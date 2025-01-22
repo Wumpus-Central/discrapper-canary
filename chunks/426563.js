@@ -30,8 +30,8 @@ var i = r(526167),
     R = r(410693),
     O = r(185672),
     D = r(235731);
-let x = [o, s, l, u, c, d],
-    L = [f, p, h, _, m, g, E, v],
+let L = [o, s, l, u, c, d],
+    x = [f, p, h, _, m, g, E, v],
     w = [T, S, A, C, N, R],
     P = {
         clyde: O,
@@ -46,9 +46,9 @@ function k() {
     return e ? D : a;
 }
 n.Z = {
-    DEFAULT_AVATARS: x,
+    DEFAULT_AVATARS: L,
     DEFAULT_PROVISIONAL_AVATARS: w,
-    DEFAULT_GROUP_DM_AVATARS: L,
+    DEFAULT_GROUP_DM_AVATARS: x,
     BOT_AVATARS: P,
     DEFAULT_CHANNEL_ICON: y,
     canUseWebp: M

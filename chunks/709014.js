@@ -32,7 +32,7 @@ function m(e, n) {
         R = o.useContext(d.S).reducedMotion.enabled,
         { enabled: O } = p.Z.useExperiment({ location: 'LottieIcon web entry point' }),
         D = R || !O,
-        x = o.useRef(v);
+        L = o.useRef(v);
     return (
         o.useImperativeHandle(
             n,
@@ -65,7 +65,7 @@ function m(e, n) {
                         var n;
                         let r,
                             { default: i } = e,
-                            a = null !== (n = S.current) && void 0 !== n ? n : x.current;
+                            a = null !== (n = S.current) && void 0 !== n ? n : L.current;
                         if (null != a && null != y[a]) {
                             let e = y[a];
                             r = [e.start, e.start + e.duration];

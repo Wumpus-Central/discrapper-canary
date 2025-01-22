@@ -66,10 +66,10 @@ r.d(n, {
         return B;
     },
     ws: function () {
-        return x;
+        return L;
     },
     xI: function () {
-        return L;
+        return x;
     },
     zI: function () {
         return g;
@@ -247,11 +247,11 @@ function D(e) {
     let { onboardingCTA: n } = e;
     i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_ONBOARDING_CLICKED, { onboarding_cta_type: n });
 }
-function x(e) {
+function L(e) {
     let { forumDemoId: n } = e;
     i.ZP.trackWithMetadata(h.rMx.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: n });
 }
-function L(e) {
+function x(e) {
     let { added: n } = e;
     i.ZP.trackWithMetadata(h.rMx.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: n });
 }

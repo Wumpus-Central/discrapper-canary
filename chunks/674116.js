@@ -18,8 +18,8 @@ var i = n(200651),
     p = n(680924),
     x = n(58765),
     f = n(429789),
-    _ = n(726763),
-    E = n(208113),
+    E = n(726763),
+    _ = n(208113),
     C = n(894939),
     T = n(710808),
     S = n(625205),
@@ -116,7 +116,7 @@ function G() {
                         children: F.intl.string(F.t['8/udY2'])
                     }),
                     children: [
-                        (0, i.jsx)(_.Z, {}),
+                        (0, i.jsx)(E.Z, {}),
                         (0, i.jsx)(D.Z, {}),
                         (0, i.jsx)(u.F, {
                             setting: M.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
@@ -126,7 +126,7 @@ function G() {
                         (0, i.jsx)(N.Z, {}),
                         (0, i.jsx)(f.Z, {}),
                         s && (0, i.jsx)(A.Z, {}),
-                        (0, i.jsx)(E.Z, {}),
+                        (0, i.jsx)(_.Z, {}),
                         (0, i.jsx)(v.Z, {}),
                         (0, i.jsx)(j.Z, {}),
                         (0, i.jsx)(R.Z, { refreshStyles: !0 }),

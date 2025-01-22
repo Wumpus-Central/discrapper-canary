@@ -23,8 +23,8 @@ var i = n(200651),
     p = n(296848),
     x = n(798769),
     f = n(981631),
-    _ = n(388032),
-    E = n(612711);
+    E = n(388032),
+    _ = n(612711);
 async function C(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: r, setIsCancelling: s, analyticsLocations: a, analyticsLocation: l } = e;
     try {
@@ -42,26 +42,26 @@ function T(e) {
             },
             [a]
         ),
-        g = d.status === f.O0b.PAUSED ? _.intl.string(_.t.Lp9WoK) : _.intl.string(_.t.eSR83d),
+        g = d.status === f.O0b.PAUSED ? E.intl.string(E.t.Lp9WoK) : E.intl.string(E.t.eSR83d),
         C = (function (e) {
-            let t = e.status === f.O0b.PAUSED ? _.t.o3upfX : _.t.dBXZEh,
+            let t = e.status === f.O0b.PAUSED ? E.t.o3upfX : E.t.dBXZEh,
                 { durations: n, currentDaysPaused: i } = (0, p.AT)(e),
                 r = [];
             for (let e of n) {
                 let n = l.T[e];
                 r.push({
-                    name: _.intl.formatToPlainString(t, { days: n - i }),
+                    name: E.intl.formatToPlainString(t, { days: n - i }),
                     value: n,
-                    radioItemIconClassName: E.radioOption
+                    radioItemIconClassName: _.radioOption
                 });
             }
             return (
                 r.sort((e, t) => e.value - t.value),
                 r.push({
-                    name: _.intl.string(_.t.OCPUMz),
+                    name: E.intl.string(E.t.OCPUMz),
                     value: 0,
-                    radioBarClassName: E.cancelText,
-                    radioItemIconClassName: E.cancelText
+                    radioBarClassName: _.cancelText,
+                    radioItemIconClassName: _.cancelText
                 }),
                 r
             );
@@ -79,23 +79,23 @@ function T(e) {
                 (0, i.jsx)(c.ModalHeader, {
                     separator: !1,
                     children: (0, i.jsxs)('div', {
-                        className: E.__invalid_header,
+                        className: _.__invalid_header,
                         children: [
                             (0, i.jsx)(c.Heading, {
                                 variant: 'heading-xl/bold',
-                                className: E.__invalid_modalHeader,
-                                children: _.intl.string(_.t.f3nnBw)
+                                className: _.__invalid_modalHeader,
+                                children: E.intl.string(E.t.f3nnBw)
                             }),
                             (0, i.jsx)(c.Heading, {
                                 variant: 'heading-sm/medium',
-                                className: E.subtitle,
+                                className: _.subtitle,
                                 children: g
                             })
                         ]
                     })
                 }),
                 (0, i.jsx)(c.ModalContent, {
-                    className: E.body,
+                    className: _.body,
                     children: (0, i.jsx)(c.RadioGroup, {
                         options: C,
                         onChange: m,
@@ -122,16 +122,16 @@ function S(e) {
         j = a()(A).add(l, 'days').toDate();
     switch (t.status) {
         case f.O0b.PAST_DUE:
-            v = _.intl.format(_.t['xaS18/'], {
+            v = E.intl.format(E.t['xaS18/'], {
                 pauseDuration: l,
                 resumeDate: j
             });
             break;
         case f.O0b.PAUSED:
-            v = _.intl.format(_.t.Vur3FR, { resumeDate: j });
+            v = E.intl.format(E.t.Vur3FR, { resumeDate: j });
             break;
         default:
-            v = _.intl.format(_.t.W85vFB, {
+            v = E.intl.format(E.t.W85vFB, {
                 pauseDate: A,
                 resumeDate: j,
                 pauseDuration: l
@@ -139,7 +139,7 @@ function S(e) {
     }
     return (
         (N = (0, i.jsx)('div', {
-            className: E.body,
+            className: _.body,
             children: v
         })),
         (0, i.jsxs)(i.Fragment, {
@@ -151,21 +151,21 @@ function S(e) {
                 (0, i.jsx)(c.ModalHeader, {
                     separator: !1,
                     children: (0, i.jsx)('div', {
-                        className: E.__invalid_header,
+                        className: _.__invalid_header,
                         children: (0, i.jsx)(c.Heading, {
                             variant: 'heading-xl/bold',
-                            className: E.__invalid_modalHeader,
-                            children: _.intl.string(_.t['AnMG5+'])
+                            className: _.__invalid_modalHeader,
+                            children: E.intl.string(E.t['AnMG5+'])
                         })
                     })
                 }),
                 (0, i.jsxs)(c.ModalContent, {
-                    className: E.body,
+                    className: _.body,
                     children: [
                         u
                             ? (0, i.jsx)(c.FormErrorBlock, {
-                                  className: E.errorBlock,
-                                  children: _.intl.string(_.t['5mlOCQ'])
+                                  className: _.errorBlock,
+                                  children: E.intl.string(E.t['5mlOCQ'])
                               })
                             : null,
                         N
@@ -174,7 +174,7 @@ function S(e) {
                 (0, i.jsx)(c.ModalFooter, {
                     justify: h.Z.Justify.START,
                     children: (0, i.jsxs)('div', {
-                        className: E.whatYouLoseButtonContainer,
+                        className: _.whatYouLoseButtonContainer,
                         children: [
                             (0, i.jsx)(c.Button, {
                                 color: c.Button.Colors.RED,
@@ -190,13 +190,13 @@ function S(e) {
                                         analyticsLocation: d
                                     });
                                 },
-                                children: _.intl.string(_.t['cY+Ooa'])
+                                children: E.intl.string(E.t['cY+Ooa'])
                             }),
                             (0, i.jsx)(c.Button, {
                                 look: c.Button.Looks.LINK,
                                 color: (0, o.wj)(I) ? c.Button.Colors.WHITE : c.Button.Colors.PRIMARY,
                                 onClick: s,
-                                children: _.intl.string(_.t.h9tkAA)
+                                children: E.intl.string(E.t.h9tkAA)
                             })
                         ]
                     })

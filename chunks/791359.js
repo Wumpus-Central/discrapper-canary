@@ -26,13 +26,13 @@ var i = n(200651),
     v = n(203028),
     S = n(358924),
     T = n(292140),
-    A = n(525296),
-    b = n(981631),
+    b = n(525296),
+    A = n(981631),
     Z = n(674563),
     x = n(388032),
     L = n(721925);
-let P = 15 * I.Z.Millis.MINUTE,
-    O = (0, A.Z)(function (e) {
+let y = 15 * I.Z.Millis.MINUTE,
+    P = (0, b.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             s = (0, i.jsx)(v.Z, {
                 party: t,
@@ -55,7 +55,7 @@ let P = 15 * I.Z.Millis.MINUTE,
                         return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === Z.wW.GAME;
                     })
                     .map((e) => e.game.name);
-                E.default.track(b.rMx.NOW_PLAYING_CARD_HOVERED, {
+                E.default.track(A.rMx.NOW_PLAYING_CARD_HOVERED, {
                     num_users: g,
                     num_streams: f,
                     num_activities: _,
@@ -63,7 +63,7 @@ let P = 15 * I.Z.Millis.MINUTE,
                     games_detected: e
                 });
             }, [g, f, _, I, m]),
-            A = o()(C, P);
+            b = o()(C, y);
         return null != s || null != c
             ? (0, i.jsx)(d.Popout, {
                   position: 'left',
@@ -79,7 +79,7 @@ let P = 15 * I.Z.Millis.MINUTE,
                       let { isShown: n } = t;
                       return (0, i.jsx)(S.Z, {
                           ...e,
-                          onMouseEnter: A,
+                          onMouseEnter: b,
                           'aria-haspopup': 'menu',
                           className: L.itemCard,
                           active: n,
@@ -91,7 +91,7 @@ let P = 15 * I.Z.Millis.MINUTE,
               })
             : null;
     }),
-    y = a().throttle(() => p.W(!1), 300000);
+    O = a().throttle(() => p.W(!1), 300000);
 function R() {
     let {
             nowPlayingCards: e,
@@ -109,7 +109,7 @@ function R() {
         s = (0, c.e7)([h.Z], () => h.Z.quests);
     r.useEffect(() => (u.Z.wait(() => C.L()), () => u.Z.wait(() => C.v())), [null == a ? void 0 : a.id]),
         r.useEffect(() => {
-            n && !l && y();
+            n && !l && O();
         }, [n, l]);
     let o = r.useMemo(() => {
             let t = new Map(),
@@ -131,7 +131,7 @@ function R() {
                   ? e.map((e) => {
                         let { party: t } = e;
                         return (0, i.jsx)(
-                            O,
+                            P,
                             {
                                 party: t,
                                 quest: o.get(t.id)

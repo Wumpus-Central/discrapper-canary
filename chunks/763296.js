@@ -40,10 +40,10 @@ let T = new Map(),
     R = new Set(),
     O = new Map(),
     D = !1;
-function x() {
+function L() {
     T.clear(), S.clear(), O.clear(), (D = !1), (N = 0), (C = 0);
 }
-function L() {
+function x() {
     S.clear(), O.clear();
 }
 function w() {
@@ -193,7 +193,7 @@ class q extends (a = d.ZP.Store) {
 }
 I(q, 'displayName', 'SoundboardStore'),
     (n.Z = new q(f.Z, {
-        LOGOUT: x,
+        LOGOUT: L,
         GUILD_SOUNDBOARD_FETCH: w,
         GUILD_SOUNDBOARD_SOUND_CREATE: k,
         GUILD_SOUNDBOARD_SOUND_UPDATE: k,
@@ -201,7 +201,7 @@ I(q, 'displayName', 'SoundboardStore'),
         GUILD_SOUNDBOARD_SOUND_PLAY_START: F,
         GUILD_SOUNDBOARD_SOUND_PLAY_END: V,
         USER_SOUNDBOARD_SET_VOLUME: H,
-        VOICE_CHANNEL_SELECT: L,
+        VOICE_CHANNEL_SELECT: x,
         USER_SETTINGS_PROTO_UPDATE: W,
         SOUNDBOARD_FETCH_DEFAULT_SOUNDS: G,
         SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: Z,

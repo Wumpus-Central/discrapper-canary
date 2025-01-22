@@ -25,8 +25,8 @@ var g = r(512722),
     R = r(977059),
     O = r(695346),
     D = r(199902),
-    x = r(314897),
-    L = r(358085),
+    L = r(314897),
+    x = r(358085),
     w = r(998502),
     P = r(569545),
     M = r(70722),
@@ -76,7 +76,7 @@ function q(e) {
 async function Q(e, n) {
     if (i !== e) return;
     let { enabled: r } = (0, R.R)({ location: 'uploadStreamPreviews' }),
-        a = ((0, L.isWeb)() && O.I0.getSetting()) || D.Z.getIsActiveStreamPreviewDisabled(n);
+        a = ((0, x.isWeb)() && O.I0.getSetting()) || D.Z.getIsActiveStreamPreviewDisabled(n);
     if (r && a) return;
     let o = () => Q(e, n);
     if (!V)
@@ -90,9 +90,9 @@ async function Q(e, n) {
                     streamKey: n,
                     previewURL: i
                 }),
-                L.isPlatformEmbedded)
+                x.isPlatformEmbedded)
             ) {
-                let e = x.default.getToken();
+                let e = L.default.getToken();
                 E()(null != e, 'Auth token was null while sending screenshot.'),
                     await w.ZP.makeChunkedRequest(
                         k.ANM.STREAM_PREVIEW(n),
@@ -117,7 +117,7 @@ async function Q(e, n) {
 }
 function X(e, n) {
     let r = 0;
-    return (L.isPlatformEmbedded ? $ : J)(e, (e) => {
+    return (x.isPlatformEmbedded ? $ : J)(e, (e) => {
         if (new Uint32Array(e.data.buffer).some((e) => 0 !== e)) return !0;
         if (++r > n) throw Error('Timed out awaiting non-black frame after '.concat(n, ' frames'));
         return !1;
@@ -172,7 +172,7 @@ n.Z = {
             C.Z.subscribe('STREAM_DELETE', K),
             C.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
                 let { guildId: n, channelId: r, userId: a, streamId: o, context: s } = e;
-                !(null == o || s !== U.Yn.STREAM || a !== x.default.getId() || __OVERLAY__) && (K(), (i = o), z(o, n, r, a));
+                !(null == o || s !== U.Yn.STREAM || a !== L.default.getId() || __OVERLAY__) && (K(), (i = o), z(o, n, r, a));
             }),
             C.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: n } = e;

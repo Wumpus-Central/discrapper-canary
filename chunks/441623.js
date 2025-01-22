@@ -43,8 +43,8 @@ function N() {
 let R = N(),
     O = [],
     D = new Set(),
-    x = {},
-    L = null;
+    L = {},
+    x = null;
 function w(e, n) {
     let r = new Date(),
         i = new Date(e.getTime());
@@ -58,8 +58,8 @@ function P(e) {
     return !w(e, e.getFullYear()) && w(e, new Date().getFullYear());
 }
 function M() {
-    if (null != L) {
-        X(L);
+    if (null != x) {
+        X(x);
         return;
     }
     if ((B(), !_.Z.hasConsented(y.pjP.PERSONALIZATION))) return;
@@ -72,7 +72,7 @@ function M() {
                 r = h.Z.getUserAffinity(e);
             if (m.Z.getRelationshipType(e) === y.OGo.FRIEND && !m.Z.isIgnored(e) && null != r && r.affinity > 0 && null != n) {
                 let r = new Date(n);
-                P(r) && (O.push(e), (x[e] = { friendsSince: r }));
+                P(r) && (O.push(e), (L[e] = { friendsSince: r }));
             }
         }
         O.sort((e, n) => {
@@ -91,7 +91,7 @@ function U() {
     return Array.from(D).some((e) => !R.lastShownFriendsListGiftIntents.includes(e));
 }
 function B() {
-    (O.length = 0), D.clear(), (x = {});
+    (O.length = 0), D.clear(), (L = {});
 }
 function G() {
     B();
@@ -134,7 +134,7 @@ function q() {
 function Q(e) {
     let { total: n } = e;
     if (null == n) {
-        (L = null), M();
+        (x = null), M();
         return;
     }
     X(n);
@@ -143,7 +143,7 @@ function X(e) {
     B();
     let { enabled: n } = E.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore generateFriendAnniversaries' }, { autoTrackExposure: !1 });
     if (!n) return;
-    L = e;
+    x = e;
     let r = m.Z.getFriendIDs().filter((e) => !m.Z.isIgnored(e));
     l()
         .sampleSize(r, e)
@@ -151,7 +151,7 @@ function X(e) {
             let n = m.Z.getSince(e);
             if (null != n) {
                 let r = new Date(n);
-                O.push(e), (x[e] = { friendsSince: r });
+                O.push(e), (L[e] = { friendsSince: r });
             }
         }),
         (D = new Set(O.slice(0, I)));
@@ -177,14 +177,14 @@ class J extends (i = d.ZP.PersistedStore) {
         return !(Date.now() - n <= A) && U();
     }
     getFriendAnniversaryYears(e) {
-        let n = x[e];
+        let n = L[e];
         return null == n ? 0 : k(n.friendsSince);
     }
     isGiftIntentMessageInCooldown(e) {
         return null != R.messageGiftIntentLastShownMap[e];
     }
     getDevToolTotalFriendAnniversaries() {
-        return L;
+        return x;
     }
 }
 b(J, 'displayName', 'PremiumGiftingIntentStore'),

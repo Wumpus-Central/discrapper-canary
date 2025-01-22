@@ -141,12 +141,12 @@ function D(e) {
         o = a.indexOf(i);
     -1 !== o ? (a.splice(o, 1), a.unshift(i)) : null != a[0] && '' !== a[0] && i.startsWith(a[0]) ? (a[0] = i) : o < 0 && a.unshift(i), a.length > 5 && a.splice(5, a.length), u.K.set(I, { history: A });
 }
-function x(e) {
+function L(e) {
     let { searchId: n } = e,
         r = v(n);
     (r.isIndexing = !0), (r.isHistoricalIndexing = !0), (r.isSearching = !1);
 }
-function L(e) {
+function x(e) {
     let { searchId: n } = e,
         r = v(n);
     (r.isSearching = !1), (r.isIndexing = !1), (r.isHistoricalIndexing = e.doingHistoricalIndex || !1), (r.searchFetcher = null), (r.totalResults = e.totalResults), (r.hasError = e.hasError), (r.analyticsId = e.analyticsId), (r.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0), (r.showNoResultsAlt = Math.random() < g), (r.rawResults = e.messages), null == r.query && (r.hasError = !0);
@@ -292,8 +292,8 @@ class H extends (i = l.ZP.Store) {
 m(H, 'displayName', 'SearchStore'),
     (n.Z = new H(c.Z, {
         SEARCH_START: O,
-        SEARCH_INDEXING: x,
-        SEARCH_FINISH: L,
+        SEARCH_INDEXING: L,
+        SEARCH_FINISH: x,
         SEARCH_EDITOR_STATE_CLEAR: w,
         SEARCH_ENSURE_SEARCH_STATE: R,
         SEARCH_EDITOR_STATE_CHANGE: N,

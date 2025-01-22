@@ -1,18 +1,18 @@
-e.d(t, {
+n.d(t, {
     K: function () {
-        return l;
+        return a;
     }
 });
-var i = e(475468),
-    o = e(19780),
-    r = e(981631);
-let l = {
+var i = n(475468),
+    r = n(19780),
+    s = n(981631);
+let a = {
     binds: ['mod+shift+alt+v'],
     comboKeysBindGlobal: !0,
-    action(n) {
-        n.preventDefault(), n.stopPropagation();
-        let t = o.Z.getGuildId(),
-            e = o.Z.getChannelId();
-        return null != e && (0, i.K)(null != t ? t : r.ME, e), !1;
+    action(e) {
+        e.preventDefault(), e.stopPropagation();
+        let t = r.Z.getGuildId(),
+            n = r.Z.getChannelId();
+        return null != n && (0, i.K)(null != t ? t : s.ME, n), !1;
     }
 };

@@ -1,49 +1,49 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var a = t(200651),
-    i = t(192379),
-    r = t(120356),
-    l = t.n(r),
-    o = t(481060),
-    s = t(49898),
-    c = t(149025);
+var i = n(200651),
+    a = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    o = n(481060),
+    s = n(49898),
+    c = n(149025);
 function d(e) {
-    let { state: n, query: t, placeholder: r, onTextChange: d, onCollapsedClick: u, onClear: m, onBlur: p, onSubmit: _ } = e,
-        g = i.useRef(null),
-        f = i.useCallback(
+    let { state: t, query: n, placeholder: r, onTextChange: d, onCollapsedClick: u, onClear: m, onBlur: p, onSubmit: h } = e,
+        g = a.useRef(null),
+        C = a.useCallback(
             (e) => {
-                'Enter' === e.key && _();
+                'Enter' === e.key && h();
             },
-            [_]
+            [h]
         ),
-        v = i.useCallback(() => {
+        x = a.useCallback(() => {
             u(),
                 setTimeout(() => {
                     var e;
                     return null === (e = g.current) || void 0 === e ? void 0 : e.focus();
                 });
         }, [u]);
-    return n === s.GlobalDiscoverySearchBarState.COLLAPSED
-        ? (0, a.jsx)(o.Clickable, {
+    return t === s.GlobalDiscoverySearchBarState.COLLAPSED
+        ? (0, i.jsx)(o.Clickable, {
               className: c.searchIcon,
-              onClick: v,
-              children: (0, a.jsx)(o.MagnifyingGlassIcon, {
+              onClick: x,
+              children: (0, i.jsx)(o.MagnifyingGlassIcon, {
                   size: 'md',
                   color: o.tokens.colors.INTERACTIVE_NORMAL
               })
           })
-        : (0, a.jsx)(o.SearchBar, {
+        : (0, i.jsx)(o.SearchBar, {
               ref: g,
-              className: l()(c.searchBar, { [c.searchFloating]: n === s.GlobalDiscoverySearchBarState.FLOATING }),
+              className: l()(c.searchBar, { [c.searchFloating]: t === s.GlobalDiscoverySearchBarState.FLOATING }),
               size: o.SearchBar.Sizes.MEDIUM,
-              query: t,
+              query: n,
               placeholder: r,
               onChange: d,
               onClear: m,
-              onKeyDown: f,
+              onKeyDown: C,
               onBlur: p
           });
 }

@@ -54,7 +54,7 @@ function O(e) {
 function D(e) {
     (m = { ...e.relationships }), R();
 }
-function x(e) {
+function L(e) {
     let n = m[e.relationship.id];
     (m = {
         ...m,
@@ -80,7 +80,7 @@ function x(e) {
                 user: e.relationship.user
             });
 }
-function L(e) {
+function x(e) {
     (m = { ...m }), delete m[e.relationship.id], null != g[e.relationship.id] && ((g = { ...g }), delete g[e.relationship.id]), null != E[e.relationship.id] && ((E = { ...E }), delete E[e.relationship.id]), !e.relationship.userIgnored && (y.delete(e.relationship.id), b.delete(e.relationship.id)), v.delete(e.relationship.id), R();
 }
 function w(e) {
@@ -194,8 +194,8 @@ _(M, 'displayName', 'RelationshipStore'),
     (n.Z = new M(u.Z, {
         CONNECTION_OPEN: O,
         OVERLAY_INITIALIZE: D,
-        RELATIONSHIP_ADD: x,
-        RELATIONSHIP_REMOVE: L,
+        RELATIONSHIP_ADD: L,
+        RELATIONSHIP_REMOVE: x,
         RELATIONSHIP_UPDATE: w,
         RELATIONSHIP_PENDING_INCOMING_REMOVED: P
     }));

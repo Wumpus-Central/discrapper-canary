@@ -30,11 +30,11 @@ function S(e) {
         [A, C] = o.useState(r),
         [N, R] = o.useState(),
         [O, D] = o.useState(!1),
-        x = (0, _.pO)(A),
-        L = (0, c.TX)(),
+        L = (0, _.pO)(A),
+        x = (0, c.TX)(),
         { enabled: w } = d.O.useExperiment({ location: 'gift card' }),
         P = y;
-    x && ((P = L ? g.Cj.SEASONAL_STANDARD_BOX : null != h ? h : v), w && (P = g.Cj.NITROWEEN_STANDARD));
+    L && ((P = x ? g.Cj.SEASONAL_STANDARD_BOX : null != h ? h : v), w && (P = g.Cj.NITROWEEN_STANDARD));
     let [M, k] = o.useState(P),
         U = (0, p.iE)(),
         [B, G] = o.useState(),

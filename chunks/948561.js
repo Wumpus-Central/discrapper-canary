@@ -30,8 +30,8 @@ var o = r(952639),
     R = r(774863),
     O = r(799525),
     D = r(981631),
-    x = r(526761);
-function L(e, n, r) {
+    L = r(526761);
+function x(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -302,7 +302,7 @@ function ee(e) {
 }
 function et(e) {
     let { settings: n, local: r } = e;
-    if (!(0, A.Kh)() || !r || n.type !== x.yP.PRELOADED_USER_SETTINGS) return !1;
+    if (!(0, A.Kh)() || !r || n.type !== L.yP.PRELOADED_USER_SETTINGS) return !1;
     let i = y.Z.getChannelId();
     return null != i && er(i);
 }
@@ -317,7 +317,7 @@ function er(e) {
 class ei extends f.Z {
     constructor(...e) {
         super(...e),
-            L(this, 'actions', {
+            x(this, 'actions', {
                 LOAD_MESSAGES_SUCCESS: Q,
                 LOAD_FORUM_POSTS: J,
                 LOAD_THREADS_SUCCESS: $,

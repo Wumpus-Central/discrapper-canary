@@ -22,7 +22,7 @@ function x() {
     var e;
     let t = null === (e = (0, o.Z)()) || void 0 === e || e,
         { explicitContentGuilds: n, explicitContentFriendDm: x, explicitContentNonFriendDm: f } = (0, l.B)(),
-        _ = [
+        E = [
             {
                 value: r.Q4.BLUR,
                 label: h.intl.string(h.t.S49UaW)
@@ -32,7 +32,7 @@ function x() {
                 label: h.intl.string(h.t['D/157e'])
             }
         ],
-        E = [
+        _ = [
             {
                 value: r.Q4.BLUR,
                 label: h.intl.string(h.t.S49UaW)
@@ -43,7 +43,7 @@ function x() {
             label: h.intl.string(h.t['5k5OFh'])
         };
     return (
-        t && (_.unshift(C), E.unshift(C)),
+        t && (E.unshift(C), _.unshift(C)),
         (0, i.jsxs)(d.U, {
             setting: m.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: u.FY.EXPLICIT_MEDIA_REDACTION_V2,
@@ -57,7 +57,7 @@ function x() {
                     title: h.intl.string(h.t['6k0AgI']),
                     titleClassName: p.selectItemTitle,
                     children: (0, i.jsx)(s.SingleSelect, {
-                        options: _,
+                        options: E,
                         value: x,
                         onChange: (e) => (0, a.zj)({ explicitContentFriendDm: e })
                     })
@@ -67,7 +67,7 @@ function x() {
                     title: h.intl.string(h.t.D2EGSk),
                     titleClassName: p.selectItemTitle,
                     children: (0, i.jsx)(s.SingleSelect, {
-                        options: _,
+                        options: E,
                         value: f,
                         onChange: (e) => (0, a.zj)({ explicitContentNonFriendDm: e })
                     })
@@ -78,7 +78,7 @@ function x() {
                         title: h.intl.string(h.t['FP+a4+']),
                         titleClassName: p.selectItemTitle,
                         children: (0, i.jsx)(s.SingleSelect, {
-                            options: E,
+                            options: _,
                             value: n,
                             onChange: (e) => (0, a.zj)({ explicitContentGuilds: e })
                         })

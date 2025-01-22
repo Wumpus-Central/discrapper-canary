@@ -29,17 +29,17 @@ function S(e, n) {
 function A(e) {
     var n;
     let { renderHeader: r, referralTrialOfferId: o, handleClose: A } = e,
-        { selectedSkuId: C, step: N, selectedPlan: R, purchaseState: O, purchaseType: D, selectedSku: x } = (0, E.usePaymentContext)(),
-        { isGift: L, selectedGiftStyle: w, giftRecipient: P } = (0, g.wD)(),
-        M = L && (0, m.pO)(P) && N === v.h8.CONFIRM && null != w && (null == x ? void 0 : x.productLine) !== y.POd.COLLECTIBLES,
+        { selectedSkuId: C, step: N, selectedPlan: R, purchaseState: O, purchaseType: D, selectedSku: L } = (0, E.usePaymentContext)(),
+        { isGift: x, selectedGiftStyle: w, giftRecipient: P } = (0, g.wD)(),
+        M = x && (0, m.pO)(P) && N === v.h8.CONFIRM && null != w && (null == L ? void 0 : L.productLine) !== y.POd.COLLECTIBLES,
         k = null != r && null != N,
         U = [v.h8.SKU_SELECT, v.h8.SELECT_FREE_SKU],
         B = null != N && !U.includes(N) && null != C,
         G = (0, f.N)(o),
-        Z = !L && null != G && null != C && b.nG[G.trial_id].skus.includes(C),
+        Z = !x && null != G && null != C && b.nG[G.trial_id].skus.includes(C),
         F = (0, d.Ng)(),
         V = null == F ? void 0 : null === (n = F.discount) || void 0 === n ? void 0 : n.plan_ids.some((e) => b.GP[e].skuId === C),
-        j = !L && null != F && null != C && V,
+        j = !x && null != F && null != C && V,
         { enabled: H } = c.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
         Y = (0, c.rK)(),
         W = H && Y;
@@ -78,11 +78,11 @@ function A(e) {
                           onClose: A,
                           showTrialBadge: Z,
                           showDiscountBadge: j,
-                          isGift: L,
+                          isGift: x,
                           giftRecipient: P,
                           useWinterTheme: W
                       }))),
             e
         );
-    }, [w, A, O, r, R, C, N, Z, j, M, B, k, D, L, P, W]);
+    }, [w, A, O, r, R, C, N, Z, j, M, B, k, D, x, P, W]);
 }

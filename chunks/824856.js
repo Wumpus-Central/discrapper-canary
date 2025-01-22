@@ -19,7 +19,7 @@ var i = n(200651),
     x = n(525981);
 function f(e) {
     let { cta: t, storeListing: n, className: s } = e,
-        { applicationId: f, benefits: _, description: E } = n,
+        { applicationId: f, benefits: E, description: _ } = n,
         C = r.useMemo(() => (null == n.thumbnail ? null : (0, h.q)(f, n.thumbnail, 256)), [f, n.thumbnail]),
         { data: T } = (0, d.X)(n.skuId),
         S = r.useMemo(() => {
@@ -61,19 +61,19 @@ function f(e) {
                   ]
               }),
               children: [
-                  !(0, g.Ew)(E) &&
+                  !(0, g.Ew)(_) &&
                       (0, i.jsx)('div', {
                           className: x.description,
                           children: (0, i.jsx)(p.Z, {
                               variant: 'text-sm/medium',
-                              children: E
+                              children: _
                           })
                       }),
-                  null != _ &&
-                      _.length > 0 &&
+                  null != E &&
+                      E.length > 0 &&
                       (0, i.jsx)('div', {
                           className: x.benefits,
-                          children: _.map((e) => {
+                          children: E.map((e) => {
                               let { id: t, name: n, description: r, icon: s } = e;
                               return (0, i.jsx)(
                                   o.Gm,

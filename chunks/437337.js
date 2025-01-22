@@ -77,10 +77,10 @@ let y = function e(e) {
             },
             'animate-always'
         );
-    function x(e) {
+    function L(e) {
         A(!1), null == r || r(e.currentTarget.checked, e);
     }
-    function L(e) {
+    function x(e) {
         if (!s && !e.repeat) (' ' === e.key || 'Enter' === e.key) && A(!0);
     }
     function w(e) {
@@ -149,9 +149,9 @@ let y = function e(e) {
                     },
                     className: m.input,
                     tabIndex: s ? -1 : 0,
-                    onKeyDown: L,
+                    onKeyDown: x,
                     onKeyUp: w,
-                    onChange: x,
+                    onChange: L,
                     checked: i,
                     disabled: s
                 })

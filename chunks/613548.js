@@ -117,7 +117,7 @@ function q(e) {
         ed = [];
     if (Q && !ei) {
         let e = (null == W ? void 0 : W.type) === V.fO.STREAM ? (0, C.my)(W.id) : void 0,
-            t = (null == W ? void 0 : W.type) === V.fO.ACTIVITY ? W.id : void 0;
+            t = (null == W ? void 0 : W.type) === V.fO.ACTIVITY ? W.applicationId : void 0;
         ed.push(
             (0, i.jsx)(
                 R.Z,

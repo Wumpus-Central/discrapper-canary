@@ -20,12 +20,12 @@ let m = {
     g = (e) => {
         let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, linkText: g, linkTo: h, cardAlignment: p = m.START } = e,
             { balance: x } = (0, l.A)(),
-            [f, _] = r.useState(o.b.DEFAULT),
-            [E, C] = r.useState(!1);
+            [f, E] = r.useState(o.b.DEFAULT),
+            [_, C] = r.useState(!1);
         return (
             r.useEffect(() => {
-                _(E ? o.b.SELECTED : o.b.DEFAULT);
-            }, [E, _]),
+                E(_ ? o.b.SELECTED : o.b.DEFAULT);
+            }, [_, E]),
             (0, i.jsxs)('div', {
                 className: u.container,
                 children: [
@@ -33,11 +33,11 @@ let m = {
                         balance: null != x ? x : 0,
                         balanceWidgetMode: f,
                         onClick: () => {
-                            C(!E);
+                            C(!_);
                         },
                         showNotificationBadge: t
                     }),
-                    E &&
+                    _ &&
                         (0, i.jsx)('div', {
                             className: a()(u.cardContainer, p),
                             children: (0, i.jsx)(c.L, {

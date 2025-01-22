@@ -1,7 +1,7 @@
 n(724458);
 var l,
-    r,
     s,
+    r,
     i,
     o = n(442837),
     a = n(570140),
@@ -89,14 +89,14 @@ class x extends (l = o.ZP.Store) {
     }
 }
 (i = 'OverlayRTCConnectionStore'),
-    (s = 'displayName') in (r = x)
-        ? Object.defineProperty(r, s, {
+    (r = 'displayName') in (s = x)
+        ? Object.defineProperty(s, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[s] = i),
+        : (s[r] = i),
     (t.Z = new x(a.Z, {
         OVERLAY_INITIALIZE: function (e) {
             u = e.rtcConnectionStates;

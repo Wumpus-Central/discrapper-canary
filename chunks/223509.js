@@ -25,8 +25,8 @@ var i,
     R = 4,
     O = 5,
     D = 6,
-    x = 7,
-    L = 8,
+    L = 7,
+    x = 8,
     w = 9,
     P = 10,
     M = 11,
@@ -194,8 +194,8 @@ function em(e, n) {
                 r.mode = D;
             case D:
                 if (1024 & r.flags && ((ed = r.length) > ei && (ed = ei), ed && (r.head && ((eI = r.head.extra_len - r.length), !r.head.extra && (r.head.extra = Array(r.head.extra_len)), o.arraySet(r.head.extra, i, en, ed, eI)), 512 & r.flags && (r.check = l(r.check, i, ed, en)), (ei -= ed), (en += ed), (r.length -= ed)), r.length)) break r;
-                (r.length = 0), (r.mode = x);
-            case x:
+                (r.length = 0), (r.mode = L);
+            case L:
                 if (2048 & r.flags) {
                     if (0 === ei) break r;
                     ed = 0;
@@ -203,8 +203,8 @@ function em(e, n) {
                     while (eI && ed < ei);
                     if ((512 & r.flags && (r.check = l(r.check, i, ed, en)), (ei -= ed), (en += ed), eI)) break r;
                 } else r.head && (r.head.name = null);
-                (r.length = 0), (r.mode = L);
-            case L:
+                (r.length = 0), (r.mode = x);
+            case x:
                 if (4096 & r.flags) {
                     if (0 === ei) break r;
                     ed = 0;

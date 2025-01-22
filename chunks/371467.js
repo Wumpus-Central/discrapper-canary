@@ -41,16 +41,16 @@ var n,
     V = i(585708),
     W = i(588909),
     F = i(981631),
-    B = i(388032);
+    Y = i(388032);
 ((s = n || (n = {}))[(s.GENERIC = 0)] = 'GENERIC'), (s[(s.TEXT = 1)] = 'TEXT'), (s[(s.INCOMING_CALL = 2)] = 'INCOMING_CALL'), (s[(s.NUDGE = 3)] = 'NUDGE'), ((r = l || (l = {}))[(r.NORMAL = 0)] = 'NORMAL'), (r[(r.HIGH = 1)] = 'HIGH'), (r[(r.URGENT = 2)] = 'URGENT');
-let Y = 5 * R.Z.Millis.SECOND,
+let B = 5 * R.Z.Millis.SECOND,
     G = 8 * R.Z.Millis.SECOND,
     K = 30 * R.Z.Millis.SECOND,
     Q = 30 * R.Z.Millis.SECOND,
     J = Object.freeze({
         timestamp: 0,
         priority: 0,
-        duration: Y,
+        duration: B,
         expirationExternallyManaged: !1,
         type: 0
     }),
@@ -120,7 +120,7 @@ function eo(e, t) {
                     start() {
                         let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t,
                             o = l ? F._1z.TIMED_OUT : F._1z.DISMISSED;
-                        -1 === n && (n = setTimeout(() => m.Z.updateNotificationStatus(e, o), null != i ? i : Y));
+                        -1 === n && (n = setTimeout(() => m.Z.updateNotificationStatus(e, o), null != i ? i : B));
                     },
                     stop() {
                         clearTimeout(n), (n = -1);
@@ -283,13 +283,13 @@ let ea = new er(E.Z, {
         });
     },
     CLIPS_SAVE_CLIP_START: function () {
-        eo((0, P.f)(B.intl.string(B.t.NBMK9v)));
+        eo((0, P.f)(Y.intl.string(Y.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        eo((0, P.f)(B.intl.format(B.t.KLhk6u, { duration: (0, A.A)(v.Z.getSettings().clipsLength / 1000, !0) })));
+        eo((0, P.f)(Y.intl.format(Y.t.KLhk6u, { duration: (0, A.A)(v.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        eo((0, P.f)(B.intl.string(B.t['1ZbZur'])));
+        eo((0, P.f)(Y.intl.string(Y.t['1ZbZur'])));
     },
     STREAM_START: function (e) {
         let t = (0, P.y)();

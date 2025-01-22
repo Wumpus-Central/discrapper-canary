@@ -30,8 +30,8 @@ n.Z = {
             R = m.Z.getVoiceStateForSession(h.default.getId(), N),
             O = (null == R ? void 0 : R.channelId) === n.id || _.Z.getChannelId() === m.Z.getCurrentClientVoiceChannelId(n.guild_id),
             D = d.Z.getBlockedUsersForVoiceChannel(n.id),
-            x = d.Z.getIgnoredUsersForVoiceChannel(n.id);
-        return ((0, c.B)(n.id) && (A = !0), A || I || i || (!(D.size > 0) && !(x.size > 0)))
+            L = d.Z.getIgnoredUsersForVoiceChannel(n.id);
+        return ((0, c.B)(n.id) && (A = !0), A || I || i || (!(D.size > 0) && !(L.size > 0)))
             ? !S && !I && (0, E._)(n)
                 ? new Promise((e) => {
                       (0, o.openModalLazy)(async () => {
@@ -64,7 +64,7 @@ n.Z = {
                               return (0, a.jsx)(o, {
                                   channelId: n.id,
                                   blockedUserIds: D,
-                                  ignoredUserIds: x,
+                                  ignoredUserIds: L,
                                   transitionState: l,
                                   onClose: s,
                                   onJoin: () =>
@@ -88,7 +88,7 @@ n.Z = {
                                   action: y.q.DISMISS,
                                   channel_id: n.id,
                                   blocked_user_ids: Array.from(D),
-                                  ignored_user_ids: Array.from(x),
+                                  ignored_user_ids: Array.from(L),
                                   warning_surface: y.fz.PRE_JOIN_MODAL
                               });
                           }

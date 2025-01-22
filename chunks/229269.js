@@ -1,6 +1,6 @@
 n.d(t, {
     f: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(450272),
     x = n(388032),
     f = n(713126),
-    _ = n(564952);
-function E() {
+    E = n(564952);
+function _() {
     return (0, i.jsx)(m.PaymentContextProvider, {
         stepConfigs: [],
         skuIDs: [],
@@ -117,7 +117,7 @@ function T(e) {
 function S(e) {
     let { children: t, footer: n, className: r } = e;
     return (0, i.jsx)('div', {
-        className: l()(_.root, _.focusLock, _.small, _.rootWithShadow, f.modal, r),
+        className: l()(E.root, E.focusLock, E.small, E.rootWithShadow, f.modal, r),
         'aria-label': x.intl.string(x.t.eQ2bLi),
         children: (0, i.jsxs)('form', {
             className: f.form,
@@ -270,7 +270,7 @@ function P() {
         [l, c] = r.useState(R(O)),
         [d, m] = r.useState(O),
         [g, h] = r.useState(null),
-        [x, _] = r.useState(
+        [x, E] = r.useState(
             (0, i.jsx)(p.DS, {
                 errorLabel: v.CONFIGURABLE,
                 elementOptions: j,
@@ -328,8 +328,8 @@ function P() {
                     try {
                         let t = JSON.parse(e),
                             n = JSON.parse(l);
-                        _(null),
-                            _(
+                        E(null),
+                            E(
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         (0, i.jsxs)(o.Text, {

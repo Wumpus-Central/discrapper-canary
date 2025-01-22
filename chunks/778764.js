@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(998502),
     x = n(365007),
     f = n(15980),
-    _ = n(755733),
-    E = n(981631),
+    E = n(755733),
+    _ = n(981631),
     C = n(388032),
     T = n(421333);
 function S(e) {
@@ -29,20 +29,20 @@ function S(e) {
         m = (0, d.Dt)(),
         [f, S] = r.useState(''),
         [b, I] = r.useState(!0),
-        [N, v] = r.useState(_.x.INIT),
+        [N, v] = r.useState(E.x.INIT),
         [A, j] = r.useState(''),
         [O, R] = r.useState(null),
         P = async () => {
             let e;
-            v(_.x.REGISTER);
-            let t = g.isPlatformEmbedded && p.ZP.supportsFeature(E.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(c) : s.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+            v(E.x.REGISTER);
+            let t = g.isPlatformEmbedded && p.ZP.supportsFeature(_.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(c) : s.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                h.Z.captureException(e), R(C.intl.string(C.t.xSCvBQ)), v(_.x.INIT);
+                h.Z.captureException(e), R(C.intl.string(C.t.xSCvBQ)), v(E.x.INIT);
                 return;
             }
-            j(e), v(_.x.NAME);
+            j(e), v(E.x.NAME);
         };
     return (0, i.jsxs)(l.ModalRoot, {
         transitionState: t,
@@ -55,7 +55,7 @@ function S(e) {
                     (0, i.jsxs)(l.Heading, {
                         id: m,
                         variant: 'heading-lg/semibold',
-                        children: [N === _.x.INIT && C.intl.string(C.t.vrOCCg), N === _.x.REGISTER && C.intl.string(C.t.wePEBA), N === _.x.NAME && C.intl.string(C.t['cY/IOj'])]
+                        children: [N === E.x.INIT && C.intl.string(C.t.vrOCCg), N === E.x.REGISTER && C.intl.string(C.t.wePEBA), N === E.x.NAME && C.intl.string(C.t['cY/IOj'])]
                     }),
                     (0, i.jsx)(l.ModalCloseButton, {
                         onClick: a,
@@ -68,7 +68,7 @@ function S(e) {
                 width: 440,
                 children: [
                     (0, i.jsxs)(l.Slide, {
-                        id: _.x.INIT,
+                        id: E.x.INIT,
                         children: [
                             (0, i.jsxs)(l.ModalContent, {
                                 className: T.content,
@@ -106,7 +106,7 @@ function S(e) {
                         ]
                     }),
                     (0, i.jsxs)(l.Slide, {
-                        id: _.x.REGISTER,
+                        id: E.x.REGISTER,
                         children: [
                             (0, i.jsxs)(l.ModalContent, {
                                 className: T.content,
@@ -130,7 +130,7 @@ function S(e) {
                         ]
                     }),
                     (0, i.jsx)(l.Slide, {
-                        id: _.x.NAME,
+                        id: E.x.NAME,
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
@@ -140,7 +140,7 @@ function S(e) {
                                         })
                                         .then(() => a())
                                         .catch(() => {
-                                            R(C.intl.string(C.t.fEptJC)), v(_.x.INIT);
+                                            R(C.intl.string(C.t.fEptJC)), v(E.x.INIT);
                                         });
                             },
                             children: [
@@ -185,7 +185,7 @@ function S(e) {
                                             look: l.Button.Looks.LINK,
                                             color: l.Button.Colors.PRIMARY,
                                             onClick: () => {
-                                                v(_.x.INIT);
+                                                v(E.x.INIT);
                                             },
                                             children: C.intl.string(C.t['13/7kZ'])
                                         })

@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(37234),
     x = n(821849),
     f = n(230711),
-    _ = n(497321),
-    E = n(634894),
+    E = n(497321),
+    _ = n(634894),
     C = n(410030),
     T = n(607070),
     S = n(100527),
@@ -312,11 +312,11 @@ t.Z = function () {
         f = null == p ? void 0 : p.countryCode,
         C = (0, c.e7)([R.Z], () => R.Z.enabled),
         T = 'PremiumManagementSettings';
-    (0, E.j)({
+    (0, _.j)({
         location: T + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, E.j)({
+        (0, _.j)({
             location: T + ' auto off',
             autoTrackExposure: !1
         }),
@@ -329,7 +329,7 @@ t.Z = function () {
         });
     }, [f, C, e]);
     let [B, Z] = r.useState(!1);
-    if (C) return (0, i.jsx)(_.Z, {});
+    if (C) return (0, i.jsx)(E.Z, {});
     if (e) return (0, i.jsx)(A.c8, {});
     let L = s && null !== n && a,
         M = u !== z.a$.NONE;

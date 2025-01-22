@@ -14,9 +14,9 @@ var i = n(200651),
     v = n(797614),
     f = n(593481),
     m = n(703656),
-    b = n(254761),
-    y = n(70956),
-    E = n(960048),
+    y = n(254761),
+    E = n(70956),
+    b = n(960048),
     Z = n(145597),
     g = n(692546),
     k = n(518084),
@@ -37,7 +37,7 @@ function L(e, t, n) {
         e
     );
 }
-let S = 10 * y.Z.Millis.SECOND;
+let S = 10 * E.Z.Millis.SECOND;
 function A() {
     let e = (0, Z.QF)(),
         t = (0, Z.Ht)();
@@ -79,7 +79,7 @@ class P extends o.PureComponent {
                               children: [
                                   (0, i.jsx)(f.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(b.Z, {
+                                      icon: (0, i.jsx)(y.Z, {
                                           width: 40,
                                           height: 40,
                                           className: I.notificationIcon
@@ -182,7 +182,7 @@ class T extends o.PureComponent {
             ]
         }),
             setImmediate(() => window.addEventListener('click', A));
-        let r = E.Z.captureCrash(e, { extra: t });
+        let r = b.Z.captureCrash(e, { extra: t });
         h.Z.track(x.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,

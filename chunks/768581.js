@@ -85,14 +85,14 @@ function D(e) {
         c = 'size='.concat((0, _.oO)(i * (0, _.x_)(), R));
     return null != window.GLOBAL_ENV.CDN_HOST ? ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/emojis/').concat(n, '.').concat(l) + '?'.concat(c).concat(u) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + v.ANM.EMOJI(n, l);
 }
-function x(e, n) {
+function L(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = r ? T : I;
     if (null == e && null == n) return i[0];
     let a = (0, m.Lk)(n, 0);
     return a > 0 ? i[a % A] : null != e ? i[f()(e).shiftRight(22).mod(i.length).toJSNumber()] : i[0];
 }
-function L(e) {
+function x(e) {
     let { id: n, avatar: r, discriminator: a, bot: o } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : v.IXf,
@@ -117,7 +117,7 @@ function w(e) {
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : v.IXf,
         a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-    return null !== (n = L(e, r, i, a)) && void 0 !== n ? n : x(e.id, e.discriminator, e.isProvisional);
+    return null !== (n = x(e, r, i, a)) && void 0 !== n ? n : L(e.id, e.discriminator, e.isProvisional);
 }
 function P(e) {
     let n,
@@ -271,7 +271,7 @@ function q(e) {
 function Q(e) {
     let { id: n, icon: r, size: i = v.IXf, bot: a, botIconFirst: o, fallbackAvatar: s = !0 } = e;
     if (null != a && o) {
-        let e = L(a, !1, i);
+        let e = x(a, !1, i);
         if (null != e) return e;
     }
     if (null != r)
@@ -284,7 +284,7 @@ function Q(e) {
             canAnimate: !1
         });
     if (null != a) {
-        let e = L(a, !1, i);
+        let e = x(a, !1, i);
         if (null != e) return e;
     }
     if (s) return b;
@@ -365,7 +365,7 @@ function eo(e) {
 }
 n.ZP = {
     getUserAvatarURL: w,
-    getDefaultAvatarURL: x,
+    getDefaultAvatarURL: L,
     getGuildMemberAvatarURL: M,
     getGuildMemberAvatarURLSimple: P,
     getGuildMemberAvatarSource: k,

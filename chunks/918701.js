@@ -1,6 +1,6 @@
 r.d(n, {
     $H: function () {
-        return eL;
+        return ex;
     },
     $J: function () {
         return e0;
@@ -132,7 +132,7 @@ r.d(n, {
         return eN;
     },
     pO: function () {
-        return ex;
+        return eL;
     },
     q6: function () {
         return J;
@@ -209,8 +209,8 @@ var I = r(572004),
     R = r(617136),
     O = r(272008),
     D = r(569984),
-    x = r(497505),
-    L = r(75137),
+    L = r(497505),
+    x = r(75137),
     w = r(566078),
     P = r(312046),
     M = r(46140),
@@ -430,15 +430,15 @@ function ep(e, n, r) {
 }
 let eh = (e) => {
     switch (e) {
-        case x.y$.XBOX:
+        case L.y$.XBOX:
             return B.intl.string(B.t.G84UWV);
-        case x.y$.PLAYSTATION:
+        case L.y$.PLAYSTATION:
             return B.intl.string(B.t['6IeKx8']);
-        case x.y$.SWITCH:
+        case L.y$.SWITCH:
             return B.intl.string(B.t['1pp0sr']);
-        case x.y$.PC:
+        case L.y$.PC:
             return B.intl.string(B.t['YK+wUl']);
-        case x.y$.CROSS_PLATFORM:
+        case L.y$.CROSS_PLATFORM:
             return B.intl.string(B.t.UWVbzc);
     }
 };
@@ -454,11 +454,11 @@ function e_(e) {
     return B.intl.formatToPlainString(B.t.EQa7oq, { questName: i.config.messages.questName });
 }
 function em(e) {
-    return Object.keys(M.a_).includes(x.jn[e]);
+    return Object.keys(M.a_).includes(L.jn[e]);
 }
 function eg(e, n) {
     if (!em(n)) return !1;
-    let r = x.jn[n];
+    let r = L.jn[n];
     return (0, S.yE)(e.dismissedQuestContent, M.a_[r]);
 }
 function eE(e) {
@@ -537,10 +537,10 @@ function eD(e) {
     let { quest: n } = e;
     return n.config.taskConfig.type === g.L.FIRST_PARTY && null != n.config.taskConfig.tasks[p.X.STREAM_ON_DESKTOP];
 }
-function ex(e) {
+function eL(e) {
     return e.config.taskConfig.type === g.L.FIRST_PARTY && null != e.config.taskConfig.tasks[p.X.PLAY_ACTIVITY];
 }
-function eL(e) {
+function ex(e) {
     return null != e && eO({ quest: e });
 }
 function ew(e, n) {
@@ -548,7 +548,7 @@ function ew(e, n) {
 }
 function eP(e) {
     let n = w.r.build(e.config).application.id;
-    return ex(e) && n === M.Ts;
+    return eL(e) && n === M.Ts;
 }
 function eM(e, n) {
     return w.r.build(e.config).features.has(n);
@@ -679,12 +679,12 @@ let eB = (e, n) => {
                 quest: e,
                 taskType: p.X.WATCH_VIDEO
             });
-        if (eL(e))
+        if (ex(e))
             return eY({
                 quest: e,
                 taskType: p.X.PLAY_ON_DESKTOP
             });
-        if (ex(e))
+        if (eL(e))
             return eY({
                 quest: e,
                 taskType: p.X.PLAY_ACTIVITY
@@ -827,7 +827,7 @@ function tr(e) {
 function ti(e) {
     var n;
     let r = null === (n = eE(e)) || void 0 === n ? void 0 : n.expirationMode;
-    return !!(0, L.U)() && !!r && Z.has(r);
+    return !!(0, x.U)() && !!r && Z.has(r);
 }
 function ta(e) {
     let n = Object.keys(e.config.taskConfig.tasks),
@@ -847,7 +847,7 @@ function to(e) {
 }
 function ts(e) {
     let n = e$(e),
-        r = ex(e);
+        r = eL(e);
     return n || r;
 }
 function tl(e, n) {
@@ -856,8 +856,8 @@ function tl(e, n) {
 }
 function tu(e) {
     return {
-        [x.jn.QUEST_BAR]: x.Ok.DESKTOP_ACCOUNT_PANEL_AREA,
-        [x.jn.QUEST_BAR_V2]: x.Ok.DESKTOP_ACCOUNT_PANEL_AREA,
-        [x.jn.QUEST_BAR_MOBILE]: x.Ok.MOBILE_HOME_DOCK_AREA
+        [L.jn.QUEST_BAR]: L.Ok.DESKTOP_ACCOUNT_PANEL_AREA,
+        [L.jn.QUEST_BAR_V2]: L.Ok.DESKTOP_ACCOUNT_PANEL_AREA,
+        [L.jn.QUEST_BAR_MOBILE]: L.Ok.MOBILE_HOME_DOCK_AREA
     }[e];
 }

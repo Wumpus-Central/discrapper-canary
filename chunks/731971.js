@@ -9,20 +9,20 @@ n.d(t, {
         return c;
     },
     h6: function () {
-        return l;
+        return r;
     },
     oE: function () {
         return a;
     },
     y: function () {
-        return r;
+        return l;
     }
 });
 let i = (0, n(15729).U)((e) => ({
         nickname: void 0,
         dmsAllowed: !0,
         showActivity: !0,
-        receiveNotifications: !1,
+        receiveNotifications: !0,
         setNickname: (t) => e({ nickname: t }),
         setDmsAllowed: (t) => e({ dmsAllowed: t }),
         setShowActivity: (t) => e({ showActivity: t }),
@@ -32,13 +32,13 @@ let i = (0, n(15729).U)((e) => ({
                 nickname: void 0,
                 dmsAllowed: !0,
                 showActivity: !0,
-                receiveNotifications: !1
+                receiveNotifications: !0
             })
     })),
     a = () => {
         i.getState().reset();
     },
-    r = () => i.getState().nickname,
-    l = () => i.getState().dmsAllowed,
+    l = () => i.getState().nickname,
+    r = () => i.getState().dmsAllowed,
     o = () => i.getState().showActivity,
     c = () => i.getState().receiveNotifications;

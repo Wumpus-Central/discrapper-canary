@@ -22,14 +22,14 @@ var l = n(481060),
     v = n(929809),
     S = n(179645),
     T = n(701476),
-    A = n(785997),
-    b = n(981631),
+    b = n(785997),
+    A = n(981631),
     Z = n(188785),
     x = n(630724);
 function L() {
     null != i && (0, l.closeModal)(i);
 }
-class P extends s.Z {
+class y extends s.Z {
     _initialize() {
         a.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen), a.Z.subscribe('LOGOUT', L);
     }
@@ -57,33 +57,33 @@ class P extends s.Z {
             let e = _.Z.getGuild(L);
             null != e && (0, u.Dc)(e) && ((s = !0), (0, p.RM)(e.id));
         }
-        let P = () => 0 === f.Z.totalGuilds && !N.isPlatformEmbedded,
-            O = o.b();
+        let y = () => 0 === f.Z.totalGuilds && !N.isPlatformEmbedded,
+            P = o.b();
         (e = [
             {
                 key: 'Unified NUF Modal',
                 open: async function e(e) {
                     let t = (e) => {
                         switch (e) {
-                            case A.F.AGE_GATE:
+                            case b.F.AGE_GATE:
                                 m.Z.flowStep(x.MK.ANY, x.EW.AGE_GATE);
                                 break;
-                            case A.F.CHOOSE_TEMPLATE:
+                            case b.F.CHOOSE_TEMPLATE:
                                 m.Z.flowStep(x.MK.ANY, x.X2.GUILD_TEMPLATES);
                                 break;
-                            case A.F.CUSTOMIZE_GUILD:
+                            case b.F.CUSTOMIZE_GUILD:
                                 m.Z.flowStep(x.MK.ANY, x.X2.GUILD_CREATE);
                                 break;
-                            case A.F.CHANNEL_PROMPT:
+                            case b.F.CHANNEL_PROMPT:
                                 m.Z.flowStep(x.MK.ANY, x.X2.CHANNEL_PROMPT);
                                 break;
-                            case A.F.JOIN_GUILD:
+                            case b.F.JOIN_GUILD:
                                 m.Z.flowStep(x.MK.ANY, x.X2.JOIN_GUILD);
                                 break;
-                            case A.F.CREATION_INTENT:
+                            case b.F.CREATION_INTENT:
                                 m.Z.flowStep(x.MK.ANY, x.X2.CREATION_INTENT);
                                 break;
-                            case A.F.COMPLETE:
+                            case b.F.COMPLETE:
                                 m.Z.flowStep(x.MK.ANY, x.X2.SUCCESS);
                                 break;
                             case null:
@@ -102,18 +102,18 @@ class P extends s.Z {
                                 });
                         },
                         {
-                            onCloseRequest: b.dG4,
+                            onCloseRequest: A.dG4,
                             onCloseCallback: e,
                             modalKey: i
                         }
                     );
                 },
-                predicate: () => P() && !Z.a
+                predicate: () => y() && !Z.a
             },
             {
                 key: 'New User Age Gate',
                 open: c.i,
-                predicate: () => O && !P() && !Z.a
+                predicate: () => P && !y() && !Z.a
             },
             {
                 key: 'Claim Account Modal',
@@ -160,4 +160,4 @@ class P extends s.Z {
             t();
     }
 }
-t.Z = new P();
+t.Z = new y();

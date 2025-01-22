@@ -97,11 +97,11 @@ function D(e) {
     let { nonce: n } = e;
     M(n);
 }
-function x(e) {
+function L(e) {
     let { application: n, nonce: r } = e;
     (a = n.id), M(r);
 }
-function L() {
+function x() {
     (i = void 0), (a = void 0);
 }
 function w(e) {
@@ -176,8 +176,8 @@ m(U, 'displayName', 'InteractionStore'),
         INTERACTION_FAILURE: R,
         MESSAGE_CREATE: N,
         CHANNEL_SELECT: O,
-        INTERACTION_IFRAME_MODAL_CREATE: x,
-        INTERACTION_IFRAME_MODAL_CLOSE: L,
+        INTERACTION_IFRAME_MODAL_CREATE: L,
+        INTERACTION_IFRAME_MODAL_CLOSE: x,
         INTERACTION_IFRAME_MODAL_KEY_CREATE: w,
         INTERACTION_MODAL_CREATE: D,
         EMBEDDED_ACTIVITY_UPDATE_V2: P

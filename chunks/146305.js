@@ -255,10 +255,10 @@ t.Z = {
                     label: ej.intl.string(ej.t.AKcFUl),
                     ariaLabel: ej.intl.string(ej.t.AKcFUl),
                     onClick() {
-                        (0, d.goToAppDirectory)({
+                        (0, d.dx)({
                             guildId: t.guild.id,
                             entrypoint: {
-                                name: c.ApplicationDirectoryEntrypointNames.GUILD_SETTINGS,
+                                name: c.n3.GUILD_SETTINGS,
                                 guildSettingsSection: e
                             }
                         }),

@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return r;
+        return l;
     }
 });
-var i = n(442837),
-    l = n(317381);
-function r() {
-    return (0, i.e7)([l.ZP], () => l.ZP.getCurrentEmbeddedActivity());
+var r = n(442837),
+    i = n(317381);
+function l() {
+    return (0, r.e7)([i.ZP], () => i.ZP.getCurrentEmbeddedActivity());
 }

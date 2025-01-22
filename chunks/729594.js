@@ -78,16 +78,16 @@ function I(e, n) {
             -1 !== D && (-1 === R || D < R) && (R = D);
         }
         -1 === R && (R = b.length), (this.host = b.slice(0, R)), (b = b.slice(R)), this.parseHost(), (this.hostname = this.hostname || '');
-        var x = '[' === this.hostname[0] && ']' === this.hostname[this.hostname.length - 1];
-        if (!x) {
-            for (var L = this.hostname.split(/\./), O = 0, w = L.length; O < w; O++) {
-                var P = L[O];
+        var L = '[' === this.hostname[0] && ']' === this.hostname[this.hostname.length - 1];
+        if (!L) {
+            for (var x = this.hostname.split(/\./), O = 0, w = x.length; O < w; O++) {
+                var P = x[O];
                 if (!!P) {
                     if (!P.match(p)) {
                         for (var M = '', k = 0, U = P.length; k < U; k++) P.charCodeAt(k) > 127 ? (M += 'x') : (M += P[k]);
                         if (!M.match(p)) {
-                            var B = L.slice(0, O),
-                                G = L.slice(O + 1),
+                            var B = x.slice(0, O),
+                                G = x.slice(O + 1),
                                 Z = P.match(h);
                             Z && (B.push(Z[1]), G.unshift(Z[2])), G.length && (b = '/' + G.join('.') + b), (this.hostname = B.join('.'));
                             break;
@@ -96,10 +96,10 @@ function I(e, n) {
                 }
             }
         }
-        this.hostname.length > f ? (this.hostname = '') : (this.hostname = this.hostname.toLowerCase()), !x && (this.hostname = i.toASCII(this.hostname));
+        this.hostname.length > f ? (this.hostname = '') : (this.hostname = this.hostname.toLowerCase()), !L && (this.hostname = i.toASCII(this.hostname));
         var F = this.port ? ':' + this.port : '',
             V = this.hostname || '';
-        (this.host = V + F), (this.href += this.host), x && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), '/' !== b[0] && (b = '/' + b));
+        (this.host = V + F), (this.href += this.host), L && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), '/' !== b[0] && (b = '/' + b));
     }
     if (!_[S])
         for (var O = 0, w = u.length; O < w; O++) {

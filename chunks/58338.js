@@ -9,8 +9,8 @@ var i = t(200651),
     l = t(192379),
     a = t(442837),
     s = t(481060),
-    r = t(87051),
-    u = t(113449),
+    u = t(87051),
+    r = t(113449),
     o = t(748756),
     d = t(686660),
     c = t(122074),
@@ -48,12 +48,12 @@ function N(e) {
                     m = (n) => {
                         N(!1);
                         let t = { message_notifications: n };
-                        n === h.bL.ALL_MESSAGES && S !== M.i.ALL_MESSAGES && (t.flags = (0, u.Q4)(g.ZP.getGuildFlags(e), f.vc.UNREADS_ALL_MESSAGES)), r.Z.updateGuildNotificationSettings(e, t, E.UE.notifications(n));
+                        n === h.bL.ALL_MESSAGES && S !== M.i.ALL_MESSAGES && (t.flags = (0, r.Q4)(g.ZP.getGuildFlags(e), f.vc.UNREADS_ALL_MESSAGES)), u.Z.updateGuildNotificationSettings(e, t, E.UE.notifications(n));
                     },
                     x = (n) => {
                         N(!1);
                         let t = g.ZP.getGuildFlags(e);
-                        r.Z.updateGuildNotificationSettings(e, { flags: (0, u.Q4)(t, n === M.i.ALL_MESSAGES ? f.vc.UNREADS_ALL_MESSAGES : f.vc.UNREADS_ONLY_MENTIONS) }, E.UE.unreads(n));
+                        u.Z.updateGuildNotificationSettings(e, { flags: (0, r.Q4)(t, n === M.i.ALL_MESSAGES ? f.vc.UNREADS_ALL_MESSAGES : f.vc.UNREADS_ONLY_MENTIONS) }, E.UE.unreads(n));
                     };
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -164,7 +164,7 @@ function N(e) {
                         suppressEveryone: g.ZP.isSuppressEveryoneEnabled(e),
                         muteScheduledEvents: g.ZP.isMuteScheduledEventsEnabled(e)
                     })),
-                    t = r.Z.updateGuildNotificationSettings;
+                    t = u.Z.updateGuildNotificationSettings;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)(s.MenuGroup, {

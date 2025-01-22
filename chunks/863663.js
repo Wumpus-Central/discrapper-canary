@@ -1,28 +1,28 @@
-e.d(n, {
+n.d(t, {
     NB: function () {
-        return u;
+        return o;
     },
     ar: function () {
-        return c;
+        return d;
     },
     fG: function () {
-        return s;
+        return u;
     },
     kg: function () {
-        return o;
+        return s;
     },
     pM: function () {
         return a;
     }
 });
-var i = e(881052);
-e(496675);
-var r = e(981631),
-    l = e(388032);
-let u = '_role';
-function o(t) {
-    if (!(t >= 0))
-        switch (-t) {
+var i = n(881052);
+n(496675);
+var r = n(981631),
+    l = n(388032);
+let o = '_role';
+function s(e) {
+    if (!(e >= 0))
+        switch (-e) {
             case r.evJ.ENTITY_TOO_LARGE:
                 return l.intl.string(l.t.YbdEFB);
             case r.evJ.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
@@ -30,22 +30,22 @@ function o(t) {
             case 1:
                 return l.intl.string(l.t.R0RpRU);
             default:
-                return l.intl.formatToPlainString(l.t.cYwlp6, { code: -t });
+                return l.intl.formatToPlainString(l.t.cYwlp6, { code: -e });
         }
 }
-function a(t) {
-    let { newRoleParams: n } = t;
-    if (null != n && '' === n.name.trim()) {
-        var e, r;
+function a(e) {
+    let { newRoleParams: t } = e;
+    if (null != t && '' === t.name.trim()) {
+        var n, r;
         return (
-            (e = u),
+            (n = o),
             (r = l.intl.string(l.t['V0B/k5'])),
             new i.Hx({
                 status: 400,
                 body: {
                     message: 'Invalid form body',
                     errors: {
-                        [e]: {
+                        [n]: {
                             _errors: [
                                 {
                                     code: '',
@@ -59,20 +59,20 @@ function a(t) {
         );
     }
 }
-function s(t) {
-    var n;
-    let { guildProductListing: e, name: i, priceTier: r, description: l, image: u, imageName: o, isImageChanged: a, newRoleParams: s, hasUnsavedAttachmentChanges: c } = t,
-        d = {};
-    (null == e ? void 0 : e.name) !== i && '' !== i.trim() && (d.name = i), (null !== (n = null == e ? void 0 : e.description) && void 0 !== n ? n : '') !== l && (d.description = l), (null == e ? void 0 : e.price_tier) !== r && null != r && (d.priceTier = r), null != s && '' !== s.name.trim() ? (d.createNewRole = !0) : null === s && (d.unlinkRole = !0), u.startsWith('data:') && (a || (null == e && (Object.keys(d).length > 0 || c))) && ((d.image = u), (d.imageName = o));
-    let f = Object.keys(d).length > 0 || c;
+function u(e) {
+    var t;
+    let { guildProductListing: n, name: i, priceTier: r, description: l, image: o, imageName: s, isImageChanged: a, newRoleParams: u, hasUnsavedAttachmentChanges: d } = e,
+        c = {};
+    (null == n ? void 0 : n.name) !== i && '' !== i.trim() && (c.name = i), (null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : '') !== l && (c.description = l), (null == n ? void 0 : n.price_tier) !== r && null != r && (c.priceTier = r), null != u && '' !== u.name.trim() ? (c.createNewRole = !0) : null === u && (c.unlinkRole = !0), o.startsWith('data:') && (a || (null == n && (Object.keys(c).length > 0 || d))) && ((c.image = o), (c.imageName = s));
+    let h = Object.keys(c).length > 0 || d;
     return {
-        changes: d,
-        hasUnsavedChanges: f,
-        canSaveForDraft: f,
-        canSaveForPublished: f,
-        canPublishOrUnpublish: !(null == e || f)
+        changes: c,
+        hasUnsavedChanges: h,
+        canSaveForDraft: h,
+        canSaveForPublished: h,
+        canPublishOrUnpublish: !(null == n || h)
     };
 }
-function c(t, n) {
-    return ''.concat(location.protocol, '//').concat(location.host).concat(r.Z5c.GUILD_PRODUCT(t, n));
+function d(e, t) {
+    return ''.concat(location.protocol, '//').concat(location.host).concat(r.Z5c.GUILD_PRODUCT(e, t));
 }

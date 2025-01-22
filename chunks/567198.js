@@ -287,8 +287,8 @@
                 if (((a = p.precision), e.eq(r))) return R(f, a);
                 if (((n = e.e), (d = n >= (i = e.d.length - 1)), (u = f.s), d)) {
                     if ((i = g < 0 ? -g : g) <= _) {
-                        for (l = new p(r), n = Math.ceil(a / h + 4), o = !1; i % 2 && x((l = l.times(f)).d, n), 0 !== (i = c(i / 2)); ) {
-                            x((f = f.times(f)).d, n);
+                        for (l = new p(r), n = Math.ceil(a / h + 4), o = !1; i % 2 && L((l = l.times(f)).d, n), 0 !== (i = c(i / 2)); ) {
+                            L((f = f.times(f)).d, n);
                         }
                         return (o = !0), e.s < 0 ? new p(r).div(l) : R(l, a);
                     }
@@ -360,14 +360,14 @@
                 N,
                 O,
                 D,
-                x = i.constructor,
-                L = i.s == a.s ? 1 : -1,
+                L = i.constructor,
+                x = i.s == a.s ? 1 : -1,
                 w = i.d,
                 P = a.d;
-            if (!i.s) return new x(i);
+            if (!i.s) return new L(i);
             if (!a.s) throw Error(s + 'Division by zero');
-            for (d = 0, c = i.e - a.e, O = P.length, C = w.length, E = (g = new x(L)).d = []; P[d] == (w[d] || 0); ) ++d;
-            if ((P[d] > (w[d] || 0) && --c, (I = null == o ? (o = x.precision) : l ? o + (T(i) - T(a)) + 1 : o) < 0)) return new x(0);
+            for (d = 0, c = i.e - a.e, O = P.length, C = w.length, E = (g = new L(x)).d = []; P[d] == (w[d] || 0); ) ++d;
+            if ((P[d] > (w[d] || 0) && --c, (I = null == o ? (o = L.precision) : l ? o + (T(i) - T(a)) + 1 : o) < 0)) return new L(0);
             if (((I = (I / h + 2) | 0), (d = 0), 1 == O)) for (f = 0, P = P[0], I++; (d < C || f) && I--; d++) (S = f * p + (w[d] || 0)), (E[d] = (S / P) | 0), (f = S % P | 0);
             else {
                 for ((f = (p / (P[0] + 1)) | 0) > 1 && ((P = e(P, f)), (w = e(w, f)), (O = P.length), (C = w.length)), A = O, y = (v = w.slice(0, O)).length; y < O; ) v[y++] = 0;
@@ -527,10 +527,10 @@
             s = o.length;
         return n ? (r && (i = r - s) > 0 ? (o = o.charAt(0) + '.' + o.slice(1) + A(i)) : s > 1 && (o = o.charAt(0) + '.' + o.slice(1)), (o = o + (a < 0 ? 'e' : 'e+') + a)) : a < 0 ? ((o = '0.' + A(-a - 1) + o), r && (i = r - s) > 0 && (o += A(i))) : a >= s ? ((o += A(a + 1 - s)), r && (i = r - a - 1) > 0 && (o = o + '.' + A(i))) : ((i = a + 1) < s && (o = o.slice(0, i) + '.' + o.slice(i)), r && (i = r - s) > 0 && (a + 1 === s && (o += '.'), (o += A(i)))), e.s < 0 ? '-' + o : o;
     }
-    function x(e, n) {
+    function L(e, n) {
         if (e.length > n) return (e.length = n), !0;
     }
-    function L(e) {
+    function x(e) {
         var n, r, i;
         function a(e) {
             var n = this;
@@ -557,7 +557,7 @@
             if ((45 === e.charCodeAt(0) ? ((e = e.slice(1)), (n.s = -1)) : (n.s = 1), f.test(e))) N(n, e);
             else throw Error(l + e);
         }
-        if (((a.prototype = g), (a.ROUND_UP = 0), (a.ROUND_DOWN = 1), (a.ROUND_CEIL = 2), (a.ROUND_FLOOR = 3), (a.ROUND_HALF_UP = 4), (a.ROUND_HALF_DOWN = 5), (a.ROUND_HALF_EVEN = 6), (a.ROUND_HALF_CEIL = 7), (a.ROUND_HALF_FLOOR = 8), (a.clone = L), (a.config = a.set = w), void 0 === e && (e = {}), e)) for (n = 0, i = ['precision', 'rounding', 'toExpNeg', 'toExpPos', 'LN10']; n < i.length; ) !e.hasOwnProperty((r = i[n++])) && (e[r] = this[r]);
+        if (((a.prototype = g), (a.ROUND_UP = 0), (a.ROUND_DOWN = 1), (a.ROUND_CEIL = 2), (a.ROUND_FLOOR = 3), (a.ROUND_HALF_UP = 4), (a.ROUND_HALF_DOWN = 5), (a.ROUND_HALF_EVEN = 6), (a.ROUND_HALF_CEIL = 7), (a.ROUND_HALF_FLOOR = 8), (a.clone = x), (a.config = a.set = w), void 0 === e && (e = {}), e)) for (n = 0, i = ['precision', 'rounding', 'toExpNeg', 'toExpPos', 'LN10']; n < i.length; ) !e.hasOwnProperty((r = i[n++])) && (e[r] = this[r]);
         return a.config(e), a;
     }
     function w(e) {
@@ -577,7 +577,7 @@
         }
         return this;
     }
-    ((a = L(a)).default = a.Decimal = a),
+    ((a = x(a)).default = a.Decimal = a),
         (r = new a(1)),
         'function' == typeof define && define.amd
             ? define(function () {

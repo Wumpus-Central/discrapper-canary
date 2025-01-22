@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(179658),
     x = n(491428),
     f = n(225433),
-    _ = n(484614),
-    E = n(615287),
+    E = n(484614),
+    _ = n(615287),
     C = n(386506),
     T = n(865427),
     S = n(802098),
@@ -618,7 +618,7 @@ class X extends r.Component {
                             (0, i.jsx)(I.Z.Child, {
                                 wrap: !0,
                                 basis: '75%',
-                                children: (0, i.jsx)(_.Z, { value: n })
+                                children: (0, i.jsx)(E.Z, { value: n })
                             }),
                             (0, i.jsx)(m.Button, {
                                 onClick: this.handleGenerateLink,
@@ -871,7 +871,7 @@ function ee() {
         t = (0, d.e7)([O.Z], () => O.Z.getForcedRenderMode()),
         [n, s] = r.useState(!1),
         [a, l] = r.useState(''),
-        o = e || t === E.R5.OUT_OF_PROCESS_V2 || t === E.R5.OUT_OF_PROCESS_V3;
+        o = e || t === _.R5.OUT_OF_PROCESS_V2 || t === _.R5.OUT_OF_PROCESS_V3;
     return (r.useEffect(() => {
         (async () => {
             l(await (0, B.Y)());

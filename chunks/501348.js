@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(714338),
     x = n(857595),
     f = n(607070),
-    _ = n(627845),
-    E = n(514361),
+    E = n(627845),
+    _ = n(514361),
     C = n(600164),
     T = n(313201),
     S = n(540059),
@@ -112,7 +112,7 @@ let Y = {
         ];
     },
     X = () => {
-        let e = (0, l.e7)([E.Z], () => E.Z.isPreview),
+        let e = (0, l.e7)([_.Z], () => _.Z.isPreview),
             { enabled: t } = j.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
@@ -257,7 +257,7 @@ class J extends r.Component {
                   children: (0, i.jsx)(u.FormText, {
                       type: u.FormText.Types.DEFAULT,
                       className: V.forcedColorsWarning,
-                      children: (0, _.b)()
+                      children: (0, E.b)()
                           ? U.intl.format(U.t.Jae48P, {
                                 onClick: () => {
                                     g.Z.open(k.oAB.ACCESSIBILITY);
@@ -513,7 +513,7 @@ function ee() {
     (0, h.Z)(() => {
         $(o.z.CLIENT_THEMES_SETTINGS_BADGE), $(o.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), $(o.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     });
-    let c = (0, l.cj)([D.Z, y.ZP, f.Z, R.default, E.Z], () => {
+    let c = (0, l.cj)([D.Z, y.ZP, f.Z, R.default, _.Z], () => {
             var e, t;
             return {
                 theme: D.Z.theme,
@@ -525,7 +525,7 @@ function ee() {
                 messageGroupSpacing: f.Z.messageGroupSpacing,
                 displayCompactAvatars: y.ZP.displayCompactAvatars,
                 isStaff: null !== (t = null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
-                gradientPreset: E.Z.gradientPreset
+                gradientPreset: _.Z.gradientPreset
             };
         }),
         d = (0, S.o9)('UserSettingsAppearance'),

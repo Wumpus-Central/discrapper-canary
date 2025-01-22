@@ -25,12 +25,12 @@ var a = r(200651),
 let R = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     O = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
     D = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
-    x = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
-    L = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
+    L = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE),
+    x = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     w = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
     P = [R, R, R, R],
     M = (O + D) * 2 + R,
-    k = L + 2 * w,
+    k = x + 2 * w,
     U = 7,
     B = (e) => {
         let { activeIndex: n, stickerPickerCategories: r, categoryListRef: i, firstStandardStickerCategoryOffsetTop: s, setShouldRenderShortcut: u } = e,
@@ -44,13 +44,13 @@ let R = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                         v = E ? 1 : 0,
                         R = (null === (d = r[v]) || void 0 === d ? void 0 : d.type) === b.Ih.RECENT,
                         D = r.length > 0,
-                        L = r.length;
+                        x = r.length;
                     if (0 === i && E)
                         return (0, a.jsx)(
                             'div',
                             {
                                 role: 'listitem',
-                                'aria-setsize': L,
+                                'aria-setsize': x,
                                 'aria-posinset': i,
                                 children: (0, a.jsx)(c.Clickable, {
                                     'aria-label': C.intl.string(C.t.y3LQCA),
@@ -63,8 +63,8 @@ let R = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                         size: 'custom',
                                         color: 'currentColor',
                                         className: N.stickerCategoryGenericIcon,
-                                        height: x,
-                                        width: x
+                                        height: L,
+                                        width: L
                                     })
                                 })
                             },
@@ -75,7 +75,7 @@ let R = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                             'div',
                             {
                                 role: 'listitem',
-                                'aria-setsize': L,
+                                'aria-setsize': x,
                                 'aria-posinset': i,
                                 children: (0, a.jsx)(c.Clickable, {
                                     'aria-label': C.intl.string(C.t.RxAmVF),
@@ -88,8 +88,8 @@ let R = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                         size: 'custom',
                                         color: 'currentColor',
                                         className: N.stickerCategoryGenericIcon,
-                                        height: x,
-                                        width: x
+                                        height: L,
+                                        width: L
                                     })
                                 })
                             },
@@ -132,7 +132,7 @@ let R = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                     children: (e) =>
                                         (0, a.jsx)('div', {
                                             role: 'listitem',
-                                            'aria-setsize': L,
+                                            'aria-setsize': x,
                                             'aria-posinset': i,
                                             children: (0, a.jsx)(c.Clickable, {
                                                 ...e,
@@ -180,7 +180,7 @@ let R = (0, E.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 (e) => {
                     var n;
                     let r = null === (n = i.current) || void 0 === n ? void 0 : n.getListDimensions();
-                    if (null != r) u(e + r.height - L < s);
+                    if (null != r) u(e + r.height - x < s);
                 },
                 [s, i, u]
             )

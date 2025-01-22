@@ -69,8 +69,8 @@ var m = r(512722),
     R = r(581883),
     O = r(48481),
     D = r(526761),
-    x = r(981631);
-function L(e, n, r) {
+    L = r(981631);
+function x(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -191,7 +191,7 @@ class U {
                 let {
                         body: { settings: n }
                     } = await v.tn.get({
-                        url: x.ANM.USER_SETTINGS_PROTO(this.type),
+                        url: L.ANM.USER_SETTINGS_PROTO(this.type),
                         rejectWithError: !1
                     }),
                     r = (0, O.d5)(this.ProtoClass, n);
@@ -256,12 +256,12 @@ class U {
         });
     }
     constructor(e, n) {
-        L(this, 'ProtoClass', void 0),
-            L(this, 'type', void 0),
-            L(this, 'logger', void 0),
-            L(this, 'beforeSendCallbacks', void 0),
-            L(this, 'lastSendTime', void 0),
-            L(this, 'persistChanges', void 0),
+        x(this, 'ProtoClass', void 0),
+            x(this, 'type', void 0),
+            x(this, 'logger', void 0),
+            x(this, 'beforeSendCallbacks', void 0),
+            x(this, 'lastSendTime', void 0),
+            x(this, 'persistChanges', void 0),
             (this.ProtoClass = e),
             (this.type = n),
             (this.beforeSendCallbacks = []),
@@ -285,7 +285,7 @@ class U {
                 try {
                     this.saveLastSendTime();
                     let { body: r } = await v.tn.patch({
-                        url: x.ANM.USER_SETTINGS_PROTO(this.type),
+                        url: L.ANM.USER_SETTINGS_PROTO(this.type),
                         body: {
                             settings: n,
                             required_data_version: e.offlineEditDataVersion
@@ -316,7 +316,7 @@ class U {
                             rateLimited: !0,
                             timeout: r
                         });
-                    } else if (400 === e.status && (null === (r = e.body) || void 0 === r ? void 0 : r.code) === x.evJ.INVALID_USER_SETTINGS_DATA) throw (this.logger.log('Reloading do to invalid data'), this.loadIfNecessary(!0), e);
+                    } else if (400 === e.status && (null === (r = e.body) || void 0 === r ? void 0 : r.code) === L.evJ.INVALID_USER_SETTINGS_DATA) throw (this.logger.log('Reloading do to invalid data'), this.loadIfNecessary(!0), e);
                     else throw (this.logger.log('Unknown user settings error'), e);
                 }
             }),

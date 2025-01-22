@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return _;
+        return E;
     }
 });
 var i = n(200651),
@@ -25,7 +25,7 @@ function x(e) {
         f = r.useCallback(() => {
             (0, c.Zn)(t);
         }, [t]),
-        _ = r.useCallback(() => (0, u.openUserProfileModal)({ userId: t }), [t]);
+        E = r.useCallback(() => (0, u.openUserProfileModal)({ userId: t }), [t]);
     return (
         r.useEffect(() => {
             (0, l.PR)(t);
@@ -44,7 +44,7 @@ function x(e) {
                     children: [
                         (0, i.jsx)(a.Clickable, {
                             className: p.username,
-                            onClick: _,
+                            onClick: E,
                             children: (0, i.jsx)(a.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'interactive-active',
@@ -102,7 +102,7 @@ function f(e) {
         ]
     });
 }
-function _(e) {
+function E(e) {
     let { userId: t } = e,
         n = (0, d._)(t);
     return (0, i.jsxs)(i.Fragment, {

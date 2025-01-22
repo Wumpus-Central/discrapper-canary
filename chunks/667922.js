@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return p;
+        return M;
     }
 });
 var i = t(200651),
@@ -12,19 +12,19 @@ var i = t(200651),
     u = t(995774),
     d = t(665906),
     c = t(695346),
-    f = t(496675),
-    g = t(768581),
+    g = t(496675),
+    f = t(768581),
     m = t(585483),
     h = t(176354),
     E = t(981631),
     I = t(185923),
     v = t(388032);
-function p(e, n) {
+function M(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
-        g = (0, d.$R)(n),
-        p = (0, r.e7)([f.Z], () => (n.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, n)) && g, [n, g]),
+        f = (0, d.$R)(n),
+        M = (0, r.e7)([g.Z], () => (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)) && f, [n, f]),
         Z = (0, o.MZ)(n.getGuildId());
-    if (!c.nc.getSetting() || !p || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
+    if (!c.nc.getSetting() || !M || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
     let x = Z.filter(
         (e) =>
             !h.ZP.isEmojiFilteredOrLocked({
@@ -43,7 +43,7 @@ function p(e, n) {
                     id: null !== (d = null !== (o = l.id) && void 0 !== o ? o : l.optionallyDiverseSequence) && void 0 !== d ? d : l.name,
                     label: ':'.concat(l.name, ':'),
                     icon: (e) =>
-                        (0, i.jsx)(M, {
+                        (0, i.jsx)(p, {
                             ...e,
                             reducedMotionEnabled: t.enabled,
                             emoji: l
@@ -80,14 +80,14 @@ function p(e, n) {
         })
     });
 }
-function M(e) {
+function p(e) {
     var n;
     let { emoji: t, reducedMotionEnabled: l, className: r = '', isFocused: a = !1 } = e;
     return (0, i.jsx)('img', {
         className: r,
         src:
             null != t.id
-                ? g.ZP.getEmojiURL({
+                ? f.ZP.getEmojiURL({
                       id: t.id,
                       animated: t.animated && (!l || a),
                       size: 18

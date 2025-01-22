@@ -166,20 +166,20 @@ function D(e) {
         r && n.push(i), i.opensCodeBlock && (r = !0);
     }
 }
-let x = {
+let L = {
         max: 1 / 0,
         maxAge: 1 * d.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    L = new (c())(x);
+    x = new (c())(L);
 function w(e, n) {
     let r = ''.concat(e, '-').concat(n),
-        i = L.get(r);
+        i = x.get(r);
     if (null != i) return i;
     let a = f.default.highlight(n, e, !1);
     if (null == a || a.illegal) return null;
     let o = a.value.split('\n');
-    return L.set(r, o), o;
+    return x.set(r, o), o;
 }
 function P(e) {
     let n;

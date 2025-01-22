@@ -1,54 +1,54 @@
 n.d(t, {
     R: function () {
-        return g;
+        return f;
     }
 }),
     n(47120);
 var i = n(200651),
     a = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     o = n(481060),
     c = n(590965),
     s = n(51331),
     d = n(259580),
     u = n(731971),
-    _ = n(981631),
-    f = n(388032),
-    m = n(671149);
-let g = () => {
+    m = n(981631),
+    _ = n(388032),
+    g = n(671149);
+let f = () => {
     var e;
-    let { nickname: t, dmsAllowed: n, showActivity: r, receiveNotifications: g, setNickname: p, setDmsAllowed: b, setShowActivity: v, setReceiveNotifications: h } = (0, u.XW)(),
-        [T, S] = a.useState(!1),
-        I = null === (e = c.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable;
+    let { nickname: t, dmsAllowed: n, showActivity: l, receiveNotifications: f, setNickname: b, setDmsAllowed: p, setShowActivity: S, setReceiveNotifications: h } = (0, u.XW)(),
+        [v, I] = a.useState(!1),
+        C = null === (e = c.Z.getProps().invite) || void 0 === e ? void 0 : e.is_nickname_changeable;
     return (0, i.jsxs)('div', {
-        className: l()(m.editProfileContainer, { [m.opened]: T }),
+        className: r()(g.editProfileContainer, { [g.opened]: v }),
         children: [
             (0, i.jsxs)(o.Clickable, {
-                className: m.header,
-                onClick: () => S((e) => !e),
+                className: g.header,
+                onClick: () => I((e) => !e),
                 children: [
                     (0, i.jsx)('div', {
-                        className: m.headerIconWrapper,
+                        className: g.headerIconWrapper,
                         children: (0, i.jsx)(o.SettingsIcon, { size: 'md' })
                     }),
                     (0, i.jsxs)('div', {
-                        className: m.title,
+                        className: g.title,
                         children: [
                             (0, i.jsx)(o.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: f.intl.string(f.t.A5wHQ0)
+                                children: _.intl.string(_.t.A5wHQ0)
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'interactive-normal',
-                                children: f.intl.string(f.t.UKCSER)
+                                children: _.intl.string(_.t.UKCSER)
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: l()(m.caret, { [m.opened]: T }),
+                        className: r()(g.caret, { [g.opened]: v }),
                         children: (0, i.jsx)(d.Z, {
                             width: 18,
                             height: 18,
@@ -58,38 +58,38 @@ let g = () => {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: l()(m.customizationSection, { [m.opened]: T }, I ? null : m.condensed),
+                className: r()(g.customizationSection, { [g.opened]: v }, C ? null : g.condensed),
                 children: [
-                    I &&
+                    C &&
                         (0, i.jsxs)('div', {
-                            className: m.serverNickname,
+                            className: g.serverNickname,
                             children: [
                                 (0, i.jsx)(o.Text, {
                                     variant: 'eyebrow',
                                     color: 'header-secondary',
-                                    children: f.intl.string(f.t.me1lRk)
+                                    children: _.intl.string(_.t.me1lRk)
                                 }),
                                 (0, i.jsx)(o.TextInput, {
-                                    placeholder: f.intl.string(f.t['09Q8ys']),
-                                    maxLength: _.l$U,
+                                    placeholder: _.intl.string(_.t['09Q8ys']),
+                                    maxLength: m.l$U,
                                     value: t,
-                                    onChange: p
+                                    onChange: b
                                 })
                             ]
                         }),
                     (0, i.jsx)(s.Z, {
-                        title: f.intl.string(f.t['/2ed39']),
+                        title: _.intl.string(_.t['/2ed39']),
                         value: n,
-                        onChange: b
+                        onChange: p
                     }),
                     (0, i.jsx)(s.Z, {
-                        title: f.intl.string(f.t.bN4m1N),
-                        value: r,
-                        onChange: v
+                        title: _.intl.string(_.t.bN4m1N),
+                        value: l,
+                        onChange: S
                     }),
                     (0, i.jsx)(s.Z, {
-                        title: f.intl.string(f.t.rnrPkZ),
-                        value: g,
+                        title: _.intl.string(_.t.rnrPkZ),
+                        value: f,
                         onChange: h
                     })
                 ]

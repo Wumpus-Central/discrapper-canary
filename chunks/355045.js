@@ -47,7 +47,7 @@ function A(e) {
             onClose: (e) => e && n()
         });
     }
-    function x() {
+    function L() {
         (0, p.Z)({
             initialPlanId: null,
             subscriptionTier: I.Si.TIER_2,
@@ -135,7 +135,7 @@ function A(e) {
                               innerClassName: s()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaGiftContent),
                               look: c.Button.Looks.OUTLINED,
                               color: c.Button.Colors.WHITE,
-                              onClick: x,
+                              onClick: L,
                               size: c.Button.Sizes.LARGE,
                               children: [
                                   (0, i.jsx)(c.GiftIcon, {

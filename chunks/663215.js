@@ -122,7 +122,7 @@ function N(e) {
         }),
         R = p.ZP.canUseSoundboardEverywhere(i),
         D = (0, s.e7)([c.Z], () => c.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        x = (0, s.e7)(
+        L = (0, s.e7)(
             [d.Z],
             () => {
                 let { canCreateExpressions: e } = (0, l.Gw)(D);
@@ -130,7 +130,7 @@ function N(e) {
             },
             [D]
         ),
-        { canSeeRecentlyHeard: L, canSeeFrequentlyPlayed: w } = (0, _.k)({
+        { canSeeRecentlyHeard: x, canSeeFrequentlyPlayed: w } = (0, _.k)({
             location: 'soundboard-useSoundGrid',
             autoTrackExposure: !0
         }),
@@ -159,7 +159,7 @@ function N(e) {
                   sectionType: E.bg.FAVORITES,
                   sortById: !0
               }),
-              L &&
+              x &&
                   T({
                       sections: o,
                       guildIds: I,
@@ -177,7 +177,7 @@ function N(e) {
                       sectionType: E.bg.FREQUENTLY_USED,
                       sortById: !1
                   }),
-              A(o, D, x, u, n),
+              A(o, D, L, u, n),
               !R && C(o, u),
               S(o, N, null == D ? void 0 : D.id, u, a),
               R && C(o, u),
@@ -193,7 +193,7 @@ function N(e) {
                       lockedCustomSoundCount: i
                   }
               });
-    }, [I, u, h, M, P, w, L, D, x, n, R, N, r, y, a]);
+    }, [I, u, h, M, P, w, x, D, L, n, R, N, r, y, a]);
 }
 function R(e, n, r) {
     return o.useMemo(

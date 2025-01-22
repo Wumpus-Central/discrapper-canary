@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(724458);
@@ -19,7 +19,7 @@ var i = n(200651),
     p = n(388032),
     x = n(774927),
     f = n(232186);
-function _(e) {
+function E(e) {
     let { label: t, onChange: n, enabled: r, subLabel: s } = e;
     return (0, i.jsx)(o.FormSwitch, {
         value: !!r,
@@ -28,7 +28,7 @@ function _(e) {
         children: t
     });
 }
-function E() {
+function _() {
     let e = (0, l.e7)([d.Z], () => d.Z.getSubsection()),
         t = r.createRef(),
         { categories: n, initialized: s } = (0, l.cj)([m.Z], () => m.Z.getEmailSettings());
@@ -39,7 +39,7 @@ function E() {
             null == t || null === (n = t.current) || void 0 === n || n.scrollIntoView(!0);
         }
     }, [s, t, e]);
-    let E = g.M0.reduce((e, t) => e || !!n[t], !1),
+    let _ = g.M0.reduce((e, t) => e || !!n[t], !1),
         C = {
             [g.$Z.COMMUNICATION]: h.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
             [g.$Z.SOCIAL]: h.s6.NOTIFICATIONS_EMAILS_SOCIAL,
@@ -61,7 +61,7 @@ function E() {
                               let { category: t, label: r, subLabel: s } = e,
                                   a = C[t],
                                   l = (0, i.jsx)(
-                                      _,
+                                      E,
                                       {
                                           label: r(),
                                           subLabel: s(),
@@ -89,7 +89,7 @@ function E() {
                               children: [
                                   (0, i.jsx)(o.Button, {
                                       className: x.marketingUnsubscribeButton,
-                                      disabled: !E,
+                                      disabled: !_,
                                       look: o.ButtonLooks.LINK,
                                       color: o.ButtonColors.LINK,
                                       onClick: u.oc,

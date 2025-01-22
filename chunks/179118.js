@@ -30,8 +30,8 @@ var a = r(200651),
     R = r(669079),
     O = r(74538),
     D = r(51144),
-    x = r(987209),
-    L = r(981631),
+    L = r(987209),
+    x = r(981631),
     w = r(474936),
     P = r(388032),
     M = r(431852);
@@ -41,9 +41,9 @@ function U(e) {
         [I, S] = o.useState(f.CopyInput.Modes.DEFAULT),
         C = (0, d.e7)([A.Z], () => A.Z.enabled),
         U = p || (null != u && null != h),
-        G = (null == i ? void 0 : i.productLine) === L.POd.COLLECTIBLES,
+        G = (null == i ? void 0 : i.productLine) === x.POd.COLLECTIBLES,
         Z = (0, y.Z)(),
-        { selectedGiftingPromotionReward: F } = (0, x.wD)(),
+        { selectedGiftingPromotionReward: F } = (0, L.wD)(),
         V = null == Z ? void 0 : Z.giftPurchaseConfirmation,
         j = (0, v.tK)(null == F ? void 0 : F.skuId),
         H = (0, v.a5)(s) && null != j && null != V,
@@ -220,7 +220,7 @@ let B = (e) => {
         R = [...T, ...N],
         O = (0, d.e7)([C.default], () => C.default.filter((e) => R.includes(e.id) && !e.bot), [R]);
     if (null == O || 0 === O.length) return null;
-    let x = c().sortBy(O, (e) => R.indexOf(e.id));
+    let L = c().sortBy(O, (e) => R.indexOf(e.id));
     return (0, a.jsxs)('div', {
         className: M.giftRecipientSection,
         children: [
@@ -244,7 +244,7 @@ let B = (e) => {
                         onChange: (e) => {
                             s(e), u(!1);
                         },
-                        options: x.map((e) => ({
+                        options: L.map((e) => ({
                             value: e,
                             label: ''.concat(D.ZP.getUserTag(e))
                         }))

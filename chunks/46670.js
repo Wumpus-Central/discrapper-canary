@@ -96,8 +96,8 @@ function p(e, n, r) {
     let {
             itemProps: O,
             isPressed: D,
-            isFocused: x,
-            hasAction: L,
+            isFocused: L,
+            hasAction: x,
             allowsSelection: w
         } = (0, s.Cs)({
             selectionManager: n.selectionManager,
@@ -133,13 +133,13 @@ function p(e, n, r) {
             },
             labelProps: { id: A },
             descriptionProps: { id: C },
-            isFocused: x,
-            isFocusVisible: x && (0, a.E)(),
+            isFocused: L,
+            isFocusVisible: L && (0, a.E)(),
             isSelected: y,
             isDisabled: v,
             isPressed: D,
             allowsSelection: w,
-            hasAction: L
+            hasAction: x
         }
     );
 }

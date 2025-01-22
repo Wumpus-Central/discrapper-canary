@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(373793),
     l = t(367907),
-    o = t(69580),
-    a = t(812206),
+    a = t(69580),
+    o = t(812206),
     d = t(981631),
     r = t(689079);
 function c(e) {
@@ -19,11 +19,11 @@ function c(e) {
         section_name: v,
         source: _
     });
-    let f = a.Z.getApplication(m),
+    let f = o.Z.getApplication(m),
         h = i.Y.USER_INSTALL,
         M = null == f ? void 0 : null === (s = f.integrationTypesConfig) || void 0 === s ? void 0 : null === (u = s[h]) || void 0 === u ? void 0 : null === (c = u.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
     return new Promise((e) => {
-        (0, o.openOAuth2Modal)(
+        (0, a.openOAuth2Modal)(
             {
                 clientId: m,
                 integrationType: h,

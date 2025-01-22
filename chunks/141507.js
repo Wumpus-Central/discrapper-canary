@@ -1,6 +1,6 @@
 r.d(n, {
     k: function () {
-        return L;
+        return x;
     }
 });
 var i = r(200651),
@@ -32,14 +32,14 @@ let O = 250;
 function D(e) {
     return null != e && 'animated' in e;
 }
-let x = (e) => {
+let L = (e) => {
         let { inspectedEmoji: n, guild: r } = e,
             i = D(n);
         return null != r && i ? N.intl.format(N.t.KFW2aW, { guildName: r.name }) : null;
     },
-    L = a.memo(function (e) {
+    x = a.memo(function (e) {
         let n,
-            L,
+            x,
             w,
             { className: P, emojiGrid: M, guildId: k, pickerIntention: U, channel: B } = e,
             { enabled: G } = b.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
@@ -110,7 +110,7 @@ let x = (e) => {
                           size: 28
                       })
                     : n.url;
-            L =
+            x =
                 '' === e
                     ? (0, i.jsx)(l.Text, {
                           variant: 'text-md/normal',
@@ -123,7 +123,7 @@ let x = (e) => {
                           className: R.emoji
                       });
         } else if ('CREATE_EMOJI' === n.type)
-            L = (0, i.jsx)(l.CirclePlusIcon, {
+            x = (0, i.jsx)(l.CirclePlusIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: R.icon,
@@ -134,7 +134,7 @@ let x = (e) => {
                 a = r(39874),
                 o = r(853871),
                 l = r(63149);
-            L = K.has(n.guildId)
+            x = K.has(n.guildId)
                 ? (0, i.jsx)('img', {
                       className: R.icon,
                       src: (0, s.wj)(Q) ? o : l,
@@ -158,7 +158,7 @@ let x = (e) => {
         let $ =
             G && 'CREATE_EMOJI' === n.type
                 ? N.intl.string(N.t['Z/r7IS'])
-                : x({
+                : L({
                       inspectedEmoji: n,
                       channel: B,
                       guildId: k,
@@ -167,7 +167,7 @@ let x = (e) => {
                   });
         return (0, i.jsx)(_.Z, {
             className: P,
-            graphicPrimary: L,
+            graphicPrimary: x,
             graphicSecondary: J,
             titlePrimary: w,
             titleSecondary: $,

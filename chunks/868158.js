@@ -3,7 +3,7 @@ r.d(n, {
         return O;
     },
     Fx: function () {
-        return L;
+        return x;
     },
     IM: function () {
         return D;
@@ -60,7 +60,7 @@ function R(e, n) {
                           })) && void 0 !== r
                 ? r
                 : [],
-        c = x(n, i, (e) => ({
+        c = L(n, i, (e) => ({
             id: e.id,
             members: e.members,
             presences: e.presences,
@@ -102,7 +102,7 @@ function D(e, n, r) {
             null != n && (e.recipients = n.map((e) => (l()(null != N[e], 'Missing user in compressed ready payload'), N[e]))), delete e.recipient_ids;
         });
     let h = null !== (i = null == d ? void 0 : d.map((e, n) => (!0 === e.unavailable ? e : ((e.members = w(N, null == u ? void 0 : u[n])), k(e))))) && void 0 !== i ? i : [],
-        _ = x(n, d, (e) => k(e));
+        _ = L(n, d, (e) => k(e));
     return (
         null != _ && h.push(_),
         {
@@ -115,10 +115,10 @@ function D(e, n, r) {
         }
     );
 }
-function x(e, n, r) {
+function L(e, n, r) {
     return null == C || C.identifyTime !== e || (null != n && n.some((e) => e.id === C.guild.id)) ? null : r(C.guild);
 }
-function L(e, n) {
+function x(e, n) {
     var r, i, a;
     let o = b.Z.getGuild(e.id),
         s = U(

@@ -3,7 +3,7 @@ r.d(n, {
         return M;
     },
     Z: function () {
-        return L;
+        return x;
     }
 });
 var i = r(47120);
@@ -33,8 +33,8 @@ var l = r(373793),
     R = r(665692);
 let O = new Set(['applicationCommandOption']),
     D = new Set([u.jw.ATTACHMENT]),
-    x = new Set(['line', 'applicationCommand']);
-function L(e, n, r, i) {
+    L = new Set(['line', 'applicationCommand']);
+function x(e, n, r, i) {
     let { insertData: a, isInline: o, isVoid: s, onChange: l, deleteBackward: u, deleteForward: m, deleteFragment: g } = e;
     (e.insertData = (r) => {
         if (null != n && A.bN.isEditorEmpty(e) && r.types.includes('application/x-discord-interaction-data')) {
@@ -155,7 +155,7 @@ function w(e) {
             );
         let e = A.bN.richValue(i)[0],
             n = e.children[0];
-        if (x.has(e.type) && A.LC.isText(n)) {
+        if (L.has(e.type) && A.LC.isText(n)) {
             let e = F(n.text, o);
             if (null != e)
                 return (

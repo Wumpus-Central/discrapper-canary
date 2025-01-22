@@ -1,4 +1,4 @@
-o.exports = {
+e.exports = {
     wrapper: 'wrapper_e45025',
     content: 'content_e45025',
     initialGlowUp: 'initialGlowUp_e45025',

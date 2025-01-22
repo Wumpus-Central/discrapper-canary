@@ -19,8 +19,8 @@ var r = n(442837),
     p = n(823087),
     x = n(232388),
     f = n(716210),
-    _ = n(459674),
-    E = n(803567),
+    E = n(459674),
+    _ = n(803567),
     C = n(269876),
     T = n(976758),
     S = n(726985),
@@ -74,13 +74,13 @@ function A() {
             (0, i.jsx)(c.Z, {
                 webSetting: S.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                 title: N.intl.string(N.t['6I6GUl']),
-                children: (0, i.jsx)(E.Z, { refreshStyles: !0 })
+                children: (0, i.jsx)(_.Z, { refreshStyles: !0 })
             }),
             (0, i.jsx)(c.Z, {
                 title: N.intl.string(N.t['8/udY2']),
                 webSetting: S.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
                 children: (0, i.jsxs)(d.Z, {
-                    children: [(0, i.jsx)(f.Z, { refreshStyles: !0 }), (0, i.jsx)(_.Z, { refreshStyles: !0 }), (0, i.jsx)(u.Z, { refreshStyles: !0 }), (0, i.jsx)(m.Z, { refreshStyles: !0 }), (0, i.jsx)(x.Z, { refreshStyles: !0 })]
+                    children: [(0, i.jsx)(f.Z, { refreshStyles: !0 }), (0, i.jsx)(E.Z, { refreshStyles: !0 }), (0, i.jsx)(u.Z, { refreshStyles: !0 }), (0, i.jsx)(m.Z, { refreshStyles: !0 }), (0, i.jsx)(x.Z, { refreshStyles: !0 })]
                 })
             })
         ]

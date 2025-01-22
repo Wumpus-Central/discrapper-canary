@@ -39,7 +39,7 @@ function I(e, n) {
     let O = o.useCallback(() => {
             (0, h.RO)(v.X1.GIF, i);
         }, [i]),
-        { Component: D, events: x, play: L } = (0, d.V)(),
+        { Component: D, events: L, play: x } = (0, d.V)(),
         w = (0, p.Q3)('ChannelGIFPickerButton');
     if (r) return null;
     let P = S === v.X1.GIF && A === i;
@@ -53,10 +53,10 @@ function I(e, n) {
                 ...e,
                 children: (0, a.jsx)(g.Z, {
                     innerClassName: b.button,
-                    onMouseEnter: x.onMouseEnter,
-                    onMouseLeave: x.onMouseLeave,
+                    onMouseEnter: L.onMouseEnter,
+                    onMouseLeave: L.onMouseLeave,
                     onClick: () => {
-                        O(), L();
+                        O(), x();
                     },
                     isActive: P,
                     pulse: s,

@@ -14,8 +14,8 @@ var i = n(200651),
     u = n(36635);
 function m(e) {
     let { integrations: t, editedIntegration: n, guild: m, platformType: h, labelText: p, descriptionText: g, helpText: x, canNavigate: f } = e,
-        b = o.Z.get(h),
-        v = l.useCallback(
+        v = o.Z.get(h),
+        b = l.useCallback(
             async (e) => {
                 f() && (await s.Z.enableIntegration(m.id, e.type, e.id), a.Z.startEditingIntegration(e.id));
             },
@@ -27,7 +27,7 @@ function m(e) {
             },
             [f, n, m.id]
         ),
-        N = l.useCallback(
+        I = l.useCallback(
             (e) => {
                 f() && (e === (null == n ? void 0 : n.id) ? a.Z.stopEditingIntegration() : a.Z.startEditingIntegration(e));
             },
@@ -37,8 +37,8 @@ function m(e) {
         children: [
             (0, i.jsx)(d.Z, {
                 name: p,
-                icon: null == b ? void 0 : b.icon.whiteSVG,
-                iconBackgroundColor: null == b ? void 0 : b.color,
+                icon: null == v ? void 0 : v.icon.whiteSVG,
+                iconBackgroundColor: null == v ? void 0 : v.color,
                 iconClassName: u.platformIcon,
                 description: g,
                 isHeader: !0
@@ -52,9 +52,9 @@ function m(e) {
                         editedIntegration: n,
                         guild: m,
                         isExpanded: (null == n ? void 0 : n.id) === e.id,
-                        onEnable: v,
+                        onEnable: b,
                         onDisable: C,
-                        onToggleExpand: () => N(e.id)
+                        onToggleExpand: () => I(e.id)
                     },
                     e.id
                 )

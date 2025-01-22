@@ -27,22 +27,22 @@ function S(e) {
     let { channel: t, baseChannelId: n } = e,
         S = (0, E.ZP)(t),
         T = (0, h.K)(),
-        A = (0, h.V)(),
-        b = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
+        b = (0, h.V)(),
+        A = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
         Z = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
         x = (0, p.V)(t.id, t.getRecipientId()),
         L = r.useCallback(() => {
-            f.Z.closeChannelSidebar(_.uZ), b && T && (0, g.Kh)(t.id), Z && A && (0, g.Kh)(t.id);
-        }, [t.id, Z, A, b, T]),
-        P = r.useCallback(() => {
+            f.Z.closeChannelSidebar(_.uZ), A && T && (0, g.Kh)(t.id), Z && b && (0, g.Kh)(t.id);
+        }, [t.id, Z, b, A, T]),
+        y = r.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
-        { markAsNotSpam: O } = (0, m.m)({
+        { markAsNotSpam: P } = (0, m.m)({
             onAcceptSuccess: L,
-            onError: P
+            onError: y
         });
     if (null == t || !t.isDM()) return null;
-    let y = [
+    let O = [
         (0, i.jsx)(
             o.ZP.Icon,
             {
@@ -56,7 +56,7 @@ function S(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.ZP, {
-                toolbar: y,
+                toolbar: O,
                 'aria-label': C.intl.string(C.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
@@ -76,7 +76,7 @@ function S(e) {
                         (0, i.jsx)(a.Button, {
                             className: v.hamBannerButton,
                             size: a.ButtonSizes.SMALL,
-                            onClick: () => O(t, x),
+                            onClick: () => P(t, x),
                             children: C.intl.string(C.t.koqL3d)
                         })
                     ]

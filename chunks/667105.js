@@ -1,9 +1,9 @@
 r.d(n, {
     DH: function () {
-        return L;
+        return x;
     },
     Ks: function () {
-        return x;
+        return L;
     },
     g2: function () {
         return O;
@@ -133,7 +133,7 @@ let O = (e) => {
             children: r
         });
     };
-function x(e) {
+function L(e) {
     var n;
     let { quest: r, progressState: i, isCollectibleQuest: a, location: s, questContentPosition: l, questContentRowIndex: u, inGiftInventory: c, isVideoQuest: f } = e,
         p = N({
@@ -237,7 +237,7 @@ function x(e) {
         }
     }, [I, i, f, E, c, p, a, r, s, l, u, R, v, T]);
 }
-function L() {
+function x() {
     return (0, l.e7)([E.Z], () => {
         var e, n;
         return null !== (n = null !== (e = E.Z.questDeliveryOverride) && void 0 !== e ? e : (0, y.PM)(E.Z.quests, E.Z.questToDeliverForPlacement, v.Ok.DESKTOP_ACCOUNT_PANEL_AREA)) && void 0 !== n ? n : null;

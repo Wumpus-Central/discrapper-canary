@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(167533),
     S = n(925329),
     T = n(707409),
-    A = n(210887),
-    b = n(283595),
+    b = n(210887),
+    A = n(283595),
     Z = n(417363),
     x = n(941128),
     L = n(451478),
-    P = n(424218),
-    O = n(780570),
-    y = n(353042),
+    y = n(424218),
+    P = n(780570),
+    O = n(353042),
     R = n(86826),
     j = n(981631),
     D = n(388032),
@@ -83,10 +83,10 @@ function B(e, t) {
         case j.f07.ALLOCATING_DISK:
             return ''.concat(e);
         default:
-            return (0, P.BU)(e, { useKibibytes: !0 });
+            return (0, y.BU)(e, { useKibibytes: !0 });
     }
 }
-let V = {
+let H = {
     [j.vxO.INSTALLING]: {
         [T.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JfJt9f, {
@@ -175,8 +175,8 @@ let V = {
             })
     }
 };
-function H(e, t, n, i, r) {
-    let l = V[t],
+function V(e, t, n, i, r) {
+    let l = H[t],
         a = null != l ? Object.keys(l) : [],
         { unit: s, time: o } = (0, T.CI)(null != e ? e / 60 : null, a);
     if (null != l && null != s) {
@@ -202,7 +202,7 @@ function F(e) {
         case j.f07.ALLOCATING_DISK:
             return D.intl.formatToPlainString(D.t.XigoJy, { percent: i });
         case j.f07.PATCHING:
-            return H(a, t, i, o, s);
+            return V(a, t, i, o, s);
         case j.f07.FINALIZING:
             return D.intl.formatToPlainString(D.t['6PHDUF'], { percent: i });
         case j.f07.PAUSING:
@@ -224,7 +224,7 @@ function F(e) {
                 total: s
             });
         case j.f07.REPAIRING:
-            if (t === j.vxO.REPAIRING) return H(a, t, i, o, s);
+            if (t === j.vxO.REPAIRING) return V(a, t, i, o, s);
             return D.intl.formatToPlainString(D.t.OCzETU, {
                 percent: i,
                 progress: o,
@@ -296,7 +296,7 @@ class K extends r.PureComponent {
             if (null != i && null != r) {
                 let n = B(r, l),
                     a = B(i, l),
-                    s = Math.floor((t = O.xI(i, r)));
+                    s = Math.floor((t = P.xI(i, r)));
                 e =
                     l === j.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
@@ -327,15 +327,15 @@ class K extends r.PureComponent {
         if (null == e) return null;
         let { progress: n, total: i } = e;
         if (null == n || null == i) return null;
-        let r = O.xI(n, i),
+        let r = P.xI(n, i),
             l = Math.floor(r),
             a =
                 0 === n && 1 === i
                     ? D.intl.string(D.t['+pfsFR'])
                     : D.intl.formatToPlainString(D.t['+feX8f'], {
                           percent: l,
-                          progress: (0, P.BU)(n),
-                          total: (0, P.BU)(i)
+                          progress: (0, y.BU)(n),
+                          total: (0, y.BU)(i)
                       });
         return this.renderBody({
             message: a,
@@ -344,7 +344,7 @@ class K extends r.PureComponent {
         });
     }
     renderProgressPatching() {
-        return (0, i.jsx)(y.Z, {
+        return (0, i.jsx)(O.Z, {
             getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
@@ -355,7 +355,7 @@ class K extends r.PureComponent {
         if (null == e) return null;
         let { total: t, progress: n, stage: i, type: r } = e;
         if (null == t || null == n || null == i) return null;
-        let l = O.xI(n, t),
+        let l = P.xI(n, t),
             a = Math.floor(l);
         return this.renderBody({
             percent: l,
@@ -395,8 +395,8 @@ class K extends r.PureComponent {
                 if (null == n) return null;
                 let { stage: i, progress: r, total: l, type: a, readerProgress: s } = n;
                 if (null == r || null == l || null == i) return null;
-                let o = O.xI(r, l),
-                    c = O.xI(null != s ? s : 0, l),
+                let o = P.xI(r, l),
+                    c = P.xI(null != s ? s : 0, l),
                     d = (e[e.length - 1] / t) * 1000,
                     u = l - r,
                     h = F({
@@ -610,7 +610,7 @@ function et(e, t, n, i) {
                     branchId: s,
                     state: c,
                     application: o,
-                    libraryApplication: b.Z.getLibraryApplication(a, s),
+                    libraryApplication: A.Z.getLibraryApplication(a, s),
                     finished: t,
                     index: l
                 }),
@@ -619,13 +619,13 @@ function et(e, t, n, i) {
     }, []);
 }
 t.Z = (0, E.Z)(
-    c.ZP.connectStores([I.Z, Z.Z, x.Z, A.Z, L.Z], () => {
+    c.ZP.connectStores([I.Z, Z.Z, x.Z, b.Z, L.Z], () => {
         let e = et(x.Z.activeItems, !1, I.Z, Z.Z);
         return {
             applications: [...e, ...et(x.Z.finishedItems, !0, I.Z, Z.Z)],
             paused: x.Z.paused,
             isFocused: L.Z.isFocused(),
-            theme: A.Z.theme
+            theme: b.Z.theme
         };
     })((0, _.Z)(ee))
 );

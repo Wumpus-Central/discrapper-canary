@@ -26,11 +26,11 @@ function g(e) {
     let { user: t, currentUser: g, displayProfile: j, subsection: _, onClose: b } = e,
         { trackUserProfileAction: E } = (0, d.KZ)(),
         N = (0, l.e7)([c.Z], () => ((null == j ? void 0 : j.guildId) != null ? c.Z.getGuild(j.guildId) : null)),
-        S = (0, l.e7)([u.Z], () => {
+        y = (0, l.e7)([u.Z], () => {
             var e;
             return null === (e = u.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         }),
-        y = (0, l.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
+        S = (0, l.e7)([s.Z, a.Z], () => s.Z.getChannel(a.Z.getChannelId()));
     return (0, i.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: Z.scroller,
@@ -41,12 +41,12 @@ function g(e) {
                     userBio: j.bio,
                     setLineClamp: !1
                 }),
-            (null == S ? void 0 : S.popularApplicationCommandIds) != null &&
-                null != y &&
+            (null == y ? void 0 : y.popularApplicationCommandIds) != null &&
+                null != S &&
                 (0, i.jsx)(f.Z, {
-                    applicationId: S.id,
-                    commandIds: S.popularApplicationCommandIds,
-                    channel: y,
+                    applicationId: y.id,
+                    commandIds: y.popularApplicationCommandIds,
+                    channel: S,
                     guildId: null !== (n = null == j ? void 0 : j.guildId) && void 0 !== n ? n : void 0,
                     onClick: b
                 }),

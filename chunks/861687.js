@@ -30,8 +30,8 @@ var u = r(654861),
     R = r(148959),
     O = r(926951),
     D = r(166884),
-    x = r(868616),
-    L = r(848886),
+    L = r(868616),
+    x = r(848886),
     w = r(583215),
     P = r(576574),
     M = r(307320),
@@ -286,7 +286,7 @@ class ey extends g.Z {
     _chooseExperiments(e) {
         let n = [];
         if ((this._recordingEnabled && n.push('connection_log'), null != this.guildId)) {
-            let { shouldOverrideKrisp: e, overrideKrispSetting: r } = x.Z.getCurrentConfig(
+            let { shouldOverrideKrisp: e, overrideKrispSetting: r } = L.Z.getCurrentConfig(
                 {
                     guildId: this.guildId,
                     location: 'handleReady'
@@ -501,7 +501,7 @@ class ey extends g.Z {
                 n && p.push('nvNewPresets');
             }
             if (null != this.guildId) {
-                let { enableAdaptiveKeyFrame: e } = L.Z.getCurrentConfig(
+                let { enableAdaptiveKeyFrame: e } = x.Z.getCurrentConfig(
                     {
                         guildId: this.guildId,
                         location: 'handleReady'

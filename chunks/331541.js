@@ -25,14 +25,14 @@ var i = n(200651),
     v = n(899007),
     S = n(648052),
     T = n(867176),
-    A = n(537006),
-    b = n(483424),
+    b = n(537006),
+    A = n(483424),
     Z = n(681837),
     x = n(502762),
     L = n(530),
-    P = n(309494),
-    O = n(4517),
-    y = n(171368),
+    y = n(309494),
+    P = n(4517),
+    O = n(171368),
     R = n(420654),
     j = n(695346),
     D = n(158776),
@@ -42,8 +42,8 @@ var i = n(200651),
     U = n(5192),
     G = n(74538),
     B = n(51144),
-    V = n(246133),
-    H = n(474376),
+    H = n(246133),
+    V = n(474376),
     F = n(435478),
     z = n(383832),
     W = n(981631),
@@ -86,7 +86,7 @@ function J(e, t, n) {
                 {
                     id: ''.concat(e, '-').concat(r),
                     label: l(),
-                    action: () => (0, V.Z)(e, t, void 0, r),
+                    action: () => (0, H.Z)(e, t, void 0, r),
                     dontCloseOnAction: !0
                 },
                 r
@@ -121,7 +121,7 @@ function J(e, t, n) {
                 ]
             });
         },
-        action: () => (0, V.Z)(e, t),
+        action: () => (0, H.Z)(e, t),
         dontCloseOnAction: !0,
         children: e !== W.Skl.ONLINE ? r : void 0
     });
@@ -153,13 +153,13 @@ function $(e, t, n) {
                 ]
             });
         },
-        action: () => (0, V.Z)(e, t),
+        action: () => (0, H.Z)(e, t),
         dontCloseOnAction: !0
     });
 }
 function ee(e) {
     var t;
-    let { currentUser: n, onClose: k, setPopoutRef: V } = e,
+    let { currentUser: n, onClose: k, setPopoutRef: H } = e,
         ee = __OVERLAY__,
         et = (0, N.ZP)(n.id),
         { analyticsLocations: en } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
@@ -170,8 +170,8 @@ function ee(e) {
         { ref: er } = (0, d.Z)(),
         el = (0, u.Z)(er);
     r.useEffect(() => {
-        null == V || V(er.current);
-    }, [er, V]);
+        null == H || H(er.current);
+    }, [er, H]);
     let ea = (0, o.e7)([D.Z], () => D.Z.getStatus(n.id)),
         es = (0, o.e7)([M.Z], () => M.Z.hidePersonalInformation),
         eo = (0, g.p)(),
@@ -289,13 +289,13 @@ function ee(e) {
                 ]
             });
         })(ea),
-        eu = (0, H.g)(k),
+        eu = (0, V.g)(k),
         eh = (0, _.Z)({ analyticsLocations: en }),
         { dimissibleUpsellsEnabled: em } = (0, C.u)({ location: 'AccountProfilePopout' }),
         ep = (0, G.I5)(n),
         eg = (e) => {
             null == k || k(),
-                (0, y.openUserProfileModal)({
+                (0, O.openUserProfileModal)({
                     sourceAnalyticsLocations: en,
                     ...ei,
                     ...e
@@ -328,7 +328,7 @@ function ee(e) {
                                     profileType: Y.y0.BITE_SIZE,
                                     onOpenProfile: ee ? void 0 : eg
                                 }),
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(P.Z, {
                                     location: 'AccountProfilePopout',
                                     user: n,
                                     profileType: Y.y0.BITE_SIZE,
@@ -359,7 +359,7 @@ function ee(e) {
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)(Z.Z, { userId: n.id }),
-                                            (0, i.jsx)(P.Z, {
+                                            (0, i.jsx)(y.Z, {
                                                 user: n,
                                                 isHovering: el
                                             })
@@ -373,11 +373,11 @@ function ee(e) {
                                     onClose: k
                                 }),
                                 em &&
-                                    (0, i.jsx)(A.Z, {
+                                    (0, i.jsx)(b.Z, {
                                         isPremiumUser: ep,
                                         onInteraction: k
                                     }),
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: n,
                                     currentUser: n,
                                     onClose: k

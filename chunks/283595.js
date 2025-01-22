@@ -55,10 +55,10 @@ function D(e) {
         I[(0, _.Tu)(e.id, e.branchId)] = e;
     }
 }
-function x() {
+function L() {
     b = !1;
 }
-function L(e) {
+function x(e) {
     let { libraryApplications: n } = e;
     (I = {}), D(n), (b = !0);
 }
@@ -182,8 +182,8 @@ class j extends (i = c.ZP.Store) {
 }
 E(j, 'displayName', 'LibraryApplicationStore'),
     (n.Z = new j(f.Z, {
-        LOGOUT: x,
-        LIBRARY_FETCH_SUCCESS: L,
+        LOGOUT: L,
+        LIBRARY_FETCH_SUCCESS: x,
         SKU_PURCHASE_SUCCESS: w,
         LIBRARY_APPLICATION_FLAGS_UPDATE_START: P,
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: M,

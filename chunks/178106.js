@@ -74,13 +74,13 @@ function D(e) {
         recentUses: e.recentUses.map(Number).filter((e) => e > 0)
     }));
 }
-function x() {
+function L() {
     var e;
     if (!P()) return;
     let n = null === (e = h.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
     S.overwriteHistory(D(null != n ? n : {}), I);
 }
-function L(e) {
+function x(e) {
     let {
         settings: { type: n },
         wasSaved: r
@@ -101,7 +101,7 @@ function P() {
 }
 class M extends (i = d.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.default, g.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && T.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (I = e.playedEventsPendingFlush), this.syncWith([h.Z], x);
+        this.waitFor(_.default, g.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && T.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (I = e.playedEventsPendingFlush), this.syncWith([h.Z], L);
     }
     getState() {
         return {
@@ -127,5 +127,5 @@ b(M, 'displayName', 'SoundboardEventStore'),
     (n.Z = new M(f.Z, {
         GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: A,
         GUILD_SOUNDBOARD_SOUND_PLAY_START: C,
-        USER_SETTINGS_PROTO_UPDATE: L
+        USER_SETTINGS_PROTO_UPDATE: x
     }));

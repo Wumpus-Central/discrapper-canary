@@ -38,7 +38,7 @@ class N extends u.Z {
         g.DZ.beforeSendCallbacks.push({
             hasChanges: () => !1,
             processProto: () => {
-                L(S, !1);
+                x(S, !1);
             }
         }),
             g.DZ.beforeSendCallbacks.push({
@@ -89,22 +89,22 @@ class N extends u.Z {
     }
 }
 function R() {
-    (C = !0), L(T, !0);
+    (C = !0), x(T, !0);
 }
 function O(e) {
-    C && 'active' !== e.state && (clearTimeout(A), (A = null), x(!1));
+    C && 'active' !== e.state && (clearTimeout(A), (A = null), L(!1));
 }
 function D() {
-    C && (clearTimeout(A), (A = null), x(!1));
+    C && (clearTimeout(A), (A = null), L(!1));
 }
-async function x(e) {
-    L(S, !1),
+async function L(e) {
+    x(S, !1),
         !E.Z.hasLoaded(y.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (h.Z.hasPendingUsage() || f.ZP.hasPendingUsage() || c.ZP.hasPendingUsage() || d.Z.hasPendingUsage() || (_.Z.hasPendingUsage() && !e)) && ((0, g.T6)(), await g.DZ.loadIfNecessary()),
         s().forEach(g.aj, (e) => {
             e.markDirtyIfHasPendingChange();
         });
 }
-function L(e, n) {
-    null != A && clearTimeout(A), (A = setTimeout(() => x(n), e));
+function x(e, n) {
+    null != A && clearTimeout(A), (A = setTimeout(() => L(n), e));
 }
 n.Z = new N();

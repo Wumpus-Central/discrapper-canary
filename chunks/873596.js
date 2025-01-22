@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return v;
     }
 }),
     n(47120);
 var l = n(200651),
-    r = n(192379),
-    s = n(442837),
+    s = n(192379),
+    r = n(442837),
     i = n(481060),
     o = n(313201),
     a = n(19780),
@@ -21,8 +21,8 @@ var l = n(200651),
     f = n(388032),
     p = n(628437);
 function m(e) {
-    let { lobbyId: t, connectionTypeText: n, closePopout: r } = e,
-        i = (0, s.cj)([u.Z], () => ({
+    let { lobbyId: t, connectionTypeText: n, closePopout: s } = e,
+        i = (0, r.cj)([u.Z], () => ({
             connectionState: u.Z.getConnectionState(t),
             hostname: u.Z.getHostname(t),
             averagePing: u.Z.getAveragePing(t),
@@ -32,13 +32,13 @@ function m(e) {
         }));
     return (0, l.jsx)(g.Z, {
         ...i,
-        closePopout: r,
+        closePopout: s,
         connectionTypeText: n
     });
 }
 function E(e) {
     let { closePopout: t, connectionTypeText: n } = e,
-        r = (0, s.cj)([a.Z], () => ({
+        s = (0, r.cj)([a.Z], () => ({
             connectionState: a.Z.getState(),
             hostname: a.Z.getHostname(),
             averagePing: a.Z.getAveragePing(),
@@ -47,13 +47,13 @@ function E(e) {
             pings: a.Z.getPings()
         }));
     return (0, l.jsx)(g.Z, {
-        ...r,
+        ...s,
         closePopout: t,
         connectionTypeText: n
     });
 }
 function T(e) {
-    let { channelId: t, isOverlay: n, lobbyId: r, closePopout: s } = e,
+    let { channelId: t, isOverlay: n, lobbyId: s, closePopout: r } = e,
         i = (0, x.J)({
             channelId: t,
             location: 'RTCConnectionDebugPanelContainer'
@@ -62,20 +62,20 @@ function T(e) {
             : f.intl.string(f.t.ETIVvr);
     return n
         ? (0, l.jsx)(m, {
-              lobbyId: r,
-              closePopout: s,
+              lobbyId: s,
+              closePopout: r,
               connectionTypeText: i
           })
         : (0, l.jsx)(E, {
-              closePopout: s,
+              closePopout: r,
               connectionTypeText: i
           });
 }
-function v(e) {
-    let t = (0, s.e7)([c.Z], () => c.Z.hasVideo(e.channelId)),
-        [n, a] = r.useState(C.tu.RTC_DEBUG_PANEL),
+function I(e) {
+    let t = (0, r.e7)([c.Z], () => c.Z.hasVideo(e.channelId)),
+        [n, a] = s.useState(C.tu.RTC_DEBUG_PANEL),
         u = (0, o.Dt)(),
-        x = r.useMemo(() => {
+        x = s.useMemo(() => {
             switch (n) {
                 case C.tu.RTC_DEBUG_PANEL:
                     return (0, l.jsx)(T, { ...e });
@@ -83,7 +83,7 @@ function v(e) {
                     return (0, l.jsx)(N.Z, { channelId: e.channelId });
             }
         }, [e, n]);
-    r.useEffect(() => {
+    s.useEffect(() => {
         (0, d.sN)({
             channelId: e.channelId,
             selectedTab: n
@@ -91,7 +91,7 @@ function v(e) {
     }, [e.channelId, n]);
     let g = (0, h.r)();
     return (
-        r.useEffect(() => {
+        s.useEffect(() => {
             g && a(C.tu.RTC_DEBUG_PANEL);
         }, [g]),
         (0, l.jsxs)('div', {
@@ -133,12 +133,12 @@ function v(e) {
         })
     );
 }
-function I(e) {
+function v(e) {
     return (0, x.J)({
         channelId: e.channelId,
         location: 'RTCConnectionPopout'
     })
-        ? (0, l.jsx)(v, { ...e })
+        ? (0, l.jsx)(I, { ...e })
         : (0, l.jsx)('div', {
               className: p.debugPanelStandalone,
               children: (0, l.jsx)('section', {

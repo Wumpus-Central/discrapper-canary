@@ -88,11 +88,11 @@ function D(e) {
         R(n)
     );
 }
-function x(e) {
+function L(e) {
     let { channelId: n } = e;
     return R(n);
 }
-function L(e) {
+function x(e) {
     let { x: n, y: r } = e;
     return (
         (i = {
@@ -134,7 +134,7 @@ E(M, 'displayName', 'IncomingCallStore'),
         CALL_DELETE: D,
         GUILD_RING_START: O,
         GUILD_RING_STOP: D,
-        VOICE_CHANNEL_SELECT: x,
-        INCOMING_CALL_MOVE: L,
+        VOICE_CHANNEL_SELECT: L,
+        INCOMING_CALL_MOVE: x,
         CHANNEL_DELETE: w
     }));

@@ -14,17 +14,17 @@ var r = n(120356),
     p = n(981631),
     x = n(474936),
     f = n(388032),
-    _ = n(719721);
+    E = n(719721);
 t.Z = function (e) {
     let { className: t, guildId: n, boostingVariant: r } = e,
-        E = (0, a.e7)([m.Z], () => m.Z.getGuild(n), [n]),
+        _ = (0, a.e7)([m.Z], () => m.Z.getGuild(n), [n]),
         { fractionalState: C } = (0, o.Z)(),
         T = C === x.a$.FP_ONLY;
-    return null == E
+    return null == _
         ? (0, i.jsx)('div', {
-              className: s()(t, _.guildContainer),
+              className: s()(t, E.guildContainer),
               children: (0, i.jsx)('div', {
-                  className: _.guildInfoContainer,
+                  className: E.guildInfoContainer,
                   children: (0, i.jsx)(l.Text, {
                       variant: 'text-lg/bold',
                       children: f.intl.string(f.t['6Kwwur'])
@@ -32,38 +32,38 @@ t.Z = function (e) {
               })
           })
         : (0, i.jsxs)('div', {
-              className: s()(t, _.guildContainer),
+              className: s()(t, E.guildContainer),
               children: [
                   (0, i.jsx)(c.Z, {
-                      className: _.__invalid_guildIcon,
-                      guild: E,
+                      className: E.__invalid_guildIcon,
+                      guild: _,
                       size: c.Z.Sizes.LARGER
                   }),
                   (0, i.jsxs)('div', {
-                      className: _.guildInfoContainer,
+                      className: E.guildInfoContainer,
                       children: [
                           (0, i.jsx)(l.Text, {
                               variant: 'text-lg/bold',
-                              children: E.name
+                              children: _.name
                           }),
                           (0, i.jsxs)('div', {
-                              className: _.guildBoostStatsContainer,
+                              className: E.guildBoostStatsContainer,
                               children: [
                                   (0, i.jsx)(g.Z, {
-                                      className: _.guildBoostBadge,
+                                      className: E.guildBoostBadge,
                                       width: 16,
                                       height: 16
                                   }),
                                   (0, i.jsx)(l.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: f.intl.format(f.t['pob/cH'], { subscriptions: E.premiumSubscriberCount })
+                                      children: f.intl.format(f.t['pob/cH'], { subscriptions: _.premiumSubscriberCount })
                                   }),
-                                  (0, i.jsx)('div', { className: _.separator }),
+                                  (0, i.jsx)('div', { className: E.separator }),
                                   (0, i.jsx)(l.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: (0, h.nW)(E.premiumTier, { useLevels: !1 })
+                                      children: (0, h.nW)(_.premiumTier, { useLevels: !1 })
                                   })
                               ]
                           })
@@ -71,7 +71,7 @@ t.Z = function (e) {
                   }),
                   r
                       ? (0, i.jsx)(u.Z, {
-                            guild: E,
+                            guild: _,
                             analyticsLocation: {
                                 page: p.ZY5.GUILD_BOOSTING_USER_SETTINGS,
                                 section: p.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
@@ -88,7 +88,7 @@ t.Z = function (e) {
                             color: l.Button.Colors.PRIMARY,
                             onClick: () => {
                                 (0, d.f)({
-                                    guildId: E.id,
+                                    guildId: _.id,
                                     location: { section: p.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA }
                                 });
                             },

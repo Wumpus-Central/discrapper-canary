@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(47120);
@@ -22,8 +22,8 @@ var a = n(200651),
     g = n(98357),
     v = n(432877),
     j = n(246992),
-    _ = n(821843),
-    C = n(941469);
+    C = n(821843),
+    _ = n(941469);
 function T() {
     var e;
     let t = (0, s.Wu)([p.Z], () => p.Z.getSortedChannels()[1]),
@@ -44,7 +44,7 @@ function T() {
             let t = (0, b.x9)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
             h.Z.updatePrivateChannelRecipientFlags(i.id, t);
         }, [i]),
-        C = null != i && !!i.isPrivate() && (0, b.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+        _ = null != i && !!i.isPrivate() && (0, b.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Text, {
@@ -52,10 +52,10 @@ function T() {
                 children: 'In-Game NUX Message for DMs'
             }),
             (0, a.jsxs)('div', {
-                className: _.inGameNuxContainer,
+                className: C.inGameNuxContainer,
                 children: [
                     (0, a.jsx)(c.SearchableSelect, {
-                        wrapperClassName: _.search,
+                        wrapperClassName: C.search,
                         options: g,
                         placeholder: 'Select DM',
                         value: n,
@@ -77,14 +77,14 @@ function T() {
                         size: c.Button.Sizes.SMALL,
                         onClick: v,
                         disabled: null == n,
-                        children: C ? 'Clear NUX Flag' : 'Set NUX Flag'
+                        children: _ ? 'Clear NUX Flag' : 'Set NUX Flag'
                     })
                 ]
             })
         ]
     });
 }
-function N() {
+function S() {
     let e = v.ZP.allByCategory(v.zU.MESSAGING).map((e) => {
         let [t, n, { label: r }] = e;
         return (0, a.jsx)(
@@ -93,14 +93,14 @@ function N() {
                 value: n,
                 onChange: (e) => (0, g.Z)(t, e),
                 hideBorder: !0,
-                className: _.switch,
+                className: C.switch,
                 children: r
             },
             t
         );
     });
     return (0, a.jsxs)('div', {
-        className: i()(C.panel, _.panel),
-        children: [e, (0, a.jsx)('div', { className: _.divider }), (0, a.jsx)(T, {})]
+        className: i()(_.panel, C.panel),
+        children: [e, (0, a.jsx)('div', { className: C.divider }), (0, a.jsx)(T, {})]
     });
 }

@@ -120,7 +120,7 @@ function O(e) {
     return e.map((e) => R(e)).join(', ');
 }
 function D(e) {
-    let { options: n, placeholder: r = y.intl.string(y.t.XqMe3N), className: i, isDisabled: s = !1, maxVisibleItems: u = 7, autoFocus: c = !1, popoutWidth: f, clearable: h = !1, look: E = v.q.FILLED, onClose: I, onOpen: T, renderOptionLabel: S = R, renderOptionValue: A = O, popoutClassName: C, popoutPosition: N = 'bottom', popoutLayerContext: D, optionClassName: L, closeOnSelect: w, select: P, isSelected: M, serialize: k, clear: U, hideIcon: B = !1, 'aria-label': G, 'aria-labelledby': Z } = e,
+    let { options: n, placeholder: r = y.intl.string(y.t.XqMe3N), className: i, isDisabled: s = !1, maxVisibleItems: u = 7, autoFocus: c = !1, popoutWidth: f, clearable: h = !1, look: E = v.q.FILLED, onClose: I, onOpen: T, renderOptionLabel: S = R, renderOptionValue: A = O, popoutClassName: C, popoutPosition: N = 'bottom', popoutLayerContext: D, optionClassName: x, closeOnSelect: w, select: P, isSelected: M, serialize: k, clear: U, hideIcon: B = !1, 'aria-label': G, 'aria-labelledby': Z } = e,
         [F, V] = o.useState(!1),
         { ref: j, width: H, height: Y } = (0, m.Z)(),
         W = o.useCallback(
@@ -171,7 +171,7 @@ function D(e) {
         },
         renderPopout: (e) => {
             let { closePopout: r, position: i, updatePosition: o } = e;
-            return (0, a.jsx)(x, {
+            return (0, a.jsx)(L, {
                 className: C,
                 closeOnSelect: w,
                 maxVisibleItems: u,
@@ -183,7 +183,7 @@ function D(e) {
                 options: n,
                 serialize: k,
                 renderOptionLabel: S,
-                optionClassName: L,
+                optionClassName: x,
                 updatePosition: o,
                 popoutPosition: i
             });
@@ -261,7 +261,7 @@ function D(e) {
         }
     });
 }
-function x(e) {
+function L(e) {
     let { className: n, onSelect: r, closePopout: i, closeOnSelect: s = !0, isSelected: d, options: p, width: _, maxVisibleItems: m, renderOptionLabel: g, serialize: v, optionClassName: y, buttonHeight: I, updatePosition: T, popoutPosition: S } = e,
         [A, C] = o.useState(0),
         N = o.useRef(null),
@@ -291,7 +291,7 @@ function x(e) {
         o.useEffect(() => {
             T();
         }, [T, A]);
-    let x = o.useCallback(
+    let L = o.useCallback(
             (e) => {
                 r(e), s && i();
             },
@@ -300,12 +300,12 @@ function x(e) {
         w = p.map((e, n) => {
             var r;
             return (0, a.jsx)(
-                L,
+                x,
                 {
                     isSelected: d(e.value),
                     value: e.value,
                     label: g(e),
-                    onSelect: x,
+                    onSelect: L,
                     className: y,
                     isDisabled: e.disabled,
                     serialize: v
@@ -348,7 +348,7 @@ function x(e) {
         })
     });
 }
-function L(e) {
+function x(e) {
     let { className: n, value: r, label: i, onSelect: o, isSelected: s, isDisabled: u, serialize: f } = e,
         p = (0, c.JA)(f(r));
     return (0, a.jsxs)(d.P, {

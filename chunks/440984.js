@@ -19,12 +19,12 @@ var i = n(200651),
     p = n(474936),
     x = n(388032),
     f = n(783899),
-    _ = n(982404),
-    E = n(299156);
+    E = n(982404),
+    _ = n(299156);
 function C(e) {
     let { premiumSubscription: t, premiumType: n, onClose: C, confettiCanvas: T, userWasChurned: S = !1, userDiscountOffer: b } = e,
         I = (0, o.ZP)(),
-        N = (0, a.wj)(I) ? _ : E,
+        N = (0, a.wj)(I) ? E : _,
         v = r.useRef(null),
         [A, j] = r.useState(!1),
         O = (0, g._)(t, p.Xh.PREMIUM_MONTH_TIER_2, b),

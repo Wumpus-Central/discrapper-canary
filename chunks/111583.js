@@ -3,11 +3,11 @@ var a,
     o = r(442837),
     s = r(544891),
     l = r(570140),
-    u = r(70956),
-    c = r(314897),
-    d = r(300429),
-    f = r(981631),
-    p = r(176505);
+    u = r(333023),
+    c = r(70956),
+    d = r(314897),
+    f = r(300429),
+    p = r(981631);
 function h(e, n, r) {
     return (
         n in e
@@ -21,8 +21,8 @@ function h(e, n, r) {
         e
     );
 }
-let _ = 10 * u.Z.Millis.SECOND,
-    m = 1.5 * u.Z.Millis.SECOND,
+let _ = 10 * c.Z.Millis.SECOND,
+    m = 1.5 * c.Z.Millis.SECOND,
     g = 5,
     E = {},
     v = Object.freeze({});
@@ -32,19 +32,19 @@ function y(e) {
 }
 function b(e) {
     let { channelId: n } = e,
-        r = c.default.getId();
-    if (null == r || n === p.V) return !1;
+        r = d.default.getId();
+    if (null == r || n === u.V) return !1;
     null != i && i.channelId !== n && (null != i.timeout && clearTimeout(i.timeout), (i = null));
     let a = Date.now(),
         o = 0.8 * _;
     if (null != i && (null != i.timeout || i.prevSend + o > a)) return !1;
-    let u = setTimeout(
+    let c = setTimeout(
         () => {
-            if (null == i || i.channelId !== n || r !== c.default.getId() || null == i.timeout) return;
+            if (null == i || i.channelId !== n || r !== d.default.getId() || null == i.timeout) return;
             if (((i.timeout = null), !(O(n) > g)))
                 s.tn
                     .post({
-                        url: f.ANM.TYPING(n),
+                        url: p.ANM.TYPING(n),
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
@@ -57,14 +57,14 @@ function b(e) {
                                 l.Z.dispatch({
                                     type: 'SLOWMODE_SET_COOLDOWN',
                                     channelId: n,
-                                    slowmodeType: d.S.SendMessage,
+                                    slowmodeType: f.S.SendMessage,
                                     cooldownMs: a
                                 }),
                                 o > 0 &&
                                     l.Z.dispatch({
                                         type: 'SLOWMODE_SET_COOLDOWN',
                                         channelId: n,
-                                        slowmodeType: d.S.CreateThread,
+                                        slowmodeType: f.S.CreateThread,
                                         cooldownMs: o
                                     });
                         }
@@ -75,7 +75,7 @@ function b(e) {
     return (
         (i = {
             channelId: n,
-            timeout: u,
+            timeout: c,
             prevSend: a
         }),
         A({
@@ -90,7 +90,7 @@ function I(e) {
 }
 function T(e) {
     let { channelId: n } = e,
-        r = c.default.getId();
+        r = d.default.getId();
     return (
         null != r &&
         null != i &&

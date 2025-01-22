@@ -18,8 +18,8 @@ var i = n(200651),
     p = n(839469),
     x = n(25990),
     f = n(594174),
-    _ = n(585483),
-    E = n(16703),
+    E = n(585483),
+    _ = n(16703),
     C = n(785145),
     T = n(981631),
     S = n(526761),
@@ -29,7 +29,7 @@ var i = n(200651),
 function v() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, s.e7)([u.Z], () => u.Z.getGuild()),
-        t = (0, E.Z)(),
+        t = (0, _.Z)(),
         n = (0, s.e7)([u.Z, x.Z], () => u.Z.showNotice() || x.Z.showNotice()),
         v = null != e ? e : t,
         A = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
@@ -39,11 +39,11 @@ function v() {
     function y(t) {
         if (j !== t) {
             if (n) {
-                _.S.dispatch(T.CkL.SHAKE_APP, {
+                E.S.dispatch(T.CkL.SHAKE_APP, {
                     duration: 300,
                     intensity: l.$x
                 }),
-                    _.S.dispatch(T.CkL.EMPHASIZE_NOTICE);
+                    E.S.dispatch(T.CkL.EMPHASIZE_NOTICE);
                 return;
             }
             t === S.NB.GUILD && null == e && null != v && (0, d.Fq)(v, R), O(t);

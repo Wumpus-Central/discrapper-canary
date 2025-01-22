@@ -70,10 +70,10 @@ let y = { location: {} },
     R = 3600000,
     O = 86400000,
     D = 0.001,
-    x = performance.now(),
-    L = [];
+    L = performance.now(),
+    x = [];
 function w(e) {
-    L.push(e);
+    x.push(e);
 }
 let P = {
     [g.rMx.APP_OPENED]: {
@@ -335,11 +335,11 @@ function F(e) {
             ...k(e)
         };
     }
-    (o.client_performance_cpu = _.Z.getCurrentCPUUsagePercent()), (o.client_performance_memory = _.Z.getCurrentMemoryUsageKB()), (o.cpu_core_count = _.Z.getCPUCoreCount()), (o.accessibility_features = U()), (o.rendered_locale = v.intl.currentLocale), (o.uptime_app = Math.floor((performance.now() - x) / 1000));
+    (o.client_performance_cpu = _.Z.getCurrentCPUUsagePercent()), (o.client_performance_memory = _.Z.getCurrentMemoryUsageKB()), (o.cpu_core_count = _.Z.getCPUCoreCount()), (o.accessibility_features = U()), (o.rendered_locale = v.intl.currentLocale), (o.uptime_app = Math.floor((performance.now() - L) / 1000));
     let s = _.Z.getProcessUptime();
     null != s && (o.uptime_process_renderer = Math.floor(s));
     let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = I;
-    return (o.utm_source = null !== (n = o.utm_source) && void 0 !== n ? n : l), (o.utm_medium = null !== (r = o.utm_medium) && void 0 !== r ? r : u), (o.utm_campaign = null !== (i = o.utm_campaign) && void 0 !== i ? i : c), (o.utm_content = null !== (a = o.utm_content) && void 0 !== a ? a : d), L.forEach((e) => e(o)), o;
+    return (o.utm_source = null !== (n = o.utm_source) && void 0 !== n ? n : l), (o.utm_medium = null !== (r = o.utm_medium) && void 0 !== r ? r : u), (o.utm_campaign = null !== (i = o.utm_campaign) && void 0 !== i ? i : c), (o.utm_content = null !== (a = o.utm_content) && void 0 !== a ? a : d), x.forEach((e) => e(o)), o;
 }
 function V(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];

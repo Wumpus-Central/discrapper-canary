@@ -29,9 +29,9 @@ function N(e) {
         { reducedMotion: u } = o.useContext(h.AccessibilityPreferencesContext),
         { accessibilitySettings: p, appWrapperClassName: _ } = (0, I.I)(),
         { fontScale: b, fontScaleClass: A, saturation: N, desaturateUserColors: R, useForcedColors: O, systemForcedColors: D } = p,
-        x = (0, c.TH)(),
-        L = o.useMemo(() => C.has(x.pathname), [x.pathname]);
-    (0, T.Z)(window, L);
+        L = (0, c.TH)(),
+        x = o.useMemo(() => C.has(L.pathname), [L.pathname]);
+    (0, T.Z)(window, x);
     let w = (0, S.Z)(window, __OVERLAY__ || r),
         P = (0, f.e7)([g.Z], () => g.Z.sidebarWidth),
         M = (0, h.useRedesignIconContext)().enabled,

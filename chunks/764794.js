@@ -24,7 +24,7 @@ function b(e) {
         { analyticsLocations: R } = (0, f.ZP)(d.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
         O = i.isDM() && void 0 !== i.recipients ? i.recipients[0] : null,
         D = (0, c.ZP)();
-    function x() {
+    function L() {
         C((e) => !e);
     }
     return n
@@ -66,7 +66,7 @@ function b(e) {
                                   'aria-label': I.toString(),
                                   'aria-haspopup': 'dialog',
                                   onClick: () => {
-                                      x(),
+                                      L(),
                                           _.default.track(g.rMx.SHARE_NITRO_FLOW_STEPS, {
                                               location_stack: R,
                                               step: E.fz.BADGE_CLICKED,

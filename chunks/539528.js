@@ -165,9 +165,9 @@ function N(e) {
     function D() {
         return Math.random().toString(36).substr(2, N);
     }
-    var x = g();
-    function L(e) {
-        (0, i.Z)(X, e), (X.length = n.length), x.notifyListeners(X.location, X.action);
+    var L = g();
+    function x(e) {
+        (0, i.Z)(X, e), (X.length = n.length), L.notifyListeners(X.location, X.action);
     }
     function w(e) {
         !T(e) && k(O(e.state));
@@ -177,12 +177,12 @@ function N(e) {
     }
     var M = !1;
     function k(e) {
-        if (M) (M = !1), L();
+        if (M) (M = !1), x();
         else {
             var n = 'POP';
-            x.confirmTransitionTo(e, n, m, function (r) {
+            L.confirmTransitionTo(e, n, m, function (r) {
                 r
-                    ? L({
+                    ? x({
                           action: n,
                           location: e
                       })
@@ -207,7 +207,7 @@ function N(e) {
     function F(e, i) {
         var a = 'PUSH',
             o = _(e, i, D(), X.location);
-        x.confirmTransitionTo(o, a, m, function (e) {
+        L.confirmTransitionTo(o, a, m, function (e) {
             if (e) {
                 var i = Z(o),
                     s = o.key,
@@ -230,7 +230,7 @@ function N(e) {
                             d = G.slice(0, u + 1);
                         d.push(o.key),
                             (G = d),
-                            L({
+                            x({
                                 action: a,
                                 location: o
                             });
@@ -242,7 +242,7 @@ function N(e) {
     function V(e, i) {
         var a = 'REPLACE',
             o = _(e, i, D(), X.location);
-        x.confirmTransitionTo(o, a, m, function (e) {
+        L.confirmTransitionTo(o, a, m, function (e) {
             if (e) {
                 var i = Z(o),
                     s = o.key,
@@ -263,7 +263,7 @@ function N(e) {
                     else {
                         var u = G.indexOf(X.location.key);
                         -1 !== u && (G[u] = o.key),
-                            L({
+                            x({
                                 action: a,
                                 location: o
                             });
@@ -288,7 +288,7 @@ function N(e) {
     var z = !1;
     function q(e) {
         void 0 === e && (e = !1);
-        var n = x.setPrompt(e);
+        var n = L.setPrompt(e);
         return (
             !z && (K(1), (z = !0)),
             function () {
@@ -297,7 +297,7 @@ function N(e) {
         );
     }
     function Q(e) {
-        var n = x.appendListener(e);
+        var n = L.appendListener(e);
         return (
             K(1),
             function () {
@@ -343,12 +343,12 @@ function D(e) {
     var n = e.indexOf('#');
     return -1 === n ? e : e.slice(0, n);
 }
-function x() {
+function L() {
     var e = window.location.href,
         n = e.indexOf('#');
     return -1 === n ? '' : e.substring(n + 1);
 }
-function L(e) {
+function x(e) {
     window.location.hash = e;
 }
 function w(e) {
@@ -368,7 +368,7 @@ function P(e) {
         y = m.encodePath,
         b = m.decodePath;
     function T() {
-        var e = b(x());
+        var e = b(L());
         return p && (e = d(e, p)), _(e);
     }
     var S = g();
@@ -381,7 +381,7 @@ function P(e) {
         return e.pathname === n.pathname && e.search === n.search && e.hash === n.hash;
     }
     function M() {
-        var e = x(),
+        var e = L(),
             n = y(e);
         if (e !== n) w(n);
         else {
@@ -414,7 +414,7 @@ function P(e) {
         var a = r - i;
         a && ((C = !0), Y(a));
     }
-    var B = x(),
+    var B = L(),
         G = y(B);
     B !== G && w(G);
     var Z = T(),
@@ -431,9 +431,9 @@ function P(e) {
             if (e) {
                 var n = h(i),
                     a = y(p + n),
-                    o = x() !== a;
+                    o = L() !== a;
                 if (o) {
-                    (N = n), L(a);
+                    (N = n), x(a);
                     var s = F.lastIndexOf(h($.location)),
                         l = F.slice(0, s + 1);
                     l.push(n),
@@ -453,7 +453,7 @@ function P(e) {
             if (e) {
                 var n = h(i),
                     a = y(p + n),
-                    o = x() !== a;
+                    o = L() !== a;
                 o && ((N = n), w(a));
                 var s = F.indexOf(h($.location));
                 -1 !== s && (F[s] = n),

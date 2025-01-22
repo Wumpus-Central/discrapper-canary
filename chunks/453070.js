@@ -145,7 +145,7 @@ let C = (e) => {
             (0, v.$p)();
         }, []);
     },
-    x = (e) => {
+    L = (e) => {
         let n = (0, l.e7)([b.Z], () => b.Z.getAllGuildStickers()),
             r = (0, l.Wu)(
                 [h.ZP, f.Z],
@@ -201,10 +201,10 @@ let C = (e) => {
             return a;
         }, [n, r, i, e]);
     },
-    L = [];
+    x = [];
 function w() {
     var e, n;
-    return null !== (n = null === (e = (0, d.D)().favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== n ? n : L;
+    return null !== (n = null === (e = (0, d.D)().favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== n ? n : x;
 }
 function P() {
     let e = w();
@@ -213,7 +213,7 @@ function P() {
 function M() {
     var e, n;
     let r = (0, d.D)(),
-        i = L;
+        i = x;
     return (null == r ? void 0 : null === (e = r.stickerFrecency) || void 0 === e ? void 0 : e.stickers) != null && (i = Object.keys(null == r ? void 0 : null === (n = r.stickerFrecency) || void 0 === n ? void 0 : n.stickers)), i;
 }
 function k() {
@@ -231,7 +231,7 @@ let U = (e) => {
                 []
             ),
             a = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
-            o = x(e);
+            o = L(e);
         return s.useMemo(() => {
             var s;
             let l = r.map(T.z),

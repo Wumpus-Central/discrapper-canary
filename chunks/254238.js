@@ -53,7 +53,7 @@ async function I() {
         n = null == e ? void 0 : e.nonce;
     u.Z.dispatch({ type: 'REMOTE_SESSION_DISCONNECT' });
     let r = [];
-    ((null == e ? void 0 : e.type) === v.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === v.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && r.push(L(e.type, e.deviceId, e.commandId)), null != n && r.push(R(n));
+    ((null == e ? void 0 : e.type) === v.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === v.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && r.push(x(e.type, e.deviceId, e.commandId)), null != n && r.push(R(n));
     try {
         await Promise.all(r);
     } catch (e) {
@@ -166,7 +166,7 @@ function D(e, n) {
         deviceId: n
     });
 }
-async function x(e, n, r, i) {
+async function L(e, n, r, i) {
     let a;
     u.Z.dispatch({
         type: 'GAME_CONSOLE_DEVICE_SEND_COMMAND_START',
@@ -206,7 +206,7 @@ async function x(e, n, r, i) {
         s
     );
 }
-async function L(e, n, r) {
+async function x(e, n, r) {
     u.Z.dispatch({
         type: 'GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START',
         platform: e,
@@ -240,5 +240,5 @@ async function L(e, n, r) {
 async function w(e, n, r) {
     await m.Z.maybeShowPTTAlert(e), await I();
     let i = await N();
-    await x(e, n, r, i), (0, E.Z)(r.id, e);
+    await L(e, n, r, i), (0, E.Z)(r.id, e);
 }

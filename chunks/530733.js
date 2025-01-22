@@ -163,12 +163,12 @@ function D(e) {
     }
     return null;
 }
-function x(e, n, r, i, a) {
+function L(e, n, r, i, a) {
     var o;
     for (o in r) 'children' === o || 'key' === o || o in n || w(e, o, null, r[o], i);
     for (o in n) (a && 'function' != typeof n[o]) || 'children' === o || 'key' === o || 'value' === o || 'checked' === o || r[o] === n[o] || w(e, o, n[o], r[o], i);
 }
-function L(e, n, r) {
+function x(e, n, r) {
     '-' === n[0] ? e.setProperty(n, null == r ? '' : r) : (e[n] = null == r ? '' : 'number' != typeof r || _.test(n) ? r : r + 'px');
 }
 function w(e, n, r, i, a) {
@@ -176,8 +176,8 @@ function w(e, n, r, i, a) {
     i: if ('style' === n) {
         if ('string' == typeof r) e.style.cssText = r;
         else {
-            if (('string' == typeof i && (e.style.cssText = i = ''), i)) for (n in i) (r && n in r) || L(e.style, n, '');
-            if (r) for (n in r) (i && r[n] === i[n]) || L(e.style, n, r[n]);
+            if (('string' == typeof i && (e.style.cssText = i = ''), i)) for (n in i) (r && n in r) || x(e.style, n, '');
+            if (r) for (n in r) (i && r[n] === i[n]) || x(e.style, n, r[n]);
         }
     } else if ('o' === n[0] && 'n' === n[1]) (o = n !== (n = n.replace(/Capture$/, ''))), (n = n.toLowerCase() in e ? n.toLowerCase().slice(2) : n.slice(2)), e.l || (e.l = {}), (e.l[n + o] = r), r ? i || e.addEventListener(n, o ? M : P, o) : e.removeEventListener(n, o ? M : P, o);
     else if ('dangerouslySetInnerHTML' !== n) {
@@ -294,7 +294,7 @@ function B(e, n, r, a, o, s, l, u) {
             if (null != s) for (h = {}, E = 0; E < e.attributes.length; E++) h[e.attributes[E].name] = e.attributes[E].value;
             (f || d) && ((f && ((d && f.__html == d.__html) || f.__html === e.innerHTML)) || (e.innerHTML = (f && f.__html) || ''));
         }
-        if ((x(e, _, h, o, u), f)) n.__k = [];
+        if ((L(e, _, h, o, u), f)) n.__k = [];
         else if ((C(e, Array.isArray((E = n.props.children)) ? E : [E], n, r, a, o && 'foreignObject' !== m, s, l, s ? s[0] : r.__k && I(r, 0), u), null != s)) for (E = s.length; E--; ) null != s[E] && g(s[E]);
         u || ('value' in _ && void 0 !== (E = _.value) && (E !== e.value || ('progress' === m && !E) || ('option' === m && E !== h.value)) && w(e, 'value', E, h.value, !1), 'checked' in _ && void 0 !== (E = _.checked) && E !== e.checked && w(e, 'checked', E, h.checked, !1));
     }

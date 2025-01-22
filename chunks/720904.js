@@ -13,15 +13,15 @@ var l = t(120356),
     u = t(222677),
     d = t(995774),
     c = t(665906),
-    f = t(695346),
-    g = t(496675),
+    g = t(695346),
+    f = t(496675),
     m = t(768581),
     h = t(176354),
     E = t(981631),
     I = t(185923),
     v = t(388032),
-    p = t(953568);
-let M = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
+    M = t(953568);
+let p = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
 function Z(e) {
     var n;
     let { emoji: t, isFocused: l } = e,
@@ -44,17 +44,17 @@ function Z(e) {
                 children: (e) =>
                     (0, i.jsx)('div', {
                         'aria-label': v.intl.formatToPlainString(v.t['/iYSo6'], { emojiName: t.name }),
-                        className: r()(p.button, { [p.focused]: l }),
+                        className: r()(M.button, { [M.focused]: l }),
                         ...e,
                         children:
                             null == s || '' === s.trim()
                                 ? (0, i.jsx)('span', {
-                                      className: r()('emoji', 'emoji-text', p.icon),
+                                      className: r()('emoji', 'emoji-text', M.icon),
                                       ...e,
                                       children: u
                                   })
                                 : (0, i.jsx)('img', {
-                                      className: p.icon,
+                                      className: M.icon,
                                       src: s,
                                       alt: ''
                                   })
@@ -68,7 +68,7 @@ function x(e, n) {
     let t = (0, s.MZ)(n.guild_id).filter((e) => {
         var t;
         return (
-            !(e.useSpriteSheet && M.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
+            !(e.useSpriteSheet && p.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: n,
@@ -77,15 +77,15 @@ function x(e, n) {
         );
     });
     t.length > 4 && (t.length = 4);
-    let l = f.nc.useSetting(),
+    let l = g.nc.useSetting(),
         r = (0, c.$R)(n),
-        m = (0, a.e7)([g.Z], () => l && r && (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
+        m = (0, a.e7)([f.Z], () => l && r && (n.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
         v = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };
     return m && t.length > 0
         ? (0, i.jsx)(o.MenuGroup, {
-              className: p.wrapper,
+              className: M.wrapper,
               children: t.map((e, n) => {
                   var t;
                   return (0, i.jsx)(

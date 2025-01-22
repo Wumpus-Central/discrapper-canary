@@ -27,8 +27,8 @@ var i = t(200651),
     b = t(451834),
     E = t(502762),
     N = t(544989),
-    S = t(705556),
-    y = t(481932),
+    y = t(705556),
+    S = t(481932),
     T = t(195387),
     P = t(272510),
     C = t(748283),
@@ -42,8 +42,8 @@ var i = t(200651),
     D = t(388032),
     F = t(171865);
 function G(e) {
-    let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: z, initialSection: K, initialSubsection: Y, transitionState: H, onClose: J, showGuildProfile: X = !0, sourceAnalyticsLocations: q = [] } = e,
-        { analyticsLocations: Q } = (0, u.ZP)([...q, d.Z.SIMPLIFIED_PROFILE_MODAL]),
+    let { user: n, currentUser: t, guildId: G, channelId: w, messageId: k, roleId: V, sessionId: W, friendToken: z, initialSection: K, initialSubsection: Y, transitionState: H, onClose: J, showGuildProfile: q = !0, sourceAnalyticsLocations: X = [] } = e,
+        { analyticsLocations: Q } = (0, u.ZP)([...X, d.Z.SIMPLIFIED_PROFILE_MODAL]),
         $ = (0, Z.Z)({
             user: n,
             currentUser: t,
@@ -57,14 +57,14 @@ function G(e) {
             channelId: w,
             messageId: k,
             roleId: V,
-            showGuildProfile: X
+            showGuildProfile: q
         }),
         en = (0, g.$m)(),
         et = (0, s.useSpring)({
             opacity: null != en.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
-        ei = (0, v.ZP)(n.id, X ? G : void 0),
+        ei = (0, v.ZP)(n.id, q ? G : void 0),
         el = (0, v.ZP)(n.id, G),
         eo = (0, r.e7)([m.Z], () => m.Z.getRelationshipType(n.id)),
         er = n.id === t.id,
@@ -87,7 +87,7 @@ function G(e) {
                                     ...ee,
                                     showGuildProfile: !1,
                                     friendToken: z,
-                                    sourceAnalyticsLocations: q
+                                    sourceAnalyticsLocations: X
                                 }),
                                 (0, p.pQ)({
                                     action: 'PRESS_VIEW_MAIN_PROFILE',
@@ -106,7 +106,7 @@ function G(e) {
                                     ...ee,
                                     showGuildProfile: !0,
                                     friendToken: z,
-                                    sourceAnalyticsLocations: q
+                                    sourceAnalyticsLocations: X
                                 }),
                                 (0, p.pQ)({
                                     action: 'PRESS_VIEW_SERVER_PROFILE',
@@ -154,7 +154,7 @@ function G(e) {
                                             channelId: w,
                                             onClose: J
                                         }),
-                                        (0, i.jsx)(y.Z, {
+                                        (0, i.jsx)(S.Z, {
                                             shouldShowTooltip: null === en.interactionType,
                                             profileType: U.y0.FULL_SIZE,
                                             user: n,
@@ -214,7 +214,7 @@ function G(e) {
                                                             friendToken: z,
                                                             onClose: J
                                                         }),
-                                                        (0, i.jsx)(S.Z, {
+                                                        (0, i.jsx)(y.Z, {
                                                             user: n,
                                                             guildId: G,
                                                             onClose: J

@@ -27,8 +27,8 @@ function T(e) {
     let { premiumSubscription: n, planId: r, selectPlan: a, selected: s, priceOptions: T, shouldShowUpdatedPaymentModal: S, isEligibleForDiscount: A, discountAmountOff: C, isEligibleForTrial: N } = e,
         R = (0, u.e7)([p.default], () => p.default.locale),
         O = (0, u.e7)([h.Z], () => h.Z.get(r)),
-        { isGift: D, giftRecipient: x } = (0, f.wD)(),
-        L = D && (0, _.pO)(x);
+        { isGift: D, giftRecipient: L } = (0, f.wD)(),
+        x = D && (0, _.pO)(L);
     l()(null != O, 'Missing subscriptionPlan');
     let w = null != n && n.planId === r,
         P = w || (r === y.Xh.PREMIUM_MONTH_TIER_2 && null != n && [y.Xh.PREMIUM_YEAR_TIER_0, y.Xh.PREMIUM_YEAR_TIER_1].includes(n.planId)),
@@ -63,12 +63,12 @@ function T(e) {
                 children: [
                     (0, i.jsxs)('div', {
                         className: o()(I.planOptionInterval, {
-                            [I.optionSelected]: s || L,
-                            [I.updatedOptionSelected]: S && (s || L)
+                            [I.optionSelected]: s || x,
+                            [I.updatedOptionSelected]: S && (s || x)
                         }),
-                        children: [(0, g.L7)(O.interval, D, U, O.intervalCount, L, (0, g.Rd)(O.id)), L && V()]
+                        children: [(0, g.L7)(O.interval, D, U, O.intervalCount, x, (0, g.Rd)(O.id)), x && V()]
                     }),
-                    L &&
+                    x &&
                         (0, i.jsx)('div', {
                             className: I.planOneTimeCost,
                             children: b.intl.format(b.t.ori2Ji, { currencyAmount: (0, E.T4)(k.amount, k.currency) })
@@ -98,7 +98,7 @@ function T(e) {
             return null;
         };
     return (0, i.jsxs)(d.Clickable, {
-        role: L ? 'menuitem' : 'radio',
+        role: x ? 'menuitem' : 'radio',
         'aria-checked': s,
         tabIndex: s ? 0 : -1,
         focusProps: {
@@ -111,8 +111,8 @@ function T(e) {
         },
         onClick: P ? void 0 : () => a(r),
         className: o()(I.planOptionClickableContainer, {
-            [I.selectedPlan]: L && s,
-            [I.selectionBox]: L
+            [I.selectedPlan]: x && s,
+            [I.selectionBox]: x
         }),
         children: [
             (0, i.jsxs)('div', {
@@ -121,7 +121,7 @@ function T(e) {
                     (0, i.jsxs)('div', {
                         className: I.planOptionClickable,
                         children: [
-                            !L &&
+                            !x &&
                                 (0, i.jsx)(d.Checkbox, {
                                     readOnly: !0,
                                     displayOnly: !0,
@@ -137,7 +137,7 @@ function T(e) {
                                     className: I.planOptionCurrentPlan,
                                     children: ['(', b.intl.string(b.t.ymSxh4), ')']
                                 }),
-                            !L && V()
+                            !x && V()
                         ]
                     }),
                     S
@@ -146,7 +146,7 @@ function T(e) {
                               children: b.intl.format(b.t.hXcaLS, { price: H() })
                           })
                         : (0, i.jsx)('div', {
-                              className: o()({ [I.optionSelected]: s || L }),
+                              className: o()({ [I.optionSelected]: s || x }),
                               children: (0, E.T4)(k.amount, k.currency)
                           })
                 ]

@@ -37,8 +37,8 @@ let I = '33kozedd0zs6fbauka98psnc7zwom2s',
     R = 128,
     O = null,
     D = 0,
-    x = null,
-    L = new Set(),
+    L = null,
+    x = new Set(),
     w = {};
 function P(e) {
     var n;
@@ -71,7 +71,7 @@ class U {
     }
     stop() {
         (this._started = !1),
-            (x = null),
+            (L = null),
             (D = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
             p.Z.dispatch({
@@ -126,7 +126,7 @@ class U {
     }
     async _checkYouTube(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (((x = null), e.revoked || L.has(e.id))) return null;
+        if (((L = null), e.revoked || x.has(e.id))) return null;
         try {
             var r;
             let {
@@ -149,7 +149,7 @@ class U {
                 } = i[0],
                 l = { large_image: null !== (r = (0, m.getAssetFromImageURL)(y.ABu.YOUTUBE, s.high.url)) && void 0 !== r ? r : void 0 },
                 u = null != o && '' !== o ? o.slice(0, R) : void 0;
-            return (x = {
+            return (L = {
                 url: S(a),
                 name: _.Z.get(y.ABu.YOUTUBE).name,
                 details: u,
@@ -160,7 +160,7 @@ class U {
                 return h.Z.refreshAccessToken(e.type, e.id)
                     .then((n) => this._checkYouTube(e, n))
                     .catch(() => null);
-            return 403 === r.status && L.add(e.id), null;
+            return 403 === r.status && x.add(e.id), null;
         }
     }
     _check() {
@@ -175,7 +175,7 @@ class U {
                 if (this._started) {
                     var n;
                     let r = null === (n = e.find((e) => 'fulfilled' === e.status && null != e.value)) || void 0 === n ? void 0 : n.value;
-                    null == r && null != x && (r = x),
+                    null == r && null != L && (r = L),
                         p.Z.dispatch({
                             type: 'STREAMING_UPDATE',
                             stream: r

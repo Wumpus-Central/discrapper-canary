@@ -1,18 +1,18 @@
-e.d(n, {
+n.d(t, {
     U: function () {
-        return o;
+        return s;
     }
 });
-var i = e(192379),
-    r = e(695346),
-    l = e(73346),
-    u = e(834431);
-function o(t, n) {
-    let { shouldAnimate: e = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        o = r.QK.useSetting(),
-        a = (0, u.n)(),
-        s = e && a && o;
+var i = n(192379),
+    r = n(695346),
+    l = n(73346),
+    o = n(834431);
+function s(e, t) {
+    let { shouldAnimate: n = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        s = r.QK.useSetting(),
+        a = (0, o.n)(),
+        u = n && a && s;
     return i.useMemo(() => {
-        if ((null == t ? void 0 : t.image_asset) != null) return (0, l._W)(t.application_id, t.image_asset, n, s ? void 0 : 'webp');
-    }, [n, t, s]);
+        if ((null == e ? void 0 : e.image_asset) != null) return (0, l._W)(e.application_id, e.image_asset, t, u ? void 0 : 'webp');
+    }, [t, e, u]);
 }

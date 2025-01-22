@@ -64,7 +64,7 @@ t.Z = l.memo(function (e) {
             }),
             [T]
         ),
-        B = l.useCallback(
+        Y = l.useCallback(
             (e) =>
                 i({
                     ...e,
@@ -74,7 +74,7 @@ t.Z = l.memo(function (e) {
                 }),
             [t, i, I]
         ),
-        Y = l.useCallback(
+        B = l.useCallback(
             (e) =>
                 null != o || null != Z
                     ? (0, n.jsxs)('div', {
@@ -117,8 +117,8 @@ t.Z = l.memo(function (e) {
         onUpdate: R,
         onClick: k,
         targetWindow: b,
-        renderExtras: Y,
+        renderExtras: B,
         resizeValidation: K,
-        children: B
+        children: Y
     });
 });

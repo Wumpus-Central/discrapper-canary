@@ -42,8 +42,8 @@ function O(e, n, r) {
     );
 }
 let D = 50,
-    x = 0.9,
-    L = 0.1,
+    L = 0.9,
+    x = 0.1,
     w = 0;
 function P(e) {
     return (null != e ? e : R.Qx) / R.Qx;
@@ -928,10 +928,10 @@ class k extends E.Z {
                         var r, i, a, o;
                         let s = this.videoStreamParameters.find((e) => e.ssrc === n);
                         if (void 0 !== s && (null !== (r = s.quality) && void 0 !== r ? r : 0) < 100 && 'video' === s.type) {
-                            let r = Math.floor(e.bitrate * x);
+                            let r = Math.floor(e.bitrate * L);
                             r = u()(r, null !== (i = s.minBitrate) && void 0 !== i ? i : 0, null !== (a = s.maxBitrate) && void 0 !== a ? a : r);
                             let l = null !== (o = s.targetBitrate) && void 0 !== o ? o : 0;
-                            (Math.abs(r - l) / ((r + l) / 2) > L || void 0 === s.targetBitrate) && (this.logger.info('Updating target bitrate for SSRC '.concat(n, ' from ').concat(s.targetBitrate, ' to ').concat(r)), this.videoQualityManager.setGoLiveSimulcastLQTargetBitrate(r), this.updateVideoQuality());
+                            (Math.abs(r - l) / ((r + l) / 2) > x || void 0 === s.targetBitrate) && (this.logger.info('Updating target bitrate for SSRC '.concat(n, ' from ').concat(s.targetBitrate, ' to ').concat(r)), this.videoQualityManager.setGoLiveSimulcastLQTargetBitrate(r), this.updateVideoQuality());
                         }
                     });
                 }

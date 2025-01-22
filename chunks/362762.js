@@ -1,36 +1,36 @@
-var i,
-    r,
+var n,
     s,
-    l,
-    o = n(442837),
-    a = n(570140),
-    c = n(981631);
-let d = {};
-class u extends (l = o.ZP.Store) {
+    i,
+    c,
+    l = a(442837),
+    r = a(570140),
+    d = a(981631);
+let o = {};
+class g extends (c = l.ZP.Store) {
     getState(e) {
-        return d[e];
+        return o[e];
     }
 }
-(s = 'CodedLinkNativeAppStateStore'),
-    (r = 'displayName') in (i = u)
-        ? Object.defineProperty(i, r, {
-              value: s,
+(i = 'CodedLinkNativeAppStateStore'),
+    (s = 'displayName') in (n = g)
+        ? Object.defineProperty(n, s, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = s),
-    (t.Z = new u(a.Z, {
+        : (n[s] = i),
+    (t.Z = new g(r.Z, {
         NATIVE_APP_MODAL_OPENING: function (e) {
             let { code: t } = e;
-            d[t] = c.kEZ.OPENING;
+            o[t] = d.kEZ.OPENING;
         },
         NATIVE_APP_MODAL_OPENED: function (e) {
             let { code: t } = e;
-            d[t] = c.kEZ.OPEN;
+            o[t] = d.kEZ.OPEN;
         },
         NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
             let { code: t } = e;
-            d[t] = c.kEZ.OPEN_FAIL;
+            o[t] = d.kEZ.OPEN_FAIL;
         }
     }));

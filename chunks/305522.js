@@ -8,8 +8,8 @@ e.a(n, async function (n, r) {
                 __wbindgen_string_new: function () {
                     return u.h4;
                 },
-                crop_gif: function () {
-                    return u.oW;
+                crop_and_rotate_gif: function () {
+                    return u.hM;
                 }
             });
         var u = e(463281),

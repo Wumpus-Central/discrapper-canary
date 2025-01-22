@@ -27,8 +27,8 @@ var i = n(200651),
     v = n(843445),
     S = n(981631),
     T = n(388032),
-    A = n(32304);
-function b(e, t, n) {
+    b = n(32304);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -73,11 +73,11 @@ class L extends r.PureComponent {
         let { isAuthenticated: e, location: t } = this.props,
             n = e
                 ? (0, i.jsx)('div', {
-                      className: A.applicationStore,
+                      className: b.applicationStore,
                       children: this.renderContent()
                   })
                 : (0, i.jsx)(Z, {
-                      className: A.applicationStore,
+                      className: b.applicationStore,
                       location: t,
                       render: this.renderContent
                   });
@@ -88,8 +88,8 @@ class L extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'stopListeningToHistory', void 0),
-            b(this, 'renderStoreListing', (e) => {
+            A(this, 'stopListeningToHistory', void 0),
+            A(this, 'renderStoreListing', (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: r }
@@ -111,7 +111,7 @@ class L extends r.PureComponent {
                     })
                 });
             }),
-            b(this, 'renderContent', () =>
+            A(this, 'renderContent', () =>
                 (0, i.jsxs)(a.rs, {
                     children: [
                         (0, i.jsx)(a.AW, {

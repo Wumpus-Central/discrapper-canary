@@ -270,14 +270,14 @@ class _ {
                                     R = null !== (a = n.fecPacketsReceived) && void 0 !== a ? a : 0,
                                     O = null !== (o = n.fecPacketsDiscarded) && void 0 !== o ? o : 0,
                                     D = null !== (s = n.jitterBuffer) && void 0 !== s ? s : 0,
-                                    x = {
+                                    L = {
                                         audioJitterBuffer: n.audioJitterBuffer,
                                         audioJitterTarget: n.audioJitterTarget,
                                         audioJitterDelay: n.audioJitterDelay,
                                         relativeReceptionDelay: n.relativeReceptionDelay,
                                         relativePlayoutDelay: n.relativePlayoutDelay
                                     },
-                                    L = {
+                                    x = {
                                         silent: n.opSilence,
                                         normal: n.opNormal,
                                         merged: n.opMerge,
@@ -311,15 +311,15 @@ class _ {
                                             mosSum: this.inboundStats[r].mosSum + a,
                                             mosCount: this.inboundStats[r].mosCount + (a > 0 ? 1 : 0),
                                             mosBuckets: o,
-                                            bufferStats: x,
-                                            frameOpStats: L,
+                                            bufferStats: L,
+                                            frameOpStats: x,
                                             ...w
                                         }),
                                         (this.periodicInboundStats[r] = {
                                             previousTimestampMs: this.periodicInboundStats[r].previousTimestampMs,
                                             previous: this.periodicInboundStats[r].previous,
                                             currentTimestampMs: Date.now(),
-                                            current: L,
+                                            current: x,
                                             accelerateRateSum: this.periodicInboundStats[r].accelerateRateSum + (null !== (m = n.accelerateRate) && void 0 !== m ? m : 0),
                                             expandRateSum: this.periodicInboundStats[r].expandRateSum + (null !== (g = n.expandRate) && void 0 !== g ? g : 0),
                                             preemptiveExpandRateSum: this.periodicInboundStats[r].preemptiveExpandRateSum + (null !== (E = n.preemptiveExpandRate) && void 0 !== E ? E : 0),
@@ -337,15 +337,15 @@ class _ {
                                         mosSum: 0,
                                         mosCount: 0,
                                         mosBuckets: [0, 0, 0, 0, 0],
-                                        bufferStats: x,
-                                        frameOpStats: L,
+                                        bufferStats: L,
+                                        frameOpStats: x,
                                         ...w
                                     }),
                                         (this.periodicInboundStats[r] = {
                                             previousTimestampMs: Date.now(),
-                                            previous: L,
+                                            previous: x,
                                             currentTimestampMs: Date.now(),
-                                            current: L,
+                                            current: x,
                                             accelerateRateSum: null !== (y = n.accelerateRate) && void 0 !== y ? y : 0,
                                             expandRateSum: null !== (b = n.expandRate) && void 0 !== b ? b : 0,
                                             preemptiveExpandRateSum: null !== (I = n.preemptiveExpandRate) && void 0 !== I ? I : 0,

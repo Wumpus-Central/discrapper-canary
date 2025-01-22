@@ -12,16 +12,16 @@ let f = 20,
             R = o.useRef(!1),
             O = o.useRef(null),
             D = (0, u.Iu)((e) => e.searchQuery),
-            x = i.useStore((e) => e.activeCategoryIndex),
-            L = r.map((e) => ((0, l._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
+            L = i.useStore((e) => e.activeCategoryIndex),
+            x = r.map((e) => ((0, l._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
             w = (0, c.Uf)({
                 listRef: O,
                 searchQuery: D,
-                nitroLockedSectionStates: L,
+                nitroLockedSectionStates: x,
                 setShowUpsell: N
             }),
             P = (0, c.Qs)({
-                activeCategoryIndex: x,
+                activeCategoryIndex: L,
                 isScrolling: R,
                 listRef: O,
                 onActiveCategoryIndexChange: i.setActiveCategoryIndex,
@@ -37,7 +37,7 @@ let f = 20,
         return (
             (0, c.Xs)({
                 searchQuery: D,
-                activeCategoryIndex: x,
+                activeCategoryIndex: L,
                 listRef: O
             }),
             o.useImperativeHandle(

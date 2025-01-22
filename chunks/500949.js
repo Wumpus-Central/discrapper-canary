@@ -87,25 +87,25 @@ var a,
     g = n(857702),
     v = n(20450),
     j = n(312976),
-    _ = n(147591),
-    C = n(135164),
+    C = n(147591),
+    _ = n(135164),
     T = n(940172),
-    N = n(81011),
-    S = n(981613),
+    S = n(81011),
+    N = n(981613),
     y = n(762399),
     I = n(232112),
     E = n(53796),
     Z = n(402332),
-    w = n(375924),
-    k = n(596136),
+    k = n(375924),
+    w = n(596136),
     O = n(341901),
     R = n(856308),
     B = n(665352),
     P = n(394900),
     L = n(661105),
     A = n(525169),
-    D = n(433517),
-    F = n(190558),
+    F = n(433517),
+    D = n(190558),
     M = n(231338);
 let H = {
         sRGB: s.Z,
@@ -121,33 +121,33 @@ let H = {
         JzCzHz: g.Z,
         Jzazbz: v.Z,
         LCH: j.Z,
-        LCHuv: _.Z,
-        Lab: C.Z,
+        LCHuv: C.Z,
+        Lab: _.Z,
         Lab_D65: T.Z,
-        Luv: N.Z,
-        OKLCH: S.Z,
+        Luv: S.Z,
+        OKLCH: N.Z,
         OKLab: y.Z,
         P3: I.Z,
         ProPhoto: E.Z,
         REC_2020: Z.Z,
-        REC_2100_HLG: w.Z,
-        REC_2100_PQ: k.Z,
+        REC_2100_HLG: k.Z,
+        REC_2100_PQ: w.Z,
         XYZ_D50: O.Z,
         XYZ_D65: R.Z
     },
     G = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
 Object.values(H).forEach((e) => B.Z.register(e));
-let { SemanticColors: U } = F.V,
+let { SemanticColors: U } = D.V,
     z = U,
     V = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function W(e, t) {
     let [n, a] = o.useState(() => {
-        let n = D.K.get(e);
+        let n = F.K.get(e);
         return null != n ? n : t;
     });
     return (
         o.useEffect(() => {
-            D.K.set(e, n);
+            F.K.set(e, n);
         }, [e, n]),
         [n, a]
     );

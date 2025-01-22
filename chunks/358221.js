@@ -25,8 +25,8 @@ var l = r(512722),
     R = r(979651),
     O = r(413523),
     D = r(354459),
-    x = r(981631);
-function L(e, n, r) {
+    L = r(981631);
+function x(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -146,8 +146,8 @@ function er(e) {
 function ei(e) {
     let n = K(e);
     if (0 === n.size()) return;
-    let r = ek(e) || en(n) ? x.WtW.VIDEO : x.WtW.VOICE;
-    r === x.WtW.VOICE ? (delete G[e], delete Z[e]) : (G[e] = r);
+    let r = ek(e) || en(n) ? L.WtW.VIDEO : L.WtW.VOICE;
+    r === L.WtW.VOICE ? (delete G[e], delete Z[e]) : (G[e] = r);
 }
 function ea(e) {
     delete k[e], delete U[e], delete G[e], delete Z[e];
@@ -163,7 +163,7 @@ function el(e) {
     let { channelId: n, messageId: r } = e,
         i = eo(),
         a = I.Z.getChannel(n);
-    return null == n || null == r || ((null == a ? void 0 : a.type) !== x.d4z.GUILD_VOICE && (null == a ? void 0 : a.type) !== x.d4z.GUILD_STAGE_VOICE) || j[n] ? i : ((H[n] = !1), (j[n] = !0), !0);
+    return null == n || null == r || ((null == a ? void 0 : a.type) !== L.d4z.GUILD_VOICE && (null == a ? void 0 : a.type) !== L.d4z.GUILD_STAGE_VOICE) || j[n] ? i : ((H[n] = !1), (j[n] = !0), !0);
 }
 function eu(e) {
     let { voiceStates: n, initial: r } = e;
@@ -269,11 +269,11 @@ function eS(e) {
 }
 function eA(e) {
     let { channel: n } = e;
-    if (n.type === x.d4z.GROUP_DM) {
+    if (n.type === L.d4z.GROUP_DM) {
         let e = n.originChannelId;
         if (null != e) {
             var r, i;
-            return (Z[n.id] = { [x.IlC.APP]: null !== (i = null === (r = Z[e]) || void 0 === r ? void 0 : r[x.IlC.APP]) && void 0 !== i ? i : x.AEg.NORMAL }), !0;
+            return (Z[n.id] = { [L.IlC.APP]: null !== (i = null === (r = Z[e]) || void 0 === r ? void 0 : r[L.IlC.APP]) && void 0 !== i ? i : L.AEg.NORMAL }), !0;
         }
     }
     return !1;
@@ -305,11 +305,11 @@ function eD(e) {
     let { channelId: n, userId: r } = e;
     return X(r, [n]);
 }
-function ex(e) {
+function eL(e) {
     let { channelId: n, userId: r } = e;
     return X(r, [n]);
 }
-function eL(e) {
+function ex(e) {
     let { userId: n } = e;
     return X(n);
 }
@@ -413,14 +413,14 @@ class eU extends (i = f.ZP.PersistedStore) {
     }
     getMode(e) {
         var n;
-        return null !== (n = G[e]) && void 0 !== n ? n : ek(e) ? x.WtW.VIDEO : x.WtW.VOICE;
+        return null !== (n = G[e]) && void 0 !== n ? n : ek(e) ? L.WtW.VIDEO : L.WtW.VOICE;
     }
     getLayout(e) {
         var n, r;
-        let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x.IlC.APP;
-        if (__OVERLAY__) return x.AEg.NORMAL;
+        let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L.IlC.APP;
+        if (__OVERLAY__) return L.AEg.NORMAL;
         let a = ek(e);
-        return null !== (r = null === (n = Z[e]) || void 0 === n ? void 0 : n[i]) && void 0 !== r ? r : a ? x.AEg.NO_CHAT : x.AEg.NORMAL;
+        return null !== (r = null === (n = Z[e]) || void 0 === n ? void 0 : n[i]) && void 0 !== r ? r : a ? L.AEg.NO_CHAT : L.AEg.NORMAL;
     }
     getChatOpen(e) {
         var n;
@@ -434,8 +434,8 @@ class eU extends (i = f.ZP.PersistedStore) {
         return null !== (n = H[e]) && void 0 !== n && n;
     }
     isFullscreenInContext() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : x.IlC.APP;
-        return Object.values(Z).some((n) => n[e] === x.AEg.FULL_SCREEN);
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : L.IlC.APP;
+        return Object.values(Z).some((n) => n[e] === L.AEg.FULL_SCREEN);
     }
     getStageStreamSize(e) {
         return Y[e];
@@ -444,8 +444,8 @@ class eU extends (i = f.ZP.PersistedStore) {
         return W[e];
     }
 }
-L(eU, 'displayName', 'ChannelRTCStore'),
-    L(eU, 'persistKey', 'ChannelRTCStore'),
+x(eU, 'displayName', 'ChannelRTCStore'),
+    x(eU, 'persistKey', 'ChannelRTCStore'),
     (n.Z = new eU(p.Z, {
         CONNECTION_OPEN: z,
         CONNECTION_OPEN_SUPPLEMENTAL: eo,
@@ -471,8 +471,8 @@ L(eU, 'displayName', 'ChannelRTCStore'),
         CHANNEL_RTC_UPDATE_CHAT_OPEN: eI,
         CHANNEL_RTC_UPDATE_PARTCIPANTS_LIST_OPEN: eT,
         RTC_CONNECTION_VIDEO: eD,
-        RTC_CONNECTION_PLATFORM: ex,
-        AUDIO_SET_LOCAL_VIDEO_DISABLED: eL,
+        RTC_CONNECTION_PLATFORM: eL,
+        AUDIO_SET_LOCAL_VIDEO_DISABLED: ex,
         MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED: ew,
         STREAM_CLOSE: eR,
         STREAM_DELETE: eR,

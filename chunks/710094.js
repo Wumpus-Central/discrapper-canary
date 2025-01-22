@@ -30,8 +30,8 @@ var o = r(200651),
     R = r(678334),
     O = r(614277),
     D = r(474936),
-    x = r(231338),
-    L = r(388032);
+    L = r(231338),
+    x = r(388032);
 let w = 500;
 function P(e) {
     var n, r;
@@ -65,21 +65,21 @@ function P(e) {
             [a, Y, ec]
         ),
         eN = null != z ? q[z] : null,
-        eR = null != $ && D.o4.has($.id) && null != eN && !(0, d.aQ)(eN) ? Error(L.intl.string(L.t['2ik8io'])) : null,
+        eR = null != $ && D.o4.has($.id) && null != eN && !(0, d.aQ)(eN) ? Error(x.intl.string(x.t['2ik8io'])) : null,
         eO = s.useRef(null),
-        [eD, ex] = s.useState(null),
-        eL = !eh && null != eT && null != ee && D.nG[eT.trial_id].skus.includes(ee),
+        [eD, eL] = s.useState(null),
+        ex = !eh && null != eT && null != ee && D.nG[eT.trial_id].skus.includes(ee),
         ew = null == eS ? void 0 : null === (n = eS.discount) || void 0 === n ? void 0 : n.plan_ids,
         eP = !eh && null != eS && null != ew && null != $ && ew.includes($.id),
         eM = eh && (0, E.pO)(em),
-        ek = null == F && null == V && eu === x.GZ.SUBSCRIPTION,
+        ek = null == F && null == V && eu === L.GZ.SUBSCRIPTION,
         eU = (0, A.Kp)({
-            isTrial: eL,
+            isTrial: ex,
             isGift: eh,
             selectedSkuId: ee,
             startedPaymentFlowWithPaymentSources: ed.current
         }),
-        eB = eh && eu === x.GZ.ONE_TIME,
+        eB = eh && eu === L.GZ.ONE_TIME,
         eG = eB || (eU ? ek && es : es),
         eZ = (0, f.id)($, eh, eg),
         eF = s.useCallback(() => {
@@ -95,14 +95,14 @@ function P(e) {
         }, [a, eU, eB, eZ]),
         eV = !1;
     return (
-        eu === x.GZ.ONE_TIME
+        eu === L.GZ.ONE_TIME
             ? (i = (0, o.jsx)(C.Z, {
                   hasLegalTermsFlash: ev,
                   legalTermsNodeRef: eO,
                   onPaymentSourceChange: (e) => en(null != e ? e.id : null),
                   handlePaymentSourceAdd: () => a(b.h8.ADD_PAYMENT_STEPS)
               }))
-            : ((eV = eh ? null == ef : null != eN && eu === x.GZ.SUBSCRIPTION && eL && !eN.canRedeemTrial()),
+            : ((eV = eh ? null == ef : null != eN && eu === L.GZ.SUBSCRIPTION && ex && !eN.canRedeemTrial()),
               null == H || ep || eh
                   ? (u()(null != $, 'Expected plan to be selected'),
                     (i = (0, o.jsx)(_.Z, {
@@ -121,7 +121,7 @@ function P(e) {
                         reviewWarningMessage: M,
                         purchaseState: eo,
                         referralTrialOfferId: Z,
-                        isTrial: eL || (null != l && null != P),
+                        isTrial: ex || (null != l && null != P),
                         isDiscount: eP,
                         handleClose: j
                     })))
@@ -140,7 +140,7 @@ function P(e) {
                         setHasAcceptedTerms: el,
                         legalTermsNodeRef: eO,
                         hasLegalTermsFlash: ev,
-                        onInvoiceError: (e) => ex(e),
+                        onInvoiceError: (e) => eL(e),
                         planGroup: k,
                         currencies: K,
                         onCurrencyChange: (e) => et(e),
@@ -151,7 +151,7 @@ function P(e) {
         (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsx)(I.P, { giftMessage: e_ }),
-                !eM && (0, o.jsx)(N.Z, { isEligibleForTrial: eL }),
+                !eM && (0, o.jsx)(N.Z, { isEligibleForTrial: ex }),
                 (0, o.jsxs)(O.C3, {
                     children: [(0, o.jsx)(S.Z, {}), (0, o.jsx)(T.Z, {}), i]
                 }),
@@ -175,7 +175,7 @@ function P(e) {
                         openInvoiceId: U,
                         backButtonEligible: eG,
                         metadata: eA,
-                        isTrial: eL,
+                        isTrial: ex,
                         disablePurchase: eV
                     })
                 })

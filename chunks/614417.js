@@ -43,7 +43,7 @@ function R(e) {
         }),
         O = o.useRef(null),
         D = (0, E.ZP)(n.id, r),
-        x = (0, u.e7)([p.ZP], () => (null != r ? p.ZP.getMember(r, n.id) : null));
+        L = (0, u.e7)([p.ZP], () => (null != r ? p.ZP.getMember(r, n.id) : null));
     return (
         o.useEffect(() => {
             null == i || i(null == O ? void 0 : O.current);
@@ -52,7 +52,7 @@ function R(e) {
             value: I,
             children: (0, a.jsx)(m.Mt, {
                 value: R,
-                shouldTrackViewOnMount: null == x || null != x.fullProfileLoadedTimestamp,
+                shouldTrackViewOnMount: null == L || null != L.fullProfileLoadedTimestamp,
                 children: (0, a.jsx)(c.Dialog, {
                     ref: O,
                     'aria-label': n.username,
@@ -116,10 +116,10 @@ function R(e) {
 }
 function O(e) {
     let { user: n, guildId: r, setPopoutRef: i, channelId: s, messageId: T, roleId: R, onViewBlockedProfileClick: O, newAnalyticsLocations: D = [] } = e,
-        x = (0, u.e7)([h.Z], () => h.Z.isBlocked(n.id)),
-        { analyticsLocations: L } = (0, f.ZP)([...D, x ? d.Z.BLOCKED_PROFILE_POPOUT : d.Z.IGNORED_PROFILE_POPOUT]),
+        L = (0, u.e7)([h.Z], () => h.Z.isBlocked(n.id)),
+        { analyticsLocations: x } = (0, f.ZP)([...D, L ? d.Z.BLOCKED_PROFILE_POPOUT : d.Z.IGNORED_PROFILE_POPOUT]),
         w = (0, m.ZB)({
-            layout: x ? 'BLOCKED_PROFILE_POPOUT' : 'IGNORED_PROFILE_POPOUT',
+            layout: L ? 'BLOCKED_PROFILE_POPOUT' : 'IGNORED_PROFILE_POPOUT',
             userId: n.id,
             guildId: r,
             channelId: s,
@@ -132,9 +132,9 @@ function O(e) {
     o.useEffect(() => {
         null == i || i(null == P ? void 0 : P.current);
     }, [P, i]);
-    let U = x ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE';
+    let U = L ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE';
     return (0, a.jsx)(f.Gt, {
-        value: L,
+        value: x,
         children: (0, a.jsx)(m.Mt, {
             value: w,
             shouldTrackViewOnMount: null == k || null != k.fullProfileLoadedTimestamp,
@@ -170,7 +170,7 @@ function O(e) {
                                             }),
                                             (0, a.jsx)(c.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: A.intl.format(x ? A.t['8F+WNz'] : A.t['/cZp5u'], { username: _.ZP.getName(r, s, n) })
+                                                children: A.intl.format(L ? A.t['8F+WNz'] : A.t['/cZp5u'], { username: _.ZP.getName(r, s, n) })
                                             })
                                         ]
                                     }),
@@ -178,12 +178,12 @@ function O(e) {
                                         align: 'center',
                                         children: [
                                             (0, a.jsx)(I.Z, {
-                                                isBlocked: x,
+                                                isBlocked: L,
                                                 onClick: () => {
                                                     null == O || O(),
                                                         (0, g.pQ)({
                                                             action: U,
-                                                            analyticsLocations: L,
+                                                            analyticsLocations: x,
                                                             ...w
                                                         });
                                                 }
@@ -194,7 +194,7 @@ function O(e) {
                                                     null == O || O(),
                                                         (0, g.pQ)({
                                                             action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
-                                                            analyticsLocations: L,
+                                                            analyticsLocations: x,
                                                             ...w
                                                         });
                                                 }

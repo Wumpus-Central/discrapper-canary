@@ -37,8 +37,8 @@ let S = new d.Z('OverlayRenderStore'),
     R = {},
     O = null,
     D = new Set([c.Jx.FULLSCREEN, c.Jx.BORDERLESS_FULLSCREEN, c.Jx.UNKNOWN, c.Jx.MINIMIZED]),
-    x = new Set([c.Jx.MINIMIZED, c.Jx.UNKNOWN]),
-    L = 5000,
+    L = new Set([c.Jx.MINIMIZED, c.Jx.UNKNOWN]),
+    x = 5000,
     w = 3000,
     P = 10000;
 function M(e) {
@@ -147,7 +147,7 @@ async function Y(e) {
     }
     Z(e, 'state', u.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION), S.verbose('Determining initial overlay method for pid '.concat(e));
     let n = await z(e);
-    S.verbose('Overlay method for pid '.concat(e, ': ').concat((0, y.P_)(n))), V(e, v.zE.SCREEN_TYPE_RESOLUTION), q(e, n), et(L), ed.emitChange();
+    S.verbose('Overlay method for pid '.concat(e, ': ').concat((0, y.P_)(n))), V(e, v.zE.SCREEN_TYPE_RESOLUTION), q(e, n), et(x), ed.emitChange();
 }
 async function W(e) {
     if (!G(e)) {
@@ -168,7 +168,7 @@ async function K(e) {
 }
 async function z(e) {
     let n = await K(e);
-    if (x.has(n)) {
+    if (L.has(n)) {
         let r = await (0, y.hj)(e, P);
         null != r && (n = r);
     }
@@ -182,7 +182,7 @@ async function z(e) {
 function q(e, n) {
     return Z(e, 'state', n === u.gl.Disabled ? u.mM.OVERLAY_DISABLED : u.mM.WAITING_FOR_MODULE_TRACKING), Z(e, 'overlayMethod', n), S.verbose('Updating overlay method for pid '.concat(e, ' to ').concat((0, y.P_)(n))), l.Z.updateOverlayMethod(e, n);
 }
-function Q() {
+async function Q() {
     let e = new Set(
             p.ZP.getRunningGames()
                 .filter((e) => {
@@ -193,11 +193,11 @@ function Q() {
         ),
         n = new Set(k()),
         r = new Set([...n].filter((n) => !e.has(n)));
-    for (let e of r) W(e);
+    await Promise.all([...r].map(W));
     let i = new Set([...e].filter((e) => !n.has(e)));
-    for (let e of i) Y(e);
+    await Promise.all([...i].map(Y));
     let a = new Set([...n].filter((n) => e.has(n)));
-    ee(a),
+    await ee(a),
         (r.size > 0 || i.size > 0) &&
             S.verbose('Tracked games have changes', {
                 trackedPIDsNoLongerValid: r,
@@ -266,7 +266,7 @@ function et(e) {
         __OVERLAY__ && S.error('Running Polling While in Overlay Context!'),
             (O = setTimeout(async () => {
                 if (((O = null), !!(k().length > 0))) {
-                    et(L);
+                    et(x);
                     await ee(new Set(k()));
                 }
             }, e));
@@ -283,7 +283,7 @@ function en(e, n, r) {
             legacyEnabled: n,
             global: r
         }),
-        (0, m.vR)(!0),
+        e && !n && (0, m.vR)(!0),
         Q();
 }
 function er() {

@@ -34,8 +34,8 @@ var a = r(200651),
     R = r(176919),
     O = r(711007),
     D = r(459965),
-    x = r(509545),
-    L = r(580130),
+    L = r(509545),
+    x = r(580130),
     w = r(626135),
     P = r(669079),
     M = r(74538),
@@ -56,8 +56,8 @@ var a = r(200651),
 let Q = 2,
     X = 'billing';
 function J(e) {
-    let { analyticsLocations: n, analyticsLocation: r, analyticsObject: i, analyticsSourceLocation: s, analyticsSubscriptionType: c = W.NYc.PREMIUM, onComplete: p, transitionState: m, initialPlanId: E, subscriptionTier: I, onClose: T, trialId: L, trialFooterMessageOverride: F, reviewWarningMessage: V, planGroup: H = K.Y1, openInvoiceId: X, onSubscriptionConfirmation: J, renderPurchaseConfirmation: $, postSuccessGuild: ee, followupSKUInfo: et, renderHeader: en, applicationId: er, guildId: ei, referralTrialOfferId: ea, skuId: eo, onStepChange: es, shakeWhilePurchasing: el = !1, isLargeModal: eu = !1, hideShadow: ec = !1, returnRef: ed, skipConfirm: ef = !1, continueSessionToInitialStep: ep } = e,
-        { activitySessionId: eh, purchaseState: e_, setPurchaseState: em, selectedSkuId: eg, setSelectedSkuId: eE, selectedPlan: ev, setSelectedPlanId: ey, setSelectedPlanNotification: eb, setStep: eI, setPurchaseError: eT, paymentAuthenticationState: eS, step: eA, contextMetadata: eC, purchaseTokenAuthState: eN, activeSubscription: eR, priceOptions: eO, hasPaymentSources: eD, paymentSourceId: ex, paymentSources: eL, purchaseType: ew, defaultPlanId: eP } = (0, U.usePaymentContext)(),
+    let { analyticsLocations: n, analyticsLocation: r, analyticsObject: i, analyticsSourceLocation: s, analyticsSubscriptionType: c = W.NYc.PREMIUM, onComplete: p, transitionState: m, initialPlanId: E, subscriptionTier: I, onClose: T, trialId: x, trialFooterMessageOverride: F, reviewWarningMessage: V, planGroup: H = K.Y1, openInvoiceId: X, onSubscriptionConfirmation: J, renderPurchaseConfirmation: $, postSuccessGuild: ee, followupSKUInfo: et, renderHeader: en, applicationId: er, guildId: ei, referralTrialOfferId: ea, skuId: eo, onStepChange: es, shakeWhilePurchasing: el = !1, isLargeModal: eu = !1, hideShadow: ec = !1, returnRef: ed, skipConfirm: ef = !1, continueSessionToInitialStep: ep } = e,
+        { activitySessionId: eh, purchaseState: e_, setPurchaseState: em, selectedSkuId: eg, setSelectedSkuId: eE, selectedPlan: ev, setSelectedPlanId: ey, setSelectedPlanNotification: eb, setStep: eI, setPurchaseError: eT, paymentAuthenticationState: eS, step: eA, contextMetadata: eC, purchaseTokenAuthState: eN, activeSubscription: eR, priceOptions: eO, hasPaymentSources: eD, paymentSourceId: eL, paymentSources: ex, purchaseType: ew, defaultPlanId: eP } = (0, U.usePaymentContext)(),
         eM = (0, Z.Z)(),
         ek = d.ModalSize.SMALL;
     eu || (null == eM ? void 0 : eM.isLargeModal) ? (ek = d.ModalSize.LARGE) : (null == eM ? void 0 : eM.isDynamicModal) && (ek = d.ModalSize.DYNAMIC);
@@ -73,7 +73,7 @@ function J(e) {
             subscription_type: c,
             subscription_plan_id: null == ev ? void 0 : ev.id,
             is_gift: eU,
-            eligible_for_trial: null != L,
+            eligible_for_trial: null != x,
             location_stack: n,
             sku_id: eo,
             application_id: er,
@@ -82,7 +82,7 @@ function J(e) {
             activity_session_id: eh,
             eligible_for_discount: eH
         }),
-        eK = null != ex ? eL[ex] : null;
+        eK = null != eL ? ex[eL] : null;
     o.useEffect(() => {
         eW((e) => {
             let n = null != ev ? (0, M.aS)(ev.id, !1, eU, eO) : void 0;
@@ -107,7 +107,7 @@ function J(e) {
             if ((null != eP && null != ep ? ey(eP) : ey(E), null != eo)) eE(eo);
             else if (null != E) {
                 var e;
-                eE(null === (e = x.Z.get(E)) || void 0 === e ? void 0 : e.skuId);
+                eE(null === (e = L.Z.get(E)) || void 0 === e ? void 0 : e.skuId);
             }
         }, [ey, eE, E, eo, eP, ep]);
     let ez = o.useCallback(() => {
@@ -166,7 +166,7 @@ function J(e) {
             handleClose: eq,
             analyticsData: eY,
             setAnalyticsData: eW,
-            trialId: L,
+            trialId: x,
             trialFooterMessageOverride: F,
             reviewWarningMessage: V,
             planGroup: H,
@@ -219,14 +219,14 @@ function $(e) {
         }),
         { defaultToMonthlyPlan: O } = T.k.getCurrentConfig({ location: '055ec5_1' }, { autoTrackExposure: !1 }),
         { redirectToPlanSelectStep: D } = I.m.useExperiment({ location: 'PaymentPredicateStep' }, { autoTrackExposure: !1 }),
-        [x, w] = o.useState(!0),
-        P = (0, c.e7)([L.Z], () => L.Z.applicationIdsFetched.has(K.CL));
+        [L, w] = o.useState(!0),
+        P = (0, c.e7)([x.Z], () => x.Z.applicationIdsFetched.has(K.CL));
     return (o.useEffect(() => {
         w(!h || !_ || g);
     }, [g, _, h]),
     (0, m.Z)(
         'Payment Modal',
-        x,
+        L,
         5,
         {
             hasFetchedSubscriptions: h,
@@ -236,7 +236,7 @@ function $(e) {
         { tags: { app_context: X } }
     ),
     o.useEffect(() => {
-        if ((!P && (0, p.yD)(K.CL), x || f)) return;
+        if ((!P && (0, p.yD)(K.CL), L || f)) return;
         let e = (0, F.Kp)({
             isTrial: R,
             isGift: C,
@@ -255,8 +255,8 @@ function $(e) {
                 : null != n
                   ? i(B.h8.PLAN_SELECT)
                   : i(B.h8.SKU_SELECT);
-    }, [u, d, f, P, r, x, i, n, v, y, O, R, b, C, N, A, D]),
-    x)
+    }, [u, d, f, P, r, L, i, n, v, y, O, R, b, C, N, A, D]),
+    L)
         ? (0, a.jsx)(H.Z, {})
         : f
           ? (0, a.jsx)(E.Vq, { onClose: l })

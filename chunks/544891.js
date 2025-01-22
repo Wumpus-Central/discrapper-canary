@@ -21,7 +21,7 @@ r.d(n, {
         return p.Hx;
     },
     tn: function () {
-        return L;
+        return x;
     },
     yZ: function () {
         return _.H;
@@ -248,13 +248,13 @@ let N = C.bind(null, 'get'),
     R = C.bind(null, 'post'),
     O = C.bind(null, 'put'),
     D = C.bind(null, 'patch'),
-    x = C.bind(null, 'del'),
-    L = {
+    L = C.bind(null, 'del'),
+    x = {
         get: N,
         post: R,
         put: O,
         patch: D,
-        del: x
+        del: L
     };
 if (r.g.isServerRendering) {
     let e = (e, n) =>
@@ -265,7 +265,7 @@ if (r.g.isServerRendering) {
             body: null,
             text: ''
         });
-    (N = e), (R = e), (O = e), (D = e), (x = e);
+    (N = e), (R = e), (O = e), (D = e), (L = e);
 }
 function w() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

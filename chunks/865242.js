@@ -26,23 +26,23 @@ function s(e) {
     'percent' === T.style && isNaN(s) && (A = 0.01);
     let [C, N] = (0, o.useState)(m),
         [R, O] = (0, o.useState)(p),
-        [D, x] = (0, o.useState)(u);
-    (!Object.is(m, C) || p !== R || u !== D) && (v(S(m)), N(m), O(p), x(u));
-    let L = (0, o.useMemo)(() => y.parse(E), [y, E]),
+        [D, L] = (0, o.useState)(u);
+    (!Object.is(m, C) || p !== R || u !== D) && (v(S(m)), N(m), O(p), L(u));
+    let x = (0, o.useMemo)(() => y.parse(E), [y, E]),
         w = () => {
             let e;
             if (!E.length) {
                 g(NaN), v(void 0 === c ? '' : S(m));
                 return;
             }
-            if (isNaN(L)) {
+            if (isNaN(x)) {
                 v(S(m));
                 return;
             }
-            (e = isNaN(s) ? (0, i.uZ)(L, n, r) : (0, i.N4)(L, n, r, s)), g((e = y.parse(S(e)))), v(S(void 0 === c ? e : m));
+            (e = isNaN(s) ? (0, i.uZ)(x, n, r) : (0, i.N4)(x, n, r, s)), g((e = y.parse(S(e)))), v(S(void 0 === c ? e : m));
         },
         P = (e, a) => {
-            let o = L;
+            let o = x;
             if (isNaN(o)) {
                 let e = isNaN(a) ? 0 : a;
                 return (0, i.N4)(e, n, r, A);
@@ -68,11 +68,11 @@ function s(e) {
         decrementToMin: () => {
             null != n && g(n);
         },
-        canIncrement: (0, o.useMemo)(() => !h && !_ && (isNaN(L) || isNaN(r) || (0, i.N4)(L, n, r, A) > L || l('+', L, A) <= r), [h, _, n, r, A, L]),
-        canDecrement: (0, o.useMemo)(() => !h && !_ && (isNaN(L) || isNaN(n) || (0, i.N4)(L, n, r, A) < L || l('-', L, A) >= n), [h, _, n, r, A, L]),
+        canIncrement: (0, o.useMemo)(() => !h && !_ && (isNaN(x) || isNaN(r) || (0, i.N4)(x, n, r, A) > x || l('+', x, A) <= r), [h, _, n, r, A, x]),
+        canDecrement: (0, o.useMemo)(() => !h && !_ && (isNaN(x) || isNaN(n) || (0, i.N4)(x, n, r, A) < x || l('-', x, A) >= n), [h, _, n, r, A, x]),
         minValue: n,
         maxValue: r,
-        numberValue: L,
+        numberValue: x,
         setNumberValue: g,
         setInputValue: v,
         inputValue: E,

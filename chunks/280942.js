@@ -40,7 +40,7 @@ function m(e) {
             x === c.a$.NONE && ((f.transfer.disabled = !0), (f.transfer.subtext = d.intl.string(d.t.LiLRRU))), (f.cancel.subtext = d.intl.string(d.t['1ywaWF'])), (f.cancel.disabled = !0), (f.uncancel.disabled = !0);
     }
     x !== c.a$.NONE && ((f.cancel.subtext = d.intl.string(d.t.dq4vq6)), (f.cancel.disabled = !0), (f.uncancel.disabled = !0));
-    let _ = r.useMemo(
+    let E = r.useMemo(
         () =>
             h.isPausedOrPausePending && x === c.a$.NONE
                 ? (0, i.jsx)(s.MenuItem, {
@@ -111,7 +111,7 @@ function m(e) {
                       disabled: f.cancel.disabled,
                       color: 'danger'
                   }),
-            _
+            E
         ]
     });
 }

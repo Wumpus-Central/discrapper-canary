@@ -33,8 +33,8 @@ var c = r(200651),
     R = r(474936),
     O = r(388032),
     D = r(13926);
-let x = 1000;
-function L(e, n, r, i, a) {
+let L = 1000;
+function x(e, n, r, i, a) {
     let o = N.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, n, r, a),
         s = new URL(v.Z.makeUrl(N.Z5c.BILLING_LOGIN_HANDOFF)),
         l = (0, f.Z)();
@@ -80,9 +80,9 @@ let w = (e) => {
                 let e = setTimeout(
                     () => {
                         var e;
-                        if (!P) M(!0), (0, _.r5)(v.loadId), L(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : R.Xh.PREMIUM_MONTH_TIER_2, w, v.loadId, o, n);
+                        if (!P) M(!0), (0, _.r5)(v.loadId), x(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : R.Xh.PREMIUM_MONTH_TIER_2, w, v.loadId, o, n);
                     },
-                    r.delay ? x : 0
+                    r.delay ? L : 0
                 );
                 return () => clearTimeout(e);
             }, [s, w, v, o, M, P, n, r.delay]),

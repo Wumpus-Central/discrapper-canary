@@ -31,16 +31,16 @@ var a = r(200651),
     O = r(484495);
 function D(e) {
     var n;
-    let { onClose: r, onComplete: i, onStepChange: s, transitionState: D, loadId: x, skuId: L, isGift: w = !1, giftRecipient: P, giftMessage: M, giftingOrigin: k, analyticsLocations: U, returnRef: B } = e,
+    let { onClose: r, onComplete: i, onStepChange: s, transitionState: D, loadId: L, skuId: x, isGift: w = !1, giftRecipient: P, giftMessage: M, giftingOrigin: k, analyticsLocations: U, returnRef: B } = e,
         { analyticsLocations: G } = (0, p.ZP)([...U, f.Z.COLLECTIBLES_PAYMENT_MODAL]),
         Z = o.useRef(new u.qA()),
         [F, V] = o.useState(null),
         [j, H] = o.useState(!1),
-        Y = o.useMemo(() => (0, N.UY)(L), [L]),
+        Y = o.useMemo(() => (0, N.UY)(x), [x]),
         W = (0, c.Wu)([h.Z], () => h.Z.recommendedGiftSkuIds, []),
-        K = null != L ? [L] : W,
+        K = null != x ? [x] : W,
         z = null !== (n = K[0]) && void 0 !== n ? n : null,
-        q = null != L && _.Rm.has(L),
+        q = null != x && _.Rm.has(x),
         Q = o.useCallback(() => {
             H(!0), null == i || i();
         }, [i]),
@@ -107,7 +107,7 @@ function D(e) {
                     'aria-hidden': !0
                 }),
             (0, a.jsx)(g.PaymentContextProvider, {
-                loadId: x,
+                loadId: L,
                 stepConfigs: $,
                 applicationId: C.XAJ,
                 skuIDs: K,

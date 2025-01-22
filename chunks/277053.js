@@ -20,8 +20,8 @@ let I = new Set(),
     v = null,
     S = null,
     T = null,
-    A = null,
     b = null,
+    A = null,
     Z = null,
     x = h.K.get(E.kf) || !1;
 function L(e) {
@@ -29,12 +29,12 @@ function L(e) {
         n = { ...e.permissionOverwrites };
     return null != t && null == n[t] && (n[t] = p.we(t)), n;
 }
-function P() {
-    if (((T = g.Z.getChannel()), (A = g.Z.getCategory()), null == T)) return !1;
+function y() {
+    if (((T = g.Z.getChannel()), (b = g.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (S = v = L(T)), null == v[b] && (b = e), (r = null != A), (i = p.o4(T, A)), (Z = null), (N = !1), (C = _.QZA.CLOSED), I.clear();
+    (S = v = L(T)), null == v[A] && (A = e), (r = null != b), (i = p.o4(T, b)), (Z = null), (N = !1), (C = _.QZA.CLOSED), I.clear();
 }
-class O extends (l = u.ZP.Store) {
+class P extends (l = u.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, f.Z);
     }
@@ -54,7 +54,7 @@ class O extends (l = u.ZP.Store) {
         return v;
     }
     get selectedOverwriteId() {
-        return b;
+        return A;
     }
     get formState() {
         return C;
@@ -69,14 +69,14 @@ class O extends (l = u.ZP.Store) {
         return T;
     }
     get category() {
-        return A;
+        return b;
     }
     get advancedMode() {
         return x;
     }
 }
 (o = 'ChannelSettingsPermissionsStore'),
-    (s = 'displayName') in (a = O)
+    (s = 'displayName') in (a = P)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -84,13 +84,13 @@ class O extends (l = u.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new O(m.Z, {
+    (t.Z = new P(m.Z, {
         CHANNEL_SETTINGS_SET_SECTION: function (e) {
             let { section: t } = e;
             if (null != T || t !== _.CoT.PERMISSIONS) return !1;
-            P();
+            y();
         },
-        CHANNEL_SETTINGS_PERMISSIONS_INIT: P,
+        CHANNEL_SETTINGS_PERMISSIONS_INIT: y,
         CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
             let { id: t, allow: n, deny: r } = e,
                 l = null == v ? void 0 : v[t];
@@ -107,18 +107,18 @@ class O extends (l = u.ZP.Store) {
                 I.add(t),
                 (C = _.QZA.OPEN),
                 (N = !d().isEqual(v, S)),
-                (i = p.o4(T, A));
+                (i = p.o4(T, b));
         },
         CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
             let { id: t } = e;
-            if (null != v && null != v[t]) b = t;
+            if (null != v && null != v[t]) A = t;
             else {
                 if (null == T) return !1;
                 Z = t;
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (C = _.QZA.CLOSED), (v = null), (S = null), (T = null), (A = null), (N = !1), I.clear(), (b = null), (Z = null);
+            (C = _.QZA.CLOSED), (v = null), (S = null), (T = null), (b = null), (N = !1), I.clear(), (A = null), (Z = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -128,7 +128,7 @@ class O extends (l = u.ZP.Store) {
                 !1 !==
                     (function (e) {
                         if (null == T || T.id !== e || null == (T = f.Z.getChannel(e))) return !1;
-                        A = g.Z.getCategory();
+                        b = g.Z.getCategory();
                         let t = T.getGuildId();
                         if (null == t) return !1;
                         S = L(T);
@@ -142,10 +142,10 @@ class O extends (l = u.ZP.Store) {
                             (v = {
                                 ...T.permissionOverwrites,
                                 ...n
-                            })[b]
-                                ? (b = t)
-                                : null != Z && null != v[Z] && ((b = Z), (Z = null)),
-                            (i = p.o4(T, A)),
+                            })[A]
+                                ? (A = t)
+                                : null != Z && null != v[Z] && ((A = Z), (Z = null)),
+                            (i = p.o4(T, b)),
                             !0
                         );
                     })(e.id) && (n = !0);
@@ -156,7 +156,7 @@ class O extends (l = u.ZP.Store) {
         },
         CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS: function (e) {
             let { silent: t } = e;
-            t ? (C = _.QZA.OPEN) : ((C = _.QZA.CLOSED), P());
+            t ? (C = _.QZA.OPEN) : ((C = _.QZA.CLOSED), y());
         },
         CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
             let { advancedMode: t } = e;

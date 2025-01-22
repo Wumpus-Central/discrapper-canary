@@ -30,13 +30,13 @@ function C(e) {
     let { onClose: i, closePopout: s, sound: C, channel: N } = e,
         R = (0, f.ZP)(),
         [O, D] = o.useState(!1),
-        { location: x } = (0, d.O)(),
-        L = o.useMemo(
+        { location: L } = (0, d.O)(),
+        x = o.useMemo(
             () => ({
-                ...x,
+                ...L,
                 section: b.jXE.SOUNDBOARD_SOUND_PICKER
             }),
-            [x]
+            [L]
         ),
         { analyticsLocations: w } = (0, h.ZP)(p.Z.PREMIUM_UPSELL),
         { previewSound: P } = (0, v.Z)(C, null !== (n = null == N ? void 0 : N.id) && void 0 !== n ? n : null),
@@ -51,13 +51,13 @@ function C(e) {
             type: I.cd.SOUND_PICKER_SOUND_CLICKED,
             is_external: !0,
             location: {
-                ...L,
+                ...x,
                 object: b.qAy.SOUNDBOARD_SOUND
             },
             location_stack: w,
             sku_id: E.ZP.getSkuIdForPremiumType(I.p9.TIER_2)
         });
-    }, [w, L]);
+    }, [w, x]);
     let U = o.useCallback(() => {
         g.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, { location_section: b.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, _.z)(), s();
     }, [s]);

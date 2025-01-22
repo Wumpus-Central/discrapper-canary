@@ -25,8 +25,8 @@ var o = r(200651),
     R = r(626135),
     O = r(280930),
     D = r(606301),
-    x = r(278754),
-    L = r(981631),
+    L = r(278754),
+    x = r(981631),
     w = r(388032),
     P = r(304550);
 let M = 4,
@@ -171,7 +171,7 @@ function F(e) {
             ea = (e, n) => {
                 if (er) {
                     if (
-                        (R.default.track(L.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
+                        (R.default.track(x.rMx.AUTO_SUGGEST_EXPRESSION_SELECTED, {
                             sticker_id: e.id,
                             suggestion_trigger: H
                         }),
@@ -280,11 +280,11 @@ function F(e) {
                                             }),
                                             (0, o.jsx)(_.Clickable, {
                                                 onClick: () => {
-                                                    R.default.track(L.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                                                    R.default.track(x.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                                                         enabled: !1,
-                                                        location: { section: L.jXE.EXPRESSION_PICKER }
+                                                        location: { section: x.jXE.EXPRESSION_PICKER }
                                                     }),
-                                                        (0, x.AW)(!1);
+                                                        (0, L.AW)(!1);
                                                 },
                                                 children: (0, o.jsx)(_.Tooltip, {
                                                     text: w.intl.string(w.t.XNMs5u),

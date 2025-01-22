@@ -79,13 +79,13 @@ function R(e) {
 }
 function O(e) {
     let { userId: n, speakingFlags: r } = e;
-    return r !== h.Dg.NONE && n === f.default.getId() && x({}), !1;
+    return r !== h.Dg.NONE && n === f.default.getId() && L({}), !1;
 }
 function D(e) {
     let { state: n } = e;
     return (b = n === p.$7l.BACKGROUND), (m = Date.now()), A(), !1;
 }
-function x(e) {
+function L(e) {
     let { timestamp: n, type: r } = e,
         i = 'OVERLAY_SET_NOT_IDLE' === r && null != n;
     return (
@@ -104,19 +104,19 @@ function x(e) {
     (d.isPlatformEmbedded && (null === l.Z || void 0 === l.Z ? void 0 : l.Z.remotePowerMonitor) != null
         ? (C(),
           l.Z.remotePowerMonitor.on('resume', () => {
-              (v = !1), x({});
+              (v = !1), L({});
           }),
           l.Z.remotePowerMonitor.on('suspend', () => {
-              (v = !0), x({}), s.default.disconnect();
+              (v = !0), L({}), s.default.disconnect();
           }),
           l.Z.remotePowerMonitor.on('lock-screen', () => {
-              (y = !0), x({});
+              (y = !0), L({});
           }),
           l.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (y = !1), x({});
+              (y = !1), L({});
           }))
         : setInterval(A, 0.25 * p.OSm));
-class L extends (i = a.ZP.Store) {
+class x extends (i = a.ZP.Store) {
     isIdle() {
         return g;
     }
@@ -127,17 +127,17 @@ class L extends (i = a.ZP.Store) {
         return g ? m : null;
     }
 }
-_(L, 'displayName', 'IdleStore'),
-    (n.Z = new L(o.Z, {
+_(x, 'displayName', 'IdleStore'),
+    (n.Z = new x(o.Z, {
         IDLE: N,
         AFK: R,
         SPEAKING: O,
         APP_STATE_UPDATE: D,
-        OVERLAY_SET_NOT_IDLE: x,
-        CHANNEL_SELECT: x,
-        VOICE_CHANNEL_SELECT: x,
-        WINDOW_FOCUS: x,
-        OVERLAY_INITIALIZE: x,
-        OVERLAY_SET_INPUT_LOCKED: x,
-        USER_SETTINGS_PROTO_UPDATE: x
+        OVERLAY_SET_NOT_IDLE: L,
+        CHANNEL_SELECT: L,
+        VOICE_CHANNEL_SELECT: L,
+        WINDOW_FOCUS: L,
+        OVERLAY_INITIALIZE: L,
+        OVERLAY_SET_INPUT_LOCKED: L,
+        USER_SETTINGS_PROTO_UPDATE: L
     }));

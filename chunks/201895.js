@@ -1,73 +1,73 @@
-e.d(n, {
+n.d(t, {
     ZP: function () {
-        return c;
+        return d;
     }
 }),
-    e(653041);
-var i = e(131704),
-    r = e(699516),
-    l = e(594174),
-    u = e(933557),
-    o = e(981631),
-    a = e(388032);
-function s(t) {
-    let { isSubscriptionGated: n, needSubscriptionToAccess: e } = t;
-    if (n) return e ? a.intl.string(a.t['oj+HOj']) : a.intl.string(a.t.xI3TQU);
+    n(653041);
+var i = n(131704),
+    r = n(699516),
+    l = n(594174),
+    o = n(933557),
+    s = n(981631),
+    a = n(388032);
+function u(e) {
+    let { isSubscriptionGated: t, needSubscriptionToAccess: n } = e;
+    if (t) return n ? a.intl.string(a.t['oj+HOj']) : a.intl.string(a.t.xI3TQU);
 }
-function c(t) {
-    let n,
-        { channel: e, unread: c = !1, mentionCount: d = 0, userCount: f, embeddedActivitiesCount: _, isSubscriptionGated: E, needSubscriptionToAccess: p } = t,
-        g = (0, u.F6)(e, l.default, r.Z);
-    switch (e.type) {
-        case o.d4z.DM:
-            n = c ? a.t.F2MZsr : a.t.fYqXVV;
+function d(e) {
+    let t,
+        { channel: n, unread: d = !1, mentionCount: c = 0, userCount: h, embeddedActivitiesCount: f, isSubscriptionGated: g, needSubscriptionToAccess: C } = e,
+        p = (0, o.F6)(n, l.default, r.Z);
+    switch (n.type) {
+        case s.d4z.DM:
+            t = d ? a.t.F2MZsr : a.t.fYqXVV;
             break;
-        case o.d4z.GROUP_DM:
-            n = c ? a.t.fxxUo6 : a.t.lts3LS;
+        case s.d4z.GROUP_DM:
+            t = d ? a.t.fxxUo6 : a.t.lts3LS;
             break;
-        case o.d4z.GUILD_STORE:
-            n = a.t.Bo4msr;
+        case s.d4z.GUILD_STORE:
+            t = a.t.Bo4msr;
             break;
-        case o.d4z.GUILD_DIRECTORY:
-            n = a.t['92EAFx'];
+        case s.d4z.GUILD_DIRECTORY:
+            t = a.t['92EAFx'];
             break;
-        case o.d4z.GUILD_ANNOUNCEMENT:
-            n = d > 0 ? a.t.sDKIpq : c ? a.t.VM7z8f : a.t.WJ3MPj;
+        case s.d4z.GUILD_ANNOUNCEMENT:
+            t = c > 0 ? a.t.sDKIpq : d ? a.t.VM7z8f : a.t.WJ3MPj;
             break;
-        case o.d4z.GUILD_VOICE:
-            let S = [a.intl.formatToPlainString(a.t.bkpadH, { channelName: e.name })];
-            if ((d > 0 && S.push(a.intl.formatToPlainString(a.t['3l1GOz'], { mentionCount: d })), c && S.push(a.intl.string(a.t.x5zAGR)), null != f)) {
-                let t = e.userLimit;
-                null != t && t > 0
-                    ? S.push(
+        case s.d4z.GUILD_VOICE:
+            let E = [a.intl.formatToPlainString(a.t.bkpadH, { channelName: n.name })];
+            if ((c > 0 && E.push(a.intl.formatToPlainString(a.t['3l1GOz'], { mentionCount: c })), d && E.push(a.intl.string(a.t.x5zAGR)), null != h)) {
+                let e = n.userLimit;
+                null != e && e > 0
+                    ? E.push(
                           a.intl.formatToPlainString(a.t['6qgTOD'], {
-                              userCount: f,
-                              limit: t
+                              userCount: h,
+                              limit: e
                           })
                       )
-                    : S.push(a.intl.formatToPlainString(a.t.GNIiAA, { userCount: f }));
+                    : E.push(a.intl.formatToPlainString(a.t.GNIiAA, { userCount: h }));
             }
-            null != _ && _ > 0 && S.push(a.intl.formatToPlainString(a.t.O6PLYW, { activitiesCount: _ }));
-            let m = s({
-                isSubscriptionGated: E,
-                needSubscriptionToAccess: p
+            null != f && f > 0 && E.push(a.intl.formatToPlainString(a.t.O6PLYW, { activitiesCount: f }));
+            let _ = u({
+                isSubscriptionGated: g,
+                needSubscriptionToAccess: C
             });
-            return null != m && S.push(m), S.join(', ');
-        case o.d4z.GUILD_STAGE_VOICE:
-            n = a.t.TPPk2d;
+            return null != _ && E.push(_), E.join(', ');
+        case s.d4z.GUILD_STAGE_VOICE:
+            t = a.t.TPPk2d;
             break;
         default:
-            n = i.Ec.has(e.type) ? (d > 0 ? a.t['ZL7+Iy'] : c ? a.t.YlVvmZ : a.t['0nZpiI']) : d > 0 ? a.t.g8ONMz : c ? a.t.smf1CQ : a.t.s0JADg;
+            t = i.Ec.has(n.type) ? (c > 0 ? a.t['ZL7+Iy'] : d ? a.t.YlVvmZ : a.t['0nZpiI']) : c > 0 ? a.t.g8ONMz : d ? a.t.smf1CQ : a.t.s0JADg;
     }
-    let C = [
-            a.intl.formatToPlainString(n, {
-                channelName: g,
-                mentionCount: d
+    let I = [
+            a.intl.formatToPlainString(t, {
+                channelName: p,
+                mentionCount: c
             })
         ],
-        I = s({
-            isSubscriptionGated: E,
-            needSubscriptionToAccess: p
+        S = u({
+            isSubscriptionGated: g,
+            needSubscriptionToAccess: C
         });
-    return null != I && C.push(I), C.join(', ');
+    return null != S && I.push(S), I.join(', ');
 }

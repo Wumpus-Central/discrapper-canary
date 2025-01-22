@@ -39,8 +39,8 @@ function u(e) {
                     ]
                 })
             }),
-        [f, _] = r.useState(null),
-        E = r.useCallback(() => {
+        [f, E] = r.useState(null),
+        _ = r.useCallback(() => {
             if (null == f) return;
             let { scrollHeight: e, clientHeight: t } = f;
             e > t &&
@@ -50,8 +50,8 @@ function u(e) {
                 });
         }, [f]);
     r.useEffect(() => {
-        requestAnimationFrame(E);
-    }, [E, t, n]);
+        requestAnimationFrame(_);
+    }, [_, t, n]);
     let C = 'auto';
     return (
         null != h && (C = m ? ''.concat(h.expandedHeight, 'px') : ''.concat(h.truncatedHeight, 'px')),
@@ -61,7 +61,7 @@ function u(e) {
                     ...u,
                     className: d.content,
                     lineClamp: m ? void 0 : n,
-                    ref: _,
+                    ref: E,
                     style: { height: C },
                     children: t
                 }),

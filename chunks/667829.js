@@ -30,8 +30,8 @@ var o = r(200651),
     R = r(140963),
     O = r(4484),
     D = r(925994),
-    x = r(981631),
-    L = r(388032),
+    L = r(981631),
+    x = r(388032),
     w = r(553796);
 function P(e, n, r) {
     return (
@@ -158,11 +158,11 @@ class U extends s.Component {
     }
     getPlaceholder() {
         let { disabled: e, placeholder: n, isPreviewing: r } = this.props;
-        return e && !r ? L.intl.string(L.t.IYKTTU) : n;
+        return e && !r ? x.intl.string(x.t.IYKTTU) : n;
     }
     render() {
         var e, n, r, i, a, s;
-        let { textValue: l, richValue: c, disabled: d, onChange: f, onKeyDown: p, onResize: h, onSubmit: m, channel: g, type: E, fontSize: v, useSlate: y, spellcheckEnabled: b, useNewSlashCommands: I, canOnlyUseTextCommands: S, className: N, id: D, required: L, maxCharacterCount: P, allowNewLines: M, 'aria-describedby': U, 'aria-labelledby': B, accessibilityLabel: G } = this.props,
+        let { textValue: l, richValue: c, disabled: d, onChange: f, onKeyDown: p, onResize: h, onSubmit: m, channel: g, type: E, fontSize: v, useSlate: y, spellcheckEnabled: b, useNewSlashCommands: I, canOnlyUseTextCommands: S, className: N, id: D, required: x, maxCharacterCount: P, allowNewLines: M, 'aria-describedby': U, 'aria-labelledby': B, accessibilityLabel: G } = this.props,
             { submitting: Z, popup: F } = this.state,
             V = {
                 channel: g,
@@ -172,7 +172,7 @@ class U extends s.Component {
                 }),
                 id: D,
                 placeholder: this.getPlaceholder(),
-                required: L,
+                required: x,
                 accessibilityLabel: G,
                 disabled: d || !1,
                 submitting: Z,
@@ -227,11 +227,11 @@ class U extends s.Component {
         return (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsx)(T.d9, {
-                    event: x.CkL.INSERT_TEXT,
+                    event: L.CkL.INSERT_TEXT,
                     handler: this.handleInsertText
                 }),
                 (0, o.jsx)(T.d9, {
-                    event: x.CkL.CLEAR_TEXT,
+                    event: L.CkL.CLEAR_TEXT,
                     handler: this.handleClearText
                 }),
                 j

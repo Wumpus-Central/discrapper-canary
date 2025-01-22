@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(23551),
     x = n(468026),
     f = n(410030),
-    _ = n(726542),
-    E = n(122021),
+    E = n(726542),
+    _ = n(122021),
     C = n(275759),
     T = n(231757),
     S = n(888496),
@@ -87,7 +87,7 @@ let G = (e) => {
                                     children: s.guild.toString()
                                 }),
                                 (0, i.jsx)(u.Anchor, {
-                                    href: null === (n = _.Z.get(s.type)) || void 0 === n ? void 0 : null === (t = n.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(n, s.account),
+                                    href: null === (n = E.Z.get(s.type)) || void 0 === n ? void 0 : null === (t = n.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(n, s.account),
                                     children: (0, i.jsx)(u.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
@@ -124,8 +124,8 @@ function H(e) {
         [H, Y] = r.useState(null),
         [W, z] = r.useState(!1),
         [K, q] = r.useState([]),
-        Q = (0, E.rR)(h.type),
-        X = _.Z.get(Q);
+        Q = (0, _.rR)(h.type),
+        X = E.Z.get(Q);
     r.useEffect(() => {
         I(h.friendSync), A(h.visibility), O(h.metadataVisibility), D(h.showActivity);
     }, [h]);
@@ -149,7 +149,7 @@ function H(e) {
         });
     }
     function et() {
-        let e = _.Z.get(h.type),
+        let e = E.Z.get(h.type),
             t = F.intl.string(F.t.apVJu7);
         (0, y.Z)(h) &&
             (t = (0, i.jsxs)(i.Fragment, {
@@ -209,8 +209,8 @@ function H(e) {
         children: [
             (function (e) {
                 var t;
-                let n = _.Z.get(e.type),
-                    r = _.Z.get(Q),
+                let n = E.Z.get(e.type),
+                    r = E.Z.get(Q),
                     s = '1' === (null !== (t = e.metadata) && void 0 !== t ? t : {})[k.PC.TWITTER_VERIFIED],
                     a = null;
                 return (
@@ -339,7 +339,7 @@ function H(e) {
                 let a = K.includes(e.id),
                     l = F.intl.string(F.t.wzzjk5);
                 if (null == r || 0 === r.length) {
-                    if (!0 !== _.Z.get(e.type).hasMetadata) return null;
+                    if (!0 !== E.Z.get(e.type).hasMetadata) return null;
                     (r = [
                         (0, i.jsx)(
                             u.TextBadge,
@@ -417,7 +417,7 @@ function H(e) {
                         children: F.intl.format(F.t['6u6J0t'], { platform: n.name })
                     })
                 })),
-            (null === (s = _.Z.get(h.type)) || void 0 === s ? void 0 : s.hasMetadata) === !0 &&
+            (null === (s = E.Z.get(h.type)) || void 0 === s ? void 0 : s.hasMetadata) === !0 &&
                 (o = (0, i.jsx)(u.FormSwitch, {
                     className: U.connectionOptionSwitch,
                     hideBorder: !0,
@@ -507,7 +507,7 @@ function Y() {
     );
 }
 function W(e) {
-    let t = _.Z.get(e);
+    let t = E.Z.get(e);
     (0, T.Z)({ platformType: t.type }),
         R.default.track(M.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
@@ -522,7 +522,7 @@ function z() {
             onComplete: W
         });
     }
-    let t = (0, E.fq)(),
+    let t = (0, _.fq)(),
         n = (0, u.useRedesignIconContext)().enabled ? 24 : 18;
     return (0, i.jsxs)('div', {
         className: U.connectionsContainer,
@@ -594,7 +594,7 @@ function K(e) {
                     ]
                 })
               : s
-                    .filter((e) => _.Z.isSupported(e.type))
+                    .filter((e) => E.Z.isSupported(e.type))
                     .map((e, t) =>
                         (0, i.jsx)(
                             H,

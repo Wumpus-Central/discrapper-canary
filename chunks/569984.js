@@ -10,8 +10,8 @@ var T = r(754700),
     R = r(918701),
     O = r(184299),
     D = r(5881),
-    x = r(46140);
-function L(e, n, r) {
+    L = r(46140);
+function x(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -97,7 +97,7 @@ function j() {
 }
 function H(e) {
     let { quests: n } = e;
-    for (let e of ((i = !1), (o = new Map()), n)) o.set(e.id, e), e.targetedContent.includes(N.jn.QUEST_BAR) && (0, D.T)({ location: x.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
+    for (let e of ((i = !1), (o = new Map()), n)) o.set(e.id, e), e.targetedContent.includes(N.jn.QUEST_BAR) && (0, D.T)({ location: L.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
 }
 function Y() {
     (l = 0), (i = !1);
@@ -199,7 +199,7 @@ function ef(e) {
 }
 function ep(e) {
     let { user_status: n } = e,
-        r = (0, D.T)({ location: x.dr.QUESTS_STORE });
+        r = (0, D.T)({ location: L.dr.QUESTS_STORE });
     r.log('Received user status update for '.concat(n.quest_id), n);
     let i = (0, R.U3)(n);
     k(n.quest_id, { userStatus: i }), 0 === Object.keys(i.progress).length && w.has(i.questId) && (r.log('Removing optimistic progress for '.concat(i.questId)), w.delete(i.questId));
@@ -294,7 +294,7 @@ class ey extends (y = A.ZP.Store) {
         return null === (r = w.get(e)) || void 0 === r ? void 0 : r.get(n);
     }
 }
-L(ey, 'displayName', 'QuestsStore'),
+x(ey, 'displayName', 'QuestsStore'),
     (n.Z = new ey(C.Z, {
         LOGOUT: V,
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: j,

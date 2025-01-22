@@ -18,7 +18,7 @@ r.d(n, {
         return N;
     },
     yC: function () {
-        return x;
+        return L;
     }
 });
 var i = r(47120);
@@ -337,8 +337,8 @@ class D extends y.C {
         ]);
     }
 }
-let x = new D();
-class L extends y.C {
+let L = new D();
+class x extends y.C {
     internalJsonWrite(e, n) {
         return e.value;
     }
@@ -387,7 +387,7 @@ class L extends y.C {
         ]);
     }
 }
-let w = new L();
+let w = new x();
 class P extends y.C {
     internalJsonWrite(e, n) {
         return e.value;

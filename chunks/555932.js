@@ -87,8 +87,8 @@ function T(e) {
         O = n.premiumTier === h.Eu4.TIER_3 ? 1 : C * (R - N) + N,
         {
             progressBarFillWidthFactor: D,
-            isProgressBarAnimationComplete: x,
-            setShouldFireConfetti: L,
+            isProgressBarAnimationComplete: L,
+            setShouldFireConfetti: x,
             shouldFireConfetti: w,
             tierMarkerAnimationPosition: P
         } = I({
@@ -140,9 +140,9 @@ function T(e) {
                         {
                             confettiTriggerRef: y,
                             guild: n,
-                            isProgressBarAnimationComplete: x,
+                            isProgressBarAnimationComplete: L,
                             setConfettiCount: v,
-                            setShouldFireConfetti: L,
+                            setShouldFireConfetti: x,
                             tier: e,
                             tierMarkerAnimationPosition: P,
                             children: (0, d.nW)(e)

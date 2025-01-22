@@ -94,7 +94,7 @@ function D(e) {
     if (null == n) return !1;
     (v = n), (y = []);
 }
-function x(e) {
+function L(e) {
     let n = e.trendingCategories;
     b = [
         ...(null != e.trendingGIFPreview
@@ -116,7 +116,7 @@ function x(e) {
         }))
     ];
 }
-function L(e) {
+function x(e) {
     let { items: n } = e;
     T = n;
 }
@@ -156,7 +156,7 @@ p(P, 'displayName', 'GIFPickerViewStore'),
         GIF_PICKER_QUERY: C,
         GIF_PICKER_QUERY_SUCCESS: O,
         GIF_PICKER_QUERY_FAILURE: D,
-        GIF_PICKER_TRENDING_FETCH_SUCCESS: x,
-        GIF_PICKER_SUGGESTIONS_SUCCESS: L,
+        GIF_PICKER_TRENDING_FETCH_SUCCESS: L,
+        GIF_PICKER_SUGGESTIONS_SUCCESS: x,
         GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: w
     }));

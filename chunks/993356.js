@@ -8,8 +8,8 @@ t(192379);
 var l = t(442837),
     a = t(481060),
     s = t(87051),
-    r = t(778123),
-    u = t(122074),
+    u = t(778123),
+    r = t(122074),
     o = t(9156),
     d = t(621600),
     c = t(981631),
@@ -51,11 +51,11 @@ function h(e) {
                     [e.id]
                 ),
                 _ = f === c.gLR.DISABLED,
-                N = (0, r.Z)(e.id);
+                N = (0, u.Z)(e.id);
             function S(n, t) {
                 s.Z.updateGuildNotificationSettings(e.id, n, t);
             }
-            let I = (0, u.ng)(e.id, !0);
+            let I = (0, r.ng)(e.id, !0);
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(a.MenuGroup, {
@@ -122,7 +122,7 @@ function h(e) {
                         })) || void 0 === n
                   ? void 0
                   : n.label,
-        N = (0, u.U)();
+        N = (0, r.U)();
     return null != M
         ? (0, i.jsx)(a.MenuItem, {
               id: 'guild-notifications',

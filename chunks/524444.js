@@ -78,8 +78,8 @@ var o = r(200651),
     R = r(593545),
     O = r(479313),
     D = r(765104),
-    x = r(505953),
-    L = r(695346),
+    L = r(505953),
+    x = r(695346),
     w = r(201542),
     P = r(306680),
     M = r(594174),
@@ -167,7 +167,7 @@ function J(e) {
 function $(e) {
     let { alt: n, hiddenSpoilers: r, renderAdjacentContent: i, containerClassName: a, imageContainerClassName: l, disableAltTextDisplay: c = !1, mediaLayoutType: d, imageContainerStyle: f } = e,
         p = d === F.hV.MOSAIC,
-        _ = !c && L.H1.getSetting() && null != n && '' !== n && !0 !== r,
+        _ = !c && x.H1.getSetting() && null != n && '' !== n && !0 !== r,
         m = (e) => {
             let { altText: n } = e;
             return (0, o.jsxs)(h.Dialog, {
@@ -424,9 +424,9 @@ function el(e) {
             },
             [a]
         ),
-        L = (0, y.Z)(R);
+        x = (0, y.Z)(R);
     s.useEffect(() => {
-        !d().isEqual(L, R) &&
+        !d().isEqual(x, R) &&
             U.default.track(V.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
                 num_summaries: R.length,
                 message_counts: R.map((e) => e.count),
@@ -437,7 +437,7 @@ function el(e) {
                 channel_id: a.id,
                 channel_type: a.type
             });
-    }, [R, L, a.guild_id, a.id, a.type]);
+    }, [R, x, a.guild_id, a.id, a.type]);
     let w = (0, p.e7)(
             [M.default],
             () => {
@@ -593,7 +593,7 @@ function el(e) {
         );
     let et = s.useMemo(
             () =>
-                (0, o.jsx)(x.Z, {
+                (0, o.jsx)(L.Z, {
                     channel: a,
                     summaries: R,
                     summariesMembers: w,
@@ -792,11 +792,11 @@ function ed(e) {
             [C],
             ec
         ),
-        L = null !== (r = (0, p.e7)([D.Z], () => D.Z.visibleSummaryIndex())) && void 0 !== r ? r : -1,
-        w = null == C ? void 0 : null === (n = C[L]) || void 0 === n ? void 0 : n.topic;
+        x = null !== (r = (0, p.e7)([D.Z], () => D.Z.visibleSummaryIndex())) && void 0 !== r ? r : -1,
+        w = null == C ? void 0 : null === (n = C[x]) || void 0 === n ? void 0 : n.topic;
     null == w && null == m && (null == C ? void 0 : C.length) >= 1 && (w = null === (i = C[0]) || void 0 === i ? void 0 : i.topic);
-    let P = s.useMemo(() => d().get(C, L - 1), [L, C]),
-        G = s.useMemo(() => d().get(C, L + 1), [L, C]),
+    let P = s.useMemo(() => d().get(C, x - 1), [x, C]),
+        G = s.useMemo(() => d().get(C, x + 1), [x, C]),
         Z = s.useMemo(
             () =>
                 d().debounce((e) => {
@@ -870,11 +870,11 @@ function ed(e) {
             [C, a, j, l]
         ),
         X = s.useCallback(() => {
-            Q(L - 1, H.DZ.PILL_NEXT_ARROW);
-        }, [Q, L]),
+            Q(x - 1, H.DZ.PILL_NEXT_ARROW);
+        }, [Q, x]),
         J = s.useCallback(() => {
-            Q(L + 1, H.DZ.PILL_PREVIOUS_ARROW);
-        }, [L, Q]),
+            Q(x + 1, H.DZ.PILL_PREVIOUS_ARROW);
+        }, [x, Q]),
         $ = s.useCallback((e) => {
             var n;
             z(e);
@@ -930,7 +930,7 @@ function ed(e) {
         );
     let et = s.useMemo(
         () =>
-            (0, o.jsx)(x.Z, {
+            (0, o.jsx)(L.Z, {
                 channel: a,
                 summaries: C,
                 summariesMembers: R,

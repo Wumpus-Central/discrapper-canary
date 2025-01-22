@@ -194,13 +194,13 @@ var S = function e(n) {
     R = C.call(Function.call, Array.prototype.concat),
     O = C.call(Function.apply, Array.prototype.splice),
     D = C.call(Function.call, String.prototype.replace),
-    x = C.call(Function.call, String.prototype.slice),
-    L = C.call(Function.call, RegExp.prototype.exec),
+    L = C.call(Function.call, String.prototype.slice),
+    x = C.call(Function.call, RegExp.prototype.exec),
     w = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     P = /\\(\\)?/g,
     M = function (e) {
-        var n = x(e, 0, 1),
-            r = x(e, -1);
+        var n = L(e, 0, 1),
+            r = L(e, -1);
         if ('%' === n && '%' !== r) throw new u('invalid intrinsic syntax, expected closing `%`');
         if ('%' === r && '%' !== n) throw new u('invalid intrinsic syntax, expected opening `%`');
         var i = [];
@@ -228,7 +228,7 @@ var S = function e(n) {
 e.exports = function (e, n) {
     if ('string' != typeof e || 0 === e.length) throw new c('intrinsic name must be a non-empty string');
     if (arguments.length > 1 && 'boolean' != typeof n) throw new c('"allowMissing" argument must be a boolean');
-    if (null === L(/^%?[^%]*%?$/, e)) throw new u('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
+    if (null === x(/^%?[^%]*%?$/, e)) throw new u('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
     var r = M(e),
         i = r.length > 0 ? r[0] : '',
         a = k('%' + i + '%', n),
@@ -239,8 +239,8 @@ e.exports = function (e, n) {
     d && ((i = d[0]), O(r, R([0, 1], d)));
     for (var f = 1, p = !0; f < r.length; f += 1) {
         var _ = r[f],
-            m = x(_, 0, 1),
-            g = x(_, -1);
+            m = L(_, 0, 1),
+            g = L(_, -1);
         if (('"' === m || "'" === m || '`' === m || '"' === g || "'" === g || '`' === g) && m !== g) throw new u('property names with quotes must have matching quotes');
         if ((('constructor' === _ || !p) && (l = !0), (i += '.' + _), N(I, (o = '%' + i + '%')))) s = I[o];
         else if (null != s) {

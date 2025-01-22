@@ -25,8 +25,8 @@ var l = r(392711),
     R = r(816436),
     O = r(981631),
     D = r(372897),
-    x = r(490897);
-function L(e) {
+    L = r(490897);
+function x(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (m.Z.isFullServerPreview(e)) return;
     let r = n ? C.Z.getOnboardingPromptsForOnboarding(e) : C.Z.getOnboardingPrompts(e),
@@ -113,7 +113,7 @@ n.Z = {
             removedOptionIds: o
         });
     },
-    updateOnboardingResponses: u().debounce(L, 1000),
+    updateOnboardingResponses: u().debounce(x, 1000),
     updateRolesLocal: w,
     completeOnboarding(e, n) {
         let r = n.length > 0 ? n[n.length - 1] : null,
@@ -140,8 +140,8 @@ n.Z = {
                 guild_onboarding_covered_channel_ids: l.map((e) => e.id),
                 guild_onboarding_uncovered_channel_ids: u.map((e) => e.id)
             }),
-            (0, f.Ju)(e, x.W.GUILD_ONBOARDING_QUESTION, A.default.fromTimestamp(Date.now())),
-            L(e, !0),
+            (0, f.Ju)(e, L.W.GUILD_ONBOARDING_QUESTION, A.default.fromTimestamp(Date.now())),
+            x(e, !0),
             m.Z.isFullServerPreview(e))
         ) {
             (0, _.zS)(e, c, []), (0, _.aq)(e, { optInEnabled: !0 }), (0, _.og)(e, Array.from(a));

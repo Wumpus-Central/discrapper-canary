@@ -25,8 +25,8 @@ var a = r(200651),
     R = r(453070),
     O = r(926491),
     D = r(457040),
-    x = r(740492),
-    L = r(585483),
+    L = r(740492),
+    x = r(585483),
     w = r(5967),
     P = r(28546),
     M = r(957825),
@@ -60,7 +60,7 @@ let j = M.Om + B.Su.MEDIUM,
     }),
     Y = (e) => {
         let { positionContainerRef: n, drawerRef: r, orientation: i } = e,
-            a = (0, p.e7)([x.ZP], () => x.ZP.expressionPickerWidth),
+            a = (0, p.e7)([L.ZP], () => L.ZP.expressionPickerWidth),
             [s, l] = o.useState(window.innerWidth),
             [u, d] = o.useState(null != a ? a : M._j.MIN),
             f = o.useMemo(() => {
@@ -116,7 +116,7 @@ let j = M.Om + B.Su.MEDIUM,
     };
 function W(e) {
     var n, r, i, s;
-    let { positionTargetRef: u, hideGifFavorites: c, includeCreateEmojiButton: g, onSelectGIF: x, onSelectEmoji: W, onSelectSticker: K, onSelectSound: z, channel: q, type: Q, position: X, align: J, positionLayerClassName: $, closeOnModalOuterClick: ee = !1, parentModalKey: et } = e,
+    let { positionTargetRef: u, hideGifFavorites: c, includeCreateEmojiButton: g, onSelectGIF: L, onSelectEmoji: W, onSelectSticker: K, onSelectSound: z, channel: q, type: Q, position: X, align: J, positionLayerClassName: $, closeOnModalOuterClick: ee = !1, parentModalKey: et } = e,
         en = o.useRef(null),
         er = o.useRef(!1),
         ei = o.useRef(),
@@ -145,7 +145,7 @@ function W(e) {
                 }
                 (0, P._Q)();
                 let i = null === (n = (0, w.uB)(e)) || void 0 === n ? void 0 : n.activeElement;
-                (null == i || 'BODY' === i.tagName) && L.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
+                (null == i || 'BODY' === i.tagName) && x.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
             },
             [ee, e_, eh]
         ),
@@ -160,9 +160,9 @@ function W(e) {
             ec.addEventListener('mousedown', em),
             ec.addEventListener('contextmenu', em),
             ed.subscribe(k.CkL.POPOUT_CLOSE, eg),
-            L.S.subscribe(k.CkL.CLOSE_GIF_PICKER, e),
+            x.S.subscribe(k.CkL.CLOSE_GIF_PICKER, e),
             () => {
-                ec.removeEventListener('mousedown', em), ec.removeEventListener('contextmenu', em), ed.unsubscribe(k.CkL.POPOUT_CLOSE, eg), L.S.unsubscribe(k.CkL.CLOSE_GIF_PICKER, e);
+                ec.removeEventListener('mousedown', em), ec.removeEventListener('contextmenu', em), ed.unsubscribe(k.CkL.POPOUT_CLOSE, eg), x.S.unsubscribe(k.CkL.CLOSE_GIF_PICKER, e);
             }
         );
     }, [el, eg, em, ec, ed]),
@@ -199,10 +199,10 @@ function W(e) {
                         (er.current = !0));
             }
         });
-    let eI = (null === (n = Q.gifs) || void 0 === n ? void 0 : n.allowSending) && !d.tq && null != x,
+    let eI = (null === (n = Q.gifs) || void 0 === n ? void 0 : n.allowSending) && !d.tq && null != L,
         eT = (null === (r = Q.stickers) || void 0 === r ? void 0 : r.allowSending) && null != K,
-        eS = o.useCallback((e) => (null == z ? void 0 : z(e, 'emoji_picker')), [z]),
-        eA = o.useCallback((e) => (null == z ? void 0 : z(e, 'soundboard_picker')), [z]),
+        eS = o.useCallback((e, n) => (null == z ? void 0 : z(e, 'emoji_picker', n)), [z]),
+        eA = o.useCallback((e, n) => (null == z ? void 0 : z(e, 'soundboard_picker', n)), [z]),
         eC = (null === (i = Q.soundmoji) || void 0 === i ? void 0 : i.allowSending) === !0 && null != z,
         eN = !(null === (s = Q.expressionPicker) || void 0 === s ? void 0 : s.onlyEmojis) && (eI || eT),
         eR = 'left' === J ? 'right' : 'left',
@@ -313,7 +313,7 @@ function W(e) {
                                               : null,
                                           el === M.X1.GIF && eI
                                               ? (0, a.jsx)(S.Z, {
-                                                    onSelectGIF: x,
+                                                    onSelectGIF: L,
                                                     hideFavorites: c,
                                                     persistSearch: !0
                                                 })

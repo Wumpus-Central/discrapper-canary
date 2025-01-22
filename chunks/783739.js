@@ -18,8 +18,8 @@ var i = n(200651),
     p = n(314884),
     x = n(74538),
     f = n(199778),
-    _ = n(296533),
-    E = n(901750),
+    E = n(296533),
+    _ = n(901750),
     C = n(112863),
     T = n(701157),
     S = n(912152),
@@ -47,7 +47,7 @@ function v(e) {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.oQ, { className: N.blockedPaymentsWarning }),
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(_.Z, {
                 hasGuildBoostSlots: D,
                 hasAppliedGuildBoosts: B,
                 hasBoostPerk: F,
@@ -67,11 +67,11 @@ function v(e) {
             }),
             !P && (0, i.jsx)(C.Z, {}),
             (null == t ? void 0 : t.isPaused) && M === I.a$.NONE
-                ? (0, i.jsx)(_.r, {
+                ? (0, i.jsx)(E.r, {
                       appliedGuildBoosts: L,
                       premiumSubscription: t
                   })
-                : (0, i.jsx)(_.Z, {
+                : (0, i.jsx)(E.Z, {
                       guildBoostSlots: n,
                       premiumSubscription: t
                   }),

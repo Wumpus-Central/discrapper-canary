@@ -39,7 +39,7 @@ function O(e, n) {
 function D(e, n) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         S = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: A, onClick: O, onConfirm: D, onCancel: x, shouldConfirm: L, messageId: w, channelId: P } = e,
+        { trusted: A, onClick: O, onConfirm: D, onCancel: L, shouldConfirm: x, messageId: w, channelId: P } = e,
         M = a().sanitizeUrl(e.href);
     if (null == M) {
         null != n && n.preventDefault(),
@@ -118,7 +118,7 @@ function D(e, n) {
             }
             (0, l.Z)(k);
         },
-        W = null != x ? x : () => {};
+        W = null != L ? L : () => {};
     if (null !== c.Z.isBlockedDomain(k)) {
         null == n || n.preventDefault(), u.Z.show(k);
         return;
@@ -135,7 +135,7 @@ function D(e, n) {
         z = (0, I.E)(k),
         q = !('http:' === z || 'https:' === z);
     if ((!q && (K || b.Z.isTrustedDomain(k))) || (q && b.Z.isTrustedProtocol(k))) {
-        null == n || (null != L && L)
+        null == n || (null != x && x)
             ? Y()
             : B &&
               h.Z.trackAnnouncementMessageLinkClicked({

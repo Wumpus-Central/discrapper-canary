@@ -3,7 +3,7 @@ r.d(n, {
         return M;
     },
     Io: function () {
-        return L;
+        return x;
     },
     NY: function () {
         return w;
@@ -12,7 +12,7 @@ r.d(n, {
         return O;
     },
     Vq: function () {
-        return x;
+        return L;
     },
     Wf: function () {
         return P;
@@ -133,7 +133,7 @@ function D(e) {
     }
     return f;
 }
-function x(e) {
+function L(e) {
     let { id: n, guildId: r } = e,
         s = (0, a.e7)([g.Z], () => (null != r ? g.Z.getRole(r, n) : void 0)),
         l = (0, a.e7)([u.Z], () => u.Z.roleStyle);
@@ -158,7 +158,7 @@ function x(e) {
         ]
     });
 }
-function L(e) {
+function x(e) {
     let { id: n } = e,
         r = (0, a.e7)([m.Z], () => m.Z.getChannel(n)),
         o = S.intl.string(S.t.zLZPmp).toLowerCase(),

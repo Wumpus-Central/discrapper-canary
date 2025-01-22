@@ -119,7 +119,7 @@ let v = Symbol('linkClicked');
 function y(e) {
     let { onPress: n, onPressChange: r, onPressStart: o, onPressEnd: s, onPressUp: l, isDisabled: u, isPressed: c, preventFocusOnPress: d, shouldCancelOnPointerExit: f, allowTextSelectionOnPress: _, ref: g, ...y } = m(e),
         [C, N] = (0, a.useState)(!1),
-        x = (0, a.useRef)({
+        L = (0, a.useRef)({
             isPressed: !1,
             ignoreEmulatedMouseEvents: !1,
             ignoreClickAfterPress: !1,
@@ -130,9 +130,9 @@ function y(e) {
             isOverTarget: !1,
             pointerType: null
         }),
-        { addGlobalListener: L, removeAllGlobalListeners: w } = (0, i.xi)(),
+        { addGlobalListener: x, removeAllGlobalListeners: w } = (0, i.xi)(),
         P = (0, i.iW)((e, n) => {
-            let i = x.current;
+            let i = L.current;
             if (u || i.didFirePressStart) return !1;
             let a = !0;
             if (((i.isTriggeringEvent = !0), o)) {
@@ -142,7 +142,7 @@ function y(e) {
             return r && r(!0), (i.isTriggeringEvent = !1), (i.didFirePressStart = !0), N(!0), a;
         }),
         M = (0, i.iW)((e, i, a = !0) => {
-            let o = x.current;
+            let o = L.current;
             if (!o.didFirePressStart) return !1;
             (o.ignoreClickAfterPress = !0), (o.didFirePressStart = !1), (o.isTriggeringEvent = !0);
             let l = !0;
@@ -157,7 +157,7 @@ function y(e) {
             return (o.isTriggeringEvent = !1), l;
         }),
         k = (0, i.iW)((e, n) => {
-            let r = x.current;
+            let r = L.current;
             if (u) return !1;
             if (l) {
                 r.isTriggeringEvent = !0;
@@ -167,21 +167,21 @@ function y(e) {
             return !0;
         }),
         U = (0, i.iW)((e) => {
-            let n = x.current;
+            let n = L.current;
             n.isPressed && n.target && (n.isOverTarget && null != n.pointerType && M(A(n.target, e), n.pointerType, !1), (n.isPressed = !1), (n.isOverTarget = !1), (n.activePointerId = null), (n.pointerType = null), w(), !_ && h(n.target));
         }),
         B = (0, i.iW)((e) => {
             f && U(e);
         }),
         G = (0, a.useMemo)(() => {
-            let e = x.current,
+            let e = L.current,
                 n = {
                     onKeyDown(n) {
                         if (I(n.nativeEvent, n.currentTarget) && n.currentTarget.contains(n.target)) {
                             var a;
                             D(n.target, n.key) && n.preventDefault();
                             let o = !0;
-                            !e.isPressed && !n.repeat && ((e.target = n.currentTarget), (e.isPressed = !0), (o = P(n, 'keyboard')), L((0, i.r3)(n.currentTarget), 'keyup', r, !1)), o && n.stopPropagation(), n.metaKey && (0, i.V5)() && (null === (a = e.metaKeyEvents) || void 0 === a || a.set(n.key, n.nativeEvent));
+                            !e.isPressed && !n.repeat && ((e.target = n.currentTarget), (e.isPressed = !0), (o = P(n, 'keyboard')), x((0, i.r3)(n.currentTarget), 'keyup', r, !1)), o && n.stopPropagation(), n.metaKey && (0, i.V5)() && (null === (a = e.metaKeyEvents) || void 0 === a || a.set(n.key, n.nativeEvent));
                         } else 'Meta' === n.key && (e.metaKeyEvents = new Map());
                     },
                     onKeyUp(n) {
@@ -222,7 +222,7 @@ function y(e) {
                     }
                     O(n.currentTarget) && n.preventDefault(), (e.pointerType = n.pointerType);
                     let s = !0;
-                    !e.isPressed && ((e.isPressed = !0), (e.isOverTarget = !0), (e.activePointerId = n.pointerId), (e.target = n.currentTarget), !u && !d && (0, i.Ao)(n.currentTarget), !_ && p(e.target), (s = P(n, e.pointerType)), L((0, i.r3)(n.currentTarget), 'pointermove', r, !1), L((0, i.r3)(n.currentTarget), 'pointerup', a, !1), L((0, i.r3)(n.currentTarget), 'pointercancel', o, !1)), s && n.stopPropagation();
+                    !e.isPressed && ((e.isPressed = !0), (e.isOverTarget = !0), (e.activePointerId = n.pointerId), (e.target = n.currentTarget), !u && !d && (0, i.Ao)(n.currentTarget), !_ && p(e.target), (s = P(n, e.pointerType)), x((0, i.r3)(n.currentTarget), 'pointermove', r, !1), x((0, i.r3)(n.currentTarget), 'pointerup', a, !1), x((0, i.r3)(n.currentTarget), 'pointercancel', o, !1)), s && n.stopPropagation();
                 }),
                     (n.onMouseDown = (e) => {
                         e.currentTarget.contains(e.target) && 0 === e.button && (O(e.currentTarget) && e.preventDefault(), e.stopPropagation());
@@ -249,7 +249,7 @@ function y(e) {
                             n.stopPropagation();
                             return;
                         }
-                        (e.isPressed = !0), (e.isOverTarget = !0), (e.target = n.currentTarget), (e.pointerType = (0, i.Zj)(n.nativeEvent) ? 'virtual' : 'mouse'), !u && !d && (0, i.Ao)(n.currentTarget), P(n, e.pointerType) && n.stopPropagation(), L((0, i.r3)(n.currentTarget), 'mouseup', r, !1);
+                        (e.isPressed = !0), (e.isOverTarget = !0), (e.target = n.currentTarget), (e.pointerType = (0, i.Zj)(n.nativeEvent) ? 'virtual' : 'mouse'), !u && !d && (0, i.Ao)(n.currentTarget), P(n, e.pointerType) && n.stopPropagation(), x((0, i.r3)(n.currentTarget), 'mouseup', r, !1);
                     }
                 }),
                     (n.onMouseEnter = (n) => {
@@ -277,7 +277,7 @@ function y(e) {
                 (n.onTouchStart = (n) => {
                     if (!n.currentTarget.contains(n.target)) return;
                     let r = T(n.nativeEvent);
-                    if (!!r) (e.activePointerId = r.identifier), (e.ignoreEmulatedMouseEvents = !0), (e.isOverTarget = !0), (e.isPressed = !0), (e.target = n.currentTarget), (e.pointerType = 'touch'), !u && !d && (0, i.Ao)(n.currentTarget), !_ && p(e.target), P(n, e.pointerType) && n.stopPropagation(), L((0, i.kR)(n.currentTarget), 'scroll', a, !0);
+                    if (!!r) (e.activePointerId = r.identifier), (e.ignoreEmulatedMouseEvents = !0), (e.isOverTarget = !0), (e.isPressed = !0), (e.target = n.currentTarget), (e.pointerType = 'touch'), !u && !d && (0, i.Ao)(n.currentTarget), !_ && p(e.target), P(n, e.pointerType) && n.stopPropagation(), x((0, i.kR)(n.currentTarget), 'scroll', a, !0);
                 }),
                     (n.onTouchMove = (n) => {
                         if (!n.currentTarget.contains(n.target)) return;
@@ -318,12 +318,12 @@ function y(e) {
                 };
             }
             return n;
-        }, [L, u, d, w, _, U, B, M, P, k]);
+        }, [x, u, d, w, _, U, B, M, P, k]);
     return (
         (0, a.useEffect)(
             () => () => {
                 var e;
-                !_ && h(null !== (e = x.current.target) && void 0 !== e ? e : void 0);
+                !_ && h(null !== (e = L.current.target) && void 0 !== e ? e : void 0);
             },
             [_]
         ),
@@ -340,7 +340,7 @@ function I(e, n) {
     let { key: r, code: a } = e,
         o = n,
         s = o.getAttribute('role');
-    return ('Enter' === r || ' ' === r || 'Spacebar' === r || 'Space' === a) && !((o instanceof (0, i.kR)(o).HTMLInputElement && !L(o, r)) || o instanceof (0, i.kR)(o).HTMLTextAreaElement || o.isContentEditable) && !(('link' === s || (!s && b(o))) && 'Enter' !== r);
+    return ('Enter' === r || ' ' === r || 'Spacebar' === r || 'Space' === a) && !((o instanceof (0, i.kR)(o).HTMLInputElement && !x(o, r)) || o instanceof (0, i.kR)(o).HTMLTextAreaElement || o.isContentEditable) && !(('link' === s || (!s && b(o))) && 'Enter' !== r);
 }
 function T(e) {
     let { targetTouches: n } = e;
@@ -387,11 +387,11 @@ function O(e) {
     return !(e instanceof HTMLElement) || !e.hasAttribute('draggable');
 }
 function D(e, n) {
-    return e instanceof HTMLInputElement ? !L(e, n) : e instanceof HTMLButtonElement ? 'submit' !== e.type && 'reset' !== e.type : !b(e) && !0;
+    return e instanceof HTMLInputElement ? !x(e, n) : e instanceof HTMLButtonElement ? 'submit' !== e.type && 'reset' !== e.type : !b(e) && !0;
 }
-let x = new Set(['checkbox', 'radio', 'range', 'color', 'file', 'image', 'button', 'submit', 'reset']);
-function L(e, n) {
-    return 'checkbox' === e.type || 'radio' === e.type ? ' ' === n : x.has(e.type);
+let L = new Set(['checkbox', 'radio', 'range', 'color', 'file', 'image', 'button', 'submit', 'reset']);
+function x(e, n) {
+    return 'checkbox' === e.type || 'radio' === e.type ? ' ' === n : L.has(e.type);
 }
 function w({ children: e }) {
     let n = (0, a.useMemo)(

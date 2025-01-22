@@ -34,8 +34,8 @@ var o = r(200651),
     R = r(113434),
     O = r(497505),
     D = r(918701),
-    x = r(475595),
-    L = r(566078),
+    L = r(475595),
+    x = r(566078),
     w = r(114732),
     P = r(46140),
     M = r(675654),
@@ -65,18 +65,18 @@ function Z(e) {
         I = s.useRef(new c.qA()),
         T = (0, f.e7)([_.Z], () => _.Z.useReducedMotion),
         S = (0, f.e7)([A.default], () => A.default.getCurrentUser()),
-        C = s.useMemo(() => (0, x.fh)(a, x.eC.HERO), [a]),
+        C = s.useMemo(() => (0, L.fh)(a, L.eC.HERO), [a]),
         R = (null === (n = a.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-        [D, L] = s.useState(!0 === g || R ? 'claimed' : 'loading');
+        [D, x] = s.useState(!0 === g || R ? 'claimed' : 'loading');
     s.useEffect(() => {
         !R &&
             !0 !== g &&
             (0, N.QB)(a.id, O.y$.CROSS_PLATFORM, l)
-                .then(() => L('claimed'))
-                .catch(() => L('error'));
+                .then(() => x('claimed'))
+                .catch(() => x('error'));
     }, [a, l, R, g]);
     let P = () => {
-            L('applying'), m().finally(i);
+            x('applying'), m().finally(i);
         },
         k = !0 === g && null === h && (null == d ? void 0 : d.skuId) !== '',
         B = null == h && !0 !== g,
@@ -127,8 +127,8 @@ function Z(e) {
 }
 function F(e) {
     let { quest: n } = e,
-        r = s.useMemo(() => (0, x.fh)(n, x.eC.LOGO_TYPE, 'dark'), [n]),
-        i = L.r.build(n.config).defaultRewardRedemptionInstructionsByPlatform[O.y$.CROSS_PLATFORM];
+        r = s.useMemo(() => (0, L.fh)(n, L.eC.LOGO_TYPE, 'dark'), [n]),
+        i = x.r.build(n.config).defaultRewardRedemptionInstructionsByPlatform[O.y$.CROSS_PLATFORM];
     return (0, o.jsxs)('div', {
         className: U.additionalRedemptionInstructions,
         children: [
@@ -147,7 +147,7 @@ function F(e) {
 }
 function V(e) {
     let { quest: n, user: r, decoration: i, backgroundUrl: a, isSaving: s, onClose: l, onConfirm: u } = e,
-        c = (0, x.fh)(n, x.eC.REWARD).url,
+        c = (0, L.fh)(n, L.eC.REWARD).url,
         d = (0, R.Qy)(n.config);
     return (0, o.jsxs)('div', {
         className: U.claimedRootContainer,

@@ -66,12 +66,12 @@ let A = o.createContext({
 function C(e) {
     let { placeholder: n, children: r, value: i, onChange: s, className: d, listClassName: f, 'aria-label': b, multiSelect: I = !1, autoFocus: T = !1, maxVisibleItems: C = 5, itemToString: N = S, showScrollbar: R = !1 } = e,
         [O, D] = o.useState(''),
-        [x] = o.useState(!0),
-        [L, w] = o.useState(null),
+        [L] = o.useState(!0),
+        [x, w] = o.useState(null),
         P = o.useId(),
         M = o.useRef(null);
     o.useLayoutEffect(() => {
-        let e = document.querySelector('['.concat(v, '="').concat(L, '"]')),
+        let e = document.querySelector('['.concat(v, '="').concat(x, '"]')),
             n = M.current;
         null != n &&
             null != e &&
@@ -79,7 +79,7 @@ function C(e) {
                 node: e,
                 padding: 12
             });
-    }, [L]);
+    }, [x]);
     let k = r(O),
         U = 0 === k.length,
         B = o.useId(),
@@ -125,8 +125,8 @@ function C(e) {
                     ref: r,
                     role: 'combobox',
                     'aria-label': b,
-                    'aria-expanded': x,
-                    'aria-controls': x ? P : void 0,
+                    'aria-expanded': L,
+                    'aria-controls': L ? P : void 0,
                     'aria-owns': P,
                     'aria-haspopup': 'listbox',
                     className: l()(E.combobox, d),
@@ -143,12 +143,12 @@ function C(e) {
                             className: l()({ [E.searchWithScrollbar]: R }),
                             inputProps: {
                                 'aria-multiline': !1,
-                                'aria-activedescendant': null != L ? L : void 0
+                                'aria-activedescendant': null != x ? x : void 0
                             }
                         }),
                         (0, a.jsx)('div', {
                             children:
-                                x &&
+                                L &&
                                 (U
                                     ? (0, a.jsxs)('div', {
                                           className: E.empty,
@@ -166,7 +166,7 @@ function C(e) {
                                       })
                                     : (0, a.jsx)(A.Provider, {
                                           value: {
-                                              activeDescendant: L,
+                                              activeDescendant: x,
                                               selected: i,
                                               setSelected: s,
                                               itemToString: N

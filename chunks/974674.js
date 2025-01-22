@@ -234,7 +234,7 @@ function D(e, n, r) {
         avatarCutoutRadius: n ? (c + 2 * o) * E.ZC : (a + 2 * o) / 2
     };
 }
-function x(e, n, r, i) {
+function L(e, n, r, i) {
     let a = O(r, i, n, !1),
         s = (0, p.lm)(i, e);
     if (!n) {
@@ -262,7 +262,7 @@ function x(e, n, r, i) {
         rx: r.stroke
     });
 }
-function L(e) {
+function x(e) {
     let { status: n, isMobile: r, isTyping: i, size: a } = e,
         o = r && !i && n === v.Skl.ONLINE,
         s = (0, E.UC)(a);
@@ -286,8 +286,8 @@ function w(e) {
         },
         O = null == _ || m ? void 0 : C(_, g, v),
         D = A.size * y.hs,
-        x = N(g, r, v, b),
-        L =
+        L = N(g, r, v, b),
+        x =
             null != T &&
             (0, o.jsx)('svg', {
                 width: D + S,
@@ -300,7 +300,7 @@ function w(e) {
                     y: 0,
                     width: D,
                     height: D,
-                    mask: null != x ? 'url(#'.concat(x, ')') : void 0,
+                    mask: null != L ? 'url(#'.concat(L, ')') : void 0,
                     children: (0, o.jsx)('div', {
                         className: I.avatarStack,
                         children: (0, o.jsx)('img', {
@@ -325,7 +325,7 @@ function w(e) {
               onMouseLeave: null != f ? f : void 0,
               'aria-label': O,
               'aria-hidden': m,
-              children: [n, L]
+              children: [n, x]
           })
         : (0, o.jsxs)('div', {
               className: u()(I.wrapper, p),
@@ -336,7 +336,7 @@ function w(e) {
               role: 'img',
               'aria-label': O,
               'aria-hidden': m,
-              children: [n, L]
+              children: [n, x]
           });
 }
 function P(e) {
@@ -364,7 +364,7 @@ function M(e) {
         C = (0, E.UC)(i),
         N = null != A ? Math.ceil((C.status * E.D6 - C.status) / 2) : 0,
         D = C.size + N,
-        L = (0, p.vj)(A, a);
+        x = (0, p.vj)(A, a);
     return (0, o.jsx)(w, {
         ...e,
         ariaLabel: T,
@@ -391,7 +391,7 @@ function M(e) {
                         className: S
                     })
                 }),
-                null != A && null != y ? x(y, s, C, A) : null,
+                null != A && null != y ? L(y, s, C, A) : null,
                 null != A
                     ? (0, o.jsx)(h.u, {
                           text: _ ? (0, g.u5)(A) : null,
@@ -405,7 +405,7 @@ function M(e) {
                                       (0, o.jsx)('rect', {
                                           ...e,
                                           ...O(C, A, s, l),
-                                          fill: L,
+                                          fill: x,
                                           mask: 'url(#'.concat((0, p.rs)(A, s, l), ')'),
                                           className: I.pointerEvents
                                       }),
@@ -436,7 +436,7 @@ function U(e) {
         Z = s.useId(),
         [F] = s.useState(() => ({
             fill: i,
-            ...L({
+            ...x({
                 size: v,
                 status: r,
                 isMobile: n,
@@ -446,7 +446,7 @@ function U(e) {
         V = s.useMemo(
             () => ({
                 fill: B,
-                ...L({
+                ...x({
                     size: v,
                     status: b,
                     isMobile: a,
@@ -527,7 +527,7 @@ function U(e) {
                         className: U
                     })
                 }),
-                null != O && x(O, a, X, b),
+                null != O && L(O, a, X, b),
                 (0, o.jsx)(h.u, {
                     text: N ? (0, g.u5)(b) : null,
                     'aria-label': !1,

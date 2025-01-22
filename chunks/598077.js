@@ -151,7 +151,7 @@ class m extends s.Z {
         this.avatarDecorationData = (0, l.FG)(e);
     }
     constructor(e) {
-        var n, r, i, a, s, l, u, c, p, h, m, g, E, v, y, b, I, T, S, A, C, N, R, O, D, x, L, w, P, M, k;
+        var n, r, i, a, s, l, u, c, p, h, m, g, E, v, y, b, I, T, S, A, C, N, R, O, D, L, x, w, P, M, k;
         super(), _(this, 'id', void 0), _(this, 'username', void 0), _(this, 'discriminator', void 0), _(this, 'avatar', void 0), _(this, 'avatarDecorationData', void 0), _(this, 'banner', void 0), _(this, 'email', void 0), _(this, 'verified', void 0), _(this, 'bot', void 0), _(this, 'system', void 0), _(this, 'mfaEnabled', void 0), _(this, 'mobile', void 0), _(this, 'desktop', void 0), _(this, 'premiumType', void 0), _(this, 'flags', void 0), _(this, 'publicFlags', void 0), _(this, 'purchasedFlags', void 0), _(this, 'premiumUsageFlags', void 0), _(this, 'phone', void 0), _(this, 'nsfwAllowed', void 0), _(this, 'guildMemberAvatars', void 0), _(this, 'hasBouncedEmail', void 0), _(this, 'personalConnectionId', void 0), _(this, 'globalName', void 0), _(this, 'primaryGuild', void 0), _(this, 'hasFlag', (e) => !1), _(this, 'isStaff', () => !1), _(this, 'isStaffPersonal', () => !1), _(this, 'hasAnyStaffLevel', () => !1);
         let U = null !== (r = e.premium_type) && void 0 !== r ? r : e.premiumType;
         (this.id = e.id),
@@ -174,8 +174,8 @@ class m extends s.Z {
             (this.phone = null !== (N = e.phone) && void 0 !== N ? N : null),
             (this.nsfwAllowed = null !== (R = e.nsfw_allowed) && void 0 !== R ? R : e.nsfwAllowed),
             (this.guildMemberAvatars = null !== (O = e.guildMemberAvatars) && void 0 !== O ? O : {}),
-            (this.hasBouncedEmail = null !== (x = null !== (D = e.has_bounced_email) && void 0 !== D ? D : e.hasBouncedEmail) && void 0 !== x && x),
-            (this.personalConnectionId = null !== (w = null !== (L = e.personal_connection_id) && void 0 !== L ? L : e.personalConnectionId) && void 0 !== w ? w : null),
+            (this.hasBouncedEmail = null !== (L = null !== (D = e.has_bounced_email) && void 0 !== D ? D : e.hasBouncedEmail) && void 0 !== L && L),
+            (this.personalConnectionId = null !== (w = null !== (x = e.personal_connection_id) && void 0 !== x ? x : e.personalConnectionId) && void 0 !== w ? w : null),
             (this.globalName = null !== (P = e.global_name) && void 0 !== P ? P : e.globalName),
             (this.banner = e.banner),
             (this.primaryGuild = (0, f.lt)(null !== (k = null !== (M = e.primary_guild) && void 0 !== M ? M : e.primaryGuild) && void 0 !== k ? k : null)),

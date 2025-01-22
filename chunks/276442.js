@@ -18,7 +18,7 @@ var i = r(512722),
     m = r(474936);
 function g(e) {
     let { analyticsData: n, initialPlanId: r, breadcrumbSteps: i, handleStepChange: g, referralTrialOfferId: E, onReturn: v, continueSessionToInitialStep: y } = e,
-        { contextMetadata: b, step: I, paymentSources: T, paymentSourceId: S, setPaymentSourceId: A, purchaseError: C, setPurchaseError: N, purchaseErrorBlockRef: R, paymentAuthenticationState: O, selectedSkuId: D, activeSubscription: x, previousStepRef: L, setPurchaseState: w } = (0, d.usePaymentContext)(),
+        { contextMetadata: b, step: I, paymentSources: T, paymentSourceId: S, setPaymentSourceId: A, purchaseError: C, setPurchaseError: N, purchaseErrorBlockRef: R, paymentAuthenticationState: O, selectedSkuId: D, activeSubscription: L, previousStepRef: x, setPurchaseState: w } = (0, d.usePaymentContext)(),
         { isGift: P } = (0, c.wD)(),
         M = {
             ...(0, l.fL)(),
@@ -40,7 +40,7 @@ function g(e) {
         G = null != v ? v : B;
     a()(I, 'Step should be set here');
     let Z = (0, o.Z)(() => Date.now(), [I]),
-        F = null != y && null == L.current ? y : f.h8.PAYMENT_TYPE;
+        F = null != y && null == x.current ? y : f.h8.PAYMENT_TYPE;
     return (0, l.vP)({
         paymentModalArgs: M,
         initialStep: F,
@@ -65,6 +65,6 @@ function g(e) {
             });
         },
         isEligibleForTrial: U,
-        allowDesktopRedirectPurchase: (0, h.tr)(D, P, x)
+        allowDesktopRedirectPurchase: (0, h.tr)(D, P, L)
     });
 }

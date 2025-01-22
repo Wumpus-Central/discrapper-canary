@@ -1,20 +1,20 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return m;
     }
 });
-var a = t(200651),
-    i = t(192379),
-    r = t(481060),
-    l = t(881294),
-    o = t(258971),
-    s = t(133743),
-    c = t(981631),
-    d = t(388032),
-    u = t(190778);
+var i = n(200651),
+    a = n(192379),
+    r = n(481060),
+    l = n(881294),
+    o = n(258971),
+    s = n(133743),
+    c = n(981631),
+    d = n(388032),
+    u = n(190778);
 function m(e) {
-    let { application: n, className: t } = e,
-        m = i.useCallback((e) => {
+    let { application: t, className: n } = e,
+        m = a.useCallback((e) => {
             (0, l.zZ)(c.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                 category: e.name,
                 category_id: e.id,
@@ -22,25 +22,25 @@ function m(e) {
             }),
                 (0, s.pR)({ categoryId: e.id });
         }, []);
-    return null == n.categories || 0 === n.categories.length
+    return null == t.categories || 0 === t.categories.length
         ? null
-        : (0, a.jsxs)('div', {
-              className: t,
+        : (0, i.jsxs)('div', {
+              className: n,
               children: [
-                  (0, a.jsx)(r.Heading, {
+                  (0, i.jsx)(r.Heading, {
                       variant: 'heading-sm/semibold',
                       color: 'header-primary',
                       children: d.intl.string(d.t.s7ialZ)
                   }),
-                  (0, a.jsx)('div', {
+                  (0, i.jsx)('div', {
                       className: u.categories,
-                      children: n.categories.map((e) =>
-                          (0, a.jsx)(
+                      children: t.categories.map((e) =>
+                          (0, i.jsx)(
                               r.Clickable,
                               {
                                   className: u.category,
                                   onClick: () => m(e),
-                                  children: (0, a.jsx)(r.Text, {
+                                  children: (0, i.jsx)(r.Text, {
                                       variant: 'text-sm/semibold',
                                       color: 'redesign-button-tertiary-text',
                                       children: e.name

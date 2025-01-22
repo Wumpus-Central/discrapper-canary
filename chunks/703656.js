@@ -19,7 +19,7 @@ r.d(n, {
         return T;
     },
     eH: function () {
-        return x;
+        return L;
     },
     m1: function () {
         return N;
@@ -134,6 +134,6 @@ function O() {
 function D() {
     E() && ((a = null), i.goBack());
 }
-function x() {
+function L() {
     E() && ((a = null), i.goForward());
 }

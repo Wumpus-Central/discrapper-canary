@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(865427),
     x = n(358085),
     f = n(210887),
-    _ = n(981631),
-    E = n(388032),
+    E = n(981631),
+    _ = n(388032),
     C = n(823879);
 let T = [
     {
@@ -149,12 +149,12 @@ function S() {
                                 orientation: 'horizontal',
                                 options: [
                                     {
-                                        name: E.intl.string(E.t.b8Cei4),
-                                        value: _.BRd.DARK
+                                        name: _.intl.string(_.t.b8Cei4),
+                                        value: E.BRd.DARK
                                     },
                                     {
-                                        name: E.intl.string(E.t.K2sFfn),
-                                        value: _.BRd.LIGHT
+                                        name: _.intl.string(_.t.K2sFfn),
+                                        value: E.BRd.LIGHT
                                     }
                                 ],
                                 onChange: (e) => {

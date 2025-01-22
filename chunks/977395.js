@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var r = n(909688),
-    a = n(228624),
-    i = n(91641),
-    l = n(166350),
-    s = n(987338);
-let o = new i.E([l.NR, l.ZI, l.Ob, l.uc, l.m1, a.k, r.j], s.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });
+    i = n(228624),
+    l = n(91641),
+    s = n(166350),
+    a = n(987338);
+let o = new l.E([s.NR, s.ZI, s.Ob, s.uc, s.m1, i.k, r.j], a.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });

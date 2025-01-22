@@ -1,22 +1,22 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var a = t(200651),
-    i = t(192379),
-    r = t(481060),
-    l = t(581364),
-    o = t(665692),
-    s = t(388032),
-    c = t(765853);
+var i = n(200651),
+    a = n(192379),
+    r = n(481060),
+    l = n(581364),
+    o = n(665692),
+    s = n(388032),
+    c = n(765853);
 function d(e) {
-    let { application: n } = e,
-        t = i.useMemo(() => {
+    let { application: t } = e,
+        n = a.useMemo(() => {
             var e;
-            let t = null === (e = n.directory_entry) || void 0 === e ? void 0 : e.popular_application_commands;
-            return null != t
-                ? t.map((e) =>
+            let n = null === (e = t.directory_entry) || void 0 === e ? void 0 : e.popular_application_commands;
+            return null != n
+                ? n.map((e) =>
                       (0, l.Z8)({
                           rootCommand: e,
                           command: e,
@@ -24,32 +24,32 @@ function d(e) {
                       })
                   )
                 : [];
-        }, [n]);
-    return 0 === t.length
+        }, [t]);
+    return 0 === n.length
         ? null
-        : (0, a.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               className: c.sectionContainer,
               children: [
-                  (0, a.jsx)(r.Heading, {
+                  (0, i.jsx)(r.Heading, {
                       variant: 'heading-lg/semibold',
                       color: 'header-primary',
                       children: s.intl.string(s.t.swIgTE)
                   }),
-                  (0, a.jsx)('div', {
+                  (0, i.jsx)('div', {
                       className: c.contentContainer,
-                      children: t.map((e) =>
-                          (0, a.jsxs)(
+                      children: n.map((e) =>
+                          (0, i.jsxs)(
                               'div',
                               {
                                   className: c.commandContainer,
                                   children: [
-                                      (0, a.jsxs)(r.Text, {
+                                      (0, i.jsxs)(r.Text, {
                                           className: c.commandName,
                                           variant: 'code',
                                           color: 'header-primary',
                                           children: [o.GI, e.displayName]
                                       }),
-                                      (0, a.jsx)(r.Text, {
+                                      (0, i.jsx)(r.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-normal',
                                           children: e.displayDescription

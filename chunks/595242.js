@@ -18,13 +18,13 @@ var i = n(200651),
     p = n(899667),
     x = n(853872),
     f = n(78839),
-    _ = n(783739),
-    E = n(981631),
+    E = n(783739),
+    _ = n(981631),
     C = n(688738);
 function T() {
     r.useEffect(() => {
         c.Z.wait(() => {
-            d.jg(), d.tZ(), (0, u.X8)(), (0, m.Y2)(null, null, E.JjL.DISCOVERY), (0, u.tH)(!0);
+            d.jg(), d.tZ(), (0, u.X8)(), (0, m.Y2)(null, null, _.JjL.DISCOVERY), (0, u.tH)(!0);
         });
     }, []);
     let { hasFetchedSubscriptions: e, premiumSubscription: t } = (0, l.cj)([f.ZP], () => ({
@@ -41,7 +41,7 @@ function T() {
                   (0, i.jsx)('div', { className: C.background }),
                   (0, i.jsx)('div', {
                       className: C.content,
-                      children: (0, i.jsx)(_.Z, { premiumSubscription: t })
+                      children: (0, i.jsx)(E.Z, { premiumSubscription: t })
                   })
               ]
           })

@@ -140,7 +140,7 @@ function I(e, n, r, i, a, o) {
         R = null !== (_ = C('channel_flags')) && void 0 !== _ ? _ : 0,
         O = (null !== (g = S.channel_flags) && void 0 !== g ? g : 0) ^ R,
         D = 0 === (0, f.M1)(O, m.ic.FAVORITED, m.ic.OPT_IN_ENABLED),
-        x = null !== (v = null === (d = c.Z.getLastMessage(n)) || void 0 === d ? void 0 : d.type) && void 0 !== v ? v : null;
+        L = null !== (v = null === (d = c.Z.getLastMessage(n)) || void 0 === d ? void 0 : d.type) && void 0 !== v ? v : null;
     s.ZP.trackWithMetadata(p.rMx.NOTIFICATION_SETTINGS_UPDATED, {
         ...S,
         ...l.Z.getStats(e),
@@ -156,7 +156,7 @@ function I(e, n, r, i, a, o) {
         channel_is_overridden_old: C('channel_is_overridden'),
         channel_message_notification_settings_old: C('channel_message_notification_settings'),
         is_opt_in_only_change: D,
-        last_message_type: x
+        last_message_type: L
     });
 }
 function T(e) {

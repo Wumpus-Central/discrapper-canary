@@ -19,8 +19,8 @@ let g = (e) => {
         a,
         { body: g, cancelText: E, className: v, confirmColor: y, confirmText: b = _.intl.string(_.t.BddRzc), secondaryConfirmText: I, onCancel: T, onClose: S, onConfirm: A, onConfirmSecondary: C, title: N, transitionState: R, titleClassName: O } = e,
         D = (0, h.Q3)('ConfirmModal'),
-        x = D ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE,
-        L = () => {
+        L = D ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE,
+        x = () => {
             null == S || S(), null == T || T();
         },
         w = (e) => {
@@ -34,9 +34,9 @@ let g = (e) => {
             '' !== E &&
             (n = (0, i.jsx)(s.zx, {
                 type: 'button',
-                size: x,
+                size: L,
                 color: s.zx.Colors.PRIMARY,
-                onClick: L,
+                onClick: x,
                 className: m.secondaryButton,
                 children: E
             })),
@@ -45,7 +45,7 @@ let g = (e) => {
             (r = (0, i.jsx)(s.zx, {
                 type: 'submit',
                 color: y,
-                size: x,
+                size: L,
                 className: o()(m.primaryButton, null != n ? m.gutter : null),
                 autoFocus: !0,
                 children: b

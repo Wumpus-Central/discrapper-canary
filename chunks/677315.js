@@ -25,11 +25,11 @@ var i,
     R = r(197859),
     O = r(732116),
     D = r(653457),
-    x = 'Promise',
-    L = O.CONSTRUCTOR,
+    L = 'Promise',
+    x = O.CONSTRUCTOR,
     w = O.REJECTION_EVENT,
     P = O.SUBCLASSING,
-    M = N.getterFor(x),
+    M = N.getterFor(L),
     k = N.set,
     U = R && R.prototype,
     B = R,
@@ -140,7 +140,7 @@ var i,
         }
     };
 if (
-    L &&
+    x &&
     ((G = (B = function (e) {
         y(this, G), g(e), f(i, this);
         var n = M(this);
@@ -152,7 +152,7 @@ if (
     }).prototype),
     ((i = function (e) {
         k(this, {
-            type: x,
+            type: L,
             done: !1,
             notified: !1,
             parent: !1,
@@ -211,9 +211,9 @@ l(
         global: !0,
         constructor: !0,
         wrap: !0,
-        forced: L
+        forced: x
     },
     { Promise: B }
 ),
-    _(B, x, !1, !0),
-    m(x);
+    _(B, L, !1, !0),
+    m(L);

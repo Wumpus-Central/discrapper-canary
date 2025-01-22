@@ -1,11 +1,11 @@
 n.d(t, {
     j: function () {
-        return i;
+        return l;
     }
 });
 var r = n(818083),
-    a = n(987338);
-let i = (0, r.B)({
+    i = n(987338);
+let l = (0, r.B)({
     kind: 'user',
     id: '2025-01_mobile_shop_adaptive_back_button_color',
     label: 'mobile shop adaptive back button color',
@@ -17,5 +17,5 @@ let i = (0, r.B)({
             config: { enabled: !0 }
         }
     ],
-    commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN
+    commonTriggerPoint: i.$P.COLLECTIBLES_SHOP_OPEN
 });

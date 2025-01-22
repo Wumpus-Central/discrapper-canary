@@ -58,12 +58,12 @@ let T = 10800000,
         tension: 100,
         mass: 1
     },
-    x = (e) => {
+    L = (e) => {
         let n = (0, v.useToken)(v.tokens.modules.guildbar.AVATAR_SIZE),
             r = (0, v.useToken)(v.tokens.modules.guildbar.FOLDER_SIZE);
         return e ? r : n;
     },
-    L = (e) => e / 2,
+    x = (e) => e / 2,
     w = (e) => (e ? 2 : 4),
     P = (e) => {
         switch (e) {
@@ -149,9 +149,9 @@ function j(e) {
         } = e,
         o = (0, y.Q3)('BlobMask'),
         l = !!a.isFolder,
-        u = x(!1),
-        c = x(l),
-        d = L(c),
+        u = L(!1),
+        c = L(l),
+        d = x(c),
         f = w(o);
     return (0, s.jsx)(H, {
         ...a,
@@ -352,8 +352,8 @@ class H extends l.Component {
             R = ''.concat(g, '-lower_badge_masks'),
             O = ''.concat(g, '-blob_mask'),
             D = ''.concat(g, '-stroke_mask'),
-            x = ''.concat(g, '-highlight_mask'),
-            L = (null == a ? void 0 : a.width) != null ? a.width : A,
+            L = ''.concat(g, '-highlight_mask'),
+            x = (null == a ? void 0 : a.width) != null ? a.width : A,
             w = (null == a ? void 0 : a.height) != null ? a.height : A;
         return (0, s.jsxs)(
             'div',
@@ -377,7 +377,7 @@ class H extends l.Component {
                                         d &&
                                             (0, s.jsx)(h.animated.path, {
                                                 d: this.getPathInterpolation(),
-                                                id: x
+                                                id: L
                                             }),
                                         (0, s.jsx)(h.animated.path, {
                                             d: this.getPathInterpolation(),
@@ -398,13 +398,13 @@ class H extends l.Component {
                                         T
                                             ? (0, s.jsx)(h.animated.rect, {
                                                   id: R,
-                                                  x: f - (L + 2 * _) + _,
+                                                  x: f - (x + 2 * _) + _,
                                                   y: f - (w + 2 * _) + _,
-                                                  width: L + 2 * _,
+                                                  width: x + 2 * _,
                                                   height: w + 2 * _,
                                                   rx: p / 2,
                                                   ry: p / 2,
-                                                  transform: this.getBadgePositionInterpolation(v, 1, L + _)
+                                                  transform: this.getBadgePositionInterpolation(v, 1, x + _)
                                               })
                                             : null
                                     ]
@@ -419,7 +419,7 @@ class H extends l.Component {
                                     children: [
                                         d &&
                                             (0, s.jsx)('use', {
-                                                href: '#'.concat(x),
+                                                href: '#'.concat(L),
                                                 fill: 'black'
                                             }),
                                         (0, s.jsx)('use', {

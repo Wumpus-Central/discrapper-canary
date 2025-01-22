@@ -29,16 +29,16 @@ var i = r(200651),
     N = r(769860);
 function R(e) {
     var n, r, o;
-    let { title: R, type: O, guildBoostProps: D, analyticsSource: x, analyticsLocation: L, body: w, context: P, glowUp: M, modalClassName: k, modalContentClassName: U, artContainerClassName: B, headerClassName: G, bodyClassName: Z, transitionState: F, onClose: V, onSubscribeClick: j, onSubscribeFinish: H, onSecondaryClick: Y, secondaryCTA: W, subscribeButtonText: K, showNewBadge: z = !1, enableArtBoxShadow: q = !0, subscriptionTier: Q = T.Si.TIER_2, isLoading: X = !1, hideBackButton: J, backButtonText: $, showEnhancedUpsell: ee, useSubscribeButtonGradient: et, subscribeButtonClassname: en, hidePremiumOfferUpsell: er, children: ei, LeadingComponent: ea, ...eo } = e,
+    let { title: R, type: O, guildBoostProps: D, analyticsSource: L, analyticsLocation: x, body: w, context: P, glowUp: M, modalClassName: k, modalContentClassName: U, artContainerClassName: B, headerClassName: G, bodyClassName: Z, transitionState: F, onClose: V, onSubscribeClick: j, onSubscribeFinish: H, onSecondaryClick: Y, secondaryCTA: W, subscribeButtonText: K, showNewBadge: z = !1, enableArtBoxShadow: q = !0, subscriptionTier: Q = T.Si.TIER_2, isLoading: X = !1, hideBackButton: J, backButtonText: $, showEnhancedUpsell: ee, useSubscribeButtonGradient: et, subscribeButtonClassname: en, hidePremiumOfferUpsell: er, children: ei, LeadingComponent: ea, ...eo } = e,
         es = null != D,
         el = (0, E.N)(),
         eu = (0, g.Ng)(),
         ec = !er && ((null == el ? void 0 : null === (n = el.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === Q || (0, g.Wp)(eu, Q)) && !es,
         { analyticsLocations: ed } = (0, f.ZP)(d.Z.PREMIUM_UPSELL_MODAL),
         ef = {
-            analyticsLocation: L,
+            analyticsLocation: x,
             analyticsLocations: ed,
-            analyticsSource: x,
+            analyticsSource: L,
             guildBoostProps: D,
             type: O
         },
@@ -74,7 +74,7 @@ function R(e) {
     let eg = () => {
             if (es)
                 return (0, i.jsx)(p.Z, {
-                    analyticsLocation: L,
+                    analyticsLocation: x,
                     guild: D.guild,
                     onClose: V
                 });
@@ -91,7 +91,7 @@ function R(e) {
             return (0, i.jsx)(y.Z, {
                 className: en,
                 showGradient: ee || et,
-                premiumModalAnalyticsLocation: L,
+                premiumModalAnalyticsLocation: x,
                 subscriptionTier: Q,
                 size: u.Button.Sizes.SMALL,
                 color: ee || et ? u.Button.Colors.CUSTOM : u.Button.Colors.GREEN,
@@ -145,7 +145,7 @@ function R(e) {
                                             subscriptionTier: null !== (o = null == el ? void 0 : null === (r = el.subscription_trial) || void 0 === r ? void 0 : r.sku_id) && void 0 !== o ? o : T.Si.TIER_2,
                                             headingText: R,
                                             context: P,
-                                            analyticsLocationObject: L,
+                                            analyticsLocationObject: x,
                                             discountOffer: eu,
                                             trialOffer: el,
                                             children: M

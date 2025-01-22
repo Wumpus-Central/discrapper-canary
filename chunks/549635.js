@@ -27,7 +27,7 @@ function b(e) {
     var n, r, a, o, l;
     let p,
         { media: m, obscured: b = !1, padding: T, onContextMenu: S } = e,
-        { width: A, height: C, url: N, proxyUrl: R, alt: O, type: D, maxWidth: x, maxHeight: L, ...w } = m,
+        { width: A, height: C, url: N, proxyUrl: R, alt: O, type: D, maxWidth: L, maxHeight: x, ...w } = m,
         { zoomed: P, setZoomed: M } = (0, E.Y)(),
         k = I(P, N, R),
         U = {

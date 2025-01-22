@@ -1,12 +1,12 @@
 r.d(n, {
     FU: function () {
-        return L;
+        return x;
     },
     eH: function () {
         return w;
     },
     wG: function () {
-        return x;
+        return L;
     }
 });
 var i = r(66153);
@@ -102,11 +102,11 @@ async function D(e, n, r) {
             (0, y.Nm)();
         }
 }
-async function x(e, n) {
+async function L(e, n) {
     let { track: r = !0, location: i } = n;
     await D(m.TO.CAMERA_BACKGROUND_LIVE, { type: m.W$.INPUT_DEVICE }, e), r && (0, I.Bh)(e, i, 'Enabled');
 }
-async function L(e, n, r) {
+async function x(e, n, r) {
     let { track: i = !0, location: a } = r;
     (0, y.GS)(),
         await D(
@@ -123,5 +123,5 @@ function w() {
     let e = g.default.getCurrentUser();
     if (null == e) return;
     let n = (0, v.P)(e);
-    (0, S.Z)() && !b.Z.hasBeenApplied && null != n && x(n, { track: !1 }).catch(C.dG4);
+    (0, S.Z)() && !b.Z.hasBeenApplied && null != n && L(n, { track: !1 }).catch(C.dG4);
 }

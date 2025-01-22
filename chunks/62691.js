@@ -33,12 +33,12 @@ var D = function (e) {
             delete R[e], n();
         }
     },
-    x = function (e) {
+    L = function (e) {
         return function () {
             D(e);
         };
     },
-    L = function (e) {
+    x = function (e) {
         D(e.data);
     },
     w = function (e) {
@@ -62,16 +62,16 @@ var D = function (e) {
     }),
     v
         ? (a = function (e) {
-              I.nextTick(x(e));
+              I.nextTick(L(e));
           })
         : T && T.now
           ? (a = function (e) {
-                T.now(x(e));
+                T.now(L(e));
             })
           : A && !E
-            ? ((s = (o = new A()).port2), (o.port1.onmessage = L), (a = c(s.postMessage, s)))
+            ? ((s = (o = new A()).port2), (o.port1.onmessage = x), (a = c(s.postMessage, s)))
             : l.addEventListener && d(l.postMessage) && !l.importScripts && i && 'file:' !== i.protocol && !p(w)
-              ? ((a = w), l.addEventListener('message', L, !1))
+              ? ((a = w), l.addEventListener('message', x, !1))
               : (a =
                     O in m('script')
                         ? function (e) {
@@ -80,7 +80,7 @@ var D = function (e) {
                               };
                           }
                         : function (e) {
-                              setTimeout(x(e), 0);
+                              setTimeout(L(e), 0);
                           })),
     (e.exports = {
         set: y,

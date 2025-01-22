@@ -25,7 +25,7 @@ var i,
 function h(e) {
     let { channelId: n, ChannelStore: r, GuildStore: i, PermissionStore: a, VoiceStateStore: o } = e,
         s = r.getChannel(n);
-    if (!(0, c.s)() && null == s) return 3;
+    if (!(0, c.sq)() && null == s) return 3;
     if (!(0, d.a)(s)) return 6;
     if (null != s && !s.isPrivate()) {
         let e = s.getGuildId();

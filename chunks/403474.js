@@ -1,4 +1,4 @@
-e.d(n, {
+n.d(t, {
     k: function () {
         return i;
     }
@@ -9,7 +9,7 @@ let i = {
     mentionable: !1,
     position: 0,
     hoist: !1,
-    permissions: e(981631).Plq.SEND_MESSAGES,
+    permissions: n(981631).Plq.SEND_MESSAGES,
     color: 0,
     colorString: '0',
     icon: null,

@@ -372,9 +372,9 @@ class y extends u.Z {
                 duration_decoder_unknown: g(e.decoderBuckets[_.gr.UNKNOWN]),
                 ...h
             },
-            { bytes: E, framesDropped: v, framesCodecError: y, framesCodec: b, framesNetwork: I, packets: T, packetsLost: S, nackCount: A, pliCount: C, qpSum: N, pauseCount: R, freezeCount: O, totalPausesDuration: D, totalFreezesDuration: x, totalFramesDuration: L, keyframes: w, passthroughCount: P, cryptorSuccessCount: M, cryptorFailureCount: k, cryptorDuration: U, cryptorAttempts: B, cryptorMissingKeyCount: G, cryptorInvalidNonceCount: Z, qualityDecodeErrors: F, qualityDecoderReboots: V, qualityScoreErrors: j, qualityFrameDrops: H, qualitySizeMismatches: Y } = e.aggregatedProperties;
+            { bytes: E, framesDropped: v, framesCodecError: y, framesCodec: b, framesNetwork: I, packets: T, packetsLost: S, nackCount: A, pliCount: C, qpSum: N, pauseCount: R, freezeCount: O, totalPausesDuration: D, totalFreezesDuration: L, totalFramesDuration: x, keyframes: w, passthroughCount: P, cryptorSuccessCount: M, cryptorFailureCount: k, cryptorDuration: U, cryptorAttempts: B, cryptorMissingKeyCount: G, cryptorInvalidNonceCount: Z, qualityDecodeErrors: F, qualityDecoderReboots: V, qualityScoreErrors: j, qualityFrameDrops: H, qualitySizeMismatches: Y } = e.aggregatedProperties;
         return (
-            e instanceof _.nt ? ((m.sender_freeze_count = O), (m.sender_total_freezes_duration = x), (m.sender_total_frames_duration = L)) : ((m.receiver_freeze_count = O), (m.receiver_total_freezes_duration = x), (m.receiver_total_frames_duration = L), (m.receiver_pause_count = R), (m.receiver_total_pauses_duration = D)),
+            e instanceof _.nt ? ((m.sender_freeze_count = O), (m.sender_total_freezes_duration = L), (m.sender_total_frames_duration = x)) : ((m.receiver_freeze_count = O), (m.receiver_total_freezes_duration = L), (m.receiver_total_frames_duration = x), (m.receiver_pause_count = R), (m.receiver_total_pauses_duration = D)),
             {
                 ...m,
                 avg_bitrate: i > 0 ? Math.round(((null != E ? E : 0) * 8) / i) : 0,

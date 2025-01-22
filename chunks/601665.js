@@ -29,7 +29,7 @@ var a = r(200651),
     N = r(388032),
     R = r(591156);
 function O(e) {
-    let { user: n, currentUser: r, guildId: i, channelId: O, messageId: D, roleId: x, closePopout: L, setPopoutRef: w, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
+    let { user: n, currentUser: r, guildId: i, channelId: O, messageId: D, roleId: L, closePopout: x, setPopoutRef: w, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
         { analyticsLocations: k } = (0, d.ZP)([...M, c.Z.BITE_SIZE_PROFILE_POPOUT]),
         U = (0, h.ZB)({
             layout: 'BITE_SIZE_POPOUT',
@@ -37,7 +37,7 @@ function O(e) {
             guildId: i,
             channelId: O,
             messageId: D,
-            roleId: x
+            roleId: L
         }),
         B = (0, m.ZP)(n.id, i),
         G = (0, s.e7)([p.Z], () => (null != i ? p.Z.getGuild(i) : null)),
@@ -48,7 +48,7 @@ function O(e) {
         null == w || w(null == F ? void 0 : F.current);
     }, [F, w]);
     let j = (e) => {
-            null == L || L(),
+            null == x || x(),
                 (0, T.openUserProfileModal)({
                     sourceAnalyticsLocations: k,
                     ...U,
@@ -112,7 +112,7 @@ function O(e) {
                                     location: 'BotUserProfilePopout',
                                     user: n,
                                     profileType: C.y0.BITE_SIZE,
-                                    onCloseProfile: L
+                                    onCloseProfile: x
                                 })
                             ]
                         }),
@@ -124,13 +124,13 @@ function O(e) {
                             isHovering: V,
                             onOpenProfile: P ? void 0 : j,
                             channelId: O,
-                            onClose: L
+                            onClose: x
                         }),
                         (0, a.jsx)(A.Z, {
                             user: n,
                             guildId: i,
                             channelId: O,
-                            onClose: L
+                            onClose: x
                         })
                     ]
                 })

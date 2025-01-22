@@ -28,8 +28,8 @@ var l = t(481060),
     b = t(398145),
     E = t(228168),
     N = t(981631),
-    S = t(388032),
-    y = t(171865);
+    y = t(388032),
+    S = t(171865);
 function T(e) {
     let { user: n, currentUser: t, guildId: T, channelId: P, messageId: C, roleId: A, sessionId: L, initialSection: M, initialSubsection: R, transitionState: O, onClose: U, sourceAnalyticsLocations: B = [] } = e,
         D = T === N.ME ? void 0 : T,
@@ -51,9 +51,9 @@ function T(e) {
             value: w,
             children: (0, i.jsx)(l.ModalRoot, {
                 transitionState: O,
-                className: y.root,
+                className: S.root,
                 hideShadow: !0,
-                'aria-label': S.intl.string(S.t['3N/J2t']),
+                'aria-label': y.intl.string(y.t['3N/J2t']),
                 children: (0, i.jsxs)(x.Z, {
                     user: n,
                     displayProfile: F,
@@ -74,7 +74,7 @@ function T(e) {
                                     profileType: E.y0.FULL_SIZE
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: y.headerInner,
+                                    className: S.headerInner,
                                     children: [
                                         (0, i.jsx)(d.Z, {
                                             user: n,
@@ -91,17 +91,17 @@ function T(e) {
                                             onCloseProfile: U
                                         }),
                                         (0, i.jsxs)('div', {
-                                            className: y.headerButtons,
+                                            className: S.headerButtons,
                                             children: [
                                                 (0, i.jsx)(g.c, {
                                                     userId: n.id,
                                                     onClose: U,
-                                                    className: y.messageTextButton
+                                                    className: S.messageTextButton
                                                 }),
                                                 (0, i.jsx)(g.v, {
                                                     userId: n.id,
                                                     onClose: U,
-                                                    tooltipContainerClassName: y.messageIconButton
+                                                    tooltipContainerClassName: S.messageIconButton
                                                 }),
                                                 (0, i.jsx)(v.Z, {
                                                     user: n,
@@ -115,7 +115,7 @@ function T(e) {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: y.body,
+                            className: S.body,
                             children: [
                                 (0, i.jsx)(I.Z, {
                                     user: n,
@@ -131,7 +131,7 @@ function T(e) {
                                     })
                                 }),
                                 (0, i.jsx)(x.Z.Overlay, {
-                                    className: y.overlay,
+                                    className: S.overlay,
                                     children: (0, i.jsx)(_.Z, {
                                         user: n,
                                         currentUser: t,

@@ -25,8 +25,8 @@ let N = 20,
     R = 125,
     O = (0, y.hQ)(),
     D = h.Z.convert.fromCodePoint('1f44f'),
-    x = (0, T.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
-    L = (0, T.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE);
+    L = (0, T.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+    x = (0, T.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE);
 function w(e) {
     switch (h.Z.convert.toCodePoint(e)) {
         case '1f3fb':
@@ -75,8 +75,8 @@ let P = (e) => {
         let { id: n, selectedSurrogate: r, onClick: i, hasTabWrapper: a } = e,
             l = (0, v.Z)('diversity'),
             c = (0, m.useSpring)({
-                height: (L + 2 * x) * (b.gw.length + 1),
-                from: { height: L },
+                height: (x + 2 * L) * (b.gw.length + 1),
+                from: { height: x },
                 config: { duration: R }
             });
         s.useEffect(() => {

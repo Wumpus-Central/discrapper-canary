@@ -55,13 +55,13 @@ function m(e) {
 function g(e) {
     return _(e.code, (n) => {
         var r, i;
-        (n.state = c.r2o.RESOLVED), (n.guild = e.invite.guild), (n.channel = e.invite.channel), (n.inviter = e.invite.inviter), (n.approximate_member_count = null !== (r = e.invite.approximate_member_count) && void 0 !== r ? r : null), (n.approximate_presence_count = null !== (i = e.invite.approximate_presence_count) && void 0 !== i ? i : null), (n.target_type = e.invite.target_type), (n.target_user = e.invite.target_user), (n.target_application = e.invite.target_application), (n.expires_at = e.invite.expires_at), (n.stage_instance = e.invite.stage_instance), (n.friends_count = e.invite.friends_count), (n.is_contact = e.invite.is_contact), (n.guild_scheduled_event = e.invite.guild_scheduled_event), (n.type = e.invite.type), (n.flags = e.invite.flags);
+        (n.state = c.r2o.RESOLVED), (n.guild = e.invite.guild), (n.channel = e.invite.channel), (n.inviter = e.invite.inviter), (n.approximate_member_count = null !== (r = e.invite.approximate_member_count) && void 0 !== r ? r : null), (n.approximate_presence_count = null !== (i = e.invite.approximate_presence_count) && void 0 !== i ? i : null), (n.target_type = e.invite.target_type), (n.target_user = e.invite.target_user), (n.target_application = e.invite.target_application), (n.expires_at = e.invite.expires_at), (n.stage_instance = e.invite.stage_instance), (n.friends_count = e.invite.friends_count), (n.is_contact = e.invite.is_contact), (n.guild_scheduled_event = e.invite.guild_scheduled_event), (n.type = e.invite.type), (n.flags = e.invite.flags), (n.is_nickname_changeable = e.invite.is_nickname_changeable);
     });
 }
 function E(e) {
     return _(e.invite.code, (n) => {
         var r, i;
-        (n.state = c.r2o.RESOLVED), (n.guild = e.invite.guild), (n.channel = e.invite.channel), (n.inviter = e.invite.inviter), (n.approximate_member_count = null !== (r = e.invite.approximate_member_count) && void 0 !== r ? r : null), (n.approximate_presence_count = null !== (i = e.invite.approximate_presence_count) && void 0 !== i ? i : null), (n.target_type = e.invite.target_type), (n.target_user = e.invite.target_user), (n.target_application = e.invite.target_application), (n.stage_instance = e.invite.stage_instance), (n.guild_scheduled_event = e.invite.guild_scheduled_event), (n.type = e.invite.type);
+        (n.state = c.r2o.RESOLVED), (n.guild = e.invite.guild), (n.channel = e.invite.channel), (n.inviter = e.invite.inviter), (n.approximate_member_count = null !== (r = e.invite.approximate_member_count) && void 0 !== r ? r : null), (n.approximate_presence_count = null !== (i = e.invite.approximate_presence_count) && void 0 !== i ? i : null), (n.target_type = e.invite.target_type), (n.target_user = e.invite.target_user), (n.target_application = e.invite.target_application), (n.stage_instance = e.invite.stage_instance), (n.guild_scheduled_event = e.invite.guild_scheduled_event), (n.type = e.invite.type), (n.is_nickname_changeable = e.invite.is_nickname_changeable);
     });
 }
 function v(e) {

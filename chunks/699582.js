@@ -419,10 +419,10 @@ function D(e) {
     for (var a = 1, o = r.length; a < o; a++) c.call(N.subtags, r[a]) ? (r[a] = N.subtags[r[a]]) : c.call(N.extLang, r[a]) && ((r[a] = N.extLang[r[a]][0]), 1 === a && N.extLang[r[1]][1] === r[0] && ((r = h.call(r, a++)), (o -= 1)));
     return g.call(r, '-');
 }
-function x() {
+function L() {
     return o;
 }
-function L(e) {
+function x(e) {
     var n = em(String(e));
     return !1 !== A.test(n) && !0;
 }
@@ -463,7 +463,7 @@ function M(e, n) {
                 c = o.indexOf('-u-');
             (l['[[extension]]'] = u), (l['[[extensionIndex]]'] = c);
         }
-    } else l['[[locale]]'] = x();
+    } else l['[[locale]]'] = L();
     return l;
 }
 function k(e, n) {
@@ -582,7 +582,7 @@ function H(e, n, r) {
         h = F(r, 'style', 'string', new eh('decimal', 'percent', 'currency'), 'decimal');
     i['[[style]]'] = h;
     var _ = F(r, 'currency', 'string');
-    if (void 0 !== _ && !L(_)) throw RangeError("'" + _ + "' is not a valid currency code");
+    if (void 0 !== _ && !x(_)) throw RangeError("'" + _ + "' is not a valid currency code");
     if ('currency' === h && void 0 === _) throw TypeError('Currency code is required when style is currency');
     if ('currency' === h) {
         (_ = _.toUpperCase()), (i['[[currency]]'] = _);

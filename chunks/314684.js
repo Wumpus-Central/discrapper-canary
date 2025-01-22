@@ -46,8 +46,8 @@ var i = n(192379),
     p = n(243778),
     x = n(594174),
     f = n(314884),
-    _ = n(580130),
-    E = n(626135),
+    E = n(580130),
+    _ = n(626135),
     C = n(823379),
     T = n(111361),
     S = n(595878),
@@ -76,10 +76,10 @@ function O() {
         g = null != l,
         h = (function () {
             let e = (0, a.e7)(
-                [_.Z],
+                [E.Z],
                 () => {
                     var e;
-                    return null !== (e = _.Z.getForApplication(j.XAJ)) && void 0 !== e ? e : P;
+                    return null !== (e = E.Z.getForApplication(j.XAJ)) && void 0 !== e ? e : P;
                 },
                 [],
                 C.OL
@@ -87,12 +87,12 @@ function O() {
             return (0, N.Cl)(A.qY, e);
         })(),
         p = g && null != h && (0, N.C3)(h.skuId, o),
-        E = null !== (t = null !== (e = null == n ? void 0 : n.next_tenure_reward_id) && void 0 !== e ? e : null == l ? void 0 : l.skuId) && void 0 !== t ? t : null == r ? void 0 : r.skuId;
+        _ = null !== (t = null !== (e = null == n ? void 0 : n.next_tenure_reward_id) && void 0 !== e ? e : null == l ? void 0 : l.skuId) && void 0 !== t ? t : null == r ? void 0 : r.skuId;
     return i.useMemo(() => {
         let e = {
             redeemableAt: null == n ? void 0 : n.redeemable_at,
             tenureRewardStatusId: null == n ? void 0 : n.id,
-            tenureRewardType: (0, N.Xs)(E)
+            tenureRewardType: (0, N.Xs)(_)
         };
         if (m)
             return {
@@ -146,7 +146,7 @@ function O() {
                 }
             );
         }
-    }, [u, r, n, m, g, p, l, E]);
+    }, [u, r, n, m, g, p, l, _]);
 }
 function R(e) {
     let { showAnimations: t } = e,
@@ -165,10 +165,10 @@ function R(e) {
 let P = new Set();
 function D(e) {
     let t = (0, a.e7)(
-            [_.Z],
+            [E.Z],
             () => {
                 var e;
-                return null !== (e = _.Z.getForApplication(v.CL)) && void 0 !== e ? e : P;
+                return null !== (e = E.Z.getForApplication(v.CL)) && void 0 !== e ? e : P;
             },
             [],
             C.OL
@@ -222,7 +222,7 @@ let B = (e) => {
                 ((0, g.EW)(n),
                 n === l.z.TENURE_REWARD_PENDING &&
                     !1 === r.current &&
-                    (E.default.track(j.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
+                    (_.default.track(j.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
                         user_tenure_reward_id: null == e ? void 0 : e.tenureRewardStatusId,
                         tenure_reward_id: e.tenureRewardSkuId,
                         reward_type: null == e ? void 0 : e.tenureRewardType,
@@ -234,7 +234,7 @@ let B = (e) => {
 function k() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.CL,
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, a.e7)([_.Z], () => _.Z.isFetchingForApplication(e)),
+        n = (0, a.e7)([E.Z], () => E.Z.isFetchingForApplication(e)),
         r = (0, a.e7)([x.default], () => {
             let e = x.default.getCurrentUser();
             return null != e && (0, T.M5)(e, v.p9.TIER_2);

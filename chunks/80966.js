@@ -12,7 +12,7 @@ var i = r(200651),
     c = r(388032);
 class d extends a.Component {
     render() {
-        let { src: e, fileSize: n, className: r, mediaPlayerClassName: a, poster: d, fileName: f, naturalWidth: p, naturalHeight: h, playable: _, downloadable: m = !0, volume: g, autoPlay: E, autoMute: v, responsive: y, mediaLayoutType: b, mimeType: I, renderOverlayContent: T, renderLinkComponent: S, onClick: A, onPlay: C, onPause: N, onEnded: R, onControlsShow: O, onControlsHide: D, onVolumeChange: x, onMute: L, alt: w = c.intl.string(c.t.FlNoSU), ...P } = this.props;
+        let { src: e, fileSize: n, className: r, mediaPlayerClassName: a, poster: d, fileName: f, naturalWidth: p, naturalHeight: h, playable: _, downloadable: m = !0, volume: g, autoPlay: E, autoMute: v, responsive: y, mediaLayoutType: b, mimeType: I, renderOverlayContent: T, renderLinkComponent: S, onClick: A, onPlay: C, onPause: N, onEnded: R, onControlsShow: O, onControlsHide: D, onVolumeChange: L, onMute: x, alt: w = c.intl.string(c.t.FlNoSU), ...P } = this.props;
         return (0, i.jsx)(s.ZP, {
             alt: w,
             className: r,
@@ -53,8 +53,8 @@ class d extends a.Component {
                     onPlay: C,
                     onPause: N,
                     onEnded: R,
-                    onVolumeChange: x,
-                    onMute: L,
+                    onVolumeChange: L,
+                    onMute: x,
                     onControlsShow: O,
                     onControlsHide: D,
                     mimeType: I,

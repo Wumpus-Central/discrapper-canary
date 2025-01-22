@@ -51,8 +51,8 @@ var i = r(392711),
     R = r(700785),
     O = r(546416),
     D = r(981631),
-    x = r(176505);
-function L(e) {
+    L = r(176505);
+function x(e) {
     let n = 0;
     for (let r in e) n += 1;
     return n;
@@ -75,12 +75,12 @@ function w(e) {
         guild_num_channels: l + u,
         guild_num_text_channels: l,
         guild_num_voice_channels: u,
-        guild_num_roles: L(i),
+        guild_num_roles: x(i),
         guild_member_num_roles: null != o ? o.roles.length : 0,
         guild_member_perms: String(null !== (n = g.Z.getGuildPermissions(r)) && void 0 !== n ? n : R.Hn),
         guild_is_vip: r.hasFeature(D.oNc.VIP_REGIONS),
         is_member: null != o,
-        num_voice_channels_active: L(d)
+        num_voice_channels_active: x(d)
     };
 }
 function P(e, n) {
@@ -146,7 +146,7 @@ function G(e) {
         u = {
             ...n,
             ...w(l),
-            ...(null != a && null != o && (0, x.AB)(o) ? P(a, o) : k(s))
+            ...(null != a && null != o && (0, L.AB)(o) ? P(a, o) : k(s))
         };
     C.default.track(e, u, { flush: r });
 }

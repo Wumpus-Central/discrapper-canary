@@ -83,7 +83,7 @@ function f(e) {
             [v, A, T.x, T.y, g]
         ),
         D = r ? (0, u.vV)(p, h, _, m) : 1,
-        x = (0, o.useCallback)(() => {
+        L = (0, o.useCallback)(() => {
             let e = E.current;
             if (null == e) return !1;
             let n = null != D ? D : 1;
@@ -97,7 +97,7 @@ function f(e) {
         onMouseLeave: () => y(!1),
         className: l()(s, c.wrapper, {
             [c.panning]: r && v,
-            [c.pannable]: r && x()
+            [c.pannable]: r && L()
         }),
         style: {
             ...(null != f ? f : {}),

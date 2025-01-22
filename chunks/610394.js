@@ -64,8 +64,8 @@ class R {
 }
 let O = new p.Z('OverlayStoreV3'),
     D = new Set(),
-    x = new Set(),
-    L = {},
+    L = new Set(),
+    x = {},
     w = new R(),
     P = null,
     M = !1,
@@ -101,19 +101,19 @@ let Z = new G(),
     F = new Set();
 function V(e) {
     var n;
-    return null !== (n = L[e]) && void 0 !== n ? n : {};
+    return null !== (n = x[e]) && void 0 !== n ? n : {};
 }
 function j(e, n) {
-    L[e] = {
-        ...L[e],
+    x[e] = {
+        ...x[e],
         ...n
     };
 }
 function H(e) {
     var n, r;
-    if (null != L[e]) return;
+    if (null != x[e]) return;
     let i = _.ZP.getGameForPID(e);
-    L[e] = {
+    x[e] = {
         overlay_method: d.gl[d.gl.OutOfProcess],
         success: !1,
         error_description: null,
@@ -190,7 +190,7 @@ function $() {
     O.verbose('Destroying OOP host window'), null === f.Z || void 0 === f.Z || null === (e = f.Z.window) || void 0 === e || e.close(A.OVERLAY_V3_KEY), null != U && E.default.track(C.rMx.OVERLAY_HOOK_RESULT, V(U)), (U = null), (0, y.tB)(null != U ? U : y.R2), ei(), f.Z.window.setBackgroundThrottling(!0), w.resetGPUBoosts();
 }
 function ee(e) {
-    O.verbose('Refreshing OOP host window for pid '.concat(e)), X(e), x.delete(null != U ? U : y.R2), (U = e), (0, y.tB)(null != U ? U : y.R2);
+    O.verbose('Refreshing OOP host window for pid '.concat(e)), X(e), L.delete(null != U ? U : y.R2), (U = e), (0, y.tB)(null != U ? U : y.R2);
     let n = m.Z.getWindow(A.OVERLAY_V3_KEY),
         r = () =>
             new Promise((e) => {
@@ -283,7 +283,7 @@ function e_(e) {
 }
 function em(e) {
     let { locked: n, pid: r } = e;
-    if ((n ? x.delete(r) : x.add(r), null == B || (clearTimeout(B), (B = null), !n)))
+    if ((n ? L.delete(r) : L.add(r), null == B || (clearTimeout(B), (B = null), !n)))
         n
             ? Q(n)
             : (B = setTimeout(() => {
@@ -306,7 +306,7 @@ class ey extends (a = l.ZP.Store) {
         this.waitFor(_.ZP, g.default, h.Z);
     }
     isInputLocked(e) {
-        return !x.has(e);
+        return !L.has(e);
     }
     isSupported() {
         return S.iP;

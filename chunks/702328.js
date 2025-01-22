@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(906732),
     x = n(70097),
     f = n(433811),
-    _ = n(214852),
-    E = n(594174),
+    E = n(214852),
+    _ = n(594174),
     C = n(78839),
     T = n(626135),
     S = n(526167),
@@ -118,18 +118,18 @@ let ec = (e) => {
 t.Z = (e) => {
     var t, n;
     let { isFullscreen: s, entrypoint: Z } = e;
-    (0, _.z)(f.X);
+    (0, E.z)(f.X);
     let M = Z === X.EZ.ApplicationStoreHome,
         w = r.useRef(null),
         F = r.useRef(null),
         U = (0, l.e7)([g.Z], () => g.Z.useReducedMotion),
         Q = (0, m.ZP)(),
         em = (0, c.wj)(Q),
-        eg = E.default.getCurrentUser(),
+        eg = _.default.getCurrentUser(),
         eh = (0, b.I5)(eg),
         ep = (0, N.xP)('PremiumMarketingHome') && !eh && M,
         [ex, ef] = r.useState(!1),
-        [e_, eE] = r.useState(!1),
+        [eE, e_] = r.useState(!1),
         [eC, eT] = r.useState(!1),
         [eS, eb] = r.useState(!1),
         eI = (0, S.rO)(),
@@ -344,7 +344,7 @@ t.Z = (e) => {
                 }),
                 !ep && (0, i.jsx)('div', { className: s ? et.footerSpacingFullscreen : et.footerSpacing }),
                 (0, i.jsx)(V.Z, {
-                    isVisible: !ex && !eC && !e_ && eN,
+                    isVisible: !ex && !eC && !eE && eN,
                     isFullscreen: s,
                     subscriptionTier: eR,
                     isMarketingPageV2: ep
@@ -366,10 +366,10 @@ t.Z = (e) => {
                 ep &&
                     (0, i.jsx)(o.$, {
                         onChange: (e) => {
-                            eE(e);
+                            e_(e);
                         },
                         children: (0, i.jsx)(Y.Z, {
-                            isFooterVisible: e_,
+                            isFooterVisible: eE,
                             isDarkMode: em,
                             isReducedMotion: U
                         })

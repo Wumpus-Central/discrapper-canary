@@ -30,7 +30,7 @@ var a = r(200651),
     R = r(388032),
     O = r(591156);
 function D(e) {
-    let { user: n, guildId: r, channelId: i, messageId: D, roleId: x, setPopoutRef: L, closePopout: w, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
+    let { user: n, guildId: r, channelId: i, messageId: D, roleId: L, setPopoutRef: x, closePopout: w, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
         k = (0, g.ZP)(n.id, r),
         { analyticsLocations: U } = (0, c.ZP)([...M, u.Z.BITE_SIZE_PROFILE_POPOUT]),
         B = (0, _.ZB)({
@@ -39,13 +39,13 @@ function D(e) {
             guildId: r,
             channelId: i,
             messageId: D,
-            roleId: x
+            roleId: L
         }),
         G = o.useRef(null),
         Z = (0, l.Z)(G);
     o.useEffect(() => {
-        null == L || L(null == G ? void 0 : G.current);
-    }, [G, L]);
+        null == x || x(null == G ? void 0 : G.current);
+    }, [G, x]);
     let F = () => {
             null == w || w(),
                 (0, C.openUserProfileModal)({

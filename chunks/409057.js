@@ -31,8 +31,8 @@ var a = r(120356),
     R = r(232174),
     O = r(652853),
     D = r(979038),
-    x = r(448980),
-    L = r(336383),
+    L = r(448980),
+    x = r(336383),
     w = r(194811),
     P = r(373826),
     M = r(315324),
@@ -264,7 +264,7 @@ function Y(e) {
                   });
     return (0, i.jsx)(h.Gt, {
         value: Q,
-        children: (0, i.jsxs)(L.Z, {
+        children: (0, i.jsxs)(x.Z, {
             ref: en,
             className: o()(H.card, z),
             onAction: et,
@@ -292,7 +292,7 @@ function Y(e) {
                                     children: [
                                         eh(),
                                         !n.bot &&
-                                            (0, i.jsx)(x.Z, {
+                                            (0, i.jsx)(L.Z, {
                                                 user: n,
                                                 activity: a,
                                                 className: H.badges

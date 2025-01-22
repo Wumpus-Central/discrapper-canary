@@ -37,18 +37,18 @@ function S(e) {
             { autoTrackExposure: !1 }
         ),
         D = O && h.Z.can(T.Plq.CONNECT, R),
-        x = (null == S ? void 0 : S.type) === T.IIU.HANG_STATUS && D ? R : null,
-        { recentActivityTabEnabled: L } = (0, g.O)({ location: 'UserProfileActivityCardWrapper' }),
+        L = (null == S ? void 0 : S.type) === T.IIU.HANG_STATUS && D ? R : null,
+        { recentActivityTabEnabled: x } = (0, g.O)({ location: 'UserProfileActivityCardWrapper' }),
         { recentActivityEnabled: w } = (0, E.i)({ location: 'UserProfileActivityCardWrapper' }),
         P = n.id === r.id,
-        M = (L || w) && !P && !n.bot,
+        M = (x || w) && !P && !n.bot,
         k = (0, o.e7)([p.Z, _.Z, f.Z], () => {
             if ((0, s.Z)(S)) {
                 var e, r;
                 let i = null === (e = _.Z.getVoiceStateForSession(n.id, null == S ? void 0 : S.session_id)) || void 0 === e ? void 0 : e.channelId;
                 return p.Z.getGuild(null === (r = f.Z.getChannel(i)) || void 0 === r ? void 0 : r.getGuildId());
             }
-            return null != x ? p.Z.getGuild(x.getGuildId()) : null;
+            return null != L ? p.Z.getGuild(L.getGuildId()) : null;
         });
     (0, c.q)(null == S ? void 0 : S.application_id);
     let U = (0, o.e7)([u.Z], () => ((null == S ? void 0 : S.application_id) != null ? u.Z.getApplication(S.application_id) : (null == S ? void 0 : S.name) != null ? u.Z.getApplicationByName(S.name) : null));
@@ -58,10 +58,10 @@ function S(e) {
                 D &&
                 m.default.track(T.rMx.VIEW_HANG_STATUS, {
                     source: 'UserProfilePopout',
-                    guild_id: null == x ? void 0 : x.guild_id,
-                    channel_id: null == x ? void 0 : x.id
+                    guild_id: null == L ? void 0 : L.guild_id,
+                    channel_id: null == L ? void 0 : L.id
                 });
-        }, [null == S ? void 0 : S.type, D, x]),
+        }, [null == S ? void 0 : S.type, D, L]),
         (null == S ? void 0 : S.type) === T.IIU.HANG_STATUS && !D)
     )
         return null;

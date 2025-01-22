@@ -68,10 +68,10 @@ function O(e) {
 function D(e, n, r) {
     (0, v.XE)(n, e, b.YQ.SOUNDBOARD), (0, f.kq)(n, e, __OVERLAY__, r);
 }
-function x(e, n) {
+function L(e, n) {
     (0, v.XE)(n, e, b.YQ.JOINED_VOICE_CHANNEL), (0, f.vy)(n, e, __OVERLAY__);
 }
-function L() {
+function x() {
     var e, n;
     return Object.values(null !== (n = null === (e = c.Z.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : {}).some((e) => null != e.joinSound);
 }
@@ -85,14 +85,14 @@ async function w(e) {
         o = y.Z.getSound(a, i.soundId);
     if (null != o) {
         if (!N(o, r) || !R(n, o, r, !0) || !O(r)) return null;
-        x(o, r.id);
+        L(o, r.id);
     }
 }
 function P(e) {
     let { isSoundboardButtonDisabled: n = !1 } = e,
         r = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         i = [];
-    if (!n && !L()) {
+    if (!n && !x()) {
         i.push(o.z.CUSTOM_CALL_SOUNDS_SPARKLES);
         let e = (0, E.Fc)(r);
         (g.ZP.canUseCustomCallSounds(r) || e) && i.push(o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL);

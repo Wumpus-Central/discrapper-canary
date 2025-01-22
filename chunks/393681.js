@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(279837),
     x = n(952306),
     f = n(600164),
-    _ = n(690221),
-    E = n(346585),
+    E = n(690221),
+    _ = n(346585),
     C = n(347649),
     T = n(332473),
     S = n(303172),
@@ -115,10 +115,10 @@ class K extends r.PureComponent {
                   className: W.accountWarningBodyText,
                   messageType: u.HelpMessageTypes.WARNING,
                   children: [
-                      this.props.forceMigrationExperiment ? Y.intl.format(Y.t.zT1hgo, { date: (0, E.IE)(this.props.locale) }) : Y.intl.format(Y.t.pdYZys, {}),
+                      this.props.forceMigrationExperiment ? Y.intl.format(Y.t.zT1hgo, { date: (0, _.IE)(this.props.locale) }) : Y.intl.format(Y.t.pdYZys, {}),
                       ' ',
                       '',
-                      (0, i.jsx)(_.Z, {
+                      (0, i.jsx)(E.Z, {
                           className: W.noticeTextButton,
                           onClick: () => (0, S.Z)(H.Kq.USER_SETTINGS),
                           children: Y.intl.string(Y.t.LhlgY2)

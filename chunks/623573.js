@@ -20,7 +20,7 @@ var r = n(120356),
 function p(e) {
     let { transitionState: t, analyticsLocation: n, onClose: r, onAddPaymentSource: a, toastContent: c, initialStep: p = d.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: x = !1 } = e,
         f = (0, u.fL)(),
-        _ = (0, u.vP)({
+        E = (0, u.vP)({
             paymentModalArgs: f,
             initialStep: p,
             prependSteps: [],
@@ -57,7 +57,7 @@ function p(e) {
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: _
+            children: E
         })
     });
 }

@@ -42,10 +42,10 @@ function I(e, n) {
 function T(e) {
     var n;
     let { legalTermsNodeRef: r, invoiceError: i, planError: o, disablePurchase: s, flashLegalTerms: p, isSubmitting: h, premiumSubscription: g, isGift: T, planGroup: S, isPrepaid: A, isTrial: C, makePurchase: N, needsPaymentSource: R, inReverseTrial: O, onNext: D } = e,
-        { application: x, selectedPlan: L, hasAcceptedTerms: w, purchaseType: P, paymentSourceId: M, activeSubscription: k, devShelfFetchState: U } = (0, d.usePaymentContext)(),
+        { application: L, selectedPlan: x, hasAcceptedTerms: w, purchaseType: P, paymentSourceId: M, activeSubscription: k, devShelfFetchState: U } = (0, d.usePaymentContext)(),
         B = b({
             purchaseType: P,
-            plan: L,
+            plan: x,
             premiumSubscription: g,
             isGift: T,
             planGroup: S,
@@ -72,7 +72,7 @@ function T(e) {
                     children: B
                 })
         });
-    if ((0, f.yE)(null !== (n = null == x ? void 0 : x.flags) && void 0 !== n ? n : 0, m.udG.EMBEDDED) && U === u.O.LOADING)
+    if ((0, f.yE)(null !== (n = null == L ? void 0 : L.flags) && void 0 !== n ? n : 0, m.udG.EMBEDDED) && U === u.O.LOADING)
         return (0, a.jsx)(l.Tooltip, {
             text: E.intl.string(E.t.cjA5tr),
             children: (e) =>

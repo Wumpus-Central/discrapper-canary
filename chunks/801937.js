@@ -57,11 +57,11 @@ let C = new g.Z('ChoosePaymentSourceType'),
         [I.HeQ.IDEAL, new Set(['ALL', 'NL'])],
         [I.HeQ.CASH_APP, new Set(['ALL', 'US'])]
     ]),
-    x = new Map([[I.HeQ.PAYSAFE_CARD, new Set(['DE'])]]),
-    L = '40c266_1',
+    L = new Map([[I.HeQ.PAYSAFE_CARD, new Set(['DE'])]]),
+    x = '40c266_1',
     w = 1000;
 function P(e) {
-    let { enabledPaymentTypes: n, forceCountryCode: r, validCountryCodes: i } = _.ZP.getCurrentConfig({ location: L }, { autoTrackExposure: !1 }),
+    let { enabledPaymentTypes: n, forceCountryCode: r, validCountryCodes: i } = _.ZP.getCurrentConfig({ location: x }, { autoTrackExposure: !1 }),
         a = null != e ? e : 'ALL';
     i.length > 0 && null != r && null != e && (a = i.includes(e) ? e : r);
     let o = new Set(),
@@ -70,7 +70,7 @@ function P(e) {
         D.forEach((e, r) => {
             n.includes(r) && (e.has(a) ? o.add(r) : s.push(r));
         }),
-        x.forEach((e, n) => {
+        L.forEach((e, n) => {
             e.has(a) && o.add(n);
         }),
         {

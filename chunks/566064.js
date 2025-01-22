@@ -46,7 +46,7 @@ function h(e) {
         [A, C] = a.useState(!1),
         [N, R] = a.useState(!1),
         [O, D] = a.useState(!1),
-        [x] = a.useState(
+        [L] = a.useState(
             () =>
                 new l.$o((e) => {
                     let [n, r] = e.split(',').map(Number);
@@ -60,8 +60,8 @@ function h(e) {
                     };
                 })
         );
-    a.useEffect(() => () => x.clean(), [x]);
-    let L = a.useCallback(
+    a.useEffect(() => () => L.clean(), [L]);
+    let x = a.useCallback(
             (e) => {
                 if (!T.current || !b) return !1;
                 e.focus();
@@ -73,10 +73,10 @@ function h(e) {
                 let i = d(n, e, r);
                 (null != m ? m(e, r, i) : Promise.resolve()).then(() => {
                     let e = f(i);
-                    null != e ? (L(e), R(!1)) : requestAnimationFrame(() => R(!0));
+                    null != e ? (x(e), R(!1)) : requestAnimationFrame(() => R(!0));
                 });
             },
-            [n, m, L]
+            [n, m, x]
         ),
         P = a.useCallback(
             function () {
@@ -95,9 +95,9 @@ function h(e) {
                     return;
                 }
                 let s = f(d(n, r, a));
-                null != s && (D(!0), L(s));
+                null != s && (D(!0), x(s));
             },
-            [E, i, h, g, n, L]
+            [E, i, h, g, n, x]
         ),
         [M, k] = a.useState(!1);
     a.useEffect(() => {
@@ -105,18 +105,18 @@ function h(e) {
         k(!1);
         let e = f(d(n, i, h));
         if (null != e) {
-            L(e);
+            x(e);
             return;
         }
         C(!1);
         let r = f(d(n));
-        null != r && L(r);
-    }, [n, M, A, L, i, h]);
+        null != r && x(r);
+    }, [n, M, A, x, i, h]);
     let U = a.useCallback((e) => {
         T.current && null == e && k(!0);
     }, []);
     a.useEffect(() => {
-        A && N && null != S && (L(S), R(!1));
+        A && N && null != S && (x(S), R(!1));
     }, [N, S]),
         a.useEffect(() => {
             A && (!O && w(i, h), D(!1));
@@ -176,11 +176,11 @@ function h(e) {
                     'aria-colindex': e + 1,
                     id: (0, l.NE)(n, e, r),
                     tabIndex: v && e === i && r === h ? 0 : -1,
-                    onFocus: x.get(''.concat(e, ',').concat(r))
+                    onFocus: L.get(''.concat(e, ',').concat(r))
                 };
                 return e === i && r === h && (a.ref = U), a;
             },
-            [n, v, i, h, x, U]
+            [n, v, i, h, L, U]
         ),
         H = a.useCallback(
             (e) => ({

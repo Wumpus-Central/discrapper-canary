@@ -107,7 +107,7 @@ function D() {
         E[e] = {};
     });
 }
-function x(e) {
+function L(e) {
     Object.values(h.Yn).forEach((n) => {
         let r = n;
         e.filter((e) => {
@@ -124,7 +124,7 @@ function x(e) {
         });
     });
 }
-function L() {
+function x() {
     null != N && (N.destroy(), (N = null));
 }
 function w(e) {
@@ -132,7 +132,7 @@ function w(e) {
     g = null !== (n = e.section) && void 0 !== n ? n : m;
 }
 function P() {
-    L();
+    x();
 }
 function M(e) {
     null != e.channelId && (D(), v.clear());
@@ -196,7 +196,7 @@ function Z(e) {
 function F(e) {
     let { path: n } = e,
         r = d.Z.getMediaEngine();
-    if ((L(), !r.supports(h.AN.CONNECTION_REPLAY) || 0 === n.length)) return;
+    if ((x(), !r.supports(h.AN.CONNECTION_REPLAY) || 0 === n.length)) return;
     let i = r.createReplayConnection(h.Yn.DEFAULT, n);
     null != i &&
         ((N = i),
@@ -286,4 +286,4 @@ _(Y, 'displayName', 'RTCDebugStore'),
         VOICE_CHANNEL_SELECT: M,
         RTC_CONNECTION_VIDEO: k
     })),
-    d.Z.getMediaEngine().on(l.aB.ConnectionStats, x);
+    d.Z.getMediaEngine().on(l.aB.ConnectionStats, L);

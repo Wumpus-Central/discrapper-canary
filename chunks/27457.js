@@ -83,7 +83,7 @@ let eg = [eu.fO.ACTIVITY, eu.fO.PRESENCE_EMBEDDED_ACTIVITY],
             eH = (0, o.e7)([z.default], () => z.default.getId()),
             eY = (0, o.e7)([q.default], () => q.default.getCurrentUser()),
             eJ = C.type === eu.fO.ACTIVITY ? null : null === (t = C.user) || void 0 === t ? void 0 : t.id,
-            [eq] = (0, h.Z)(C.type === eu.fO.ACTIVITY ? [C.id] : []),
+            [eq] = (0, h.Z)(C.type === eu.fO.ACTIVITY ? [C.applicationId] : []),
             eX = (0, o.e7)([b.Z], () => b.Z.getEnabled()),
             eK = (0, o.e7)([Y.Z], () => null != eJ && Y.Z.isLocalVideoDisabled(eJ, (0, v.Z)(C.type)), [eJ, C.type]),
             eQ = (0, o.e7)([Y.Z], () => (null != eJ ? Y.Z.getVideoToggleState(eJ, (0, v.Z)(C.type)) : ec.ZUi.NONE), [eJ, C.type]),
@@ -91,39 +91,39 @@ let eg = [eu.fO.ACTIVITY, eu.fO.PRESENCE_EMBEDDED_ACTIVITY],
             { speaking: e0, ringing: e1, hasVideo: e2 } = (0, eo.Z)(C, eH),
             e3 = (function (e, t, n) {
                 var i, l, a, r;
-                let s = (0, o.cj)([X.Z], () => {
-                        var e, i, l;
-                        let a = X.Z.getVoiceState(n, t.id);
+                let s = t.type !== eu.fO.ACTIVITY ? t.user.id : t.applicationId,
+                    c = (0, o.cj)([X.Z], () => {
+                        var e, t, i;
+                        let l = X.Z.getVoiceState(n, s);
                         return {
-                            muted: null !== (e = null == a ? void 0 : a.mute) && void 0 !== e && e,
-                            deafened: null !== (i = null == a ? void 0 : a.deaf) && void 0 !== i && i,
-                            suppressed: null !== (l = null == a ? void 0 : a.suppress) && void 0 !== l && l,
-                            voiceChannelId: null == a ? void 0 : a.channelId
+                            muted: null !== (e = null == l ? void 0 : l.mute) && void 0 !== e && e,
+                            deafened: null !== (t = null == l ? void 0 : l.deaf) && void 0 !== t && t,
+                            suppressed: null !== (i = null == l ? void 0 : l.suppress) && void 0 !== i && i,
+                            voiceChannelId: null == l ? void 0 : l.channelId
                         };
                     }),
-                    c = (0, o.cj)(
+                    u = (0, o.cj)(
                         [Y.Z],
                         () => {
-                            let n = (0, v.Z)(t.type),
-                                i = t.type !== eu.fO.ACTIVITY ? t.user.id : t.id;
-                            return e === i
+                            let n = (0, v.Z)(t.type);
+                            return e === s
                                 ? {
                                       muted: !1,
                                       deafened: !1
                                   }
                                 : {
-                                      muted: Y.Z.isLocalMute(i, n),
-                                      localVideoDisabled: Y.Z.isLocalVideoDisabled(i, n),
-                                      localVideoAutoDisabled: Y.Z.isLocalVideoAutoDisabled(i, n)
+                                      muted: Y.Z.isLocalMute(s, n),
+                                      localVideoDisabled: Y.Z.isLocalVideoDisabled(s, n),
+                                      localVideoAutoDisabled: Y.Z.isLocalVideoAutoDisabled(s, n)
                                   };
                         },
-                        [e, t]
+                        [e, t.type, s]
                     );
                 return {
-                    serverMuted: s.muted,
-                    serverDeafened: s.deafened,
-                    suppressed: s.suppressed,
-                    localMuted: c.muted,
+                    serverMuted: c.muted,
+                    serverDeafened: c.deafened,
+                    suppressed: c.suppressed,
+                    localMuted: u.muted,
                     muted: null !== (a = t.type === eu.fO.USER && (null === (i = t.voiceState) || void 0 === i ? void 0 : i.isVoiceMuted())) && void 0 !== a && a,
                     deafened: null !== (r = t.type === eu.fO.USER && (null === (l = t.voiceState) || void 0 === l ? void 0 : l.isVoiceDeafened())) && void 0 !== r && r
                 };

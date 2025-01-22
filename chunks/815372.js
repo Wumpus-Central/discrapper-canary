@@ -46,7 +46,7 @@ class u extends o.Z {
                 });
             case 'APPS_HOME':
                 return new u({
-                    path: s.Z5c.APPLICATION_DIRECTORY,
+                    path: s.Z5c.GLOBAL_DISCOVERY_APPS,
                     type: 'APPS_HOME'
                 });
             default:

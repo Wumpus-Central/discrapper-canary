@@ -58,17 +58,17 @@ function y(e) {
         { reducedMotion: R } = a.useContext(u.S),
         O = a.useContext(p.Z),
         D = T[A].impressionName,
-        x = {
+        L = {
             ...T[A].impressionProperties,
             location_stack: S
         };
     O({
         type: s.ImpressionTypes.MODAL,
         name: D,
-        properties: x,
+        properties: L,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: L, width: w = 0, height: P = 0 } = (0, d.Z)(A),
+    let { ref: x, width: w = 0, height: P = 0 } = (0, d.Z)(A),
         M = {
             ...m,
             ...I.springConfig,
@@ -123,7 +123,7 @@ function y(e) {
             return (0, i.jsx)(
                 o.animated.div,
                 {
-                    ref: n === A ? L : null,
+                    ref: n === A ? x : null,
                     style: {
                         position: 'absolute',
                         display: y,

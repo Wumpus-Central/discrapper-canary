@@ -30,12 +30,12 @@ function p(e, t) {
         label: h.intl.string(h.t.sMsaLi)
     });
     null != f && g.push(f);
-    let b = (null === (n = t.tags) || void 0 === n ? void 0 : n.guild_connections) === null,
-        v = t.managed && !b,
+    let v = (null === (n = t.tags) || void 0 === n ? void 0 : n.guild_connections) === null,
+        b = t.managed && !v,
         C = null != t && (0, s.pM)(e.id, t.id);
     return (
         !p &&
-            !v &&
+            !b &&
             !C &&
             g.push(
                 (0, i.jsx)(
@@ -52,7 +52,7 @@ function p(e, t) {
                                     body: h.intl.format(h.t['9+nrUV'], { name: t.name }),
                                     cancelText: h.intl.string(h.t['ETE/oK']),
                                     onConfirm: async () => {
-                                        b && (await (0, d.L_)(e.id, t.id, [])), a.Z.deleteRole(e.id, t.id);
+                                        v && (await (0, d.L_)(e.id, t.id, [])), a.Z.deleteRole(e.id, t.id);
                                     }
                                 });
                             }

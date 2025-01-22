@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(553795),
     x = n(63063),
     f = n(981631),
-    _ = n(856651),
-    E = n(388032),
+    E = n(856651),
+    _ = n(388032),
     C = n(429779);
 function T(e) {
     var t;
@@ -57,9 +57,9 @@ function T(e) {
         case f.ABu.TIKTOK:
             S = (0, g.hf)(m, C.metadataItem);
     }
-    let b = (0, u.FI)(m[_.PC.CREATED_AT], p),
+    let b = (0, u.FI)(m[E.PC.CREATED_AT], p),
         I = null,
-        N = E.intl.string(E.t.wzzjk5);
+        N = _.intl.string(_.t.wzzjk5);
     return (
         (null == S || 0 === S.length) &&
             null == b &&
@@ -68,12 +68,12 @@ function T(e) {
                 {
                     variant: 'text-xs/normal',
                     color: 'header-secondary',
-                    children: E.intl.format(E.t.Up2ni4, { helpdeskUrl: x.Z.getArticleURL(f.BhN.CONNECTION_DETAILS) })
+                    children: _.intl.format(_.t.Up2ni4, { helpdeskUrl: x.Z.getArticleURL(f.BhN.CONNECTION_DETAILS) })
                 },
                 'label'
             )),
-            (N = E.intl.string(E.t['LVh3//']))),
-        a && (N = E.intl.string(E.t.i4jeWV)),
+            (N = _.intl.string(_.t['LVh3//']))),
+        a && (N = _.intl.string(_.t.i4jeWV)),
         (0, i.jsxs)('div', {
             className: C.metadataContainer,
             children: [
@@ -92,7 +92,7 @@ function T(e) {
                           {
                               variant: 'text-xs/normal',
                               color: 'header-secondary',
-                              children: E.intl.format(E.t['9rfonp'], { date: b })
+                              children: _.intl.format(_.t['9rfonp'], { date: b })
                           },
                           'member-since'
                       )
@@ -106,7 +106,7 @@ function T(e) {
                         size: l.Button.Sizes.MIN,
                         submitting: c,
                         disabled: a,
-                        'aria-label': E.intl.string(E.t.sCkLYG),
+                        'aria-label': _.intl.string(_.t.sCkLYG),
                         onClick: a ? void 0 : T,
                         children: N
                     },
@@ -125,7 +125,7 @@ function S(e) {
         g(t.visibility), p(t.metadataVisibility);
     }, [t]);
     let f = d.Z.get(t.type),
-        _ = !0 === f.hasMetadata;
+        E = !0 === f.hasMetadata;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -162,7 +162,7 @@ function S(e) {
                                         color: 'header-primary',
                                         children: f.name
                                     }),
-                                    _ &&
+                                    E &&
                                         (0, i.jsx)(T, {
                                             account: t,
                                             refreshed: s.includes(t.id),
@@ -170,7 +170,7 @@ function S(e) {
                                         })
                                 ]
                             }),
-                            _ &&
+                            E &&
                                 (0, i.jsx)(l.FormSwitch, {
                                     className: C.additionalDetailsSwitch,
                                     hideBorder: !0,
@@ -192,7 +192,7 @@ function S(e) {
                                     children: (0, i.jsx)(l.Text, {
                                         variant: 'text-md/normal',
                                         color: 'header-secondary',
-                                        children: E.intl.string(E.t['3l78ws'])
+                                        children: _.intl.string(_.t['3l78ws'])
                                     })
                                 })
                         ]
@@ -222,7 +222,7 @@ function b() {
                   (0, i.jsx)(l.FormTitle, {
                       tag: l.FormTitleTags.H5,
                       className: C.title,
-                      children: E.intl.string(E.t.aw0GVV)
+                      children: _.intl.string(_.t.aw0GVV)
                   }),
                   t.map((e) =>
                       (0, i.jsx)(

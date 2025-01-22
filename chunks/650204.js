@@ -26,8 +26,8 @@ var E = r(616254),
     R = r(960048),
     O = r(63063),
     D = r(240849),
-    x = r(998502),
-    L = r(513566),
+    L = r(998502),
+    x = r(513566),
     w = r(534713),
     P = r(358085),
     M = r(703656),
@@ -78,24 +78,24 @@ if (null != G.Z) {
         .join(', ');
     new Y.Z().log('[NATIVE INFO] host '.concat(e, ', modules: ').concat(d, ', build: ').concat(n));
     let f = null === (u = (c = G.Z.remoteApp).getReleaseChannel) || void 0 === u ? void 0 : u.call(c);
-    ('canary' === f || 'development' === f) && x.ZP.pauseFrameEvictor(), x.ZP.initializeExitHook(), x.ZP.initializeWERHandler();
+    ('canary' === f || 'development' === f) && L.ZP.pauseFrameEvictor(), L.ZP.initializeExitHook(), L.ZP.initializeWERHandler();
 }
 if (((0, U.O)(window), __OVERLAY__)) J(b.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) J(b.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), P.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => x.ZP.beforeUnload()), x.ZP.on('HELP_OPEN', () => window.open(O.Z.getCommunityURL()));
-        let e = new B.sW(K, () => x.ZP.purgeMemory());
-        x.ZP.on('MAIN_WINDOW_BLUR', () => {
-            e.delay(), x.ZP.setFocused(!1), (0, k.T_)(window, !1);
+        (window.onbeforeunload = () => L.ZP.beforeUnload()), L.ZP.on('HELP_OPEN', () => window.open(O.Z.getCommunityURL()));
+        let e = new B.sW(K, () => L.ZP.purgeMemory());
+        L.ZP.on('MAIN_WINDOW_BLUR', () => {
+            e.delay(), L.ZP.setFocused(!1), (0, k.T_)(window, !1);
         }),
-            x.ZP.on('MAIN_WINDOW_FOCUS', () => {
-                e.cancel(), x.ZP.setFocused(!0), (0, k.T_)(window, !0);
+            L.ZP.on('MAIN_WINDOW_FOCUS', () => {
+                e.cancel(), L.ZP.setFocused(!0), (0, k.T_)(window, !0);
             }),
-            x.ZP.on('MAIN_WINDOW_PATH', X),
-            x.ZP.on('MAIN_WINDOW_HIDDEN', () => {
+            L.ZP.on('MAIN_WINDOW_PATH', X),
+            L.ZP.on('MAIN_WINDOW_HIDDEN', () => {
                 (0, k.al)(window);
             });
     }
-    A.Z.initialize(), I.Z.initialize(), T.Z.init(), N.Z.init(), H.Z.init(), S.Z.initialize(), D.Z.initialize(), L.Z.initialize(), C.j(), J(b.Z.App);
+    A.Z.initialize(), I.Z.initialize(), T.Z.init(), N.Z.init(), H.Z.init(), S.Z.initialize(), D.Z.initialize(), x.Z.initialize(), C.j(), J(b.Z.App);
 }

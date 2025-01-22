@@ -1,6 +1,6 @@
 n.d(t, {
     n: function () {
-        return _;
+        return E;
     }
 }),
     n(47120),
@@ -61,8 +61,8 @@ let p = (e) => {
               });
     };
 ((r = i || (i = {}))[(r.PRICE = 0)] = 'PRICE'), (r[(r.EMOJI = 1)] = 'EMOJI'), (r[(r.STICKER = 2)] = 'STICKER'), (r[(r.CUSTOM_APP_ICONS = 3)] = 'CUSTOM_APP_ICONS'), (r[(r.SUPER_REACTIONS = 4)] = 'SUPER_REACTIONS'), (r[(r.UPLOAD = 5)] = 'UPLOAD'), (r[(r.STREAMING = 6)] = 'STREAMING'), (r[(r.BOOSTS = 7)] = 'BOOSTS'), (r[(r.PROFILE_THEMES = 8)] = 'PROFILE_THEMES'), (r[(r.SERVER_PROFILE = 9)] = 'SERVER_PROFILE'), (r[(r.SHOP_DISCOUNTS = 10)] = 'SHOP_DISCOUNTS'), (r[(r.CLIENT_THEME = 11)] = 'CLIENT_THEME'), (r[(r.BADGE = 12)] = 'BADGE'), (r[(r.VIDEO_BACKGROUND = 13)] = 'VIDEO_BACKGROUND'), (r[(r.CUSTOM_SOUNDS_ANYWHERE = 14)] = 'CUSTOM_SOUNDS_ANYWHERE'), (r[(r.CUSTOM_ENTRY_SOUNDS = 15)] = 'CUSTOM_ENTRY_SOUNDS'), (r[(r.SERVER_LIMIT = 16)] = 'SERVER_LIMIT'), (r[(r.MESSAGE_LENGTH = 17)] = 'MESSAGE_LENGTH'), (r[(r.CUSTOMIZATION_CATEGORY = 18)] = 'CUSTOMIZATION_CATEGORY'), (r[(r.FEATURE_UPGRADES_CATEGORY = 19)] = 'FEATURE_UPGRADES_CATEGORY'), (r[(r.PERSONALIZATION_CATEGORY = 20)] = 'PERSONALIZATION_CATEGORY'), (r[(r.AVATAR_AND_BANNER = 21)] = 'AVATAR_AND_BANNER'), (r[(r.REFERRAL_PROGRAM = 22)] = 'REFERRAL_PROGRAM');
-let _ = (e, t, n, i, r) => {
-    let _ = {
+let E = (e, t, n, i, r) => {
+    let E = {
             0: {
                 label: (0, s.jsx)(p, { text: g.intl.string(g.t['09yRKy']) }),
                 column1: (0, s.jsx)(s.Fragment, { children: (0, s.jsx)(x, { text: o.ZP.formatPriceString(e, u.rV.MONTH) }) }),
@@ -203,7 +203,7 @@ let _ = (e, t, n, i, r) => {
                 withBottomBorder: !1
             }
         },
-        E = r === u.a$.FP_ONLY,
-        C = [_[0], _[1], _[2], _[3], _[4], _[5], _[6], ...(E ? [] : [_[7]]), _[8], _[9], _[10], _[11], ...(E ? [] : [_[12]]), _[13], _[14], _[15], _[16], _[17]];
-    return (0, d.V)() && C.push(_[22]), C;
+        _ = r === u.a$.FP_ONLY,
+        C = [E[0], E[1], E[2], E[3], E[4], E[5], E[6], ...(_ ? [] : [E[7]]), E[8], E[9], E[10], E[11], ...(_ ? [] : [E[12]]), E[13], E[14], E[15], E[16], E[17]];
+    return (0, d.V)() && C.push(E[22]), C;
 };

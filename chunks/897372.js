@@ -26,8 +26,8 @@ var i,
     R = T.getState,
     O = l.URL,
     D = l.TypeError,
-    x = l.parseInt,
-    L = Math.floor,
+    L = l.parseInt,
+    x = Math.floor,
     w = Math.pow,
     P = c(''.charAt),
     M = c(/./.exec),
@@ -72,7 +72,7 @@ var i,
             if (((o = 10), a.length > 1 && '0' === P(a, 0) && ((o = M($, a) ? 16 : 8), (a = j(a, 8 === o ? 1 : 2))), '' === a)) s = 0;
             else {
                 if (!M(10 === o ? et : 8 === o ? ee : en, a)) return e;
-                s = x(a, o);
+                s = L(a, o);
             }
             G(r, s);
         }
@@ -109,7 +109,7 @@ var i,
                 f++, (d = ++c);
                 continue;
             }
-            for (n = r = 0; r < 4 && M(en, p()); ) (n = 16 * n + x(p(), 16)), f++, r++;
+            for (n = r = 0; r < 4 && M(en, p()); ) (n = 16 * n + L(p(), 16)), f++, r++;
             if ('.' === p()) {
                 if (0 === r) return;
                 if (((f -= r), c > 6)) return;
@@ -120,7 +120,7 @@ var i,
                     }
                     if (!M(J, p())) return;
                     for (; M(J, p()); ) {
-                        if (((o = x(p(), 10)), null === a)) a = o;
+                        if (((o = L(p(), 10)), null === a)) a = o;
                         else {
                             if (0 === a) return;
                             a = 10 * a + o;
@@ -149,7 +149,7 @@ var i,
     ed = function (e) {
         var n, r, i, a;
         if ('number' == typeof e) {
-            for (r = 0, n = []; r < 4; r++) Y(n, e % 256), (e = L(e / 256));
+            for (r = 0, n = []; r < 4; r++) Y(n, e % 256), (e = x(e / 256));
             return k(n, '.');
         }
         if ('object' == typeof e) {
@@ -219,8 +219,8 @@ var i,
     eR = {},
     eO = {},
     eD = {},
-    ex = {},
     eL = {},
+    ex = {},
     ew = {},
     eP = {},
     eM = {},
@@ -300,7 +300,7 @@ ej.prototype = {
                     break;
                 case eC:
                     if ('/' === o) {
-                        c = ex;
+                        c = eL;
                         break;
                     }
                     c = eG;
@@ -317,7 +317,7 @@ ej.prototype = {
                     break;
                 case eR:
                     if (u.isSpecial() && ('/' === o || '\\' === o)) c = eD;
-                    else if ('/' === o) c = ex;
+                    else if ('/' === o) c = eL;
                     else {
                         (u.username = r.username), (u.password = r.password), (u.host = r.host), (u.port = r.port), (c = eG);
                         continue;
@@ -329,11 +329,11 @@ ej.prototype = {
                     break;
                 case eD:
                     if ('/' !== o && '\\' !== o) {
-                        c = ex;
+                        c = eL;
                         continue;
                     }
                     break;
-                case ex:
+                case eL:
                     if ('@' === o) {
                         p && (f = '%40' + f), (p = !0), (s = m(f));
                         for (var v = 0; v < s.length; v++) {
@@ -348,10 +348,10 @@ ej.prototype = {
                         f = '';
                     } else if (o === i || '/' === o || '?' === o || '#' === o || ('\\' === o && u.isSpecial())) {
                         if (p && '' === f) return W;
-                        (d -= m(f).length + 1), (f = ''), (c = eL);
+                        (d -= m(f).length + 1), (f = ''), (c = ex);
                     } else f += o;
                     break;
-                case eL:
+                case ex:
                 case ew:
                     if (n && 'file' === u.scheme) {
                         c = eU;
@@ -376,7 +376,7 @@ ej.prototype = {
                     else {
                         if (!(o === i || '/' === o || '?' === o || '#' === o || ('\\' === o && u.isSpecial())) && !n) return q;
                         if ('' !== f) {
-                            var T = x(f, 10);
+                            var T = L(f, 10);
                             if (T > 65535) return q;
                             (u.port = u.isSpecial() && T === eg[u.scheme] ? null : T), (f = '');
                         }
@@ -545,7 +545,7 @@ ej.prototype = {
         return null === e ? '' : null === n ? ed(e) : ed(e) + ':' + n;
     },
     setHost: function (e) {
-        !this.cannotBeABaseURL && this.parse(e, eL);
+        !this.cannotBeABaseURL && this.parse(e, ex);
     },
     getHostname: function () {
         var e = this.host;

@@ -50,8 +50,8 @@ let S = (e) => {
 function A(e) {
     var n;
     let r;
-    let { hideCloseButton: a = !1, hideCloseOnFullScreen: _, shouldShowPrice: m, plan: E, renderAnimation: b, onClose: A, isGift: C, upgradeToPremiumType: N, headerTheme: R = y.nL.DEFAULT, className: O, showTrialBadge: D = !1, showDiscountBadge: x = !1 } = e,
-        L = N === y.p9.TIER_2;
+    let { hideCloseButton: a = !1, hideCloseOnFullScreen: _, shouldShowPrice: m, plan: E, renderAnimation: b, onClose: A, isGift: C, upgradeToPremiumType: N, headerTheme: R = y.nL.DEFAULT, className: O, showTrialBadge: D = !1, showDiscountBadge: L = !1 } = e,
+        x = N === y.p9.TIER_2;
     r = N === y.p9.TIER_0 ? f.Z : N === y.p9.TIER_1 ? p.Z : d.Z;
     let w = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         P = (0, g.Ng)(),
@@ -60,8 +60,8 @@ function A(e) {
         'aria-hidden': !0,
         className: o()(
             {
-                [I.headerBackground]: !L,
-                [I.tier2HeaderBackground]: L
+                [I.headerBackground]: !x,
+                [I.tier2HeaderBackground]: x
             },
             O
         ),
@@ -72,7 +72,7 @@ function A(e) {
                       className: I.snow,
                       wind: 5
                   }),
-            (D || x) && (0, i.jsx)(h.Z, { className: I.trialBadgeSparkles }),
+            (D || L) && (0, i.jsx)(h.Z, { className: I.trialBadgeSparkles }),
             b(),
             (0, i.jsxs)(c.Z, {
                 align: c.Z.Align.START,
@@ -81,11 +81,11 @@ function A(e) {
                 children: [
                     (0, i.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(r, { className: o()(I.headerIcon, { [I.nonTier2]: !L }) }),
-                            (D || x) &&
+                            (0, i.jsx)(r, { className: o()(I.headerIcon, { [I.nonTier2]: !x }) }),
+                            (D || L) &&
                                 (0, i.jsx)(S, {
                                     isTier0: N === y.p9.TIER_0,
-                                    discountAmount: x ? M : void 0
+                                    discountAmount: L ? M : void 0
                                 })
                         ]
                     }),

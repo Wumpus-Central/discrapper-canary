@@ -30,8 +30,8 @@ var o = r(200651),
     R = r(572397),
     O = r(705262),
     D = r(981631),
-    x = r(921944),
-    L = r(474936),
+    L = r(921944),
+    x = r(474936),
     w = r(388032),
     P = r(245392);
 let M = () =>
@@ -53,7 +53,7 @@ let M = () =>
         let { markAsDismissed: n } = e,
             r = (0, R.q)(),
             i = () => {
-                null != n && n(x.L.DISMISS), r(D.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, C.Mo)();
+                null != n && n(L.L.DISMISS), r(D.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, C.Mo)();
             };
         return (0, o.jsxs)('div', {
             className: P.editorHeader,
@@ -86,7 +86,7 @@ let M = () =>
             }),
             g = (e) => {
                 if (!e) return;
-                if ((null == a || a(), null != s && s(x.L.PRIMARY), null != u))
+                if ((null == a || a(), null != s && s(L.L.PRIMARY), null != u))
                     (0, O.Yk)({
                         isPersisted: !0,
                         themeName: f.Us[u.id],
@@ -99,8 +99,8 @@ let M = () =>
             };
         return (0, o.jsx)(b.Z, {
             size: p.Button.Sizes.MEDIUM,
-            buttonText: c ? w.intl.string(w.t.IJI7ys) : (null == _ ? void 0 : null === (i = _.subscription_trial) || void 0 === i ? void 0 : i.sku_id) === L.Si.TIER_2 ? m : w.intl.string(w.t.mr4K7O),
-            subscriptionTier: L.Si.TIER_2,
+            buttonText: c ? w.intl.string(w.t.IJI7ys) : (null == _ ? void 0 : null === (i = _.subscription_trial) || void 0 === i ? void 0 : i.sku_id) === x.Si.TIER_2 ? m : w.intl.string(w.t.mr4K7O),
+            subscriptionTier: x.Si.TIER_2,
             onSubscribeModalClose: g
         });
     },
@@ -113,7 +113,7 @@ let M = () =>
             [a, l] = s.useState(!1),
             u = (0, R.q)(),
             f = () => {
-                null != n && n(x.L.DISMISS), u(D.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, C.Mo)(), !i && _.Z.open();
+                null != n && n(L.L.DISMISS), u(D.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, C.Mo)(), !i && _.Z.open();
             },
             h = (0, c.EQ)({
                 isPreview: r,
@@ -162,7 +162,7 @@ function G(e) {
         s.useEffect(() => {
             if (!!i)
                 S.default.track(D.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: L.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                    type: x.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: r
                 });
         }, [i, r]);

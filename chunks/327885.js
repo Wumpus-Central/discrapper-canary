@@ -19,8 +19,8 @@ var r = n(512722),
     p = n(32300),
     x = n(809357),
     f = n(371651),
-    _ = n(556296),
-    E = n(808506),
+    E = n(556296),
+    _ = n(808506),
     C = n(237997),
     T = n(626135);
 n(63063);
@@ -33,17 +33,17 @@ function A(e) {
     var t;
     let n = C.Z.getNotificationPositionMode(),
         i = n !== b._vf.DISABLED,
-        r = _.Z.getOverlayKeybind(),
-        s = _.Z.getOverlayChatKeybind();
+        r = E.Z.getOverlayKeybind(),
+        s = E.Z.getOverlayChatKeybind();
     return {
-        enabled: E.Z.enabled,
+        enabled: _.Z.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
         text_notifications_mode: C.Z.getTextChatNotificationMode(),
         hotkey: null != r ? (0, S.BB)(r.shortcut) : null,
         text_activation_hotkey: null != s ? (0, S.BB)(s.shortcut) : null,
         text_opacity_slider: C.Z.getTextWidgetOpacity(),
-        old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : E.Z.enabled
+        old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : _.Z.enabled
     };
 }
 function j(e) {
@@ -58,7 +58,7 @@ function O(e) {
     let { className: t, showHeader: n = !0 } = e,
         { enabled: r, legacyEnabled: a } = (0, o.cj)([f.Z], () => f.Z.getEnabledStatus()),
         {
-            avatarSizeMode: E,
+            avatarSizeMode: _,
             displayNameMode: S,
             displayUserMode: O,
             notificationPositionMode: R,
@@ -72,7 +72,7 @@ function O(e) {
             textChatNotificationMode: C.Z.getTextChatNotificationMode(),
             shouldShowKeybindIndicators: C.Z.showKeybindIndicators
         })),
-        y = (0, o.e7)([_.Z], () => _.Z.getOverlayKeybind()),
+        y = (0, o.e7)([E.Z], () => E.Z.getOverlayKeybind()),
         B = (0, x.Z)({ location: 'overlay_user_settings' }),
         Z = (0, g.$1)(),
         L = (0, p.XE)('overlay_user_settings');
@@ -176,7 +176,7 @@ function O(e) {
                                     let { value: t } = e;
                                     return u.Z.setAvatarSizeMode(t);
                                 },
-                                value: E
+                                value: _
                             })
                         }),
                         (0, i.jsx)(j, {

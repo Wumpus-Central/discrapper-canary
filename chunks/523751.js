@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return L;
+        return x;
     }
 });
 var i = r(200651),
@@ -156,7 +156,7 @@ function D(e) {
         ]
     });
 }
-function x(e) {
+function L(e) {
     let { badgeType: n, guildTraits: r } = e,
         { tooltipTitle: a, tooltipSubtitle: o, tooltipDescription: s } = R(n, r.visibility);
     return (0, i.jsxs)(i.Fragment, {
@@ -189,10 +189,10 @@ function x(e) {
         ]
     });
 }
-function L(e) {
+function x(e) {
     let n,
         r,
-        { guild: o, tooltipColor: u = d.Tooltip.Colors.BRAND, tooltipPosition: h, className: y, flowerStarClassName: b, iconClassName: I, badgeStrokeColor: C, badgeColor: R, size: D = 16, disableBoostClick: L, 'aria-label': w = !1 } = e,
+        { guild: o, tooltipColor: u = d.Tooltip.Colors.BRAND, tooltipPosition: h, className: y, flowerStarClassName: b, iconClassName: I, badgeStrokeColor: C, badgeColor: R, size: D = 16, disableBoostClick: x, 'aria-label': w = !1 } = e,
         P = (0, l.e7)([v.default, E.ZP], () => {
             let e = v.default.getCurrentUser();
             return E.ZP.isMember(null == o ? void 0 : o.id, null == e ? void 0 : e.id);
@@ -204,7 +204,7 @@ function L(e) {
             (e) => {
                 k.premium &&
                     P &&
-                    !L &&
+                    !x &&
                     (e.stopPropagation(),
                     e.preventDefault(),
                     (0, _.f)({
@@ -215,7 +215,7 @@ function L(e) {
                         }
                     }));
             },
-            [k.premium, P, L, o.id]
+            [k.premium, P, x, o.id]
         );
     if (U === T.Q.NONE) return null;
     if (U === T.Q.CLAN) {
@@ -227,7 +227,7 @@ function L(e) {
                   color: u,
                   position: h,
                   'aria-label': w,
-                  text: (0, i.jsx)(x, {
+                  text: (0, i.jsx)(L, {
                       badgeType: U,
                       guildTraits: k
                   }),
@@ -255,7 +255,7 @@ function L(e) {
         color: u,
         position: h,
         'aria-label': w,
-        text: (0, i.jsx)(x, {
+        text: (0, i.jsx)(L, {
             badgeType: U,
             guildTraits: k
         }),

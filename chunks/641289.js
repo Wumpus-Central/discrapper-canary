@@ -72,19 +72,19 @@ function A(e) {
             match: i(/\./, o(..._)),
             relevance: 0
         },
-        x = [
+        L = [
             D,
             {
                 className: 'built_in',
                 match: i(/\b/, o(..._), /(?=\()/)
             }
         ],
-        L = {
+        x = {
             match: /->/,
             relevance: 0
         },
         w = [
-            L,
+            x,
             {
                 className: 'operator',
                 relevance: 0,
@@ -229,7 +229,7 @@ function A(e) {
             begin: /</,
             end: />/,
             keywords: R,
-            contains: [...m, ...O, ...X, L, J]
+            contains: [...m, ...O, ...X, x, J]
         };
     J.contains.push($);
     let ee = {
@@ -247,7 +247,7 @@ function A(e) {
                 ...m,
                 W,
                 ...O,
-                ...x,
+                ...L,
                 ...w,
                 k,
                 V,
@@ -369,7 +369,7 @@ function A(e) {
     for (let e of V.variants) {
         let n = e.contains.find((e) => 'interpol' === e.label);
         n.keywords = R;
-        let r = [...O, ...x, ...w, k, V, ...z];
+        let r = [...O, ...L, ...w, k, V, ...z];
         n.contains = [
             ...r,
             {
@@ -399,7 +399,7 @@ function A(e) {
             },
             W,
             ...O,
-            ...x,
+            ...L,
             ...w,
             k,
             V,

@@ -23,7 +23,7 @@ let c = () => {
             playing: r.playing,
             size: t,
             useClockOptions: {
-                minInterval: 1000 / 60,
+                minInterval: r.tickRate,
                 droppedFramesCallbackThreshold: 10,
                 droppedFramesResetTime: 2000,
                 droppedFramesCallback: r.improvePerformance

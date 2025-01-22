@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return o;
     }
 }),
     n(757143);
 var r = n(192379),
-    o = n(442837),
-    i = n(131951),
-    l = n(388032);
-let a = /^Default/;
-function c() {
-    let e = (0, o.e7)([i.Z], () => i.Z.getInputDevices());
+    i = n(442837),
+    l = n(131951),
+    a = n(388032);
+let u = /^Default/;
+function o() {
+    let e = (0, i.e7)([l.Z], () => l.Z.getInputDevices());
     return r.useMemo(() => {
         let t = { ...e },
             n = t.default;
@@ -18,7 +18,7 @@ function c() {
             ? t
             : ((t.default = {
                   ...n,
-                  name: n.name.replace(a, l.intl.string(l.t.bBvAEB))
+                  name: n.name.replace(u, a.intl.string(a.t.bBvAEB))
               }),
               t);
     }, [e]);

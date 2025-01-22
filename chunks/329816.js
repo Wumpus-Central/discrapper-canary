@@ -25,8 +25,8 @@ var o = r(200651),
     R = r(613413),
     O = r(94795),
     D = r(327943),
-    x = r(907459),
-    L = r(559407),
+    L = r(907459),
+    x = r(559407),
     w = r(556766),
     P = r(514361),
     M = r(724145),
@@ -187,7 +187,7 @@ function e_(e) {
                                                                                         className: u()(l ? ed.mobileApp : ed.app),
                                                                                         children: n
                                                                                     }),
-                                                                                    (0, o.jsx)(L.Z, {}),
+                                                                                    (0, o.jsx)(x.Z, {}),
                                                                                     (0, o.jsx)(v.Z, {}),
                                                                                     (0, o.jsx)(m.Modals, {}),
                                                                                     (0, o.jsx)(y.Z, {}),
@@ -210,7 +210,7 @@ function e_(e) {
                                                             eC && !eO && (0, o.jsx)(M.Z, { markAsDismissed: eI }),
                                                             eN &&
                                                                 !eO &&
-                                                                (0, o.jsx)(x.Z, {
+                                                                (0, o.jsx)(L.Z, {
                                                                     isCoachmark: eT,
                                                                     markAsDismissed: eI
                                                                 }),

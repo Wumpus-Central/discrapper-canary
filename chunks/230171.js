@@ -95,9 +95,9 @@ function j(e) {
                 (0, u.X)(n.id);
                 return;
             }
-            (0, p.goToAppDirectory)({
+            (0, p.dx)({
                 applicationId: n.id,
-                entrypoint: { name: f.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
+                entrypoint: { name: f.n3.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
         }, [n.id, q]),
         ee = r.useCallback(() => {

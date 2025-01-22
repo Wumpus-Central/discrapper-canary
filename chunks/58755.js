@@ -103,9 +103,9 @@ function b(e) {
 }
 function g(e) {
     let { scale: t, setState: n, onClose: r } = e,
-        { name: c, base: p, darkness: b, lightness: g, showColumnarPalettePreview: v, colorSpace: _, easingStrength: C = 1, useP3ColorSpace: T, steps: N = 26 } = t,
-        S = (0, m.XM)(t),
-        y = (0, m.W6)(S, c);
+        { name: c, base: p, darkness: b, lightness: g, showColumnarPalettePreview: v, colorSpace: C, easingStrength: _ = 1, useP3ColorSpace: T, steps: S = 26 } = t,
+        N = (0, m.XM)(t),
+        y = (0, m.W6)(N, c);
     return (0, a.jsxs)(d.FormSection, {
         className: x.paletteSettings,
         children: [
@@ -123,7 +123,7 @@ function g(e) {
                     }),
                     (0, a.jsx)(d.Clickable, {
                         onClick: function () {
-                            let e = Object.entries(S).reduce((e, t) => {
+                            let e = Object.entries(N).reduce((e, t) => {
                                 let [n, a] = t;
                                 return (
                                     (e[n] = {
@@ -165,7 +165,7 @@ function g(e) {
                     }),
                     (0, a.jsx)(d.SingleSelect, {
                         options: f,
-                        value: _,
+                        value: C,
                         onChange: (e) => (0, m.t4)(c, e, n),
                         popoutLayerContext: h.O$
                     })
@@ -218,7 +218,7 @@ function g(e) {
             (0, a.jsx)(d.FormSection, {
                 title: 'Easing',
                 children: (0, a.jsxs)(d.FormItem, {
-                    title: 'Easing Strength ('.concat(C.toFixed(2), ')'),
+                    title: 'Easing Strength ('.concat(_.toFixed(2), ')'),
                     children: [
                         (0, a.jsx)(d.FormText, {
                             type: d.FormTextTypes.DESCRIPTION,
@@ -226,7 +226,7 @@ function g(e) {
                         }),
                         (0, a.jsx)(d.Slider, {
                             onValueRender: () => null,
-                            initialValue: C,
+                            initialValue: _,
                             minValue: 1,
                             maxValue: 5,
                             onValueChange: (e) => (0, m.rd)(c, e, n),
@@ -256,10 +256,10 @@ function g(e) {
                         })
                     }),
                     (0, a.jsx)(d.FormItem, {
-                        title: 'Steps ('.concat(N, ')'),
+                        title: 'Steps ('.concat(S, ')'),
                         children: (0, a.jsx)(d.Slider, {
                             onValueRender: () => null,
-                            initialValue: N,
+                            initialValue: S,
                             minValue: (0, m.A0)(c).length,
                             maxValue: 100,
                             onValueChange: (e) => (0, m.YC)(c, Math.round(e), n),
@@ -271,7 +271,7 @@ function g(e) {
                         children: (0, a.jsx)('div', {
                             className: x.paletteOverrides,
                             'data-columnar': v,
-                            children: Object.entries(S).map((e, n) => {
+                            children: Object.entries(N).map((e, n) => {
                                 let [r, c] = e,
                                     u = (0, m.HI)(c),
                                     h = (0, o.Z)((0, s.Z)('black'), c) > 4.5 ? 'black' : 'white',

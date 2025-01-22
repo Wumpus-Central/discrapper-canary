@@ -54,12 +54,12 @@ function N(e) {
 }
 function R(e) {
     let { className: n, userId: a, channelId: o, parsedUserId: _, content: R, inlinePreview: O = !1, viewingChannelId: D } = e,
-        { analyticsLocations: x } = (0, p.ZP)(f.Z.USER_MENTION),
-        L = (0, u.e7)([T.default], () => T.default.getUser(a)),
+        { analyticsLocations: L } = (0, p.ZP)(f.Z.USER_MENTION),
+        x = (0, u.e7)([T.default], () => T.default.getUser(a)),
         w = (0, u.e7)([v.Z], () => v.Z.getChannel(o)),
         P = null != w ? w.getGuildId() : null,
         M =
-            O || null == L || null == P || null == o
+            O || null == x || null == P || null == o
                 ? void 0
                 : (e) => {
                       null != w &&
@@ -69,17 +69,17 @@ function R(e) {
                                   (0, i.jsx)(e, {
                                       ...n,
                                       viewingChannelId: D,
-                                      user: L,
+                                      user: x,
                                       channel: w,
                                       guildId: P
                                   });
                           });
                   },
-        k = A.ZP.useName(L),
-        U = (0, u.e7)([v.Z, y.ZP, I.Z], () => S.ZP.getNickname(P, o, L)),
+        k = A.ZP.useName(x),
+        U = (0, u.e7)([v.Z, y.ZP, I.Z], () => S.ZP.getNickname(P, o, x)),
         B = b.Z.getGuild(P),
         G = (0, h.Ib)(B, w) && a === C.fL ? C.jM : null;
-    if (null == L)
+    if (null == x)
         return (0, i.jsx)(N, {
             userId: _,
             className: n,
@@ -95,24 +95,24 @@ function R(e) {
         });
     return O
         ? (0, i.jsx)(p.Gt, {
-              value: x,
+              value: L,
               children: Z()
           })
         : (0, i.jsx)(p.Gt, {
-              value: x,
+              value: L,
               children: (0, i.jsx)(c.Popout, {
                   preload:
-                      null == L
+                      null == x
                           ? void 0
                           : () =>
-                                (0, g.Z)(L.id, L.getAvatarURL(P, 80), {
+                                (0, g.Z)(x.id, x.getAvatarURL(P, 80), {
                                     guildId: null != P ? P : void 0,
                                     channelId: null != o ? o : void 0
                                 }),
                   renderPopout: (e) => (
-                      s()(null != L, 'Unexpected missing user'),
+                      s()(null != x, 'Unexpected missing user'),
                       (0, i.jsx)(E.Z, {
-                          userId: L.id,
+                          userId: x.id,
                           guildId: null != P ? P : void 0,
                           channelId: o,
                           ...e

@@ -48,8 +48,8 @@ function f(e) {
                 R = n.rects.reference,
                 O = n.rects.popper,
                 D = new Map(),
-                x = !0,
-                L = N[0],
+                L = !0,
+                x = N[0],
                 w = 0;
             w < N.length;
             w++
@@ -77,12 +77,12 @@ function f(e) {
                     return e;
                 }))
             ) {
-                (L = P), (x = !1);
+                (x = P), (L = !1);
                 break;
             }
             D.set(P, V);
         }
-        if (x) {
+        if (L) {
             for (
                 var j = I ? 3 : 1,
                     H = function (e) {
@@ -93,14 +93,14 @@ function f(e) {
                                     return e;
                                 });
                         });
-                        if (n) return (L = n), 'break';
+                        if (n) return (x = n), 'break';
                     },
                     Y = j;
                 Y > 0 && 'break' !== H(Y);
                 Y--
             );
         }
-        n.placement !== L && ((n.modifiersData[o]._skip = !0), (n.placement = L), (n.reset = !0));
+        n.placement !== x && ((n.modifiersData[o]._skip = !0), (n.placement = x), (n.reset = !0));
     }
 }
 n.Z = {

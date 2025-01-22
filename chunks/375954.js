@@ -25,8 +25,8 @@ var u = r(392711),
     R = r(592125),
     O = r(796974),
     D = r(984933),
-    x = r(271383),
-    L = r(430824),
+    L = r(271383),
+    x = r(430824),
     w = r(496675),
     P = r(699516),
     M = r(944486),
@@ -286,7 +286,7 @@ function ey(e) {
 }
 class eb extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(U.default, R.Z, O.Z, x.ZP, S.default, M.Z, k.Z, L.Z, P.Z, D.ZP), this.syncWith([v.Z], () => {});
+        this.waitFor(U.default, R.Z, O.Z, L.ZP, S.default, M.Z, k.Z, x.Z, P.Z, D.ZP), this.syncWith([v.Z], () => {});
     }
     getMessages(e) {
         if (v.Z.hasViewingRoles()) {

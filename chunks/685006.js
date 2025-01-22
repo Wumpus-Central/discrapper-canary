@@ -102,7 +102,7 @@ function j(e) {
             analyticsLocations: I
         }),
         N = p ? c.Button.Colors.RED : c.Button.Colors.BRAND,
-        S = (0, v.R6)('LoadedEntryPointCommandButton');
+        S = (0, v.Q3)('LoadedEntryPointCommandButton');
     return (0, i.jsx)(c.Button, {
         className: a()(b.entryPointAppCommandButton, E.Id),
         size: S ? c.Button.Sizes.SMALL : c.Button.Sizes.LARGE,

@@ -12,7 +12,7 @@ r.d(n, {
         return C;
     },
     WO: function () {
-        return x;
+        return L;
     },
     rU: function () {
         return N;
@@ -132,7 +132,7 @@ async function N(e, n, r) {
         });
         return;
     }
-    let m = await L(r, f);
+    let m = await x(r, f);
     return (
         T('MESSAGE_REACTION_ADD', e, n, r, {
             burst: f,
@@ -230,7 +230,7 @@ async function D(e, n, r, i) {
             I(i, () => D(e, n, r, { isRetry: !0 }), { isRetry: o });
         });
 }
-async function x(e) {
+async function L(e) {
     let { channelId: n, messageId: r, emoji: i, location: s = 'Message', userId: l, options: u } = e,
         f = null != u && !!u.burst,
         p = null != u && !!u.isRetry;
@@ -264,7 +264,7 @@ async function x(e) {
                     I(
                         e,
                         () =>
-                            x({
+                            L({
                                 channelId: n,
                                 messageId: r,
                                 emoji: i,
@@ -278,7 +278,7 @@ async function x(e) {
                         { isRetry: p }
                     )
                 ) {
-                    let e = await L(i, f);
+                    let e = await x(i, f);
                     T('MESSAGE_REACTION_ADD', n, r, i, {
                         userId: l,
                         burst: f,
@@ -288,7 +288,7 @@ async function x(e) {
                 }
             });
 }
-async function L(e, n) {
+async function x(e, n) {
     let r = [];
     if (n)
         try {

@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(635921),
     x = n(474936),
     f = n(869783),
-    _ = n(388032),
-    E = n(255346),
+    E = n(388032),
+    _ = n(255346),
     C = n(839526),
     T = n(4046),
     S = n(423741);
@@ -37,28 +37,28 @@ t.Z = (e) => {
         (0, i.jsx)(c.Gt, {
             value: v,
             children: (0, i.jsxs)('div', {
-                className: a()(E.container, s),
+                className: a()(_.container, s),
                 children: [
                     (0, i.jsx)(l.Heading, {
-                        className: E.footerHeader,
+                        className: _.footerHeader,
                         variant: 'display-md',
                         color: 'header-primary',
-                        children: _.intl.string(_.t.lEw32t)
+                        children: E.intl.string(E.t.lEw32t)
                     }),
                     (0, i.jsx)(p.PK, {
                         subscriptionTier: null !== (n = null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : j,
                         inOfferExperience: R,
-                        containerClassName: a()(E.footerCTAContainer),
+                        containerClassName: a()(_.footerCTAContainer),
                         isMarketingPageV2Enabled: !0,
                         isDarkMode: I
                     }),
                     (0, i.jsx)('div', {
-                        className: E.footerArtContainer,
+                        className: _.footerArtContainer,
                         children: (0, i.jsx)(d.Z, {
                             playsInline: !0,
                             preload: 'auto',
                             poster: T.Z,
-                            className: a()(E.footerArt),
+                            className: a()(_.footerArt),
                             onEnded: () => {
                                 B(!0);
                             },
@@ -69,8 +69,8 @@ t.Z = (e) => {
                             })
                         })
                     }),
-                    (0, i.jsx)('div', { className: E.leftGradient }),
-                    (0, i.jsx)('div', { className: E.rightGradient })
+                    (0, i.jsx)('div', { className: _.leftGradient }),
+                    (0, i.jsx)('div', { className: _.rightGradient })
                 ]
             })
         })

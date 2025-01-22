@@ -1,40 +1,40 @@
-e.d(t, {
+n.d(t, {
     r: function () {
-        return b;
+        return h;
     }
 });
-var i = e(106351),
-    o = e(475179),
-    r = e(816782),
-    l = e(358221),
-    d = e(221292),
-    s = e(687158),
-    u = e(433355),
-    a = e(592125),
-    c = e(944486),
-    E = e(914010),
-    C = e(981631);
-let b = {
+var i = n(106351),
+    r = n(475179),
+    s = n(816782),
+    a = n(358221),
+    l = n(221292),
+    o = n(687158),
+    c = n(433355),
+    d = n(592125),
+    u = n(944486),
+    m = n(914010),
+    g = n(981631);
+let h = {
     binds: ['mod+u'],
     comboKeysBindGlobal: !0,
     action() {
-        let n = E.Z.getGuildId(),
-            t = c.Z.getChannelId(n),
-            e = a.Z.getChannel(t);
-        if (null != t && null != e && e.type === i.d.GUILD_VOICE) return o.Z.updateChatOpen(t, !l.Z.getChatOpen(t)), !1;
-        if (null != t && null != e && e.type === i.d.DM) {
-            let n = u.ZP.getSection(t, null == e ? void 0 : e.isDM()),
-                i = (0, s.Of)(e.getRecipientId()),
-                o = n === C.ULH.PROFILE;
+        let e = m.Z.getGuildId(),
+            t = u.Z.getChannelId(e),
+            n = d.Z.getChannel(t);
+        if (null != t && null != n && n.type === i.d.GUILD_VOICE) return r.Z.updateChatOpen(t, !a.Z.getChatOpen(t)), !1;
+        if (null != t && null != n && n.type === i.d.DM) {
+            let e = c.ZP.getSection(t, null == n ? void 0 : n.isDM()),
+                i = (0, o.Of)(n.getRecipientId()),
+                r = e === g.ULH.PROFILE;
             return (
-                (0, d.TY)({
+                (0, l.TY)({
                     displayProfile: i,
-                    isProfileOpen: !o
+                    isProfileOpen: !r
                 }),
-                r.Z.toggleProfilePanelSection(),
+                s.Z.toggleProfilePanelSection(),
                 !1
             );
         }
-        return r.Z.toggleMembersSection(), !1;
+        return s.Z.toggleMembersSection(), !1;
     }
 };

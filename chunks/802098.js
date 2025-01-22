@@ -73,7 +73,7 @@ function O(e) {
 function D() {
     y = c.l4.getSetting();
 }
-class x extends (i = o.ZP.Store) {
+class L extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(u.default, d.Z), this.syncWith([u.default], () => !0), this.syncWith([d.Z], D);
         let e = s.K.get(v);
@@ -122,8 +122,8 @@ class x extends (i = o.ZP.Store) {
         return I.size > 0;
     }
 }
-p(x, 'displayName', 'ChangelogStore'),
-    (n.Z = new x(l.Z, {
+p(L, 'displayName', 'ChangelogStore'),
+    (n.Z = new L(l.Z, {
         CHANGE_LOG_LOCK: T,
         CHANGE_LOG_UNLOCK: S,
         CHANGE_LOG_SET_CONFIG: A,

@@ -19,8 +19,8 @@ var r = n(990547),
     p = n(782568),
     x = n(758182),
     f = n(163379),
-    _ = n(703288),
-    E = n(574755),
+    E = n(703288),
+    _ = n(574755),
     C = n(377171),
     T = n(540059),
     S = n(621628),
@@ -73,8 +73,8 @@ var r = n(990547),
     ep = n(649157),
     ex = n(593648),
     ef = n(327885),
-    e_ = n(595242),
-    eE = n(463153),
+    eE = n(595242),
+    e_ = n(463153),
     eC = n(36192),
     eT = n(889029),
     eS = n(400287),
@@ -97,11 +97,11 @@ var r = n(990547),
 let ew = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eF = eN.Z,
     eU = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eU, impressionSource: eV, numOfPendingFamilyRequests: eG, isOverlaySupported: eH, isClipsBetaTagShowing: eY = !1, shouldMergeGameSettings: eW, isUserSettingsSearchEnabled: ez, isKeywordFilteringEnabled: eK, isStaff: eq, isInappropriateConversationWarningEnabled: eQ, paymentsBlocked: eX, isEligibleForQuests: eJ, showGiftNitro: e$, isStricterMessageRequestsEnabled: e0, hasLibraryApplication: e1, hasTOTPEnabled: e2, developerMode: e6, isAdultUser: e3, hasSecureFramesVerifiedUserIds: e4, hypeSquadRemoved: e8, stealthRemediationEnabled: e7, hasIgnoredUsers: e5, hasBlockedUsers: e9, isAllowGameFriendDMsVisible: te, useRefreshedVoiceAndVideo: tt } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eU, impressionSource: eV, numOfPendingFamilyRequests: eG, isOverlaySupported: eH, isClipsBetaTagShowing: eY = !1, shouldMergeGameSettings: eW, isUserSettingsSearchEnabled: ez, isKeywordFilteringEnabled: eK, isStaff: eq, isInappropriateConversationWarningEnabled: eQ, paymentsBlocked: eX, isEligibleForQuests: eJ, showGiftNitro: e$, isStricterMessageRequestsEnabled: e0, hasLibraryApplication: e1, hasTOTPEnabled: e2, developerMode: e6, isAdultUser: e3, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e4, stealthRemediationEnabled: e7, hasIgnoredUsers: e5, hasBlockedUsers: e9, isAllowGameFriendDMsVisible: te, useRefreshedVoiceAndVideo: tt } = e;
         return Object.freeze({
             [ey.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
-                element: eE.Z,
+                element: e_.Z,
                 predicate: () => ez
             },
             [ey.s6.ACCOUNT_SECURITY_TAB]: {
@@ -417,7 +417,7 @@ let ew = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eB.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [eM.intl.string(eM.t['5b3FND'])],
                 parent: ey.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-                predicate: () => e4
+                predicate: () => e8
             },
             [ey.s6.PRIVACY_FAMILY_CENTER]: {
                 section: eB.oAB.FAMILY_CENTER,
@@ -481,8 +481,8 @@ let ew = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eM.intl.string(eM.t.z2jK6e)],
                 label: eM.intl.string(eM.t.z2jK6e),
                 ariaLabel: eM.intl.string(eM.t.z2jK6e),
-                icon: eY ? (0, i.jsx)(_.Z, {}) : void 0,
-                element: E.Z,
+                icon: eY ? (0, i.jsx)(E.Z, {}) : void 0,
+                element: _.Z,
                 predicate: () => !eW
             },
             [ey.s6.RESTRICTED_USERS]: {
@@ -520,7 +520,7 @@ let ew = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eB.oAB.GUILD_BOOSTING,
                 searchableTitles: [eM.intl.string(eM.t['+CbP2t'])],
                 label: eM.intl.string(eM.t['+CbP2t']),
-                element: e_.Z
+                element: eE.Z
             },
             [ey.s6.SUBSCRIPTIONS]: {
                 section: eB.oAB.SUBSCRIPTIONS,
@@ -1458,13 +1458,13 @@ let ew = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eM.intl.string(eM.t['k0R+4e'])],
                 label: eM.intl.string(eM.t['k0R+4e']),
                 element: em.Z,
-                predicate: () => !e8
+                predicate: () => !e4
             },
             [ey.s6.TOWNHALL]: {
                 section: eB.oAB.TOWNHALL,
                 searchableTitles: [eM.intl.string(eM.t.dnZNER)],
                 label: eM.intl.string(eM.t.dnZNER),
-                predicate: () => e8,
+                predicate: () => e4,
                 onClick: () => {
                     (0, p.Z)('https://discord.gg/discord-townhall'), (0, d.xf)();
                 }

@@ -8,8 +8,8 @@ t.d(n, {
 });
 var i = t(192379),
     l = t(228458),
-    o = t(442837),
-    a = t(895924),
+    a = t(442837),
+    o = t(895924),
     d = t(581364),
     r = t(823379),
     c = t(399654),
@@ -34,7 +34,7 @@ function m(e) {
         { fetchState: t, recommendationsSections: s } = (function (e) {
             let { channelId: n } = e,
                 t = l.I.CONTEXTUAL_IMAGE,
-                a = i.useMemo(
+                o = i.useMemo(
                     () => ({
                         channelId: n,
                         location: t,
@@ -43,11 +43,11 @@ function m(e) {
                     [n, t]
                 );
             i.useEffect(() => {
-                (0, c.a)(a);
-            }, [a]);
-            let { fetchState: d, recommendationsSections: r } = (0, o.cj)([u.ZP], () => ({
-                fetchState: u.ZP.getFetchState(a),
-                recommendationsSections: u.ZP.getRecommendations(a)
+                (0, c.a)(o);
+            }, [o]);
+            let { fetchState: d, recommendationsSections: r } = (0, a.cj)([u.ZP], () => ({
+                fetchState: u.ZP.getFetchState(o),
+                recommendationsSections: u.ZP.getRecommendations(o)
             }));
             return {
                 fetchState: d,
@@ -70,7 +70,7 @@ function m(e) {
                 }),
                 Object.keys(n)
                     .map((n) => {
-                        var t, i, l, o, r, c, u, s, m, E, p, v;
+                        var t, i, l, a, r, c, u, s, m, E, p, v;
                         let C, _;
                         let f = e.find((e) => {
                             var t;
@@ -102,12 +102,12 @@ function m(e) {
                                     .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
                                     .join(' ')
                             },
-                            imageOption: null === (r = f.command_metadata) || void 0 === r ? void 0 : null === (o = r[n]) || void 0 === o ? void 0 : o.imageOption,
+                            imageOption: null === (r = f.command_metadata) || void 0 === r ? void 0 : null === (a = r[n]) || void 0 === a ? void 0 : a.imageOption,
                             overrideSendCommand: _,
                             overrideSendCommandInfo: null === (u = f.command_metadata) || void 0 === u ? void 0 : null === (c = u[n]) || void 0 === c ? void 0 : c.overrideSendCommandInfo,
                             onlyAllowEdit: null === (m = f.command_metadata) || void 0 === m ? void 0 : null === (s = m[n]) || void 0 === s ? void 0 : s.onlyAllowEdit,
                             section: {
-                                type: a.Qi.APPLICATION,
+                                type: o.Qi.APPLICATION,
                                 id: h.id,
                                 icon: h.icon,
                                 name: null !== (v = null == h ? void 0 : null === (E = h.bot) || void 0 === E ? void 0 : E.username) && void 0 !== v ? v : h.name,

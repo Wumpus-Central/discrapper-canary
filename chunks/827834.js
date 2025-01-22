@@ -6,8 +6,8 @@ n.default = (function () {
         var r,
             i = arguments.length > 1 ? arguments[1] : {},
             a = {},
-            o = { start: eL },
-            s = eL,
+            o = { start: ex },
+            s = ex,
             l = function (e) {
                 return {
                     type: 'messageFormatPattern',
@@ -93,7 +93,7 @@ n.default = (function () {
                 value: 'plural',
                 description: '"plural"'
             },
-            x = function (e) {
+            L = function (e) {
                 return {
                     type: e.type,
                     ordinal: !1,
@@ -101,7 +101,7 @@ n.default = (function () {
                     options: e.options
                 };
             },
-            L = 'selectordinal',
+            x = 'selectordinal',
             w = {
                 type: 'literal',
                 value: 'selectordinal',
@@ -288,7 +288,7 @@ n.default = (function () {
         function eD(e) {
             if (!(eI < eC)) eI > eC && ((eC = eI), (eN = [])), eN.push(e);
         }
-        function ex(r, i, a) {
+        function eL(r, i, a) {
             function o(e) {
                 var n = 1;
                 for (
@@ -336,7 +336,7 @@ n.default = (function () {
                 u = a < n.length ? n.charAt(a) : null;
             return null !== i && o(i), new e(null !== r ? r : s(i, u), i, u, a, l.line, l.column);
         }
-        function eL() {
+        function ex() {
             return ew();
         }
         function ew() {
@@ -381,11 +381,11 @@ n.default = (function () {
         }
         function eF() {
             var e, r, i, o;
-            return (e = eI), n.substr(eI, 6) === O ? ((r = O), (eI += 6)) : ((r = a), 0 === eR && eD(D)), r !== a && eq() !== a ? (44 === n.charCodeAt(eI) ? ((i = g), eI++) : ((i = a), 0 === eR && eD(E)), i !== a && eq() !== a && (o = eK()) !== a ? ((eT = e), (e = r = x(o))) : ((eI = e), (e = u))) : ((eI = e), (e = u)), e;
+            return (e = eI), n.substr(eI, 6) === O ? ((r = O), (eI += 6)) : ((r = a), 0 === eR && eD(D)), r !== a && eq() !== a ? (44 === n.charCodeAt(eI) ? ((i = g), eI++) : ((i = a), 0 === eR && eD(E)), i !== a && eq() !== a && (o = eK()) !== a ? ((eT = e), (e = r = L(o))) : ((eI = e), (e = u))) : ((eI = e), (e = u)), e;
         }
         function eV() {
             var e, r, i, o;
-            return (e = eI), n.substr(eI, 13) === L ? ((r = L), (eI += 13)) : ((r = a), 0 === eR && eD(w)), r !== a && eq() !== a ? (44 === n.charCodeAt(eI) ? ((i = g), eI++) : ((i = a), 0 === eR && eD(E)), i !== a && eq() !== a && (o = eK()) !== a ? ((eT = e), (e = r = P(o))) : ((eI = e), (e = u))) : ((eI = e), (e = u)), e;
+            return (e = eI), n.substr(eI, 13) === x ? ((r = x), (eI += 13)) : ((r = a), 0 === eR && eD(w)), r !== a && eq() !== a ? (44 === n.charCodeAt(eI) ? ((i = g), eI++) : ((i = a), 0 === eR && eD(E)), i !== a && eq() !== a && (o = eK()) !== a ? ((eT = e), (e = r = P(o))) : ((eI = e), (e = u))) : ((eI = e), (e = u)), e;
         }
         function ej() {
             var e, r, i, o, s;
@@ -473,7 +473,7 @@ n.default = (function () {
                     type: 'end',
                     description: 'end of input'
                 }),
-            ex(null, eN, eC))
+            eL(null, eN, eC))
         );
     }
     return (

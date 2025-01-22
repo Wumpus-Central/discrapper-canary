@@ -11,7 +11,7 @@ var i = r(200651),
     u = r(810462),
     c = r(252084);
 function d(e) {
-    let { categories: n, collapsedCategories: r, containerWidth: d, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: _, defaultSearchPlaceholder: m, emptySearchPlaceholder: g, renderEmptyState: E, renderRow: v, renderSection: y, renderSectionHeader: b, renderSectionFooter: I, renderInspector: T, renderEmptySearchState: S, renderCategoryList: A, renderHeaderAccessories: C, rowHeight: N, sectionHeaderHeight: R, sectionFooterHeight: O, itemNodeWidth: D, listPaddingRight: x, itemNodeMargin: L, listPadding: w, gridNavigatorId: P, gridNotice: M, renderHeader: k, renderUpsell: U, setShowUpsell: B } = e,
+    let { categories: n, collapsedCategories: r, containerWidth: d, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: _, defaultSearchPlaceholder: m, emptySearchPlaceholder: g, renderEmptyState: E, renderRow: v, renderSection: y, renderSectionHeader: b, renderSectionFooter: I, renderInspector: T, renderEmptySearchState: S, renderCategoryList: A, renderHeaderAccessories: C, rowHeight: N, sectionHeaderHeight: R, sectionFooterHeight: O, itemNodeWidth: D, listPaddingRight: L, itemNodeMargin: x, listPadding: w, gridNavigatorId: P, gridNotice: M, renderHeader: k, renderUpsell: U, setShowUpsell: B } = e,
         G = a.useRef(null),
         Z = a.useRef(null),
         F = a.useRef(null),
@@ -33,9 +33,9 @@ function d(e) {
             categories: n,
             collapsedCategories: r,
             gridWidth: Y,
-            listPaddingRight: x,
+            listPaddingRight: L,
             itemNodeWidth: D,
-            itemNodeMargin: L
+            itemNodeMargin: x
         }),
         {
             getItemProps: X,

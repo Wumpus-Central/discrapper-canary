@@ -25,11 +25,11 @@ function x() {
         n = (0, s.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
         g = (0, s.e7)([o.Z], () => o.Z.getGuilds()),
         { hideGuildOptions: x, hideGlobalOption: f } = (0, m.b)(),
-        _ = n[0];
+        E = n[0];
     r.useEffect(() => {
-        if (!f || !x) e === u.Th && e !== _ && f && t(_), e !== u.Th && x && t(u.Th);
-    }, [e, t, f, x, _]);
-    let E = r.useMemo(() => {
+        if (!f || !x) e === u.Th && e !== E && f && t(E), e !== u.Th && x && t(u.Th);
+    }, [e, t, f, x, E]);
+    let _ = r.useMemo(() => {
             let e = x
                 ? []
                 : n
@@ -80,7 +80,7 @@ function x() {
             t(e);
         },
         value: e,
-        options: E,
+        options: _,
         renderOptionPrefix: C
     });
 }

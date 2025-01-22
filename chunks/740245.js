@@ -58,11 +58,11 @@ function D(e, n) {
     var r = l(e, n, 1) ^ l(e, n, 8) ^ c(e, n, 7);
     return r < 0 && (r += 4294967296), r;
 }
-function x(e, n) {
+function L(e, n) {
     var r = s(e, n, 19) ^ s(n, e, 29) ^ u(e, n, 6);
     return r < 0 && (r += 4294967296), r;
 }
-function L(e, n) {
+function x(e, n) {
     var r = l(e, n, 19) ^ l(n, e, 29) ^ c(e, n, 6);
     return r < 0 && (r += 4294967296), r;
 }
@@ -75,8 +75,8 @@ i.inherits(y, E),
     (y.prototype._prepareBlock = function (e, n) {
         for (var r = this.W, i = 0; i < 32; i++) r[i] = e[n + i];
         for (; i < r.length; i += 2) {
-            var a = x(r[i - 4], r[i - 3]),
-                o = L(r[i - 4], r[i - 3]),
+            var a = L(r[i - 4], r[i - 3]),
+                o = x(r[i - 4], r[i - 3]),
                 s = r[i - 14],
                 l = r[i - 13],
                 u = O(r[i - 30], r[i - 29]),
@@ -102,17 +102,17 @@ i.inherits(y, E),
             y = this.h[10],
             O = this.h[11],
             D = this.h[12],
-            x = this.h[13],
-            L = this.h[14],
+            L = this.h[13],
+            x = this.h[14],
             w = this.h[15];
         o(this.k.length === r.length);
         for (var P = 0; P < r.length; P += 2) {
-            var M = L,
+            var M = x,
                 k = w,
                 U = N(E, v),
                 B = R(E, v),
-                G = b(E, v, y, O, D, x),
-                Z = I(E, v, y, O, D, x),
+                G = b(E, v, y, O, D, L),
+                Z = I(E, v, y, O, D, L),
                 F = this.k[P],
                 V = this.k[P + 1],
                 j = r[P],
@@ -122,9 +122,9 @@ i.inherits(y, E),
             (M = A(i, a)), (k = C(i, a)), (U = T(i, a, s, l, u, c));
             var K = f(M, k, U, (B = S(i, a, s, l, u, c))),
                 z = p(M, k, U, B);
-            (L = D), (w = x), (D = y), (x = O), (y = E), (O = v), (E = f(h, _, Y, W)), (v = p(_, _, Y, W)), (h = u), (_ = c), (u = s), (c = l), (s = i), (l = a), (i = f(Y, W, K, z)), (a = p(Y, W, K, z));
+            (x = D), (w = L), (D = y), (L = O), (y = E), (O = v), (E = f(h, _, Y, W)), (v = p(_, _, Y, W)), (h = u), (_ = c), (u = s), (c = l), (s = i), (l = a), (i = f(Y, W, K, z)), (a = p(Y, W, K, z));
         }
-        d(this.h, 0, i, a), d(this.h, 2, s, l), d(this.h, 4, u, c), d(this.h, 6, h, _), d(this.h, 8, E, v), d(this.h, 10, y, O), d(this.h, 12, D, x), d(this.h, 14, L, w);
+        d(this.h, 0, i, a), d(this.h, 2, s, l), d(this.h, 4, u, c), d(this.h, 6, h, _), d(this.h, 8, E, v), d(this.h, 10, y, O), d(this.h, 12, D, L), d(this.h, 14, x, w);
     }),
     (y.prototype._digest = function (e) {
         return 'hex' === e ? i.toHex32(this.h, 'big') : i.split32(this.h, 'big');

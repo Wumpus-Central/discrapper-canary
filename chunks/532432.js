@@ -20,21 +20,21 @@ let m = [
     }
 ];
 function g(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: r, sectionTitle: g, changeAvatarButtonText: h, guildId: p, className: x, disabled: f = !1, isTryItOutFlow: _ = !1, forcedDivider: E, withHighlight: C = !1 } = e,
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: r, sectionTitle: g, changeAvatarButtonText: h, guildId: p, className: x, disabled: f = !1, isTryItOutFlow: E = !1, forcedDivider: _, withHighlight: C = !1 } = e,
         T = C ? a.ShinyButton : a.Button;
     return (0, i.jsx)(o.Z, {
         className: x,
         title: g,
         errors: n,
         disabled: f,
-        forcedDivider: E,
+        forcedDivider: _,
         children: (0, i.jsxs)('div', {
             className: u.buttonsContainer,
             children: [
                 (0, i.jsx)(T, {
                     className: s()({ [u.buttonHighlighted]: C }),
                     size: a.Button.Sizes.SMALL,
-                    onClick: () => (0, l.$r)(c.pC.AVATAR, p, _, _ ? m : void 0),
+                    onClick: () => (0, l.$r)(c.pC.AVATAR, p, E, E ? m : void 0),
                     children: null != h ? h : d.intl.string(d.t['4OynCA'])
                 }),
                 t &&

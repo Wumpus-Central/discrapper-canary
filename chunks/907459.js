@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return L;
+        return x;
     }
 });
 var i = r(200651),
@@ -76,7 +76,7 @@ let O = () => {
             ]
         });
     },
-    x = (e) => {
+    L = (e) => {
         let { isCoachmark: n, markAsDismissed: r } = e,
             a = (0, l.e7)([I.Z], () => I.Z.isUpsellPreview),
             o = () => {
@@ -96,7 +96,7 @@ let O = () => {
             ]
         });
     };
-function L(e) {
+function x(e) {
     let { isCoachmark: n, markAsDismissed: r } = e,
         { analyticsLocations: o } = (0, h.ZP)(p.Z.APP_ICON_EDITOR),
         c = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
@@ -138,7 +138,7 @@ function L(e) {
                                   isEditor: !0
                               })
                           }),
-                          (0, i.jsx)(x, {
+                          (0, i.jsx)(L, {
                               markAsDismissed: r,
                               isCoachmark: n
                           })

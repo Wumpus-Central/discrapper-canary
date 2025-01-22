@@ -21,14 +21,14 @@ var i = n(200651),
     v = n(252618),
     S = n(605236),
     T = n(243778),
-    A = n(984370),
-    b = n(797614),
+    b = n(984370),
+    A = n(797614),
     Z = n(359110),
     x = n(6025),
     L = n(897473),
-    P = n(108427),
-    O = n(970731),
-    y = n(210887),
+    y = n(108427),
+    P = n(970731),
+    O = n(210887),
     R = n(433355),
     j = n(592125),
     D = n(819640),
@@ -38,8 +38,8 @@ var i = n(200651),
     U = n(610697),
     G = n(26373),
     B = n(486622),
-    V = n(922409),
-    H = n(899740),
+    H = n(922409),
+    V = n(899740),
     F = n(177033),
     z = n(355350),
     W = n(307947),
@@ -54,7 +54,7 @@ var i = n(200651),
     et = n(247627);
 function en() {
     let e = r.useRef(null),
-        t = (0, H.q)(),
+        t = (0, V.q)(),
         n = (0, F.Z)(),
         l = (0, G.K)(),
         c = (0, g.N)(),
@@ -63,7 +63,7 @@ function en() {
         }, []),
         { rejectAll: h } = (0, B.m)({ onError: d }),
         m = (0, E.Z)('message-requests-list'),
-        { channelId: p } = (0, V._)(),
+        { channelId: p } = (0, H._)(),
         f = r.useCallback(() => {
             h(n.map((e) => e.channel.id));
         }, [n, h]),
@@ -127,7 +127,7 @@ function en() {
                 ),
             [t, f, c]
         );
-    return (n.length !== t && b.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && A.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, i.jsx)(W.Z, { section: q.pS.REQUESTS })
         : (0, i.jsx)(s.bG, {
               navigator: m,
@@ -179,14 +179,14 @@ function ei(e) {
 }
 let er = function (e) {
         let { markAsDismissed: t } = e;
-        return (0, i.jsx)(O.ZP, {
+        return (0, i.jsx)(P.ZP, {
             header: $.intl.string($.t.hRT8tb),
             content: $.intl.string($.t.apPgJC),
             buttonCTA: $.intl.string($.t.LNoAQU),
             className: ee.messageRequestCoachmark,
             onClick: () => t(Q.L.UNKNOWN),
             markAsDismissed: t,
-            caretPosition: O.DF.TOP_CENTER,
+            caretPosition: P.DF.TOP_CENTER,
             headerClassName: ee.__invalid_header
         });
     },
@@ -207,7 +207,7 @@ let er = function (e) {
                             renderPopout: () =>
                                 t
                                     ? (0, i.jsx)(er, { markAsDismissed: s })
-                                    : (0, i.jsx)(O.ZP, {
+                                    : (0, i.jsx)(P.ZP, {
                                           header: $.intl.string($.t.hRT8tb),
                                           content: $.intl.string($.t['8JWodn']),
                                           buttonCTA: $.intl.string($.t.JN6EOD),
@@ -217,7 +217,7 @@ let er = function (e) {
                                               e.stopPropagation(), m.Z.open(X.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.FY.MESSAGE_REQUESTS_V2 });
                                           },
                                           markAsDismissed: s,
-                                          caretPosition: O.DF.TOP_CENTER,
+                                          caretPosition: P.DF.TOP_CENTER,
                                           headerClassName: ee.__invalid_header
                                       }),
                             position: 'bottom',
@@ -238,11 +238,11 @@ function ea(e) {
 }
 let es = (0, p.Z)(function (e) {
     let { width: t } = e,
-        n = (0, H.q)();
+        n = (0, V.q)();
     (0, f.Z)(() => {
-        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, P.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), b.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
+        h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), A.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     });
-    let l = (0, c.e7)([y.Z], () => y.Z.theme),
+    let l = (0, c.e7)([O.Z], () => O.Z.theme),
         s = (0, z.w)(),
         [d, m] = r.useState(!1),
         p = (0, c.e7)([R.ZP], () => {
@@ -273,16 +273,16 @@ let es = (0, p.Z)(function (e) {
                         (0, i.jsx)(u.ThemeProvider, {
                             theme: l,
                             children: (e) =>
-                                (0, i.jsxs)(A.Z, {
+                                (0, i.jsxs)(b.Z, {
                                     className: e,
                                     toolbar: !0,
                                     children: [
-                                        (0, i.jsx)(A.Z.Icon, {
+                                        (0, i.jsx)(b.Z.Icon, {
                                             icon: u.EnvelopeIcon,
                                             'aria-hidden': !0
                                         }),
-                                        (0, i.jsx)(el, { children: (0, i.jsx)(A.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
-                                        (0, i.jsx)(A.Z.Divider, {}),
+                                        (0, i.jsx)(el, { children: (0, i.jsx)(b.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
+                                        (0, i.jsx)(b.Z.Divider, {}),
                                         (0, i.jsxs)(u.TabBar, {
                                             'aria-label': $.intl.string($.t.e7GWjY),
                                             selectedItem: C,

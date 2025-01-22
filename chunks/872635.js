@@ -233,8 +233,8 @@ n.Z = o.forwardRef(function (e, n) {
         null == A || null == C)
     )
         return null;
-    let x = null === (r = i.current) || void 0 === r ? void 0 : r.getSlateEditor();
-    return null == x
+    let L = null === (r = i.current) || void 0 === r ? void 0 : r.getSlateEditor();
+    return null == L
         ? null
         : (0, a.jsx)(f.ZP, {
               children: (0, a.jsxs)('div', {
@@ -252,7 +252,7 @@ n.Z = o.forwardRef(function (e, n) {
                       e.stopPropagation();
                   },
                   children: [
-                      (0, a.jsx)(T, { slateEditor: x }),
+                      (0, a.jsx)(T, { slateEditor: L }),
                       (0, a.jsx)(y, {
                           editorRef: i,
                           options: l

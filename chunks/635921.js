@@ -22,8 +22,8 @@ var r = n(120356),
     p = n(104494),
     x = n(639119),
     f = n(105759),
-    _ = n(346497),
-    E = n(422034),
+    E = n(346497),
+    _ = n(422034),
     C = n(206127),
     T = n(710220),
     S = n(318747),
@@ -81,7 +81,7 @@ t.ZP = (e) => {
         Z = (0, p.Wp)(B, I.Si.TIER_2) ? I.Si.TIER_2 : void 0,
         L = (0, x.N)(),
         M = (0, m.Nx)(),
-        k = (0, _.Vi)(),
+        k = (0, E.Vi)(),
         w = (0, a.e7)([u.Z], () => u.Z.affinities),
         F = (0, f.Z)(),
         { enabled: U } = h._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
@@ -109,7 +109,7 @@ t.ZP = (e) => {
                             : G
                               ? (0, i.jsx)('div', {
                                     className: s()(v.affinityDescription),
-                                    children: (0, i.jsx)(E.Z, {
+                                    children: (0, i.jsx)(_.Z, {
                                         textColor: 'always-white',
                                         smallerText: !r
                                     })

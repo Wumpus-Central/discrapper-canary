@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(65154),
     x = n(388032),
     f = n(897237),
-    _ = n(587987),
-    E = n(652849),
+    E = n(587987),
+    _ = n(652849),
     C = n(232186);
 let T = (0, g.hQ)();
 function S() {
@@ -66,7 +66,7 @@ function S() {
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
             'aria-labelledby': T,
             children: (0, i.jsxs)('div', {
-                className: a()(f.sliderBar, f.microphone, f.inputSensitivityBar, _.bar),
+                className: a()(f.sliderBar, f.microphone, f.inputSensitivityBar, E.bar),
                 children: [
                     (0, i.jsx)('div', {
                         className: a()(f.fill, f.inputSensitivityBarFill),
@@ -102,7 +102,7 @@ function S() {
                     (0, i.jsx)(g.FG, {
                         children: (e) =>
                             (0, i.jsxs)('div', {
-                                className: a()(E.horizontal, C.marginBottom4),
+                                className: a()(_.horizontal, C.marginBottom4),
                                 children: [
                                     (0, i.jsx)(u.FormTitle, {
                                         tag: u.FormTitleTags.H3,

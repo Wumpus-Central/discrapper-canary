@@ -36,7 +36,7 @@ function A(e) {
                     duration_open_ms: Date.now() - R
                 });
         }, [i, n, O, R, r.id]),
-        x = o.useCallback(
+        L = o.useCallback(
             (e) => {
                 e &&
                     !N.current &&
@@ -133,7 +133,7 @@ function A(e) {
                             ]
                         }),
                         (0, a.jsx)(s.$, {
-                            onChange: x,
+                            onChange: L,
                             children: (0, a.jsx)('div', { className: S.persistentCtaSpacer })
                         })
                     ]

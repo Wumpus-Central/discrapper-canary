@@ -62,10 +62,10 @@ function O(e) {
         T = !f && null != y,
         [S, O] = s.useState(),
         D = (0, b.V2)({ location: 'SoundmojiGuildInfo' }),
-        x = f || T || null != S || !D,
-        [L, w] = s.useState(!x);
+        L = f || T || null != S || !D,
+        [x, w] = s.useState(!L);
     s.useEffect(() => {
-        if (!x)
+        if (!L)
             w(!0),
                 (0, m.xU)(n.soundId, n.guildId)
                     .then((e) => {
@@ -74,10 +74,10 @@ function O(e) {
                     .finally(() => {
                         w(!1), a();
                     });
-    }, [a, x, n.guildId, n.soundId]);
+    }, [a, L, n.guildId, n.soundId]);
     let { buttonType: P, description: M } = (0, I.Z)(n, r, T, S),
         k = P === I.y.JOIN_GUILD,
-        U = !f && L,
+        U = !f && x,
         B = s.useMemo(() => (T ? p.JO.createFromGuildRecord(y) : null != S ? p.JO.createFromDiscoverableGuild(S) : void 0), [y, T, S]);
     return U
         ? (0, o.jsx)(_.SE, {})

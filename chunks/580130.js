@@ -43,7 +43,7 @@ function O(e) {
 function D(e) {
     y[e.id] = f.Z.createFromServer(e);
 }
-function x(e) {
+function L(e) {
     delete v[e.id];
     let n = I[e.application_id];
     null != n && n.delete(e.id);
@@ -53,7 +53,7 @@ function x(e) {
         null != n && n.delete(e.id);
     }
 }
-function L(e) {
+function x(e) {
     let { applicationId: n } = e;
     A.add(n);
 }
@@ -88,7 +88,7 @@ function F(e) {
     return O(e.entitlement);
 }
 function V(e) {
-    return x(e.entitlement);
+    return L(e.entitlement);
 }
 class j extends (i = c.yh) {
     initialize() {
@@ -183,7 +183,7 @@ class j extends (i = c.yh) {
 }
 E(j, 'displayName', 'EntitlementStore'),
     (n.Z = new j(d.Z, {
-        ENTITLEMENT_FETCH_APPLICATION_START: L,
+        ENTITLEMENT_FETCH_APPLICATION_START: x,
         ENTITLEMENT_FETCH_APPLICATION_SUCCESS: w,
         ENTITLEMENT_FETCH_APPLICATION_FAIL: M,
         ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: P,

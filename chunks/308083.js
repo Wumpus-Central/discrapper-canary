@@ -54,7 +54,7 @@ r.d(n, {
         return K;
     },
     f4: function () {
-        return x;
+        return L;
     },
     gQ: function () {
         return X;
@@ -140,7 +140,7 @@ function D(e) {
             return e;
     }
 }
-function x() {
+function L() {
     return {
         [g.z.SOCIAL]: {
             type: g.z.SOCIAL,
@@ -175,11 +175,11 @@ if (
     isNaN(Number(Object.values(i).pop())))
 )
     throw Error('Failed to get the last step in the ClanSetupSteps enum');
-let L = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP', 'Voice ON', 'Voice OFF', 'Unrated', 'All Ranks', 'Bronze+', 'Silver+', 'Gold+', 'Platinum+', 'Diamond+'],
-    w = new Set([...L, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
+let x = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP', 'Voice ON', 'Voice OFF', 'Unrated', 'All Ranks', 'Bronze+', 'Silver+', 'Gold+', 'Platinum+', 'Diamond+'],
+    w = new Set([...x, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
     P = ['20+', '30+', '40+', 'All Ages'],
     M = ['Recurring Events', 'Beginner Friendly', 'PUGs', 'Inclusive', 'Parent Friendly', 'Work-life Balance', 'Competitive', 'Streamer', 'Esports'],
-    k = new Set([...L, ...P, ...M]),
+    k = new Set([...x, ...P, ...M]),
     U = new Set(['Bulgarian', 'Chinese (Simplified)', 'Chinese (Traditional)', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hindi', 'Hungarian', 'Italian', 'Japanese', 'Korean', 'Lithuanian', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese']);
 function B(e) {
     return !k.has(e) && !F.has(e) && !U.has(e);

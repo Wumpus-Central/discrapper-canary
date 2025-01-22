@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(175756),
     x = n(104494),
     f = n(639119),
-    _ = n(211712),
-    E = n(629654),
+    E = n(211712),
+    _ = n(629654),
     C = n(53691),
     T = n(165583),
     S = n(267717),
@@ -68,14 +68,14 @@ function U(e) {
         $ = r.useRef(null);
     (0, I.Z)($, k.Y_.TRY_IT_OUT);
     let { analyticsLocations: ee, sourceAnalyticsLocations: et } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
-        [en, ei] = r.useState(Math.floor(Math.random() * _.J2.length)),
+        [en, ei] = r.useState(Math.floor(Math.random() * E.J2.length)),
         er = (e) => {
             if (e) {
                 if (((0, l.I5)(K), (0, b.z5)(z), (0, b.ho)(q), null != X)) {
                     let e = m.Z.getProduct(X.skuId);
                     null != e && (0, h.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, l.cV)(X)) : null != g.Z.getPurchase(X.skuId) && (0, l.cV)(X);
                 }
-                v.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: _.J2[en].presetName });
+                v.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: E.J2[en].presetName });
             }
         };
     r.useEffect(() => {
@@ -122,7 +122,7 @@ function U(e) {
                           }),
                           profilePreview: (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(E.Z, {
+                                  (0, i.jsx)(_.Z, {
                                       selectedIndex: en,
                                       setSelectedIndex: ei
                                   }),

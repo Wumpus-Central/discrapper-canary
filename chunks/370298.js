@@ -7,8 +7,8 @@ t.d(n, {
     t(653041);
 var i = t(200651),
     l = t(192379),
-    o = t(442837),
-    a = t(749280),
+    a = t(442837),
+    o = t(749280),
     d = t(481060),
     r = t(166459),
     c = t(911969),
@@ -37,8 +37,8 @@ var i = t(200651),
     U = t(974378);
 function y(e) {
     let { toggleShowMenu: n, showMenu: t, className: r, channelId: c, imageUrl: u, mimeType: s } = e,
-        m = (0, o.e7)([S.Z], () => S.Z.getChannel(c)),
-        { Component: E, events: p, play: v } = (0, a.w)(),
+        m = (0, a.e7)([S.Z], () => S.Z.getChannel(c)),
+        { Component: E, events: p, play: v } = (0, o.w)(),
         [C, _] = l.useState(!1);
     return null == m
         ? null
@@ -85,13 +85,13 @@ function y(e) {
           }));
 }
 function w(e) {
-    let { onSelect: n, onClose: t, channel: a, imageUrl: S, mimeType: y } = e,
-        w = (0, o.e7)([N.Z], () => N.Z.getGuild(a.guild_id)),
-        { fetchState: j, imageRecCommandContexts: Z } = (0, b.h)({ channelId: a.id }),
+    let { onSelect: n, onClose: t, channel: o, imageUrl: S, mimeType: y } = e,
+        w = (0, a.e7)([N.Z], () => N.Z.getGuild(o.guild_id)),
+        { fetchState: j, imageRecCommandContexts: Z } = (0, b.h)({ channelId: o.id }),
         D = j === O.M.FETCHING,
-        F = (0, f.g)(a),
+        F = (0, f.g)(o),
         L = (0, E.PL)(!0, !0),
-        k = (0, E.LD)(a.guild_id, !0);
+        k = (0, E.LD)(o.guild_id, !0);
     l.useEffect(() => {
         (j === O.M.ERROR || (j === O.M.FETCHED && 0 === Z.length)) && t();
     }, [j, Z.length, t]),
@@ -103,12 +103,12 @@ function w(e) {
                 t.push(Number(e.command.id)), null != e.overrideSendCommand && t.push(Number(e.overrideSendCommand.id));
             }),
                 T.default.track(R.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
-                    guild_id: null !== (e = null == a ? void 0 : a.guild_id) && void 0 !== e ? e : '',
-                    channel_id: null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : '',
+                    guild_id: null !== (e = null == o ? void 0 : o.guild_id) && void 0 !== e ? e : '',
+                    channel_id: null !== (n = null == o ? void 0 : o.id) && void 0 !== n ? n : '',
                     application_ids: [...Z.map((e) => Number(e.command.applicationId))],
                     command_ids: t
                 });
-        }, [Z, a, D]);
+        }, [Z, o, D]);
     let H = l.useCallback(
             async (e) => {
                 let n = await fetch(S),
@@ -116,7 +116,7 @@ function w(e) {
                     i = y.join('/'),
                     l = new File([t], 'image'.concat((0, b.Q)({ contentType: i })), { type: i });
                 r.Z.setFile({
-                    channelId: a.id,
+                    channelId: o.id,
                     id: e,
                     file: {
                         id: e,
@@ -126,25 +126,25 @@ function w(e) {
                     draftType: A.d.SlashCommand
                 });
             },
-            [S, a.id, y]
+            [S, o.id, y]
         ),
         G = l.useCallback(
             async (e, n, t, i) => {
-                var l, o;
+                var l, a;
                 if (!F) return;
                 let d = e.applicationId,
                     r = (null === (l = L.result) || void 0 === l ? void 0 : l.sections[d]) != null,
-                    u = (null === (o = k.result) || void 0 === o ? void 0 : o.sections[d]) != null;
+                    u = (null === (a = k.result) || void 0 === a ? void 0 : a.sections[d]) != null;
                 await H(i),
-                    null != p.Z.getActiveCommand(a.id) &&
+                    null != p.Z.getActiveCommand(o.id) &&
                         m.Po({
-                            channelId: a.id,
+                            channelId: o.id,
                             command: null,
                             section: null
                         }),
-                    r || u || E.ZP.queryInstallOnDemandApp(e.applicationId, a.id),
+                    r || u || E.ZP.queryInstallOnDemandApp(e.applicationId, o.id),
                     m.Po({
-                        channelId: a.id,
+                        channelId: o.id,
                         command: e,
                         section: n,
                         location: t,
@@ -163,19 +163,19 @@ function w(e) {
                         location: t,
                         sectionName: n.name
                     }),
-                    P.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
+                    P.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: o.id });
             },
-            [a.id, H, F, L, k]
+            [o.id, H, F, L, k]
         ),
         B = l.useCallback(
             async (e, n, t) => {
                 var i, l;
-                let o = e.applicationId,
-                    d = (null === (i = L.result) || void 0 === i ? void 0 : i.sections[o]) != null,
-                    r = (null === (l = k.result) || void 0 === l ? void 0 : l.sections[o]) != null;
-                d || r || E.ZP.queryInstallOnDemandApp(e.applicationId, a.id);
+                let a = e.applicationId,
+                    d = (null === (i = L.result) || void 0 === i ? void 0 : i.sections[a]) != null,
+                    r = (null === (l = k.result) || void 0 === l ? void 0 : l.sections[a]) != null;
+                d || r || E.ZP.queryInstallOnDemandApp(e.applicationId, o.id);
                 let c = await (0, M.L)({
-                    applicationId: o,
+                    applicationId: a,
                     userIndexState: L,
                     guildIndexState: k,
                     location: n,
@@ -199,13 +199,13 @@ function w(e) {
                                 ]
                             },
                             context: {
-                                channel: a,
+                                channel: o,
                                 guild: w
                             },
                             commandOrigin: n === v.Vh.IMAGE_RECS_SUBMENU ? v.bB.IMAGE_RECS_SUBMENU : v.bB.IMAGE_RECS_MENU
                         }));
             },
-            [a, w, L, k, H]
+            [o, w, L, k, H]
         );
     return (0, i.jsxs)(d.Menu, {
         onSelect: n,
@@ -246,7 +246,7 @@ function w(e) {
                           let n = e.overrideSendCommand,
                               t = null == e ? void 0 : e.overrideSendCommandInfo,
                               l = null != n && null != t,
-                              o = e.onlyAllowEdit || (null != t && null == n),
+                              a = e.onlyAllowEdit || (null != t && null == n),
                               r = e.imageOption;
                           return null == r
                               ? null
@@ -255,15 +255,15 @@ function w(e) {
                                     {
                                         id: e.command.id,
                                         action: () => {
-                                            o ? G(e.command, e.section, v.Vh.IMAGE_RECS_MENU, r) : B(l ? n : e.command, v.Vh.IMAGE_RECS_MENU, l ? t.imageOption : r);
+                                            a ? G(e.command, e.section, v.Vh.IMAGE_RECS_MENU, r) : B(l ? n : e.command, v.Vh.IMAGE_RECS_MENU, l ? t.imageOption : r);
                                         },
                                         label: e.command.displayName,
                                         subtext: e.command.displayDescription,
                                         subtextLineClamp: 1,
-                                        icon: o ? d.PencilIcon : l ? void 0 : d.SendMessageIcon,
+                                        icon: a ? d.PencilIcon : l ? void 0 : d.SendMessageIcon,
                                         iconLeft: () =>
                                             (0, i.jsx)(h.Z, {
-                                                channel: a,
+                                                channel: o,
                                                 section: e.section,
                                                 width: 32,
                                                 height: 32,
@@ -272,7 +272,7 @@ function w(e) {
                                             }),
                                         iconLeftSize: 'lg',
                                         showImageFirst: !0,
-                                        disabled: !F && o,
+                                        disabled: !F && a,
                                         children: l
                                             ? (0, i.jsxs)(i.Fragment, {
                                                   children: [

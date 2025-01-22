@@ -25,8 +25,8 @@ var o = r(200651),
     R = r(342687),
     O = r(826298),
     D = r(689079),
-    x = r(981631),
-    L = r(388032),
+    L = r(981631),
+    x = r(388032),
     w = r(926030),
     P = r(239840);
 let M = 512,
@@ -38,7 +38,7 @@ let M = 512,
     F = 420,
     V = [8, 8, 0, 8],
     j = d().debounce(() => {
-        (0, h.yw)(x.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
+        (0, h.yw)(L.rMx.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300);
 function H(e) {
     e.preventDefault();
@@ -52,7 +52,7 @@ n.Z = s.forwardRef(function (e, n) {
         [W, K] = s.useState(!1),
         z = v.Xn.useStore((e) => e.activeCategoryIndex);
     s.useEffect(() => {
-        (0, h.yw)(x.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
+        (0, h.yw)(L.rMx.APPLICATION_COMMAND_BROWSER_OPENED);
     }, []);
     let {
             sectionDescriptors: q,
@@ -201,7 +201,7 @@ n.Z = s.forwardRef(function (e, n) {
                             n,
                             0 === a.length &&
                                 (0, o.jsx)(f.Z, {
-                                    message: L.intl.format(L.t.WoQXT0, { applicationName: i.name }),
+                                    message: x.intl.format(x.t.WoQXT0, { applicationName: i.name }),
                                     noResultsImageURL: P,
                                     className: w.noSearchResults
                                 })

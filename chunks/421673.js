@@ -31,7 +31,7 @@ let g = 100,
     C = [],
     N = 350,
     R = c()(D, N),
-    O = c()(x, N);
+    O = c()(L, N);
 function D(e, n) {
     p.default.track(m.rMx.SEARCH_STARTED, {
         channel_id: n,
@@ -39,7 +39,7 @@ function D(e, n) {
         location_stack: e
     });
 }
-function x(e, n, r, i) {
+function L(e, n, r, i) {
     p.default.track(m.rMx.SEARCH_RESULT_VIEWED, {
         search_type: m.aib.SOUNDBOARD,
         channel_id: r,
@@ -48,7 +48,7 @@ function x(e, n, r, i) {
         location_stack: n
     });
 }
-function L(e, n, r, i) {
+function x(e, n, r, i) {
     var a;
     let o = 0,
         s = n.name.toLocaleLowerCase(),
@@ -59,7 +59,7 @@ function L(e, n, r, i) {
     return e === s && (o += E), h.includes(e) && (o += v), s.startsWith(e) && (o += y), h.some((n) => n.startsWith(e)) && (o += b), s.endsWith(e) && (o += I), h.some((n) => n.endsWith(e)) && (o += T), l()(e, n.name.toLocaleLowerCase()) && (o += S), h.some((n) => l()(e, n)) && (o += A), o > 0 && (0, _.Nq)(r, n, i) && (o += g), o;
 }
 function w(e, n, r, i, a) {
-    let o = n.reduce((n, o) => (R(a, null == i ? void 0 : i.id), (n[o.soundId] = L(e.toLocaleLowerCase(), o, r, i)), n), {}),
+    let o = n.reduce((n, o) => (R(a, null == i ? void 0 : i.id), (n[o.soundId] = x(e.toLocaleLowerCase(), o, r, i)), n), {}),
         s = n.filter((e) => o[e.soundId] > 0).sort((e, n) => o[n.soundId] - o[e.soundId]);
     return O(s, a, null == i ? void 0 : i.id, e), s;
 }

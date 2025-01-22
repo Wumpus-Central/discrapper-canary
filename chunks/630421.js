@@ -55,11 +55,11 @@ function h(e) {
         O = i.we,
         D = window;
     if (E) {
-        var x = (0, a.Z)(u),
-            L = 'clientHeight',
+        var L = (0, a.Z)(u),
+            x = 'clientHeight',
             w = 'clientWidth';
-        x === (0, o.Z)(u) && ((x = (0, s.Z)(u)), 'static' !== (0, l.Z)(x).position && 'absolute' === m && ((L = 'scrollHeight'), (w = 'scrollWidth')));
-        (d === i.we || ((d === i.t$ || d === i.F2) && h === i.ut)) && ((O = i.I), (S -= (y && x === D && D.visualViewport ? D.visualViewport.height : x[L]) - c.height), (S *= g ? 1 : -1)), (d === i.t$ || ((d === i.we || d === i.I) && h === i.ut)) && ((R = i.F2), (I -= (y && x === D && D.visualViewport ? D.visualViewport.width : x[w]) - c.width), (I *= g ? 1 : -1));
+        L === (0, o.Z)(u) && ((L = (0, s.Z)(u)), 'static' !== (0, l.Z)(L).position && 'absolute' === m && ((x = 'scrollHeight'), (w = 'scrollWidth')));
+        (d === i.we || ((d === i.t$ || d === i.F2) && h === i.ut)) && ((O = i.I), (S -= (y && L === D && D.visualViewport ? D.visualViewport.height : L[x]) - c.height), (S *= g ? 1 : -1)), (d === i.t$ || ((d === i.we || d === i.I) && h === i.ut)) && ((R = i.F2), (I -= (y && L === D && D.visualViewport ? D.visualViewport.width : L[w]) - c.width), (I *= g ? 1 : -1));
     }
     var P = Object.assign({ position: m }, E && f),
         M =

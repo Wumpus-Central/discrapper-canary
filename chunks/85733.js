@@ -47,11 +47,11 @@ var i = r(478497),
     },
     m = {},
     g = function e(n, r, o, s, l, c, f, p, g, E, v, y, b, I, T, S, A, C) {
-        for (var N, R = n, O = C, D = 0, x = !1; void 0 !== (O = O.get(m)) && !x; ) {
-            var L = O.get(n);
-            if (((D += 1), void 0 !== L)) {
-                if (L === D) throw RangeError('Cyclic object value');
-                x = !0;
+        for (var N, R = n, O = C, D = 0, L = !1; void 0 !== (O = O.get(m)) && !L; ) {
+            var x = O.get(n);
+            if (((D += 1), void 0 !== x)) {
+                if (x === D) throw RangeError('Cyclic object value');
+                L = !0;
             }
             void 0 === O.get(m) && (D = 0);
         }

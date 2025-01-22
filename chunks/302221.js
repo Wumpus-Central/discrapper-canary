@@ -1,6 +1,6 @@
 r.d(n, {
     AZ: function () {
-        return L;
+        return x;
     },
     BM: function () {
         return G;
@@ -201,14 +201,14 @@ function D(e) {
         a = [n, r, i].map((e) => ((e /= 255) <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)));
     return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
 }
-function x(e) {
+function L(e) {
     let n = e[0],
         r = e[1],
         i = D(n),
         a = D(r);
     return (Math.max(i, a) + 0.05) / (Math.min(i, a) + 0.05);
 }
-function L(e, n, r) {
+function x(e, n, r) {
     let i, a;
     let o = Math.max((e /= 255), (n /= 255), (r /= 255)),
         s = Math.min(e, n, r),
@@ -250,7 +250,7 @@ function w(e, n, r) {
 }
 function P(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = L(e.red, e.green, e.blue);
+        i = x(e.red, e.green, e.blue);
     return r ? (i.lightness = i.lightness + n > 1 ? 0.9 : i.lightness + n) : (i.lightness = i.lightness - n < 0 ? 0.1 : i.lightness - n), w(i.hue, i.saturation, i.lightness);
 }
 function M(e) {
@@ -261,15 +261,15 @@ function M(e) {
     if (null == o || null == a) return;
     let s = (0, u._i)(o.toHexString()),
         l = (0, u.Bd)(s) > 0.5,
-        c = x([a, o]),
-        d = L(a.red, a.green, a.blue);
+        c = L([a, o]),
+        d = x(a.red, a.green, a.blue);
     for (d.saturation *= i; c < r && null != d; ) {
         if (l) {
             if (d.lightness < 0.95) d.lightness += 0.05;
             else break;
         } else if (d.lightness > 0.05) d.lightness -= 0.05;
         else break;
-        c = x([w(d.hue, d.saturation, d.lightness), n[1]]);
+        c = L([w(d.hue, d.saturation, d.lightness), n[1]]);
     }
     return w(d.hue, d.saturation, d.lightness);
 }
@@ -301,7 +301,7 @@ function B(e) {
     var n;
     let { colorRGB: r, saturationFactor: i = 1 } = e;
     if (null == r) return r;
-    let a = L(r.red, r.green, r.blue);
+    let a = x(r.red, r.green, r.blue);
     if (null == a) return null == r ? void 0 : r.toHexString();
     return null === (n = w(a.hue, a.saturation * i, a.lightness)) || void 0 === n ? void 0 : n.toHexString();
 }

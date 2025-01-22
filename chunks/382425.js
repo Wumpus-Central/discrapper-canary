@@ -30,8 +30,8 @@ var a = r(200651),
     R = r(496675),
     O = r(158776),
     D = r(699516),
-    x = r(938475),
-    L = r(626135),
+    L = r(938475),
+    x = r(626135),
     w = r(960870),
     P = r(139793),
     M = r(510659),
@@ -74,9 +74,9 @@ function $(e) {
         }),
         ed = (0, u.e7)([N.Z], () => N.Z.getGuild(null == i ? void 0 : i.guildId)),
         ef = (0, u.e7)([C.Z], () => C.Z.getChannel(null == i ? void 0 : i.channelId)),
-        ep = (0, u.Wu)([x.ZP], () =>
+        ep = (0, u.Wu)([L.ZP], () =>
             null != ef
-                ? x.ZP.getVoiceStatesForChannel(ef).map((e) => {
+                ? L.ZP.getVoiceStatesForChannel(ef).map((e) => {
                       let { user: n } = e;
                       return n;
                   })
@@ -90,7 +90,7 @@ function $(e) {
     o.useEffect(() => {
         if (es) {
             var e;
-            L.default.track(K.rMx.USER_VOICE_ACTIVITY_VIEWED, {
+            x.default.track(K.rMx.USER_VOICE_ACTIVITY_VIEWED, {
                 activity_user_id: n.id,
                 discoverable: null === (e = i.discoverable) || void 0 === e || e,
                 surface: 'user-profile-stream-activity-card',

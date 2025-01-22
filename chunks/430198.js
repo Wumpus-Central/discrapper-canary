@@ -100,11 +100,11 @@ function O(e, n) {
 function D() {
     (T = {}), S.clear();
 }
-function x(e) {
+function L(e) {
     let { guild: n } = e;
     delete T[n.id];
 }
-function L(e) {
+function x(e) {
     let { guildId: n } = e;
     delete T[n];
 }
@@ -152,14 +152,14 @@ I(U, 'displayName', 'GatedChannelStore'),
         CONNECTION_OPEN: D,
         OVERLAY_INITIALIZE: D,
         CACHE_LOADED_LAZY: D,
-        GUILD_CREATE: x,
-        GUILD_UPDATE: x,
-        GUILD_DELETE: x,
-        GUILD_ROLE_CREATE: L,
-        GUILD_ROLE_UPDATE: L,
-        GUILD_ROLE_DELETE: L,
-        IMPERSONATE_UPDATE: L,
-        IMPERSONATE_STOP: L,
+        GUILD_CREATE: L,
+        GUILD_UPDATE: L,
+        GUILD_DELETE: L,
+        GUILD_ROLE_CREATE: x,
+        GUILD_ROLE_UPDATE: x,
+        GUILD_ROLE_DELETE: x,
+        IMPERSONATE_UPDATE: x,
+        IMPERSONATE_STOP: x,
         CHANNEL_CREATE: w,
         CHANNEL_DELETE: w,
         CHANNEL_UPDATES: P,

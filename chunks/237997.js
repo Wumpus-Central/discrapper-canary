@@ -51,8 +51,8 @@ let C = Object.freeze({
     R = {},
     O = null,
     D = new Set(),
-    x = !1,
-    L = null,
+    L = !1,
+    x = null,
     w = !1,
     P = !1,
     M = new Set(),
@@ -232,7 +232,7 @@ function eh() {
     B.disableExternalLinkAlert = !0;
 }
 function e_() {
-    x = !0;
+    L = !0;
 }
 function em() {
     u.Z.addInterceptor((e) => {
@@ -305,7 +305,7 @@ class ey extends (i = s.ZP.PersistedStore) {
                 let e = h.default.getId();
                 B = null != e ? U(e) : { ...C };
             }),
-            __OVERLAY__ && (v.isPlatformEmbedded && (L = y.ZP.requireModule('discord_overlay2')), D.delete((0, b.QF)())),
+            __OVERLAY__ && (v.isPlatformEmbedded && (x = y.ZP.requireModule('discord_overlay2')), D.delete((0, b.QF)())),
             null != e)
         ) {
             R = e;
@@ -382,7 +382,7 @@ class ey extends (i = s.ZP.PersistedStore) {
         return P;
     }
     get incompatibleApp() {
-        return x;
+        return L;
     }
     getActiveRegions() {
         return M;

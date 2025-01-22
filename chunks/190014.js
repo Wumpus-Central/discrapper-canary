@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -19,7 +19,7 @@ var i = n(200651),
     p = n(736530),
     x = n(981631),
     f = n(388032);
-function _(e) {
+function E(e) {
     let { ingress: t, guildId: n } = e,
         c = o.iH.useSetting().includes(n),
         g = r.useCallback(
@@ -47,10 +47,10 @@ function _(e) {
               })
           });
 }
-function E(e) {
+function _(e) {
     let { ingress: t = g.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         r = (0, c.is)();
-    return (0, i.jsx)(_, {
+    return (0, i.jsx)(E, {
         ingress: t,
         guildId: null != n ? n : r
     });

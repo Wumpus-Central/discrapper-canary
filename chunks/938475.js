@@ -183,10 +183,10 @@ class D {
             (this.guildId = e);
     }
 }
-function x() {
+function L() {
     T = {};
 }
-function L() {
+function x() {
     Z();
 }
 function w(e) {
@@ -265,8 +265,8 @@ class F extends (i = u.ZP.Store) {
 }
 b(F, 'displayName', 'SortedVoiceStateStore'),
     (n.ZP = new F(d.Z, {
-        CONNECTION_OPEN: x,
-        OVERLAY_INITIALIZE: L,
+        CONNECTION_OPEN: L,
+        OVERLAY_INITIALIZE: x,
         VOICE_CHANNEL_SELECT: M,
         VOICE_STATE_UPDATES: w,
         GUILD_MEMBER_UPDATE: U,

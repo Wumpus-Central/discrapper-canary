@@ -33,13 +33,13 @@ let v = [],
     (e.JACK_O_LANTERN = 'jack_o_lantern'), (e.NOSE = 'nose');
 })(i || (i = {}));
 let D = new Set(['jack_o_lantern', 'nose']),
-    x = {
+    L = {
         jack_o_lantern: {
             sprites: (0, p.Z)(['chocolate_bar', 'lollipop', 'candy'])
         },
         nose: { sprites: (0, p.Z)(['foot']) }
     };
-function L(e) {
+function x(e) {
     if (null == e) return null;
     for (let n of D) if (null != e.match(new RegExp(':'.concat(n, '(_tone[1-9])?')))) return n;
     return null;
@@ -149,7 +149,7 @@ function U(e) {
         y = l.useCallback(
             (e) => {
                 if (!f) {
-                    let n = L(e);
+                    let n = x(e);
                     null != n && ((g.current = n), p(!0), a(null));
                 }
             },
@@ -187,8 +187,8 @@ function U(e) {
               value: b,
               children: [
                   n,
-                  Object.keys(x).map((e) => {
-                      let n = x[e];
+                  Object.keys(L).map((e) => {
+                      let n = L[e];
                       return (0, s.jsx)(
                           k,
                           {

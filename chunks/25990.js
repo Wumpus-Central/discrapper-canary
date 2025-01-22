@@ -37,11 +37,11 @@ function D(e) {
     let { section: n } = e;
     return n === I.oAB.ACCOUNT && C();
 }
-function x(e) {
+function L(e) {
     let { avatar: n } = e;
     (i = n), (h = void 0);
 }
-function L(e) {
+function x(e) {
     let { globalName: n } = e;
     a = n;
 }
@@ -215,8 +215,8 @@ T(et, 'displayName', 'UserSettingsAccountStore'),
         USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: ee,
         USER_SETTINGS_ACCOUNT_SUBMIT: R,
         USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: O,
-        USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: x,
-        USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: L,
+        USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: L,
+        USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: x,
         USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: w,
         USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: M,
         USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: P,

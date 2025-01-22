@@ -25,8 +25,8 @@ var o = r(200651),
     R = r(497954),
     O = r(449413),
     D = r(266080),
-    x = r(316617),
-    L = r(15682),
+    L = r(316617),
+    x = r(15682),
     w = r(189472),
     P = r(749534),
     M = r(157759),
@@ -171,7 +171,7 @@ let q = (e) => {
                     null != et && (0, o.jsx)(Z.Z, { element: et }),
                     null != ea && (0, o.jsx)(G.Z, { element: ea }),
                     null != W(n, 'breadcrumbs') && (0, o.jsx)(m.Z, { history: a }),
-                    null != W(n, 'message_preview') && ('message' === r.name || 'first_dm' === r.name) && (0, o.jsx)(x.Z, { message: r.record }),
+                    null != W(n, 'message_preview') && ('message' === r.name || 'first_dm' === r.name) && (0, o.jsx)(L.Z, { message: r.record }),
                     null != W(n, 'user_preview') && 'user' === r.name ? (0, o.jsx)(F.Z, { user: r.record }) : null,
                     K(n) &&
                         (0, o.jsxs)(P.Z, {
@@ -241,7 +241,7 @@ let q = (e) => {
                     null != W(n, 'guild_discovery_preview') && 'guild_discovery' === r.name && (0, o.jsx)(A.Z, { entry: r.record }),
                     null != W(n, 'app_preview') && 'application' === r.name && (0, o.jsx)(h.Z, { entry: r.record }),
                     null != ee &&
-                        (0, o.jsx)(L.Z, {
+                        (0, o.jsx)(x.Z, {
                             element: ee,
                             onChange: ev,
                             state: ef

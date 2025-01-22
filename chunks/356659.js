@@ -60,7 +60,7 @@ r.d(n, {
         return S;
     },
     i$: function () {
-        return x;
+        return L;
     },
     jF: function () {
         return f;
@@ -84,7 +84,7 @@ r.d(n, {
         return P;
     },
     xx: function () {
-        return L;
+        return x;
     },
     yl: function () {
         return N;
@@ -129,8 +129,8 @@ let c = 'alt+c',
     R = 15,
     O = 30000,
     D = 30,
-    x = 10,
-    L = 14 * u.Z.Millis.DAY,
+    L = 10,
+    x = 14 * u.Z.Millis.DAY,
     w = 5,
     P = 5,
     M = 1;

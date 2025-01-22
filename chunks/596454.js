@@ -25,8 +25,8 @@ r(200960);
 let I = __OVERLAY__ ? () => (0, c.e7)([g.Z], () => g.Z.isInstanceFocused()) : y.n;
 function T(e) {
     var n, r;
-    let { src: i, alt: a, className: l, emojiId: c, emojiName: f, channelId: _, messageId: g, animated: y, size: T = 'default', isInteracting: S = !1, shouldAnimate: A, onMouseEnter: C, onMouseLeave: N, canSelect: R = !0, autoplay: O, registerAnimatedElementRef: D, ...x } = e,
-        [L, w] = s.useState(!1),
+    let { src: i, alt: a, className: l, emojiId: c, emojiName: f, channelId: _, messageId: g, animated: y, size: T = 'default', isInteracting: S = !1, shouldAnimate: A, onMouseEnter: C, onMouseLeave: N, canSelect: R = !0, autoplay: O, registerAnimatedElementRef: D, ...L } = e,
+        [x, w] = s.useState(!1),
         [P, M] = s.useState(void 0),
         k = s.useRef(),
         { triggerAnimation: U, untriggerAnimation: B } = s.useContext(p.Rm),
@@ -41,13 +41,13 @@ function T(e) {
                 let e = !0 === A && F;
                 return E.ZP.getEmojiURL({
                     id: c,
-                    animated: Z && !0 === y && (e || L || !0 === S),
+                    animated: Z && !0 === y && (e || x || !0 === S),
                     size: V
                 });
             }
             if (null != f) return v.ZP.getURL(f);
             throw Error('Unknown Src for Emoji');
-        }, [y, F, c, f, V, Z, L, S, A, i]),
+        }, [y, F, c, f, V, Z, x, S, A, i]),
         Y = s.useCallback(() => {
             null != H &&
                 (k.current = (0, h.po)(H, (e) => {
@@ -69,7 +69,7 @@ function T(e) {
         z = s.useMemo(() => {
             let e = null != c && '' !== c ? { 'data-id': c } : { 'data-name': f };
             return {
-                ...x,
+                ...L,
                 className: u()('emoji', l, {
                     jumboable: 'jumbo' === T,
                     reactionLarge: 'reactionLarge' === T
@@ -80,7 +80,7 @@ function T(e) {
                 'data-type': 'emoji',
                 ...e
             };
-        }, [l, c, f, W, K, Y, x, T]);
+        }, [l, c, f, W, K, Y, L, T]);
     s.useEffect(
         () => () => {
             var e;

@@ -3,7 +3,7 @@ r.d(n, {
         return w;
     },
     O_: function () {
-        return x;
+        return L;
     },
     qA: function () {
         return c;
@@ -552,7 +552,7 @@ function D(e, n, r, i, a) {
         spriteHeight: r.spriteHeight
     });
 }
-var x = i.forwardRef(function (e, n) {
+var L = i.forwardRef(function (e, n) {
         var s = e.className,
             l = e.environment,
             u = e.onClick,
@@ -701,13 +701,13 @@ var x = i.forwardRef(function (e, n) {
                 },
                 [R, u]
             ),
-            x = i.useCallback(
+            L = i.useCallback(
                 function (e) {
                     return R(e, { clickHandler: c });
                 },
                 [R, c]
             ),
-            L = i.useCallback(
+            x = i.useCallback(
                 function (e) {
                     return R(e, { mouseHandler: d });
                 },
@@ -727,15 +727,15 @@ var x = i.forwardRef(function (e, n) {
                     };
                     return (
                         e('click', O, u),
-                        e('mousedown', x, c),
-                        e('mousemove', L, d),
+                        e('mousedown', L, c),
+                        e('mousemove', x, d),
                         e('mouseup', w, f),
                         function () {
-                            window.removeEventListener('click', O), window.removeEventListener('mousedown', x), window.removeEventListener('mousemove', L), window.removeEventListener('mouseup', L);
+                            window.removeEventListener('click', O), window.removeEventListener('mousedown', L), window.removeEventListener('mousemove', x), window.removeEventListener('mouseup', x);
                         }
                     );
                 },
-                [O, x, L, w, u, c, d, f]
+                [O, L, x, w, u, c, d, f]
             ),
             i.useEffect(function () {
                 var e = g.current,
@@ -765,7 +765,7 @@ var x = i.forwardRef(function (e, n) {
             )
         );
     }),
-    L = {
+    x = {
         display: 'none',
         position: 'absolute',
         width: 0,
@@ -926,7 +926,7 @@ var x = i.forwardRef(function (e, n) {
             i.createElement('canvas', {
                 ref: f,
                 className: r,
-                style: s ? void 0 : L
+                style: s ? void 0 : x
             })
         );
     });

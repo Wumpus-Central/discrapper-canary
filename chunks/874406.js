@@ -1,19 +1,19 @@
 i.r(n);
 var o = i(200651);
 i(192379);
-var e = i(481060),
-    s = i(194359),
-    r = i(468026),
+var r = i(481060),
+    e = i(194359),
+    s = i(468026),
     a = i(388032);
 n.default = (t) =>
-    (0, o.jsx)(r.default, {
-        confirmText: a.intl.string(a.t.Eq9seX),
-        title: a.intl.string(a.t.eVjfAg),
+    (0, o.jsx)(s.default, {
+        confirmText: a.intl.string(a.t['cY+Ooa']),
+        title: a.intl.string(a.t.z2pFjo),
         cancelText: a.intl.string(a.t['ETE/oK']),
         onConfirm: () => {
-            s.Z.clearPendingRelationships();
+            e.Z.clearPendingRelationships();
         },
-        body: a.intl.formatToPlainString(a.t.jaXsAw, { incomingRequestCount: t.incomingRequestCount }),
-        confirmColor: e.ButtonColors.RED,
+        body: a.intl.formatToPlainString(a.t['0nTvEx'], { incomingRequestCount: t.incomingRequestCount }),
+        confirmColor: r.ButtonColors.RED,
         ...t
     });

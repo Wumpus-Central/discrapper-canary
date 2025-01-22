@@ -24,8 +24,8 @@ function _(e) {
         v = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
         { onClose: S } = E,
         T = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
-        A = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
-        b =
+        b = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
+        A =
             (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
                 ? () => {
                       (0, o.uL)(m.Z5c.APPLICATION_STORE), S();
@@ -73,7 +73,7 @@ function _(e) {
                 src: N ? _.heroArtImageLinkLightTheme : _.heroArtImageLinkDarkTheme
             });
     let L = N ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
-        P =
+        y =
             '' !== _.modalTopPill
                 ? () =>
                       (0, i.jsx)(u.Cy, {
@@ -85,7 +85,7 @@ function _(e) {
     return {
         renderModalProps: E,
         header: _.header,
-        modalTopExtra: P,
+        modalTopExtra: y,
         subHeader: _.subheader,
         subHeaderExtra: Z,
         body: _.body,
@@ -107,11 +107,11 @@ function _(e) {
                 onClick: () => {
                     c.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: v,
-                        cta_type: A,
+                        cta_type: b,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: v
                     }),
-                        b();
+                        A();
                 },
                 children: [
                     (0, i.jsx)('img', {

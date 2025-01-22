@@ -1,97 +1,97 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return v;
+        return x;
     }
 }),
-    t(47120),
-    t(724458);
-var a = t(200651),
-    i = t(192379),
-    r = t(120356),
-    l = t.n(r),
-    o = t(21260),
-    s = t(780384),
-    c = t(481060),
-    d = t(410030),
-    u = t(540059),
-    m = t(889711),
-    p = t(79707),
-    _ = t(388032),
-    g = t(333078);
-function f(e) {
-    let { onTabSelect: n, tabs: t, selectedTab: r } = e,
+    n(47120),
+    n(724458);
+var i = n(200651),
+    a = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    o = n(21260),
+    s = n(780384),
+    c = n(481060),
+    d = n(410030),
+    u = n(540059),
+    m = n(889711),
+    p = n(79707),
+    h = n(388032),
+    g = n(333078);
+function C(e) {
+    let { onTabSelect: t, tabs: n, selectedTab: r } = e,
         o = (0, d.ZP)(),
         m = (0, s.wj)(o),
-        f = (0, u.Q3)('GlobalDiscoveryHeaderMoreTab'),
-        v = i.useMemo(
+        C = (0, u.Q3)('GlobalDiscoveryHeaderMoreTab'),
+        x = a.useMemo(
             () =>
                 null !=
-                t.find((e) => {
-                    let { id: n } = e;
-                    return n === r;
+                n.find((e) => {
+                    let { id: t } = e;
+                    return t === r;
                 }),
-            [r, t]
+            [r, n]
         ),
-        [C, x] = i.useState(!1),
-        h = (function (e) {
-            let { selected: n, isVisualRefreshEnabled: t, isDarkTheme: a, isHovered: i } = e;
-            if (t) return i ? 'text-primary' : n ? 'text-brand' : 'text-normal';
-            return !n && i ? 'interactive-hover' : n ? 'header-primary' : a ? 'interactive-normal' : 'header-primary';
+        [v, _] = a.useState(!1),
+        f = (function (e) {
+            let { selected: t, isVisualRefreshEnabled: n, isDarkTheme: i, isHovered: a } = e;
+            if (n) return a ? 'text-primary' : t ? 'text-brand' : 'text-normal';
+            return !t && a ? 'interactive-hover' : t ? 'header-primary' : i ? 'interactive-normal' : 'header-primary';
         })({
-            selected: v,
-            isVisualRefreshEnabled: f,
+            selected: x,
+            isVisualRefreshEnabled: C,
             isDarkTheme: m,
-            isHovered: C
+            isHovered: v
         }),
         b = (function (e) {
-            let { selected: n, isVisualRefreshEnabled: t, isDarkTheme: a, isHovered: i } = e;
-            if (t) return i ? c.tokens.colors.TEXT_PRIMARY : n ? c.tokens.colors.TEXT_BRAND : c.tokens.colors.INTERACTIVE_NORMAL;
-            return !n && i ? c.tokens.colors.INTERACTIVE_HOVER : n ? c.tokens.colors.HEADER_PRIMARY : a ? c.tokens.colors.TEXT_MUTED : c.tokens.colors.HEADER_PRIMARY;
+            let { selected: t, isVisualRefreshEnabled: n, isDarkTheme: i, isHovered: a } = e;
+            if (n) return a ? c.tokens.colors.TEXT_PRIMARY : t ? c.tokens.colors.TEXT_BRAND : c.tokens.colors.INTERACTIVE_NORMAL;
+            return !t && a ? c.tokens.colors.INTERACTIVE_HOVER : t ? c.tokens.colors.HEADER_PRIMARY : i ? c.tokens.colors.TEXT_MUTED : c.tokens.colors.HEADER_PRIMARY;
         })({
-            selected: v,
-            isVisualRefreshEnabled: f,
+            selected: x,
+            isVisualRefreshEnabled: C,
             isDarkTheme: m,
-            isHovered: C
+            isHovered: v
         }),
-        I = i.useCallback(() => x(!0), []),
-        j = i.useCallback(() => x(!1), []);
-    return (0, a.jsx)(c.Popout, {
+        I = a.useCallback(() => _(!0), []),
+        S = a.useCallback(() => _(!1), []);
+    return (0, i.jsx)(c.Popout, {
         renderPopout: (e) => {
-            let { closePopout: i } = e;
-            return (0, a.jsx)(p.Z, {
+            let { closePopout: a } = e;
+            return (0, i.jsx)(p.Z, {
                 selectedTab: r,
-                onClose: i,
-                tabs: t,
-                onTabSelect: n
+                onClose: a,
+                tabs: n,
+                onTabSelect: t
             });
         },
         position: 'bottom',
         align: 'left',
-        children: (e, n) => {
-            let { isShown: t } = n;
-            return (0, a.jsx)(c.TabBar.Item, {
+        children: (e, t) => {
+            let { isShown: n } = t;
+            return (0, i.jsx)(c.TabBar.Item, {
                 ...e,
                 id: 'more',
                 look: 'brand',
-                selectedItem: f && v ? 'more' : void 0,
-                className: l()(g.tab, { [g.selected]: !f && v }),
-                'aria-label': _.intl.string(_.t.UKOtz8),
-                children: (0, a.jsxs)('div', {
+                selectedItem: C && x ? 'more' : void 0,
+                className: l()(g.tab, { [g.selected]: !C && x }),
+                'aria-label': h.intl.string(h.t.UKOtz8),
+                children: (0, i.jsxs)('div', {
                     className: g.more,
                     onMouseEnter: I,
-                    onMouseLeave: j,
+                    onMouseLeave: S,
                     children: [
-                        (0, a.jsx)(c.Text, {
-                            variant: f ? 'text-sm/semibold' : 'text-md/medium',
-                            color: h,
-                            children: _.intl.string(_.t.UKOtz8)
+                        (0, i.jsx)(c.Text, {
+                            variant: C ? 'text-sm/semibold' : 'text-md/medium',
+                            color: f,
+                            children: h.intl.string(h.t.UKOtz8)
                         }),
-                        t
-                            ? (0, a.jsx)(c.ChevronSmallUpIcon, {
+                        n
+                            ? (0, i.jsx)(c.ChevronSmallUpIcon, {
                                   size: 'xs',
                                   color: b
                               })
-                            : (0, a.jsx)(c.ChevronSmallDownIcon, {
+                            : (0, i.jsx)(c.ChevronSmallDownIcon, {
                                   size: 'xs',
                                   color: b
                               })
@@ -101,14 +101,14 @@ function f(e) {
         }
     });
 }
-function v(e) {
-    let { className: n, selectedTab: t, tabs: r, onTabSelect: s, onAvailableWidthChange: d } = e,
-        [p, _] = i.useState(0),
-        v = i.useRef(p),
+function x(e) {
+    let { className: t, selectedTab: n, tabs: r, onTabSelect: s, onAvailableWidthChange: d } = e,
+        [p, h] = a.useState(0),
+        x = a.useRef(p),
         {
-            lastVisibleIndex: C,
-            onItemLayout: x,
-            overflowItemsRef: h,
+            lastVisibleIndex: v,
+            onItemLayout: _,
+            overflowItemsRef: f,
             itemWidthsRef: b
         } = (0, o.zP)({
             items: r,
@@ -116,42 +116,42 @@ function v(e) {
             maxLines: 1,
             containerWidth: p
         }),
-        I = i.useMemo(() => r.slice(0, C + 1), [C, r]),
-        j = i.useMemo(() => r.slice(C + 1), [C, r]),
-        S = i.useRef(null),
-        E = i.useCallback(() => {
+        I = a.useMemo(() => r.slice(0, v + 1), [v, r]),
+        S = a.useMemo(() => r.slice(v + 1), [v, r]),
+        j = a.useRef(null),
+        N = a.useCallback(() => {
             var e;
-            let n = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            if (null == n || v.current === n.width) return;
-            _(n.width), (v.current = n.width);
-            let t = b.current.reduce((e, n, t) => e + n + (0 === t ? 0 : 20)),
-                a = n.width - t;
-            null == d || d(a);
+            let t = null === (e = j.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            if (null == t || x.current === t.width) return;
+            h(t.width), (x.current = t.width);
+            let n = b.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
+                i = t.width - n;
+            null == d || d(i);
         }, [b, d]);
-    i.useEffect(() => {
-        let e = (0, m.pP)(E);
+    a.useEffect(() => {
+        let e = (0, m.pP)(N);
         return (0, m.YP)(e, document.body), () => (0, m.UC)(e, document.body);
-    }, [E]);
-    let N = 0 !== p,
+    }, [N]);
+    let E = 0 !== p,
         y = (0, u.Q3)('GlobalDiscoveryHeaderTabs');
-    return (0, a.jsxs)('div', {
-        className: l()(g.container, n),
-        ref: S,
+    return (0, i.jsxs)('div', {
+        className: l()(g.container, t),
+        ref: j,
         children: [
-            (0, a.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: g.measurements,
                 children: [
-                    r.map((e, n) =>
-                        (0, a.jsx)(
+                    r.map((e, t) =>
+                        (0, i.jsx)(
                             o.AJ,
                             {
-                                index: n,
-                                onItemLayout: x,
-                                children: (0, a.jsx)(c.TabBar.Item, {
+                                index: t,
+                                onItemLayout: _,
+                                children: (0, i.jsx)(c.TabBar.Item, {
                                     id: e.id,
                                     'aria-label': e.label,
                                     className: g.tab,
-                                    children: (0, a.jsx)(c.Text, {
+                                    children: (0, i.jsx)(c.Text, {
                                         variant: 'text-md/medium',
                                         children: e.label
                                     })
@@ -160,42 +160,42 @@ function v(e) {
                             e.id
                         )
                     ),
-                    (0, a.jsx)('div', {
-                        ref: h,
-                        children: (0, a.jsx)(f, {
-                            tabs: j,
+                    (0, i.jsx)('div', {
+                        ref: f,
+                        children: (0, i.jsx)(C, {
+                            tabs: S,
                             onTabSelect: s,
-                            selectedTab: t
+                            selectedTab: n
                         })
                     })
                 ]
             }),
-            N &&
-                (0, a.jsxs)(c.TabBar, {
+            E &&
+                (0, i.jsxs)(c.TabBar, {
                     type: 'top',
                     look: 'brand',
-                    selectedItem: t,
+                    selectedItem: n,
                     onItemSelect: s,
                     className: g.tabs,
                     children: [
                         I.map((e) =>
-                            (0, a.jsx)(
+                            (0, i.jsx)(
                                 c.TabBar.Item,
                                 {
                                     id: e.id,
                                     look: 'brand',
                                     'aria-label': e.label,
-                                    className: l()(g.tab, { [g.selected]: !y && t === e.id }),
+                                    className: l()(g.tab, { [g.selected]: !y && n === e.id }),
                                     children: e.label
                                 },
                                 e.id
                             )
                         ),
-                        0 !== j.length
-                            ? (0, a.jsx)(f, {
-                                  tabs: j,
+                        0 !== S.length
+                            ? (0, i.jsx)(C, {
+                                  tabs: S,
                                   onTabSelect: s,
-                                  selectedTab: t
+                                  selectedTab: n
                               })
                             : null
                     ]

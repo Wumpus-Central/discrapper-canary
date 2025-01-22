@@ -46,12 +46,12 @@ let S = (0, g.Un)({
         webpackId: 869779,
         name: 'ChannelSettings'
     }),
-    A = (0, g.Un)({
+    b = (0, g.Un)({
         createPromise: () => n.e('18249').then(n.bind(n, 838819)),
         webpackId: 838819,
         name: 'CollectiblesShop'
     }),
-    b = (0, g.Un)({
+    A = (0, g.Un)({
         createPromise: () => Promise.all([n.e('63288'), n.e('7654'), n.e('98479'), n.e('16806'), n.e('60696'), n.e('58227'), n.e('16114'), n.e('82309'), n.e('93735')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
@@ -59,19 +59,19 @@ let S = (0, g.Un)({
     Z = {
         [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(S, {}),
         [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
-        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(b, {}),
-        [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(A, {})
+        [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(A, {}),
+        [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(b, {})
     },
     x = 'SHOWN',
     L = 'HIDDEN',
-    P = {
+    y = {
         friction: 10,
         tension: 100
     };
-function O() {
+function P() {
     return l.useEffect(() => (p.Z.enable(), p.Z.enableTemp(m.u), () => p.Z.disableTemp()), []), null;
 }
-class y extends (i = l.PureComponent) {
+class O extends (i = l.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.mode
             ? {
@@ -98,11 +98,11 @@ class y extends (i = l.PureComponent) {
         o.Z.parallel([
             o.Z.spring(t, {
                 toValue: 1,
-                ...P
+                ...y
             }),
             o.Z.spring(n, {
                 toValue: 1,
-                ...P
+                ...y
             })
         ]).start(() => this.animateComplete(e));
     }
@@ -113,11 +113,11 @@ class y extends (i = l.PureComponent) {
             o.Z.parallel([
                 o.Z.spring(t, {
                     toValue: 0,
-                    ...P
+                    ...y
                 }),
                 o.Z.spring(n, {
                     toValue: 1.1,
-                    ...P
+                    ...y
                 })
             ]).start(() => {
                 e(), I.S.dispatch(C.CkL.LAYER_POP_COMPLETE);
@@ -129,11 +129,11 @@ class y extends (i = l.PureComponent) {
         o.Z.parallel([
             o.Z.spring(e, {
                 toValue: 0,
-                ...P
+                ...y
             }),
             o.Z.spring(t, {
                 toValue: 0.93,
-                ...P
+                ...y
             })
         ]).start(() => this.animateComplete());
     }
@@ -184,7 +184,7 @@ class y extends (i = l.PureComponent) {
             });
     }
 }
-v(y, 'defaultProps', { baseLayer: !1 }), v(y, 'contextType', u.AccessibilityPreferencesContext);
+v(O, 'defaultProps', { baseLayer: !1 }), v(O, 'contextType', u.AccessibilityPreferencesContext);
 class R extends l.PureComponent {
     componentDidMount() {
         I.S.subscribe(C.CkL.LAYER_POP_ESCAPE_KEY, h.xf);
@@ -199,7 +199,7 @@ class R extends l.PureComponent {
         return (
             l.push(
                 (0, r.jsx)(
-                    y,
+                    O,
                     {
                         mode: 0 !== i || n ? L : x,
                         baseLayer: !0,
@@ -217,10 +217,10 @@ class R extends l.PureComponent {
         return (
             (i = 'string' == typeof e ? Z[e]() : (0, r.jsx)(e, {})),
             (0, r.jsxs)(
-                y,
+                O,
                 {
                     mode: t === n - 1 ? x : L,
-                    children: [(0, r.jsx)(O, {}), i]
+                    children: [(0, r.jsx)(P, {}), i]
                 },
                 'layer-'.concat(t)
             )

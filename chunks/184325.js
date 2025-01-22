@@ -30,26 +30,26 @@ var a = r(200651),
     R = r(981631),
     O = r(474936),
     D = r(388032),
-    x = r(153225);
-let L = (e) => {
+    L = r(153225);
+let x = (e) => {
     if (null != e)
         switch (e) {
             case O.JN.PREMIUM_TENURE_1_MONTH:
-                return x.tieredTenureBadgeBronzeGlow;
+                return L.tieredTenureBadgeBronzeGlow;
             case O.JN.PREMIUM_TENURE_3_MONTH:
-                return x.tieredTenureBadgeSilverGlow;
+                return L.tieredTenureBadgeSilverGlow;
             case O.JN.PREMIUM_TENURE_6_MONTH:
-                return x.tieredTenureBadgeGoldGlow;
+                return L.tieredTenureBadgeGoldGlow;
             case O.JN.PREMIUM_TENURE_12_MONTH:
-                return x.tieredTenureBadgePlatinumGlow;
+                return L.tieredTenureBadgePlatinumGlow;
             case O.JN.PREMIUM_TENURE_24_MONTH:
-                return x.tieredTenureBadgeDiamondGlow;
+                return L.tieredTenureBadgeDiamondGlow;
             case O.JN.PREMIUM_TENURE_36_MONTH:
-                return x.tieredTenureBadgeEmeraldGlow;
+                return L.tieredTenureBadgeEmeraldGlow;
             case O.JN.PREMIUM_TENURE_60_MONTH:
-                return x.tieredTenureBadgeRubyGlow;
+                return L.tieredTenureBadgeRubyGlow;
             case O.JN.PREMIUM_TENURE_72_MONTH:
-                return x.tieredTenureBadgeFireGlow;
+                return L.tieredTenureBadgeFireGlow;
             default:
                 return;
         }
@@ -62,7 +62,7 @@ function w(e) {
         B = E.default.getCurrentUser(),
         G = (0, b.yd)(null == B ? void 0 : B.premiumType, O.p9.TIER_2);
     return (0, a.jsx)('div', {
-        className: l()(x.container, r),
+        className: l()(L.container, r),
         'aria-label': D.intl.string(D.t.VWV0y8),
         role: 'group',
         children: n.map((e) => {
@@ -101,22 +101,22 @@ function w(e) {
                             ...P
                         });
                 },
-                f = L(null == n ? void 0 : n.id),
+                f = x(null == n ? void 0 : n.id),
                 E = null != n && k,
                 b =
                     (null == n ? void 0 : n.badgeVersion) === 2
                         ? (0, a.jsxs)('div', {
-                              className: x.tieredTenureBadgeTooltip,
+                              className: L.tieredTenureBadgeTooltip,
                               children: [
                                   (0, a.jsx)('img', {
                                       src: (0, p.J)(n.id),
                                       alt: ''
                                   }),
                                   (0, a.jsx)('div', {
-                                      className: x.tieredTenureBadgeTooltipWordmarkContainer,
+                                      className: L.tieredTenureBadgeTooltipWordmarkContainer,
                                       children: (0, a.jsx)(v.Z, {
                                           width: 56,
-                                          className: x.tieredTenureBadgeTooltipWordmark
+                                          className: L.tieredTenureBadgeTooltipWordmark
                                       })
                                   }),
                                   (0, a.jsx)(u.Heading, {
@@ -126,7 +126,7 @@ function w(e) {
                                   (0, a.jsx)(u.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      className: x.tieredTenureBadgeTooltipDescription,
+                                      className: L.tieredTenureBadgeTooltipDescription,
                                       children: e.description
                                   })
                               ]
@@ -150,12 +150,12 @@ function w(e) {
                                 alt: ' ',
                                 'aria-hidden': !0,
                                 src: (0, N.jC)(e.icon),
-                                className: l()(x.badge, i)
+                                className: l()(L.badge, i)
                             }),
                             E &&
                                 (0, a.jsxs)('div', {
-                                    className: x.starContainer,
-                                    children: [(0, a.jsx)(C.Z, { className: x.topLeftStar }), (0, a.jsx)(C.Z, { className: x.bottomRightStar })]
+                                    className: L.starContainer,
+                                    children: [(0, a.jsx)(C.Z, { className: L.topLeftStar }), (0, a.jsx)(C.Z, { className: L.bottomRightStar })]
                                 })
                         ]
                     })

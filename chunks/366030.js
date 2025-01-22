@@ -30,8 +30,8 @@ var o = r(200651),
     R = r(107484),
     O = r(977392),
     D = r(134433),
-    x = r(753194),
-    L = r(458034),
+    L = r(753194),
+    x = r(458034),
     w = r(856651),
     P = r(981631),
     M = r(228168),
@@ -99,7 +99,7 @@ function G(e) {
                 E = (null == m ? void 0 : m.bot) != null ? new S.Z(m.bot) : null;
             return (
                 N.SJ.includes(null !== (n = null == m ? void 0 : m.id) && void 0 !== n ? n : '')
-                    ? (l = (0, o.jsx)(x.Z, {
+                    ? (l = (0, o.jsx)(L.Z, {
                           className: U.botTag,
                           color: i,
                           size: 16
@@ -248,7 +248,7 @@ function F(e) {
                       channelId: a.id,
                       guildId: i.id,
                       onGetRolesClicked: () => {
-                          (0, L.Am)(i.id);
+                          (0, x.Am)(i.id);
                       },
                       onOpenProfile: () => {
                           (0, T.openUserProfileModal)({

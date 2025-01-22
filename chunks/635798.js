@@ -25,10 +25,10 @@ function u(e) {
         [N, R] = (0, a.useState)(void 0),
         O = (0, a.useRef)(I),
         D = (0, a.useRef)(S),
-        x = (e) => {
+        L = (e) => {
             (O.current = e), T(e);
         },
-        L = (e) => {
+        x = (e) => {
             (D.current = e), A(e);
         };
     function w(e) {
@@ -47,7 +47,7 @@ function u(e) {
         if (r || !k(e)) return;
         let a = P(e),
             o = M(e);
-        (n = (0, i.N4)(n, a, o, _)), x(c(O.current, e, n));
+        (n = (0, i.N4)(n, a, o, _)), L(c(O.current, e, n));
     }
     function B(e) {
         return h.format(e);
@@ -79,7 +79,7 @@ function u(e) {
         setThumbDragging: function e(e, n) {
             if (r || !k(e)) return;
             let i = D.current[e];
-            (D.current = c(D.current, e, n)), L(D.current), b && i && !D.current.some(Boolean) && b(O.current);
+            (D.current = c(D.current, e, n)), x(D.current), b && i && !D.current.some(Boolean) && b(O.current);
         },
         focusedThumb: N,
         setFocusedThumb: R,

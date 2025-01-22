@@ -25,7 +25,7 @@ function h(e) {
     i.useEffect(() => {
         p && null != h && null == d.Z.getSubscriptionSettings(h.id) && f(h.id);
     }, [p, h, f]);
-    let _ =
+    let E =
         null == n
             ? void 0
             : (function (e) {
@@ -52,6 +52,6 @@ function h(e) {
         handleToggleExpanded: () => x((e) => !e),
         listing: n,
         groupListing: r,
-        subscriptionInfo: _
+        subscriptionInfo: E
     };
 }

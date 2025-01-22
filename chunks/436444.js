@@ -45,8 +45,8 @@ function I(e) {
         R = m.oCV[S] - i.premiumSubscriberCount,
         O = S <= A || o,
         D = O && S <= i.premiumTier,
-        x = O && S < i.premiumTier,
-        L = O && S === i.premiumTier,
+        L = O && S < i.premiumTier,
+        x = O && S === i.premiumTier,
         { scaleFactor: w } = (0, u.useSpring)({
             from: { scaleFactor: 0 },
             to: { scaleFactor: A >= S || (o && A + 1 === S) || (o && -1 === A && S === m.Eu4.NONE) ? 1 : 0 },
@@ -98,8 +98,8 @@ function I(e) {
                 className: s()(v.progressBarMarker, {
                     [v.progressBarMarkerUnlocked]: D,
                     [v.progressBarMarkerLocked]: k,
-                    [v.progressBarMarkerLower]: x,
-                    [v.progressBarMarkerCurrent]: L
+                    [v.progressBarMarkerLower]: L,
+                    [v.progressBarMarkerCurrent]: x
                 }),
                 style: { left: ''.concat(100 * b[S], '%') },
                 ...e,

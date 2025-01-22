@@ -38,7 +38,7 @@ function T(e, n, r) {
 class S extends (i = s.PureComponent) {
     render() {
         let e;
-        let { className: n, imageClassName: r, readyState: i, src: a, placeholder: s, placeholderVersion: l, alt: c, width: f, height: _, maxWidth: E = f, maxHeight: b = _, minWidth: I, minHeight: T, mediaLayoutType: S, limitResponsiveWidth: R = !0, accessory: O, zoomable: D, original: x, children: L, renderAccessory: w, onClick: P, tabIndex: M, dataSafeSrc: k, useFullWidth: U = !1, ...B } = this.props;
+        let { className: n, imageClassName: r, readyState: i, src: a, placeholder: s, placeholderVersion: l, alt: c, width: f, height: _, maxWidth: E = f, maxHeight: b = _, minWidth: I, minHeight: T, mediaLayoutType: S, limitResponsiveWidth: R = !0, accessory: O, zoomable: D, original: L, children: x, renderAccessory: w, onClick: P, tabIndex: M, dataSafeSrc: k, useFullWidth: U = !1, ...B } = this.props;
         if (1 === f && 1 === _) return null;
         let G = (0, h.Tj)({
                 width: f,
@@ -50,7 +50,7 @@ class S extends (i = s.PureComponent) {
             }),
             Z = 0 !== G.width ? G.width / G.height : 1;
         '' !== a && i !== g.zo9.ERROR
-            ? (e = L({
+            ? (e = x({
                   src: a,
                   size: G,
                   alt: c,
@@ -90,13 +90,13 @@ class S extends (i = s.PureComponent) {
                     style: C(G, R, U, S),
                     ...B,
                     children: [
-                        null != x &&
+                        null != L &&
                             (0, o.jsx)('a', {
                                 tabIndex: -1,
                                 onClick: P,
                                 'aria-hidden': !0,
                                 className: y.originalLink,
-                                href: x,
+                                href: L,
                                 ref: this._containerRef,
                                 'data-role': 'img',
                                 'data-safe-src': null != k ? k : a

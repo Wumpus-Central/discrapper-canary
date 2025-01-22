@@ -19,7 +19,7 @@ n.Z = a.forwardRef(function (e, n) {
     var o, b, I;
     let T;
     let { canRemove: S, className: A, role: C, onRemove: N, guildId: R, disableBorderColor: O, onMouseDown: D } = e,
-        { tabIndex: x, ...L } = (0, l.JA)(C.id),
+        { tabIndex: L, ...x } = (0, l.JA)(C.id),
         w = (0, E.p9)({
             roleId: C.id,
             size: 16,
@@ -79,7 +79,7 @@ n.Z = a.forwardRef(function (e, n) {
                       children: (0, i.jsxs)(f.Clickable, {
                           className: s()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
                           onClick: N,
-                          tabIndex: x,
+                          tabIndex: L,
                           focusProps: { focusClassName: y.roleRemoveIconFocused },
                           'aria-hidden': !1,
                           'aria-label': v.intl.formatToPlainString(v.t.QrxwhY, { roleName: C.name }),
@@ -110,8 +110,8 @@ n.Z = a.forwardRef(function (e, n) {
             onContextMenu: k,
             onMouseDown: D,
             'aria-label': C.name,
-            tabIndex: x,
-            ...L,
+            tabIndex: L,
+            ...x,
             children: [
                 j(),
                 null != w

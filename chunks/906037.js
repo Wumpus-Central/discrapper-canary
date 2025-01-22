@@ -1,32 +1,32 @@
-i.d(t, {
+n.d(t, {
     CR: function () {
-        return s;
+        return a;
     },
     eM: function () {
-        return o;
+        return r;
     },
     m3: function () {
-        return r;
+        return l;
     }
 });
-var n = i(570140),
-    l = i(449224);
-function o(e) {
+var i = n(570140),
+    o = n(449224);
+function r(e) {
     return (!e.isPreviewingInGame && !e.locked) || e.pinned;
 }
-function s(e, t, i) {
-    (e.locked !== t.locked || e.pinned !== t.pinned || i(e) !== i(t) || o(e) !== o(t)) && r(t, i(t));
+function a(e, t, n) {
+    (e.locked !== t.locked || e.pinned !== t.pinned || n(e) !== n(t) || r(e) !== r(t)) && l(t, n(t));
 }
-function r(e, t) {
-    var i, s;
-    let r = o(e),
-        a = l.Z.getGame();
-    n.Z.dispatch({
+function l(e, t) {
+    var n, a;
+    let l = r(e),
+        c = o.Z.getGame();
+    i.Z.dispatch({
         type: 'OVERLAY_WIDGET_CHANGED',
-        gameName: null !== (i = null == a ? void 0 : a.name) && void 0 !== i ? i : null,
-        gameId: null !== (s = null == a ? void 0 : a.id) && void 0 !== s ? s : null,
+        gameName: null !== (n = null == c ? void 0 : c.name) && void 0 !== n ? n : null,
+        gameId: null !== (a = null == c ? void 0 : c.id) && void 0 !== a ? a : null,
         widgetType: e.widget,
-        visible: r && t,
+        visible: l && t,
         locked: e.locked,
         pinned: e.pinned
     });

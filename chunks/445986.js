@@ -1,66 +1,66 @@
 n.d(t, {
     Q: function () {
-        return c;
+        return m;
     }
 }),
     n(653041),
     n(47120);
-var s = n(200651),
-    i = n(192379),
-    a = n(481060),
-    r = n(33122),
-    l = n(761705),
-    o = n(9807),
-    d = n(843445),
-    h = n(981631),
+var i = n(200651),
+    a = n(192379),
+    r = n(481060),
+    l = n(33122),
+    o = n(761705),
+    s = n(9807),
+    c = n(843445),
+    d = n(981631),
     u = n(388032);
-function c(e) {
+function m(e) {
     return ''.concat(e.split('?')[0], '?size=').concat(2048);
 }
-let m = (e) => {
-    let { index: t, items: n, ...i } = e,
-        a = n[t],
-        r = 0,
-        o = [];
+let p = (e) => {
+    let { index: t, items: n, ...a } = e,
+        r = n[t],
+        l = 0,
+        s = [];
     for (let e of n)
-        if (e.type === h.s9s.IMG) {
-            let { width: t, height: n, src: s } = e;
-            e === a && (r = o.length),
-                o.push({
-                    src: c(s),
+        if (e.type === d.s9s.IMG) {
+            let { width: t, height: n, src: i } = e;
+            e === r && (l = s.length),
+                s.push({
+                    src: m(i),
                     width: t,
                     height: n
                 });
         }
-    return (0, s.jsx)(l.Z, {
-        ...i,
-        items: o,
-        startWith: r
+    return (0, i.jsx)(o.Z, {
+        ...a,
+        items: s,
+        startWith: l
     });
 };
-class p extends i.Component {
+class h extends a.Component {
     render() {
         let { pageSize: e, ...t } = this.props,
-            n = e === d.b.SMALL ? o.Z : r.Z;
-        return (0, s.jsx)(n, {
+            n = e === c.b.SMALL ? s.Z : l.Z;
+        return (0, i.jsx)(n, {
             ...t,
             onCurrentItemClick: this.handleCurrentItemClick
         });
     }
     constructor(...e) {
-        var t, n, i;
+        var t, n, a;
         super(...e),
             (t = this),
             (n = 'handleCurrentItemClick'),
-            (i = (e, t) => {
-                e.type === h.s9s.IMG &&
-                    !(0, a.hasAnyModalOpen)() &&
-                    (0, a.openModal)((e) =>
-                        (0, s.jsx)(a.ModalRoot, {
-                            size: a.ModalSize.DYNAMIC,
+            (a = (e, t) => {
+                e.type === d.s9s.IMG &&
+                    !(0, r.hasAnyModalOpen)() &&
+                    (0, r.openModal)((e) =>
+                        (0, i.jsx)(r.ModalRoot, {
+                            size: r.ModalSize.DYNAMIC,
                             'aria-label': u.intl.string(u.t.X4IxWF),
                             ...e,
-                            children: (0, s.jsx)(m, {
+                            children: (0, i.jsx)(p, {
                                 ...e,
                                 index: t,
                                 items: this.props.items
@@ -70,12 +70,12 @@ class p extends i.Component {
             }),
             n in t
                 ? Object.defineProperty(t, n, {
-                      value: i,
+                      value: a,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i);
+                : (t[n] = a);
     }
 }
-t.Z = p;
+t.Z = h;

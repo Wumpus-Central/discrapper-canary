@@ -72,12 +72,12 @@ function D(e, n, r, i) {
     var a;
     return null === r ? (a = new I()) : 'string' != typeof r && !n.objectMode && (a = new g('chunk', ['string', 'Buffer'], r)), !a || (A(e, a), o.nextTick(i, a), !1);
 }
-function x(e, n, r) {
+function L(e, n, r) {
     return !e.objectMode && !1 !== e.decodeStrings && 'string' == typeof n && (n = c.from(n, r)), n;
 }
-function L(e, n, r, i, a, o) {
+function x(e, n, r, i, a, o) {
     if (!r) {
-        var s = x(n, i, a);
+        var s = L(n, i, a);
         i !== s && ((r = !0), (a = 'buffer'), (i = s));
     }
     var l = n.objectMode ? 1 : i.length;
@@ -209,7 +209,7 @@ r(689118)(R, u),
         var i = this._writableState,
             a = !1,
             o = !i.objectMode && p(e);
-        return o && !c.isBuffer(e) && (e = f(e)), 'function' == typeof n && ((r = n), (n = null)), o ? (n = 'buffer') : !n && (n = i.defaultEncoding), 'function' != typeof r && (r = C), i.ending ? O(this, r) : (o || D(this, i, e, r)) && (i.pendingcb++, (a = L(this, i, o, e, n, r))), a;
+        return o && !c.isBuffer(e) && (e = f(e)), 'function' == typeof n && ((r = n), (n = null)), o ? (n = 'buffer') : !n && (n = i.defaultEncoding), 'function' != typeof r && (r = C), i.ending ? O(this, r) : (o || D(this, i, e, r)) && (i.pendingcb++, (a = x(this, i, o, e, n, r))), a;
     }),
     (R.prototype.cork = function () {
         this._writableState.corked++;

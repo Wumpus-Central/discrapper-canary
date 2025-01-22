@@ -30,8 +30,8 @@ var A = r(807864),
     R = r(26151),
     O = r(224706),
     D = r(765250),
-    x = r(13245),
-    L = r(287734),
+    L = r(13245),
+    x = r(287734),
     w = r(615287),
     P = r(579806),
     M = r(887278),
@@ -210,11 +210,11 @@ async function eT(e) {
         if (er.size > 0) {
             eE = 'reconcile.getOverlayURL';
             let n = await eR();
-            (eE = 'reconcile.createHostProcess'), e.createHostProcess(n, eL, ex);
+            (eE = 'reconcile.createHostProcess'), e.createHostProcess(n, ex, eL);
         } else (eE = 'reconcile.destroyHostProcess'), e.destroyHostProcess(), (0, J.tB)(J.R2);
     } else if (ea) {
         let n = await eR();
-        e.createHostProcess(n, eL, ex);
+        e.createHostProcess(n, ex, eL);
     } else e.destroyHostProcess(), (0, J.tB)(J.R2);
 }
 async function eS(e) {
@@ -224,7 +224,7 @@ async function eS(e) {
         eg.warn('Trying to attach to pid='.concat(e, ', that is already in status: ').concat(n));
         return;
     }
-    await x.Z.updateOverlayState(e, w.mM.WAITING_FOR_OVERLAY_OPEN), (eE = 'attach.getOverlayModule');
+    await L.Z.updateOverlayState(e, w.mM.WAITING_FOR_OVERLAY_OPEN), (eE = 'attach.getOverlayModule');
     let r = await eO();
     (eE = 'attach.transitionOverlayPIDStatus'), eI(e, 'ATTACHING'), (eE = 'attach.attachToProcess');
     let i = await M.YT(e);
@@ -344,10 +344,10 @@ let eO = (() => {
         let a = await eO();
         !ea && (await eC(void 0)), await eT(a);
     });
-function ex(e) {
-    x.Z.setFocusedPID(0 === e ? null : e);
+function eL(e) {
+    L.Z.setFocusedPID(0 === e ? null : e);
 }
-function eL(e, n, r) {
+function ex(e, n, r) {
     var i;
     let a = null === (i = B.ZP.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
         o = W.Z.getGameByName(a),
@@ -362,7 +362,7 @@ function eL(e, n, r) {
         width: r.graphics_width,
         height: r.graphics_height
     }),
-        x.Z.updateOverlayState(e, w.mM.OVERLAY_RENDERING),
+        L.Z.updateOverlayState(e, w.mM.OVERLAY_RENDERING),
         z.default.track($.rMx.OVERLAY_HOOK_RESULT, s),
         eg.info('Overlay connection to '.concat(e, ' ').concat(n ? 'succeeded' : 'failed'), s),
         n ? eI(e, 'CONNECTED', 'CONNECTING') : eI(e, 'CONNECT_FAILED', 'CONNECTING');
@@ -410,7 +410,7 @@ function eM(e) {
                         }),
                         eI(a, 'READY'),
                         (0, J.tB)(a),
-                        x.Z.overlayReady(a);
+                        L.Z.overlayReady(a);
                 });
             break;
         case $.BmY.DISPATCH:
@@ -456,12 +456,12 @@ function eV(e) {
     let { port: n } = e;
     ec = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let r = new URLSearchParams();
-    r.append('build_id', '6d8ca85a92e99762de4c86cfff8d66d3a0ae95e9'), r.append('rpc', String(n)), r.append('rpc_auth_token', ec), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
+    r.append('build_id', 'da95c6158979b56199acb559feddd24a344e493b'), r.append('rpc', String(n)), r.append('rpc_auth_token', ec), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
 }
 function ej(e) {
     let { channelId: n, ring: r } = e;
     setImmediate(() => {
-        L.default.selectPrivateChannel(n), R.Z.call(n, !1, !!r);
+        x.default.selectPrivateChannel(n), R.Z.call(n, !1, !!r);
     });
 }
 function eH(e) {
@@ -495,7 +495,7 @@ function eQ(e) {
             channelId: a,
             messageId: o
         }),
-            null != el && x.Z.setInputLocked(!0, el);
+            null != el && L.Z.setInputLocked(!0, el);
     });
 }
 function eX(e) {

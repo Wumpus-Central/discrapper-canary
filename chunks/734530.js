@@ -243,7 +243,7 @@
                 };
             return d.every(h);
         },
-        x = function (e, n, r) {
+        L = function (e, n, r) {
             return C(e)
                 ? Object.keys(e).reduce(function (a, s) {
                       var l = !C(n) || !D(e[s], n[s]);
@@ -251,14 +251,14 @@
                   }, null)
                 : null;
         },
-        L = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+        x = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
         w = function (e) {
-            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
+            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
             if (null === e || R(e)) return e;
             throw Error(n);
         },
         P = function (e) {
-            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
+            var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
             if (N(e))
                 return {
                     tag: 'async',
@@ -351,7 +351,7 @@
                 n.useEffect(
                     function () {
                         if (!!l.elements) {
-                            var e = x(i, f, ['clientSecret', 'fonts']);
+                            var e = L(i, f, ['clientSecret', 'fonts']);
                             e && l.elements.update(e);
                         }
                     },
@@ -545,7 +545,7 @@
                         R = 'customCheckoutSdk' in C ? C.customCheckoutSdk : null,
                         O = u(n.useState(null), 2),
                         D = O[0],
-                        L = O[1],
+                        x = O[1],
                         w = n.useRef(null),
                         P = n.useRef(null);
                     S(D, 'blur', d),
@@ -572,7 +572,7 @@
                             function () {
                                 if (null === w.current && null !== P.current && (N || R)) {
                                     var n = null;
-                                    R ? (n = R.createElement(e, c)) : N && (n = N.create(e, c)), (w.current = n), L(n), n && n.mount(P.current);
+                                    R ? (n = R.createElement(e, c)) : N && (n = N.create(e, c)), (w.current = n), x(n), n && n.mount(P.current);
                                 }
                             },
                             [N, R, c]
@@ -582,7 +582,7 @@
                         n.useEffect(
                             function () {
                                 if (!!w.current) {
-                                    var e = x(c, M, ['paymentRequest']);
+                                    var e = L(c, M, ['paymentRequest']);
                                     e && w.current.update(e);
                                 }
                             },

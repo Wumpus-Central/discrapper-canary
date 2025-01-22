@@ -26,14 +26,14 @@ var i,
     v = n(230900),
     S = n(854698),
     T = n(703656),
-    A = n(922482),
-    b = n(565799),
+    b = n(922482),
+    A = n(565799),
     Z = n(501655),
     x = n(427679),
     L = n(448206),
-    P = n(184301),
-    O = n(347475),
-    y = n(496675),
+    y = n(184301),
+    P = n(347475),
+    O = n(496675),
     R = n(594174),
     j = n(662868),
     D = n(981631),
@@ -55,9 +55,9 @@ function U(e) {
             [s, r]
         ),
         B = null == i ? void 0 : i.id,
-        V = (0, c.Wu)([b.Z], () => [...new Set(b.Z.getMutableParticipants(B, Z.pV.SPEAKER).map((e) => e.user))], [B]),
-        H = (0, c.e7)([b.Z], () => (null != B ? b.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
-        F = (0, c.e7)([y.Z], () => y.Z.can(D.Plq.CONNECT, i)),
+        H = (0, c.Wu)([A.Z], () => [...new Set(A.Z.getMutableParticipants(B, Z.pV.SPEAKER).map((e) => e.user))], [B]),
+        V = (0, c.e7)([A.Z], () => (null != B ? A.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
+        F = (0, c.e7)([O.Z], () => O.Z.can(D.Plq.CONNECT, i)),
         z = (0, L.Z)(null == i ? void 0 : i.id),
         W = null == r ? void 0 : r.creator_id,
         Y = (0, c.e7)([R.default], () => R.default.getUser(W), [W]);
@@ -280,13 +280,13 @@ function U(e) {
                 canConnect: F,
                 myRole: z,
                 eventCreator: Y,
-                speakers: V,
-                listenerCount: H,
+                speakers: H,
+                listenerCount: V,
                 isEventNoticeHidden: G,
                 isStageNoticeHidden: U,
                 isStudyRoomNotice: n
             }),
-        [r, s, i, F, z, Y, V, H, G, U, n]
+        [r, s, i, F, z, Y, H, V, G, U, n]
     );
     return null == K
         ? null
@@ -328,9 +328,9 @@ function U(e) {
                                   (0, l.jsx)(
                                       u.Popout,
                                       {
-                                          preload: () => (0, P.Z)(e, { guildId: t.id }),
+                                          preload: () => (0, y.Z)(e, { guildId: t.id }),
                                           renderPopout: (n) =>
-                                              (0, l.jsx)(O.Z, {
+                                              (0, l.jsx)(P.Z, {
                                                   ...n,
                                                   userId: e.id,
                                                   guildId: t.id,
@@ -375,7 +375,7 @@ function U(e) {
                             size: u.Button.Sizes.SMALL,
                             color: u.Button.Colors.GREEN,
                             onClick: () => {
-                                if (J) null != i && null != i.getGuildId() && ((0, A.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
+                                if (J) null != i && null != i.getGuildId() && ((0, b.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
                                 else {
                                     if (null == r) return;
                                     (0, g.bO)({ eventId: r.id });

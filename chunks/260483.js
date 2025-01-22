@@ -104,12 +104,12 @@ function D(e) {
     }
     return !1;
 }
-function x(e) {
+function L(e) {
     let n = p[e.id];
     if (null == n) return !1;
     null != e.memberIdsPreview && (n.memberIdsPreview = e.memberIdsPreview), (n.memberCount = e.memberCount);
 }
-class L extends (i = l.ZP.Store) {
+class x extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
@@ -125,8 +125,8 @@ class L extends (i = l.ZP.Store) {
         return p;
     }
 }
-f(L, 'displayName', 'ThreadMembersStore'),
-    (n.Z = new L(u.Z, {
+f(x, 'displayName', 'ThreadMembersStore'),
+    (n.Z = new x(u.Z, {
         CONNECTION_OPEN: v,
         OVERLAY_INITIALIZE: y,
         GUILD_CREATE: b,
@@ -135,7 +135,7 @@ f(L, 'displayName', 'ThreadMembersStore'),
         THREAD_CREATE: T,
         THREAD_UPDATE: T,
         THREAD_LIST_SYNC: S,
-        THREAD_MEMBERS_UPDATE: x,
+        THREAD_MEMBERS_UPDATE: L,
         SEARCH_FINISH: O,
         MOD_VIEW_SEARCH_FINISH: O,
         LOAD_THREADS_SUCCESS: A,

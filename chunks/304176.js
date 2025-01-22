@@ -39,16 +39,16 @@ let A = 40,
                 src: null == n.src ? n.src : (0, d.o)(n.src, A),
                 size: A
             },
-            x = () => {
+            L = () => {
                 (0, f.f)({
                     guildId: r.id,
                     location: { section: b.jXE.ROLE_ICON_POPOUT }
                 });
             },
-            L = () => {
+            x = () => {
                 (0, h.uL)(b.Z5c.CHANNEL(r.id, I.oC.ROLE_SUBSCRIPTIONS));
             },
-            w = R ? L : x;
+            w = R ? x : L;
         return (0, i.jsx)(o.Dialog, {
             children: (0, i.jsx)(y.W_, {
                 children: (0, i.jsxs)('div', {

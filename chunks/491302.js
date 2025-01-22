@@ -18,7 +18,7 @@ var i = n(200651),
     p = n(388032),
     g = n(88817);
 function x(e) {
-    let { webhook: t, editedWebhook: n, channelOptions: x, isExpanded: f, errors: b, onToggleExpand: v } = e,
+    let { webhook: t, editedWebhook: n, channelOptions: x, isExpanded: f, errors: v, onToggleExpand: b } = e,
         C = l.useMemo(() => {
             var e, n;
             return (
@@ -32,7 +32,7 @@ function x(e) {
                       })
             );
         }, [t]),
-        N = l.useCallback(() => {
+        I = l.useCallback(() => {
             (0, r.openModal)((e) =>
                 (0, i.jsx)(r.ConfirmModal, {
                     ...e,
@@ -54,14 +54,14 @@ function x(e) {
                 })
             );
         }, [t.guild_id, t.id, t.name]),
-        I = [];
+        N = [];
     null != t.source_channel &&
         null != t.source_guild &&
-        (I.push({
+        (N.push({
             icon: r.AnnouncementsIcon,
             text: t.source_channel.name
         }),
-        I.push({
+        N.push({
             text: (0, i.jsx)(
                 'span',
                 {
@@ -105,7 +105,7 @@ function x(e) {
                                                         o.Z.updateWebhook({ name: e });
                                                     },
                                                     maxLength: 80,
-                                                    error: b.name
+                                                    error: v.name
                                                 })
                                             })
                                         }),
@@ -127,7 +127,7 @@ function x(e) {
                                 (0, i.jsx)(r.FormDivider, { className: g.bottomDivider }),
                                 (0, i.jsx)(d.Z, {
                                     children: (0, i.jsx)(r.Button, {
-                                        onClick: N,
+                                        onClick: I,
                                         size: r.Button.Sizes.SMALL,
                                         color: r.Button.Colors.RED,
                                         look: r.Button.Looks.LINK,
@@ -149,7 +149,7 @@ function x(e) {
                     (0, i.jsx)(r.Clickable, {
                         className: g.header,
                         'aria-expanded': f,
-                        onClick: v,
+                        onClick: b,
                         children: (0, i.jsxs)(d.Z, {
                             align: d.Z.Align.CENTER,
                             children: [
@@ -157,7 +157,7 @@ function x(e) {
                                     name: t.name,
                                     imageSrc: C,
                                     detailsClassName: g.__invalid_description,
-                                    details: I
+                                    details: N
                                 }),
                                 (0, i.jsx)(c.Z, {
                                     className: g.expandIcon,

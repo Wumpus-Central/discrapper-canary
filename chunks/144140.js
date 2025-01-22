@@ -78,10 +78,10 @@ function D(e) {
     }
     return !1;
 }
-function x(e) {
+function L(e) {
     (I = {}), y.clear(), e.guilds.forEach(N);
 }
-function L(e) {
+function x(e) {
     let { threadMessages: n } = e;
     for (let e in (b = { ...n })) {
         let r = n[e].mostRecentMessage;
@@ -231,8 +231,8 @@ class z extends (i = l.ZP.Store) {
 }
 v(z, 'displayName', 'ThreadMessageStore'),
     (n.Z = new z(u.Z, {
-        CONNECTION_OPEN: x,
-        OVERLAY_INITIALIZE: L,
+        CONNECTION_OPEN: L,
+        OVERLAY_INITIALIZE: x,
         GUILD_CREATE: w,
         GUILD_DELETE: P,
         THREAD_CREATE: M,

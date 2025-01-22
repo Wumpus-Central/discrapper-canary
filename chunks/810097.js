@@ -85,13 +85,13 @@ function O(e) {
     let { user: n, sourceType: r, isVisible: i, isExpandable: a, interactionSourceId: l, onAction: C, renderMoreButtonPopout: N } = e,
         O = (0, f.e7)([g.default], () => g.default.getId() === n.id),
         D = (0, E.Z)(n.id),
-        { profileType: x } = (0, I.z)(),
-        { onInteraction: L } = (0, b.Xo)(),
+        { profileType: L } = (0, I.z)(),
+        { onInteraction: x } = (0, b.Xo)(),
         { live: w, stream: P } = (0, v.Z)(n.id),
         M = (0, y.Z)(r === T.n_.STATUS ? n.id : null, 'UserProfileInteractionToolbar'),
         k =
             !i &&
-            x !== T.y0.FULL_SIZE &&
+            L !== T.y0.FULL_SIZE &&
             (0, d.EQ)(r)
                 .with(T.n_.STATUS, () => 0 === w.length && null == P && null == M)
                 .with(T.n_.ACTIVITY, () => !0)
@@ -107,23 +107,23 @@ function O(e) {
         return null;
     let G = () => {
             r === T.n_.AVATAR ? C({ action: 'PRESS_REACT_AVATAR' }) : r === T.n_.STATUS ? C({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : C({ action: 'PRESS_REACT_ACTIVITY' }),
-                null == L ||
-                    L({
+                null == x ||
+                    x({
                         interactionType: T.P.REACT,
                         interactionSource: r,
                         interactionSourceId: l
                     }),
-                x === T.y0.BITE_SIZE && (0, m.EW)(p.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                L === T.y0.BITE_SIZE && (0, m.EW)(p.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
         Z = () => {
             r === T.n_.AVATAR ? C({ action: 'PRESS_REPLY_AVATAR' }) : r === T.n_.STATUS ? C({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : C({ action: 'PRESS_REPLY_ACTIVITY' }),
-                null == L ||
-                    L({
+                null == x ||
+                    x({
                         interactionType: T.P.REPLY,
                         interactionSource: r,
                         interactionSourceId: l
                     }),
-                x === T.y0.BITE_SIZE && (0, m.EW)(p.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                L === T.y0.BITE_SIZE && (0, m.EW)(p.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
         F = (e) => {
             e.animationName === (0, c.get)(A, 'fadeInAndOut') && B(!1);

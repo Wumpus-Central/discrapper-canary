@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(627845),
     x = n(600164),
     f = n(313201),
-    _ = n(786761),
-    E = n(3148),
+    E = n(786761),
+    _ = n(3148),
     C = n(739566),
     T = n(753206),
     S = n(440849),
@@ -119,8 +119,8 @@ function Y(e) {
 function W() {
     let e = j.jU.useSetting(),
         [t] = r.useState(() => {
-            let e = (0, _.e5)({
-                ...(0, E.ZP)({
+            let e = (0, E.e5)({
+                ...(0, _.ZP)({
                     channelId: '1337',
                     content: L.intl.formatToPlainString(L.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
                 }),

@@ -1,106 +1,106 @@
-t.r(n),
-    t.d(n, {
+e.r(t),
+    e.d(t, {
         default: function () {
-            return C;
+            return I;
         }
     }),
-    t(47120);
-var i = t(200651),
-    l = t(192379),
-    r = t(120356),
-    a = t.n(r),
-    o = t(846519),
-    s = t(481060),
-    u = t(376641),
-    c = t(714338),
-    d = t(585483),
-    f = t(254109),
-    m = t(212459),
-    h = t(73249),
-    p = t(730606),
-    g = t(369171),
-    _ = t(860153),
-    E = t(981631),
-    S = t(388032),
-    x = t(176598);
-function C(e) {
-    let { onClose: n, items: t, startingIndex: r, shouldRedactExplicitContent: C, shouldHideMediaOptions: v = !1, className: y, transitionState: I, ...b } = e,
-        [M, O] = l.useState(null != r ? r : 0),
-        [L, T] = l.useState(!1),
-        [A, R] = l.useState(!0),
-        D = l.useRef(null);
-    l.useEffect(() => {
-        if (null != n)
+    e(47120);
+var i = e(200651),
+    o = e(192379),
+    l = e(120356),
+    a = e.n(l),
+    s = e(846519),
+    r = e(481060),
+    u = e(376641),
+    c = e(714338),
+    d = e(585483),
+    f = e(254109),
+    _ = e(212459),
+    E = e(73249),
+    m = e(730606),
+    S = e(369171),
+    h = e(860153),
+    p = e(981631),
+    g = e(388032),
+    C = e(176598);
+function I(n) {
+    let { onClose: t, items: e, startingIndex: l, shouldRedactExplicitContent: I, shouldHideMediaOptions: M = !1, className: O, transitionState: T, ...y } = n,
+        [x, L] = o.useState(null != l ? l : 0),
+        [v, A] = o.useState(!1),
+        [D, b] = o.useState(!0),
+        R = o.useRef(null);
+    o.useEffect(() => {
+        if (null != t)
             return (
-                d.S.subscribe(E.CkL.MEDIA_MODAL_CLOSE, n),
+                d.S.subscribe(p.CkL.MEDIA_MODAL_CLOSE, t),
                 () => {
-                    d.S.unsubscribe(E.CkL.MEDIA_MODAL_CLOSE, n);
+                    d.S.unsubscribe(p.CkL.MEDIA_MODAL_CLOSE, t);
                 }
             );
-    }, [n]),
-        l.useEffect(
+    }, [t]),
+        o.useEffect(
             () => (
-                I === s.ModalTransitionState.ENTERED && (c.Z.disable(), c.Z.enableTemp(u.P)),
-                I === s.ModalTransitionState.HIDDEN && (c.Z.disable(), c.Z.enableTemp(u.v)),
+                T === r.ModalTransitionState.ENTERED && (c.Z.disable(), c.Z.enableTemp(u.P)),
+                T === r.ModalTransitionState.HIDDEN && (c.Z.disable(), c.Z.enableTemp(u.v)),
                 () => {
                     c.Z.disableTemp();
                 }
             ),
-            [I]
+            [T]
         );
-    let j = l.useCallback((e) => {
-            O(e), (0, f.yg)(f.uG.SELECTED_ITEM_CHANGE);
+    let N = o.useCallback((n) => {
+            L(n), (0, f.yg)(f.uG.SELECTED_ITEM_CHANGE);
         }, []),
-        N = l.useMemo(
+        j = o.useMemo(
             () => ({
-                zoomed: L,
-                setZoomed: T,
-                accessoryVisibility: (function (e, n, t) {
-                    return (null != e || (e = s.ModalTransitionState.HIDDEN), e === s.ModalTransitionState.ENTERING || e >= s.ModalTransitionState.EXITING) ? g.UE.FORCE_HIDDEN : !t || n ? g.UE.VISIBLE : g.UE.INACTIVE;
-                })(null != I ? I : void 0, A, L)
+                zoomed: v,
+                setZoomed: A,
+                accessoryVisibility: (function (n, t, e) {
+                    return (null != n || (n = r.ModalTransitionState.HIDDEN), n === r.ModalTransitionState.ENTERING || n >= r.ModalTransitionState.EXITING) ? S.UE.FORCE_HIDDEN : !e || t ? S.UE.VISIBLE : S.UE.INACTIVE;
+                })(null != T ? T : void 0, D, v)
             }),
-            [L, I, A]
+            [v, T, D]
         ),
-        w = l.useCallback(() => {
-            var e;
-            R(!0), (null !== (e = D.current) && void 0 !== e) || (D.current = new o.sW(1000, () => R(!1))), D.current.delay();
+        P = o.useCallback(() => {
+            var n;
+            b(!0), (null !== (n = R.current) && void 0 !== n) || (R.current = new s.sW(1000, () => b(!1))), R.current.delay();
         }, []),
-        P = l.useCallback(() => {
-            w(), null == n || n();
-        }, [w, n]),
-        k = t[M];
-    return (0, i.jsx)(s.ThemeProvider, {
-        theme: E.BRd.DARK,
-        children: (e) =>
-            (0, i.jsx)(s.ModalRoot, {
+        k = o.useCallback(() => {
+            P(), null == t || t();
+        }, [P, t]),
+        B = e[x];
+    return (0, i.jsx)(r.ThemeProvider, {
+        theme: p.BRd.DARK,
+        children: (n) =>
+            (0, i.jsx)(r.ModalRoot, {
                 hideShadow: !0,
-                className: a()(x.carouselModal, e),
-                transitionState: I,
-                ...b,
-                size: s.ModalSize.DYNAMIC,
+                className: a()(C.carouselModal, n),
+                transitionState: T,
+                ...y,
+                size: r.ModalSize.DYNAMIC,
                 fullscreenOnMobile: !1,
-                onMouseMove: w,
-                onMouseDown: P,
-                'aria-label': S.intl.string(S.t.AMTX3t),
-                children: (0, i.jsxs)(m.z.Provider, {
-                    value: N,
+                onMouseMove: P,
+                onMouseDown: k,
+                'aria-label': g.intl.string(g.t.AMTX3t),
+                children: (0, i.jsxs)(_.z.Provider, {
+                    value: j,
                     children: [
-                        (0, i.jsx)(_.Z, {
-                            item: k,
-                            onClose: n
+                        (0, i.jsx)(h.Z, {
+                            item: B,
+                            onClose: t
                         }),
-                        (0, i.jsxs)(g.c7, {
+                        (0, i.jsxs)(S.c7, {
                             children: [
-                                (0, i.jsx)(p.Z, {
-                                    items: t,
-                                    startIndex: M,
-                                    onIndexChange: j,
-                                    shouldRedactExplicitContent: C,
-                                    shouldHideMediaOptions: v
+                                (0, i.jsx)(m.ZP, {
+                                    items: e,
+                                    startIndex: x,
+                                    onIndexChange: N,
+                                    shouldRedactExplicitContent: I,
+                                    shouldHideMediaOptions: M
                                 }),
-                                (0, i.jsx)(h.Z, {
-                                    item: k,
-                                    hideMediaOptions: v
+                                (0, i.jsx)(E.Z, {
+                                    item: B,
+                                    hideMediaOptions: M
                                 })
                             ]
                         })

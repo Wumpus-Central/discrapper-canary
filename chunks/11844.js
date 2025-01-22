@@ -44,7 +44,7 @@ t.Z = function () {
             }
         );
     }
-    let _ = (0, u.aq)({ fractionalState: p });
+    let E = (0, u.aq)({ fractionalState: p });
     return (0, i.jsxs)('div', {
         className: h.wrapper,
         children: [
@@ -59,7 +59,7 @@ t.Z = function () {
                 variant: 'text-sm/medium',
                 children: g.intl.format(g.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
-                        let n = null != _,
+                        let n = null != E,
                             r = (0, i.jsx)(
                                 s.Button,
                                 {
@@ -76,8 +76,8 @@ t.Z = function () {
                             ? (0, i.jsx)(
                                   o.Z,
                                   {
-                                      text: _,
-                                      'aria-label': _.toString(),
+                                      text: E,
+                                      'aria-label': E.toString(),
                                       children: (e) =>
                                           (0, i.jsx)('span', {
                                               ...e,

@@ -24,8 +24,8 @@ function g(e) {
     let n = (0, o.e7)([c.Z], () => c.Z.getHighestRole(t)),
         l = (0, o.Wu)([s.ZP], () => s.ZP.getMembers(e), [e]),
         g = (0, o.cj)([u.default], () => u.default.getUsers()),
-        b = (0, o.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
-        v = i.useMemo(() => {
+        v = (0, o.Wu)([d.Z], () => Object.values(d.Z.getRoles(e)), [e]),
+        b = i.useMemo(() => {
             let e = [];
             for (let n of l) {
                 let i = g[n.userId];
@@ -51,9 +51,9 @@ function g(e) {
             var t;
             return e.managed && (null === (t = e.tags) || void 0 === t ? void 0 : t.bot_id) != null;
         },
-        N = i.useMemo(() => {
+        I = i.useMemo(() => {
             let i = [];
-            for (let l of b) {
+            for (let l of v) {
                 if (C(l)) continue;
                 let r = !a.e$(l.permissions, p.Plq.ADMINISTRATOR) && c.Z.isRoleHigher(t, n, l),
                     o = {
@@ -64,21 +64,21 @@ function g(e) {
                 l.id === e ? i.unshift(o) : i.push(o);
             }
             return i;
-        }, [b, e, t, n]),
-        [I, j] = i.useState(''),
+        }, [v, e, t, n]),
+        [N, j] = i.useState(''),
         T = i.useMemo(() => {
             let t = (function (e) {
                     return e.startsWith('@') ? e.substr(1) : e;
-                })(I),
-                n = I.startsWith('@') ? N.filter((t) => t.id === e) : N,
-                i = (0, h.B)(v, x, t);
+                })(N),
+                n = N.startsWith('@') ? I.filter((t) => t.id === e) : I,
+                i = (0, h.B)(b, x, t);
             return {
                 members: i,
                 roles: (0, h.B)(n, f, t)
             };
-        }, [e, v, I, N]);
+        }, [e, b, N, I]);
     return {
-        query: I,
+        query: N,
         results: T,
         setQuery: j,
         unfilteredCount: T.members.length + T.roles.length

@@ -58,7 +58,7 @@ function T(e) {
             });
         }
     }, [R, A, C, e, O]);
-    let { live: D, recent: x } = (0, a.useMemo)(() => {
+    let { live: D, recent: L } = (0, a.useMemo)(() => {
         let e = (0, o.uniqWith)(
                 T.filter((e) => {
                     let { type: n } = e;
@@ -74,7 +74,7 @@ function T(e) {
     }, [T, null == S ? void 0 : S.entries]);
     return {
         live: D,
-        recent: x,
+        recent: L,
         stream: N,
         outbox: S
     };

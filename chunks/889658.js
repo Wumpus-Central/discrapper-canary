@@ -54,7 +54,7 @@ class a {
         if (r) return r;
         let i = this.options.loose,
             a = i ? d[f.HYPHENRANGELOOSE] : d[f.HYPHENRANGE];
-        u('hyphen replace', (e = e.replace(a, x(this.options.includePrerelease)))), u('comparator trim', (e = e.replace(d[f.COMPARATORTRIM], p))), u('tilde trim', (e = e.replace(d[f.TILDETRIM], h))), u('caret trim', (e = e.replace(d[f.CARETTRIM], _)));
+        u('hyphen replace', (e = e.replace(a, L(this.options.includePrerelease)))), u('comparator trim', (e = e.replace(d[f.COMPARATORTRIM], p))), u('tilde trim', (e = e.replace(d[f.TILDETRIM], h))), u('caret trim', (e = e.replace(d[f.CARETTRIM], _)));
         let s = e
             .split(' ')
             .map((e) => b(e, this.options))
@@ -83,7 +83,7 @@ class a {
             } catch (e) {
                 return !1;
             }
-        for (let n = 0; n < this.set.length; n++) if (L(this.set[n], e, this.options)) return !0;
+        for (let n = 0; n < this.set.length; n++) if (x(this.set[n], e, this.options)) return !0;
         return !1;
     }
 }
@@ -155,8 +155,8 @@ let o = new (r(147567))(),
     },
     O = (e, n) => (u('replaceStars', e, n), e.trim().replace(d[f.STAR], '')),
     D = (e, n) => (u('replaceGTE0', e, n), e.trim().replace(d[n.includePrerelease ? f.GTE0PRE : f.GTE0], '')),
-    x = (e) => (n, r, i, a, o, s, l, u, c, d, f, p) => ((r = I(i) ? '' : I(a) ? `>=${i}.0.0${e ? '-0' : ''}` : I(o) ? `>=${i}.${a}.0${e ? '-0' : ''}` : s ? `>=${r}` : `>=${r}${e ? '-0' : ''}`), (u = I(c) ? '' : I(d) ? `<${+c + 1}.0.0-0` : I(f) ? `<${c}.${+d + 1}.0-0` : p ? `<=${c}.${d}.${f}-${p}` : e ? `<${c}.${d}.${+f + 1}-0` : `<=${u}`), `${r} ${u}`.trim()),
-    L = (e, n, r) => {
+    L = (e) => (n, r, i, a, o, s, l, u, c, d, f, p) => ((r = I(i) ? '' : I(a) ? `>=${i}.0.0${e ? '-0' : ''}` : I(o) ? `>=${i}.${a}.0${e ? '-0' : ''}` : s ? `>=${r}` : `>=${r}${e ? '-0' : ''}`), (u = I(c) ? '' : I(d) ? `<${+c + 1}.0.0-0` : I(f) ? `<${c}.${+d + 1}.0-0` : p ? `<=${c}.${d}.${f}-${p}` : e ? `<${c}.${d}.${+f + 1}-0` : `<=${u}`), `${r} ${u}`.trim()),
+    x = (e, n, r) => {
         for (let r = 0; r < e.length; r++) if (!e[r].test(n)) return !1;
         if (n.prerelease.length && !r.includePrerelease) {
             for (let r = 0; r < e.length; r++) {

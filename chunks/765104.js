@@ -22,8 +22,8 @@ var h = r(392711),
     R = r(70956),
     O = r(709054),
     D = r(418088),
-    x = r(814249);
-function L(e, n, r) {
+    L = r(814249);
+function x(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -107,7 +107,7 @@ class H extends (u = m.ZP.PersistedStore) {
         if (null != n) {
             let e = null !== (r = null == a ? void 0 : a.summaryIdLastRequestedAt) && void 0 !== r ? r : 0,
                 i = Date.now() - e;
-            return n !== (null == a ? void 0 : a.summaryId) || i > x.cS;
+            return n !== (null == a ? void 0 : a.summaryId) || i > L.cS;
         }
         let s = null !== (i = null == a ? void 0 : a.lastReceivedAt) && void 0 !== i ? i : 0;
         return !(null == a ? void 0 : a.fetching) && 0 === s;
@@ -149,7 +149,7 @@ function Y(e, n, r, i) {
     let a = null == n || n < r;
     return !(null == e || e > i) && !a;
 }
-L(H, 'persistKey', 'SummaryStore');
+x(H, 'persistKey', 'SummaryStore');
 let W = new H(g.Z, {
     CONNECTION_OPEN: () => !1,
     CHANNEL_SELECT(e) {

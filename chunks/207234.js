@@ -1,26 +1,26 @@
-e.d(t, {
+n.d(t, {
     M: function () {
-        return s;
+        return o;
     },
     a: function () {
-        return d;
+        return l;
     }
 });
-var i = e(392711),
-    o = e.n(i),
-    r = e(585483),
-    l = e(981631);
-let d = {
+var i = n(392711),
+    r = n.n(i),
+    s = n(585483),
+    a = n(981631);
+let l = {
         binds: ['mod+i'],
         comboKeysBindGlobal: !0,
-        action: () => (r.S.dispatch(l.CkL.TOGGLE_INBOX), !1)
+        action: () => (s.S.dispatch(a.CkL.TOGGLE_INBOX), !1)
     },
-    s = {
+    o = {
         binds: ['mod+shift+e'],
         comboKeysBindGlobal: !0,
-        action: o().debounce(
+        action: r().debounce(
             () => {
-                if (r.S.hasSubscribers(l.CkL.MARK_TOP_INBOX_CHANNEL_READ)) return r.S.dispatch(l.CkL.MARK_TOP_INBOX_CHANNEL_READ), !1;
+                if (s.S.hasSubscribers(a.CkL.MARK_TOP_INBOX_CHANNEL_READ)) return s.S.dispatch(a.CkL.MARK_TOP_INBOX_CHANNEL_READ), !1;
             },
             100,
             { leading: !0 }

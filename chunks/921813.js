@@ -23,7 +23,7 @@ var a = r(120356),
     y = r(228168),
     b = r(154960);
 function I(e) {
-    let { user: n, guild: r, canUsePremiumCustomization: a, onUpsellClick: I, pendingBanner: T, pendingBio: S, pendingPronouns: A, pendingAvatar: C, pendingAvatarDecoration: N, pendingNickname: R, pendingGlobalName: O, pendingThemeColors: D, pendingProfileEffectId: x, avatarClassName: L, containerClassName: w, isTryItOutFlow: P = !1, disabledInputs: M = !1, hideCustomStatus: k = !1, hideBioSection: U = !1, hideMessageInput: B = !0, hideExampleButton: G = !1 } = e,
+    let { user: n, guild: r, canUsePremiumCustomization: a, onUpsellClick: I, pendingBanner: T, pendingBio: S, pendingPronouns: A, pendingAvatar: C, pendingAvatarDecoration: N, pendingNickname: R, pendingGlobalName: O, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: w, isTryItOutFlow: P = !1, disabledInputs: M = !1, hideCustomStatus: k = !1, hideBioSection: U = !1, hideMessageInput: B = !0, hideExampleButton: G = !1 } = e,
         Z = (0, u.ZP)(n.id, null == r ? void 0 : r.id),
         { avatarSrc: F, avatarDecorationSrc: V } = (0, d.Z)({
             user: n,
@@ -34,7 +34,7 @@ function I(e) {
             showPending: !0
         }),
         j = (0, h.ZT)({
-            pendingProfileEffectId: x,
+            pendingProfileEffectId: L,
             displayProfile: Z
         }),
         { theme: H, primaryColor: Y } = (0, c.Z)({
@@ -73,7 +73,7 @@ function I(e) {
                         previewAvatarDecoration: V,
                         previewTheme: H,
                         previewPrimaryColor: Y,
-                        className: L,
+                        className: x,
                         disabledInputs: M,
                         isTryItOutFlow: P,
                         onUpsellClick: () => (null == I ? void 0 : I({ object: v.qAy.AVATAR }))

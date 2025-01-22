@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(727785),
     x = n(388032),
     f = n(198491);
-function _() {}
-let E = [p.h8.VOICE_CHANNEL];
+function E() {}
+let _ = [p.h8.VOICE_CHANNEL];
 function C(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
@@ -92,7 +92,7 @@ function N(e) {
 function v(e) {
     let { transitionState: t, onClose: n, onSelect: l } = e,
         c = r.useId(),
-        _ = r.useRef(null),
+        E = r.useRef(null),
         {
             mouseFocusEnabled: T,
             enableMouseFocus: N,
@@ -117,7 +117,7 @@ function v(e) {
             queryResults: O
         } = (0, o.Z)({
             visible: !0,
-            autocompleterResultTypes: E,
+            autocompleterResultTypes: _,
             autocompleterBeforeCreateSearchContext: C
         }),
         R = (function (e) {
@@ -151,7 +151,7 @@ function v(e) {
             );
         })(A);
     r.useEffect(() => {
-        let { current: e } = _;
+        let { current: e } = E;
         !(null == e || e.isItemVisible(0, P, !0)) &&
             e.scrollToIndex({
                 section: 0,
@@ -219,7 +219,7 @@ function v(e) {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': x.intl.string(x.t['+N3fW1']),
-                        ref: _,
+                        ref: E,
                         sections: [y],
                         renderRow: function (e) {
                             let { row: t } = e,
@@ -297,9 +297,9 @@ function A(e) {
               channel: n,
               id: n.id,
               category: r,
-              onClick: _,
-              onFocus: _,
-              onMouseEnter: _,
+              onClick: E,
+              onFocus: E,
+              onMouseEnter: E,
               focused: !1,
               children:
                   null != l

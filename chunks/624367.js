@@ -127,11 +127,11 @@ function A(e) {
                                                             let t = U || B;
                                                             r.Y.USER_INSTALL in (null !== (e = P.integrationTypesConfig) && void 0 !== e ? e : {}) || t
                                                                 ? (0, u.X)(P.id)
-                                                                : (0, f.goToAppDirectory)({
+                                                                : (0, f.dx)({
                                                                       guildId: L,
-                                                                      view: h.ApplicationDirectoryViews.APPLICATION,
+                                                                      view: h.eN.APPLICATION,
                                                                       applicationId: P.id,
-                                                                      entrypoint: { name: h.ApplicationDirectoryEntrypointNames.OAUTH2_EMBED }
+                                                                      entrypoint: { name: h.n3.OAUTH2_EMBED }
                                                                   });
                                                         },
                                                         className: T.button,

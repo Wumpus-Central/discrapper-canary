@@ -57,8 +57,8 @@ function d(e) {
         R = N.state,
         O = N.styles,
         D = N.forceUpdate,
-        x = N.update,
-        L = i.useMemo(
+        L = N.update,
+        x = i.useMemo(
             function () {
                 return {
                     ref: I,
@@ -71,10 +71,10 @@ function d(e) {
                         ref: A
                     },
                     forceUpdate: D || l,
-                    update: x || u
+                    update: L || u
                 };
             },
-            [I, A, r, R, O, x, D]
+            [I, A, r, R, O, L, D]
         );
-    return (0, o.$p)(E)(L);
+    return (0, o.$p)(E)(x);
 }

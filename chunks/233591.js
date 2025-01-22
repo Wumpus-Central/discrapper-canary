@@ -40,7 +40,7 @@ var i = r(581031),
         for (e = r ? y(e / c) : e >> 1, e += y(e / n); e > (g * l) >> 1; ) (e = y(e / g)), (i += o);
         return y(i + ((g + 1) * e) / (e + u));
     },
-    x = function (e) {
+    L = function (e) {
         var n,
             r,
             i = [],
@@ -60,11 +60,11 @@ var i = r(581031),
                 if ((r = e[n]) < c && ++h > a) throw E(m);
                 if (r === c) {
                     for (var C = h, N = o; ; ) {
-                        var x = N <= _ ? s : N >= _ + l ? l : N - _;
-                        if (C < x) break;
-                        var L = C - x,
-                            w = o - x;
-                        S(i, b(O(x + (L % w)))), (C = y(L / w)), (N += o);
+                        var L = N <= _ ? s : N >= _ + l ? l : N - _;
+                        if (C < L) break;
+                        var x = C - L,
+                            w = o - L;
+                        S(i, b(O(L + (x % w)))), (C = y(x / w)), (N += o);
                     }
                     S(i, b(O(C))), (_ = D(h, A, v === g)), (h = 0), v++;
                 }
@@ -78,6 +78,6 @@ e.exports = function (e) {
         r,
         i = [],
         a = C(A(N(e), _, '.'), '.');
-    for (n = 0; n < a.length; n++) S(i, v(h, (r = a[n])) ? 'xn--' + x(r) : r);
+    for (n = 0; n < a.length; n++) S(i, v(h, (r = a[n])) ? 'xn--' + L(r) : r);
     return T(i, '.');
 };

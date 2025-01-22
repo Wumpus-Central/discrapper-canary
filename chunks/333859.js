@@ -19,8 +19,8 @@ var r = n(442837),
     p = n(626135),
     x = n(981631),
     f = n(474936),
-    _ = n(388032),
-    E = n(352545),
+    E = n(388032),
+    _ = n(352545),
     C = n(232186);
 let T = () => {
         (0, d.nJ)(), (0, a.xf)();
@@ -44,24 +44,24 @@ let T = () => {
                     });
             }),
             (0, i.jsxs)('div', {
-                className: E.selectionGroup,
+                className: _.selectionGroup,
                 children: [
                     (0, i.jsx)(m.Z, {
                         disabled: t && !n,
                         renderCTAButtons: () =>
                             (0, i.jsxs)('div', {
-                                className: E.tryItOutButtons,
+                                className: _.tryItOutButtons,
                                 children: [
                                     (0, i.jsx)(s.Button, {
                                         color: !n && t ? s.Button.Colors.PRIMARY : s.Button.Colors.BRAND,
                                         onClick: () => T(),
-                                        children: n ? _.intl.string(_.t.SKNnqq) : _.intl.string(_.t['hb/wEx'])
+                                        children: n ? E.intl.string(E.t.SKNnqq) : E.intl.string(E.t['hb/wEx'])
                                     }),
                                     t
                                         ? (0, i.jsx)(h.Z, {
                                               showGradient: n,
                                               subscriptionTier: f.Si.TIER_2,
-                                              buttonText: n ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O)
+                                              buttonText: n ? E.intl.string(E.t.pj0XBA) : E.intl.string(E.t.mr4K7O)
                                           })
                                         : null
                                 ]

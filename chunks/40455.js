@@ -105,8 +105,8 @@ class N extends l.Z {
         super({
             CACHE_LOADED_LAZY_NO_CACHE: U,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_DELETE: L,
-            CHANNEL_UPDATES: x,
+            CHANNEL_DELETE: x,
+            CHANNEL_UPDATES: L,
             CONNECTION_OPEN_SUPPLEMENTAL: O,
             GUILD_DELETE: M,
             LOGIN_SUCCESS: k,
@@ -128,10 +128,10 @@ function D(e) {
         i = s.Z.getChannelId();
     r && n === i && N.recordChannel(n), !r && N.deleteChannel(n);
 }
-function x(e) {
+function L(e) {
     for (let n of e.channels) D(n);
 }
-function L(e) {
+function x(e) {
     N.deleteChannel(e.channel.id);
 }
 function w(e) {

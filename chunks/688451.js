@@ -164,7 +164,7 @@ function R(e, n) {
     n._ = n.p.length;
     var r = n.p[0],
         a = void 0 !== e && e !== r;
-    return n.h.O || y('ES5').S(n, e, a), a ? (r[Q].P && (S(n), i(4)), o(e) && ((e = O(n, e)), n.l || x(n, e)), n.u && y('Patches').M(r[Q].t, e, n.u, n.s)) : (e = O(n, r, [])), S(n), n.u && n.v(n.u, n.s), e !== z ? e : void 0;
+    return n.h.O || y('ES5').S(n, e, a), a ? (r[Q].P && (S(n), i(4)), o(e) && ((e = O(n, e)), n.l || L(n, e)), n.u && y('Patches').M(r[Q].t, e, n.u, n.s)) : (e = O(n, r, [])), S(n), n.u && n.v(n.u, n.s), e !== z ? e : void 0;
 }
 function O(e, n, r) {
     if (v(n)) return n;
@@ -181,7 +181,7 @@ function O(e, n, r) {
             n
         );
     if (i.A !== e) return n;
-    if (!i.P) return x(e, i.t, !0), i.t;
+    if (!i.P) return L(e, i.t, !0), i.t;
     if (!i.I) {
         (i.I = !0), i.A._--;
         var a = 4 === i.i || 5 === i.i ? (i.o = m(i.k)) : i.o,
@@ -191,7 +191,7 @@ function O(e, n, r) {
             s(o, function (n, o) {
                 return D(e, i, a, n, o, r, l);
             }),
-            x(e, a, !1),
+            L(e, a, !1),
             r && e.u && y('Patches').N(i, r, e.u, e.s);
     }
     return i.o;
@@ -204,13 +204,13 @@ function D(e, n, r, i, s, l, c) {
     } else c && r.add(s);
     if (o(s) && !v(s)) {
         if (!e.h.D && e._ < 1) return;
-        O(e, s), (n && n.A.l) || x(e, s);
+        O(e, s), (n && n.A.l) || L(e, s);
     }
 }
-function x(e, n, r) {
+function L(e, n, r) {
     void 0 === r && (r = !1), !e.l && e.h.D && e.m && g(n, r);
 }
-function L(e, n) {
+function x(e, n) {
     var r = e[Q];
     return (r ? _(r) : e)[n];
 }
@@ -895,7 +895,7 @@ var V,
                     return a ? ('value' in a ? a.value : null === (i = a.get) || void 0 === i ? void 0 : i.call(e.k)) : void 0;
                 })(e, r, n);
             var i = r[n];
-            return e.I || !o(i) ? i : i === L(e.t, n) ? (M(e), (e.o[n] = k(e.A.h, i, e))) : i;
+            return e.I || !o(i) ? i : i === x(e.t, n) ? (M(e), (e.o[n] = k(e.A.h, i, e))) : i;
         },
         has: function (e, n) {
             return n in _(e);
@@ -907,7 +907,7 @@ var V,
             var i = w(_(e), n);
             if (null == i ? void 0 : i.set) return i.set.call(e.k, r), !0;
             if (!e.P) {
-                var a = L(_(e), n),
+                var a = x(_(e), n),
                     o = null == a ? void 0 : a[Q];
                 if (o && o.t === r) return (e.o[n] = r), (e.R[n] = !1), !0;
                 if (f(r, a) && (void 0 !== r || u(e.t, n))) return !0;
@@ -916,7 +916,7 @@ var V,
             return (e.o[n] === r && (void 0 !== r || n in e.o)) || (Number.isNaN(r) && Number.isNaN(e.o[n])) || ((e.o[n] = r), (e.R[n] = !0)), !0;
         },
         deleteProperty: function (e, n) {
-            return void 0 !== L(e.t, n) || n in e.t ? ((e.R[n] = !1), M(e), P(e)) : delete e.R[n], e.o && delete e.o[n], !0;
+            return void 0 !== x(e.t, n) || n in e.t ? ((e.R[n] = !1), M(e), P(e)) : delete e.R[n], e.o && delete e.o[n], !0;
         },
         getOwnPropertyDescriptor: function (e, n) {
             var r = _(e),

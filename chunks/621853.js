@@ -37,8 +37,8 @@ let b = Symbol('NO GUILD ID'),
     R = new Map(),
     O = new Map(),
     D = new Map(),
-    x = new Map(),
     L = new Map(),
+    x = new Map(),
     w = new Map(),
     P = !1;
 function M(e) {
@@ -75,7 +75,7 @@ function k(e, n) {
     }
 }
 function U() {
-    I.clear(), T.clear(), N.clear(), R.clear(), x.clear(), L.clear(), w.clear(), (P = !1);
+    I.clear(), T.clear(), N.clear(), R.clear(), L.clear(), x.clear(), w.clear(), (P = !1);
 }
 function B(e) {
     let { userId: n } = e;
@@ -99,7 +99,7 @@ function Z(e) {
         .value();
 }
 function F(e) {
-    T.delete(e.userId), x.set(e.userId, Z(e.mutualFriends)), L.set(e.userId, e.mutualFriends.length);
+    T.delete(e.userId), L.set(e.userId, Z(e.mutualFriends)), x.set(e.userId, e.mutualFriends.length);
 }
 function V(e) {
     var n, r, i, a, o, s, c, d, f, h, _, E, y, T, C, P, U, B, G, F, V, j, H, Y, W, K, z;
@@ -127,9 +127,9 @@ function V(e) {
     }
     if (null != e.mutual_friends_count) {
         let n = e.mutual_friends_count;
-        L.set(e.user.id, n);
+        x.set(e.user.id, n);
     }
-    null != e.mutual_friends && (x.set(e.user.id, Z(e.mutual_friends)), L.set(e.user.id, e.mutual_friends.length));
+    null != e.mutual_friends && (L.set(e.user.id, Z(e.mutual_friends)), x.set(e.user.id, e.mutual_friends.length));
     let Q = null != e.premium_since ? new Date(e.premium_since) : null,
         X = null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
         J = e.application;
@@ -341,8 +341,8 @@ function J(e) {
 function $(e) {
     let n = e.relationship.id,
         r = N.get(n);
-    if (!x.has(n) && !L.has(n) && null == r) return !1;
-    x.delete(n), L.delete(n), et(r);
+    if (!L.has(n) && !x.has(n) && null == r) return !1;
+    L.delete(n), x.delete(n), et(r);
 }
 function ee() {
     I.clear(), N.clear(), R.clear();
@@ -372,10 +372,10 @@ class en extends _.Z {
         return null == n ? null : null !== (i = null === (r = R.get(e)) || void 0 === r ? void 0 : r.get(n)) && void 0 !== i ? i : null;
     }
     getMutualFriends(e) {
-        return x.get(e);
+        return L.get(e);
     }
     getMutualFriendsCount(e) {
-        return L.get(e);
+        return x.get(e);
     }
     getMutualGuilds(e) {
         return w.get(e);

@@ -174,10 +174,10 @@ var g = {
         }
         return !1;
     },
-    x = function (e) {
+    L = function (e) {
         return Array.isArray(e) ? e.join('') : e;
     },
-    L = function (e, n) {
+    x = function (e, n) {
         return Array.isArray(e)
             ? e.reduce(
                   function (e, r) {
@@ -244,7 +244,7 @@ var g = {
                     toString: function () {
                         return (function (e, n, r, i) {
                             var a = k(r),
-                                o = x(n);
+                                o = L(n);
                             return a ? '<' + e + ' data-rh="true" ' + a + '>' + M(o, i) + '</' + e + '>' : '<' + e + ' data-rh="true">' + M(o, i) + '</' + e + '>';
                         })(e, n.title, n.titleAttributes, r);
                     }
@@ -308,9 +308,9 @@ var g = {
                 var n = e.linkTags,
                     r = e.scriptTags,
                     i = e.encode,
-                    a = L(e.metaTags, y),
-                    o = L(n, E),
-                    s = L(r, v);
+                    a = x(e.metaTags, y),
+                    o = x(n, E),
+                    s = x(r, v);
                 return {
                     priorityMethods: {
                         toComponent: function () {
@@ -475,7 +475,7 @@ var K = function (e, n) {
         z(g.BODY, e.bodyAttributes),
             z(g.HTML, i),
             (function (e, n) {
-                void 0 !== e && document.title !== e && (document.title = x(e)), z(g.TITLE, n);
+                void 0 !== e && document.title !== e && (document.title = L(e)), z(g.TITLE, n);
             })(d, f);
         var p = {
                 baseTag: K(g.BASE, r),

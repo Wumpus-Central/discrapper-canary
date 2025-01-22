@@ -19,8 +19,8 @@ var a = r(200651),
     I = r(656634);
 let T = (e) => {
     let { analyticsLocation: n, analyticsSourceLocation: r, guild: i, buttonText: s, targetBoostedGuildTier: T, onClose: S = () => {}, closeLayer: A = () => {}, pauseAnimation: C = !1, applicationId: N, handleSubscribeModalClose: R, withHighlight: O = !1, ...D } = e,
-        { analyticsLocations: x } = (0, f.ZP)(),
-        L = (0, d.bp)() === v.IlC.POPOUT,
+        { analyticsLocations: L } = (0, f.ZP)(),
+        x = (0, d.bp)() === v.IlC.POPOUT,
         [w, P] = o.useState(!1),
         { fractionalState: M } = (0, p.Z)();
     !_.Z.hasFetched && (0, c.X8)();
@@ -30,14 +30,14 @@ let T = (e) => {
         G = async () => {
             P(!0),
                 await (0, E.u)({
-                    analyticsLocations: x,
+                    analyticsLocations: L,
                     analyticsLocation: n,
                     analyticsSourceLocation: r,
                     guild: i,
                     numberOfBoostsToAdd: U,
                     onClose: S,
                     closeLayer: A,
-                    inPopout: L,
+                    inPopout: x,
                     applicationId: N,
                     handleSubscribeModalClose: R
                 }),

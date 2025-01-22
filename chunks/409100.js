@@ -24,7 +24,7 @@ let p = (e) => {
     },
     x = (e, t, n, i) => (t || n ? g.intl.string(g.t.fkPGam) : e === m.Si.TIER_2 ? g.intl.formatToPlainString(g.t.bkQ4bG, { percent: i }) : void 0);
 t.Z = (e) => {
-    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: f = !1, isPersistentCTA: _ = !1, useShorterCTA: E = !1, ...C } = e,
+    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: f = !1, isPersistentCTA: E = !1, useShorterCTA: _ = !1, ...C } = e,
         T = (0, a.ZP)(),
         S = (0, r.wj)(T) || t,
         b = (0, d.N)(),
@@ -40,13 +40,13 @@ t.Z = (e) => {
         R = f
             ? g.intl.string(g.t.J61px8)
             : null != v
-              ? x(n, E, _, v.discount.amount)
+              ? x(n, _, E, v.discount.amount)
               : p({
                     showTrialCTA: A,
                     subscriptionTier: n,
                     shouldShowUpsells: !1,
                     trialDurationCopy: N,
-                    isPersistentCTA: _,
+                    isPersistentCTA: E,
                     shouldShowReferralTrialCopy: O,
                     subscriptionTrial: I
                 });

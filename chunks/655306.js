@@ -3,7 +3,7 @@ r.d(n, {
         return A;
     },
     ZP: function () {
-        return x;
+        return L;
     },
     ai: function () {
         return i;
@@ -51,7 +51,7 @@ let T = 100,
 !(function (e) {
     (e.UserSSRCUpdate = 'user-ssrc-update'), (e.Update = 'update');
 })(i || (i = {}));
-class x extends u.Z {
+class L extends u.Z {
     getWantsLevel() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
             n = this.getVideoParticipantCount();

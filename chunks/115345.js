@@ -45,8 +45,8 @@ var l = r(192379),
     R = r(960048),
     O = r(709054),
     D = r(223683),
-    x = r(630114),
-    L = r(506712),
+    L = r(630114),
+    x = r(506712),
     w = r(468788),
     P = r(789662),
     M = r(981631),
@@ -81,7 +81,7 @@ function G(e, n) {
 }
 function Z(e, n) {
     return Object.values(I.Z.getGuilds()).some((r) => {
-        let [i] = v.Z.hasConsented(M.pjP.PERSONALIZATION) ? (0, L.q)(r, P.nf, e, n, !1) : (0, L.A)(r, e);
+        let [i] = v.Z.hasConsented(M.pjP.PERSONALIZATION) ? (0, x.q)(r, P.nf, e, n, !1) : (0, x.A)(r, e);
         return i === P.AR.UseGreyDot;
     });
 }
@@ -101,9 +101,9 @@ function F() {
 }
 function V(e, n, r, i, a) {
     var o;
-    let [s, l, u] = v.Z.hasConsented(M.pjP.PERSONALIZATION) ? (0, L.q)(e, n, r, i, !0) : (0, L.A)(e, r),
+    let [s, l, u] = v.Z.hasConsented(M.pjP.PERSONALIZATION) ? (0, x.q)(e, n, r, i, !0) : (0, x.A)(e, r),
         c = null !== (o = r.filter((n) => n.guild_id === e.id)[0]) && void 0 !== o ? o : {},
-        d = (0, x.Z)(e, null != a ? a : s, c, i, n);
+        d = (0, L.Z)(e, null != a ? a : s, c, i, n);
     return {
         guildId: e.id,
         mode: s,

@@ -79,7 +79,7 @@ function D(e, n, r) {
     }
     return e;
 }
-function x(e, n, r, i) {
+function L(e, n, r, i) {
     let a = i[e];
     if ((null != a && ((r = s.Od(r, a.deny)), (r = s.IH(r, a.allow))), null != n)) {
         let e = I,
@@ -96,9 +96,9 @@ function x(e, n, r, i) {
     }
     return r;
 }
-function L(e) {
+function x(e) {
     let { userId: n, member: r, guild: i, overwrites: a, roles: o, checkElevated: l = !0, excludeGuildPermissions: u = !1, lurkerPermissionsMask: c = A } = e;
-    if (u) return x(i.id, r, I, a);
+    if (u) return L(i.id, r, I, a);
     let d = (o =
             null != o
                 ? {
@@ -112,7 +112,7 @@ function L(e) {
             let n = o[r.roles[e]];
             void 0 !== n && (p = s.IH(p, n.permissions));
         }
-    return (p = s.e$(p, b.Plq.ADMINISTRATOR) ? T : x(i.id, r, p, a)), (f.Z.isLurking(i.id) || (null == r ? void 0 : r.isPending)) && (p = s.hX(p, c)), g.ZP.isCurrentUserGuest(i.id) && (p = s.hX(p, C)), D(p, i, n, l);
+    return (p = s.e$(p, b.Plq.ADMINISTRATOR) ? T : L(i.id, r, p, a)), (f.Z.isLurking(i.id) || (null == r ? void 0 : r.isPending)) && (p = s.hX(p, c)), g.ZP.isCurrentUserGuest(i.id) && (p = s.hX(p, C)), D(p, i, n, l);
 }
 function w(e) {
     let n,
@@ -163,7 +163,7 @@ function w(e) {
         joinedAt: new Date().toISOString(),
         communicationDisabledUntil: null
     };
-    return L({
+    return x({
         userId: b.lds,
         member: d,
         guild: n,
@@ -214,7 +214,7 @@ function P(e) {
     if (null == a) return I;
     if (!(_ === (null === (n = v.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && d.Z.isViewingRoles(a.id)) && a.isOwner(_)) return D(T, a, _, c);
     let b = g.ZP.getMember(a.id, _);
-    return L({
+    return x({
         userId: _,
         member: b,
         guild: a,

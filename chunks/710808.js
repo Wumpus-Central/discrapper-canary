@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(131951),
     x = n(226961),
     f = n(12647),
-    _ = n(569550),
-    E = n(726985),
+    E = n(569550),
+    _ = n(726985),
     C = n(981631),
     T = n(65154),
     S = n(388032),
@@ -100,11 +100,11 @@ function v(e) {
     let P = (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(g.F, {
-                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
+                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, i.jsx)(a.FormSwitch, {
                     value: j,
                     onChange: (e) => {
-                        (0, _.Z)('stream_info_overlay_enabled', e, j), (0, o.y)({ isStreamInfoOverlayEnabled: e });
+                        (0, E.Z)('stream_info_overlay_enabled', e, j), (0, o.y)({ isStreamInfoOverlayEnabled: e });
                     },
                     note: S.intl.string(S.t.kBXuW1),
                     hideBorder: t,
@@ -112,7 +112,7 @@ function v(e) {
                 })
             }),
             (0, i.jsx)(g.F, {
-                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
+                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
                 children: (0, i.jsx)(a.FormSwitch, {
                     value: A,
                     onChange: (e) => l.Z.setAecDump(e),
@@ -122,7 +122,7 @@ function v(e) {
                 })
             }),
             (0, i.jsxs)(g.F, {
-                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
+                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
                     (0, i.jsx)(a.FormSwitch, {
                         hideBorder: !0,
@@ -149,7 +149,7 @@ function v(e) {
                 ]
             }),
             (0, i.jsx)(g.F, {
-                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
+                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
                 children: (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)(a.FormSwitch, {

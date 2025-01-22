@@ -66,14 +66,14 @@ function O() {
     C = !1;
 }
 let D = (e) => 'guild-join-request='.concat(e),
-    x = (e, n) => 'guild-'.concat(e, '-').concat(n);
-function L(e) {
+    L = (e, n) => 'guild-'.concat(e, '-').concat(n);
+function x(e) {
     let n = [];
-    return n.push(D(e.joinRequestId)), n.push(x(e.guildId, e.applicationStatus)), n;
+    return n.push(D(e.joinRequestId)), n.push(L(e.guildId, e.applicationStatus)), n;
 }
-let w = new c.h(L, (e) => ''.concat(e.joinRequestId)),
-    P = new c.h(L, (e) => ''.concat(e.joinRequestId)),
-    M = new c.h(L, (e) => ''.concat(e.actionedAt));
+let w = new c.h(x, (e) => ''.concat(e.joinRequestId)),
+    P = new c.h(x, (e) => ''.concat(e.joinRequestId)),
+    M = new c.h(x, (e) => ''.concat(e.actionedAt));
 function k(e) {
     return w.get(e);
 }
@@ -99,7 +99,7 @@ function Z(e) {
 }
 function F(e) {
     let { guildId: n, action: r } = e;
-    w.values(x(n, m.wB.SUBMITTED)).forEach((e) => {
+    w.values(L(n, m.wB.SUBMITTED)).forEach((e) => {
         B({
             ...e,
             applicationStatus: r
@@ -133,7 +133,7 @@ class Q extends (i = u.ZP.Store) {
         return z[e];
     }
     getRequests(e, n) {
-        let r = x(e, n);
+        let r = L(e, n);
         return (0, _.bk)(n) ? M.values(r) : (0, _.Nd)(n) ? P.values(r) : w.values(r);
     }
     getSubmittedGuildJoinRequestTotal(e) {

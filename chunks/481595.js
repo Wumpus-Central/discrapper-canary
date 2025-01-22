@@ -30,8 +30,8 @@ var a = r(200651),
     R = r(695103),
     O = r(4912),
     D = r(630388),
-    x = r(669079),
-    L = r(937615),
+    L = r(669079),
+    x = r(937615),
     w = r(987209),
     P = r(563132),
     M = r(45572),
@@ -52,23 +52,23 @@ function Z(e) {
                   s
                       ? (0, a.jsx)(y.C, {
                             sku: n,
-                            value: (0, L.T4)(i, r.currency),
+                            value: (0, x.T4)(i, r.currency),
                             className: G.subscriptionCostRow
                         })
                       : (0, a.jsx)(b.R$, {
                             label: n.name,
-                            value: (0, L.T4)(i, r.currency),
+                            value: (0, x.T4)(i, r.currency),
                             className: G.subscriptionCostRow
                         }),
                   (0, a.jsx)(b.R$, {
                       label: B.intl.string(B.t['/I8zmJ']),
-                      value: (0, L.T4)(r.tax, r.currency),
+                      value: (0, x.T4)(r.tax, r.currency),
                       className: G.subscriptionCostRow
                   }),
                   (0, a.jsx)(b.KU, {}),
                   (0, a.jsx)(b.Ji, {
                       label: B.intl.format(B.t['+B5KfH'], {}),
-                      value: (0, L.T4)(r.amount, r.currency),
+                      value: (0, x.T4)(r.amount, r.currency),
                       className: G.subscriptionCostRow
                   })
               ]
@@ -78,12 +78,12 @@ function Z(e) {
               children: s
                   ? (0, a.jsx)(y.C, {
                         sku: n,
-                        value: (0, L.T4)(r.amount, r.currency),
+                        value: (0, x.T4)(r.amount, r.currency),
                         className: G.subscriptionCostRow
                     })
                   : (0, a.jsx)(b.R$, {
                         label: n.name,
-                        value: (0, L.T4)(r.amount, r.currency),
+                        value: (0, x.T4)(r.amount, r.currency),
                         className: G.subscriptionCostRow
                     })
           });
@@ -106,9 +106,9 @@ function F(e) {
 }
 function V(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: r, onPaymentSourceChange: i, handlePaymentSourceAdd: s } = e,
-        { application: v, purchaseState: L, paymentSources: V, paymentSourceId: j, setHasAcceptedTerms: H, skusById: Y, skuPricePreviewsById: W, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: q, purchasePreviewError: Q, devShelfFetchState: X } = (0, P.usePaymentContext)(),
+        { application: v, purchaseState: x, paymentSources: V, paymentSourceId: j, setHasAcceptedTerms: H, skusById: Y, skuPricePreviewsById: W, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: q, purchasePreviewError: Q, devShelfFetchState: X } = (0, P.usePaymentContext)(),
         { isGift: J, giftRecipient: $ } = (0, w.wD)(),
-        ee = J && (0, x.pO)($),
+        ee = J && (0, L.pO)($),
         { defaultPaymentSourceId: et, hasFetchedPaymentSources: en } = (0, c.cj)([C.Z], () => ({
             defaultPaymentSourceId: C.Z.defaultPaymentSourceId,
             hasFetchedPaymentSources: C.Z.hasFetchedPaymentSources
@@ -122,7 +122,7 @@ function V(e) {
     let es = (0, c.e7)([g.Z, R.Z], () => R.Z.inTestModeForApplication(v.id) || g.Z.inDevModeForApplication(v.id), [v.id]),
         el = (0, c.e7)([S.Z], () => S.Z.enabled),
         eu = u.M.EEA_COUNTRIES.has(A.Z.ipCountryCodeWithFallback),
-        ec = L === M.A.PURCHASING || L === M.A.COMPLETED,
+        ec = x === M.A.PURCHASING || x === M.A.COMPLETED,
         ed = null != j ? V[j].type : null,
         ef = (0, E.ed)('SKUInvoice'),
         ep = er.productLine === U.POd.COLLECTIBLES && ef;

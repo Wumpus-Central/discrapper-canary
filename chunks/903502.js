@@ -39,8 +39,8 @@ function b() {
     let [e, t] = r.useState(null),
         [n, b] = r.useState(0),
         [g, v] = r.useState(1000),
-        [j, _] = r.useState(0),
-        C = (0, l.e7)([c.Z], () => {
+        [j, C] = r.useState(0),
+        _ = (0, l.e7)([c.Z], () => {
             var t;
             return null === e ? null : null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : s.R[e];
         }),
@@ -48,7 +48,7 @@ function b() {
             label: e,
             value: e
         })),
-        N = r.useMemo(() => null != e && j >= 0 && j <= 100 && n >= 0, [e, j, n]);
+        S = r.useMemo(() => null != e && j >= 0 && j <= 100 && n >= 0, [e, j, n]);
     return (0, a.jsxs)('div', {
         className: h.container,
         children: [
@@ -71,7 +71,7 @@ function b() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
-                    null != C &&
+                    null != _ &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(d.Z, {
@@ -83,19 +83,19 @@ function b() {
                                 }),
                                 (0, a.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / 1000, ' second(s) or')
+                                    children: ''.concat(_.cooldown / 1000, ' second(s) or')
                                 }),
                                 (0, a.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / m, ' minute(s) or')
+                                    children: ''.concat(_.cooldown / m, ' minute(s) or')
                                 }),
                                 (0, a.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / x, ' hour(s) or')
+                                    children: ''.concat(_.cooldown / x, ' hour(s) or')
                                 }),
                                 (0, a.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(C.cooldown / f, ' day(s)')
+                                    children: ''.concat(_.cooldown / f, ' day(s)')
                                 })
                             ]
                         }),
@@ -133,7 +133,7 @@ function b() {
                 className: h.formElement,
                 tag: i.FormTitleTags.H3,
                 children: [
-                    null != C &&
+                    null != _ &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(d.Z, {
@@ -145,7 +145,7 @@ function b() {
                                 }),
                                 (0, a.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: ''.concat(100 * C.chance, '%')
+                                    children: ''.concat(100 * _.chance, '%')
                                 })
                             ]
                         }),
@@ -164,7 +164,7 @@ function b() {
                                 max: 100,
                                 value: j.toString(),
                                 type: 'number',
-                                onChange: (e) => _(parseFloat(e))
+                                onChange: (e) => C(parseFloat(e))
                             }),
                             (0, a.jsx)(i.Text, {
                                 variant: 'text-md/normal',
@@ -185,7 +185,7 @@ function b() {
                                 cooldown: n * g,
                                 chance: j / 100
                             }),
-                        disabled: !N,
+                        disabled: !S,
                         children: 'Update'
                     }),
                     (0, a.jsx)(i.Button, {
@@ -194,7 +194,7 @@ function b() {
                                 type: 'FEEDBACK_OVERRIDE_CLEAR',
                                 feedbackType: e
                             }),
-                        disabled: !N,
+                        disabled: !S,
                         children: 'Clear Override'
                     })
                 ]

@@ -27,13 +27,13 @@ var i = n(200651),
     v = n(294330),
     S = n(981631),
     T = n(841787);
-let A = Object.freeze({
+let b = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 202
     }),
-    b = Object.freeze({
+    A = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
@@ -50,36 +50,36 @@ let A = Object.freeze({
     });
 function L(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: o, loading: m, searchResultsQuery: S, loadMore: L, searchCategoryId: P } = (0, _.f)({ loadId: t }),
-        O = 0 === o.length && !m,
-        y = r.useContext(u.AnalyticsContext),
+        { guildIds: o, loading: m, searchResultsQuery: S, loadMore: L, searchCategoryId: y } = (0, _.f)({ loadId: t }),
+        P = 0 === o.length && !m,
+        O = r.useContext(u.AnalyticsContext),
         [R, j] = r.useState((0, f.PM)()),
         [D, M] = r.useState(!0),
         w = r.useRef(D),
         [k, U] = r.useState(3),
         G = r.useRef(k),
         B = r.useRef(null),
-        V = r.useCallback(
+        H = r.useCallback(
             (e) => {
-                if (null == e || O || m) return;
+                if (null == e || P || m) return;
                 let t = o.length / k;
                 336 * t <= e.height && L();
             },
-            [O, m, o.length, k, L]
+            [P, m, o.length, k, L]
         ),
-        H = (0, d.y)((e) => {
+        V = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = t.width;
             n < 1024 && w.current ? ((w.current = !1), M(!1)) : n > 1024 && !w.current && ((w.current = !0), M(!0));
             let i = 1;
             for (n -= D ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
-            i !== G.current && ((G.current = i), U(i)), V(t);
+            i !== G.current && ((G.current = i), U(i)), H(t);
         });
     r.useLayoutEffect(() => {
         var e;
-        V(null === (e = H.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
-    }, [H, V]),
+        H(null === (e = V.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
+    }, [V, H]),
         r.useEffect(() => {
             j((0, f.PM)());
         }, [S]),
@@ -89,11 +89,11 @@ function L(e) {
                 searchId: R,
                 query: S,
                 guildResults: o.map(p.Z.getGuild).filter(h.lm),
-                analyticsContext: y,
-                categoryId: P
+                analyticsContext: O,
+                categoryId: y
             });
-        }, [y, o, t, P, R, S]);
-    let F = r.useCallback((e) => n(e, P), [n, P]),
+        }, [O, o, t, y, R, S]);
+    let F = r.useCallback((e) => n(e, y), [n, y]),
         z = r.useMemo(() => (m ? [o.length, 0] : [o.length]), [o.length, m]),
         W = r.useCallback(
             (e, n, r) => {
@@ -113,7 +113,7 @@ function L(e) {
                                             className: T.headingFilters,
                                             children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(N.Z, { loadId: t })]
                                         }),
-                                    O && (0, i.jsx)(C.Z, { loadId: t })
+                                    P && (0, i.jsx)(C.Z, { loadId: t })
                                 ]
                             },
                             r
@@ -122,21 +122,21 @@ function L(e) {
                         return (0, i.jsx)(c.Spinner, { className: a()(T.spinner, { [T.spinnerWithSidebar]: D }) }, r);
                 }
             },
-            [O, D, t]
+            [P, D, t]
         ),
         Y = r.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = D ? 16 : 50;
-                        return O ? t + 448 : t;
+                        return P ? t + 448 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [O, D]
+            [P, D]
         ),
         K = r.useCallback(
             (e, t) => {
@@ -180,7 +180,7 @@ function L(e) {
                             style: n,
                             children: (0, i.jsx)(v.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await X(e, t, P, Z),
+                                onClick: async (e) => await X(e, t, y, Z),
                                 onView: (e) => F(e)
                             })
                         },
@@ -189,7 +189,7 @@ function L(e) {
                 }
                 return null;
             },
-            [o, X, F, P]
+            [o, X, F, y]
         );
     r.useEffect(() => {
         let e = B.current;
@@ -230,10 +230,10 @@ function L(e) {
                 ),
             [L]
         ),
-        $ = D ? A : b;
+        $ = D ? b : A;
     return (0, i.jsx)('div', {
         className: T.container,
-        ref: H,
+        ref: V,
         children: (0, i.jsx)(c.MasonryList, {
             ref: B,
             className: T.masonryList,

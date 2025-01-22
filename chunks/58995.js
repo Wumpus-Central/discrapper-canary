@@ -25,8 +25,8 @@ var o = r(200651),
     R = r(921944),
     O = r(388032),
     D = r(145695),
-    x = r(553796);
-let L = T.Z.Millis.DAYS_30;
+    L = r(553796);
+let x = T.Z.Millis.DAYS_30;
 function w(e) {
     let { animatedIconComponent: n, hovered: i, isCoachmarkDismissed: a } = e,
         s = !a || i;
@@ -64,7 +64,7 @@ function P(e) {
         u = (0, c.e7)([b.Z], () => !(null === b.Z || void 0 === b.Z ? void 0 : b.Z.hasLayers())),
         p = (0, c.e7)([I.default], () => I.default.getCurrentUser()),
         T = null != p ? S.default.age(p.id) : 0,
-        P = !n && u && T >= L,
+        P = !n && u && T >= x,
         { enabled: M } = v.O.useExperiment({ location: 'gift-button' }),
         k = [];
     M && P && k.push(d.z.NITROWEEN_COACHMARKS);
@@ -104,7 +104,7 @@ function P(e) {
                     markAsDismissed: B
                 }),
             (0, o.jsx)(C.Z, {
-                innerClassName: x.button,
+                innerClassName: L.button,
                 'aria-label': O.intl.string(O.t.Z1RnTk),
                 isActive: !1,
                 onClick: () => {

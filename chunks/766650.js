@@ -1,4 +1,4 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
         return h;
     }
@@ -13,18 +13,18 @@ var s = n(200651),
     c = n(144114),
     u = n(317175),
     d = n(149938);
-function h(t) {
-    let { show: e, alpha2: n, countryCode: i } = t,
+function h(e) {
+    let { show: t, alpha2: n, countryCode: i } = e,
         h = r.useRef(null),
         [p, m] = r.useState(0),
         [x, f] = r.useState(!1);
     r.useEffect(() => {
-        function t() {
-            var t, n;
-            m(e && null !== (n = null === (t = h.current) || void 0 === t ? void 0 : t.getBoundingClientRect().width) && void 0 !== n ? n : 0);
+        function e() {
+            var e, n;
+            m(t && null !== (n = null === (e = h.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== n ? n : 0);
         }
-        return t(), window.addEventListener('resize', t), () => window.removeEventListener('resize', t);
-    }, [e, n, i]);
+        return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
+    }, [t, n, i]);
     let g = (0, o.useSpring)({
             width: ''.concat(p, 'px'),
             onStart: () => {
@@ -34,21 +34,21 @@ function h(t) {
                 f(!1);
             }
         }),
-        C = (t) => {
-            c.Z.setCountryCode(t);
+        C = (e) => {
+            c.Z.setCountryCode(e);
         };
     return (0, s.jsx)(o.Popout, {
         position: 'top',
-        renderPopout: (t) =>
+        renderPopout: (e) =>
             (0, s.jsx)(u.Z, {
                 className: d.popout,
-                onClick: (e) => {
-                    C(e), t.closePopout();
+                onClick: (t) => {
+                    C(t), e.closePopout();
                 }
             }),
-        children: (t) =>
+        children: (e) =>
             (0, s.jsx)('div', {
-                className: l()(d.outerContainer, { [d.hidden]: !(e || x) }),
+                className: l()(d.outerContainer, { [d.hidden]: !(t || x) }),
                 children: (0, s.jsx)(a.animated.div, {
                     className: d.container,
                     style: g,
@@ -57,7 +57,7 @@ function h(t) {
                         ref: h,
                         children: [
                             (0, s.jsxs)(o.Clickable, {
-                                ...t,
+                                ...e,
                                 className: d.countryCode,
                                 children: [n, ' ', i]
                             }),

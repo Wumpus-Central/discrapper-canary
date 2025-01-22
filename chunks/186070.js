@@ -1,24 +1,24 @@
-e.d(t, {
+n.d(t, {
     FI: function () {
-        return l;
+        return a;
     },
     IL: function () {
-        return r;
+        return s;
     }
 });
-var i = e(585483),
-    o = e(981631);
-let r = {
+var i = n(585483),
+    r = n(981631);
+let s = {
         binds: ['mod+return'],
         comboKeysBindGlobal: !0,
         action() {
-            if (i.S.hasSubscribers(o.CkL.CALL_ACCEPT)) return i.S.dispatch(o.CkL.CALL_ACCEPT), !1;
+            if (i.S.hasSubscribers(r.CkL.CALL_ACCEPT)) return i.S.dispatch(r.CkL.CALL_ACCEPT), !1;
         }
     },
-    l = {
+    a = {
         binds: ["ctrl+'", "ctrl+shift+'"],
         comboKeysBindGlobal: !0,
-        action(n) {
-            if (i.S.hasSubscribers(o.CkL.CALL_START)) return i.S.dispatch(o.CkL.CALL_START, n), !1;
+        action(e) {
+            if (i.S.hasSubscribers(r.CkL.CALL_START)) return i.S.dispatch(r.CkL.CALL_START, e), !1;
         }
     };

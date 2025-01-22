@@ -7,11 +7,11 @@ var i = n(200651);
 n(192379);
 var s = n(481060),
     r = n(13245),
-    a = n(371651),
-    o = n(145597),
+    o = n(371651),
+    a = n(145597),
     l = n(312839),
-    d = n(981631),
-    c = n(987650),
+    c = n(981631),
+    d = n(987650),
     u = n(388032),
     h = n(114057);
 function p() {
@@ -27,9 +27,9 @@ function p() {
 }
 function f(e) {
     switch (e.type) {
-        case c.nc.GO_LIVE_VOICE: {
+        case d.nc.GO_LIVE_VOICE: {
             let { game: t, voiceGuild: h } = e,
-                { trackView: f, trackClick: g } = (0, l.R)(c.n0.GoLiveNudge, { notif_type: c.n0.GoLiveNudge });
+                { trackView: f, trackClick: g } = (0, l.R)(d.n0.GoLiveNudge, { notif_type: d.n0.GoLiveNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -45,7 +45,7 @@ function f(e) {
                 onNotificationClick: (e, t) => {
                     g('unlock'),
                         r.Z.updateNotificationStatus(t),
-                        a.Z.isOverlayOOPEnabledForPid((0, o.QF)()) ? r.Z.setInputLocked(!1, (0, o.QF)()) : r.Z.setInstanceLocked(!1),
+                        o.Z.isOverlayOOPEnabledForPid((0, a.QF)()) ? r.Z.setInputLocked(!1, (0, a.QF)()) : r.Z.setInstanceLocked(!1),
                         (0, s.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('46298')]).then(n.bind(n, 60594));
                             return (t) =>
@@ -53,7 +53,7 @@ function f(e) {
                                     ...t,
                                     selectSource: !1,
                                     guildId: h.id,
-                                    analyticsLocation: d.Sbl.OVERLAY_NUDGE
+                                    analyticsLocation: c.Sbl.OVERLAY_NUDGE
                                 });
                         });
                 },
@@ -62,9 +62,9 @@ function f(e) {
                 }
             };
         }
-        case c.nc.GO_LIVE_NON_VOICE: {
+        case d.nc.GO_LIVE_NON_VOICE: {
             let { game: t } = e,
-                { trackView: h, trackClick: f } = (0, l.R)(c.n0.GoLiveNonVoiceNudge, { notif_type: c.n0.GoLiveNonVoiceNudge });
+                { trackView: h, trackClick: f } = (0, l.R)(d.n0.GoLiveNonVoiceNudge, { notif_type: d.n0.GoLiveNonVoiceNudge });
             return {
                 icon: n(847881),
                 title: null,
@@ -77,7 +77,7 @@ function f(e) {
                 onNotificationClick: (e, t) => {
                     f('unlock'),
                         r.Z.updateNotificationStatus(t),
-                        a.Z.isOverlayOOPEnabledForPid((0, o.QF)()) ? r.Z.setInputLocked(!1, (0, o.QF)()) : r.Z.setInstanceLocked(!1),
+                        o.Z.isOverlayOOPEnabledForPid((0, a.QF)()) ? r.Z.setInputLocked(!1, (0, a.QF)()) : r.Z.setInstanceLocked(!1),
                         (0, s.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('46298')]).then(n.bind(n, 60594));
                             return (t) =>
@@ -85,7 +85,7 @@ function f(e) {
                                     ...t,
                                     selectSource: !1,
                                     selectGuild: !0,
-                                    analyticsLocation: d.Sbl.OVERLAY_NUDGE
+                                    analyticsLocation: c.Sbl.OVERLAY_NUDGE
                                 });
                         });
                 },

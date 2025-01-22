@@ -1,8 +1,8 @@
 n(47120);
 var l = n(200651),
-    r = n(192379),
-    s = n(120356),
-    i = n.n(s),
+    s = n(192379),
+    r = n(120356),
+    i = n.n(r),
     o = n(46973),
     a = n(481060),
     c = n(304680),
@@ -41,17 +41,17 @@ let T = () => {
     });
 };
 t.Z = function (e) {
-    (0, r.useEffect)(() => {
+    (0, s.useEffect)(() => {
         x.default.track(f.rMx.OPEN_POPOUT, { type: 'RTC Connection' });
     }, []);
-    let t = (0, r.useCallback)(() => {
+    let t = (0, s.useCallback)(() => {
             let { closePopout: t } = e;
             null != t && t(), c.bA();
         }, [e]),
-        n = (0, r.useCallback)(() => {
-            let { hostname: t, averagePing: n, lastPing: s, outboundLossRate: o } = e,
+        n = (0, s.useCallback)(() => {
+            let { hostname: t, averagePing: n, lastPing: r, outboundLossRate: o } = e,
                 a = d.Sb.getSetting();
-            return (0, l.jsxs)(r.Fragment, {
+            return (0, l.jsxs)(s.Fragment, {
                 children: [
                     a &&
                         (0, l.jsxs)('div', {
@@ -74,10 +74,10 @@ t.Z = function (e) {
                         className: E.popoutText,
                         children: m.intl.format(m.t['X58/lJ'], { averagePing: n.toFixed(0) })
                     }),
-                    null != s
+                    null != r
                         ? (0, l.jsx)('div', {
                               className: E.popoutText,
-                              children: m.intl.format(m.t['6iv2TE'], { lastPing: s.toFixed(0) })
+                              children: m.intl.format(m.t['6iv2TE'], { lastPing: r.toFixed(0) })
                           })
                         : null,
                     null != o
@@ -101,9 +101,9 @@ t.Z = function (e) {
                 ]
             });
         }, [e]),
-        { connectionState: s, connectionTypeText: o } = e,
+        { connectionState: r, connectionTypeText: o } = e,
         g = d.Sb.getSetting(),
-        v = {
+        I = {
             [f.hes.AWAITING_ENDPOINT]: m.intl.format(m.t.Eu2vUV, { url: f.yXt.STATUS }),
             [f.hes.CONNECTING]: m.intl.string(m.t['y+E8aG']),
             [f.hes.AUTHENTICATING]: m.intl.string(m.t['5lGIZG']),
@@ -114,14 +114,14 @@ t.Z = function (e) {
             [f.hes.RTC_CONNECTED]: n,
             [f.hes.NO_ROUTE]: m.intl.format(m.t['2tgQnp'], { url: N.Z.getArticleURL(f.BhN.VOICE_CONNECTION_ERRORS) }),
             [f.hes.RTC_DISCONNECTED]: m.intl.string(m.t.fOX25O)
-        }[s];
+        }[r];
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            'function' == typeof v
-                ? v()
+            'function' == typeof I
+                ? I()
                 : (0, l.jsx)('p', {
                       className: i()(E.popoutText, E.popoutTextDetails),
-                      children: v
+                      children: I
                   }),
             (0, l.jsx)('hr', { className: E.separator }),
             (0, l.jsxs)('div', {

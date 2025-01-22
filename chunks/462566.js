@@ -67,7 +67,7 @@ function E(e) {
                     updateCompleted: (e) => C('cardExpiry', e)
                 })
         },
-        x = {
+        L = {
             name: 'cardCvc',
             title: () => _.intl.string(_.t.Fd3rOz),
             getClassNameForLayout: () => g.width50,
@@ -83,7 +83,7 @@ function E(e) {
                     }
                 })
         },
-        L = {
+        x = {
             id: 'card-name',
             name: 'name',
             title: () => _.intl.string(_.t.VUlFdX),
@@ -95,9 +95,9 @@ function E(e) {
         w = [
             { fields: [O] },
             {
-                fields: [D, x]
+                fields: [D, L]
             },
-            { fields: [L] }
+            { fields: [x] }
         ];
     function P(e, n) {
         if ('name' !== n && 'country' !== n && 'postalCode' !== n) return;

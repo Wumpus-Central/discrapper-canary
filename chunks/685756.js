@@ -45,8 +45,8 @@ function O(e, n, r) {
     );
 }
 let D = 3,
-    x = 8;
-function L() {}
+    L = 8;
+function x() {}
 !(function (e) {
     (e[(e.IDENTIFY = 0)] = 'IDENTIFY'), (e[(e.SELECT_PROTOCOL = 1)] = 'SELECT_PROTOCOL'), (e[(e.READY = 2)] = 'READY'), (e[(e.HEARTBEAT = 3)] = 'HEARTBEAT'), (e[(e.SELECT_PROTOCOL_ACK = 4)] = 'SELECT_PROTOCOL_ACK'), (e[(e.SPEAKING = 5)] = 'SPEAKING'), (e[(e.HEARTBEAT_ACK = 6)] = 'HEARTBEAT_ACK'), (e[(e.RESUME = 7)] = 'RESUME'), (e[(e.HELLO = 8)] = 'HELLO'), (e[(e.RESUMED = 9)] = 'RESUMED'), (e[(e.CLIENT_CONNECT = 11)] = 'CLIENT_CONNECT'), (e[(e.VIDEO = 12)] = 'VIDEO'), (e[(e.CLIENT_DISCONNECT = 13)] = 'CLIENT_DISCONNECT'), (e[(e.SESSION_UPDATE = 14)] = 'SESSION_UPDATE'), (e[(e.MEDIA_SINK_WANTS = 15)] = 'MEDIA_SINK_WANTS'), (e[(e.VOICE_BACKEND_VERSION = 16)] = 'VOICE_BACKEND_VERSION'), (e[(e.CHANNEL_OPTIONS_UPDATE = 17)] = 'CHANNEL_OPTIONS_UPDATE'), (e[(e.FLAGS = 18)] = 'FLAGS'), (e[(e.PLATFORM = 20)] = 'PLATFORM'), (e[(e.DAVE_PROTOCOL_PREPARE_TRANSITION = 21)] = 'DAVE_PROTOCOL_PREPARE_TRANSITION'), (e[(e.DAVE_PROTOCOL_EXECUTE_TRANSITION = 22)] = 'DAVE_PROTOCOL_EXECUTE_TRANSITION'), (e[(e.DAVE_PROTOCOL_READY_FOR_TRANSITION = 23)] = 'DAVE_PROTOCOL_READY_FOR_TRANSITION'), (e[(e.DAVE_PROTOCOL_PREPARE_EPOCH = 24)] = 'DAVE_PROTOCOL_PREPARE_EPOCH'), (e[(e.MLS_EXTERNAL_SENDER_PACKAGE = 25)] = 'MLS_EXTERNAL_SENDER_PACKAGE'), (e[(e.MLS_KEY_PACKAGE = 26)] = 'MLS_KEY_PACKAGE'), (e[(e.MLS_PROPOSALS = 27)] = 'MLS_PROPOSALS'), (e[(e.MLS_COMMIT_WELCOME = 28)] = 'MLS_COMMIT_WELCOME'), (e[(e.MLS_PREPARE_COMMIT_TRANSITION = 29)] = 'MLS_PREPARE_COMMIT_TRANSITION'), (e[(e.MLS_WELCOME = 30)] = 'MLS_WELCOME'), (e[(e.MLS_INVALID_COMMIT_WELCOME = 31)] = 'MLS_INVALID_COMMIT_WELCOME'), (e[(e.CLIENT_CANNOT_REACH_RTC_SERVER = 32)] = 'CLIENT_CANNOT_REACH_RTC_SERVER');
 })(i || (i = {})),
@@ -142,7 +142,7 @@ class Y extends T.Z {
                 let e = Date.now() - this.connectionStartTime;
                 this.handleClose(!1, 0, 'The connection timed out after '.concat(e, ' ms - did not receive OP_HELLO in time.'));
             }, w));
-        let e = (this.webSocket = new WebSocket(''.concat(this.url, '?v=').concat(x)));
+        let e = (this.webSocket = new WebSocket(''.concat(this.url, '?v=').concat(L)));
         (e.binaryType = 'arraybuffer'),
             (e.onopen = () => {
                 1 === this.connectionState ? this.emit('connect') : 5 === this.connectionState && this.doResumeOrClose(), (this.connectionState = 4);
@@ -334,7 +334,7 @@ class Y extends T.Z {
     cleanupWebSocket(e) {
         this.stopHeartbeater(), this.clearHelloTimeout();
         let n = this.webSocket;
-        (this.webSocket = null), null != n && ((n.onopen = L), (n.onmessage = L), (n.onerror = L), (n.onclose = L), null == e || e(n)), this.backoff.cancel();
+        (this.webSocket = null), null != n && ((n.onopen = x), (n.onmessage = x), (n.onerror = x), (n.onclose = x), null == e || e(n)), this.backoff.cancel();
     }
     cleanupState() {
         (this.serverId = null), (this.sessionId = null), (this.token = null), (this.resumable = !1), (this.lastRecvSeqNum = null);

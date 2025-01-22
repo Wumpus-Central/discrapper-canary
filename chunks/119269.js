@@ -34,7 +34,7 @@ let f = (e) => {
     });
 };
 t.ZP = (e) => {
-    let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: r, progressCircleStrokeSize: a, backgroundCircleSize: l, percentage: d, initialPercentage: m, progressCircleVariation: _ = 0, avatarDecoAssetId: E, avatarDecoAssetDescription: C, ellipseOpacity: T, customAnimationClassName: S, circleColor: b, circleStroke: I } = e,
+    let { showAnimations: t = !0, iconClassName: n, staticPercentage: i, innerCircleClassName: r, progressCircleStrokeSize: a, backgroundCircleSize: l, percentage: d, initialPercentage: m, progressCircleVariation: E = 0, avatarDecoAssetId: _, avatarDecoAssetDescription: C, ellipseOpacity: T, customAnimationClassName: S, circleColor: b, circleStroke: I } = e,
         N = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
         v = t && !N;
     return (0, s.jsx)('div', {
@@ -48,9 +48,9 @@ t.ZP = (e) => {
             progressCircleStrokeSize: a,
             percentage: null != i ? i : d,
             initialPercentage: null != i ? i : m,
-            progressCircleVariation: _,
+            progressCircleVariation: E,
             children: (() => {
-                switch (_) {
+                switch (E) {
                     case 0:
                         return (0, s.jsx)(g.Z, {
                             className: v ? x.nitroGemAnimation : void 0,
@@ -63,9 +63,9 @@ t.ZP = (e) => {
                             ellipseOpacity: T
                         });
                     case 2:
-                        if (null != E)
+                        if (null != _)
                             return (0, s.jsx)(f, {
-                                avatarDecoAssetId: E,
+                                avatarDecoAssetId: _,
                                 avatarDecoAssetDescription: C
                             });
                         return null;

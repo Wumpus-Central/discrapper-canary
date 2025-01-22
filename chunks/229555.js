@@ -47,8 +47,8 @@ t.Z = () => {
     if (null == t) return null;
     let r = (0, c.J)(t.id),
         { id: d, badgeVersion: h, nameUnformatted: p, earnedOnDate: x, tenureReqNumMonths: f } = t,
-        _ = u.intl.string(p),
-        E = (0, l.q)(d, f);
+        E = u.intl.string(p),
+        _ = (0, l.q)(d, f);
     return 1 === h
         ? (0, i.jsxs)('div', {
               className: s()(m.container, g(d)),
@@ -57,7 +57,7 @@ t.Z = () => {
                   ' ',
                   (0, i.jsx)('img', {
                       src: r,
-                      alt: _,
+                      alt: E,
                       className: m.badgeImage
                   }),
                   (0, i.jsxs)('div', {
@@ -66,7 +66,7 @@ t.Z = () => {
                           (0, i.jsx)(a.xv, {
                               variant: 'text-lg/semibold',
                               className: m.badgeText,
-                              children: _
+                              children: E
                           }),
                           (0, i.jsx)(a.xv, {
                               variant: 'text-xs/normal',
@@ -83,7 +83,7 @@ t.Z = () => {
                   ' ',
                   (0, i.jsx)('img', {
                       src: r,
-                      alt: _,
+                      alt: E,
                       className: s()(m.badgeImage, m.badgeImageV2)
                   }),
                   (0, i.jsxs)('div', {
@@ -92,12 +92,12 @@ t.Z = () => {
                           (0, i.jsx)(a.xv, {
                               variant: 'text-lg/semibold',
                               className: m.badgeText,
-                              children: _
+                              children: E
                           }),
                           (0, i.jsx)(a.xv, {
                               variant: 'text-md/normal',
                               className: m.badgeText,
-                              children: E
+                              children: _
                           }),
                           (0, i.jsx)(a.xv, {
                               variant: 'text-xs/normal',

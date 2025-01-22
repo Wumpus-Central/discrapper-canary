@@ -47,8 +47,8 @@ let T = 10,
     R = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/?((about|images|privacy)\/?)?$/,
     O = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     D = /^\/activities\/([0-9-]+)\/?$/,
-    x = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    L = /^\/channels\/([0-9]+)\/shop$/,
+    L = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+    x = /^\/channels\/([0-9]+)\/shop$/,
     w = /^\/quests\/([0-9-]+)\/?$/,
     P = /^\/oauth2\/authorize/,
     M = /^#itemSkuId=([0-9]+)$/,
@@ -185,9 +185,9 @@ function X(e) {
             let e = I[1];
             d(b.g.ACTIVITY_BOOKMARK, e);
         }
-        let N = null == c ? void 0 : c.match(x);
+        let N = null == c ? void 0 : c.match(L);
         null != N && d(b.g.GUILD_PRODUCT, ''.concat(N[1], '-').concat(N[2]));
-        let w = null == c ? void 0 : c.match(L);
+        let w = null == c ? void 0 : c.match(x);
         null != w && d(b.g.SERVER_SHOP, w[1]);
         let k = J(e);
         if ((null != k && d(b.g.QUESTS_EMBED, k), '/shop' === c)) {

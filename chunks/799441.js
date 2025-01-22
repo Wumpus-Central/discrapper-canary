@@ -67,8 +67,8 @@ function h(e, n, r) {
         });
     (I.onKeyDown = I.onKeyDownCapture), delete I.onKeyDownCapture;
     let D = (0, i.zL)(e, { labelable: !0 }),
-        x = (0, i.dG)(I, v, N),
-        L = (0, i.Me)();
+        L = (0, i.dG)(I, v, N),
+        x = (0, i.Me)();
     return (
         p.set(n, {
             isDisabled: f,
@@ -84,11 +84,11 @@ function h(e, n, r) {
                 }
             },
             triggerProps: (0, i.dG)(D, {
-                ...x,
+                ...L,
                 isDisabled: f,
-                onKeyDown: (0, i.tS)(x.onKeyDown, b, e.onKeyDown),
+                onKeyDown: (0, i.tS)(L.onKeyDown, b, e.onKeyDown),
                 onKeyUp: e.onKeyUp,
-                'aria-labelledby': [L, x['aria-labelledby'], x['aria-label'] && !x['aria-labelledby'] ? x.id : null].filter(Boolean).join(' '),
+                'aria-labelledby': [x, L['aria-labelledby'], L['aria-label'] && !L['aria-labelledby'] ? L.id : null].filter(Boolean).join(' '),
                 onFocus(r) {
                     !n.isFocused && (e.onFocus && e.onFocus(r), e.onFocusChange && e.onFocusChange(!0), n.setFocused(!0));
                 },
@@ -96,7 +96,7 @@ function h(e, n, r) {
                     !n.isOpen && (e.onBlur && e.onBlur(r), e.onFocusChange && e.onFocusChange(!1), n.setFocused(!1));
                 }
             }),
-            valueProps: { id: L },
+            valueProps: { id: x },
             menuProps: {
                 ...y,
                 autoFocus: n.focusStrategy || !0,
@@ -107,7 +107,7 @@ function h(e, n, r) {
                 onBlur: (r) => {
                     !r.currentTarget.contains(r.relatedTarget) && (e.onBlur && e.onBlur(r), e.onFocusChange && e.onFocusChange(!1), n.setFocused(!1));
                 },
-                'aria-labelledby': [N['aria-labelledby'], x['aria-label'] && !N['aria-labelledby'] ? x.id : null].filter(Boolean).join(' ')
+                'aria-labelledby': [N['aria-labelledby'], L['aria-label'] && !N['aria-labelledby'] ? L.id : null].filter(Boolean).join(' ')
             },
             descriptionProps: R,
             errorMessageProps: O,

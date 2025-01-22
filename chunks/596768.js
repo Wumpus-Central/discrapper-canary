@@ -22,11 +22,11 @@ var a = n(200651),
     g = n(257785),
     v = n(484036),
     j = n(681619),
-    _ = n(621060),
-    C = n(388032),
+    C = n(621060),
+    _ = n(388032),
     T = n(931933),
-    N = n(941469);
-let S = [
+    S = n(941469);
+let N = [
         {
             key: 'id',
             cellClassName: T.eventColumn,
@@ -64,7 +64,7 @@ let S = [
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)(x.ZP, {
-                            className: i()(N.headerBar, T.subPanelHeaderBar),
+                            className: i()(S.headerBar, T.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(x.ZP.Icon, {
                                     icon: h.AnalyticsIcon,
@@ -131,7 +131,7 @@ function I() {
         o = r.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = r.useState(void 0),
         x = o.find((e) => e.key === c),
-        { TabBar: f, renderSelectedTab: g } = (0, _.Z)({ tabs: y }, []),
+        { TabBar: f, renderSelectedTab: g } = (0, C.Z)({ tabs: y }, []),
         I = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
         E = r.useCallback((e) => {
             m.Z.dispatch({
@@ -141,7 +141,7 @@ function I() {
         }, []);
     return (0, a.jsxs)('div', {
         ref: n,
-        className: i()(N.panel, T.panel),
+        className: i()(S.panel, T.panel),
         children: [
             (0, a.jsxs)('div', {
                 className: T.toolbar,
@@ -161,11 +161,11 @@ function I() {
                         size: h.Button.Sizes.ICON,
                         onClick: b.Zw,
                         children: (0, a.jsx)('span', {
-                            title: C.intl.string(C.t.VkKicX),
+                            title: _.intl.string(_.t.VkKicX),
                             children: (0, a.jsx)(h.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': C.intl.string(C.t.VkKicX)
+                                'aria-label': _.intl.string(_.t.VkKicX)
                             })
                         })
                     }),
@@ -179,7 +179,7 @@ function I() {
                 ]
             }),
             (0, a.jsx)(j.Z, {
-                columns: S,
+                columns: N,
                 data: o,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)

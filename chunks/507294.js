@@ -28,13 +28,13 @@ var i = n(200651),
     v = n(63063),
     S = n(134433),
     T = n(225104),
-    A = n(981631),
-    b = n(388032),
+    b = n(981631),
+    A = n(388032),
     Z = n(698948),
     x = n(795661);
 function L(e, t) {
     (0, c.openModalLazy)(async () => {
-        let { default: r } = await Promise.all([n.e('56630'), n.e('82412'), n.e('83953')]).then(n.bind(n, 107807));
+        let { default: r } = await Promise.all([n.e('81463'), n.e('82412'), n.e('83953')]).then(n.bind(n, 107807));
         return (n) =>
             (0, i.jsx)(r, {
                 role: e,
@@ -44,17 +44,17 @@ function L(e, t) {
     });
 }
 t.default = function (e) {
-    let { guildId: t, transitionState: l, onClose: P } = e,
-        O = (0, s.e7)([C.Z], () => C.Z.getRoles(t)),
-        y = (0, s.e7)([E.default], () => E.default.getId()),
-        R = (0, s.e7)([I.ZP], () => I.ZP.getMember(t, y)),
+    let { guildId: t, transitionState: l, onClose: y } = e,
+        P = (0, s.e7)([C.Z], () => C.Z.getRoles(t)),
+        O = (0, s.e7)([E.default], () => E.default.getId()),
+        R = (0, s.e7)([I.ZP], () => I.ZP.getMember(t, O)),
         [j, D] = r.useState([]),
         M = (0, h.ZP)(),
         w = (0, f.Dt)();
     if (
         (r.useEffect(() => {
             if (0 !== j.length)
-                N.default.track(A.rMx.PASSPORT_ENTRY_VIEWED, {
+                N.default.track(b.rMx.PASSPORT_ENTRY_VIEWED, {
                     role_ids: j.map((e) => {
                         let { role_id: t } = e;
                         return t;
@@ -68,7 +68,7 @@ t.default = function (e) {
         null == R)
     )
         return null;
-    let k = Object.values(O).filter((e) => {
+    let k = Object.values(P).filter((e) => {
         var t;
         return (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null;
     });
@@ -87,11 +87,11 @@ t.default = function (e) {
                     (0, i.jsx)(c.Heading, {
                         variant: 'text-md/medium',
                         color: 'header-primary',
-                        children: b.intl.string(b.t.ghtnsr)
+                        children: A.intl.string(A.t.ghtnsr)
                     }),
                     (0, i.jsx)(c.ModalCloseButton, {
                         className: Z.modalCloseButton,
-                        onClick: P
+                        onClick: y
                     })
                 ]
             }),
@@ -101,7 +101,7 @@ t.default = function (e) {
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'header-primary',
-                        children: b.intl.format(b.t['Y+TsER'], { helpdeskArticleUrl: v.Z.getArticleURL(A.BhN.CONNECTION_DETAILS) })
+                        children: A.intl.format(A.t['Y+TsER'], { helpdeskArticleUrl: v.Z.getArticleURL(b.BhN.CONNECTION_DETAILS) })
                     }),
                     (0, i.jsx)('div', {
                         className: Z.verifiedRoles,

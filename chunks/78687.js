@@ -148,7 +148,7 @@ e.exports = function (e) {
                 function D(e) {
                     return 2 * e + C();
                 }
-                function x(e, n, r) {
+                function L(e, n, r) {
                     var i = g(e),
                         a = E(e),
                         o = N(n),
@@ -157,7 +157,7 @@ e.exports = function (e) {
                         u = D(r);
                     (i.scrollLeft = o), (i.scrollTop = s), (a.scrollLeft = l), (a.scrollTop = u);
                 }
-                function L() {
+                function x() {
                     var e = a(l).container;
                     if (!e) {
                         ((e = document.createElement('div')).className = u), (e.style.cssText = d(['visibility: hidden', 'display: inline', 'width: 0px', 'height: 0px', 'z-index: -1', 'overflow: hidden', 'margin: 0', 'padding: 0'])), (a(l).container = e), h(e), l.appendChild(e);
@@ -192,7 +192,7 @@ e.exports = function (e) {
                     }
                     r();
                     var o = a(l).container;
-                    !o && (o = L());
+                    !o && (o = x());
                     var c = s.width,
                         p = s.height,
                         h = d(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%', 'left: 0px', 'top: 0px']),
@@ -257,7 +257,7 @@ e.exports = function (e) {
                                     f('Aborting because element container has not been initialized');
                                     return;
                                 }
-                                x(l, u, d);
+                                L(l, u, d);
                             }),
                             p &&
                                 i &&
@@ -324,7 +324,7 @@ e.exports = function (e) {
                         return;
                     }
                     var e = a(l).style;
-                    T(l, e.width, e.height), x(l, e.width, e.height);
+                    T(l, e.width, e.height), L(l, e.width, e.height);
                 }
                 function k() {
                     c(l);
@@ -337,7 +337,7 @@ e.exports = function (e) {
                     f('Making detectable...'),
                     p(l)
                         ? (f('Element is detached'),
-                          L(),
+                          x(),
                           f('Waiting until element is attached...'),
                           (a(l).onRendered = function () {
                               f('Element is now attached'), U();

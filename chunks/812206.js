@@ -98,7 +98,7 @@ function D(e) {
     let { applications: n } = e;
     for (let e of n) v(u.ZP.createFromServer(e));
 }
-function x(e) {
+function L(e) {
     let { recommendations: n } = e;
     n.forEach((e) => {
         e.items.forEach((e) => {
@@ -106,7 +106,7 @@ function x(e) {
         });
     });
 }
-function L(e) {
+function x(e) {
     let { user: n, application: r } = e;
     n.bot &&
         null != r &&
@@ -283,8 +283,8 @@ c(Y, 'displayName', 'ApplicationStore'),
         LIBRARY_FETCH_SUCCESS: O,
         STORE_LISTING_FETCH_SUCCESS: F,
         LOAD_MESSAGES_SUCCESS: V,
-        APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: x,
-        USER_PROFILE_FETCH_SUCCESS: L,
+        APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: L,
+        USER_PROFILE_FETCH_SUCCESS: x,
         APP_DM_OPEN: w,
         USER_AUTHORIZED_APPS_UPDATE: H
     }));

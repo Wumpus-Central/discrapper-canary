@@ -12,7 +12,7 @@ r.d(n, {
         return D;
     },
     _W: function () {
-        return x;
+        return L;
     },
     uF: function () {
         return P;
@@ -60,7 +60,7 @@ function D(e, n) {
         ...u
     };
 }
-function x(e, n, r, i) {
+function L(e, n, r, i) {
     var a;
     let o;
     let s = window.GLOBAL_ENV.CDN_HOST;
@@ -91,7 +91,7 @@ function x(e, n, r, i) {
         o
     );
 }
-function L() {
+function x() {
     return new Promise(async (e) => {
         if (I.ZP.hasFetchedSubscriptions()) e();
         else if (y.Z.isSubscriptionFetching) {
@@ -108,7 +108,7 @@ async function w(e) {
         s = v.default.isAuthenticated();
     if (o && s) {
         let e = [];
-        !b.Z.hasFetchedPaymentSources && e.push(null !== (r = y.Z.paymentSourcesFetchRequest) && void 0 !== r ? r : (0, g.tZ)()), !y.Z.ipCountryCodeLoaded && e.push((0, g.GE)()), e.push(L()), await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]);
+        !b.Z.hasFetchedPaymentSources && e.push(null !== (r = y.Z.paymentSourcesFetchRequest) && void 0 !== r ? r : (0, g.tZ)()), !y.Z.ipCountryCodeLoaded && e.push((0, g.GE)()), e.push(x()), await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]);
     }
     let l = b.Z.getDefaultBillingCountryCode(),
         u = null !== (i = null === (n = b.Z.defaultPaymentSource) || void 0 === n ? void 0 : n.id) && void 0 !== i ? i : null,

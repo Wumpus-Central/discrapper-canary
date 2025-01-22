@@ -63,8 +63,8 @@ var o = r(990547),
     R = r(973616),
     O = r(314897),
     D = r(592125),
-    x = r(430824),
-    L = r(496675),
+    L = r(430824),
+    x = r(496675),
     w = r(594174),
     P = r(979651),
     M = r(585483),
@@ -101,13 +101,13 @@ async function et(e) {
     let { channelId: i, applicationId: a, isStart: o, analyticsLocations: s, locationObject: u, embeddedActivitiesManager: c, componentId: d, commandOrigin: f, sectionName: p, source: h, partyId: m, onExecutedCallback: g, referrerId: E, customId: v, joinUserId: y, joinSessionId: b, joinSecret: I, inviterUserId: T } = e,
         N = D.Z.getChannel(i),
         R = null !== (n = null == N ? void 0 : N.getGuildId()) && void 0 !== n ? n : void 0,
-        O = (0, Z.s)();
+        O = (0, Z.sq)();
     if (!O && null == R && !(null !== (r = null == N ? void 0 : N.isPrivate()) && void 0 !== r && r)) return !1;
-    let x = (0, C.r)();
+    let L = (0, C.r)();
     try {
         l.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
-            nonce: x,
+            nonce: L,
             applicationId: a,
             channelId: null != i ? i : null,
             componentId: d,
@@ -143,7 +143,7 @@ async function et(e) {
             if (
                 !(await er({
                     applicationId: a,
-                    nonce: x,
+                    nonce: L,
                     channelId: i,
                     guildId: R,
                     commandOrigin: f,
@@ -169,7 +169,7 @@ async function et(e) {
         }
         l.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
-            nonce: x,
+            nonce: L,
             applicationId: a,
             channelId: null != i ? i : null
         });
@@ -177,7 +177,7 @@ async function et(e) {
         return (
             l.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
-                nonce: x,
+                nonce: L,
                 applicationId: a,
                 channelId: null != i ? i : null,
                 isStart: o,
@@ -222,7 +222,7 @@ async function er(e) {
             return !1;
     }
     let f = D.Z.getChannel(i),
-        p = null != a ? x.Z.getGuild(a) : null;
+        p = null != a ? L.Z.getGuild(a) : null;
     return (
         null != f &&
         (await new Promise((e, n) => {
@@ -271,7 +271,7 @@ async function ei(e) {
         _ = w.default.getCurrentUser(),
         m = r;
     if (null == m) return !1;
-    let g = (0, Z.s)(),
+    let g = (0, Z.sq)(),
         E = await (0, H.Z)(m, i);
     if (null == _ || null == E) return !1;
     if (!g && null == i) return M.S.dispatch(Q.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: m }), !1;
@@ -280,8 +280,8 @@ async function ei(e) {
     let y = (0, Y.e4)({
         channelId: i,
         ChannelStore: D.Z,
-        GuildStore: x.Z,
-        PermissionStore: L.Z,
+        GuildStore: L.Z,
+        PermissionStore: x.Z,
         VoiceStateStore: P.Z
     });
     if (y !== Y.jy.CAN_LAUNCH)

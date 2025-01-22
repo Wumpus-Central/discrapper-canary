@@ -24,16 +24,16 @@ var a = n(200651),
     g = n(355863),
     v = n(449224),
     j = n(808506),
-    _ = n(70956),
-    C = n(145597),
+    C = n(70956),
+    _ = n(145597),
     T = n(246992),
-    N = n(981631),
-    S = n(501787),
+    S = n(981631),
+    N = n(501787),
     y = n(27731),
     I = n(941469);
 let E = {
-        [N.Odu.CLICK_ZONE_DEBUG]: (e) => ({
-            type: N.Odu.CLICK_ZONE_DEBUG,
+        [S.Odu.CLICK_ZONE_DEBUG]: (e) => ({
+            type: S.Odu.CLICK_ZONE_DEBUG,
             id: (0, o.Z)(),
             layoutId: e,
             anchor: {
@@ -44,11 +44,11 @@ let E = {
                 width: 100,
                 height: 100
             },
-            ...g.Z.getWidgetDefaultSettings(N.Odu.CLICK_ZONE_DEBUG),
+            ...g.Z.getWidgetDefaultSettings(S.Odu.CLICK_ZONE_DEBUG),
             pinned: !0
         }),
-        [N.Odu.PERFORMANCE_DEBUG]: (e) => ({
-            type: N.Odu.PERFORMANCE_DEBUG,
+        [S.Odu.PERFORMANCE_DEBUG]: (e) => ({
+            type: S.Odu.PERFORMANCE_DEBUG,
             id: (0, o.Z)(),
             layoutId: e,
             anchor: {
@@ -60,12 +60,12 @@ let E = {
                 width: 'auto',
                 height: 'auto'
             },
-            ...g.Z.getWidgetDefaultSettings(N.Odu.PERFORMANCE_DEBUG),
+            ...g.Z.getWidgetDefaultSettings(S.Odu.PERFORMANCE_DEBUG),
             pinned: !0
         })
     },
     Z = (e, t) => e.find((e) => e.type === t);
-function w(e) {
+function k(e) {
     let { trackedGame: t } = e,
         n = (0, s.e7)([m.ZP], () => m.ZP.getGameForPID(t.pid)),
         r = (0, s.e7)([v.Z], () => v.Z.getGameForPID(t.pid));
@@ -145,7 +145,7 @@ function w(e) {
         ]
     });
 }
-function k(e) {
+function w(e) {
     let { pid: t } = e,
         n = (0, s.cj)([j.Z], () => j.Z.getOverlayPIDStatuses()),
         r = (0, s.cj)([f.Z], () => f.Z.getTrackedGames()),
@@ -216,7 +216,7 @@ function k(e) {
     });
 }
 function O(e) {
-    let t = Z(Object.values((0, s.Wu)([g.Z], () => g.Z.getWidgetsForLayout(S.OVERLAY_V3_LAYOUT_ID))), e);
+    let t = Z(Object.values((0, s.Wu)([g.Z], () => g.Z.getWidgetsForLayout(N.OVERLAY_V3_LAYOUT_ID))), e);
     return [
         t,
         () => {
@@ -224,7 +224,7 @@ function O(e) {
             else {
                 let t = E[e];
                 if (null == t) return;
-                let n = t(S.OVERLAY_V3_LAYOUT_ID);
+                let n = t(N.OVERLAY_V3_LAYOUT_ID);
                 (0, d.A4)(n);
             }
         }
@@ -232,13 +232,13 @@ function O(e) {
 }
 function R() {
     var e, t;
-    let [n, l] = O(N.Odu.CLICK_ZONE_DEBUG),
-        [o, d] = O(N.Odu.PERFORMANCE_DEBUG),
+    let [n, l] = O(S.Odu.CLICK_ZONE_DEBUG),
+        [o, d] = O(S.Odu.PERFORMANCE_DEBUG),
         g = (0, s.e7)([b.ZP], () => b.ZP.hasRenderDebugMode(x.G.ClickZones)),
         v = (0, s.e7)([b.ZP], () => b.ZP.hasRenderDebugMode(x.G.WidgetAreas)),
-        S = (0, s.e7)([f.Z], () => f.Z.getForcedRenderMode()),
+        N = (0, s.e7)([f.Z], () => f.Z.getForcedRenderMode()),
         [E, Z] = r.useState({}),
-        [R, B] = r.useState(S),
+        [R, B] = r.useState(N),
         P = (e) => {
             B(e), u.Z.forceRenderMode(e);
         },
@@ -261,12 +261,12 @@ function R() {
             }
         ].map((e) => ({
             ...e,
-            label: ''.concat(e.label, ' ').concat(S === e.value ? '(current)' : '')
+            label: ''.concat(e.label, ' ').concat(N === e.value ? '(current)' : '')
         })),
         A = (0, s.cj)([f.Z], () => f.Z.getTrackedGames()),
-        D = (0, s.e7)([j.Z], () => j.Z.getFocusedPID()),
-        F = (0, s.e7)([j.Z], () => j.Z.isFocusedPidOutOfProcess()),
-        M = (0, C.QF)(),
+        F = (0, s.e7)([j.Z], () => j.Z.getFocusedPID()),
+        D = (0, s.e7)([j.Z], () => j.Z.isFocusedPidOutOfProcess()),
+        M = (0, _.QF)(),
         H = (0, s.e7)([f.Z], () => f.Z.isOverlayOOPEnabledForPid(M), [M]),
         G = (0, s.e7)([m.ZP], () => m.ZP.getRunningGames());
     r.useEffect(() => {
@@ -308,7 +308,7 @@ function R() {
                         { ...e }
                     )
                 );
-            }, 10 * _.Z.Millis.SECOND)),
+            }, 10 * C.Z.Millis.SECOND)),
             () => clearInterval(V.current)
         ),
         []
@@ -485,7 +485,7 @@ function R() {
                                             color: 'text-normal',
                                             children: 'No running games'
                                         }),
-                                    Object.values(A).map((e) => (0, a.jsx)(w, { trackedGame: e }, e.pid))
+                                    Object.values(A).map((e) => (0, a.jsx)(k, { trackedGame: e }, e.pid))
                                 ]
                             })
                         })
@@ -499,18 +499,18 @@ function R() {
                                 color: 'text-normal',
                                 children: 'No tracked game times'
                             }),
-                        Object.values(A).map((e) => (0, a.jsx)(k, { pid: e.pid }, e.pid)),
+                        Object.values(A).map((e) => (0, a.jsx)(w, { pid: e.pid }, e.pid)),
                         (0, a.jsxs)('div', {
                             children: [
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'text-primary',
-                                    children: ['focusedPID: ', null !== (e = null == D ? void 0 : D.toString()) && void 0 !== e ? e : 'null']
+                                    children: ['focusedPID: ', null !== (e = null == F ? void 0 : F.toString()) && void 0 !== e ? e : 'null']
                                 }),
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
-                                    children: ['isFocusedPidOutOfProcess: ', F ? 'Yes' : 'No']
+                                    children: ['isFocusedPidOutOfProcess: ', D ? 'Yes' : 'No']
                                 }),
                                 (0, a.jsxs)(c.Text, {
                                     variant: 'text-sm/medium',

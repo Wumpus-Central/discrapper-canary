@@ -9,21 +9,21 @@ n.d(t, {
     n(815648),
     n(47120);
 var r,
-    a,
-    i = n(192379),
-    l = n(512969),
-    s = n(37234),
+    i,
+    l = n(192379),
+    s = n(512969),
+    a = n(37234),
     o = n(703656),
     c = n(981631);
 function d() {
-    let { search: e } = (0, l.TH)(),
-        t = (0, l.UO)(),
-        n = i.useMemo(() => new URLSearchParams(e), [e]).get('source'),
+    let { search: e } = (0, s.TH)(),
+        t = (0, s.UO)(),
+        n = l.useMemo(() => new URLSearchParams(e), [e]).get('source'),
         r = null != n ? parseInt(n, 10) : null;
     return {
-        onClose: i.useCallback(() => {
+        onClose: l.useCallback(() => {
             if (0 === r) {
-                (0, o.op)(), (0, s.jN)(c.S9g.USER_SETTINGS);
+                (0, o.op)(), (0, a.jN)(c.S9g.USER_SETTINGS);
                 return;
             }
             if ((0, o.uv)()) {
@@ -36,4 +36,4 @@ function d() {
         ...t
     };
 }
-((a = r || (r = {}))[(a.SETTINGS = 0)] = 'SETTINGS'), (a[(a.CHANGELOG = 1)] = 'CHANGELOG'), (a[(a.DM_LIST = 2)] = 'DM_LIST');
+((i = r || (r = {}))[(i.SETTINGS = 0)] = 'SETTINGS'), (i[(i.CHANGELOG = 1)] = 'CHANGELOG'), (i[(i.DM_LIST = 2)] = 'DM_LIST');

@@ -15,8 +15,8 @@ var r = n(120356),
     p = n(63063),
     x = n(775412),
     f = n(520540),
-    _ = n(501862),
-    E = n(533525),
+    E = n(501862),
+    _ = n(533525),
     C = n(197115),
     T = n(823188),
     S = n(184176),
@@ -145,7 +145,7 @@ t.Z = (e) => {
         l = (0, a.e7)([g.ZP], () => g.ZP.inReverseTrial()),
         h = (0, x._O)(),
         f = A.intl.string(A.t.qYKftb),
-        C = (0, E.b)(n),
+        C = (0, _.b)(n),
         S = (0, b.pn)(n),
         I = (0, i.jsx)(P, { className: t }),
         O = A.intl.string(A.t.ifwQZW),
@@ -166,7 +166,7 @@ t.Z = (e) => {
                 (0, i.jsx)('div', {
                     ...e,
                     className: j.pillContainer,
-                    children: (0, i.jsx)(_.Z, {
+                    children: (0, i.jsx)(E.Z, {
                         countdownText: M,
                         showInfoIcon: !0
                     })

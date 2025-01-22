@@ -1,14 +1,14 @@
-n.d(e, {
+n.d(t, {
     i: function () {
         return l;
     }
 });
-var i = n(981631),
-    r = n(388032);
-function l(t) {
-    let { username: e, usernameOnClickHandler: n = i.dG4, productName: l } = t;
-    return r.intl.formatToParts(r.t.w4iXs7, {
-        username: e,
+var r = n(981631),
+    i = n(388032);
+function l(e) {
+    let { username: t, usernameOnClickHandler: n = r.dG4, productName: l } = e;
+    return i.intl.formatToParts(i.t.w4iXs7, {
+        username: t,
         usernameHook: n,
         productName: l
     });

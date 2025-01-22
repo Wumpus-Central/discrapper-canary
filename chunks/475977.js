@@ -13,8 +13,8 @@ var i = n(200651),
     p = n(874703),
     x = n(410154),
     f = n(302800),
-    _ = n(981631),
-    E = n(474936),
+    E = n(981631),
+    _ = n(474936),
     C = n(388032),
     T = n(782376),
     S = n(786792),
@@ -72,8 +72,8 @@ t.Z = () => {
                   }
                 : f.GX[b]),
         r.useEffect(() => {
-            g.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: E.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+            g.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: _.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                 location_stack: n,
                 version: null == N ? void 0 : N.version
             });

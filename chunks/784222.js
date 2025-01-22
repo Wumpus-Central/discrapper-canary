@@ -42,8 +42,8 @@ var u = r(192379),
     R = r(771845),
     O = r(594174),
     D = r(176354),
-    x = r(111361),
-    L = r(392552),
+    L = r(111361),
+    x = r(392552),
     w = r(543241),
     P = r(304852),
     M = r(199257),
@@ -79,14 +79,14 @@ let G = (e) => {
         q = (0, p.e7)([_.ZP], () => _.ZP.expandedSectionsByGuildIds),
         { canCreateExpressions: Q } = (0, I.XJ)(b),
         X = (0, p.e7)([O.default], () => O.default.getCurrentUser()),
-        J = (0, x.I5)(X),
+        J = (0, L.I5)(X),
         $ = (0, T.B4)({ location: 'useEmojiGrid' }),
         ee = Z.getCustomEmoji(),
         et = (e) => {
             if (e.type === m.B.GUILD) return e.guildId;
         },
         en = u.useMemo(() => d().groupBy(ee, et), [ee]),
-        { enabled: er, treatment: ei } = L.Z.useExperiment(
+        { enabled: er, treatment: ei } = x.Z.useExperiment(
             { location: 'EmojiPicker' },
             {
                 autoTrackExposure: !0,
@@ -121,14 +121,14 @@ let G = (e) => {
                         S = s.sectionId === k.En.TOP_GUILD_EMOJI,
                         A = !S && null != b && T === b.id && y.length < b.getMaxEmojiSlots(),
                         C = S && y.length < E && !er,
-                        R = null != b && S && er && ei === L.B.WITH_TOP_LIST && en[b.id].length < b.getMaxEmojiSlots(),
+                        R = null != b && S && er && ei === x.B.WITH_TOP_LIST && en[b.id].length < b.getMaxEmojiSlots(),
                         O = i && Q && null != b && (A || C || R);
                     O && R && y.length === E && y.shift();
-                    let x = y.length > I && null != b && s.isNitroLocked,
-                        P = x && !q.has(b.id);
+                    let L = y.length > I && null != b && s.isNitroLocked,
+                        P = L && !q.has(b.id);
                     P && y.splice(I - 1);
                     let M = er && O && !f,
-                        U = Math.ceil((O || x ? y.length + 1 : y.length) / E),
+                        U = Math.ceil((O || L ? y.length + 1 : y.length) / E),
                         G = [];
                     for (let e = 0; e < U; e++) {
                         let n = 0 === e,
@@ -179,7 +179,7 @@ let G = (e) => {
                                     visibleRowIndex: m
                                 });
                             }
-                            if (x && e === U - 1) {
+                            if (L && e === U - 1) {
                                 let n = G[e];
                                 n.push({
                                     type: 2,

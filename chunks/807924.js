@@ -34,8 +34,8 @@ function h(e) {
             R = A - v[g] - E[b],
             O = A / 2 - v[g] / 2 + C,
             D = (0, u.u)(N, O, R),
-            x = m;
-        r.modifiersData[o] = (((n = {})[x] = D), (n.centerOffset = D - O), n);
+            L = m;
+        r.modifiersData[o] = (((n = {})[L] = D), (n.centerOffset = D - O), n);
     }
 }
 function _(e) {

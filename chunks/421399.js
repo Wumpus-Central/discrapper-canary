@@ -37,7 +37,7 @@ function S(e) {
 function A(e) {
     var n;
     let r,
-        { author: i, message: s, channel: _, userOverride: A, compact: C = !1, withMentionPrefix: N = !1, showPopout: R = !1, className: O, onClick: D, onContextMenu: x, onPopoutRequestClose: L, renderPopout: w, renderRemixTag: P = !1, decorations: M } = e,
+        { author: i, message: s, channel: _, userOverride: A, compact: C = !1, withMentionPrefix: N = !1, showPopout: R = !1, className: O, onClick: D, onContextMenu: L, onPopoutRequestClose: x, renderPopout: w, renderRemixTag: P = !1, decorations: M } = e,
         k = o.useContext(g.Z),
         U = null !== (n = null == _ ? void 0 : _.guild_id) && void 0 !== n ? n : k,
         { analyticsLocations: B } = (0, h.ZP)(p.Z.USERNAME),
@@ -60,7 +60,7 @@ function A(e) {
             className: T.username,
             style: Y && null != F ? { color: F } : void 0,
             onClick: D,
-            onContextMenu: x,
+            onContextMenu: L,
             children: (0, a.jsx)(a.Fragment, { children: G + Z })
         };
     function Q() {
@@ -101,7 +101,7 @@ function A(e) {
                   renderPopout: w,
                   shouldShow: R,
                   position: u.tq ? 'window_center' : 'right',
-                  onRequestClose: L,
+                  onRequestClose: x,
                   children: (e) => {
                       let { onClick: n, ...r } = e;
                       return (0, a.jsxs)(a.Fragment, {

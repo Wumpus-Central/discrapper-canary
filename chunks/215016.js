@@ -45,21 +45,21 @@ function N(e, n, r) {
 let R = [p.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, p.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'],
     O = 220,
     D = 1220,
-    x = Array.from({ length: 16 }).map((e, n) => ({
+    L = Array.from({ length: 16 }).map((e, n) => ({
         id: ''.concat(n),
         height: Math.floor(100 * Math.random()) + 120
     }));
-function L(e) {
+function x(e) {
     var n;
     return null !== (n = e.id) && void 0 !== n ? n : e.src;
 }
 function w(e, n) {
-    let r = x[n];
+    let r = L[n];
     return null == r ? 0 : r.height;
 }
 function P(e, n, r, i) {
     if (!(e > 0))
-        return null == x[n]
+        return null == L[n]
             ? null
             : (0, a.jsx)(
                   'div',
@@ -75,7 +75,7 @@ function P(e, n, r, i) {
 }
 function M(e, n) {
     var r, i;
-    return e > 0 ? '' : null !== (i = null === (r = x[n]) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : '';
+    return e > 0 ? '' : null !== (i = null === (r = L[n]) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : '';
 }
 function k(e) {
     return e === f.EO.VIDEO;
@@ -269,7 +269,7 @@ class Z extends o.PureComponent {
             N(this, 'handleSelect', (e) => {
                 let n;
                 let { data: r } = this.props,
-                    i = r.findIndex((n) => L(n) === e);
+                    i = r.findIndex((n) => x(n) === e);
                 -1 !== i && (n = r[i]), null != n && this.selectItem(n, i);
             }),
             N(this, 'handleClickItem', (e, n) => {
@@ -302,7 +302,7 @@ class Z extends o.PureComponent {
                                       className: C.favButton,
                                       ...s
                                   }),
-                              focused: L(s) === o,
+                              focused: x(s) === o,
                               imagePool: this.props.imagePool,
                               videoPool: this.props.videoPool
                           },
@@ -371,7 +371,7 @@ class Z extends o.PureComponent {
                           {
                               fade: !0,
                               className: l()(C.results, i),
-                              sections: [x.length],
+                              sections: [L.length],
                               columns: e,
                               itemGutter: 12,
                               getItemKey: M,

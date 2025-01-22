@@ -60,7 +60,7 @@ function m(e) {
                                       activeSlide: b,
                                       centered: !1,
                                       onSlideReady: (e) => C(e),
-                                      width: b === p.h8.ADD_PAYMENT_STEPS ? '100%' : void 0,
+                                      width: b === p.h8.ADD_PAYMENT_STEPS ? 408 : void 0,
                                       children: I.filter((e) => null != e.key).map((e) =>
                                           (0, i.jsx)(
                                               d.Slide,

@@ -1,18 +1,18 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return r;
     }
 });
-var a = t(200651);
-t(192379);
-var i = t(278741);
+var i = n(200651);
+n(192379);
+var a = n(278741);
 function r(e) {
-    let { children: n } = e;
-    return (0, a.jsx)('section', {
-        className: i.contentSection,
-        children: (0, a.jsx)('div', {
-            className: i.content,
-            children: n
+    let { children: t } = e;
+    return (0, i.jsx)('section', {
+        className: a.contentSection,
+        children: (0, i.jsx)('div', {
+            className: a.content,
+            children: t
         })
     });
 }

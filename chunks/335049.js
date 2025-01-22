@@ -18,11 +18,11 @@ var i = n(200651),
     g = n(471445),
     x = n(91218),
     f = n(518738),
-    b = n(592125),
-    v = n(271383),
+    v = n(592125),
+    b = n(271383),
     C = n(430824),
-    N = n(246946),
-    I = n(594174),
+    I = n(246946),
+    N = n(594174),
     j = n(51144),
     T = n(981631),
     _ = n(388032),
@@ -80,15 +80,15 @@ function S(e) {
             name: h,
             categoryName: x
         } = (0, c.cj)(
-            [b.Z],
+            [v.Z],
             () => {
                 if (d === n)
                     return {
                         name: _.intl.string(_.t['7YqSGx']),
                         icon: u.TextIcon
                     };
-                let e = b.Z.getChannel(n),
-                    i = (null == e ? void 0 : e.parent_id) != null ? b.Z.getChannel(e.parent_id) : null;
+                let e = v.Z.getChannel(n),
+                    i = (null == e ? void 0 : e.parent_id) != null ? v.Z.getChannel(e.parent_id) : null;
                 return {
                     icon: null != e ? (0, g.KS)(e, t) : null,
                     name: null == e ? void 0 : e.name,
@@ -129,7 +129,7 @@ function S(e) {
                             children: ['(', x, ')']
                         })
                       : null,
-                  r ? (0, i.jsx)(R, { tooltipText: o }) : null
+                  r ? (0, i.jsx)(L, { tooltipText: o }) : null
               ]
           });
 }
@@ -142,7 +142,7 @@ function y(e) {
             roleId: o,
             size: 24
         }),
-        b = l.useCallback(
+        v = l.useCallback(
             (e) => {
                 if (null != r && null != p)
                     (0, m.jW)(e, async () => {
@@ -160,7 +160,7 @@ function y(e) {
     return (null == p ? void 0 : p.name) == null
         ? null
         : (0, i.jsxs)('div', {
-              onContextMenu: b,
+              onContextMenu: v,
               className: Z.identifier,
               children: [
                   null != g
@@ -181,22 +181,22 @@ function y(e) {
                       variant: 'text-md/normal',
                       children: p.name
                   }),
-                  s ? (0, i.jsx)(R, { tooltipText: h }) : null
+                  s ? (0, i.jsx)(L, { tooltipText: h }) : null
               ]
           });
 }
 function A(e) {
     let { guild: t, id: n, isLocked: l, lockTooltipText: r, openEntryContextMenu: a } = e,
-        o = (0, c.e7)([I.default], () => I.default.getUser(n)),
+        o = (0, c.e7)([N.default], () => N.default.getUser(n)),
         s = (0, c.e7)(
-            [v.ZP],
+            [b.ZP],
             () => {
                 var e;
-                return null === (e = v.ZP.getMember(t.id, n)) || void 0 === e ? void 0 : e.nick;
+                return null === (e = b.ZP.getMember(t.id, n)) || void 0 === e ? void 0 : e.nick;
             },
             [t.id, n]
         ),
-        d = (0, c.e7)([N.Z], () => N.Z.hidePersonalInformation);
+        d = (0, c.e7)([I.Z], () => I.Z.hidePersonalInformation);
     return null == o
         ? null
         : (0, i.jsxs)('div', {
@@ -222,11 +222,11 @@ function A(e) {
                             variant: 'text-sm/normal',
                             children: j.ZP.getUserTag(o)
                         }),
-                  l ? (0, i.jsx)(R, { tooltipText: r }) : null
+                  l ? (0, i.jsx)(L, { tooltipText: r }) : null
               ]
           });
 }
-function R(e) {
+function L(e) {
     let { tooltipText: t } = e;
     return (0, i.jsx)(u.Tooltip, {
         text: t,

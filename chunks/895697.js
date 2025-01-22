@@ -29,8 +29,8 @@ var a = r(442837),
     C = r(410344),
     N = r(591156);
 function R(e) {
-    let { user: n, currentUser: r, displayProfile: R, guild: O, isHovering: D, onOpenProfile: x, channelId: L, onClose: w } = e,
-        P = c.ZP.getName(null == O ? void 0 : O.id, L, n),
+    let { user: n, currentUser: r, displayProfile: R, guild: O, isHovering: D, onOpenProfile: L, channelId: x, onClose: w } = e,
+        P = c.ZP.getName(null == O ? void 0 : O.id, x, n),
         M = (0, a.e7)([d.Z], () => {
             var e;
             return null === (e = d.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
@@ -44,7 +44,7 @@ function R(e) {
             (0, i.jsx)(g.Z, {
                 user: n,
                 profileType: S.y0.BITE_SIZE,
-                onOpenProfile: x,
+                onOpenProfile: L,
                 nickname: P,
                 pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, i.jsx)(p.Z, {
@@ -59,14 +59,14 @@ function R(e) {
                             (0, i.jsx)(y.Z, {
                                 userId: n.id,
                                 isHovering: D,
-                                onOpenProfile: x
+                                onOpenProfile: L
                             })
                     ]
                 })
             }),
             (0, i.jsx)(T.Z, {
                 user: n,
-                onOpenProfile: (e) => (null == x ? void 0 : x({ section: e }))
+                onOpenProfile: (e) => (null == L ? void 0 : L({ section: e }))
             }),
             (0, i.jsxs)('div', {
                 className: C.buttons,

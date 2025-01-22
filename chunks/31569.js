@@ -1,7 +1,7 @@
-var a = t(972959);
-let i = Object.freeze({
+var i = n(972959);
+let a = Object.freeze({
         query: '',
-        searchBarState: t(49898).GlobalDiscoverySearchBarState.DEFAULT
+        searchBarState: n(49898).GlobalDiscoverySearchBarState.DEFAULT
     }),
-    r = (0, a.H)(() => i);
-n.Z = r;
+    r = (0, i.H)(() => a);
+t.Z = r;

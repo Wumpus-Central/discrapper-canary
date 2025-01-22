@@ -208,10 +208,10 @@ function O(e, n) {
 function D(e, n, r) {
     return new b(e, r).compare(new b(n, r));
 }
-function x(e, n) {
+function L(e, n) {
     return D(e, n, !0);
 }
-function L(e, n, r) {
+function x(e, n, r) {
     var i = new b(e, r),
         a = new b(n, r);
     return i.compare(a) || i.compareBuild(a);
@@ -286,7 +286,7 @@ function j(e, n) {
     if (!(this instanceof j)) return new j(e, n);
     i('comparator', e, n), (this.options = n), (this.loose = !!n.loose), this.parse(e), this.semver === H ? (this.value = '') : (this.value = this.operator + this.semver.version), i('comp', this);
 }
-(n.rcompareIdentifiers = C), (n.major = N), (n.minor = R), (n.patch = O), (n.compare = D), (n.compareLoose = x), (n.compareBuild = L), (n.rcompare = w), (n.sort = P), (n.rsort = M), (n.gt = k), (n.lt = U), (n.eq = B), (n.neq = G), (n.gte = Z), (n.lte = F), (n.cmp = V), (n.Comparator = j);
+(n.rcompareIdentifiers = C), (n.major = N), (n.minor = R), (n.patch = O), (n.compare = D), (n.compareLoose = L), (n.compareBuild = x), (n.rcompare = w), (n.sort = P), (n.rsort = M), (n.gt = k), (n.lt = U), (n.eq = B), (n.neq = G), (n.gte = Z), (n.lte = F), (n.cmp = V), (n.Comparator = j);
 var H = {};
 function Y(e, n) {
     if (

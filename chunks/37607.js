@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return b;
     }
 });
 var i = n(200651),
@@ -18,7 +18,7 @@ var i = n(200651),
     g = n(981631),
     x = n(388032),
     f = n(926870);
-function b(e) {
+function v(e) {
     let { applicationId: t, channels: n } = e,
         l = (0, d.q)(t);
     return 0 === n.length || null == l
@@ -58,7 +58,7 @@ function b(e) {
               ]
           });
 }
-function v(e) {
+function b(e) {
     let { guild: t } = e,
         n = (0, m.F)(t.id),
         r = a().groupBy(n, (e) => {
@@ -79,7 +79,7 @@ function v(e) {
                 (0, i.jsx)(o.FormDivider, { className: f.headerDivider }),
                 d.map((e) =>
                     (0, i.jsx)(
-                        b,
+                        v,
                         {
                             applicationId: e,
                             channels: r[e]

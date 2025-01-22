@@ -21,8 +21,8 @@ e.exports = function (e, n, r, _, m, g, E, v) {
         R,
         O = v.bits,
         D = 0,
-        x = 0,
         L = 0,
+        x = 0,
         w = 0,
         P = 0,
         M = 0,
@@ -37,26 +37,26 @@ e.exports = function (e, n, r, _, m, g, E, v) {
         H = null,
         Y = 0;
     for (D = 0; D <= a; D++) V[D] = 0;
-    for (x = 0; x < _; x++) V[n[r + x]]++;
+    for (L = 0; L < _; L++) V[n[r + L]]++;
     for (P = O, w = a; w >= 1 && 0 === V[w]; w--);
     if ((P > w && (P = w), 0 === w)) return (m[g++] = 20971520), (m[g++] = 20971520), (v.bits = 1), 0;
-    for (L = 1; L < w && 0 === V[L]; L++);
-    for (P < L && (P = L), U = 1, D = 1; D <= a; D++) if (((U <<= 1), (U -= V[D]) < 0)) return -1;
+    for (x = 1; x < w && 0 === V[x]; x++);
+    for (P < x && (P = x), U = 1, D = 1; D <= a; D++) if (((U <<= 1), (U -= V[D]) < 0)) return -1;
     if (U > 0 && (e === l || 1 !== w)) return -1;
     for (D = 1, j[1] = 0; D < a; D++) j[D + 1] = j[D] + V[D];
-    for (x = 0; x < _; x++) 0 !== n[r + x] && (E[j[n[r + x]]++] = x);
-    if ((e === l ? ((Z = H = E), (A = 19)) : e === u ? ((Z = d), (F -= 257), (H = f), (Y -= 257), (A = 256)) : ((Z = p), (H = h), (A = -1)), (G = 0), (x = 0), (D = L), (S = g), (M = P), (k = 0), (I = -1), (T = (B = 1 << P) - 1), (e === u && B > o) || (e === c && B > s))) return 1;
+    for (L = 0; L < _; L++) 0 !== n[r + L] && (E[j[n[r + L]]++] = L);
+    if ((e === l ? ((Z = H = E), (A = 19)) : e === u ? ((Z = d), (F -= 257), (H = f), (Y -= 257), (A = 256)) : ((Z = p), (H = h), (A = -1)), (G = 0), (L = 0), (D = x), (S = g), (M = P), (k = 0), (I = -1), (T = (B = 1 << P) - 1), (e === u && B > o) || (e === c && B > s))) return 1;
     for (;;) {
-        (C = D - k), E[x] < A ? ((N = 0), (R = E[x])) : E[x] > A ? ((N = H[Y + E[x]]), (R = Z[F + E[x]])) : ((N = 96), (R = 0)), (y = 1 << (D - k)), (L = b = 1 << M);
+        (C = D - k), E[L] < A ? ((N = 0), (R = E[L])) : E[L] > A ? ((N = H[Y + E[L]]), (R = Z[F + E[L]])) : ((N = 96), (R = 0)), (y = 1 << (D - k)), (x = b = 1 << M);
         do m[S + (G >> k) + (b -= y)] = (C << 24) | (N << 16) | R | 0;
         while (0 !== b);
         for (y = 1 << (D - 1); G & y; ) y >>= 1;
-        if ((0 !== y ? ((G &= y - 1), (G += y)) : (G = 0), x++, 0 == --V[D])) {
+        if ((0 !== y ? ((G &= y - 1), (G += y)) : (G = 0), L++, 0 == --V[D])) {
             if (D === w) break;
-            D = n[r + E[x]];
+            D = n[r + E[L]];
         }
         if (D > P && (G & T) !== I) {
-            for (0 === k && (k = P), S += L, U = 1 << (M = D - k); M + k < w && !((U -= V[M + k]) <= 0); ) {
+            for (0 === k && (k = P), S += x, U = 1 << (M = D - k); M + k < w && !((U -= V[M + k]) <= 0); ) {
                 M++, (U <<= 1);
             }
             if (((B += 1 << M), (e === u && B > o) || (e === c && B > s))) return 1;

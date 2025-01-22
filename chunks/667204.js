@@ -33,8 +33,8 @@ var u = r(512722),
     R = r(706454),
     O = r(430824),
     D = r(117530),
-    x = r(594174),
-    L = r(403182),
+    L = r(594174),
+    x = r(403182),
     w = r(823379),
     P = r(861990),
     M = r(555573),
@@ -49,7 +49,7 @@ var u = r(512722),
     H = r(388032);
 async function Y(e) {
     var n, r, i, a, o, s, l, u, f, h, m, g, y, b, I, T, S;
-    let { command: A, optionValues: C, context: O, commandTargetId: x, maxSizeCallback: L, commandOrigin: w = Z.bB.CHAT, sectionName: P, interactionLifecycleOptionsFactory: B = Q, source: j, clientSupportsContextlessActivityLaunch: H } = e,
+    let { command: A, optionValues: C, context: O, commandTargetId: L, maxSizeCallback: x, commandOrigin: w = Z.bB.CHAT, sectionName: P, interactionLifecycleOptionsFactory: B = Q, source: j, clientSupportsContextlessActivityLaunch: H } = e,
         Y = null !== (i = G.Z.getSource(O.channel.id)) && void 0 !== i ? i : j,
         K = null !== (a = G.Z.getCommandOrigin(O.channel.id)) && void 0 !== a ? a : w;
     null == O.autocomplete &&
@@ -211,7 +211,7 @@ async function Y(e) {
         et = () => {
             W(C);
         };
-    null != x && (ee.target_id = x),
+    null != L && (ee.target_id = L),
         H && (ee.client_supports_contextless_activity_launch = !0),
         null != O.autocomplete
             ? (0, M.GV)(A, O, ee)
@@ -221,7 +221,7 @@ async function Y(e) {
                   data: ee,
                   context: O,
                   attachments: J,
-                  maxSizeCallback: L,
+                  maxSizeCallback: x,
                   onMessageSuccess: et,
                   analytics_location: X(K),
                   sectionName: P,
@@ -342,7 +342,7 @@ async function Q(e, n, r) {
             name: r.name,
             name_localized: e.displayName,
             type: _.B8.APPLICATION_COMMAND,
-            user: (0, A.pe)(x.default.getCurrentUser())
+            user: (0, A.pe)(L.default.getCurrentUser())
         },
         interaction_data: r
     };
@@ -415,9 +415,9 @@ async function J(e, n) {
 }
 async function $(e, n, r, i) {
     let a = e,
-        o = (0, L.dg)(r),
+        o = (0, x.dg)(r),
         s = (e) => {
-            null == i || i(o, e), T.yr(n, V.evJ.ENTITY_TOO_LARGE, H.intl.formatToPlainString(H.t.fxEKdX, { maxSize: (0, L.Ng)(o) }));
+            null == i || i(o, e), T.yr(n, V.evJ.ENTITY_TOO_LARGE, H.intl.formatToPlainString(H.t.fxEKdX, { maxSize: (0, x.Ng)(o) }));
         },
         { totalSize: l, largestUploadedFileSize: u } = await J(a, !1);
     if (u > Math.max(o, j.Y1) || l > P.zz) return s(u), !1;

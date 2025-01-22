@@ -36,7 +36,7 @@ var a = r(997945),
     R = r(473974),
     O = r(563856);
 let D = 60;
-function x() {
+function L() {
     return {
         id: a.aH.DEFAULT,
         iconSource: l,
@@ -44,7 +44,7 @@ function x() {
         isPremium: !1
     };
 }
-function L() {
+function x() {
     return [
         {
             id: a.Ru.BRAND_DARK,
@@ -181,7 +181,7 @@ function L() {
     ];
 }
 function w() {
-    return [x(), ...L()];
+    return [L(), ...x()];
 }
 function P(e) {
     return w().find((n) => n.id === e);

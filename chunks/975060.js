@@ -50,10 +50,10 @@ function D(e) {
     let { billingAddressInfo: r } = s.az(f);
     O(r);
 }
-function x() {
+function L() {
     (u = ''), (c = null);
 }
-function L(e) {
+function x(e) {
     let { email: n, nonce: r, billingAddress: i } = e;
     (u = n), (c = r), O(i), (T = _.length > 0);
 }
@@ -145,8 +145,8 @@ l(V, 'displayName', 'NewPaymentSourceStore'),
         NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: D,
         NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE: M,
         NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: k,
-        BRAINTREE_TOKENIZE_PAYPAL_START: x,
-        BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: L,
+        BRAINTREE_TOKENIZE_PAYPAL_START: L,
+        BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: x,
         BRAINTREE_TOKENIZE_VENMO_START: w,
         BRAINTREE_TOKENIZE_VENMO_SUCCESS: P,
         ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS: U,

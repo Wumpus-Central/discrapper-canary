@@ -110,7 +110,7 @@ class N extends (a = c.PureComponent) {
     render() {
         var e;
         let { value: n, active: r, focused: i, sortedMarkers: a, markerPositions: o, closestMarkerIndex: s, newClosestIndex: l, min: c, max: d } = this.state,
-            { disabled: p, stickToMarkers: h, className: m, children: g, barStyles: b, fillStyles: T, mini: S, hideBubble: A, defaultValue: C, orientation: N, onValueRender: O, renderMarker: D, getAriaValueText: x, barClassName: L, grabberClassName: w, grabberStyles: P = {}, markerPosition: M = 0, 'aria-hidden': k, 'aria-label': U, 'aria-labelledby': B, 'aria-describedby': G } = this.props,
+            { disabled: p, stickToMarkers: h, className: m, children: g, barStyles: b, fillStyles: T, mini: S, hideBubble: A, defaultValue: C, orientation: N, onValueRender: O, renderMarker: D, getAriaValueText: L, barClassName: x, grabberClassName: w, grabberStyles: P = {}, markerPosition: M = 0, 'aria-hidden': k, 'aria-label': U, 'aria-labelledby': B, 'aria-describedby': G } = this.props,
             Z = 0;
         h ? null != o && (null != l ? (Z = o[l]) : null != s && (Z = o[s])) : (Z = this.scaleValue(n));
         let F = ''.concat(Z, '%'),
@@ -147,7 +147,7 @@ class N extends (a = c.PureComponent) {
                       })
                     : null,
             j = null != O ? O(n) : ''.concat(Z.toFixed(0), '%'),
-            H = null !== (e = null == x ? void 0 : x(n)) && void 0 !== e ? e : void 0;
+            H = null !== (e = null == L ? void 0 : L(n)) && void 0 !== e ? e : void 0;
         return (0, u.jsx)(R, {
             active: r,
             keyboardFocused: i && y.Z.keyboardModeEnabled,
@@ -192,7 +192,7 @@ class N extends (a = c.PureComponent) {
                                 children: V
                             }),
                             (0, u.jsx)('div', {
-                                className: f()(I.bar, L),
+                                className: f()(I.bar, x),
                                 style: b,
                                 children: (0, u.jsx)('div', {
                                     className: I.barFill,

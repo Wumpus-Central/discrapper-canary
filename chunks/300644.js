@@ -1,10 +1,10 @@
-e.d(t, {
+n.d(t, {
     O: function () {
-        return o;
+        return r;
     }
 });
-var i = e(63063);
-let o = {
+var i = n(63063);
+let r = {
     binds: ['mod+shift+h', 'f1'],
     comboKeysBindGlobal: !0,
     action: () => (window.open(i.w), !1)

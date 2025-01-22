@@ -180,7 +180,7 @@ r.d(n, {
         return u;
     },
     dB: function () {
-        return ex;
+        return eL;
     },
     dJ: function () {
         return F;
@@ -276,7 +276,7 @@ r.d(n, {
         return tt;
     },
     rB: function () {
-        return eL;
+        return ex;
     },
     rV: function () {
         return s;
@@ -336,8 +336,8 @@ var i,
     R,
     O = r(47120);
 var D = r(314794),
-    x = r(981631),
-    L = r(185923),
+    L = r(981631),
+    x = r(185923),
     w = r(388032);
 !(function (e) {
     (e[(e.TIER_1 = 1)] = 'TIER_1'), (e[(e.TIER_2 = 2)] = 'TIER_2'), (e[(e.TIER_0 = 3)] = 'TIER_0');
@@ -583,8 +583,8 @@ let z = Object.freeze({
     eR = '1150904354090532864',
     eO = '1199128659810582528',
     eD = '1204865493622587392',
-    ex = '1204867673024888832',
-    eL = '1215346678383509504',
+    eL = '1204867673024888832',
+    ex = '1215346678383509504',
     ew = '1215366184820539392',
     eP = '1223319122125783040',
     eM = '1223380890109870080',
@@ -746,78 +746,78 @@ let eG = Object.freeze({
     ej = 52428800,
     eH = 104857600,
     eY = {
-        [x.Eu4.NONE]: 5,
-        [x.Eu4.TIER_1]: 10,
-        [x.Eu4.TIER_2]: 15,
-        [x.Eu4.TIER_3]: 30
+        [L.Eu4.NONE]: 5,
+        [L.Eu4.TIER_1]: 10,
+        [L.Eu4.TIER_2]: 15,
+        [L.Eu4.TIER_3]: 30
     },
     eW = {
-        [x.Eu4.NONE]: eY[x.Eu4.NONE],
-        [x.Eu4.TIER_1]: eY[x.Eu4.NONE] + eY[x.Eu4.TIER_1],
-        [x.Eu4.TIER_2]: eY[x.Eu4.NONE] + eY[x.Eu4.TIER_1] + eY[x.Eu4.TIER_2],
-        [x.Eu4.TIER_3]: eY[x.Eu4.NONE] + eY[x.Eu4.TIER_1] + eY[x.Eu4.TIER_2] + eY[x.Eu4.TIER_3]
+        [L.Eu4.NONE]: eY[L.Eu4.NONE],
+        [L.Eu4.TIER_1]: eY[L.Eu4.NONE] + eY[L.Eu4.TIER_1],
+        [L.Eu4.TIER_2]: eY[L.Eu4.NONE] + eY[L.Eu4.TIER_1] + eY[L.Eu4.TIER_2],
+        [L.Eu4.TIER_3]: eY[L.Eu4.NONE] + eY[L.Eu4.TIER_1] + eY[L.Eu4.TIER_2] + eY[L.Eu4.TIER_3]
     },
     eK = {
-        [x.Eu4.NONE]: 8,
-        [x.Eu4.TIER_1]: 24,
-        [x.Eu4.TIER_2]: 36,
-        [x.Eu4.TIER_3]: 48
+        [L.Eu4.NONE]: 8,
+        [L.Eu4.TIER_1]: 24,
+        [L.Eu4.TIER_2]: 36,
+        [L.Eu4.TIER_3]: 48
     },
     ez = Object.freeze({
-        [x.Eu4.NONE]: {
+        [L.Eu4.NONE]: {
             features: [],
             limits: {
-                emoji: L.jZ,
-                bitrate: x.eWB,
-                fileSize: x.mBz,
+                emoji: x.jZ,
+                bitrate: L.eWB,
+                fileSize: L.mBz,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eK[x.Eu4.NONE],
+                soundboardSounds: eK[L.Eu4.NONE],
                 maxConcurrentActivities: 2,
-                stickers: eW[x.Eu4.NONE],
-                stageVideoUsers: x.B9o
+                stickers: eW[L.Eu4.NONE],
+                stageVideoUsers: L.B9o
             }
         },
-        [x.Eu4.TIER_1]: {
-            features: [x.oNc.INVITE_SPLASH, x.oNc.ANIMATED_ICON],
+        [L.Eu4.TIER_1]: {
+            features: [L.oNc.INVITE_SPLASH, L.oNc.ANIMATED_ICON],
             limits: {
                 emoji: 100,
                 bitrate: 128000,
-                fileSize: x.mBz,
+                fileSize: L.mBz,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eK[x.Eu4.TIER_1],
+                soundboardSounds: eK[L.Eu4.TIER_1],
                 maxConcurrentActivities: 3,
-                stickers: eW[x.Eu4.TIER_1],
-                stageVideoUsers: x.B9o
+                stickers: eW[L.Eu4.TIER_1],
+                stageVideoUsers: L.B9o
             }
         },
-        [x.Eu4.TIER_2]: {
-            features: [x.oNc.INVITE_SPLASH, x.oNc.ANIMATED_ICON, x.oNc.BANNER, x.oNc.ROLE_ICONS],
+        [L.Eu4.TIER_2]: {
+            features: [L.oNc.INVITE_SPLASH, L.oNc.ANIMATED_ICON, L.oNc.BANNER, L.oNc.ROLE_ICONS],
             limits: {
                 emoji: 150,
                 bitrate: 256000,
                 fileSize: ej,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eK[x.Eu4.TIER_2],
+                soundboardSounds: eK[L.Eu4.TIER_2],
                 maxConcurrentActivities: 5,
-                stickers: eW[x.Eu4.TIER_2],
-                stageVideoUsers: x.eez
+                stickers: eW[L.Eu4.TIER_2],
+                stageVideoUsers: L.eez
             }
         },
-        [x.Eu4.TIER_3]: {
-            features: [x.oNc.INVITE_SPLASH, x.oNc.ANIMATED_ICON, x.oNc.BANNER, x.oNc.ANIMATED_BANNER, x.oNc.VANITY_URL, x.oNc.ROLE_ICONS],
+        [L.Eu4.TIER_3]: {
+            features: [L.oNc.INVITE_SPLASH, L.oNc.ANIMATED_ICON, L.oNc.BANNER, L.oNc.ANIMATED_BANNER, L.oNc.VANITY_URL, L.oNc.ROLE_ICONS],
             limits: {
                 emoji: 250,
                 bitrate: 384000,
                 fileSize: eH,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eK[x.Eu4.TIER_3],
+                soundboardSounds: eK[L.Eu4.TIER_3],
                 maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-                stickers: eW[x.Eu4.TIER_3],
-                stageVideoUsers: x.RcX
+                stickers: eW[L.Eu4.TIER_3],
+                stageVideoUsers: L.RcX
             }
         }
     }),

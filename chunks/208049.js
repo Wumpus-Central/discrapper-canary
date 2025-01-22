@@ -18,7 +18,7 @@ r.d(n, {
         return O;
     },
     XE: function () {
-        return L;
+        return x;
     },
     hs: function () {
         return D;
@@ -30,7 +30,7 @@ r.d(n, {
         return w;
     },
     xU: function () {
-        return x;
+        return L;
     },
     xz: function () {
         return M;
@@ -156,7 +156,7 @@ function D(e) {
         v.fy.INFREQUENT_USER_ACTION
     );
 }
-async function x(e, n) {
+async function L(e, n) {
     try {
         let r = await l.tn.get({
             url: E.ANM.SOUNDBOARD_SOUND_GUILD_DATA(e, n),
@@ -167,7 +167,7 @@ async function x(e, n) {
         throw new d.Z(e);
     }
 }
-function L(e, n, r) {
+function x(e, n, r) {
     u.Z.dispatch({
         type: 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY',
         sound: n,

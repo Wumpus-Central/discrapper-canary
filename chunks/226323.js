@@ -52,17 +52,17 @@ let C = { offset: 2 },
     };
 function v(e) {
     var t, r;
-    let { channel: l, user: p, nick: v, mute: S, deaf: T, serverMute: A, serverDeaf: b } = e,
+    let { channel: l, user: p, nick: v, mute: S, deaf: T, serverMute: b, serverDeaf: A } = e,
         Z = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         x = (0, d.Z)({
             userId: p.id,
             checkSoundSharing: !0
         }),
         L = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
-        P = p.getAvatarURL(l.guild_id, 24),
-        O = null != v ? v : f.ZP.getName(p),
+        y = p.getAvatarURL(l.guild_id, 24),
+        P = null != v ? v : f.ZP.getName(p),
         {
-            icon: y,
+            icon: O,
             colorize: R,
             getStatus: j
         } = null !==
@@ -74,9 +74,9 @@ function v(e) {
                 else if (l) return N.localMute;
                 else if (r) return N.mute;
             })({
-                serverDeaf: b,
+                serverDeaf: A,
                 deaf: T,
-                serverMute: A,
+                serverMute: b,
                 mute: S,
                 localMute: Z
             })) && void 0 !== r
@@ -85,10 +85,10 @@ function v(e) {
         D =
             null != j
                 ? E.intl.formatToPlainString(E.t['1+MVBA'], {
-                      userName: O,
+                      userName: P,
                       status: j()
                   })
-                : O;
+                : P;
     function M(e) {
         null != L
             ? (0, c.jW)(e, async () => {
@@ -141,10 +141,10 @@ function v(e) {
                             isShaking: x,
                             children: (0, i.jsx)('div', {
                                 className: a()(I.avatar, { [I.speaking]: x }),
-                                style: { backgroundImage: 'url('.concat(P, ')') },
+                                style: { backgroundImage: 'url('.concat(y, ')') },
                                 children:
-                                    null != y
-                                        ? (0, i.jsx)(y, {
+                                    null != O
+                                        ? (0, i.jsx)(O, {
                                               className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: R }),
                                               color: 'currentColor',
                                               size: 'xs'

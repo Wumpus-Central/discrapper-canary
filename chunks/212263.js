@@ -25,8 +25,8 @@ var a = r(200651),
     R = r(149203),
     O = r(981631),
     D = r(185923),
-    x = r(474936),
-    L = r(388032),
+    L = r(474936),
+    x = r(388032),
     w = r(940675);
 let P = (e) => {
     let n,
@@ -52,7 +52,7 @@ let P = (e) => {
         ),
         X = Q.enabled || null != Y,
         J = Q.addSocialProof;
-    n = k === D.Hz.REACTION ? x.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == M ? x.cd.EMOJI_PICKER_FLOATING_UPSELL : M.subCategory === R.t0.TOP_GUILD_EMOJI ? x.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : M.subCategory === R.t0.NEWLY_ADDED_EMOJI ? x.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : x.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    n = k === D.Hz.REACTION ? L.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == M ? L.cd.EMOJI_PICKER_FLOATING_UPSELL : M.subCategory === R.t0.TOP_GUILD_EMOJI ? L.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : M.subCategory === R.t0.NEWLY_ADDED_EMOJI ? L.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : L.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let $ = null != M ? M.emoji : void 0,
         ee = null != $ && $.animated,
         et = null != $ && !A.ZP.isInternalEmojiForGuildId($, null == P ? void 0 : P.getGuildId()),
@@ -69,10 +69,10 @@ let P = (e) => {
                     object: en
                 },
                 location_stack: q,
-                sku_id: (0, C.Wz)(C.ZP.getSkuIdForPremiumType(x.p9.TIER_2))
+                sku_id: (0, C.Wz)(C.ZP.getSkuIdForPremiumType(L.p9.TIER_2))
             });
     }, [U, q, z, ee, et, n, en, X]);
-    let er = () => (K ? L.intl.string(L.t['Gd/XHB']) : L.intl.string(L.t.P3etAg)),
+    let er = () => (K ? x.intl.string(x.t['Gd/XHB']) : x.intl.string(x.t.P3etAg)),
         ei = (0, u.e7)([_.Z], () => _.Z.affinities),
         ea = (0, u.e7)([_.Z], () => _.Z.hasFetched);
     o.useEffect(() => {
@@ -87,8 +87,8 @@ let P = (e) => {
                     width: 220,
                     height: 132
                 },
-                title: L.intl.string(L.t['0+11FB']),
-                description: L.intl.string(L.t.dURIzc),
+                title: x.intl.string(x.t['0+11FB']),
+                description: x.intl.string(x.t.dURIzc),
                 enableSocialProof: eo,
                 analyticsLocationSection: O.jXE.EMOJI_UPSELL_POPOUT,
                 onClose: s,
@@ -100,7 +100,7 @@ let P = (e) => {
                         object: en
                     },
                     location_stack: q,
-                    sku_id: (0, C.Wz)(C.ZP.getSkuIdForPremiumType(x.p9.TIER_2)),
+                    sku_id: (0, C.Wz)(C.ZP.getSkuIdForPremiumType(L.p9.TIER_2)),
                     has_search_query: null != z && '' !== z,
                     is_animated: ee
                 }
@@ -113,18 +113,18 @@ let P = (e) => {
                   (0, a.jsx)(c.Clickable, {
                       className: w.premiumPromoClose,
                       onClick: s,
-                      children: L.intl.string(L.t.cpT0Cg)
+                      children: x.intl.string(x.t.cpT0Cg)
                   }),
                   (0, a.jsxs)(a.Fragment, {
                       children: [
                           K
                               ? (0, a.jsx)(v.ZP, {
-                                    type: x.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                                    subscriptionTier: x.Si.TIER_2,
+                                    type: L.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
+                                    subscriptionTier: L.Si.TIER_2,
                                     onClose: s,
                                     trialOffer: Y,
                                     discountOffer: W,
-                                    children: L.intl.format(L.t.se13Fh, { onClick: V })
+                                    children: x.intl.format(x.t.se13Fh, { onClick: V })
                                 })
                               : (0, a.jsxs)(a.Fragment, {
                                     children: [
@@ -135,17 +135,17 @@ let P = (e) => {
                                         }),
                                         (0, a.jsx)('div', {
                                             className: w.premiumPromoTitle,
-                                            children: L.intl.string(L.t['1SsvhY'])
+                                            children: x.intl.string(x.t['1SsvhY'])
                                         }),
                                         (0, a.jsx)('div', {
                                             className: w.premiumPromoDescription,
-                                            children: L.intl.format(L.t.se13Fh, { onClick: V })
+                                            children: x.intl.format(x.t.se13Fh, { onClick: V })
                                         })
                                     ]
                                 }),
                           !K &&
                               (0, a.jsx)(y.Z, {
-                                  subscriptionTier: x.Si.TIER_2,
+                                  subscriptionTier: L.Si.TIER_2,
                                   submitting: Z,
                                   premiumModalAnalyticsLocation: {
                                       section: O.jXE.EMOJI_PICKER_POPOUT,

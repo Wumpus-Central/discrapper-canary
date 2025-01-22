@@ -33,7 +33,7 @@ var c = r(200651),
     R = r(388032),
     O = r(26577);
 let D = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/avif', 'video/quicktime', 'video/mp4'];
-function x(e) {
+function L(e) {
     let { alt: n, spoiler: r, renderContent: i, size: a } = e,
         [o, s] = d.useState(!1);
     return (0, c.jsx)(b.a.Provider, {
@@ -77,7 +77,7 @@ function x(e) {
         })
     });
 }
-function L(e) {
+function x(e) {
     let { file: n, alt: r, spoiler: i, size: a = N.q.MEDIUM, onMouseEnter: o } = e,
         [s, l] = d.useState(),
         [u, f] = d.useState({
@@ -145,7 +145,7 @@ function L(e) {
         children: (0, c.jsx)(_.Clickable, {
             onClick: g,
             className: O.clickableMedia,
-            children: (0, c.jsx)(x, {
+            children: (0, c.jsx)(L, {
                 size: a,
                 alt: r,
                 spoiler: i,
@@ -172,7 +172,7 @@ function w(e) {
         (0, c.jsx)('div', {
             onMouseEnter: o,
             className: O.mediaContainer,
-            children: (0, c.jsx)(x, {
+            children: (0, c.jsx)(L, {
                 size: a,
                 alt: r,
                 spoiler: i,
@@ -198,7 +198,7 @@ function P(e) {
         [o, s] = d.useState(!1),
         l = i === N.q.SMALL;
     return r.isImage && r.item.platform === E.ow.WEB
-        ? (0, c.jsx)(L, {
+        ? (0, c.jsx)(x, {
               file: r.item.file,
               alt: r.description,
               spoiler: r.spoiler,

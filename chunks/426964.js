@@ -25,8 +25,8 @@ var a = r(200651),
     R = r(284019),
     O = r(308083),
     D = r(981631),
-    x = r(388032),
-    L = r(420930);
+    L = r(388032),
+    x = r(420930);
 function w(e) {
     e.stopPropagation();
 }
@@ -118,7 +118,7 @@ n.Z = o.memo(function (e) {
                 color: s.Button.Colors.BRAND,
                 size: s.Button.Sizes.SMALL,
                 fullWidth: !0,
-                className: L.button,
+                className: x.button,
                 themeColor: null !== (n = null == G ? void 0 : null === (e = G.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== n ? n : null
             };
         }, [null == G ? void 0 : null === (n = G.branding) || void 0 === n ? void 0 : n.primaryColor]),
@@ -129,7 +129,7 @@ n.Z = o.memo(function (e) {
                     return (0, a.jsx)(R.Z, {
                         onClick: ec,
                         ...ef,
-                        children: x.intl.string(x.t.dXvKgY)
+                        children: L.intl.string(L.t.dXvKgY)
                     });
                 case !en && (null == G ? void 0 : null === (e = G.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(D.oNc.CLAN_DISCOVERY_DISABLED)):
                     return null;
@@ -137,19 +137,19 @@ n.Z = o.memo(function (e) {
                     return (0, a.jsx)(R.Z, {
                         onClick: eu,
                         ...ef,
-                        children: x.intl.string(x.t.YfkjGh)
+                        children: L.intl.string(L.t.YfkjGh)
                     });
                 case en && !er:
                     return (0, a.jsx)(R.Z, {
                         onClick: el,
                         ...ef,
-                        children: x.intl.string(x.t['1keBy8'])
+                        children: L.intl.string(L.t['1keBy8'])
                     });
                 case en && er:
                     return (0, a.jsx)(R.Z, {
                         onClick: ed,
                         ...ef,
-                        children: x.intl.string(x.t.muzrLS)
+                        children: L.intl.string(L.t.muzrLS)
                     });
                 default:
                     return null;
@@ -157,7 +157,7 @@ n.Z = o.memo(function (e) {
         }, [en, ei, null == G ? void 0 : G.discoveryProfileFeatures, ea, er, ec, ef, eu, el, ed]),
         eh = o.useMemo(
             () => ({
-                className: L.container,
+                className: x.container,
                 onClick: w
             }),
             []
@@ -177,21 +177,21 @@ n.Z = o.memo(function (e) {
                 children: [
                     (0, a.jsx)(N.xV, {
                         clan: G,
-                        className: L.cardContainer,
+                        className: x.cardContainer,
                         isMember: en,
                         hasPendingJoinRequest: $,
                         atMaxMemberCapacity: ee
                     }),
                     em &&
                         (0, a.jsxs)('div', {
-                            className: L.buttonGroupContainer,
+                            className: x.buttonGroupContainer,
                             children: [
                                 null != ep && ep,
                                 e_ &&
                                     (0, a.jsx)(R.Z, {
                                         onClick: eo,
                                         ...ef,
-                                        children: x.intl.string(x.t.HzLAb2)
+                                        children: L.intl.string(L.t.HzLAb2)
                                     })
                             ]
                         })
@@ -199,27 +199,27 @@ n.Z = o.memo(function (e) {
             }),
             H &&
                 (0, a.jsxs)(s.Dialog, {
-                    className: L.askToJoinInputWrapper,
+                    className: x.askToJoinInputWrapper,
                     children: [
                         (0, a.jsx)(s.Text, {
                             color: 'interactive-normal',
                             variant: 'text-xs/normal',
-                            children: x.intl.format(x.t.k5d4Wl, { username: eg })
+                            children: L.intl.format(L.t.k5d4Wl, { username: eg })
                         }),
                         (0, a.jsxs)('div', {
-                            className: L.inputRow,
+                            className: x.inputRow,
                             children: [
                                 (0, a.jsx)(s.TextInput, {
-                                    inputClassName: L.input,
+                                    inputClassName: x.input,
                                     value: W,
                                     onChange: K,
-                                    placeholder: x.intl.formatToPlainString(x.t['4c+CAw'], { channel: eg })
+                                    placeholder: L.intl.formatToPlainString(L.t['4c+CAw'], { channel: eg })
                                 }),
                                 (0, a.jsx)(s.Button, {
-                                    className: L.sendButton,
+                                    className: x.sendButton,
                                     color: s.Button.Colors.BRAND,
                                     onClick: es,
-                                    children: x.intl.string(x.t.TXNS7e)
+                                    children: L.intl.string(L.t.TXNS7e)
                                 })
                             ]
                         })

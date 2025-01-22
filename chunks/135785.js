@@ -15,18 +15,18 @@ t.Z = (e) => {
     let t,
         n,
         { premiumSubscription: r, className: p, isFullscreen: x = !1, textColor: f } = e,
-        _ = (0, d.Nx)();
+        E = (0, d.Nx)();
     if (null == r) return null;
-    let E = null != r ? c.ZP.getPremiumPlanItem(r) : null;
-    if ((c.ZP.isBoostOnlySubscription(r) ? (t = g.intl.string(g.t.Uj0md3)) : null != E && (t = c.ZP.getDisplayPremiumType(E.planId)), null == t)) return null;
+    let _ = null != r ? c.ZP.getPremiumPlanItem(r) : null;
+    if ((c.ZP.isBoostOnlySubscription(r) ? (t = g.intl.string(g.t.Uj0md3)) : null != _ && (t = c.ZP.getDisplayPremiumType(_.planId)), null == t)) return null;
     let C = () => l.Z.open(m.oAB.SUBSCRIPTIONS),
-        T = (null != E ? c.ZP.getSkuIdForPlan(E.planId) : null) === u.Si.TIER_1;
+        T = (null != _ ? c.ZP.getSkuIdForPlan(_.planId) : null) === u.Si.TIER_1;
     return (
-        (n = null != f ? f : _ || x ? 'always-white' : 'text-normal'),
+        (n = null != f ? f : E || x ? 'always-white' : 'text-normal'),
         (0, i.jsxs)(a.Card, {
             className: s()(h.container, p, {
                 [h.lightTextLink]: x,
-                [h.centerText]: _
+                [h.centerText]: E
             }),
             type: a.Card.Types.CUSTOM,
             children: [
@@ -35,7 +35,7 @@ t.Z = (e) => {
                     width: 20,
                     height: 20,
                     color: 'currentColor',
-                    className: s()(h.icon, { [h.lightThemeColorOnly]: _ || x })
+                    className: s()(h.icon, { [h.lightThemeColorOnly]: E || x })
                 }),
                 (0, i.jsx)(a.Text, {
                     variant: 'text-sm/medium',

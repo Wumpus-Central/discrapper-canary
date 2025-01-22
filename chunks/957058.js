@@ -4,19 +4,19 @@ n.d(t, {
     }
 });
 var r = n(192379),
-    a = n(557816),
-    i = n.n(a),
-    l = n(597688),
-    s = n(228624);
+    i = n(557816),
+    l = n.n(i),
+    s = n(597688),
+    a = n(228624);
 let o = () => {
-    let e = (0, s.ed)('CollectiblesFeedShop');
+    let e = (0, a.ed)('CollectiblesFeedShop');
     return (0, r.useCallback)(
         (t) =>
-            i()(
+            l()(
                 t
                     .map((t) => {
-                        let n = l.Z.getProduct(t);
-                        return e && null != n && null != n.variantGroupStoreListingId ? l.Z.getProductByStoreListingId(n.variantGroupStoreListingId) : n;
+                        let n = s.Z.getProduct(t);
+                        return e && null != n && null != n.variantGroupStoreListingId ? s.Z.getProductByStoreListingId(n.variantGroupStoreListingId) : n;
                     })
                     .filter((e) => null != e),
                 'storeListingId'

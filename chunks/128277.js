@@ -30,7 +30,7 @@ var i = r(200651),
     R = r(228168),
     O = r(249942);
 function D(e) {
-    let { user: n, currentUser: r, activity: o, guild: D, channel: x, className: L, onClose: w } = e,
+    let { user: n, currentUser: r, activity: o, guild: D, channel: L, className: x, onClose: w } = e,
         { profileType: P } = (0, v.z)(),
         M = { [O.fullSize]: P === R.y0.FULL_SIZE },
         k = (0, h.Z)({
@@ -96,12 +96,12 @@ function D(e) {
                   });
         },
         H = () =>
-            null == D || null == x
+            null == D || null == L
                 ? null
                 : (0, i.jsx)(S.Z, {
                       user: n,
                       guild: D,
-                      channel: x,
+                      channel: L,
                       onAction: Z,
                       onClose: w
                   }),
@@ -120,7 +120,7 @@ function D(e) {
         value: G,
         children: (0, i.jsxs)(b.Z, {
             ref: F,
-            className: s()(O.card, L),
+            className: s()(O.card, x),
             onAction: Z,
             onClose: w,
             children: [

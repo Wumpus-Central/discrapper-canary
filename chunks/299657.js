@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(100527),
     x = n(906732),
     f = n(211242),
-    _ = n(15640),
-    E = n(89057),
+    E = n(15640),
+    _ = n(89057),
     C = n(433811),
     T = n(214852),
     S = n(621853),
@@ -45,7 +45,7 @@ t.Z = function (e) {
         V = null == U ? void 0 : U.id,
         G = (0, y.N)(),
         H = (0, D.Ng)(),
-        Y = (0, _.V)(),
+        Y = (0, E.V)(),
         [W, z] = r.useState(!0),
         K = r.useRef(0),
         q = (0, A.M5)(U, L.p9.TIER_2),
@@ -77,7 +77,7 @@ t.Z = function (e) {
         (0, l.e7)([b.Z], () => b.Z.enabled))
     )
         return (0, i.jsx)(h.Z, {});
-    if (n) return (0, i.jsx)(E.c8, {});
+    if (n) return (0, i.jsx)(_.c8, {});
     if (t === L.EZ.ApplicationStoreHome && q)
         return J && null == $
             ? (0, i.jsx)('div', {

@@ -1,6 +1,6 @@
 r.d(n, {
     Jh: function () {
-        return x;
+        return L;
     },
     Lk: function () {
         return w;
@@ -12,7 +12,7 @@ r.d(n, {
         return O;
     },
     _Z: function () {
-        return L;
+        return x;
     },
     c7: function () {
         return D;
@@ -79,7 +79,7 @@ function D(e) {
         headerClassName: R.headerSuccess
     });
 }
-function x(e) {
+function L(e) {
     let { guild: n, application: r, ...i } = e,
         s = N.intl.string(N.t.se5gLi);
     o.useEffect(() => {
@@ -109,7 +109,7 @@ function x(e) {
         })
     });
 }
-function L(e) {
+function x(e) {
     let { guild: n, application: r, ...i } = e,
         { onClose: s } = i,
         l = o.useCallback(() => {
@@ -121,7 +121,7 @@ function L(e) {
                         guild_id: null == n ? void 0 : n.id
                     });
         }, [s, null == r ? void 0 : r.id, null == n ? void 0 : n.id]),
-        u = (0, _.useApplicationDirectoryHistory)((e) => e.entrypoint),
+        u = (0, _.g8)((e) => e.entrypoint),
         c = o.useCallback(() => {
             null == s || s(), I.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == r ? void 0 : r.id });
         }, [s, null == r ? void 0 : r.id]),
@@ -185,7 +185,7 @@ function P() {
     var e, n;
     let r = (0, c.TH)();
     return (0, a.jsx)(A.G, {
-        children: (0, a.jsx)(x, {
+        children: (0, a.jsx)(L, {
             guild: null === (e = r.state) || void 0 === e ? void 0 : e.guild,
             application: null === (n = r.state) || void 0 === n ? void 0 : n.application,
             showsCloseWindowText: !0

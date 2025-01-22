@@ -179,10 +179,10 @@ function D(e) {
         message: (0, p.wi)(a.message, n)
     });
 }
-function x(e) {
+function L(e) {
     return I.deleteChannelCache(e.channel.id);
 }
-function L() {
+function x() {
     if (0 === I.retainWhere((e) => null != h.Z.getChannel(e))) return !1;
 }
 function w(e, n) {
@@ -252,9 +252,9 @@ g(Z, 'displayName', 'ReferencedMessageStore'),
         MESSAGE_DELETE: P,
         MESSAGE_DELETE_BULK: M,
         CREATE_PENDING_REPLY: k,
-        CHANNEL_DELETE: x,
-        THREAD_DELETE: x,
-        GUILD_DELETE: L,
+        CHANNEL_DELETE: L,
+        THREAD_DELETE: L,
+        GUILD_DELETE: x,
         CONNECTION_OPEN: U,
         LOGOUT: U
     }));

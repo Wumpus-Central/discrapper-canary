@@ -27,33 +27,33 @@ function m(e) {
             }),
                 n(u.intl.string(u.t.VFqtkJ), p);
         },
-        [f, _] = r.useState({});
+        [f, E] = r.useState({});
     r.useEffect(() => {
         for (let n of t) {
             var e;
             let t = null === (e = n.items[0]) || void 0 === e ? void 0 : e.planId;
             null != t &&
-                (_((e) => ({
+                (E((e) => ({
                     ...e,
                     [n.id]: o.G.LOADING
                 })),
                 (0, a.vY)(t)
                     .then(() => {
-                        _((e) => ({
+                        E((e) => ({
                             ...e,
                             [n.id]: o.G.DONE
                         }));
                     })
                     .catch(() => {
-                        _((e) => ({
+                        E((e) => ({
                             ...e,
                             [n.id]: o.G.ERROR
                         }));
                     }));
         }
     }, [t]);
-    let { loadState: E } = (0, l.qz)(),
-        C = E !== l.jd.LOADED;
+    let { loadState: _ } = (0, l.qz)(),
+        C = _ !== l.jd.LOADED;
     switch (h) {
         case c.j.HOME:
             return (0, i.jsx)(i.Fragment, {

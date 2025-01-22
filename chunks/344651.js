@@ -31,8 +31,8 @@ var c = r(442837),
     R = r(819640),
     O = r(594174),
     D = r(979651),
-    x = r(509545),
-    L = r(78839),
+    L = r(509545),
+    x = r(78839),
     w = r(936101),
     P = r(868158),
     M = r(483012),
@@ -1133,7 +1133,7 @@ H(
         });
     }),
     j(['USER_PAYMENT_SOURCES_UPDATE'], () => {
-        R.Z.hasLayers() && (r(355467).tZ(), p.Gn(x.Z.getFetchedSKUIDs()));
+        R.Z.hasLayers() && (r(355467).tZ(), p.Gn(L.Z.getFetchedSKUIDs()));
     }),
     j(['USER_SUBSCRIPTIONS_UPDATE'], () => {
         h.k(), R.Z.hasLayers() && r(355467).jg();
@@ -1141,13 +1141,13 @@ H(
     j(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE'], (e) => {
         W({
             type: 'GUILD_BOOST_SLOT_CREATE',
-            guildBoostSlot: S.Z.createFromServer(e, L.ZP.getSubscriptionById(e.subscription_id))
+            guildBoostSlot: S.Z.createFromServer(e, x.ZP.getSubscriptionById(e.subscription_id))
         });
     }),
     j(['USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE'], (e) => {
         W({
             type: 'GUILD_BOOST_SLOT_UPDATE',
-            guildBoostSlot: S.Z.createFromServer(e, L.ZP.getSubscriptionById(e.subscription_id))
+            guildBoostSlot: S.Z.createFromServer(e, x.ZP.getSubscriptionById(e.subscription_id))
         });
     }),
     j(['BILLING_POPUP_BRIDGE_CALLBACK'], (e) => {

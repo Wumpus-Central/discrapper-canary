@@ -31,7 +31,7 @@ let T = (e) => {
 };
 function S(e) {
     var n;
-    let { user: r, displayProfile: i, guildId: s, pendingBanner: b, children: S, className: A, avatarSize: C, avatarOffsetX: N, avatarOffsetY: R, bannerWidth: O, bannerHeight: D, themePadding: x, animateOnHover: L = !1 } = e,
+    let { user: r, displayProfile: i, guildId: s, pendingBanner: b, children: S, className: A, avatarSize: C, avatarOffsetX: N, avatarOffsetY: R, bannerWidth: O, bannerHeight: D, themePadding: L, animateOnHover: x = !1 } = e,
         w = (0, _.Dt)(),
         [P, M] = o.useState(!1),
         k = (0, c.e7)([E.Z], () => E.Z.isFocused()),
@@ -40,15 +40,15 @@ function S(e) {
             displayProfile: i,
             pendingBanner: b,
             size: O,
-            canAnimate: L || !U ? P : k
+            canAnimate: x || !U ? P : k
         }),
         Z = (0, f.useToken)(d.Z.unsafe_rawColors.PRIMARY_800).hex(),
         F = r.getAvatarURL(s, (0, f.getAvatarSize)(C)),
         V = (0, u._i)((0, p.ZP)(F, Z, !1)),
         j = (0, h.Z)(null !== (n = null == i ? void 0 : i.primaryColor) && void 0 !== n ? n : V).hex,
         H = T(C),
-        Y = H + N - x,
-        W = D - R - x;
+        Y = H + N - L,
+        W = D - R - L;
     return (0, a.jsxs)('svg', {
         className: I.mask,
         viewBox: '0 0 '.concat(O, ' ').concat(D),

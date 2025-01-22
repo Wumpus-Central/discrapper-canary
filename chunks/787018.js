@@ -3,7 +3,7 @@ t.d(n, {
         return T;
     },
     Z: function () {
-        return y;
+        return S;
     }
 }),
     t(47120);
@@ -30,15 +30,15 @@ var i = t(200651),
     b = t(981631),
     E = t(388032),
     N = t(409308),
-    S = t(161068);
-function y(e) {
+    y = t(161068);
+function S(e) {
     let { user: n, guildId: t, channelId: o, messageId: r, roleId: s, transitionState: f, onViewBlockedProfileClick: m, showGuildProfile: Z = !0, sourceAnalyticsLocations: g = [] } = e,
-        y = t === b.ME ? void 0 : t,
+        S = t === b.ME ? void 0 : t,
         { analyticsLocations: T } = (0, d.ZP)([...g, a.Z.BLOCKED_PROFILE_MODAL]),
         P = (0, x.ZB)({
             layout: 'BLOCKED_PROFILE_MODAL',
             userId: n.id,
-            guildId: y,
+            guildId: S,
             channelId: o,
             messageId: r,
             roleId: s,
@@ -54,7 +54,7 @@ function y(e) {
                 description: E.intl.string(E.t.QxrDY2)
             }
         ],
-        A = (0, p.ZP)(n.id, Z ? y : void 0),
+        A = (0, p.ZP)(n.id, Z ? S : void 0),
         L = l.createRef();
     return (0, i.jsx)(d.Gt, {
         value: T,
@@ -75,7 +75,7 @@ function y(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: S,
+                                src: y,
                                 className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),
@@ -84,7 +84,7 @@ function y(e) {
                                 children: [
                                     (0, i.jsx)(h.Z, {
                                         user: n,
-                                        guildId: y
+                                        guildId: S
                                     }),
                                     (0, i.jsx)(c.Heading, {
                                         variant: 'heading-xl/bold',
@@ -139,7 +139,7 @@ function y(e) {
     });
 }
 function T(e) {
-    let { user: n, guildId: t, channelId: o, messageId: j, roleId: y, transitionState: T, onViewBlockedProfileClick: P, showGuildProfile: C = !0, sourceAnalyticsLocations: A = [] } = e,
+    let { user: n, guildId: t, channelId: o, messageId: j, roleId: S, transitionState: T, onViewBlockedProfileClick: P, showGuildProfile: C = !0, sourceAnalyticsLocations: A = [] } = e,
         L = t === b.ME ? void 0 : t,
         M = (0, s.e7)([f.Z], () => f.Z.isBlocked(n.id)),
         { analyticsLocations: R } = (0, d.ZP)([...A, M ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
@@ -149,7 +149,7 @@ function T(e) {
             guildId: L,
             channelId: o,
             messageId: j,
-            roleId: y,
+            roleId: S,
             showGuildProfile: C
         }),
         U = [
@@ -183,7 +183,7 @@ function T(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: S,
+                                src: y,
                                 className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),

@@ -45,8 +45,8 @@ function R(e, n, r) {
 }
 let O = new g.Z('GuildMemberStore'),
     D = {},
-    x = {},
     L = {},
+    x = {},
     w = {},
     P = {},
     M = !1,
@@ -143,17 +143,17 @@ function q(e) {
     if (i === S.default.getId()) {
         if (y.Z.isViewingRoles(o) || y.Z.isFullServerPreview(o)) {
             let e = y.Z.getViewingRoles(o);
-            L[o] = {
+            x[o] = {
                 ...R,
                 ...y.Z.getMemberOptions(o),
                 roles: null != e ? T.default.keys(e) : []
             };
-        } else null != L[o] && delete L[o];
+        } else null != x[o] && delete x[o];
     }
     return R;
 }
 function Q(e) {
-    M ? (M = !1) : ((D = {}), (x = {})), (P = {}), J(e);
+    M ? (M = !1) : ((D = {}), (L = {})), (P = {}), J(e);
 }
 function X(e) {
     e.guilds.forEach((e) => {
@@ -177,11 +177,11 @@ function J(e) {
 }
 function $(e) {
     let { guildMembers: n } = e;
-    (D = { ...n }), (x = {});
+    (D = { ...n }), (L = {});
 }
 function ee(e) {
     let { guildMembers: n, guilds: r } = e;
-    (M = !0), (D = { ...n }), (x = {}), (w = {}), en(r);
+    (M = !0), (D = { ...n }), (L = {}), (w = {}), en(r);
 }
 function et(e) {
     let { guilds: n } = e;
@@ -422,7 +422,7 @@ function ey(e) {
 }
 function eb(e) {
     let { guild: n } = e;
-    delete D[n.id], delete x[n.id], V(n.id);
+    delete D[n.id], delete L[n.id], V(n.id);
 }
 function eI(e) {
     let n = D[e.guildId];
@@ -568,7 +568,7 @@ function eD(e) {
 !(function (e) {
     (e[(e.GUILD = 0)] = 'GUILD'), (e[(e.USER = 1)] = 'USER');
 })(i || (i = {}));
-class ex extends (a = f.ZP.Store) {
+class eL extends (a = f.ZP.Store) {
     initialize() {
         this.waitFor(C.Z, S.default, y.Z);
     }
@@ -637,7 +637,7 @@ class ex extends (a = f.ZP.Store) {
         let r = this.getTrueMember(e, n);
         if (null != r && n === S.default.getId() && (y.Z.isViewingRoles(e) || y.Z.isFullServerPreview(e))) {
             var i;
-            return null !== (i = L[e]) && void 0 !== i ? i : r;
+            return null !== (i = x[e]) && void 0 !== i ? i : r;
         }
         return r;
     }
@@ -645,12 +645,12 @@ class ex extends (a = f.ZP.Store) {
         return this.getMember(e, S.default.getId());
     }
     getSelfMemberJoinedAt(e) {
-        let n = x[e];
+        let n = L[e];
         if (null != n) return n;
         let r = this.getSelfMember(e);
         if (null == r || null == r.joinedAt) return null;
         let i = new Date(r.joinedAt);
-        return (x[e] = i), i;
+        return (L[e] = i), i;
     }
     getCachedSelfMember(e) {
         var n;
@@ -681,8 +681,8 @@ class ex extends (a = f.ZP.Store) {
         return U;
     }
 }
-R(ex, 'displayName', 'GuildMemberStore'),
-    (n.ZP = new ex(p.Z, {
+R(eL, 'displayName', 'GuildMemberStore'),
+    (n.ZP = new eL(p.Z, {
         CONNECTION_OPEN: Q,
         CONNECTION_OPEN_SUPPLEMENTAL: X,
         OVERLAY_INITIALIZE: $,

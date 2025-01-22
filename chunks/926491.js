@@ -39,7 +39,7 @@ let b = 2,
         R = new Map(R.set(e, n));
     },
     D = g.Z.Millis.HOUR,
-    x = async () => {
+    L = async () => {
         if (0 !== b) return;
         let e = c.Z.database();
         if (null == e) return;
@@ -51,7 +51,7 @@ let b = 2,
                 stickers: n
             });
     };
-function L(e) {
+function x(e) {
     let { stickers: n } = e;
     for (let [e, r] of n)
         if (_.Z.isMember(e) && !R.has(e)) {
@@ -226,7 +226,7 @@ class Q extends (i = l.ZP.Store) {
         return b;
     }
     get stickerMetadata() {
-        return x(), null == S && ((S = new Map()), k()), S;
+        return L(), null == S && ((S = new Map()), k()), S;
     }
     get hasLoadedStickerPacks() {
         return null != C && C + D > Date.now();
@@ -235,7 +235,7 @@ class Q extends (i = l.ZP.Store) {
         return N;
     }
     getStickerById(e) {
-        return !T.has(e) && x(), T.get(e);
+        return !T.has(e) && L(), T.get(e);
     }
     getStickerPack(e) {
         return I.get(e);
@@ -250,13 +250,13 @@ class Q extends (i = l.ZP.Store) {
         return R;
     }
     getAllStickersIterator() {
-        return x(), T.values();
+        return L(), T.values();
     }
     getAllGuildStickers() {
-        return x(), R;
+        return L(), R;
     }
     getStickersByGuildId(e) {
-        return x(), R.get(e);
+        return L(), R.get(e);
     }
 }
 y(Q, 'displayName', 'StickersStore'),
@@ -273,5 +273,5 @@ y(Q, 'displayName', 'StickersStore'),
         GUILD_STICKERS_CREATE_SUCCESS: K,
         STICKER_FETCH_SUCCESS: z,
         GUILD_STICKERS_UPDATE: q,
-        CACHED_STICKERS_LOADED: L
+        CACHED_STICKERS_LOADED: x
     }));

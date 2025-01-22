@@ -133,7 +133,7 @@ function O(e) {
 function D(e) {
     return null != e ? R(e) : O('#'.concat(b.intl.string(b.t.J90oLS)));
 }
-function x() {
+function L() {
     return S(
         {
             name: b.intl.string(b.t.zLZPmp).toLowerCase(),
@@ -143,7 +143,7 @@ function x() {
         'italics'
     );
 }
-function L(e, n, r, i, a) {
+function x(e, n, r, i, a) {
     let o = d.Z.getGuild(e),
         s = (null == o ? void 0 : o.id) === i;
     return {
@@ -153,7 +153,7 @@ function L(e, n, r, i, a) {
         messageId: r,
         originalLink: a,
         inContent: null == o || s ? null : [T(o)],
-        content: [x()]
+        content: [L()]
     };
 }
 function w(e, n, r, i) {
@@ -237,7 +237,7 @@ let M = {
                     id: i
                 };
             let a = N(i, r.mentionChannels);
-            return null == a ? L(null, i, null, I(r.channelId)) : P(a, null, I(r.channelId));
+            return null == a ? x(null, i, null, I(r.channelId)) : P(a, null, I(r.channelId));
         }
     },
     k = {
@@ -254,7 +254,7 @@ let M = {
                 s = e[3];
             if (null == o) return R(i);
             let l = N(o, null);
-            return null == l ? L(a, o, s, I(r.channelId), i) : P(l, s, I(r.channelId), i);
+            return null == l ? x(a, o, s, I(r.channelId), i) : P(l, s, I(r.channelId), i);
         }
     },
     U = {
@@ -271,7 +271,7 @@ let M = {
             let u = N(s, null);
             if (null != u) return P(u, l, I(r.channelId), i);
             let c = N(o, null);
-            return null != c ? P(c, l, I(r.channelId), i) : L(a, o, l, I(r.channelId), i);
+            return null != c ? P(c, l, I(r.channelId), i) : x(a, o, l, I(r.channelId), i);
         }
     };
 n.Z = {

@@ -172,7 +172,7 @@ function C(e) {
 }
 function N(e) {
     var n;
-    let { clan: r, bannerComponent: i, expanded: s, isMember: h = !1, traitsToHighlight: E, prioritizedGameIds: N, className: R, position: O, showBrandingFooter: D = !1, bannerUrl: x, onlyAnimateIconOnHover: L = !1, hasPendingJoinRequest: w = !1, atMaxMemberCapacity: P = !1, footer: M = null } = e,
+    let { clan: r, bannerComponent: i, expanded: s, isMember: h = !1, traitsToHighlight: E, prioritizedGameIds: N, className: R, position: O, showBrandingFooter: D = !1, bannerUrl: L, onlyAnimateIconOnHover: x = !1, hasPendingJoinRequest: w = !1, atMaxMemberCapacity: P = !1, footer: M = null } = e,
         {
             tag: k,
             badge: U,
@@ -192,7 +192,7 @@ function N(e) {
             Y(!1);
         }, []),
         X = b.intl.formatToPlainString(b.t['0WHArK'], { count: r.memberCount }),
-        J = null != x ? x : (0, _.pY)(r.id, Z),
+        J = null != L ? L : (0, _.pY)(r.id, Z),
         $ = null == i && null == J ? { background: 'linear-gradient(90deg, '.concat(B, ', ').concat(G, ')') } : void 0,
         ee =
             null != i
@@ -257,7 +257,7 @@ function N(e) {
                                                 guildName: r.name,
                                                 guildIcon: r.icon,
                                                 iconSize: 64,
-                                                animate: !L || H
+                                                animate: !x || H
                                             })
                                         })
                                     }),

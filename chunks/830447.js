@@ -349,7 +349,7 @@ function O(e) {
     }, [O.isUsingKeyboardNavigation]);
     let D = c.useRef(null);
     (0, m.T)(D);
-    let L = a ? g.u2 : g.zJ;
+    let x = a ? g.u2 : g.zJ;
     return (0, u.jsx)(I.r.Provider, {
         value: d,
         children: (0, u.jsx)('div', {
@@ -357,13 +357,13 @@ function O(e) {
             ...O.getContainerProps(),
             ref: D,
             'aria-label': e['aria-label'],
-            children: (0, u.jsxs)(L, {
+            children: (0, u.jsxs)(x, {
                 className: S.scroller,
                 children: [
                     0 === p.length &&
                         (0, u.jsx)(T.ck, {
                             disabled: !0,
-                            label: () => (0, u.jsx)(x, {}),
+                            label: () => (0, u.jsx)(L, {}),
                             menuItemProps: O.getItemProps({ path: ['empty'] }),
                             isFocused: !1,
                             onFocus: () => {},
@@ -381,7 +381,7 @@ function D() {
         children: (0, u.jsx)(E.$, {})
     });
 }
-function x() {
+function L() {
     let e = '\u266B (つ\uFF61\u25D5‿‿\u25D5\uFF61)つ \u266A',
         n = '\u266B \u2282(\uFF61\u25D5‿‿\u25D5\uFF61\u2282) \u266A',
         [r, i] = c.useState(e);

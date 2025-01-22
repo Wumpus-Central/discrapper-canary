@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(798769),
     x = n(474936),
     f = n(981631),
-    _ = n(388032),
-    E = n(546146),
+    E = n(388032),
+    _ = n(546146),
     C = n(982404),
     T = n(299156);
 t.Z = function (e) {
@@ -54,25 +54,25 @@ t.Z = function (e) {
                       onClose: s
                   }),
                   (0, i.jsx)(c.ModalContent, {
-                      className: E.body,
+                      className: _.body,
                       children: (0, i.jsxs)('div', {
-                          className: E.confirmDiscountContent,
+                          className: _.confirmDiscountContent,
                           children: [
                               (0, i.jsx)(c.Heading, {
                                   variant: 'heading-xl/bold',
-                                  children: _.intl.format(_.t.q9Vxu7, { percent: b.discount.amount })
+                                  children: E.intl.format(E.t.q9Vxu7, { percent: b.discount.amount })
                               }),
                               (0, i.jsxs)('div', {
-                                  className: E.confirmDiscountDescription,
+                                  className: _.confirmDiscountDescription,
                                   children: [
                                       (0, i.jsx)('img', {
                                           alt: '',
                                           src: R,
-                                          className: E.confirmDiscountIcon
+                                          className: _.confirmDiscountIcon
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
-                                          children: _.intl.format(_.t.Eq1RHB, {
+                                          children: E.intl.format(E.t.Eq1RHB, {
                                               percent: b.discount.amount,
                                               numMonths: b.discount.user_usage_limit,
                                               price: y
@@ -81,11 +81,11 @@ t.Z = function (e) {
                                   ]
                               }),
                               (0, i.jsx)('div', {
-                                  className: E.confirmDiscountLegalese,
+                                  className: _.confirmDiscountLegalese,
                                   children: (0, i.jsx)(c.Text, {
                                       variant: 'text-xs/semibold',
-                                      className: E.confirmDiscountLegaleseText,
-                                      children: _.intl.format(_.t.hrGTjI, {
+                                      className: _.confirmDiscountLegaleseText,
+                                      children: E.intl.format(E.t.hrGTjI, {
                                           discountedPrice: P,
                                           billingPeriod: (0, m.JP)(b.discount.user_usage_limit_interval),
                                           numMonths: b.discount.user_usage_limit,
@@ -96,29 +96,29 @@ t.Z = function (e) {
                               }),
                               I &&
                                   (0, i.jsx)('div', {
-                                      className: E.redemptionFailedMessage,
+                                      className: _.redemptionFailedMessage,
                                       children: (0, i.jsx)(c.Text, {
                                           variant: 'text-xs/semibold',
-                                          className: E.redemptionFailedMessageCopy,
-                                          children: _.intl.string(_.t.AD6odn)
+                                          className: _.redemptionFailedMessageCopy,
+                                          children: E.intl.string(E.t.AD6odn)
                                       })
                                   }),
                               (0, i.jsxs)('div', {
-                                  className: a()(E.confirmDiscountButtons, {
-                                      [E.confrimDiscountsButtonsError]: I,
-                                      [E.confrimDiscountsButtonsNoError]: !I
+                                  className: a()(_.confirmDiscountButtons, {
+                                      [_.confrimDiscountsButtonsError]: I,
+                                      [_.confrimDiscountsButtonsNoError]: !I
                                   }),
                                   children: [
                                       (0, i.jsx)(c.Button, {
                                           look: c.ButtonLooks.LINK,
                                           onClick: () => s(),
-                                          children: _.intl.string(_.t.zl7LZm)
+                                          children: E.intl.string(E.t.zl7LZm)
                                       }),
                                       (0, i.jsx)(c.Button, {
                                           size: c.ButtonSizes.SMALL,
                                           submitting: v,
                                           onClick: () => j(b.id),
-                                          children: _.intl.string(_.t.CKSuZG)
+                                          children: E.intl.string(E.t.CKSuZG)
                                       })
                                   ]
                               })

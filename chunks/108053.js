@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return b;
     }
 }),
     n(47120);
@@ -19,19 +19,19 @@ var i = n(200651),
     g = n(388032),
     x = n(112151),
     f = n(893916),
-    b = n(408942);
-function v(e) {
+    v = n(408942);
+function b(e) {
     let t,
-        { guild: n, channel: v, customWebhooks: C, editedWebhook: N, selectableWebhookChannels: I, refToScroller: j, errors: T, canNavigate: _ } = e,
+        { guild: n, channel: b, customWebhooks: C, editedWebhook: I, selectableWebhookChannels: N, refToScroller: j, errors: T, canNavigate: _ } = e,
         Z = (0, c.ZP)(),
         [E, S] = l.useState(null),
         [y, A] = l.useState(null);
-    if (null != v) t = v;
+    if (null != b) t = b;
     else {
-        let e = Object.values(I);
+        let e = Object.values(N);
         t = e.length > 0 ? e[0] : null;
     }
-    let R = l.useCallback(async () => {
+    let L = l.useCallback(async () => {
         if (_() && null !== t) {
             let e = await s.Z.create(n.id, t.id).catch((e) => {
                 let { body: t, status: n } = e;
@@ -57,9 +57,9 @@ function v(e) {
         }
     }, [_, t, n]);
     (0, d.Z)(() => {
-        0 === C.length && R();
+        0 === C.length && L();
     });
-    let L = null !== t;
+    let R = null !== t;
     return (0, i.jsxs)(a.FormSection, {
         children: [
             (0, i.jsx)(a.FormText, {
@@ -76,14 +76,14 @@ function v(e) {
                           (0, i.jsx)(a.Button, {
                               className: x.createButton,
                               size: a.Button.Sizes.SMALL,
-                              disabled: !L,
-                              onClick: R,
+                              disabled: !R,
+                              onClick: L,
                               children: g.intl.string(g.t['nrO/HB'])
                           }),
                           (0, i.jsx)(h.Z, {
                               webhooks: C,
-                              editedWebhook: N,
-                              selectableWebhookChannels: I,
+                              editedWebhook: I,
+                              selectableWebhookChannels: N,
                               lastCreatedWebhookId: null == E ? void 0 : E.id,
                               errors: T,
                               canNavigate: _
@@ -91,7 +91,7 @@ function v(e) {
                       ]
                   })
                 : (function (e, t, n) {
-                      let l = (0, r.wj)(e) ? f : b;
+                      let l = (0, r.wj)(e) ? f : v;
                       return (0, i.jsxs)(u.Z, {
                           direction: u.Z.Direction.VERTICAL,
                           align: u.Z.Align.CENTER,
@@ -113,7 +113,7 @@ function v(e) {
                               })
                           ]
                       });
-                  })(Z, L, R)
+                  })(Z, R, L)
         ]
     });
 }

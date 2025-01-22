@@ -27,8 +27,8 @@ var i = t(200651),
     b = t(228168),
     E = t(981631),
     N = t(388032),
-    S = t(171865),
-    y = t(64406),
+    y = t(171865),
+    S = t(64406),
     T = t(893302);
 function P(e) {
     let { user: n, guildId: t, channelId: P, messageId: C, roleId: A, sessionId: L, transitionState: M, onClose: R, sourceAnalyticsLocations: O = [] } = e,
@@ -52,7 +52,7 @@ function P(e) {
             value: F,
             children: (0, i.jsxs)(o.ModalRoot, {
                 transitionState: M,
-                className: S.root,
+                className: y.root,
                 hideShadow: !0,
                 'aria-label': N.intl.string(N.t['3N/J2t']),
                 children: [
@@ -74,7 +74,7 @@ function P(e) {
                                         profileType: b.y0.FULL_SIZE
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: S.headerInner,
+                                        className: y.headerInner,
                                         children: (0, i.jsx)(m.Z, {
                                             user: n,
                                             displayProfile: B,
@@ -86,7 +86,7 @@ function P(e) {
                                 ]
                             }),
                             (0, i.jsxs)('div', {
-                                className: S.body,
+                                className: y.body,
                                 children: [
                                     (0, i.jsx)(g.Z, {
                                         user: n,
@@ -101,7 +101,7 @@ function P(e) {
                                         })
                                     }),
                                     (0, i.jsx)(Z.Z.Overlay, {
-                                        className: S.overlay,
+                                        className: y.overlay,
                                         children: (0, i.jsxs)('div', {
                                             className: T.container,
                                             children: [
@@ -126,7 +126,7 @@ function P(e) {
                                                 }),
                                                 (0, i.jsxs)(o.ScrollerThin, {
                                                     fade: !0,
-                                                    className: y.scroller,
+                                                    className: S.scroller,
                                                     children: [
                                                         (0, i.jsx)(p.Z, {
                                                             userId: n.id,

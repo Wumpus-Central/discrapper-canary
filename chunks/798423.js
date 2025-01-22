@@ -1,10 +1,10 @@
 n.d(t, {
     Q: function () {
-        return s;
+        return r;
     }
 });
 var i = n(863750);
-function s() {
+function r() {
     return i.Z.get('enable_recently_active');
 }
 n(238428);

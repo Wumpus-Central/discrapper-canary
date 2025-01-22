@@ -43,7 +43,7 @@ let N = !1,
         }
         i = S.qt[n];
     },
-    x = (e) => {
+    L = (e) => {
         let { mobileThemesIndex: n } = e;
         if (null == n) {
             a = void 0;
@@ -51,7 +51,7 @@ let N = !1,
         }
         a = n;
     },
-    L = (e) => {
+    x = (e) => {
         U();
     },
     w = (e) => {
@@ -143,8 +143,8 @@ C(V, 'displayName', 'ClientThemesBackgroundStore'),
     C(V, 'persistKey', 'ClientThemesBackgroundStore'),
     (n.Z = new V(c.Z, {
         UPDATE_BACKGROUND_GRADIENT_PRESET: D,
-        UPDATE_MOBILE_PENDING_THEME_INDEX: x,
-        CLIENT_THEMES_EDITOR_OPEN: L,
+        UPDATE_MOBILE_PENDING_THEME_INDEX: L,
+        CLIENT_THEMES_EDITOR_OPEN: x,
         CLIENT_THEMES_EDITOR_CLOSE: w,
         RESET_PREVIEW_CLIENT_THEME: P,
         CHANNEL_SELECT: M,

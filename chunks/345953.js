@@ -101,20 +101,20 @@ function D(e, n, r, i) {
     let l = e[s];
     return (l[n] = null !== (a = l[n]) && void 0 !== a ? a : R(r)), i(l[n]), (l[n].modifiedAt = String(Date.now())), o && C(l, n, r), N(l), !0;
 }
-function x() {
+function L() {
     O();
 }
-let L = o().debounce(() => {
+let x = o().debounce(() => {
     U();
 }, T);
 function w(e, n, r) {
-    (0, g.RF)(e, n, { volume: r }), L();
+    (0, g.RF)(e, n, { volume: r }), x();
 }
 function P(e, n, r) {
-    (0, g.RF)(e, n, { muted: r }), L.cancel(), U();
+    (0, g.RF)(e, n, { muted: r }), x.cancel(), U();
 }
 function M(e, n, r) {
-    (0, g.RF)(e, n, { soundboardMuted: r }), L.cancel(), U();
+    (0, g.RF)(e, n, { soundboardMuted: r }), x.cancel(), U();
 }
 let k = o().debounce(d.On, 500, { maxWait: 500 });
 function U() {
@@ -158,7 +158,7 @@ class F extends c.Z {
     constructor(...e) {
         super(...e),
             b(this, 'actions', {
-                POST_CONNECTION_OPEN: x,
+                POST_CONNECTION_OPEN: L,
                 AUDIO_SET_LOCAL_VOLUME: B,
                 AUDIO_TOGGLE_LOCAL_MUTE: G,
                 AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: Z

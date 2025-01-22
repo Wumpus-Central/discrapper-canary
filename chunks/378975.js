@@ -129,27 +129,27 @@ function C(e) {
         N = j === m.gH.LOADING,
         [E, Z] = i.useState(!1),
         [L, k] = i.useState(() => new Set(t.filter((e) => e.default).map((e) => e.value))),
-        [O, M] = i.useState(L),
+        [O, P] = i.useState(L),
         R = i.useMemo(() => t.some((e) => null != e.emoji), [t]);
     i.useEffect(() => {
         if ((null == b ? void 0 : b.type) === c.re.STRING_SELECT) {
             let e = new Set(b.values);
-            k(e), M(e);
+            k(e), P(e);
         } else {
             let e = new Set(_);
-            k(e), M(e);
+            k(e), P(e);
         }
     }, [r, _, b]);
-    let P = i.useCallback(() => {
+    let M = i.useCallback(() => {
         if (O !== L)
             I({
                 type: c.re.STRING_SELECT,
                 values: Array.from(L)
-            }) && M(L);
-    }, [L, O, M, I]);
+            }) && P(L);
+    }, [L, O, P, I]);
     i.useEffect(() => {
-        if (!(E || (L.size === O.size && Array.from(O).every((e) => L.has(e))))) P();
-    }, [E, L, O, P]);
+        if (!(E || (L.size === O.size && Array.from(O).every((e) => L.has(e))))) M();
+    }, [E, L, O, M]);
     let A = o.singleSelect;
     T ? (A = o.multiSelect) : 0 === C && (A = o.toggleSelect);
     let w = (0, o.useVariableSelect)({

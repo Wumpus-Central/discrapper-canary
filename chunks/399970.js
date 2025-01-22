@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     n(47120);
@@ -19,14 +19,14 @@ var i,
     p = n(388032),
     x = n(840891),
     f = n(232186);
-let _ = /^\d+$|^$/;
+let E = /^\d+$|^$/;
 ((r = i || (i = {})).LOCALHOST = 'localhost'), (r.PROXY = 'proxy');
-function E(e) {
+function _(e) {
     let { onClose: t, transitionState: n } = e,
         {
             authorizedApplicationId: i,
             authorizationError: r,
-            authorizing: E
+            authorizing: _
         } = (0, l.cj)([h.Z], () => ({
             authorizedApplicationId: h.Z.testModeApplicationId,
             authorizationError: h.Z.error,
@@ -36,7 +36,7 @@ function E(e) {
         [S, b] = a.useState('8080'),
         [I, N] = a.useState('localhost'),
         v = (0, g.Dt)(),
-        A = _.test(C);
+        A = E.test(C);
     async function j() {
         d.q$();
         let e = (function (e, t, n) {
@@ -107,7 +107,7 @@ function E(e) {
                                         onChange: function (e) {
                                             T(e);
                                         },
-                                        disabled: E
+                                        disabled: _
                                     })
                                 }),
                                 (0, s.jsx)(o.FormItem, {
@@ -144,11 +144,11 @@ function E(e) {
                                               value: S,
                                               maxLength: 5,
                                               onChange: (e) => b(e),
-                                              disabled: E
+                                              disabled: _
                                           })
                                       }),
                                 (0, s.jsx)(o.Button, {
-                                    submitting: E,
+                                    submitting: _,
                                     type: 'submit',
                                     disabled: !A || 0 === C.length || ('localhost' === I && 0 === S.length),
                                     color: O ? o.Button.Colors.RED : o.Button.Colors.GREEN,

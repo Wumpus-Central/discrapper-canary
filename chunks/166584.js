@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return x;
+        return L;
     }
 });
 var i = r(47120);
@@ -39,7 +39,7 @@ function D(e) {
         D = (e, n) => {
             null != n ? (g.current[e] = n) : delete g.current[e];
         },
-        [x, L] = s.useState(d),
+        [L, x] = s.useState(d),
         [w, P] = s.useState(N),
         [M, k] = s.useState(!1),
         U = s.useRef(null),
@@ -68,8 +68,8 @@ function D(e) {
                     (e += s + C), r.push(a);
                 }
             }
-            L(r.length === x.length ? x : r), P(i), G.current++;
-        }, [d, x, M]);
+            x(r.length === L.length ? L : r), P(i), G.current++;
+        }, [d, L, M]);
     let Z = s.useMemo(() => 'roles-'.concat((0, l.Z)()), []),
         F = (0, u.ZP)({
             id: Z,
@@ -80,14 +80,14 @@ function D(e) {
         }),
         V = d.length,
         j = 0 === V ? S.intl.string(S.t['vR7M+/']) : S.intl.formatToPlainString(S.t.PCs0oq, { numRoles: V }),
-        H = (M ? d : x).map((e, a) => {
+        H = (M ? d : L).map((e, a) => {
             var s;
             return (0, o.jsx)(
                 b.Z,
                 {
                     role: e,
                     guildId: i.id,
-                    style: { maxWidth: M || a !== x.length - 1 ? N : w },
+                    style: { maxWidth: M || a !== L.length - 1 ? N : w },
                     disableBorderColor: !0,
                     ref: (n) => D(e.id, n),
                     onRemove: () => m(e),
@@ -115,7 +115,7 @@ function D(e) {
                     ...r,
                     children: [
                         H,
-                        x.length < d.length
+                        L.length < d.length
                             ? M
                                 ? (0, o.jsx)(f.TooltipContainer, {
                                       text: S.intl.string(S.t.XnXtCg),
@@ -137,7 +137,7 @@ function D(e) {
                                           className: A.expandButton,
                                           children: (0, o.jsx)(f.Text, {
                                               variant: 'text-xs/medium',
-                                              children: '+'.concat(d.length - x.length)
+                                              children: '+'.concat(d.length - L.length)
                                           })
                                       })
                                   })
@@ -158,7 +158,7 @@ function D(e) {
         })
     });
 }
-function x(e) {
+function L(e) {
     let { user: n, currentUser: r, guild: i } = e,
         { trackUserProfileAction: a } = (0, y.KZ)(),
         l = (0, d.e7)([_.ZP], () => _.ZP.getMember(i.id, n.id)),

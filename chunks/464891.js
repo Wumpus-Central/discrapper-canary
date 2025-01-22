@@ -36,8 +36,8 @@ var s = r(200651),
     R = r(484459),
     O = r(184301),
     D = r(740492),
-    x = r(430824),
-    L = r(496675),
+    L = r(430824),
+    x = r(496675),
     w = r(594174),
     P = r(768581),
     M = r(585483),
@@ -124,11 +124,11 @@ function $(e) {
         { message: m, author: g, compact: E = !1, subscribeToGroupId: v, animate: y = !0, onContextMenu: b, onClickAvatar: I, onPopoutRequestClose: T, showAvatarPopout: S } = i,
         [A, C] = l.useState(!1),
         { analyticsLocations: R } = (0, _.ZP)(h.Z.AVATAR),
-        x = (0, f.e7)([D.ZP], () => {
+        L = (0, f.e7)([D.ZP], () => {
             var e;
             return null !== (e = i.displayCompactAvatars) && void 0 !== e ? e : D.ZP.displayCompactAvatars;
         }),
-        L = null != m.messageReference && null != m.webhookId && m.hasFlag(H.iLy.IS_CROSSPOST),
+        x = null != m.messageReference && null != m.webhookId && m.hasFlag(H.iLy.IS_CROSSPOST),
         w = m.author,
         { id: k } = w,
         U = E ? z : q,
@@ -162,13 +162,13 @@ function $(e) {
         (l.useEffect(() => {
             if (null != v) return M.S.subscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, ''.concat(v, ':').concat(k), C), () => void M.S.unsubscribeKeyed(H.LPv.ANIMATE_CHAT_AVATAR, ''.concat(v, ':').concat(k), C);
         }, [k, v]),
-        !E || !!x)
+        !E || !!L)
     )
         return null != o && null != S
             ? (0, s.jsx)(_.Gt, {
                   value: R,
                   children: (0, s.jsx)(p.Popout, {
-                      preload: L ? void 0 : j,
+                      preload: x ? void 0 : j,
                       renderPopout: o,
                       shouldShow: S,
                       position: d.tq ? 'window_center' : 'right',
@@ -304,8 +304,8 @@ function er(e) {
     let { message: n, repliedMessage: r, compact: i = !1, renderPopout: a, showTimestampOnHover: o, roleIcon: u, subscribeToGroupId: d, hideTimestamp: h, className: _, channel: m } = e,
         T = l.useMemo(() => (null != a ? (e) => a(e, n) : void 0), [a, n]),
         [, C] = (0, v.ZP)(n.author.id, e.guildId),
-        N = (0, f.e7)([x.Z], () => x.Z.getGuild(e.guildId), [e.guildId]),
-        R = null != n.author && null != N && L.Z.canManageUser(H.Plq.MODERATE_MEMBERS, n.author, N),
+        N = (0, f.e7)([L.Z], () => L.Z.getGuild(e.guildId), [e.guildId]),
+        R = null != n.author && null != N && x.Z.canManageUser(H.Plq.MODERATE_MEMBERS, n.author, N),
         O = C && R,
         P = $({
             props: e,

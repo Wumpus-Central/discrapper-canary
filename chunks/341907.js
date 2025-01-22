@@ -16,10 +16,10 @@ r.r(n),
             return w;
         },
         openQuestInGameRewardModal: function () {
-            return L;
+            return x;
         },
         openQuestsNitroRewardModal: function () {
-            return x;
+            return L;
         },
         openQuestsRewardCodeModal: function () {
             return D;
@@ -70,7 +70,7 @@ function D(e) {
             });
     });
 }
-function x(e, n) {
+function L(e, n) {
     (0, l.openModalLazy)(async () => {
         let { default: a } = await Promise.all([r.e('8016'), r.e('36909')]).then(r.bind(r, 824393));
         return (r) =>
@@ -81,7 +81,7 @@ function x(e, n) {
             });
     });
 }
-function L(e, n) {
+function x(e, n) {
     (0, l.openModalLazy)(async () => {
         let { default: a } = await r.e('88938').then(r.bind(r, 390238));
         return (r) =>

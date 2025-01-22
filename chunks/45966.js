@@ -73,7 +73,7 @@ function N(e) {
         onboardingPromptsSeen: s,
         onboardingResponsesSeen: l
     }),
-        !d && x(n, o),
+        !d && L(n, o),
         (b[n] = Date.now());
 }
 function R() {
@@ -95,7 +95,7 @@ function D(e) {
     let { guildId: n, optionId: r, selected: i, removedOptionIds: a } = e;
     return !!d.Z.isFullServerPreview(n) || (null != v[n] && (null != a && a.length > 0 && l().pullAll(v[n].responses, a), i ? v[n].responses.push(r) : l().pull(v[n].responses, r), null == y[n] && (y[n] = {}), (y[n][r] = i), null != a && a.forEach((e) => (y[n][e] = !1)), (y[n] = { ...y[n] }), !0));
 }
-function x(e, n) {
+function L(e, n) {
     if (null == y[e]) return;
     let r = {};
     Object.keys(y[e]).forEach((i) => {
@@ -111,9 +111,9 @@ function x(e, n) {
             responses: i
         });
 }
-function L(e) {
+function x(e) {
     let { guildId: n, options: r, prompts_seen: i, options_seen: a } = e;
-    x(n, r);
+    L(n, r);
     let o = v[n];
     if (null == o) return !1;
     let s = C(o.prompts, i, a);
@@ -233,7 +233,7 @@ E(B, 'displayName', 'GuildOnboardingPromptsStore'),
         GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: N,
         GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: R,
         GUILD_ONBOARDING_SELECT_OPTION: D,
-        GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: L,
+        GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: x,
         GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: O,
         GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: O,
         GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: w,

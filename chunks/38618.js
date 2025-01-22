@@ -37,22 +37,22 @@ function D(e, n, r) {
         e
     );
 }
-let x = window.DiscordNative;
+let L = window.DiscordNative;
 A.Wb.dispatcher.getDispatchHandler = N.Z;
-let L = new d.Z('ConnectionStore'),
+let x = new d.Z('ConnectionStore'),
     w = 100,
     P = 0,
     M = null,
     k = !0,
     U = null;
 function B() {
-    return A.Wb.isClosed() ? (L.verbose('Socket is reconnecting because of starting new session'), A.Wb.connect()) : (L.verbose('Socket is not reconnecting during a new session because it is not closed'), !1);
+    return A.Wb.isClosed() ? (x.verbose('Socket is reconnecting because of starting new session'), A.Wb.connect()) : (x.verbose('Socket is not reconnecting during a new session because it is not closed'), !1);
 }
 function G(e) {
-    e.isSwitchingAccount && A.RR.handleAccountSwitch(), L.verbose('Closing socket because of logout'), A.Wb.close();
+    e.isSwitchingAccount && A.RR.handleAccountSwitch(), x.verbose('Closing socket because of logout'), A.Wb.close();
 }
 function Z() {
-    return L.verbose('session refresh dispatched', { isEstablished: A.Wb.isSessionEstablished() }), !!A.Wb.isSessionEstablished() && (A.Wb.close(), A.Wb.connect());
+    return x.verbose('session refresh dispatched', { isEstablished: A.Wb.isSessionEstablished() }), !!A.Wb.isSessionEstablished() && (A.Wb.close(), A.Wb.connect());
 }
 async function F(e) {
     (P = Date.now()), (M = e.sessionId), A.RR.handleConnectionOpen();
@@ -60,7 +60,7 @@ async function F(e) {
         r = y.Z.getVoiceChannelId();
     if (null != r) {
         var i, a, o, s, l, u, d, f;
-        if ((null === (l = window) || void 0 === l ? void 0 : null === (s = l.performance) || void 0 === s ? void 0 : null === (o = s.getEntriesByType) || void 0 === o ? void 0 : null === (a = o.call(s, 'navigation')) || void 0 === a ? void 0 : null === (i = a[0]) || void 0 === i ? void 0 : i.type) === 'reload' || (null === (u = await (null == x ? void 0 : null === (f = x.processUtils) || void 0 === f ? void 0 : null === (d = f.getLastCrash) || void 0 === d ? void 0 : d.call(f))) || void 0 === u ? void 0 : u.rendererCrashReason) != null || !k) {
+        if ((null === (l = window) || void 0 === l ? void 0 : null === (s = l.performance) || void 0 === s ? void 0 : null === (o = s.getEntriesByType) || void 0 === o ? void 0 : null === (a = o.call(s, 'navigation')) || void 0 === a ? void 0 : null === (i = a[0]) || void 0 === i ? void 0 : i.type) === 'reload' || (null === (u = await (null == L ? void 0 : null === (f = L.processUtils) || void 0 === f ? void 0 : null === (d = f.getLastCrash) || void 0 === d ? void 0 : d.call(f))) || void 0 === u ? void 0 : u.rendererCrashReason) != null || !k) {
             let e = m.Z.getChannel(r);
             null != e &&
                 (n = {
@@ -72,7 +72,7 @@ async function F(e) {
     A.GC.update(n, !0), (k = !1);
 }
 function V() {
-    L.verbose('connection closed dispatched'), (P = Date.now());
+    x.verbose('connection closed dispatched'), (P = Date.now());
 }
 function j(e) {
     return e.resetSocket && (A.Wb.close(), A.Wb.dispatcher.clear(), A.Wb.connect()), !1;

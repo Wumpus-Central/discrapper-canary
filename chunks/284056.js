@@ -22,8 +22,8 @@ var i = n(200651),
     p = n(19780),
     x = n(626135),
     f = n(981631),
-    _ = n(388032),
-    E = n(621519);
+    E = n(388032),
+    _ = n(621519);
 function C(e, t, n) {
     return (
         t in e
@@ -85,7 +85,7 @@ class T extends r.PureComponent {
         let { captionVoice: e, captionNoVoice: t } = this.props,
             { isMicTesting: n, isDetectingInput: r } = this.state;
         return (0, i.jsx)(d.FormText, {
-            className: E.micTestCaption,
+            className: _.micTestCaption,
             type: d.FormText.Types.DESCRIPTION,
             children: n ? (r ? e : t) : null
         });
@@ -93,28 +93,28 @@ class T extends r.PureComponent {
     render() {
         let { isVoiceConnected: e, title: t, description: n, notchBackground: r, buttonTest: s, buttonStop: a, buttonClassName: l, buttonColor: o, isDeafened: c, buttonMinWidth: u, measureButtonRef: m } = this.props,
             { isMicTesting: h, volume: p } = this.state,
-            x = e && !h ? _.intl.string(_.t['9viE2N']) : null;
+            x = e && !h ? E.intl.string(E.t['9viE2N']) : null;
         h && e && !c && this._micTestStop();
         let f = a.length >= s.length ? a : s;
         return (0, i.jsxs)('div', {
-            className: E.container,
+            className: _.container,
             children: [
                 (0, i.jsx)(d.FormTitle, {
                     tag: d.FormTitleTags.H5,
-                    className: E.title,
+                    className: _.title,
                     children: t
                 }),
                 null != n &&
                     (0, i.jsx)(d.FormText, {
                         type: d.FormText.Types.DESCRIPTION,
-                        className: E.description,
+                        className: _.description,
                         children: n
                     }),
                 (0, i.jsxs)('div', {
-                    className: E.micTest,
+                    className: _.micTest,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: E.buttonSizer,
+                            className: _.buttonSizer,
                             'aria-hidden': !0,
                             children: [
                                 (0, i.jsx)(d.Button, {
@@ -125,7 +125,7 @@ class T extends r.PureComponent {
                                     color: o,
                                     children: f
                                 }),
-                                (0, i.jsx)('div', { className: E.buttonSizerSpacer })
+                                (0, i.jsx)('div', { className: _.buttonSizerSpacer })
                             ]
                         }),
                         (0, i.jsx)(d.Tooltip, {
@@ -229,7 +229,7 @@ function S(e) {
             };
         }),
         x = (0, l.e7)([p.Z], () => p.Z.isConnected()),
-        { ref: f, width: _ } = (0, m.Z)();
+        { ref: f, width: E } = (0, m.Z)();
     return (0, i.jsx)(T, {
         isVoiceConnected: x,
         inputVolume: c,
@@ -241,7 +241,7 @@ function S(e) {
         inputDeviceName: null !== (t = null == r ? void 0 : r.name) && void 0 !== t ? t : '',
         outputDeviceName: null !== (n = null == s ? void 0 : s.name) && void 0 !== n ? n : '',
         measureButtonRef: f,
-        buttonMinWidth: _,
+        buttonMinWidth: E,
         ...e
     });
 }

@@ -5,76 +5,76 @@ n.d(t, {
 });
 var r = n(200651);
 n(192379);
-var a = n(120356),
-    i = n.n(a),
-    l = n(481060),
-    s = n(884697),
+var i = n(120356),
+    l = n.n(i),
+    s = n(481060),
+    a = n(884697),
     o = n(409116),
     c = n(200615),
     d = n(981631),
     u = n(388032),
-    m = n(487667);
+    C = n(487667);
 function h(e) {
-    let { product: t, isPremiumUser: n, discount: a, className: h, nitroUpsell: g = !1 } = e,
-        p = (0, s.ql)(t, d.tuJ.DEFAULT);
-    if (null == p) return null;
-    if (p.amount <= 0)
+    let { product: t, isPremiumUser: n, discount: i, className: h, nitroUpsell: p = !1 } = e,
+        f = (0, a.ql)(t, d.tuJ.DEFAULT);
+    if (null == f) return null;
+    if (f.amount <= 0)
         return (0, r.jsx)('div', {
-            className: i()(m.priceTagsContainer, h),
-            children: (0, r.jsx)(o.F, { price: p })
+            className: l()(C.priceTagsContainer, h),
+            children: (0, r.jsx)(o.F, { price: f })
         });
-    let f = (0, s.ql)(t, d.tuJ.PREMIUM_TIER_2),
-        C = !n && !(0, s.x6)(t),
+    let m = (0, a.ql)(t, d.tuJ.PREMIUM_TIER_2),
+        g = !n && !(0, a.x6)(t),
         b =
-            (0, s.x6)(t) && n
+            (0, a.x6)(t) && n
                 ? {
-                      ...p,
-                      amount: a.original
+                      ...f,
+                      amount: i.original
                   }
-                : p;
+                : f;
     return (0, r.jsxs)('div', {
-        className: i()(m.priceTagsContainer, h),
+        className: l()(C.priceTagsContainer, h),
         children: [
             (0, r.jsx)(o.F, {
                 price: b,
-                discount: n ? s.f_ : a,
-                className: i()(m.price, {
-                    [m.striked]: n,
-                    [m.dimmed]: n,
-                    [m.fullPrice]: C
+                discount: n ? a.f_ : i,
+                className: l()(C.price, {
+                    [C.striked]: n,
+                    [C.dimmed]: n,
+                    [C.fullPrice]: g
                 })
             }),
-            null != f &&
+            null != m &&
                 (0, r.jsx)(o.F, {
-                    price: f,
-                    discount: n ? a : s.f_,
-                    renderPrice: g
+                    price: m,
+                    discount: n ? i : a.f_,
+                    renderPrice: p
                         ? (e) =>
-                              (0, r.jsx)(l.Text, {
+                              (0, r.jsx)(s.Text, {
                                   variant: 'text-xs/medium',
                                   children: u.intl.format(u.t.Sv8iiY, {
                                       price: e,
                                       subscribeNowHook: (e) => (0, r.jsx)(c.F, { text: e })
                                   })
                               })
-                        : C
+                        : g
                           ? (e) => u.intl.formatToPlainString(u.t.W3gIWF, { price: e })
                           : void 0,
-                    className: i()(m.price, {
-                        [m.dimmed]: !n,
-                        [m.fullPrice]: C
+                    className: l()(C.price, {
+                        [C.dimmed]: !n,
+                        [C.fullPrice]: g
                     }),
                     variant: n ? void 0 : 'text-xs/semibold',
-                    icon: (0, r.jsx)(l.Tooltip, {
+                    icon: (0, r.jsx)(s.Tooltip, {
                         text: u.intl.string(u.t.MPFyJy),
                         'aria-label': u.intl.string(u.t.X3Ekj4),
                         children: (e) => {
                             let { ...t } = e;
-                            return (0, r.jsx)(l.NitroWheelIcon, {
+                            return (0, r.jsx)(s.NitroWheelIcon, {
                                 size: 'md',
                                 color: 'currentColor',
                                 ...t,
-                                className: i()(m.premiumIcon, { [m.fullPrice]: C })
+                                className: l()(C.premiumIcon, { [C.fullPrice]: g })
                             });
                         }
                     })

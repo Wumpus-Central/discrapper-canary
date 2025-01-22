@@ -108,7 +108,7 @@ function D(e) {
         }
     ];
 }
-function x(e) {
+function L(e) {
     let { guild: n } = e,
         r = b.findIndex((e) => e.id === n.id);
     if (-1 !== r) {
@@ -118,7 +118,7 @@ function x(e) {
     if (null == v[n.id] || n.unavailable) return !1;
     (v = { ...v }), delete v[n.id], (E[n.id] = void 0), i--;
 }
-function L(e) {
+function x(e) {
     let { guildId: n, role: r } = e,
         i = E[n],
         a = f.CL(r),
@@ -193,9 +193,9 @@ g(U, 'displayName', 'GuildStore'),
         CACHE_LOADED_LAZY: C,
         GUILD_CREATE: R,
         GUILD_UPDATE: O,
-        GUILD_DELETE: x,
-        GUILD_ROLE_CREATE: L,
-        GUILD_ROLE_UPDATE: L,
+        GUILD_DELETE: L,
+        GUILD_ROLE_CREATE: x,
+        GUILD_ROLE_UPDATE: x,
         GUILD_ROLE_DELETE: w,
         GUILD_MEMBER_ADD: P,
         GUILD_SETTINGS_SUBMIT_SUCCESS: M,

@@ -30,8 +30,8 @@ var i = r(200651),
     R = r(373826),
     O = r(315324),
     D = r(262210),
-    x = r(666984),
-    L = r(386019),
+    L = r(666984),
+    x = r(386019),
     w = r(228168),
     P = r(249942);
 function M(e) {
@@ -117,7 +117,7 @@ function M(e) {
                 ? null
                 : (0, i.jsx)('div', {
                       className: s()(P.actions, V),
-                      children: (0, i.jsx)(x.Z, {
+                      children: (0, i.jsx)(L.Z, {
                           user: r,
                           activity: M,
                           onAction: q
@@ -149,7 +149,7 @@ function M(e) {
                         onAction: q,
                         onShowToolbar: () => q({ action: 'HOVER_ACTIVITY_CARD' }),
                         renderMoreButtonPopout: (e) =>
-                            (0, i.jsx)(L.Z, {
+                            (0, i.jsx)(x.Z, {
                                 display: 'live',
                                 user: r,
                                 activity: M,

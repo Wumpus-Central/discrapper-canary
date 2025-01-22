@@ -1,97 +1,97 @@
-n.r(o),
-    n.d(o, {
+o.r(n),
+    o.d(n, {
         default: function () {
             return C;
         }
     });
-var i = n(200651),
-    e = n(192379),
-    s = n(704215),
-    a = n(481060),
-    d = n(607070),
-    l = n(605236),
-    r = n(661824),
-    c = n(626135),
-    m = n(132871),
-    x = n(147890),
-    u = n(981631),
-    I = n(921944),
-    _ = n(388032),
-    h = n(716218);
+var e = o(200651),
+    i = o(192379),
+    s = o(704215),
+    a = o(481060),
+    d = o(607070),
+    l = o(605236),
+    r = o(661824),
+    c = o(626135),
+    m = o(132871),
+    x = o(147890),
+    u = o(981631),
+    I = o(921944),
+    _ = o(388032),
+    h = o(716218);
 function C(t) {
-    let { guildId: o, transitionState: C, onClose: N, analyticsType: j = s.z.APP_DIRECTORY_UPSELL_MODAL } = t;
+    let { guildId: n, transitionState: C, onClose: j, analyticsType: N = s.z.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (
-        e.useEffect(() => {
+        i.useEffect(() => {
             c.default.track(u.rMx.DISMISSIBLE_CONTENT_SHOWN, {
-                type: s.z[j],
-                guild_id: o
+                type: s.z[N],
+                guild_id: n
             });
-        }, [o, j]),
-        (0, i.jsxs)(a.ModalRoot, {
+        }, [n, N]),
+        (0, e.jsxs)(a.ModalRoot, {
             transitionState: C,
             className: h.__invalid_modal,
             size: a.ModalSize.SMALL,
             children: [
-                (0, i.jsxs)(a.ModalContent, {
+                (0, e.jsxs)(a.ModalContent, {
                     className: h.modalContent,
                     children: [
-                        (0, i.jsx)(a.LottieAnimation, {
+                        (0, e.jsx)(a.LottieAnimation, {
                             autoplay: !0,
                             shouldAnimate: !d.Z.useReducedMotion,
-                            importData: () => n.e('76241').then(n.t.bind(n, 554690, 19)),
+                            importData: () => o.e('76241').then(o.t.bind(o, 554690, 19)),
                             className: h.animation
                         }),
-                        (0, i.jsx)(a.Heading, {
+                        (0, e.jsx)(a.Heading, {
                             variant: 'heading-xl/semibold',
                             children: _.intl.string(_.t['2tv5YG'])
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, e.jsx)(a.Text, {
                             variant: 'text-md/medium',
                             className: h.subheader,
                             color: 'text-muted',
                             children: _.intl.string(_.t.pgwlDw)
                         }),
-                        (0, i.jsxs)('ul', {
+                        (0, e.jsxs)('ul', {
                             className: h.listContainer,
                             children: [
-                                (0, i.jsxs)('li', {
+                                (0, e.jsxs)('li', {
                                     className: h.listItem,
                                     children: [
-                                        (0, i.jsx)(a.MagicWandIcon, {
+                                        (0, e.jsx)(a.MagicWandIcon, {
                                             color: 'currentColor',
                                             className: h.wandIcon
                                         }),
-                                        (0, i.jsx)(a.Text, {
+                                        (0, e.jsx)(a.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-normal',
                                             children: _.intl.string(_.t['0vKo5O'])
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(r.Z, { className: h.divider }),
-                                (0, i.jsxs)('li', {
+                                (0, e.jsx)(r.Z, { className: h.divider }),
+                                (0, e.jsxs)('li', {
                                     className: h.listItem,
                                     children: [
-                                        (0, i.jsx)(a.RobotIcon, {
+                                        (0, e.jsx)(a.RobotIcon, {
                                             color: 'currentColor',
                                             className: h.robotIcon
                                         }),
-                                        (0, i.jsx)(a.Text, {
+                                        (0, e.jsx)(a.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-normal',
                                             children: _.intl.string(_.t.CprEDA)
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(r.Z, { className: h.divider }),
-                                (0, i.jsxs)('li', {
+                                (0, e.jsx)(r.Z, { className: h.divider }),
+                                (0, e.jsxs)('li', {
                                     className: h.listItem,
                                     children: [
-                                        (0, i.jsx)(a.ReactionIcon, {
+                                        (0, e.jsx)(a.ReactionIcon, {
                                             color: 'currentColor',
                                             className: h.smileIcon
                                         }),
-                                        (0, i.jsx)(a.Text, {
+                                        (0, e.jsx)(a.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-normal',
                                             children: _.intl.string(_.t.wQJMPD)
@@ -102,32 +102,32 @@ function C(t) {
                         })
                     ]
                 }),
-                (0, i.jsxs)(a.ModalFooter, {
+                (0, e.jsxs)(a.ModalFooter, {
                     className: h.modalFooter,
                     children: [
-                        (0, i.jsx)(a.Button, {
+                        (0, e.jsx)(a.Button, {
                             onClick: () => {
-                                N(),
-                                    (0, l.EW)(j, {
+                                j(),
+                                    (0, l.EW)(N, {
                                         forceTrack: !0,
                                         dismissAction: I.L.PRIMARY,
-                                        guildId: o
+                                        guildId: n
                                     }),
-                                    (0, x.goToAppDirectory)({
-                                        guildId: o,
-                                        entrypoint: { name: m.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_UPSELL_MODAL }
+                                    (0, x.dx)({
+                                        guildId: n,
+                                        entrypoint: { name: m.n3.APPLICATION_DIRECTORY_UPSELL_MODAL }
                                     });
                             },
                             children: _.intl.string(_.t['5e8Mrq'])
                         }),
-                        (0, i.jsx)(a.Button, {
+                        (0, e.jsx)(a.Button, {
                             look: a.Button.Looks.LINK,
                             onClick: () => {
-                                N(),
-                                    (0, l.EW)(j, {
+                                j(),
+                                    (0, l.EW)(N, {
                                         forceTrack: !0,
                                         dismissAction: I.L.SECONDARY,
-                                        guildId: o
+                                        guildId: n
                                     });
                             },
                             color: a.Button.Colors.PRIMARY,

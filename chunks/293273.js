@@ -92,11 +92,11 @@ function D(e) {
     if (l()(N[n], [r, i])) return !1;
     null != i ? (N[n] = [r, i]) : delete N[n], R();
 }
-function x(e) {
+function L(e) {
     let { socketId: n } = e;
     delete N[n], R();
 }
-function L(e) {
+function x(e) {
     let { localActivities: n } = e;
     (N = { ...n }), R();
 }
@@ -129,10 +129,10 @@ class w extends (i = d.ZP.Store) {
 }
 A(w, 'displayName', 'LocalActivityStore'),
     (n.Z = new w(f.Z, {
-        OVERLAY_INITIALIZE: L,
+        OVERLAY_INITIALIZE: x,
         START_SESSION: O,
         LOCAL_ACTIVITY_UPDATE: D,
-        RPC_APP_DISCONNECTED: x,
+        RPC_APP_DISCONNECTED: L,
         RUNNING_GAMES_CHANGE: R,
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: R,
         SPOTIFY_PLAYER_STATE: R,

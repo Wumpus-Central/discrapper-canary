@@ -29,7 +29,7 @@ function c(e) {
             dirty: R,
             chunkStart: O,
             chunkEnd: D,
-            forceUpdateOnChunkChange: x
+            forceUpdateOnChunkChange: L
         } = (0, l.Z)({
             chunkSize: f,
             getScrollerState: p,
@@ -63,7 +63,7 @@ function c(e) {
         {
             ...T.current,
             masonryComputer: S,
-            forceUpdateOnChunkChange: x,
+            forceUpdateOnChunkChange: L,
             forceUpdate: I
         }
     );

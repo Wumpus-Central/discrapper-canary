@@ -57,7 +57,7 @@ function O(e) {
 function D() {
     T = !1;
 }
-function x(e) {
+function L(e) {
     var n;
     null != e.invites &&
         e.invites.forEach((e) => {
@@ -66,7 +66,7 @@ function x(e) {
         (i = null !== (n = s()(u()(d()(Object.values(y), 'createdAt')))) && void 0 !== n ? n : null),
         (I = !1);
 }
-function L() {
+function x() {
     I = !0;
 }
 function w() {
@@ -109,11 +109,11 @@ m(U, 'displayName', 'InstantInviteStore'),
         CHANNEL_DELETE: A,
         FRIEND_INVITE_CREATE_SUCCESS: O,
         FRIEND_INVITE_CREATE_FAILURE: D,
-        FRIEND_INVITE_REVOKE_SUCCESS: x,
+        FRIEND_INVITE_REVOKE_SUCCESS: L,
         INSTANT_INVITE_CREATE_SUCCESS: C,
         INSTANT_INVITE_CREATE_FAILURE: N,
         INSTANT_INVITE_REVOKE_SUCCESS: R,
-        FRIEND_INVITE_REVOKE_REQUEST: L,
+        FRIEND_INVITE_REVOKE_REQUEST: x,
         FRIEND_INVITE_CREATE_REQUEST: w,
         FRIEND_INVITES_FETCH_REQUEST: P,
         FRIEND_INVITES_FETCH_RESPONSE: M,

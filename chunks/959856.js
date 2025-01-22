@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return x;
+        return L;
     }
 });
 var i = r(773603);
@@ -43,7 +43,7 @@ function O(e, n, r) {
     );
 }
 let D = new d.Yd('MediaEngineWebRTC');
-class x extends f.Z {
+class L extends f.Z {
     destroy() {
         null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null)), this.eachConnection((e) => e.destroy()), this.emit(m.aB.Destroy), this.removeAllListeners();
     }

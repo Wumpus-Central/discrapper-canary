@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(120356),
-    a = n.n(r),
-    o = n(131478);
+    o = n.n(r),
+    a = n(131478);
 function l(e) {
     let { keybind: t, separator: n = '+', className: r } = e;
     return (0, i.jsx)(i.Fragment, {
@@ -17,7 +17,7 @@ function l(e) {
                 {
                     children: [
                         (0, i.jsx)('span', {
-                            className: a()(o.key, r),
+                            className: o()(a.key, r),
                             children: e
                         }),
                         l === t.length - 1 ? void 0 : n

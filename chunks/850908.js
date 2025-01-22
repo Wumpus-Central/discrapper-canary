@@ -1,13 +1,13 @@
-n.d(e, {
+function r(e) {
+    if (null != e.title && null != e.filename) {
+        let t = e.filename.lastIndexOf('.'),
+            n = t > 0 ? e.filename.substr(t) : '';
+        return e.title + n;
+    }
+    return e.filename;
+}
+n.d(t, {
     Z: function () {
-        return i;
+        return r;
     }
 });
-function i(t) {
-    if (null != t.title && null != t.filename) {
-        let e = t.filename.lastIndexOf('.'),
-            n = e > 0 ? t.filename.substr(e) : '';
-        return t.title + n;
-    }
-    return t.filename;
-}

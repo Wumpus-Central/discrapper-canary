@@ -1,19 +1,19 @@
-e.d(t, {
+n.d(t, {
     X3: function () {
-        return r;
+        return s;
     },
     nq: function () {
-        return o;
+        return r;
     }
 });
-var i = e(452913);
-let o = {
+var i = n(452913);
+let r = {
         binds: ['mod+alt+down', 'mod+shift+]', 'ctrl+tab'],
         comboKeysBindGlobal: !0,
-        action: (n) => (n.preventDefault(), n.stopPropagation(), (0, i.Z)(), !1)
+        action: (e) => (e.preventDefault(), e.stopPropagation(), (0, i.Z)(), !1)
     },
-    r = {
+    s = {
         binds: ['mod+alt+up', 'mod+shift+[', 'ctrl+shift+tab'],
         comboKeysBindGlobal: !0,
-        action: (n) => (n.preventDefault(), n.stopPropagation(), (0, i.Z)(-1), !1)
+        action: (e) => (e.preventDefault(), e.stopPropagation(), (0, i.Z)(-1), !1)
     };

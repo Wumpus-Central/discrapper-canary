@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(100527),
     x = n(906732),
     f = n(475977),
-    _ = n(957730),
-    E = n(53691),
+    E = n(957730),
+    _ = n(53691),
     C = n(267717),
     T = n(296810),
     S = n(921813),
@@ -49,7 +49,7 @@ function M() {
     let t = (0, l.e7)([N.Z], () => N.Z.hidePersonalInformation),
         { pendingBio: n, ...s } = (0, l.cj)([v.Z], () => v.Z.getAllPending()),
         M = (0, l.e7)([v.Z], () => v.Z.showNotice()),
-        k = P.dN.useSetting() && null != n ? _.ZP.parse(void 0, n).content : n,
+        k = P.dN.useSetting() && null != n ? E.ZP.parse(void 0, n).content : n,
         w = O.ZP.canUsePremiumProfileCustomization(e),
         { analyticsLocations: F } = (0, x.ZP)(p.Z.PROFILE);
     r.useEffect(() => () => d.Z.wait(m.W3), []);
@@ -98,7 +98,7 @@ function M() {
                   }),
                   Y &&
                       !M &&
-                      (0, i.jsx)(E.p, {
+                      (0, i.jsx)(_.p, {
                           className: L.floatingNitroUpsell,
                           showUpsell: Y && !V,
                           text: Z.intl.format(Z.t.TmfgIy, { onClick: () => (0, C.openPremiumTryItOutProfileUpsell)() }),

@@ -18,8 +18,8 @@ var i = n(200651),
     p = n(358085),
     x = n(962100),
     f = n(981631),
-    _ = n(388032),
-    E = n(973936),
+    E = n(388032),
+    _ = n(973936),
     C = n(232186);
 let T = !p.isPlatformEmbedded,
     S = (0, g.hQ)();
@@ -35,24 +35,24 @@ function I(e) {
             p.isPlatformEmbedded || n !== f.pM4.PUSH_TO_TALK
                 ? (0, i.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
-                      className: a()(E.pttToolsMessage, C.marginBottom8),
-                      children: _.intl.format(_.t.HVvn5e, { onClick: () => d.Z.setSection(f.oAB.KEYBINDS) })
+                      className: a()(_.pttToolsMessage, C.marginBottom8),
+                      children: E.intl.format(E.t.HVvn5e, { onClick: () => d.Z.setSection(f.oAB.KEYBINDS) })
                   })
                 : (0, i.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
-                      className: a()(E.pttToolsMessage, E.pttToolsWarning, C.marginBottom8),
-                      children: _.intl.format(_.t.zvMPOT, { onDownloadClick: () => (0, x.y)('Help Text PTT') })
+                      className: a()(_.pttToolsMessage, _.pttToolsWarning, C.marginBottom8),
+                      children: E.intl.format(E.t.zvMPOT, { onDownloadClick: () => (0, x.y)('Help Text PTT') })
                   })),
         (0, i.jsxs)('div', {
-            className: E.pttTools,
+            className: _.pttTools,
             children: [
                 (0, i.jsxs)('div', {
-                    className: E.pttToolsFlex,
+                    className: _.pttToolsFlex,
                     children: [
                         (0, i.jsx)('div', {
-                            className: E.column,
+                            className: _.column,
                             children: (0, i.jsx)(o.FormItem, {
-                                title: _.intl.string(_.t.YkDjVF),
+                                title: E.intl.string(E.t.YkDjVF),
                                 children: (0, i.jsx)(u.Z, {
                                     defaultValue: r,
                                     onChange: (e) => c.Z.setMode(n, { shortcut: e })
@@ -60,14 +60,14 @@ function I(e) {
                             })
                         }),
                         (0, i.jsx)('div', {
-                            className: E.column,
+                            className: _.column,
                             children: (0, i.jsxs)(o.FormItem, {
                                 children: [
                                     (0, i.jsx)(o.FormTitle, {
                                         id: S,
                                         tag: o.FormTitleTags.H5,
                                         className: C.marginBottom8,
-                                        children: _.intl.string(_.t.y0ShVl)
+                                        children: E.intl.string(E.t.y0ShVl)
                                     }),
                                     (0, i.jsx)(o.Slider, {
                                         initialValue: s,
@@ -92,11 +92,11 @@ function N() {
         s = [
             {
                 value: f.pM4.VOICE_ACTIVITY,
-                name: _.intl.string(_.t.cHCEOD)
+                name: E.intl.string(E.t.cHCEOD)
             },
             {
                 value: f.pM4.PUSH_TO_TALK,
-                name: T ? _.intl.string(_.t['1AINrK']) : _.intl.string(_.t.Q8gkVF)
+                name: T ? E.intl.string(E.t['1AINrK']) : E.intl.string(E.t.Q8gkVF)
             }
         ],
         a = r.useCallback(
@@ -108,11 +108,11 @@ function N() {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
                             (0, i.jsx)(e, {
-                                title: _.intl.string(_.t.Kdt0GR),
-                                confirmText: _.intl.string(_.t['1WjMbG']),
-                                cancelText: _.intl.string(_.t.BddRzc),
+                                title: E.intl.string(E.t.Kdt0GR),
+                                confirmText: E.intl.string(E.t['1WjMbG']),
+                                cancelText: E.intl.string(E.t.BddRzc),
                                 onConfirm: () => (0, x.y)('PTT Limited Modal'),
-                                body: _.intl.string(_.t.NIozvr),
+                                body: E.intl.string(E.t.NIozvr),
                                 ...t
                             });
                     }),
@@ -123,7 +123,7 @@ function N() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.FormItem, {
-                title: _.intl.string(_.t['pS+K2N']),
+                title: E.intl.string(E.t['pS+K2N']),
                 className: C.marginBottom20,
                 children: (0, i.jsx)(o.RadioGroup, {
                     onChange: a,

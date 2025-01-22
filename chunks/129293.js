@@ -1,12 +1,12 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
         return r;
     }
 });
 var s = n(593473);
-function r(t) {
-    let e = null != t.hash && '' !== t.hash ? (0, s.parse)(t.hash) : null;
-    if ((null == e ? void 0 : e.token) != null) return e.token;
-    let n = null != t.search && '' !== t.search ? (0, s.parse)(t.search) : null;
+function r(e) {
+    let t = null != e.hash && '' !== e.hash ? (0, s.parse)(e.hash) : null;
+    if ((null == t ? void 0 : t.token) != null) return t.token;
+    let n = null != e.search && '' !== e.search ? (0, s.parse)(e.search) : null;
     return (null == n ? void 0 : n.token) != null ? n.token : null;
 }

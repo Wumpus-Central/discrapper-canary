@@ -47,11 +47,11 @@ function j() {
         n = (0, o.e7)([d.Z], () => d.Z.getChannel(e)),
         r = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
         j = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
-        _ = (0, o.e7)([h.Z], () => h.Z.computePermissions(r)),
-        C = (0, c.ZP)(n, !0),
+        C = (0, o.e7)([h.Z], () => h.Z.computePermissions(r)),
+        _ = (0, c.ZP)(n, !0),
         T = null != n ? (0, p.IG)(n, !1, !0) : null,
-        N = null != r ? f.Z.getGuildPermissionSpecMap(r) : null,
-        S = Object.values(null != T ? T : {}).map((e) => {
+        S = null != r ? f.Z.getGuildPermissionSpecMap(r) : null,
+        N = Object.values(null != T ? T : {}).map((e) => {
             let { title: t, flag: n } = e,
                 r = i.e$(j, n);
             return (0, a.jsx)(
@@ -63,9 +63,9 @@ function j() {
                 t
             );
         }),
-        y = Object.values(null != N ? N : {}).map((e) => {
+        y = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
-                r = i.e$(_, n);
+                r = i.e$(C, n);
             return (0, a.jsx)(
                 v,
                 {
@@ -85,9 +85,9 @@ function j() {
                     children: [
                         (0, a.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
-                            children: null != C ? 'Permissions in '.concat(C) : 'No channel selected'
+                            children: null != _ ? 'Permissions in '.concat(_) : 'No channel selected'
                         }),
-                        S
+                        N
                     ]
                 }),
                 (0, a.jsxs)('section', {

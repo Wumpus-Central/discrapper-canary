@@ -47,14 +47,14 @@ function A(e, n, r) {
 }
 function C(e) {
     var n, r, d;
-    let { channel: m, currentUser: E, activeStreams: v, hideSelfOptions: C = !1, showReportOption: N = !1, handleGoLive: R, onClose: O, onSelect: D, appContext: x = I.IlC.APP, disableChangeWindows: L = !1 } = e,
+    let { channel: m, currentUser: E, activeStreams: v, hideSelfOptions: C = !1, showReportOption: N = !1, handleGoLive: R, onClose: O, onSelect: D, appContext: L = I.IlC.APP, disableChangeWindows: x = !1 } = e,
         w = (0, o.e7)([g.Z], () => g.Z.getGoLiveSource()),
         P = (0, o.e7)([_.Z], () => _.Z.getState().soundshareEnabled),
         M = g.Z.supports(T.AN.DESKTOP_CAPTURE_APPLICATIONS),
         k = null !== (d = v.find((e) => e.ownerId === (null == E ? void 0 : E.id))) && void 0 !== d ? d : null,
         U = A(m, E, v),
-        B = (0, p.Z)(k, x),
-        G = (0, f.Z)(k, x, I.VqG),
+        B = (0, p.Z)(k, L),
+        G = (0, f.Z)(k, L, I.VqG),
         Z = (0, o.e7)([g.Z], () => g.Z.supports(T.AN.SOUNDSHARE)),
         F = (0, o.e7)([g.Z], () => g.Z.supportsScreenSoundshare()),
         V = (null == w ? void 0 : w.desktopSource) != null,
@@ -126,7 +126,7 @@ function C(e) {
                                     action: K
                                 })
                               : null,
-                          M && !L
+                          M && !x
                               ? (0, i.jsx)(s.MenuItem, {
                                     id: 'change-windows',
                                     label: S.intl.string(S.t.qntSam),

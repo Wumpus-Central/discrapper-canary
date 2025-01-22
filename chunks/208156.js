@@ -37,7 +37,7 @@ function S(e) {
         [N, R] = c.useState(!1),
         O = m.Z.theme,
         D = { ...i };
-    function x(e) {
+    function L(e) {
         var r;
         null == a || a(e.target), (S.current = e.target), A(!0), null === (r = e.target.contentWindow) || void 0 === r || r.postMessage([_.Z.HELLO, C], null != n ? n : '');
     }
@@ -70,7 +70,7 @@ function S(e) {
                   style: D,
                   allow: 'autoplay; encrypted-media',
                   referrerPolicy: d,
-                  onLoad: x,
+                  onLoad: L,
                   sandbox: (0, y.Z)({ allowPopups: l }),
                   className: r,
                   src: ''.concat(n, '?').concat(new URLSearchParams(C))

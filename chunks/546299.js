@@ -115,7 +115,7 @@ function O(e, n, r) {
 function D(e, n, r) {
     return e >>> r;
 }
-function x(e, n, r) {
+function L(e, n, r) {
     return ((e << (32 - r)) | (n >>> r)) >>> 0;
 }
-(n.inherits = a), (n.toArray = s), (n.toHex = l), (n.htonl = u), (n.toHex32 = c), (n.zero2 = d), (n.zero8 = f), (n.join32 = p), (n.split32 = h), (n.rotr32 = _), (n.rotl32 = m), (n.sum32 = g), (n.sum32_3 = E), (n.sum32_4 = v), (n.sum32_5 = y), (n.sum64 = b), (n.sum64_hi = I), (n.sum64_lo = T), (n.sum64_4_hi = S), (n.sum64_4_lo = A), (n.sum64_5_hi = C), (n.sum64_5_lo = N), (n.rotr64_hi = R), (n.rotr64_lo = O), (n.shr64_hi = D), (n.shr64_lo = x);
+(n.inherits = a), (n.toArray = s), (n.toHex = l), (n.htonl = u), (n.toHex32 = c), (n.zero2 = d), (n.zero8 = f), (n.join32 = p), (n.split32 = h), (n.rotr32 = _), (n.rotl32 = m), (n.sum32 = g), (n.sum32_3 = E), (n.sum32_4 = v), (n.sum32_5 = y), (n.sum64 = b), (n.sum64_hi = I), (n.sum64_lo = T), (n.sum64_4_hi = S), (n.sum64_4_lo = A), (n.sum64_5_hi = C), (n.sum64_5_lo = N), (n.rotr64_hi = R), (n.rotr64_lo = O), (n.shr64_hi = D), (n.shr64_lo = L);

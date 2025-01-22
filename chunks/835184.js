@@ -1,87 +1,87 @@
 var i,
-    r = e(442837),
-    l = e(570140),
-    a = e(314897),
-    d = e(924301),
-    c = e(658041),
-    u = e(765305);
-function o(n, t, e) {
+    l = n(442837),
+    r = n(570140),
+    d = n(314897),
+    a = n(924301),
+    u = n(658041),
+    s = n(765305);
+function o(t, e, n) {
     return (
-        t in n
-            ? Object.defineProperty(n, t, {
-                  value: e,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (n[t] = e),
-        n
+            : (t[e] = n),
+        t
     );
 }
 let _ = {},
-    s = {};
-function E(n) {
-    let t = { ..._ };
-    delete t[n], (_ = t);
-    let e = { ...s };
-    delete e[n], (s = e);
+    E = {};
+function c(t) {
+    let e = { ..._ };
+    delete e[t], (_ = e);
+    let n = { ...E };
+    delete n[t], (E = n);
 }
-class p extends (i = r.ZP.PersistedStore) {
-    initialize(n) {
-        if (null != n) {
-            var t, e;
-            (_ = null !== (t = n.upcomingEventDismissals) && void 0 !== t ? t : {}), (s = null !== (e = n.upcomingEventSeenTimestamps) && void 0 !== e ? e : {});
+class I extends (i = l.ZP.PersistedStore) {
+    initialize(t) {
+        if (null != t) {
+            var e, n;
+            (_ = null !== (e = t.upcomingEventDismissals) && void 0 !== e ? e : {}), (E = null !== (n = t.upcomingEventSeenTimestamps) && void 0 !== n ? n : {});
         }
     }
-    getGuildEventNoticeDismissalTime(n) {
-        return _[n];
+    getGuildEventNoticeDismissalTime(t) {
+        return _[t];
     }
     getAllEventDismissals() {
         return _;
     }
-    getUpcomingNoticeSeenTime(n) {
-        return s[n];
+    getUpcomingNoticeSeenTime(t) {
+        return E[t];
     }
     getAllUpcomingNoticeSeenTimes() {
-        return s;
+        return E;
     }
     getState() {
         return {
             upcomingEventDismissals: _,
-            upcomingEventSeenTimestamps: s
+            upcomingEventSeenTimestamps: E
         };
     }
 }
-o(p, 'displayName', 'UpcomingEventNoticesStore'),
-    o(p, 'persistKey', 'UpcomingEventNotices'),
-    (t.Z = new p(l.Z, {
-        UPCOMING_GUILD_EVENT_NOTICE_HIDE: function (n) {
-            let { eventId: t } = n,
-                e = { ..._ };
-            (e[t] = Date.now()), (_ = e);
+o(I, 'displayName', 'UpcomingEventNoticesStore'),
+    o(I, 'persistKey', 'UpcomingEventNotices'),
+    (e.Z = new I(r.Z, {
+        UPCOMING_GUILD_EVENT_NOTICE_HIDE: function (t) {
+            let { eventId: e } = t,
+                n = { ..._ };
+            (n[e] = Date.now()), (_ = n);
         },
-        GUILD_SCHEDULED_EVENT_UPDATE: function (n) {
-            let { guildScheduledEvent: t } = n;
-            (t.status === u.p1.CANCELED || t.status === u.p1.COMPLETED) && E(t.id);
+        GUILD_SCHEDULED_EVENT_UPDATE: function (t) {
+            let { guildScheduledEvent: e } = t;
+            (e.status === s.p1.CANCELED || e.status === s.p1.COMPLETED) && c(e.id);
         },
-        GUILD_SCHEDULED_EVENT_DELETE: function (n) {
-            let { guildScheduledEvent: t } = n;
-            E(t.id);
+        GUILD_SCHEDULED_EVENT_DELETE: function (t) {
+            let { guildScheduledEvent: e } = t;
+            c(e.id);
         },
-        GUILD_SCHEDULED_EVENT_USER_ADD: function (n) {
-            let { userId: t, guildEventId: e } = n;
-            if (t !== a.default.getId()) return;
-            let i = d.ZP.getGuildScheduledEvent(e);
-            if (null == i || i.status !== u.p1.SCHEDULED || null != _[e]) return;
-            let r = s[e];
-            if ((0, c.M)(i, void 0, r, !1) === u.X_.NEW_EVENT) {
-                let n = { ..._ };
-                (n[e] = Date.now()), (_ = n);
+        GUILD_SCHEDULED_EVENT_USER_ADD: function (t) {
+            let { userId: e, guildEventId: n } = t;
+            if (e !== d.default.getId()) return;
+            let i = a.ZP.getGuildScheduledEvent(n);
+            if (null == i || i.status !== s.p1.SCHEDULED || null != _[n]) return;
+            let l = E[n];
+            if ((0, u.M)(i, void 0, l, !1) === s.X_.NEW_EVENT) {
+                let t = { ..._ };
+                (t[n] = Date.now()), (_ = t);
             }
         },
-        UPCOMING_GUILD_EVENT_NOTICE_SEEN: function (n) {
-            let { guildEventId: t } = n,
-                e = { ...s };
-            (e[t] = Date.now()), (s = e);
+        UPCOMING_GUILD_EVENT_NOTICE_SEEN: function (t) {
+            let { guildEventId: e } = t,
+                n = { ...E };
+            (n[e] = Date.now()), (E = n);
         }
     }));

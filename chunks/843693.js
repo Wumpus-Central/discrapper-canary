@@ -95,13 +95,13 @@ function A(e) {
                                         value: 0,
                                         multiplier: 1
                                     }),
-                                    L.emitChange());
+                                    x.emitChange());
                         } else
                             A({
                                 ...e,
                                 value: e.value - 1
                             }),
-                                L.emitChange();
+                                x.emitChange();
                     }
                 }));
 }
@@ -148,7 +148,7 @@ function D(e) {
     }
     return !1;
 }
-class x extends (i = o.ZP.Store) {
+class L extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(c.default, d.Z);
     }
@@ -187,10 +187,10 @@ class x extends (i = o.ZP.Store) {
         return null != a ? (0, h.KH)(a, i) * r : 0;
     }
 }
-g(x, 'displayName', 'PoggermodeStore');
-let L = new x(u.Z, {
+g(L, 'displayName', 'PoggermodeStore');
+let x = new L(u.Z, {
     POGGERMODE_UPDATE_COMBO: N,
     POGGERMODE_UPDATE_MESSAGE_COMBO: R,
     MESSAGE_CREATE: D
 });
-n.ZP = L;
+n.ZP = x;

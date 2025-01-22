@@ -204,7 +204,7 @@ var v = function e(n) {
             i
         );
     },
-    x = function (e, n) {
+    L = function (e, n) {
         var r,
             i = e;
         if ((I(y, i) && (i = '%' + (r = y[i])[0] + '%'), I(g, i))) {
@@ -224,7 +224,7 @@ e.exports = function (e, n) {
     if (null === N(/^%?[^%]*%?$/, e)) throw new a('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
     var r = D(e),
         i = r.length > 0 ? r[0] : '',
-        o = x('%' + i + '%', n),
+        o = L('%' + i + '%', n),
         l = o.name,
         c = o.value,
         d = !1,

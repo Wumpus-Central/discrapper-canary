@@ -60,8 +60,8 @@ let C = (0, h.kt)({
         }
     };
 function O(e) {
-    let { user: n, guildId: r, channelId: i, profileType: s, sourceType: u, sourceDetails: h, setPopoutRef: _, modalKey: y, onAction: O, onClose: D, entry: x } = e,
-        { resetInteraction: L, setInteractionToast: w } = (0, v.Xo)(),
+    let { user: n, guildId: r, channelId: i, profileType: s, sourceType: u, sourceDetails: h, setPopoutRef: _, modalKey: y, onAction: O, onClose: D, entry: L } = e,
+        { resetInteraction: x, setInteractionToast: w } = (0, v.Xo)(),
         { primaryColor: P } = (0, b.z)(),
         [M, k] = o.useState(''),
         [U, B] = o.useState((0, f.JM)(M)),
@@ -69,9 +69,9 @@ function O(e) {
         Z = o.useRef(null),
         F = o.useCallback(
             (e) => {
-                e.key === T.vn.ESCAPE && (e.stopPropagation(), L());
+                e.key === T.vn.ESCAPE && (e.stopPropagation(), x());
             },
-            [L]
+            [x]
         );
     o.useEffect(() => {
         null == _ || _(null == Z ? void 0 : Z.current);
@@ -93,7 +93,7 @@ function O(e) {
                     location: 'UserProfileReplyPopout',
                     openChannel: !1,
                     whenReady: !1,
-                    entry: x
+                    entry: L
                 });
             } catch (e) {}
             w(I.P.REPLY);
@@ -141,7 +141,7 @@ function O(e) {
                     try {
                         return (
                             await V(r),
-                            L(),
+                            x(),
                             null == D || D(),
                             {
                                 shouldClear: !0,

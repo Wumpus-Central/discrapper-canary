@@ -149,10 +149,10 @@ function D(e, n, r, i) {
         .sort(T)
         .map((e) => I(e, a.e$(e.permissions, i)));
 }
-function x(e, n, r, i, a) {
+function L(e, n, r, i, a) {
     return Object.values(n).filter((n) => y(n) || (!A(r, n.id, i, a) && R(e, n)));
 }
-function L(e, n, r, i, o) {
+function x(e, n, r, i, o) {
     return Object.values(n).filter((n) => {
         var s;
         return y(n) || (!A(r, n.id, i, o) && R(e, n)) || a.e$(a.$e(n.permissions, null === (s = r.permissionOverwrites[n.id]) || void 0 === s ? void 0 : s.allow), i);
@@ -161,7 +161,7 @@ function L(e, n, r, i, o) {
 function w(e, n, r, i, a) {
     let o = [];
     return 0 ===
-        (o = x(e, n, r, i, a)
+        (o = L(e, n, r, i, a)
             .sort(T)
             .map((e) => I(e))).length
         ? S(v.intl.string(v.t.nZfHsb))
@@ -170,7 +170,7 @@ function w(e, n, r, i, a) {
 function P(e, n, r, i, o) {
     let s = [];
     return 0 ===
-        (s = L(e, n, r, i, o)
+        (s = x(e, n, r, i, o)
             .sort(T)
             .map((e) => I(e, a.e$(e.permissions, i)))).length
         ? S(v.intl.string(v.t.nZfHsb))

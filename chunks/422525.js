@@ -8,8 +8,8 @@ t(192379);
 var l = t(481060),
     a = t(40851),
     s = t(132871),
-    r = t(147890),
-    u = t(593128),
+    u = t(147890),
+    r = t(593128),
     o = t(434404),
     d = t(956324),
     c = t(640678),
@@ -50,9 +50,9 @@ function f(e) {
                         {
                             id: t,
                             action: () => {
-                                (0, r.goToAppDirectory)({
+                                (0, u.dx)({
                                     guildId: e.id,
-                                    entrypoint: { name: s.ApplicationDirectoryEntrypointNames.GUILD_CONTEXT_MENU }
+                                    entrypoint: { name: s.n3.GUILD_CONTEXT_MENU }
                                 });
                             },
                             label: a
@@ -67,7 +67,7 @@ function f(e) {
                             (0, g.q4)(
                                 (n) => {
                                     let { closeLayer: t } = n;
-                                    return (0, i.jsx)(u.Z, {
+                                    return (0, i.jsx)(r.Z, {
                                         onClose: t,
                                         guildId: e.id
                                     });

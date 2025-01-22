@@ -46,10 +46,10 @@ function T(e) {
         { theme: R } = (0, _.z)(),
         O = (0, o.e7)([u.Z], () => u.Z.theme),
         D = (0, s.wj)(O) ? !(0, s.wj)(R) : (0, s.wj)(R),
-        x = a.useRef(null);
+        L = a.useRef(null);
     a.useEffect(() => {
-        null == T || T(null == x ? void 0 : x.current);
-    }, [x, T]),
+        null == T || T(null == L ? void 0 : L.current);
+    }, [L, T]),
         a.useEffect(() => {
             let e = (e) => {
                 e.key === E.vn.ESCAPE && (e.stopPropagation(), C());
@@ -61,7 +61,7 @@ function T(e) {
                 }
             );
         }, [A, C]);
-    let L = async (e) => {
+    let x = async (e) => {
         if (null == e) return;
         h === m.n_.AVATAR ? S({ action: 'SEND_REACT_AVATAR' }) : h === m.n_.STATUS ? S({ action: 'SEND_REACT_CUSTOM_STATUS' }) : S({ action: 'SEND_REACT_ACTIVITY' });
         let r = I({
@@ -88,7 +88,7 @@ function T(e) {
         guildId: null != r ? r : void 0,
         closePopout: v.dG,
         onSelectEmoji: async (e, n) => {
-            await L(e), n && (C(), null == A || A());
+            await x(e), n && (C(), null == A || A());
         },
         pickerIntention: g.Hz.PROFILE
     });

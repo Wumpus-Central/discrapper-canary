@@ -39,7 +39,7 @@ r.d(n, {
         return q;
     },
     yg: function () {
-        return L;
+        return x;
     },
     yi: function () {
         return U;
@@ -78,10 +78,10 @@ var o = r(46973),
     R = r(711644),
     O = r(259612),
     D = r(356659),
-    x = r(981631);
-async function L(e) {
+    L = r(981631);
+async function x(e) {
     let { allowVoiceRecording: n } = e;
-    await h.tU.updateSetting(n), b.default.track(x.rMx.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: n }), l.Z.dispatch({ type: 'CLIPS_ALLOW_VOICE_RECORDING_UPDATE' });
+    await h.tU.updateSetting(n), b.default.track(L.rMx.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: n }), l.Z.dispatch({ type: 'CLIPS_ALLOW_VOICE_RECORDING_UPDATE' });
 }
 async function w(e) {
     let { clipsEnabled: n, guildId: r, trackAnalytics: i = !1 } = e;
@@ -93,7 +93,7 @@ async function w(e) {
         }
     }),
         i &&
-            b.default.track(x.rMx.CLIPS_SETTINGS_UPDATED, {
+            b.default.track(L.rMx.CLIPS_SETTINGS_UPDATED, {
                 clips_enabled: n,
                 guild_id: r,
                 ...(!n && { decoupled_clips_enabled: !1 })
@@ -109,7 +109,7 @@ function P(e) {
         }
     }),
         r &&
-            b.default.track(x.rMx.CLIPS_SETTINGS_UPDATED, {
+            b.default.track(L.rMx.CLIPS_SETTINGS_UPDATED, {
                 ...(n && { clips_enabled: !0 }),
                 decoupled_clips_enabled: n
             });
@@ -119,7 +119,7 @@ function M(e) {
         type: 'CLIPS_SETTINGS_UPDATE',
         settings: { remindersEnabled: e }
     }),
-        b.default.track(x.rMx.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e });
+        b.default.track(L.rMx.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e });
 }
 function k(e) {
     l.Z.dispatch({
@@ -145,7 +145,7 @@ function G(e) {
         type: 'CLIPS_SETTINGS_UPDATE',
         settings: { viewerClipsEnabled: n }
     }),
-        r && b.default.track(x.rMx.CLIPS_SETTINGS_UPDATED, { viewer_clips_enabled: n });
+        r && b.default.track(L.rMx.CLIPS_SETTINGS_UPDATED, { viewer_clips_enabled: n });
 }
 function Z(e) {
     var n;
@@ -229,7 +229,7 @@ async function V(e) {
         var p;
         let { duration: e, clipStats: n } = await (null != c ? o.saveClipForUser(c, a, s) : o.saveClip(a, s)),
             i = F(d, n);
-        (i.clip_save_time_ms = n.clipSaveTimeMs), (i.clip_size_bytes = n.clipSizeBytes), null != n.viewerDecodeFps && ((i.decode_fps_during_clip = n.viewerDecodeFps), (i.encode_fps_during_clip = n.viewerEncodeFps), (i.target_fps = null)), b.default.track(x.rMx.CLIP_SAVED, i);
+        (i.clip_save_time_ms = n.clipSaveTimeMs), (i.clip_size_bytes = n.clipSizeBytes), null != n.viewerDecodeFps && ((i.decode_fps_during_clip = n.viewerDecodeFps), (i.encode_fps_during_clip = n.viewerEncodeFps), (i.target_fps = null)), b.default.track(L.rMx.CLIP_SAVED, i);
         let l = await (0, O.R)(u.Z.clips.getClipProtocolURLFromPath(a), 0);
         return (
             (r.thumbnail = l),
@@ -250,10 +250,10 @@ async function V(e) {
                 }),
             !('errorMessage' in a))
         )
-            throw (b.default.track(x.rMx.CLIP_SAVE_FAILURE, d), a);
+            throw (b.default.track(L.rMx.CLIP_SAVE_FAILURE, d), a);
         let n = a,
             i = F(d, n);
-        throw ((i.error_at = n.errorAt), (i.error_message = n.errorMessage), b.default.track(x.rMx.CLIP_SAVE_FAILURE, i), n.errorMessage);
+        throw ((i.error_at = n.errorAt), (i.error_message = n.errorMessage), b.default.track(L.rMx.CLIP_SAVE_FAILURE, i), n.errorMessage);
     }
 }
 async function j(e) {
@@ -320,7 +320,7 @@ async function Y(e, n) {
     };
     null != (await (0, N.w)(i)) &&
         (await E.Z.getMediaEngine().updateClipMetadata(i.filepath, JSON.stringify(i)),
-        b.default.track(x.rMx.CLIP_EDITED, { clip_id: i.id }),
+        b.default.track(L.rMx.CLIP_EDITED, { clip_id: i.id }),
         l.Z.dispatch({
             type: 'CLIPS_UPDATE_METADATA',
             clip: i

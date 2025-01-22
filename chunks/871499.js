@@ -102,8 +102,8 @@ let T = {
     };
 function A(e) {
     let { color: n, ignoreColorForCaret: r = !1, isActive: i = !1, className: s, iconClassName: u, onPopoutClick: A, popoutOpen: C = !1, popoutDisabled: N = !1, premiumGlow: R = !1, fullRegionButton: O = !1, ...D } = e,
-        x = (0, E.Z)(n, i),
-        L = (0, E.Z)(r ? void 0 : n, !1),
+        L = (0, E.Z)(n, i),
+        x = (0, E.Z)(r ? void 0 : n, !1),
         w = (0, d.Z)('(max-width: 456px)'),
         P = o.useRef(null),
         M = o.useContext(m.h9);
@@ -111,7 +111,7 @@ function A(e) {
         null != P.current && (M ? P.current.pause() : P.current.play());
     }, [M]);
     let { groupedButtons: k } = (0, h.ZP)({ location: 'CenterControlButton' }),
-        U = k ? [y.experimentButton, S[x], O && null == A && y.fullRegionButton] : [T[x]],
+        U = k ? [y.experimentButton, S[L], O && null == A && y.fullRegionButton] : [T[L]],
         B = (0, a.jsx)(I, {
             ...D,
             grow: !1,
@@ -123,7 +123,7 @@ function A(e) {
         ? B
         : k
           ? (0, a.jsxs)('div', {
-                className: l()(y.caretButtonContainer, s, O && null != A && [y.fullRegionDropdownButton, S[x]]),
+                className: l()(y.caretButtonContainer, s, O && null != A && [y.fullRegionDropdownButton, S[L]]),
                 children: [
                     B,
                     null != A
@@ -132,7 +132,7 @@ function A(e) {
                                   'aria-label': v.intl.string(v.t.PdRCRk),
                                   onClick: N ? void 0 : A,
                                   onContextMenu: N ? void 0 : A,
-                                  className: l()(y.contextMenuNubExperiment, S[L], {
+                                  className: l()(y.contextMenuNubExperiment, S[x], {
                                       [y.active]: C,
                                       [y.disabled]: N
                                   }),
@@ -176,7 +176,7 @@ function A(e) {
                                   'aria-label': v.intl.string(v.t.PdRCRk),
                                   onClick: A,
                                   onContextMenu: A,
-                                  className: l()(y.contextMenuNub, T[x], { [y.active]: C }),
+                                  className: l()(y.contextMenuNub, T[L], { [y.active]: C }),
                                   children: (0, a.jsx)(_.Z, { className: l()(y.contextMenuCaret, { [y.open]: C }) })
                               })
                           })

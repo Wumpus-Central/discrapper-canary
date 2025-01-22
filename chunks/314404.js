@@ -33,8 +33,8 @@ var a = r(200651),
     R = r(857039),
     O = r(847903),
     D = r(104494),
-    x = r(639119),
-    L = r(55610),
+    L = r(639119),
+    x = r(55610),
     w = r(653798),
     P = r(553797),
     M = r(927699),
@@ -106,7 +106,7 @@ function z(e) {
         eE = (0, R.Z)({ location: 'PremiumPlanSelectStep' });
     (E = null != E ? E : ei), (u = null != u ? u : en), c()(void 0 !== u, 'should not be undefined');
     let [ev, ey] = (0, d.Wu)([v.Z], () => [null != u ? v.Z.get(u.planId) : null, null != y ? v.Z.get(y) : null]),
-        eb = (0, x.N)(Q),
+        eb = (0, L.N)(Q),
         eI = null == eb ? void 0 : eb.subscription_trial,
         eT = (0, D.Ng)(),
         eS = null == eT ? void 0 : null === (n = eT.discount) || void 0 === n ? void 0 : n.plan_ids,
@@ -125,20 +125,20 @@ function z(e) {
     o.useEffect(() => {
         q && A.ZP.trackExposure({ location: '5f89bb_1' });
     }, [q]);
-    let ex = (null == eA ? void 0 : eA.id) != null && z.includes(eA.id);
+    let eL = (null == eA ? void 0 : eA.id) != null && z.includes(eA.id);
     o.useEffect(() => {
-        if (!ex) {
+        if (!eL) {
             if (null == ev || es) eC(z[0]);
             else if (null != ev) {
                 let e = z.find((e) => e !== ev.id);
                 null != e && eC(e);
             }
         }
-    }, [ex, es, z, ev, eC]),
+    }, [eL, es, z, ev, eC]),
         o.useEffect(() => {
             eg && null != ep && ep.length > 0 && eh(ep[0]);
         }, [ep, eh, eg]);
-    let eL = !em && (es || (!eR && !eO)) && ex && J,
+    let ex = !em && (es || (!eR && !eO)) && eL && J,
         ew = (0, f.useRadioGroup)(),
         eP = (null == eA ? void 0 : eA.id) != null ? (0, T.aS)(eA.id, !1, es, eN) : void 0,
         { ipCountryCode: eM } = (0, O.Z)(),
@@ -249,7 +249,7 @@ function z(e) {
                 (0, a.jsxs)('div', {
                     className: em ? eY : void 0,
                     children: [
-                        (0, a.jsx)(L.Z, {
+                        (0, a.jsx)(x.Z, {
                             fromBoostCancelModal: !1,
                             className: W.legacyPricingNotice
                         }),
@@ -277,7 +277,7 @@ function z(e) {
                         !eH && eK(),
                         (0, a.jsx)('div', {
                             children:
-                                eL && null != eA && null != eP
+                                ex && null != eA && null != eP
                                     ? (0, a.jsxs)('div', {
                                           children: [
                                               (0, a.jsx)('div', { className: W.selectPlanDivider }),

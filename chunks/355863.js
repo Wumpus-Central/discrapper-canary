@@ -378,13 +378,13 @@ function D(e, n) {
     for (let e = 0; e < r.length; e++) B(r[e], e);
     return !0;
 }
-function x(e) {
+function L(e) {
     let { widgetId: n, meta: r } = e;
     return N(n, (e, n) => {
-        L(e, r);
+        x(e, r);
     });
 }
-function L(e, n) {
+function x(e, n) {
     var r;
     a = {
         ...a,
@@ -741,5 +741,5 @@ I(H, 'displayName', 'LayoutStore'),
         LAYOUT_DELETE_WIDGET: M,
         LAYOUT_DELETE_ALL_WIDGETS: k,
         LAYOUT_CREATE_WIDGETS: U,
-        LAYOUT_SET_WIDGET_META: x
+        LAYOUT_SET_WIDGET_META: L
     }));

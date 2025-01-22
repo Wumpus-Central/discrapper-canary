@@ -83,7 +83,7 @@ function O(e) {
         i = e.guild_scheduled_event_id;
     null == S[i] && (S[i] = {});
     let a = R(e.guild_scheduled_event_exception_id);
-    null == S[i][a] && (S[i][a] = {}), (S[i][a][e.user_id] = e), n && L(e), r && (b += 1);
+    null == S[i][a] && (S[i][a] = {}), (S[i][a][e.user_id] = e), n && x(e), r && (b += 1);
 }
 function D(e) {
     var n, r, i, a;
@@ -93,23 +93,23 @@ function D(e) {
         u = e.user_id === f.default.getId();
     (l || !u) && (null === (a = S[e.guild_scheduled_event_id]) || void 0 === a || null === (i = a[s]) || void 0 === i || delete i[e.user_id], w(e), o && (b += 1));
 }
-function x(e, n, r) {
+function L(e, n, r) {
     let i = R(n);
     null == A[e] && (A[e] = {}), (A[e][i] = r);
 }
-function L(e) {
+function x(e) {
     var n, r;
     let i = R(e.guild_scheduled_event_exception_id),
         a = null !== (r = null === (n = A[e.guild_scheduled_event_id]) || void 0 === n ? void 0 : n[i]) && void 0 !== r ? r : 0,
         o = a + ((null != e.guild_scheduled_event_exception_id && e.response === _.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === _.gv.INTERESTED) ? 1 : -1);
-    x(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, o);
+    L(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, o);
 }
 function w(e) {
     var n, r;
     let i = R(e.guild_scheduled_event_exception_id),
         a = null !== (r = null === (n = A[e.guild_scheduled_event_id]) || void 0 === n ? void 0 : n[i]) && void 0 !== r ? r : 0,
         o = a + ((null != e.guild_scheduled_event_exception_id && e.response === _.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === _.gv.INTERESTED) ? -1 : 1);
-    x(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, o);
+    L(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, o);
 }
 function P(e) {
     let { guilds: n } = e;
@@ -228,9 +228,9 @@ function z(e) {
 }
 function q(e) {
     let { eventId: n, counts: r } = e;
-    x(n, null, r.eventCount),
+    L(n, null, r.eventCount),
         h.default.forEachKey(r.recurrenceCounts, (e) => {
-            x(n, e, r.eventCount - r.recurrenceCounts[e]);
+            L(n, e, r.eventCount - r.recurrenceCounts[e]);
         });
 }
 function Q() {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var i = n(200651);
@@ -19,13 +19,13 @@ var r = n(120356),
     p = n(726985),
     x = n(981631),
     f = n(388032),
-    _ = n(232186);
-function E() {
+    E = n(232186);
+function _() {
     let e = (0, c.pR)(),
         t = (0, c.Ju)(),
         n = h.fq.useSetting(),
         r = h.eR.useSetting(),
-        E = (0, u.V2)({ location: 'UserSettingsTextImages' }),
+        _ = (0, u.V2)({ location: 'UserSettingsTextImages' }),
         C = h.R$.useSetting(),
         T = h.cC.useSetting(),
         S = h.vF.useSetting(),
@@ -44,13 +44,13 @@ function E() {
                 setting: p.s6.CHAT_INLINE_MEDIA,
                 children: [
                     (0, i.jsx)(a.FormTitle, {
-                        className: _.marginBottom8,
+                        className: E.marginBottom8,
                         children: f.intl.string(f.t.U68Dgo)
                     }),
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_INLINE_MEDIA_LINKS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: s()(_.marginTop8, _.marginBottom20),
+                            className: s()(E.marginTop8, E.marginBottom20),
                             value: v,
                             onChange: h.RS.updateSetting,
                             children: f.intl.string(f.t.U47N1t)
@@ -59,7 +59,7 @@ function E() {
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_INLINE_MEDIA_UPLOADS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: s()(_.marginTop8, _.marginBottom20),
+                            className: s()(E.marginTop8, E.marginBottom20),
                             value: N,
                             note: f.intl.formatToPlainString(f.t.qjjvqK, { maxSize: 10 }),
                             onChange: h.x4.updateSetting,
@@ -69,7 +69,7 @@ function E() {
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: s()(_.marginTop8, _.marginBottom40),
+                            className: s()(E.marginTop8, E.marginBottom40),
                             value: b,
                             note: f.intl.string(f.t.T0rbtL),
                             onChange: h.H1.updateSetting,
@@ -82,13 +82,13 @@ function E() {
                 setting: p.s6.CHAT_EMBEDS,
                 children: [
                     (0, i.jsx)(a.FormTitle, {
-                        className: _.marginBottom8,
+                        className: E.marginBottom8,
                         children: f.intl.string(f.t.PWZOn5)
                     }),
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_EMBEDS_LINK_PREVIEWS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: s()(_.marginTop8, _.marginBottom40),
+                            className: s()(E.marginTop8, E.marginBottom40),
                             value: A,
                             onChange: h.NA.updateSetting,
                             children: f.intl.string(f.t.xX0ZTE)
@@ -100,13 +100,13 @@ function E() {
                 setting: p.s6.CHAT_EMOJI,
                 children: [
                     (0, i.jsx)(a.FormTitle, {
-                        className: _.marginBottom8,
+                        className: E.marginBottom8,
                         children: f.intl.string(f.t.sMOuub)
                     }),
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_EMOJI_REACTIONS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: s()(_.marginTop8, _.marginBottom20),
+                            className: s()(E.marginTop8, E.marginBottom20),
                             value: j,
                             onChange: h.nc.updateSetting,
                             children: f.intl.string(f.t.Iv24sr)
@@ -115,7 +115,7 @@ function E() {
                     (0, i.jsx)(m.F, {
                         setting: p.s6.CHAT_EMOJI_EMOTICONS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            className: _.marginBottom40,
+                            className: E.marginBottom40,
                             value: I,
                             note: d.Z.parse(f.intl.string(f.t['20dvub'])),
                             onChange: h.ev.updateSetting,
@@ -127,10 +127,10 @@ function E() {
             (0, i.jsx)(m.F, {
                 setting: p.s6.CHAT_STICKERS,
                 children: (0, i.jsxs)(a.FormSection, {
-                    className: _.marginBottom8,
+                    className: E.marginBottom8,
                     children: [
                         (0, i.jsx)(a.FormTitle, {
-                            className: _.marginBottom8,
+                            className: E.marginBottom8,
                             children: f.intl.string(f.t['6NtAuL'])
                         }),
                         t
@@ -138,7 +138,7 @@ function E() {
                             : (0, i.jsx)(m.F, {
                                   setting: p.s6.CHAT_STICKERS_SUGGESTIONS,
                                   children: (0, i.jsx)(a.FormSwitch, {
-                                      className: s()(_.marginTop8, _.marginBottom20),
+                                      className: s()(E.marginTop8, E.marginBottom20),
                                       value: e,
                                       note: f.intl.string(f.t.r3uQUV),
                                       onChange: (t) => {
@@ -155,7 +155,7 @@ function E() {
                         (0, i.jsx)(m.F, {
                             setting: p.s6.CHAT_STICKERS_AUTOCOMPLETE,
                             children: (0, i.jsx)(a.FormSwitch, {
-                                className: _.marginBottom40,
+                                className: E.marginBottom40,
                                 value: n,
                                 note: f.intl.string(f.t['/eVrj4']),
                                 onChange: (e) => {
@@ -172,20 +172,20 @@ function E() {
                     ]
                 })
             }),
-            E &&
+            _ &&
                 (0, i.jsx)(m.F, {
                     setting: p.s6.CHAT_SOUNDMOJI,
                     children: (0, i.jsxs)(a.FormSection, {
-                        className: _.marginBottom8,
+                        className: E.marginBottom8,
                         children: [
                             (0, i.jsx)(a.FormTitle, {
-                                className: _.marginBottom8,
+                                className: E.marginBottom8,
                                 children: f.intl.string(f.t.EHlAMT)
                             }),
                             (0, i.jsx)(m.F, {
                                 setting: p.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
                                 children: (0, i.jsx)(a.FormSwitch, {
-                                    className: _.marginBottom40,
+                                    className: E.marginBottom40,
                                     value: r,
                                     note: f.intl.string(f.t.hrSIhI),
                                     onChange: (e) => {
@@ -204,16 +204,16 @@ function E() {
             (0, i.jsx)(m.F, {
                 setting: p.s6.CHAT_TEXT_BOX,
                 children: (0, i.jsxs)(a.FormSection, {
-                    className: _.marginBottom8,
+                    className: E.marginBottom8,
                     children: [
                         (0, i.jsx)(a.FormTitle, {
-                            className: _.marginBottom8,
+                            className: E.marginBottom8,
                             children: f.intl.string(f.t.afR0pK)
                         }),
                         (0, i.jsx)(m.F, {
                             setting: p.s6.CHAT_TEXT_BOX_PREVIEW,
                             children: (0, i.jsx)(a.FormSwitch, {
-                                className: s()(_.marginTop8, _.marginBottom40),
+                                className: s()(E.marginTop8, E.marginBottom40),
                                 value: C,
                                 onChange: (e) => {
                                     g.default.track(x.rMx.PREVIEW_MARKDOWN_TOGGLED, {
@@ -231,16 +231,16 @@ function E() {
             (0, i.jsx)(m.F, {
                 setting: p.s6.CHAT_THREADS,
                 children: (0, i.jsxs)(a.FormSection, {
-                    className: _.marginBottom40,
+                    className: E.marginBottom40,
                     children: [
                         (0, i.jsx)(a.FormTitle, {
-                            className: _.marginBottom8,
+                            className: E.marginBottom8,
                             children: f.intl.string(f.t.B2panJ)
                         }),
                         (0, i.jsx)(m.F, {
                             setting: p.s6.CHAT_THREADS_SPLIT_VIEW,
                             children: (0, i.jsx)(a.FormSwitch, {
-                                className: _.marginTop8,
+                                className: E.marginTop8,
                                 value: S,
                                 onChange: h.vF.updateSetting,
                                 children: f.intl.string(f.t.AInv5u)
@@ -256,7 +256,7 @@ function E() {
                     children: [
                         (0, i.jsx)(a.FormText, {
                             type: a.FormText.Types.DESCRIPTION,
-                            className: _.marginBottom8,
+                            className: E.marginBottom8,
                             children: f.intl.string(f.t.TYnRkZ)
                         }),
                         (0, i.jsx)(a.RadioGroup, {

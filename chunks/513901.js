@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var i = n(200651),
@@ -18,9 +18,9 @@ var i = n(200651),
     p = n(981631),
     x = n(474936),
     f = n(388032),
-    _ = n(184057);
-function E(e) {
-    let { user: t, guild: n, className: s, sectionTitle: E, forcedDivider: C = !1, withTutorial: T = !1, showBorder: S = !1, isTryItOutFlow: b = !1, initialSelectedEffectId: I } = e,
+    E = n(184057);
+function _(e) {
+    let { user: t, guild: n, className: s, sectionTitle: _, forcedDivider: C = !1, withTutorial: T = !1, showBorder: S = !1, isTryItOutFlow: b = !1, initialSelectedEffectId: I } = e,
         N = (0, m.Kg)(t, n),
         v = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: A } = (0, o.ZP)(),
@@ -48,22 +48,22 @@ function E(e) {
         forcedDivider: C,
         borderType: h.Y.PREMIUM,
         hasBackground: !0,
-        title: E,
+        title: _,
         showBorder: S,
         errors: O,
         className: s,
         children: (0, i.jsxs)('div', {
-            className: _.buttonsContainer,
+            className: E.buttonsContainer,
             children: [
                 (0, i.jsx)(y, {
                     size: l.Button.Sizes.SMALL,
                     onClick: R,
-                    className: a()({ [_.buttonHighlighted]: T }),
+                    className: a()({ [E.buttonHighlighted]: T }),
                     children: f.intl.string(f.t['0nEVoK'])
                 }),
                 D &&
                     (0, i.jsx)(l.Button, {
-                        className: _.removeButton,
+                        className: E.removeButton,
                         color: l.Button.Colors.PRIMARY,
                         look: l.Button.Looks.LINK,
                         size: l.Button.Sizes.SMALL,

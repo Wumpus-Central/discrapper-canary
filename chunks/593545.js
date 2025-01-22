@@ -221,8 +221,8 @@ function C(e) {
         O = '';
     R && u && C > N ? (O = '\n...') : !R && (O = '...'), '' !== O && (R ? (O += ' ' + m.intl.formatToPlainString(m.t.DQnFp6, { lines: C - N })) : (O += ' ' + m.intl.formatToPlainString(m.t['1+gGcH'], { formattedBytes: (0, _.IC)(E) })));
     let D = (null == y ? void 0 : y.slice(0, N).join('\n')) + O,
-        x = (0, f.yx)(D),
-        L = u || N < C;
+        L = (0, f.yx)(D),
+        x = u || N < C;
     return (0, a.jsxs)('div', {
         className: l()(v, g.container),
         children: [
@@ -232,7 +232,7 @@ function C(e) {
                     null == s
                         ? (0, a.jsx)(c.Spinner, { className: g.spinner })
                         : (0, a.jsx)(b, {
-                              text: x,
+                              text: L,
                               language: p
                           })
             }),
@@ -241,7 +241,7 @@ function C(e) {
                 className: g.footer,
                 variant: 'text-sm/normal',
                 children: [
-                    L
+                    x
                         ? (0, a.jsxs)(a.Fragment, {
                               children: [
                                   (0, a.jsx)(I, {

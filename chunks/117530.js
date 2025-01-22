@@ -101,11 +101,11 @@ function D(e) {
     let { channelId: n, draftType: r } = e;
     I(n, r, []);
 }
-function x(e) {
+function L(e) {
     let { baseChannelId: n } = e;
     I(n, h.d.FirstThreadMessage, []);
 }
-class L extends (i = u.ZP.Store) {
+class x extends (i = u.ZP.Store) {
     getFirstUpload(e, n) {
         let r = y(e, n);
         return r.length > 0 ? r[0] : null;
@@ -128,8 +128,8 @@ class L extends (i = u.ZP.Store) {
         return y(e, n).find(r);
     }
 }
-g(L, 'displayName', 'UploadAttachmentStore'),
-    (n.Z = new L(c.Z, {
+g(x, 'displayName', 'UploadAttachmentStore'),
+    (n.Z = new x(c.Z, {
         UPLOAD_ATTACHMENT_POP_FILE: T,
         UPLOAD_ATTACHMENT_ADD_FILES: S,
         UPLOAD_ATTACHMENT_UPDATE_FILE: N,
@@ -138,5 +138,5 @@ g(L, 'displayName', 'UploadAttachmentStore'),
         UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: D,
         UPLOAD_ATTACHMENT_SET_UPLOADS: O,
         UPLOAD_ATTACHMENT_SET_FILE: R,
-        SIDEBAR_CLOSE: x
+        SIDEBAR_CLOSE: L
     }));

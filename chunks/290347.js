@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120),
@@ -38,7 +38,7 @@ let S = [],
             text: t
         });
     },
-    A = (e) => {
+    b = (e) => {
         let { header: t, subHeader: n, imageSrc: r, tagText: l, wideStyle: s } = e;
         return (0, i.jsxs)('div', {
             className: a()(v.featureCard, { [v.wideStyle]: s }),
@@ -71,19 +71,19 @@ let S = [],
             ]
         });
     };
-function b(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: b, modalTopExtra: Z, header: x, headerClassName: L, subHeader: P, subHeaderExtra: O, featureCards: y, changeLogId: R, button: j, body: D } = e,
+function A(e) {
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: A, modalTopExtra: Z, header: x, headerClassName: L, subHeader: y, subHeaderExtra: P, featureCards: O, changeLogId: R, button: j, body: D } = e,
         { onClose: M, transitionState: w } = n,
         k = (0, h.Dt)(),
-        U = y.length % 2 == 0,
+        U = O.length % 2 == 0,
         G = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        [B, V] = r.useState(Date.now()),
-        [H, F] = r.useState(0),
+        [B, H] = r.useState(Date.now()),
+        [V, F] = r.useState(0),
         [z, W] = r.useState(0),
         [Y, K] = r.useState(!1),
         [q, X] = r.useState(!0),
         Q = r.useRef(B),
-        J = r.useRef(H),
+        J = r.useRef(V),
         $ = r.useRef(z),
         ee = r.useRef(Y),
         et = r.useRef(q),
@@ -94,7 +94,7 @@ function b(e) {
             t = e - Q.current,
             n = J.current,
             i = $.current;
-        return ee.current && (F((n += t)), !et.current && W((i += t))), V(e), [n, i];
+        return ee.current && (F((n += t)), !et.current && W((i += t))), H(e), [n, i];
     }
     return (
         r.useEffect(() => {
@@ -133,8 +133,8 @@ function b(e) {
             [en]
         ),
         r.useEffect(() => {
-            (Q.current = B), (J.current = H), ($.current = z), (ee.current = Y), (et.current = q);
-        }, [B, H, z, Y, q]),
+            (Q.current = B), (J.current = V), ($.current = z), (ee.current = Y), (et.current = q);
+        }, [B, V, z, Y, q]),
         r.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
@@ -152,7 +152,7 @@ function b(e) {
             [R, l.type]
         ),
         r.useEffect(() => {
-            null != b && (0, p.kk)(b);
+            null != A && (0, p.kk)(A);
             let e = Date.now();
             return (
                 f.default.track(I.rMx.CHANGE_LOG_OPENED, { change_log_id: R }),
@@ -161,10 +161,10 @@ function b(e) {
                         change_log_id: R,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != b && (0, p.EW)(b, { dismissAction: C.L.DISMISS });
+                        null != A && (0, p.EW)(A, { dismissAction: C.L.DISMISS });
                 }
             );
-        }, [b, R]),
+        }, [A, R]),
         (0, i.jsxs)(o.ModalRoot, {
             className: a()(v.root, t),
             transitionState: w,
@@ -195,7 +195,7 @@ function b(e) {
                                   src: l.src,
                                   poster: l.poster,
                                   onPlay: (e) => {
-                                      f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), V(Date.now()), K(!0), X(e.currentTarget.muted);
+                                      f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), H(Date.now()), K(!0), X(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
                                       el(), X(e.currentTarget.muted), K(!1);
@@ -254,7 +254,7 @@ function b(e) {
                         (0, i.jsxs)(o.Heading, {
                             variant: 'heading-lg/semibold',
                             className: v.subHeader,
-                            children: [P, null == O ? void 0 : O()]
+                            children: [y, null == P ? void 0 : P()]
                         }),
                         null != D &&
                             (0, i.jsx)(o.Heading, {
@@ -262,12 +262,12 @@ function b(e) {
                                 className: v.bodyText,
                                 children: D
                             }),
-                        y.length > 0 &&
+                        O.length > 0 &&
                             (0, i.jsx)('div', {
                                 className: a()(v.featureCardGroup, { [v.wideStyle]: U }),
-                                children: y.map((e, t) =>
+                                children: O.map((e, t) =>
                                     (0, i.jsx)(
-                                        A,
+                                        b,
                                         {
                                             ...e,
                                             wideStyle: U

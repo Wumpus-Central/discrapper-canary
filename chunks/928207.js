@@ -21,8 +21,8 @@ var r = n(120356),
     v = n(74538),
     S = n(981631),
     T = n(474936),
-    A = n(388032),
-    b = n(707858);
+    b = n(388032),
+    A = n(707858);
 let Z = o.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser() }))(
     (0, m.Z)(
         (0, h.Z)((e) => {
@@ -34,7 +34,7 @@ let Z = o.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser(
                 N = (0, p.ZP)();
             return t
                 ? (0, i.jsxs)('div', {
-                      className: b.homeWrapperNormal,
+                      className: A.homeWrapperNormal,
                       children: [
                           (0, i.jsx)(u.Z, {
                               section: S.jXE.NAVIGATION,
@@ -43,9 +43,9 @@ let Z = o.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser(
                                   children: (e) =>
                                       (0, i.jsxs)(E.Z, {
                                           isAuthenticated: t,
-                                          className: l()(b.headerBar, e, {
-                                              [b.headerBarV2LightBackground]: m && !(0, c.wj)(N),
-                                              [b.headerBarV2DarkBackground]: m && (0, c.wj)(N)
+                                          className: l()(A.headerBar, e, {
+                                              [A.headerBarV2LightBackground]: m && !(0, c.wj)(N),
+                                              [A.headerBarV2DarkBackground]: m && (0, c.wj)(N)
                                           }),
                                           role: 'navigation',
                                           children: [
@@ -54,7 +54,7 @@ let Z = o.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser(
                                                   'aria-hidden': !0,
                                                   color: m ? s.Z.PREMIUM_TIER_2_PINK : void 0
                                               }),
-                                              (0, i.jsx)(E.Z.Title, { children: A.intl.string(A.t.Ipxkoq) }),
+                                              (0, i.jsx)(E.Z.Title, { children: b.intl.string(b.t.Ipxkoq) }),
                                               (0, i.jsx)(E.Z.Divider, {})
                                           ]
                                       })
@@ -67,7 +67,7 @@ let Z = o.ZP.connectStores([N.default], () => ({ user: N.default.getCurrentUser(
                                       ? (0, i.jsx)(_.Z, {
                                             align: _.Z.Align.CENTER,
                                             justify: _.Z.Justify.CENTER,
-                                            children: (0, i.jsx)(d.Spinner, { className: b.spinner })
+                                            children: (0, i.jsx)(d.Spinner, { className: A.spinner })
                                         })
                                       : (0, i.jsx)(C.Z, { entrypoint: T.EZ.ApplicationStoreHome })
                           })

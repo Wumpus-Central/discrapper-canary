@@ -105,7 +105,7 @@ var A = !1,
 function D() {
     return !(n.unstable_now() - O < R);
 }
-function x() {
+function L() {
     if (null !== C) {
         var e = n.unstable_now();
         O = e;
@@ -119,18 +119,18 @@ function x() {
 }
 if ('function' == typeof b)
     s = function () {
-        b(x);
+        b(L);
     };
 else if ('undefined' != typeof MessageChannel) {
-    var L = new MessageChannel(),
-        w = L.port2;
-    (L.port1.onmessage = x),
+    var x = new MessageChannel(),
+        w = x.port2;
+    (x.port1.onmessage = L),
         (s = function () {
             w.postMessage(null);
         });
 } else
     s = function () {
-        v(x, 0);
+        v(L, 0);
     };
 function P(e) {
     (C = e), A || ((A = !0), s());

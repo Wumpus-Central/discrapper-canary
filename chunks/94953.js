@@ -8,8 +8,8 @@ var i = t(200651),
     l = t(192379),
     a = t(442837),
     s = t(481060),
-    r = t(616780),
-    u = t(100527),
+    u = t(616780),
+    r = t(100527),
     o = t(931240),
     d = t(353093),
     c = t(314897),
@@ -27,7 +27,7 @@ function N(e) {
         A = (0, a.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n, t), [n, t]),
         b = l.useMemo(() => ({ [n]: [t] }), [n, t]),
         Z = (0, d.EJ)(m);
-    (0, r.$)(b);
+    (0, u.$)(b);
     let v = I === f.IlC.POPOUT,
         G = x === t,
         [C, j] = (0, a.Wu)(
@@ -41,7 +41,7 @@ function N(e) {
         ),
         T = l.useCallback(
             (e, n) => () => {
-                (0, o.nE)(e, n, u.Z.CONTEXT_MENU);
+                (0, o.nE)(e, n, r.Z.CONTEXT_MENU);
             },
             []
         );

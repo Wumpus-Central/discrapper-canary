@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(838436),
     x = n(726985),
     f = n(981631),
-    _ = n(388032),
-    E = n(565696);
+    E = n(388032),
+    _ = n(565696);
 let C = (e) => {
     (0, o.openModalLazy)(async () => {
         let { default: t } = await n.e('25120').then(n.bind(n, 926281));
@@ -45,10 +45,10 @@ function T() {
         I = S && b,
         N = () => {
             C({
-                header: _.intl.string(_.t.jxXMEx),
-                body: _.intl.format(_.t.fSv59f, { helpdeskArticle: u.Z.getArticleURL(f.BhN.GDPR_PACKAGE_CONTENTS) }),
-                confirmText: _.intl.string(_.t.NYgNg4),
-                cancelText: _.intl.string(_.t.jpVjsr),
+                header: E.intl.string(E.t.jxXMEx),
+                body: E.intl.format(E.t.fSv59f, { helpdeskArticle: u.Z.getArticleURL(f.BhN.GDPR_PACKAGE_CONTENTS) }),
+                confirmText: E.intl.string(E.t.NYgNg4),
+                cancelText: E.intl.string(E.t.jpVjsr),
                 confirmButtonColor: o.Button.Colors.BRAND,
                 onConfirm: (e) => {
                     T(!0),
@@ -56,16 +56,16 @@ function T() {
                             .then(
                                 (e) => {
                                     null != e && null != e.body
-                                        ? c.Z.show({ body: _.intl.string(_.t['6Nmv4u']) })
+                                        ? c.Z.show({ body: E.intl.string(E.t['6Nmv4u']) })
                                         : c.Z.show({
-                                              title: _.intl.string(_.t.OjbtDg),
-                                              body: _.intl.string(_.t['0F5Jys'])
+                                              title: E.intl.string(E.t.OjbtDg),
+                                              body: E.intl.string(E.t['0F5Jys'])
                                           });
                                 },
                                 () =>
                                     c.Z.show({
-                                        title: _.intl.string(_.t.OjbtDg),
-                                        body: _.intl.string(_.t['0F5Jys'])
+                                        title: E.intl.string(E.t.OjbtDg),
+                                        body: E.intl.string(E.t['0F5Jys'])
                                     })
                             )
                             .finally(() => T(!1));
@@ -76,21 +76,21 @@ function T() {
         setting: x.s6.PRIVACY_DATA_REQUEST_V2,
         children: [
             (0, i.jsx)(p.H, {
-                header: _.intl.string(_.t.XAHCgI),
-                description: _.intl.format(_.t.P3kNfn, { helpdeskArticle: u.Z.getArticleURL(f.BhN.GDPR_REQUEST_DATA) })
+                header: E.intl.string(E.t.XAHCgI),
+                description: E.intl.format(E.t.P3kNfn, { helpdeskArticle: u.Z.getArticleURL(f.BhN.GDPR_REQUEST_DATA) })
             }),
             I
                 ? (0, i.jsx)(o.Card, {
-                      className: E.card,
+                      className: _.card,
                       children: (0, i.jsx)(o.Text, {
                           variant: 'text-md/normal',
-                          children: _.intl.format(_.t.RNDlV1, { date: a()(t.created_at).add(f.eBq, 'days').format('MMMM Do YYYY') })
+                          children: E.intl.format(E.t.RNDlV1, { date: a()(t.created_at).add(f.eBq, 'days').format('MMMM Do YYYY') })
                       })
                   })
                 : (0, i.jsx)('div', {
-                      className: E.button,
+                      className: _.button,
                       children: (0, i.jsx)(o.Tooltip, {
-                          text: e.isStaff() ? _.intl.string(_.t.ZPQLHx) : e.verified ? null : _.intl.string(_.t['c1f88/']),
+                          text: e.isStaff() ? E.intl.string(E.t.ZPQLHx) : e.verified ? null : E.intl.string(E.t['c1f88/']),
                           children: (e) => {
                               let { onMouseEnter: t, onMouseLeave: r } = e;
                               return (0, i.jsx)(o.Button, {
@@ -101,7 +101,7 @@ function T() {
                                   look: o.Button.Looks.FILLED,
                                   color: o.Button.Colors.BRAND,
                                   submitting: s || n,
-                                  children: _.intl.string(_.t.dmBSKi)
+                                  children: E.intl.string(E.t.dmBSKi)
                               });
                           }
                       })

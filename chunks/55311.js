@@ -3,19 +3,19 @@ n.d(t, {
         return o;
     }
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(481060),
+var i = n(481060),
     l = n(846027),
     a = n(468026),
-    s = n(388032);
+    u = n(388032);
 function o(e, t) {
     if (e) {
-        (0, r.openModal)((e) =>
-            (0, i.jsx)(a.default, {
+        (0, i.openModal)((e) =>
+            (0, r.jsx)(a.default, {
                 ...e,
-                title: s.intl.string(s.t.QZ7WSU),
-                body: s.intl.string(s.t.Tl9JpK)
+                title: u.intl.string(u.t.QZ7WSU),
+                body: u.intl.string(u.t.Tl9JpK)
             })
         );
         return;

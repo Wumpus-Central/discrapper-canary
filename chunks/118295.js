@@ -48,7 +48,7 @@ function _() {
         };
     }
     function S(e, n, r, i) {
-        var a = s((n && n.prototype instanceof x ? n : x).prototype);
+        var a = s((n && n.prototype instanceof L ? n : L).prototype);
         return E(a, '_invoke', { value: Z(e, r, new H(i || [])) }), a;
     }
     function A(e, n, r) {
@@ -70,8 +70,8 @@ function _() {
         R = 'executing',
         O = 'completed',
         D = {};
-    function x() {}
     function L() {}
+    function x() {}
     function w() {}
     var P = {};
     T(P, y, function () {
@@ -80,7 +80,7 @@ function _() {
     var M = l,
         k = M && M(M(Y([])));
     k && k !== m && g.call(k, y) && (P = k);
-    var U = (w.prototype = x.prototype = s(P));
+    var U = (w.prototype = L.prototype = s(P));
     function B(e) {
         var n;
         u((n = ['next', 'throw', 'return'])).call(n, function (n) {
@@ -203,19 +203,19 @@ function _() {
         throw TypeError(i(e) + ' is not iterable');
     }
     return (
-        (L.prototype = w),
+        (x.prototype = w),
         E(U, 'constructor', {
             value: w,
             configurable: !0
         }),
         E(w, 'constructor', {
-            value: L,
+            value: x,
             configurable: !0
         }),
-        (L.displayName = T(w, I, 'GeneratorFunction')),
+        (x.displayName = T(w, I, 'GeneratorFunction')),
         (r.isGeneratorFunction = function (e) {
             var n = 'function' == typeof e && e.constructor;
-            return !!n && (n === L || 'GeneratorFunction' === (n.displayName || n.name));
+            return !!n && (n === x || 'GeneratorFunction' === (n.displayName || n.name));
         }),
         (r.mark = function (e) {
             return d ? d(e, w) : ((e.__proto__ = w), T(e, I, 'GeneratorFunction')), (e.prototype = s(U)), e;

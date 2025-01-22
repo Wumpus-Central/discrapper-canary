@@ -37,8 +37,8 @@ let b = 'default',
     R = {},
     O = null,
     D = null,
-    x = {},
-    L = {
+    L = {},
+    x = {
         clipsEnabled: !1,
         storageLocation: b,
         clipsQuality: {
@@ -52,7 +52,7 @@ let b = 'default',
         viewerConnectivity: g.dJ.ALL
     },
     w = {
-        clipsSettings: L,
+        clipsSettings: x,
         hardwareClassification: null,
         hardwareClassificationForDecoupled: null,
         hardwareClassificationVersion: 0,
@@ -101,8 +101,8 @@ function B(e) {
         var a;
         let e = Date.now();
         (D = null != D ? D : e),
-            (x[r] = [
-                ...(null !== (a = x[r]) && void 0 !== a ? a : []),
+            (L[r] = [
+                ...(null !== (a = L[r]) && void 0 !== a ? a : []),
                 {
                     timestamp: e,
                     thumbnail: i
@@ -112,7 +112,7 @@ function B(e) {
 }
 function G(e) {
     let { streamKey: n, timestamp: r } = e;
-    D === r && (D = null), null == r ? (x[n] = []) : (x[n] = x[n].filter((e) => e.timestamp !== r));
+    D === r && (D = null), null == r ? (L[n] = []) : (L[n] = L[n].filter((e) => e.timestamp !== r));
 }
 function Z() {
     A = Math.max(A - 1, 0);
@@ -188,7 +188,7 @@ function z(e) {
 }
 function q(e) {
     let { streamKey: n } = e;
-    if (((D = null), (x[n] = []), null == N || (0, d.my)(n).ownerId !== f.default.getId())) return !1;
+    if (((D = null), (L[n] = []), null == N || (0, d.my)(n).ownerId !== f.default.getId())) return !1;
     N =
         0 === N.newClipIds.length
             ? null
@@ -263,10 +263,10 @@ class er extends (i = s.ZP.DeviceSettingsStore) {
     }
     getStreamClipAnimations(e) {
         var n;
-        return null !== (n = x[e]) && void 0 !== n ? n : I;
+        return null !== (n = L[e]) && void 0 !== n ? n : I;
     }
     hasAnyClipAnimations() {
-        return Object.values(x).some((e) => e.length > 0);
+        return Object.values(L).some((e) => e.length > 0);
     }
     getHardwareClassification() {
         return w.hardwareClassification;
@@ -313,12 +313,12 @@ y(er, 'displayName', 'ClipsStore'),
     y(er, 'persistKey', 'ClipsStore'),
     y(er, 'migrations', [
         (e) => ({
-            clipsSettings: null != e ? e : L,
+            clipsSettings: null != e ? e : x,
             newClipsCount: 0
         }),
         (e) => {
             let n = {
-                ...L,
+                ...x,
                 ...e.clipsSettings
             };
             return {
@@ -352,7 +352,7 @@ y(er, 'displayName', 'ClipsStore'),
             ...e,
             clipsSettings: {
                 ...e.clipsSettings,
-                decoupledClipsEnabled: L.decoupledClipsEnabled
+                decoupledClipsEnabled: x.decoupledClipsEnabled
             }
         }),
         (e) => {
@@ -386,7 +386,7 @@ y(er, 'displayName', 'ClipsStore'),
             ...e,
             clipsSettings: {
                 ...e.clipsSettings,
-                clipsQuality: 'number' == typeof e.clipsSettings.clipsQuality || null == e.clipsSettings.clipsQuality ? L.clipsQuality : e.clipsSettings.clipsQuality
+                clipsQuality: 'number' == typeof e.clipsSettings.clipsQuality || null == e.clipsSettings.clipsQuality ? x.clipsQuality : e.clipsSettings.clipsQuality
             }
         }),
         (e) => {
@@ -395,7 +395,7 @@ y(er, 'displayName', 'ClipsStore'),
                 ...e,
                 clipsSettings: {
                     ...e.clipsSettings,
-                    remindersEnabled: null !== (n = e.clipsSettings.remindersEnabled) && void 0 !== n ? n : L.remindersEnabled
+                    remindersEnabled: null !== (n = e.clipsSettings.remindersEnabled) && void 0 !== n ? n : x.remindersEnabled
                 }
             };
         },

@@ -30,8 +30,8 @@ var a = r(200651),
     R = r(25827),
     O = r(430824),
     D = r(131951),
-    x = r(594174),
-    L = r(451478),
+    L = r(594174),
+    x = r(451478),
     w = r(768581),
     P = r(358221),
     M = r(584511),
@@ -58,7 +58,7 @@ function W(e) {
         s = (0, b.Z)();
     return (
         o.useEffect(() => {
-            let e = x.default.getCurrentUser();
+            let e = L.default.getCurrentUser();
             if (s && null != e) {
                 let n = (0, v.P)(e);
                 (0, y.FU)(n, i, { track: !1 }).catch(U.dG4);
@@ -157,9 +157,9 @@ function z(e) {
         T = (0, g.ZP)(h),
         [S, A] = (0, c.Wu)([D.Z], () => [D.Z.supports(B.AN.VIDEO), Object.keys(D.Z.getVideoDevices()).length]),
         C = null != y ? ''.concat(T, ', ').concat(y.name) : T,
-        N = (0, c.e7)([L.Z], () => L.Z.isFocused()),
+        N = (0, c.e7)([x.Z], () => x.Z.isFocused()),
         R = (0, c.e7)([P.Z], () => P.Z.getMode(h.id)),
-        x = o.useCallback((e) => {
+        L = o.useCallback((e) => {
             null != e.top && null != e.left && p.Z.move(e.left, e.top);
         }, []),
         k = (0, d.useSpring)(
@@ -208,7 +208,7 @@ function z(e) {
             ]
         }),
         Q = z ? V : j,
-        X = (0, c.e7)([L.Z], () => L.Z.windowSize());
+        X = (0, c.e7)([x.Z], () => x.Z.windowSize());
     return (0, a.jsx)(_.Z, {
         className: Z.wrapper,
         selector: '.'.concat(Z.root),
@@ -218,7 +218,7 @@ function z(e) {
         },
         maxX: X.width,
         maxY: X.height,
-        onDragEnd: x,
+        onDragEnd: L,
         dragAnywhere: !0,
         children: (0, a.jsx)(d.ThemeProvider, {
             theme: E ? U.BRd.DARK : void 0,

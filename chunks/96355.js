@@ -236,7 +236,7 @@
             o = e * r + n * i;
         return o > 1 && (o = 1), o < -1 && (o = -1), a * Math.acos(o);
     }
-    function x(e, n, r, i, a, o, s, l, u, c) {
+    function L(e, n, r, i, a, o, s, l, u, c) {
         var d = (c * (e - r)) / 2 + (u * (n - i)) / 2,
             f = (-u * (e - r)) / 2 + (c * (n - i)) / 2,
             p = s * s,
@@ -257,7 +257,7 @@
             N = D(I, T, S, A);
         return 0 === o && N > 0 && (N -= t_), 1 === o && N < 0 && (N += t_), [y, b, C, N];
     }
-    function L(e, n) {
+    function x(e, n) {
         var r = (4 / 3) * Math.tan(n / 4),
             i = Math.cos(e),
             a = Math.sin(e),
@@ -662,11 +662,11 @@
         for (var a = 0, o = n, s = r - i; o < r; o += i) (a += (e[s] - e[o]) * (e[o + 1] + e[s + 1])), (s = o);
         return a;
     }
-    function ex(e, n) {
+    function eL(e, n) {
         var r = n.id,
             i = n.bbox,
             a = null == n.properties ? {} : n.properties,
-            o = eL(e, n);
+            o = ex(e, n);
         return null == r && null == i
             ? {
                   type: 'Feature',
@@ -688,7 +688,7 @@
                     geometry: o
                 };
     }
-    function eL(e, n) {
+    function ex(e, n) {
         function r(e, n) {
             n.length && n.pop();
             for (var r = c[e < 0 ? ~e : e], i = 0, a = r.length; i < a; ++i) n.push(u(r[i], i));
@@ -774,7 +774,7 @@
         }
         function a(n) {
             return ew(
-                eL(e, {
+                ex(e, {
                     type: 'Polygon',
                     arcs: [n]
                 }).coordinates[0]
@@ -826,7 +826,7 @@
     }
     function eM(e) {
         return function (n, r) {
-            return tL(e(n), r);
+            return tx(e(n), r);
         };
     }
     function ek(e, n) {
@@ -880,7 +880,7 @@
         )
             !(function () {
                 var n = r[0],
-                    a = tx(r)[0][0],
+                    a = tL(r)[0][0],
                     o = r[a],
                     s = eP(e, [n, o]);
                 (s.area = n.area + o.area), (s.type = 'Polygon'), (s.arcs = s.arcs[0]), r.splice(a, 1), r.shift(), r.splice(i(r, s.area), 0, s);
@@ -1705,13 +1705,13 @@
             r = Math.abs(r);
             var h = (f * f) / (r * r) + (p * p) / ((i = Math.abs(i)) * i);
             h > 1 && ((r *= Math.sqrt(h)), (i *= Math.sqrt(h)));
-            var _ = x(e, n, l, u, o, s, r, i, c, d),
+            var _ = L(e, n, l, u, o, s, r, i, c, d),
                 m = [],
                 g = _[2],
                 E = _[3],
                 v = Math.max(Math.ceil(Math.abs(E) / (t_ / 4)), 1);
             E /= v;
-            for (var y = 0; y < v; y++) m.push(L(g, E)), (g += E);
+            for (var y = 0; y < v; y++) m.push(x(g, E)), (g += E);
             return m.map(function (e) {
                 for (var n = 0; n < e.length; n += 2) {
                     var a = e[n + 0],
@@ -1919,10 +1919,10 @@
                 ? {
                       type: 'FeatureCollection',
                       features: n.geometries.map(function (n) {
-                          return ex(e, n);
+                          return eL(e, n);
                       })
                   }
-                : ex(e, n);
+                : eL(e, n);
         },
         tO = function (e, n) {
             function r(n) {
@@ -1997,7 +1997,7 @@
             }
             return r;
         },
-        tx = function (e) {
+        tL = function (e) {
             function n(e, n) {
                 e.forEach(function (e) {
                     e < 0 && (e = ~e);
@@ -2041,7 +2041,7 @@
                     }
             return o;
         },
-        tL = function (e, n) {
+        tx = function (e, n) {
             return e < n ? -1 : e > n ? 1 : e >= n ? 0 : NaN;
         },
         tw = function (e) {
@@ -2066,7 +2066,7 @@
             );
         },
         tP =
-            (tw(tL).right,
+            (tw(tx).right,
             function (e, n) {
                 return eU(ek(eB(e), e), n);
             }),

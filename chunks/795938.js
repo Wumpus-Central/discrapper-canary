@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     topBar: 'topBar_bf8df0',
     messageContents: 'messageContents_bf8df0',
     timestamp: 'timestamp_bf8df0',

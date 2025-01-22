@@ -9,8 +9,8 @@ t(192379);
 var l = t(512722),
     a = t.n(l),
     s = t(442837),
-    r = t(481060),
-    u = t(239091),
+    u = t(481060),
+    r = t(239091),
     o = t(100527),
     d = t(906732),
     c = t(299206),
@@ -53,8 +53,8 @@ function O(e) {
             channel: O
         }),
         U = (0, G.Z)(d),
-        D = (0, A.Z)(n),
-        R = (0, b.Z)(n),
+        R = (0, A.Z)(n),
+        D = (0, b.Z)(n),
         k = (0, v.Z)(n),
         w = (0, p.Z)({
             guildId: n.id,
@@ -87,7 +87,7 @@ function O(e) {
         X = (0, x.Z)(n),
         W = (0, E.Mn)('GuildContextMenu');
     function Q() {
-        (0, r.openModal)((e) =>
+        (0, u.openModal)((e) =>
             (0, i.jsx)(S.g, {
                 ...e,
                 guild: n
@@ -95,21 +95,21 @@ function O(e) {
         );
     }
     return n.hasFeature(j.oNc.HUB)
-        ? (0, i.jsxs)(r.Menu, {
+        ? (0, i.jsxs)(u.Menu, {
               navId: 'guild-context',
-              onClose: u.Zy,
+              onClose: r.Zy,
               'aria-label': T.intl.string(T.t.HpQykZ),
               onSelect: l,
               children: [
-                  (0, i.jsxs)(r.MenuGroup, {
+                  (0, i.jsxs)(u.MenuGroup, {
                       children: [
                           y,
-                          (0, i.jsx)(r.MenuItem, {
+                          (0, i.jsx)(u.MenuItem, {
                               id: 'privacy',
                               label: T.intl.string(T.t.IlFwwc),
                               action: () =>
-                                  (0, r.openModalLazy)(async () => {
-                                      let { default: e } = await Promise.all([t.e('50506'), t.e('96211'), t.e('23217'), t.e('84605'), t.e('6380'), t.e('72181'), t.e('8016'), t.e('51269'), t.e('66711'), t.e('13351'), t.e('86282'), t.e('21628'), t.e('18543'), t.e('17938'), t.e('18101'), t.e('24207'), t.e('46097'), t.e('76540'), t.e('8739'), t.e('58059'), t.e('18895'), t.e('24391'), t.e('99393'), t.e('99008'), t.e('37229'), t.e('22646'), t.e('95393'), t.e('3940'), t.e('25183'), t.e('57322'), t.e('48923'), t.e('30419'), t.e('18824'), t.e('30203'), t.e('55141')]).then(t.bind(t, 241420));
+                                  (0, u.openModalLazy)(async () => {
+                                      let { default: e } = await Promise.all([t.e('50506'), t.e('96211'), t.e('23217'), t.e('84605'), t.e('8016'), t.e('51269'), t.e('22878'), t.e('13351'), t.e('66711'), t.e('17938'), t.e('21628'), t.e('6380'), t.e('46097'), t.e('76540'), t.e('8739'), t.e('58059'), t.e('86282'), t.e('18543'), t.e('18895'), t.e('19652'), t.e('99393'), t.e('99008'), t.e('37229'), t.e('22646'), t.e('95393'), t.e('3940'), t.e('25183'), t.e('65889'), t.e('48923'), t.e('30419'), t.e('18824'), t.e('30203'), t.e('82544'), t.e('93988')]).then(t.bind(t, 241420));
                                       return (t) =>
                                           (0, i.jsx)(e, {
                                               ...t,
@@ -122,39 +122,39 @@ function O(e) {
                   }),
                   P
                       ? null
-                      : (0, i.jsx)(r.MenuGroup, {
-                            children: (0, i.jsx)(r.MenuItem, {
+                      : (0, i.jsx)(u.MenuGroup, {
+                            children: (0, i.jsx)(u.MenuItem, {
                                 id: 'leave-guild',
                                 label: T.intl.string(T.t.Dv8gFR),
                                 action: Q,
                                 color: 'danger'
                             })
                         }),
-                  (0, i.jsx)(r.MenuGroup, { children: Y })
+                  (0, i.jsx)(u.MenuGroup, { children: Y })
               ]
           })
-        : (0, i.jsxs)(r.Menu, {
+        : (0, i.jsxs)(u.Menu, {
               navId: 'guild-context',
-              onClose: u.Zy,
+              onClose: r.Zy,
               'aria-label': T.intl.string(T.t.HpQykZ),
               onSelect: l,
               children: [
-                  (0, i.jsx)(r.MenuGroup, { children: z }),
-                  (0, i.jsx)(r.MenuGroup, { children: y }),
-                  (0, i.jsxs)(r.MenuGroup, {
-                      children: [D, W || __OVERLAY__ ? null : R, W && !__OVERLAY__ ? q : null, K, U, V]
+                  (0, i.jsx)(u.MenuGroup, { children: z }),
+                  (0, i.jsx)(u.MenuGroup, { children: y }),
+                  (0, i.jsxs)(u.MenuGroup, {
+                      children: [R, W || __OVERLAY__ ? null : D, W && !__OVERLAY__ ? q : null, K, U, V]
                   }),
-                  (0, i.jsxs)(r.MenuGroup, {
+                  (0, i.jsxs)(u.MenuGroup, {
                       children: [
                           o ? null : k,
                           __OVERLAY__
                               ? null
-                              : (0, i.jsx)(r.MenuItem, {
+                              : (0, i.jsx)(u.MenuItem, {
                                     id: 'privacy',
                                     label: T.intl.string(T.t.BayiAg),
                                     action: () =>
-                                        (0, r.openModalLazy)(async () => {
-                                            let { default: e } = await Promise.all([t.e('50506'), t.e('96211'), t.e('23217'), t.e('84605'), t.e('6380'), t.e('72181'), t.e('8016'), t.e('51269'), t.e('66711'), t.e('13351'), t.e('86282'), t.e('21628'), t.e('18543'), t.e('17938'), t.e('18101'), t.e('24207'), t.e('46097'), t.e('76540'), t.e('8739'), t.e('58059'), t.e('18895'), t.e('24391'), t.e('99393'), t.e('99008'), t.e('37229'), t.e('22646'), t.e('95393'), t.e('3940'), t.e('25183'), t.e('57322'), t.e('48923'), t.e('30419'), t.e('18824'), t.e('30203'), t.e('55141')]).then(t.bind(t, 241420));
+                                        (0, u.openModalLazy)(async () => {
+                                            let { default: e } = await Promise.all([t.e('50506'), t.e('96211'), t.e('23217'), t.e('84605'), t.e('8016'), t.e('51269'), t.e('22878'), t.e('13351'), t.e('66711'), t.e('17938'), t.e('21628'), t.e('6380'), t.e('46097'), t.e('76540'), t.e('8739'), t.e('58059'), t.e('86282'), t.e('18543'), t.e('18895'), t.e('19652'), t.e('99393'), t.e('99008'), t.e('37229'), t.e('22646'), t.e('95393'), t.e('3940'), t.e('25183'), t.e('65889'), t.e('48923'), t.e('30419'), t.e('18824'), t.e('30203'), t.e('82544'), t.e('93988')]).then(t.bind(t, 241420));
                                             return (t) =>
                                                 (0, i.jsx)(e, {
                                                     ...t,
@@ -166,14 +166,14 @@ function O(e) {
                           B
                       ]
                   }),
-                  (0, i.jsxs)(r.MenuGroup, {
+                  (0, i.jsxs)(u.MenuGroup, {
                       children: [F, H]
                   }),
-                  (0, i.jsxs)(r.MenuGroup, {
+                  (0, i.jsxs)(u.MenuGroup, {
                       children: [
                           X,
                           !P &&
-                              (0, i.jsx)(r.MenuItem, {
+                              (0, i.jsx)(u.MenuItem, {
                                   id: 'leave-guild',
                                   label: T.intl.string(T.t.J2TBi4),
                                   action: Q,
@@ -181,7 +181,7 @@ function O(e) {
                               })
                       ]
                   }),
-                  (0, i.jsx)(r.MenuGroup, { children: Y })
+                  (0, i.jsx)(u.MenuGroup, { children: Y })
               ]
           });
 }

@@ -30,8 +30,8 @@ var o = r(200651),
     R = r(111583),
     O = r(594174),
     D = r(451478),
-    x = r(626135),
-    L = r(823379),
+    L = r(626135),
+    x = r(823379),
     w = r(5192),
     P = r(981631),
     M = r(388032),
@@ -63,7 +63,7 @@ class G extends s.PureComponent {
         let e = this.props.activity.application_id;
         null != e &&
             -1 === B.indexOf(e) &&
-            (x.default.track(P.rMx.SHOW_TUTORIAL, {
+            (L.default.track(P.rMx.SHOW_TUTORIAL, {
                 tutorial: 'activity-invite-nux-inline',
                 application_id: e
             }),
@@ -121,7 +121,7 @@ function F(e) {
                   .filter((e) => e !== (null == y ? void 0 : y.id))
                   .reject((e) => C.Z.isBlockedOrIgnored(e))
                   .map((e) => O.default.getUser(e))
-                  .filter(L.lm)
+                  .filter(x.lm)
                   .map((e) => w.ZP.getName(n, c.id, e))
                   .value(),
         N = (0, v.R6)('TypingUsers');
@@ -135,7 +135,7 @@ function F(e) {
                   channel: c,
                   guild: b
               });
-    let [R, D, x] = S,
+    let [R, D, L] = S,
         P = '';
     return (
         1 === S.length
@@ -149,7 +149,7 @@ function F(e) {
                 ? (P = M.intl.format(M.t.StKTho, {
                       a: R,
                       b: D,
-                      c: x
+                      c: L
                   }))
                 : S.length > 3 && (P = M.intl.string(M.t.uVDhqa)),
         (0, o.jsxs)('div', {

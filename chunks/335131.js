@@ -1,6 +1,6 @@
 r.d(n, {
     B1: function () {
-        return x;
+        return L;
     },
     DR: function () {
         return T;
@@ -9,7 +9,7 @@ r.d(n, {
         return N;
     },
     K$: function () {
-        return L;
+        return x;
     },
     Ov: function () {
         return P;
@@ -78,7 +78,7 @@ let b = (e) => {
         });
     },
     A = (e, n) => !!e == !!n,
-    C = (e, n) => A(null == e ? void 0 : e.noCache, null == n ? void 0 : n.noCache) && A(null == e ? void 0 : e.includeUnpublished, null == n ? void 0 : n.includeUnpublished) && A(null == e ? void 0 : e.includeBundles, null == n ? void 0 : n.includeBundles) && (null == e ? void 0 : e.countryCode) === (null == n ? void 0 : n.countryCode) && (null == e ? void 0 : e.paymentGateway) === (null == n ? void 0 : n.paymentGateway),
+    C = (e, n) => A(null == e ? void 0 : e.noCache, null == n ? void 0 : n.noCache) && A(null == e ? void 0 : e.includeUnpublished, null == n ? void 0 : n.includeUnpublished) && A(null == e ? void 0 : e.includeBundles, null == n ? void 0 : n.includeBundles) && A(null == e ? void 0 : e.includePopularPicks, null == n ? void 0 : n.includePopularPicks) && (null == e ? void 0 : e.countryCode) === (null == n ? void 0 : n.countryCode) && (null == e ? void 0 : e.paymentGateway) === (null == n ? void 0 : n.paymentGateway),
     N = async (e) => {
         l.Z.dispatch({
             type: 'COLLECTIBLES_CATEGORIES_FETCH',
@@ -187,7 +187,7 @@ let b = (e) => {
             );
         }
     },
-    x = async (e, n) => {
+    L = async (e, n) => {
         try {
             return (
                 await s.tn.get({
@@ -203,7 +203,7 @@ let b = (e) => {
             return (0, v.G)(new c.Hx(e)), !1;
         }
     },
-    L = (e) => {
+    x = (e) => {
         l.Z.dispatch({
             type: 'COLLECTIBLES_CATEGORY_ITEMS_VIEWED',
             ...e

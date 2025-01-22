@@ -199,7 +199,7 @@ let O = {
         if (o < n.length) {
             let e = n[o];
             return (
-                s.insertText(D(e), x(e)),
+                s.insertText(D(e), L(e)),
                 {
                     type: E.z2.EMOJI,
                     metadata: {
@@ -255,7 +255,7 @@ let O = {
 function D(e) {
     return ''.concat(v.Iv).concat(e.name).concat(v.Iv);
 }
-function x(e) {
+function L(e) {
     var n;
     let r = e.animated ? 'a' : '';
     return e.managed || null == e.id

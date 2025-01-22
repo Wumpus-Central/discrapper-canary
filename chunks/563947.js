@@ -42,8 +42,8 @@ var i = r(313921),
     R = r(95201),
     O = r(447306),
     D = r(679462),
-    x = r(349398),
-    L = r(608255),
+    L = r(349398),
+    x = r(608255),
     w = r(109793),
     P = r(149722),
     M = r(907603),
@@ -136,8 +136,8 @@ X = {
     'ro-RO': R.Z,
     'ru-RU': O.Z,
     'sk-SK': D.Z,
-    'sl-SI': x.Z,
-    'sr-SP': L.Z,
+    'sl-SI': L.Z,
+    'sr-SP': x.Z,
     'sv-SE': w.Z,
     'tr-TR': P.Z,
     'uk-UA': M.Z,
@@ -559,15 +559,15 @@ function es(e, n, r) {
     e !== (0, F.useMemo)(() => n.segments.find((e) => e.isEditable), [n.segments]) && !n.isInvalid && (u = void 0);
     let O = (0, G.Me)(),
         D = !n.isDisabled && !n.isReadOnly && e.isEditable,
-        x = 'literal' === e.type ? '' : o.of(e.type),
-        L = (0, G.bE)({
-            'aria-label': `${x}${s ? `, ${s}` : ''}${l ? ', ' : ''}`,
+        L = 'literal' === e.type ? '' : o.of(e.type),
+        x = (0, G.bE)({
+            'aria-label': `${L}${s ? `, ${s}` : ''}${l ? ', ' : ''}`,
             'aria-labelledby': l
         });
     return 'literal' === e.type
         ? { segmentProps: { 'aria-hidden': !0 } }
         : {
-              segmentProps: (0, G.dG)(_, L, {
+              segmentProps: (0, G.dG)(_, x, {
                   id: O,
                   ...R,
                   'aria-invalid': n.isInvalid ? 'true' : void 0,

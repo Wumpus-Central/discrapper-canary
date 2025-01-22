@@ -36,8 +36,8 @@ function R(e, n, r) {
 }
 let O = {},
     D = {},
-    x = {},
     L = {},
+    x = {},
     w = C.hVg.THEATRE,
     P = {},
     M = [],
@@ -98,8 +98,8 @@ function V(e) {
             let { analyticsContext: n } = e;
             n.setActionContext(a);
         }),
-        (L[l] = s),
-        (x[l] = o),
+        (x[l] = s),
+        (L[l] = o),
         null != o)
     ) {
         let e = _.ZP.getGameForPID(o);
@@ -119,21 +119,21 @@ function j(e) {
             let { analyticsContext: r } = e;
             r.setActionContext(n);
         }),
-        (L[r] = null),
-        (x[r] = null);
+        (x[r] = null),
+        (L[r] = null);
 }
 function H(e) {
     let { streamKey: n, rtcServerId: r, region: i, viewerIds: o } = e;
     a = n;
     let s = P[n];
     if (null == s && null != r) {
-        null == x[n] && (D[n] = null);
+        null == L[n] && (D[n] = null);
         let e = (0, g.my)(n);
-        null == D[n] && null == L[n] && (D[n] = (0, E.L2)(e, S.Z));
+        null == D[n] && null == x[n] && (D[n] = (0, E.L2)(e, S.Z));
         let a = new m.A({
             streamRegion: i,
             streamApplication: D[n],
-            streamSourceType: en(L[n]),
+            streamSourceType: en(x[n]),
             actionContext: O[n],
             numViewers: null != o ? o.length : 0
         });
@@ -283,7 +283,7 @@ class er extends (o = f.ZP.Store) {
         return null != n ? n.getMaxViewers() : null;
     }
     getStreamSourceId(e) {
-        return L[e];
+        return x[e];
     }
     getUserIds(e) {
         let n = P[e];

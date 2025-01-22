@@ -39,7 +39,7 @@ function T(e) {
         usernameLower: null != t ? t.username.toLowerCase() : null
     };
 }
-function A(e) {
+function b(e) {
     return {
         status: E.Z.getStatus(e),
         isMobile: E.Z.isMobileOnline(e),
@@ -47,7 +47,7 @@ function A(e) {
         applicationStream: g.Z.getAnyStreamForUser(e)
     };
 }
-function b(e) {
+function A(e) {
     let t = [];
     return (
         l()(f.ZP.memberOf(e))
@@ -83,8 +83,8 @@ class x {
                         userId: t,
                         nickname: I.Z.getNickname(t),
                         ...T(t),
-                        ...A(t),
                         ...b(t),
+                        ...A(t),
                         spam: I.Z.isSpam(t),
                         ignoredUser: I.Z.isIgnored(t),
                         giftIntentType: e === N.OGo.FRIEND && p.Z.isTopAffinityFriendAnniversary({ userId: t }) ? v.hX.FRIEND_ANNIVERSARY : void 0
@@ -100,8 +100,8 @@ class x {
                           applicationId: n,
                           nickname: I.Z.getNickname(t),
                           ...T(t),
-                          ...A(t),
                           ...b(t),
+                          ...A(t),
                           spam: I.Z.isSpam(t),
                           ignoredUser: I.Z.isIgnored(t),
                           isGameRelationship: !0
@@ -117,8 +117,8 @@ class x {
                         type: 99,
                         nickname: e.name,
                         ...T(e.key),
-                        ...A(e.key),
-                        ...b(e.key)
+                        ...b(e.key),
+                        ...A(e.key)
                     })
             );
         return new x(l().concat(e, t, n));
@@ -187,38 +187,38 @@ class x {
     }
 }
 let L = !0,
-    P = !1,
-    O = N.pJs.ONLINE,
-    y = new x(),
+    y = !1,
+    P = N.pJs.ONLINE,
+    O = new x(),
     R = !0,
     j = !1;
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    L && (e || (O !== N.pJs.ONLINE && O !== N.pJs.ADD_FRIEND)) && !P && ((L = !1), (P = !0), o.Z.fetchRelationships());
+    L && (e || (P !== N.pJs.ONLINE && P !== N.pJs.ADD_FRIEND)) && !y && ((L = !1), (y = !0), o.Z.fetchRelationships());
 }
 function M() {
-    if (((L = !0), R ? (P = !1) : D(), (y = y.reset()), j)) return;
-    let e = y.getRelationshipCounts();
-    O = 0 === e[N.OGo.FRIEND] ? (0 !== e[N.OGo.PENDING_INCOMING] ? N.pJs.PENDING : N.pJs.ADD_FRIEND) : N.pJs.ONLINE;
+    if (((L = !0), R ? (y = !1) : D(), (O = O.reset()), j)) return;
+    let e = O.getRelationshipCounts();
+    P = 0 === e[N.OGo.FRIEND] ? (0 !== e[N.OGo.PENDING_INCOMING] ? N.pJs.PENDING : N.pJs.ADD_FRIEND) : N.pJs.ONLINE;
 }
 function w() {
-    y = R ? new x() : y.reset();
+    O = R ? new x() : O.reset();
 }
 function k(e) {
     return function () {
-        return !R && !!y.update(e) && ((y = y.clone()), !0);
+        return !R && !!O.update(e) && ((O = O.clone()), !0);
     };
 }
 class U extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, E.Z, C.default, _.Z, f.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], w), this.syncWith([m.Z], w), this.syncWith([u.Z], w), this.syncWith([p.Z], w), this.syncWith([C.default], k(T)), this.syncWith([E.Z, g.Z], k(A)), M();
+        this.waitFor(I.Z, E.Z, C.default, _.Z, f.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], w), this.syncWith([m.Z], w), this.syncWith([u.Z], w), this.syncWith([p.Z], w), this.syncWith([C.default], k(T)), this.syncWith([E.Z, g.Z], k(b)), M();
     }
     getState() {
         return {
-            fetching: P,
-            section: O,
+            fetching: y,
+            section: P,
             pendingCount: I.Z.getPendingCount(),
-            rows: y
+            rows: O
         };
     }
 }
@@ -228,19 +228,19 @@ S(U, 'displayName', 'FriendsStore'),
             M();
         },
         FRIENDS_SET_SECTION: function (e) {
-            (O = e.section), D();
+            (P = e.section), D();
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
             return (R = null != t), w(), !R;
         },
         LOAD_RELATIONSHIPS_SUCCESS: function () {
-            P = !1;
+            y = !1;
         },
         LOAD_RELATIONSHIPS_FAILURE: function () {
-            (L = !0), (P = !0);
+            (L = !0), (y = !0);
         },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
-            (O = e.section), (j = !0);
+            (P = e.section), (j = !0);
         }
     }));

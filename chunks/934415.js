@@ -18,7 +18,7 @@ r.d(n, {
         return M;
     },
     jZ: function () {
-        return x;
+        return L;
     },
     mE: function () {
         return H;
@@ -27,7 +27,7 @@ r.d(n, {
         return D;
     },
     rX: function () {
-        return L;
+        return x;
     },
     rY: function () {
         return P;
@@ -103,10 +103,10 @@ function D(e, n, r) {
         a
     );
 }
-function x(e, n) {
+function L(e, n) {
     return O(e, n, l.BN.MEMBER);
 }
-function L(e, n) {
+function x(e, n) {
     return O(e, n, l.BN.ROLE);
 }
 function w(e) {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
 });
 var i = n(200651);
@@ -19,8 +19,8 @@ var r = n(120356),
     p = n(388032),
     x = n(381578),
     f = n(232186);
-function _() {
-    let { enabled: e, autoToggle: t, hideInstantInvites: r, hidePersonalInformation: _, disableSounds: E, disableNotifications: C, enableContentProtection: T } = (0, a.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
+function E() {
+    let { enabled: e, autoToggle: t, hideInstantInvites: r, hidePersonalInformation: E, disableSounds: _, disableNotifications: C, enableContentProtection: T } = (0, a.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
         S = (e, t) => {
             o.Z.update({ [e]: t });
         };
@@ -78,7 +78,7 @@ function _() {
                     (0, i.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
                         children: (0, i.jsx)(l.FormSwitch, {
-                            value: _,
+                            value: E,
                             onChange: (e) => S('hidePersonalInformation', e),
                             note: p.intl.string(p.t['+9Lra2']),
                             children: p.intl.string(p.t.UpQziI)
@@ -96,7 +96,7 @@ function _() {
                     (0, i.jsx)(d.F, {
                         setting: g.s6.STREAMER_MODE_DISABLE_SOUNDS,
                         children: (0, i.jsx)(l.FormSwitch, {
-                            value: E,
+                            value: _,
                             onChange: (e) => S('disableSounds', e),
                             note: p.intl.string(p.t.eAkaio),
                             children: p.intl.string(p.t.o56OZm)

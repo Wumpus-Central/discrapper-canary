@@ -21,14 +21,14 @@ var i = n(913527),
     v = n(9156),
     S = n(594174),
     T = n(51144),
-    A = n(196051),
-    b = n(441729),
+    b = n(196051),
+    A = n(441729),
     Z = n(653477),
     x = n(981631),
     L = n(388032);
-let P = [],
+let y = [],
+    P = null,
     O = null,
-    y = null,
     R = null,
     j = /\|\|([\s\S]+?)\|\|/g;
 function D(e, t, n, i) {
@@ -76,15 +76,15 @@ function M() {
         R = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices();
     }
     let n = R.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e || !1);
-    y = n.length > 0 ? n[0] : null;
+    O = n.length > 0 ? n[0] : null;
 }
 async function w(e, t, n, i, r) {
     let l = s.e6(e, n);
-    null !== l && (null == y && M(), t ? await (0, A.NB)() : null == O || O.removeEventListener('end', A.NB), l.addEventListener('end', A.NB), null != i && l.addEventListener('start', i), null != r && l.addEventListener('end', r), (O = l), s.iq(l, y));
+    null !== l && (null == O && M(), t ? await (0, b.NB)() : null == P || P.removeEventListener('end', b.NB), l.addEventListener('end', b.NB), null != i && l.addEventListener('start', i), null != r && l.addEventListener('end', r), (P = l), s.iq(l, O));
 }
 function k(e, t, n, i, r) {
     w(e, t, r, () => {
-        (0, A.Bo)(n, i);
+        (0, b.Bo)(n, i);
     });
 }
 function U(e) {
@@ -92,7 +92,7 @@ function U(e) {
     w(t, n, i, r, l);
 }
 function G() {
-    return null !== O && O.removeEventListener('end', A.NB), s.M9(), (O = null), !0;
+    return null !== P && P.removeEventListener('end', b.NB), s.M9(), (P = null), !0;
 }
 function B(e) {
     var t, n, i;
@@ -104,7 +104,7 @@ function B(e) {
         u = null !== (i = f.ZP.getNick(c, r.author.id)) && void 0 !== i ? i : T.ZP.getName(r.author);
     return k(D(r.content, u, c, o), !0, l.id, r.id), !0;
 }
-function V(e) {
+function H(e) {
     var t, n, i, r, l, a;
     let { channelId: s, message: o, optimistic: c } = e;
     if (c || E.Z.isSelfDeaf()) return !1;
@@ -113,12 +113,12 @@ function V(e) {
     let u = N.Z.getChannelId(),
         _ = p.ZP.getCurrentSidebarChannelId(u),
         S = s === u || s === _,
-        A = h.OW.getSetting() && o.tts && S,
-        b = I.Z.getTTSType(),
-        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (b === x.PrB.ALL_CHANNELS || (b === x.PrB.SELECTED_CHANNEL && S));
-    if ((A || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
-        if (P.indexOf(o.id) >= 0) return !1;
-        P.unshift(o.id) > 10 && P.pop();
+        b = h.OW.getSetting() && o.tts && S,
+        A = I.Z.getTTSType(),
+        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (A === x.PrB.ALL_CHANNELS || (A === x.PrB.SELECTED_CHANNEL && S));
+    if ((b || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
+        if (y.indexOf(o.id) >= 0) return !1;
+        y.unshift(o.id) > 10 && y.pop();
         let e = d.getGuildId();
         if (null != e && v.ZP.getMutedChannels(e).has(s)) return !1;
         let t = null !== (l = null !== (r = f.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : T.ZP.getName(o.author)) && void 0 !== l ? l : '',
@@ -128,16 +128,16 @@ function V(e) {
     }
     return !1;
 }
-function H(e) {
+function V(e) {
     let { id: t, channelId: n } = e,
-        i = b.Z.currentMessage;
-    return null != i && t === i.messageId && n === i.channelId && ((0, A.NB)(), !0);
+        i = A.Z.currentMessage;
+    return null != i && t === i.messageId && n === i.channelId && ((0, b.NB)(), !0);
 }
 function F() {
     E.Z.isSelfDeaf() && s.M9();
 }
 t.Z = {
     init() {
-        l.Z.subscribe('SPEAK_TEXT', U), l.Z.subscribe('SPEAK_MESSAGE', B), l.Z.subscribe('STOP_SPEAKING', G), l.Z.subscribe('MESSAGE_CREATE', V), l.Z.subscribe('MESSAGE_DELETE', H), l.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', F), l.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', M), (0, a.Ql)(M);
+        l.Z.subscribe('SPEAK_TEXT', U), l.Z.subscribe('SPEAK_MESSAGE', B), l.Z.subscribe('STOP_SPEAKING', G), l.Z.subscribe('MESSAGE_CREATE', H), l.Z.subscribe('MESSAGE_DELETE', V), l.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', F), l.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', M), (0, a.Ql)(M);
     }
 };

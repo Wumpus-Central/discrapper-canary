@@ -40,8 +40,8 @@ let I = 'US',
     R = (0, m.hQ)(),
     O = (0, m.hQ)(),
     D = (0, m.hQ)(),
-    x = (0, m.hQ)(),
     L = (0, m.hQ)(),
+    x = (0, m.hQ)(),
     w = (0, m.hQ)();
 !(function (e) {
     (e.NAME = 'name'), (e.COUNTRY = 'country'), (e.LINE1 = 'line1'), (e.LINE2 = 'line2'), (e.CITY = 'city'), (e.POSTAL_CODE = 'postalCode'), (e.STATE = 'state');
@@ -114,7 +114,7 @@ let P = {
     }),
     G = (e) => ({
         name: 'city',
-        id: x,
+        id: L,
         title: () => v.intl.string(v.t.bUSWl5),
         autoComplete: 'address-level2',
         placeholder: () => v.intl.string(v.t['5rRx39']),
@@ -150,7 +150,7 @@ let P = {
         }
         return {
             name: 'postalCode',
-            id: L,
+            id: x,
             title: () => n,
             autoComplete: 'postal-code',
             placeholder: () => r,

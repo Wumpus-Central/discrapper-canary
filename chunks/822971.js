@@ -138,19 +138,19 @@ function l(e) {
             end: /"/,
             contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, R]
         },
-        x = {
+        L = {
             scope: 'string',
             begin: /\$"""/,
             end: /"""/,
             contains: [{ match: /\{\{/ }, { match: /\}\}/ }, R],
             relevance: 2
         },
-        L = {
+        x = {
             scope: 'string',
             match: a(/'/, s(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (R.contains = [D, O, C, A, L, r, c, f, v, I, T, S, h, m]),
+        (R.contains = [D, O, C, A, x, r, c, f, v, I, T, S, h, m]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -160,7 +160,7 @@ function l(e) {
             contains: [
                 r,
                 {
-                    variants: [x, D, O, N, C, A, L]
+                    variants: [L, D, O, N, C, A, x]
                 },
                 c,
                 f,
@@ -170,7 +170,7 @@ function l(e) {
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [f, N, C, A, L, S]
+                    contains: [f, N, C, A, x, S]
                 },
                 y,
                 v,

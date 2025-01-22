@@ -1,27 +1,27 @@
-var a = t(200651);
-t(192379);
-var i = t(120356),
-    r = t.n(i),
-    l = t(481060),
-    o = t(578451);
-n.Z = function (e) {
-    let { tabs: n, onTabSelect: t, selectedTab: i, className: s } = e;
-    return (0, a.jsx)(l.TabBar, {
+var i = n(200651);
+n(192379);
+var a = n(120356),
+    r = n.n(a),
+    l = n(481060),
+    o = n(578451);
+t.Z = function (e) {
+    let { tabs: t, onTabSelect: n, selectedTab: a, className: s } = e;
+    return (0, i.jsx)(l.TabBar, {
         type: 'top-pill',
-        selectedItem: i,
-        onItemSelect: t,
+        selectedItem: a,
+        onItemSelect: n,
         className: s,
-        children: n.map((e, n) => {
-            let { id: t, label: i, count: s } = e;
-            return (0, a.jsx)(
+        children: t.map((e, t) => {
+            let { id: n, label: a, count: s } = e;
+            return (0, i.jsx)(
                 l.TabBar.Item,
                 {
-                    id: t,
-                    className: r()(o.tabItem, { [o.firstChildSpacingFix]: 0 === n }),
-                    'aria-label': i,
-                    children: null != s && s > 0 ? ''.concat(i, ' (').concat(s, ')') : i
+                    id: n,
+                    className: r()(o.tabItem, { [o.firstChildSpacingFix]: 0 === t }),
+                    'aria-label': a,
+                    children: null != s && s > 0 ? ''.concat(a, ' (').concat(s, ')') : a
                 },
-                t
+                n
             );
         })
     });

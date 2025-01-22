@@ -16,10 +16,10 @@ t.Z = function (e) {
         T = () => {
             N(!0), f && !_ && !v && (null == E || E());
         },
-        A = () => {
+        b = () => {
             N(!1);
         },
-        b = (e, t) => {
+        A = (e, t) => {
             if (null != t)
                 S(!0),
                     (0, d.jW)(
@@ -52,9 +52,9 @@ t.Z = function (e) {
                         [h.active]: _ || v,
                         [h.firstItem]: 0 === t
                     }),
-                    onContextMenu: (e) => b(e, m),
+                    onContextMenu: (e) => A(e, m),
                     onMouseEnter: T,
-                    onMouseLeave: A,
+                    onMouseLeave: b,
                     onClick: null != g ? g : void 0,
                     style: {
                         LIST_ROW_HEIGHT: u.WN,

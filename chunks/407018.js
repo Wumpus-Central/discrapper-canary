@@ -125,11 +125,11 @@ function h(e, n) {
         D = (0, o.useCallback)(() => {
             E.current && (0, i.Ao)(E.current);
         }, [E]),
-        x = n.focusedThumb === p;
+        L = n.focusedThumb === p;
     (0, o.useEffect)(() => {
-        x && D();
-    }, [x, D]);
-    let L = 'rtl' === T,
+        L && D();
+    }, [L, D]);
+    let x = 'rtl' === T,
         w = (0, o.useRef)(null),
         { keyboardProps: P } = (0, s.v5)({
             onKeyDown(e) {
@@ -162,10 +162,10 @@ function h(e, n) {
                 let { getThumbPercent: s, setThumbPercent: l, decrementThumb: u, incrementThumb: c, step: d, pageSize: f } = n,
                     { width: h, height: _ } = g.current.getBoundingClientRect(),
                     m = I ? _ : h;
-                if ((null == w.current && (w.current = s(p) * m), 'keyboard' === i)) (e > 0 && L) || (e < 0 && !L) || r > 0 ? u(p, o ? f : d) : c(p, o ? f : d);
+                if ((null == w.current && (w.current = s(p) * m), 'keyboard' === i)) (e > 0 && x) || (e < 0 && !x) || r > 0 ? u(p, o ? f : d) : c(p, o ? f : d);
                 else {
                     let n = I ? r : e;
-                    (I || L) && (n = -n), (w.current += n), l(p, (0, a.uZ)(w.current / m, 0, 1));
+                    (I || x) && (n = -n), (w.current += n), l(p, (0, a.uZ)(w.current / m, 0, 1));
                 }
             },
             onMoveEnd() {
@@ -240,7 +240,7 @@ function h(e, n) {
             labelProps: N,
             isDragging: n.isThumbDragging(p),
             isDisabled: b,
-            isFocused: x
+            isFocused: L
         }
     );
 }

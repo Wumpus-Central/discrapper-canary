@@ -29,7 +29,7 @@ function A(e) {
         [N, R] = o.useState(!1),
         O = (0, f.Ye)(g.default.extractTimestamp(n.startId)),
         D = (0, s.e7)([E.Z], () => E.Z.summaryFeedback(n)),
-        x = (e, r) => {
+        L = (e, r) => {
             e.stopPropagation(),
                 (0, v.Z)({
                     summary: n,
@@ -37,9 +37,9 @@ function A(e) {
                     rating: r
                 });
         },
-        L = p.Z.can(I.Plq.MANAGE_MESSAGES, i),
+        x = p.Z.can(I.Plq.MANAGE_MESSAGES, i),
         w = (e) => {
-            L &&
+            x &&
                 (0, u.jW)(e, async () => {
                     let { default: e } = await r.e('12891').then(r.bind(r, 519620));
                     return (r) =>
@@ -118,7 +118,7 @@ function A(e) {
                     className: S.feedbackContainer,
                     children: [
                         (0, a.jsx)(l.Clickable, {
-                            onClick: (e) => x(e, T.aZ.GOOD),
+                            onClick: (e) => L(e, T.aZ.GOOD),
                             children: (0, a.jsx)(m.Z, {
                                 className: S.thumbIcon,
                                 width: 12,
@@ -126,7 +126,7 @@ function A(e) {
                             })
                         }),
                         (0, a.jsx)(l.Clickable, {
-                            onClick: (e) => x(e, T.aZ.BAD),
+                            onClick: (e) => L(e, T.aZ.BAD),
                             children: (0, a.jsx)(_.Z, {
                                 className: S.thumbIcon,
                                 width: 12,

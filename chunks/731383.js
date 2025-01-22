@@ -68,13 +68,13 @@ var i = r(728804),
             C = '';
         }
         if (_(C) || a.isBuffer(C)) return f ? [b(I ? r : f(r, h.encoder, T, 'key', y)) + '=' + b(f(C, h.encoder, T, 'value', y))] : [b(r) + '=' + b(String(C))];
-        var x = [];
-        if (void 0 === C) return x;
+        var L = [];
+        if (void 0 === C) return L;
         if ('comma' === o && u(C)) I && f && (C = a.maybeMap(C, f)), (A = [{ value: C.length > 0 ? C.join(',') || null : void 0 }]);
         else if (u(p)) A = p;
         else {
-            var L = Object.keys(C);
-            A = g ? L.sort(g) : L;
+            var x = Object.keys(C);
+            A = g ? x.sort(g) : x;
         }
         for (var w = s && u(C) && 1 === C.length ? r + '[]' : r, P = 0; P < A.length; ++P) {
             var M = A[P],
@@ -83,10 +83,10 @@ var i = r(728804),
                 var U = u(C) ? ('function' == typeof o ? o(w, M) : w) : w + (E ? '.' + M : '[' + M + ']');
                 S.set(n, R);
                 var B = i();
-                B.set(m, S), d(x, e(k, U, o, s, l, c, 'comma' === o && I && u(C) ? null : f, p, g, E, v, y, b, I, T, B));
+                B.set(m, S), d(L, e(k, U, o, s, l, c, 'comma' === o && I && u(C) ? null : f, p, g, E, v, y, b, I, T, B));
             }
         }
-        return x;
+        return L;
     },
     E = function (e) {
         if (!e) return h;

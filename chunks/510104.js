@@ -33,21 +33,21 @@ function p(e, n) {
         R = I === u.k5 ? u.YP : u.k5,
         O = e.rects.popper,
         D = e.elements[S ? R : I],
-        x = (0, i.Z)((0, c.kK)(D) ? D : D.contextElement || (0, a.Z)(e.elements.popper), E, y, m),
-        L = (0, o.Z)(e.elements.reference),
+        L = (0, i.Z)((0, c.kK)(D) ? D : D.contextElement || (0, a.Z)(e.elements.popper), E, y, m),
+        x = (0, o.Z)(e.elements.reference),
         w = (0, s.Z)({
-            reference: L,
+            reference: x,
             element: O,
             strategy: 'absolute',
             placement: h
         }),
         P = (0, l.Z)(Object.assign({}, O, w)),
-        M = I === u.k5 ? P : L,
+        M = I === u.k5 ? P : x,
         k = {
-            top: x.top - M.top + N.top,
-            bottom: M.bottom - x.bottom + N.bottom,
-            left: x.left - M.left + N.left,
-            right: M.right - x.right + N.right
+            top: L.top - M.top + N.top,
+            bottom: M.bottom - L.bottom + N.bottom,
+            left: L.left - M.left + N.left,
+            right: M.right - L.right + N.right
         },
         U = e.modifiersData.offset;
     if (I === u.k5 && U) {

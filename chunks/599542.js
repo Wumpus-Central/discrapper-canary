@@ -223,11 +223,11 @@ function D(e) {
         }
     }, [r, n]);
 }
-function x(e) {
-    for (L(e) && (e = e.parentElement); e && !L(e); ) e = e.parentElement;
+function L(e) {
+    for (x(e) && (e = e.parentElement); e && !x(e); ) e = e.parentElement;
     return e || document.scrollingElement || document.documentElement;
 }
-function L(e) {
+function x(e) {
     let n = window.getComputedStyle(e);
     return /(auto|scroll)/.test(n.overflow + n.overflowX + n.overflowY);
 }

@@ -41,18 +41,18 @@ i(u, a),
         for (var n = this._w, r = 0 | this._ah, i = 0 | this._bh, a = 0 | this._ch, o = 0 | this._dh, l = 0 | this._eh, u = 0 | this._fh, v = 0 | this._gh, y = 0 | this._hh, b = 0 | this._al, I = 0 | this._bl, T = 0 | this._cl, S = 0 | this._dl, A = 0 | this._el, C = 0 | this._fl, N = 0 | this._gl, R = 0 | this._hl, O = 0; O < 32; O += 2) (n[O] = e.readInt32BE(4 * O)), (n[O + 1] = e.readInt32BE(4 * O + 4));
         for (; O < 160; O += 2) {
             var D = n[O - 30],
-                x = n[O - 30 + 1],
-                L = h(D, x),
-                w = _(x, D);
+                L = n[O - 30 + 1],
+                x = h(D, L),
+                w = _(L, D);
             D = n[O - 4];
-            var P = m(D, (x = n[O - 4 + 1])),
-                M = g(x, D),
+            var P = m(D, (L = n[O - 4 + 1])),
+                M = g(L, D),
                 k = n[O - 14],
                 U = n[O - 14 + 1],
                 B = n[O - 32],
                 G = n[O - 32 + 1],
                 Z = (w + U) | 0,
-                F = (L + k + E(Z, w)) | 0;
+                F = (x + k + E(Z, w)) | 0;
             (F = (F + P + E((Z = (Z + M) | 0), M)) | 0), (F = (F + B + E((Z = (Z + G) | 0), G)) | 0), (n[O] = F), (n[O + 1] = Z);
         }
         for (var V = 0; V < 160; V += 2) {

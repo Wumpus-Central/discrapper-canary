@@ -23,9 +23,9 @@ function p(e) {
         p = (0, a.e7)([c.Z], () => (null != r ? c.Z.getForSKU(r.id) : null), [r]),
         x = (0, a.e7)([u.Z], () => (null != r ? u.Z.getSubscriptionGroupListingForSubscriptionListing(r.id) : null), [r]),
         f = null == p ? void 0 : p.applicationId,
-        _ = (0, a.e7)([l.Z], () => (null != f ? l.Z.getApplication(f) : null), [f]),
-        E = null === (t = e.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
-        C = (0, a.e7)([o.Z], () => o.Z.getGuild(E), [E]),
+        E = (0, a.e7)([l.Z], () => (null != f ? l.Z.getApplication(f) : null), [f]),
+        _ = null === (t = e.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
+        C = (0, a.e7)([o.Z], () => o.Z.getGuild(_), [_]),
         [T, S] = i.useState(!1),
         b =
             null == r
@@ -53,7 +53,7 @@ function p(e) {
                       subscription: e
                   });
     return {
-        application: _,
+        application: E,
         guild: C,
         expanded: T,
         handleToggleExpanded: () => S((e) => !e),

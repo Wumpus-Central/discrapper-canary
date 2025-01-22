@@ -47,8 +47,8 @@ function u(e) {
             },
             [h]
         ),
-        b = h.type === o.yU.CHAT ? r.SlashBoxIcon : r.PaperIcon,
-        v = (0, s.gw)(h.type, h.displayName);
+        v = h.type === o.yU.CHAT ? r.SlashBoxIcon : r.PaperIcon,
+        b = (0, s.gw)(h.type, h.displayName);
     return (0, i.jsxs)(r.Clickable, {
         onClick: x,
         className: c.item,
@@ -57,14 +57,14 @@ function u(e) {
             (0, i.jsxs)('div', {
                 className: c.identifier,
                 children: [
-                    (0, i.jsx)(b, {
+                    (0, i.jsx)(v, {
                         className: c.icon,
                         size: 'md',
                         color: 'currentColor'
                     }),
                     (0, i.jsx)(r.Text, {
                         variant: 'text-md/normal',
-                        children: v
+                        children: b
                     })
                 ]
             }),

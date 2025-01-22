@@ -131,7 +131,7 @@ function I(e, n, r) {
             case 'binary':
                 return U(this, n, r);
             case 'base64':
-                return L(this, n, r);
+                return x(this, n, r);
             case 'ucs2':
             case 'ucs-2':
             case 'utf16le':
@@ -216,10 +216,10 @@ function O(e, n, r, i) {
 function D(e, n, r, i) {
     return X(Q(n), e, r, i);
 }
-function x(e, n, r, i) {
+function L(e, n, r, i) {
     return X(q(n, e.length - r), e, r, i);
 }
-function L(e, n, r) {
+function x(e, n, r) {
     return 0 === n && r === e.length ? i.fromByteArray(e) : i.fromByteArray(e.slice(n, r));
 }
 function w(e, n, r) {
@@ -415,7 +415,7 @@ function w(e, n, r) {
                 case 'ucs-2':
                 case 'utf16le':
                 case 'utf-16le':
-                    return x(this, e, n, r);
+                    return L(this, e, n, r);
                 default:
                     if (o) throw TypeError('Unknown encoding: ' + i);
                     (i = ('' + i).toLowerCase()), (o = !0);

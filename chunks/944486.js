@@ -36,8 +36,8 @@ function D(e, n, r) {
         e
     );
 }
-let x = 'SelectedChannelStore',
-    L = 300000,
+let L = 'SelectedChannelStore',
+    x = 300000,
     w = 60000,
     P = {},
     M = {},
@@ -48,7 +48,7 @@ function B(e) {
 }
 function G() {
     !__OVERLAY__ &&
-        g.K.set(x, {
+        g.K.set(L, {
             selectedChannelId: o,
             selectedVoiceChannelId: l,
             lastChannelFollowingDestination: s,
@@ -99,7 +99,7 @@ function j() {
             let n = P[e.id];
             null == k[e.id] && F(e.id, n);
         }),
-        null != u && Date.now() - u >= L && ((l = null), (e = !0)),
+        null != u && Date.now() - u >= x && ((l = null), (e = !0)),
         e
     );
 }
@@ -194,7 +194,7 @@ function et(e) {
         G());
 }
 function en() {
-    (P = {}), (o = null), (a = void 0), (k = {}), (s = {}), (l = null), g.K.remove(x);
+    (P = {}), (o = null), (a = void 0), (k = {}), (s = {}), (l = null), g.K.remove(L);
 }
 function er(e) {
     let { channel: n } = e;
@@ -211,7 +211,7 @@ class ei extends (d = m.ZP.Store) {
         if (!__OVERLAY__) {
             var e, n;
             let r =
-                null !== (e = g.K.get(x)) && void 0 !== e
+                null !== (e = g.K.get(L)) && void 0 !== e
                     ? e
                     : {
                           selectedChannelId: o,

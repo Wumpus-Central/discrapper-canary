@@ -16,15 +16,15 @@ var i = r(200651),
     h = r(939350),
     _ = r(450793);
 function m(e) {
-    let { color: n = 'default', label: r, icon: o, iconLeft: m, iconLeftSize: g = 'md', hint: E, subtext: v, subtextLineClamp: y, hasSubmenu: b, disabled: I, isFocused: T, menuItemProps: S, action: A, onClose: C, onFocus: N, className: R, focusedClassName: O, subMenuIconClassName: D, dontCloseOnActionIfHoldingShiftKey: x, dontCloseOnAction: L, iconProps: w, sparkle: P } = e,
+    let { color: n = 'default', label: r, icon: o, iconLeft: m, iconLeftSize: g = 'md', hint: E, subtext: v, subtextLineClamp: y, hasSubmenu: b, disabled: I, isFocused: T, menuItemProps: S, action: A, onClose: C, onFocus: N, className: R, focusedClassName: O, subMenuIconClassName: D, dontCloseOnActionIfHoldingShiftKey: L, dontCloseOnAction: x, iconProps: w, sparkle: P } = e,
         M = a.useContext(c.r),
         k = a.useRef(null),
         U = a.useCallback(
             (e) => {
                 if (null == A) return !1;
-                !(e.shiftKey && x) && !L && C(), e.persist(), null == M || M(), requestAnimationFrame(() => A(e));
+                !(e.shiftKey && L) && !x && C(), e.persist(), null == M || M(), requestAnimationFrame(() => A(e));
             },
-            [A, C, M, x, L]
+            [A, C, M, L, x]
         );
     return (
         a.useEffect(() => {

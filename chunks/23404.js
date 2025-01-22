@@ -21,12 +21,12 @@ var i = n(200651),
     v = n(64141),
     S = n(667105),
     T = n(860151),
-    A = n(341907),
-    b = n(46140),
+    b = n(341907),
+    A = n(46140),
     Z = n(981631),
     x = n(388032),
     L = n(444865);
-function P(e) {
+function y(e) {
     var t;
     let { quest: n } = e,
         r = (0, m.B6)(n.config.expiresAt),
@@ -60,14 +60,14 @@ function P(e) {
         ]
     });
 }
-function O(e) {
+function P(e) {
     var t, n, l, o;
     let { nodeRef: d, quest: E } = e,
         I = (0, u.O5)(),
         C = (0, s.e7)([p.Z], () => p.Z.isEnrolling(E.id), [E]),
-        [Z, O] = r.useState(!1),
-        y = r.useCallback(() => O(!0), []),
-        R = r.useCallback(() => O(!1), []),
+        [Z, P] = r.useState(!1),
+        O = r.useCallback(() => P(!0), []),
+        R = r.useCallback(() => P(!1), []),
         j = r.useCallback((e) => {
             e.stopPropagation();
         }, []),
@@ -84,7 +84,7 @@ function O(e) {
                     questContent: g.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, A.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, E.id));
+                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, E.id));
         }, [E, I]),
         w = r.useCallback(() => {
             I({
@@ -92,7 +92,7 @@ function O(e) {
                 questContent: g.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, A.navigateToQuestHome)(b.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, E.id);
+                (0, b.navigateToQuestHome)(A.dr.ACTIVITY_PANEL, g.jn.ACTIVITY_PANEL, E.id);
         }, [E.id, I]),
         k = (0, S.hf)({
             quest: E,
@@ -101,16 +101,16 @@ function O(e) {
         U = (0, m.tP)(E),
         G = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         B = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        V = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
-        H = (null == E ? void 0 : E.userStatus) == null || (0, f.zE)(E.userStatus, g.jn.ACTIVITY_PANEL),
+        H = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
+        V = (null == E ? void 0 : E.userStatus) == null || (0, f.zE)(E.userStatus, g.jn.ACTIVITY_PANEL),
         F = (0, m.Rf)(E),
         z = (0, _.D)({
             quest: E,
             taskDetails: F,
-            location: b.dr.ACTIVITY_PANEL,
+            location: A.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         });
-    return H || U || V
+    return V || U || H
         ? null
         : (0, i.jsxs)('div', {
               ref: (e) => {
@@ -119,15 +119,15 @@ function O(e) {
               className: a()(L.wrapper, { [L.wrapperQuestAccepted]: G }),
               onClick: j,
               onKeyPress: j,
-              onFocus: y,
-              onMouseEnter: y,
+              onFocus: O,
+              onMouseEnter: O,
               onBlur: R,
               onMouseLeave: R,
               children: [
                   (0, i.jsxs)('div', {
                       className: L.utils,
                       children: [
-                          G ? (0, i.jsx)(P, { quest: E }) : (0, i.jsx)(N.Z, { textOpacity: 0.5 }),
+                          G ? (0, i.jsx)(y, { quest: E }) : (0, i.jsx)(N.Z, { textOpacity: 0.5 }),
                           (0, i.jsx)(v.r, {
                               quest: E,
                               questContent: g.jn.ACTIVITY_PANEL,
@@ -149,7 +149,7 @@ function O(e) {
                   !G &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(P, { quest: E }),
+                              (0, i.jsx)(y, { quest: E }),
                               (0, i.jsx)(c.Text, {
                                   className: L.instructions,
                                   variant: 'text-sm/normal',
@@ -165,7 +165,7 @@ function O(e) {
                           className: L.rewardTileWithInstructions,
                           quest: E,
                           questContent: g.jn.ACTIVITY_PANEL,
-                          location: b.dr.ACTIVITY_PANEL,
+                          location: A.dr.ACTIVITY_PANEL,
                           taskDetails: F
                       }),
                   (0, i.jsxs)('div', {
@@ -222,7 +222,7 @@ t.Z = function (e) {
         questOrQuests: e.quest,
         questContent: g.jn.ACTIVITY_PANEL,
         children: (t) =>
-            (0, i.jsx)(O, {
+            (0, i.jsx)(P, {
                 nodeRef: t,
                 ...e
             })

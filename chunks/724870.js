@@ -1,6 +1,6 @@
 e.d(t, {
     h: function () {
-        return S;
+        return I;
     },
     m: function () {
         return g;
@@ -21,11 +21,11 @@ var l = e(512722),
     p = e(55563),
     m = e(626135),
     v = e(987209),
-    I = e(981631);
-function S(n) {
-    let { initialPlanId: t, activeSubscription: l, analyticsObject: r, analyticsLocation: o, analyticsLocations: d, analyticsSubscriptionType: f, renderHeader: p, planGroup: S, skuId: h, guildId: g, reviewWarningMessage: Z, applicationId: A, showBenefitsFirst: N, onComplete: b, forcesTransitionToGuild: E } = n,
-        C = (0, u.Z)(),
-        L = !1;
+    S = e(981631);
+function I(n) {
+    let { initialPlanId: t, activeSubscription: l, analyticsObject: r, analyticsLocation: o, analyticsLocations: d, analyticsSubscriptionType: f, renderHeader: p, planGroup: I, skuId: h, guildId: g, reviewWarningMessage: Z, applicationId: A, showBenefitsFirst: b, onComplete: E, forcesTransitionToGuild: N } = n,
+        L = (0, u.Z)(),
+        C = !1;
     (0, a.openModalLazy)(
         async () => {
             let { PaymentContextProvider: n } = await Promise.resolve().then(e.bind(e, 563132)),
@@ -33,11 +33,11 @@ function S(n) {
                 { getApplicationPaymentSteps: a } = await e.e('86513').then(e.bind(e, 759386)),
                 s = a({
                     guildId: g,
-                    showBenefitsFirst: N
+                    showBenefitsFirst: b
                 });
             return (e) =>
                 (0, i.jsx)(n, {
-                    loadId: C,
+                    loadId: L,
                     applicationId: A,
                     activeSubscription: l,
                     stepConfigs: s,
@@ -52,24 +52,24 @@ function S(n) {
                             analyticsLocation: o,
                             analyticsSubscriptionType: f,
                             renderHeader: p,
-                            planGroup: S,
+                            planGroup: I,
                             reviewWarningMessage: Z,
                             applicationId: A,
                             guildId: null != g ? g : void 0,
                             onComplete: () => {
-                                (L = !0), null == b || b();
+                                (C = !0), null == E || E();
                             },
-                            forcesTransitionToGuild: E
+                            forcesTransitionToGuild: N
                         })
                     })
                 });
         },
         {
             onCloseCallback: () => {
-                !L &&
-                    (m.default.track(I.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: C,
-                        payment_type: I.Zuq[I.GZQ.SUBSCRIPTION],
+                !C &&
+                    (m.default.track(S.rMx.PAYMENT_FLOW_CANCELED, {
+                        load_id: L,
+                        payment_type: S.Zuq[S.GZQ.SUBSCRIPTION],
                         location: null != o ? o : r,
                         is_gift: !1,
                         sku_id: h,
@@ -79,7 +79,7 @@ function S(n) {
                     (0, s.fw)(),
                     (0, c.p)());
             },
-            onCloseRequest: I.dG4
+            onCloseRequest: S.dG4
         }
     );
 }
@@ -96,12 +96,12 @@ async function g(n) {
     let m = (0, d.KW)(s.flags);
     r()(m, 'Guild application subscriptions unsupported!'),
         await h(e, i),
-        S({
+        I({
             initialPlanId: null != l ? l : null === (t = c[0]) || void 0 === t ? void 0 : t.id,
             activeSubscription: null,
             analyticsLocations: a,
             analyticsLocationObject: u,
-            analyticsSubscriptionType: I.NYc.APPLICATION,
+            analyticsSubscriptionType: S.NYc.APPLICATION,
             renderHeader: o,
             planGroup: [],
             skuId: i,

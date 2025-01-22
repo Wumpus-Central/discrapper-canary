@@ -149,7 +149,7 @@ let I = (t) => {
             {
                 onClick: () => {
                     (0, c.openModalLazy)(async () => {
-                        let { default: t } = await Promise.all([n.e('72181'), n.e('46097'), n.e('25183'), n.e('18831'), n.e('56827')]).then(n.bind(n, 41164));
+                        let { default: t } = await Promise.all([n.e('22878'), n.e('46097'), n.e('25183'), n.e('18831'), n.e('56827')]).then(n.bind(n, 41164));
                         return (e) =>
                             (0, i.jsx)(t, {
                                 classificationId: s,

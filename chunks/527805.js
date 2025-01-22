@@ -28,7 +28,7 @@ function m(e) {
     if ((null == u ? void 0 : u.nsfwAllowed) === !1 && (null == s ? void 0 : null === (n = s.embeddedActivityConfig) || void 0 === n ? void 0 : n.requires_age_gate) === !0) return 7;
     if (!c) return 5;
     if (!(0, h.Z)(null == s ? void 0 : null === (r = s.embeddedActivityConfig) || void 0 === r ? void 0 : r.supported_platforms)) return 6;
-    let v = (0, f.s)(),
+    let v = (0, f.sq)(),
         y = null != l ? l : null === (i = m.getVoiceStateForSession(a, null == o ? void 0 : o.session_id)) || void 0 === i ? void 0 : i.channelId;
     if (!v && null == y) return 4;
     let b = p.getChannel(l);

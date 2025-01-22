@@ -1,18 +1,18 @@
-t.d(n, {
+r.d(n, {
     Y: function () {
-        return a;
+        return s;
     },
     z: function () {
-        return r;
+        return o;
     }
 });
-var i = t(192379),
-    l = t(369171);
-let r = (0, i.createContext)({
+var i = r(192379),
+    a = r(369171);
+let o = (0, i.createContext)({
     zoomed: !1,
     setZoomed: () => {},
-    accessoryVisibility: l.UE.FORCE_HIDDEN
+    accessoryVisibility: a.UE.FORCE_HIDDEN
 });
-function a() {
-    return (0, i.useContext)(r);
+function s() {
+    return (0, i.useContext)(o);
 }

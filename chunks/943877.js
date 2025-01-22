@@ -3,10 +3,10 @@ r.d(n, {
         return b;
     },
     OV: function () {
-        return x;
+        return L;
     },
     P$: function () {
-        return L;
+        return x;
     },
     RM: function () {
         return N;
@@ -542,13 +542,13 @@ function N(e) {
         [b, I] = y(g, e.granularity),
         N = I || 'UTC';
     if (g && !(b in g)) throw Error('Invalid granularity ' + b + ' for value ' + g.toString());
-    let x = (0, d.useMemo)(() => new s.C(i), [i]),
-        L = (0, d.useMemo)(() => o(x.resolvedOptions().calendar), [o, x]),
+    let L = (0, d.useMemo)(() => new s.C(i), [i]),
+        x = (0, d.useMemo)(() => o(L.resolvedOptions().calendar), [o, L]),
         [w, P] = (0, c.zk)(e.value, e.defaultValue, e.onChange),
-        M = (0, d.useMemo)(() => E(w, L), [w, L]),
-        [k, U] = (0, d.useState)(() => v(e.placeholderValue, b, L, I)),
+        M = (0, d.useMemo)(() => E(w, x), [w, x]),
+        [k, U] = (0, d.useState)(() => v(e.placeholderValue, b, x, I)),
         B = M || k,
-        G = 'gregory' === L.identifier && 'BC' === B.era,
+        G = 'gregory' === x.identifier && 'BC' === B.era,
         Z = (0, d.useMemo)(
             () => ({
                 granularity: b,
@@ -573,25 +573,25 @@ function N(e) {
         ),
         [Y, W] = (0, d.useState)(() => (e.value || e.defaultValue ? { ...H } : {})),
         K = (0, d.useRef)(),
-        z = (0, d.useRef)(L.identifier);
+        z = (0, d.useRef)(x.identifier);
     (0, d.useEffect)(() => {
-        L.identifier !== z.current && ((z.current = L.identifier), U((n) => (Object.keys(Y).length > 0 ? (0, a.Mw)(n, L) : v(e.placeholderValue, b, L, I))));
-    }, [L, b, Y, I, e.placeholderValue]),
+        x.identifier !== z.current && ((z.current = x.identifier), U((n) => (Object.keys(Y).length > 0 ? (0, a.Mw)(n, x) : v(e.placeholderValue, b, x, I))));
+    }, [x, b, Y, I, e.placeholderValue]),
         w && Object.keys(Y).length < Object.keys(H).length && W((Y = { ...H })),
-        null == w && Object.keys(Y).length === Object.keys(H).length && (W((Y = {})), U(v(e.placeholderValue, b, L, I)));
+        null == w && Object.keys(Y).length === Object.keys(H).length && (W((Y = {})), U(v(e.placeholderValue, b, x, I)));
     let q = M && Object.keys(Y).length >= Object.keys(H).length ? M : k,
         Q = (n) => {
             if (e.isDisabled || e.isReadOnly) return;
             let r = Object.keys(Y),
                 i = Object.keys(H);
-            null == n ? (P(null), U(v(e.placeholderValue, b, L, I)), W({})) : r.length >= i.length || (r.length === i.length - 1 && H.dayPeriod && !Y.dayPeriod && 'dayPeriod' !== K.current) ? P((n = (0, a.Mw)(n, (null == g ? void 0 : g.calendar) || new l.IQ()))) : U(n), (K.current = null);
+            null == n ? (P(null), U(v(e.placeholderValue, b, x, I)), W({})) : r.length >= i.length || (r.length === i.length - 1 && H.dayPeriod && !Y.dayPeriod && 'dayPeriod' !== K.current) ? P((n = (0, a.Mw)(n, (null == g ? void 0 : g.calendar) || new l.IQ()))) : U(n), (K.current = null);
         },
         X = (0, d.useMemo)(() => q.toDate(N), [q, N]),
         J = (0, d.useMemo)(
             () =>
                 V.formatToParts(X).map((e) => {
                     let n = S[e.type];
-                    'era' === e.type && 1 === L.getEras().length && (n = !1);
+                    'era' === e.type && 1 === x.getEras().length && (n = !1);
                     let r = S[e.type] && !Y[e.type],
                         a = S[e.type] ? T(e.type, e.value, i) : null;
                     return {
@@ -603,7 +603,7 @@ function N(e) {
                         isEditable: n
                     };
                 }),
-            [X, Y, V, j, q, L, i]
+            [X, Y, V, j, q, x, i]
         );
     H.era && Y.year && !Y.era ? ((Y.era = !0), W({ ...Y })) : !H.era && Y.era && (delete Y.era, W({ ...Y }));
     let $ = (e) => {
@@ -622,7 +622,7 @@ function N(e) {
     return {
         value: M,
         dateValue: X,
-        calendar: L,
+        calendar: x,
         setValue: Q,
         segments: J,
         dateFormatter: V,
@@ -656,7 +656,7 @@ function N(e) {
         },
         clearSegment(n) {
             delete Y[n], (K.current = n), W({ ...Y });
-            let r = v(e.placeholderValue, b, L, I),
+            let r = v(e.placeholderValue, b, x, I),
                 i = q;
             if ('dayPeriod' === n && 'hour' in q && 'hour' in r) {
                 let e = q.hour >= 12,
@@ -788,7 +788,7 @@ function D(e, n, r, i) {
                 return e.set({ [n]: r });
         }
 }
-function x(e) {
+function L(e) {
     var n, r, i;
     let o = (0, u.d)(e),
         [l, f] = (0, c.zk)(e.value, e.defaultValue || null, e.onChange),
@@ -843,8 +843,8 @@ function x(e) {
         D = (e) => {
             (null == S ? void 0 : S.start) && (null == S ? void 0 : S.end) && e.start && e.end ? R(S, e) : N(e);
         },
-        x = e.isInvalid || 'invalid' === e.validationState || (null != E && (p(E.start, e.minValue, e.maxValue) || p(E.end, e.minValue, e.maxValue) || (null != E.end && null != E.start && 0 > E.end.compare(E.start)) || ((null == E ? void 0 : E.start) && (null === (n = e.isDateUnavailable) || void 0 === n ? void 0 : n.call(e, E.start))) || ((null == E ? void 0 : E.end) && (null === (r = e.isDateUnavailable) || void 0 === r ? void 0 : r.call(e, E.end))))),
-        L = e.validationState || (x ? 'invalid' : null);
+        L = e.isInvalid || 'invalid' === e.validationState || (null != E && (p(E.start, e.minValue, e.maxValue) || p(E.end, e.minValue, e.maxValue) || (null != E.end && null != E.start && 0 > E.end.compare(E.start)) || ((null == E ? void 0 : E.start) && (null === (n = e.isDateUnavailable) || void 0 === n ? void 0 : n.call(e, E.start))) || ((null == E ? void 0 : E.end) && (null === (r = e.isDateUnavailable) || void 0 === r ? void 0 : r.call(e, E.end))))),
+        x = e.validationState || (L ? 'invalid' : null);
     return {
         value: E,
         setValue: v,
@@ -885,8 +885,8 @@ function x(e) {
                 }),
                 o.setOpen(n);
         },
-        validationState: L,
-        isInvalid: x,
+        validationState: x,
+        isInvalid: L,
         formatValue(n, r) {
             let i;
             if (!E || !E.start || !E.end) return null;
@@ -938,7 +938,7 @@ function x(e) {
         }
     };
 }
-function L(e) {
+function x(e) {
     let { placeholderValue: n = new i.qp(), minValue: r, maxValue: o, granularity: s } = e,
         [u, f] = (0, c.zk)(e.value, e.defaultValue, e.onChange),
         p = u || n,

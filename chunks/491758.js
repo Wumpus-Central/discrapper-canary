@@ -18,8 +18,8 @@ var i = n(200651),
     p = n(556296),
     x = n(924557),
     f = n(435064),
-    _ = n(894694),
-    E = n(779618),
+    E = n(894694),
+    _ = n(779618),
     C = n(39604),
     T = n(442334),
     S = n(356659),
@@ -36,7 +36,7 @@ function R() {
         D = (0, l.e7)([f.Z], () => f.Z.getHardwareClassification()),
         y = (0, l.e7)([p.Z], () => p.Z.getKeybindForAction(b.kg4.SAVE_CLIP, !0)),
         B = f.Z.isDecoupledGameClippingEnabled(),
-        Z = (0, E.Z)(h.Z),
+        Z = (0, _.Z)(h.Z),
         { showClipsHeaderEntrypoint: L } = x.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     a()(null != y, 'Save clip keybind unset');
     let M = (0, l.e7)([m.default], () => m.default.locale),
@@ -119,7 +119,7 @@ function R() {
                             className: j.formItem,
                             children: v.intl.format(v.t.kiaF4e, { onClick: () => d.Z.open(b.oAB.VOICE, null, { scrollPosition: N.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
-                    D === _.x.BELOW_MINIMUM
+                    D === E.x.BELOW_MINIMUM
                         ? (0, i.jsx)(g.Z, {
                               look: g.z.WARNING,
                               className: j.formItem,

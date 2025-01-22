@@ -50,9 +50,9 @@ function g(e) {
         [N, R] = (0, l.zk)(e.value, e.defaultValue, e.onChange),
         O = (0, u.useMemo)(() => (N ? (0, a.Mw)((0, a.WG)(N), C) : null), [N, C]),
         D = (0, u.useMemo)(() => (N && 'timeZone' in N ? N.timeZone : r.timeZone), [N, r.timeZone]),
-        x = (0, u.useMemo)(() => (e.focusedValue ? _((0, a.Mw)((0, a.WG)(e.focusedValue), C), b, I) : void 0), [e.focusedValue, C, b, I]),
-        L = (0, u.useMemo)(() => _(e.defaultFocusedValue ? (0, a.Mw)((0, a.WG)(e.defaultFocusedValue), C) : O || (0, a.Mw)((0, i.Lg)(D), C), b, I), [e.defaultFocusedValue, O, D, C, b, I]),
-        [w, P] = (0, l.zk)(x, L, e.onFocusChange),
+        L = (0, u.useMemo)(() => (e.focusedValue ? _((0, a.Mw)((0, a.WG)(e.focusedValue), C), b, I) : void 0), [e.focusedValue, C, b, I]),
+        x = (0, u.useMemo)(() => _(e.defaultFocusedValue ? (0, a.Mw)((0, a.WG)(e.defaultFocusedValue), C) : O || (0, a.Mw)((0, i.Lg)(D), C), b, I), [e.defaultFocusedValue, O, D, C, b, I]),
+        [w, P] = (0, l.zk)(L, x, e.onFocusChange),
         [M, k] = (0, u.useState)(() => {
             switch (T) {
                 case 'start':
@@ -202,16 +202,16 @@ function v(e) {
     }
     let R = (0, u.useRef)(null),
         [O, D] = (0, u.useState)(null),
-        x = (0, u.useMemo)(() => (0, i.l7)(h, null == O ? void 0 : O.start), [h, O]),
-        L = (0, u.useMemo)(() => (0, i.Mb)(E, null == O ? void 0 : O.end), [E, O]),
+        L = (0, u.useMemo)(() => (0, i.l7)(h, null == O ? void 0 : O.start), [h, O]),
+        x = (0, u.useMemo)(() => (0, i.Mb)(E, null == O ? void 0 : O.end), [E, O]),
         w = g({
             ...v,
             value: T && T.start,
             createCalendar: s,
             locale: f,
             visibleDuration: p,
-            minValue: x,
-            maxValue: L,
+            minValue: L,
+            maxValue: x,
             selectionAlignment: N
         }),
         P = (n) => {
@@ -231,7 +231,7 @@ function v(e) {
         B = A ? y(A, w.focusedDate) : T && y(T.start, T.end),
         G = (n) => {
             if (!e.isReadOnly) {
-                if ((n = m((n = _(n, x, L)), w.visibleRange.start, e.isDateUnavailable))) {
+                if ((n = m((n = _(n, L, x)), w.visibleRange.start, e.isDateUnavailable))) {
                     if (A) {
                         let e = y(A, n);
                         S({

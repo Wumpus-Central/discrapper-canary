@@ -20,8 +20,8 @@ var r = n(392711),
     p = n(210887),
     x = n(962100),
     f = n(65154),
-    _ = n(388032),
-    E = n(43824),
+    E = n(388032),
+    _ = n(43824),
     C = n(232186);
 function T() {
     let e, t;
@@ -44,13 +44,13 @@ function T() {
         (e = (0, i.jsx)(o.FormText, {
             type: o.FormText.Types.DESCRIPTION,
             className: C.marginTop8,
-            children: _.intl.format(_.t['1iK6UV'], { onDownloadClick: () => (0, x.y)('Help Text Input Devices') })
+            children: E.intl.format(E.t['1iK6UV'], { onDownloadClick: () => (0, x.y)('Help Text Input Devices') })
         })),
         !b &&
             (t = (0, i.jsx)(o.FormText, {
                 type: o.FormText.Types.DESCRIPTION,
                 className: C.marginTop8,
-                children: _.intl.format(_.t.Ow0dbG, { onDownloadClick: () => (0, x.y)('Help Text Output Devices') })
+                children: E.intl.format(E.t.Ow0dbG, { onDownloadClick: () => (0, x.y)('Help Text Output Devices') })
             }));
     let j = s()(v).values().first(),
         O = null != j ? j.disabled : null != e,
@@ -64,16 +64,16 @@ function T() {
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',
-                className: E.deviceOptionCertified
+                className: _.deviceOptionCertified
             });
         }
         return (0, i.jsxs)(
             'span',
             {
-                className: E.deviceOption,
+                className: _.deviceOption,
                 children: [
                     (0, i.jsx)('span', {
-                        className: E.deviceOptionLabel,
+                        className: _.deviceOptionLabel,
                         children: g.Z.getCertifiedDeviceName(s, r)
                     }),
                     t
@@ -86,12 +86,12 @@ function T() {
         return D(e[0]);
     }
     return (0, i.jsxs)('div', {
-        className: E.devices,
+        className: _.devices,
         children: [
             (0, i.jsx)('div', {
-                className: E.column,
+                className: _.column,
                 children: (0, i.jsxs)(o.FormItem, {
-                    title: _.intl.string(_.t.hHMYbW),
+                    title: E.intl.string(E.t.hHMYbW),
                     children: [
                         (0, i.jsx)(o.SingleSelect, {
                             value: I,
@@ -116,9 +116,9 @@ function T() {
                 })
             }),
             (0, i.jsx)('div', {
-                className: E.column,
+                className: _.column,
                 children: (0, i.jsxs)(o.FormItem, {
-                    title: _.intl.string(_.t.dl18zc),
+                    title: E.intl.string(E.t.dl18zc),
                     children: [
                         (0, i.jsx)(o.SingleSelect, {
                             value: N,

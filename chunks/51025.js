@@ -9,7 +9,7 @@ r.d(n, {
         return y;
     },
     Wx: function () {
-        return L;
+        return x;
     },
     XT: function () {
         return w;
@@ -36,7 +36,7 @@ r.d(n, {
         return R;
     },
     wi: function () {
-        return x;
+        return L;
     }
 });
 var i = r(411104);
@@ -179,14 +179,14 @@ function D(e, n) {
             branchId: n
         });
 }
-function x(e, n) {
+function L(e, n) {
     o.Z.dispatch({
         type: 'DISPATCH_APPLICATION_REMOVE_FINISHED',
         applicationId: e,
         branchId: n
     });
 }
-function L(e, n) {
+function x(e, n) {
     let r = s.Z.getApplication(e);
     null != r && h.Z.createShortcuts(c.Xc.getSetting(), c.Pe.getSetting(), r.name, r.id, n.installPath);
 }

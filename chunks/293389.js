@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(297700),
     x = n(77498),
     f = n(283595),
-    _ = n(626135),
-    E = n(251625),
+    E = n(626135),
+    _ = n(251625),
     C = n(358085),
     T = n(210887),
     S = n(981631),
@@ -81,35 +81,35 @@ function P(e) {
 function D(e) {
     var t;
     let { rawGame: n, nowPlaying: s = !1, isOverride: h } = e,
-        E = (0, l.cj)([x.Z, g.ZP, f.Z], () => (0, g.FZ)(n)),
+        _ = (0, l.cj)([x.Z, g.ZP, f.Z], () => (0, g.FZ)(n)),
         [C, T] = r.useState(!1),
-        [N, j] = r.useState(null !== (t = E.name) && void 0 !== t ? t : '???'),
+        [N, j] = r.useState(null !== (t = _.name) && void 0 !== t ? t : '???'),
         O = a()(v.flexCenter, {
             [I.game]: !s,
             [I.activeGame]: s,
             [A.card]: !s,
-            [I.nowPlaying]: null != E && s
+            [I.nowPlaying]: null != _ && s
         });
     function P() {
-        d.Z.deleteEntry(E);
+        d.Z.deleteEntry(_);
     }
     function D() {
-        E.name !== N && d.Z.editName(E, N);
+        _.name !== N && d.Z.editName(_, N);
     }
     function y(e) {
         13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
     }
     function B() {
-        d.Z.toggleDetection(E);
+        d.Z.toggleDetection(_);
     }
     function Z() {
         if (C) return;
-        let e = null != E.id ? x.Z.getDetectableGame(E.id) : null;
-        _.default.track(S.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        let e = null != _.id ? x.Z.getDetectableGame(_.id) : null;
+        E.default.track(S.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
-            game_name: E.name
+            game_name: _.name
         }),
-            (0, c.showToast)((0, c.createToast)(b.intl.formatToPlainString(b.t['6klMOj'], { gameName: E.name }), c.ToastType.SUCCESS)),
+            (0, c.showToast)((0, c.createToast)(b.intl.formatToPlainString(b.t['6klMOj'], { gameName: _.name }), c.ToastType.SUCCESS)),
             T(!0);
     }
     return (0, i.jsxs)('div', {
@@ -118,13 +118,13 @@ function D(e) {
             (0, i.jsxs)('div', {
                 className: a()(I.gameNameLastPlayed, v.vertical),
                 children: [
-                    E.verified && !h
+                    _.verified && !h
                         ? (0, i.jsxs)('div', {
                               className: I.detectedApplication,
                               children: [
                                   (0, i.jsx)('div', {
                                       className: I.gameName,
-                                      children: E.name
+                                      children: _.name
                                   }),
                                   (0, i.jsx)(c.Tooltip, {
                                       text: b.intl.string(b.t['4PJP5u']),
@@ -155,7 +155,7 @@ function D(e) {
                           }),
                     (function () {
                         let e;
-                        let { played: t, exePath: n } = E;
+                        let { played: t, exePath: n } = _;
                         return (
                             s ? (e = b.intl.string(b.t.VbV5dn)) : null != t && '' !== t && (e = b.intl.format(b.t.gGeOEx, { when: t })),
                             (0, i.jsx)('div', {
@@ -196,7 +196,7 @@ function D(e) {
                         })
                     }),
             (function () {
-                let { detectable: e } = E,
+                let { detectable: e } = _,
                     t = e
                         ? (0, i.jsx)(c.EyeIcon, {
                               size: 'md',
@@ -230,7 +230,7 @@ function D(e) {
             })(),
             (function () {
                 if (!R) return null;
-                let { overlay: e, overlayWarn: t } = E,
+                let { overlay: e, overlayWarn: t } = _,
                     n = e
                         ? (0, i.jsx)(c.ScreenIcon, {
                               size: 'md',
@@ -267,7 +267,7 @@ function D(e) {
                                     className: I.toggleIcon,
                                     onClick: () => {
                                         var t;
-                                        return (t = !e), void d.Z.toggleOverlay(E, t);
+                                        return (t = !e), void d.Z.toggleOverlay(_, t);
                                     },
                                     onMouseEnter: r,
                                     onMouseLeave: s,
@@ -320,7 +320,7 @@ function B(e) {
         ]
     });
 }
-let Z = (0, E.oH)(function () {
+let Z = (0, _.oH)(function () {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return new Set(t.map((e) => e.exePath));
 });

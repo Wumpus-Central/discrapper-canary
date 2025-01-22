@@ -87,11 +87,11 @@ function D(e) {
     let { savedMessage: n } = e;
     A(n);
 }
-function x(e) {
+function L(e) {
     let { savedMessageData: n } = e;
     return C(n);
 }
-function L(e) {
+function x(e) {
     let { messageId: n, channelId: r } = e,
         i = S({
             messageId: n,
@@ -104,7 +104,7 @@ function L(e) {
 }
 function w(e) {
     let { id: n, channelId: r } = e;
-    return L({
+    return x({
         messageId: n,
         channelId: r
     });
@@ -112,7 +112,7 @@ function w(e) {
 function P(e) {
     let { ids: n, channelId: r } = e;
     for (let e of n)
-        L({
+        x({
             messageId: e,
             channelId: r
         });
@@ -221,7 +221,7 @@ p(V, 'displayName', 'SavedMessagesStore'),
         LOGOUT: R,
         SAVED_MESSAGES_UPDATE: O,
         SAVED_MESSAGE_CREATE: D,
-        SAVED_MESSAGE_DELETE: x,
+        SAVED_MESSAGE_DELETE: L,
         MESSAGE_DELETE: w,
         MESSAGE_DELETE_BULK: P,
         MESSAGE_UPDATE: M,

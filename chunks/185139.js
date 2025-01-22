@@ -25,9 +25,9 @@ var E = r(122289),
     I = r(719919);
 let T = new Set([g.h8.SKU_SELECT, g.h8.AWAITING_AUTHENTICATION, g.h8.AWAITING_PURCHASE_TOKEN_AUTH, g.h8.CONFIRM]);
 function S(e) {
-    let { steps: n, currentStep: r, body: i, paymentError: a, header: u, footer: S, isGift: A = !1, giftMessage: C = b.intl.string(b.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: R = !1, purchaseError: O, purchaseErrorBlockRef: D, planError: x, onScroll: L, scrollerClassName: w, hasCurrencies: P = !1 } = e,
+    let { steps: n, currentStep: r, body: i, paymentError: a, header: u, footer: S, isGift: A = !1, giftMessage: C = b.intl.string(b.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: R = !1, purchaseError: O, purchaseErrorBlockRef: D, planError: L, onScroll: x, scrollerClassName: w, hasCurrencies: P = !1 } = e,
         M = null;
-    null != a && null == (0, g.ly)(a) ? (M = a) : null != O ? (M = O) : null != x && (M = x);
+    null != a && null == (0, g.ly)(a) ? (M = a) : null != O ? (M = O) : null != L && (M = L);
     let k = null != M ? M.message : '';
     null != M && M instanceof h.HF && (M.code === _.SM.CARD_DECLINED && P && (k += ' '.concat(b.intl.string(b.t.iWvwQU))), M.code === _.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = b.intl.string(b.t.ypuSd3)), M.code === y.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = b.intl.string(b.t.mXMmWF)));
     let { stripe: U } = (0, m.usePaymentContext)();
@@ -102,7 +102,7 @@ function S(e) {
                                       steps: n,
                                       sideMargin: 20,
                                       children: (0, o.jsx)(f.AdvancedScrollerThin, {
-                                          onScroll: L,
+                                          onScroll: x,
                                           className: c()(I.scroller, w),
                                           children: i
                                       })

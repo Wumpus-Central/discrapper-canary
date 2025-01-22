@@ -6,7 +6,7 @@ r.d(n, {
         return B;
     },
     R2: function () {
-        return L;
+        return x;
     },
     T$: function () {
         return D;
@@ -15,7 +15,7 @@ r.d(n, {
         return M;
     },
     Zm: function () {
-        return x;
+        return L;
     },
     bK: function () {
         return k;
@@ -87,7 +87,7 @@ let N = 3500000,
         let f = (0, a.useMemo)(() => 0 === c.length || (!c.some((e) => null == e || e < N) && !0), [c]);
         return ((null == n ? void 0 : n.premiumTier) === A.Eu4.NONE || (null == n ? void 0 : n.premiumTier) === A.Eu4.TIER_1) && f && !o;
     },
-    x = (e, n) => {
+    L = (e, n) => {
         let r = (0, u.e7)([v.default], () => {
                 var e;
                 return null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
@@ -97,7 +97,7 @@ let N = 3500000,
             o = D(e);
         return a && o && i.length > 0;
     };
-function L(e) {
+function x(e) {
     let [n, r, i] = (0, u.Wu)([T.Z], () => [T.Z.isFetchingPrice(e), T.Z.getPrice(e), T.Z.getErrored(e)]);
     return (
         (0, a.useEffect)(() => {

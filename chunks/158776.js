@@ -57,12 +57,12 @@ let O = (e) => ((0, p.Z)(e) ? 1 : 0);
 function D(e, n) {
     return O(n) - O(e);
 }
-function x(e, n) {
+function L(e, n) {
     var r, i;
     return (null !== (r = n.created_at) && void 0 !== r ? r : 0) - (null !== (i = e.created_at) && void 0 !== i ? i : 0);
 }
-function L(e, n) {
-    return R(e, n) || D(e, n) || x(e, n);
+function x(e, n) {
+    return R(e, n) || D(e, n) || L(e, n);
 }
 function w(e) {
     if ((delete I[e], delete T[e], delete S[e], null == b[e])) return;
@@ -91,7 +91,7 @@ function M(e) {
             timestamp: Date.now()
         };
     else {
-        let e = o.length > 1 ? [...o].sort(L) : o,
+        let e = o.length > 1 ? [...o].sort(x) : o,
             r = s[n];
         (o = null != r && l()(r.activities, e) ? r.activities : e),
             (s[n] = {
@@ -119,7 +119,7 @@ function k(e) {
             timestamp: Date.now()
         };
     else {
-        let e = o.length > 1 ? [...o].sort(L) : o;
+        let e = o.length > 1 ? [...o].sort(x) : o;
         l[n] = {
             status: i,
             clientStatus: a,

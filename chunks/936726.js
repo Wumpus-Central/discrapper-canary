@@ -20,11 +20,11 @@ var i = n(200651),
     g = n(598077),
     x = n(259580),
     f = n(768581),
-    b = n(572004),
-    v = n(709054),
+    v = n(572004),
+    b = n(709054),
     C = n(51144),
-    N = n(486199),
-    I = n(981631),
+    I = n(486199),
+    N = n(981631),
     j = n(388032),
     T = n(475872);
 let _ = (e) => {
@@ -38,18 +38,18 @@ function Z(e, t) {
         : (0, f.ov)({
               id: e.id,
               avatar: t,
-              discriminator: I.fo$
+              discriminator: N.fo$
           });
 }
 function E(e) {
     let { id: t, webhook: n, editedWebhook: r, channelOptions: g, isExpanded: f, isNew: C, errors: E, onToggleExpand: S } = e,
         [y, A] = l.useState(!1),
-        [R] = l.useState(new s.V7());
-    l.useEffect(() => () => R.stop(), [R]);
-    let L = l.useMemo(() => Z(n, n.avatar), [n]),
+        [L] = l.useState(new s.V7());
+    l.useEffect(() => () => L.stop(), [L]);
+    let R = l.useMemo(() => Z(n, n.avatar), [n]),
         k = l.useCallback(() => {
-            let e = ''.concat((0, o.K0)(!1)).concat(I.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
-            (0, b.JG)(e);
+            let e = ''.concat((0, o.K0)(!1)).concat(N.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
+            (0, v.JG)(e);
         }, [n]),
         O = l.useCallback(() => {
             (0, d.openModal)((e) =>
@@ -85,12 +85,12 @@ function E(e) {
               icon: d.ClockIcon,
               text: j.intl.formatToPlainString(j.t['7EcUbm'], {
                   user: _(n.user),
-                  timestamp: v.default.extractTimestamp(n.id)
+                  timestamp: b.default.extractTimestamp(n.id)
               })
           })
         : w.push({
               icon: d.ClockIcon,
-              text: j.intl.formatToPlainString(j.t['7mv59P'], { timestamp: v.default.extractTimestamp(n.id) })
+              text: j.intl.formatToPlainString(j.t['7mv59P'], { timestamp: b.default.extractTimestamp(n.id) })
           });
     let M = null;
     return (
@@ -177,7 +177,7 @@ function E(e) {
                                                         ...s,
                                                         'aria-label': '',
                                                         onClick: () => {
-                                                            null == t || t(), A(!0), d.AccessibilityAnnouncer.announce(j.intl.string(j.t.wwdb3t)), R.start(1000, () => A(!1)), k();
+                                                            null == t || t(), A(!0), d.AccessibilityAnnouncer.announce(j.intl.string(j.t.wwdb3t)), L.start(1000, () => A(!1)), k();
                                                         },
                                                         size: d.Button.Sizes.SMALL,
                                                         color: d.Button.Colors.PRIMARY,
@@ -217,9 +217,9 @@ function E(e) {
                         children: (0, i.jsxs)(h.Z, {
                             align: h.Z.Align.CENTER,
                             children: [
-                                (0, i.jsx)(N.Z, {
+                                (0, i.jsx)(I.Z, {
                                     name: n.name,
-                                    imageSrc: L,
+                                    imageSrc: R,
                                     details: w
                                 }),
                                 (0, i.jsx)(x.Z, {

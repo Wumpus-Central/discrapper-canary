@@ -1,58 +1,58 @@
-e.d(t, {
+n.d(t, {
     $c: function () {
-        return C;
+        return g;
     },
     Nx: function () {
-        return b;
+        return h;
     },
     On: function () {
-        return A;
+        return p;
     },
     tQ: function () {
-        return c;
+        return u;
     },
     x5: function () {
-        return E;
+        return m;
     }
 });
-var i = e(140492),
-    o = e(475468),
-    r = e(703656),
-    l = e(769654),
-    d = e(944486),
-    s = e(914010),
-    u = e(358085),
-    a = e(981631);
-let c = {
+var i = n(140492),
+    r = n(475468),
+    s = n(703656),
+    a = n(769654),
+    l = n(944486),
+    o = n(914010),
+    c = n(358085),
+    d = n(981631);
+let u = {
         binds: ['alt+down'],
         comboKeysBindGlobal: !0,
         action: () => ((0, i.Z)(), !1)
     },
-    E = {
+    m = {
         binds: ['alt+up'],
         comboKeysBindGlobal: !0,
         action: () => ((0, i.Z)(-1), !1)
     },
-    C = {
+    g = {
         binds: ['mod+alt+right'],
         comboKeysBindGlobal: !0,
         action() {
-            let n;
-            if (null != s.Z.getGuildId()) n = a.ME;
+            let e;
+            if (null != o.Z.getGuildId()) e = d.ME;
             else {
-                let t = s.Z.getLastSelectedGuildId();
-                null != t && ((n = t), (0, o.K)(t, d.Z.getChannelId(t)));
+                let t = o.Z.getLastSelectedGuildId();
+                null != t && ((e = t), (0, r.K)(t, l.Z.getChannelId(t)));
             }
-            return null != n && (0, l.X)(n), !1;
+            return null != e && (0, a.X)(e), !1;
         }
     },
-    b = {
-        binds: (0, u.isMac)() ? ['mod+['] : ['alt+left'],
+    h = {
+        binds: (0, c.isMac)() ? ['mod+['] : ['alt+left'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, r.op)(), !1)
+        action: () => ((0, s.op)(), !1)
     },
-    A = {
-        binds: (0, u.isMac)() ? ['mod+]'] : ['alt+right'],
+    p = {
+        binds: (0, c.isMac)() ? ['mod+]'] : ['alt+right'],
         comboKeysBindGlobal: !0,
-        action: () => ((0, r.eH)(), !1)
+        action: () => ((0, s.eH)(), !1)
     };

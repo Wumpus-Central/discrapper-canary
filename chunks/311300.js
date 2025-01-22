@@ -30,8 +30,8 @@ var i = r(513394),
     R = r(918525),
     O = r(602250),
     D = r(143880),
-    x = r(500652),
-    L = r(147341),
+    L = r(500652),
+    x = r(147341),
     w = r(689845),
     P = r(365498),
     M = r(949739),
@@ -135,12 +135,12 @@ function X(e, n) {
         D = (e) => {
             'touch' !== e.pointerType && (s.current.focus(), n.toggle('keyboard' === e.pointerType || 'virtual' === e.pointerType ? 'first' : null, 'manual'));
         },
-        x = (0, F.bE)({
+        L = (0, F.bE)({
             id: h.id,
             'aria-label': p.format('buttonLabel'),
             'aria-labelledby': e['aria-labelledby'] || A.id
         }),
-        L = (0, F.bE)({
+        x = (0, F.bE)({
             id: _.id,
             'aria-label': p.format('listboxLabel'),
             'aria-labelledby': e['aria-labelledby'] || A.id
@@ -207,7 +207,7 @@ function X(e, n) {
             labelProps: A,
             buttonProps: {
                 ...h,
-                ...x,
+                ...L,
                 excludeFromTabOrder: !0,
                 onPress: O,
                 onPressStart: D,
@@ -223,7 +223,7 @@ function X(e, n) {
                 autoCorrect: 'off',
                 spellCheck: 'false'
             }),
-            listBoxProps: (0, F.dG)(_, L, {
+            listBoxProps: (0, F.dG)(_, x, {
                 autoFocus: n.focusStrategy,
                 shouldUseVirtualFocus: !0,
                 shouldSelectOnPressUp: !0,
@@ -266,8 +266,8 @@ Q = {
     'ro-RO': R.Z,
     'ru-RU': O.Z,
     'sk-SK': D.Z,
-    'sl-SI': x.Z,
-    'sr-SP': L.Z,
+    'sl-SI': L.Z,
+    'sr-SP': x.Z,
     'sv-SE': w.Z,
     'tr-TR': P.Z,
     'uk-UA': M.Z,

@@ -73,11 +73,11 @@ function D(e) {
     var n;
     (p = h), (h = e.section), (T = null), (S = null !== (n = e.analyticsLocations) && void 0 !== n ? n : []), null != e.subsection && (_[h] = e.subsection);
 }
-function x(e) {
+function L(e) {
     let { forSection: n } = e;
     null != n ? delete _[n] : null != h && delete _[h];
 }
-function L(e) {
+function x(e) {
     let { forSection: n } = e;
     null != n ? delete m[n] : null != h && delete m[h];
 }
@@ -174,8 +174,8 @@ d(B, 'displayName', 'UserSettingsModalStore'),
         USER_SETTINGS_MODAL_SUBMIT: P,
         USER_SETTINGS_MODAL_SUBMIT_FAILURE: U,
         USER_SETTINGS_MODAL_SET_SECTION: D,
-        USER_SETTINGS_MODAL_CLEAR_SUBSECTION: x,
-        USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: L,
+        USER_SETTINGS_MODAL_CLEAR_SUBSECTION: L,
+        USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: x,
         USER_SETTINGS_MODAL_UPDATE_ACCOUNT: w,
         USER_SETTINGS_MODAL_SUBMIT_COMPLETE: k,
         USER_SETTINGS_MODAL_RESET: M

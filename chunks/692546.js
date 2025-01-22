@@ -7,11 +7,11 @@ n.d(t, {
 var i,
     s = n(192379),
     r = n(392711),
-    a = n.n(r),
-    o = n(995295),
+    o = n.n(r),
+    a = n(995295),
     l = n(513431),
-    d = n(902704),
-    c = n(846519),
+    c = n(902704),
+    d = n(846519),
     u = n(13245),
     h = n(808506),
     p = n(671999),
@@ -35,22 +35,22 @@ let v = {
         y: 0
     },
     x = !1;
-function Z(e) {
+function S(e) {
     let { clientX: t, clientY: n } = e;
     (x = !0), (v.x = t), (v.y = n);
 }
-let S = new Map();
+let Z = new Map();
 function _(e, t) {
-    if (null == t) S.delete(e), 0 === S.size && (window.removeEventListener('mousemove', Z), (x = !1));
+    if (null == t) Z.delete(e), 0 === Z.size && (window.removeEventListener('mousemove', S), (x = !1));
     else {
-        let n = S.get(e);
-        if (null != n && (0, d.Z)(n.zone, t.zone)) return;
-        0 === S.size && window.addEventListener('mousemove', Z), S.set(e, t);
+        let n = Z.get(e);
+        if (null != n && (0, c.Z)(n.zone, t.zone)) return;
+        0 === Z.size && window.addEventListener('mousemove', S), Z.set(e, t);
     }
     f.isPlatformEmbedded &&
         (h.Z.isFocusedPidOutOfProcess()
             ? u.Z.setClickZones(
-                  Array.from(S.values()).map((e) => {
+                  Array.from(Z.values()).map((e) => {
                       let { zone: t } = e;
                       return {
                           name: t.name,
@@ -63,7 +63,7 @@ function _(e, t) {
               )
             : (g.ZP.requireModule('discord_overlay2').broadcastCommand({
                   message: 'set_click_zones',
-                  zones: Array.from(S.values()).map((e) => {
+                  zones: Array.from(Z.values()).map((e) => {
                       let { zone: t } = e;
                       return t;
                   })
@@ -71,7 +71,7 @@ function _(e, t) {
               (function () {
                   if (!E)
                       g.ZP.requireModule('discord_overlay2').setClickZoneCallback((e, t, n) => {
-                          let i = S.get(e);
+                          let i = Z.get(e);
                           null != i && (!x && ((v.x = t), (v.y = n)), i.instance.click());
                       }),
                           (E = !0);
@@ -101,10 +101,10 @@ class C extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'zone', a().uniqueId('ClickArea')),
-            m(this, 'interval', new c.Xp()),
+            m(this, 'zone', o().uniqueId('ClickArea')),
+            m(this, 'interval', new d.Xp()),
             m(this, 'updateZone', () => {
-                let e = (0, o.findDOMNode)(this);
+                let e = (0, a.findDOMNode)(this);
                 if ((0, l.k)(e)) {
                     let { left: t, top: n, right: i, bottom: s } = e.getBoundingClientRect();
                     _(this.zone, {

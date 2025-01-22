@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return C;
     }
 }),
     n(47120);
@@ -102,7 +102,7 @@ function j(e) {
         ]
     });
 }
-function _() {
+function C() {
     let e = r.useRef(null),
         [t, n] = r.useState(''),
         l = o.yh.getAll(),

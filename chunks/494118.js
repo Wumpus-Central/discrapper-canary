@@ -18,7 +18,7 @@ var l = n(780384),
     p = n(408942);
 function g(e) {
     let { followedChannelWebhooks: t, editedWebhook: n, selectableWebhookChannels: g, errors: x, canNavigate: f } = e,
-        b = (0, a.ZP)();
+        v = (0, a.ZP)();
     return (0, i.jsxs)(r.FormSection, {
         children: [
             (0, i.jsx)(r.FormText, {
@@ -56,7 +56,7 @@ function g(e) {
                               })
                           ]
                       });
-                  })(b, () => open(s.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)))
+                  })(v, () => open(s.Z.getArticleURL(c.BhN.CHANNEL_FOLLOWING)))
         ]
     });
 }

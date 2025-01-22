@@ -22,7 +22,7 @@ function C(e) {
     let { channelId: t, onClose: n, appContext: C, exitFullScreen: x, onSelect: v } = e,
         _ = (0, l.e7)([o.Z], () => o.Z.getSelectedParticipant(t)),
         I = (null == _ ? void 0 : _.type) === f.fO.STREAM ? _.stream : null,
-        E = (0, l.e7)([a.Z], () => ((null == _ ? void 0 : _.type) === f.fO.ACTIVITY ? a.Z.getApplication(_.id) : void 0)),
+        E = (0, l.e7)([a.Z], () => ((null == _ ? void 0 : _.type) === f.fO.ACTIVITY ? a.Z.getApplication(_.applicationId) : void 0)),
         b = (0, c.Z)(t),
         Z = (0, u.Z)(),
         N = (0, d.Z)(t),

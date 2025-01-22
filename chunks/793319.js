@@ -252,7 +252,7 @@ let eA = a.memo(function (e) {
         ),
         _ = (0, D.qY)(i.id),
         I = a.useCallback(() => {
-            if ((null == s ? void 0 : s.type) === eb.fO.ACTIVITY && s.id === (null == l ? void 0 : l.applicationId)) return 'ACTIVITY';
+            if ((null == s ? void 0 : s.type) === eb.fO.ACTIVITY && s.applicationId === (null == l ? void 0 : l.applicationId)) return 'ACTIVITY';
             if (g) return 'STREAM';
             if (null != _) return 'EVENT';
             return 'CALL';
@@ -297,10 +297,10 @@ let eA = a.memo(function (e) {
                   };
             switch (E) {
                 case 'ACTIVITY':
-                    if (null == s || null == t || null == l) return;
+                    if (null == s || null == t || s.type !== eb.fO.ACTIVITY || null == l) return;
                     return (0, r.jsx)(Q.Z, {
                         ...o,
-                        applicationId: s.id,
+                        applicationId: s.applicationId,
                         color: 'red',
                         location: l.location,
                         onPopoutClick: v.length > 0 ? a : null

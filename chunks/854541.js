@@ -3,13 +3,13 @@ r.d(n, {
         return R;
     },
     Z$: function () {
-        return x;
+        return L;
     },
     jH: function () {
         return O;
     },
     zH: function () {
-        return L;
+        return x;
     }
 });
 var i = r(47120);
@@ -122,17 +122,17 @@ function D(e) {
         R = C(n),
         O = null != R ? R : 0,
         D = (0, d.Rf)(O),
-        x = (0, d.O)(O),
-        [L, w] = o.useState({
+        L = (0, d.O)(O),
+        [x, w] = o.useState({
             current: O,
             pending: {
                 hex: D,
-                hsl: x
+                hsl: L
             },
             input: D
         });
     o.useEffect(() => {
-        if (null == R || R === L.current) return;
+        if (null == R || R === x.current) return;
         let e = (0, d.Rf)(R),
             n = (0, d.O)(R);
         w({
@@ -143,7 +143,7 @@ function D(e) {
             },
             input: e
         });
-    }, [R, L]),
+    }, [R, x]),
         o.useEffect(() => s, [s]);
     let P = (e) => {
             let n = '#' === e[0] ? e : '#'.concat(e);
@@ -195,7 +195,7 @@ function D(e) {
                         let { hex: n } = e;
                         return U(n);
                     },
-                    color: L.pending.hsl
+                    color: x.pending.hsl
                 }),
                 c,
                 (0, a.jsxs)('div', {
@@ -212,7 +212,7 @@ function D(e) {
                             }),
                         (0, a.jsx)(_.o, {
                             className: T.customColorPickerInput,
-                            value: L.input,
+                            value: x.input,
                             onChange: P,
                             maxLength: S
                         })
@@ -245,8 +245,8 @@ function D(e) {
         children: B
     });
 }
-let x = o.memo(D);
-function L(e) {
+let L = o.memo(D);
+function x(e) {
     let { className: n, defaultColor: r, customColor: i, colors: o, value: s, disabled: d, onChange: f, renderDefaultButton: p, renderCustomButton: h, colorContainerClassName: _ } = e,
         m = (e) =>
             (0, a.jsx)('div', {

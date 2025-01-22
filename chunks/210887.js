@@ -66,10 +66,10 @@ function O() {
 function D() {
     return B();
 }
-function x() {
+function L() {
     return B();
 }
-function L() {
+function x() {
     return (0, c.ap)(O());
 }
 function w(e) {
@@ -142,12 +142,12 @@ S(Z, 'displayName', 'ThemeStore'),
         CONNECTION_OPEN: D,
         LOGOUT: w,
         OVERLAY_INITIALIZE: D,
-        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: x,
-        UNSYNCED_USER_SETTINGS_UPDATE: x,
+        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: L,
+        UNSYNCED_USER_SETTINGS_UPDATE: L,
         USER_SETTINGS_PROTO_UPDATE: D,
         UPDATE_BACKGROUND_GRADIENT_PRESET: k,
         RESET_PREVIEW_CLIENT_THEME: D,
         SYSTEM_THEME_CHANGE: P,
         ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: M,
-        ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: L
+        ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: x
     }));

@@ -39,8 +39,8 @@ var d = r(392711),
     R = r(417363),
     O = r(626135),
     D = r(70956),
-    x = r(877481),
-    L = r(823379),
+    L = r(877481),
+    x = r(823379),
     w = r(358085),
     P = r(998502),
     M = r(145597),
@@ -377,7 +377,7 @@ function eC(e) {
         }),
             $.gamesSeen.sort((e, n) => n.lastFocused - e.lastFocused),
             ey(),
-            x.Z.setRecentGames(eN().map((e) => eb(e)));
+            L.Z.setRecentGames(eN().map((e) => eb(e)));
 }
 function eN() {
     let e = f().values($.gameOverrides);
@@ -400,10 +400,10 @@ function eO(e) {
 function eD(e) {
     K = e.games;
 }
-function ex() {
+function eL() {
     H = !1;
 }
-function eL(e) {
+function ex(e) {
     let { pid: n } = e;
     (er = n), (ei = null);
 }
@@ -639,7 +639,7 @@ class eY extends (a = _.ZP.Store) {
     getRunningVerifiedApplicationIds() {
         return this.getRunningGames()
             .map((e) => C.Z.getGameByName(e.name))
-            .filter(L.lm)
+            .filter(x.lm)
             .map((e) => e.id);
     }
     getGameForPID(e) {
@@ -711,8 +711,8 @@ B(eY, 'displayName', 'RunningGameStore');
 let eW = new eY(g.Z, {
     RUNNING_GAMES_CHANGE: eO,
     CANDIDATE_GAMES_CHANGE: eD,
-    PERMISSION_CLEAR_PTT_ADMIN_WARNING: ex,
-    PERMISSION_REQUEST_ELEVATED_PROCESS: eL,
+    PERMISSION_CLEAR_PTT_ADMIN_WARNING: eL,
+    PERMISSION_REQUEST_ELEVATED_PROCESS: ex,
     PERMISSION_CLEAR_ELEVATED_PROCESS: eP,
     PERMISSION_CONTINUE_NONELEVATED_PROCESS: ew,
     RUNNING_GAME_ADD_OVERRIDE: eM,

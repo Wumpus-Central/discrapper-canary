@@ -61,24 +61,24 @@ function N(e) {
         N = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
         R = (null == m ? void 0 : m.actionType) === E.oi.VIEW,
         O = (0, d.useToken)(d.tokens.colors.WHITE),
-        [D, x] = o.useState(!1),
-        [L] = o.useState(new u.Z.Value(0)),
+        [D, L] = o.useState(!1),
+        [x] = o.useState(new u.Z.Value(0)),
         [w] = o.useState(new u.Z.Value(0));
     o.useEffect(() => {
         y
-            ? u.Z.timing(L, {
+            ? u.Z.timing(x, {
                   toValue: 0,
                   duration: N ? 1 : 350,
                   easing: u.Z.Easing.quad,
                   delay: R ? 0 : 500
-              }).start(() => x(!0))
-            : u.Z.timing(L, {
+              }).start(() => L(!0))
+            : u.Z.timing(x, {
                   toValue: 1,
                   duration: N ? 1 : 350,
                   easing: u.Z.Easing.quad,
                   delay: 400
               }).start();
-    }, [y, L, R, N]),
+    }, [y, x, R, N]),
         o.useEffect(() => {
             y &&
                 D &&
@@ -139,7 +139,7 @@ function N(e) {
                       : (0, a.jsxs)(u.Z.div, {
                             className: T.banner,
                             style: {
-                                marginBottom: L.interpolate({
+                                marginBottom: x.interpolate({
                                     inputRange: [0, 1],
                                     outputRange: [-S, 0]
                                 })

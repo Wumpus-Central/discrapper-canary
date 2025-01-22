@@ -31,15 +31,15 @@ var o = r(120356),
     R = r(960870),
     O = r(139793),
     D = r(502762),
-    x = r(652853),
-    L = r(336383),
+    L = r(652853),
+    x = r(336383),
     w = r(373826),
     P = r(228168),
     M = r(616922),
     k = r(249942);
 function U(e) {
     let { user: n, entry: r, header: i, className: o, onClose: l } = e,
-        { profileType: f } = (0, x.z)(),
+        { profileType: f } = (0, L.z)(),
         p = { [k.fullSize]: f === P.y0.FULL_SIZE },
         { largeImage: h } = (0, _.rv)({
             entry: r,
@@ -101,7 +101,7 @@ function U(e) {
                   })
               ]
           })
-        : (0, a.jsxs)(L.Z, {
+        : (0, a.jsxs)(x.Z, {
               ref: T,
               className: o,
               subsection: P.Tb.RECENT_ACTIVITY,
@@ -150,7 +150,7 @@ function U(e) {
 }
 function B(e) {
     let { user: n, entry: r, header: i, className: o, onClose: l } = e,
-        { profileType: u } = (0, x.z)(),
+        { profileType: u } = (0, L.z)(),
         f = { [k.fullSize]: u === P.y0.FULL_SIZE },
         { largeImage: p } = (0, _.rv)({ entry: r }),
         { url: h } = r.extra,
@@ -211,7 +211,7 @@ function B(e) {
                           })
                       ]
                   });
-    return (0, a.jsxs)(L.Z, {
+    return (0, a.jsxs)(x.Z, {
         ref: y,
         className: o,
         subsection: P.Tb.RECENT_ACTIVITY,
@@ -245,7 +245,7 @@ function B(e) {
 function G(e) {
     var n, r;
     let { user: i, entry: o, header: l, className: u, onClose: c } = e,
-        { profileType: f } = (0, x.z)(),
+        { profileType: f } = (0, L.z)(),
         p = { [k.fullSize]: f === P.y0.FULL_SIZE },
         { largeImage: h } = (0, _.rv)({ entry: o }),
         { analyticsLocations: m } = (0, d.ZP)(),
@@ -262,7 +262,7 @@ function G(e) {
         I = null === (n = o.extra.entries[0]) || void 0 === n ? void 0 : n.media;
     return null == I
         ? null
-        : (0, a.jsxs)(L.Z, {
+        : (0, a.jsxs)(x.Z, {
               ref: y,
               className: u,
               subsection: P.Tb.RECENT_ACTIVITY,
@@ -320,7 +320,7 @@ function G(e) {
 }
 function Z(e) {
     let { user: n, entry: r, header: i, className: o, onClose: l } = e,
-        { profileType: u } = (0, x.z)(),
+        { profileType: u } = (0, L.z)(),
         c = { [k.fullSize]: u === P.y0.FULL_SIZE },
         { largeImage: m } = (0, _.rv)({
             entry: r,
@@ -340,7 +340,7 @@ function Z(e) {
         I = () => {
             null == l || l(), (0, f.__)(p._b.TEXT, h.Ie.NORMAL, { applicationId: r.extra.application_id });
         };
-    return (0, a.jsxs)(L.Z, {
+    return (0, a.jsxs)(x.Z, {
         ref: b,
         className: o,
         subsection: P.Tb.RECENT_ACTIVITY,

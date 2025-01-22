@@ -1,7 +1,7 @@
 s.r(t),
     s.d(t, {
         default: function () {
-            return b;
+            return A;
         }
     }),
     s(47120);
@@ -23,23 +23,23 @@ var n,
     C = s(388032),
     _ = s(279647);
 ((o = n || (n = {}))[(o.MANAGE_ACCOUNTS = 0)] = 'MANAGE_ACCOUNTS'), (o[(o.LOGIN = 1)] = 'LOGIN');
-let A = {
+let b = {
     0: d.ModalSize.SMALL,
     1: d.ModalSize.DYNAMIC
 };
-function b(e) {
+function A(e) {
     let { transitionState: t, onClose: s } = e,
         [n, o] = i.useState(0),
-        { currentUser: b, multiAccountUsers: N } = (0, l.cj)([h.default, f.Z], () => ({
+        { currentUser: A, multiAccountUsers: N } = (0, l.cj)([h.default, f.Z], () => ({
             currentUser: h.default.getCurrentUser(),
             multiAccountUsers: f.Z.getUsers()
         })),
         [T, R] = i.useState(!1),
         [v, E] = i.useState(x.lds),
-        [I, M] = i.useState(null);
+        [I, w] = i.useState(null);
     i.useEffect(() => {
         if (T)
-            M(
+            w(
                 (0, r.jsx)(d.HelpMessage, {
                     messageType: d.HelpMessageTypes.ERROR,
                     className: _.infoMessage,
@@ -50,7 +50,7 @@ function b(e) {
         else if (null != v) {
             let e = h.default.getUser(v);
             null != e &&
-                M(
+                w(
                     (0, r.jsx)(d.HelpMessage, {
                         messageType: d.HelpMessageTypes.POSITIVE,
                         className: _.infoMessage,
@@ -67,10 +67,10 @@ function b(e) {
             type: a.ImpressionTypes.MODAL,
             name: 0 === n ? a.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : a.ImpressionNames.USER_LOGIN
         });
-    let w = null;
+    let M = null;
     return (
         0 === n
-            ? (w = (0, r.jsxs)(r.Fragment, {
+            ? (M = (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(d.ModalHeader, {
                           separator: !1,
@@ -105,7 +105,7 @@ function b(e) {
                                               s();
                                               break;
                                           case m.W.REMOVED:
-                                              t === (null == b ? void 0 : b.id) && s(), E(t);
+                                              t === (null == A ? void 0 : A.id) && s(), E(t);
                                       }
                                   }
                               }),
@@ -133,7 +133,7 @@ function b(e) {
                   ]
               }))
             : 1 === n &&
-              (w = (0, r.jsx)(p.Z, {
+              (M = (0, r.jsx)(p.Z, {
                   onClose: () => {
                       c.Z.dispatch({ type: 'CLEAR_AUTHENTICATION_ERRORS' }), o(0);
                   }
@@ -141,12 +141,12 @@ function b(e) {
         (0, r.jsx)(d.ModalRoot, {
             className: _.modal,
             transitionState: t,
-            size: A[n],
+            size: b[n],
             'aria-label': C.intl.string(C.t.WbFpq6),
             children: (0, r.jsx)(d.Sequencer, {
                 step: n,
                 steps: [0, 1],
-                children: w
+                children: M
             })
         })
     );

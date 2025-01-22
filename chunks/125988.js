@@ -35,13 +35,13 @@ let h = (e) => {
                 }),
             [O, b, h, E]
         ),
-        x = a.useCallback(() => y(!0), []);
+        L = a.useCallback(() => y(!0), []);
     return {
         avatarPlaceholderSrc: p,
         avatarDecorationSrc: D,
         isAvatarDecorationAnimating: b,
         eventHandlers: {
-            onMouseEnter: x,
+            onMouseEnter: L,
             onMouseLeave: a.useCallback(() => y(!1), [])
         }
     };

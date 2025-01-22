@@ -37,11 +37,11 @@ let p = 5,
     R = !1,
     O = null,
     D = !1,
-    x = !1,
     L = !1,
+    x = !1,
     w = d.g2L.NOT_ELIGIBLE;
 function P() {
-    (h = null), (_ = new Map()), (m = new Set()), (E = new Set()), (v = !1), (y = new Set()), (b = new Set()), (I = new Map()), (T = 0), (S = null), (A = []), (C = !1), (N = 0), (R = !1), (O = null), (g = new Map()), (D = !1), (x = !1), (L = !1), (w = d.g2L.NOT_ELIGIBLE);
+    (h = null), (_ = new Map()), (m = new Set()), (E = new Set()), (v = !1), (y = new Set()), (b = new Set()), (I = new Map()), (T = 0), (S = null), (A = []), (C = !1), (N = 0), (R = !1), (O = null), (g = new Map()), (D = !1), (L = !1), (x = !1), (w = d.g2L.NOT_ELIGIBLE);
 }
 let M = () => !0;
 function k(e) {
@@ -50,7 +50,7 @@ function k(e) {
 }
 function U(e) {
     let { referrals_remaining: n, sent_user_ids: r, refresh_at: i, recipient_status: a, has_eligible_friends: o, isUserEligibleForIncentive: s, isUserQualifiedForIncentive: l, userReferralIncentiveState: u } = e;
-    (R = null == i && o), (v = !1), (h = n), (m = new Set(r)), (O = i), (g = a), (D = s && (o || g.size > 0)), (x = l), (w = u);
+    (R = null == i && o), (v = !1), (h = n), (m = new Set(r)), (O = i), (g = a), (D = s && (o || g.size > 0)), (L = l), (w = u);
 }
 function B(e) {
     let {} = e;
@@ -116,13 +116,13 @@ function $() {
 }
 function ee(e) {
     let { isUserEligibleForIncentive: n } = e;
-    (L = !1), null != n && (D = n);
+    (x = !1), null != n && (D = n);
 }
 function et() {
-    L = !1;
+    x = !1;
 }
 function en() {
-    L = !0;
+    x = !0;
 }
 class er extends (i = s.ZP.Store) {
     initialize() {
@@ -177,10 +177,10 @@ class er extends (i = s.ZP.Store) {
         return D;
     }
     getIsSenderQualifiedForIncentive() {
-        return x;
+        return L;
     }
     getIsFetchingReferralIncentiveEligibility() {
-        return L;
+        return x;
     }
     getSenderIncentiveState() {
         return w;

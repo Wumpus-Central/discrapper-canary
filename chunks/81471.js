@@ -22,7 +22,7 @@ let S = r.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: l, message: S } = (0, _.a)(t),
         T = (0, d.p)(),
-        { isBlocked: A, isIgnored: b } = (0, s.cj)(
+        { isBlocked: b, isIgnored: A } = (0, s.cj)(
             [f.Z],
             () => ({
                 isBlocked: null != S && f.Z.isBlockedForMessage(S),
@@ -43,36 +43,36 @@ let S = r.memo(function (e) {
                     : { content: null },
             [S, T]
         ),
-        P = null;
+        y = null;
     if (l)
-        P = (0, i.jsx)(o.Text, {
+        y = (0, i.jsx)(o.Text, {
             className: N.messageReplacement,
             variant: 'text-sm/normal',
             color: 'text-muted',
             children: C.intl.string(C.t.BZHld3)
         });
     else if (n) {
-        if (null != S && A)
-            P = (0, i.jsx)(o.Text, {
+        if (null != S && b)
+            y = (0, i.jsx)(o.Text, {
                 className: N.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t['WPe+xM'])
             });
-        else if (null != S && b)
-            P = (0, i.jsx)(o.Text, {
+        else if (null != S && A)
+            y = (0, i.jsx)(o.Text, {
                 className: N.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t.uxrh1N)
             });
         else if (null != S) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(S, L, A, b, a()(N.messageContent, v.inlineFormat), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(S, L, b, A, a()(N.messageContent, v.inlineFormat), {
                 leadingIconClass: N.messageContentIcon,
                 trailingIconClass: N.messageContentIcon,
                 iconSize: I.WW
             });
-            P =
+            y =
                 null != t
                     ? (0, i.jsx)(o.Text, {
                           variant: 'text-sm/normal',
@@ -88,18 +88,18 @@ let S = r.memo(function (e) {
                           children: e
                       });
         } else
-            P = (0, i.jsx)(o.Text, {
+            y = (0, i.jsx)(o.Text, {
                 className: N.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: C.intl.string(C.t['0KfDxM'])
             });
-    } else P = null;
+    } else y = null;
     return (0, i.jsx)(c.a.Provider, {
         value: (0, u.Z)(x, Z),
         children: (0, i.jsx)(o.FocusBlock, {
             className: N.messageFocusBlock,
-            children: P
+            children: y
         })
     });
 });

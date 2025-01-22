@@ -21,8 +21,8 @@ var i,
     p = n(880511),
     x = n(985443),
     f = n(612253),
-    _ = n(832287),
-    E = n(872532),
+    E = n(832287),
+    _ = n(872532),
     C = n(91342),
     T = n(181708),
     S = n(821721),
@@ -81,7 +81,7 @@ t.ZP = (e) => {
                 description: g.intl.string(g.t.HMSHeH),
                 descriptionCta: g.intl.string(g.t.jVcuVV),
                 onClick: n,
-                previewImage: E,
+                previewImage: _,
                 videoUrl: r ? O.Z : R.Z
             },
             referralProgram: {
@@ -97,7 +97,7 @@ t.ZP = (e) => {
                 description: g.intl.string(g.t.HC5wVV),
                 descriptionCta: g.intl.string(g.t.jVcuVV),
                 onClick: i,
-                previewImage: _,
+                previewImage: E,
                 videoUrl: r ? S.Z : b.Z
             }
         },

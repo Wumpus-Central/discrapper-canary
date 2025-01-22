@@ -9,7 +9,7 @@ r.d(n, {
         return C;
     },
     cp: function () {
-        return x;
+        return L;
     },
     eL: function () {
         return R;
@@ -153,7 +153,7 @@ function D(e, n) {
     let a = p.Z.getMessage(i.id, g.default.castChannelIdAsMessageId(i.id));
     return null != a && e.length > 0 && null != e.find((e) => e.isImage || e.isVideo) && i.isForumPost() && i.ownerId === (null === (r = h.default.getCurrentUser()) || void 0 === r ? void 0 : r.id) && 0 === c.Z.getCount(i.id) && (0 === a.attachments.length || null == a.attachments.find((e) => y(e) || b(e)));
 }
-function x(e) {
+function L(e) {
     return e.reduce(
         (e, n) => ({
             containsVideo: e.containsVideo || n.isVideo,

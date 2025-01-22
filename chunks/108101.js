@@ -25,8 +25,8 @@ var i = r(687249),
     R = '[object Arguments]',
     O = '[object Array]',
     D = '[object Boolean]',
-    x = '[object Date]',
-    L = '[object Error]',
+    L = '[object Date]',
+    x = '[object Error]',
     w = '[object Function]',
     P = '[object GeneratorFunction]',
     M = '[object Map]',
@@ -49,46 +49,46 @@ var i = r(687249),
     J = '[object Uint16Array]',
     $ = '[object Uint32Array]',
     ee = {};
-function et(e, n, r, O, D, x) {
-    var L,
+function et(e, n, r, O, D, L) {
+    var x,
         M = n & A,
         k = n & C,
         B = n & N;
-    if ((r && (L = D ? r(e, O, D, x) : r(e)), void 0 !== L)) return L;
+    if ((r && (x = D ? r(e, O, D, L) : r(e)), void 0 !== x)) return x;
     if (!I(e)) return e;
     var G = v(e);
     if (G) {
-        if (((L = m(e)), !M)) return c(e, L);
+        if (((x = m(e)), !M)) return c(e, x);
     } else {
         var Z = _(e),
             F = Z == w || Z == P;
         if (y(e)) return u(e, M);
         if (Z == U || Z == R || (F && !D)) {
-            if (((L = k || F ? {} : E(e)), !M)) return k ? f(e, l(L, e)) : d(e, s(L, e));
+            if (((x = k || F ? {} : E(e)), !M)) return k ? f(e, l(x, e)) : d(e, s(x, e));
         } else {
             if (!ee[Z]) return D ? e : {};
-            L = g(e, Z, M);
+            x = g(e, Z, M);
         }
     }
-    x || (x = new i());
-    var V = x.get(e);
+    L || (L = new i());
+    var V = L.get(e);
     if (V) return V;
-    x.set(e, L),
+    L.set(e, x),
         T(e)
             ? e.forEach(function (i) {
-                  L.add(et(i, n, r, i, e, x));
+                  x.add(et(i, n, r, i, e, L));
               })
             : b(e) &&
               e.forEach(function (i, a) {
-                  L.set(a, et(i, n, r, a, e, x));
+                  x.set(a, et(i, n, r, a, e, L));
               });
     var j = B ? (k ? h : p) : k ? keysIn : S,
         H = G ? void 0 : j(e);
     return (
         a(H || e, function (i, a) {
-            H && (i = e[(a = i)]), o(L, a, et(i, n, r, a, e, x));
+            H && (i = e[(a = i)]), o(x, a, et(i, n, r, a, e, L));
         }),
-        L
+        x
     );
 }
-(ee[R] = ee[O] = ee[j] = ee[H] = ee[D] = ee[x] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[U] = ee[B] = ee[G] = ee[Z] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[L] = ee[w] = ee[V] = !1), (e.exports = et);
+(ee[R] = ee[O] = ee[j] = ee[H] = ee[D] = ee[L] = ee[Y] = ee[W] = ee[K] = ee[z] = ee[q] = ee[M] = ee[k] = ee[U] = ee[B] = ee[G] = ee[Z] = ee[F] = ee[Q] = ee[X] = ee[J] = ee[$] = !0), (ee[x] = ee[w] = ee[V] = !1), (e.exports = et);

@@ -1,20 +1,20 @@
-e.d(t, {
+n.d(t, {
     T: function () {
-        return l;
+        return a;
     }
 });
-var i = e(132871),
-    o = e(147890),
-    r = e(914010);
-let l = {
+var i = n(132871),
+    r = n(147890),
+    s = n(914010);
+let a = {
     binds: ['mod+ctrl+a'],
     comboKeysBindGlobal: !0,
     action() {
-        var n;
-        let t = null !== (n = r.Z.getGuildId()) && void 0 !== n ? n : void 0;
-        (0, o.goToAppDirectory)({
+        var e;
+        let t = null !== (e = s.Z.getGuildId()) && void 0 !== e ? e : void 0;
+        (0, r.dx)({
             guildId: t,
-            entrypoint: { name: i.ApplicationDirectoryEntrypointNames.KEYBOARD_SHORTCUT }
+            entrypoint: { name: i.n3.KEYBOARD_SHORTCUT }
         });
     }
 };

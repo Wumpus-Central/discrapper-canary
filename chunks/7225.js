@@ -1,38 +1,38 @@
-i.r(n),
-    i.d(n, {
+e.r(n),
+    e.d(n, {
         default: function () {
             return h;
         }
     }),
-    i(47120);
-var e,
+    e(47120);
+var i,
     r,
-    a = i(200651),
-    o = i(192379),
-    s = i(541822),
-    l = i(442837),
-    c = i(481060),
-    d = i(728345),
-    u = i(812206),
-    p = i(600164),
-    _ = i(886176),
-    C = i(572004),
-    S = i(504211),
-    f = i(283836),
-    I = i(507608),
-    T = i(533159),
-    N = i(981631),
-    E = i(272242),
-    L = i(388032),
-    b = i(671702);
+    a = e(200651),
+    s = e(192379),
+    o = e(541822),
+    l = e(442837),
+    c = e(481060),
+    d = e(728345),
+    u = e(812206),
+    p = e(600164),
+    _ = e(886176),
+    C = e(572004),
+    S = e(504211),
+    f = e(283836),
+    I = e(507608),
+    T = e(533159),
+    E = e(981631),
+    N = e(979007),
+    L = e(388032),
+    b = e(671702);
 function h(t) {
-    let { onClose: n, transitionState: i, appId: e, guildId: r } = t,
-        h = (0, l.e7)([u.Z], () => u.Z.getApplication(e), [e]),
-        [m, g] = o.useState(() => (u.Z.isFetchingApplication(e) ? { status: 1 } : { status: 0 }));
-    o.useEffect(() => {
+    let { onClose: n, transitionState: e, appId: i, guildId: r } = t,
+        h = (0, l.e7)([u.Z], () => u.Z.getApplication(i), [i]),
+        [m, g] = s.useState(() => (u.Z.isFetchingApplication(i) ? { status: 1 } : { status: 0 }));
+    s.useEffect(() => {
         0 === m.status &&
             (g({ status: 1 }),
-            d.ZP.fetchApplication(e)
+            d.ZP.fetchApplication(i)
                 .then(() => {
                     g({ status: 2 });
                 })
@@ -42,12 +42,12 @@ function h(t) {
                         error: t.message
                     });
                 }));
-    }, [e, m.status]);
-    let { subscriptions: P, otps: O } = (0, f.q)(e);
+    }, [i, m.status]);
+    let { subscriptions: P, otps: O } = (0, f.q)(i);
     if (null == h) return null;
     let A = L.intl.formatToPlainString(L.t.XDRjs7, { appName: h.name });
     return (0, a.jsxs)(c.ModalRoot, {
-        transitionState: i,
+        transitionState: e,
         'aria-label': A,
         size: c.ModalSize.DYNAMIC,
         className: b.modal,
@@ -75,8 +75,8 @@ function h(t) {
                                     color: c.ButtonColors.TRANSPARENT,
                                     'aria-label': L.intl.string(L.t.WqhZsr),
                                     onClick: () => {
-                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(N.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(e, E.ApplicationDirectoryProfileSections.STORE));
-                                        (0, C.JG)(t), (0, c.showToast)((0, c.createToast)(L.intl.string(L.t['L/PwZW']), c.ToastType.SUCCESS)), (0, S.X)(e, S.B.STORE_MODAL);
+                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(E.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(i, N.GlobalDiscoveryAppsSections.STORE));
+                                        (0, C.JG)(t), (0, c.showToast)((0, c.createToast)(L.intl.string(L.t['L/PwZW']), c.ToastType.SUCCESS)), (0, S.X)(i, S.B.STORE_MODAL);
                                     },
                                     children: (0, a.jsx)(c.LinkIcon, { size: 'sm' })
                                 }),
@@ -90,7 +90,7 @@ function h(t) {
             }),
             (0, a.jsx)('div', {
                 className: b.scrollerWrapper,
-                children: (0, a.jsx)(s.Z, {
+                children: (0, a.jsx)(o.Z, {
                     className: b.scroller,
                     children: (0, a.jsx)(I.AF, {
                         app: h,
@@ -116,4 +116,4 @@ function h(t) {
         ]
     });
 }
-((r = e || (e = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED'), (r[(r.ERROR = 3)] = 'ERROR');
+((r = i || (i = {}))[(r.NONE = 0)] = 'NONE'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED'), (r[(r.ERROR = 3)] = 'ERROR');

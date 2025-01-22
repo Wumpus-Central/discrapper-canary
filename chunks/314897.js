@@ -25,7 +25,7 @@ var d = r(213919),
     R = r(412788),
     O = r(981631),
     D = r(723359);
-function x(e, n, r) {
+function L(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -38,7 +38,7 @@ function x(e, n, r) {
         e
     );
 }
-let L = new b.Z('AuthenticationStore'),
+let x = new b.Z('AuthenticationStore'),
     w = 'fingerprint',
     P = 'user_id_cache',
     M = null,
@@ -83,7 +83,7 @@ function el(e) {
 function eu(e) {
     let n = null != d.getToken(),
         r = null != _.K.get(O.B1h);
-    L.verbose(e, {
+    x.verbose(e, {
         tokenManagerHasToken: n,
         storageHasToken: r
     });
@@ -198,10 +198,10 @@ function eO(e) {
 function eD(e) {
     (V = O.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION), (i = e.credentials);
 }
-function ex(e) {
+function eL(e) {
     (V = O.u34.PHONE_IP_AUTHORIZATION), (i = e.credentials);
 }
-function eL(e) {
+function ex(e) {
     let n = e.fingerprint;
     null == G
         ? null != n
@@ -411,7 +411,7 @@ class e$ extends (o = p.ZP.Store) {
         return eo;
     }
 }
-x(e$, 'displayName', 'AuthenticationStore'),
+L(e$, 'displayName', 'AuthenticationStore'),
     (n.default = new e$(
         m.Z,
         {
@@ -431,12 +431,12 @@ x(e$, 'displayName', 'AuthenticationStore'),
             LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION: eR,
             LOGIN_ACCOUNT_DISABLED: eO,
             LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION: eD,
-            LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: ex,
+            LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: eL,
             LOGIN_RESET: em,
             LOGIN_STATUS_RESET: eg,
             LOGIN_SUSPENDED_USER: eX,
             LOGOUT: eH,
-            FINGERPRINT: eL,
+            FINGERPRINT: ex,
             REGISTER_SAVE_FORM: ew,
             REGISTER: eP,
             REGISTER_SUCCESS: eM,

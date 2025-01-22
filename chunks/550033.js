@@ -123,10 +123,10 @@ var O = [],
     D = function () {
         (this.changed = !1), (this.values = O), (this.toValues = null), (this.fromValues = O), (this.to = void 0), (this.from = void 0), (this.config = new C()), (this.immediate = !1), (this.onStart = void 0), (this.onChange = void 0), (this.onRest = []);
     };
-function x(e) {
+function L(e) {
     var n = 0;
     if ('undefined' == typeof Symbol || null == e[Symbol.iterator]) {
-        if (Array.isArray(e) || (e = L(e)))
+        if (Array.isArray(e) || (e = x(e)))
             return function () {
                 return n >= e.length
                     ? { done: !0 }
@@ -139,7 +139,7 @@ function x(e) {
     }
     return (n = e[Symbol.iterator]()).next.bind(n);
 }
-function L(e, n) {
+function x(e, n) {
     if (e) {
         if ('string' == typeof e) return w(e, n);
         var r = Object.prototype.toString.call(e).slice(8, -1);
@@ -175,7 +175,7 @@ var k = function (e, n) {
         void 0 === n && (n = []), void 0 === r && (r = {});
         var i = V;
         e.default && !0 !== e.default && (i = Object.keys((e = e.default)));
-        for (var a, s = x(i); !(a = s()).done; ) {
+        for (var a, s = L(i); !(a = s()).done; ) {
             var l = a.value,
                 u = e[l];
             !o.is.und(u) && !n.includes(l) && (r[l] = u);
@@ -718,8 +718,8 @@ var ei = (function (e) {
                                         }
                                     }
                                 } else {
-                                    var x = s.progress || 0;
-                                    s.duration <= 0 ? (x = 1) : (x += (1 - x) * Math.min(1, _ / s.duration)), (y = ((h = m + s.easing(x) * (f - m)) - c.lastPosition) / e), (p = 1 == x);
+                                    var L = s.progress || 0;
+                                    s.duration <= 0 ? (L = 1) : (L += (1 - L) * Math.min(1, _ / s.duration)), (y = ((h = m + s.easing(L) * (f - m)) - c.lastPosition) / e), (p = 1 == L);
                                 }
                                 (c.lastVelocity = y), Number.isNaN(h) && (console.warn('Got NaN while animating:', n), (p = !0));
                             }
@@ -931,8 +931,8 @@ var ei = (function (e) {
                 n.config && !A && N(C, M(n.config, i), n.config !== s.config ? M(s.config, i) : void 0);
                 var D = p.getAnimated(this);
                 if (!D || o.is.und(g)) return r(Q(this, !0));
-                var x = o.is.und(n.reset) ? u && !n.default : !o.is.und(v) && k(n.reset, i),
-                    L = x ? v : this.get(),
+                var L = o.is.und(n.reset) ? u && !n.default : !o.is.und(v) && k(n.reset, i),
+                    x = L ? v : this.get(),
                     w = W(g),
                     P = o.is.num(w) || o.is.arr(w) || o.isAnimatedString(w),
                     U = !A && (!P || k(s.immediate || n.immediate, i));
@@ -947,28 +947,28 @@ var ei = (function (e) {
                     Z = !!T,
                     V = !1;
                 if (!Z) {
-                    var j = x || (this.is(el) && b);
-                    (I || j) && (Z = !(V = o.isEqual(W(L), w))), (!o.isEqual(C.decay, R) || !o.isEqual(C.velocity, O)) && (Z = !0);
+                    var j = L || (this.is(el) && b);
+                    (I || j) && (Z = !(V = o.isEqual(W(x), w))), (!o.isEqual(C.decay, R) || !o.isEqual(C.velocity, O)) && (Z = !0);
                 }
-                if ((V && this.is(ec) && (a.changed && !x ? (Z = !0) : !Z && this._stop()), !A)) {
+                if ((V && this.is(ec) && (a.changed && !L ? (Z = !0) : !Z && this._stop()), !A)) {
                     (Z || o.getFluidConfig(f)) && ((a.values = D.getPayload()), (a.toValues = T ? null : G == p.AnimatedString ? [1] : o.toArray(w))), (a.immediate = U), (a.onStart = e_(c('onStart'), i)), (a.onChange = e_(c('onChange'), i));
                     var H = a.onRest,
-                        Y = x && !n.onRest ? H[0] || o.noop : em(e_(c('onRest'), i), this);
+                        Y = L && !n.onRest ? H[0] || o.noop : em(e_(c('onRest'), i), this);
                     if (Z) {
                         a.onRest = [Y, em(r, this)];
-                        var K = x ? 0 : 1;
+                        var K = L ? 0 : 1;
                         K < H.length &&
                             h.batchedUpdates(function () {
                                 for (; K < H.length; K++) H[K]();
                             });
-                    } else (x || n.onRest) && (a.onRest[0] = Y);
+                    } else (L || n.onRest) && (a.onRest[0] = Y);
                 }
                 var z = e_(c('onProps'), i);
-                if ((z && z(n, this), x && D.setValue(L), A)) r(et(n.to, n, this._state, this));
-                else if (Z) x && (this._phase = eu), this._reset(), this._start();
+                if ((z && z(n, this), L && D.setValue(x), A)) r(et(n.to, n, this._state, this));
+                else if (Z) L && (this._phase = eu), this._reset(), this._start();
                 else if (this.is(ec) && !I) a.onRest.push(em(r, this));
                 else {
-                    let e = q(this, L),
+                    let e = q(this, x),
                         n = e_(c('onNoopRest'), i);
                     null != n && n(e), r(e);
                 }
@@ -1362,23 +1362,23 @@ function eD(e, n) {
         });
     });
 }
-var ex = l.createContext({}),
-    eL = function (e) {
+var eL = l.createContext({}),
+    ex = function (e) {
         var n = e.children,
             r = E(e, ['children']),
-            i = l.useContext(ex);
+            i = l.useContext(eL);
         r = P(
             function () {
                 return s(s({}, i), r);
             },
             [i, r.pause, r.cancel, r.immediate, r.config]
         );
-        var a = ex.Provider;
+        var a = eL.Provider;
         return l.createElement(a, { value: r }, n);
     };
-(eL.Provider = ex.Provider), (eL.Consumer = ex.Consumer);
+(ex.Provider = eL.Provider), (ex.Consumer = eL.Consumer);
 var ew = function () {
-        return l.useContext(ex);
+        return l.useContext(eL);
     },
     eP = {
         create: function (e) {
@@ -1910,7 +1910,7 @@ Object.keys(b).forEach(function (e) {
     (n.FrameValue = es),
     (n.Interpolation = eK),
     (n.Spring = eH),
-    (n.SpringContext = eL),
+    (n.SpringContext = ex),
     (n.SpringHandle = eP),
     (n.SpringValue = ep),
     (n.Trail = eY),

@@ -61,10 +61,10 @@ let y = (e) => {
     D = () => {
         i = Date.now();
     },
-    x = (e) => {
+    L = (e) => {
         v = e.enabled;
     };
-class L extends (a = s.ZP.Store) {
+class x extends (a = s.ZP.Store) {
     get lastConfettiTrigger() {
         return i;
     }
@@ -96,8 +96,8 @@ class L extends (a = s.ZP.Store) {
         return E;
     }
 }
-d(L, 'displayName', 'ConsumablesStore'),
-    (n.Z = new L(l.Z, {
+d(x, 'displayName', 'ConsumablesStore'),
+    (n.Z = new x(l.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: y,
         CONSUMABLES_PRICE_FETCH_SUCCEEDED: b,
         CONSUMABLES_PRICE_FETCH_FAILED: I,
@@ -109,5 +109,5 @@ d(L, 'displayName', 'ConsumablesStore'),
         SET_PREVIOUS_GO_LIVE_SETTINGS: R,
         CLEAR_CONSUMED_ENTITLEMENT: O,
         POTIONS_TRIGGER_MESSAGE_CONFETTI: D,
-        POTIONS_SET_CONFETTI_MODE: x
+        POTIONS_SET_CONFETTI_MODE: L
     }));

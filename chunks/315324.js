@@ -43,7 +43,7 @@ function y(e) {
         R = p.Z.can(g.Plq.CONNECT, y) ? (N ? o.StageIcon : o.VoiceNormalIcon) : o.LockIcon,
         O = T === m.y0.FULL_SIZE,
         D = T === m.y0.PANEL,
-        x = !O && !D;
+        L = !O && !D;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', { className: E.voiceChannelDivider }),
@@ -93,7 +93,7 @@ function y(e) {
                         onClick: (e) => {
                             e.stopPropagation(), null == b || b({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
                         },
-                        disableUserPopout: !!x || ((e) => e === n.id),
+                        disableUserPopout: !!L || ((e) => e === n.id),
                         overflowCountVariant: 'text-xs/normal'
                     })
                 ]

@@ -31,8 +31,8 @@ var u = r(873546),
     R = r(944486),
     O = r(914010),
     D = r(771845),
-    x = r(626135),
-    L = r(591759),
+    L = r(626135),
+    x = r(591759),
     w = r(782568),
     P = r(981631),
     M = r(46140);
@@ -89,7 +89,7 @@ function G(e) {
                 d = null !== (a = O.Z.getGuildId()) && void 0 !== a ? a : void 0;
             if (null == l) (0, w.Z)(e);
             else {
-                x.default.track(P.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                L.default.track(P.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                     application_id: l,
                     device_platform: u.tq ? 'mobile_web' : 'desktop_web',
                     guild_id: d,
@@ -137,8 +137,8 @@ function G(e) {
                 }),
             !0
         );
-    let { host: s, hostname: l, pathname: d, search: f, hash: N } = null !== (n = L.Z.toURLSafe(e)) && void 0 !== n ? n : {},
-        D = L.Z.isDiscordHostname(null != l ? l : null) || L.Z.isDiscordLocalhost(null != s ? s : null, null != l ? l : null);
+    let { host: s, hostname: l, pathname: d, search: f, hash: N } = null !== (n = x.Z.toURLSafe(e)) && void 0 !== n ? n : {},
+        D = x.Z.isDiscordHostname(null != l ? l : null) || x.Z.isDiscordLocalhost(null != s ? s : null, null != l ? l : null);
     if (D && ((null == d ? void 0 : d.startsWith('/application-directory')) || (null == d ? void 0 : d.startsWith('/discovery/applications')))) {
         let e = d.split('/'),
             n = null == d ? void 0 : d.startsWith('/discovery/applications'),
@@ -170,7 +170,7 @@ function G(e) {
             );
         };
     }
-    if (null != d && D && L.Z.isAppRoute(d)) {
+    if (null != d && D && x.Z.isAppRoute(d)) {
         let e = {
             navigationReplace: !1,
             openChannel: !0

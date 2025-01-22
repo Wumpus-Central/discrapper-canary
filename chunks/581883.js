@@ -107,9 +107,9 @@ function O(e) {
 }
 function D(e) {
     let { userSettings: n } = e;
-    x(n);
+    L(n);
 }
-function x(e) {
+function L(e) {
     null != e &&
         l().forEach(y, (n, r) => {
             var i, a;
@@ -125,9 +125,9 @@ function x(e) {
             null != d && ((n.editInfo.protoToSave = d), (n.editInfo.offlineEditDataVersion = s.offlineEditDataVersion));
         });
 }
-class L extends (i = u.ZP.PersistedStore) {
+class x extends (i = u.ZP.PersistedStore) {
     initialize(e) {
-        x(e);
+        L(e);
     }
     getState() {
         return this.computeState();
@@ -185,9 +185,9 @@ class L extends (i = u.ZP.PersistedStore) {
         return null !== (n = null === (e = this.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : null;
     }
 }
-g(L, 'displayName', 'UserSettingsProtoStore'),
-    g(L, 'persistKey', 'UserSettingsProtoStore-Cache'),
-    (n.Z = new L(p.Z, {
+g(x, 'displayName', 'UserSettingsProtoStore'),
+    g(x, 'persistKey', 'UserSettingsProtoStore-Cache'),
+    (n.Z = new x(p.Z, {
         CACHE_LOADED: D,
         USER_SETTINGS_PROTO_UPDATE: R,
         USER_SETTINGS_PROTO_ENQUEUE_UPDATE: R,

@@ -83,7 +83,7 @@ function D(e, n, r) {
         i * T <= S ? D(e, n, r, i + 1) : r();
     }, T);
 }
-function x(e) {
+function L(e) {
     return (
         v.info('launch', e),
         new Promise((n, r) => {
@@ -100,7 +100,7 @@ n.Z = {
         O(N(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => O(N(e)).then(x),
+    launch: (e) => O(N(e)).then(L),
     launchDispatchApplication(e, n, r, i, a) {
         let { launchOptions: s, defaultLaunchOptionId: u, installPath: d, applicationId: f, branchId: _, buildId: m, shouldPatch: g } = e;
         if (null == s || null == u || null == d) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
@@ -147,7 +147,7 @@ n.Z = {
         O(R(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launchGame: (e) => (d.Z.isConnected(e) ? Promise.resolve() : O(R(e)).then(x)),
+    launchGame: (e) => (d.Z.isConnected(e) ? Promise.resolve() : O(R(e)).then(L)),
     isProtocolRegistered: (e) =>
         C().then((n) => {
             var r, i;

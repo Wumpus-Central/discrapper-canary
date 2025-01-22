@@ -25,8 +25,8 @@ var i = n(200651),
     v = n(944486),
     S = n(606304),
     T = n(979651),
-    A = n(938475),
-    b = n(823379),
+    b = n(938475),
+    A = n(823379),
     Z = n(557177),
     x = n(981631);
 function L(e, t, n, i) {
@@ -40,7 +40,7 @@ function L(e, t, n, i) {
         return l.attach('useSound'), () => l.detach();
     });
 }
-function P() {
+function y() {
     return (
         L(
             [I.Z, v.Z],
@@ -68,7 +68,7 @@ function P() {
         null
     );
 }
-function O() {
+function P() {
     return (
         L(
             [_.Z, N.Z, v.Z, d.Z],
@@ -106,7 +106,7 @@ function O() {
         null
     );
 }
-function y() {
+function O() {
     return (
         L(
             [S.Z],
@@ -179,7 +179,7 @@ function M() {
                     s = g.Z.getAllActiveStreams();
                 if (null != n) {
                     let i = _.Z.getChannel(n);
-                    null != i && ((e = i.type), (t = A.ZP.countVoiceStatesForChannel(i.id) - (T.Z.isInChannel(i.id) ? 1 : 0)), (r = g.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
+                    null != i && ((e = i.type), (t = b.ZP.countVoiceStatesForChannel(i.id) - (T.Z.isInChannel(i.id) ? 1 : 0)), (r = g.Z.getAllApplicationStreamsForChannel(i.id).map((e) => e.ownerId)));
                 }
                 let o = null;
                 return (
@@ -238,10 +238,10 @@ function w() {
                     n = o.ZP.getConnectedActivityLocation(),
                     i = (0, c.p)(n),
                     r = f.default.getId(),
-                    l = (0, b.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
-                    a = (0, b.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
-                    s = (0, b.lm)(i) ? o.ZP.getEmbeddedActivitiesForChannel(i) : o.i6,
-                    d = (0, b.lm)(n) ? o.ZP.getSelfEmbeddedActivityForLocation(n) : null;
+                    l = (0, A.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
+                    a = (0, A.lm)(e) ? o.ZP.getEmbeddedActivitiesForChannel(e) : o.i6,
+                    s = (0, A.lm)(i) ? o.ZP.getEmbeddedActivitiesForChannel(i) : o.i6,
+                    d = (0, A.lm)(n) ? o.ZP.getSelfEmbeddedActivityForLocation(n) : null;
                 return {
                     connectedActivityLocation: n,
                     voiceChannelId: e,
@@ -256,15 +256,15 @@ function w() {
                 let n,
                     { connectedActivityLocation: i, voiceChannelId: r, currentUserId: l, channelActivities: a, connectedChannelActivities: s, userConnectedActivity: o, voiceChannelActivities: c } = t;
                 let d = c.some((e) => e.applicationId === (null == o ? void 0 : o.applicationId) && e.launchId === o.launchId);
-                if ((0, b.lm)(r)) {
+                if ((0, A.lm)(r)) {
                     let t = e.voiceChannelActivities.find((e) => e.userIds.has(l)),
                         i = c.find((e) => e.userIds.has(l));
-                    e.voiceChannelActivities.length < c.length && (0, b.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, b.lm)(t) && (n = 'activity_end'), void 0 === t && (0, b.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, b.lm)(i) && (0, b.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+                    e.voiceChannelActivities.length < c.length && (0, A.lm)(e.voiceChannelId) && (n = 'activity_launch'), void 0 === i && (0, A.lm)(t) && (n = 'activity_end'), void 0 === t && (0, A.lm)(i) && i.userIds.size > 1 && (n = 'activity_user_join'), (0, A.lm)(i) && (0, A.lm)(t) && (i.userIds.size > t.userIds.size && (n = 'activity_user_join'), i.userIds.size < t.userIds.size && (n = 'activity_user_left'));
                 }
                 if (!d) {
                     e.connectedChannelActivities.length < s.length && e.channelActivities.length < a.length && (n = 'activity_launch');
                     let t = e.userConnectedActivity;
-                    null == o && (0, b.lm)(t) && (n = 'activity_end'), (0, b.lm)(o) && (0, b.lm)(t) && (o.userIds.size > t.userIds.size && (n = 'activity_user_join'), o.userIds.size < t.userIds.size && (n = 'activity_user_left'));
+                    null == o && (0, A.lm)(t) && (n = 'activity_end'), (0, A.lm)(o) && (0, A.lm)(t) && (o.userIds.size > t.userIds.size && (n = 'activity_user_join'), o.userIds.size < t.userIds.size && (n = 'activity_user_left'));
                 }
                 return null == n && (null != e.connectedActivityLocation || null != i) && (null == e.connectedActivityLocation && null != i ? (n = 'activity_launch') : null != e.connectedActivityLocation && null == i ? (n = 'activity_end') : null != o && null != e.userConnectedActivity && (e.userConnectedActivity.userIds.size < o.userIds.size ? (n = 'activity_user_join') : e.userConnectedActivity.userIds.size > o.userIds.size && (n = 'activity_user_leave'))), n;
             }
@@ -293,6 +293,6 @@ function k() {
 }
 function U() {
     return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(P, {}), (0, i.jsx)(O, {}), (0, i.jsx)(y, {}), (0, i.jsx)(R, {}), (0, i.jsx)(j, {}), (0, i.jsx)(M, {}), (0, i.jsx)(D, {}), (0, i.jsx)(w, {}), (0, i.jsx)(k, {})]
+        children: [(0, i.jsx)(y, {}), (0, i.jsx)(P, {}), (0, i.jsx)(O, {}), (0, i.jsx)(R, {}), (0, i.jsx)(j, {}), (0, i.jsx)(M, {}), (0, i.jsx)(D, {}), (0, i.jsx)(w, {}), (0, i.jsx)(k, {})]
     });
 }

@@ -1,6 +1,6 @@
 r.d(n, {
     dy: function () {
-        return x;
+        return L;
     },
     gw: function () {
         return S;
@@ -55,7 +55,7 @@ for (let e = 0; e < S.length; e++) {
     let n = S[e];
     (E['skin-tone-'.concat(e + 1)] = n), (v[n] = 'skin-tone-'.concat(e + 1));
 }
-class x {
+class L {
     get names() {
         return this.emojiObject.names;
     }
@@ -117,15 +117,15 @@ class x {
             for (let n of e.diversityChildren)
                 if (null != n.diversity) {
                     let e = n.diversity.join('-');
-                    this.diversityChildren[e] = new x(n);
+                    this.diversityChildren[e] = new L(n);
                 }
         }
     }
 }
-let L = r(5420);
-for (let e in L) {
-    let n = L[e].map((e) => {
-        let n = new x(e),
+let x = r(5420);
+for (let e in x) {
+    let n = x[e].map((e) => {
+        let n = new L(e),
             r = n.surrogates,
             i = n.uniqueName;
         if ((n.setSpriteSheetIndex(n.hasDiversity ? b++ : I++), (v[r] = i), 0 > r.indexOf('‍'))) {

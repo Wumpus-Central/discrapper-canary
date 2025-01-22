@@ -20,21 +20,21 @@ var i = r(200651),
     E = r(620492);
 function v(e) {
     let { guildId: n, channel: r, containerWidth: o, onClose: v, onSelect: y, analyticsSource: b, suppressPlaySound: I, shouldValidateSelectedSound: T, shouldShowUpsell: S = !0, gridNotice: A, inExpressionPicker: C, soundButtonOverlay: N, listPadding: R, renderHeader: O, defaultSoundsOnly: D } = e,
-        x = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
-        { analyticsLocations: L } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
+        L = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
+        { analyticsLocations: x } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
     a.useEffect(() => {
-        h.w(), p.DZ.loadIfNecessary(), (0, f.ql)('');
-    }, []);
+        h.w(), p.DZ.loadIfNecessary(), !C && (0, f.ql)('');
+    }, [C]);
     let { refreshEnabled: w } = (0, _.Z)({ location: 'SoundboardSoundPicker' });
     return (0, i.jsx)(d.Gt, {
-        value: L,
+        value: x,
         children: (0, i.jsx)(u.Dialog, {
             className: s()(E.picker, {
-                [E.fetching]: x,
+                [E.fetching]: L,
                 [E.inExpressionPicker]: C,
                 [E.refresh]: w
             }),
-            children: x
+            children: L
                 ? (0, i.jsx)(u.Spinner, {})
                 : (0, i.jsx)(g.Z, {
                       guildId: n,

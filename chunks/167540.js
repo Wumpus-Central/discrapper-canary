@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
 }),
     n(47120);
@@ -31,11 +31,11 @@ function f() {
         })
     });
 }
-function _(e) {
+function E(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, l.e7)([d.Z], () => d.Z.supports(h.AN.VIDEO)),
         [s, u] = r.useState(!1),
-        _ = (0, i.jsxs)(i.Fragment, {
+        E = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.F, {
                     setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
@@ -49,7 +49,7 @@ function _(e) {
             ]
         });
     return t
-        ? _
+        ? E
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(o.HeadingLevel, {
@@ -58,7 +58,7 @@ function _(e) {
                           className: x.marginBottom20,
                           children: p.intl.string(p.t.LKzQSE)
                       }),
-                      children: _
+                      children: E
                   }),
                   (0, i.jsx)(o.FormDivider, { className: a()(x.marginBottom40, x.marginTop40) })
               ]

@@ -1,19 +1,19 @@
 if (
-    (n.d(t, {
+    (n.d(e, {
         Uc: function () {
-            return d;
+            return O;
         },
         Xh: function () {
-            return A;
+            return I;
         },
         aQ: function () {
-            return S;
+            return d;
         },
         m_: function () {
             return r;
         },
         z8: function () {
-            return I;
+            return S;
         }
     }),
     n(610138),
@@ -24,36 +24,36 @@ if (
     12633 == n.j)
 )
     var r,
-        o,
-        i = n(512969);
-var l = n(972959),
-    c = n(264043),
-    a = n(34674),
+        l,
+        o = n(512969);
+var a = n(972959),
+    i = n(264043),
+    c = n(34674),
     u = n(703656),
     s = n(979007),
     p = n(981631);
-((o = r || (r = {})).HOME = 'home'), (o.SEARCH = 'search'), (o.APPLICATION = 'application'), (o.CATEGORY = 'category');
-let S = (0, l.H)(() => ({})),
-    I = (0, l.H)(() => ({
+((l = r || (r = {})).HOME = 'home'), (l.SEARCH = 'search'), (l.APPLICATION = 'application'), (l.CATEGORY = 'category');
+let d = (0, a.H)(() => ({})),
+    S = (0, a.H)(() => ({
         sessionId: null,
         guildId: null,
         entrypoint: null,
         trackedOpenedFromExternalEntrypoint: !1
     }));
-function d() {
+function O() {
     let {
-        location: { state: e }
+        location: { state: t }
     } = (0, u.s1)();
-    return null == e ? void 0 : e.previousView;
+    return null == t ? void 0 : t.previousView;
 }
-function A() {
-    var e, t, n;
+function I() {
+    var t, e, n;
     let {
-        location: { pathname: r, search: o }
+        location: { pathname: r, search: l }
     } = (0, u.s1)();
     if (
         null !=
-        (0, i.LX)(r, {
+        (0, o.LX)(r, {
             path: p.Z5c.GLOBAL_DISCOVERY_APPS,
             exact: !0
         })
@@ -61,42 +61,42 @@ function A() {
         return { type: 'home' };
     if (
         null !=
-        (0, i.LX)(r, {
+        (0, o.LX)(r, {
             path: p.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
             exact: !0
         })
     ) {
-        let e = new URLSearchParams(o),
-            t = { type: 'search' },
-            n = e.get('q');
-        null != n && '' !== n && (t.query = n);
-        let r = Number(e.get('category_id'));
-        Number.isInteger(r) && r !== a.MU && (t.categoryId = r.toString());
-        let i = Number(e.get('page'));
-        return null != i && i > 1 && (t.page = i), t;
+        let t = new URLSearchParams(l),
+            e = { type: 'search' },
+            n = t.get('q');
+        null != n && '' !== n && (e.query = n);
+        let r = Number(t.get('category_id'));
+        Number.isInteger(r) && r !== c.MU && (e.categoryId = r.toString());
+        let o = Number(t.get('page'));
+        return null != o && o > 1 && (e.page = o), e;
     }
-    let l = (0, i.LX)(r, {
+    let a = (0, o.LX)(r, {
             path: [p.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId')],
             exact: !0
         }),
-        { categoryId: S } = null !== (e = null == l ? void 0 : l.params) && void 0 !== e ? e : {};
-    if (null != l && null != S)
+        { categoryId: d } = null !== (t = null == a ? void 0 : a.params) && void 0 !== t ? t : {};
+    if (null != a && null != d)
         return {
             type: 'category',
-            categoryId: S
+            categoryId: d
         };
-    let I = (0, i.LX)(r, {
+    let S = (0, o.LX)(r, {
             path: [p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'), p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', ':section'), p.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')],
             exact: !0
         }),
-        { applicationId: d, section: A, skuId: O } = null !== (t = null == I ? void 0 : I.params) && void 0 !== t ? t : {};
-    if (null != I && null != d) {
-        let e = null === (n = c.Z.getApplication(d)) || void 0 === n ? void 0 : n.name;
+        { applicationId: O, section: I, skuId: _ } = null !== (e = null == S ? void 0 : S.params) && void 0 !== e ? e : {};
+    if (null != S && null != O) {
+        let t = null === (n = i.Z.getApplication(O)) || void 0 === n ? void 0 : n.name;
         return {
             type: 'application',
-            applicationId: d,
-            applicationName: e,
-            section: null != A ? A : null != O ? s.GlobalDiscoveryAppsSections.STORE : s.GlobalDiscoveryAppsSections.ABOUT
+            applicationId: O,
+            applicationName: t,
+            section: null != I ? I : null != _ ? s.GlobalDiscoveryAppsSections.STORE : s.GlobalDiscoveryAppsSections.ABOUT
         };
     }
 }

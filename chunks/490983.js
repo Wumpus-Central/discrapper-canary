@@ -25,8 +25,8 @@ var o = r(658722),
     R = r(823379),
     O = r(780570),
     D = r(358085),
-    x = r(998502),
-    L = r(804739),
+    L = r(998502),
+    x = r(804739),
     w = r(7956),
     P = r(981631);
 function M(e, n, r) {
@@ -98,7 +98,7 @@ function X(e, n, r, i, a) {
               isNew: V(e, s),
               isLaunching: m.Z.launchingGames.has(e.id),
               isRunning: i.has(e.id),
-              isLaunchable: (0, L.t)({
+              isLaunchable: (0, x.t)({
                   LibraryApplicationStore: y.Z,
                   LaunchableGameStore: m.Z,
                   DispatchApplicationStore: S.Z,
@@ -126,7 +126,7 @@ function J(e, n, r, i) {
             isNew: !1,
             isLaunching: m.Z.launchingGames.has(e),
             isRunning: i.has(e),
-            isLaunchable: (0, L.t)({
+            isLaunchable: (0, x.t)({
                 LibraryApplicationStore: y.Z,
                 LaunchableGameStore: m.Z,
                 DispatchApplicationStore: S.Z,
@@ -158,7 +158,7 @@ function $() {
         !u().isEqual(o, B) &&
             ((B = o),
             D.isPlatformEmbedded &&
-                x.ZP.setSystemTrayApplications(
+                L.ZP.setSystemTrayApplications(
                     Y(B)
                         .map((e) => e.application)
                         .slice(0, k)

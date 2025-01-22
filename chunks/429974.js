@@ -27,16 +27,16 @@ async function v(e) {
         O = f.default.getUser(y);
     if (null == O) return;
     let D = h.Z.getUserProfile(y),
-        x = c.Z.getPrimaryActivity(y),
-        L = c.Z.getStatus(y),
+        L = c.Z.getPrimaryActivity(y),
+        x = c.Z.getStatus(y),
         w = c.Z.isMobileOnline(y),
-        { party: P, assets: M, application_id: k } = null != x ? x : {},
+        { party: P, assets: M, application_id: k } = null != L ? L : {},
         U = null != k ? u.Z.getApplication(k) : null,
         B = w ? _.j28.ONLINE_MOBILE : _.j28.ONLINE_DESKTOP,
-        G = L === _.Skl.ONLINE ? B : L;
+        G = x === _.Skl.ONLINE ? B : x;
     (g = await (0, a.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([r.e('56630'), r.e('82412'), r.e('3748')]).then(r.bind(r, 533835));
+            let { default: e } = await Promise.all([r.e('81463'), r.e('82412'), r.e('3748')]).then(r.bind(r, 533835));
             return (n) =>
                 (0, i.jsx)(e, {
                     user: O,
@@ -57,15 +57,15 @@ async function v(e) {
             guild_id: T,
             channel_id: S,
             other_user_id: y,
-            application_id: null !== (o = null == x ? void 0 : x.application_id) && void 0 !== o ? o : null,
-            application_name: null == x ? void 0 : x.name,
+            application_id: null !== (o = null == L ? void 0 : L.application_id) && void 0 !== o ? o : null,
+            application_name: null == L ? void 0 : L.name,
             sku_id: null !== (s = null == U ? void 0 : U.primarySkuId) && void 0 !== s ? s : null,
             is_friend: d.Z.isFriend(y),
             has_images: !!(null !== (v = null == M ? void 0 : M.large_image) && void 0 !== v ? v : null == M ? void 0 : M.small_image),
             party_max: null == P ? void 0 : null === (n = P.size) || void 0 === n ? void 0 : n[1],
             party_id: null == P ? void 0 : P.id,
             party_platform: (0, m.Ps)(null == P ? void 0 : P.id) ? _.ABu.SPOTIFY : null,
-            game_platform: (0, l.Z)(x),
+            game_platform: (0, l.Z)(L),
             profile_user_status: G,
             profile_has_nitro_customization: (null == D ? void 0 : D.banner) != null,
             profile_has_profile_effect: (null == D ? void 0 : D.profileEffectId) != null,

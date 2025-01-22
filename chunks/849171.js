@@ -197,7 +197,7 @@ function B(e) {
 function W(e) {
     let { participant: t, width: n, selected: i, interactible: l, channel: s } = e,
         { analyticsLocations: o } = (0, b.ZP)(y.Z.ACTIVITY_TILE),
-        { id: u } = t,
+        { applicationId: u } = t,
         d = (0, v.Z)(),
         m = null != d && (0, h.p)(d.location) === s.id && d.applicationId === u,
         [f] = (0, T.Z)([u]),

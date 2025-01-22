@@ -97,8 +97,8 @@ function D(e) {
         })
     );
 }
-var x = /\/+/g;
-function L(e, n) {
+var L = /\/+/g;
+function x(e, n) {
     return 'object' == typeof e && null !== e && null != e.key ? D('' + e.key) : n.toString(36);
 }
 function w(e, n, a, o, s) {
@@ -122,22 +122,22 @@ function w(e, n, a, o, s) {
     if (u)
         return (
             (s = s((u = e))),
-            (e = '' === o ? '.' + L(u, 0) : o),
+            (e = '' === o ? '.' + x(u, 0) : o),
             T(s)
                 ? ((a = ''),
-                  null != e && (a = e.replace(x, '$&/') + '/'),
+                  null != e && (a = e.replace(L, '$&/') + '/'),
                   w(s, n, a, '', function (e) {
                       return e;
                   }))
-                : null != s && (O(s) && (s = R(s, a + (!s.key || (u && u.key === s.key) ? '' : ('' + s.key).replace(x, '$&/') + '/') + e)), n.push(s)),
+                : null != s && (O(s) && (s = R(s, a + (!s.key || (u && u.key === s.key) ? '' : ('' + s.key).replace(L, '$&/') + '/') + e)), n.push(s)),
             1
         );
     if (((u = 0), (o = '' === o ? '.' : o + ':'), T(e)))
         for (var c = 0; c < e.length; c++) {
-            var d = o + L((l = e[c]), c);
+            var d = o + x((l = e[c]), c);
             u += w(l, n, a, d, s);
         }
-    else if ('function' == typeof (d = _(e))) for (e = d.call(e), c = 0; !(l = e.next()).done; ) (d = o + L((l = l.value), c++)), (u += w(l, n, a, d, s));
+    else if ('function' == typeof (d = _(e))) for (e = d.call(e), c = 0; !(l = e.next()).done; ) (d = o + x((l = l.value), c++)), (u += w(l, n, a, d, s));
     else if ('object' === l) throw Error('Objects are not valid as a React child (found: ' + ('[object Object]' === (n = String(e)) ? 'object with keys {' + Object.keys(e).join(', ') + '}' : n) + '). If you meant to render a collection of children, use an array instead.');
     return u;
 }

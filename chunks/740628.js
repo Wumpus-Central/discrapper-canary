@@ -63,7 +63,7 @@ function j(e) {
     let { user: u, currentUser: f, displayProfile: m, items: x, initialSection: I = p.oh.USER_INFO, initialSubsection: j, onClose: _ } = e,
         { trackUserProfileAction: b } = (0, a.KZ)(),
         E = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: N, subsection: S }, y] = l.useState({
+        [{ section: N, subsection: y }, S] = l.useState({
             section:
                 null !==
                     (d =
@@ -82,7 +82,7 @@ function j(e) {
         });
     l.useEffect(() => {
         if (null == x.find((e) => e.section === N))
-            y({
+            S({
                 section: x[0].section,
                 subsection: void 0
             });
@@ -93,12 +93,12 @@ function j(e) {
                 action: 'PRESS_SECTION',
                 section: e
             }),
-                y({
+                S({
                     section: e,
                     subsection: void 0
                 });
         },
-        [b, y]
+        [b, S]
     );
     return E
         ? (0, i.jsx)('div', {
@@ -142,7 +142,7 @@ function j(e) {
                   (0, i.jsx)(g, {
                       items: x,
                       section: N,
-                      subsection: S,
+                      subsection: y,
                       user: u,
                       currentUser: f,
                       displayProfile: m,

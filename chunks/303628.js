@@ -31,8 +31,8 @@ function D(e) {
         l = (0, f.e7)([I.Z], () => I.Z.getUploads(n, r.drafts.type)),
         {
             isApplicationCommand: D,
-            commandOptions: x,
-            commandOptionStates: L
+            commandOptions: L,
+            commandOptionStates: x
         } = (0, f.cj)([E.Z], () => {
             let e = E.Z.getActiveCommand(n);
             if (null == e)
@@ -52,15 +52,15 @@ function D(e) {
             var e;
             return null !==
                 (e =
-                    null == x
+                    null == L
                         ? void 0
-                        : x.filter((e) => {
+                        : L.filter((e) => {
                               var n;
-                              return e.type === _.jw.ATTACHMENT && (null == L ? void 0 : null === (n = L[e.name]) || void 0 === n ? void 0 : n.hasValue);
+                              return e.type === _.jw.ATTACHMENT && (null == x ? void 0 : null === (n = x[e.name]) || void 0 === n ? void 0 : n.hasValue);
                           })) && void 0 !== e
                 ? e
                 : [];
-        }, [x, L]),
+        }, [L, x]),
         [P, M] = s.useState([]);
     s.useEffect(() => {
         let e = () => {
@@ -144,7 +144,7 @@ function D(e) {
               ]
           });
 }
-function x(e) {
+function L(e) {
     let { channelId: n, type: r, canAttachFiles: i } = e;
     return i
         ? (0, o.jsx)(D, {
@@ -153,4 +153,4 @@ function x(e) {
           })
         : null;
 }
-n.Z = s.memo(x);
+n.Z = s.memo(L);

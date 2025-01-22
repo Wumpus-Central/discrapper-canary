@@ -27,7 +27,7 @@ function x(e) {
     let { channel: t, primaryEntryPointCommand: n, application: s, showAppLauncherPopup: c = !1 } = e,
         [p, x] = i.useState(!1),
         v = (0, l.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
-        _ = (0, r.G)(),
+        _ = (0, r.GK)(),
         I = c ? C.t.cpT0Cg : C.t['0hKkS0'],
         E = i.useMemo(() => (null != n ? (0, h.XZ)(n.displayName) : C.intl.string(C.t['3xjX0d'])), [n]),
         b = void 0 !== s.flags && (0, f.yE)(s.flags, g.udG.EMBEDDED),

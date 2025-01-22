@@ -1,21 +1,21 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return u;
     },
     o: function () {
-        return s;
+        return o;
     }
 });
-var a = n(442837),
-    r = n(522474),
+var r = n(442837),
+    i = n(522474),
     l = n(658785),
-    i = n(981631);
-function o(e) {
+    a = n(981631);
+function u(e) {
     let { location: t, options: n } = e,
-        a = s(),
-        { showKeybindIndicators: r } = l.Z.useExperiment({ location: t }, n);
-    return r && a;
+        r = o(),
+        { showKeybindIndicators: i } = l.Z.useExperiment({ location: t }, n);
+    return i && r;
 }
-function s() {
-    return !(0, a.e7)([r.Z], () => r.Z.getWindowVisible(i.KJ3.ACTIVITY_POPOUT));
+function o() {
+    return !(0, r.e7)([i.Z], () => i.Z.getWindowVisible(a.KJ3.ACTIVITY_POPOUT));
 }

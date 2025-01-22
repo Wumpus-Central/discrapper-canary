@@ -258,7 +258,7 @@ function O(n) {
                 : null != G
                   ? () => {
                         (0, u.openModalLazy)(async () => {
-                            let { SubscriptionDetailsModal: n } = await Promise.all([e.e('86282'), e.e('97319')]).then(e.bind(e, 519896));
+                            let { SubscriptionDetailsModal: n } = await Promise.all([e.e('86282'), e.e('23642')]).then(e.bind(e, 519896));
                             return (i) =>
                                 (0, l.jsx)(n, {
                                     appId: s,

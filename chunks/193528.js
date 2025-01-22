@@ -19,7 +19,7 @@ var i = n(200651),
     p = n(388032),
     x = n(602750);
 function f(e) {
-    let { onChange: t, onClose: n, color: s, suggestedColors: f, disabled: _, label: E, colorPickerMiddle: C, colorPickerFooter: T, showEyeDropper: S } = e,
+    let { onChange: t, onClose: n, color: s, suggestedColors: f, disabled: E, label: _, colorPickerMiddle: C, colorPickerFooter: T, showEyeDropper: S } = e,
         b = r.useRef(null),
         I = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         N = c.Z.colors.BACKGROUND_ACCENT.css,
@@ -51,12 +51,12 @@ function f(e) {
                 let { onClick: t, ...n } = e;
                 return (0, i.jsxs)('div', {
                     ref: b,
-                    className: a()(x.colorSwatch, { [x.disabled]: _ }),
+                    className: a()(x.colorSwatch, { [x.disabled]: E }),
                     children: [
                         (0, i.jsx)(d.Clickable, {
                             ...n,
-                            tabIndex: _ ? -1 : 0,
-                            onClick: _ ? h.dG4 : t,
+                            tabIndex: E ? -1 : 0,
+                            onClick: E ? h.dG4 : t,
                             style: {
                                 backgroundColor: A,
                                 borderColor: j
@@ -72,7 +72,7 @@ function f(e) {
                                 color: O
                             })
                         }),
-                        E
+                        _
                     ]
                 });
             }

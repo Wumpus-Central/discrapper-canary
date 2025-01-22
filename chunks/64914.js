@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
 }),
     n(47120);
@@ -19,12 +19,12 @@ var i = n(200651),
     p = n(726985),
     x = n(981631),
     f = n(388032);
-function _() {
+function E() {
     let [e] = r.useState(() => u.ZP.getEnableHardwareAcceleration()),
         t = g.bm.useSetting(),
         n = g.Sb.useSetting(),
-        _ = (0, s.e7)([d.Z], () => d.Z.testModeApplicationId),
-        E = (0, s.e7)([m.ZP], () => m.ZP.showPlayAgain),
+        E = (0, s.e7)([d.Z], () => d.Z.testModeApplicationId),
+        _ = (0, s.e7)([m.ZP], () => m.ZP.showPlayAgain),
         C = r.useCallback((e) => {
             g.bm.updateSetting(!e);
         }, []),
@@ -83,7 +83,7 @@ function _() {
             (0, i.jsx)(c.F, {
                 setting: p.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
                 children: (0, i.jsx)(a.FormSwitch, {
-                    value: null != _,
+                    value: null != E,
                     note: f.intl.string(f.t['52hMnJ']),
                     onChange: T,
                     children: f.intl.string(f.t.erOqlp)
@@ -92,7 +92,7 @@ function _() {
             (0, i.jsx)(c.F, {
                 setting: p.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
                 children: (0, i.jsx)(a.FormSwitch, {
-                    value: E,
+                    value: _,
                     note: f.intl.string(f.t['B/qU4O']),
                     onChange: S,
                     children: f.intl.string(f.t.qDZryM)

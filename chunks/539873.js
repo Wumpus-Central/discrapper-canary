@@ -37,10 +37,10 @@ function C(e) {
         ),
         D = o.useRef(null);
     (0, g.Z)(D, T.h1.CUSTOM_APP_ICONS);
-    let x = (0, p.Dt)(),
-        L = (0, c.useRadioGroup)({
+    let L = (0, p.Dt)(),
+        x = (0, c.useRadioGroup)({
             orientation: 'horizontal',
-            labelledBy: x
+            labelledBy: L
         }),
         w = (e) => {
             if (O && !s && e !== v.aH.DEFAULT) {
@@ -66,7 +66,7 @@ function C(e) {
     return (0, a.jsx)('div', {
         ref: D,
         children: (0, a.jsx)('div', {
-            ...L,
+            ...x,
             className: A.__invalid_container,
             children: (0, a.jsxs)('div', {
                 className: n,

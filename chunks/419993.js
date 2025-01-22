@@ -103,8 +103,8 @@ class C extends (i = s.Component) {
     render() {
         var e, n;
         let { disabled: r, value: i, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: f, spellCheck: h, resizeable: y, className: b, id: S, rows: A, flex: C, autosize: N, required: R, onInvalid: O, inputRef: D } = this.props,
-            x = N ? _.l : 'textarea',
-            L = this.hasError(),
+            L = N ? _.l : 'textarea',
+            x = this.hasError(),
             w = null !== (n = this.props['aria-labelledby']) && void 0 !== n ? n : null === (e = this.context) || void 0 === e ? void 0 : e.titleId,
             P = this.getAriaDescribedBy();
         return (0, o.jsxs)('div', {
@@ -114,16 +114,16 @@ class C extends (i = s.Component) {
                     className: u()(g.inputMaxLength, { [g.flex]: C }),
                     children: [
                         (0, o.jsx)(d.t, {
-                            children: (0, o.jsx)(x, {
+                            children: (0, o.jsx)(L, {
                                 type: 'text',
                                 className: u()(E.inputDefault, g.textArea, v.scrollbarDefault, b, {
-                                    [E.error]: L,
+                                    [E.error]: x,
                                     [E.disabled]: r,
                                     [g.resizeable]: y
                                 }),
                                 'aria-labelledby': w,
                                 'aria-describedby': P,
-                                'aria-invalid': L,
+                                'aria-invalid': x,
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: S,
                                 disabled: r,

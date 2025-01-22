@@ -1,21 +1,21 @@
 n.d(t, {
     i: function () {
-        return I;
+        return x;
     }
 }),
     n(47120);
-var s = n(200651),
-    i = n(192379),
-    a = n(120356),
-    r = n.n(a),
-    l = n(477660),
-    o = n.n(l),
-    d = n(481060),
-    h = n(770146),
+var i = n(200651),
+    a = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    o = n(477660),
+    s = n.n(o),
+    c = n(481060),
+    d = n(770146),
     u = n(241209),
-    c = n(73346),
-    m = n(388032),
-    p = n(797844);
+    m = n(73346),
+    p = n(388032),
+    h = n(797844);
 function g(e, t, n) {
     return (
         t in e
@@ -30,16 +30,16 @@ function g(e, t, n) {
     );
 }
 let C = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
-    I = {
+    x = {
         ...u.Z.rules,
         heading: {
             ...u.Z.rules.heading,
             react(e, t, n) {
-                let i = 'h'.concat(Math.min(Math.max(2, e.level + 1), 4));
-                return (0, s.jsx)(
-                    h.Z,
+                let a = 'h'.concat(Math.min(Math.max(2, e.level + 1), 4));
+                return (0, i.jsx)(
+                    d.Z,
                     {
-                        tag: i,
+                        tag: a,
                         children: t(e.content, n)
                     },
                     n.key
@@ -52,8 +52,8 @@ let C = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 let n = e.match(C);
                 if (null != n) {
                     let e = n[2],
-                        s = t.assets.find((t) => t.id === e);
-                    return null != s && [...n, s, t.applicationId];
+                        i = t.assets.find((t) => t.id === e);
+                    return null != i && [...n, i, t.applicationId];
                 }
                 return !1;
             },
@@ -63,23 +63,23 @@ let C = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 applicationId: e[4]
             }),
             react: (e, t, n) =>
-                (0, s.jsx)(
+                (0, i.jsx)(
                     'div',
                     {
-                        className: p.assetWrapper,
-                        children: (0, s.jsx)('img', {
+                        className: h.assetWrapper,
+                        children: (0, i.jsx)('img', {
                             alt: e.alt,
-                            src: (0, c._W)(e.applicationId, e.asset, 800),
-                            className: p.asset
+                            src: (0, m._W)(e.applicationId, e.asset, 800),
+                            className: h.asset
                         })
                     },
                     n.key
                 )
         }
     },
-    x = o().parserFor(I),
-    v = o().reactFor(o().ruleOutput(I, 'react'));
-class f extends i.PureComponent {
+    v = s().parserFor(x),
+    _ = s().reactFor(s().ruleOutput(x, 'react'));
+class f extends a.PureComponent {
     componentDidMount() {
         if (null != this._container) {
             let { height: e } = this._container.getBoundingClientRect();
@@ -87,26 +87,26 @@ class f extends i.PureComponent {
         }
     }
     render() {
-        let { applicationId: e, description: t, blurb: n, className: i, assets: a } = this.props,
-            { collapsed: l, collapsable: o } = this.state;
-        return (0, s.jsxs)('div', {
-            className: i,
+        let { applicationId: e, description: t, blurb: n, className: a, assets: r } = this.props,
+            { collapsed: o, collapsable: s } = this.state;
+        return (0, i.jsxs)('div', {
+            className: a,
             children: [
-                (0, s.jsx)('div', {
-                    className: r()({ [p.collapsed]: o && l }),
-                    children: (0, s.jsxs)('div', {
+                (0, i.jsx)('div', {
+                    className: l()({ [h.collapsed]: s && o }),
+                    children: (0, i.jsxs)('div', {
                         ref: this.setContentContainerRef,
                         children: [
-                            (0, s.jsx)('div', {
-                                className: p.blurb,
+                            (0, i.jsx)('div', {
+                                className: h.blurb,
                                 children: n
                             }),
-                            (0, s.jsx)(u.Z, {
-                                className: p.description,
-                                parser: x,
-                                output: v,
+                            (0, i.jsx)(u.Z, {
+                                className: h.description,
+                                parser: v,
+                                output: _,
                                 state: {
-                                    assets: a,
+                                    assets: r,
                                     applicationId: e
                                 },
                                 children: t
@@ -114,12 +114,12 @@ class f extends i.PureComponent {
                         ]
                     })
                 }),
-                o
-                    ? (0, s.jsx)(d.Button, {
-                          className: p.toggleCollapseButton,
+                s
+                    ? (0, i.jsx)(c.Button, {
+                          className: h.toggleCollapseButton,
                           onClick: this.handleToggleCollapse,
-                          color: d.Button.Colors.PRIMARY,
-                          children: l ? m.intl.string(m.t.DxcOXF) : m.intl.string(m.t.rD6EaG)
+                          color: c.Button.Colors.PRIMARY,
+                          children: o ? p.intl.string(p.t.DxcOXF) : p.intl.string(p.t.rD6EaG)
                       })
                     : null
             ]

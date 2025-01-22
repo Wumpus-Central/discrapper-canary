@@ -24,8 +24,8 @@ var i,
     p = n(355467),
     x = n(410030),
     f = n(100527),
-    _ = n(906732),
-    E = n(211242),
+    E = n(906732),
+    _ = n(211242),
     C = n(600164),
     T = n(509545),
     S = n(626135),
@@ -69,11 +69,11 @@ async function Y(e) {
 function W(e) {
     var t;
     let { premiumSubscription: n, premiumType: i, setStep: r, onClose: l, whatYouLoseExperienceEnabled: o, analyticsLocation: c } = e,
-        d = (0, E.Q)(),
+        d = (0, _.Q)(),
         [u, m] = a.useState(!1),
         [p, f] = a.useState(!1),
         T = (0, x.ZP)(),
-        { analyticsLocations: S } = (0, _.ZP)(),
+        { analyticsLocations: S } = (0, E.ZP)(),
         b = null;
     switch (n.status) {
         case V.O0b.PAST_DUE:
@@ -187,7 +187,7 @@ function W(e) {
 function z(e) {
     var t, n;
     let { premiumSubscription: i } = e,
-        { analyticsLocations: r } = (0, _.ZP)(),
+        { analyticsLocations: r } = (0, E.ZP)(),
         [a] = (0, A.ED)({
             subscriptionId: i.id,
             items: (0, N.Ue)(null !== (n = null === (t = i.renewalMutations) || void 0 === t ? void 0 : t.items) && void 0 !== n ? n : i.items),
@@ -234,7 +234,7 @@ function K(e) {
     let { premiumSubscription: t, premiumType: n, onBack: i, onClose: r, analyticsLocation: l } = e,
         [c, d] = a.useState(!1),
         [u, m] = a.useState(!1),
-        { analyticsLocations: g } = (0, _.ZP)();
+        { analyticsLocations: g } = (0, E.ZP)();
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(M.Z, {
@@ -302,7 +302,7 @@ function X(e) {
     let n,
         { premiumSubscription: i, transitionState: r, onClose: l, analyticsLocations: o, analyticsLocation: d, initialStep: m } = e,
         p = a.useRef(new c.qA()),
-        [E, C] = a.useState(null),
+        [_, C] = a.useState(null),
         T = (0, O.yQ)(),
         I = (null == T ? void 0 : T.showCard) === !0,
         v = (null == T ? void 0 : T.tenureRewardType) === U.nW.AVATAR_DECO,
@@ -315,7 +315,7 @@ function X(e) {
     }, [i]);
     let L = R === F.p9.TIER_0 || R === F.p9.TIER_1 || R === F.p9.TIER_2;
     null == m && (m = L ? 1 : 2);
-    let { analyticsLocations: M } = (0, _.ZP)(o, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
+    let { analyticsLocations: M } = (0, E.ZP)(o, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
         [Y, z, X, J] = (function (e, t, n) {
             let [i, r] = a.useState(e),
                 [s, l] = a.useState(Date.now()),
@@ -482,14 +482,14 @@ function X(e) {
                 premiumSubscription: i,
                 premiumType: R,
                 onClose: () => et(Y),
-                confettiCanvas: E,
+                confettiCanvas: _,
                 userDiscountOffer: ei
             });
             break;
         default:
             throw Error('Unexpected step: '.concat(Y));
     }
-    return (0, s.jsxs)(_.Gt, {
+    return (0, s.jsxs)(E.Gt, {
         value: M,
         children: [
             (0, s.jsx)(c.O_, {

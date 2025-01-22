@@ -39,8 +39,8 @@ var i = r(677846),
     R = r(10893),
     O = r(2728),
     D = r(42090),
-    x = r(870478),
-    L = r(632174),
+    L = r(870478),
+    x = r(632174),
     w = r(4598),
     P = r(367788),
     M = r(746194),
@@ -144,8 +144,8 @@ Y = {
     'ro-RO': R.Z,
     'ru-RU': O.Z,
     'sk-SK': D.Z,
-    'sl-SI': x.Z,
-    'sr-SP': L.Z,
+    'sl-SI': L.Z,
+    'sr-SP': x.Z,
     'sv-SE': w.Z,
     'tr-TR': P.Z,
     'uk-UA': M.Z,
@@ -199,17 +199,17 @@ function q(e, n, r) {
         R = e.onClose || N.onClose,
         O = S ? () => {} : e.onAction || N.onAction,
         D = (0, B.tv)(),
-        x = (e) => {
+        L = (e) => {
             O && O(s), e.target instanceof HTMLAnchorElement && D.open(e.target, e);
         },
-        L = 'menuitem';
-    !S && ('single' === n.selectionManager.selectionMode ? (L = 'menuitemradio') : 'multiple' === n.selectionManager.selectionMode && (L = 'menuitemcheckbox'));
+        x = 'menuitem';
+    !S && ('single' === n.selectionManager.selectionMode ? (x = 'menuitemradio') : 'multiple' === n.selectionManager.selectionMode && (x = 'menuitemcheckbox'));
     let w = (0, B.mp)(),
         P = (0, B.mp)(),
         M = (0, B.mp)(),
         k = {
             'aria-disabled': A || void 0,
-            role: L,
+            role: x,
             'aria-label': e['aria-label'],
             'aria-labelledby': w,
             'aria-describedby': [P, M].filter(Boolean).join(' ') || void 0,
@@ -221,10 +221,10 @@ function q(e, n, r) {
     let U = n.collection.getItem(s);
     u && ((k['aria-posinset'] = null == U ? void 0 : U.index), (k['aria-setsize'] = (0, j.is)(n.collection)));
     let G = (e) => {
-            'keyboard' === e.pointerType && x(e), null == d || d(e);
+            'keyboard' === e.pointerType && L(e), null == d || d(e);
         },
         F = (e) => {
-            'keyboard' !== e.pointerType && (x(e), !S && R && (null != l ? l : 'multiple' !== n.selectionManager.selectionMode || n.selectionManager.isLink(s)) && R()), null == f || f(e);
+            'keyboard' !== e.pointerType && (L(e), !S && R && (null != l ? l : 'multiple' !== n.selectionManager.selectionMode || n.selectionManager.isLink(s)) && R()), null == f || f(e);
         },
         { itemProps: H, isFocused: Y } = (0, V.Cs)({
             selectionManager: n.selectionManager,

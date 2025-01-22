@@ -29,14 +29,14 @@ var i = n(200651),
     v = n(740492),
     S = n(973616),
     T = n(592125),
-    A = n(626135),
-    b = n(823379),
+    b = n(626135),
+    A = n(823379),
     Z = n(728345),
     x = n(812206),
     L = n(981631),
-    P = n(388032),
-    O = n(914333),
-    y = n(312565);
+    y = n(388032),
+    P = n(914333),
+    O = n(312565);
 async function R(e, t, n) {
     t(e.id);
     let i = e.bot;
@@ -57,7 +57,7 @@ async function R(e, t, n) {
             t(void 0);
         }
         if (
-            (A.default.track(L.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (b.default.track(L.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: l,
                 channel_id: r
@@ -90,37 +90,37 @@ function j(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: l, analyticsLocations: c } = e,
         d = (0, s.e7)([T.Z], () => T.Z.getDMFromUserId(l)),
         m = (0, s.e7)([h.ZP], () => h.ZP.getCurrentEmbeddedActivity()),
-        g = (0, u.G)(),
+        g = (0, u.GK)(),
         f = null != m && m.applicationId === t.id && (g || (0, p.p)(m.location) === d),
         _ = n === t.id,
         I = null != n;
     return (0, i.jsx)(o.Clickable, {
-        className: a()(O.clickable, { [O.disabledClickable]: I }),
+        className: a()(P.clickable, { [P.disabledClickable]: I }),
         onClick: () => (f || I ? null : R(t, r, c)),
-        'aria-label': P.intl.formatToPlainString(P.t['zLhr9/'], {
+        'aria-label': y.intl.formatToPlainString(y.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
         children: (0, i.jsx)(o.Tooltip, {
-            tooltipContentClassName: O.tooltipContent,
+            tooltipContentClassName: P.tooltipContent,
             text: t.name,
             children: (e) => {
                 let { ...n } = e;
                 return (0, i.jsxs)('div', {
-                    className: O.iconContainer,
+                    className: P.iconContainer,
                     ...n,
                     children: [
                         (0, i.jsx)(E.Z, {
                             application: t,
-                            className: O.iconCard,
+                            className: P.iconCard,
                             'aria-hidden': !0,
                             rendersPlaceholder: !0
                         }),
                         _ || f
                             ? (0, i.jsx)(o.Spinner, {
                                   type: o.Spinner.Type.PULSING_ELLIPSIS,
-                                  className: O.spinner,
-                                  itemClassName: f ? O.spinnerInnerRunning : void 0
+                                  className: P.spinner,
+                                  itemClassName: f ? P.spinnerInnerRunning : void 0
                               })
                             : null
                     ]
@@ -132,7 +132,7 @@ function j(e) {
 function D(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: r, analyticsLocations: l } = e;
     return (0, i.jsx)('div', {
-        className: O.itemContainer,
+        className: P.itemContainer,
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
@@ -180,28 +180,28 @@ function k(e) {
             () =>
                 n
                     .map((e) => e.application)
-                    .filter(b.lm)
+                    .filter(A.lm)
                     .slice(0, 5),
             [n]
         );
     return (
         r.useLayoutEffect(() => {
             var e;
-            if (!c.current) (c.current = !0), A.default.track(L.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = d.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+            if (!c.current) (c.current = !0), b.default.track(L.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = d.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
         }, [d]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: O.container,
+                    className: P.container,
                     onContextMenu: M,
                     children: [
                         (0, i.jsx)(N.Z, {
-                            className: a()(O.headerContainer, y.privateChannelsHeaderContainer),
+                            className: a()(P.headerContainer, O.privateChannelsHeaderContainer),
                             children: (0, i.jsx)('div', {
-                                className: O.textContainer,
+                                className: P.textContainer,
                                 children: (0, i.jsx)('span', {
-                                    className: y.headerText,
-                                    children: P.intl.string(P.t.vayAzs)
+                                    className: O.headerText,
+                                    children: y.intl.string(y.t.vayAzs)
                                 })
                             })
                         }),

@@ -170,11 +170,11 @@ function B(e) {
                                               var e;
                                               a.Y.USER_INSTALL in (null !== (e = n.integrationTypesConfig) && void 0 !== e ? e : {}) || K
                                                   ? (0, _.X)(n.id)
-                                                  : (0, I.goToAppDirectory)({
+                                                  : (0, I.dx)({
                                                         guildId: b,
-                                                        view: C.ApplicationDirectoryViews.APPLICATION,
+                                                        view: C.eN.APPLICATION,
                                                         applicationId: n.id,
-                                                        entrypoint: { name: C.ApplicationDirectoryEntrypointNames.OAUTH2_EMBED }
+                                                        entrypoint: { name: C.n3.OAUTH2_EMBED }
                                                     });
                                           },
                                           children: O.intl.string(O.t.fbcCzc)

@@ -28,20 +28,20 @@ let b = (e) => {
         let [C, N] = o.useState(0),
             [R, O] = o.useState(0),
             { accessibilityLabel: D } = v,
-            [x, L] = o.useState(-I),
+            [L, x] = o.useState(-I),
             {
                 stop: w,
                 reset: P,
                 ticking: M
             } = (0, h.Z)((e) => {
-                L((n) => n + e);
+                x((n) => n + e);
             }),
             k = o.useRef(I);
         o.useEffect(() => {
             k.current = I;
         }),
             o.useEffect(() => {
-                L(-k.current), A((0, _.H)(v.effects));
+                x(-k.current), A((0, _.H)(v.effects));
             }, [v]),
             o.useEffect(() => {
                 let e = 0,
@@ -56,7 +56,7 @@ let b = (e) => {
         let [U, B] = o.useState(!1);
         return (
             o.useEffect(() => {
-                !0 !== c && !s && (w(), L(0)), !s && U && M.current && (w(), L(0)), i && s && !M.current && (P(), v.animationType === p.Q.PERSISTENT ? L(d === p.j.FromStart ? 0 : C) : L(0));
+                !0 !== c && !s && (w(), x(0)), !s && U && M.current && (w(), x(0)), i && s && !M.current && (P(), v.animationType === p.Q.PERSISTENT ? x(d === p.j.FromStart ? 0 : C) : x(0));
             }, [s, U, C, i, w, P, M, v.animationType, c, d]),
             (0, a.jsx)('div', {
                 ref: T,
@@ -87,7 +87,7 @@ let b = (e) => {
                                 layerConfig: e,
                                 animationType: v.animationType,
                                 ticking: M.current,
-                                time: x,
+                                time: L,
                                 accessibilityLabel: D,
                                 hasPlayedThrough: U,
                                 setHasPlayedThrough: B,

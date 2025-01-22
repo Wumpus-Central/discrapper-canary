@@ -88,11 +88,11 @@ function D(e) {
     let { channels: n } = e;
     for (let e of n) delete b[e.id];
 }
-function x(e) {
+function L(e) {
     let { guildId: n } = e;
     O(n);
 }
-function L(e) {
+function x(e) {
     let { guildId: n, user: r } = e;
     return null != r && null != n && R(r.id, n);
 }
@@ -147,9 +147,9 @@ y(U, 'displayName', 'StageChannelRoleStore'),
     (n.ZP = new U(d.Z, {
         CHANNEL_UPDATES: D,
         CONNECTION_OPEN: M,
-        GUILD_MEMBER_REMOVE: L,
-        GUILD_MEMBER_UPDATE: L,
-        GUILD_ROLE_UPDATE: x,
+        GUILD_MEMBER_REMOVE: x,
+        GUILD_MEMBER_UPDATE: x,
+        GUILD_ROLE_UPDATE: L,
         PASSIVE_UPDATE_V2: P,
         VOICE_STATE_UPDATES: w,
         GUILD_CREATE: k,

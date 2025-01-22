@@ -25,25 +25,25 @@ var a = n(200651),
 n(381996);
 var v = n(392750),
     j = n(926976),
-    _ = n(592197),
-    C = n(806240),
+    C = n(592197),
+    _ = n(806240),
     T = n(789654),
-    N = n(719672),
-    S = n(691867),
+    S = n(719672),
+    N = n(691867),
     y = n(916790),
     I = n(645973),
     E = n(903502),
     Z = n(912072),
-    w = n(272193),
-    k = n(735959),
+    k = n(272193),
+    w = n(735959),
     O = n(246992),
     R = n(496025),
     B = n(442954),
     P = n(633001),
     L = n(702904),
     A = n(178821),
-    D = n(248526),
-    F = n(958328),
+    F = n(248526),
+    D = n(958328),
     M = n(315384),
     H = n(514866),
     G = n(678639),
@@ -103,7 +103,7 @@ function q() {
                     e.push({
                         id: 'perks_demos',
                         name: 'Perks Demos',
-                        render: () => (0, a.jsx)(D.Z, {})
+                        render: () => (0, a.jsx)(F.Z, {})
                     })),
                 x.Z.isDeveloper &&
                     (e.push({
@@ -114,7 +114,7 @@ function q() {
                     e.push({
                         id: 'clans',
                         name: 'Clans',
-                        render: () => (0, a.jsx)(C.Z, {})
+                        render: () => (0, a.jsx)(_.Z, {})
                     }),
                     e.push({
                         id: 'performance',
@@ -134,7 +134,7 @@ function q() {
                 e.push({
                     id: 'intl',
                     name: 'Intl',
-                    render: () => (0, a.jsx)(k.Z, {})
+                    render: () => (0, a.jsx)(w.Z, {})
                 }),
                 e.push({
                     id: 'colors',
@@ -144,7 +144,7 @@ function q() {
                 e.push({
                     id: 'design_toggles',
                     name: 'Design Toggles',
-                    render: () => (0, a.jsx)(S.Z, {})
+                    render: () => (0, a.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
@@ -164,7 +164,7 @@ function q() {
                 e.push({
                     id: 'permissions',
                     name: 'Permissions',
-                    render: () => (0, a.jsx)(F.Z, {})
+                    render: () => (0, a.jsx)(D.Z, {})
                 }),
                 e.push({
                     id: 'modals',
@@ -185,7 +185,7 @@ function q() {
                 e.push({
                     id: 'dcf',
                     name: 'DCF',
-                    render: () => (0, a.jsx)(N.Z, {})
+                    render: () => (0, a.jsx)(S.Z, {})
                 }),
                 e.push({
                     id: 'potions',
@@ -211,12 +211,12 @@ function q() {
                     e.push({
                         id: 'billing',
                         name: 'Billing',
-                        render: () => (0, a.jsx)(_.Z, {})
+                        render: () => (0, a.jsx)(C.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, a.jsx)(w.Z, {})
+                    render: () => (0, a.jsx)(k.Z, {})
                 }),
                 e
             );

@@ -28,15 +28,15 @@ function y(e) {
         R = null != T ? T : N,
         O = null !== (y = null != S ? S : T) && void 0 !== y ? y : N / 10,
         D = I.length,
-        x = null != b.upsellLongMessages && (null != D ? D : 0) > m.J6R && C,
-        L = null != b.upsellLongMessages && !C,
+        L = null != b.upsellLongMessages && (null != D ? D : 0) > m.J6R && C,
+        x = null != b.upsellLongMessages && !C,
         w = (null === (r = (0, f.N)()) || void 0 === r ? void 0 : null === (n = r.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === g.Si.TIER_2,
         P = R - D,
         M = P > O,
         k = P < 0 && w,
         U = 0 === P ? E.intl.string(E.t.tU6YQ0) : P > 0 ? E.intl.formatToPlainString(E.t.qH8uFR, { count: P }) : E.intl.string(E.t.YSRIqa),
         { analyticsLocations: B } = (0, c.ZP)(u.Z.CHARACTER_COUNT);
-    if (!((x && P >= 0) || !M || (L && !M))) return null;
+    if (!((L && P >= 0) || !M || (x && !M))) return null;
     let G = P >= 0;
     return (0, i.jsx)(c.Gt, {
         value: B,
@@ -46,7 +46,7 @@ function y(e) {
                 (0, i.jsxs)('div', {
                     className: v.flairContainer,
                     children: [
-                        x && G
+                        L && G
                             ? (0, i.jsx)(l.Tooltip, {
                                   text: E.intl.formatToPlainString(E.t.vcvHa2, { maxLength: R }),
                                   position: 'top',
@@ -77,7 +77,7 @@ function y(e) {
                     ]
                 }),
                 (0, i.jsx)(l.HiddenVisually, { children: E.intl.format(E.t.qH8uFR, { count: P }) }),
-                L && !M
+                x && !M
                     ? (0, i.jsx)(_.Z, {
                           className: v.upsell,
                           iconOnly: (null === (a = b.upsellLongMessages) || void 0 === a ? void 0 : a.iconOnly) || !1,

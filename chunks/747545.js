@@ -24,8 +24,8 @@ var i = n(200651),
     p = n(921801),
     x = n(695346),
     f = n(716161),
-    _ = n(938117),
-    E = n(131951),
+    E = n(938117),
+    _ = n(131951),
     C = n(626135),
     T = n(358085),
     S = n(981631),
@@ -35,7 +35,7 @@ var i = n(200651),
 let v = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
 function A() {
     let [e, t] = r.useState(!1),
-        n = (0, c.e7)([E.Z], () => E.Z.isMediaFilterSettingLoading());
+        n = (0, c.e7)([_.Z], () => _.Z.isMediaFilterSettingLoading());
     return (r.useEffect(() => {
         let e = new d.V7();
         return (
@@ -57,8 +57,8 @@ function A() {
 function j(e) {
     let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: s = !1, onLearnMore: l, selectedBackgroundOption: d, onSelectBackgroundOption: A, renderCamera: j, hidePreviewToggle: O = !1, showSmallBackgroundOptions: R = !1, onCancelPreview: P } = e,
         { analyticsLocations: D } = (0, h.ZP)(),
-        y = (0, c.e7)([E.Z], () => E.Z.getVideoDeviceId()),
-        B = (0, c.Wu)([E.Z], () => Object.values(E.Z.getVideoDevices())),
+        y = (0, c.e7)([_.Z], () => _.Z.getVideoDeviceId()),
+        B = (0, c.Wu)([_.Z], () => Object.values(_.Z.getVideoDevices())),
         Z = x.qF.useSetting(),
         L = B.map((e) => {
             let { id: t, name: n } = e;
@@ -74,7 +74,7 @@ function j(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 j(y),
-                E.Z.isEnabled()
+                _.Z.isEnabled()
                     ? null
                     : (0, i.jsx)(u.Text, {
                           className: N.permissionWarning,
@@ -135,7 +135,7 @@ function j(e) {
                     }),
                 (0, i.jsx)(p.F, {
                     setting: b.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
-                    children: (0, i.jsx)(_.Z, {
+                    children: (0, i.jsx)(E.Z, {
                         className: N.spacingTop24,
                         onLearnMore: l,
                         selectedBackgroundOption: d,

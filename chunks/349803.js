@@ -15,7 +15,7 @@ var r = n(120356),
     x = n(798849);
 t.Z = function (e) {
     var t, n;
-    let { isVisible: r, isFullscreen: f, subscriptionTier: _, isMarketingPageV2: E } = e,
+    let { isVisible: r, isFullscreen: f, subscriptionTier: E, isMarketingPageV2: _ } = e,
         C = null === (t = (0, u.N)()) || void 0 === t ? void 0 : t.subscription_trial,
         T = (0, d.Ng)(),
         S = (0, d.Wp)(T, h.Si.TIER_2) ? h.Si.TIER_2 : void 0,
@@ -37,11 +37,11 @@ t.Z = function (e) {
         }),
         style: b,
         children: (0, i.jsxs)('div', {
-            className: E ? x.innerWrapperV2 : x.innerWrapperV1,
+            className: _ ? x.innerWrapperV2 : x.innerWrapperV1,
             children: [
                 (0, i.jsx)(g.Z, {
                     className: s()(x.button, { [x.subButton]: v }),
-                    subscriptionTier: null !== (n = null != _ ? _ : null == C ? void 0 : C.sku_id) && void 0 !== n ? n : S,
+                    subscriptionTier: null !== (n = null != E ? E : null == C ? void 0 : C.sku_id) && void 0 !== n ? n : S,
                     premiumModalAnalyticsLocation: I,
                     isPersistentCTA: !0
                 }),

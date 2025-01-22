@@ -30,8 +30,8 @@ var s = r(200651),
     R = r(28546),
     O = r(691251),
     D = r(98528),
-    x = r(770812),
-    L = r(434404),
+    L = r(770812),
+    x = r(434404),
     w = r(536442),
     P = r(609218),
     M = r(695346),
@@ -74,7 +74,7 @@ let el = (e, n) => {
                 (e, i) => {
                     switch (e.type) {
                         case z.ld.CREATE_EMOJI:
-                            a(void 0, !0), L.Z.open(e.guildId, ee.pNK.EMOJI);
+                            a(void 0, !0), x.Z.open(e.guildId, ee.pNK.EMOJI);
                             return;
                         case z.ld.EMOJI: {
                             if (null != e.emoji && i.altKey) {
@@ -187,16 +187,16 @@ let el = (e, n) => {
     em = function (e, n) {
         var r, i;
         let a,
-            { pickerIntention: o, channel: u, guildId: d, closePopout: f, emojiSize: p = $.Su.MEDIUM, hasTabWrapper: m = !1, containerContext: E = 0, includeCreateEmojiButton: O, onSelectEmoji: L, onSelectSoundmoji: Z, containerWidth: el, onNavigateAway: ef, persistSearch: em, className: eg, headerClassName: eE, analyticsOverride: ev = e_, searchProps: ey = {}, wrapper: eb, shouldHidePickerActions: eI = !1, messageId: eT, renderHeader: eS, listHeaderClassName: eA, categoryListClassName: eC, shouldShowSoundmojiInEmojiPicker: eN = !1 } = e,
-            { onFocus: eR, onKeyDown: eO, autoFocus: eD = !0, accessory: ex } = ey,
-            eL = (0, h.e7)([k.ZP], () => (null != d ? k.ZP.getDefaultChannel(d) : null), [d]),
+            { pickerIntention: o, channel: u, guildId: d, closePopout: f, emojiSize: p = $.Su.MEDIUM, hasTabWrapper: m = !1, containerContext: E = 0, includeCreateEmojiButton: O, onSelectEmoji: x, onSelectSoundmoji: Z, containerWidth: el, onNavigateAway: ef, persistSearch: em, className: eg, headerClassName: eE, analyticsOverride: ev = e_, searchProps: ey = {}, wrapper: eb, shouldHidePickerActions: eI = !1, messageId: eT, renderHeader: eS, listHeaderClassName: eA, categoryListClassName: eC, shouldShowSoundmojiInEmojiPicker: eN = !1 } = e,
+            { onFocus: eR, onKeyDown: eO, autoFocus: eD = !0, accessory: eL } = ey,
+            ex = (0, h.e7)([k.ZP], () => (null != d ? k.ZP.getDefaultChannel(d) : null), [d]),
             [ew, eP] = l.useState(null),
             eM = l.useRef(''),
             ek = (0, R.Iu)((e) => e.searchQuery),
             eU = l.useRef(null),
             eB = l.useRef(null),
             eG = l.useRef(null);
-        null == u && null != eL && (u = eL);
+        null == u && null != ex && (u = ex);
         let eZ = null !== (i = null !== (r = null == u ? void 0 : u.getGuildId()) && void 0 !== r ? r : d) && void 0 !== i ? i : null,
             [eF, eV] = l.useState(!1),
             ej = U.default.getCurrentUser(),
@@ -261,7 +261,7 @@ let el = (e, n) => {
                 pickerIntention: o,
                 selectedChannel: u,
                 closePopout: f,
-                onSelectEmoji: L,
+                onSelectEmoji: x,
                 setUpsellConfigs: eP,
                 emojiSelectAnalytics: (e) => {
                     '' !== ek
@@ -312,7 +312,7 @@ let el = (e, n) => {
                 pickerIntention: o,
                 analyticsLocation: eQ,
                 columnCounts: e8,
-                onSelectEmoji: L,
+                onSelectEmoji: x,
                 emojiGrid: e7,
                 emojiList: eB,
                 channelGuildId: eZ,
@@ -363,7 +363,7 @@ let el = (e, n) => {
                 }));
         } else
             (null == ew ? void 0 : ew.type) === z.Bg.ROLE_SUBSCRIPTION
-                ? (a = (0, s.jsx)(x.Z, {
+                ? (a = (0, s.jsx)(L.Z, {
                       onClose: () => eP(null),
                       guildId: ew.guildId,
                       emojiId: ew.emojiId
@@ -388,7 +388,7 @@ let el = (e, n) => {
                 searchBarRef: eG,
                 onFocus: eR,
                 autoFocus: eD,
-                accessory: ex,
+                accessory: eL,
                 headerClassName: eE,
                 hasTabWrapper: m,
                 diversitySurrogate: eJ,

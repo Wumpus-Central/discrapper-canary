@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return g;
     }
 });
 var i = t(200651),
@@ -12,10 +12,10 @@ var i = t(200651),
     u = t(111810),
     d = t(84040),
     c = t(388032);
-function f(e, n) {
+function g(e, n) {
     let t = (0, d.Z)(n, e),
-        f = e.hasPotions(),
-        g = (0, u.V1)('Message Context Menu'),
+        g = e.hasPotions(),
+        f = (0, u.V1)('Message Context Menu'),
         m = l.useCallback(
             (t) => {
                 try {
@@ -26,7 +26,7 @@ function f(e, n) {
             },
             [n.id, e.id]
         );
-    return t && !f && g
+    return t && !g && f
         ? (0, i.jsx)(r.MenuItem, {
               id: 'add-confetti-potion',
               label: c.intl.string(c.t.icaJW1),

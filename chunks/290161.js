@@ -14,8 +14,8 @@ var i = n(200651),
     v = n(367207),
     f = n(241890),
     m = n(649561),
-    b = n(631553),
-    y = n(981631);
+    y = n(631553),
+    E = n(981631);
 n(635324), n(167666), n(308765), n(913487), r.ZP.initialize();
 t.default = function () {
     return (
@@ -39,10 +39,10 @@ t.default = function () {
                             (0, i.jsx)(h.Co, {}),
                             (0, i.jsx)(p.ZP, {}),
                             (0, i.jsx)(s.Wu, {
-                                appContext: y.IlC.OVERLAY,
+                                appContext: E.IlC.OVERLAY,
                                 renderWindow: window,
                                 children: (0, i.jsxs)(_.yP, {
-                                    children: [(0, i.jsx)(b.Z, {}), (0, i.jsx)(a.Modals, {}), (0, i.jsx)(l.Z, {}), (0, i.jsx)(_.Un, {})]
+                                    children: [(0, i.jsx)(y.Z, {}), (0, i.jsx)(a.Modals, {}), (0, i.jsx)(l.Z, {}), (0, i.jsx)(_.Un, {})]
                                 })
                             })
                         ]

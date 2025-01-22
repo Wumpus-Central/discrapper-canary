@@ -27,14 +27,14 @@ function T(e) {
 }
 async function S(e) {
     let n,
-        { applicationId: r, activityChannelId: c, locationObject: T, analyticsLocations: S, componentId: A, sectionName: C, source: N, partyId: R, joinUserId: O, joinSessionId: D, joinSecret: x, inviterUserId: L } = e,
+        { applicationId: r, activityChannelId: c, locationObject: T, analyticsLocations: S, componentId: A, sectionName: C, source: N, partyId: R, joinUserId: O, joinSessionId: D, joinSecret: L, inviterUserId: x } = e,
         w = (0, E.Z)(),
         P = o.Z.getChannel(c),
         M = null == P ? void 0 : P.getGuildId(),
         k = null == M || '' === M,
         U = l.default.getCurrentUser();
     if (null == U) return !1;
-    let B = (0, d.s)();
+    let B = (0, d.sq)();
     if (!B && (null == P || (k && !P.isPrivate()) || null == c)) return Promise.resolve(!1);
     let G = p.ZP.getCurrentEmbeddedActivity();
     (null == G ? void 0 : G.applicationId) != null && (n = a.Z.getApplication(null == G ? void 0 : G.applicationId));
@@ -80,8 +80,8 @@ async function S(e) {
             partyId: R,
             joinUserId: O,
             joinSessionId: D,
-            joinSecret: x,
-            inviterUserId: L
+            joinSecret: L,
+            inviterUserId: x
         })
     );
 }

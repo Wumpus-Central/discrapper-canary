@@ -30,10 +30,10 @@ var o = r(512722),
 function v(e, n, r) {
     var i;
     let { context: a, commandTypes: o, allowNsfw: d, computedPermissions: v, userId: S, roleIds: A, isImpersonating: C, hasBaseAccessPermissions: N } = n,
-        { applicationAllowedForUser: R, applicationAllowedForChannel: O, isGuildInstalled: D, isUserInstalled: x, commandBotId: L } = r;
+        { applicationAllowedForUser: R, applicationAllowedForChannel: O, isGuildInstalled: D, isUserInstalled: L, commandBotId: x } = r;
     if (!o.includes(e.type)) return 2;
     if (e.nsfw && !d) return 1;
-    let w = null != a ? (0, m.Vh)(a, L) : void 0;
+    let w = null != a ? (0, m.Vh)(a, x) : void 0;
     if (null != e.contexts) {
         if (null != w && !e.contexts.includes(w)) return 4;
     } else if (e.inputType === h.iw.BOT && ((!1 === e.dmPermission && w === c.D.BOT_DM) || w === c.D.PRIVATE_CHANNEL)) return 4;
@@ -49,7 +49,7 @@ function v(e, n, r) {
     }
     if (e.applicationId === g.bi.BUILT_IN) return 0;
     let P = null != a ? (0, m.ny)(a) : void 0;
-    if (null == P || u.e$(v, E.Plq.ADMINISTRATOR) || (x && (null === (i = e.integration_types) || void 0 === i ? void 0 : i.includes(l.Y.USER_INSTALL)))) return 0;
+    if (null == P || u.e$(v, E.Plq.ADMINISTRATOR) || (L && (null === (i = e.integration_types) || void 0 === i ? void 0 : i.includes(l.Y.USER_INSTALL)))) return 0;
     if (!N && D && (null == e.integration_types || e.integration_types.includes(l.Y.GUILD_INSTALL))) return 5;
     if (a instanceof f.Sf) {
         s()(void 0 !== O, 'missing applicationAllowedForChannel');

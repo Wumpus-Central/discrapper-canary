@@ -64,8 +64,8 @@ let R = '14px',
             })
         );
     },
-    x = (e) => {
-        let { activities: n, applicationStream: r, className: i, textClassName: s, emojiClassName: l, animate: O = !0, hideTooltip: x = !1, hideEmoji: L = !1, user: w, hasQuest: P } = e,
+    L = (e) => {
+        let { activities: n, applicationStream: r, className: i, textClassName: s, emojiClassName: l, animate: O = !0, hideTooltip: L = !1, hideEmoji: x = !1, user: w, hasQuest: P } = e,
             M = null != n ? n.find((e) => e.type === C.IIU.CUSTOM_STATUS) : null,
             k = (0, u.e7)([E.default], () => E.default.getId() === (null == w ? void 0 : w.id)),
             U = (0, u.e7)([m.Z], () => (k ? m.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === C.IIU.HANG_STATUS) : null)),
@@ -90,11 +90,11 @@ let R = '14px',
               }))
             : null != M &&
               null != M.emoji &&
-              !L &&
+              !x &&
               (F = (0, a.jsx)(A.Z, {
                   emoji: M.emoji,
                   animate: O,
-                  hideTooltip: x,
+                  hideTooltip: L,
                   className: l
               }));
         let { blockeeExperimentEnabled: j, blockerExperimentEnabled: H, analyticsEligible: Y } = (0, p.NR)('activity-status-web'),
@@ -143,4 +143,4 @@ let R = '14px',
                   ]
               });
     };
-n.Z = x;
+n.Z = L;

@@ -1,6 +1,6 @@
 r.d(n, {
     Qk: function () {
-        return x;
+        return L;
     },
     WG: function () {
         return B;
@@ -36,7 +36,7 @@ var a = r(200651),
     R = r(388032),
     O = r(563297);
 let D = 300;
-function x(e) {
+function L(e) {
     let { src: n, width: r, height: i, options: a, hasMultiple: o = !1 } = e,
         s = (0, m.Kc)('preloadMediaViewerLazyImage') ? M + k + (o ? U : 0) : 0,
         { width: l, height: u } = (0, b.zp)(r, i, {
@@ -54,7 +54,7 @@ function x(e) {
         options: a
     });
 }
-function L(e, n) {
+function x(e, n) {
     return ((e % n) + n) % n;
 }
 function w(e) {
@@ -102,7 +102,7 @@ function B(e) {
         return;
     }
     if (null != e.width && null != e.height)
-        x({
+        L({
             src: (0, v.q)({
                 proxyURL: e.proxyUrl,
                 url: e.url
@@ -120,14 +120,14 @@ function G(e) {
         { zoomed: g, setZoomed: E } = (0, T.Y)();
     o.useEffect(() => {
         if (n.length > 1) {
-            let e = L(p + 1, n.length),
-                r = L(p - 1, n.length);
+            let e = x(p + 1, n.length),
+                r = x(p - 1, n.length);
             B(n[e]), B(n[r]);
         }
     }, [p, n]);
     let v = o.useCallback(
         (e) => {
-            _((e = L(e, n.length))), (m.current = e), null == r || r(e), E(!1);
+            _((e = x(e, n.length))), (m.current = e), null == r || r(e), E(!1);
         },
         [r, n, E]
     );
@@ -147,7 +147,7 @@ function G(e) {
         );
     }, [v, E]);
     let b = n[p],
-        x = (0, h.KP)(
+        L = (0, h.KP)(
             {
                 type: h.lJ.GenericMedia,
                 media: b
@@ -185,7 +185,7 @@ function G(e) {
                         {
                             className: l()(O.mediaWrapper, { [O.hasPreviews]: G }),
                             children: (0, a.jsx)(P, {
-                                isObscured: !g && x,
+                                isObscured: !g && L,
                                 src: b.url,
                                 children: (e) =>
                                     (0, a.jsx)(a.Fragment, {

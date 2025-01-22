@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
 }),
     n(47120),
@@ -127,7 +127,7 @@ class f extends r.Component {
             });
     }
 }
-function _() {
+function E() {
     let e = r.useContext(u.AnalyticsContext),
         t = (0, s.e7)([d.Z], () => d.Z.enabled);
     return (0, i.jsx)(f, {

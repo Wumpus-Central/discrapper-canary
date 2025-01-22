@@ -27,7 +27,7 @@ r.d(n, {
         return Z;
     },
     aj: function () {
-        return L;
+        return x;
     },
     bl: function () {
         return P;
@@ -54,7 +54,7 @@ r.d(n, {
         return T;
     },
     uV: function () {
-        return x;
+        return L;
     },
     x0: function () {
         return j;
@@ -160,7 +160,7 @@ let _ = (e) => (null == e ? void 0 : e.premiumType) != null,
     R = (e) => C(e, l.Z.AVATAR_DECORATION),
     O = (e) => N(e, l.Z.AVATAR_DECORATION),
     D = (e, n) => (0, s.uniqBy)([...R(e), ...O(n)], 'id'),
-    x = (e, n) => {
+    L = (e, n) => {
         var r;
         let { CDN_HOST: i, API_ENDPOINT: a } = window.GLOBAL_ENV,
             o = (0, u.oO)(n.size * (0, u.x_)()),
@@ -169,10 +169,10 @@ let _ = (e) => (null == e ? void 0 : e.premiumType) != null,
         let l = h.ANM.APPLICATION_ASSET(h.XAJ, e, s);
         return ''.concat(location.protocol).concat(a).concat(l, '?size=').concat(o);
     },
-    L = (e) => C(e, l.Z.PROFILE_EFFECT),
+    x = (e) => C(e, l.Z.PROFILE_EFFECT),
     w = (e) => N(e, l.Z.PROFILE_EFFECT),
     P = (e, n) => {
-        let r = L(n),
+        let r = x(n),
             i = w(e).filter((e) => {
                 let { id: n } = e;
                 return !r.some((e) => e.id === n);

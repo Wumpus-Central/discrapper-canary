@@ -1,24 +1,24 @@
-e.d(t, {
+n.d(t, {
     l: function () {
-        return c;
+        return u;
     }
 });
-var i = e(904245),
-    o = e(181945),
-    r = e(888369),
-    l = e(375954),
-    d = e(944486),
-    s = e(914010),
-    u = e(585483),
-    a = e(981631);
-let c = {
+var i = n(904245),
+    r = n(181945),
+    s = n(888369),
+    a = n(375954),
+    l = n(944486),
+    o = n(914010),
+    c = n(585483),
+    d = n(981631);
+let u = {
     binds: ['shift+esc'],
     comboKeysBindGlobal: !0,
     action() {
-        let n = s.Z.getGuildId();
-        if (null == n || !r.default.getGuildHasUnreadIgnoreMuted(n)) return;
-        (0, o.Z)([n]);
-        let t = d.Z.getChannelId(n);
-        if (null != t) l.Z.getMessages(t).hasMoreAfter ? i.Z.jumpToPresent(t, a.AQB) : u.S.dispatch(a.CkL.SCROLLTO_PRESENT);
+        let e = o.Z.getGuildId();
+        if (null == e || !s.default.getGuildHasUnreadIgnoreMuted(e)) return;
+        (0, r.Z)([e]);
+        let t = l.Z.getChannelId(e);
+        if (null != t) a.Z.getMessages(t).hasMoreAfter ? i.Z.jumpToPresent(t, d.AQB) : c.S.dispatch(d.CkL.SCROLLTO_PRESENT);
     }
 };

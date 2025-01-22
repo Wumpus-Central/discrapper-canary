@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
 });
 var i = n(200651),
@@ -31,15 +31,15 @@ function f(e) {
         })
     });
 }
-function _(e) {
+function E(e) {
     let { refreshStyles: t = !1 } = e,
         { openH264: n, hardwareEncoding: s } = (0, l.cj)([u.Z], () => ({
             openH264: u.Z.getOpenH264(),
             hardwareEncoding: u.Z.getHardwareEncoding()
         })),
-        _ = r.useRef(null);
-    (0, m.Z)(_, g.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
-    let E = (0, i.jsxs)(i.Fragment, {
+        E = r.useRef(null);
+    (0, m.Z)(E, g.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
+    let _ = (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(d.F, {
                 setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
@@ -55,7 +55,7 @@ function _(e) {
                 setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
                 children: (0, i.jsx)(o.FormSwitch, {
                     style: { scrollMarginTop: '48px' },
-                    containerRef: _,
+                    containerRef: E,
                     className: t ? null : a()(x.marginTop8, x.marginBottom20),
                     value: s,
                     onChange: c.Z.setHardwareEncoding,
@@ -70,11 +70,11 @@ function _(e) {
     return (0, i.jsx)(d.F, {
         setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
         children: t
-            ? E
+            ? _
             : (0, i.jsx)(o.FormSection, {
                   className: x.marginBottom20,
                   title: p.intl.string(p.t.Tceiq6),
-                  children: E
+                  children: _
               })
     });
 }

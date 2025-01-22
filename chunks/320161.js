@@ -19,8 +19,8 @@ let g = d.Z.Millis.SECOND,
     p = d.Z.Millis.HALF_SECOND,
     x = [() => m.intl.string(m.t.MSaeTU), () => m.intl.string(m.t.UmrCw8), () => m.intl.string(m.t.gKE0Ji), () => m.intl.string(m.t['4DSKbm']), () => m.intl.string(m.t['+8ENdX']), () => m.intl.string(m.t.GlWHv7), () => m.intl.string(m.t.hIzxU1), () => m.intl.string(m.t['26uMPD']), () => m.intl.string(m.t.uFs7R0), () => m.intl.string(m.t.bLXdcX), () => m.intl.string(m.t.gPg9fX)];
 function f(e) {
-    let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': f, delay: _ = p } = e,
-        [E, C] = r.useState(0),
+    let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': f, delay: E = p } = e,
+        [_, C] = r.useState(0),
         [T, S] = r.useState(!1),
         [b, I] = r.useState(!1),
         [N] = r.useState(() => new a.V7()),
@@ -35,24 +35,24 @@ function f(e) {
         !c.wS)
     )
         return (0, i.jsx)(i.Fragment, { children: d({}) });
-    let A = E >= x.length - 1,
+    let A = _ >= x.length - 1,
         j = A ? l.TooltipColors.RED : l.TooltipColors.GREEN,
         O = T ? j : l.TooltipColors.PRIMARY,
         R = () => {
-            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), !b && C(E + 1), I(!0), S(!0), N.start(g, () => I(!1)), v.start(h, () => C(0));
+            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), !b && C(_ + 1), I(!0), S(!0), N.start(g, () => I(!1)), v.start(h, () => C(0));
         };
     return (0, i.jsx)(l.Tooltip, {
         text: (() => {
             var e;
             if (!T) return t;
-            let n = (0, s.clamp)(E - 1, 0, x.length - 1),
+            let n = (0, s.clamp)(_ - 1, 0, x.length - 1),
                 r = null !== (e = x[n]) && void 0 !== e ? e : x[0];
             return (0, i.jsx)(l.Shaker, {
                 isShaking: A,
                 children: r()
             });
         })(),
-        delay: _,
+        delay: E,
         'aria-label': f,
         color: O,
         forceOpen: b,

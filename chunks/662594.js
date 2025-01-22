@@ -3,7 +3,7 @@ r.d(n, {
         return D;
     },
     oL: function () {
-        return x;
+        return L;
     },
     so: function () {
         return i;
@@ -48,8 +48,8 @@ function O(e, n, r) {
     );
 }
 let D = 'everyone',
-    x = 0;
-function L(e, n, r, i) {
+    L = 0;
+function x(e, n, r, i) {
     switch (n) {
         case N.Skl.ONLINE:
         case N.Skl.OFFLINE:
@@ -139,7 +139,7 @@ class k {
             var r;
             let i = n,
                 a = Math.max(0, null !== (r = e.count) && void 0 !== r ? r : 0);
-            return (n += a + 1), L(this.guildId, e.id, a, i);
+            return (n += a + 1), x(this.guildId, e.id, a, i);
         })),
             (this.rows.length = n);
     }
@@ -158,7 +158,7 @@ class k {
     }
     insert(e, n) {
         let { group: r, member: i } = n;
-        if (null != r) this.rows.splice(e, 0, L(this.guildId, r.id, r.count));
+        if (null != r) this.rows.splice(e, 0, x(this.guildId, r.id, r.count));
         else if (null != i) {
             let n = w(this.guildId, this.ownerId, i.user.id);
             if (null == n) return;
@@ -169,7 +169,7 @@ class k {
     update(e, n) {
         let { group: r, member: i } = n,
             a = this.rows[e];
-        if ((null != a && 'MEMBER' === a.type && delete this.members[a.user.id], null != r)) this.rows[e] = L(this.guildId, r.id, r.count);
+        if ((null != a && 'MEMBER' === a.type && delete this.members[a.user.id], null != r)) this.rows[e] = x(this.guildId, r.id, r.count);
         else if (null != i) {
             let n = w(this.guildId, this.ownerId, i.user.id);
             if (null == n) return;

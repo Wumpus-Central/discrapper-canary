@@ -20,29 +20,29 @@ var i = n(200651),
     g = n(51144),
     x = n(486199),
     f = n(366598),
-    b = n(125657),
-    v = n(725875),
+    v = n(125657),
+    b = n(725875),
     C = n(981631),
-    N = n(388032),
-    I = n(380813);
+    I = n(388032),
+    N = n(380813);
 function j(e) {
     let { application: t, guild: n, integration: l, ...r } = e;
     return (0, i.jsx)(a.ConfirmModal, {
         ...r,
-        header: N.intl.formatToPlainString(N.t['rL9d//'], { applicationName: t.name }),
-        confirmText: N.intl.string(N.t.ebGf4u),
-        cancelText: N.intl.string(N.t['ETE/oK']),
+        header: I.intl.formatToPlainString(I.t['rL9d//'], { applicationName: t.name }),
+        confirmText: I.intl.string(I.t.ebGf4u),
+        cancelText: I.intl.string(I.t['ETE/oK']),
         onConfirm: () => {
             d.Z.disableIntegration(n.id, l.id).catch(() => {
                 o.Z.show({
-                    title: N.intl.string(N.t.wYqMmJ),
-                    body: N.intl.string(N.t.A4Mnsr)
+                    title: I.intl.string(I.t.wYqMmJ),
+                    body: I.intl.string(I.t.A4Mnsr)
                 });
             });
         },
         children: (0, i.jsx)(a.Text, {
             variant: 'text-md/normal',
-            children: N.intl.format(N.t.FGE8yc, { applicationName: t.name })
+            children: I.intl.format(I.t.FGE8yc, { applicationName: t.name })
         })
     });
 }
@@ -50,8 +50,8 @@ function T(e) {
     var t;
     let { guild: n, applicationIntegration: o, selectableWebhookChannels: d, editedWebhook: T, errors: _, canNavigate: Z } = e,
         { application: E, integration: S, webhooks: y } = o,
-        [A, R] = (0, r.Wu)([m.Z], () => [m.Z.can(C.Plq.MANAGE_ROLES, n), null == E.bot || m.Z.canManageUser(C.Plq.MANAGE_GUILD, E.bot.id, n)], [E.bot, n]),
-        L = (0, r.e7)([m.Z], () => m.Z.can(C.Plq.MANAGE_WEBHOOKS, n), [n]),
+        [A, L] = (0, r.Wu)([m.Z], () => [m.Z.can(C.Plq.MANAGE_ROLES, n), null == E.bot || m.Z.canManageUser(C.Plq.MANAGE_GUILD, E.bot.id, n)], [E.bot, n]),
+        R = (0, r.e7)([m.Z], () => m.Z.can(C.Plq.MANAGE_WEBHOOKS, n), [n]),
         k = l.useCallback(() => {
             Z() &&
                 (0, a.openModal)((e) =>
@@ -67,14 +67,14 @@ function T(e) {
             let e = [
                 {
                     icon: a.ClockIcon,
-                    text: N.intl.formatToPlainString(N.t.gcdJ8P, { timestamp: p.default.extractTimestamp(S.id) })
+                    text: I.intl.formatToPlainString(I.t.gcdJ8P, { timestamp: p.default.extractTimestamp(S.id) })
                 }
             ];
             return (
                 null != S.user &&
                     e.push({
                         icon: a.UserIcon,
-                        text: N.intl.formatToPlainString(N.t.qE7oqq, { user: g.ZP.getUserTag(S.user) })
+                        text: I.intl.formatToPlainString(I.t.qE7oqq, { user: g.ZP.getUserTag(S.user) })
                     }),
                 e
             );
@@ -82,17 +82,17 @@ function T(e) {
         w = l.useMemo(
             () =>
                 null != E.bot
-                    ? (0, i.jsx)(b.Z, {
+                    ? (0, i.jsx)(v.Z, {
                           guild: n,
                           applicationIntegration: o
                       })
                     : (0, i.jsx)(a.Card, {
-                          className: I.emptyCard,
+                          className: N.emptyCard,
                           editable: !0,
                           children: (0, i.jsx)(a.Text, {
                               color: 'text-muted',
                               variant: 'text-sm/normal',
-                              children: N.intl.string(N.t.pfLnzc)
+                              children: I.intl.string(I.t.pfLnzc)
                           })
                       }),
             [E.bot, o, n]
@@ -108,7 +108,7 @@ function T(e) {
             (null == E ? void 0 : E.description) != null
                 ? (0, i.jsx)(u.Z, {
                       userBio: E.description,
-                      className: I.headerDescription
+                      className: N.headerDescription
                   })
                 : null,
             A
@@ -118,34 +118,34 @@ function T(e) {
                       guildId: n.id
                   })
                 : null,
-            (0, i.jsx)(a.FormDivider, { className: I.headerDivider }),
+            (0, i.jsx)(a.FormDivider, { className: N.headerDivider }),
             null != E.bot
                 ? (0, i.jsxs)('div', {
-                      className: I.section,
+                      className: N.section,
                       children: [
                           (0, i.jsx)(f.Z, {
                               icon: (0, i.jsx)(a.RobotIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
-                              title: N.intl.string(N.t.AOdOYm)
+                              title: I.intl.string(I.t.AOdOYm)
                           }),
                           w
                       ]
                   })
                 : null,
             (0, i.jsxs)('div', {
-                className: I.section,
+                className: N.section,
                 children: [
                     (0, i.jsx)(f.Z, {
                         icon: (0, i.jsx)(a.WebhookIcon, {
                             size: 'md',
                             color: 'currentColor'
                         }),
-                        title: N.intl.string(N.t['t9ZX/P'])
+                        title: I.intl.string(I.t['t9ZX/P'])
                     }),
                     y.length > 0
-                        ? (0, i.jsx)(v.Z, {
+                        ? (0, i.jsx)(b.Z, {
                               webhooks: y,
                               editedWebhook: T,
                               selectableWebhookChannels: d,
@@ -153,26 +153,26 @@ function T(e) {
                               canNavigate: Z
                           })
                         : (0, i.jsx)(a.Card, {
-                              className: I.emptyCard,
+                              className: N.emptyCard,
                               editable: !0,
                               children: (0, i.jsx)(a.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: L ? N.intl.string(N.t.ahPd2d) : N.intl.string(N.t.axqYMj)
+                                  children: R ? I.intl.string(I.t.ahPd2d) : I.intl.string(I.t.axqYMj)
                               })
                           })
                 ]
             }),
-            (0, i.jsx)(a.FormDivider, { className: I.headerDivider }),
+            (0, i.jsx)(a.FormDivider, { className: N.headerDivider }),
             (0, i.jsxs)(s.Z, {
-                className: I.section,
+                className: N.section,
                 justify: s.Z.Justify.BETWEEN,
                 align: s.Z.Align.CENTER,
                 children: [
                     (0, i.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: R ? N.intl.string(N.t.hdneLy) : N.intl.string(N.t.xRCMq6)
+                        children: L ? I.intl.string(I.t.hdneLy) : I.intl.string(I.t.xRCMq6)
                     }),
                     (0, i.jsx)(s.Z.Child, {
                         grow: 0,
@@ -181,9 +181,9 @@ function T(e) {
                             size: a.Button.Sizes.SMALL,
                             color: a.Button.Colors.RED,
                             look: a.Button.Looks.FILLED,
-                            disabled: !R,
+                            disabled: !L,
                             onClick: k,
-                            children: N.intl.string(N.t.ebGf4u)
+                            children: I.intl.string(I.t.ebGf4u)
                         })
                     })
                 ]

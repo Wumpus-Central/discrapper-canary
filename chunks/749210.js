@@ -35,13 +35,13 @@ let D = (e) => {
             body: O.intl.formatToPlainString(O.t['VSd+Ag'], { quantity: e })
         });
     },
-    x = (e) => {
+    L = (e) => {
         u.Z.dispatch({
             type: 'GUILD_DELETE',
             guild: { id: e }
         });
     },
-    L = () => {
+    x = () => {
         N.Z.show({
             title: O.intl.string(O.t.ZZlox8),
             body: O.intl.string(O.t.ZUEGFh)
@@ -116,7 +116,7 @@ async function w(e) {
             let e = I.default.getCurrentUser();
             A.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? D(R.tHP) : D(R.DZw);
         }
-        throw ((null === (o = n.body) || void 0 === o ? void 0 : o.code) === R.evJ.GUILD_AT_CAPACITY && L(), g && (null === (s = n.body) || void 0 === s ? void 0 : s.code) === R.evJ.UNKNOWN_GUILD && x(e), n);
+        throw ((null === (o = n.body) || void 0 === o ? void 0 : o.code) === R.evJ.GUILD_AT_CAPACITY && x(), g && (null === (s = n.body) || void 0 === s ? void 0 : s.code) === R.evJ.UNKNOWN_GUILD && L(e), n);
     }
 }
 function P(e) {
@@ -145,7 +145,7 @@ n.Z = {
             (0, _.uL)(R.Z5c.CHANNEL(e, i), a),
             await new Promise(setImmediate);
     },
-    deleteGuild: x,
+    deleteGuild: L,
     selectGuild(e) {
         (0, f.a)(e);
     },

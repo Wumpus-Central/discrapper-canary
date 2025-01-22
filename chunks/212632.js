@@ -1,67 +1,67 @@
-n(47120);
-var a = n(200651),
-    r = n(192379),
-    l = n(120356),
-    i = n.n(l),
-    o = n(481060),
-    s = n(981631),
-    c = n(388032),
-    d = n(373780),
-    u = n(232186);
-let h = 0,
-    m = () => 'notification-position-selector-'.concat(h++),
-    x = (e) => {
+t(47120);
+var l = t(200651),
+    i = t(192379),
+    r = t(120356),
+    u = t.n(r),
+    a = t(481060),
+    o = t(981631),
+    E = t(388032),
+    d = t(373780),
+    _ = t(232186);
+let c = 0,
+    s = () => 'notification-position-selector-'.concat(c++),
+    C = (e) => {
         switch (e) {
-            case s._vf.TOP_LEFT:
-                return c.intl.string(c.t.xlchpa);
-            case s._vf.TOP_RIGHT:
-                return c.intl.string(c.t['4uHRHB']);
-            case s._vf.BOTTOM_LEFT:
-                return c.intl.string(c.t.ovWFnJ);
-            case s._vf.BOTTOM_RIGHT:
-                return c.intl.string(c.t['M/9V7+']);
+            case o._vf.TOP_LEFT:
+                return E.intl.string(E.t.xlchpa);
+            case o._vf.TOP_RIGHT:
+                return E.intl.string(E.t['4uHRHB']);
+            case o._vf.BOTTOM_LEFT:
+                return E.intl.string(E.t.ovWFnJ);
+            case o._vf.BOTTOM_RIGHT:
+                return E.intl.string(E.t['M/9V7+']);
             default:
-                return c.intl.string(c.t.AlY4ZW);
+                return E.intl.string(E.t.AlY4ZW);
         }
     },
-    f = [s._vf.DISABLED, s._vf.TOP_LEFT, s._vf.TOP_RIGHT, s._vf.BOTTOM_LEFT, s._vf.BOTTOM_RIGHT];
-function p(e) {
-    let { position: t, onChange: n } = e,
-        [l] = r.useState(() => m()),
-        h = t === s._vf.DISABLED ? c.intl.string(c.t.R6LxVV) : c.intl.formatToPlainString(c.t.XXHDMz, { position: x(t) });
-    return (0, a.jsxs)('div', {
+    T = [o._vf.DISABLED, o._vf.TOP_LEFT, o._vf.TOP_RIGHT, o._vf.BOTTOM_LEFT, o._vf.BOTTOM_RIGHT];
+function I(e) {
+    let { position: n, onChange: t } = e,
+        [r] = i.useState(() => s()),
+        c = n === o._vf.DISABLED ? E.intl.string(E.t.R6LxVV) : E.intl.formatToPlainString(E.t.XXHDMz, { position: C(n) });
+    return (0, l.jsxs)('div', {
         children: [
-            (0, a.jsx)(o.FocusRing, {
+            (0, l.jsx)(a.FocusRing, {
                 within: !0,
                 offset: -2,
-                children: (0, a.jsx)('div', {
-                    className: i()(d.wrapper, { [d.disabledSelected]: t === s._vf.DISABLED }),
-                    children: f.map((e) =>
-                        (0, a.jsxs)(
+                children: (0, l.jsx)('div', {
+                    className: u()(d.wrapper, { [d.disabledSelected]: n === o._vf.DISABLED }),
+                    children: T.map((e) =>
+                        (0, l.jsxs)(
                             'label',
                             {
-                                className: i()({
-                                    [d.selected]: e === t,
-                                    [d.disabled]: e === s._vf.DISABLED,
-                                    [d.topRight]: e === s._vf.TOP_RIGHT,
-                                    [d.topLeft]: e === s._vf.TOP_LEFT,
-                                    [d.bottomRight]: e === s._vf.BOTTOM_RIGHT,
-                                    [d.bottomLeft]: e === s._vf.BOTTOM_LEFT
+                                className: u()({
+                                    [d.selected]: e === n,
+                                    [d.disabled]: e === o._vf.DISABLED,
+                                    [d.topRight]: e === o._vf.TOP_RIGHT,
+                                    [d.topLeft]: e === o._vf.TOP_LEFT,
+                                    [d.bottomRight]: e === o._vf.BOTTOM_RIGHT,
+                                    [d.bottomLeft]: e === o._vf.BOTTOM_LEFT
                                 }),
                                 children: [
-                                    x(e),
-                                    e === s._vf.DISABLED
-                                        ? (0, a.jsx)(o.DenyIcon, {
+                                    C(e),
+                                    e === o._vf.DISABLED
+                                        ? (0, l.jsx)(a.DenyIcon, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.disabledIcon
                                           })
                                         : null,
-                                    (0, a.jsx)('input', {
+                                    (0, l.jsx)('input', {
                                         type: 'radio',
-                                        name: l,
+                                        name: r,
                                         value: e,
-                                        onChange: (t) => n(t, e),
+                                        onChange: (n) => t(n, e),
                                         className: d.hiddenInput
                                     })
                                 ]
@@ -71,12 +71,12 @@ function p(e) {
                     )
                 })
             }),
-            (0, a.jsx)(o.FormText, {
-                type: o.FormTextTypes.DESCRIPTION,
-                className: u.marginTop8,
-                children: h
+            (0, l.jsx)(a.FormText, {
+                type: a.FormTextTypes.DESCRIPTION,
+                className: _.marginTop8,
+                children: c
             })
         ]
     });
 }
-(p.Positions = s._vf), (t.Z = p);
+(I.Positions = o._vf), (n.Z = I);

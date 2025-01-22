@@ -40,17 +40,17 @@ function C(e) {
         [T, N] = a.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
         [E, Z] = a.useState(new Set(T.keys())),
         [L, k] = a.useState(() => (null != o ? o : []).map((e) => e.value)),
-        [O, M] = a.useState(0);
+        [O, P] = a.useState(0);
     a.useEffect(() => {
         let e = (null != o ? o : []).map((e) => e.value);
         if (e.every((e) => L.includes(e)) && L.every((n) => e.includes(n))) return;
         k(e);
         let n = new Map(null == o ? void 0 : o.map((e) => [e.value, e]));
-        N(n), Z(new Set(n.keys())), M((e) => e + 1);
+        N(n), Z(new Set(n.keys())), P((e) => e + 1);
     }, [o, L]);
     let {
             state: R,
-            executeStateUpdate: P,
+            executeStateUpdate: M,
             visualState: A,
             isDisabled: w,
             error: B
@@ -66,11 +66,11 @@ function C(e) {
         }
     }, [R]);
     let G = a.useCallback(() => {
-        P({
+        M({
             type: C,
             selectedOptions: Array.from(T.values())
         }) && Z(new Set(T.keys()));
-    }, [P, C, T]);
+    }, [M, C, T]);
     a.useEffect(() => {
         if (!(I || S || (T.size === E.size && Array.from(T.keys()).every((e) => E.has(e))))) G();
     }, [I, S, E, T, G]);

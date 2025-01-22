@@ -83,13 +83,13 @@ function D() {
         []
     );
 }
-function x() {
+function L() {
     let e = d.Z.getChannel(_.Z.getVoiceChannelId());
     return (b = null != e && (0, g.Z)(p.Z) && (0, m.JL)(e, f.Z, h.Z, !1)), R(), !1;
 }
-class L extends (a = s.ZP.Store) {
+class x extends (a = s.ZP.Store) {
     initialize() {
-        this.syncWith([p.Z, _.Z, d.Z, f.Z, h.Z], x), c.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, R), x();
+        this.syncWith([p.Z, _.Z, d.Z, f.Z, h.Z], L), c.Z.subscribe({ location: 'NativeScreenSharePickerStore_initialize' }, R), L();
     }
     supported() {
         return C();
@@ -127,8 +127,8 @@ function k() {
 function U() {
     A = {};
 }
-y(L, 'displayName', 'NativeScreenSharePickerStore'),
-    (n.ZP = new L(l.Z, {
+y(x, 'displayName', 'NativeScreenSharePickerStore'),
+    (n.ZP = new x(l.Z, {
         NATIVE_SCREEN_SHARE_PICKER_UPDATE: w,
         NATIVE_SCREEN_SHARE_PICKER_CANCEL: P,
         NATIVE_SCREEN_SHARE_PICKER_ERROR: M,

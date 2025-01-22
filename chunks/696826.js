@@ -12,7 +12,7 @@ r.d(n, {
         return _.Skl;
     },
     W5: function () {
-        return L;
+        return x;
     },
     lm: function () {
         return T;
@@ -21,7 +21,7 @@ r.d(n, {
         return w;
     },
     rs: function () {
-        return x;
+        return L;
     },
     vP: function () {
         return O;
@@ -337,7 +337,7 @@ function D(e) {
         ]
     });
 }
-function x(e, n) {
+function L(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (r) return p.ZP.Masks.STATUS_TYPING;
     switch (e) {
@@ -357,7 +357,7 @@ function x(e, n) {
             return p.ZP.Masks.STATUS_ONLINE;
     }
 }
-function L(e, n, r) {
+function x(e, n, r) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return n === _.Skl.ONLINE && r && !i
         ? {
@@ -374,10 +374,10 @@ function w(e) {
         c = n === _.Skl.ONLINE && r,
         d = I(n, u);
     return (0, a.jsx)(p.ZP, {
-        mask: x(n, c),
+        mask: L(n, c),
         className: l()(g.mask, o),
         style: s,
-        ...L(i, n, c),
+        ...x(i, n, c),
         children: (0, a.jsx)('div', {
             style: { backgroundColor: d },
             className: g.status

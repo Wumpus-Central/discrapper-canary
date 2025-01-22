@@ -12,7 +12,7 @@ r.d(n, {
         return en;
     },
     Ex: function () {
-        return ex;
+        return eL;
     },
     Fg: function () {
         return q;
@@ -21,7 +21,7 @@ r.d(n, {
         return el;
     },
     H1: function () {
-        return x;
+        return L;
     },
     I0: function () {
         return P;
@@ -57,7 +57,7 @@ r.d(n, {
         return e_;
     },
     R_: function () {
-        return eL;
+        return ex;
     },
     Rt: function () {
         return eB;
@@ -87,7 +87,7 @@ r.d(n, {
         return B;
     },
     Xk: function () {
-        return L;
+        return x;
     },
     Xr: function () {
         return es;
@@ -335,7 +335,7 @@ let S = (0, d.Zc)(
         (e) => (null != e ? e : N),
         (e) => e
     ),
-    x = (0, d.Zc)(
+    L = (0, d.Zc)(
         'textAndImages',
         'viewImageDescriptions',
         (e) => {
@@ -344,7 +344,7 @@ let S = (0, d.Zc)(
         },
         (e) => s.D5.create({ value: e })
     ),
-    L = (0, d.Zc)(
+    x = (0, d.Zc)(
         'textAndImages',
         'showCommandSuggestions',
         (e) => {
@@ -476,8 +476,8 @@ let z = (0, d.TG)({
             (e) => (null == e ? void 0 : e.value),
             (e) => s.yC.create({ value: e })
         ),
-        isEligible: () => 2 === c.r.getCurrentConfig({ location: 'user_settings' }, { autoTrackExposure: !1 }).bucket,
-        useIsEligible: () => 2 === c.r.useExperiment({ location: 'user_settings' }, { autoTrackExposure: !1 }).bucket,
+        isEligible: () => (0, c.k6)('user_settings'),
+        useIsEligible: () => (0, c.kH)('user_settings'),
         ineligibleDefault: h.HGf,
         eligibleDefault: () => h.O8q
     }),
@@ -869,13 +869,13 @@ let eb = (0, d.KM)(
         ineligibleDefault: o.E5.OFF,
         eligibleDefault: () => o.E5.ON
     }),
-    ex = (0, d.Zc)(
+    eL = (0, d.Zc)(
         'privacy',
         'familyCenterEnabledV2',
         (e) => (null == e ? void 0 : e.value),
         (e) => s.D5.create({ value: e })
     ),
-    eL = (0, d.Zc)(
+    ex = (0, d.Zc)(
         'privacy',
         'hideLegacyUsername',
         (e) => {

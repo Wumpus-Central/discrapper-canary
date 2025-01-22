@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return N;
     }
 }),
     n(653041),
@@ -20,21 +20,21 @@ var i = n(200651),
     g = n(598077),
     x = n(626135),
     f = n(486199),
-    b = n(929507),
-    v = n(981631),
+    v = n(929507),
+    b = n(981631),
     C = n(388032),
-    N = n(713594);
-function I(e) {
-    var t, n, r, I, j, T, _;
-    let { name: Z, icon: E, imageSrc: S, iconBackgroundColor: y, iconClassName: A, iconWrapperClassName: R, details: L, integration: k, buttonText: O, buttonDisabled: w, hasNextSection: M, onButtonClick: P, guildId: B, isScrolling: D, canShowMigrationTooltip: U, trailing: F } = e,
+    I = n(713594);
+function N(e) {
+    var t, n, r, N, j, T, _;
+    let { name: Z, icon: E, imageSrc: S, iconBackgroundColor: y, iconClassName: A, iconWrapperClassName: L, details: R, integration: k, buttonText: O, buttonDisabled: w, hasNextSection: M, onButtonClick: P, guildId: B, isScrolling: D, canShowMigrationTooltip: U, trailing: F } = e,
         [W, H] = l.useState(!1),
         [G, z] = l.useState(!1);
     let V =
-            ((I = O),
+            ((N = O),
             (j = w),
             (T = M),
             (_ = P),
-            null == I || null == _
+            null == N || null == _
                 ? null
                 : T
                   ? (0, i.jsxs)(m.Z, {
@@ -42,7 +42,7 @@ function I(e) {
                         children: [
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
-                                children: I
+                                children: N
                             }),
                             T
                                 ? (0, i.jsx)(d.ChevronSmallRightIcon, {
@@ -50,7 +50,7 @@ function I(e) {
                                       color: 'currentColor',
                                       width: 10,
                                       height: 10,
-                                      className: N.caret
+                                      className: I.caret
                                   })
                                 : null
                         ]
@@ -61,12 +61,12 @@ function I(e) {
                         color: T ? d.Button.Colors.PRIMARY : d.Button.Colors.BRAND,
                         disabled: j,
                         onClick: _,
-                        children: I
+                        children: N
                     })),
         K = U && !D && !G && void 0 !== B && null != k;
     l.useEffect(() => {
         K &&
-            x.default.track(v.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
+            x.default.track(b.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
                 ...(0, c.hH)(B),
                 application_id: null == k ? void 0 : k.application.id,
                 location: 'overview'
@@ -77,7 +77,7 @@ function I(e) {
                   renderPopout: () =>
                       (0, i.jsx)(d.Clickable, {
                           onClick: (e) => {
-                              e.stopPropagation(), z(!0), b.Z.dismissOverviewTooltip(B, k.integration);
+                              e.stopPropagation(), z(!0), v.Z.dismissOverviewTooltip(B, k.integration);
                           },
                           children: (0, i.jsx)(p.ZP, {
                               content: C.intl.string(C.t.TyMJwM),
@@ -105,8 +105,8 @@ function I(e) {
                     imageSrc: S,
                     iconBackgroundColor: y,
                     iconClassName: A,
-                    iconWrapperClassName: R,
-                    details: L,
+                    iconWrapperClassName: L,
+                    details: R,
                     isPremium: Y.length > 0
                 }),
                 (0, i.jsx)(m.Z.Child, {
@@ -129,11 +129,11 @@ function I(e) {
                                                 {
                                                     forceOpen: t,
                                                     text: new g.Z(a.bot).isVerifiedBot() ? C.intl.string(C.t.xxcTGx) : C.intl.string(C.t.AOdOYm),
-                                                    className: N.feature,
+                                                    className: I.feature,
                                                     children: (0, i.jsx)(d.RobotIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: N.featureIcon
+                                                        className: I.featureIcon
                                                     })
                                                 },
                                                 'bot'
@@ -146,11 +146,11 @@ function I(e) {
                                                 {
                                                     forceOpen: t,
                                                     text: C.intl.formatToPlainString(C.t['6HqDfX'], { count: c.length }),
-                                                    className: N.feature,
+                                                    className: I.feature,
                                                     children: (0, i.jsx)(d.WebhookIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: N.featureIcon
+                                                        className: I.featureIcon
                                                     })
                                                 },
                                                 'webhooks'
@@ -162,11 +162,11 @@ function I(e) {
                                             (0, i.jsx)(
                                                 'div',
                                                 {
-                                                    className: N.feature,
+                                                    className: I.feature,
                                                     children: (0, i.jsx)(d.SlashBoxIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: N.featureIcon
+                                                        className: I.featureIcon
                                                     })
                                                 },
                                                 'commands'
@@ -185,19 +185,19 @@ function I(e) {
     return M
         ? (0, i.jsx)(d.Clickable, {
               onClick: () => {
-                  U && null != B && null != k && b.Z.dismissOverviewTooltip(B, k.integration), null == P || P();
+                  U && null != B && null != k && v.Z.dismissOverviewTooltip(B, k.integration), null == P || P();
               },
               onFocus: () => H(!0),
               onBlur: () => H(!1),
               children: (0, i.jsx)(d.Card, {
                   editable: !0,
-                  className: a()(N.card, N.clickable),
+                  className: a()(I.card, I.clickable),
                   children: Q
               })
           })
         : (0, i.jsx)(d.Card, {
               editable: !0,
-              className: N.card,
+              className: I.card,
               children: Q
           });
 }

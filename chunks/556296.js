@@ -30,8 +30,8 @@ var c = r(879443),
     R = r(808506),
     O = r(981631),
     D = r(356659),
-    x = r(710111),
-    L = r(444675);
+    L = r(710111),
+    x = r(444675);
 function w(e, n, r) {
     return (
         n in e
@@ -90,7 +90,7 @@ function z(e) {
     else if (k[e]) {
         let n = U[e],
             r = Z[n.action];
-        (null == r ? void 0 : r.isPressed) === !0 && L.nextTick(() => r.onTrigger(!1, n)), k[e].reset(), (k[e] = null);
+        (null == r ? void 0 : r.isPressed) === !0 && x.nextTick(() => r.onTrigger(!1, n)), k[e].reset(), (k[e] = null);
     }
 }
 function q(e) {
@@ -247,7 +247,7 @@ let ei = [
         return !!R.Z.enabled && er(O.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, ']`');
     },
     function e() {
-        return er(O.kg4.SOUNDBOARD_HOLD, x.D_, !1);
+        return er(O.kg4.SOUNDBOARD_HOLD, L.D_, !1);
     },
     function e() {
         return er(O.kg4.SAVE_CLIP, D.D_);

@@ -108,8 +108,8 @@ var N = r(32026);
 var R = r(480839);
 var O = r(744285);
 var D = r(492257);
-var x = r(873817);
-var L = r(653041);
+var L = r(873817);
+var x = r(653041);
 var w = r(230367),
     P = r(320215),
     M = r(240773),
@@ -573,7 +573,7 @@ class W extends k.C {
                     a.joinSound = e$.internalBinaryRead(e, e.uint32(), r, a.joinSound);
                     break;
                 case 7:
-                    a.mobileRedesignChannelListSettings = ex.internalBinaryRead(e, e.uint32(), r, a.mobileRedesignChannelListSettings);
+                    a.mobileRedesignChannelListSettings = eL.internalBinaryRead(e, e.uint32(), r, a.mobileRedesignChannelListSettings);
                     break;
                 case 8:
                     a.disableRaidAlertPush = e.bool();
@@ -618,7 +618,7 @@ class W extends k.C {
     }
     internalBinaryWrite(e, n, r) {
         for (let i of Object.keys(e.channels)) n.tag(1, w.TD.LengthDelimited).fork().tag(1, w.TD.Bit64).fixed64(i), n.tag(2, w.TD.LengthDelimited).fork(), X.internalBinaryWrite(e.channels[i], n, r), n.join().join();
-        0 !== e.hubProgress && n.tag(2, w.TD.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && n.tag(3, w.TD.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && B.E.internalBinaryWrite(e.guildRecentsDismissedAt, n.tag(4, w.TD.LengthDelimited).fork(), r).join(), e.dismissedGuildContent.length && n.tag(5, w.TD.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && e$.internalBinaryWrite(e.joinSound, n.tag(6, w.TD.LengthDelimited).fork(), r).join(), e.mobileRedesignChannelListSettings && ex.internalBinaryWrite(e.mobileRedesignChannelListSettings, n.tag(7, w.TD.LengthDelimited).fork(), r).join(), !1 !== e.disableRaidAlertPush && n.tag(8, w.TD.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && n.tag(9, w.TD.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && $.internalBinaryWrite(e.customNotificationSoundConfig, n.tag(10, w.TD.LengthDelimited).fork(), r).join(), !1 !== e.leaderboardsDisabled && n.tag(11, w.TD.Varint).bool(e.leaderboardsDisabled);
+        0 !== e.hubProgress && n.tag(2, w.TD.Varint).uint32(e.hubProgress), 0 !== e.guildOnboardingProgress && n.tag(3, w.TD.Varint).uint32(e.guildOnboardingProgress), e.guildRecentsDismissedAt && B.E.internalBinaryWrite(e.guildRecentsDismissedAt, n.tag(4, w.TD.LengthDelimited).fork(), r).join(), e.dismissedGuildContent.length && n.tag(5, w.TD.LengthDelimited).bytes(e.dismissedGuildContent), e.joinSound && e$.internalBinaryWrite(e.joinSound, n.tag(6, w.TD.LengthDelimited).fork(), r).join(), e.mobileRedesignChannelListSettings && eL.internalBinaryWrite(e.mobileRedesignChannelListSettings, n.tag(7, w.TD.LengthDelimited).fork(), r).join(), !1 !== e.disableRaidAlertPush && n.tag(8, w.TD.Varint).bool(e.disableRaidAlertPush), !1 !== e.disableRaidAlertNag && n.tag(9, w.TD.Varint).bool(e.disableRaidAlertNag), e.customNotificationSoundConfig && $.internalBinaryWrite(e.customNotificationSoundConfig, n.tag(10, w.TD.LengthDelimited).fork(), r).join(), !1 !== e.leaderboardsDisabled && n.tag(11, w.TD.Varint).bool(e.leaderboardsDisabled);
         let i = r.writeUnknownFields;
         return !1 !== i && (!0 == i ? w.z.onWrite : i)(this.typeName, e, n), n;
     }
@@ -668,7 +668,7 @@ class W extends k.C {
                 no: 7,
                 name: 'mobile_redesign_channel_list_settings',
                 kind: 'message',
-                T: () => ex
+                T: () => eL
             },
             {
                 no: 8,
@@ -2537,8 +2537,8 @@ class eD extends k.C {
         ]);
     }
 }
-let ex = new eD();
-class eL extends k.C {
+let eL = new eD();
+class ex extends k.C {
     create(e) {
         let n = {
             theme: 0,
@@ -2681,7 +2681,7 @@ class eL extends k.C {
         ]);
     }
 }
-let ew = new eL();
+let ew = new ex();
 class eP extends k.C {
     create(e) {
         let n = {};

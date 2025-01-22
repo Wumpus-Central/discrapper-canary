@@ -43,7 +43,7 @@ function R(e, n, r) {
 }
 let O = 104,
     D = 16;
-function x(e) {
+function L(e) {
     var n, r, i;
     let { file: a } = e,
         [o, s] = d.useState(),
@@ -99,11 +99,11 @@ function x(e) {
         }
     });
 }
-class L extends d.Component {
+class x extends d.Component {
     render() {
         var e;
         if (this.props.upload.item.platform !== g.ow.WEB) return null;
-        if (this.props.upload.isImage) return (0, c.jsx)(x, { file: this.props.upload.item.file });
+        if (this.props.upload.isImage) return (0, c.jsx)(L, { file: this.props.upload.item.file });
         return (0, c.jsx)('div', { className: p()(C.icon, { [C[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
     }
 }
@@ -140,7 +140,7 @@ class w extends d.Component {
                         (0, c.jsxs)('div', {
                             className: p()(C.file, { [C.expandable]: e.isImage }),
                             children: [
-                                (0, c.jsx)(L, { upload: e }),
+                                (0, c.jsx)(x, { upload: e }),
                                 (0, c.jsxs)('div', {
                                     className: C.description,
                                     children: [

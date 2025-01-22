@@ -128,7 +128,7 @@ let D = {
         timeSuggestionMinutes: 5,
         gameplayImageUrls: [d.Z, u.Z]
     },
-    [i.f9]: {
+    [i.$Z]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 10,

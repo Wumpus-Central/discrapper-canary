@@ -77,7 +77,7 @@ function D(e) {
     for (let e of (null != r && I !== r && (I = r), n)) C(S(e));
     (i = void 0), (T = Date.now());
 }
-class x extends (o = l.ZP.PersistedStore) {
+class L extends (o = l.ZP.PersistedStore) {
     initialize(e) {
         var n;
         null != e && (null != e.detectableGamesEtag && (I = e.detectableGamesEtag), null === (n = e.detectableGames) || void 0 === n || n.forEach((e) => C(e)));
@@ -142,9 +142,9 @@ class x extends (o = l.ZP.PersistedStore) {
         (b[e] = !0), u.K.set(m, b);
     }
 }
-_(x, 'displayName', 'GameStore'),
-    _(x, 'persistKey', 'GameStore'),
-    _(x, 'migrations', [
+_(L, 'displayName', 'GameStore'),
+    _(L, 'persistKey', 'GameStore'),
+    _(L, 'migrations', [
         (e) => {
             var n, r;
             if (null == e)
@@ -165,7 +165,7 @@ _(x, 'displayName', 'GameStore'),
                       detectableGames: []
                   }
     ]),
-    (n.Z = new x(c.Z, {
+    (n.Z = new L(c.Z, {
         OVERLAY_INITIALIZE: N,
         GAMES_DATABASE_FETCH: R,
         GAMES_DATABASE_FETCH_FAIL: O,

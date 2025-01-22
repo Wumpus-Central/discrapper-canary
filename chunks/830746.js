@@ -18,8 +18,8 @@ t.Z = () => {
     let e = (0, c.mq)(p.ne.ACTIVE),
         t = (0, o.c)(),
         n = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
-        _ = (0, l.o)(x.intl.string(x.t['5RZ8Tk']), x.intl.string(x.t.bmhCnJ)),
-        E = (0, l.o)(x.intl.string(x.t.XKnFFh), x.intl.string(x.t['68zfxM'])),
+        E = (0, l.o)(x.intl.string(x.t['5RZ8Tk']), x.intl.string(x.t.bmhCnJ)),
+        _ = (0, l.o)(x.intl.string(x.t.XKnFFh), x.intl.string(x.t['68zfxM'])),
         C = (0, l.o)(x.intl.string(x.t['Rm/6a2']), x.intl.string(x.t['1xPTwM'])),
         T = (0, s.useRedesignIconContext)().enabled;
     return void 0 === n
@@ -38,12 +38,12 @@ t.Z = () => {
                               iconClassName: f.chatCheckIcon,
                               icon: s.ChatCheckIcon,
                               header: x.intl.string(x.t['001l3t']),
-                              description: _
+                              description: E
                           }),
                           (0, i.jsx)(g.Z, {
                               icon: s.EyeIcon,
                               header: x.intl.string(x.t.yipAeH),
-                              description: E
+                              description: _
                           }),
                           (0, i.jsx)(g.Z, {
                               icon: T ? s.QrCodeIcon : (0, s.makeIconCompat)(h.Z),

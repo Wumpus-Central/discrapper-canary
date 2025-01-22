@@ -62,8 +62,8 @@ function A(e, n, r) {
 n.Z = o.memo(function (e) {
     let n,
         { src: r, volume: i = 1, onVolumeChange: s, onMute: p, waveform: _, durationSecs: v, onVolumeShow: C, onVolumeHide: N, onPlay: R, onPause: O, onError: D } = e,
-        x = o.useRef(null),
-        [L, w] = o.useState(0),
+        L = o.useRef(null),
+        [x, w] = o.useState(0),
         [P, M] = o.useState(v),
         [k, U] = o.useState(!1),
         [B, G] = o.useState(!1),
@@ -92,7 +92,7 @@ n.Z = o.memo(function (e) {
             if (!Z) J();
         }, [J, Z]),
         ee = o.useCallback(() => {
-            let e = x.current;
+            let e = L.current;
             if (null == e) return;
             let n = e.error;
             null == D || D(n);
@@ -111,11 +111,11 @@ n.Z = o.memo(function (e) {
             F(!0);
         }, []),
         ei = o.useCallback(() => {
-            F(!1), L === P && J();
-        }, [L, P, J]),
+            F(!1), x === P && J();
+        }, [x, P, J]),
         ea = o.useCallback(
             (e) => {
-                let n = x.current;
+                let n = L.current;
                 if (null == P || null == n) return;
                 let r = e * P;
                 w(r), (n.currentTime = r), j(!0), clearTimeout(z.current), (z.current = void 0);
@@ -128,7 +128,7 @@ n.Z = o.memo(function (e) {
     let eo = o.useRef(null),
         es = {
             played: V,
-            currentTime: L,
+            currentTime: x,
             onPause: O,
             onPlay: R
         },
@@ -141,7 +141,7 @@ n.Z = o.memo(function (e) {
             if (e || B) {
                 if (B) {
                     var a, o;
-                    (eo.current = performance.now()), null == i || i(!1, n, (null !== (o = null === (a = x.current) || void 0 === a ? void 0 : a.duration) && void 0 !== o ? o : 0) * m.Z.Millis.SECOND);
+                    (eo.current = performance.now()), null == i || i(!1, n, (null !== (o = null === (a = L.current) || void 0 === a ? void 0 : a.duration) && void 0 !== o ? o : 0) * m.Z.Millis.SECOND);
                 } else {
                     let e = performance.now(),
                         i = eo.current,
@@ -150,14 +150,14 @@ n.Z = o.memo(function (e) {
                 }
             }
         }, [B]),
-        S(x, B, w),
+        S(L, B, w),
         A(r, B, G);
     let eu = B ? c.PauseIcon : c.PlayIcon,
         ec = B ? y.intl.string(y.t.ZcgDJS) : y.intl.string(y.t.RscU7O);
     'Safari' === platform.name
         ? (n = (0, a.jsx)(o.Suspense, {
               children: (0, a.jsx)(I, {
-                  ref: x,
+                  ref: L,
                   className: b.audioElement,
                   src: r,
                   preload: H,
@@ -170,7 +170,7 @@ n.Z = o.memo(function (e) {
               })
           }))
         : (n = (0, a.jsx)(f.Z, {
-              ref: x,
+              ref: L,
               className: b.audioElement,
               controls: !1,
               preload: H,
@@ -207,7 +207,7 @@ n.Z = o.memo(function (e) {
             (0, a.jsx)(E.Z, {
                 className: b.waveform,
                 waveform: _,
-                currentTime: L,
+                currentTime: x,
                 duration: null != P ? P : 1,
                 playing: B,
                 played: V,
@@ -217,7 +217,7 @@ n.Z = o.memo(function (e) {
             }),
             (0, a.jsx)(T, {
                 played: V,
-                currentTime: L,
+                currentTime: x,
                 duration: P
             }),
             (0, a.jsx)(h.Z, {

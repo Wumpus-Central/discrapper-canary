@@ -532,7 +532,7 @@ class eG extends l.PureComponent {
                         ? (0, i.jsx)(q.Z, {
                               channel: n,
                               stream: (null == s ? void 0 : s.type) === ek.fO.STREAM ? (0, U.my)(s.id) : void 0,
-                              applicationId: (null == s ? void 0 : s.type) === ek.fO.ACTIVITY ? s.id : void 0,
+                              applicationId: (null == s ? void 0 : s.type) === ek.fO.ACTIVITY ? s.applicationId : void 0,
                               appContext: l,
                               className: ew.leftTrayIcon,
                               exitFullScreen: this.maybeLeaveFullScreen,

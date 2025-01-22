@@ -30,8 +30,8 @@ var a = r(200651),
     R = r(388032),
     O = r(759951);
 let D = 18,
-    x = 1.25,
-    L = 36,
+    L = 1.25,
+    x = 36,
     w = 144,
     P = 150,
     M = 150,
@@ -91,8 +91,8 @@ function B(e) {
             [O.fullSize]: _ === N.y0.FULL_SIZE,
             [O.panel]: _ === N.y0.PANEL
         },
-        S = null != i ? x : 0,
-        A = L + S,
+        S = null != i ? L : 0,
+        A = x + S,
         C = w + S,
         D = o.useRef(null),
         U = o.useRef(null),
@@ -277,7 +277,7 @@ function Z(e) {
             },
             [g]
         ),
-        x = () => {
+        L = () => {
             if (null == n) return r;
             let e = null != n.id ? '`' + ':'.concat(n.name, ':') + '`' : E.ZP.translateSurrogatesToInlineEmoji(n.name);
             return null == r ? e : ''.concat(e, ' ').concat(r);
@@ -287,7 +287,7 @@ function Z(e) {
         guildId: s,
         channelId: l,
         profileType: u,
-        sourceDetails: x(),
+        sourceDetails: L(),
         sourceType: N.n_.STATUS,
         onAction: d,
         onClose: () => R(!1),

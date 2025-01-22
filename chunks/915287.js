@@ -88,7 +88,7 @@ function v(e, n, r, i) {
             });
         });
     return s.forwardRef(function (i, d) {
-        let { className: v, onScroll: y, onResize: b = null, onContentResize: I = null, dir: T = 'ltr', sections: S, sectionHeight: A, rowHeight: C, footerHeight: N = 0, sidebarHeight: R, listHeaderHeight: O = 0, renderSection: D, renderRow: x, renderFooter: L, renderSidebar: w, renderListHeader: P, stickyListHeader: M, wrapSection: k, getAnchorId: U, paddingTop: B, paddingBottom: G, fade: Z = !1, customTheme: F = !1, chunkSize: V, style: j, innerId: H, innerRole: Y, innerAriaLabel: W, innerAriaMultiselectable: K, innerAriaOrientation: z, innerClassName: q, innerTag: Q = 'div', ...X } = i,
+        let { className: v, onScroll: y, onResize: b = null, onContentResize: I = null, dir: T = 'ltr', sections: S, sectionHeight: A, rowHeight: C, footerHeight: N = 0, sidebarHeight: R, listHeaderHeight: O = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: w, renderListHeader: P, stickyListHeader: M, wrapSection: k, getAnchorId: U, paddingTop: B, paddingBottom: G, fade: Z = !1, customTheme: F = !1, chunkSize: V, style: j, innerId: H, innerRole: Y, innerAriaLabel: W, innerAriaMultiselectable: K, innerAriaOrientation: z, innerClassName: q, innerTag: Q = 'div', ...X } = i,
             J = s.useRef(null),
             $ = s.useRef(null),
             [ee, et] = s.useState(!1),
@@ -183,7 +183,7 @@ function v(e, n, r, i) {
         return (
             s.useLayoutEffect(() => {
                 2 !== er.current.dirty && (er.current.dirty = 2);
-            }, [es, D, x, L, k, eo, ea, er]),
+            }, [es, D, L, x, k, eo, ea, er]),
             (0, p.rS)({
                 scrollerRef: en,
                 anchor: ed,
@@ -222,14 +222,14 @@ function v(e, n, r, i) {
                                         renderListHeader: P,
                                         stickyListHeader: M,
                                         renderSection: D,
-                                        renderRow: x,
-                                        renderFooter: L,
+                                        renderRow: L,
+                                        renderFooter: x,
                                         wrapSection: k,
                                         spacerTop: ea
                                     })
                                 })
                             }),
-                        [Q, H, Y, W, K, z, eo, q, es, P, M, D, x, L, k, ea]
+                        [Q, H, Y, W, K, z, eo, q, es, P, M, D, L, x, k, ea]
                     ),
                     s.useMemo(
                         () =>

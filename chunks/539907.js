@@ -1,6 +1,6 @@
 r.d(n, {
     j: function () {
-        return L;
+        return x;
     },
     t: function () {
         return T;
@@ -116,12 +116,12 @@ function D(e) {
     let { targetRef: n, overrideTargetRect: r } = e;
     return null != r ? r : (f()(null != n.current, 'Invalid ref'), n.current.getBoundingClientRect());
 }
-function x(e, n) {
+function L(e, n) {
     let r = D(e),
         i = D(n);
     return r.top === i.top && r.left === i.left;
 }
-class L extends (i = l.Component) {
+class x extends (i = l.Component) {
     formatDimension(e) {
         return this.props.useRawTargetDimensions ? e : Math.ceil(e);
     }
@@ -287,7 +287,7 @@ class L extends (i = l.Component) {
         f()(null != a, 'Missing elementRef'), null != r.current && I.set(a, r.current), m.S.subscribe(v.CkL.LAYER_POP_START, this.handleLayerPopStart), m.S.subscribe(v.CkL.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == a || null === (n = a.ownerDocument) || void 0 === n || null === (e = n.defaultView) || void 0 === e || e.addEventListener('resize', this.handleLayerPopComplete), null == i || i();
     }
     componentDidUpdate(e, n) {
-        if (((A(e) !== A(this.props) || !x(e, this.props)) && this.updatePosition(), n.position !== this.state.position)) {
+        if (((A(e) !== A(this.props) || !L(e, this.props)) && this.updatePosition(), n.position !== this.state.position)) {
             var r, i;
             null === (r = (i = this.props).onPositionChange) || void 0 === r || r.call(i, this.state.position);
         }
@@ -362,7 +362,7 @@ class L extends (i = l.Component) {
             });
     }
 }
-b(L, 'defaultProps', {
+b(x, 'defaultProps', {
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     autoInvert: !1,

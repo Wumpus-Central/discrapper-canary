@@ -18,7 +18,7 @@ r.d(n, {
         return C;
     },
     T0: function () {
-        return L;
+        return x;
     },
     Wf: function () {
         return D;
@@ -27,7 +27,7 @@ r.d(n, {
         return B;
     },
     eT: function () {
-        return x;
+        return L;
     },
     gU: function () {
         return Z;
@@ -353,7 +353,7 @@ async function D(e) {
         });
     }
 }
-async function x(e) {
+async function L(e) {
     try {
         let n = await o.tn.del({
             url: E.ANM.QUESTS_PREVIEW_STATUS(e),
@@ -372,7 +372,7 @@ async function x(e) {
         });
     }
 }
-async function L(e) {
+async function x(e) {
     try {
         s.Z.dispatch({ type: 'QUESTS_DOCK_RESET_SOFT_DISMISSAL' });
         let n = await o.tn.del({

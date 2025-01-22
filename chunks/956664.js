@@ -30,7 +30,7 @@ r.d(n, {
         return D;
     },
     rv: function () {
-        return x;
+        return L;
     },
     vV: function () {
         return R;
@@ -110,10 +110,10 @@ function D(e) {
     let { width: n, height: r, maxWidth: i, maxHeight: a } = e;
     return n === r ? 1 : Math.min(Math.max(i / n, a / r), 1);
 }
-function x(e) {
+function L(e) {
     return null == e || '' === e ? 'none' : 'url('.concat(e, ')');
 }
-function L(e, n, r) {
+function x(e, n, r) {
     let i = [];
     for (let a = 0, o, s, l, u, c; a < n; a += r) (s = e[(o = 4 * a) + 0]), (l = e[o + 1]), (u = e[o + 2]), (void 0 === (c = e[o + 3]) || c >= 125) && !(s > 250 && l > 250 && u > 250) && i.push([s, l, u]);
     return i;
@@ -127,7 +127,7 @@ function M(e, n, r) {
     let o = (i.width = 0 === e.width ? P : e.width),
         s = (i.height = 0 === e.height ? P : e.height);
     a.drawImage(e, 0, 0, o, s);
-    let l = L(a.getImageData(0, 0, o, s).data, o * s, r),
+    let l = x(a.getImageData(0, 0, o, s).data, o * s, r),
         u = I()(l, n);
     return 'boolean' == typeof u ? w : u.palette();
 }

@@ -26,11 +26,11 @@ var i = r(147018),
     R = r(202934),
     O = r(641236),
     D = r(976418),
-    x = O('iterator'),
-    L = 'URLSearchParams',
-    w = L + 'Iterator',
+    L = O('iterator'),
+    x = 'URLSearchParams',
+    w = x + 'Iterator',
     P = _.set,
-    M = _.getterFor(L),
+    M = _.getterFor(x),
     k = _.getterFor(w),
     U = Object.getOwnPropertyDescriptor,
     B = function (e) {
@@ -114,7 +114,7 @@ var i = r(147018),
         (this.entries = []), (this.url = null), void 0 !== e && (I(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === z(e, 0) ? et(e, 1) : e) : T(e)));
     };
 ef.prototype = {
-    type: L,
+    type: x,
     bindURL: function (e) {
         (this.url = e), this.update();
     },
@@ -249,7 +249,7 @@ if (
         },
         { enumerable: !0 }
     ),
-    c(eh, x, eh.entries, { name: 'entries' }),
+    c(eh, L, eh.entries, { name: 'entries' }),
     c(
         eh,
         'toString',
@@ -266,7 +266,7 @@ if (
             configurable: !0,
             enumerable: !0
         }),
-    p(ep, L),
+    p(ep, x),
     i(
         {
             global: !0,
@@ -283,7 +283,7 @@ if (
             if (I(e)) {
                 var n,
                     r = e.body;
-                if (y(r) === L)
+                if (y(r) === x)
                     return (
                         !e_((n = e.headers ? new F(e.headers) : new F()), 'content-type') && em(n, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
                         S(e, {

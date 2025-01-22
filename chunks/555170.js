@@ -47,21 +47,21 @@ function D(e, n, r, i, o) {
     var s,
         l = e._readableState;
     if (null === n) (l.reading = !1), k(e, l);
-    else if ((!o && (s = L(l, n)), s)) A(e, s);
+    else if ((!o && (s = x(l, n)), s)) A(e, s);
     else if (l.objectMode || (n && n.length > 0)) {
-        if (('string' != typeof n && !l.objectMode && Object.getPrototypeOf(n) !== f.prototype && (n = h(n)), i)) l.endEmitted ? A(e, new S()) : x(e, l, n, !0);
+        if (('string' != typeof n && !l.objectMode && Object.getPrototypeOf(n) !== f.prototype && (n = h(n)), i)) l.endEmitted ? A(e, new S()) : L(e, l, n, !0);
         else if (l.ended) A(e, new I());
         else {
             if (l.destroyed) return !1;
-            (l.reading = !1), l.decoder && !r ? ((n = l.decoder.write(n)), l.objectMode || 0 !== n.length ? x(e, l, n, !1) : G(e, l)) : x(e, l, n, !1);
+            (l.reading = !1), l.decoder && !r ? ((n = l.decoder.write(n)), l.objectMode || 0 !== n.length ? L(e, l, n, !1) : G(e, l)) : L(e, l, n, !1);
         }
     } else !i && ((l.reading = !1), G(e, l));
     return !l.ended && (l.length < l.highWaterMark || 0 === l.length);
 }
-function x(e, n, r, i) {
+function L(e, n, r, i) {
     n.flowing && 0 === n.length && !n.sync ? ((n.awaitDrain = 0), e.emit('data', r)) : ((n.length += n.objectMode ? 1 : r.length), i ? n.buffer.unshift(r) : n.buffer.push(r), n.needReadable && U(e)), G(e, n);
 }
-function L(e, n) {
+function x(e, n) {
     var r;
     return !_(n) && 'string' != typeof n && void 0 !== n && !e.objectMode && (r = new b('chunk', ['string', 'Buffer', 'Uint8Array'], n)), r;
 }

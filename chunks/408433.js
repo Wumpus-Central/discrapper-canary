@@ -54,12 +54,12 @@ function D(e) {
     let { width: n, height: r } = e;
     return n > 0 && r > 0;
 }
-function x(e, n, r) {
+function L(e, n, r) {
     if ((null != n && T.test(n.name)) || S.test(r.url)) return !1;
     let i = null != r.proxy_url || /^https:/i.test(r.url);
     return null != e && y.default.extractTimestamp(e) < C && (i = i && null != n && A.test(n.name)), i;
 }
-function L(e) {
+function x(e) {
     let { url: n, proxy_url: r, width: i, height: a, placeholder: o, placeholder_version: s, flags: l } = e,
         u = g.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled || E.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled;
     return {
@@ -112,13 +112,13 @@ function w(e, n, r) {
         switch (i.type) {
             case b.hBH.ARTICLE:
             case b.hBH.IMAGE:
-                i.image = L(r.thumbnail);
+                i.image = x(r.thumbnail);
                 break;
             default:
-                i.thumbnail = L(r.thumbnail);
+                i.thumbnail = x(r.thumbnail);
         }
     if (
-        (null != r.image && D(r.image) && (i.image = L(r.image)),
+        (null != r.image && D(r.image) && (i.image = x(r.image)),
         null != r.video &&
             (null == i.thumbnail &&
                 null != r.video.proxy_url &&
@@ -128,7 +128,7 @@ function w(e, n, r) {
                     height: r.video.height,
                     url: P(r.video.proxy_url, { format: 'webp' })
                 }),
-            null != i.thumbnail && D(r.video) && x(n, r.provider, r.video) && (i.video = L(r.video))),
+            null != i.thumbnail && D(r.video) && L(n, r.provider, r.video) && (i.video = x(r.video))),
         I.k.has(i.type))
     ) {
         var a;

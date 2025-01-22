@@ -32,7 +32,7 @@ let j = async () => {
             return [];
         }
     },
-    _ = async (e, t) => {
+    C = async (e, t) => {
         try {
             await o.tn.post({
                 url: p.ANM.CREATE_USER_OFFER(e, t),
@@ -43,7 +43,7 @@ let j = async () => {
             await (0, d.T)();
         }
     },
-    C = async (e, t) => {
+    _ = async (e, t) => {
         try {
             await o.tn.del({
                 url: p.ANM.DELETE_USER_OFFER(e, t),
@@ -65,7 +65,7 @@ let j = async () => {
             await (0, d.T)();
         }
     },
-    N = async () => {
+    S = async () => {
         try {
             let { body: e } = await o.tn.get({
                 url: p.ANM.USER_OFFERS,
@@ -79,7 +79,7 @@ let j = async () => {
             };
         }
     },
-    S = async () => {
+    N = async () => {
         try {
             await o.tn.del({
                 url: p.ANM.USER_OFFERS,
@@ -95,25 +95,25 @@ function y(e) {
     let { offer: s, offerOptions: u, forceRefetch: h } = e,
         [f, p] = r.useState(!1),
         [g, j] = r.useState(!1),
-        [_, N] = r.useState(!1),
-        [S, y] = r.useState(!1);
+        [C, S] = r.useState(!1),
+        [N, y] = r.useState(!1);
     r.useEffect(() => {
-        _ && y(!0);
+        C && y(!0);
         let e = setTimeout(() => {
             y(!1);
         }, 500);
         return () => {
             clearTimeout(e);
         };
-    }, [_]);
-    let { id: I, expires_at: E, redeemed_at: Z, trial_id: w, subscription_trial: k, referrer: O } = s,
+    }, [C]);
+    let { id: I, expires_at: E, redeemed_at: Z, trial_id: k, subscription_trial: w, referrer: O } = s,
         R =
             null !==
                 (n =
                     null ===
                         (t = u.find((e) => {
                             let { value: t } = e;
-                            return t === w;
+                            return t === k;
                         })) || void 0 === t
                         ? void 0
                         : t.label) && void 0 !== n
@@ -122,9 +122,9 @@ function y(e) {
     null != O && (R = ''.concat(R, ' from @').concat(O.username));
     let B = null != E,
         P = null != E && new Date(E).getTime() < Date.now(),
-        L = (null == k ? void 0 : k.sku_id) === b.Si.TIER_0,
+        L = (null == w ? void 0 : w.sku_id) === b.Si.TIER_0,
         A = async () => {
-            N(!0), B ? await T(I, 'trial') : await (0, d.a)(s), h(), N(!1);
+            S(!0), B ? await T(I, 'trial') : await (0, d.a)(s), h(), S(!1);
         };
     r.useEffect(() => {
         if (f) {
@@ -144,10 +144,10 @@ function y(e) {
             };
         }
     }, [f, g]);
-    let D = 'Active';
+    let F = 'Active';
     return (
-        B && (D = 'Acknowledged'),
-        P && (D = 'Expired'),
+        B && (F = 'Acknowledged'),
+        P && (F = 'Expired'),
         (0, a.jsxs)('div', {
             className: i()(v.card, L ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
             children: [
@@ -161,7 +161,7 @@ function y(e) {
                         }),
                         (0, a.jsx)(c.Clickable, {
                             onClick: async () => {
-                                N(!0), await C(I, 'trial'), h(), N(!1);
+                                S(!0), await _(I, 'trial'), h(), S(!1);
                             },
                             children: (0, a.jsx)(c.TrashIcon, {
                                 size: 'md',
@@ -198,13 +198,13 @@ function y(e) {
                 (0, a.jsxs)(c.Clickable, {
                     className: i()(v.row, v.idRow),
                     onClick: () => {
-                        (0, m.JG)(w), j(!0);
+                        (0, m.JG)(k), j(!0);
                     },
                     children: [
                         (0, a.jsxs)(c.Text, {
                             variant: 'eyebrow',
                             color: 'always-white',
-                            children: ['Trial: ', w]
+                            children: ['Trial: ', k]
                         }),
                         g
                             ? (0, a.jsx)(c.CheckmarkLargeIcon, {
@@ -227,8 +227,8 @@ function y(e) {
                             'Trial Length:',
                             ' ',
                             (0, x.if)({
-                                intervalType: null !== (l = null == k ? void 0 : k.interval) && void 0 !== l ? l : b.rV.MONTH,
-                                intervalCount: null !== (o = null == k ? void 0 : k.interval_count) && void 0 !== o ? o : 1,
+                                intervalType: null !== (l = null == w ? void 0 : w.interval) && void 0 !== l ? l : b.rV.MONTH,
+                                intervalCount: null !== (o = null == w ? void 0 : w.interval_count) && void 0 !== o ? o : 1,
                                 capitalize: !1
                             })
                         ]
@@ -245,8 +245,8 @@ function y(e) {
                             }),
                             children: (0, a.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acknowledged' === D ? void 0 : 'always-white',
-                                children: D
+                                color: 'Acknowledged' === F ? void 0 : 'always-white',
+                                children: F
                             })
                         }),
                         null != Z &&
@@ -261,7 +261,7 @@ function y(e) {
                     ]
                 }),
                 (0, a.jsx)('div', {
-                    className: i()(v.loadingContainer, { [v.isLoading]: _ || S }),
+                    className: i()(v.loadingContainer, { [v.isLoading]: C || N }),
                     children: (0, a.jsx)(c.Spinner, {})
                 })
             ]
@@ -284,7 +284,7 @@ function I(e) {
             clearTimeout(e);
         };
     }, [p]);
-    let { id: _, expires_at: N, applied_at: S, discount_id: y, discount: I } = l,
+    let { id: C, expires_at: S, applied_at: N, discount_id: y, discount: I } = l,
         E =
             null !==
                 (n =
@@ -297,10 +297,10 @@ function I(e) {
                         : t.label) && void 0 !== n
                 ? n
                 : 'Unknown',
-        Z = null != N,
-        w = null != N && new Date(N).getTime() < Date.now(),
-        k = async () => {
-            b(!0), Z ? await T(_, 'discount') : await (0, d.a)(void 0, l), s(), b(!1);
+        Z = null != S,
+        k = null != S && new Date(S).getTime() < Date.now(),
+        w = async () => {
+            b(!0), Z ? await T(C, 'discount') : await (0, d.a)(void 0, l), s(), b(!1);
         };
     r.useEffect(() => {
         if (u) {
@@ -322,7 +322,7 @@ function I(e) {
     }, [u, x]);
     let O = 'Active';
     return (
-        w && (O = 'Expired'),
+        k && (O = 'Expired'),
         Z && (O = 'Acknowledged'),
         (0, a.jsxs)('div', {
             className: i()(v.card, v.discount),
@@ -337,7 +337,7 @@ function I(e) {
                         }),
                         (0, a.jsx)(c.Clickable, {
                             onClick: async () => {
-                                b(!0), await C(_, 'discount'), s(), b(!1);
+                                b(!0), await _(C, 'discount'), s(), b(!1);
                             },
                             children: (0, a.jsx)(c.TrashIcon, {
                                 size: 'md',
@@ -350,13 +350,13 @@ function I(e) {
                 (0, a.jsxs)(c.Clickable, {
                     className: i()(v.row, v.idRow),
                     onClick: () => {
-                        (0, m.JG)(_), h(!0);
+                        (0, m.JG)(C), h(!0);
                     },
                     children: [
                         (0, a.jsxs)(c.Text, {
                             variant: 'eyebrow',
                             color: 'text-normal',
-                            children: ['Offer: ', _]
+                            children: ['Offer: ', C]
                         }),
                         u
                             ? (0, a.jsx)(c.CheckmarkLargeIcon, {
@@ -407,10 +407,10 @@ function I(e) {
                     className: v.badgeContainer,
                     children: [
                         (0, a.jsx)(c.Clickable, {
-                            onClick: k,
+                            onClick: w,
                             className: i()(v.badge, v.clickable, {
                                 [v.acked]: Z,
-                                [v.expired]: w
+                                [v.expired]: k
                             }),
                             children: (0, a.jsx)(c.Text, {
                                 variant: 'eyebrow',
@@ -418,7 +418,7 @@ function I(e) {
                                 children: O
                             })
                         }),
-                        null != S &&
+                        null != N &&
                             (0, a.jsx)('div', {
                                 className: i()(v.badge, v.__invalid_badgeBottom, v.redeemed),
                                 children: (0, a.jsx)(c.Text, {
@@ -442,9 +442,9 @@ function E() {
         [n, l] = r.useState([]),
         [o, m] = r.useState(),
         [x, p] = r.useState(),
-        [b, C] = r.useState([]),
+        [b, _] = r.useState([]),
         [T, E] = r.useState([]),
-        [Z, w] = r.useState(!0);
+        [Z, k] = r.useState(!0);
     r.useEffect(() => {
         (0 === e.length || 0 === n.length || Z) &&
             j().then((e) => {
@@ -461,21 +461,21 @@ function E() {
     }, [e, n, o, x, Z]),
         r.useEffect(() => {
             Z &&
-                (w(!1),
+                (k(!1),
                 h.Z.forceReset(),
                 (0, d.T)(),
-                N().then((e) => {
-                    C(e.trial.sort((e, t) => e.id.localeCompare(t.id))), E(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
+                S().then((e) => {
+                    _(e.trial.sort((e, t) => e.id.localeCompare(t.id))), E(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
         }, [Z]);
-    let k = async () => {
-            null != o && (await _(o, 'trial'), w(!0));
+    let w = async () => {
+            null != o && (await C(o, 'trial'), k(!0));
         },
         O = async () => {
-            null != x && (await _(x, 'discount'), w(!0));
+            null != x && (await C(x, 'discount'), k(!0));
         },
         R = async () => {
-            await S(), w(!0);
+            await N(), k(!0);
         };
     return (0, a.jsx)(c.ScrollerThin, {
         className: i()(g.panel),
@@ -504,7 +504,7 @@ function E() {
                                 }),
                                 (0, a.jsx)(c.Button, {
                                     size: c.Button.Sizes.SMALL,
-                                    onClick: () => w(!0),
+                                    onClick: () => k(!0),
                                     children: 'Refresh DevTools'
                                 })
                             ]
@@ -531,7 +531,7 @@ function E() {
                                     popoutLayerContext: f.O$
                                 }),
                                 (0, a.jsx)(c.Button, {
-                                    onClick: k,
+                                    onClick: w,
                                     children: 'Create'
                                 })
                             ]
@@ -579,7 +579,7 @@ function E() {
                                     {
                                         offer: t,
                                         offerOptions: e,
-                                        forceRefetch: () => w(!0)
+                                        forceRefetch: () => k(!0)
                                     },
                                     t.id
                                 )
@@ -600,7 +600,7 @@ function E() {
                                     {
                                         offer: e,
                                         offerOptions: n,
-                                        forceRefetch: () => w(!0)
+                                        forceRefetch: () => k(!0)
                                     },
                                     e.id
                                 )

@@ -19,8 +19,8 @@ var r = n(512722),
     p = n(532432),
     x = n(349177),
     f = n(872736),
-    _ = n(134795),
-    E = n(610966),
+    E = n(134795),
+    _ = n(610966),
     C = n(513901),
     T = n(451392),
     S = n(906364),
@@ -126,7 +126,7 @@ function P() {
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(
-                              _.Z,
+                              E.Z,
                               {
                                   showRemoveBannerButton: K,
                                   errors: H.banner,
@@ -145,7 +145,7 @@ function P() {
                       ]
                   })
                 : (0, i.jsx)(
-                      E.Z,
+                      _.Z,
                       {
                           user: Z,
                           savedUserColor: null == L ? void 0 : L.accentColor,

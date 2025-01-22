@@ -20,8 +20,8 @@ var r = n(120356),
     p = n(963249),
     x = n(301766),
     f = n(509545),
-    _ = n(78839),
-    E = n(931331),
+    E = n(78839),
+    _ = n(931331),
     C = n(754347),
     T = n(122289),
     S = n(74538),
@@ -168,7 +168,7 @@ t.Z = function (e) {
         z = null == W ? void 0 : null === (t = W.discount) || void 0 === t ? void 0 : t.amount,
         K = (0, N.t7)(),
         q = (0, N.lr)(),
-        Q = (0, o.e7)([_.ZP], () => _.ZP.inReverseTrial()),
+        Q = (0, o.e7)([E.ZP], () => E.ZP.inReverseTrial()),
         X = () => {
             if (r.status === D.O0b.ACTIVE || r.status === D.O0b.PAST_DUE || r.status === D.O0b.PAUSED) ee(O.Steps.PAUSE_SELECT);
         },
@@ -272,7 +272,7 @@ t.Z = function (e) {
             ec = (0, i.jsx)(F, {});
             break;
         case P.p9.TIER_2:
-            ec = (0, i.jsx)(E.Z, {
+            ec = (0, i.jsx)(_.Z, {
                 className: B.planName,
                 'aria-label': y.intl.string(y.t.lpNrPj)
             });

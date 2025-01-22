@@ -142,10 +142,10 @@ function O(e, n) {
 function D(e, n) {
     return e && n ? (e.compare(n) >= 0 ? e : n) : e || n;
 }
-let x = null;
-function L(e, n) {
+let L = null;
+function x(e, n) {
     let r = Math.ceil(e.calendar.toJulianDay(e) + 1) % 7;
     r < 0 && (r += 7);
-    let [i, a] = x[C(n)] || [6, 0];
+    let [i, a] = L[C(n)] || [6, 0];
     return r === i || r === a;
 }

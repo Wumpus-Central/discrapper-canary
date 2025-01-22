@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(952306),
     x = n(299206),
     f = n(295474),
-    _ = n(144114),
-    E = n(918505),
+    E = n(144114),
+    _ = n(918505),
     C = n(332473),
     T = n(921801),
     S = n(485341),
@@ -46,13 +46,13 @@ function U(e) {
     var t, s;
     let { className: l, user: o } = e,
         c = r.useRef(null),
-        m = (0, E.o9)(),
+        m = (0, _.o9)(),
         g = (0, C.b)(),
         h = (0, f.gS)(),
         p = null !== (s = null == h ? void 0 : null === (t = h.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null,
-        [x, _] = r.useState(!1);
+        [x, E] = r.useState(!1);
     r.useEffect(() => {
-        _(null != c.current && c.current.scrollWidth > c.current.clientWidth);
+        E(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
     let T = !o.isClaimed(),
         S = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || T,
@@ -366,7 +366,7 @@ function Y(e) {
                                               title: k.intl.string(k.t['3CTiKi']),
                                               children: s.hasFlag(Z.xW$.MFA_SMS) ? k.intl.string(k.t.jrhJys) : void 0,
                                               actionText: k.intl.string(k.t.N86XcH),
-                                              handleSubmit: (e) => _.Z.removePhone(e, _.L.USER_SETTINGS_UPDATE)
+                                              handleSubmit: (e) => E.Z.removePhone(e, E.L.USER_SETTINGS_UPDATE)
                                           })
                                       );
                                   },
@@ -384,7 +384,7 @@ function Y(e) {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
                                         return (t) =>
                                             (0, i.jsx)(e, {
-                                                reason: _.L.USER_SETTINGS_UPDATE,
+                                                reason: E.L.USER_SETTINGS_UPDATE,
                                                 ...t
                                             });
                                     },

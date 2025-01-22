@@ -75,11 +75,11 @@ function A(e) {
             guild_id: M,
             channel_id: j.channel_id
         }),
-            (0, N.goToAppDirectory)({
-                view: x.ApplicationDirectoryViews.APPLICATION,
+            (0, N.dx)({
+                view: x.eN.APPLICATION,
                 guildId: M,
                 applicationId: b,
-                entrypoint: { name: x.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
+                entrypoint: { name: x.n3.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
     };
     if (Z && null != P)

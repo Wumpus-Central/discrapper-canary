@@ -1,22 +1,22 @@
-e.d(t, {
+n.d(t, {
     O: function () {
-        return l;
+        return a;
     }
 });
-var i = e(904245),
-    o = e(306680),
-    r = e(944486);
-let l = {
+var i = n(904245),
+    r = n(306680),
+    s = n(944486);
+let a = {
     binds: ['shift+pageup'],
     comboKeysBindGlobal: !0,
     action() {
-        let n = r.Z.getChannelId();
-        if (null != n) {
-            let t = o.ZP.ackMessageId(n);
+        let e = s.Z.getChannelId();
+        if (null != e) {
+            let t = r.ZP.ackMessageId(e);
             null != t &&
-                o.ZP.getOldestUnreadTimestamp(n) > 0 &&
+                r.ZP.getOldestUnreadTimestamp(e) > 0 &&
                 i.Z.jumpToMessage({
-                    channelId: n,
+                    channelId: e,
                     messageId: t,
                     offset: 1,
                     context: 'Keyboard Shortcut'

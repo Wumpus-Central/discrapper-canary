@@ -30,8 +30,8 @@ var i = r(443704),
     R = r(7439),
     O = r(466071),
     D = r(703788),
-    x = r(710879),
-    L = r(713933),
+    L = r(710879),
+    x = r(713933),
     w = r(445879),
     P = r(114946),
     M = r(434054),
@@ -51,8 +51,8 @@ var W = {};
 function K(e, n, r) {
     let i,
         { id: a, decrementAriaLabel: o, incrementAriaLabel: s, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: p, label: h, formatOptions: _, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: y, description: b, errorMessage: I, ...T } = e,
-        { increment: S, incrementToMax: A, decrement: C, decrementToMin: N, numberValue: R, inputValue: O, commit: D, commitValidation: x } = n,
-        L = (0, j.qb)(Y(W), '@react-aria/numberfield'),
+        { increment: S, incrementToMax: A, decrement: C, decrementToMin: N, numberValue: R, inputValue: O, commit: D, commitValidation: L } = n,
+        x = (0, j.qb)(Y(W), '@react-aria/numberfield'),
         w = (0, B.Me)(a),
         { focusProps: P } = (0, F.KK)({
             onBlur() {
@@ -112,9 +112,9 @@ function K(e, n, r) {
         eo = (0, B.zL)(e),
         es = (0, G.useCallback)(
             (e) => {
-                'Enter' === e.key ? (D(), x()) : e.continuePropagation();
+                'Enter' === e.key ? (D(), L()) : e.continuePropagation();
             },
-            [D, x]
+            [D, L]
         ),
         { isInvalid: el, validationErrors: eu, validationDetails: ec } = n.displayValidation,
         {
@@ -157,7 +157,7 @@ function K(e, n, r) {
     (0, B.y$)(r, n.numberValue, n.setNumberValue);
     let e_ = (0, B.dG)(z, P, ef, {
         role: null,
-        'aria-roledescription': (0, B.gn)() ? null : L.format('numberField'),
+        'aria-roledescription': (0, B.gn)() ? null : x.format('numberField'),
         'aria-valuemax': null,
         'aria-valuemin': null,
         'aria-valuenow': null,
@@ -174,7 +174,7 @@ function K(e, n, r) {
     let eE = (0, B.Me)(),
         ev = (0, B.Me)(),
         ey = (0, B.dG)(q, {
-            'aria-label': s || L.format('increase', { fieldLabel: eg }).trim(),
+            'aria-label': s || x.format('increase', { fieldLabel: eg }).trim(),
             id: i && !s ? eE : null,
             'aria-labelledby': i && !s ? `${eE} ${i}` : null,
             'aria-controls': w,
@@ -185,7 +185,7 @@ function K(e, n, r) {
             onPressStart: em
         }),
         eb = (0, B.dG)(Q, {
-            'aria-label': o || L.format('decrease', { fieldLabel: eg }).trim(),
+            'aria-label': o || x.format('decrease', { fieldLabel: eg }).trim(),
             id: i && !o ? ev : null,
             'aria-labelledby': i && !o ? `${ev} ${i}` : null,
             'aria-controls': w,
@@ -241,8 +241,8 @@ W = {
     'ro-RO': R.Z,
     'ru-RU': O.Z,
     'sk-SK': D.Z,
-    'sl-SI': x.Z,
-    'sr-SP': L.Z,
+    'sl-SI': L.Z,
+    'sr-SP': x.Z,
     'sv-SE': w.Z,
     'tr-TR': P.Z,
     'uk-UA': M.Z,

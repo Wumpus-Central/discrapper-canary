@@ -78,7 +78,7 @@ r.d(n, {
         return u;
     },
     am: function () {
-        return L;
+        return x;
     },
     cE: function () {
         return d;
@@ -96,7 +96,7 @@ r.d(n, {
         return M;
     },
     jT: function () {
-        return x;
+        return L;
     },
     js: function () {
         return C;
@@ -153,8 +153,8 @@ let m = 160,
     R = '1039835161136746497',
     O = '852509694341283871',
     D = '903769130790969345',
-    x = '880218394199220334',
-    L = '1078728822972764312',
+    L = '880218394199220334',
+    x = '1078728822972764312',
     w = '947957217959759964',
     P = '832013003968348200',
     M = '832012774040141894',
@@ -186,7 +186,7 @@ let m = 160,
     ei = ['in_development', 'activities_team', 'employee_release'],
     ea = [Z, Y, C, N, z, q, Q, X, J, W, K],
     eo = [$, ee, et],
-    es = [b, I, x, T, S, F];
+    es = [b, I, L, T, S, F];
 !(function (e) {
     (e.ADS = 'ADS'), (e.FAILED_LOAD = 'FAILED_LOAD'), (e.LAGGING = 'LAGGING'), (e.CONFUSING = 'CONFUSING'), (e.NOT_FUN = 'NOT_FUN'), (e.OTHER = 'OTHER');
 })(i || (i = {})),
@@ -206,8 +206,8 @@ let m = 160,
         (e[(e.DIRECTORY = 0)] = 'DIRECTORY'), (e[(e.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (e[(e.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
     })(u || (u = {}));
 let el = 'activity-shelf',
-    eu = new Set([y, b, I, x]),
-    ec = new Set([b, I, x]);
+    eu = new Set([y, b, I, L]),
+    ec = new Set([b, I, L]);
 !(function (e) {
     (e[(e.PORTRAIT = 0)] = 'PORTRAIT'), (e[(e.LANDSCAPE = 1)] = 'LANDSCAPE');
 })(c || (c = {})),

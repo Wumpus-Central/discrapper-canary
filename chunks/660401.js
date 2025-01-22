@@ -25,7 +25,7 @@ var i = r(176338),
     R = '[object Uint16Array]',
     O = '[object Uint32Array]',
     D = {};
-function x(e) {
+function L(e) {
     return (0, o.Z)(e) && (0, a.Z)(e.length) && !!D[(0, i.Z)(e)];
 }
-(D['[object Float32Array]'] = D[I] = D[T] = D[S] = D[A] = D[C] = D[N] = D[R] = D[O] = !0), (D[s] = D[l] = D[y] = D[u] = D[b] = D[c] = D[d] = D[f] = D[p] = D[h] = D[_] = D[m] = D[g] = D[E] = D[v] = !1), (n.Z = x);
+(D['[object Float32Array]'] = D[I] = D[T] = D[S] = D[A] = D[C] = D[N] = D[R] = D[O] = !0), (D[s] = D[l] = D[y] = D[u] = D[b] = D[c] = D[d] = D[f] = D[p] = D[h] = D[_] = D[m] = D[g] = D[E] = D[v] = !1), (n.Z = L);

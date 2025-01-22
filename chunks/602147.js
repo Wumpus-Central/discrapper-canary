@@ -30,9 +30,9 @@ let v = l.forwardRef(function (e, t) {
                         entrypoint: m.Qq.GUILDS_BAR
                     });
                 case p.GlobalDiscoveryTab.APPS:
-                    return (0, s.goToAppDirectory)({
+                    return (0, s.dx)({
                         restorePreviousView: !0,
-                        entrypoint: { name: o.ApplicationDirectoryEntrypointNames.GLOBAL_DISCOVERY_BUTTON }
+                        entrypoint: { name: o.n3.GLOBAL_DISCOVERY_BUTTON }
                     });
                 default:
                     return (0, d.transitionToGlobalDiscovery)({ tab: e });

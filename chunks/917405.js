@@ -1,8 +1,8 @@
 n(47120);
 var l = n(200651),
-    r = n(192379),
-    s = n(120356),
-    i = n.n(s),
+    s = n(192379),
+    r = n(120356),
+    i = n.n(r),
     o = n(481060),
     a = n(72416),
     c = n(476221),
@@ -27,7 +27,7 @@ let g = {
         [h.IE4.BAD]: x.rtcConnectionQualityBad,
         [h.IE4.UNKNOWN]: null
     };
-class f extends r.PureComponent {
+class f extends s.PureComponent {
     renderPopoutTarget(e) {
         let t = this.props.channelId;
         return null == t
@@ -40,7 +40,7 @@ class f extends r.PureComponent {
     }
     renderStatus() {
         let { hasVideo: e, state: t, channelId: n } = this.props,
-            { connectionStatus: r, connectionStatusText: s } = c.Z.getStatus(t, e);
+            { connectionStatus: s, connectionStatusText: r } = c.Z.getStatus(t, e);
         return this.renderPopoutTarget((e) => {
             let { onClick: t } = e;
             return (0, l.jsx)(o.Button, {
@@ -48,10 +48,10 @@ class f extends r.PureComponent {
                 size: o.Button.Sizes.NONE,
                 onClick: t,
                 children: (0, l.jsx)(d.Z, {
-                    text: s,
+                    text: r,
                     textVariant: this.props.connectionStatusTextVariant,
                     hasVideo: this.props.hasVideo,
-                    className: N[r],
+                    className: N[s],
                     hasConnectedChannel: null != n
                 })
             });
@@ -59,11 +59,11 @@ class f extends r.PureComponent {
     }
     render() {
         let e;
-        let { quality: t, smallPing: n, lastPing: r, state: s, className: a, children: c } = this.props;
+        let { quality: t, smallPing: n, lastPing: s, state: r, className: a, children: c } = this.props;
         return (
-            s === h.hes.RTC_CONNECTED &&
+            r === h.hes.RTC_CONNECTED &&
                 (e = (0, l.jsx)(o.Tooltip, {
-                    text: t !== h.IE4.UNKNOWN && null != r ? ''.concat(r.toFixed(0), ' ms') : null,
+                    text: t !== h.IE4.UNKNOWN && null != s ? ''.concat(s.toFixed(0), ' ms') : null,
                     color: g[t],
                     children: (e) =>
                         (0, l.jsx)(p, {
@@ -91,27 +91,27 @@ class f extends r.PureComponent {
         );
     }
     constructor(...e) {
-        var t, n, r;
+        var t, n, s;
         super(...e),
             (t = this),
             (n = 'renderPopout'),
-            (r = (e) => (t) =>
+            (s = (e) => (t) =>
                 (0, l.jsx)(u.Z, {
                     ...t,
                     channelId: e
                 })),
             n in t
                 ? Object.defineProperty(t, n, {
-                      value: r,
+                      value: s,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = r);
+                : (t[n] = s);
     }
 }
 function p(e) {
-    let { quality: t, smallPing: n, ...r } = e;
+    let { quality: t, smallPing: n, ...s } = e;
     if (!(0, o.useRedesignIconContext)().enabled)
         return (0, l.jsx)(a.Z, {
             className: i()(x.ping, { [x.smallPing]: n }),
@@ -126,7 +126,7 @@ function p(e) {
         }[t];
         return (0, l.jsx)(e, {
             className: i()(x.ping, { [x.smallPing]: n }),
-            ...r
+            ...s
         });
     }
 }

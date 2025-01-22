@@ -26,10 +26,10 @@ let I = (e) => {
         { giftRecipient: s, selectedGiftStyle: I, setSelectedGiftStyle: T, emojiConfetti: S, soundEffect: A, setEmojiConfetti: C, setSoundEffect: N } = (0, c.wD)(),
         [R, O] = o.useState(!1),
         D = o.useRef(null),
-        x = (0, u.useRadioGroup)({ orientation: 'horizontal' }),
-        L = (0, f.MY)(s, n),
-        w = L === f.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        P = L !== f.xr.DEFAULT,
+        L = (0, u.useRadioGroup)({ orientation: 'horizontal' }),
+        x = (0, f.MY)(s, n),
+        w = x === f.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        P = x !== f.xr.DEFAULT,
         M = (0, h.rK)(),
         { enabled: k } = h.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: M }),
         { enabled: U } = _.O.useExperiment({ location: 'gift card' }),
@@ -83,7 +83,7 @@ let I = (e) => {
                 },
                 className: l()(b.giftBoxOptionContainer, i),
                 'aria-label': y.intl.string(y.t.v54NrK),
-                ...x,
+                ...L,
                 children:
                     null != B &&
                     B.map((e, n) =>

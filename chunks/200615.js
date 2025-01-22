@@ -4,21 +4,21 @@ n.d(t, {
     }
 });
 var r = n(200651),
-    a = n(192379),
-    i = n(481060),
-    l = n(906732),
-    s = n(963249),
+    i = n(192379),
+    l = n(481060),
+    s = n(906732),
+    a = n(963249),
     o = n(474936),
     c = n(243410);
 let d = (e) => {
     let { text: t } = e,
-        { analyticsLocations: n } = (0, l.ZP)(),
-        d = a.useRef(null);
-    return (0, r.jsx)(i.Clickable, {
+        { analyticsLocations: n } = (0, s.ZP)(),
+        d = i.useRef(null);
+    return (0, r.jsx)(l.Clickable, {
         className: c.subscribeNow,
         innerRef: d,
         onClick: () => {
-            (0, s.Z)({
+            (0, a.Z)({
                 subscriptionTier: o.Si.TIER_2,
                 analyticsLocations: n,
                 returnRef: d

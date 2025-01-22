@@ -14,8 +14,8 @@ var r = n(120356),
     p = n(639119),
     x = n(105759),
     f = n(346497),
-    _ = n(422034),
-    E = n(710220),
+    E = n(422034),
+    _ = n(710220),
     C = n(318747),
     T = n(635921),
     S = n(474936),
@@ -69,14 +69,14 @@ t.Z = (e) => {
                         children: b.intl.string(b.t.YCZldH)
                     }),
                     U
-                        ? (0, i.jsx)(E.Z, {
+                        ? (0, i.jsx)(_.Z, {
                               referrer: w,
                               isMarketingPageV2Enabled: !0
                           })
                         : V &&
                           (0, i.jsx)('div', {
                               className: s()(I.affinityDescriptionV2),
-                              children: (0, i.jsx)(_.Z, {
+                              children: (0, i.jsx)(E.Z, {
                                   textColor: 'text-normal',
                                   smallerText: !r,
                                   isMarketingPageV2Enabled: !0

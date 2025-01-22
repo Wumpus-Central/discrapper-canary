@@ -3,10 +3,10 @@ n.d(t, {
         return e6;
     },
     BB: function () {
-        return e2;
+        return e3;
     },
     ZP: function () {
-        return e3;
+        return e2;
     }
 }),
     n(47120),
@@ -177,7 +177,7 @@ let eJ = 15 * eg.Z.Millis.MINUTE,
               })
             : null;
     };
-class e2 extends (i = l.Component) {
+class e3 extends (i = l.Component) {
     shouldRenderInvite(e) {
         let { channel: t } = this.props;
         return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && e$.has(e));
@@ -389,7 +389,7 @@ class e2 extends (i = l.Component) {
                     };
                 })
                 .filter((e) => 'INVALID' !== e.type),
-            f = (0, q._)(
+            { srcToOnClickOverride: f, srcToHandlePreloadImage: p } = (0, q.J)(
                 h,
                 {
                     shouldRedactExplicitContent: s,
@@ -397,12 +397,12 @@ class e2 extends (i = l.Component) {
                 },
                 'Media Mosaic'
             ),
-            p = h.length > 1,
-            _ = (0, eC.yE)(d, eH.iLy.IS_VOICE_MESSAGE);
-        function g(e, t) {
+            _ = h.length > 1,
+            g = (0, eC.yE)(d, eH.iLy.IS_VOICE_MESSAGE);
+        function E(e, t) {
             return (0, eN.dn)(e.originalItem, t);
         }
-        let E = m.map((n) => {
+        let C = m.map((n) => {
                 let r = (0, K.VY)(n),
                     s = {
                         message: e,
@@ -411,14 +411,14 @@ class e2 extends (i = l.Component) {
                         canRemoveItem: l && (m.length > 1 || '' !== e.content),
                         onRemoveItem: this.handleRemoveAttachment,
                         className: eY.embedWrapper,
-                        getObscureReason: g,
+                        getObscureReason: E,
                         onContextMenu:
                             null != o
                                 ? (e) => {
                                       e.stopPropagation(), e.preventDefault(), o(e, r);
                                   }
                                 : void 0,
-                        renderAudioComponent: _ ? eO.jY : eO.q7,
+                        renderAudioComponent: g ? eO.jY : eO.q7,
                         renderImageComponent: eO.dS,
                         renderVideoComponent: eO.vZ,
                         renderPlaintextFilePreview: eO.d4,
@@ -442,9 +442,9 @@ class e2 extends (i = l.Component) {
                         proxyURL: n.proxy_url,
                         url: n.url
                     });
-                return c in f && (p && (s.onClick = f[c]), 'IMAGE' === s.item.type && (s.onViewItem = f[c])), s;
+                return c in f && (_ && ((s.onClick = f[c]), (s.handlePreloadImage = p[c])), 'IMAGE' === s.item.type && (s.onViewItem = f[c])), s;
             }),
-            C = n
+            I = n
                 ? (0, r.jsx)(y.Z, {
                       className: eK.hideIfMessageNotFocused,
                       messageId: e.id,
@@ -453,8 +453,8 @@ class e2 extends (i = l.Component) {
                   })
                 : void 0;
         return (0, r.jsx)(ew.Z, {
-            items: E,
-            inlineForwardButton: C
+            items: C,
+            inlineForwardButton: I
         });
     }
     renderEmbeds(e) {
@@ -810,7 +810,7 @@ class e2 extends (i = l.Component) {
             });
     }
 }
-function e3(e) {
+function e2(e) {
     var t;
     let { channel: n, message: i, renderSuppressEmbeds: l, isMessageSnapshot: a } = e,
         o = (0, c.e7)([eu.default], () => eu.default.getId()),
@@ -861,7 +861,7 @@ function e3(e) {
         { hasInlineForwardButton: B } = (0, Z.yk)({ location: 'MessageAccessories' }),
         w = (0, P.a)(i) && B,
         F = (0, eS._)(n);
-    return (0, r.jsx)(e2, {
+    return (0, r.jsx)(e3, {
         canSuppressEmbeds: v,
         canDeleteAttachments: T,
         ...R,
@@ -886,7 +886,7 @@ function e3(e) {
         hasInlineForwardButton: w
     });
 }
-eQ(e2, 'defaultProps', {
+eQ(e3, 'defaultProps', {
     renderEmbeds: !0,
     compact: !1
 });
@@ -902,7 +902,7 @@ let e6 = (e) => {
         E = (0, A.V)(i.id, n.author.id),
         C = (0, b.r)(n.id),
         I = (0, J.Z)(n);
-    return (0, r.jsx)(e2, {
+    return (0, r.jsx)(e3, {
         ...d,
         message: n,
         channel: i,

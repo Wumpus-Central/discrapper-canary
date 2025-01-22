@@ -37,7 +37,7 @@ function d(e) {
     return n;
 }
 function f(e, n) {
-    var r, i, a, s, c, d, f, p, h, _, m, g, E, v, y, b, I, T, S, A, C, N, R, O, D, x, L;
+    var r, i, a, s, c, d, f, p, h, _, m, g, E, v, y, b, I, T, S, A, C, N, R, O, D, L, x;
     let w = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
     if (null == w) return;
     let P = e.substreams.reduce((e, n) => e + l(n.rtpStats), 0),
@@ -85,8 +85,8 @@ function f(e, n) {
         qualityDecodeErrors: null !== (R = null === (p = w.encoderQualityStats) || void 0 === p ? void 0 : p.decodeErrors) && void 0 !== R ? R : void 0,
         qualityDecoderReboots: null !== (O = null === (h = w.encoderQualityStats) || void 0 === h ? void 0 : h.decoderReboots) && void 0 !== O ? O : void 0,
         qualityScoreErrors: null !== (D = null === (_ = w.encoderQualityStats) || void 0 === _ ? void 0 : _.scoreErrors) && void 0 !== D ? D : void 0,
-        qualityFrameDrops: null !== (x = null === (m = w.encoderQualityStats) || void 0 === m ? void 0 : m.frameDrops) && void 0 !== x ? x : void 0,
-        qualitySizeMismatches: null !== (L = null === (g = w.encoderQualityStats) || void 0 === g ? void 0 : g.sizeMismatches) && void 0 !== L ? L : void 0,
+        qualityFrameDrops: null !== (L = null === (m = w.encoderQualityStats) || void 0 === m ? void 0 : m.frameDrops) && void 0 !== L ? L : void 0,
+        qualitySizeMismatches: null !== (x = null === (g = w.encoderQualityStats) || void 0 === g ? void 0 : g.sizeMismatches) && void 0 !== x ? x : void 0,
         filter: e.filter,
         passthroughCount: e.passthroughCount,
         encryptSuccessCount: e.encryptSuccessCount,

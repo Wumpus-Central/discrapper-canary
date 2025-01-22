@@ -1,6 +1,6 @@
 r.d(n, {
     B_: function () {
-        return x;
+        return L;
     },
     MO: function () {
         return b;
@@ -91,7 +91,7 @@ async function D(e) {
     });
     return n.ok ? n.body.refreshed_urls[0].refreshed : void 0;
 }
-async function x(e) {
+async function L(e) {
     let n = c.Z.toURLSafe(e);
     if (null == n || !A(n)) return e;
     let r = await D(e);

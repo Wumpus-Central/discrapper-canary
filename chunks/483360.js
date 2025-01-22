@@ -30,8 +30,8 @@ var c = r(658722),
     R = r(822179),
     O = r(926491),
     D = r(373228),
-    x = r(601070),
-    L = r(675478),
+    L = r(601070),
+    x = r(675478),
     w = r(131704),
     P = r(598077),
     M = r(592125),
@@ -182,10 +182,10 @@ function eO(e) {
 function eD(e, n, r) {
     return e === n || (!!(r || (0, w.Km)(n)) && (e === k.sH ? (0, w.r8)(n) || (0, w.bw)(n) : e === k.Zb && (0, w.bw)(n)));
 }
-function ex(e, n) {
+function eL(e, n) {
     return e === k.sH && (0, w.bw)(n);
 }
-function eL(e) {
+function ex(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = e
             .split(' ')
@@ -366,14 +366,14 @@ n.ZP = {
     queryChannels(e) {
         let n,
             { query: r, guildId: i, limit: a = ee.rnv, fuzzy: o = !0, filter: s = eg, type: l = k.sH, allowEmptyQueries: u = !1, requireVocalConnectAccess: c = !0, boosters: d = {}, allowSnowflake: f } = e,
-            h = eL(r, u);
+            h = ex(r, u);
         n =
             null != i
                 ? p()(k.ZP.getChannels(i)[l])
                       .map((e) => e.channel)
-                      .concat(x.Z.computeAllActiveJoinedThreads(i))
+                      .concat(L.Z.computeAllActiveJoinedThreads(i))
                       .value()
-                : p()(M.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(x.Z.computeAllActiveJoinedThreads()).value();
+                : p()(M.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(L.Z.computeAllActiveJoinedThreads()).value();
         let g = {},
             E = [];
         for (let e of n) {
@@ -392,7 +392,7 @@ n.ZP = {
                     p = Math.min(eo - eu, p);
                 }
                 if (0 === p || n.length > 1 || (1 === n.length && !n[0].isFullMatch && !u)) continue;
-                ex(l, e.type) && (p = Math.max(p - ec, eu / 2)),
+                eL(l, e.type) && (p = Math.max(p - ec, eu / 2)),
                     E.push({
                         type: (0, w.bw)(e.type) ? et.h8.VOICE_CHANNEL : et.h8.TEXT_CHANNEL,
                         record: e,
@@ -760,7 +760,7 @@ n.ZP = {
     queryEmojiResults(e) {
         let { query: n, channel: r, intention: i, maxCount: a = ee.rnv, matchComparator: o } = e;
         return (
-            L.DZ.loadIfNecessary(),
+            x.DZ.loadIfNecessary(),
             {
                 emojis: y.ZP.searchWithoutFetchingLatest({
                     channel: r,
@@ -779,7 +779,7 @@ n.ZP = {
             o = Y.default.getCurrentUser(),
             s = new Set(),
             l = [];
-        for (let u of (L.DZ.loadIfNecessary(), e)) {
+        for (let u of (x.DZ.loadIfNecessary(), e)) {
             if ('' === u) continue;
             let e = u.toLocaleLowerCase(),
                 c = (0, J._I)(e),
@@ -819,7 +819,7 @@ n.ZP = {
     },
     querySoundmoji(e, n) {
         let r = Y.default.getCurrentUser();
-        !A.Z.isFetching() && !A.Z.hasFetchedAllSounds() && (0, S.w)(), L.DZ.loadIfNecessary();
+        !A.Z.isFetching() && !A.Z.hasFetchedAllSounds() && (0, S.w)(), x.DZ.loadIfNecessary();
         let i = Array.from(A.Z.getSounds().values()).reduce(
             (e, r) => (
                 r.forEach((r) => {

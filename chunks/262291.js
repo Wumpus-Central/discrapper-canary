@@ -33,7 +33,7 @@ var m = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
           },
     T = !0;
 try {
-    var S = x('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
+    var S = L('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
     T = (null === (i = S.exec('a')) || void 0 === i ? void 0 : i[0]) === 'a';
 } catch (e) {
     T = !1;
@@ -92,14 +92,14 @@ var A = m
         : function (e) {
               return e.replace(h, '');
           };
-function x(e, n) {
+function L(e, n) {
     return new RegExp(e, n);
 }
 if (T) {
-    var L = x('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
+    var x = L('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
     a = function (e, n) {
         var r;
-        return (L.lastIndex = n), null !== (r = L.exec(e)[1]) && void 0 !== r ? r : '';
+        return (x.lastIndex = n), null !== (r = x.exec(e)[1]) && void 0 !== r ? r : '';
     };
 } else
     a = function (e, n) {
@@ -402,14 +402,14 @@ var w = (function () {
                     if (R.err) return R;
                     var v = this.tryParseArgumentClose(i);
                     if (v.err) return v;
-                    var x = _(i, this.clonePosition());
+                    var L = _(i, this.clonePosition());
                     if ('select' === d)
                         return {
                             val: {
                                 type: l.wD.select,
                                 value: r,
                                 options: N(R.val),
-                                location: x
+                                location: L
                             },
                             err: null
                         };
@@ -420,7 +420,7 @@ var w = (function () {
                             options: N(R.val),
                             offset: C,
                             pluralType: 'plural' === d ? 'cardinal' : 'ordinal',
-                            location: x
+                            location: L
                         },
                         err: null
                     };

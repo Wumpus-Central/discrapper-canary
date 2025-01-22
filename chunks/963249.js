@@ -22,13 +22,13 @@ var a = r(97613),
     v = r(981631),
     y = r(474936);
 function b(e) {
-    let { initialPlanId: n, followupSKUInfo: a, onClose: b, onComplete: I, onSubscriptionConfirmation: T, analyticsLocations: S, analyticsObject: A, analyticsLocation: C, analyticsSourceLocation: N, isGift: R = !1, giftMessage: O, giftStyle: D, giftingOrigin: x, subscriptionTier: L, trialId: w, postSuccessGuild: P, openInvoiceId: M, applicationId: k, referralTrialOfferId: U, giftRecipient: B, returnRef: G, subscription: Z, skipConfirm: F, repeatPurchase: V } = null != e ? e : {},
+    let { initialPlanId: n, followupSKUInfo: a, onClose: b, onComplete: I, onSubscriptionConfirmation: T, analyticsLocations: S, analyticsObject: A, analyticsLocation: C, analyticsSourceLocation: N, isGift: R = !1, giftMessage: O, giftStyle: D, giftingOrigin: L, subscriptionTier: x, trialId: w, postSuccessGuild: P, openInvoiceId: M, applicationId: k, referralTrialOfferId: U, giftRecipient: B, returnRef: G, subscription: Z, skipConfirm: F, repeatPurchase: V } = null != e ? e : {},
         j = !1,
         H = (0, s.Z)(),
         Y = _.default.getCurrentUser(),
         W = (0, E.M5)(Y, y.p9.TIER_2),
         K = o()('payment-modal'),
-        z = (0, E.Wz)(L);
+        z = (0, E.Wz)(x);
     return (0, l.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([r.e('8016'), r.e('17938'), r.e('54433'), r.e('95838')]).then(r.bind(r, 7305));
@@ -37,12 +37,12 @@ function b(e) {
                 return (0, i.jsx)(e, {
                     ...s,
                     loadId: H,
-                    subscriptionTier: L,
+                    subscriptionTier: x,
                     skuId: z,
                     isGift: R,
                     giftMessage: O,
                     giftStyle: D,
-                    giftingOrigin: x,
+                    giftingOrigin: L,
                     giftRecipient: B,
                     initialPlanId: n,
                     followupSKUInfo: a,

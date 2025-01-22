@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(706140),
     x = n(626135),
     f = n(314684),
-    _ = n(715627),
-    E = n(404615),
+    E = n(715627),
+    _ = n(404615),
     C = n(238108),
     T = n(32173),
     S = n(391110),
@@ -33,7 +33,7 @@ let R = {
         yMax: -20
     },
     P = r.memo((e) => {
-        let { name: t, canReveal: n = !0, dismissibleContentType: s, forceShadow: E, cardType: b, confettiCanvas: I } = e,
+        let { name: t, canReveal: n = !0, dismissibleContentType: s, forceShadow: _, cardType: b, confettiCanvas: I } = e,
             y = null == e ? void 0 : e.onCtaClick,
             B = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
             [Z, L] = r.useState(!1),
@@ -112,7 +112,7 @@ let R = {
         n)
             ? t === T.u.UPCOMING_DROP_UNTIMED
                 ? (0, i.jsx)('div', {
-                      className: a()(O.flipCardContainer, { [O.forceShadow]: E }),
+                      className: a()(O.flipCardContainer, { [O.forceShadow]: _ }),
                       onMouseEnter: J,
                       onFocus: J,
                       onMouseLeave: $,
@@ -148,7 +148,7 @@ let R = {
                             className: a()({
                                 [O.noFlipCardContainer]: !W,
                                 [O.noFlipCardContainerCarousel]: W,
-                                [O.forceShadow]: E,
+                                [O.forceShadow]: _,
                                 [O.reducedMotion]: B
                             }),
                             children: [
@@ -157,7 +157,7 @@ let R = {
                                     ref: t === T.u.FREE_BOOST || t === T.u.TENURE_REWARD_COLLECTIBLE ? en : void 0
                                 }),
                                 G &&
-                                    (0, i.jsx)(_.Z, {
+                                    (0, i.jsx)(E.Z, {
                                         speedValues: R,
                                         numBursts: 3,
                                         particlesPerBurst: 15,
@@ -174,7 +174,7 @@ let R = {
                         })
                     })
                   : (0, i.jsx)('div', {
-                        className: a()(O.flipCardContainer, { [O.forceShadow]: E }),
+                        className: a()(O.flipCardContainer, { [O.forceShadow]: _ }),
                         children: (0, i.jsxs)(u.Clickable, {
                             onClick: () => L(!0),
                             className: a()(O.flipCard, O.clickable, {
@@ -217,24 +217,24 @@ let R = {
                     })
             : (0, i.jsx)(P, {
                   ...z.upcomingDropUntimed,
-                  forceShadow: E
+                  forceShadow: _
               });
     });
 P.displayName = 'PerkDiscoverabilityCard';
 let D = r.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: s = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: m, onMouseEnter: g, className: h, perkComponent: p, cardVariant: x, cardType: f, onClick: _, backgroundImage: C, pillText: T, perkImage: N, imageOverlayText: v } = e,
+    let { title: r, titleClassName: s = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: m, onMouseEnter: g, className: h, perkComponent: p, cardVariant: x, cardType: f, onClick: E, backgroundImage: C, pillText: T, perkImage: N, imageOverlayText: v } = e,
         A = f === S.R0.CARD_CAROUSEL_FIRST_ROW || f === S.R0.CARD_CAROUSEL_SECOND_ROW || f === S.R0.CARD_CAROUSEL_THIRD_ROW,
         j = '' !== o || '' !== c || ('' !== l && x === S.zW.REWARD),
-        R = (0, E._)(x);
+        R = (0, _._)(x);
     return (0, i.jsxs)(u.Clickable, {
         className: a()(O.card, h, null === (n = R.cardContainer) || void 0 === n ? void 0 : n.className, {
-            [O.clickable]: null != _,
+            [O.clickable]: null != E,
             [O.hideOverflow]: A
         }),
         onMouseEnter: g,
         style: { backgroundImage: null != C ? 'url('.concat(C, ')') : void 0 },
-        onClick: _,
+        onClick: E,
         children: [
             null != T &&
                 (0, i.jsx)(u.Text, {

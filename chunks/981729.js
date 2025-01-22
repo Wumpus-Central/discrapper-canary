@@ -116,11 +116,11 @@ let D = (e) => {
             }
         });
     },
-    x = {
+    L = {
         scale: 0.95,
         opacity: 0
     },
-    L = {
+    x = {
         scale: 1,
         opacity: 0
     },
@@ -136,9 +136,9 @@ let D = (e) => {
             {
                 keys: (e) => (e ? 'tooltip' : 'empty'),
                 config: g.F,
-                from: o.enabled ? L : x,
+                from: o.enabled ? x : L,
                 enter: w,
-                leave: o.enabled ? L : x,
+                leave: o.enabled ? x : L,
                 onRest: r
             },
             'animate-always'

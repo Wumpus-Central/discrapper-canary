@@ -30,8 +30,8 @@ var a = r(200651),
     R = r(496675),
     O = r(699516),
     D = r(944486),
-    x = r(979651),
-    L = r(181106),
+    L = r(979651),
+    x = r(181106),
     w = r(417363),
     P = r(358085),
     M = r(804739),
@@ -65,8 +65,8 @@ function Z(e) {
                     })
             ) || Y,
         Q = (0, s.e7)([p.ZP], () => null != p.ZP.getSelfEmbeddedActivityForChannel(z)),
-        X = (0, s.e7)([L.Z], () => null != W && L.Z.getState(W, U.mFx.JOIN) === U.OcF.LOADING),
-        J = (0, s.e7)([T.Z, C.Z, A.Z, O.Z, D.Z, x.Z, R.Z], () =>
+        X = (0, s.e7)([x.Z], () => null != W && x.Z.getState(W, U.mFx.JOIN) === U.OcF.LOADING),
+        J = (0, s.e7)([T.Z, C.Z, A.Z, O.Z, D.Z, L.Z, R.Z], () =>
             (0, _.Z)({
                 user: n,
                 activity: i,
@@ -79,7 +79,7 @@ function Z(e) {
                 GuildMemberCountStore: A.Z,
                 RelationshipStore: O.Z,
                 SelectedChannelStore: D.Z,
-                VoiceStateStore: x.Z,
+                VoiceStateStore: L.Z,
                 PermissionStore: R.Z
             })
         ),

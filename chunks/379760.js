@@ -1,4 +1,4 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
         return d;
     }
@@ -12,14 +12,14 @@ var r = n(481060),
     o = n(388032),
     c = n(988750),
     u = n(232186);
-function d(t) {
-    let { title: e, subtitle: n, error: d, onSubmit: h, onCancel: p } = t;
+function d(e) {
+    let { title: t, subtitle: n, error: d, onSubmit: h, onCancel: p } = e;
     return (0, s.jsxs)(i.Z, {
         direction: i.Z.Direction.VERTICAL,
         children: [
             (0, s.jsx)(a.Dx, {
                 className: u.marginBottom8,
-                children: e
+                children: t
             }),
             (0, s.jsx)(a.DK, {
                 className: c.subTitle,

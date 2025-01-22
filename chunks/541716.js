@@ -307,7 +307,7 @@ let l = {
     I = {
         analyticsName: 'rules_input',
         drafts: { type: s.d.ChannelMessage },
-        permissions: { requireSendMessages: !0 },
+        permissions: { requireSendMessages: !1 },
         autocomplete: {
             alwaysUseLayer: !0,
             small: !0

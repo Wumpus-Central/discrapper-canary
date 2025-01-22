@@ -15,12 +15,12 @@ var i = n(200651),
     u = n(308083),
     m = n(984094);
 function g(e) {
-    let { className: t, clanTag: n, clanBadge: s, onTagClick: g, guildId: h, guildName: p, guildIcon: x, guildIconSize: f, memberCount: _ } = e,
-        E = r.useRef(null),
+    let { className: t, clanTag: n, clanBadge: s, onTagClick: g, guildId: h, guildName: p, guildIcon: x, guildIconSize: f, memberCount: E } = e,
+        _ = r.useRef(null),
         [C, T] = r.useState(!1);
     return (
         r.useEffect(() => {
-            let e = E.current;
+            let e = _.current;
             null != e && null != e.offsetWidth && null != e.scrollWidth && T(e.offsetWidth < e.scrollWidth);
         }, []),
         (0, i.jsxs)('div', {
@@ -46,13 +46,13 @@ function g(e) {
                                     shouldShow: C,
                                     children: (e) =>
                                         (0, i.jsx)('span', {
-                                            ref: E,
+                                            ref: _,
                                             ...e,
                                             className: m.guildName,
                                             children: p
                                         })
                                 }),
-                                null != _ && (0, i.jsx)(c.Z, { count: _ })
+                                null != E && (0, i.jsx)(c.Z, { count: E })
                             ]
                         })
                     ]

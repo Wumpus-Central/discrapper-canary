@@ -50,11 +50,11 @@ function D(e) {
     let { profileEffectId: n } = e;
     o = n;
 }
-function x(e) {
+function L(e) {
     let { banner: n } = e;
     s = n;
 }
-function L(e) {
+function x(e) {
     let { bio: n } = e;
     l = n;
 }
@@ -158,8 +158,8 @@ v(F, 'displayName', 'GuildIdentitySettingsStore'),
         GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: R,
         GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: O,
         GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: D,
-        GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: x,
-        GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: L,
+        GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: L,
+        GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: x,
         GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: w,
         GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: P,
         GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: M,

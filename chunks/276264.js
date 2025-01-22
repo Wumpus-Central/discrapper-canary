@@ -30,8 +30,8 @@ var a = r(200651),
     R = r(981631),
     O = r(674563),
     D = r(524484),
-    x = r(388032),
-    L = r(182605);
+    L = r(388032),
+    x = r(182605);
 let w = (0, C.Mg)(u.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
     P = 3;
 function M(e) {
@@ -74,9 +74,9 @@ function M(e) {
                 let e = null != G ? G.find((e) => e.type === R.IIU.CUSTOM_STATUS) : null,
                     n = null != e && null != U && (0, E.Z)(e, U, Y);
                 return (0, a.jsx)(f.Z, {
-                    className: L.activity,
-                    textClassName: L.activityText,
-                    emojiClassName: L.activityEmoji,
+                    className: x.activity,
+                    textClassName: x.activityText,
+                    emojiClassName: x.activityEmoji,
                     activities: G,
                     applicationStream: Z,
                     animate: ed,
@@ -88,8 +88,8 @@ function M(e) {
             }
             return null != e_
                 ? (0, a.jsx)(p.Z, {
-                      className: L.activity,
-                      textClassName: L.activityText,
+                      className: x.activity,
+                      textClassName: x.activityText,
                       entry: e_
                   })
                 : null;
@@ -97,13 +97,13 @@ function M(e) {
         eN = () =>
             null != u && u && null == w
                 ? (0, a.jsx)(c.Tooltip, {
-                      text: null != C ? C : x.intl.string(x.t.pclUFB),
+                      text: null != C ? C : L.intl.string(L.t.pclUFB),
                       children: (e) =>
                           (0, a.jsx)(c.CrownIcon, {
                               size: 'md',
                               color: 'currentColor',
                               ...e,
-                              className: L.ownerIcon
+                              className: x.ownerIcon
                           })
                   })
                 : null,
@@ -111,14 +111,14 @@ function M(e) {
             null == H
                 ? null
                 : (0, a.jsx)(c.Tooltip, {
-                      text: x.intl.formatToPlainString(x.t.IWkAq6, { date: H }),
+                      text: L.intl.formatToPlainString(L.t.IWkAq6, { date: H }),
                       children: (e) =>
                           (0, a.jsx)(c.Clickable, {
                               onClick: J,
                               tabIndex: -1,
                               children: (0, a.jsx)(A.Z, {
                                   ...e,
-                                  className: L.premiumIcon
+                                  className: x.premiumIcon
                               })
                           })
                   }),
@@ -126,7 +126,7 @@ function M(e) {
             let e = (null == U ? void 0 : U.isClyde()) ? O.Hb.AI : O.Hb.BOT;
             return null != U && U.bot
                 ? (0, a.jsx)(h.Z, {
-                      className: L.botTag,
+                      className: x.botTag,
                       type: e,
                       verified: U.isVerifiedBot()
                   })
@@ -136,7 +136,7 @@ function M(e) {
             (0, a.jsxs)(a.Fragment, {
                 children: [eO(), eN(), eR()]
             }),
-        ex = (e, n) => {
+        eL = (e, n) => {
             let r = V ? c.AnimatedAvatar : c.Avatar,
                 i = (0, d.Z)(G) ? R.Skl.STREAMING : F;
             return (
@@ -164,7 +164,7 @@ function M(e) {
                 })
             );
         },
-        eL = o.useMemo(() => ({ source: R.jXE.MEMBER_LIST }), []),
+        ex = o.useMemo(() => ({ source: R.jXE.MEMBER_LIST }), []),
         ew = () =>
             (0, a.jsxs)(a.Fragment, {
                 children: [
@@ -172,15 +172,15 @@ function M(e) {
                         roleName: s,
                         color: null != i ? i : void 0,
                         name: null != k ? k : el,
-                        className: L.name
+                        className: x.name
                     }),
                     (0, a.jsx)(m.ZP, {
                         primaryGuild: null == U ? void 0 : U.primaryGuild,
                         userId: null == U ? void 0 : U.id,
                         contextGuildId: W,
                         disableGuildProfile: !0,
-                        className: L.clanTag,
-                        profileViewedAnalytics: eL
+                        className: x.clanTag,
+                        profileViewedAnalytics: ex
                     })
                 ]
             }),
@@ -196,7 +196,7 @@ function M(e) {
     return null == U
         ? (0, a.jsx)(_.Z, {
               avatarSize: c.AvatarSizes.SIZE_32,
-              className: L.placeholder
+              className: x.placeholder
           })
         : (0, a.jsx)(c.Popout, {
               renderPopout: eP,
@@ -210,8 +210,8 @@ function M(e) {
                   (0, a.jsx)(g.Z, {
                       ref: ec,
                       selected: r,
-                      className: l()(L.member, K, { [L.offline]: eM && !r }),
-                      innerClassName: L.memberInner,
+                      className: l()(x.member, K, { [x.offline]: eM && !r }),
+                      innerClassName: x.memberInner,
                       onClick: Q,
                       onKeyDown: q,
                       onMouseDown: z,
@@ -221,7 +221,7 @@ function M(e) {
                       name:
                           null == w
                               ? (0, a.jsx)('span', {
-                                    className: L.username,
+                                    className: x.username,
                                     children: ew()
                                 })
                               : (0, a.jsx)(c.Tooltip, {
@@ -229,11 +229,11 @@ function M(e) {
                                     children: (e) =>
                                         (0, a.jsx)('span', {
                                             ...e,
-                                            className: l()(L.username, L.lostPermission),
+                                            className: l()(x.username, x.lostPermission),
                                             children: ew()
                                         })
                                 }),
-                      avatar: ex(U, eM),
+                      avatar: eL(U, eM),
                       subText: eC(),
                       decorators: eD(),
                       'aria-controls': ee,

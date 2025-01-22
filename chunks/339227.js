@@ -205,8 +205,8 @@ let N = {
     R = /(-# +)/,
     O = (0, E.Z)([S, N]),
     D = (0, E.Z)([A, N]),
-    x = p._p(O),
-    L = p._p(D),
+    L = p._p(O),
+    x = p._p(D),
     w = {
         max: 1 / 0,
         maxAge: 1 * v.Z.Millis.MINUTE,
@@ -221,7 +221,7 @@ function k(e, n, r) {
             disableAutoBlockNewlines: !0,
             guildId: n
         },
-        o = r ? L : x,
+        o = r ? x : L,
         s = r ? M : P,
         l = s.get(e);
     if (null != l) return l;

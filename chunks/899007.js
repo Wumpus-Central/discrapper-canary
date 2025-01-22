@@ -29,8 +29,8 @@ let C = g.ZP.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 function N(e) {
     let { user: n, displayProfile: r, guildId: i, channelId: s, profileType: g, animateOnHover: N, onOpenProfile: R, className: O } = e,
         { theme: D } = (0, b.z)(),
-        { analyticsLocations: x } = (0, p.ZP)(f.Z.AVATAR),
-        { trackUserProfileAction: L } = (0, E.KZ)(),
+        { analyticsLocations: L } = (0, p.ZP)(f.Z.AVATAR),
+        { trackUserProfileAction: x } = (0, E.KZ)(),
         w = m.ZP.isPremiumAtLeast(null == r ? void 0 : r.premiumType, S.p9.TIER_2),
         P = o.useMemo(() => n.isNonUserBot() || (0, h.W)(n, s), [n, s]),
         { live: M } = (0, v.Z)(n.id),
@@ -82,9 +82,9 @@ function N(e) {
               className: l()(Z, A.clickable),
               focusProps: { ringClassName: A.focusRing },
               onClick: () => {
-                  L({
+                  x({
                       action: 'PRESS_VIEW_PROFILE',
-                      analyticsLocations: x
+                      analyticsLocations: L
                   }),
                       null == R || R();
               },

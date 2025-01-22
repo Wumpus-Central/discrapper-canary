@@ -33,8 +33,8 @@ var s = r(772848),
     R = r(358085),
     O = r(624138),
     D = r(24933),
-    x = r(115130),
-    L = r(566620),
+    L = r(115130),
+    x = r(566620),
     w = r(317381),
     P = r(969345),
     M = r(148720),
@@ -143,8 +143,8 @@ function X(e) {
         N = d.compositeInstanceId,
         R = null == S && (null == y ? void 0 : y.isVocal()) === !0 && (null == y ? void 0 : y.isPrivate()) === !1;
     if (null == N || R) return;
-    let x = (0, s.Z)(),
-        L = 'location' in d ? 2 : 1,
+    let L = (0, s.Z)(),
+        x = 'location' in d ? 2 : 1,
         M = null == y ? void 0 : y.getGuildId(),
         k = A.default.getCurrentUser();
     if (null == y || null == k) return;
@@ -160,10 +160,10 @@ function X(e) {
         Y = null != S ? [S] : [],
         q = {
             activitySessionId: N,
-            activityUserSessionId: x,
+            activityUserSessionId: L,
             launchId: d.launchId,
             mediaSessionIds: Y,
-            activitiesInfraVersion: L
+            activitiesInfraVersion: x
         };
     W[a] = q;
     let Q = K[a];
@@ -183,7 +183,7 @@ function X(e) {
             activity_premium_tier_requirement: null == Z ? void 0 : null === (n = Z.activity) || void 0 === n ? void 0 : n.premium_tier_requirement,
             shelf_rank: null == Z ? void 0 : null === (r = Z.activity) || void 0 === r ? void 0 : r.shelf_rank,
             shelf_sorted_rank: F > 0 ? F : null,
-            activity_user_session_id: x,
+            activity_user_session_id: L,
             channel_type: y.type,
             source: null == Q ? void 0 : Q.source,
             command_context_type: (0, f.Vh)(y, a),
@@ -197,12 +197,12 @@ function X(e) {
             application_id: a,
             instance_id: d.launchId,
             initial_media_session_id: Y[0],
-            activity_user_session_id: x,
+            activity_user_session_id: L,
             raw_thermal_state: H,
             is_activity_start: l,
             shelf_rank: null == Z ? void 0 : null === (i = Z.activity) || void 0 === i ? void 0 : i.shelf_rank,
             shelf_sorted_rank: F > 0 ? F : null,
-            activities_infra_version: L
+            activities_infra_version: x
         });
 }
 function J(e) {
@@ -271,10 +271,10 @@ class $ extends d.Z {
                 let d = j.intl.string(j.t['IOy+Iy']);
                 if (a instanceof m.Z) {
                     (n = 0), (i = a.reason);
-                    let e = x.Z.getFetchState();
-                    switch ((v.Sb.getSetting() && e !== x.O.LOADED && (await (0, L.$h)()), a.reason)) {
+                    let e = L.Z.getFetchState();
+                    switch ((v.Sb.getSetting() && e !== L.O.LOADED && (await (0, x.$h)()), a.reason)) {
                         case m.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
-                            x.Z.inDevModeForApplication(l) && (d = j.intl.string(j.t.hXRXf3));
+                            L.Z.inDevModeForApplication(l) && (d = j.intl.string(j.t.hXRXf3));
                             break;
                         case m.Z.Reasons.INVALID_CHANNEL:
                             d = j.intl.string(j.t.j29zCg);
@@ -375,7 +375,7 @@ class $ extends d.Z {
                     return;
                 }
                 let h = null !== (r = null == c ? void 0 : c.getGuildId()) && void 0 !== r ? r : void 0,
-                    { activityConfigs: _, applications: m } = await (0, L.w1)({ guildId: h });
+                    { activityConfigs: _, applications: m } = await (0, x.w1)({ guildId: h });
                 if (
                     null ==
                     (0, P.Z)({
@@ -384,7 +384,7 @@ class $ extends d.Z {
                         applications: m
                     })
                 ) {
-                    let e = await (0, L.w1)({
+                    let e = await (0, x.w1)({
                         guildId: h,
                         force: !0
                     });

@@ -30,8 +30,8 @@ var a = r(200651),
     R = r(463031),
     O = r(206583),
     D = r(388032),
-    x = r(508806);
-let L = 10,
+    L = r(508806);
+let x = 10,
     w = 15,
     P = 'leaderboard.png';
 function M(e) {
@@ -70,7 +70,7 @@ function M(e) {
                 };
             return (0, m.ZJ)(n.h, n.s, n.l);
         }, [v]),
-        A = o.useMemo(() => null == g.find((e) => e.userId === u) && g.length <= L, [g, u]);
+        A = o.useMemo(() => null == g.find((e) => e.userId === u) && g.length <= x, [g, u]);
     if (
         (o.useEffect(() => {
             C.M.forEach((e) => (0, d.po)(e));
@@ -81,7 +81,7 @@ function M(e) {
     let { sort_by_statistic_id: N, sort_desc: R } = n.guild_settings,
         O = n.settings.statistics[N];
     return (0, a.jsxs)('div', {
-        className: x.container,
+        className: L.container,
         style: { background: S },
         children: [
             (0, a.jsx)(T.Z, {
@@ -92,24 +92,24 @@ function M(e) {
                 ? null
                 : (0, a.jsx)(a.Fragment, {
                       children: (0, a.jsxs)('div', {
-                          className: x.table,
+                          className: L.table,
                           children: [
                               (0, a.jsxs)('div', {
-                                  className: x.headerRow,
+                                  className: L.headerRow,
                                   children: [
                                       (0, a.jsx)(l.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: x.headerRank,
+                                          className: L.headerRank,
                                           children: '#'
                                       }),
                                       (0, a.jsx)(l.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: x.headerPlayer,
+                                          className: L.headerPlayer,
                                           children: D.intl.string(D.t['6ii1+/'])
                                       }),
                                       (0, a.jsx)(l.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: x.headerValue,
+                                          className: L.headerValue,
                                           children: (0, y.s)({
                                               statisticId: N,
                                               sortDesc: R,
@@ -119,7 +119,7 @@ function M(e) {
                                   ]
                               }),
                               (0, a.jsxs)(l.ScrollerNone, {
-                                  className: x.rows,
+                                  className: L.rows,
                                   children: [
                                       g.map((e) =>
                                           (0, o.createElement)(U, {
@@ -146,16 +146,16 @@ function k(e) {
     return (0, a.jsx)(S.z, {
         imageUrl: r,
         children: (0, a.jsxs)('span', {
-            className: x.emptyTitleContainer,
+            className: L.emptyTitleContainer,
             children: [
                 (0, a.jsx)(l.Text, {
                     tag: 'span',
                     variant: 'text-lg/normal',
-                    className: x.emptyTitle,
+                    className: L.emptyTitle,
                     children: D.intl.string(D.t.BfRGk5)
                 }),
                 (0, a.jsx)(N.Z, {
-                    className: x.emptyWinnerImage,
+                    className: L.emptyWinnerImage,
                     leaderboard: n
                 })
             ]
@@ -168,7 +168,7 @@ function U(e) {
         b = g.ZP.getName(c, void 0, y),
         I = null != d && d > r,
         [T, S] = o.useState('default'),
-        L = (0, s.e7)([h.Z], () => {
+        x = (0, s.e7)([h.Z], () => {
             let e = h.Z.getPrimaryActivity(n);
             return (null == e ? void 0 : e.application_id) != null && R.T.includes(e.application_id);
         }),
@@ -191,7 +191,7 @@ function U(e) {
             }
         },
         U = (0, a.jsx)(l.Text, {
-            className: x.tooltip,
+            className: L.tooltip,
             variant: 'text-sm/medium',
             children:
                 'copied' === T
@@ -217,11 +217,11 @@ function U(e) {
                       : (0, a.jsx)(a.Fragment, { children: D.intl.string(D.t.mikfoa) })
         });
     return (0, a.jsxs)('div', {
-        className: x.userRow,
+        className: L.userRow,
         children: [
-            I ? (0, a.jsx)('div', { className: x.rankChangeIndicator }) : null,
+            I ? (0, a.jsx)('div', { className: L.rankChangeIndicator }) : null,
             (0, a.jsx)('div', {
-                className: x.userRank,
+                className: L.userRank,
                 children:
                     r <= 3
                         ? (0, a.jsx)(A._, { rank: r })
@@ -233,7 +233,7 @@ function U(e) {
                           })
             }),
             (0, a.jsxs)('div', {
-                className: x.userPlayer,
+                className: L.userPlayer,
                 children: [
                     (0, a.jsx)(l.Avatar, {
                         src: null == y ? void 0 : y.getAvatarURL(c, 16),
@@ -258,7 +258,7 @@ function U(e) {
                                       horizontal: !0
                                   }),
                                   (0, a.jsx)(N.Z, {
-                                      className: x.userWinnerImage,
+                                      className: L.userWinnerImage,
                                       leaderboard: p
                                   })
                               ]
@@ -268,13 +268,13 @@ function U(e) {
                 ]
             }),
             (0, a.jsxs)('div', {
-                className: x.badgesContainer,
+                className: L.badgesContainer,
                 children: [
-                    L &&
+                    x &&
                         (0, a.jsx)(l.GameControllerIcon, {
                             size: 'xs',
                             color: l.tokens.colors.TEXT_POSITIVE,
-                            className: x.liveIcon
+                            className: L.liveIcon
                         }),
                     E.isPlatformEmbedded &&
                         (0, a.jsx)(l.Tooltip, {
@@ -287,15 +287,15 @@ function U(e) {
                                     ...e,
                                     onClick: w ? void 0 : k,
                                     'aria-busy': w,
-                                    className: x.copyLinkContainer,
+                                    className: L.copyLinkContainer,
                                     children: w
                                         ? (0, a.jsx)(l.Spinner, {
                                               type: l.Spinner.Type.SPINNING_CIRCLE_SIMPLE,
-                                              className: x.copySpinner
+                                              className: L.copySpinner
                                           })
                                         : (0, a.jsx)(l.LinkIcon, {
                                               size: 'xs',
-                                              className: x.copyLink
+                                              className: L.copyLink
                                           })
                                 })
                         })
@@ -313,14 +313,14 @@ function U(e) {
 function B(e) {
     let { leaderboard: n } = e;
     return (0, a.jsxs)('div', {
-        className: x.joinLeaderboardCTAContainer,
+        className: L.joinLeaderboardCTAContainer,
         children: [
             (0, a.jsx)(l.Text, {
                 variant: 'text-xs/normal',
                 children: D.intl.string(D.t.BfRGk5)
             }),
             (0, a.jsx)(N.Z, {
-                className: x.joinLeaderboardCTAWinnerImage,
+                className: L.joinLeaderboardCTAWinnerImage,
                 leaderboard: n
             })
         ]
@@ -329,7 +329,7 @@ function B(e) {
 function G(e) {
     let { rankChange: n } = e;
     return (0, a.jsxs)('div', {
-        className: x.rankChangeBadge,
+        className: L.rankChangeBadge,
         children: [
             (0, a.jsx)(l.ArrowSmallUpIcon, {
                 size: 'xxs',

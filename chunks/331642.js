@@ -19,7 +19,7 @@ var i = n(200651),
     p = n(603074),
     x = n(388032),
     f = n(477733);
-function _(e) {
+function E(e) {
     let { onSelect: t } = e,
         [n, a] = r.useState(!1),
         o = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
@@ -61,7 +61,7 @@ function _(e) {
             })
     });
 }
-function E(e) {
+function _(e) {
     let { sound: t } = e,
         { previewSound: n } = (0, m.Z)(t, null),
         r =
@@ -121,7 +121,7 @@ function C(e) {
                                   : t.name
                     }),
                     s
-                        ? (0, i.jsx)(E, { sound: t })
+                        ? (0, i.jsx)(_, { sound: t })
                         : (0, i.jsx)(l.VoiceNormalIcon, {
                               size: 'md',
                               color: 'currentColor',
@@ -132,7 +132,7 @@ function C(e) {
             (0, i.jsxs)('div', {
                 className: f.container,
                 children: [
-                    (0, i.jsx)(_, { onSelect: r }),
+                    (0, i.jsx)(E, { onSelect: r }),
                     s &&
                         !n &&
                         (0, i.jsx)(h.hU, {

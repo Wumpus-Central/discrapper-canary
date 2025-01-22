@@ -1,13 +1,13 @@
-e.d(t, {
+n.d(t, {
     p: function () {
-        return o;
+        return r;
     }
 });
-var i = e(358085);
-let o = {
+var i = n(358085);
+let r = {
     binds: ['mod+alt+i'],
     comboKeysBindGlobal: !0,
-    action(n) {
-        if ((0, i.isWeb)() && 'discord.com' === location.host) return n.preventDefault(), n.stopPropagation(), !1;
+    action(e) {
+        if ((0, i.isWeb)() && 'discord.com' === location.host) return e.preventDefault(), e.stopPropagation(), !1;
     }
 };

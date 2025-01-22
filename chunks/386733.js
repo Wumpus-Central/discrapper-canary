@@ -13,8 +13,8 @@ var i = n(200651),
     p = n(281494),
     x = n(276444),
     f = n(520540),
-    _ = n(796634),
-    E = n(197115),
+    E = n(796634),
+    _ = n(197115),
     C = n(119269),
     T = n(938736),
     S = n(981631),
@@ -121,7 +121,7 @@ t.Z = (e) => {
         v = (0, l.e7)([x.Z], () => x.Z.getRecipientStatus()),
         A = (0, T.uv)('ReferralProgramProgressBar'),
         O = (0, T.TW)('ReferralProgramProgressBar'),
-        { referralSentUsers: R, hasSentAllReferrals: P, refreshAt: D } = (0, _.G)(),
+        { referralSentUsers: R, hasSentAllReferrals: P, refreshAt: D } = (0, E.G)(),
         y = r.useMemo(() => R.map((e) => new m.Z(e)), [R]),
         { subscriberHomeVariant: B } = f.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
         Z = A === S.g2L.UNAPPLIED || A === S.g2L.QUALIFIED,
@@ -134,11 +134,11 @@ t.Z = (e) => {
     v.forEach((e) => {
         e === p.Fe.REDEEMED && M.redeemed++, e === p.Fe.CONVERTED && (M.redeemed++, M.converted++);
     });
-    let k = M.sent === _.Q,
+    let k = M.sent === E.Q,
         w = h.Z.getArticleURL(S.BhN.REFERRAL_PROGRAM),
         { analyticsLocations: F } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
         U = r.useRef(null),
-        V = (M.sent / _.Q) * 100,
+        V = (M.sent / E.Q) * 100,
         G = !1;
     O && null != D && ((G = 0 < (t = Math.ceil((new Date(D).getTime() - new Date().getTime()) / 86400000)) && t < T.AV), (s = (100 * (T.AV - t)) / T.AV));
     let H = G && null != t,
@@ -200,7 +200,7 @@ t.Z = (e) => {
                             children: [
                                 !u &&
                                     !L &&
-                                    (0, i.jsx)(E.Z, {
+                                    (0, i.jsx)(_.Z, {
                                         color: o.ButtonColors.CUSTOM,
                                         buttonText: b.intl.string(b.t.Ve9Ge3),
                                         className: a()(I.expandedProgressBarGiftingCTA, { [I.expandedProgressBarGiftingCTALayout]: !u }),
@@ -241,7 +241,7 @@ t.Z = (e) => {
                 })
             ]
         }),
-        W = M.redeemed === _.Q;
+        W = M.redeemed === E.Q;
     return (0, i.jsx)(d.Gt, {
         value: F,
         children: (0, i.jsx)('div', {

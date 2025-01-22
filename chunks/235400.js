@@ -1,7 +1,7 @@
 r.r(n),
     r.d(n, {
         default: function () {
-            return L;
+            return x;
         }
     });
 var i = r(47120);
@@ -31,12 +31,12 @@ var a = r(200651),
     R = r(474936),
     O = r(388032),
     D = r(152597);
-function x(e) {
+function L(e) {
     let { user: n, categories: r, purchases: i, analyticsLocations: s, onClose: l, initialSelectedDecoration: d, initialSelectedDecorationId: _, isTryItOutFlow: b, guild: I } = e,
         {
             pendingAvatarDecoration: N,
-            setPendingAvatarDecoration: x,
-            savedAvatarDecoration: L
+            setPendingAvatarDecoration: L,
+            savedAvatarDecoration: x
         } = (0, y.Z)({
             analyticsLocations: s,
             isTryItOut: b,
@@ -46,18 +46,18 @@ function x(e) {
             var e, n;
             if (null != d) return d;
             let a = (0, p.iC)(i, r);
-            return null != _ ? (null !== (e = a.find((e) => e.id === _)) && void 0 !== e ? e : null) : void 0 !== N ? N : null == L ? null : null !== (n = a.find((e) => (0, S.sr)(e, L))) && void 0 !== n ? n : null;
+            return null != _ ? (null !== (e = a.find((e) => e.id === _)) && void 0 !== e ? e : null) : void 0 !== N ? N : null == x ? null : null !== (n = a.find((e) => (0, S.sr)(e, x))) && void 0 !== n ? n : null;
         }),
         { product: M, purchase: k } = (0, h.Z)(null == w ? void 0 : w.skuId),
         U = T.ZP.canUseCollectibles(n),
         B = o.useRef(null),
         G = (0, m.Z)(s),
-        Z = (0, S.sr)(w, void 0 === N ? L : N),
+        Z = (0, S.sr)(w, void 0 === N ? x : N),
         F = (e) => {
             P(e), null != e && G(e);
         },
         V = () => {
-            x(w), l();
+            L(w), l();
         },
         j = o.useCallback(
             (e) => {
@@ -147,7 +147,7 @@ function x(e) {
         ]
     });
 }
-function L(e) {
+function x(e) {
     let { transitionState: n, analyticsLocations: r, onClose: i, onCloseModal: p, initialSelectedDecoration: h, initialSelectedDecorationId: m, isTryItOutFlow: g, guild: E } = e,
         v = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
         { analyticsLocations: y } = (0, d.ZP)(r, c.Z.EDIT_AVATAR_DECORATION_MODAL),
@@ -185,7 +185,7 @@ function L(e) {
                                 className: D.spinner,
                                 type: u.Spinner.Type.SPINNING_CIRCLE
                             })
-                          : (0, a.jsx)(x, {
+                          : (0, a.jsx)(L, {
                                 user: v,
                                 guild: E,
                                 categories: T,

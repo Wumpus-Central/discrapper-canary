@@ -9,8 +9,8 @@ var l = t(120356),
     a = t.n(l),
     r = t(704215),
     o = t(481060),
-    u = t(605236),
-    d = t(434404),
+    d = t(605236),
+    u = t(434404),
     c = t(41776),
     s = t(703656),
     g = t(981631),
@@ -21,10 +21,10 @@ let p = (n) => {
         l = e.id,
         p = async () => {
             let n = c.Z.isLurking(l);
-            await d.Z.leaveGuild(l),
+            await u.Z.leaveGuild(l),
                 n
                     ? (0, s.uL)(g.Z5c.GUILD_DISCOVERY)
-                    : !(0, u.un)(r.z.GUILD_LEAVE_FEEDBACK) &&
+                    : !(0, d.un)(r.z.GUILD_LEAVE_FEEDBACK) &&
                       (0, o.openModalLazy)(async () => {
                           let { default: n } = await t.e('74920').then(t.bind(t, 131102));
                           return (t) =>

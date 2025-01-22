@@ -62,7 +62,7 @@ n.Z = l.memo(function (e) {
                           isSoundmoji: !0,
                           sound: e,
                           channel: a,
-                          onSelectItem: () => (null == r ? void 0 : r(e))
+                          onSelectItem: (n) => (null == r ? void 0 : r(e, !n.shiftKey))
                       },
                       n
                   )

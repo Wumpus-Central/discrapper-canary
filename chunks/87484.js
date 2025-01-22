@@ -13,8 +13,8 @@ var l = e(772848),
     s = e(981631);
 function c(n) {
     let { applicationId: t, skuId: c, onClose: d, onComplete: f, analyticsLocations: p, analyticsLocationObject: m, contextKey: v } = n,
-        I = !1,
-        S = (0, l.Z)();
+        S = !1,
+        I = (0, l.Z)();
     (0, r.openModalLazy)(
         async () => {
             let { default: n } = await e.e('61670').then(e.bind(e, 409600));
@@ -22,7 +22,7 @@ function c(n) {
                 let { onClose: l, ...r } = e;
                 return (0, i.jsx)(n, {
                     ...r,
-                    loadId: S,
+                    loadId: I,
                     applicationId: t,
                     skuId: c,
                     analyticsLocations: p,
@@ -31,7 +31,7 @@ function c(n) {
                         l(), null == d || d(n);
                     },
                     onComplete: (n) => {
-                        (I = !0), null == f || f(n);
+                        (S = !0), null == f || f(n);
                     }
                 });
             };
@@ -39,9 +39,9 @@ function c(n) {
         {
             contextKey: v,
             onCloseCallback: () => {
-                !I &&
+                !S &&
                     o.default.track(s.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: S,
+                        load_id: I,
                         payment_type: s.Zuq[s.GZQ.ONE_TIME],
                         location: m,
                         is_gift: !1,
@@ -51,7 +51,7 @@ function c(n) {
                     }),
                     (0, u.fw)(),
                     (0, a.p)(),
-                    null == d || d(I);
+                    null == d || d(S);
             },
             onCloseRequest: s.dG4
         }

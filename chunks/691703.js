@@ -1,73 +1,73 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return g;
     }
 }),
-    t(315314),
-    t(610138),
-    t(216116),
-    t(78328),
-    t(815648),
-    t(47120);
-var a = t(200651),
-    i = t(192379),
-    r = t(442837),
-    l = t(481060),
-    o = t(214912),
-    s = t(703656),
-    c = t(314897),
-    d = t(900849),
-    u = t(881294),
-    m = t(981631),
-    p = t(388032);
-let _ = 'redirect_to_support_server';
+    n(315314),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120);
+var i = n(200651),
+    a = n(192379),
+    r = n(442837),
+    l = n(481060),
+    o = n(214912),
+    s = n(703656),
+    c = n(314897),
+    d = n(900849),
+    u = n(881294),
+    m = n(981631),
+    p = n(388032);
+let h = 'redirect_to_support_server';
 function g(e) {
-    let { application: n, className: t } = e,
+    let { application: t, className: n } = e,
         { onGoToSupportServer: g } = (function (e) {
-            let n = (0, u.nu)(),
-                t = (0, r.e7)([c.default], () => c.default.getSessionId()),
-                a = i.useCallback(async () => {
+            let t = (0, u.nu)(),
+                n = (0, r.e7)([c.default], () => c.default.getSessionId()),
+                i = a.useCallback(async () => {
                     try {
-                        var n;
-                        let t = null == e ? void 0 : null === (n = e.guild) || void 0 === n ? void 0 : n.id;
-                        if (null != t) {
+                        var t;
+                        let n = null == e ? void 0 : null === (t = e.guild) || void 0 === t ? void 0 : t.id;
+                        if (null != n) {
                             (0, u.zZ)(m.rMx.APP_DIRECTORY_SUPPORT_SERVER_JOINED, {
                                 application_id: e.id,
-                                support_guild_id: t
+                                support_guild_id: n
                             });
-                            let n = { page: m.ZY5.APPLICATION_DIRECTORY };
-                            await (0, d.Ub)(t, n, { setsHistorySnapshot: !1 });
+                            let t = { page: m.ZY5.APPLICATION_DIRECTORY };
+                            await (0, d.Ub)(n, t, { setsHistorySnapshot: !1 });
                         }
                     } catch {}
                 }, [e]);
             return (
-                i.useEffect(() => {
-                    let i = new URL(location.href);
-                    if (null != e && n && null != t && 'true' === i.searchParams.get(_)) {
-                        i.searchParams.delete(_);
-                        let e = i.pathname + i.search;
-                        (0, s.dL)(e), a();
+                a.useEffect(() => {
+                    let a = new URL(location.href);
+                    if (null != e && t && null != n && 'true' === a.searchParams.get(h)) {
+                        a.searchParams.delete(h);
+                        let e = a.pathname + a.search;
+                        (0, s.dL)(e), i();
                     }
-                }, [n, a, t, e]),
+                }, [t, i, n, e]),
                 {
-                    onGoToSupportServer: i.useCallback(() => {
-                        var t;
-                        null != (null == e ? void 0 : null === (t = e.guild) || void 0 === t ? void 0 : t.id) && (n ? a() : (0, u.rf)({ [_]: 'true' }));
-                    }, [e, a, n])
+                    onGoToSupportServer: a.useCallback(() => {
+                        var n;
+                        null != (null == e ? void 0 : null === (n = e.guild) || void 0 === n ? void 0 : n.id) && (t ? i() : (0, u.rf)({ [h]: 'true' }));
+                    }, [e, i, t])
                 }
             );
-        })(n);
-    return null != n.guild && n.guild.features.includes(m.oNc.DISCOVERABLE)
-        ? (0, a.jsxs)('div', {
-              className: t,
+        })(t);
+    return null != t.guild && t.guild.features.includes(m.oNc.DISCOVERABLE)
+        ? (0, i.jsxs)('div', {
+              className: n,
               children: [
-                  (0, a.jsx)(l.Heading, {
+                  (0, i.jsx)(l.Heading, {
                       variant: 'heading-sm/semibold',
                       color: 'header-primary',
                       children: p.intl.string(p.t.KJEO29)
                   }),
-                  (0, a.jsx)(o.Z, {
-                      guild: n.guild,
+                  (0, i.jsx)(o.Z, {
+                      guild: t.guild,
                       onClick: g
                   })
               ]

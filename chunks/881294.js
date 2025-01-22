@@ -1,9 +1,9 @@
-t.d(n, {
+n.d(t, {
     nu: function () {
         return m;
     },
     qF: function () {
-        return _;
+        return h;
     },
     rf: function () {
         return p;
@@ -12,50 +12,50 @@ t.d(n, {
         return u;
     }
 }),
-    t(315314),
-    t(610138),
-    t(216116),
-    t(78328),
-    t(815648),
-    t(47120);
-var a = t(860911),
-    i = t(442837),
-    r = t(703656),
-    l = t(314897),
-    o = t(594174),
-    s = t(626135),
-    c = t(258971),
-    d = t(981631);
-function u(e, n) {
-    var t;
-    let a = c.z8.getField('sessionId'),
-        i = c.z8.getField('guildId'),
-        r = null === (t = c.z8.getField('entrypoint')) || void 0 === t ? void 0 : t.name,
+    n(315314),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120);
+var i = n(860911),
+    a = n(442837),
+    r = n(703656),
+    l = n(314897),
+    o = n(594174),
+    s = n(626135),
+    c = n(258971),
+    d = n(981631);
+function u(e, t) {
+    var n;
+    let i = c.z8.getField('sessionId'),
+        a = c.z8.getField('guildId'),
+        r = null === (n = c.z8.getField('entrypoint')) || void 0 === n ? void 0 : n.name,
         l = o.default.getCurrentUser();
     return s.default.track(e, {
-        ...n,
-        guild_id: i,
-        directory_session_id: a,
+        ...t,
+        guild_id: a,
+        directory_session_id: i,
         source: r,
         user_id: null == l ? void 0 : l.id
     });
 }
 function m() {
-    return (0, i.e7)([l.default], () => l.default.isAuthenticated());
+    return (0, a.e7)([l.default], () => l.default.isAuthenticated());
 }
 function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        n = new URL(location.href);
-    for (let t in e) {
-        let a = e[t];
-        n.searchParams.set(t, a);
+        t = new URL(location.href);
+    for (let n in e) {
+        let i = e[n];
+        t.searchParams.set(n, i);
     }
-    let t = n.pathname + n.search,
-        i = (0, a.Ui)(t, !1);
-    (0, r.uL)(i);
+    let n = t.pathname + t.search,
+        a = (0, i.Ui)(n, !1);
+    (0, r.uL)(a);
 }
-function _() {
+function h() {
     let e = new URL(location.href),
-        n = '?redirect_to='.concat(encodeURIComponent(e.pathname + e.search));
-    (0, r.uL)(d.Z5c.REGISTER + n);
+        t = '?redirect_to='.concat(encodeURIComponent(e.pathname + e.search));
+    (0, r.uL)(d.Z5c.REGISTER + t);
 }

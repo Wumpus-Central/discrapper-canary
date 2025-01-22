@@ -6,7 +6,7 @@ r.d(n, {
         return N;
     },
     Je: function () {
-        return x;
+        return L;
     },
     KK: function () {
         return X;
@@ -33,7 +33,7 @@ r.d(n, {
         return V;
     },
     cP: function () {
-        return L;
+        return x;
     },
     e9: function () {
         return P;
@@ -115,12 +115,12 @@ let C = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
     R = (e, n) => (null != n && n.hasFeature(b.oNc.MORE_STICKERS) && e === b.Eu4.TIER_3 ? p.D.MAX_STICKER_SLOTS : I.$8[e]),
     O = (e) => I.pH[e],
     D = (e, n) => (null != n && n.hasFeature(b.oNc.MORE_SOUNDBOARD) ? A : I._k[e]),
-    x = (e) => {
+    L = (e) => {
         if (e === b.Eu4.NONE) return I._k[e];
         let n = C[C.indexOf(e) - 1];
         return I._k[e] - I._k[n];
     },
-    L = (e) => [
+    x = (e) => [
         {
             tier: b.Eu4.TIER_1,
             title: T.intl.string(T.t['lK+WOT']),
@@ -143,7 +143,7 @@ let C = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
                 },
                 {
                     title: T.intl.formatToPlainString(T.t.NRuk5u, {
-                        soundCount: x(b.Eu4.TIER_1),
+                        soundCount: L(b.Eu4.TIER_1),
                         totalSoundCount: D(b.Eu4.TIER_1)
                     }),
                     description: T.intl.string(T.t.Oq7OVl),
@@ -193,7 +193,7 @@ let C = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
                 },
                 {
                     title: T.intl.formatToPlainString(T.t.NRuk5u, {
-                        soundCount: x(b.Eu4.TIER_2),
+                        soundCount: L(b.Eu4.TIER_2),
                         totalSoundCount: D(b.Eu4.TIER_2)
                     }),
                     description: T.intl.string(T.t.pEYlPT),
@@ -255,7 +255,7 @@ let C = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
                 },
                 {
                     title: T.intl.formatToPlainString(T.t.NRuk5u, {
-                        soundCount: x(b.Eu4.TIER_3),
+                        soundCount: L(b.Eu4.TIER_3),
                         totalSoundCount: D(b.Eu4.TIER_3)
                     }),
                     description: T.intl.string(T.t['8omJSU']),

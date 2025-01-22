@@ -81,16 +81,16 @@ let T = ['discordapp.com/gifts', 'discord.com/gifts'],
     R = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => E.Z.escape(e))].join('|'),
     O = RegExp('(?: |^|https?://)(?:'.concat(R, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     D = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
-    x = (e, n) =>
+    L = (e, n) =>
         Array(n)
             .fill(void 0)
             .map(() => '['.concat(D, ']{').concat(e, '}'))
             .join('-?'),
-    L = x(4, 4),
-    w = x(4, 6),
-    P = x(5, 3),
+    x = L(4, 4),
+    w = L(4, 6),
+    P = L(5, 3),
     M = 'WUMP-?',
-    k = [L, w, P, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
+    k = [x, w, P, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     U = new RegExp('^('.concat(M, ')?(').concat(k, ')$')),
     B = '-';
 !(function (e) {

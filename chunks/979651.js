@@ -55,15 +55,15 @@ function D(e, n) {
     let r = O(e);
     if (!r.has(n)) (r = new Set(r)).add(n), b.set(e, r);
 }
-function x(e, n) {
+function L(e, n) {
     let r = O(e);
     if (!!r.has(n)) (r = new Set(r)).delete(n), 0 === r.size ? b.delete(e) : b.set(e, r);
 }
-function L(e, n, r) {
+function x(e, n, r) {
     let i = N(v, null != e ? e : h.ME),
         a = i[n],
         o = r(a);
-    return a === o ? [!1, o, a] : (null != a && (delete i[n], null != a.channelId && (delete N(I, a.channelId)[n], delete N(T, a.channelId)[n]), null != a.sessionId && delete N(S, n)[a.sessionId], x(null != e ? e : h.ME, n)), null != o && ((i[n] = o), null != o.channelId && ((N(I, o.channelId)[n] = o), o.selfVideo && ((N(T, o.channelId)[n] = o), D(null != e ? e : h.ME, n))), null != o.sessionId && (N(S, n)[o.sessionId] = o)), [!0, o, a]);
+    return a === o ? [!1, o, a] : (null != a && (delete i[n], null != a.channelId && (delete N(I, a.channelId)[n], delete N(T, a.channelId)[n]), null != a.sessionId && delete N(S, n)[a.sessionId], L(null != e ? e : h.ME, n)), null != o && ((i[n] = o), null != o.channelId && ((N(I, o.channelId)[n] = o), o.selfVideo && ((N(T, o.channelId)[n] = o), D(null != e ? e : h.ME, n))), null != o.sessionId && (N(S, n)[o.sessionId] = o)), [!0, o, a]);
 }
 function w(e) {
     let { voiceStates: n } = e;
@@ -78,7 +78,7 @@ function P(e) {
         let [i] = k(e.guildId, r);
         n = n || i;
     }
-    for (let r of e.removedVoiceStateUsers) L(e.guildId, r, () => null), (n = !0);
+    for (let r of e.removedVoiceStateUsers) x(e.guildId, r, () => null), (n = !0);
     return n && E++, n;
 }
 function M(e) {
@@ -86,7 +86,7 @@ function M(e) {
     A[C(n, r)] = i;
 }
 function k(e, n) {
-    return L(e, n.userId, (e) => {
+    return x(e, n.userId, (e) => {
         if (null == n.channelId) return null;
         {
             let r = {
@@ -109,7 +109,7 @@ function k(e, n) {
 }
 function U(e) {
     let { guildId: n, channelId: r } = e,
-        [a] = L(n, i, (e) => (null == e ? void 0 : e.set('channelId', r)));
+        [a] = x(n, i, (e) => (null == e ? void 0 : e.set('channelId', r)));
     return a;
 }
 function B(e) {
@@ -122,13 +122,13 @@ function G() {
 }
 function Z(e) {
     let { voiceStates: n, user: r, sessionId: o } = e;
-    for (let [e, r] of ((v = {}), (I = {}), (S = {}), (T = {}), Object.entries(n))) for (let [n, i] of Object.entries(r)) L(e, n, () => new p.Z(i));
+    for (let [e, r] of ((v = {}), (I = {}), (S = {}), (T = {}), Object.entries(n))) for (let [n, i] of Object.entries(r)) x(e, n, () => new p.Z(i));
     (i = r.id), (a = o);
 }
 function F(e) {
     let { guild: n } = e;
     c().forEach(v[n.id], (e) => {
-        L(n.id, e.userId, () => null);
+        x(n.id, e.userId, () => null);
     }),
         delete v[n.id];
 }

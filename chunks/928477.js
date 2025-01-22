@@ -18,7 +18,7 @@ r.d(n, {
         return w;
     },
     vH: function () {
-        return L;
+        return x;
     }
 });
 var i,
@@ -48,8 +48,8 @@ var l = r(192379),
     R = r(456077),
     O = r(124368),
     D = r(981631),
-    x = r(388032);
-function L(e) {
+    L = r(388032);
+function x(e) {
     let n = (0, N.NE)(e);
     return (0, N.Xu)(e) ? (n ? 2 : 3) : 1;
 }
@@ -100,7 +100,7 @@ function k(e) {
                 E = null !== (_ = i.name) && void 0 !== _ ? _ : '';
             if ('' === E && c) {
                 let e = M(n, r);
-                E = '' !== e ? e : x.intl.string(x.t['7Xm5QE']);
+                E = '' !== e ? e : L.intl.string(L.t['7Xm5QE']);
             }
             let b = (0, C.WD)(n),
                 I = v.Z.getChannel(A.default.castMessageIdAsChannelId(r)),
@@ -192,8 +192,8 @@ async function Z(e, n) {
         (r = await n()),
             null == r.body
                 ? d.Z.show({
-                      title: x.intl.string(x.t.j2d6Ki),
-                      body: x.intl.string(x.t.fEptJC)
+                      title: L.intl.string(L.t.j2d6Ki),
+                      body: L.intl.string(L.t.fEptJC)
                   })
                 : (c.Z.dispatch({
                       type: 'SLOWMODE_RESET_COOLDOWN',
@@ -208,13 +208,13 @@ async function Z(e, n) {
         var a, o, s, l, u, f;
         if ((null === (a = n.body) || void 0 === a ? void 0 : a.code) === D.evJ.TOO_MANY_THREADS)
             d.Z.show({
-                title: i ? x.intl.string(x.t.vWNFk5) : x.intl.string(x.t['1KEdvL']),
-                body: i ? x.intl.string(x.t.KGaiEB) : x.intl.string(x.t.P0wT5e)
+                title: i ? L.intl.string(L.t.vWNFk5) : L.intl.string(L.t['1KEdvL']),
+                body: i ? L.intl.string(L.t.KGaiEB) : L.intl.string(L.t.P0wT5e)
             });
         else if ((null === (o = n.body) || void 0 === o ? void 0 : o.code) === D.evJ.TOO_MANY_ANNOUNCEMENT_THREADS)
             d.Z.show({
-                title: x.intl.string(x.t['1KEdvL']),
-                body: x.intl.string(x.t.jDMxz8)
+                title: L.intl.string(L.t['1KEdvL']),
+                body: L.intl.string(L.t.jDMxz8)
             });
         else if ((null === (s = n.body) || void 0 === s ? void 0 : s.code) === D.evJ.SLOWMODE_RATE_LIMITED) {
             let r = null !== (f = n.body.retry_after) && void 0 !== f ? f : 0;
@@ -227,8 +227,8 @@ async function Z(e, n) {
                 });
         } else if (429 === n.status)
             d.Z.show({
-                title: i ? x.intl.string(x.t.vWNFk5) : x.intl.string(x.t['1KEdvL']),
-                body: x.intl.string(x.t['Whhv4+'])
+                title: i ? L.intl.string(L.t.vWNFk5) : L.intl.string(L.t['1KEdvL']),
+                body: L.intl.string(L.t['Whhv4+'])
             });
         else if (O.fZ.has(null === (l = n.body) || void 0 === l ? void 0 : l.code)) throw n;
         else {
@@ -249,8 +249,8 @@ async function Z(e, n) {
                         });
                 });
             d.Z.show({
-                title: x.intl.string(x.t.j2d6Ki),
-                body: x.intl.string(x.t.fEptJC)
+                title: L.intl.string(L.t.j2d6Ki),
+                body: L.intl.string(L.t.fEptJC)
             });
         }
     }

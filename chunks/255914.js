@@ -106,9 +106,9 @@ class T {
     }
     static parseOutboundStats(e, n) {
         var r, i, a, o, s, l, u, c, d, f, p, h, _, m, g, E, v, b, S, A, C, N, R, O, D;
-        let x = new T();
+        let L = new T();
         return null == e
-            ? x
+            ? L
             : {
                   bytes: e.bytesSent,
                   framesCodec: e.framesEncoded,

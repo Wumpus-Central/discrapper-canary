@@ -35,5 +35,5 @@ let s = (e, n, r) => {
     },
     l = (e) => {
         let n = {};
-        return null == e ? n : (!0 === e.noCache && (n.no_cache = !0), !0 === e.includeUnpublished && (n.include_unpublished = !0), !0 === e.includeBundles && (n.include_bundles = !0), null != e.countryCode && (n.country_code = e.countryCode), null !== e.paymentGateway && (n.payment_gateway = e.paymentGateway), e.variantsReturnStyle === i.v.VARIANTS_GROUP && (n.variants_return_style = i.v.VARIANTS_GROUP), n);
+        return null == e ? n : (!0 === e.noCache && (n.no_cache = !0), !0 === e.includeUnpublished && (n.include_unpublished = !0), !0 === e.includeBundles && (n.include_bundles = !0), !0 === e.includePopularPicks && (n.include_popular_picks = !0), null != e.countryCode && (n.country_code = e.countryCode), null !== e.paymentGateway && (n.payment_gateway = e.paymentGateway), e.variantsReturnStyle === i.v.VARIANTS_GROUP && (n.variants_return_style = i.v.VARIANTS_GROUP), n);
     };

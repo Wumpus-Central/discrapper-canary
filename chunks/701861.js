@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(981631),
     S = n(65154),
     T = n(388032),
-    A = n(401207);
-function b(e, t, n) {
+    b = n(401207);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -116,7 +116,7 @@ class x extends r.PureComponent {
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
                 (0, i.jsxs)('div', {
-                    className: A.listItemContents,
+                    className: b.listItemContents,
                     children: [
                         (0, i.jsx)(N.Z, {
                             user: e,
@@ -134,7 +134,7 @@ class x extends r.PureComponent {
                             showAccountIdentifier: !0
                         }),
                         (0, i.jsxs)('div', {
-                            className: A.actions,
+                            className: b.actions,
                             children: [
                                 null != s &&
                                     (0, i.jsx)(u.Z, {
@@ -163,15 +163,15 @@ class x extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'peopleListItemRef', r.createRef()),
-            b(this, 'state', { isActiveRow: !1 }),
-            b(this, 'handleOpenPrivateChannel', (e) => {
+            A(this, 'peopleListItemRef', r.createRef()),
+            A(this, 'state', { isActiveRow: !1 }),
+            A(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
                 let n = a().find(m.Z.getMutablePrivateChannels(), (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id);
                 null != n ? (0, h.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
-            b(this, 'handleOpenActionsMenu', (e) => {
+            A(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t, isGameRelationship: n, applicationId: r } = this.props;
                 (0, d.vq)(
                     e,

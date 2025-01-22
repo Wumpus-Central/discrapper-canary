@@ -317,7 +317,7 @@ class R {
 let O = new R();
 'u' > typeof window && O.setContainer(document.body);
 let D = l.createContext(O);
-var x = function (e, n, r, i) {
+var L = function (e, n, r, i) {
     var a = r ? r.call(i, e, n) : void 0;
     if (void 0 !== a) return !!a;
     if (e === n) return !0;
@@ -334,13 +334,13 @@ var x = function (e, n, r, i) {
     }
     return !0;
 };
-let L = !1,
+let x = !1,
     w,
     P = {};
 function M() {
-    if (!L) return;
+    if (!x) return;
     let e = null == i ? void 0 : i.getStyle();
-    null == e || x(e, P) ? null != w && cancelAnimationFrame(w) : ((P = e), null == i || i.invalidate()), (w = requestAnimationFrame(M));
+    null == e || L(e, P) ? null != w && cancelAnimationFrame(w) : ((P = e), null == i || i.invalidate()), (w = requestAnimationFrame(M));
 }
 let k = !1,
     U = {
@@ -351,10 +351,10 @@ let k = !1,
             (k = e), null == i || i.invalidate();
         },
         enableAnimationTracking() {
-            (L = !0), (w = requestAnimationFrame(M));
+            (x = !0), (w = requestAnimationFrame(M));
         },
         disableAnimationTracking() {
-            (L = !1), null != w && cancelAnimationFrame(w);
+            (x = !1), null != w && cancelAnimationFrame(w);
         }
     };
 var B = { exports: {} },

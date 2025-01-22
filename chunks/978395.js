@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return x;
+        return L;
     }
 });
 var i = r(200651),
@@ -30,9 +30,9 @@ var i = r(200651),
     R = r(228168),
     O = r(981631),
     D = r(591156);
-function x(e) {
-    let { user: n, currentUser: r, displayProfile: x, guild: L, isHovering: w, onOpenProfile: P, channelId: M, onClose: k } = e,
-        U = f.ZP.useName(null == L ? void 0 : L.id, M, n),
+function L(e) {
+    let { user: n, currentUser: r, displayProfile: L, guild: x, isHovering: w, onOpenProfile: P, channelId: M, onClose: k } = e,
+        U = f.ZP.useName(null == x ? void 0 : x.id, M, n),
         B = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(n.id)),
         G = (0, a.Wu)([l.Z], () => l.Z.getGameRelationshipsForUser(n.id, O.OGo.PENDING_INCOMING)),
         Z = (0, s.wn)({ location: 'UserProfilePopoutBody' }),
@@ -49,15 +49,15 @@ function x(e) {
                 profileType: R.y0.BITE_SIZE,
                 onOpenProfile: P,
                 usernameIcon:
-                    n.hasAvatarForGuild(null == L ? void 0 : L.id) &&
+                    n.hasAvatarForGuild(null == x ? void 0 : x.id) &&
                     (0, i.jsx)(A.Z, {
                         user: n,
                         nickname: U
                     }),
                 nickname: U,
-                pronouns: null == x ? void 0 : x.pronouns,
+                pronouns: null == L ? void 0 : L.pronouns,
                 tags: (0, i.jsx)(_.Z, {
-                    displayProfile: x,
+                    displayProfile: L,
                     profileType: R.y0.BITE_SIZE,
                     onClose: k
                 }),
@@ -77,7 +77,7 @@ function x(e) {
                 (0, i.jsx)(b.Z.Overlay, {
                     children: (0, i.jsx)(v.Z, {
                         user: n,
-                        guildId: null == L ? void 0 : L.id,
+                        guildId: null == x ? void 0 : x.id,
                         channelId: M
                     })
                 }),
@@ -109,7 +109,7 @@ function x(e) {
                 ? (0, i.jsx)(u.Z, { look: 'profile' })
                 : (0, i.jsx)(S.Z, {
                       user: n,
-                      bio: null == x ? void 0 : x.bio,
+                      bio: null == L ? void 0 : L.bio,
                       hidePersonalInformation: F,
                       onClose: k
                   }),
@@ -123,15 +123,15 @@ function x(e) {
             (0, i.jsx)(g.Z, {
                 user: n,
                 currentUser: r,
-                profileGuildId: null == x ? void 0 : x.guildId,
+                profileGuildId: null == L ? void 0 : L.guildId,
                 onClose: k,
                 className: D.activity
             }),
-            null != L &&
+            null != x &&
                 (0, i.jsx)(C.Z, {
                     user: n,
                     currentUser: r,
-                    guild: L
+                    guild: x
                 })
         ]
     });

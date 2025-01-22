@@ -37,8 +37,8 @@ var l = r(200651),
     R = r(388032),
     O = r(694638),
     D = r(99713);
-let x = 190,
-    L = 178,
+let L = 190,
+    x = 178,
     w = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
     P = (e) => {
         let { channelId: n, message: i, onRedeem: a, onClose: o } = e,
@@ -84,8 +84,8 @@ function k(e) {
         { entitlement: v, fetchedEntitlement: A, error: R } = (0, C.t6)(I.D1),
         O = E || R,
         { analyticsLocations: D } = (0, h.ZP)([p.Z.CONFETTI_POTION_MODAL]),
-        x = null != v && !v.consumed,
-        L = g || !A;
+        L = null != v && !v.consumed,
+        x = g || !A;
     (0, u.useEffect)(
         () => () => {
             O && (0, y.SN)(I.D1);
@@ -103,8 +103,8 @@ function k(e) {
                 variantsReturnStyle: c.v.INDIVIDUAL_PRODUCTS
             });
         }, [w, D]),
-        M = (0, u.useCallback)(() => (x ? w() : P()), [w, P, x]),
-        k = (0, u.useMemo)(() => ((null == v ? void 0 : v.type) === N.qc2.DEVELOPER_GIFT ? 1 : x ? 2 : 0), [null == v ? void 0 : v.type, x]),
+        M = (0, u.useCallback)(() => (L ? w() : P()), [w, P, L]),
+        k = (0, u.useMemo)(() => ((null == v ? void 0 : v.type) === N.qc2.DEVELOPER_GIFT ? 1 : L ? 2 : 0), [null == v ? void 0 : v.type, L]),
         B = (0, u.useMemo)(() => (s ? 2 : a ? (null == f ? 3 : 0) : 1), [s, a, f]);
     return (0, l.jsx)(U, {
         channel: n,
@@ -112,7 +112,7 @@ function k(e) {
         buttonDisabledState: B,
         price: _,
         onActionClick: M,
-        loading: L,
+        loading: x,
         selectedEmoji: null != f ? f : void 0,
         isReaction: o
     });
@@ -362,8 +362,8 @@ let Z = (e) => {
                 children: [
                     (0, l.jsx)(d.Image, {
                         src: D,
-                        width: L,
-                        height: x
+                        width: x,
+                        height: L
                     }),
                     (0, l.jsx)(d.Text, {
                         variant: 'text-md/normal',

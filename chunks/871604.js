@@ -37,7 +37,7 @@ function A(e) {
         }),
         O = (0, l.Z)({ channelId: null != N ? N : void 0 }),
         D = n.id,
-        x = a.useCallback(() => {
+        L = a.useCallback(() => {
             if (null != C) {
                 if (O) {
                     let e = _.Z.getCurrentlySelectedChannelId(),
@@ -51,7 +51,7 @@ function A(e) {
                     });
             }
         }, [O, C, D, R, r]),
-        L = O ? S.intl.string(S.t['Cia+Aw']) : S.intl.string(S.t.NgXl3N);
+        x = O ? S.intl.string(S.t['Cia+Aw']) : S.intl.string(S.t.NgXl3N);
     if (null == C || !(0, v.Eb)(C)) return null;
     let { customInstallUrl: w } = C,
         P = null == w || E.Z.isDiscordUrl(w) ? s.PlusSmallIcon : s.LinkExternalSmallIcon,
@@ -78,10 +78,10 @@ function A(e) {
                   let { onClick: n, ...r } = e;
                   return (0, i.jsx)(I.tG, {
                       action: 'PRESS_ADD_APP',
-                      text: L,
+                      text: x,
                       icon: M,
                       onContextMenu: n,
-                      onClick: x,
+                      onClick: L,
                       ...r,
                       ...A
                   });
@@ -89,9 +89,9 @@ function A(e) {
           })
         : (0, i.jsx)(I.tG, {
               action: 'PRESS_ADD_APP',
-              text: L,
+              text: x,
               icon: M,
-              onClick: x,
+              onClick: L,
               ...A
           });
 }

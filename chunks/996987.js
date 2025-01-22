@@ -14,7 +14,7 @@ var l = n(481060),
     c = n(232186);
 function u(e) {
     let { value: t, onChange: n, children: u, note: m, helpdeskArticleId: h, style: p, disabled: g = !1, hideBorder: x = !1, className: f = c.marginBottom20 } = e,
-        b = (0, a.Dt)();
+        v = (0, a.Dt)();
     return (0, i.jsxs)(r.Z, {
         style: p,
         className: f,
@@ -24,7 +24,7 @@ function u(e) {
                 children: [
                     (0, i.jsx)(r.Z.Child, {
                         children: (0, i.jsx)(l.FormTitle, {
-                            id: b,
+                            id: v,
                             className: c.marginReset,
                             tag: l.FormTitleTags.H3,
                             disabled: g,
@@ -38,7 +38,7 @@ function u(e) {
                             value: t,
                             onChange: n,
                             disabled: g,
-                            labelledBy: b
+                            labelledBy: v
                         })
                     })
                 ]

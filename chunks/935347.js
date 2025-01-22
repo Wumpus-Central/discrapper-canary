@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(998502),
     S = n(905656),
     T = n(981631),
-    A = n(388032),
-    b = n(38179);
+    b = n(388032),
+    A = n(38179);
 function Z(e, t, n) {
     return (
         t in e
@@ -74,7 +74,7 @@ class x extends r.PureComponent {
                 null != this._eventLoadingText && (r = this._eventLoadingText),
                 null != t && ((r = t.name), (l = t.incident_updates[0].body)),
                 (0, i.jsxs)('div', {
-                    className: b.container,
+                    className: A.container,
                     'data-fade': n,
                     style: {
                         '--connecting-container-fade-duration': ''.concat(200, 'ms'),
@@ -82,30 +82,30 @@ class x extends r.PureComponent {
                     },
                     children: [
                         (0, i.jsxs)('div', {
-                            className: b.content,
+                            className: A.content,
                             children: [
                                 (0, i.jsx)(S.Z, {
                                     autoPlay: !0,
                                     loop: !e,
                                     setRef: this.setVideoRef,
                                     onReady: this.handleReady,
-                                    className: a()(b.spinner, this.state.ready ? b.ready : '')
+                                    className: a()(A.spinner, this.state.ready ? A.ready : '')
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: b.text,
+                                    className: A.text,
                                     children: [
                                         null != t
                                             ? null
                                             : (0, i.jsx)('div', {
-                                                  className: b.tipTitle,
-                                                  children: A.intl.string(A.t.v0R1Li)
+                                                  className: A.tipTitle,
+                                                  children: b.intl.string(b.t.v0R1Li)
                                               }),
                                         (0, i.jsx)('div', {
-                                            className: null != t ? b.title : b.tip,
+                                            className: null != t ? A.title : A.tip,
                                             children: r
                                         }),
                                         (0, i.jsx)('div', {
-                                            className: b.body,
+                                            className: A.body,
                                             children: l
                                         })
                                     ]
@@ -113,32 +113,32 @@ class x extends r.PureComponent {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: a()(b.problems, { [b.slideIn]: this.state.problems }),
+                            className: a()(A.problems, { [A.slideIn]: this.state.problems }),
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: b.problemsText,
-                                    children: A.intl.string(A.t.AG2zPD)
+                                    className: A.problemsText,
+                                    children: b.intl.string(b.t.AG2zPD)
                                 }),
                                 (0, i.jsxs)('div', {
                                     children: [
                                         (0, i.jsxs)(u.Anchor, {
-                                            className: b.twitterLink,
+                                            className: A.twitterLink,
                                             href: T.yXt.TWITTER_SUPPORT,
                                             target: '_blank',
                                             children: [
                                                 (0, i.jsx)(u.XNeutralIcon, {
                                                     size: 'xs',
                                                     color: 'currentColor',
-                                                    className: b.icon
+                                                    className: A.icon
                                                 }),
-                                                A.intl.string(A.t.KlyTbm)
+                                                b.intl.string(b.t.KlyTbm)
                                             ]
                                         }),
                                         (0, i.jsxs)(u.Anchor, {
-                                            className: b.statusLink,
+                                            className: A.statusLink,
                                             href: T.yXt.STATUS,
                                             target: '_blank',
-                                            children: [(0, i.jsx)(I.Z, { className: b.icon }), A.intl.string(A.t.AgXXy8)]
+                                            children: [(0, i.jsx)(I.Z, { className: A.icon }), b.intl.string(b.t.AgXXy8)]
                                         })
                                     ]
                                 })
@@ -160,32 +160,32 @@ class x extends r.PureComponent {
                 '_loadingText',
                 (function () {
                     let e = [
-                        A.intl.string(A.t.Ex79Ky),
-                        A.intl.string(A.t['+v5zsb']),
-                        A.intl.string(A.t['RLx6+f']),
-                        A.intl.string(A.t.Q1PZkJ),
-                        A.intl.string(A.t.x7sfVl),
-                        A.intl.format(A.t.PHuQsb, {
+                        b.intl.string(b.t.Ex79Ky),
+                        b.intl.string(b.t['+v5zsb']),
+                        b.intl.string(b.t['RLx6+f']),
+                        b.intl.string(b.t.Q1PZkJ),
+                        b.intl.string(b.t.x7sfVl),
+                        b.intl.format(b.t.PHuQsb, {
                             tabHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.KeyCombo,
                                     {
                                         shortcut: 'tab',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.string(A.t.UorX4e),
-                        A.intl.string(A.t['il/GZm']),
-                        A.intl.string(A.t.HKBJv7),
-                        A.intl.format(A.t['FVVp7+'], {
+                        b.intl.string(b.t.UorX4e),
+                        b.intl.string(b.t['il/GZm']),
+                        b.intl.string(b.t.HKBJv7),
+                        b.intl.format(b.t['FVVp7+'], {
                             F6Hook: (e, t) =>
                                 (0, i.jsx)(
                                     u.KeyCombo,
                                     {
                                         shortcut: 'f6',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 ),
@@ -194,92 +194,92 @@ class x extends r.PureComponent {
                                     u.KeyCombo,
                                     {
                                         shortcut: 'tab',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.string(A.t['7Y1hFB']),
-                        A.intl.string(A.t['UcCW7+']),
-                        A.intl.string(A.t.E5GhfX),
-                        A.intl.string(A.t.bANqo6),
-                        A.intl.string(A.t.yOEVDg),
-                        A.intl.string(A.t['u0Ra/P']),
-                        A.intl.string(A.t.un4cQ0),
-                        A.intl.string(A.t['2cyYx8']),
-                        A.intl.string(A.t.KCmze3),
-                        A.intl.string(A.t['C+hUc3']),
-                        A.intl.string(A.t.I98MEB),
-                        A.intl.format(A.t.c0YCIy, {}),
-                        A.intl.string(A.t.z8AvIC),
-                        A.intl.string(A.t.IjX3Pz),
-                        A.intl.string(A.t.lg3CkZ),
-                        A.intl.string(A.t['4GaLhY']),
-                        A.intl.string(A.t.qHKbU1),
-                        A.intl.string(A.t.mJxKDw),
-                        A.intl.string(A.t.iiQBXF),
-                        A.intl.string(A.t.YPD46e),
-                        A.intl.string(A.t.O8BpgY),
-                        A.intl.string(A.t.xzFwfn),
-                        A.intl.string(A.t['4G3fsb']),
-                        A.intl.string(A.t['/jPyKC']),
-                        A.intl.string(A.t['8x7D5e']),
-                        A.intl.string(A.t.G6Q8Hx),
-                        A.intl.string(A.t['9Cx+xM']),
-                        A.intl.string(A.t.WsZ8dX),
-                        A.intl.string(A.t.btoe7O),
-                        A.intl.string(A.t.E6Y0j4),
-                        A.intl.string(A.t['7KZ819']),
-                        A.intl.string(A.t.hm7OKi),
-                        A.intl.string(A.t.H535i4),
-                        A.intl.string(A.t['08WJUV']),
-                        A.intl.string(A.t.hhtfys),
-                        A.intl.string(A.t.on980d),
-                        A.intl.string(A.t.AL6c09),
-                        A.intl.string(A.t.iLTeFx),
-                        A.intl.string(A.t.b3vSu7),
-                        A.intl.string(A.t['f8ao5+']),
-                        A.intl.format(A.t['1v1h8v'], { asterisks: '**' }),
-                        A.intl.format(A.t.MUlAVV, {
+                        b.intl.string(b.t['7Y1hFB']),
+                        b.intl.string(b.t['UcCW7+']),
+                        b.intl.string(b.t.E5GhfX),
+                        b.intl.string(b.t.bANqo6),
+                        b.intl.string(b.t.yOEVDg),
+                        b.intl.string(b.t['u0Ra/P']),
+                        b.intl.string(b.t.un4cQ0),
+                        b.intl.string(b.t['2cyYx8']),
+                        b.intl.string(b.t.KCmze3),
+                        b.intl.string(b.t['C+hUc3']),
+                        b.intl.string(b.t.I98MEB),
+                        b.intl.format(b.t.c0YCIy, {}),
+                        b.intl.string(b.t.z8AvIC),
+                        b.intl.string(b.t.IjX3Pz),
+                        b.intl.string(b.t.lg3CkZ),
+                        b.intl.string(b.t['4GaLhY']),
+                        b.intl.string(b.t.qHKbU1),
+                        b.intl.string(b.t.mJxKDw),
+                        b.intl.string(b.t.iiQBXF),
+                        b.intl.string(b.t.YPD46e),
+                        b.intl.string(b.t.O8BpgY),
+                        b.intl.string(b.t.xzFwfn),
+                        b.intl.string(b.t['4G3fsb']),
+                        b.intl.string(b.t['/jPyKC']),
+                        b.intl.string(b.t['8x7D5e']),
+                        b.intl.string(b.t.G6Q8Hx),
+                        b.intl.string(b.t['9Cx+xM']),
+                        b.intl.string(b.t.WsZ8dX),
+                        b.intl.string(b.t.btoe7O),
+                        b.intl.string(b.t.E6Y0j4),
+                        b.intl.string(b.t['7KZ819']),
+                        b.intl.string(b.t.hm7OKi),
+                        b.intl.string(b.t.H535i4),
+                        b.intl.string(b.t['08WJUV']),
+                        b.intl.string(b.t.hhtfys),
+                        b.intl.string(b.t.on980d),
+                        b.intl.string(b.t.AL6c09),
+                        b.intl.string(b.t.iLTeFx),
+                        b.intl.string(b.t.b3vSu7),
+                        b.intl.string(b.t['f8ao5+']),
+                        b.intl.format(b.t['1v1h8v'], { asterisks: '**' }),
+                        b.intl.format(b.t.MUlAVV, {
                             quickSwitcherHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.KeyCombo,
                                     {
                                         shortcut: 'mod+k',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t.aes5VF, {
+                        b.intl.format(b.t.aes5VF, {
                             markUnreadHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.KeyCombo,
                                     {
                                         shortcut: 'alt+click',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t.md9Svr, {
+                        b.intl.format(b.t.md9Svr, {
                             markServerUnreadHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.KeyCombo,
                                     {
                                         shortcut: 'shift+esc',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t['X0Tu+v'], {
+                        b.intl.format(b.t['X0Tu+v'], {
                             navigateUnreadHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.KeyCombo,
                                     {
                                         shortcut: 'shift+alt+up',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 ),
@@ -288,57 +288,57 @@ class x extends r.PureComponent {
                                     u.KeyCombo,
                                     {
                                         shortcut: 'down',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t.AkoeIS, {
+                        b.intl.format(b.t.AkoeIS, {
                             keyboardShortcutsHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.KeyCombo,
                                     {
                                         shortcut: 'mod+/',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t.P9sfAA, {
+                        b.intl.format(b.t.P9sfAA, {
                             messageNewlineHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.KeyCombo,
                                     {
                                         shortcut: 'shift+return',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t['3Ox33d'], {
+                        b.intl.format(b.t['3Ox33d'], {
                             shiftHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.KeyCombo,
                                     {
                                         shortcut: 'shift',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         }),
-                        A.intl.format(A.t.enCV6e, {
+                        b.intl.format(b.t.enCV6e, {
                             upHook: (e, t) =>
                                 (0, i.jsx)(
                                     u.KeyCombo,
                                     {
                                         shortcut: 'up',
-                                        className: b.keybind
+                                        className: A.keybind
                                     },
                                     t
                                 )
                         })
                     ];
-                    return _.default.locale.startsWith('en-') && e.push(A.intl.string(A.t.dQ9Wqq)), e[o().random(e.length - 1)];
+                    return _.default.locale.startsWith('en-') && e.push(b.intl.string(b.t.dQ9Wqq)), e[o().random(e.length - 1)];
                 })()
             ),
             Z(

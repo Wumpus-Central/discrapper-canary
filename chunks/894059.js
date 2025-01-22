@@ -1,6 +1,6 @@
 t.d(e, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = t(200651);
@@ -9,11 +9,11 @@ var l = t(481060),
     a = t(518756),
     r = t(576749),
     o = t(388032);
-function u(n) {
+function d(n) {
     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        u = (0, a.Z)(n),
-        d = (0, r.Z)();
-    return u
+        d = (0, a.Z)(n),
+        u = (0, r.Z)();
+    return d
         ? (0, i.jsx)(l.MenuItem, {
               id: 'create-event',
               label: o.intl.string(o.t['60lJ0N']),
@@ -26,7 +26,7 @@ function u(n) {
                               ...t,
                               guildId: n
                           });
-                  }, d);
+                  }, u);
               }
           })
         : null;

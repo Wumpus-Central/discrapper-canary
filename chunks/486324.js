@@ -36,10 +36,10 @@ e.d(t, {
         return R;
     },
     X_: function () {
-        return p;
+        return _;
     },
     _T: function () {
-        return _;
+        return p;
     },
     d6: function () {
         return l;
@@ -88,8 +88,8 @@ let f = 568,
     a = 552,
     s = 2400,
     O = 848,
-    p = 2400,
-    _ = 1350,
+    _ = 2400,
+    p = 1350,
     l = 2400,
     d = 960,
     b = 2400,

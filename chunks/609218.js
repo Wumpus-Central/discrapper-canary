@@ -29,15 +29,15 @@ var i,
     S = r(638916);
 function A(e) {
     let { containerContext: n, image: r, title: i, description: s, enableSocialProof: A, analyticsLocationSection: C, upsellViewedTrackingData: N, onClose: R, onDisplay: O, onLearnMore: D } = e,
-        x = (0, u.e7)([g.Z], () => g.Z.affinities),
-        L = (0, u.e7)([g.Z], () => g.Z.hasFetched);
+        L = (0, u.e7)([g.Z], () => g.Z.affinities),
+        x = (0, u.e7)([g.Z], () => g.Z.hasFetched);
     o.useEffect(() => {
-        !L && A && d.MH();
-    }, [L, A]),
+        !x && A && d.MH();
+    }, [x, A]),
         o.useEffect(() => {
             _.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, N), null == O || O();
         }, [O, N]);
-    let w = x.length > 1 && A,
+    let w = L.length > 1 && A,
         P = () => (2 === n ? S.hasTabParentContainer : 1 === n ? S.hasParentContainer : S.noParentContainer),
         M = () => {
             _.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
@@ -85,7 +85,7 @@ function A(e) {
                                 variant: 'heading-xl/bold',
                                 children: i
                             }),
-                            w && (0, a.jsx)(y.Z, { affinities: x }),
+                            w && (0, a.jsx)(y.Z, { affinities: L }),
                             (0, a.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 className: S.body,

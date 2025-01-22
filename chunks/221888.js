@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return x;
+        return L;
     }
 });
 var i = r(411104);
@@ -107,11 +107,11 @@ function O(e) {
     });
 }
 let D = [];
-function x(e) {
+function L(e) {
     let { channelId: n, guildId: i, participant: a, className: l, compact: c = !1, disableInteraction: g = !1, maxVisibleUsers: b = 3 } = e,
         [S, N] = s.useState(!1),
-        x = s.useRef(new p.sW(C, () => N(!1))),
-        L = (0, f.Wu)(
+        L = s.useRef(new p.sW(C, () => N(!1))),
+        x = (0, f.Wu)(
             [E.Z, v.default],
             () => {
                 if (a.type === I.fO.STREAM) {
@@ -129,10 +129,10 @@ function x(e) {
             [a]
         ),
         w = s.useCallback(() => {
-            x.current.cancel(), N(!0);
+            L.current.cancel(), N(!0);
         }, []),
         P = s.useCallback(() => {
-            x.current.delay();
+            L.current.delay();
         }, []),
         M = s.useCallback(
             (e, n) => {
@@ -152,17 +152,17 @@ function x(e) {
             },
             [P, w]
         );
-    if (0 === L.length) return null;
+    if (0 === x.length) return null;
     if (c)
         return (0, o.jsx)(O, {
             maxVisibleUsers: b,
-            users: L,
+            users: x,
             guildId: i,
             channelId: n,
             className: l,
             participantType: a.type
         });
-    let k = d()(L)
+    let k = d()(x)
         .take(b)
         .map((e) =>
             (0, o.jsx)(
@@ -178,12 +178,12 @@ function x(e) {
         )
         .value();
     return (
-        L.length > b &&
+        x.length > b &&
             (k[k.length - 1] = (0, o.jsxs)(
                 'div',
                 {
                     className: A.overflow,
-                    children: ['+', L.length - b + 1]
+                    children: ['+', x.length - b + 1]
                 },
                 'overflow'
             )),
@@ -199,7 +199,7 @@ function x(e) {
                             handleUserContextMenu: M,
                             guildId: i,
                             channelId: n,
-                            users: L,
+                            users: x,
                             disableInteraction: g
                         }),
                     shouldShow: S,

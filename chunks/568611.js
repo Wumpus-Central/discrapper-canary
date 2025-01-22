@@ -128,13 +128,13 @@ void 0 === b && (b = y),
                           strict: S
                       })
                     : null,
-                x = !!(g ? g(D, r) : D),
-                L = x ? I(_, l) : _,
-                w = x ? (0, u.Z)({}, A, {}, f) : A,
+                L = !!(g ? g(D, r) : D),
+                x = L ? I(_, l) : _,
+                w = L ? (0, u.Z)({}, A, {}, f) : A,
                 P = (0, u.Z)(
                     {
-                        'aria-current': (x && a) || null,
-                        className: L,
+                        'aria-current': (L && a) || null,
+                        className: x,
                         style: w,
                         to: s
                     },

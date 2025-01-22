@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(703115),
     x = n(526761),
     f = n(726985),
-    _ = n(736530),
-    E = n(981631),
+    E = n(736530),
+    _ = n(981631),
     C = n(388032);
 function T(e) {
     let { ingress: t, guildId: n } = e,
@@ -32,7 +32,7 @@ function T(e) {
                 let i = (0, c.YK)();
                 e ? i.delete(n) : i.add(n),
                     d.h2.updateSetting(Array.from(i)),
-                    l.default.track(E.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                    l.default.track(_.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: p.Y.DIRECT_MESSAGES_TOGGLE,
                         ingress: t,
                         guild_id: n
@@ -41,7 +41,7 @@ function T(e) {
             [n, t]
         );
     function I(e, t) {
-        l.default.track(E.rMx.GUILD_DEFAULT_DMS_UPDATED, {
+        l.default.track(_.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t
         });
@@ -64,7 +64,7 @@ function T(e) {
     return (0, i.jsx)(m.U, {
         setting: f.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS_V2,
         children:
-            n === _.T
+            n === E.T
                 ? (0, i.jsx)(g.Z, {
                       title: C.intl.string(C.t.RAQUSE),
                       note: C.intl.string(C.t.wbYDfX),

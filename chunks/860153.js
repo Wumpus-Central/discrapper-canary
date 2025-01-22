@@ -1,69 +1,69 @@
-t.d(n, {
+e.d(t, {
     Z: function () {
-        return E;
+        return p;
     }
 });
-var i = t(200651),
-    l = t(192379),
-    r = t(120356),
-    a = t.n(r),
-    o = t(442837),
-    s = t(481060),
-    u = t(700582),
-    c = t(372900),
-    d = t(318713),
-    f = t(123145),
-    m = t(592125),
-    h = t(369171),
-    p = t(388032),
-    g = t(795938);
-let _ = l.memo(function (e) {
-    let { message: n } = e,
-        t = (0, o.e7)([m.Z], () => m.Z.getChannel(n.channel_id));
-    return null == t
+var i = e(200651),
+    o = e(192379),
+    l = e(120356),
+    a = e.n(l),
+    s = e(442837),
+    r = e(481060),
+    u = e(700582),
+    c = e(372900),
+    d = e(318713),
+    f = e(123145),
+    _ = e(592125),
+    E = e(369171),
+    m = e(388032),
+    S = e(795938);
+let h = o.memo(function (n) {
+    let { message: t } = n,
+        e = (0, s.e7)([_.Z], () => _.Z.getChannel(t.channel_id));
+    return null == e
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: (0, i.jsx)('div', {
-                  className: g.messageContents,
+                  className: S.messageContents,
                   children: (0, i.jsxs)(c.Z.Provider, {
-                      value: t.guild_id,
+                      value: e.guild_id,
                       children: [
-                          (0, i.jsx)(u.Z, { user: n.author }),
-                          (0, i.jsx)(s.FocusBlock, {
+                          (0, i.jsx)(u.Z, { user: t.author }),
+                          (0, i.jsx)(r.FocusBlock, {
                               children: (0, i.jsx)(f.Z, {
-                                  message: n,
-                                  channel: t
+                                  message: t,
+                                  channel: e
                               })
                           }),
                           (0, i.jsx)(d.Z, {
-                              timestamp: n.timestamp,
-                              className: g.timestamp
+                              timestamp: t.timestamp,
+                              className: S.timestamp
                           })
                       ]
                   })
               })
           });
 });
-function E(e) {
-    var n;
-    let { item: t, onClose: l } = e,
-        r = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
-    return (0, i.jsx)(h.ZP, {
-        children: (e) =>
+function p(n) {
+    var t;
+    let { item: e, onClose: o } = n,
+        l = null === (t = e.sourceMetadata) || void 0 === t ? void 0 : t.message;
+    return (0, i.jsx)(E.ZP, {
+        children: (n) =>
             (0, i.jsxs)('div', {
-                className: a()(g.topBar, e),
+                className: a()(S.topBar, n),
                 children: [
-                    (0, i.jsx)(s.Button, {
-                        look: s.ButtonLooks.BLANK,
-                        color: s.ButtonColors.CUSTOM,
-                        size: s.ButtonSizes.ICON,
-                        className: g.closeButton,
-                        innerClassName: g.closeButtonInner,
-                        'aria-label': p.intl.string(p.t.Xvtztr),
-                        onClick: l,
-                        children: (0, i.jsx)(s.XSmallIcon, {})
+                    (0, i.jsx)(r.Button, {
+                        look: r.ButtonLooks.BLANK,
+                        color: r.ButtonColors.CUSTOM,
+                        size: r.ButtonSizes.ICON,
+                        className: S.closeButton,
+                        innerClassName: S.closeButtonInner,
+                        'aria-label': m.intl.string(m.t.Xvtztr),
+                        onClick: o,
+                        children: (0, i.jsx)(r.XSmallIcon, {})
                     }),
-                    null != r && (0, i.jsx)(_, { message: r })
+                    null != l && (0, i.jsx)(h, { message: l })
                 ]
             })
     });

@@ -36,7 +36,7 @@ function _(e) {
         }),
         E = d.length,
         N = 0 === E ? g.intl.string(g.t['vR7M+/']) : g.intl.formatToPlainString(g.t.PCs0oq, { numRoles: E }),
-        S = d.map((e) => {
+        y = d.map((e) => {
             var l;
             return (0, i.jsx)(
                 p.Z,
@@ -61,7 +61,7 @@ function _(e) {
                     ref: n,
                     ...t,
                     children: [
-                        S,
+                        y,
                         h &&
                             (0, i.jsx)(v.Z, {
                                 guild: c,
@@ -98,7 +98,7 @@ function b(e) {
         ),
         E = x.e9(o, t.id),
         [N] = (0, c.Wu)([m.Z], () => [m.Z.can(Z.Plq.MANAGE_ROLES, o), null != o ? m.Z.getGuildVersion(o.id) : null]),
-        S = l.useCallback(
+        y = l.useCallback(
             (e) => {
                 var t, i;
                 s({ action: 'REMOVE_ROLE' });
@@ -107,7 +107,7 @@ function b(e) {
             },
             [j, o.id, n.id, s]
         ),
-        y = l.useCallback(
+        S = l.useCallback(
             (e) => {
                 s({ action: 'ADD_ROLE' });
                 let t = null != j ? j : [];
@@ -128,8 +128,8 @@ function b(e) {
                   roles: b,
                   highestRole: E,
                   canManageRoles: N,
-                  onAddRole: y,
-                  onRemoveRole: S
+                  onAddRole: S,
+                  onRemoveRole: y
               })
           })
         : null;

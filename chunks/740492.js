@@ -63,7 +63,7 @@ function D() {
     let n = u.ZP.PersistedStore.migrateAndReadStoreState('AccessibilityStore', []).state;
     return null !== (e = null == n ? void 0 : n.darkSidebar) && void 0 !== e && e;
 }
-class x extends (o = u.ZP.DeviceSettingsStore) {
+class L extends (o = u.ZP.DeviceSettingsStore) {
     initialize(e) {
         var n;
         S = null != e ? e : {};
@@ -192,9 +192,9 @@ class x extends (o = u.ZP.DeviceSettingsStore) {
         return null !== (e = S.listDensity) && void 0 !== e ? e : E.fx.COZY;
     }
 }
-v(x, 'displayName', 'UnsyncedUserSettingsStore'),
-    v(x, 'persistKey', 'UnsyncedUserSettingsStore'),
-    v(x, 'migrations', [
+v(L, 'displayName', 'UnsyncedUserSettingsStore'),
+    v(L, 'persistKey', 'UnsyncedUserSettingsStore'),
+    v(L, 'migrations', [
         () => {
             let e = c.K.get('UserSettingsStore');
             return c.K.remove('UserSettingsStore'), l().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations', 'showPlayAgain');
@@ -203,7 +203,7 @@ v(x, 'displayName', 'UnsyncedUserSettingsStore'),
             delete e.disableVisualRefresh;
         }
     ]),
-    (n.ZP = new x(d.Z, {
+    (n.ZP = new L(d.Z, {
         UNSYNCED_USER_SETTINGS_UPDATE: A,
         LOGOUT: C,
         LOGIN_SUCCESS: N,

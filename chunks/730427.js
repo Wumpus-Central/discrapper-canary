@@ -30,7 +30,7 @@ e.exports = function (e, n, r) {
         D = function (e) {
             return g && p(g, 'normal', e), new _(!0, e);
         },
-        x = function (e) {
+        L = function (e) {
             return A ? (o(e), R ? O(e[0], e[1], D) : O(e[0], e[1])) : R ? O(e, D) : O(e);
         };
     if (C) g = e.iterator;
@@ -38,14 +38,14 @@ e.exports = function (e, n, r) {
     else {
         if (!(E = f(e))) throw new h(s(e) + ' is not iterable');
         if (l(E)) {
-            for (v = 0, y = u(e); y > v; v++) if ((b = x(e[v])) && c(m, b)) return b;
+            for (v = 0, y = u(e); y > v; v++) if ((b = L(e[v])) && c(m, b)) return b;
             return new _(!1);
         }
         g = d(e, E);
     }
     for (I = C ? e.next : g.next; !(T = a(I, g)).done; ) {
         try {
-            b = x(T.value);
+            b = L(T.value);
         } catch (e) {
             p(g, 'throw', e);
         }

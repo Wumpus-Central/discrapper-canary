@@ -23,8 +23,8 @@ var h = r(392711),
     R = r(517100),
     O = r(158776),
     D = r(606304),
-    x = r(979651),
-    L = r(626135),
+    L = r(979651),
+    x = r(626135),
     w = r(81063),
     P = r(70956),
     M = r(823379),
@@ -240,14 +240,14 @@ function eI(e, n, r) {
     let E = 'presence change';
     r &&
         ((E = 'started'),
-        L.default.track(B.rMx.SPOTIFY_LISTEN_ALONG_STARTED, {
+        x.default.track(B.rMx.SPOTIFY_LISTEN_ALONG_STARTED, {
             party_id: d.id,
             other_user_id: e
         })),
         en.info('Listen along '.concat(E, ': ').concat(l.accountId, ' to ').concat(e, ' playing ').concat(c, ' on ').concat(u.name));
 }
 function eT() {
-    L.default.track(B.rMx.SPOTIFY_LISTEN_ALONG_ENDED, {
+    x.default.track(B.rMx.SPOTIFY_LISTEN_ALONG_ENDED, {
         party_id: null != a ? a.partyId : null,
         other_user_id: null != a ? a.userId : null
     });
@@ -343,7 +343,7 @@ function eN(e) {
             track: s,
             connectionId: n
         }),
-        L.default.track(B.rMx.ACTIVITY_UPDATED, {
+        x.default.track(B.rMx.ACTIVITY_UPDATED, {
             party_platform: B.ABu.SPOTIFY,
             track_id: s.id,
             has_images: !0,
@@ -366,7 +366,7 @@ function eD(e) {
     let { accountId: n, deviceId: r } = e;
     eb(n, r);
 }
-function ex(e) {
+function eL(e) {
     var n;
     let r,
         { activity: i, metadata: o } = e,
@@ -386,7 +386,7 @@ function ex(e) {
             en.info('Play started: '.concat(l.accountId, ' playing ').concat(c, ' on ').concat(u.name))))
     );
 }
-function eL(e) {
+function ex(e) {
     let { activity: n, userId: r } = e;
     return eI(r, n, !0);
 }
@@ -412,11 +412,11 @@ function eP() {
     let e = ep();
     if (null == e) return;
     let { socket: n } = e;
-    (ed = !0), (0, k.wO)(n.accountId, n.accessToken), L.default.track(B.rMx.SPOTIFY_AUTO_PAUSED), en.info('Playback auto paused');
+    (ed = !0), (0, k.wO)(n.accountId, n.accessToken), x.default.track(B.rMx.SPOTIFY_AUTO_PAUSED), en.info('Playback auto paused');
 }
 function eM(e) {
     if (e === C.default.getId()) {
-        let n = x.Z.isCurrentClientInVoiceChannel(),
+        let n = L.Z.isCurrentClientInVoiceChannel(),
             r = (0, b.O)({
                 userId: e,
                 checkSoundSharing: !0,
@@ -641,8 +641,8 @@ let ej = new eV(y.Z, {
     SPOTIFY_PROFILE_UPDATE: eB,
     SPOTIFY_PLAYER_STATE: eN,
     SPOTIFY_PLAYER_PLAY: eR,
-    ACTIVITY_PLAY: ex,
-    ACTIVITY_SYNC: eL,
+    ACTIVITY_PLAY: eL,
+    ACTIVITY_SYNC: ex,
     ACTIVITY_SYNC_STOP: eT,
     SPOTIFY_SET_DEVICES: eO,
     SPOTIFY_SET_ACTIVE_DEVICE: eD,

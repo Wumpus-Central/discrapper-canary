@@ -30,8 +30,8 @@ var u = r(200651),
     R = r(455813),
     O = r(283756),
     D = r(793148),
-    x = r(981631),
-    L = r(217702),
+    L = r(981631),
+    x = r(217702),
     w = r(388032),
     P = r(745124),
     M = r(652849);
@@ -366,7 +366,7 @@ class Q {
     }
     sendEvent() {
         this.analyticsEnabled &&
-            T.default.track(x.rMx.MEDIA_PLAY_FINISHED, {
+            T.default.track(L.rMx.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
                 play_wall_time_ms: this.playWallTimeMs,
                 first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -641,7 +641,7 @@ class X extends (a = c.PureComponent) {
                   autoPlay: s,
                   height: d,
                   responsive: a && !l,
-                  mediaLayoutType: l ? L.hV.STATIC : o,
+                  mediaLayoutType: l ? x.hV.STATIC : o,
                   onClick: this.handleVideoClick,
                   onEnded: this.handleEnded,
                   onError: i,
@@ -765,7 +765,7 @@ class X extends (a = c.PureComponent) {
         if ((n === F.AUDIO ? (_ = P.wrapperAudio) : p ? (_ = P.wrapperControlsHidden) : h && (_ = P.wrapperPlaying), i && n === F.VIDEO)) {
             let n = this.getWidth();
             return (0, u.jsxs)('div', {
-                className: f()(_, { [P.wrapperMediaMosaic]: l === L.hV.MOSAIC }),
+                className: f()(_, { [P.wrapperMediaMosaic]: l === x.hV.MOSAIC }),
                 style: s
                     ? void 0
                     : {
@@ -787,7 +787,7 @@ class X extends (a = c.PureComponent) {
             });
         }
         return (0, u.jsxs)('div', {
-            className: f()(_, P.newMosaicStyle, a, { [P.wrapperMediaMosaic]: l === L.hV.MOSAIC }),
+            className: f()(_, P.newMosaicStyle, a, { [P.wrapperMediaMosaic]: l === x.hV.MOSAIC }),
             'data-fullscreen': d,
             onMouseEnter: this.handleMouseEnter,
             onMouseLeave: this.handleMouseLeave,
@@ -949,10 +949,10 @@ class X extends (a = c.PureComponent) {
             }),
             k(this, 'handleKeyDown', (e) => {
                 let { current: n } = this.mediaRef;
-                if (e.which === x.yXg.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
-                else if (e.which >= x.yXg.DIGIT_0 && e.which <= x.yXg.DIGIT_9 && null != n) {
+                if (e.which === L.yXg.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
+                else if (e.which >= L.yXg.DIGIT_0 && e.which <= L.yXg.DIGIT_9 && null != n) {
                     e.preventDefault();
-                    let r = (e.which - x.yXg.DIGIT_0) / 10;
+                    let r = (e.which - L.yXg.DIGIT_0) / 10;
                     (n.currentTime = n.duration * r), this.setPlay(!0);
                 }
             }),

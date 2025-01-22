@@ -20,8 +20,8 @@ var a = n(120356),
     p = n(463395),
     x = n(131951),
     f = n(626135),
-    _ = n(63063),
-    E = n(210887),
+    E = n(63063),
+    _ = n(210887),
     C = n(738486),
     T = n(726985),
     S = n(981631),
@@ -48,7 +48,7 @@ function O(e) {
 }
 function R(e) {
     let { refreshStyles: t = !1 } = e,
-        n = (0, o.e7)([E.Z], () => E.Z.theme),
+        n = (0, o.e7)([_.Z], () => _.Z.theme),
         {
             noiseCancellation: i,
             noiseSuppression: r,
@@ -109,7 +109,7 @@ function R(e) {
                         },
                         align: m.Z.Align.CENTER,
                         body: (0, s.jsx)(d.Anchor, {
-                            href: _.Z.getArticleURL(S.BhN.NOISE_SUPPRESSION),
+                            href: E.Z.getArticleURL(S.BhN.NOISE_SUPPRESSION),
                             onClick: O,
                             children: b.intl.string(b.t.hvVgAQ)
                         })
@@ -139,7 +139,7 @@ function P(e) {
         {
             hasEchoCancellation: g,
             hasNoiseSuppression: f,
-            hasAutomaticGainControl: _
+            hasAutomaticGainControl: E
         } = (0, o.cj)(
             [p.Z],
             () => ({
@@ -149,11 +149,11 @@ function P(e) {
             }),
             [i]
         ),
-        E = g || f || _,
+        _ = g || f || E,
         N = n === S.pM4.VOICE_ACTIVITY && c,
         v = (0, s.jsxs)(C.Z, {
             children: [
-                E &&
+                _ &&
                     (0, s.jsx)(d.FormText, {
                         className: t ? void 0 : I.marginBottom20,
                         type: d.FormText.Types.DESCRIPTION,
@@ -199,7 +199,7 @@ function P(e) {
                                 section: S.jXE.SETTINGS_VOICE_AND_VIDEO
                             }),
                         note: b.intl.string(b.t['6EjbvL']),
-                        disabled: _,
+                        disabled: E,
                         hideBorder: t,
                         children: b.intl.string(b.t.cUMdHx)
                     })

@@ -45,8 +45,8 @@ var i = r(392711),
     R = r(633302),
     O = r(134432),
     D = r(594174),
-    x = r(768581),
-    L = r(176354),
+    L = r(768581),
+    x = r(176354),
     w = r(353368),
     P = r(388032);
 let M = {
@@ -88,7 +88,7 @@ function F(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w.v;
     if (null != e.id) {
         var r;
-        return x.ZP.getEmojiURL({
+        return L.ZP.getEmojiURL({
             id: e.id,
             animated: null !== (r = e.animated) && void 0 !== r && r,
             size: n
@@ -96,7 +96,7 @@ function F(e) {
     }
     let i = R.ZP.convertSurrogateToName(e.name, !1),
         a = R.ZP.getByName(i);
-    return null != a ? L.ZP.getURL(a.surrogates) : '';
+    return null != a ? x.ZP.getURL(a.surrogates) : '';
 }
 function V(e, n) {
     return a()(e)

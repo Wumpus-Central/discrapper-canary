@@ -59,10 +59,10 @@ function D(e) {
     let r = R(h.Z.getChannelId());
     return null != r && r in C && (delete C[r], (n = !0)), n && e ? e : !e;
 }
-function x() {
+function L() {
     T && (T = D(T)), (I = D(I));
 }
-function L() {
+function x() {
     I && (I = D(I)), (T = D(T));
 }
 function w() {
@@ -211,9 +211,9 @@ class Y extends (i = o.ZP.PersistedStore) {
 y(Y, 'displayName', 'ChannelSectionStore'),
     y(Y, 'persistKey', 'ChannelSectionStore2'),
     (n.ZP = new Y(s.Z, {
-        CHANNEL_TOGGLE_MEMBERS_SECTION: x,
+        CHANNEL_TOGGLE_MEMBERS_SECTION: L,
         PROFILE_PANEL_TOGGLE_SECTION: w,
-        CHANNEL_TOGGLE_SUMMARIES_SECTION: L,
+        CHANNEL_TOGGLE_SUMMARIES_SECTION: x,
         SIDEBAR_VIEW_CHANNEL: k,
         SIDEBAR_VIEW_GUILD: P,
         SIDEBAR_CREATE_THREAD: U,

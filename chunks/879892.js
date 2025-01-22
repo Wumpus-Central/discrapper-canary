@@ -43,8 +43,8 @@ async function y(e) {
     }
     let D = [];
     !h.Z.isLoadedForPremiumSKUs() && D.push((0, d.Y2)()), !p.Z.hasFetched && (D.push(u.jg()), D.push((0, c.X8)())), D.length > 0 && (await Promise.allSettled(D));
-    let x = (0, m.vx)(p.Z.boostSlots),
-        L = x.length,
+    let L = (0, m.vx)(p.Z.boostSlots),
+        x = L.length,
         w = (e) => {
             null == y || y(), null == S || S(e);
         },
@@ -56,9 +56,9 @@ async function y(e) {
                     location_section: i.section
                 });
         };
-    if (L > 0 && (null == o || L >= o)) {
+    if (x > 0 && (null == o || x >= o)) {
         let e;
-        1 === L ? (e = x.slice(0, 1)) : null != o && (e = x.slice(0, o)),
+        1 === x ? (e = L.slice(0, 1)) : null != o && (e = L.slice(0, o)),
             await (0, l.openModalLazy)(
                 async () => {
                     let { default: n } = await Promise.all([r.e('8016'), r.e('22646'), r.e('30419'), r.e('24539')]).then(r.bind(r, 760558));

@@ -134,7 +134,7 @@ function D(e) {
           })
         : delete _[n];
 }
-function x(e) {
+function L(e) {
     var n, r;
     let i = !1;
     return (
@@ -157,7 +157,7 @@ function x(e) {
         i
     );
 }
-class L extends (i = u.ZP.Store) {
+class x extends (i = u.ZP.Store) {
     hasJoined(e) {
         return e in _;
     }
@@ -183,8 +183,8 @@ class L extends (i = u.ZP.Store) {
         return g.has(e);
     }
 }
-h(L, 'displayName', 'JoinedThreadsStore');
-let w = new L(c.Z, {
+h(x, 'displayName', 'JoinedThreadsStore');
+let w = new x(c.Z, {
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: T,
     GUILD_CREATE: S,
@@ -198,6 +198,6 @@ let w = new L(c.Z, {
     THREAD_DELETE: R,
     THREAD_MEMBER_UPDATE: O,
     THREAD_MEMBER_LOCAL_UPDATE: D,
-    THREAD_MEMBERS_UPDATE: x
+    THREAD_MEMBERS_UPDATE: L
 });
 n.Z = w;

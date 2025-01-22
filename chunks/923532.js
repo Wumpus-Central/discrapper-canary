@@ -6,20 +6,20 @@ n.d(t, {
 var i = n(200651),
     s = n(192379),
     r = n(512722),
-    a = n.n(r),
-    o = n(399606),
+    o = n.n(r),
+    a = n(399606),
     l = n(822183),
-    d = n(673125),
-    c = n(610947),
+    c = n(673125),
+    d = n(610947),
     u = n(594174),
     h = n(497343);
 function p(e) {
     let { streamerId: t, channelId: n } = e,
         r = s.useRef(null),
-        l = (0, o.e7)([u.default], () => u.default.getCurrentUser());
+        l = (0, a.e7)([u.default], () => u.default.getCurrentUser());
     return (
-        a()(null != l, 'user cannot be null'),
-        (0, c.Z)(r, l, t, n),
+        o()(null != l, 'user cannot be null'),
+        (0, d.Z)(r, l, t, n),
         (0, i.jsx)('canvas', {
             className: h.canvas,
             ref: r
@@ -35,8 +35,8 @@ function f(e) {
             },
             { autoTrackExposure: !0 }
         ),
-        a = (0, o.e7)([d.Z], () => d.Z.visibleOverlayCanvas);
-    return r && a
+        o = (0, a.e7)([c.Z], () => c.Z.visibleOverlayCanvas);
+    return r && o
         ? (0, i.jsx)(p, {
               guildId: t,
               channelId: n,

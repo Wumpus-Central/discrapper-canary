@@ -1,7 +1,7 @@
 let i;
 r.d(n, {
     i6: function () {
-        return x;
+        return L;
     }
 });
 var a,
@@ -47,8 +47,8 @@ let D = {
         seenUpdatedActivities: {},
         shouldShowNewActivityIndicator: !1
     },
-    x = [],
     L = [],
+    x = [],
     w = '0',
     P = new Map(),
     M = new Map(),
@@ -78,16 +78,16 @@ function J(e) {
         _ = (0, b.Z)(c);
     if (null == _) return;
     let m = (0, T.p)(u),
-        E = null != m && null !== (r = k.get(m)) && void 0 !== r ? r : x,
+        E = null != m && null !== (r = k.get(m)) && void 0 !== r ? r : L,
         v = null != E && 0 === E.length,
-        y = null !== (i = U.get(u.id)) && void 0 !== i ? i : x,
+        y = null !== (i = U.get(u.id)) && void 0 !== i ? i : L,
         S = y.find((e) => e.applicationId === c),
         A = h.map((e) => e.userId),
         C = p.default.getId(),
         N = A.some((e) => e === C),
         O = null === (n = h.find((e) => e.userId === C)) || void 0 === n ? void 0 : n.sessionId,
         D = h.some((e) => (0, I.J)(e)),
-        L = P.get(c),
+        x = P.get(c),
         w = G.get(B(null != m ? m : null, c)),
         Z = null == w ? void 0 : w.launchParams,
         F = {
@@ -98,20 +98,20 @@ function J(e) {
             url: _,
             userIds: new Set(A),
             participants: h,
-            referrerId: null !== (a = null == L ? void 0 : L.referrerId) && void 0 !== a ? a : null == Z ? void 0 : Z.referrerId,
-            customId: null !== (o = null == L ? void 0 : L.customId) && void 0 !== o ? o : null == Z ? void 0 : Z.customId
+            referrerId: null !== (a = null == x ? void 0 : x.referrerId) && void 0 !== a ? a : null == Z ? void 0 : Z.referrerId,
+            customId: null !== (o = null == x ? void 0 : x.customId) && void 0 !== o ? o : null == Z ? void 0 : Z.customId
         };
     N &&
-        null != L &&
-        P.set(L.applicationId, {
-            ...L,
+        null != x &&
+        P.set(x.applicationId, {
+            ...x,
             ...F
         });
     let V = !D;
-    null != L && u.id === L.location.id && c === (null == L ? void 0 : L.applicationId) && ((!N && Array.from(L.userIds).some((e) => e === C)) || V)
+    null != x && u.id === x.location.id && c === (null == x ? void 0 : x.applicationId) && ((!N && Array.from(x.userIds).some((e) => e === C)) || V)
         ? (P.delete(c), g.S.dispatch(R.CkL.RELEASE_ACTIVITY_WEB_VIEW))
         : N &&
-          (null == L || L.applicationId !== c || L.location.id !== u.id) &&
+          (null == x || x.applicationId !== c || x.location.id !== u.id) &&
           O === p.default.getSessionId() &&
           ei({
               applicationId: c,
@@ -192,9 +192,9 @@ function ei(e) {
         O = p.default.getSessionId();
     if (null == C || null == O || (null === (n = P.get(a)) || void 0 === n ? void 0 : n.location.id) === l.id) return !1;
     let D = (0, T.p)(l),
-        x = h.Z.getChannel(D),
-        L = null == x ? void 0 : x.getGuildId();
-    if (null == m.default.getCurrentUser() || (!(0, y.s)() && null == L && !(null !== (r = null == x ? void 0 : x.isPrivate()) && void 0 !== r && r))) return !1;
+        L = h.Z.getChannel(D),
+        x = null == L ? void 0 : L.getGuildId();
+    if (null == m.default.getCurrentUser() || (!(0, y.sq)() && null == x && !(null !== (r = null == L ? void 0 : L.isPrivate()) && void 0 !== r && r))) return !1;
     i = l;
     let w = {
         applicationId: a,
@@ -389,15 +389,15 @@ class eA extends (a = u.ZP.PersistedStore) {
     }
     getEmbeddedActivitiesForGuild(e) {
         var n;
-        return null !== (n = M.get(e)) && void 0 !== n ? n : x;
+        return null !== (n = M.get(e)) && void 0 !== n ? n : L;
     }
     getEmbeddedActivitiesForChannel(e) {
         var n;
-        return null !== (n = k.get(e)) && void 0 !== n ? n : x;
+        return null !== (n = k.get(e)) && void 0 !== n ? n : L;
     }
     getEmbeddedActivitiesForLocation(e) {
         var n;
-        return null !== (n = U.get(e.id)) && void 0 !== n ? n : x;
+        return null !== (n = U.get(e.id)) && void 0 !== n ? n : L;
     }
     getEmbeddedActivitiesByChannel() {
         return k;
@@ -412,7 +412,7 @@ class eA extends (a = u.ZP.PersistedStore) {
     getShelfActivities(e) {
         var n;
         let r = X(e);
-        return null !== (n = Z.get(r)) && void 0 !== n ? n : L;
+        return null !== (n = Z.get(r)) && void 0 !== n ? n : x;
     }
     getShelfFetchStatus(e) {
         let n = X(e);

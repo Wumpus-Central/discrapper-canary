@@ -1,15 +1,15 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return l;
     }
 });
-var a = t(200651),
-    i = t(648113),
-    r = t(358459);
+var i = n(200651),
+    a = n(648113),
+    r = n(358459);
 function l() {
-    let e = (0, i.C)();
-    return (0, a.jsxs)('div', {
+    let e = (0, a.C)();
+    return (0, i.jsxs)('div', {
         className: r.gradientBackground,
-        children: [(0, a.jsx)('div', { className: e }), (0, a.jsx)('div', { className: r.gradientOverlay })]
+        children: [(0, i.jsx)('div', { className: e }), (0, i.jsx)('div', { className: r.gradientOverlay })]
     });
 }

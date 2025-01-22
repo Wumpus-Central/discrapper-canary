@@ -3,7 +3,7 @@ r.d(n, {
         return H;
     },
     AW: function () {
-        return x;
+        return L;
     },
     EN: function () {
         return G;
@@ -215,7 +215,7 @@ function D(e, n) {
               };
     }, null);
 }
-var x = (function (e) {
+var L = (function (e) {
     function n() {
         return e.apply(this, arguments) || this;
     }
@@ -241,15 +241,15 @@ var x = (function (e) {
         n
     );
 })(a.Component);
-function L(e) {
+function x(e) {
     return '/' === e.charAt(0) ? e : '/' + e;
 }
 function w(e, n) {
-    return e ? (0, c.Z)({}, n, { pathname: L(e) + n.pathname }) : n;
+    return e ? (0, c.Z)({}, n, { pathname: x(e) + n.pathname }) : n;
 }
 function P(e, n) {
     if (!e) return n;
-    var r = L(e);
+    var r = x(e);
     return 0 !== n.pathname.indexOf(r) ? n : (0, c.Z)({}, n, { pathname: n.pathname.substr(r.length) });
 }
 function M(e) {

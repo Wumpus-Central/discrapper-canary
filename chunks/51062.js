@@ -24,15 +24,15 @@ function b(e, n, r) {
     var i, b, I, T, S, A, C;
     let { channel: N, type: R } = e,
         [O, D] = a.useState(() => (0, m.P)()),
-        x = (0, o.Z)(),
-        L = (0, s.e7)([f.ZP], () => {
+        L = (0, o.Z)(),
+        x = (0, s.e7)([f.ZP], () => {
             if (null != e.guild) {
                 var n;
                 return null != f.ZP.getMember(null === (n = e.guild) || void 0 === n ? void 0 : n.id, v.fL);
             }
             return !1;
         }),
-        w = (0, d.Ib)(e.guild, e.channel) && !L && !(0, d.g0)(e.guild),
+        w = (0, d.Ib)(e.guild, e.channel) && !x && !(0, d.g0)(e.guild),
         P = (0, s.e7)([f.ZP, _.default], () => {
             var e, n;
             let r = _.default.getCurrentUser();
@@ -82,12 +82,12 @@ function b(e, n, r) {
             let e = (e) => D(e);
             return (
                 V.on('change', e),
-                V.on('update', x),
+                V.on('update', L),
                 () => {
-                    V.off('change', e), V.off('update', x);
+                    V.off('change', e), V.off('update', L);
                 }
             );
-        }, [x, V]),
+        }, [L, V]),
         a.useEffect(() => {
             var e;
             let n = null === (e = O.query) || void 0 === e ? void 0 : e.typeInfo.stores;

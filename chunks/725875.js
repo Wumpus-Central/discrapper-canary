@@ -18,8 +18,8 @@ var i = n(200651),
     h = n(388032),
     p = n(669379);
 function g(e) {
-    let { webhooks: t, selectableWebhookChannels: n, lastCreatedWebhookId: g, editedWebhook: x, errors: f, canNavigate: b } = e,
-        v = l.useMemo(
+    let { webhooks: t, selectableWebhookChannels: n, lastCreatedWebhookId: g, editedWebhook: x, errors: f, canNavigate: v } = e,
+        b = l.useMemo(
             () =>
                 Object.values(n).map((e) => ({
                     value: e.id,
@@ -41,11 +41,11 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        N = l.useCallback(
+        I = l.useCallback(
             (e) => {
-                b() && (e === (null == x ? void 0 : x.id) ? a.Z.stopEditingWebhook() : a.Z.startEditingWebhook(e));
+                v() && (e === (null == x ? void 0 : x.id) ? a.Z.stopEditingWebhook() : a.Z.startEditingWebhook(e));
             },
-            [b, x]
+            [v, x]
         );
     return (0, i.jsx)('div', {
         className: p.__invalid_list,
@@ -108,11 +108,11 @@ function g(e) {
             })({
                 channel: t,
                 webhooks: n,
-                channelOptions: v,
+                channelOptions: b,
                 lastCreatedWebhookId: g,
                 editedWebhook: x,
                 errors: f,
-                toggleWebhookExpand: N
+                toggleWebhookExpand: I
             });
         })
     });

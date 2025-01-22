@@ -28,7 +28,7 @@ e.exports = function (e, n, r, s, _, g, N) {
     var R,
         O,
         D,
-        x = function (e) {
+        L = function (e) {
             if (e === _ && k) return k;
             if (!b && e && e in P) return P[e];
             switch (e) {
@@ -43,14 +43,14 @@ e.exports = function (e, n, r, s, _, g, N) {
                 return new r(this);
             };
         },
-        L = n + ' Iterator',
+        x = n + ' Iterator',
         w = !1,
         P = e.prototype,
         M = P[I] || P['@@iterator'] || (_ && P[_]),
-        k = (!b && M) || x(_),
+        k = (!b && M) || L(_),
         U = ('Array' === n && P.entries) || M;
     if (
-        (U && (R = c(U.call(new e()))) !== Object.prototype && R.next && (!o && c(R) !== y && (d ? d(R, y) : !l(R[I]) && h(R, I, C)), f(R, L, !0, !0), o && (m[L] = C)),
+        (U && (R = c(U.call(new e()))) !== Object.prototype && R.next && (!o && c(R) !== y && (d ? d(R, y) : !l(R[I]) && h(R, I, C)), f(R, x, !0, !0), o && (m[x] = C)),
         E &&
             _ === S &&
             M &&
@@ -65,9 +65,9 @@ e.exports = function (e, n, r, s, _, g, N) {
     ) {
         if (
             ((O = {
-                values: x(S),
-                keys: g ? k : x(T),
-                entries: x(A)
+                values: L(S),
+                keys: g ? k : L(T),
+                entries: L(A)
             }),
             N)
         )

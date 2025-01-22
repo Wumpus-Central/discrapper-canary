@@ -20,8 +20,8 @@ var i = n(200651),
     p = n(419363),
     x = n(818083),
     f = n(688465),
-    _ = n(487419),
-    E = n(197344),
+    E = n(487419),
+    _ = n(197344),
     C = n(476756),
     T = n(734934),
     S = n(223683),
@@ -198,7 +198,7 @@ function W(e) {
                 sound: 'reconnect'
             }
         ],
-        h = null != E.Z.useHolidaySoundpack();
+        h = null != _.Z.useHolidaySoundpack();
     return (0, i.jsx)(j.F, {
         setting: k.s6.NOTIFICATIONS_SOUNDS,
         children: (0, i.jsxs)(u.FormSection, {
@@ -250,7 +250,7 @@ function W(e) {
     });
 }
 function z() {
-    let e = (0, c.e7)([_.Z], () => _.Z.getGuildAlertSettings()),
+    let e = (0, c.e7)([E.Z], () => E.Z.getGuildAlertSettings()),
         [t, n] = r.useState(null),
         s = y.default.keys(e).map((t) => {
             let n = e[t];

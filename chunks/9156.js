@@ -45,8 +45,8 @@ let C = {},
     R = !1,
     O = !1,
     D = { flags: 0 },
-    x = new d.ZP(),
     L = new d.ZP(),
+    x = new d.ZP(),
     w = {
         suppress_everyone: !1,
         suppress_roles: !1,
@@ -89,9 +89,9 @@ function V(e, n) {
             ...n,
             channel_overrides: o
         };
-    x.clearTimer(e),
+    L.clearTimer(e),
         l().forEach(a, (e) => {
-            L.clearTimer(e.channel_id);
+            x.clearTimer(e.channel_id);
         }),
         j(e, s),
         (C[e] = s),
@@ -104,7 +104,7 @@ function V(e, n) {
 }
 function j(e, n) {
     !0 === n.muted &&
-        x.setTimer(e, n.mute_config, () => {
+        L.setTimer(e, n.mute_config, () => {
             Y(e, { muted: !1 }),
                 c.Z.dispatch({
                     type: 'GUILD_MUTE_EXPIRED',
@@ -114,7 +114,7 @@ function j(e, n) {
         (n.muted = !1),
         l().forEach(n.channel_overrides, (n) => {
             !0 === n.muted &&
-                L.setTimer(n.channel_id, n.mute_config, () => {
+                x.setTimer(n.channel_id, n.mute_config, () => {
                     W(e, n.channel_id, { muted: !1 }),
                         c.Z.dispatch({
                             type: 'CHANNEL_MUTE_EXPIRED',
@@ -221,7 +221,7 @@ function $(e) {
         }));
 }
 function ee(e) {
-    er(e.notificationSettings), x.reset(), L.reset(), !e.userGuildSettings.partial && ((C = {}), (M = {}), (k = {}));
+    er(e.notificationSettings), L.reset(), x.reset(), !e.userGuildSettings.partial && ((C = {}), (M = {}), (k = {}));
     let n = new Set();
     for (let r in (e.userGuildSettings.entries.forEach((e) => {
         let r = e;

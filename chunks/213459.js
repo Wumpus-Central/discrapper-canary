@@ -51,8 +51,8 @@ var c = r(192379),
     R = r(700089),
     O = r(654455),
     D = r(963456),
-    x = r(367790),
-    L = r(895924),
+    L = r(367790),
+    x = r(895924),
     w = r(581364),
     P = r(807169),
     M = r(104793),
@@ -194,7 +194,7 @@ function ea(e) {
         } else null != e.bot && (l[e.bot.id] = e.id);
         let n = {
             descriptor: {
-                ...(0, w.X0)(ex(e)),
+                ...(0, w.X0)(eL(e)),
                 permissions: null != e.permissions ? (0, v.tk)(eM(e.permissions, o)) : void 0,
                 botId: e.bot_id
             },
@@ -204,7 +204,7 @@ function ea(e) {
     }
     for (let e of ('guild' === i.type && u.size > 0 && m.Z.requestMembersById(i.guildId, [...u]),
     (0, w.nG)(
-        a.application_commands.map((e) => eL(e, o)),
+        a.application_commands.map((e) => ex(e, o)),
         !0
     ))) {
         let n = s[e.applicationId];
@@ -452,7 +452,7 @@ class e_ extends (i = h.ZP.Store) {
                 { commandTypes: [g.yU.CHAT] },
                 {
                     placeholderCount: 5,
-                    scoreMethod: x.p.COMMAND_ONLY,
+                    scoreMethod: L.p.COMMAND_ONLY,
                     applicationId: e,
                     allowFetch: !0
                 }
@@ -657,12 +657,12 @@ function eA(e, n, r) {
 }
 function eC(e) {
     var n, r, i, a, o, s, l;
-    let { permissionContext: u, contextState: c, userState: d, applicationStates: p, text: h, builtIns: _ = x.D.ALLOW, allowApplicationCommands: m = !0, singleApplicationId: g, allowEmptySections: v = !1, scoreMethod: y = x.p.NONE, sortOptions: I = eS, installOnDemand: T = !1 } = e,
+    let { permissionContext: u, contextState: c, userState: d, applicationStates: p, text: h, builtIns: _ = L.D.ALLOW, allowApplicationCommands: m = !0, singleApplicationId: g, allowEmptySections: v = !1, scoreMethod: y = L.p.NONE, sortOptions: I = eS, installOnDemand: T = !1 } = e,
         { commandTypes: A } = u,
         C = null == h ? void 0 : h.toLowerCase(),
         R = null == C ? void 0 : C.split(' '),
-        D = _ === x.D.ONLY_TEXT,
-        L = _ !== x.D.DENY ? (0, N.Kh)(A, !0, D) : [],
+        D = _ === L.D.ONLY_TEXT,
+        x = _ !== L.D.DENY ? (0, N.Kh)(A, !0, D) : [],
         w = [],
         P = {
             permissionContext: u,
@@ -717,7 +717,7 @@ function eC(e) {
     if (
         (I.applications.useFrecency && b.DZ.loadIfNecessary(),
         w.sort((e, n) => {
-            if (I.applications.useScore && y === x.p.APPLICATION_ONLY) {
+            if (I.applications.useScore && y === L.p.APPLICATION_ONLY) {
                 var r, i, a, o;
                 let s = null !== (a = null === (r = e.data[0]) || void 0 === r ? void 0 : r.score) && void 0 !== a ? a : Number.MAX_VALUE,
                     l = null !== (o = null === (i = n.data[0]) || void 0 === i ? void 0 : i.score) && void 0 !== o ? o : Number.MAX_VALUE;
@@ -730,9 +730,9 @@ function eC(e) {
             }
             return eB(e.section.name, n.section.name);
         }),
-        L.length > 0 || !0 === v)
+        x.length > 0 || !0 === v)
     ) {
-        let e = eN(N.Tm[k.bi.BUILT_IN], L, !0, !0, P);
+        let e = eN(N.Tm[k.bi.BUILT_IN], x, !0, !0, P);
         null != e && w.push(e);
     }
     let Z = w.flatMap((e) =>
@@ -741,7 +741,7 @@ function eC(e) {
             section: e.section
         }))
     );
-    if (y === x.p.COMMAND_ONLY || y === x.p.COMMAND_OR_APPLICATION) {
+    if (y === L.p.COMMAND_ONLY || y === L.p.COMMAND_OR_APPLICATION) {
         let e = u.context,
             n = S.Z.getGuild(null == u ? void 0 : null === (l = u.context) || void 0 === l ? void 0 : l.guild_id);
         I.commands.useFrecency && b.DZ.loadIfNecessary();
@@ -789,8 +789,8 @@ function eN(e, n, r, i, a) {
             isGuildInstalled: r,
             isUserInstalled: i || f
         }) === M.mF.ALLOWED && v.push(a);
-    return 0 !== (o = c !== x.p.NONE && null != s && null != l ? ek(s, l, v, e, c) : v).length || u
-        ? ((c === x.p.NONE || c === x.p.APPLICATION_ONLY) && o.sort((e, n) => eB(e.displayName, n.displayName)),
+    return 0 !== (o = c !== L.p.NONE && null != s && null != l ? ek(s, l, v, e, c) : v).length || u
+        ? ((c === L.p.NONE || c === L.p.APPLICATION_ONLY) && o.sort((e, n) => eB(e.displayName, n.displayName)),
           {
               section: e,
               data: o
@@ -808,7 +808,7 @@ function eD(e) {
     var n;
     return (null === (n = e.result) || void 0 === n ? void 0 : n.version) !== e.serverVersion;
 }
-function ex(e) {
+function eL(e) {
     return {
         description: e.description,
         icon: e.icon,
@@ -818,7 +818,7 @@ function ex(e) {
         flags: e.flags
     };
 }
-function eL(e, n) {
+function ex(e, n) {
     var r, i, a, o, s;
     let l = {
         ...e,
@@ -854,7 +854,7 @@ function eM(e, n) {
     if (
         (null != e.user &&
             r.push({
-                type: L.Kw.USER,
+                type: x.Kw.USER,
                 id: n,
                 permission: e.user
             }),
@@ -862,14 +862,14 @@ function eM(e, n) {
     )
         for (let [n, i] of Object.entries(e.channels))
             r.push({
-                type: L.Kw.CHANNEL,
+                type: x.Kw.CHANNEL,
                 id: n,
                 permission: i
             });
     if (null != e.roles)
         for (let [n, i] of Object.entries(e.roles))
             r.push({
-                type: L.Kw.ROLE,
+                type: x.Kw.ROLE,
                 id: n,
                 permission: i
             });
@@ -878,7 +878,7 @@ function eM(e, n) {
 function ek(e, n, r, i, a) {
     let o;
     let s = [];
-    if (a === x.p.APPLICATION_ONLY || a === x.p.COMMAND_OR_APPLICATION) {
+    if (a === L.p.APPLICATION_ONLY || a === L.p.COMMAND_OR_APPLICATION) {
         let n = i.name.toLocaleLowerCase();
         if (n.startsWith(e)) o = 5;
         else if (n.includes(e)) o = 6;
@@ -892,7 +892,7 @@ function ek(e, n, r, i, a) {
         d = n.slice(1).join(' ');
     for (let n of r) {
         let r;
-        (a === x.p.COMMAND_ONLY || a === x.p.COMMAND_OR_APPLICATION) && (r = eU(n, e, c, d)),
+        (a === L.p.COMMAND_ONLY || a === L.p.COMMAND_OR_APPLICATION) && (r = eU(n, e, c, d)),
             (void 0 === r || (void 0 !== o && o < r)) && (r = o),
             void 0 !== r &&
                 s.push({

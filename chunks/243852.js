@@ -21,22 +21,22 @@ var i,
     v = n(944486),
     S = n(981631);
 let T = 'ActivityTrackingStore',
-    A = 30 * f.Z.Millis.MINUTE,
-    b = 5 * f.Z.Millis.MINUTE,
+    b = 30 * f.Z.Millis.MINUTE,
+    A = 5 * f.Z.Millis.MINUTE,
     Z = null !== (i = c.K.get(T)) && void 0 !== i ? i : {},
     x = {},
     L = !1;
-function P(e) {
+function y(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    t && O(e, !0);
+    t && P(e, !0);
     let n = x[e.applicationId];
     null != n && (n.stop(), delete x[e.applicationId]), delete Z[e.applicationId], c.K.set(T, Z);
 }
-function O(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         i = null != e.updatedAt ? n - e.updatedAt : 0;
-    i > A + b && (i = 0);
+    i > b + A && (i = 0);
     let r = (0, _.OT)(e.applicationId, C.Z),
         l = v.Z.getVoiceChannelId(),
         a = E.default.getSessionId(),
@@ -55,9 +55,9 @@ function O(e) {
     }),
         (e.updatedAt = n);
     let o = x[e.applicationId];
-    null == o && (o = x[e.applicationId] = new d.Xp()).start(A, () => O(e)), !t && ((Z[e.applicationId] = e), c.K.set(T, Z));
+    null == o && (o = x[e.applicationId] = new d.Xp()).start(b, () => P(e)), !t && ((Z[e.applicationId] = e), c.K.set(T, Z));
 }
-function y() {
+function O() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = p.ZP.getVisibleRunningGames(),
         n = new Set();
@@ -66,22 +66,22 @@ function y() {
         if (null != t)
             n.add(t.id),
                 !(t.id in Z) &&
-                    O({
+                    P({
                         applicationId: t.id,
                         updatedAt: Date.now(),
                         distributor: i,
                         exePath: (0, m.N6)(null != r ? r : '')
                     });
     }
-    for (let t of Object.keys(Z)) !n.has(t) && P(Z[t], e);
+    for (let t of Object.keys(Z)) !n.has(t) && y(Z[t], e);
 }
 function R() {
-    for (let e of Object.keys(Z)) P(Z[e]);
+    for (let e of Object.keys(Z)) y(Z[e]);
     L = !1;
 }
 class j extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, g.Z, C.Z), this.syncWith([g.Z], y);
+        this.waitFor(p.ZP, g.Z, C.Z), this.syncWith([g.Z], O);
     }
     getActivities() {
         return Z;
@@ -97,11 +97,11 @@ class j extends (r = o.ZP.Store) {
           })
         : (l[a] = s),
     new j(u.Z, {
-        RUNNING_GAMES_CHANGE: () => y(),
+        RUNNING_GAMES_CHANGE: () => O(),
         CONNECTION_OPEN: function () {
             if (L) return !1;
-            for (let e of Object.keys(Z)) O(Z[e]);
-            y(!1), (L = !0);
+            for (let e of Object.keys(Z)) P(Z[e]);
+            O(!1), (L = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;

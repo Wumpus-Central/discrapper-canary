@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(726542),
     x = n(921801),
     f = n(553795),
-    _ = n(430824),
-    E = n(63063),
+    E = n(430824),
+    _ = n(63063),
     C = n(358085),
     T = n(709054),
     S = n(362352),
@@ -33,7 +33,7 @@ var i = n(200651),
     O = n(232186);
 function R(e) {
     let t = () => {
-        I.SE.updateSetting(e ? T.default.keys(_.Z.getGuilds()) : []);
+        I.SE.updateSetting(e ? T.default.keys(E.Z.getGuilds()) : []);
     };
     (0, m.openModal)((e) =>
         (0, i.jsx)(m.ConfirmModal, {
@@ -99,7 +99,7 @@ function P() {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   className: O.marginBottom8,
-                                  children: A.intl.format(A.t.aUxRra, { helpdeskArticle: E.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS) })
+                                  children: A.intl.format(A.t.aUxRra, { helpdeskArticle: _.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS) })
                               }),
                               (0, i.jsx)(m.SingleSelect, {
                                   options: o,
@@ -110,7 +110,7 @@ function P() {
                       })
                     : (0, i.jsx)(m.FormSwitch, {
                           value: t === d.E5.OFF,
-                          note: A.intl.format(A.t['+5/xu7'], { helpdeskArticle: E.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                          note: A.intl.format(A.t['+5/xu7'], { helpdeskArticle: _.Z.getArticleURL(v.BhN.ACTIVITY_STATUS_SETTINGS) }),
                           onChange: (e) => s(!e),
                           children: A.intl.string(A.t.D5GXTU)
                       }),

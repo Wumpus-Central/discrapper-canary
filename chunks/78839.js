@@ -120,7 +120,7 @@ function D(e) {
         v = d.Q.createFromServer(n);
     }
 }
-function x(e) {
+function L(e) {
     let { subscription: n } = e;
     if (((A = !0), null != n)) {
         let e = f.default.getId();
@@ -140,7 +140,7 @@ function x(e) {
         S = d.Q.createFromServer(n);
     }
 }
-function L() {
+function x() {
     (g = null), (E = null), (v = null), (y = null), (b = null), (I = !1), (T = !1), (S = null), (A = !1);
 }
 function w(e) {
@@ -230,7 +230,7 @@ m(k, 'displayName', 'SubscriptionStore'),
         BILLING_SUBSCRIPTION_FETCH_SUCCESS: N,
         BILLING_SUBSCRIPTION_UPDATE_SUCCESS: O,
         BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: D,
-        BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: x,
-        BILLING_SUBSCRIPTION_RESET: L,
-        LOGOUT: L
+        BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: L,
+        BILLING_SUBSCRIPTION_RESET: x,
+        LOGOUT: x
     }));

@@ -1,6 +1,6 @@
 r.d(n, {
     Dd: function () {
-        return L;
+        return x;
     }
 });
 var i = r(200651);
@@ -31,8 +31,8 @@ var a = r(442837),
     R = r(474936),
     O = r(388032),
     D = r(463313),
-    x = r(461405);
-let L = {
+    L = r(461405);
+let x = {
     key: A.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) => (0, i.jsx)(P, { ...e }),
     options: {
@@ -58,7 +58,7 @@ function w(e) {
 }
 function P(e) {
     let { handleStepChange: n, handleClose: r } = e,
-        { customGiftMessage: l = '', setCustomGiftMessage: u, giftRecipientError: g, setGiftRecipientError: A, validatingGiftRecipient: L, giftRecipient: P, recommendedGiftSkuIds: k, giftingOrigin: U, setValidatingGiftRecipient: B } = (0, T.wD)(),
+        { customGiftMessage: l = '', setCustomGiftMessage: u, giftRecipientError: g, setGiftRecipientError: A, validatingGiftRecipient: x, giftRecipient: P, recommendedGiftSkuIds: k, giftingOrigin: U, setValidatingGiftRecipient: B } = (0, T.wD)(),
         { selectedSkuId: G, setSelectedSkuId: Z, selectedSkuPricePreview: F, paymentSourceId: V, skuPricePreviewsById: j } = (0, S.usePaymentContext)(),
         H = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
         { enabled: Y, giftRecommendationAlgorithm: W } = h.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
@@ -131,8 +131,8 @@ function P(e) {
                         (0, i.jsx)(E.s, { giftRecipient: P }),
                         (0, i.jsx)(m.q, {
                             isShopGift: !0,
-                            className: x.adjustedGiftMainAnimation,
-                            optionsContainerClassName: x.adjustedGiftBoxOptionContainer
+                            className: L.adjustedGiftMainAnimation,
+                            optionsContainerClassName: L.adjustedGiftBoxOptionContainer
                         }),
                         J()
                     ]
@@ -174,7 +174,7 @@ function P(e) {
                         onStepChange: n,
                         onBackClick: r,
                         disabled: null != g || null == P || P.id === (null == H ? void 0 : H.id) || l.length > R.$n,
-                        loading: L
+                        loading: x
                     })
                 })
             })

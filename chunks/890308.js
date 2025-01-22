@@ -48,10 +48,10 @@
                 return e > 65535 && ((e -= 65536), (n += A(((e >>> 10) & 1023) | 55296)), (e = 56320 | (1023 & e))), (n += A(e));
             }).join('');
         }
-        function x(e) {
+        function L(e) {
             return e - 48 < 10 ? e - 22 : e - 65 < 26 ? e - 65 : e - 97 < 26 ? e - 97 : d;
         }
-        function L(e, n) {
+        function x(e, n) {
             return e + 22 + 75 * (e < 26) - ((0 != n) << 5);
         }
         function w(e, n, r) {
@@ -77,7 +77,7 @@
                 T = m;
             for ((r = e.lastIndexOf(E)) < 0 && (r = 0), i = 0; i < r; ++i) e.charCodeAt(i) >= 128 && C('not-basic'), v.push(e.charCodeAt(i));
             for (a = r > 0 ? r + 1 : 0; a < y; ) {
-                for (o = b, s = 1, l = d; a >= y && C('invalid-input'), ((u = x(e.charCodeAt(a++))) >= d || u > S((c - b) / s)) && C('overflow'), (b += u * s), !(u < (h = l <= T ? f : l >= T + p ? p : l - T)); l += d) {
+                for (o = b, s = 1, l = d; a >= y && C('invalid-input'), ((u = L(e.charCodeAt(a++))) >= d || u > S((c - b) / s)) && C('overflow'), (b += u * s), !(u < (h = l <= T ? f : l >= T + p ? p : l - T)); l += d) {
                     s > S(c / (_ = d - h)) && C('overflow'), (s *= _);
                 }
                 (T = w(b - o, (n = v.length + 1), 0 == o)), S(b / n) > c - I && C('overflow'), (I += S(b / n)), (b %= n), v.splice(b++, 0, I);
@@ -107,9 +107,9 @@
                 for (l - n > S((c - r) / (b = i + 1)) && C('overflow'), r += (l - n) * b, n = l, s = 0; s < y; ++s)
                     if (((v = e[s]) < n && ++r > c && C('overflow'), v == n)) {
                         for (u = r, h = d; !(u < (_ = h <= o ? f : h >= o + p ? p : h - o)); h += d) {
-                            (T = u - _), (I = d - _), N.push(A(L(_ + (T % I), 0))), (u = S(T / I));
+                            (T = u - _), (I = d - _), N.push(A(x(_ + (T % I), 0))), (u = S(T / I));
                         }
-                        N.push(A(L(u, 0))), (o = w(r, b, i == a)), (r = 0), ++i;
+                        N.push(A(x(u, 0))), (o = w(r, b, i == a)), (r = 0), ++i;
                     }
                 ++r, ++n;
             }

@@ -18,8 +18,8 @@ var i = n(200651),
     p = n(497505),
     x = n(341907),
     f = n(46140),
-    _ = n(981631),
-    E = n(388032),
+    E = n(981631),
+    _ = n(388032),
     C = n(839905),
     T = n(66094);
 function S() {
@@ -28,7 +28,7 @@ function S() {
         n = r.useCallback(() => {
             (0, d.xf)(),
                 (0, x.navigateToQuestHome)(f.dr.USER_SETTINGS_GIFT_INVENTORY, p.jn.QUEST_HOME_MOVE_CALLOUT),
-                g.default.track(_.rMx.QUEST_CONTENT_CLICKED, {
+                g.default.track(E.rMx.QUEST_CONTENT_CLICKED, {
                     cta_name: h.jZ.VIEW_QUESTS,
                     ...(0, h.mH)(p.jn.QUEST_HOME_MOVE_CALLOUT)
                 });
@@ -57,14 +57,14 @@ function S() {
                                 (0, i.jsx)(c.Heading, {
                                     variant: 'heading-lg/bold',
                                     color: 'always-white',
-                                    children: E.intl.string(E.t.z8YP2N)
+                                    children: _.intl.string(_.t.z8YP2N)
                                 })
                             ]
                         }),
                         (0, i.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'text-muted',
-                            children: E.intl.string(E.t.IqmRZ2)
+                            children: _.intl.string(_.t.IqmRZ2)
                         }),
                         (0, i.jsx)(c.Button, {
                             size: 'large',
@@ -75,7 +75,7 @@ function S() {
                             children: (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: e ? 'always-white' : 'text-normal',
-                                children: E.intl.string(E.t.GURBQk)
+                                children: _.intl.string(_.t.GURBQk)
                             })
                         })
                     ]

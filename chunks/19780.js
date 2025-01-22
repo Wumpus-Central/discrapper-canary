@@ -159,7 +159,7 @@ function O(e) {
 function D() {
     (a = null), (b = null), (I = null), R();
 }
-function x(e) {
+function L(e) {
     let { voiceStates: n } = e;
     return n.reduce((e, n) => {
         var r, o, s;
@@ -172,7 +172,7 @@ function x(e) {
         return !0;
     }, !1);
 }
-function L(e) {
+function x(e) {
     if (null == i || (null != e.guildId && e.guildId !== i.guildId) || (null != e.channelId && e.channelId !== i.channelId)) return !1;
     i.connect(e.endpoint, e.token);
 }
@@ -323,9 +323,9 @@ let W = new Y(
               RTC_CONNECTION_CLIENT_CONNECT: F,
               RTC_CONNECTION_CLIENT_DISCONNECT: F,
               VIDEO_SIZE_UPDATE: H,
-              VOICE_STATE_UPDATES: x,
+              VOICE_STATE_UPDATES: L,
               VOICE_CHANNEL_SELECT: B,
-              VOICE_SERVER_UPDATE: L,
+              VOICE_SERVER_UPDATE: x,
               CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: w,
               REMOTE_SESSION_CONNECT: w,
               CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: P,

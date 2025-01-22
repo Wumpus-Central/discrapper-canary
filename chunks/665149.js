@@ -46,7 +46,7 @@ let m = 24,
               });
     },
     E = (e) => {
-        let { className: n, iconClassName: r, children: a, selected: o = !1, disabled: l = !1, showBadge: u = !1, badgePosition: d = 'bottom', color: h, foreground: g, background: E, icon: v, iconSize: y = m, onClick: b, onContextMenu: I, tooltip: T = null, tooltipColor: S, tooltipPosition: A = 'bottom', tooltipDisabled: C, hideOnClick: N = !0, role: R, 'aria-label': O, 'aria-hidden': D, 'aria-checked': x, 'aria-expanded': L, 'aria-haspopup': w } = e,
+        let { className: n, iconClassName: r, children: a, selected: o = !1, disabled: l = !1, showBadge: u = !1, badgePosition: d = 'bottom', color: h, foreground: g, background: E, icon: v, iconSize: y = m, onClick: b, onContextMenu: I, tooltip: T = null, tooltipColor: S, tooltipPosition: A = 'bottom', tooltipDisabled: C, hideOnClick: N = !0, role: R, 'aria-label': O, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': w } = e,
             P = (0, p.Q3)('BaseHeaderBar'),
             M = (0, i.jsx)(v, {
                 x: 0,
@@ -106,9 +106,9 @@ let m = 24,
                               role: R,
                               'aria-label': k,
                               'aria-hidden': D,
-                              'aria-checked': x,
+                              'aria-checked': L,
                               'aria-haspopup': w,
-                              'aria-expanded': L,
+                              'aria-expanded': x,
                               tabIndex: l || null == b ? -1 : 0,
                               children: [
                                   u

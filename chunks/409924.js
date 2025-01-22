@@ -138,13 +138,13 @@ function c(e) {
         keywords: v,
         contains: ['self'].concat(D)
     });
-    let x = [].concat(O, S.contains),
-        L = x.concat([
+    let L = [].concat(O, S.contains),
+        x = L.concat([
             {
                 begin: /(\s*)\(/,
                 end: /\)/,
                 keywords: v,
-                contains: ['self'].concat(x)
+                contains: ['self'].concat(L)
             }
         ]),
         w = {
@@ -154,7 +154,7 @@ function c(e) {
             excludeBegin: !0,
             excludeEnd: !0,
             keywords: v,
-            contains: L
+            contains: x
         },
         P = {
             variants: [
@@ -251,7 +251,7 @@ function c(e) {
         aliases: ['js', 'jsx', 'mjs', 'cjs'],
         keywords: v,
         exports: {
-            PARAMS_CONTAINS: L,
+            PARAMS_CONTAINS: x,
             CLASS_REFERENCE: M
         },
         illegal: /#(?![$_A-z])/,
@@ -309,7 +309,7 @@ function c(e) {
                                         excludeBegin: !0,
                                         excludeEnd: !0,
                                         keywords: v,
-                                        contains: L
+                                        contains: x
                                     }
                                 ]
                             }

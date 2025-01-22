@@ -1,12 +1,12 @@
-e.d(t, {
+n.d(t, {
     w: function () {
-        return r;
+        return s;
     }
 });
-var i = e(481060),
-    o = e(423932);
-let r = {
+var i = n(481060),
+    r = n(423932);
+let s = {
     binds: ['mod+alt+shift+w'],
     comboKeysBindGlobal: !0,
-    action: () => ((0, o.Z)(i.closeAllModals), !1)
+    action: () => ((0, r.Z)(i.closeAllModals), !1)
 };

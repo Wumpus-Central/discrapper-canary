@@ -20,10 +20,10 @@ var r = n(525654),
 function g() {
     var e, t, n, r, g, h;
     let p = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        x = '361133',
-        f = ((e = 'cd0223a4d7ea21916ea5e32de0ff83b12a30b376'), e.substring(0, 7)),
-        _ = null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion(),
-        E = null === l.Z || void 0 === l.Z ? void 0 : null === (t = (n = l.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(n),
+        x = '361497',
+        f = ((e = 'da95c6158979b56199acb559feddd24a344e493b'), e.substring(0, 7)),
+        E = null === l.Z || void 0 === l.Z ? void 0 : l.Z.remoteApp.getVersion(),
+        _ = null === l.Z || void 0 === l.Z ? void 0 : null === (t = (n = l.Z.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(n),
         C = null === l.Z || void 0 === l.Z ? void 0 : null === (r = (g = l.Z.remoteApp).getAppArch) || void 0 === r ? void 0 : r.call(g),
         T = null === (h = o.C.getCurrentBuildOverride().overrides) || void 0 === h ? void 0 : h.discord_web,
         S = (function () {
@@ -36,7 +36,7 @@ function g() {
         })(),
         b = [p, x, '('.concat(f, ')')];
     return (
-        null != _ && (b.push('Host '.concat(_)), null != C && b.push(C.toLowerCase()), null != E && b.push('('.concat(E, ')'))),
+        null != E && (b.push('Host '.concat(E)), null != C && b.push(C.toLowerCase()), null != _ && b.push('('.concat(_, ')'))),
         b.push('Build Override: '.concat(null != T ? T.id : 'N/A')),
         null != S && b.push(S),
         (0, i.jsx)(c.Z, {
@@ -79,7 +79,7 @@ function g() {
                                         children: ['Build Override: ', T.id]
                                     })
                                 }),
-                            null != _
+                            null != E
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsxs)(a.Text, {
@@ -89,7 +89,7 @@ function g() {
                                               color: 'text-muted',
                                               children: [
                                                   'Host ',
-                                                  _,
+                                                  E,
                                                   ' ',
                                                   null != C
                                                       ? (0, i.jsxs)('span', {
@@ -97,9 +97,9 @@ function g() {
                                                             children: [C.toLowerCase(), ' ']
                                                         })
                                                       : null,
-                                                  null != E
+                                                  null != _
                                                       ? (0, i.jsxs)('span', {
-                                                            children: ['(', E, ')']
+                                                            children: ['(', _, ')']
                                                         })
                                                       : null
                                               ]

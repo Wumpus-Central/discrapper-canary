@@ -31,7 +31,7 @@ let S = new l.Z('GuildSettingsActionCreators'),
         },
         async open(e, n, i, a) {
             var o;
-            await Promise.all([r.e('63288'), r.e('48835'), r.e('56630'), r.e('90508'), r.e('65840'), r.e('68445'), r.e('80284'), r.e('27936'), r.e('7654'), r.e('33862'), r.e('98479'), r.e('53967'), r.e('16806'), r.e('60696'), r.e('58227'), r.e('16114'), r.e('82309'), r.e('93375'), r.e('64679'), r.e('12205'), r.e('94107'), r.e('3911')]).then(r.bind(r, 994763)), n === b.pNK.DISCOVERY && (0, u.K2)(e, 'GuildSettignsActionCreators.open') && (n = b.pNK.ACCESS), (null === (o = g.Z.getGuild(e)) || void 0 === o ? void 0 : o.hasFeature(b.oNc.COMMUNITY)) && (n === b.pNK.GUILD_AUTOMOD && ((n = b.pNK.SAFETY), (a = b.KsC.SAFETY_AUTOMOD)), n === b.pNK.MEMBER_VERIFICATION && ((n = b.pNK.SAFETY), (a = b.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), A.init(e, n, i, a);
+            await Promise.all([r.e('63288'), r.e('48835'), r.e('90508'), r.e('68445'), r.e('80284'), r.e('81463'), r.e('31135'), r.e('7654'), r.e('33862'), r.e('98479'), r.e('53967'), r.e('16806'), r.e('60696'), r.e('58227'), r.e('16114'), r.e('82309'), r.e('93375'), r.e('64679'), r.e('12205'), r.e('94107'), r.e('47879')]).then(r.bind(r, 994763)), n === b.pNK.DISCOVERY && (0, u.K2)(e, 'GuildSettignsActionCreators.open') && (n = b.pNK.ACCESS), (null === (o = g.Z.getGuild(e)) || void 0 === o ? void 0 : o.hasFeature(b.oNc.COMMUNITY)) && (n === b.pNK.GUILD_AUTOMOD && ((n = b.pNK.SAFETY), (a = b.KsC.SAFETY_AUTOMOD)), n === b.pNK.MEMBER_VERIFICATION && ((n = b.pNK.SAFETY), (a = b.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), A.init(e, n, i, a);
             h.Z.closeGuildSidebar(e), (0, s.jN)(b.S9g.GUILD_SETTINGS);
         },
         close() {
@@ -162,7 +162,7 @@ let S = new l.Z('GuildSettingsActionCreators'),
         saveGuild(e, n) {
             let { name: r, description: i, icon: s, splash: l, banner: u, homeHeader: d, afkChannelId: f, afkTimeout: p, systemChannelId: h, verificationLevel: _, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: v, preferredLocale: y, rulesChannelId: T, safetyAlertsChannelId: A, discoverySplash: C, publicUpdatesChannelId: N, premiumProgressBarEnabled: R, profile: O } = n,
                 D = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                x = {
+                L = {
                     name: r,
                     description: i,
                     icon: s,
@@ -191,7 +191,7 @@ let S = new l.Z('GuildSettingsActionCreators'),
                     .patch({
                         url: b.ANM.GUILD(e),
                         query: { for_discovery: D.isForDiscovery },
-                        body: x,
+                        body: L,
                         oldFormErrors: !0,
                         rejectWithError: !1
                     })

@@ -106,14 +106,14 @@ function h(e) {
             },
             [I]
         ),
-        x = a.useCallback(() => {
+        L = a.useCallback(() => {
             v({
                 type: o.B.SET_FOCUS_PATH,
                 path: []
             }),
                 T(!1);
         }, []),
-        L = a.useCallback((e) => e.every((e, n) => b[n] === e), [b]),
+        x = a.useCallback((e) => e.every((e, n) => b[n] === e), [b]),
         w = a.useCallback(
             () => ({
                 role: 'menu',
@@ -122,10 +122,10 @@ function h(e) {
                 onKeyDown: R,
                 onFocus: O,
                 onBlur: D,
-                onMouseLeave: x,
+                onMouseLeave: L,
                 'aria-activedescendant': b.length > 0 ? (0, l.qR)(n, b.join(u)) : void 0
             }),
-            [n, R, O, D, x, b]
+            [n, R, O, D, L, b]
         ),
         P = a.useCallback(
             (e) => {
@@ -133,12 +133,12 @@ function h(e) {
                 return {
                     role: 'menu',
                     tabIndex: -1,
-                    'aria-activedescendant': L(r) ? (0, l.qR)(n, b.join(u)) : void 0,
+                    'aria-activedescendant': x(r) ? (0, l.qR)(n, b.join(u)) : void 0,
                     focusIndex: E.focusIndex,
                     isUsingKeyboardNavigation: S
                 };
             },
-            [n, b, L, E.focusIndex, S]
+            [n, b, x, E.focusIndex, S]
         ),
         M = a.useCallback(
             (e) => {
@@ -147,7 +147,7 @@ function h(e) {
                 return {
                     ...(i
                         ? {
-                              'aria-expanded': L(r),
+                              'aria-expanded': x(r),
                               'aria-haspopup': !0
                           }
                         : {}),
@@ -158,7 +158,7 @@ function h(e) {
                     onMouseEnter: a ? N.get(s) : () => {}
                 };
             },
-            [n, L, C, N]
+            [n, x, C, N]
         );
     return a.useMemo(
         () => ({
@@ -166,9 +166,9 @@ function h(e) {
             getContainerProps: w,
             getSubmenuProps: P,
             getItemProps: M,
-            isFocused: L,
+            isFocused: x,
             isUsingKeyboardNavigation: S
         }),
-        [y, w, P, M, L, S]
+        [y, w, P, M, x, S]
     );
 }

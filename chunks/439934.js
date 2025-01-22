@@ -122,13 +122,13 @@ function w(e) {
     }, [G]);
     let J = () => W(!0),
         X = () => W(!1),
-        Q = f.Sb.useSetting(),
-        $ = a.useCallback(() => {
+        $ = f.Sb.useSetting(),
+        Q = a.useCallback(() => {
             null == P || P();
         }, [P]);
     return (0, i.jsxs)(o.Clickable, {
-        onClick: B === T.JS.START ? $ : void 0,
-        onContextMenu: Q
+        onClick: B === T.JS.START ? Q : void 0,
+        onContextMenu: $
             ? (e) => {
                   (0, r.vq)(e, (e) =>
                       (0, i.jsx)(j.Z, {
@@ -173,7 +173,7 @@ function w(e) {
                     B !== T.JS.START
                         ? (0, i.jsx)(_.U, {
                               action: B,
-                              onClick: $
+                              onClick: Q
                           })
                         : null,
                     (0, i.jsx)('div', {

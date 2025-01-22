@@ -67,7 +67,7 @@ function R(e) {
     var n, r, i;
     let { editor: a, chatInputType: s, channel: l, canUseCommands: u, canOnlyUseTextCommands: c, windowContext: d, previewMarkdown: f, forTests: C, onChangeStart: N, onChangeEnd: R, updateState: O } = e,
         D = a,
-        { onChange: x } = D;
+        { onChange: L } = D;
     (D.chatInputType = s),
         (D.windowContext = d),
         (D.previewMarkdown = f),
@@ -75,7 +75,7 @@ function R(e) {
         (D.events = new o.EventEmitter()),
         (D.isMac = 'MacIntel' === navigator.platform),
         (D.onChange = () => {
-            D.events.emit('onChange'), x();
+            D.events.emit('onChange'), L();
         }),
         (D = (0, I.B)(D, !0 === C)),
         (D = (0, b.Z)(D)),

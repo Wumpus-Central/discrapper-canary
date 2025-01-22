@@ -7,8 +7,8 @@ var i = t(63568),
     l = t(163400),
     a = t(995532),
     s = t(496675),
-    r = t(600553),
-    u = t(896007),
+    u = t(600553),
+    r = t(896007),
     o = t(981631);
 let d = {
     HEADER: 'HEADER',
@@ -18,11 +18,11 @@ function c(e) {
     let n = s.Z.getGuildPermissionProps(e),
         t = (0, l.p)(e.id).length > 0,
         c = (0, i.K2)(e.id, 'getGuildSettingsSections'),
-        g = (0, r.i1)({
+        g = (0, u.i1)({
             guildId: e.id,
             location: 'getGuildSettingsSections'
         });
-    return u.ZP.generateSections({
+    return r.ZP.generateSections({
         showDirtyGuildTemplateIndicator: !1,
         ...n,
         canUnlinkChannels: t,

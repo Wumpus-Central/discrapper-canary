@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return L;
+        return x;
     }
 });
 var i = r(200651);
@@ -31,7 +31,7 @@ var a = r(120356),
     R = r(388032),
     O = r(665162),
     D = r(822944);
-let x = (0, v.B)({
+let L = (0, v.B)({
     kind: 'user',
     id: '2021-07_role_popout',
     label: 'Role Popout',
@@ -44,8 +44,8 @@ let x = (0, v.B)({
         }
     ]
 });
-function L(e) {
-    let { roleColor: n, roleId: a, channelId: s, roleName: v, guildId: L, children: w, inlinePreview: P = !1 } = e,
+function x(e) {
+    let { roleColor: n, roleId: a, channelId: s, roleName: v, guildId: x, children: w, inlinePreview: P = !1 } = e,
         { analyticsLocations: M } = (0, m.ZP)(_.Z.ROLE_MENTION),
         k = (0, c.e7)([h.Z], () => h.Z.roleStyle),
         U = null != n && 0 !== n && !P,
@@ -66,8 +66,8 @@ function L(e) {
                     w
                 ]
             }),
-        { enabled: Z } = x.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
-    return !Z || P || null == s || null == L || (null == a && '@everyone' !== v)
+        { enabled: Z } = L.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
+    return !Z || P || null == s || null == x || (null == a && '@everyone' !== v)
         ? (0, i.jsx)(m.Gt, {
               value: M,
               children: G()
@@ -76,13 +76,13 @@ function L(e) {
               value: M,
               children: (0, i.jsx)(d.Popout, {
                   preload: async () => {
-                      null != a && (await (0, y.H)(L, a));
+                      null != a && (await (0, y.H)(x, a));
                   },
                   renderPopout: (e) => {
                       let n = S.Z.getChannel(s),
-                          o = C.Z.getGuild(L),
+                          o = C.Z.getGuild(x),
                           u = A.ZP.getMembers(o.id),
-                          c = C.Z.getRole(L, null != a ? a : o.getEveryoneRoleId()),
+                          c = C.Z.getRole(x, null != a ? a : o.getEveryoneRoleId()),
                           h = l()(u)
                               .filter((e) => !!('@everyone' === v || e.roles.includes(a)) && null != N.default.getUser(e.userId))
                               .sortBy((e) => {

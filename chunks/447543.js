@@ -30,8 +30,8 @@ var o = r(525654),
     R = r(461014),
     O = r(82085),
     D = r(264229),
-    x = r(652898),
-    L = r(895886),
+    L = r(652898),
+    x = r(895886),
     w = r(143816),
     P = r(703656),
     M = r(922482),
@@ -173,7 +173,7 @@ function ep(e, n, r) {
               type: 'INVITE_RESOLVE',
               code: e
           }),
-          (0, x.Z)(e, n, r).then((e) => {
+          (0, L.Z)(e, n, r).then((e) => {
               let { invite: n, code: r, banned: i } = e;
               return (
                   null != n
@@ -375,7 +375,7 @@ n.Z = {
             d = el(a, l),
             f = W.default.getCurrentUser();
         return null !== (n = null == f ? void 0 : f.hasFlag(ee.xW$.QUARANTINED)) && void 0 !== n && n
-            ? ((0, L.default)(), new Promise((e, n) => n(Error())))
+            ? ((0, x.default)(), new Promise((e, n) => n(Error())))
             : (h.Z.dispatch({
                   type: 'INVITE_ACCEPT',
                   code: u

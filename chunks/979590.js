@@ -236,7 +236,7 @@
             })
         ];
     }
-    function x(e, n, r) {
+    function L(e, n, r) {
         (n = n || 6), (r = r || 30);
         var i = c(e).toHsl(),
             a = 360 / r,
@@ -244,7 +244,7 @@
         for (i.h = (i.h - ((a * n) >> 1) + 720) % 360; --n; ) (i.h = (i.h + a) % 360), o.push(c(i));
         return o;
     }
-    function L(e, n) {
+    function x(e, n) {
         n = n || 6;
         for (var r = c(e).toHsv(), i = r.h, a = r.s, o = r.v, s = [], l = 1 / n; n--; )
             s.push(
@@ -412,13 +412,13 @@
             return e.apply(null, [this].concat([].slice.call(n)));
         },
         analogous: function () {
-            return this._applyCombination(x, arguments);
+            return this._applyCombination(L, arguments);
         },
         complement: function () {
             return this._applyCombination(N, arguments);
         },
         monochromatic: function () {
-            return this._applyCombination(L, arguments);
+            return this._applyCombination(x, arguments);
         },
         splitcomplement: function () {
             return this._applyCombination(D, arguments);

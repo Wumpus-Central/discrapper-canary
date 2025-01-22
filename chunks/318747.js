@@ -14,12 +14,12 @@ t.Z = (e) => {
         p = (0, o.ZP)(),
         x = (0, a.wj)(p) || n,
         f = x ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
-        _ = g === d.Si.TIER_0 ? u.intl.string(u.t.rk4Uu7) : u.intl.string(u.t.Ve9Ge3);
+        E = g === d.Si.TIER_0 ? u.intl.string(u.t.rk4Uu7) : u.intl.string(u.t.Ve9Ge3);
     return (0, i.jsx)(c.Z, {
         isGift: !0,
         color: f,
         look: l.ButtonLooks.OUTLINED,
-        buttonText: _,
+        buttonText: E,
         giftMessage: r,
         className: s()(t, m.giftButton, x ? m.buttonWhite : m.buttonBrand),
         subscriptionTier: g,

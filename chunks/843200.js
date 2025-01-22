@@ -33,13 +33,13 @@ function p(e) {
                 }
             );
         });
-    function _() {
+    function E() {
         (0, c.openModalLazy)(async () => {
             let { default: e } = await n.e('60827').then(n.bind(n, 324239));
             return (t) => (0, i.jsx)(e, { ...t });
         });
     }
-    function E() {
+    function _() {
         (0, c.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e('9343'), n.e('1861')]).then(n.bind(n, 642298));
             return (t) => (0, i.jsx)(e, { ...t });
@@ -77,7 +77,7 @@ function p(e) {
                                               : (0, i.jsx)(c.Button, {
                                                     size: c.Button.Sizes.MEDIUM,
                                                     color: c.Button.Colors.BRAND,
-                                                    onClick: E,
+                                                    onClick: _,
                                                     children: g.intl.string(g.t.ydw5nZ)
                                                 })
                                           : (0, i.jsx)(d.Z.Child, {
@@ -86,7 +86,7 @@ function p(e) {
                                                 children: (0, i.jsx)(c.Button, {
                                                     size: c.Button.Sizes.MEDIUM,
                                                     color: c.Button.Colors.BRAND,
-                                                    onClick: _,
+                                                    onClick: E,
                                                     children: g.intl.string(g.t.fiNVio)
                                                 })
                                             }),
@@ -97,7 +97,7 @@ function p(e) {
                                                 children: (0, i.jsx)(c.Button, {
                                                     color: c.Button.Colors.PRIMARY,
                                                     look: c.Button.Looks.LINK,
-                                                    onClick: E,
+                                                    onClick: _,
                                                     children: g.intl.string(g.t.Vm8akJ)
                                                 })
                                             })

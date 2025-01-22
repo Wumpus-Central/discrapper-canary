@@ -19,8 +19,8 @@ var i,
     p = n(578361),
     x = n(585483),
     f = n(557177),
-    _ = n(57562),
-    E = n(955204),
+    E = n(57562),
+    _ = n(955204),
     C = n(64078),
     T = n(351780),
     S = n(954794),
@@ -121,7 +121,7 @@ function M(e) {
         value: t,
         note: v.intl.string(v.t.KuYbWF),
         onChange: (e) => {
-            !e && (0, _.T)(E.hn.DISABLE_POGGERMODE),
+            !e && (0, E.T)(_.hn.DISABLE_POGGERMODE),
                 e && (!n || r)
                     ? (0, m.openModal)((e) =>
                           (0, l.jsx)(m.ConfirmModal, {
@@ -265,7 +265,7 @@ function F(e) {
         a = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         o = !t || !n || a,
         c = (e, t) => {
-            null != e.shakeIntensity && e.shakeIntensity > i && (0, _.T)(E.hn.MORE), s(e, t);
+            null != e.shakeIntensity && e.shakeIntensity > i && (0, E.T)(_.hn.MORE), s(e, t);
         };
     return (0, l.jsxs)(m.FormSection, {
         tag: m.FormTitleTags.H1,
@@ -488,7 +488,7 @@ function z() {
             return () => clearTimeout(t);
         }, [e]),
         o.useEffect(() => {
-            Math.random() > 0.99 && (0, _.T)(E.hn.VISITOR_100);
+            Math.random() > 0.99 && (0, E.T)(_.hn.VISITOR_100);
         }, []),
         (0, l.jsxs)(l.Fragment, {
             children: [

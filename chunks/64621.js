@@ -33,7 +33,7 @@ function D(e) {
     let { sourceType: n, children: r, user: i } = e,
         { profileType: a } = (0, y.z)(),
         { recentActivityTabEnabled: D } = (0, E.O)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        { recentActivityEnabled: x, allProfileReactReplyEnabled: L } = (0, v.i)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        { recentActivityEnabled: L, allProfileReactReplyEnabled: x } = (0, v.i)({ location: 'UserProfilePopoutInteractionCoachmark' }),
         w = (0, u.e7)([g.default], () => {
             var e;
             return (null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === i.id;
@@ -48,9 +48,9 @@ function D(e) {
             !w &&
             a === b.y0.BITE_SIZE &&
             (0, l.EQ)(n)
-                .with(b.n_.AVATAR, () => L && null == P)
-                .with(b.n_.STATUS, () => L)
-                .with(b.n_.ACTIVITY, () => !L && (D || x))
+                .with(b.n_.AVATAR, () => x && null == P)
+                .with(b.n_.STATUS, () => x)
+                .with(b.n_.ACTIVITY, () => !x && (D || L))
                 .exhaustive(),
         [k, U] = s.useState(!1);
     (0, f.Z)(() => U(!0), M ? N : null);
@@ -62,7 +62,7 @@ function D(e) {
             header: V,
             spacing: j,
             dismissibleContentType: H
-        } = L
+        } = x
             ? {
                   asset: C,
                   assetClassName: S.profileImage,

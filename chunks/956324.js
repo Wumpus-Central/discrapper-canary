@@ -11,8 +11,8 @@ function s(e) {
         canManageGuild: n,
         canManageRoles: t,
         canBanMembers: s,
-        canManageNicknames: r,
-        canCreateEmojisAndStickers: u,
+        canManageNicknames: u,
+        canCreateEmojisAndStickers: r,
         canManageEmojisAndStickers: o,
         canManageWebhooks: d,
         canViewAuditLog: c
@@ -30,5 +30,5 @@ function s(e) {
         }),
         [e]
     );
-    return n || t || s || r || u || o || d || c;
+    return n || t || s || u || r || o || d || c;
 }

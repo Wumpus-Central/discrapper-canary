@@ -37,8 +37,8 @@ let T = 3,
     R = new Set(),
     O = new Map(),
     D = null,
-    x = (0, a.debounce)(g.yK, 3000, { trailing: !0 });
-function L(e, n) {
+    L = (0, a.debounce)(g.yK, 3000, { trailing: !0 });
+function x(e, n) {
     s.Z.dispatch({
         type: 'CONTENT_INVENTORY_SET_FEED_STATE',
         feedId: e,
@@ -55,7 +55,7 @@ function w(e) {
     return !0;
 }
 function P(e) {
-    L(e, { loading: !1 });
+    x(e, { loading: !1 });
     let n = N.get(e);
     void 0 !== n && (clearTimeout(n), N.delete(e));
 }
@@ -65,7 +65,7 @@ function M() {
     if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == D) return;
     let n = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
         r = Math.max(0, null == D ? 0 : new Date(D).getTime() - Date.now(), n);
-    L(A, {
+    x(A, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + r)
     }),
@@ -86,7 +86,7 @@ async function k(e) {
     if (!!(w(n) || i))
         try {
             let e = v.Z.getFeed(n);
-            R.add(n), L(n, { loading: !0 });
+            R.add(n), x(n, { loading: !0 });
             let i = await (0, g.mt)({
                 token: null == e ? void 0 : e.refresh_token,
                 feedId: n,
@@ -99,7 +99,7 @@ async function k(e) {
             }),
                 O.set(n, 0),
                 R.delete(n),
-                L(n, { loading: !1 }),
+                x(n, { loading: !1 }),
                 n === A && ((D = null), M());
         } catch (o) {
             var a;
@@ -162,7 +162,7 @@ function F(e) {
 function V(e) {
     var n;
     let { connectionId: r, track: i } = e;
-    if (null != r) (null === (n = p.Z.getAccount(r, b.ABu.SPOTIFY)) || void 0 === n ? void 0 : n.showActivity) && x(r, i);
+    if (null != r) (null === (n = p.Z.getAccount(r, b.ABu.SPOTIFY)) || void 0 === n ? void 0 : n.showActivity) && L(r, i);
 }
 function j() {
     let { enabled: e } = d.Z.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !1 });

@@ -1,42 +1,42 @@
 n.d(t, {
     $: function () {
-        return f;
+        return m;
     }
 }),
     n(653041);
 var r = n(200651),
-    a = n(192379),
-    i = n(120356),
-    l = n.n(i),
-    s = n(642128),
+    i = n(192379),
+    l = n(120356),
+    s = n.n(l),
+    a = n(642128),
     o = n(873546),
     c = n(481060),
     d = n(774078),
     u = n(388032),
-    m = n(962528),
+    C = n(962528),
     h = n(781385),
-    g = n(585616);
-function p(e) {
+    p = n(585616);
+function f(e) {
     let { endDate: t } = e,
-        { days: n, hours: a, minutes: i, seconds: l } = (0, d.Z)(t),
-        s = (function (e, t, n, r) {
-            let a = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
-                i = [];
-            return e > 0 && i.push(a(e, u.intl.string(u.t.QJyuxc))), (t > 0 || i.length > 0) && i.push(a(t, u.intl.string(u.t['1LyF1t']))), (n > 0 || i.length > 0) && i.push(a(n, u.intl.string(u.t.n7dksL))), i.push(a(r, u.intl.string(u.t['6m/6nJ']))), i.join(':');
-        })(n, a, i, l);
+        { days: n, hours: i, minutes: l, seconds: s } = (0, d.Z)(t),
+        a = (function (e, t, n, r) {
+            let i = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
+                l = [];
+            return e > 0 && l.push(i(e, u.intl.string(u.t.QJyuxc))), (t > 0 || l.length > 0) && l.push(i(t, u.intl.string(u.t['1LyF1t']))), (n > 0 || l.length > 0) && l.push(i(n, u.intl.string(u.t.n7dksL))), l.push(i(r, u.intl.string(u.t['6m/6nJ']))), l.join(':');
+        })(n, i, l, s);
     return (0, r.jsx)(c.Text, {
         variant: 'heading-md/medium',
-        className: m.countdown,
+        className: C.countdown,
         tag: 'div',
         children: (0, r.jsx)('div', {
             role: 'timer',
             'aria-relevant': 'all',
-            children: s
+            children: a
         })
     });
 }
-let f = a.memo(function (e) {
-    let { unpublishedAt: t, isVisible: n, displayOptions: a, isFullScreen: i } = e,
+let m = i.memo(function (e) {
+    let { unpublishedAt: t, isVisible: n, displayOptions: i, isFullScreen: l } = e,
         d = (0, c.useSpring)({
             transform: 'translateX(-50%) '.concat(n ? 'translateY(-75%)' : 'translateY(0%)'),
             opacity: n ? 1 : 0,
@@ -45,36 +45,36 @@ let f = a.memo(function (e) {
                 friction: 12
             }
         });
-    return (0, r.jsxs)(s.animated.div, {
-        className: l()([m.countDownWrapper, i && m.fullScreenWrapper, o.tq && m.mobileWrapper]),
+    return (0, r.jsxs)(a.animated.div, {
+        className: s()([C.countDownWrapper, l && C.fullScreenWrapper, o.tq && C.mobileWrapper]),
         role: 'status',
         style: {
-            ...a.style,
+            ...i.style,
             ...d
         },
         children: [
             (0, r.jsx)(c.Text, {
                 variant: 'text-md/medium',
-                className: m.countdownLabel,
-                children: a.label()
+                className: C.countdownLabel,
+                children: i.label()
             }),
-            null != a.iconSrc &&
+            null != i.iconSrc &&
                 (0, r.jsx)('img', {
-                    src: a.iconSrc,
-                    className: m.countdownIcon,
+                    src: i.iconSrc,
+                    className: C.countdownIcon,
                     alt: '',
                     'aria-hidden': !0
                 }),
-            (0, r.jsx)(p, { endDate: t }),
+            (0, r.jsx)(f, { endDate: t }),
             (0, r.jsx)('img', {
                 src: h.Z,
-                className: l()(m.sparkles, m.left),
+                className: s()(C.sparkles, C.left),
                 alt: '',
                 'aria-hidden': !0
             }),
             (0, r.jsx)('img', {
-                src: g.Z,
-                className: l()(m.sparkles, m.right),
+                src: p.Z,
+                className: s()(C.sparkles, C.right),
                 alt: '',
                 'aria-hidden': !0
             })

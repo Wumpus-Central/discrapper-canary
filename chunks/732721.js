@@ -1,4 +1,4 @@
-o.exports = {
+e.exports = {
     bodyColumnLeft: 'bodyColumnLeft_b4a676',
     bodyColumnRight: 'bodyColumnRight_b4a676',
     stepBodySkuSelect: 'stepBodySkuSelect_b4a676',

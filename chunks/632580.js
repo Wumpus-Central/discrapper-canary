@@ -18,7 +18,7 @@ var a = r(512722),
     m = r(981631),
     g = r(474936);
 async function E(e) {
-    let { setPurchaseState: n, setHasAcceptedTerms: r, setIsSubmitting: i, setPurchaseError: a, hasRedirectURL: E, setHasRedirectURL: v, isGift: y, baseAnalyticsData: b, analyticsLocation: I, analyticsLocations: T, flowStartTime: S, subscriptionPlan: A, planGroup: C, trialId: N, priceOptions: R, paymentSource: O, isPrepaidPaymentPastDue: D, openInvoiceId: x, premiumSubscription: L, onNext: w, metadata: P, sku: M, skuPricePreview: k, purchaseType: U, referralCode: B, loadId: G, giftInfoOptions: Z, invoicePreview: F } = e;
+    let { setPurchaseState: n, setHasAcceptedTerms: r, setIsSubmitting: i, setPurchaseError: a, hasRedirectURL: E, setHasRedirectURL: v, isGift: y, baseAnalyticsData: b, analyticsLocation: I, analyticsLocations: T, flowStartTime: S, subscriptionPlan: A, planGroup: C, trialId: N, priceOptions: R, paymentSource: O, isPrepaidPaymentPastDue: D, openInvoiceId: L, premiumSubscription: x, onNext: w, metadata: P, sku: M, skuPricePreview: k, purchaseType: U, referralCode: B, loadId: G, giftInfoOptions: Z, invoicePreview: F } = e;
     n(_.A.PURCHASING), r(!0), i(!0), s.Z.wait(u.fw), a(null);
     try {
         let e, r, i;
@@ -58,11 +58,11 @@ async function E(e) {
                 loadId: G,
                 giftInfoOptions: Z
             });
-        } else if (D && null != x && null != O && null != L)
+        } else if (D && null != L && null != O && null != x)
             e = m.Uk1.has(O.type)
-                ? await (0, l.G)(L, x, O, R.currency)
+                ? await (0, l.G)(x, L, O, R.currency)
                 : await (0, l.Mg)(
-                      L,
+                      x,
                       {
                           paymentSource: O,
                           currency: R.currency
@@ -71,13 +71,13 @@ async function E(e) {
                       I,
                       G
                   );
-        else if (null != L) {
-            let n = (0, h.al)(L, A.id, 1, new Set(C)),
+        else if (null != x) {
+            let n = (0, h.al)(x, A.id, 1, new Set(C)),
                 r = {
                     paymentSource: O,
                     currency: R.currency
                 };
-            L.status === m.O0b.PAUSED ? (r.status = m.O0b.ACTIVE) : (r.items = n), (e = await (0, l.Mg)(L, r, T, I, G));
+            x.status === m.O0b.PAUSED ? (r.status = m.O0b.ACTIVE) : (r.items = n), (e = await (0, l.Mg)(x, r, T, I, G));
         } else
             e = await (0, c.Ld)({
                 planId: A.id,

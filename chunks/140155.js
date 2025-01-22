@@ -118,11 +118,11 @@ function D(e) {
     let { ids: n } = e;
     O(n, !0);
 }
-function x(e) {
+function L(e) {
     let { ids: n } = e;
     O(n, !1);
 }
-function L(e) {
+function x(e) {
     let { active: n } = e;
     v.notifCenterActive = n;
 }
@@ -261,7 +261,7 @@ let V = new F(l.Z, {
     CONNECTION_OPEN: A,
     LOGOUT: b,
     NOTIFICATION_CENTER_ITEMS_ACK: D,
-    NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: x,
+    NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: L,
     GUILD_SCHEDULED_EVENT_UPDATE: B,
     NOTIFICATION_CENTER_ITEM_CREATE: N,
     NOTIFICATION_CENTER_ITEM_DELETE: R,
@@ -270,7 +270,7 @@ let V = new F(l.Z, {
     LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: T,
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: C,
     RESET_NOTIFICATION_CENTER: b,
-    NOTIFICATION_CENTER_SET_ACTIVE: L,
+    NOTIFICATION_CENTER_SET_ACTIVE: x,
     NOTIFICATION_CENTER_TAB_FOCUSED: w,
     RELATIONSHIP_ADD: M,
     RELATIONSHIP_UPDATE: M,

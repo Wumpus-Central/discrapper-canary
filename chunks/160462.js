@@ -1,6 +1,6 @@
 n.d(t, {
     W: function () {
-        return y;
+        return P;
     }
 });
 var i = n(214629),
@@ -30,5 +30,5 @@ var i = n(214629),
     Z = n(91641),
     x = n(598984),
     L = n(987338);
-let P = [x.NR, x.ZI, x.Ob, x.uc, x.m1, o.J$, d.bb, C.g, E.O, _.w, r._f, l.Z, c.g, a.w, A.S2, h.m, m.Q, b.J2, T.zv, u.Yu, i.ZP, s.mN, f.ZP, f.Ys, g.HZ, N.Y, I.ah, v.L, S.sf, p.zu],
-    y = new Z.E(P, L.$P.CONNECTION_OPEN, { location: 'app open' });
+let y = [x.NR, x.ZI, x.Ob, x.uc, x.m1, o.J$, d.bb, C.g, E.O, _.w, r._f, l.Z, c.g, a.w, A.S2, h.m, m.Q, b.J2, T.zv, u.Yu, i.ZP, s.mN, f.ZP, f.Ys, g.HZ, N.Y, I.ah, v.L, S.sf, p.zu],
+    P = new Z.E(y, L.$P.CONNECTION_OPEN, { location: 'app open' });

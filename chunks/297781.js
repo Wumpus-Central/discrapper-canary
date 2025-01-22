@@ -36,13 +36,13 @@ r.d(n, {
         return Y;
     },
     ej: function () {
-        return L;
+        return x;
     },
     f: function () {
         return Z;
     },
     m7: function () {
-        return x;
+        return L;
     },
     n8: function () {
         return j;
@@ -95,7 +95,7 @@ let O = o.createContext({});
 function D() {
     return o.useContext(O);
 }
-function x(e) {
+function L(e) {
     let { children: n, ...r } = e;
     return (0, a.jsx)('div', {
         className: N.badgeContainer,
@@ -103,14 +103,14 @@ function x(e) {
         children: n
     });
 }
-function L(e) {
+function x(e) {
     let { Icon: n, text: r, iconColor: i, tooltipText: o, showTooltip: s } = e,
         { defaultTextColor: l, defaultIconColor: u, location: c } = D();
     return (0, a.jsx)(_.Tooltip, {
         text: o,
         shouldShow: s,
         children: (e) =>
-            (0, a.jsxs)(x, {
+            (0, a.jsxs)(L, {
                 ...e,
                 children: [
                     (0, a.jsx)(n, {
@@ -134,7 +134,7 @@ function w(e) {
         { location: i } = D();
     return null == r || (0, g.Hi)(i, [1, 2, 3, 4])
         ? null
-        : (0, a.jsx)(L, {
+        : (0, a.jsx)(x, {
               Icon: _.VoiceNormalIcon,
               text: r.name
           });
@@ -147,7 +147,7 @@ function P(e) {
         c = l ? 'text-positive' : i,
         { streamPreviewUrl: d } = (0, b.Z)(n),
         f = null != d ? _.ScreenArrowIcon : (0, y.Mq)(n) ? _.AppsIcon : _.GameControllerIcon;
-    return (0, a.jsxs)(x, {
+    return (0, a.jsxs)(L, {
         children: [
             (0, a.jsx)(f, {
                 size: 'xxs',
@@ -170,7 +170,7 @@ function M(e) {
         l = (0, I.bT)(o, s);
     return null == l
         ? null
-        : (0, a.jsxs)(x, {
+        : (0, a.jsxs)(L, {
               children: [
                   (0, a.jsx)(_.GroupIcon, {
                       size: 'xxs',
@@ -231,7 +231,7 @@ function U(e) {
         { location: r } = D(),
         i = (0, g.Hi)(r, [0, 3]) ? _.tokens.colors.STATUS_POSITIVE : void 0;
     return (0, I.Ol)(n)
-        ? (0, a.jsx)(L, {
+        ? (0, a.jsx)(x, {
               Icon: _.NewUserSimpleIcon,
               text: C.intl.string(C.t.keY6mZ),
               iconColor: i
@@ -247,7 +247,7 @@ function B(e) {
         { text: s, tooltipText: l } = (0, I.zo)(n);
     return null == s
         ? null
-        : (0, a.jsx)(L, {
+        : (0, a.jsx)(x, {
               Icon: _.TimerIcon,
               text: s,
               tooltipText: l,
@@ -261,7 +261,7 @@ function G(e) {
         o = (0, I.dw)(n);
     if (null == o) return null;
     let s = (0, I.GE)(o);
-    return (0, a.jsx)(L, {
+    return (0, a.jsx)(x, {
         Icon: _.RetryIcon,
         showTooltip: !i,
         tooltipText: s,
@@ -273,7 +273,7 @@ function Z(e) {
         { location: r } = D(),
         i = (0, I.vU)(n);
     return (0, I.q_)(n)
-        ? (0, a.jsx)(L, {
+        ? (0, a.jsx)(x, {
               Icon: _.FlashIcon,
               showTooltip: 0 === r,
               text: C.intl.formatToPlainString(C.t['Klie/P'], { days: i }),
@@ -289,7 +289,7 @@ function F(e) {
     if (null == o) return null;
     let s = i ? ' \u2014 ' : ': ',
         l = i ? C.t.C0Axoa : C.t.SDRHgo;
-    return (0, a.jsx)(L, {
+    return (0, a.jsx)(x, {
         Icon: _.TrophyIcon,
         text: (0, a.jsxs)(a.Fragment, {
             children: [C.intl.string(C.t['/50eHh']), s, C.intl.format(l, { hours: Math.round(o / m.Z.Seconds.HOUR) })]
@@ -303,7 +303,7 @@ function V(e) {
         o = null === (n = (0, I.PJ)(r, f.N.AGGREGATE_COUNT)) || void 0 === n ? void 0 : n.count;
     if (null == o) return null;
     let s = (0, g.Hi)(i, [1, 2, 5]) ? C.intl.formatToPlainString(C.t.HtifnJ, { count: o }) : C.intl.formatToPlainString(C.t['jq/Bmp'], { count: o });
-    return (0, a.jsx)(L, {
+    return (0, a.jsx)(x, {
         Icon: _.TrophyIcon,
         text: s
     });
@@ -315,7 +315,7 @@ function j(e) {
     let i = (0, I.ig)(n);
     return null == i || i === p.o.TRENDING_TYPE_UNSPECIFIED
         ? null
-        : (0, a.jsx)(L, {
+        : (0, a.jsx)(x, {
               Icon: _.FireIcon,
               text: C.intl.string(C.t.kAlUs7)
           });
@@ -327,7 +327,7 @@ function H(e) {
     let i = E.default.extractTimestamp(n.extra.application_id);
     return c()().diff(c()(i), 'days') > A.G
         ? null
-        : (0, a.jsx)(L, {
+        : (0, a.jsx)(x, {
               Icon: _.StarShootingIcon,
               text: C.intl.string(C.t.vYuyWV)
           });
@@ -359,7 +359,7 @@ function W(e) {
         r = (0, I.ap)(n.extra.media_assets_large_text);
     return null == r
         ? null
-        : (0, a.jsx)(L, {
+        : (0, a.jsx)(x, {
               Icon: _.TopicsIcon,
               text: r
           });

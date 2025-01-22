@@ -44,10 +44,10 @@ function E(e) {
     function D() {
         return A || R ? (0, u.Z)({ platformType: _.ABu.RIOT_GAMES }) : O();
     }
-    function x() {
+    function L() {
         return A ? m.intl.string(m.t.w6VSSE) : R ? m.intl.string(m.t.CHNBdn) : m.intl.string(m.t['0yRXHx']);
     }
-    function L() {
+    function x() {
         if (v) return null;
         let e = A
                 ? (0, i.jsx)(s.CircleInformationIcon, { className: g.infoMessageIcon })
@@ -71,7 +71,7 @@ function E(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Z, { className: g.divider }),
-            L(),
+            x(),
             (0, i.jsxs)(s.Button, {
                 className: g.joinLeaderboardButton,
                 innerClassName: g.joinLeaderboardButtonInner,
@@ -84,7 +84,7 @@ function E(e) {
                             src: S.icon.whiteSVG,
                             className: g.riotIcon
                         }),
-                    x()
+                    L()
                 ]
             })
         ]

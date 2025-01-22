@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(636188),
     x = n(678916),
     f = n(981631),
-    _ = n(869783),
-    E = n(388032),
+    E = n(869783),
+    _ = n(388032),
     C = n(858495);
 function T(e) {
     let { onLearnMore: t, selectedBackgroundOption: T, onSelectBackgroundOption: S, currentDeviceId: b, smallerBackgroundOptions: I, className: N } = e,
@@ -49,12 +49,12 @@ function T(e) {
             (0, g.FU)(e, b, { location: y.location })
                 .then(() => j(null))
                 .catch(() => {
-                    j(E.intl.string(E.t.ejrSLS)), (0, g.FU)(null, b, { location: y.location });
+                    j(_.intl.string(_.t.ejrSLS)), (0, g.FU)(null, b, { location: y.location });
                 });
     };
     return O
         ? (0, i.jsxs)(a.FormItem, {
-              title: E.intl.string(E.t.lZTUPj),
+              title: _.intl.string(_.t.lZTUPj),
               className: N,
               children: [
                   null != A
@@ -87,7 +87,7 @@ function T(e) {
                           return new Promise(async (i) => {
                               try {
                                   let i = await (0, d.Ff)(e, x.xV.BACKGROUND);
-                                  L(i), (0, m.g5)(i, t.type === _.m.MP4, n), j(null);
+                                  L(i), (0, m.g5)(i, t.type === E.m.MP4, n), j(null);
                               } catch (e) {
                                   j(e.message);
                               }

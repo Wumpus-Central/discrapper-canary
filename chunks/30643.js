@@ -36,7 +36,7 @@ let T = {
         ...h.Z,
         ...I.Z
     },
-    A = {
+    b = {
         ...a.Z,
         ...o.M,
         ...c.n
@@ -44,7 +44,7 @@ let T = {
 t.Z = {
     server: s.Z,
     commands: T,
-    events: A,
+    events: b,
     stores: [i.Z],
     transports: [S.Z],
     registerTransportsForEmbeddedPlatform: function () {

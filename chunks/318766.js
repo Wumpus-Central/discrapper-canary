@@ -1,6 +1,6 @@
 r.d(n, {
     u: function () {
-        return x;
+        return L;
     }
 });
 var i = r(47120);
@@ -30,11 +30,11 @@ let N = 20,
     R = 24,
     O = 18,
     D = 77,
-    x = {
+    L = {
         tension: 800,
         friction: 24
     },
-    L = () => {
+    x = () => {
         let e = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
         return (0, a.jsxs)('div', {
             className: C.premiumTooltipContainer,
@@ -96,7 +96,7 @@ function P(e) {
         onRequestClose: () => ee(!0),
         children: (e) =>
             (0, a.jsx)(f.Tooltip, {
-                text: () => (0, a.jsx)(L, {}),
+                text: () => (0, a.jsx)(x, {}),
                 'aria-label': A.intl.formatToMarkdownString(A.t['/7R4q6'], {}),
                 position: 'top',
                 shouldShow: q,
@@ -135,7 +135,7 @@ function P(e) {
                             null != i
                                 ? i()
                                 : (0, a.jsx)(f.Spring, {
-                                      config: x,
+                                      config: L,
                                       to: { value: G ? 1 : 0 },
                                       children: (e) => {
                                           let { value: n } = e;

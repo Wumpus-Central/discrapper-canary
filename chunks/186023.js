@@ -17,8 +17,8 @@ let m = (e) => {
         [S, A] = s.useState(b),
         [C, N] = s.useState(void 0),
         [R, O] = s.useState(void 0),
-        [D, x] = s.useState([]),
-        [L, w] = s.useState(void 0),
+        [D, L] = s.useState([]),
+        [x, w] = s.useState(void 0),
         [P, M] = s.useState(void 0),
         k = (e) => {
             var r;
@@ -30,7 +30,7 @@ let m = (e) => {
                     ...e,
                     destination: ['', o.button.target]
                 });
-            if ((x([...D, e]), null != o.key && (null == m || m(o.key)), N(void 0), O(void 0), n.name === d.b.MESSAGE || n.name === d.b.FIRST_DM)) {
+            if ((L([...D, e]), null != o.key && (null == m || m(o.key)), N(void 0), O(void 0), n.name === d.b.MESSAGE || n.name === d.b.FIRST_DM)) {
                 let e = n.record.id;
                 u.ZP.trackWithMetadata(h.rMx.IAR_NAVIGATE, {
                     message_id: e,
@@ -64,7 +64,7 @@ let m = (e) => {
                     next_node: y[o].id
                 });
             }
-            N(null == a ? void 0 : null === (e = a.multiSelect) || void 0 === e ? void 0 : e.state), O(null == a ? void 0 : a.textInput), A(o), x(i), null == m || m('..');
+            N(null == a ? void 0 : null === (e = a.multiSelect) || void 0 === e ? void 0 : e.state), O(null == a ? void 0 : a.textInput), A(o), L(i), null == m || m('..');
         },
         G = s.useMemo(() => {
             let e = [],
@@ -113,7 +113,7 @@ let m = (e) => {
                                 successNodeId: I,
                                 failNodeId: T,
                                 onSubmit: U,
-                                reportId: L
+                                reportId: x
                             })
                         })
                     },

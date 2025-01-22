@@ -149,7 +149,7 @@ function G(e) {
         ),
         C = (0, p.ZP)(t),
         x = (0, m.KS)(t),
-        [N] = (0, u.Z)((null == g ? void 0 : g.type) === R.fO.ACTIVITY ? [g.id] : []),
+        [N] = (0, u.Z)((null == g ? void 0 : g.type) === R.fO.ACTIVITY ? [g.applicationId] : []),
         S = O.intl.string(O.t.BVZqJi);
     t.isDM() ? (S = O.intl.string(O.t.jN2DfX)) : t.isGroupDM() && (S = O.intl.string(O.t['e5y+go']));
     let A = (0, a.e7)([h.Z], () => h.Z.getChannelStatus(t)),

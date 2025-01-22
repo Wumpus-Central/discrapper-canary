@@ -26,7 +26,7 @@ function v(e, n) {
         { handleFocus: N, handleBlur: R } = (0, h.b)(A),
         O = 0 === S,
         D = null != v,
-        x = (e) => {
+        L = (e) => {
             if (!!b) {
                 switch (e.which) {
                     case _.yXg.D:
@@ -50,7 +50,7 @@ function v(e, n) {
             ...C,
             onFocus: N,
             onBlur: R,
-            onKeyDown: x,
+            onKeyDown: L,
             className: l()(g.upload, o, { [g.sizeClip]: 2 === S }),
             ref: n,
             children: (0, a.jsxs)('div', {

@@ -1,27 +1,27 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return l;
+        return r;
     }
 });
-var a = n(200651);
-n(192379);
-var r = n(331595);
-function l(e) {
-    let { width: t = 32, height: n = 32, color: l = 'currentColor', ...i } = e;
-    return (0, a.jsxs)('svg', {
-        ...(0, r.Z)(i),
-        width: t,
-        height: n,
+var l = t(200651);
+t(192379);
+var i = t(331595);
+function r(e) {
+    let { width: n = 32, height: t = 32, color: r = 'currentColor', ...u } = e;
+    return (0, l.jsxs)('svg', {
+        ...(0, i.Z)(u),
+        width: n,
+        height: t,
         viewBox: '0 0 12 12',
         fill: 'none',
         children: [
-            (0, a.jsx)('path', {
+            (0, l.jsx)('path', {
                 d: 'M7.25 1H4.75V7.25H7.25V1Z',
-                fill: l
+                fill: r
             }),
-            (0, a.jsx)('path', {
+            (0, l.jsx)('path', {
                 d: 'M4.75 9.75C4.75 10.4167 5.33333 11 6 11C6.66667 11 7.25 10.4167 7.25 9.75C7.25 9.08333 6.66667 8.5 6 8.5C5.33333 8.5 4.75 9.08333 4.75 9.75Z',
-                fill: l
+                fill: r
             })
         ]
     });

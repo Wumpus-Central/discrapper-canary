@@ -97,11 +97,11 @@ function D(e) {
     if (f.default.getId() !== r.id) return !1;
     (v[n] = void 0), n === E && S(n);
 }
-function x() {
+function L() {
     if (null == E) return !1;
     S(E);
 }
-function L(e) {
+function x(e) {
     let { guildId: n } = e;
     (v[n] = void 0), n === E && S(n);
 }
@@ -154,12 +154,12 @@ g(G, 'displayName', 'GuildCategoryStore'),
         CHANNEL_DELETE: R,
         CHANNEL_UPDATES: O,
         GUILD_MEMBER_UPDATE: D,
-        CURRENT_USER_UPDATE: x,
-        GUILD_ROLE_CREATE: L,
-        GUILD_ROLE_UPDATE: L,
-        GUILD_ROLE_DELETE: L,
-        IMPERSONATE_UPDATE: L,
-        IMPERSONATE_STOP: L,
+        CURRENT_USER_UPDATE: L,
+        GUILD_ROLE_CREATE: x,
+        GUILD_ROLE_UPDATE: x,
+        GUILD_ROLE_DELETE: x,
+        IMPERSONATE_UPDATE: x,
+        IMPERSONATE_STOP: x,
         VOICE_CHANNEL_SELECT: P,
         VOICE_STATE_UPDATES: M
     }));

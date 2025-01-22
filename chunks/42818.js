@@ -48,8 +48,8 @@ var s = r(200651),
     R = r(474936),
     O = r(981631),
     D = r(388032),
-    x = r(193727);
-let L = (e, n) => {
+    L = r(193727);
+let x = (e, n) => {
         var r;
         return !!(null === (r = e.discounts) || void 0 === r ? void 0 : r.some((e) => e.type === n));
     },
@@ -58,7 +58,7 @@ let L = (e, n) => {
         return e.subscriptionPlanPrice - (null !== (a = null === (i = e.discounts) || void 0 === i ? void 0 : null === (r = i.find((e) => e.type === n)) || void 0 === r ? void 0 : r.amount) && void 0 !== a ? a : 0);
     };
 function P(e, n, r, i) {
-    let a = L(e, _.eW.PREMIUM_TRIAL);
+    let a = x(e, _.eW.PREMIUM_TRIAL);
     switch (e.subscriptionPlanId) {
         case R.Xh.PREMIUM_MONTH_LEGACY:
         case R.Xh.PREMIUM_YEAR_LEGACY:
@@ -111,7 +111,7 @@ function M(e) {
     );
     !0 === a &&
         (g = (0, s.jsxs)('div', {
-            className: x.invoiceItemLabelWithIcon,
+            className: L.invoiceItemLabelWithIcon,
             children: [
                 (0, s.jsxs)('div', {
                     children: [g, ' ']
@@ -119,13 +119,13 @@ function M(e) {
                 (0, s.jsx)(h.Tooltip, {
                     text: D.intl.format(D.t.UDop9f, {}),
                     'aria-label': D.intl.string(D.t.P68ePD),
-                    tooltipClassName: x.invoiceItemTooltip,
+                    tooltipClassName: L.invoiceItemTooltip,
                     children: (e) =>
                         (0, s.jsx)(h.CircleQuestionIcon, {
                             size: 'md',
                             color: 'currentColor',
                             ...e,
-                            className: x.invoiceItemLabelIcon
+                            className: L.invoiceItemLabelIcon
                         })
                 })
             ]
@@ -147,20 +147,20 @@ function M(e) {
 function k(e) {
     let { label: n, tooltipText: r, tooltipAriaLabel: i } = e;
     return (0, s.jsxs)('div', {
-        className: x.invoiceItemLabelWithIcon,
+        className: L.invoiceItemLabelWithIcon,
         children: [
             n,
             (0, s.jsx)(h.Tooltip, {
                 clickableOnMobile: !0,
                 text: r,
                 'aria-label': i,
-                tooltipClassName: x.invoiceItemTooltip,
+                tooltipClassName: L.invoiceItemTooltip,
                 children: (e) =>
                     (0, s.jsx)(h.CircleQuestionIcon, {
                         size: 'md',
                         color: 'currentColor',
                         ...e,
-                        className: x.invoiceItemLabelIcon
+                        className: L.invoiceItemLabelIcon
                     })
             })
         ]
@@ -209,7 +209,7 @@ function B(e) {
     f()(null != l, 'Expected newPlanInvoiceItem');
     let u = o.find((e) => !(0, b.Z8)(e.subscriptionPlanId) && e.amount < 0),
         c = o.find((e) => null == e.subscriptionPlanId && null != e.discounts && e.discounts.find((e) => e.type === _.eW.PREMIUM_LEGACY_UPGRADE_PROMOTION)),
-        d = L(l, _.eW.PREMIUM_TRIAL),
+        d = x(l, _.eW.PREMIUM_TRIAL),
         p = w(l, _.eW.SUBSCRIPTION_PLAN),
         h = l.quantity * p,
         m = l.amount + (null != u ? u.amount : 0) - h + (null != c ? c.amount : 0),
@@ -275,7 +275,7 @@ function F(e) {
     return i !== o || a !== l || n.subscriptionPeriodEnd.getTime() === r.subscriptionPeriodStart.getTime()
         ? null
         : (0, s.jsx)('div', {
-              className: x.subscriptionPeriodResetNotice,
+              className: L.subscriptionPeriodResetNotice,
               children: D.intl.format(D.t.JWWD4O, { renewalDate: n.subscriptionPeriodEnd })
           });
 }
@@ -316,7 +316,7 @@ function V(e) {
                         invoiceItem: e,
                         currency: i.currency,
                         showGuildSubscriptionAdjustmentTooltip: f && (e.subscriptionPlanId === R.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === R.Xh.PREMIUM_YEAR_GUILD || e.subscriptionPlanId === R.Xh.PREMIUM_3_MONTH_GUILD || e.subscriptionPlanId === R.Xh.PREMIUM_6_MONTH_GUILD),
-                        className: c()({ [x.subscriptionAddedInvoiceItem]: !n || r })
+                        className: c()({ [L.subscriptionAddedInvoiceItem]: !n || r })
                     },
                     e.id
                 );
@@ -326,7 +326,7 @@ function V(e) {
             (0, s.jsx)(C.R$, {
                 label: D.intl.string(D.t.AChTLS),
                 value: (0, I.og)((0, I.T4)(i.total, i.currency), u, d),
-                className: x.subscriptionCostRow
+                className: L.subscriptionCostRow
             })
         ]
     });
@@ -397,12 +397,12 @@ function H(e) {
                     children: [
                         (0, s.jsxs)(h.Clickable, {
                             onClick: () => I((e) => !e),
-                            className: x.subscriptionDetailsToggle,
+                            className: L.subscriptionDetailsToggle,
                             children: [
                                 b ? D.intl.string(D.t.aBcRbG) : D.intl.string(D.t.X6duqq),
                                 (0, s.jsx)(v.Z, {
                                     direction: b ? v.Z.Directions.UP : v.Z.Directions.DOWN,
-                                    className: x.subscriptionDetailsToggleCaret
+                                    className: L.subscriptionDetailsToggleCaret
                                 })
                             ]
                         }),
@@ -438,7 +438,7 @@ function Y(e) {
                           children: [
                               (0, s.jsx)(h.Text, {
                                   variant: 'text-md/bold',
-                                  className: x.purchaseDetailsHeaderText,
+                                  className: L.purchaseDetailsHeaderText,
                                   children: n
                               }),
                               (0, s.jsxs)(C.PO, {
@@ -454,7 +454,7 @@ function Y(e) {
                                       (0, s.jsx)(C.R$, {
                                           label: D.intl.string(D.t.txajQE),
                                           value: m,
-                                          className: x.subscriptionCostRow
+                                          className: L.subscriptionCostRow
                                       })
                                   ]
                               })

@@ -134,10 +134,10 @@ function O(e) {
 function D(e) {
     !e.isSwitchingAccount && (E = {});
 }
-function x(e) {
+function L(e) {
     e.userId in E && delete E[e.userId];
 }
-function L() {
+function x() {
     for (let [e, n] of f.default.entries(E))
         for (let [r, i] of f.default.entries(n)) {
             let n = i[0];
@@ -146,7 +146,7 @@ function L() {
 }
 class w extends (a = u.ZP.PersistedStore) {
     initialize(e) {
-        (E = null != e ? e : {}), L(), this.waitFor(p.default, h.Z, _.Z);
+        (E = null != e ? e : {}), x(), this.waitFor(p.default, h.Z, _.Z);
     }
     getState() {
         return E;
@@ -220,7 +220,7 @@ m(w, 'displayName', 'DraftStore'),
     (n.Z = new w(c.Z, {
         CONNECTION_OPEN: C,
         LOGOUT: D,
-        MULTI_ACCOUNT_REMOVE_ACCOUNT: x,
+        MULTI_ACCOUNT_REMOVE_ACCOUNT: L,
         GUILD_DELETE: N,
         CHANNEL_DELETE: R,
         THREAD_DELETE: R,

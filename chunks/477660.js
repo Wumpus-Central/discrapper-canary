@@ -168,8 +168,8 @@
         R = /\n{2,}$/,
         O = /^ (?= *`)|(` *) $/g,
         D = R,
-        x = / *\n+$/,
-        L = RegExp('^( *)(' + S + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + S + ' )\\n*|\\s*\n*$)'),
+        L = / *\n+$/,
+        x = RegExp('^( *)(' + S + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + S + ' )\\n*|\\s*\n*$)'),
         w = /(?:^|\n)( *)$/,
         P = (function () {
             var e = /^ *\| *| *\| *$/g,
@@ -388,7 +388,7 @@
                     var r = null == n.prevCapture ? '' : n.prevCapture[0],
                         i = w.exec(r),
                         a = n._list || !n.inline;
-                    return i && a ? ((e = i[1] + e), L.exec(e)) : null;
+                    return i && a ? ((e = i[1] + e), x.exec(e)) : null;
                 },
                 parse: function (e, n, r) {
                     var i = e[2],
@@ -409,7 +409,7 @@
                             l = f;
                             var p = r.inline,
                                 h = r._list;
-                            (r._list = !0), f ? ((r.inline = !1), (a = c.replace(x, '\n\n'))) : ((r.inline = !0), (a = c.replace(x, '')));
+                            (r._list = !0), f ? ((r.inline = !1), (a = c.replace(L, '\n\n'))) : ((r.inline = !0), (a = c.replace(L, '')));
                             var _ = n(a, r);
                             return (r.inline = p), (r._list = h), _;
                         })

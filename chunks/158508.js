@@ -47,7 +47,7 @@ function y(e) {
         N = (0, f.Do)({ location: 'use-block-user-item-web' }),
         R = N ? [s.z.IGNORE_USER_NEW_BADGE] : [],
         [O, D] = (0, d.US)(R),
-        x = O === s.z.IGNORE_USER_NEW_BADGE;
+        L = O === s.z.IGNORE_USER_NEW_BADGE;
     return !N || S || C
         ? null
         : (0, a.jsx)(l.MenuItem, {
@@ -57,14 +57,14 @@ function y(e) {
                   ? g.intl.string(g.t['8wXU9P'])
                   : (0, a.jsxs)('div', {
                         className: E.label,
-                        children: [g.intl.string(g.t.ytCpKi), x ? (0, a.jsx)(v, {}) : null]
+                        children: [g.intl.string(g.t.ytCpKi), L ? (0, a.jsx)(v, {}) : null]
                     }),
               action: A
                   ? () => {
                         null == b || b(), u.Z.unignoreUser(T, null != I ? I : 'use-ignore-user-item-web', null != i ? i : void 0);
                     }
                   : () => {
-                        x && D(m.L.TAKE_ACTION),
+                        L && D(m.L.TAKE_ACTION),
                             (0, l.openModal)((e) =>
                                 (0, a.jsx)(p.Z, {
                                     ...e,

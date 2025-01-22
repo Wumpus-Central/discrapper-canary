@@ -85,13 +85,13 @@ function A(e) {
                   }
                 : y.dG4,
         D = null == A || R ? b.intl.string(b.t['0yRXHx']) : b.intl.string(b.t['KWpU6+']),
-        { lastUpdateRequested: x, statisticLastUpdatedDate: L } = (0, E.Z)({
+        { lastUpdateRequested: L, statisticLastUpdatedDate: x } = (0, E.Z)({
             userId: T,
             guildId: n,
             leaderboardId: h,
             statisticId: a.E.LOL_TOTAL_KILLS
         }),
-        { disabled: w, subtext: P } = S(x, L),
+        { disabled: w, subtext: P } = S(L, x),
         M = (0, o.e7)(
             [f.Z, d.Z],
             () => {

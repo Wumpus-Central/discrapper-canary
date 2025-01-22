@@ -95,7 +95,7 @@ function p(e) {
     );
 }
 function h(e, r, i) {
-    if (e.customInspect && r && L(r.inspect) && r.inspect !== n.inspect && !(r.constructor && r.constructor.prototype === r)) {
+    if (e.customInspect && r && x(r.inspect) && r.inspect !== n.inspect && !(r.constructor && r.constructor.prototype === r)) {
         var a,
             o = r.inspect(i, e);
         return !A(o) && (o = h(e, o, i)), o;
@@ -104,20 +104,20 @@ function h(e, r, i) {
     if (s) return s;
     var l = Object.keys(r),
         u = p(l);
-    if ((e.showHidden && (l = Object.getOwnPropertyNames(r)), x(r) && (l.indexOf('message') >= 0 || l.indexOf('description') >= 0))) return m(r);
+    if ((e.showHidden && (l = Object.getOwnPropertyNames(r)), L(r) && (l.indexOf('message') >= 0 || l.indexOf('description') >= 0))) return m(r);
     if (0 === l.length) {
-        if (L(r)) {
+        if (x(r)) {
             var c = r.name ? ': ' + r.name : '';
             return e.stylize('[Function' + c + ']', 'special');
         }
         if (R(r)) return e.stylize(RegExp.prototype.toString.call(r), 'regexp');
         if (D(r)) return e.stylize(Date.prototype.toString.call(r), 'date');
-        if (x(r)) return m(r);
+        if (L(r)) return m(r);
     }
     var d = '',
         f = !1,
         b = ['{', '}'];
-    if ((y(r) && ((f = !0), (b = ['[', ']'])), L(r) && (d = ' [Function' + (r.name ? ': ' + r.name : '') + ']'), R(r) && (d = ' ' + RegExp.prototype.toString.call(r)), D(r) && (d = ' ' + Date.prototype.toUTCString.call(r)), x(r) && (d = ' ' + m(r)), 0 === l.length && (!f || 0 == r.length))) return b[0] + d + b[1];
+    if ((y(r) && ((f = !0), (b = ['[', ']'])), x(r) && (d = ' [Function' + (r.name ? ': ' + r.name : '') + ']'), R(r) && (d = ' ' + RegExp.prototype.toString.call(r)), D(r) && (d = ' ' + Date.prototype.toUTCString.call(r)), L(r) && (d = ' ' + m(r)), 0 === l.length && (!f || 0 == r.length))) return b[0] + d + b[1];
     if (i < 0) return R(r) ? e.stylize(RegExp.prototype.toString.call(r), 'regexp') : e.stylize('[Object]', 'special');
     return (
         e.seen.push(r),
@@ -228,10 +228,10 @@ function O(e) {
 function D(e) {
     return O(e) && '[object Date]' === P(e);
 }
-function x(e) {
+function L(e) {
     return O(e) && ('[object Error]' === P(e) || e instanceof Error);
 }
-function L(e) {
+function x(e) {
     return 'function' == typeof e;
 }
 function w(e) {
@@ -295,9 +295,9 @@ function M(e) {
     (n.isObject = O),
     (n.isDate = D),
     (n.types.isDate = D),
-    (n.isError = x),
-    (n.types.isNativeError = x),
-    (n.isFunction = L),
+    (n.isError = L),
+    (n.types.isNativeError = L),
+    (n.isFunction = x),
     (n.isPrimitive = w),
     (n.isBuffer = r(102439));
 var k = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];

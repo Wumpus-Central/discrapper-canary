@@ -18,25 +18,25 @@ function E(e) {
     let { subscriptionPlan: v, isGift: y, isTrial: b, isEmbeddedIAP: I, renewalInvoice: T, paymentSourceType: S, hide: A, purchaseType: C, productLine: N, basePrice: R, currentSubscription: O } = e,
         D = (0, o.e7)([l.ZP], () => l.ZP.inReverseTrial());
     if (A) return null;
-    let x = null == e.planGroup ? [] : e.planGroup;
+    let L = null == e.planGroup ? [] : e.planGroup;
     if (null != T) {
         let e = d.ZP.getIntervalForInvoice(T);
         (n = e.intervalType), (r = e.intervalCount), (i = (0, f.og)((0, f.T4)(T.total, T.currency), n, r)), (E = (0, f.og)((0, f.T4)(T.subtotal, T.currency), n, r));
     } else null != v && ((n = v.interval), (r = v.intervalCount));
-    let L = (0, s.K)({
+    let x = (0, s.K)({
             purchaseType: C || h.GZQ.SUBSCRIPTION,
             plan: v,
             premiumSubscription: null == O ? null : O,
             isGift: !!y,
-            planGroup: x,
+            planGroup: L,
             isPrepaidPaymentSource: !1
         }),
         w = m.intl.format(m.t.Y2Rkqa, {
-            primaryText: L,
+            primaryText: x,
             paidURL: h.EYA.PAID_TERMS
         }),
         P = m.intl.format(m.t.H2uH5e, {
-            primaryText: L,
+            primaryText: x,
             paidURL: h.EYA.PAID_TERMS
         }),
         M = '',
@@ -89,7 +89,7 @@ function E(e) {
             plan: v,
             premiumSubscription: null == O ? null : O,
             isGift: !1,
-            planGroup: x,
+            planGroup: L,
             isPrepaidPaymentSource: !1
         });
         if ((null != R && null != n && null != r && (e = (0, f.og)((0, f.T4)(R.amount, R.currency), n, r)), null == e)) {
@@ -104,7 +104,7 @@ function E(e) {
                   contactLink: h.EYA.CONTACT,
                   helpdeskArticle: c.Z.getArticleURL(h.BhN.BILLING)
               })
-            : null != O && (0, p.GY)(O, v.id, x)
+            : null != O && (0, p.GY)(O, v.id, L)
               ? m.intl.format(m.t.LyBQUV, {
                     primaryText: i,
                     rate: e,

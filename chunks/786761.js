@@ -55,7 +55,7 @@ function N(e) {
         ...e,
         timestamp: new Date(e.timestamp),
         editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
-        attachments: x(e),
+        attachments: L(e),
         embeds: w(e),
         components: (0, u.uZ)(null !== (n = e.components) && void 0 !== n ? n : [], { includeEmojiSrc: !1 }),
         codedLinks: e.type === T.uaV.THREAD_CREATED ? [] : (0, l.ZP)(e.content)
@@ -72,7 +72,7 @@ function R(e) {
         R = e.message_reference,
         O = A(e),
         D = null,
-        x = null == e ? void 0 : e.gift_info,
+        L = null == e ? void 0 : e.gift_info,
         w = e.gifting_prompt,
         k = null != e.interaction ? f.Z.createFromServer(e.interaction) : null,
         U = e.type === T.uaV.THREAD_STARTER_MESSAGE ? (null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (r = i.author) || void 0 === r ? void 0 : r.id) : void 0;
@@ -110,7 +110,7 @@ function R(e) {
               giftCodes: (0, v.Fp)(e) ? (0, v.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, v.Q_)(e.content),
               content: B,
               referralTrialOfferId: u,
-              call: L(e.call, g.timestamp),
+              call: x(e.call, g.timestamp),
               messageSnapshots: M(e),
               reactions: P(null != d ? d : e.reactions, e.poll),
               interaction: k,
@@ -120,7 +120,7 @@ function R(e) {
               purchaseNotification: e.purchase_notification,
               poll: null == e.poll ? void 0 : (0, c.Z)(e.poll),
               potions: e.potions,
-              giftInfo: null == x ? void 0 : x,
+              giftInfo: null == L ? void 0 : L,
               giftingPrompt: w
           });
 }
@@ -144,7 +144,7 @@ function D(e, n) {
         });
     let r = e,
         i = !1;
-    if ((null != n.call && (r = r.set('call', L(n.call, e.timestamp))), null != n.attachments && (r = r.set('attachments', x(n))), null != n.content && '' !== n.content && (r = r.set('content', n.content)), null != n.embeds && (r = r.set('embeds', w(n))), null != n.message_snapshots && (r = r.set('messageSnapshots', M(n))), n.pinned !== r.pinned && (r = r.set('pinned', n.pinned)), null != r.webhookId && null != n.author && (r = r.set('author', new h.Z(n.author))), null != n.flags && n.flags !== r.flags && (r = r.set('flags', n.flags)), null != n.components && (r = r.set('components', (0, u.uZ)(n.components, { includeEmojiSrc: !1 }))), null != n.role_subscription_data && (r = r.set('roleSubscriptionData', n.role_subscription_data)), null != n.reactions)) {
+    if ((null != n.call && (r = r.set('call', x(n.call, e.timestamp))), null != n.attachments && (r = r.set('attachments', L(n))), null != n.content && '' !== n.content && (r = r.set('content', n.content)), null != n.embeds && (r = r.set('embeds', w(n))), null != n.message_snapshots && (r = r.set('messageSnapshots', M(n))), n.pinned !== r.pinned && (r = r.set('pinned', n.pinned)), null != r.webhookId && null != n.author && (r = r.set('author', new h.Z(n.author))), null != n.flags && n.flags !== r.flags && (r = r.set('flags', n.flags)), null != n.components && (r = r.set('components', (0, u.uZ)(n.components, { includeEmojiSrc: !1 }))), null != n.role_subscription_data && (r = r.set('roleSubscriptionData', n.role_subscription_data)), null != n.reactions)) {
         var a;
         r = r.set('reactions', P(null !== (a = e.reactions) && void 0 !== a ? a : n.reactions));
     }
@@ -170,7 +170,7 @@ function D(e, n) {
         r
     );
 }
-function x(e) {
+function L(e) {
     return null == e.attachments
         ? []
         : e.attachments.map((e) => ({
@@ -178,7 +178,7 @@ function x(e) {
               spoiler: e.filename.startsWith(I._j)
           }));
 }
-function L(e, n) {
+function x(e, n) {
     if (null != e) {
         let r = null != e.ended_timestamp ? s()(new Date(e.ended_timestamp)) : null,
             i = null != r ? s().duration(r.diff(n)) : null;

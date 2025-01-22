@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(314684),
     x = n(794484),
     f = n(536844),
-    _ = n(342414),
-    E = n(938736),
+    E = n(342414),
+    _ = n(938736),
     C = n(391110),
     T = n(71363),
     S = n(781800),
@@ -32,7 +32,7 @@ t.Z = () => {
         [j, O] = r.useState(!1);
     (0, p.FM)();
     let R = (0, h.b)(A),
-        P = (0, E.TW)(A),
+        P = (0, _.TW)(A),
         D = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
     return (
         window.history.replaceState({}, '', window.location.pathname),
@@ -46,7 +46,7 @@ t.Z = () => {
                         children: (0, i.jsxs)(d.Gt, {
                             value: s,
                             children: [
-                                (0, i.jsx)(_.Z, {
+                                (0, i.jsx)(E.Z, {
                                     className: N.heroHeading,
                                     location: C.MQ.HOME
                                 }),

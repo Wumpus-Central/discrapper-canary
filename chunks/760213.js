@@ -1,9 +1,9 @@
-n.d(e, {
+n.d(t, {
     W: function () {
         return s;
     },
     Z: function () {
-        return I;
+        return k;
     }
 }),
     n(773603);
@@ -28,9 +28,9 @@ var s,
     N = n(251423),
     S = n(981631),
     E = n(388032),
-    A = n(536554);
-function T(t) {
-    let { actionText: e, user: n, onAction: s } = t,
+    T = n(536554);
+function A(e) {
+    let { actionText: t, user: n, onAction: s } = e,
         {
             currentUser: r,
             hidePrivateData: l,
@@ -41,29 +41,29 @@ function T(t) {
             isAuthenticated: m.default.isAuthenticated()
         })),
         N = new p.Z(n),
-        T = a && (null == r ? void 0 : r.id) === N.id,
-        I = n.tokenStatus === v.q.INVALID,
-        M = l || N.isPomelo() ? null : '#'.concat(N.discriminator),
-        k = null;
+        A = a && (null == r ? void 0 : r.id) === N.id,
+        k = n.tokenStatus === v.q.INVALID,
+        I = l || N.isPomelo() ? null : '#'.concat(N.discriminator),
+        M = null;
     return (
-        T
-            ? (k = (0, i.jsx)(u.Text, {
+        A
+            ? (M = (0, i.jsx)(u.Text, {
                   variant: 'text-sm/semibold',
-                  className: A.hintText,
+                  className: T.hintText,
                   color: 'text-positive',
                   children: E.intl.string(E.t.seV8ys)
               }))
-            : I &&
-              (k = (0, i.jsx)(u.Text, {
+            : k &&
+              (M = (0, i.jsx)(u.Text, {
                   variant: 'text-sm/semibold',
-                  className: A.hintText,
+                  className: T.hintText,
                   color: 'text-danger',
                   children: E.intl.string(E.t.tYX2pq)
               })),
         (0, i.jsx)('div', {
-            className: A.accountCard,
+            className: T.accountCard,
             children: (0, i.jsxs)('div', {
-                className: A.userDetails,
+                className: T.userDetails,
                 children: [
                     (0, i.jsx)(u.Avatar, {
                         src: N.getAvatarURL(void 0, 40),
@@ -71,15 +71,15 @@ function T(t) {
                         'aria-label': n.username
                     }),
                     (0, i.jsxs)('div', {
-                        className: o()(A.usernameSection, { [A.hasActionMaxWidth]: !T }),
+                        className: o()(T.usernameSection, { [T.hasActionMaxWidth]: !A }),
                         children: [
                             (0, i.jsxs)('div', {
-                                className: A.username,
+                                className: T.username,
                                 children: [
                                     (0, i.jsx)(u.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
-                                        className: A.textOverflow,
+                                        className: T.textOverflow,
                                         children: C.ZP.getUserTag(N, {
                                             mode: 'username',
                                             identifiable: l ? 'never' : 'always'
@@ -88,38 +88,38 @@ function T(t) {
                                     (0, i.jsx)(u.Text, {
                                         color: 'header-secondary',
                                         variant: 'text-sm/normal',
-                                        children: M
+                                        children: I
                                     })
                                 ]
                             }),
-                            k
+                            M
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: A.userActions,
+                        className: T.userActions,
                         children: [
-                            !T &&
+                            !A &&
                                 (0, i.jsx)(u.Button, {
                                     onClick: function () {
-                                        if (I) {
+                                        if (k) {
                                             s(0, n.id);
                                             return;
                                         }
                                         g.default.track(S.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: S.jXE.MANAGE_ACCOUNTS_MODAL } }), j.yD(n.id), s(1, n.id);
                                     },
                                     color: u.Button.Colors.PRIMARY,
-                                    children: I ? E.intl.string(E.t['DSN+h4']) : e
+                                    children: k ? E.intl.string(E.t['DSN+h4']) : t
                                 }),
                             (0, i.jsx)(u.Button, {
-                                className: A.userActionMenu,
-                                onClick: function (t) {
-                                    (0, h.vq)(t, (t) => {
-                                        let { onSelect: e } = t;
+                                className: T.userActionMenu,
+                                onClick: function (e) {
+                                    (0, h.vq)(e, (e) => {
+                                        let { onSelect: t } = e;
                                         return (0, i.jsx)(u.Menu, {
                                             'aria-label': E.intl.string(E.t['41qiDQ']),
                                             navId: 'manage-multi-account',
                                             onClose: h.Zy,
-                                            onSelect: e,
+                                            onSelect: t,
                                             children: (0, i.jsx)(u.MenuItem, {
                                                 id: 'remove-account',
                                                 label: E.intl.string(E.t.lSLMaW),
@@ -128,10 +128,10 @@ function T(t) {
                                                         d.Z.logout(null, n.id).finally(() => {
                                                             j.Zd(n.id);
                                                         });
-                                                        let t = {};
-                                                        null != r ? (t.section = S.jXE.MANAGE_ACCOUNTS_MODAL) : (t.page = S.Usc.LOGIN), g.default.track(S.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, { location: t }), s(2, n.id);
+                                                        let e = {};
+                                                        null != r ? (e.section = S.jXE.MANAGE_ACCOUNTS_MODAL) : (e.page = S.Usc.LOGIN), g.default.track(S.rMx.MULTI_ACCOUNT_ACCOUNT_REMOVE, { location: e }), s(2, n.id);
                                                     })(),
-                                                        null != e && e();
+                                                        null != t && t();
                                                 },
                                                 color: 'danger'
                                             })
@@ -145,7 +145,7 @@ function T(t) {
                                 children: (0, i.jsx)(u.MoreHorizontalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: A.overflowMenuIcon
+                                    className: T.overflowMenuIcon
                                 })
                             })
                         ]
@@ -155,35 +155,35 @@ function T(t) {
         })
     );
 }
-function I(t) {
-    let { actionText: e, onAction: n } = t,
+function k(e) {
+    let { actionText: t, onAction: n } = e,
         { isLoading: s, multiAccountUsers: r } = (0, N.L)();
     return (0, i.jsx)('div', {
-        className: A.list,
+        className: T.list,
         children: s
             ? (0, i.jsx)(u.Spinner, {})
-            : r.map((t, s) =>
+            : r.map((e, s) =>
                   (0, i.jsxs)(
                       l.Fragment,
                       {
                           children: [
                               (0, i.jsx)(
-                                  T,
+                                  A,
                                   {
-                                      user: t,
-                                      actionText: e,
+                                      user: e,
+                                      actionText: t,
                                       onAction: n
                                   },
-                                  t.id
+                                  e.id
                               ),
                               r.length - 1 !== s &&
                                   (0, i.jsx)('div', {
                                       role: 'separator',
-                                      className: A.separator
+                                      className: T.separator
                                   })
                           ]
                       },
-                      t.id
+                      e.id
                   )
               )
     });

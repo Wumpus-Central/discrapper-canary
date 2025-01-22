@@ -41,8 +41,8 @@ let c = 'url(#gradient)',
 t.Z = (e) => {
     let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: g = 0, progressCircleStrokeSize: h = 2, progressCircleVariation: p, progressCircleStroke: x } = e,
         f = 43 + h / 2,
-        _ = 2 * Math.PI * f,
-        [E, C] = r.useState(g);
+        E = 2 * Math.PI * f,
+        [_, C] = r.useState(g);
     r.useEffect(() => {
         let e = setTimeout(() => {
             C(t);
@@ -75,9 +75,9 @@ t.Z = (e) => {
                         stroke: N,
                         strokeWidth: h,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(_, ' ').concat(_),
+                        strokeDasharray: ''.concat(E, ' ').concat(E),
                         className: c,
-                        style: { strokeDashoffset: (1 - E / 100) * _ },
+                        style: { strokeDashoffset: (1 - _ / 100) * E },
                         r: ''.concat(f),
                         cx: '50%',
                         cy: '50%'

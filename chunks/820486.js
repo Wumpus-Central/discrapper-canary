@@ -49,7 +49,7 @@ function T(e) {
     }
     return e.name;
 }
-function A(e, t, n) {
+function b(e, t, n) {
     return null == e || e.displayName !== t
         ? {
               displayName: t,
@@ -62,7 +62,7 @@ function A(e, t, n) {
             }
           : e;
 }
-class b extends (i = a.ZP.DeviceSettingsStore) {
+class A extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (f = null != e ? e : g);
     }
@@ -88,9 +88,9 @@ class b extends (i = a.ZP.DeviceSettingsStore) {
         return v;
     }
 }
-p(b, 'displayName', 'ConnectedDeviceStore'),
-    p(b, 'persistKey', 'ConnectedDeviceStore'),
-    (t.Z = new b(s.Z, {
+p(A, 'displayName', 'ConnectedDeviceStore'),
+    p(A, 'persistKey', 'ConnectedDeviceStore'),
+    (t.Z = new A(s.Z, {
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};
@@ -129,12 +129,12 @@ p(b, 'displayName', 'ConnectedDeviceStore'),
                     : (l()
                           .difference(s, a)
                           .forEach((e) => {
-                              C[e] = A(C[e], e, h.QyF.INPUT);
+                              C[e] = b(C[e], e, h.QyF.INPUT);
                           }),
                       l()
                           .difference(c, o)
                           .forEach((e) => {
-                              C[e] = A(C[e], e, h.QyF.OUTPUT);
+                              C[e] = b(C[e], e, h.QyF.OUTPUT);
                           })),
                 !(l().isEqual(a, s) && l().isEqual(o, c)) && ((E = i), (I = r), !0)
             );

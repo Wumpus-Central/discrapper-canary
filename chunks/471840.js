@@ -51,8 +51,8 @@ function R(e) {
         [G, W] = a.useState(null),
         [z, q] = a.useState(f),
         [J, X] = a.useState(void 0),
-        [Q] = (0, h.Z)(null == z ? [] : [z]),
-        $ = a.useRef(null),
+        [$] = (0, h.Z)(null == z ? [] : [z]),
+        Q = a.useRef(null),
         K = a.useMemo(
             () => ({
                 application_id: z,
@@ -64,13 +64,13 @@ function R(e) {
     a.useEffect(() => {
         if (V === A.ag.DIRECTORY && null != Y && Y !== A.ag.DIRECTORY && null != G) {
             var e;
-            null === (e = $.current) || void 0 === e || e.scrollTo({ top: G });
+            null === (e = Q.current) || void 0 === e || e.scrollTo({ top: G });
         }
     }, [G, Y, V]);
     let ee = a.useCallback((e) => {
             var t;
             let { applicationId: n } = e,
-                i = null === (t = $.current) || void 0 === t ? void 0 : t.scrollTop;
+                i = null === (t = Q.current) || void 0 === t ? void 0 : t.scrollTop;
             null != i && W(i), q(n), U(A.ag.SELECT_CHANNEL);
         }, []),
         et = a.useCallback((e) => {
@@ -116,7 +116,7 @@ function R(e) {
         }, []);
     return (
         a.useEffect(() => {
-            let e = $.current;
+            let e = Q.current;
             if (null != e) {
                 let t = () => (ea.current = !0);
                 return (
@@ -171,14 +171,14 @@ function R(e) {
                                 children: [
                                     (() => {
                                         if (V === A.ag.DETAIL_PAGE)
-                                            return null == Q
+                                            return null == $
                                                 ? null
                                                 : (0, i.jsxs)('div', {
                                                       className: L.activityShelfTitle,
                                                       children: [
                                                           (0, i.jsx)(d.Heading, {
                                                               variant: 'heading-xl/extrabold',
-                                                              children: Q.name
+                                                              children: $.name
                                                           }),
                                                           (0, i.jsxs)(d.Clickable, {
                                                               className: L.headerBackButton,
@@ -237,7 +237,7 @@ function R(e) {
                                 children: (0, i.jsx)(F, {
                                     slide: V,
                                     children: (0, i.jsx)(y.Z, {
-                                        scrollerRef: $,
+                                        scrollerRef: Q,
                                         channel: t,
                                         guildId: n,
                                         locationObject: l,

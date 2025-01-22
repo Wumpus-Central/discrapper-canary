@@ -21,12 +21,12 @@ var i = n(200651),
     v = n(210887),
     S = n(974042),
     T = n(666286),
-    A = n(596957),
-    b = n(981631),
+    b = n(596957),
+    A = n(981631),
     Z = n(723359),
     x = n(388032),
     L = n(224602);
-function P() {
+function y() {
     return (0, i.jsx)('div', {
         className: L.inviteToolbar,
         children: (0, i.jsx)(E.Z, { tooltip: x.intl.string(x.t.HfOgAw) })
@@ -43,17 +43,17 @@ t.Z = function (e) {
                 type: 'AGE_GATE_MODAL_OPEN',
                 source: Z.L0.DEEP_LINK_PROMPT
             }).then(() => {
-                E.replace(b.Z5c.ME);
+                E.replace(A.Z5c.ME);
             });
     }, [E, l]),
         r.useEffect(() => {
-            h.Y(b.Z5c.FRIENDS), (0, N.e)('friends');
+            h.Y(A.Z5c.FRIENDS), (0, N.e)('friends');
         }, []),
         r.useEffect(() => {
             null != t && m.Z.setInitialSection(t);
         }, [t]);
-    let O = (0, c.e7)([v.Z], () => v.Z.theme),
-        { section: y, pendingCount: R } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
+    let P = (0, c.e7)([v.Z], () => v.Z.theme),
+        { section: O, pendingCount: R } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
         j = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
         D = (e) => {
             m.Z.setSection(e);
@@ -66,11 +66,11 @@ t.Z = function (e) {
         children: [
             (0, i.jsx)(p.yY, { location: x.intl.string(x.t.TdEu5e) }),
             (0, i.jsx)(d.ThemeProvider, {
-                theme: O,
+                theme: P,
                 children: (e) =>
                     (0, i.jsxs)(_.Z, {
                         className: e,
-                        toolbar: (0, i.jsx)(P, {}),
+                        toolbar: (0, i.jsx)(y, {}),
                         scrollable: o.tq,
                         role: 'navigation',
                         'aria-labelledby': M,
@@ -86,23 +86,23 @@ t.Z = function (e) {
                             (0, i.jsx)(_.Z.Divider, {}),
                             (0, i.jsxs)(d.TabBar, {
                                 'aria-label': x.intl.string(x.t.TdEu5e),
-                                selectedItem: y,
+                                selectedItem: O,
                                 type: 'top-pill',
                                 onItemSelect: D,
                                 className: L.tabBar,
                                 children: [
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        id: b.pJs.ONLINE,
+                                        id: A.pJs.ONLINE,
                                         className: L.item,
                                         children: x.intl.string(x.t.b9w3bG)
                                     }),
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        id: b.pJs.ALL,
+                                        id: A.pJs.ALL,
                                         className: L.item,
                                         children: x.intl.string(x.t.PfjFjY)
                                     }),
                                     (0, i.jsxs)(d.TabBar.Item, {
-                                        id: b.pJs.PENDING,
+                                        id: A.pJs.PENDING,
                                         className: L.item,
                                         'aria-label': x.intl.string(x.t.p6IHGB),
                                         children: [
@@ -117,7 +117,7 @@ t.Z = function (e) {
                                     }),
                                     j > 0
                                         ? (0, i.jsxs)(d.TabBar.Item, {
-                                              id: b.pJs.SUGGESTIONS,
+                                              id: A.pJs.SUGGESTIONS,
                                               className: L.item,
                                               'aria-label': x.intl.string(x.t['8rSi19']),
                                               children: [
@@ -132,14 +132,14 @@ t.Z = function (e) {
                                     n
                                         ? null
                                         : (0, i.jsx)(d.TabBar.Item, {
-                                              id: b.pJs.BLOCKED,
+                                              id: A.pJs.BLOCKED,
                                               className: L.item,
                                               children: x.intl.string(x.t['4bDptL'])
                                           }),
                                     (0, i.jsx)(d.TabBar.Item, {
                                         'aria-label': x.intl.string(x.t.j0wbEx),
                                         className: a()(L.item, L.addFriend),
-                                        id: b.pJs.ADD_FRIEND,
+                                        id: A.pJs.ADD_FRIEND,
                                         children: (0, i.jsx)('span', { children: x.intl.string(x.t.j0wbEx) })
                                     })
                                 ]
@@ -151,10 +151,10 @@ t.Z = function (e) {
                 className: L.tabBody,
                 children: [
                     (0, i.jsx)(d.TabBar.Panel, {
-                        id: y,
+                        id: O,
                         className: L.peopleColumn,
                         'aria-labelledby': w,
-                        children: y === b.pJs.ADD_FRIEND ? (0, i.jsx)(T.Z, {}) : (0, i.jsx)(A.Z, { titleId: w })
+                        children: O === A.pJs.ADD_FRIEND ? (0, i.jsx)(T.Z, {}) : (0, i.jsx)(b.Z, { titleId: w })
                     }),
                     (0, i.jsx)('div', {
                         className: L.nowPlayingColumn,

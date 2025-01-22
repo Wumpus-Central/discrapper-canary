@@ -1,4 +1,4 @@
-var i, s, l, r;
+var i, r, l, o;
 n.d(t, {
     z: function () {
         return i;
@@ -18,7 +18,7 @@ n.d(t, {
     (l.GUILD_DIRECTORY = 'guild-directory'),
     (l.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR = 'guild-new-member-actions-progress-bar'),
     (l.GUILD_MOD_DASH_MEMBER_SAFETY = 'guild-mod-dash-member-safety'),
-    ((r = s || (s = {})).SPACER = 'spacer'),
-    (r.GUILD_PROGRESS = 'guild-progress'),
-    (r.MFA_WARNING = 'mfa-warning'),
-    (r.LIVE_CHANNEL_NOTICE = 'live-channel-notice');
+    ((o = r || (r = {})).SPACER = 'spacer'),
+    (o.GUILD_PROGRESS = 'guild-progress'),
+    (o.MFA_WARNING = 'mfa-warning'),
+    (o.LIVE_CHANNEL_NOTICE = 'live-channel-notice');

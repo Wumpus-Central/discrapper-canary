@@ -42,8 +42,8 @@ let I = [],
     R = [],
     O = !1,
     D = [],
-    x = l().chain(I),
     L = l().chain(I),
+    x = l().chain(I),
     w = new Set(),
     P = new Set();
 function M(e) {
@@ -70,7 +70,7 @@ function B(e) {
     };
 }
 function G() {
-    (R = []), (i = null), (S = null), (A = new Set()), (C = u.z.LATEST_ACTIVITY), (N = 0), (D = []), (x = l().chain(I)), (L = l().chain(I)), P.clear(), w.clear();
+    (R = []), (i = null), (S = null), (A = new Set()), (C = u.z.LATEST_ACTIVITY), (N = 0), (D = []), (L = l().chain(I)), (x = l().chain(I)), P.clear(), w.clear();
 }
 function Z() {
     var e;
@@ -101,8 +101,8 @@ function V(e) {
         (O = !0)),
         0 !== w.size && ((D = D.filter((e) => !w.has(e))), w.clear()),
         0 !== P.size && ((D = Array.from(new Set([...D, ...P]))), P.clear()),
-        ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((L = l().chain(D).sort(U(u.z.LATEST_ACTIVITY))), (x = l().chain(D).sort(U(u.z.CREATION_DATE))));
-    let r = (C === u.z.LATEST_ACTIVITY ? L : x).value(),
+        ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((x = l().chain(D).sort(U(u.z.LATEST_ACTIVITY))), (L = l().chain(D).sort(U(u.z.CREATION_DATE))));
+    let r = (C === u.z.LATEST_ACTIVITY ? x : L).value(),
         a = (R = 0 === A.size ? r : r.filter(B(A))).find((e) => k(e));
     i = null == a ? null : a;
 }

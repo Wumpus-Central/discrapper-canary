@@ -43,8 +43,8 @@ let N = [A.ff.AUTHENTICATION_FAILED, A.ff.NOT_ENTITLED],
     R = 'DispatchManagerStore',
     O = [],
     D = [],
-    x = !1,
-    L = null,
+    L = !1,
+    x = null,
     w = null,
     P = !1,
     M = new Map(),
@@ -53,13 +53,13 @@ let N = [A.ff.AUTHENTICATION_FAILED, A.ff.NOT_ENTITLED],
 function B() {
     let e = {
         queue: O,
-        paused: x,
+        paused: L,
         userActions: Array.from(M)
     };
     h.K.set(R, e);
 }
 function G(e, n) {
-    return (null != L && L.applicationId === e && L.branchId === n) || (null != w && w.applicationId === e && w.branchId === n) || !1;
+    return (null != x && x.applicationId === e && x.branchId === n) || (null != w && w.applicationId === e && w.branchId === n) || !1;
 }
 function Z() {
     let e = O[0];
@@ -87,7 +87,7 @@ function V(e, n, r, i) {
         s = D.indexOf(a);
     -1 !== s && D.splice(s, 1);
     let l = F(e, n);
-    0 !== l && (r ? -1 === l && (O.push(o), Z()) : (l > 0 && O.splice(l, 1), O.unshift(o), Z())), !r && x && b.Z.resume(), B();
+    0 !== l && (r ? -1 === l && (O.push(o), Z()) : (l > 0 && O.splice(l, 1), O.unshift(o), Z())), !r && L && b.Z.resume(), B();
 }
 function j(e, n) {
     let r = (0, y.Tu)(e, n),
@@ -119,7 +119,7 @@ function q(e) {
     let { applicationId: n, branchId: r } = e,
         i = F(n, r);
     if (i < 1) return !1;
-    O.splice(0, 0, O.splice(i, 1)[0]), Z(), x && b.Z.resume(), B();
+    O.splice(0, 0, O.splice(i, 1)[0]), Z(), L && b.Z.resume(), B();
 }
 function Q(e) {
     let { applicationId: n, branchId: r } = e,
@@ -129,9 +129,9 @@ function Q(e) {
 }
 function X(e) {
     let { state: n } = e;
-    !P && ((P = !0), Z(), !x && b.Z.resume());
-    let r = x;
-    (x = n.paused), (L = n.currentTask), (w = n.nextTask);
+    !P && ((P = !0), Z(), !L && b.Z.resume());
+    let r = L;
+    (L = n.paused), (x = n.currentTask), (w = n.nextTask);
     let i = !1;
     (O = O.filter((e) => {
         let { comboId: n } = e,
@@ -155,7 +155,7 @@ function X(e) {
         return !0;
     })),
         Z(),
-        (i || r !== x) && B();
+        (i || r !== L) && B();
 }
 function J() {
     let e = E.default.getToken(),
@@ -179,7 +179,7 @@ function $(e) {
 function ee() {
     for (let e of g.ZP.getRunningDiscordApplicationIds()) m.al(e, e);
     let e = g.ZP.getVisibleGame();
-    return !x && null != e && e.pid !== U && m.wO(), (U = null == e ? null : e.pid), !1;
+    return !L && null != e && e.pid !== U && m.wO(), (U = null == e ? null : e.pid), !1;
 }
 function et() {
     (0, I.isDesktop)() && J();
@@ -208,7 +208,7 @@ class ei extends (o = p.ZP.Store) {
                       paused: null,
                       userActions: null
                   };
-        null != n.queue && (O = er(n.queue)), null != n.paused && (x = n.paused), null != n.userActions && (M = new Map(Array.from(n.userActions))), this.waitFor(T.Z, g.ZP), this.syncWith([g.ZP], ee), this.waitFor(T.Z);
+        null != n.queue && (O = er(n.queue)), null != n.paused && (L = n.paused), null != n.userActions && (M = new Map(Array.from(n.userActions))), this.waitFor(T.Z, g.ZP), this.syncWith([g.ZP], ee), this.waitFor(T.Z);
     }
     get activeItems() {
         return O.map((e) => {
@@ -220,7 +220,7 @@ class ei extends (o = p.ZP.Store) {
         return D.map(y.CP);
     }
     get paused() {
-        return x;
+        return L;
     }
     getQueuePosition(e, n) {
         return F(e, n);

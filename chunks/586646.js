@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var l = n(200651),
-    r = n(192379),
-    s = n(442837),
+    s = n(192379),
+    r = n(442837),
     i = n(481060),
     o = n(19780),
     a = n(571826),
@@ -18,7 +18,7 @@ var l = n(200651),
     N = n(539992);
 function C(e) {
     let { channelId: t } = e,
-        n = (0, s.e7)([o.Z], () => {
+        n = (0, r.e7)([o.Z], () => {
             var e;
             return null === (e = o.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
@@ -27,7 +27,7 @@ function C(e) {
             chunkSize: x.y6,
             desiredLength: x.YP
         }),
-        f = r.useCallback(() => {
+        f = s.useCallback(() => {
             (0, a.PM)({ channelId: t });
         }, [t]);
     return (0, l.jsxs)('div', {

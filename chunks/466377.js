@@ -12,10 +12,10 @@ r.d(n, {
         return D;
     },
     mz: function () {
-        return x;
+        return L;
     },
     ol: function () {
-        return L;
+        return x;
     },
     xB: function () {
         return R;
@@ -71,16 +71,16 @@ function N(e) {
             'animate-always'
         ),
         D = o.useRef(null),
-        x = null != S['aria-label'],
-        L = null != S['aria-labelledby'],
+        L = null != S['aria-label'],
+        x = null != S['aria-labelledby'],
         w = o.useId(),
         P = null !== (n = S['aria-labelledby']) && void 0 !== n ? n : w,
         M = o.useMemo(
             () => ({
                 headerId: P,
-                headerIdIsManaged: L
+                headerIdIsManaged: x
             }),
-            [P, L]
+            [P, x]
         );
     return (0, a.jsx)(I.zM.Provider, {
         value: M,
@@ -89,7 +89,7 @@ function N(e) {
             role: h,
             returnRef: b,
             impressionType: c.ImpressionTypes.MODAL,
-            'aria-labelledby': x ? void 0 : M.headerId,
+            'aria-labelledby': L ? void 0 : M.headerId,
             ...S,
             children: (0, a.jsx)(u.animated.div, {
                 className: l()(g, A.root, C[s], {
@@ -141,7 +141,7 @@ function D(e) {
         children: (0, a.jsx)(y.HeadingLevel, { children: r })
     });
 }
-function x(e) {
+function L(e) {
     var n, r, i, o, s;
     return (0, a.jsx)(b.Z, {
         grow: 0,
@@ -154,7 +154,7 @@ function x(e) {
         children: (0, a.jsx)(y.HeadingLevel, { children: e.children })
     });
 }
-function L(e) {
+function x(e) {
     return (0, a.jsx)(h.zx, {
         focusProps: e.focusProps,
         'aria-label': S.intl.string(S.t.cpT0Cg),

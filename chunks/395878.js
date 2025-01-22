@@ -1,14 +1,14 @@
-e.d(t, {
+n.d(t, {
     K: function () {
-        return d;
+        return l;
     }
 });
-var i = e(475468),
-    o = e(914010),
-    r = e(585483),
-    l = e(981631);
-let d = {
+var i = n(475468),
+    r = n(914010),
+    s = n(585483),
+    a = n(981631);
+let l = {
     binds: ['mod+shift+t'],
     comboKeysBindGlobal: !0,
-    action: () => (null != o.Z.getGuildId() && (0, i.K)(l.ME), r.S.safeDispatch(l.CkL.TOGGLE_DM_CREATE), !1)
+    action: () => (null != r.Z.getGuildId() && (0, i.K)(a.ME), s.S.safeDispatch(a.CkL.TOGGLE_DM_CREATE), !1)
 };

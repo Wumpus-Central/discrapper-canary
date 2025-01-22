@@ -33,8 +33,8 @@ var s = r(200651),
     R = r(727939),
     O = r(981631),
     D = r(921944),
-    x = r(474936),
-    L = r(388032),
+    L = r(474936),
+    x = r(388032),
     w = r(860768);
 function P() {
     let e = (0, T.q)();
@@ -64,9 +64,9 @@ function k(e) {
             isPreview: i,
             isCoachmark: a
         })
-            .with({ isCoachmark: !0 }, () => L.intl.string(L.t.cpT0Cg))
-            .with({ isPreview: !0 }, () => L.intl.string(L.t['dqH+qq']))
-            .otherwise(() => L.intl.string(L.t.Olc2Ky)),
+            .with({ isCoachmark: !0 }, () => x.intl.string(x.t.cpT0Cg))
+            .with({ isPreview: !0 }, () => x.intl.string(x.t['dqH+qq']))
+            .otherwise(() => x.intl.string(x.t.Olc2Ky)),
         _ = l.useCallback(() => {
             if (1 === n) {
                 (0, p.openModalLazy)(async () => {
@@ -108,7 +108,7 @@ function k(e) {
                         (0, s.jsx)(p.Text, {
                             className: w.footerText,
                             variant: 'text-sm/medium',
-                            children: L.intl.format(L.t.x2dQxM, { onClick: _ })
+                            children: x.intl.format(x.t.x2dQxM, { onClick: _ })
                         })
                     ]
                 }),
@@ -128,10 +128,10 @@ function k(e) {
                     i &&
                         (0, s.jsx)(N.Z, {
                             className: w.footerButton,
-                            subscriptionTier: x.Si.TIER_2,
+                            subscriptionTier: L.Si.TIER_2,
                             showGradient: !0,
                             fullWidth: !0,
-                            buttonText: L.intl.string(L.t.pj0XBA)
+                            buttonText: x.intl.string(x.t.pj0XBA)
                         })
                 ]
             })
@@ -144,11 +144,11 @@ function U(e) {
         o = l.useMemo(
             () => [
                 {
-                    name: L.intl.string(L.t.Ksh3io),
+                    name: x.intl.string(x.t.Ksh3io),
                     value: 0
                 },
                 {
-                    name: L.intl.string(L.t.RPh2oq),
+                    name: x.intl.string(x.t.RPh2oq),
                     value: 1
                 }
             ],
@@ -179,7 +179,7 @@ function U(e) {
                             children: [
                                 (0, s.jsx)(p.Heading, {
                                     variant: 'heading-lg/extrabold',
-                                    children: L.intl.string(L.t.viGN6e)
+                                    children: x.intl.string(x.t.viGN6e)
                                 }),
                                 (0, s.jsx)(p.ModalCloseButton, {
                                     className: w.closeContainer,

@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(838436),
     x = n(51331),
     f = n(726985),
-    _ = n(981631),
-    E = n(388032),
+    E = n(981631),
+    _ = n(388032),
     C = n(82873);
 function T() {
     let e = (0, a.e7)([c.Z], () => c.Z.getGameRelationshipCount()),
@@ -43,7 +43,7 @@ function T() {
                 e.push(i.name);
             }
             let t = n.length - 2;
-            return t > 0 && e.push(E.intl.format(E.t['EADv+/'], { count: t })), e.join(', ');
+            return t > 0 && e.push(_.intl.format(_.t['EADv+/'], { count: t })), e.join(', ');
         }, [n]),
         p = r.useMemo(() => {
             let e = [];
@@ -75,7 +75,7 @@ function T() {
             return e;
         }, [n]),
         x = r.useCallback(() => {
-            o.Z.open(_.oAB.AUTHORIZED_APPS);
+            o.Z.open(E.oAB.AUTHORIZED_APPS);
         }, []);
     return (0, i.jsxs)('div', {
         className: C.header,
@@ -89,7 +89,7 @@ function T() {
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
-                                children: E.intl.format(E.t.iPZSeX, { count: e })
+                                children: _.intl.format(_.t.iPZSeX, { count: e })
                             }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
@@ -110,7 +110,7 @@ function T() {
                 children: (0, i.jsx)(l.Text, {
                     variant: 'text-xs/normal',
                     color: 'interactive-normal',
-                    children: E.intl.format(E.t.oYaYOT, {})
+                    children: _.intl.format(_.t.oYaYOT, {})
                 })
             })
         ]
@@ -124,8 +124,8 @@ function S() {
             (0, i.jsx)(p.U, {
                 setting: f.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
                 children: (0, i.jsx)(x.Z, {
-                    title: E.intl.string(E.t['/U8Iwc']),
-                    note: E.intl.string(E.t.WO2Hlp),
+                    title: _.intl.string(_.t['/U8Iwc']),
+                    note: _.intl.string(_.t.WO2Hlp),
                     value: e,
                     onChange: g._j.updateSetting
                 })

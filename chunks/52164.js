@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
 }),
     n(47120);
@@ -23,15 +23,15 @@ function f(e) {
     let t,
         { subscription: n, withOverheadSeparator: r } = e,
         { analyticsLocations: f } = (0, o.ZP)(),
-        [_] = (0, m.ED)({
+        [E] = (0, m.ED)({
             subscriptionId: n.id,
             renewal: !0,
             analyticsLocations: f,
             analyticsLocation: l.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
-    if (null == _) return null;
-    let E = r ? x.finePrintWithOverheadSeparator : x.finePrint,
-        C = _.invoiceItems.find((e) => {
+    if (null == E) return null;
+    let _ = r ? x.finePrintWithOverheadSeparator : x.finePrint,
+        C = E.invoiceItems.find((e) => {
             let { subscriptionPlanId: t } = e;
             return (0, d.uZ)(t);
         });
@@ -39,7 +39,7 @@ function f(e) {
     let T = C.subscriptionPlanId,
         S = c.Z.get(T);
     s()(null != S, 'Missing plan');
-    let b = (0, u.T4)(_.total, _.currency);
+    let b = (0, u.T4)(E.total, E.currency);
     return (
         S.interval === g.rV.YEAR
             ? (t = p.intl.format(p.t['jPz/39'], {
@@ -66,13 +66,13 @@ function f(e) {
                         })),
         (0, i.jsx)(a.Text, {
             color: 'text-muted',
-            className: E,
+            className: _,
             variant: 'text-xs/normal',
             children: t
         })
     );
 }
-function _(e) {
+function E(e) {
     let { subscription: t, withOverheadSeparator: n } = e;
     return t.status === h.O0b.CANCELED || t.isPurchasedExternally
         ? null

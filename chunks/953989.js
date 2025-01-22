@@ -1,33 +1,33 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return p;
     }
 }),
-    t(47120);
-var a = t(200651),
-    i = t(192379),
-    r = t(120356),
-    l = t.n(r),
-    o = t(442837),
-    s = t(481060),
-    c = t(706454),
-    d = t(388032),
-    u = t(181169);
+    n(47120);
+var i = n(200651),
+    a = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    o = n(442837),
+    s = n(481060),
+    c = n(706454),
+    d = n(388032),
+    u = n(181169);
 let m = (0, d.getAvailableLocales)();
 function p(e) {
-    let { application: n, className: t } = e,
+    let { application: t, className: n } = e,
         r = (0, o.e7)([c.default], () => c.default.locale),
-        { supportedLanguages: p, usersLanguageIsFirst: _ } = i.useMemo(() => {
+        { supportedLanguages: p, usersLanguageIsFirst: h } = a.useMemo(() => {
             var e;
-            if ((null === (e = n.directory_entry) || void 0 === e ? void 0 : e.supported_locales) != null) {
-                let e = new Set(n.directory_entry.supported_locales),
-                    t = e.has(r),
-                    a = m.filter((n) => e.has(n.value));
+            if ((null === (e = t.directory_entry) || void 0 === e ? void 0 : e.supported_locales) != null) {
+                let e = new Set(t.directory_entry.supported_locales),
+                    n = e.has(r),
+                    i = m.filter((t) => e.has(t.value));
                 return (
-                    t && a.sort((e, n) => (e.value === r ? -1 : n.value === r ? 1 : 0)),
+                    n && i.sort((e, t) => (e.value === r ? -1 : t.value === r ? 1 : 0)),
                     {
-                        supportedLanguages: a.map((e) => d.intl.string(e.localizedName)),
-                        usersLanguageIsFirst: t
+                        supportedLanguages: i.map((e) => d.intl.string(e.localizedName)),
+                        usersLanguageIsFirst: n
                     }
                 );
             }
@@ -35,24 +35,24 @@ function p(e) {
                 supportedLanguages: [],
                 usersLanguageIsFirst: !1
             };
-        }, [n.directory_entry, r]);
-    return (0, a.jsxs)('div', {
-        className: t,
+        }, [t.directory_entry, r]);
+    return (0, i.jsxs)('div', {
+        className: n,
         children: [
-            (0, a.jsx)(s.Heading, {
+            (0, i.jsx)(s.Heading, {
                 variant: 'heading-sm/semibold',
                 color: 'header-primary',
                 children: d.intl.string(d.t.Fbjlu7)
             }),
-            (0, a.jsx)('ul', {
+            (0, i.jsx)('ul', {
                 className: u.outerContainer,
-                children: p.map((e, n) =>
-                    (0, a.jsx)(
+                children: p.map((e, t) =>
+                    (0, i.jsx)(
                         'li',
                         {
                             className: l()(u.innerContainer, u.languageItem),
-                            children: (0, a.jsx)(s.Text, {
-                                variant: 0 === n && _ ? 'text-sm/bold' : 'text-sm/normal',
+                            children: (0, i.jsx)(s.Text, {
+                                variant: 0 === t && h ? 'text-sm/bold' : 'text-sm/normal',
                                 children: e
                             })
                         },

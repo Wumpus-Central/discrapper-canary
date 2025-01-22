@@ -37,8 +37,8 @@ let A = !1,
     R = 0,
     O = [],
     D = !1,
-    x = !0,
-    L = Object.freeze([]),
+    L = !0,
+    x = Object.freeze([]),
     w = [];
 function P(e) {
     return (0, m.OT)(e, v.Z);
@@ -62,11 +62,11 @@ function k(e) {
     }
 }
 function U() {
-    (x = !0), (N = C), B();
+    (L = !0), (N = C), B();
 }
 function B() {
     var e;
-    if (((R = null !== (e = E.Z.getIdleSince()) && void 0 !== e ? e : 0), (D = E.Z.isAFK()), x)) C = N;
+    if (((R = null !== (e = E.Z.getIdleSince()) && void 0 !== e ? e : 0), (D = E.Z.isAFK()), L)) C = N;
     else if (A) C = T.Skl.INVISIBLE;
     else {
         let e = h.co.getSetting();
@@ -74,10 +74,10 @@ function B() {
     }
     C === T.Skl.ONLINE && R > 0 && (C = T.Skl.IDLE);
     let n = !1,
-        r = x || C === T.Skl.INVISIBLE ? [] : y.Z.getActivities().filter(k);
+        r = L || C === T.Skl.INVISIBLE ? [] : y.Z.getActivities().filter(k);
     !s()(O, r) && ((O = r), (n = !0));
     let i = I.Z.getRemoteActivities();
-    if ((L !== i && ((L = i), (n = !0)), n)) {
+    if ((x !== i && ((x = i), (n = !0)), n)) {
         let e = O.find((e) => e.type === T.IIU.CUSTOM_STATUS);
         w =
             O.filter((e) => e.type !== T.IIU.CUSTOM_STATUS).length > 0
@@ -85,12 +85,12 @@ function B() {
                 : null != e
                   ? [
                         e,
-                        ...u()(L)
+                        ...u()(x)
                             .filter((e) => e.type !== T.IIU.CUSTOM_STATUS)
                             .uniqBy((e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name))
                             .value()
                     ]
-                  : u().uniqBy(L, (e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name));
+                  : u().uniqBy(x, (e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name));
     }
 }
 function G(e) {
@@ -100,7 +100,7 @@ function Z() {
     return (A = !1), B();
 }
 function F() {
-    (x = !1), (N = T.Skl.UNKNOWN), B(), b.Z.setCurrentUserOnConnectionOpen(C, w);
+    (L = !1), (N = T.Skl.UNKNOWN), B(), b.Z.setCurrentUserOnConnectionOpen(C, w);
 }
 function V() {
     F();

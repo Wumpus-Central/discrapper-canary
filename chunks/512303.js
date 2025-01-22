@@ -12,31 +12,31 @@ var i = t(200651),
     u = t(700582),
     d = t(592180),
     c = t(565138),
-    f = t(598077),
-    g = t(430824),
+    g = t(598077),
+    f = t(430824),
     m = t(594174),
     h = t(388032),
     E = t(500054);
 function I(e) {
     var n, t, I, v;
-    let p = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[r.Y.USER_INSTALL],
-        M = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[r.Y.GUILD_INSTALL],
+    let M = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[r.Y.USER_INSTALL],
+        p = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[r.Y.GUILD_INSTALL],
         Z = null === (I = e.interactionMetadata) || void 0 === I ? void 0 : I.user.id,
-        x = (0, a.e7)([m.default], () => m.default.getUser(p)),
-        S = (0, a.e7)([g.Z], () => g.Z.getGuild(M)),
-        j = (0, a.e7)([m.default], () => m.default.getUser(Z));
+        x = (0, a.e7)([m.default], () => m.default.getUser(M)),
+        S = (0, a.e7)([f.Z], () => f.Z.getGuild(p)),
+        T = (0, a.e7)([m.default], () => m.default.getUser(Z));
     if (
         (l.useEffect(() => {
-            null == x && null != p && (0, s.PR)(p);
-        }, [x, p]),
+            null == x && null != M && (0, s.PR)(M);
+        }, [x, M]),
         !(0, d.a)(e))
     )
         return null;
-    null == j && (j = new f.Z(null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user));
-    let T = null;
+    null == T && (T = new g.Z(null === (v = e.interactionMetadata) || void 0 === v ? void 0 : v.user));
+    let _ = null;
     return (
         null != S
-            ? (T = (0, i.jsx)(o.MenuItem, {
+            ? (_ = (0, i.jsx)(o.MenuItem, {
                   className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
@@ -49,7 +49,7 @@ function I(e) {
                   subtext: h.intl.formatToPlainString(h.t.ShLXXF, { application: e.author.username })
               }))
             : null != x &&
-              (T = (0, i.jsx)(o.MenuItem, {
+              (_ = (0, i.jsx)(o.MenuItem, {
                   className: E.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
@@ -65,18 +65,18 @@ function I(e) {
             id: 'view-interaction-info',
             label: h.intl.string(h.t.Rjezb2),
             children: [
-                T,
-                null != j
+                _,
+                null != T
                     ? (0, i.jsx)(o.MenuItem, {
                           className: E.interactionInfoMenuItem,
                           disabled: !0,
                           iconLeft: () =>
                               (0, i.jsx)(u.Z, {
-                                  user: j,
+                                  user: T,
                                   size: o.AvatarSizes.SIZE_20
                               }),
                           id: 'interaction-user',
-                          label: j.username,
+                          label: T.username,
                           subtext: h.intl.string(h.t['04gxNj'])
                       })
                     : null

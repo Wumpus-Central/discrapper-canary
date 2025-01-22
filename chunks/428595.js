@@ -25,8 +25,8 @@ var s = r(392711),
     R = r(303694),
     O = r(660199),
     D = r(364458),
-    x = r(981631),
-    L = r(689079),
+    L = r(981631),
+    x = r(689079),
     w = r(377668),
     P = r(388032);
 let M = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
@@ -230,7 +230,7 @@ let F = (e) => {
                 }
                 null == o && '@Clyde' === e[0] && (0, d.gJ)(V(r), s) && (a = w.fL);
                 let u = e[1],
-                    c = null != u && x.Xyh.test(u.trim()),
+                    c = null != u && L.Xyh.test(u.trim()),
                     f = c && r.unknownUserMentionPlaceholder ? '@'.concat(P.intl.string(P.t.sKdZ6e)) : e[0];
                 return {
                     userId: a,
@@ -275,7 +275,7 @@ let F = (e) => {
                         id: e[2]
                     };
                 let [, ...i] = e[1].split(' '),
-                    a = ''.concat(e[2]).concat([...i].map((e) => ''.concat(L.oQ).concat(e)).join(''));
+                    a = ''.concat(e[2]).concat([...i].map((e) => ''.concat(x.oQ).concat(e)).join(''));
                 return {
                     channelId: r.channelId,
                     commandId: e[2],
@@ -344,7 +344,7 @@ let F = (e) => {
         spoiler: {
             order: C.ZP.order,
             requiredFirstCharacters: ['|'],
-            match: (e) => x.$92.exec(e),
+            match: (e) => L.$92.exec(e),
             parse: (e, n, r) => ({
                 content: n(e[1], r),
                 channelId: r.channelId
@@ -353,7 +353,7 @@ let F = (e) => {
         staticRouteLink: {
             order: C.ZP.order,
             requiredFirstCharacters: ['<'],
-            match: (e) => x.PEY.exec(e),
+            match: (e) => L.PEY.exec(e),
             parse(e, n, r) {
                 var i;
                 let [, a, o] = e,

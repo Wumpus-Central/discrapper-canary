@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return I;
     }
 }),
     n(653041),
@@ -20,14 +20,14 @@ var i = n(200651),
     g = n(271383),
     x = n(430824),
     f = n(823379),
-    b = n(700785),
-    v = n(388032),
+    v = n(700785),
+    b = n(388032),
     C = n(449650);
-function N(e) {
+function I(e) {
     var t;
-    let { guild: n, applicationIntegration: N } = e,
-        I = (0, a.e7)([x.Z], () => x.Z.getRoles(n.id)),
-        { application: j } = N,
+    let { guild: n, applicationIntegration: I } = e,
+        N = (0, a.e7)([x.Z], () => x.Z.getRoles(n.id)),
+        { application: j } = I,
         T = null != j.bot ? new p.Z(j.bot) : null,
         _ = (0, a.e7)([g.ZP], () => (null != T ? g.ZP.getMember(n.id, T.id) : null), [T, n]),
         Z = null == T ? void 0 : T.id;
@@ -36,12 +36,12 @@ function N(e) {
     }, [n.id, Z]);
     let E = l.useMemo(() => {
         var e, t, i;
-        let l = I[n.getEveryoneRoleId()],
-            a = null !== (t = null == _ ? void 0 : null === (e = _.roles) || void 0 === e ? void 0 : e.map((e) => I[e]).filter(f.lm)) && void 0 !== t ? t : [],
-            o = null !== (i = null == l ? void 0 : l.permissions) && void 0 !== i ? i : b.Hn;
+        let l = N[n.getEveryoneRoleId()],
+            a = null !== (t = null == _ ? void 0 : null === (e = _.roles) || void 0 === e ? void 0 : e.map((e) => N[e]).filter(f.lm)) && void 0 !== t ? t : [],
+            o = null !== (i = null == l ? void 0 : l.permissions) && void 0 !== i ? i : v.Hn;
         for (let e of a) o = r.IH(o, e.permissions);
         return o;
-    }, [n, I, _]);
+    }, [n, N, _]);
     return null == T
         ? null
         : (0, i.jsx)(o.Card, {
@@ -61,7 +61,7 @@ function N(e) {
                               (0, i.jsx)(o.Text, {
                                   color: 'header-primary',
                                   variant: 'text-sm/normal',
-                                  children: v.intl.format(v.t.GyhzGx, { user: T.toString() })
+                                  children: b.intl.format(b.t.GyhzGx, { user: T.toString() })
                               }),
                               (0, i.jsx)(u.Z, {
                                   className: C.tag,
@@ -81,7 +81,7 @@ function N(e) {
                                             children: [
                                                 (0, i.jsx)(o.FormTitle, {
                                                     className: C.permissionHeader,
-                                                    children: v.intl.format(v.t.PCs0oq, { numRoles: n.length })
+                                                    children: b.intl.format(b.t.PCs0oq, { numRoles: n.length })
                                                 }),
                                                 (0, i.jsx)(d.ZP, {
                                                     className: C.rolePills,
@@ -97,9 +97,9 @@ function N(e) {
                                   a.length > 0 || s.length > 0
                                       ? (0, i.jsx)(c.Z, {
                                             grantedPermissions: a,
-                                            grantedPermissionsHeader: v.intl.string(v.t['hA4+sr']),
+                                            grantedPermissionsHeader: b.intl.string(b.t['hA4+sr']),
                                             disabledPermissions: s,
-                                            disabledPermissionsHeader: v.intl.string(v.t['/rEZ2t'])
+                                            disabledPermissionsHeader: b.intl.string(b.t['/rEZ2t'])
                                         })
                                       : null
                               ]

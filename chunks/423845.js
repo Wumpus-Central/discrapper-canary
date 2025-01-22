@@ -25,8 +25,8 @@ var i = r(620014),
     R = 4,
     O = '[object Arguments]',
     D = '[object Array]',
-    x = '[object Boolean]',
-    L = '[object Date]',
+    L = '[object Boolean]',
+    x = '[object Date]',
     w = '[object Error]',
     P = '[object Function]',
     M = '[object GeneratorFunction]',
@@ -50,12 +50,12 @@ var i = r(620014),
     $ = '[object Uint16Array]',
     ee = '[object Uint32Array]',
     et = {};
-function en(e, n, r, D, x, L) {
+function en(e, n, r, D, L, x) {
     var w,
         k = n & C,
         U = n & N,
         G = n & R;
-    if ((r && (w = x ? r(e, D, x, L) : r(e)), void 0 !== w)) return w;
+    if ((r && (w = L ? r(e, D, L, x) : r(e)), void 0 !== w)) return w;
     if (!I(e)) return e;
     var Z = v(e);
     if (Z) {
@@ -64,32 +64,32 @@ function en(e, n, r, D, x, L) {
         var F = _(e),
             V = F == P || F == M;
         if (y(e)) return u(e, k);
-        if (F == B || F == O || (V && !x)) {
+        if (F == B || F == O || (V && !L)) {
             if (((w = U || V ? {} : E(e)), !k)) return U ? f(e, l(w, e)) : d(e, s(w, e));
         } else {
-            if (!et[F]) return x ? e : {};
+            if (!et[F]) return L ? e : {};
             w = g(e, F, k);
         }
     }
-    L || (L = new i());
-    var j = L.get(e);
+    x || (x = new i());
+    var j = x.get(e);
     if (j) return j;
-    L.set(e, w),
+    x.set(e, w),
         T(e)
             ? e.forEach(function (i) {
-                  w.add(en(i, n, r, i, e, L));
+                  w.add(en(i, n, r, i, e, x));
               })
             : b(e) &&
               e.forEach(function (i, a) {
-                  w.set(a, en(i, n, r, a, e, L));
+                  w.set(a, en(i, n, r, a, e, x));
               });
     var H = G ? (U ? h : p) : U ? A : S,
         Y = Z ? void 0 : H(e);
     return (
         a(Y || e, function (i, a) {
-            Y && (i = e[(a = i)]), o(w, a, en(i, n, r, a, e, L));
+            Y && (i = e[(a = i)]), o(w, a, en(i, n, r, a, e, x));
         }),
         w
     );
 }
-(et[O] = et[D] = et[H] = et[Y] = et[x] = et[L] = et[W] = et[K] = et[z] = et[q] = et[Q] = et[k] = et[U] = et[B] = et[G] = et[Z] = et[F] = et[V] = et[X] = et[J] = et[$] = et[ee] = !0), (et[w] = et[P] = et[j] = !1), (e.exports = en);
+(et[O] = et[D] = et[H] = et[Y] = et[L] = et[x] = et[W] = et[K] = et[z] = et[q] = et[Q] = et[k] = et[U] = et[B] = et[G] = et[Z] = et[F] = et[V] = et[X] = et[J] = et[$] = et[ee] = !0), (et[w] = et[P] = et[j] = !1), (e.exports = en);

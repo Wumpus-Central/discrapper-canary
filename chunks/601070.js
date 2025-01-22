@@ -40,14 +40,14 @@ function D() {
     for (let e in ((I = {}), (C = {}), (T = {}), (S = {}), (A = {}), (R = _.Z.getChannelId()), O)) clearTimeout(O[e]);
     (O = {}),
         g.Z.forEachGuild((e) => {
-            L(e);
+            x(e);
         }),
         w();
 }
-function x(e) {
-    for (let n in (delete I[e], delete C[e], delete T[e], delete S[e], delete A[e], L(e), S[e])) M(e, n);
-}
 function L(e) {
+    for (let n in (delete I[e], delete C[e], delete T[e], delete S[e], delete A[e], x(e), S[e])) M(e, n);
+}
+function x(e) {
     let n = g.Z.getThreadsForGuild(e);
     for (let e in n)
         for (let r in n[e]) {
@@ -188,15 +188,15 @@ function j() {
     w();
 }
 function H(e) {
-    if (e.channels.length > 0) return x(e.guildId);
+    if (e.channels.length > 0) return L(e.guildId);
 }
 function Y(e) {
     let { guild: n } = e;
-    return x(n.id);
+    return L(n.id);
 }
 function W(e) {
     let { guildId: n } = e;
-    return x(n);
+    return L(n);
 }
 function K(e) {
     V(e), z();

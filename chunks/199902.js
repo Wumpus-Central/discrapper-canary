@@ -34,8 +34,8 @@ function D(e, n, r) {
         e
     );
 }
-let x = null,
-    L = {},
+let L = null,
+    x = {},
     w = null;
 function P() {
     (i = new Map()), (a = {}), (o = {}), (s = {});
@@ -93,7 +93,7 @@ function F(e) {
             ...r,
             state: R.jm8.CONNECTING
         }),
-        r.ownerId === y.default.getId() && (L[r.channelId] = !1);
+        r.ownerId === y.default.getId() && (x[r.channelId] = !1);
 }
 function V(e) {
     var n;
@@ -143,13 +143,13 @@ function Y(e) {
 function W(e) {
     let { id: n, channelId: r } = e;
     if (
-        ((x = n),
+        ((L = n),
         Array.from(i.values()).forEach((e) => {
-            (0, m.V9)(e) !== x && e.state === R.jm8.ENDED && U((0, m.V9)(e));
+            (0, m.V9)(e) !== L && e.state === R.jm8.ENDED && U((0, m.V9)(e));
         }),
         null != n)
     )
-        (0, m.DB)(n) && n.includes(y.default.getId()) && (L[r] = !1);
+        (0, m.DB)(n) && n.includes(y.default.getId()) && (x[r] = !1);
 }
 function K(e) {
     let { streamKey: n, unavailable: a, reason: s } = e;
@@ -174,7 +174,7 @@ function K(e) {
         ...l,
         state: u
     }),
-        u === R.jm8.ENDED && x !== n && U(n);
+        u === R.jm8.ENDED && L !== n && U(n);
 }
 function z(e) {
     let { streamKey: n } = e,
@@ -206,7 +206,7 @@ function q(e) {
 }
 function Q(e) {
     let { channelId: n, selfStreamHidden: r } = e;
-    (0, m.DB)(x) && (null == x ? void 0 : x.includes(y.default.getId())) && !1 === L[n] && !0 === r && (x = null), (L[n] = r);
+    (0, m.DB)(L) && (null == L ? void 0 : L.includes(y.default.getId())) && !1 === x[n] && !0 === r && (L = null), (x[n] = r);
 }
 function X(e) {
     let { intent: n } = e;
@@ -224,14 +224,14 @@ function $(e) {
 P();
 class ee extends (l = f.ZP.PersistedStore) {
     initialize(e) {
-        this.syncWith([S.Z], () => !0), this.waitFor(_.ZP, S.Z), (null == e ? void 0 : e.selfStreamParticipantsHidden) !== void 0 && Object.assign(L, null == e ? void 0 : e.selfStreamParticipantsHidden);
+        this.syncWith([S.Z], () => !0), this.waitFor(_.ZP, S.Z), (null == e ? void 0 : e.selfStreamParticipantsHidden) !== void 0 && Object.assign(x, null == e ? void 0 : e.selfStreamParticipantsHidden);
     }
     getState() {
-        return { selfStreamParticipantsHidden: L };
+        return { selfStreamParticipantsHidden: x };
     }
     isSelfStreamHidden(e) {
         var n;
-        return null !== (n = L[e]) && void 0 !== n && n;
+        return null !== (n = x[e]) && void 0 !== n && n;
     }
     getLastActiveStream() {
         var e;

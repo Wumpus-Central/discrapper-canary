@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var i = n(200651);
@@ -19,8 +19,8 @@ var r = n(100527),
     p = n(154784),
     x = n(267006),
     f = n(726985),
-    _ = n(388032);
-function E() {
+    E = n(388032);
+function _() {
     let e = (0, o.Z)(),
         { analyticsLocations: t } = (0, s.ZP)([r.Z.USER_SETTINGS_VIDEO_TAB]);
     return (0, i.jsxs)(s.Gt, {
@@ -36,14 +36,14 @@ function E() {
                 ]
             }),
             (0, i.jsx)(a.Z, {
-                title: _.intl.string(_.t.KDdjoq),
+                title: E.intl.string(E.t.KDdjoq),
                 webSetting: f.s6.VOICE_AND_VIDEO_VIDEO_STREAMING,
                 children: (0, i.jsxs)(l.Z, {
                     children: [(0, i.jsx)(h.Z, { refreshStyles: !0 }), e && (0, i.jsx)(g.Z, { refreshStyles: !0 }), (0, i.jsx)(m.Z, { refreshStyles: !0 })]
                 })
             }),
             (0, i.jsx)(a.Z, {
-                title: _.intl.string(_.t['8/udY2']),
+                title: E.intl.string(E.t['8/udY2']),
                 webSetting: f.s6.VOICE_AND_VIDEO_VIDEO_ADVANCED,
                 children: (0, i.jsx)(l.Z, { children: (0, i.jsx)(x.Z, { refreshStyles: !0 }) })
             })

@@ -19,16 +19,16 @@ t.Z = (e) => {
         p = n.toString(),
         x = n.getIconURL(40, !0),
         f = null,
-        _ = h[h.length - 1];
+        E = h[h.length - 1];
     if (null == n.icon && null != p) {
-        var E;
-        _ = null !== (E = h[(f = (0, a.Zg)(p)).length - 1]) && void 0 !== E ? E : h[h.length - 1];
+        var _;
+        E = null !== (_ = h[(f = (0, a.Zg)(p)).length - 1]) && void 0 !== _ ? _ : h[h.length - 1];
     }
     return (0, i.jsxs)('div', {
         className: g.container,
         children: [
             (0, i.jsxs)('div', {
-                style: { fontSize: _ },
+                style: { fontSize: E },
                 children: [
                     null != f
                         ? (0, i.jsx)('div', {

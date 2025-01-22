@@ -48,7 +48,7 @@ r.d(n, {
         return F;
     },
     tG: function () {
-        return x;
+        return L;
     },
     vx: function () {
         return M;
@@ -104,7 +104,7 @@ let C = {
         [A.TI.FRIENDS_AND_NON_FRIENDS.valueOf()]: c.Q4.BLOCK
     },
     D = 1,
-    x = (e) => {
+    L = (e) => {
         let { setting: n, isDm: r = !1, isFriend: i = !1 } = e;
         if (null != n && n !== c.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return n;
         let a = E.default.getCurrentUser();
@@ -113,12 +113,12 @@ let C = {
                   isDm: r,
                   isFriend: i
               })
-            : L({
+            : x({
                   isDm: r,
                   isFriend: i
               });
     },
-    L = (e) => {
+    x = (e) => {
         let { isDm: n = !1, isFriend: r = !1 } = e;
         if (!n) return c.Q4.SHOW;
         let i = _.UP.getSetting();
@@ -133,12 +133,12 @@ let C = {
     P = () => {
         let e = _.Sh.getSetting();
         return {
-            explicitContentGuilds: x({ setting: null == e ? void 0 : e.explicitContentGuilds }),
-            explicitContentNonFriendDm: x({
+            explicitContentGuilds: L({ setting: null == e ? void 0 : e.explicitContentGuilds }),
+            explicitContentNonFriendDm: L({
                 setting: null == e ? void 0 : e.explicitContentNonFriendDm,
                 isDm: !0
             }),
-            explicitContentFriendDm: x({
+            explicitContentFriendDm: L({
                 setting: null == e ? void 0 : e.explicitContentFriendDm,
                 isDm: !0,
                 isFriend: !0

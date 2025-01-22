@@ -149,7 +149,7 @@ let b = (e) => {
                         })
                 });
         if (!s) return D();
-        let x = (e) =>
+        let L = (e) =>
             (0, a.jsx)(_.vk, {
                 ...e,
                 node: n,
@@ -165,7 +165,7 @@ let b = (e) => {
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
             position: 'right',
-            renderPopout: x,
+            renderPopout: L,
             positionKey: b,
             children: D
         });

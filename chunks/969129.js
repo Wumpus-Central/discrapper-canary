@@ -73,12 +73,12 @@ function d(e) {
         [N, R] = (0, i.useState)(s),
         O = (0, i.useRef)(s),
         D = () => {
-            if (!x) return;
-            L(!1);
+            if (!L) return;
+            x(!1);
             let e = E || c || C.current;
             !_(e, O.current) && ((O.current = e), R(e));
         },
-        [x, L] = (0, i.useState)(!1);
+        [L, x] = (0, i.useState)(!1);
     return (
         (0, i.useEffect)(D),
         {
@@ -89,10 +89,10 @@ function d(e) {
             },
             resetValidation() {
                 let e = s;
-                !_(e, O.current) && ((O.current = e), R(e)), 'native' === m && L(!1), S(!0);
+                !_(e, O.current) && ((O.current = e), R(e)), 'native' === m && x(!1), S(!0);
             },
             commitValidation() {
-                'native' === m && L(!0), S(!0);
+                'native' === m && x(!0), S(!0);
             }
         }
     );

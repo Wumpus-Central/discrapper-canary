@@ -15,7 +15,7 @@ t.Z = (e) => {
     var t;
     let n,
         r,
-        { title: p, titleClassName: x, buttonClassName: f, perkImage: _, isCarousel: E, onCtaClick: C, perkComponent: T, subtitle: S = '', descriptionCta: b = '', cardVariant: I, subtitleClassName: N, imageOverlayText: v } = e,
+        { title: p, titleClassName: x, buttonClassName: f, perkImage: E, isCarousel: _, onCtaClick: C, perkComponent: T, subtitle: S = '', descriptionCta: b = '', cardVariant: I, subtitleClassName: N, imageOverlayText: v } = e,
         A = (0, o._)(I),
         j = (0, l.yQ)(),
         O = (null == j ? void 0 : j.nitroTenureStatus) === d.EB.REDEEMABLE;
@@ -44,14 +44,14 @@ t.Z = (e) => {
                 subtitle: S,
                 subtitleClassName: N
             }),
-            null != _ &&
+            null != E &&
                 (0, i.jsxs)('div', {
-                    className: s()(u.relative, { [u.cardImage]: !E }),
+                    className: s()(u.relative, { [u.cardImage]: !_ }),
                     children: [
                         (0, i.jsx)('img', {
-                            src: _,
+                            src: E,
                             alt: '',
-                            className: E ? (R ? u.carouselCardImageGrayscale : u.carouselCardImage) : ''
+                            className: _ ? (R ? u.carouselCardImageGrayscale : u.carouselCardImage) : ''
                         }),
                         R
                             ? (0, i.jsx)('div', {

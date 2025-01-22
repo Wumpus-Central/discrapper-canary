@@ -58,7 +58,7 @@ function m(e) {
             })
         });
     }
-    function x() {
+    function L() {
         let e = c()(n)
                 .take(i)
                 .map((e) => {
@@ -127,6 +127,6 @@ function m(e) {
         ? null
         : (0, a.jsx)('div', {
               className: l()(m, _.avatars),
-              children: x()
+              children: L()
           });
 }

@@ -37,10 +37,10 @@ let T = new Set(),
     R = {},
     O = 10 * v.Z.Millis.MINUTE,
     D = 6 * v.Z.Millis.HOUR,
-    x = 10 * v.Z.Millis.MINUTE,
-    L = new c.V7();
+    L = 10 * v.Z.Millis.MINUTE,
+    x = new c.V7();
 function w(e) {
-    L.start(e + Math.random() * O, f.o);
+    x.start(e + Math.random() * O, f.o);
 }
 function P() {
     return w(D), M();
@@ -130,10 +130,10 @@ function H(e) {
     w(D);
 }
 function Y() {
-    w(x);
+    w(L);
 }
 function W() {
-    L.stop();
+    x.stop();
 }
 function K(e) {
     let { entitlements: n } = e;

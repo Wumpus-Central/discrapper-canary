@@ -22,7 +22,7 @@ function h(e) {
         p = (0, c.useToken)(m).spring({ opacity: 0.1 }),
         x = (0, c.useToken)(m).spring({ opacity: 0 }),
         f = (0, c.useToken)(m).spring({ opacity: 1 }),
-        [_, E] = (0, c.useSpring)(
+        [E, _] = (0, c.useSpring)(
             () => ({
                 from: {
                     backgroundColor: h,
@@ -50,7 +50,7 @@ function h(e) {
             let { startColor: e, handleRest: t, endColor: n, targetBorderColor: i, targetColor: r, animationDelay: s } = T.current,
                 { useReducedMotion: a } = u.Z,
                 l = a ? 0 : 200;
-            E({
+            _({
                 reset: !0,
                 immediate: !1,
                 to: {
@@ -62,7 +62,7 @@ function h(e) {
                     easing: o.Z.Easing.ease
                 }
             }),
-                E({
+                _({
                     delay: s,
                     immediate: a,
                     to: [
@@ -76,7 +76,7 @@ function h(e) {
                         easing: o.Z.Easing.ease
                     }
                 }),
-                E({
+                _({
                     delay: s + 200 + 200,
                     immediate: a,
                     to: [
@@ -91,9 +91,9 @@ function h(e) {
                     },
                     onRest: t
                 });
-        }, [E]),
+        }, [_]),
         (0, i.jsx)(l.animated.div, {
-            style: _,
+            style: E,
             className: a()(g.settingsItemHighlight, n),
             children: t
         })
