@@ -19125,7 +19125,8 @@ span.clanTag_a31c43 {
     justify-content: center;
     align-items: center;
     gap: 3px;
-    text-transform: uppercase
+    text-transform: uppercase;
+    cursor: pointer
 }
 
 .badge_ba89c1 {
