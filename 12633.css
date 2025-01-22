@@ -10855,7 +10855,8 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     border-radius: 0 0 8px 8px;
     color: var(--white-500);
     background-color: var(--brand-500);
-    box-shadow: var(--elevation-low)
+    box-shadow: var(--elevation-low);
+    justify-content: space-between
 }
 
 .newTopicsBarContainer_cf58b5:active {
@@ -10865,10 +10866,6 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 @media(max-width:914px) {
     .newTopicsBarCompact_cf58b5 {
         display: none
-    }
-
-    .newTopicsBarInitial_cf58b5 .newTopicsBarCenter_cf58b5 {
-        left: 33%
     }
 
     .newTopicsBarText_cf58b5 .topicsPillDropdownCaret_cf58b5 {
@@ -10914,7 +10911,12 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 }
 
 .newTopicsBarInitial_cf58b5 {
-    position: static
+    display: flex;
+    align-items: center;
+    text-transform: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
 }
 
 .newTopicsBarTextUnselected_cf58b5 {
