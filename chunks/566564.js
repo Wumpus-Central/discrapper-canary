@@ -9,227 +9,196 @@ var r = n(200651),
     d = n(481060),
     u = n(594174),
     m = n(960048),
-    h = n(381585),
-    g = n(597688),
-    p = n(606414),
-    f = n(67696),
-    C = n(744112),
-    b = n(223143),
-    v = n(364111),
-    x = n(937510),
-    _ = n(752053),
-    k = n(38900),
-    I = n(709999),
-    S = n(81136),
-    E = n(953655),
-    j = n(580914),
-    T = n(957058),
-    B = n(215023),
-    N = n(388032),
-    y = n(218142);
-let L = (e) => {
-    let { handleTransition: t } = e,
-        { noCache: n, includeUnpublished: i } = (0, S.Z)(),
+    h = n(597688),
+    g = n(606414),
+    p = n(67696),
+    f = n(744112),
+    C = n(223143),
+    b = n(364111),
+    v = n(752053),
+    x = n(81136),
+    _ = n(953655),
+    k = n(548685),
+    I = n(580914),
+    S = n(215023),
+    E = n(388032),
+    j = n(218142);
+let T = (e) => {
+    let { handleTransition: t, numVisibleItems: n, isFetchingCategories: i } = e,
+        { noCache: l, includeUnpublished: s } = (0, x.Z)(),
         {
-            isFetchingShopHome: l,
-            fetchShopHomeError: s,
-            shopBlocks: c,
-            refreshShopHome: d
-        } = (0, v.E)({
-            noCache: n,
-            includeUnpublished: i,
+            isFetchingShopHome: c,
+            fetchShopHomeError: d,
+            shopBlocks: u,
+            refreshShopHome: m
+        } = (0, b.E)({
+            noCache: l,
+            includeUnpublished: s,
             includeBundles: !0
         }),
-        u = a.useCallback(() => {
-            d();
-        }, [d]);
-    return null != s
-        ? (0, r.jsx)(_.Z, {
-              onRetry: u,
-              errorOrigin: _.i.SHOP_PAGE,
-              errorMessage: s.message
+        h = a.useCallback(() => {
+            m();
+        }, [m]);
+    return null != d
+        ? (0, r.jsx)(v.Z, {
+              onRetry: h,
+              errorOrigin: v.i.SHOP_PAGE,
+              errorMessage: d.message
           })
-        : l || 0 === c.length
+        : c || 0 === u.length
           ? (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(j.Z, {
-                        isLoading: l,
+                    (0, r.jsx)(I.Z, {
+                        isLoading: c,
                         handleTransition: t
                     }),
-                    (0, r.jsx)(E.Z, {
-                        isLoading: l,
+                    (0, r.jsx)(_.Z, {
+                        isLoading: c,
                         handleTransition: t,
                         categories: []
+                    }),
+                    (0, r.jsx)(k.Z, {
+                        isLoading: c,
+                        handleTransition: t,
+                        numVisibleItems: n,
+                        rankedSkuIds: []
                     })
                 ]
             })
-          : (0, r.jsx)(r.Fragment, {
-                children: c.map((e, n) => {
-                    if (null == e) return null;
-                    switch (e.type) {
-                        case o.z.HERO:
-                            return (0, r.jsx)(
-                                j.Z,
-                                {
-                                    isLoading: l,
-                                    handleTransition: t,
-                                    heroBlock: e
-                                },
-                                n
-                            );
-                        case o.z.FEATURED:
-                            return (0, r.jsx)(
-                                E.Z,
-                                {
-                                    isLoading: l,
-                                    handleTransition: t,
-                                    featuredBlockRecord: e
-                                },
-                                n
-                            );
-                        default:
-                            return null;
-                    }
-                })
+          : (0, r.jsxs)(r.Fragment, {
+                children: [
+                    u.map((e, a) => {
+                        if (null == e) return null;
+                        switch (e.type) {
+                            case o.z.HERO:
+                                return (0, r.jsx)(
+                                    I.Z,
+                                    {
+                                        isLoading: c,
+                                        handleTransition: t,
+                                        heroBlock: e
+                                    },
+                                    a
+                                );
+                            case o.z.FEATURED:
+                                return (0, r.jsx)(
+                                    _.Z,
+                                    {
+                                        isLoading: c,
+                                        handleTransition: t,
+                                        featuredBlockRecord: e
+                                    },
+                                    a
+                                );
+                            case o.z.FEED:
+                                return (0, r.jsx)(
+                                    k.Z,
+                                    {
+                                        isLoading: c || i,
+                                        handleTransition: t,
+                                        numVisibleItems: n,
+                                        rankedSkuIds: e.rankedSkuIds
+                                    },
+                                    a
+                                );
+                            default:
+                                return null;
+                        }
+                    }),
+                    !u.some((e) => (null == e ? void 0 : e.type) === o.z.FEED) &&
+                        (0, r.jsx)(k.Z, {
+                            isLoading: i,
+                            numVisibleItems: n,
+                            handleTransition: () => t('shop all top'),
+                            rankedSkuIds: S.yo
+                        })
+                ]
             });
 };
 t.Z = (e) => {
     var t;
     let { isFullScreen: n, handleTransition: i, numVisibleItems: o } = e,
-        { categories: v, isFetchingCategories: P, fetchCategoriesError: Z, fetchPurchasesError: O, claimError: w, refreshCategories: A } = (0, b.ZP)({ location: 'CollectiblesFeedShop' }),
-        R = null !== (t = null != Z ? Z : O) && void 0 !== t ? t : w,
-        F = Array.from(v.values()),
-        H = (0, c.e7)([u.default], () => u.default.getCurrentUser()),
-        D = (0, f.n)('CollectiblesFeedShop'),
-        V = (0, p.c)('CollectiblesFeedShop') && null != g.Z.getCategory(s.T.ROBERT),
-        M = a.createRef(),
-        W = (0, C.b)('Collectibles Shop Button'),
-        { noCache: U, includeUnpublished: G } = (0, S.Z)(),
-        z = (0, T.u)(),
-        $ = F[0],
-        K = [F[1], g.Z.getCategory(V ? s.T.ROBERT : s.T.ANIME_V2)],
-        q = a.useCallback(() => {
-            A();
-        }, [A]),
-        J = a.useMemo(() => z(B.yo), [P, z]),
-        Y = (0, x.l)(J);
-    if (null == H) return null;
-    if (null != R) {
+        { categories: b, isFetchingCategories: B, fetchCategoriesError: L, fetchPurchasesError: y, claimError: N, refreshCategories: P } = (0, C.ZP)({ location: 'CollectiblesFeedShop' }),
+        Z = null !== (t = null != L ? L : y) && void 0 !== t ? t : N,
+        O = Array.from(b.values()),
+        w = (0, c.e7)([u.default], () => u.default.getCurrentUser()),
+        A = (0, p.n)('CollectiblesFeedShop'),
+        R = (0, g.c)('CollectiblesFeedShop') && null != h.Z.getCategory(s.T.ROBERT),
+        F = (0, f.b)('Collectibles Shop Button'),
+        { noCache: H, includeUnpublished: V } = (0, x.Z)(),
+        D = O[0],
+        M = [O[1], h.Z.getCategory(R ? s.T.ROBERT : s.T.ANIME_V2)],
+        W = a.useCallback(() => {
+            P();
+        }, [P]);
+    if (null == w) return null;
+    if (null != Z) {
         let e = [];
-        null != Z ? e.push('shop load fetch categories error: '.concat(R.message)) : null != O ? e.push('shop load fetch purchase error: '.concat(R.message)) : e.push('shop load claim error: '.concat(R.message)),
+        null != L ? e.push('shop load fetch categories error: '.concat(Z.message)) : null != y ? e.push('shop load fetch purchase error: '.concat(Z.message)) : e.push('shop load claim error: '.concat(Z.message)),
             m.Z.captureMessage(e.join('\n'), {
                 tags: {
-                    isStaff: H.isStaff().toString(),
-                    preloadEnabled: W.toString(),
-                    disableCache: U.toString(),
-                    includeUnpublished: G.toString()
+                    isStaff: w.isStaff().toString(),
+                    preloadEnabled: F.toString(),
+                    disableCache: H.toString(),
+                    includeUnpublished: V.toString()
                 }
             });
     }
-    return null != Z
-        ? (0, r.jsx)(_.Z, {
-              onRetry: q,
-              errorOrigin: _.i.SHOP_PAGE,
-              errorMessage: Z.message
+    return null != L
+        ? (0, r.jsx)(v.Z, {
+              onRetry: W,
+              errorOrigin: v.i.SHOP_PAGE,
+              errorMessage: L.message
           })
         : (0, r.jsx)(r.Fragment, {
               children: (0, r.jsx)('div', {
-                  className: l()(y.shop, { [y.shopFullscreen]: n }),
+                  className: l()(j.shop, { [j.shopFullscreen]: n }),
                   children: (0, r.jsxs)('div', {
-                      className: l()(y.content, y.mainContent),
+                      className: l()(j.content, j.mainContent),
                       children: [
-                          D
-                              ? (0, r.jsx)(L, { handleTransition: i })
+                          A
+                              ? (0, r.jsx)(T, {
+                                    handleTransition: i,
+                                    numVisibleItems: o,
+                                    isFetchingCategories: B
+                                })
                               : (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)(j.Z, {
-                                            isLoading: P,
+                                        (0, r.jsx)(I.Z, {
+                                            isLoading: B,
                                             handleTransition: i,
-                                            category: $
+                                            category: D
                                         }),
-                                        (0, r.jsx)(E.Z, {
-                                            isLoading: P,
+                                        (0, r.jsx)(_.Z, {
+                                            isLoading: B,
                                             handleTransition: i,
-                                            categories: K
+                                            categories: M
+                                        }),
+                                        (0, r.jsx)(k.Z, {
+                                            isLoading: B,
+                                            numVisibleItems: o,
+                                            handleTransition: () => i('shop all top'),
+                                            rankedSkuIds: S.yo
                                         })
                                     ]
                                 }),
-                          (0, r.jsxs)('div', {
-                              className: l()(y.row, y.between, y.section, y.popularPicksSection),
-                              children: [
-                                  (0, r.jsxs)('div', {
-                                      className: y.popularPicksHeader,
-                                      children: [
-                                          (0, r.jsx)(d.Heading, {
-                                              variant: 'heading-lg/semibold',
-                                              children: N.intl.string(N.t.ivaAAw)
-                                          }),
-                                          (0, r.jsxs)(d.Clickable, {
-                                              className: y.shopAll,
-                                              onClick: () => i('shop all top'),
-                                              children: [
-                                                  (0, r.jsx)(d.ServerGridIcon, {}),
-                                                  (0, r.jsx)(d.Text, {
-                                                      variant: 'text-sm/medium',
-                                                      children: N.intl.string(N.t.xFcotb)
-                                                  })
-                                              ]
-                                          })
-                                      ]
-                                  }),
-                                  (0, r.jsx)('div', {
-                                      className: y.feed,
-                                      ref: M,
-                                      children: P
-                                          ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(k.K, {}, t + 1)) })
-                                          : (0, r.jsx)(r.Fragment, {
-                                                children: Y.slice(0, o).map((e, t) => {
-                                                    let n = g.Z.getCategoryForProduct(e.skuId);
-                                                    return null == e || null == n
-                                                        ? null
-                                                        : (0, r.jsx)(
-                                                              h.k0,
-                                                              {
-                                                                  newValue: {
-                                                                      tilePosition: t,
-                                                                      pageSection: 'popular picks',
-                                                                      categoryPosition: 2
-                                                                  },
-                                                                  children: (0, r.jsx)(
-                                                                      I.Z,
-                                                                      {
-                                                                          product: e,
-                                                                          category: n,
-                                                                          user: H,
-                                                                          isInFeedView: !0
-                                                                      },
-                                                                      e.skuId
-                                                                  )
-                                                              },
-                                                              null == e ? void 0 : e.skuId
-                                                          );
-                                                })
-                                            })
-                                  })
-                              ]
-                          }),
-                          o >= B.iA &&
+                          o >= S.iA &&
                               (0, r.jsxs)('div', {
-                                  className: y.endOfFeed,
+                                  className: j.endOfFeed,
                                   children: [
                                       (0, r.jsx)(d.Heading, {
                                           variant: 'heading-md/semibold',
-                                          children: N.intl.string(N.t.Yr70c3)
+                                          children: E.intl.string(E.t.Yr70c3)
                                       }),
                                       (0, r.jsx)(d.Button, {
-                                          className: y.endOfFeedButton,
+                                          className: j.endOfFeedButton,
                                           onClick: () => {
                                               i('shop all bottom', void 0, !0);
                                           },
                                           children: (0, r.jsx)(d.Text, {
                                               variant: 'text-md/medium',
                                               color: 'always-white',
-                                              children: N.intl.string(N.t.AfrvRE)
+                                              children: E.intl.string(E.t.AfrvRE)
                                           })
                                       })
                                   ]

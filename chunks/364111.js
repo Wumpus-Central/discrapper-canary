@@ -16,34 +16,36 @@ function u(e) {
     let t = (0, r.e7)([l.Z], () => l.Z.hasLoadedExperiments),
         n = (0, d.hv)('useMaybeFetchCollectiblesShopHome'),
         u = (0, c.n)('useMaybeFetchCollectiblesShopHome'),
-        h = (0, a.isDesktop)() || (0, a.isWeb)(),
-        [m, p, g, f, _, E] = (0, r.Wu)([o.Z], () => {
+        h = (0, c.N)('useMaybeFetchCollectiblesShopHome'),
+        m = (0, a.isDesktop)() || (0, a.isWeb)(),
+        [p, g, f, _, E, I] = (0, r.Wu)([o.Z], () => {
             var e, t;
             return [o.Z.shopBlocks, null !== (e = o.Z.lastSuccessfulFetch) && void 0 !== e ? e : 0, null !== (t = o.Z.lastErrorTimestamp) && void 0 !== t ? t : 0, o.Z.lastFetchOptions, o.Z.fetchShopHomeError, o.Z.isFetchingShopHome];
         }),
-        I = (0, i.useMemo)(
+        C = (0, i.useMemo)(
             () => ({
                 ...e,
                 variantsReturnStyle: n,
-                includeBundles: h
+                includeBundles: m,
+                includePopularPicks: h
             }),
-            [e, n, h]
+            [e, n, m, h]
         ),
-        C = (0, i.useMemo)(() => !(0, s.oc)(f, I), [f, I]),
-        N = (0, i.useMemo)(() => Date.now() - p < 600000, [p]);
+        N = (0, i.useMemo)(() => !(0, s.oc)(_, C), [_, C]),
+        v = (0, i.useMemo)(() => Date.now() - g < 600000, [g]);
     return (
         (0, i.useEffect)(() => {
-            if (!t || !u || E) return;
-            let e = Date.now() - g < 600000;
-            if (null == _ || !e) (C || !N) && (0, s.Ov)(I);
-        }, [t, u, E, _, g, N, C, I]),
+            if (!t || !u || I) return;
+            let e = Date.now() - f < 600000;
+            if (null == E || !e) (N || !v) && (0, s.Ov)(C);
+        }, [t, u, I, E, f, v, N, C]),
         {
-            isFetchingShopHome: E,
-            fetchShopHomeError: _,
-            shopBlocks: m,
+            isFetchingShopHome: I,
+            fetchShopHomeError: E,
+            shopBlocks: p,
             refreshShopHome: (0, i.useCallback)(() => {
-                (0, s.Ov)(I);
-            }, [I])
+                (0, s.Ov)(C);
+            }, [C])
         }
     );
 }

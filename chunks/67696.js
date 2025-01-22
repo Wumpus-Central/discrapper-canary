@@ -1,4 +1,7 @@
 n.d(t, {
+    N: function () {
+        return l;
+    },
     n: function () {
         return r;
     }
@@ -13,7 +16,16 @@ let i = (0, n(818083).B)({
                 id: 1,
                 label: 'Use Shop Home API',
                 config: { enabled: !0 }
+            },
+            {
+                id: 2,
+                label: 'Use Shop Home API, include popular picks',
+                config: {
+                    enabled: !0,
+                    includePopularPicks: !0
+                }
             }
         ]
     }),
-    r = (e) => i.useExperiment({ location: e }).enabled;
+    r = (e) => i.useExperiment({ location: e }).enabled,
+    l = (e) => i.useExperiment({ location: e }).includePopularPicks;
