@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return R;
     }
 }),
     n(47120),
@@ -25,14 +25,15 @@ var a = n(200651),
     v = n(449224),
     j = n(808506),
     _ = n(70956),
-    C = n(246992),
-    T = n(981631),
-    N = n(501787),
-    S = n(27731),
-    y = n(941469);
-let I = {
-        [T.Odu.CLICK_ZONE_DEBUG]: (e) => ({
-            type: T.Odu.CLICK_ZONE_DEBUG,
+    C = n(145597),
+    T = n(246992),
+    N = n(981631),
+    S = n(501787),
+    y = n(27731),
+    I = n(941469);
+let E = {
+        [N.Odu.CLICK_ZONE_DEBUG]: (e) => ({
+            type: N.Odu.CLICK_ZONE_DEBUG,
             id: (0, o.Z)(),
             layoutId: e,
             anchor: {
@@ -43,11 +44,11 @@ let I = {
                 width: 100,
                 height: 100
             },
-            ...g.Z.getWidgetDefaultSettings(T.Odu.CLICK_ZONE_DEBUG),
+            ...g.Z.getWidgetDefaultSettings(N.Odu.CLICK_ZONE_DEBUG),
             pinned: !0
         }),
-        [T.Odu.PERFORMANCE_DEBUG]: (e) => ({
-            type: T.Odu.PERFORMANCE_DEBUG,
+        [N.Odu.PERFORMANCE_DEBUG]: (e) => ({
+            type: N.Odu.PERFORMANCE_DEBUG,
             id: (0, o.Z)(),
             layoutId: e,
             anchor: {
@@ -59,17 +60,17 @@ let I = {
                 width: 'auto',
                 height: 'auto'
             },
-            ...g.Z.getWidgetDefaultSettings(T.Odu.PERFORMANCE_DEBUG),
+            ...g.Z.getWidgetDefaultSettings(N.Odu.PERFORMANCE_DEBUG),
             pinned: !0
         })
     },
-    E = (e, t) => e.find((e) => e.type === t);
-function Z(e) {
+    Z = (e, t) => e.find((e) => e.type === t);
+function w(e) {
     let { trackedGame: t } = e,
         n = (0, s.e7)([m.ZP], () => m.ZP.getGameForPID(t.pid)),
         r = (0, s.e7)([v.Z], () => v.Z.getGameForPID(t.pid));
     return (0, a.jsxs)('div', {
-        className: S.panelGroup,
+        className: y.panelGroup,
         children: [
             (0, a.jsx)(c.Text, {
                 variant: 'text-md/bold',
@@ -144,33 +145,104 @@ function Z(e) {
         ]
     });
 }
-function w(e) {
-    let t = E(Object.values((0, s.Wu)([g.Z], () => g.Z.getWidgetsForLayout(N.OVERLAY_V3_LAYOUT_ID))), e);
+function k(e) {
+    let { pid: t } = e,
+        n = (0, s.cj)([j.Z], () => j.Z.getOverlayPIDStatuses()),
+        r = (0, s.cj)([f.Z], () => f.Z.getTrackedGames()),
+        l = (0, s.e7)([j.Z], () => j.Z.isInputLocked(t), [t]),
+        i = (0, s.e7)([j.Z], () => j.Z.isReady(t), [t]);
+    return (0, a.jsxs)('div', {
+        children: [
+            (0, a.jsx)(c.Text, {
+                variant: 'text-md/semibold',
+                color: 'text-primary',
+                children: ''.concat(t)
+            }),
+            (0, a.jsx)(c.Text, {
+                variant: 'text-sm/normal',
+                color: 'text-secondary',
+                children: 'Screen Type Resolution: '.concat(
+                    ((e) => {
+                        var t;
+                        let n = null === (t = r[e]) || void 0 === t ? void 0 : t.timer;
+                        if (null == n || null == n.screenTypeResolutionTimestamp) return '...';
+                        let a = n.screenTypeResolutionTimestamp - n.startTrackingTimestamp;
+                        return ''.concat(a.toFixed(2), 'ms');
+                    })(t)
+                )
+            }),
+            (0, a.jsx)(c.Text, {
+                variant: 'text-sm/normal',
+                color: 'text-secondary',
+                children: 'Window Creation: '.concat(
+                    ((e) => {
+                        var t;
+                        let n = null === (t = r[e]) || void 0 === t ? void 0 : t.timer;
+                        if (null == n || null == n.moduleTrackingTimestamp || null == n.screenTypeResolutionTimestamp) return '...';
+                        let a = n.moduleTrackingTimestamp - n.screenTypeResolutionTimestamp;
+                        return ''.concat(a.toFixed(2), 'ms');
+                    })(t)
+                )
+            }),
+            (0, a.jsx)(c.Text, {
+                variant: 'text-sm/normal',
+                color: 'text-secondary',
+                children: 'Rendering: '.concat(
+                    ((e) => {
+                        var t;
+                        let n = null === (t = r[e]) || void 0 === t ? void 0 : t.timer;
+                        if (null == n || null == n.overlayRenderingTimestamp || null == n.moduleTrackingTimestamp) return '...';
+                        let a = n.overlayRenderingTimestamp - n.moduleTrackingTimestamp;
+                        return ''.concat(a.toFixed(2), 'ms');
+                    })(t)
+                )
+            }),
+            (0, a.jsx)(c.Text, {
+                variant: 'text-sm/normal',
+                color: 'text-primary',
+                children: 'Bridge Status: '.concat(n.get(Number(t)))
+            }),
+            (0, a.jsx)(c.Text, {
+                variant: 'text-sm/normal',
+                color: 'text-primary',
+                children: 'isInputLocked: '.concat(l)
+            }),
+            (0, a.jsx)(c.Text, {
+                variant: 'text-sm/normal',
+                color: 'text-primary',
+                children: 'isReady: '.concat(i)
+            })
+        ]
+    });
+}
+function O(e) {
+    let t = Z(Object.values((0, s.Wu)([g.Z], () => g.Z.getWidgetsForLayout(S.OVERLAY_V3_LAYOUT_ID))), e);
     return [
         t,
         () => {
             if (null != t) (0, d.E9)(t.id);
             else {
-                let t = I[e];
+                let t = E[e];
                 if (null == t) return;
-                let n = t(N.OVERLAY_V3_LAYOUT_ID);
+                let n = t(S.OVERLAY_V3_LAYOUT_ID);
                 (0, d.A4)(n);
             }
         }
     ];
 }
-function k() {
-    let [e, t] = w(T.Odu.CLICK_ZONE_DEBUG),
-        [n, l] = w(T.Odu.PERFORMANCE_DEBUG),
-        o = (0, s.e7)([b.ZP], () => b.ZP.hasRenderDebugMode(x.G.ClickZones)),
-        d = (0, s.e7)([b.ZP], () => b.ZP.hasRenderDebugMode(x.G.WidgetAreas)),
-        g = (0, s.e7)([f.Z], () => f.Z.getForcedRenderMode()),
-        [v, N] = r.useState({}),
-        [I, E] = r.useState(g),
-        k = (e) => {
-            E(e), u.Z.forceRenderMode(e);
+function R() {
+    var e, t;
+    let [n, l] = O(N.Odu.CLICK_ZONE_DEBUG),
+        [o, d] = O(N.Odu.PERFORMANCE_DEBUG),
+        g = (0, s.e7)([b.ZP], () => b.ZP.hasRenderDebugMode(x.G.ClickZones)),
+        v = (0, s.e7)([b.ZP], () => b.ZP.hasRenderDebugMode(x.G.WidgetAreas)),
+        S = (0, s.e7)([f.Z], () => f.Z.getForcedRenderMode()),
+        [E, Z] = r.useState({}),
+        [R, B] = r.useState(S),
+        P = (e) => {
+            B(e), u.Z.forceRenderMode(e);
         },
-        O = [
+        L = [
             {
                 label: h.R5.UNSET,
                 value: h.R5.UNSET
@@ -189,28 +261,31 @@ function k() {
             }
         ].map((e) => ({
             ...e,
-            label: ''.concat(e.label, ' ').concat(g === e.value ? '(current)' : '')
+            label: ''.concat(e.label, ' ').concat(S === e.value ? '(current)' : '')
         })),
-        R = (0, s.cj)([f.Z], () => f.Z.getTrackedGames()),
-        B = (0, s.e7)([m.ZP], () => m.ZP.getRunningGames());
+        A = (0, s.cj)([f.Z], () => f.Z.getTrackedGames()),
+        D = (0, s.e7)([j.Z], () => j.Z.getFocusedPID()),
+        F = (0, s.e7)([j.Z], () => j.Z.isFocusedPidOutOfProcess()),
+        M = (0, C.QF)(),
+        H = (0, s.e7)([f.Z], () => f.Z.isOverlayOOPEnabledForPid(M), [M]),
+        G = (0, s.e7)([m.ZP], () => m.ZP.getRunningGames());
     r.useEffect(() => {
-        N((e) => {
-            for (let t of Object.keys(R)) e[Number(t)] = R[Number(t)];
+        Z((e) => {
+            for (let t of Object.keys(A)) e[Number(t)] = A[Number(t)];
             return e;
         });
-    }, [R]);
-    let P = (0, s.cj)([j.Z], () => j.Z.getOverlayPIDStatuses()),
-        [L, A] = r.useState({}),
-        D = r.useRef();
+    }, [A]);
+    let [U, z] = r.useState({}),
+        V = r.useRef();
     r.useEffect(
         () => (
-            (D.current = setInterval(async () => {
+            (V.current = setInterval(async () => {
                 let e = m.ZP.getRunningGames(),
                     t = [],
                     n = Date.now();
                 for (let a of e) t.push((0, p.hj)(a.pid, 0).then((e) => [a.pid, e, n]));
                 let a = await Promise.all(t);
-                A((e) =>
+                z((e) =>
                     a.reduce(
                         (e, t) => {
                             var n;
@@ -234,55 +309,34 @@ function k() {
                     )
                 );
             }, 10 * _.Z.Millis.SECOND)),
-            () => clearInterval(D.current)
+            () => clearInterval(V.current)
         ),
         []
     );
-    let F = (e) => {
+    let W = (e) => {
             u.Z.setRenderDebugMode(!b.ZP.hasRenderDebugMode(e), e);
         },
-        M = () => {
-            F(x.G.ClickZones);
+        K = () => {
+            W(x.G.ClickZones);
         },
-        H = () => {
-            F(x.G.WidgetAreas);
+        Y = () => {
+            W(x.G.WidgetAreas);
         },
-        G = (e) => {
+        X = (e) => {
             var t, n;
-            return null !== (n = null === (t = v[e]) || void 0 === t ? void 0 : t.gameName) && void 0 !== n ? n : 'Unknown';
+            return null !== (n = null === (t = E[e]) || void 0 === t ? void 0 : t.gameName) && void 0 !== n ? n : 'Unknown';
         },
-        U = (e) => {
+        $ = (e) => {
             var t, n;
-            return null !== (n = null === (t = v[e]) || void 0 === t ? void 0 : t.fullscreenType) && void 0 !== n ? n : 'Unknown';
+            return null !== (n = null === (t = E[e]) || void 0 === t ? void 0 : t.fullscreenType) && void 0 !== n ? n : 'Unknown';
         },
-        z = (e) => {
-            var t;
-            let n = null === (t = R[e]) || void 0 === t ? void 0 : t.timer;
-            if (null == n || null == n.screenTypeResolutionTimestamp) return '...';
-            let a = n.screenTypeResolutionTimestamp - n.startTrackingTimestamp;
-            return ''.concat(a.toFixed(2), 'ms');
-        },
-        V = (e) => {
-            var t;
-            let n = null === (t = R[e]) || void 0 === t ? void 0 : t.timer;
-            if (null == n || null == n.moduleTrackingTimestamp || null == n.screenTypeResolutionTimestamp) return '...';
-            let a = n.moduleTrackingTimestamp - n.screenTypeResolutionTimestamp;
-            return ''.concat(a.toFixed(2), 'ms');
-        },
-        W = (e) => {
-            var t;
-            let n = null === (t = R[e]) || void 0 === t ? void 0 : t.timer;
-            if (null == n || null == n.overlayRenderingTimestamp || null == n.moduleTrackingTimestamp) return '...';
-            let a = n.overlayRenderingTimestamp - n.moduleTrackingTimestamp;
-            return ''.concat(a.toFixed(2), 'ms');
-        },
-        K = B.filter((e) => null == R[e.pid]);
+        q = G.filter((e) => null == A[e.pid]);
     return (0, a.jsx)(c.ScrollerAuto, {
         children: (0, a.jsxs)('div', {
-            className: i()(y.panel, S.panel),
+            className: i()(I.panel, y.panel),
             children: [
                 (0, a.jsxs)('div', {
-                    className: S.panelGroup,
+                    className: y.panelGroup,
                     children: [
                         (0, a.jsx)(c.Tooltip, {
                             position: 'left',
@@ -291,8 +345,8 @@ function k() {
                                 (0, a.jsx)('div', {
                                     ...e,
                                     children: (0, a.jsx)(c.Checkbox, {
-                                        value: o,
-                                        onChange: () => M(),
+                                        value: g,
+                                        onChange: () => K(),
                                         size: 18,
                                         type: c.Checkbox.Types.INVERTED,
                                         shape: c.Checkbox.Shapes.BOX,
@@ -312,8 +366,8 @@ function k() {
                                 (0, a.jsx)('div', {
                                     ...e,
                                     children: (0, a.jsx)(c.Checkbox, {
-                                        value: d,
-                                        onChange: () => H(),
+                                        value: v,
+                                        onChange: () => Y(),
                                         size: 18,
                                         type: c.Checkbox.Types.INVERTED,
                                         shape: c.Checkbox.Shapes.BOX,
@@ -329,12 +383,12 @@ function k() {
                         (0, a.jsx)(c.Tooltip, {
                             position: 'left',
                             text: 'Creates a widget that has a clickzone inside of it, which will show/hide every few seconds.',
-                            children: (n) =>
+                            children: (e) =>
                                 (0, a.jsx)('div', {
-                                    ...n,
+                                    ...e,
                                     children: (0, a.jsx)(c.Checkbox, {
-                                        value: null != e,
-                                        onChange: () => t(),
+                                        value: null != n,
+                                        onChange: () => l(),
                                         size: 18,
                                         type: c.Checkbox.Types.INVERTED,
                                         shape: c.Checkbox.Shapes.BOX,
@@ -354,8 +408,8 @@ function k() {
                                 (0, a.jsx)('div', {
                                     ...e,
                                     children: (0, a.jsx)(c.Checkbox, {
-                                        value: null != n,
-                                        onChange: () => l(),
+                                        value: null != o,
+                                        onChange: () => d(),
                                         size: 18,
                                         type: c.Checkbox.Types.INVERTED,
                                         shape: c.Checkbox.Shapes.BOX,
@@ -376,17 +430,17 @@ function k() {
                     children: (e) =>
                         (0, a.jsx)('div', {
                             ...e,
-                            className: S.panelGroup,
+                            className: y.panelGroup,
                             children: (0, a.jsx)(c.Select, {
                                 serialize: (e) => e,
-                                isSelected: (e) => e === I,
-                                options: O,
-                                select: k,
-                                popoutLayerContext: C.O$
+                                isSelected: (e) => e === R,
+                                options: L,
+                                select: P,
+                                popoutLayerContext: T.O$
                             })
                         })
                 }),
-                K.length > 0 &&
+                q.length > 0 &&
                     (0, a.jsx)(c.Tooltip, {
                         position: 'left',
                         text: 'Games that are running but not tracked by the overlay',
@@ -394,14 +448,14 @@ function k() {
                             (0, a.jsx)('div', {
                                 ...e,
                                 children: (0, a.jsxs)('div', {
-                                    className: S.panelGroup,
+                                    className: y.panelGroup,
                                     children: [
                                         (0, a.jsx)(c.Text, {
                                             variant: 'text-md/bold',
                                             color: 'text-danger',
                                             children: 'Untracked Running Games'
                                         }),
-                                        K.map((e) =>
+                                        q.map((e) =>
                                             (0, a.jsx)(
                                                 c.Text,
                                                 {
@@ -423,63 +477,53 @@ function k() {
                         (0, a.jsx)('div', {
                             ...e,
                             children: (0, a.jsxs)('div', {
-                                className: S.panelGroup,
+                                className: y.panelGroup,
                                 children: [
-                                    0 === Object.keys(R).length &&
+                                    0 === Object.keys(A).length &&
                                         (0, a.jsx)(c.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-normal',
                                             children: 'No running games'
                                         }),
-                                    Object.values(R).map((e) => (0, a.jsx)(Z, { trackedGame: e }, e.pid))
+                                    Object.values(A).map((e) => (0, a.jsx)(w, { trackedGame: e }, e.pid))
                                 ]
                             })
                         })
                 }),
                 (0, a.jsxs)('div', {
-                    className: S.panelGroup,
+                    className: y.panelGroup,
                     children: [
-                        0 === Object.keys(R).length &&
+                        0 === Object.keys(A).length &&
                             (0, a.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
                                 children: 'No tracked game times'
                             }),
-                        Object.values(R).map((e) =>
-                            (0, a.jsxs)(
-                                'div',
-                                {
-                                    children: [
-                                        (0, a.jsx)(c.Text, {
-                                            variant: 'text-md/semibold',
-                                            color: 'text-primary',
-                                            children: ''.concat(e.pid)
-                                        }),
-                                        (0, a.jsx)(c.Text, {
-                                            variant: 'text-md/normal',
-                                            color: 'text-secondary',
-                                            children: 'Screen Type Resolution: '.concat(z(e.pid))
-                                        }),
-                                        (0, a.jsx)(c.Text, {
-                                            variant: 'text-md/normal',
-                                            color: 'text-secondary',
-                                            children: 'Window Creation: '.concat(V(e.pid))
-                                        }),
-                                        (0, a.jsx)(c.Text, {
-                                            variant: 'text-md/normal',
-                                            color: 'text-secondary',
-                                            children: 'Rendering: '.concat(W(e.pid))
-                                        }),
-                                        (0, a.jsx)(c.Text, {
-                                            variant: 'text-md/medium',
-                                            color: 'text-primary',
-                                            children: 'Bridge Status: '.concat(P.get(Number(e.pid)))
-                                        })
-                                    ]
-                                },
-                                e.pid
-                            )
-                        )
+                        Object.values(A).map((e) => (0, a.jsx)(k, { pid: e.pid }, e.pid)),
+                        (0, a.jsxs)('div', {
+                            children: [
+                                (0, a.jsxs)(c.Text, {
+                                    variant: 'text-sm/medium',
+                                    color: 'text-primary',
+                                    children: ['focusedPID: ', null !== (e = null == D ? void 0 : D.toString()) && void 0 !== e ? e : 'null']
+                                }),
+                                (0, a.jsxs)(c.Text, {
+                                    variant: 'text-sm/normal',
+                                    color: 'text-secondary',
+                                    children: ['isFocusedPidOutOfProcess: ', F ? 'Yes' : 'No']
+                                }),
+                                (0, a.jsxs)(c.Text, {
+                                    variant: 'text-sm/medium',
+                                    color: 'text-primary',
+                                    children: ['processPid: ', null !== (t = null == M ? void 0 : M.toString()) && void 0 !== t ? t : 'unknown']
+                                }),
+                                (0, a.jsxs)(c.Text, {
+                                    variant: 'text-sm/normal',
+                                    color: 'text-secondary',
+                                    children: ['isOOPEnabledForPid: ', H ? 'Yes' : 'No']
+                                })
+                            ]
+                        })
                     ]
                 }),
                 (0, a.jsx)(c.Tooltip, {
@@ -489,15 +533,15 @@ function k() {
                         (0, a.jsx)('div', {
                             ...e,
                             children: (0, a.jsxs)('div', {
-                                className: S.panelGroup,
+                                className: y.panelGroup,
                                 children: [
-                                    0 === Object.keys(R).length &&
+                                    0 === Object.keys(A).length &&
                                         (0, a.jsx)(c.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-normal',
                                             children: 'No recent screen types'
                                         }),
-                                    Object.values(R).map((e) => {
+                                    Object.values(A).map((e) => {
                                         var t;
                                         return (0, a.jsxs)(
                                             'div',
@@ -506,14 +550,14 @@ function k() {
                                                     (0, a.jsx)(c.Text, {
                                                         variant: 'text-md/semibold',
                                                         color: 'text-primary',
-                                                        children: G(e.pid)
+                                                        children: X(e.pid)
                                                     }),
                                                     (0, a.jsxs)(c.Text, {
                                                         variant: 'text-sm/medium',
                                                         color: 'text-secondary',
-                                                        children: ['Original Screen Type: ', U(e.pid)]
+                                                        children: ['Original Screen Type: ', $(e.pid)]
                                                     }),
-                                                    null === (t = L[e.pid]) || void 0 === t
+                                                    null === (t = U[e.pid]) || void 0 === t
                                                         ? void 0
                                                         : t.reverse().map((t) => {
                                                               let { screenType: n, timestamp: r } = t;

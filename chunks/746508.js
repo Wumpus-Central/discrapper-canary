@@ -38,8 +38,8 @@ var i = n(200651),
     U = n(446226),
     G = n(935261),
     B = n(74299),
-    V = n(803647),
-    H = n(142497),
+    H = n(803647),
+    V = n(142497),
     F = n(810788),
     z = n(160404),
     W = n(703656),
@@ -270,7 +270,7 @@ function eB(e) {
         })
     );
 }
-function eV(e) {
+function eH(e) {
     let t,
         n,
         { channel: r, enableActivities: l } = e,
@@ -347,7 +347,7 @@ function eV(e) {
           })
         : null;
 }
-function eH(e) {
+function eV(e) {
     let t,
         { channel: n, canGoLive: l, enableActivities: s, disabled: o } = e,
         c = (0, w.Q3)('ConnectedStreamButton'),
@@ -362,7 +362,7 @@ function eH(e) {
         }, [g, n.id]),
         C = h.find((e) => e.ownerId === (null == u ? void 0 : u.id)),
         N = (0, es.E)(n, u, h);
-    t = null == C ? (l ? I : ec.Z) : () => (0, V.Z)(C);
+    t = null == C ? (l ? I : ec.Z) : () => (0, H.Z)(C);
     let v = null != C || N.length > 0,
         S = p ? ej.intl.string(ej.t.fjBNo6) : ej.intl.string(ej.t.uQn9Bw),
         A = _ || s || E,
@@ -530,7 +530,7 @@ class eF extends r.PureComponent {
                     enableActivities: d,
                     disabled: !h && u
                 }),
-                (0, i.jsx)(eH, {
+                (0, i.jsx)(eV, {
                     channel: e,
                     canGoLive: t,
                     enableActivities: d,
@@ -539,7 +539,7 @@ class eF extends r.PureComponent {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         d
-                            ? (0, i.jsx)(eV, {
+                            ? (0, i.jsx)(eH, {
                                   channel: e,
                                   enableActivities: r
                               })
@@ -628,7 +628,7 @@ class eF extends r.PureComponent {
                 });
             }),
             ew(this, 'handleCloseVoicePanelIntroduction', () => {
-                H.Kw(eR.v.VOICE_PANEL_INTRODUCTION);
+                V.Kw(eR.v.VOICE_PANEL_INTRODUCTION);
             }),
             ew(this, 'renderVoicePanelIntroduction', () =>
                 (0, i.jsxs)('div', {
@@ -671,7 +671,10 @@ function ez(e) {
             },
             tooltipClassName: eD.noiseCancellationTooltip,
             tooltipText: n ? null : ej.intl.string(ej.t.vFiCS0),
-            icon: s
+            icon: (0, i.jsx)(s, {
+                size: 'refresh_sm',
+                color: f.tokens.colors.CHANNEL_ICON
+            })
         })
     );
 }

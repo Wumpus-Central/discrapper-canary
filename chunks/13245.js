@@ -315,12 +315,6 @@ let m = {
             overlayState: n
         });
     },
-    notifyReadyToShow(e) {
-        s.Z.dispatch({
-            type: 'OVERLAY_NOTIFY_READY_TO_SHOW',
-            pid: e
-        });
-    },
     successfullyShown(e) {
         s.Z.dispatch({
             type: 'OVERLAY_SUCCESSFULLY_SHOWN',

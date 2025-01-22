@@ -253,16 +253,9 @@ let eo = (() => {
     }
     return () => (null == e && (e = n()), e);
 })();
-function es(e, n) {
+function es(e) {
     if (!!S.iP) {
-        if (
-            ((M = e),
-            b.v.update({
-                enabled: e,
-                global: n
-            }),
-            null == P)
-        ) {
+        if (((M = e), null == P)) {
             eo();
             return;
         }
@@ -278,11 +271,11 @@ function ef(e) {
     w.toggleGPUBoost(e.reason, e.enabled);
 }
 function ep() {
-    O.verbose('Maybe Enable Overlay'), z() ? es(b.v.enabled, b.v.global) : M && ((M = !1), (0, y.vR)(!1));
+    O.verbose('Maybe Enable Overlay'), z() ? es(b.v.enabled && !b.v.legacyEnabled) : M && ((M = !1), (0, y.vR)(!1));
 }
 function eh(e) {
-    let { enabled: n, global: r } = e;
-    es(n, r);
+    let { enabled: n, legacyEnabled: r } = e;
+    es(n && !r);
 }
 function e_(e) {
     let { zones: n } = e;
@@ -290,7 +283,6 @@ function e_(e) {
 }
 function em(e) {
     let { locked: n, pid: r } = e;
-    if (!n && !D.has(r)) return;
     if ((n ? x.delete(r) : x.add(r), null == B || (clearTimeout(B), (B = null), !n)))
         n
             ? Q(n)
