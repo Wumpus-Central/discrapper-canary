@@ -1,40 +1,23 @@
-a.r(c),
-    a.d(c, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return E;
+            return u;
         }
     });
-var o = a(200651),
-    e = a(192379),
-    _ = a(512969),
-    n = a(608787),
-    I = a(442837),
-    i = a(765717),
-    O = a(353926),
-    l = a(215256),
-    p = a(8991),
-    P = a(981631);
-let R = e.lazy(() =>
-    (0, n.wE)({
-        createPromise: () => Promise.all([a.e('72181'), a.e('66711'), a.e('21628'), a.e('77803'), a.e('9005'), a.e('64676'), a.e('31931'), a.e('32883')]).then(a.bind(a, 319443)),
+var c = n(200651),
+    r = n(192379),
+    a = n(608787),
+    i = n(765717),
+    p = n(981631);
+let s = r.lazy(() =>
+    (0, a.wE)({
+        createPromise: () => Promise.all([n.e('22878'), n.e('66711'), n.e('21628'), n.e('77803'), n.e('16987'), n.e('32883')]).then(n.bind(n, 319443)),
         webpackId: 319443
     })
 );
-function E() {
-    let t = (0, I.e7)([O.Z], () => O.Z.hasLoadedExperiments);
-    e.useEffect(() => {
-        t && l.f.trackExposure({ location: 'GlobalDiscoveryAppsRoutes' });
-    }, [t]);
-    let c = (0, l.M)({ location: 'GlobalDiscoveryAppsRoutes' });
-    return t
-        ? c
-            ? (0, o.jsx)(i.Z, {
-                  path: P.Z5c.GLOBAL_DISCOVERY_APPS,
-                  component: R
-              })
-            : (0, o.jsx)(_.AW, {
-                  path: P.Z5c.GLOBAL_DISCOVERY_APPS,
-                  component: p.p
-              })
-        : null;
+function u() {
+    return (0, c.jsx)(i.Z, {
+        path: p.Z5c.GLOBAL_DISCOVERY_APPS,
+        component: s
+    });
 }

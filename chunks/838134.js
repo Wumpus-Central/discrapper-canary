@@ -1,75 +1,17 @@
-c.r(e),
-    c.d(e, {
+I.r(t),
+    I.d(t, {
         default: function () {
-            return S;
+            return n;
         }
     });
-var a = c(200651),
-    o = c(192379),
-    i = c(512969),
-    I = c(608787),
-    n = c(442837),
-    _ = c(765717),
-    O = c(353926),
-    l = c(926061),
-    p = c(215256),
-    P = c(8991),
-    E = c(314897),
-    R = c(272242),
-    r = c(981631);
-let A = o.lazy(() =>
-        (0, I.wE)({
-            createPromise: () => Promise.all([c.e('6380'), c.e('72181'), c.e('56630'), c.e('66711'), c.e('86282'), c.e('65840'), c.e('21628'), c.e('18101'), c.e('24207'), c.e('77803'), c.e('9005'), c.e('64676'), c.e('53409'), c.e('52988')]).then(c.bind(c, 753450)),
-            webpackId: 753450
-        })
-    ),
-    s = o.lazy(() =>
-        (0, I.wE)({
-            createPromise: () => Promise.all([c.e('6380'), c.e('56630'), c.e('65840'), c.e('18101'), c.e('24207'), c.e('9005'), c.e('53409'), c.e('43704')]).then(c.bind(c, 74438)),
-            webpackId: 74438
-        })
-    ),
-    C = o.lazy(() =>
-        (0, I.wE)({
-            createPromise: () => Promise.all([c.e('6380'), c.e('56630'), c.e('65840'), c.e('18101'), c.e('24207'), c.e('53409'), c.e('64121')]).then(c.bind(c, 675869)),
-            webpackId: 675869
-        })
-    );
-function S() {
-    let t = (0, n.e7)([O.Z], () => O.Z.hasLoadedExperiments),
-        e = (0, n.e7)([E.default], () => E.default.isAuthenticated()),
-        c = (0, l.YP)({ location: 'ApplicationDirectoryRoutes' }) && t,
-        I = (0, p.M)({ location: 'ApplicationDirectoryRoutes' }) && t;
-    o.useEffect(() => {
-        t && !e && p.f.trackExposure({ location: 'ApplicationDirectoryRoutes' });
-    }, [e, t]);
-    let S = (e && c) || (!e && I);
-    return t
-        ? S
-            ? (0, a.jsx)(i.AW, {
-                  path: r.Z5c.APPLICATION_DIRECTORY,
-                  component: P.E
-              })
-            : (0, a.jsxs)(i.rs, {
-                  children: [
-                      (0, a.jsx)(_.Z, {
-                          path: r.Z5c.APPLICATION_DIRECTORY,
-                          exact: !0,
-                          component: s
-                      }),
-                      (0, a.jsx)(_.Z, {
-                          path: r.Z5c.APPLICATION_DIRECTORY_SEARCH,
-                          component: C
-                      }),
-                      (0, a.jsx)(i.l_, {
-                          path: r.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', R.ApplicationDirectoryProfileSections.PREMIUM_DEPRECATED),
-                          to: r.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', R.ApplicationDirectoryProfileSections.STORE)
-                      }),
-                      (0, a.jsx)(_.Z, {
-                          path: r.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', ':section?'),
-                          component: A
-                      })
-                  ]
-              })
-        : null;
+var _ = I(200651);
+I(192379);
+var a = I(512969),
+    O = I(8991),
+    R = I(981631);
+function n() {
+    return (0, _.jsx)(a.AW, {
+        path: R.Z5c.APPLICATION_DIRECTORY,
+        component: O.E
+    });
 }

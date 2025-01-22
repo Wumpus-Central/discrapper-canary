@@ -133,25 +133,17 @@ function e_(e) {
             }));
     }, [eT, eS, eI, i]);
     let eA = s.useRef(document.body),
-        eC = () => {
-            let e = (0, d.LX)(i, {
-                path: eu.Z5c.APPLICATION_DIRECTORY,
-                exact: !1,
-                strict: !1
-            });
-            return ((!!f.tq || !!f.Em) && null != e) || !1;
-        },
-        eN = (eE && !en) || eS,
-        eR = ev && !eS,
-        eO = es || e_,
-        { enabled: eD } = W.Z.useExperiment(
+        eC = (eE && !en) || eS,
+        eN = ev && !eS,
+        eR = es || e_,
+        { enabled: eO } = W.Z.useExperiment(
             { location: 'AppSkeleton' },
             {
-                autoTrackExposure: eO && (eN || eR),
-                disable: !eO
+                autoTrackExposure: eR && (eC || eN),
+                disable: !eR
             }
         ),
-        ex = ''.concat(I ? 'enabled' : 'disabled').concat(Q);
+        eD = ''.concat(I ? 'enabled' : 'disabled').concat(Q);
     return (0, o.jsx)(
         K.Z,
         {
@@ -179,7 +171,7 @@ function e_(e) {
                                                           })
                                                         : null,
                                                     (0, o.jsxs)('div', {
-                                                        className: u()(ed.appAsidePanelWrapper, l && ed.mobileAppAsidePanelWrapper, { [ed.allowsScrolling]: eC() }),
+                                                        className: u()(ed.appAsidePanelWrapper, l && ed.mobileAppAsidePanelWrapper),
                                                         children: [
                                                             (0, o.jsx)(B.K, {}),
                                                             (0, o.jsx)('div', {
@@ -215,17 +207,17 @@ function e_(e) {
                                                             }),
                                                             (0, o.jsx)(w.Z, {}),
                                                             (0, o.jsx)(E.Z, {}),
-                                                            eN && !eD && (0, o.jsx)(M.Z, { markAsDismissed: eI }),
-                                                            eR &&
-                                                                !eD &&
+                                                            eC && !eO && (0, o.jsx)(M.Z, { markAsDismissed: eI }),
+                                                            eN &&
+                                                                !eO &&
                                                                 (0, o.jsx)(x.Z, {
                                                                     isCoachmark: eT,
                                                                     markAsDismissed: eI
                                                                 }),
-                                                            (eN || eR) &&
-                                                                eD &&
+                                                            (eC || eN) &&
+                                                                eO &&
                                                                 (0, o.jsx)(q.Z, {
-                                                                    initialTab: eR ? q._.APP_ICONS : q._.CLIENT_THEMES,
+                                                                    initialTab: eN ? q._.APP_ICONS : q._.CLIENT_THEMES,
                                                                     markAsDismissed: eI
                                                                 }),
                                                             (0, o.jsx)(Z.Z, { mobile: l })
@@ -244,7 +236,7 @@ function e_(e) {
                 })
             })
         },
-        ex
+        eD
     );
 }
 n.Z = e_;

@@ -1,23 +1,14 @@
-n.d(t, {
+n.d(e, {
     $_: function () {
-        return A;
+        return s;
     },
     KQ: function () {
-        return I;
+        return u;
     },
     MU: function () {
-        return p;
+        return c;
     },
     RF: function () {
-        return _;
-    },
-    m0: function () {
-        return S;
-    },
-    rf: function () {
-        return O;
-    },
-    tu: function () {
         return d;
     }
 }),
@@ -26,86 +17,53 @@ n.d(t, {
     n(216116),
     n(78328),
     n(815648),
-    n(47120);
-var r = n(860911),
-    o = n(477690),
-    i = n(481060),
-    l = n(911969),
-    c = n(703656),
-    a = n(736408),
-    u = n(981631),
-    s = n(388032);
-let p = 0;
-function S(e) {
-    return e.id === p;
-}
-function I() {
+    n(47120),
+    n(860911);
+var r = n(477690);
+n(481060);
+var l = n(911969);
+n(703656);
+var o = n(736408),
+    a = n(981631),
+    i = n(388032);
+let c = 0;
+function u() {
     return {
-        id: p,
-        name: s.intl.string(s.t.E407b2)
+        id: c,
+        name: i.intl.string(i.t.E407b2)
     };
 }
-function d(e) {
-    switch (e.id) {
-        case 0:
-            return i.GlobeEarthIcon;
-        case 4:
-            return i.TvIcon;
-        case 5:
-            return i.AnalyticsIcon;
-        case 6:
-            return i.GameControllerIcon;
-        case 8:
-            break;
-        case 9:
-            return i.FriendsIcon;
-        case 10:
-            return i.WrenchIcon;
-    }
-    return i.AsteriskIcon;
-}
-function A(e) {
-    let { itemId: t, hash: n, containerWidth: r = parseFloat(o.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) } = e;
-    return (0, a.$)({
-        itemId: t,
+function s(t) {
+    let { itemId: e, hash: n, containerWidth: l = parseFloat(r.Z.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) } = t;
+    return (0, o.$)({
+        itemId: e,
         hash: n,
-        containerWidth: r
+        containerWidth: l
     });
 }
-function O() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        t = new URL(location.href);
-    for (let n in e) {
-        let r = e[n];
-        t.searchParams.set(n, r);
-    }
-    let n = t.pathname + t.search,
-        o = (0, r.Ui)(n, !1);
-    (0, c.uL)(o);
-}
-let E = (e) => {
-    if (null == e) return null;
-    let t = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
-    return null != t ? t[1] : null;
+let p = (t) => {
+    if (null == t) return null;
+    let e = t.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
+    return null != e ? e[1] : null;
 };
-function _(e) {
-    switch (e.type) {
+function d(t) {
+    switch (t.type) {
         case l.ee.MEDIA_PROXY:
-            var t;
-            let n = null !== (t = e.proxy_url) && void 0 !== t ? t : e.url;
+            var e;
+            let n = null !== (e = t.proxy_url) && void 0 !== e ? e : t.url;
             return {
-                type: u.s9s.IMG,
+                type: a.s9s.IMG,
                 width: 0,
                 height: 0,
                 src: n
             };
         case l.ee.YOUTUBE:
-            let r = E(e.url);
+            let r = p(t.url);
             if (null != r)
                 return {
-                    type: u.s9s.YOUTUBE_VIDEO,
+                    type: a.s9s.YOUTUBE_VIDEO,
                     youtubeVideoId: r
                 };
     }
-    return console.warn('Unsupported carousel item', e), null;
+    return console.warn('Unsupported carousel item', t), null;
 }

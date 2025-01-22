@@ -1,98 +1,58 @@
-c.d(e, {
+I.d(t, {
     E: function () {
-        return _;
-    },
-    p: function () {
-        return O;
+        return E;
     }
 }),
-    c(610138),
-    c(216116),
-    c(78328),
-    c(815648),
-    c(47120);
-var a = c(200651);
-c(192379);
-var o = c(512969),
-    i = c(979007),
-    I = c(981631),
-    n = c(272242);
-function _() {
-    let t = new URLSearchParams(location.search),
-        e = t.get('q'),
-        c = t.get('category_id');
+    I(610138),
+    I(216116),
+    I(78328),
+    I(815648),
+    I(47120);
+var _ = I(200651);
+I(192379);
+var a = I(512969),
+    O = I(979007),
+    R = I(981631),
+    n = I(272242);
+function E() {
+    let c = new URLSearchParams(location.search),
+        t = c.get('q'),
+        I = c.get('category_id');
     return (
-        t.delete('page'),
-        (0, a.jsxs)(o.rs, {
+        c.delete('page'),
+        (0, _.jsxs)(a.rs, {
             children: [
-                null != c && null == e
-                    ? (0, a.jsx)(o.l_, {
-                          path: I.Z5c.APPLICATION_DIRECTORY_SEARCH,
-                          to: ''.concat(I.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(''.concat(c)))
+                null != I && null == t
+                    ? (0, _.jsx)(a.l_, {
+                          path: R.Z5c.APPLICATION_DIRECTORY_SEARCH,
+                          to: ''.concat(R.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(''.concat(I)))
                       })
-                    : (0, a.jsx)(o.l_, {
-                          path: I.Z5c.APPLICATION_DIRECTORY_SEARCH,
-                          to: ''.concat(I.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, '?').concat(t.toString())
+                    : (0, _.jsx)(a.l_, {
+                          path: R.Z5c.APPLICATION_DIRECTORY_SEARCH,
+                          to: ''.concat(R.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, '?').concat(c.toString())
                       }),
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
-                    to: I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')
+                (0, _.jsx)(a.l_, {
+                    path: R.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
+                    to: R.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')
                 }),
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', n.ApplicationDirectoryProfileSections.STORE),
-                    to: I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', i.GlobalDiscoveryAppsSections.STORE)
+                (0, _.jsx)(a.l_, {
+                    path: R.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', n.c.STORE),
+                    to: R.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', O.GlobalDiscoveryAppsSections.STORE)
                 }),
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', n.ApplicationDirectoryProfileSections.PREMIUM_DEPRECATED),
-                    to: I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', i.GlobalDiscoveryAppsSections.STORE)
+                (0, _.jsx)(a.l_, {
+                    path: R.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', n.c.PREMIUM_DEPRECATED),
+                    to: R.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', O.GlobalDiscoveryAppsSections.STORE)
                 }),
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId'),
+                (0, _.jsx)(a.l_, {
+                    path: R.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId'),
                     to: {
-                        pathname: I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'),
+                        pathname: R.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'),
                         search: location.search
                     }
                 }),
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.APPLICATION_DIRECTORY,
-                    to: I.Z5c.GLOBAL_DISCOVERY_APPS
-                })
-            ]
-        })
-    );
-}
-function O() {
-    let t = new URLSearchParams(location.search);
-    return (
-        t.delete('page'),
-        (0, a.jsxs)(o.rs, {
-            children: [
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(':categoryId'),
-                    to: ''.concat(I.Z5c.APPLICATION_DIRECTORY_SEARCH, '?category_id=:categoryId')
-                }),
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH,
-                    to: ''.concat(I.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(t.toString())
-                }),
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId'),
-                    to: I.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId')
-                }),
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', i.GlobalDiscoveryAppsSections.STORE),
-                    to: I.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', n.ApplicationDirectoryProfileSections.STORE)
-                }),
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'),
-                    to: {
-                        pathname: I.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId'),
-                        search: location.search
-                    }
-                }),
-                (0, a.jsx)(o.l_, {
-                    path: I.Z5c.GLOBAL_DISCOVERY_APPS,
-                    to: I.Z5c.APPLICATION_DIRECTORY
+                (0, _.jsx)(a.l_, {
+                    path: R.Z5c.APPLICATION_DIRECTORY,
+                    to: R.Z5c.GLOBAL_DISCOVERY_APPS
                 })
             ]
         })
