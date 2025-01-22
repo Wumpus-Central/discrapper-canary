@@ -919,7 +919,14 @@ let eL = {
                 null != g && (w.message.sticker_ids = g),
                 F.Z.isEnabled() && (w.message.has_poggermode_enabled = !0),
                 null != T && (w.message.content_inventory_entry = T),
-                null != E && E.callback(),
+                null != E &&
+                    ((w.message.confetti_potion = {
+                        message_emoji: {
+                            id: E.emoji.id,
+                            name: (0, j.zI)(E.emoji)
+                        }
+                    }),
+                    E.callback()),
                 new Promise((n, i) => {
                     let a = Date.now(),
                         o = p.ZP.length,
@@ -937,8 +944,7 @@ let eL = {
                                                 queueSize: o
                                             },
                                             poll: I
-                                        }),
-                                        null != E && (0, j.qc)(e, s.body.id, E.emoji);
+                                        });
                                     let i = eg.default.cast(e),
                                         a = R.Z.getRequest(i);
                                     if (null != a) {
