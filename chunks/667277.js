@@ -110,8 +110,8 @@ function C(e, n, r, E) {
             weekStartsOn: O,
             locale: C
         },
-        x = [new p.GT()],
-        L = I.match(b)
+        L = [new p.GT()],
+        x = I.match(b)
             .map(function (e) {
                 var n = e[0];
                 return n in l.Z ? (0, l.Z[n])(e, C.formatLong) : e;
@@ -138,7 +138,7 @@ function C(e, n, r, E) {
         Q,
         X,
         J,
-        $ = g(L);
+        $ = g(x);
     try {
         var ee = function () {
             var n = J.value;
@@ -159,7 +159,7 @@ function C(e, n, r, E) {
                 });
                 var s = i.run(v, n, C.match, D);
                 if (!s) return { v: new Date(NaN) };
-                x.push(s.setter), (v = s.rest);
+                L.push(s.setter), (v = s.rest);
             } else {
                 if (r.match(A)) throw RangeError('Format string contains an unescaped latin alphabet character `' + r + '`');
                 if (("''" === n ? (n = "'") : "'" === r && (n = N(n)), 0 !== v.indexOf(n))) return { v: new Date(NaN) };
@@ -176,10 +176,9 @@ function C(e, n, r, E) {
         $.f();
     }
     if (v.length > 0 && S.test(v)) return new Date(NaN);
-    var en = x
-            .map(function (e) {
-                return e.priority;
-            })
+    var en = L.map(function (e) {
+            return e.priority;
+        })
             .sort(function (e, n) {
                 return n - e;
             })
@@ -187,13 +186,11 @@ function C(e, n, r, E) {
                 return r.indexOf(e) === n;
             })
             .map(function (e) {
-                return x
-                    .filter(function (n) {
-                        return n.priority === e;
-                    })
-                    .sort(function (e, n) {
-                        return n.subPriority - e.subPriority;
-                    });
+                return L.filter(function (n) {
+                    return n.priority === e;
+                }).sort(function (e, n) {
+                    return n.subPriority - e.subPriority;
+                });
             })
             .map(function (e) {
                 return e[0];
