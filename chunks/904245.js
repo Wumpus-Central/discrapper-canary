@@ -15,14 +15,14 @@ var l = r(278074),
     E = r(849521),
     v = r(421474),
     y = r(333023),
-    b = r(970606),
-    I = r(960904),
-    T = r(830121),
-    S = r(710845),
-    A = r(247206),
-    C = r(38618),
-    N = r(687516),
-    R = r(539573),
+    b = r(960904),
+    I = r(830121),
+    T = r(710845),
+    S = r(247206),
+    A = r(38618),
+    C = r(687516),
+    N = r(539573),
+    R = r(926526),
     O = r(826581),
     D = r(409059),
     L = r(264229),
@@ -84,8 +84,8 @@ function eT(e, n, r) {
         e
     );
 }
-let eS = new S.Z('MessageActionCreators'),
-    eA = new S.Z('MessageQueue'),
+let eS = new T.Z('MessageActionCreators'),
+    eA = new T.Z('MessageQueue'),
     eC = !1;
 class eN {
     markComplete() {
@@ -97,9 +97,9 @@ class eN {
 }
 function eR(e) {
     let { content: n, channelId: r, messageId: i, location: a, suggested: o = null, overrideProperties: s = {} } = e;
-    (0, T.ZP)(n).forEach((e) => {
+    (0, I.ZP)(n).forEach((e) => {
         let { type: n, code: l } = e;
-        if (n === I.g.INVITE)
+        if (n === b.g.INVITE)
             eO({
                 inviteKey: l,
                 channelId: r,
@@ -108,7 +108,7 @@ function eR(e) {
                 suggested: o,
                 overrideProperties: s
             });
-        else if (n === I.g.TEMPLATE) {
+        else if (n === b.g.TEMPLATE) {
             let e = D.Z.getGuildTemplate(l);
             if (null == e || e.state === eb.Rj.RESOLVING) return;
             h.ZP.trackWithMetadata(ey.rMx.GUILD_TEMPLATE_LINK_SENT, {
@@ -117,27 +117,27 @@ function eR(e) {
                 guild_template_description: e.description,
                 guild_template_guild_id: e.sourceGuildId
             });
-        } else if (n === I.g.BUILD_OVERRIDE);
-        else if (n === I.g.MANUAL_BUILD_OVERRIDE);
-        else if (n === I.g.EVENT);
-        else if (n === I.g.CHANNEL_LINK);
-        else if (n === I.g.APP_DIRECTORY_PROFILE) (0, E.y)(l);
-        else if (n === I.g.APP_DIRECTORY_STOREFRONT) (0, E.y)(l, 'storefront');
-        else if (n === I.g.APP_DIRECTORY_STOREFRONT_SKU) {
+        } else if (n === b.g.BUILD_OVERRIDE);
+        else if (n === b.g.MANUAL_BUILD_OVERRIDE);
+        else if (n === b.g.EVENT);
+        else if (n === b.g.CHANNEL_LINK);
+        else if (n === b.g.APP_DIRECTORY_PROFILE) (0, E.y)(l);
+        else if (n === b.g.APP_DIRECTORY_STOREFRONT) (0, E.y)(l, 'storefront');
+        else if (n === b.g.APP_DIRECTORY_STOREFRONT_SKU) {
             let e = (0, v.Q)(l);
             null != e && (0, E.y)(e.applicationId, 'storefront_sku');
-        } else if (n === I.g.ACTIVITY_BOOKMARK);
-        else if (n === I.g.EMBEDDED_ACTIVITY_INVITE);
-        else if (n === I.g.GUILD_PRODUCT);
-        else if (n === I.g.SERVER_SHOP);
-        else if (n === I.g.QUESTS_EMBED)
+        } else if (n === b.g.ACTIVITY_BOOKMARK);
+        else if (n === b.g.EMBEDDED_ACTIVITY_INVITE);
+        else if (n === b.g.GUILD_PRODUCT);
+        else if (n === b.g.SERVER_SHOP);
+        else if (n === b.g.QUESTS_EMBED)
             (0, z.dA)({
                 questId: l,
                 event: ey.rMx.QUEST_LINK_SHARED,
                 trackGuildAndChannelMetadata: !0
             });
-        else if (n === I.g.APP_OAUTH2_LINK) h.ZP.trackWithMetadata(ey.rMx.APP_OAUTH2_LINK_EMBED_URL_SENT, { application_id: l });
-        else if (n === I.g.COLLECTIBLES_SHOP);
+        else if (n === b.g.APP_OAUTH2_LINK) h.ZP.trackWithMetadata(ey.rMx.APP_OAUTH2_LINK_EMBED_URL_SENT, { application_id: l });
+        else if (n === b.g.COLLECTIBLES_SHOP);
         else throw Error('Unknown coded link type: '.concat(n));
     });
 }
@@ -157,7 +157,7 @@ function eO(e) {
             let i = et.Z.getLastActiveStream();
             if (null != i && i.channelId === n.id) {
                 (e = ey.dAT.STREAM), (r.destination_user_id = i.ownerId);
-                let n = (0, N.L2)(i, el.Z);
+                let n = (0, C.L2)(i, el.Z);
                 r.application_id = null != n ? n.id : null;
             }
         }
@@ -363,8 +363,8 @@ let ex = {
                     })),
                 s = (0, B.r)();
             ew.sendBotMessage(e, a, o, s),
-                (0, A.aP)({
-                    action: A.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT,
+                (0, S.aP)({
+                    action: S.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT,
                     messageId: s,
                     channelId: e,
                     context: r
@@ -463,7 +463,7 @@ let ex = {
         fetchMessages(e) {
             let { channelId: n, before: r, after: i, limit: a, jump: o, focus: s, isPreload: l, skipLocalFetch: c, truncate: p, forICYMI: h } = e,
                 _ = er.Z.getChannel(n),
-                m = C.Z.isConnectedOrOverlay(),
+                m = A.Z.isConnectedOrOverlay(),
                 g = Date.now();
             if (null != _ && _.type === ey.d4z.GUILD_STORE) return !1;
             if (n === y.V) return;
@@ -543,7 +543,7 @@ let ex = {
                                         limit: a,
                                         jump: o,
                                         forICYMI: h,
-                                        isStale: !m || C.Z.lastTimeConnectedChanged() >= g,
+                                        isStale: !m || A.Z.lastTimeConnectedChanged() >= g,
                                         truncate: p
                                     });
                             }),
@@ -578,7 +578,7 @@ let ex = {
                 return;
             }
             if ((eS.log('fetched '.concat(u.messages.length, ' messages from local database (channel_id: ').concat(e, ', remote_fetch_completed: ').concat(a.completed, ')')), ee.Z.addLocalMessages(e, u.messages.length), !a.completed && u.messages.length > 0)) {
-                let n = u.messages.length >= i && u.connectionId === C.Z.lastTimeConnectedChanged();
+                let n = u.messages.length >= i && u.connectionId === A.Z.lastTimeConnectedChanged();
                 d.Z.dispatch({
                     type: 'LOCAL_MESSAGES_LOADED',
                     guildId: o.guild_id,
@@ -861,12 +861,12 @@ let ex = {
                 );
             let l = n.content,
                 { invalidEmojis: u, validNonShortcutEmojis: c, tts: f = !1 } = n,
-                { activityAction: h, location: _, suggestedInvite: m, stickerIds: g, confettiPotionData: E, messageReference: v, allowedMentions: y, poll: I, contentInventoryEntry: T } = r,
-                S = null !== (a = r.flags) && void 0 !== a ? a : 0,
-                [A, C] = (0, J.Z)(l);
-            A && ((l = C), (S = (0, eh.pj)(S, ey.iLy.SUPPRESS_NOTIFICATIONS)));
-            let N = (null === (i = r.messageReference) || void 0 === i ? void 0 : i.type) === ey.Uvt.FORWARD;
-            if ('' === l && null == h && null == g && null == I && null == T && !N) return Promise.resolve();
+                { activityAction: h, location: _, suggestedInvite: m, stickerIds: g, confettiPotionData: E, messageReference: v, allowedMentions: y, poll: b, contentInventoryEntry: I } = r,
+                T = null !== (a = r.flags) && void 0 !== a ? a : 0,
+                [S, A] = (0, J.Z)(l);
+            S && ((l = A), (T = (0, eh.pj)(T, ey.iLy.SUPPRESS_NOTIFICATIONS)));
+            let C = (null === (i = r.messageReference) || void 0 === i ? void 0 : i.type) === ey.Uvt.FORWARD;
+            if ('' === l && null == h && null == g && null == b && null == I && !C) return Promise.resolve();
             let D = null != v ? ey.uaV.REPLY : ey.uaV.DEFAULT,
                 L = null !== (o = r.nonce) && void 0 !== o ? o : (0, B.r)(),
                 x = L;
@@ -878,9 +878,9 @@ let ex = {
                     type: D,
                     messageReference: v,
                     allowedMentions: y,
-                    flags: 0 !== S ? S : void 0,
+                    flags: 0 !== T ? T : void 0,
                     nonce: L,
-                    poll: (0, j.x9)(I)
+                    poll: (0, j.x9)(b)
                 });
                 (0, F.EL)(e, n.id), null != g && (n.sticker_items = g.map((e) => X.Z.getStickerById(e)).filter((e) => null != e)), ew.receiveMessage(e, n, !0, r);
             }
@@ -899,7 +899,7 @@ let ex = {
                     tts: f,
                     message_reference: v,
                     allowed_mentions: y,
-                    flags: S
+                    flags: T
                 }
             };
             if (null != h) {
@@ -915,10 +915,10 @@ let ex = {
                 }
             }
             return (
-                null != I && (w.message.poll = I),
+                null != b && (w.message.poll = b),
                 null != g && (w.message.sticker_ids = g),
                 V.Z.isEnabled() && (w.message.has_poggermode_enabled = !0),
-                null != T && (w.message.content_inventory_entry = T),
+                null != I && (w.message.content_inventory_entry = I),
                 null != E &&
                     ((w.message.confetti_potion = {
                         message_emoji: {
@@ -943,13 +943,13 @@ let ex = {
                                                 duration: u,
                                                 queueSize: o
                                             },
-                                            poll: I
+                                            poll: b
                                         });
                                     let i = eE.default.cast(e),
                                         a = O.Z.getRequest(i);
                                     if (null != a) {
                                         let { guildId: n, userId: r, applicationStatus: i } = a;
-                                        (0, b.aC)({
+                                        (0, R.pL)({
                                             guildId: n,
                                             channelId: e,
                                             messageId: s.body.id,
@@ -1009,7 +1009,7 @@ let ex = {
                                                     cooldownMs: n * ep.Z.Millis.SECOND
                                                 });
                                         } else
-                                            R.U8.has(s.body.code)
+                                            N.U8.has(s.body.code)
                                                 ? d.Z.dispatch({
                                                       type: 'MESSAGE_SEND_FAILED_AUTOMOD',
                                                       messageData: w,
@@ -1020,7 +1020,7 @@ let ex = {
                                                   })
                                                 : s.body.code === ey.evJ.POGGERMODE_TEMPORARILY_DISABLED
                                                   ? d.Z.dispatch({ type: 'POGGERMODE_TEMPORARILY_DISABLED' })
-                                                  : null != I || N || null != T || ew.sendClydeError(e, s.body.code);
+                                                  : null != b || C || null != I || ew.sendClydeError(e, s.body.code);
                                     }
                                     n
                                         ? ew.deleteMessage(e, x, !0)
@@ -1090,7 +1090,7 @@ let ex = {
                     message: o
                 },
                 (r) => {
-                    let i = !r.hasErr && R.U8.has(r.body.code);
+                    let i = !r.hasErr && N.U8.has(r.body.code);
                     if (i) {
                         let e = {
                             type: p.$V.EDIT,

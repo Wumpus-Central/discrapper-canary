@@ -664,7 +664,7 @@ function el(e) {
                       }),
                       (0, o.jsx)(h.Clickable, {
                           onClick: en,
-                          className: u()(W.barButtonMain, W.newTopicsBarInitial),
+                          className: u()(W.newTopicsBarInitial),
                           children: l
                       }),
                       (0, o.jsxs)(h.Clickable, {

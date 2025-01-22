@@ -2,8 +2,8 @@ var i = r(544891),
     a = r(570140),
     o = r(668781),
     s = r(287734),
-    l = r(970606),
-    u = r(131704),
+    l = r(131704),
+    u = r(926526),
     c = r(826581),
     d = r(246364),
     f = r(937111),
@@ -93,8 +93,8 @@ let _ = async (e) => {
     },
     v = async function (e, n, r) {
         let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.wB.APPROVED,
-            u = arguments.length > 4 ? arguments[4] : void 0;
-        (0, l.r2)({
+            l = arguments.length > 4 ? arguments[4] : void 0;
+        (0, u.ID)({
             guildId: e,
             actionType: s,
             applicationUserId: n
@@ -104,7 +104,7 @@ let _ = async (e) => {
                 url: p.ANM.GUILD_JOIN_REQUEST_ID(e, r),
                 body: {
                     action: s,
-                    rejection_reason: u
+                    rejection_reason: l
                 },
                 rejectWithError: !1
             })
@@ -186,7 +186,7 @@ let _ = async (e) => {
     },
     A = (e, n) => {
         null != n &&
-            (0, l.bH)({
+            (0, u.Dq)({
                 guildId: e,
                 applicationStatus: n.applicationStatus,
                 applicationUserId: n.userId
@@ -203,7 +203,7 @@ let _ = async (e) => {
                 url: p.ANM.GUILD_JOIN_REQUEST_INTERVIEW(e),
                 rejectWithError: !1
             }),
-            o = (0, u.q_)(r.body);
+            o = (0, l.q_)(r.body);
         return (
             a.Z.dispatch({
                 type: 'CHANNEL_CREATE',

@@ -17,11 +17,11 @@ r.d(n, {
 });
 var i = r(174212),
     a = r(689079);
-let o = (e) => {
+function o(e) {
     let n = e.toLowerCase() === a.WO.toLowerCase(),
         r = e.toLowerCase() === a.Lu.toLowerCase();
-    return n || r ? n : null;
-};
+    if (!!(n || r)) return n;
+}
 function s(e, n) {
     var r;
     let i = null == e ? void 0 : null === (r = e.find((e) => e.displayName === n)) || void 0 === r ? void 0 : r.value;
