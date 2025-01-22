@@ -145,6 +145,8 @@ function M(e) {
         }
     }
     i === g.OGo.FRIEND &&
+        null != n.user &&
+        !o &&
         (v.notifCenterLocalItems = v.notifCenterLocalItems.map((e) =>
             P(e, _.O7.INCOMING_FRIEND_REQUESTS, n.user.id)
                 ? {
