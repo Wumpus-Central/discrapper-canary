@@ -1,8 +1,8 @@
-n(67867)(
+r(67867)(
     {
         target: 'Symbol',
         stat: !0,
         forced: !0
     },
-    { isWellKnownSymbol: n(593352) }
+    { isWellKnownSymbol: r(593352) }
 );

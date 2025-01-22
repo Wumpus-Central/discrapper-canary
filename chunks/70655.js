@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(70780),
-    s = r(147913),
-    o = r(710845),
+    o = r(147913),
+    s = r(710845),
     l = r(131951),
     u = r(936349),
     c = r(70956),
@@ -19,12 +19,12 @@ function f(e, n, r) {
         e
     );
 }
-let _ = 1 * c.Z.Millis.SECOND,
+let p = 1 * c.Z.Millis.SECOND,
     h = 30 * c.Z.Millis.SECOND,
-    p = 360,
-    m = new o.Z('RTCLatencyTestManager');
+    _ = 360,
+    m = new s.Z('RTCLatencyTestManager');
 m.enableNativeLogger(!0);
-class g extends s.Z {
+class g extends o.Z {
     _terminate() {
         null != this.refetchTimeout && clearTimeout(this.refetchTimeout);
     }
@@ -47,11 +47,11 @@ class g extends s.Z {
                 (0, a.J)()
                     .then((e) => this._handleTestRegionsResponse(e.body))
                     .catch((e) => m.warn(e)),
-                    (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, p * c.Z.Millis.MINUTE));
+                    (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, _ * c.Z.Millis.MINUTE));
             }),
             f(this, '_handleConnectionOpen', () => {
                 if (d.isPlatformEmbedded && !__OVERLAY__) {
-                    let e = Math.floor(_ + Math.random() * h);
+                    let e = Math.floor(p + Math.random() * h);
                     null != this.refetchTimeout && clearTimeout(this.refetchTimeout), (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e));
                 }
             });

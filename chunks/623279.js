@@ -4,17 +4,17 @@ e.exports.parse = function (e) {
     n.shift();
     var r = null,
         i = [];
-    n[2] && ((r = (o = n[2].split('-')).shift()), (i = o));
+    n[2] && ((r = (s = n[2].split('-')).shift()), (i = s));
     var a = [];
     n[5] && (a = n[5].split('-')).shift();
-    var s = [];
+    var o = [];
     if (n[6]) {
-        (o = n[6].split('-')).shift();
-        for (var o, l, u = []; o.length; ) {
-            var c = o.shift();
+        (s = n[6].split('-')).shift();
+        for (var s, l, u = []; s.length; ) {
+            var c = s.shift();
             1 === c.length
                 ? l
-                    ? (s.push({
+                    ? (o.push({
                           singleton: l,
                           extension: u
                       }),
@@ -23,7 +23,7 @@ e.exports.parse = function (e) {
                     : (l = c)
                 : u.push(c);
         }
-        s.push({
+        o.push({
             singleton: l,
             extension: u
         });
@@ -42,7 +42,7 @@ e.exports.parse = function (e) {
                 script: n[3] || null,
                 region: n[4] || null,
                 variant: a,
-                extension: s,
+                extension: o,
                 privateuse: d
             },
             privateuse: f,

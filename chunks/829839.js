@@ -1,6 +1,6 @@
 r.d(n, {
     AQ: function () {
-        return I;
+        return y;
     },
     DY: function () {
         return g;
@@ -11,19 +11,19 @@ r.d(n, {
 });
 var i,
     a,
-    s,
     o,
+    s,
     l,
     u,
     c = r(653041);
 var d = r(733860);
 var f = r(553813),
-    _ = r.n(f),
+    p = r.n(f),
     h = r(65154);
-let p = [
+let _ = [
     {
         name: 'H265',
-        encode: (null === (a = window) || void 0 === a ? void 0 : null === (i = a.DiscordNative) || void 0 === i ? void 0 : i.process.platform) !== 'darwin' || ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.DiscordNative) || void 0 === s ? void 0 : s.os.arch) === 'arm64' && _().satisfies(null === (u = window) || void 0 === u ? void 0 : null === (l = u.DiscordNative) || void 0 === l ? void 0 : l.os.release, h.n4)),
+        encode: (null === (a = window) || void 0 === a ? void 0 : null === (i = a.DiscordNative) || void 0 === i ? void 0 : i.process.platform) !== 'darwin' || ((null === (s = window) || void 0 === s ? void 0 : null === (o = s.DiscordNative) || void 0 === o ? void 0 : o.os.arch) === 'arm64' && p().satisfies(null === (u = window) || void 0 === u ? void 0 : null === (l = u.DiscordNative) || void 0 === l ? void 0 : l.os.release, h.n4)),
         decode: !0
     },
     {
@@ -43,7 +43,7 @@ let p = [
     }
 ];
 function m(e, n) {
-    let r = n.concat(p),
+    let r = n.concat(_),
         i = [];
     return (
         r.forEach((n) => {
@@ -98,6 +98,6 @@ function E(e, n) {
 function v(e) {
     return 'AV1X' === e ? 'AV1' : e;
 }
-function I(e) {
+function y(e) {
     return 'AV1' === e ? 'AV1X' : e;
 }

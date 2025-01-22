@@ -7,12 +7,12 @@ function a(e) {
         errors: []
     };
 }
-function s(e, n) {
+function o(e, n) {
     (this.path = e), this.rethrow(n);
 }
 (n.Reporter = a),
     (a.prototype.isError = function (e) {
-        return e instanceof s;
+        return e instanceof o;
     }),
     (a.prototype.save = function () {
         let e = this._reporterState;
@@ -52,11 +52,11 @@ function s(e, n) {
     (a.prototype.error = function (e) {
         let n;
         let r = this._reporterState,
-            i = e instanceof s;
+            i = e instanceof o;
         if (
             ((n = i
                 ? e
-                : new s(
+                : new o(
                       r.path
                           .map(function (e) {
                               return '[' + JSON.stringify(e) + ']';
@@ -79,9 +79,9 @@ function s(e, n) {
               }
             : e;
     }),
-    i(s, Error),
-    (s.prototype.rethrow = function (e) {
-        if (((this.message = e + ' at: ' + (this.path || '(shallow)')), Error.captureStackTrace && Error.captureStackTrace(this, s), !this.stack))
+    i(o, Error),
+    (o.prototype.rethrow = function (e) {
+        if (((this.message = e + ' at: ' + (this.path || '(shallow)')), Error.captureStackTrace && Error.captureStackTrace(this, o), !this.stack))
             try {
                 throw Error(this.message);
             } catch (e) {

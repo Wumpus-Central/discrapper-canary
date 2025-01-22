@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(727637),
-    d = n(782568),
-    u = n(317632),
+    u = n(782568),
+    d = n(317632),
     m = n(174767),
     h = n(594174),
     f = n(55935),
@@ -24,16 +24,16 @@ function g(e) {
             var e, n;
             return null !== (n = null === (e = h.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : '';
         }),
-        d = (0, f.vc)(a()(t.created_at), 'LT'),
-        u = r.useRef(null),
-        g = (0, c.Z)(u);
+        u = (0, f.vc)(a()(t.created_at), 'LT'),
+        d = r.useRef(null),
+        g = (0, c.Z)(d);
     return (
         r.useEffect(() => {
             !n && (0, m.Br)(t);
         }, [t, n]),
         (0, i.jsxs)('div', {
             className: _.container,
-            ref: u,
+            ref: d,
             children: [
                 (0, i.jsxs)('div', {
                     className: _.primaryRow,
@@ -78,7 +78,7 @@ function g(e) {
                             variant: 'text-xs/medium',
                             className: _.subtitle,
                             color: 'text-muted',
-                            children: [t.application_name, ' \xB7 ', d]
+                            children: [t.application_name, ' \xB7 ', u]
                         }),
                         n &&
                             (0, i.jsx)('div', {
@@ -98,8 +98,8 @@ function g(e) {
 }
 function E(e) {
     let { expired: t, invite: n, isHoveringInvite: l } = e,
-        a = (0, o.e7)([u.Z], () => u.Z.isInviteGameInstalled(n)),
-        c = (0, o.e7)([u.Z], () => u.Z.isInviteJoinable(n)),
+        a = (0, o.e7)([d.Z], () => d.Z.isInviteGameInstalled(n)),
+        c = (0, o.e7)([d.Z], () => d.Z.isInviteJoinable(n)),
         [h, f] = r.useState(!1),
         g = r.useCallback(async () => {
             f(!0);
@@ -141,7 +141,7 @@ function E(e) {
                 disabled: h,
                 size: s.ButtonSizes.SMALL,
                 color: s.ButtonColors.TRANSPARENT,
-                onClick: () => (0, d.Z)(n.fallback_url),
+                onClick: () => (0, u.Z)(n.fallback_url),
                 children: p.intl.string(p.t['27y8KC'])
             })
           : (0, i.jsx)(s.Tooltip, {
@@ -153,7 +153,7 @@ function E(e) {
                         disabled: !0,
                         size: s.ButtonSizes.SMALL,
                         color: s.ButtonColors.TRANSPARENT,
-                        onClick: () => (0, d.Z)(n.fallback_url),
+                        onClick: () => (0, u.Z)(n.fallback_url),
                         children: (0, i.jsxs)('div', {
                             className: _.launchToJoinContainer,
                             children: [

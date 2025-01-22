@@ -1,48 +1,48 @@
-n.d(t, {
+r.d(n, {
     v: function () {
-        return _;
+        return m;
     }
-}),
-    n(47120);
-var i = n(200651),
-    o = n(192379),
-    a = n(399606),
-    r = n(89057),
-    c = n(597688),
-    d = n(987209),
-    s = n(563132),
-    l = n(409813),
-    f = n(48931),
-    u = n(456251),
-    p = n(981631);
-function _(e) {
-    let { handleStepChange: t, handleClose: n } = e,
-        { blockedPayments: _, hasFetchedSkus: b, paymentSources: x, hasFetchedPaymentSources: g, application: m, skusById: h, selectedSkuId: C } = (0, s.usePaymentContext)(),
-        { isGift: S } = (0, d.wD)(),
-        [B, k] = o.useState(!0),
-        [v, T] = (0, a.Wu)([c.Z], () => [c.Z.isFetchingCategories, c.Z.error]);
+});
+var i = r(47120);
+var a = r(200651),
+    o = r(192379),
+    s = r(399606),
+    l = r(89057),
+    u = r(597688),
+    c = r(987209),
+    d = r(563132),
+    f = r(409813),
+    p = r(48931),
+    h = r(456251),
+    _ = r(981631);
+function m(e) {
+    let { handleStepChange: n, handleClose: r } = e,
+        { blockedPayments: i, hasFetchedSkus: m, paymentSources: g, hasFetchedPaymentSources: E, application: v, skusById: y, selectedSkuId: b } = (0, d.usePaymentContext)(),
+        { isGift: I } = (0, c.wD)(),
+        [T, S] = o.useState(!0),
+        [A, C] = (0, s.Wu)([u.Z], () => [u.Z.isFetchingCategories, u.Z.error]);
     if (
         (o.useEffect(() => {
-            let e = null != m;
-            if (!!b && !!g && !!e) k(v);
-        }, [b, g, m, v]),
+            let e = null != v;
+            if (!!m && !!E && !!e) S(A);
+        }, [m, E, v, A]),
         o.useEffect(() => {
-            if (B || _ || null == C) return;
-            let e = h[C];
-            if (S && (null == e ? void 0 : e.productLine) === p.POd.COLLECTIBLES) {
-                t(l.h8.GIFT_CUSTOMIZATION);
+            if (T || i || null == b) return;
+            let e = y[b];
+            if (I && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES) {
+                n(f.h8.GIFT_CUSTOMIZATION);
                 return;
             }
-            if (0 === Object.keys(x).length) {
-                t(l.h8.ADD_PAYMENT_STEPS);
+            if (0 === Object.keys(g).length) {
+                n(f.h8.ADD_PAYMENT_STEPS);
                 return;
             }
-            t(l.h8.REVIEW);
-        }, [B, _, t, x, S, h, C]),
-        B)
+            n(f.h8.REVIEW);
+        }, [T, i, n, g, I, y, b]),
+        T)
     )
-        return (0, i.jsx)(u.Z, {});
-    if (_) return (0, i.jsx)(r.Vq, { onClose: n });
-    if (null != T) return (0, i.jsx)(f.Z, { onClose: n });
+        return (0, a.jsx)(h.Z, {});
+    if (i) return (0, a.jsx)(l.Vq, { onClose: r });
+    if (null != C) return (0, a.jsx)(p.Z, { onClose: r });
     return null;
 }

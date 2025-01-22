@@ -6,16 +6,16 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(782568),
-    o = r(388032),
+    o = r(782568),
+    s = r(388032),
     l = r(746711);
 let u = (e) => {
     let {
-        data: { url: n, link_text: r, link_description: o, is_localized: u }
+        data: { url: n, link_text: r, link_description: s, is_localized: u }
     } = e;
     if (!u) return null;
     let c = () => {
-        (0, s.Z)(n);
+        (0, o.Z)(n);
     };
     return (0, i.jsxs)(a.Clickable, {
         role: 'link',
@@ -30,12 +30,12 @@ let u = (e) => {
                         variant: 'text-md/semibold',
                         children: r
                     }),
-                    null != o &&
-                        '' !== o &&
+                    null != s &&
+                        '' !== s &&
                         (0, i.jsx)(a.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
-                            children: o
+                            children: s
                         })
                 ]
             }),
@@ -63,19 +63,19 @@ function c(e) {
             let { data: r } = e;
             return (0, i.jsx)(u, { data: r }, 'external-link+'.concat(n));
         }),
-        s = n.some((e) => {
+        o = n.some((e) => {
             let { data: n } = e;
             return n.is_header_hidden;
         });
     return (0, i.jsxs)('div', {
         className: l.linksContainer,
         children: [
-            !s &&
+            !o &&
                 (0, i.jsx)(a.Heading, {
                     variant: 'heading-sm/semibold',
                     color: 'header-secondary',
                     className: l.header,
-                    children: o.intl.string(o.t.hvVgAQ)
+                    children: s.intl.string(s.t.hvVgAQ)
                 }),
             r
         ]

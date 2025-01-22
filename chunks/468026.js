@@ -2,93 +2,93 @@ r.r(n);
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(693789),
+    o = r.n(a),
+    s = r(693789),
     l = r(1561),
     u = r(512983),
     c = r(466377),
     d = r(993365),
     f = r(481060),
-    _ = r(600164),
+    p = r(600164),
     h = r(540059),
-    p = r(388032),
+    _ = r(388032),
     m = r(222263);
 let g = (e) => {
     let n,
         r,
         a,
-        { body: g, cancelText: E, className: v, confirmColor: I, confirmText: T = p.intl.string(p.t.BddRzc), secondaryConfirmText: b, onCancel: y, onClose: S, onConfirm: A, onConfirmSecondary: N, title: C, transitionState: R, titleClassName: O } = e,
+        { body: g, cancelText: E, className: v, confirmColor: y, confirmText: b = _.intl.string(_.t.BddRzc), secondaryConfirmText: I, onCancel: T, onClose: S, onConfirm: A, onConfirmSecondary: C, title: N, transitionState: R, titleClassName: O } = e,
         D = (0, h.Q3)('ConfirmModal'),
-        L = D ? o.zx.Sizes.MEDIUM : o.zx.Sizes.LARGE,
-        x = () => {
-            null == S || S(), null == y || y();
+        x = D ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE,
+        L = () => {
+            null == S || S(), null == T || T();
         },
         w = (e) => {
             null != e && e.preventDefault(), null == S || S(), null == A || A();
         },
         P = () => {
-            null == S || S(), null == N || N();
+            null == S || S(), null == C || C();
         };
     return (
         null != E &&
             '' !== E &&
-            (n = (0, i.jsx)(o.zx, {
+            (n = (0, i.jsx)(s.zx, {
                 type: 'button',
-                size: L,
-                color: o.zx.Colors.PRIMARY,
-                onClick: x,
+                size: x,
+                color: s.zx.Colors.PRIMARY,
+                onClick: L,
                 className: m.secondaryButton,
                 children: E
             })),
-        null != T &&
-            '' !== T &&
-            (r = (0, i.jsx)(o.zx, {
-                type: 'submit',
-                color: I,
-                size: L,
-                className: s()(m.primaryButton, null != n ? m.gutter : null),
-                autoFocus: !0,
-                children: T
-            })),
         null != b &&
             '' !== b &&
+            (r = (0, i.jsx)(s.zx, {
+                type: 'submit',
+                color: y,
+                size: x,
+                className: o()(m.primaryButton, null != n ? m.gutter : null),
+                autoFocus: !0,
+                children: b
+            })),
+        null != I &&
+            '' !== I &&
             (a = (0, i.jsx)(l.P, {
                 onClick: P,
                 className: m.minorContainer,
                 children: (0, i.jsx)(d.x, {
                     className: m.secondaryAction,
                     variant: 'text-xs/normal',
-                    children: b
+                    children: I
                 })
             })),
         (0, i.jsx)(c.Y0, {
             transitionState: R,
             size: c.Cg.DYNAMIC,
-            className: s()(v, m.container),
-            'aria-label': C,
+            className: o()(v, m.container),
+            'aria-label': N,
             children: (0, i.jsxs)('form', {
                 onSubmit: w,
                 className: m.form,
                 children: [
                     (0, i.jsx)(c.xB, {
                         children:
-                            null != C && D
+                            null != N && D
                                 ? (0, i.jsx)(f.Heading, {
                                       variant: 'heading-lg/semibold',
-                                      className: s()(m.title, O),
-                                      children: C
+                                      className: o()(m.title, O),
+                                      children: N
                                   })
                                 : (0, i.jsx)(u.v, {
                                       tag: 'h2',
-                                      className: s()(m.title, O),
-                                      children: C
+                                      className: o()(m.title, O),
+                                      children: N
                                   })
                     }),
                     (0, i.jsx)(c.hz, {
                         className: m.modalContent,
-                        children: (0, i.jsx)(_.Z, {
-                            direction: _.Z.Direction.VERTICAL,
-                            justify: D ? _.Z.Justify.START : _.Z.Justify.CENTER,
+                        children: (0, i.jsx)(p.Z, {
+                            direction: p.Z.Direction.VERTICAL,
+                            justify: D ? p.Z.Justify.START : p.Z.Justify.CENTER,
                             className: m.content,
                             children:
                                 null != g &&
@@ -101,8 +101,8 @@ let g = (e) => {
                         })
                     }),
                     (0, i.jsxs)(c.mz, {
-                        justify: D ? void 0 : _.Z.Justify.BETWEEN,
-                        wrap: _.Z.Wrap.WRAP,
+                        justify: D ? void 0 : p.Z.Justify.BETWEEN,
+                        wrap: p.Z.Wrap.WRAP,
                         children: [r, n, a]
                     })
                 ]

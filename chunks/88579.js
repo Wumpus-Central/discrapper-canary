@@ -1,6 +1,6 @@
 var i = r(706627),
     a = Object.create,
-    s = (function () {
+    o = (function () {
         function e() {}
         return function (n) {
             if (!i(n)) return {};
@@ -10,4 +10,4 @@ var i = r(706627),
             return (e.prototype = void 0), r;
         };
     })();
-e.exports = s;
+e.exports = o;

@@ -5,9 +5,9 @@ r.d(n, {
 });
 var i = r(717029),
     a = r(25487),
-    s = r(846042);
-function o(e) {
-    return (o =
+    o = r(846042);
+function s(e) {
+    return (s =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -46,7 +46,7 @@ function f(e, n) {
             return (e.__proto__ = n), e;
         })(e, n);
 }
-function _(e) {
+function p(e) {
     var n = m();
     return function () {
         var r,
@@ -55,9 +55,9 @@ function _(e) {
     };
 }
 function h(e, n) {
-    return n && ('object' === o(n) || 'function' == typeof n) ? n : p(e);
+    return n && ('object' === s(n) || 'function' == typeof n) ? n : _(e);
 }
-function p(e) {
+function _(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
@@ -92,12 +92,12 @@ function E(e, n, r) {
 }
 var v = (function (e) {
     d(r, e);
-    var n = _(r);
+    var n = p(r);
     function r() {
         var e;
         l(this, r);
-        for (var i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
-        return E(p((e = n.call.apply(n, [this].concat(a)))), 'priority', 10), E(p(e), 'incompatibleTokens', ['t', 'T', 'x']), e;
+        for (var i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
+        return E(_((e = n.call.apply(n, [this].concat(a)))), 'priority', 10), E(_(e), 'incompatibleTokens', ['t', 'T', 'x']), e;
     }
     return (
         c(r, [
@@ -106,15 +106,15 @@ var v = (function (e) {
                 value: function (e, n) {
                     switch (n) {
                         case 'X':
-                            return (0, s.DA)(a.s.basicOptionalMinutes, e);
+                            return (0, o.DA)(a.s.basicOptionalMinutes, e);
                         case 'XX':
-                            return (0, s.DA)(a.s.basic, e);
+                            return (0, o.DA)(a.s.basic, e);
                         case 'XXXX':
-                            return (0, s.DA)(a.s.basicOptionalSeconds, e);
+                            return (0, o.DA)(a.s.basicOptionalSeconds, e);
                         case 'XXXXX':
-                            return (0, s.DA)(a.s.extendedOptionalSeconds, e);
+                            return (0, o.DA)(a.s.extendedOptionalSeconds, e);
                         default:
-                            return (0, s.DA)(a.s.extended, e);
+                            return (0, o.DA)(a.s.extended, e);
                     }
                 }
             },

@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(602984),
-    o =
+    o = r(602984),
+    s =
         Object.assign ||
         function (e) {
             for (var n = 1; n < arguments.length; n++) {
@@ -18,17 +18,17 @@ var i = r(192379),
             c = e.borderRadius,
             d = e.boxShadow,
             f = e.children,
-            _ = (0, a.default)({
+            p = (0, a.default)({
                 default: {
                     grid: {
                         borderRadius: c,
                         boxShadow: d,
                         absolute: '0px 0px 0px 0px',
-                        background: 'url(' + s.U(n, r, l, u.canvas) + ') center left'
+                        background: 'url(' + o.U(n, r, l, u.canvas) + ') center left'
                     }
                 }
             });
-        return (0, i.isValidElement)(f) ? i.cloneElement(f, o({}, f.props, { style: o({}, f.props.style, _.grid) })) : i.createElement('div', { style: _.grid });
+        return (0, i.isValidElement)(f) ? i.cloneElement(f, s({}, f.props, { style: s({}, f.props.style, p.grid) })) : i.createElement('div', { style: p.grid });
     };
 (l.defaultProps = {
     size: 8,

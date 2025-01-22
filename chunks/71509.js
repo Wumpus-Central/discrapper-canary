@@ -3,7 +3,7 @@ r.d(n, {
         return i;
     },
     Ip: function () {
-        return s;
+        return o;
     },
     Ui: function () {
         return a;
@@ -11,4 +11,4 @@ r.d(n, {
 });
 let i = 5,
     a = 'switch-accounts-modal',
-    s = 'multiaccount_cta_tooltip_seen';
+    o = 'multiaccount_cta_tooltip_seen';

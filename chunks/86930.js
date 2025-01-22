@@ -1,11 +1,11 @@
-var e = n(570596),
-    o = n(548828),
-    i = n(28886),
-    u = n(858698),
-    s = n(749915),
-    c = TypeError;
-t.exports = function (t, r) {
-    var n = arguments.length < 2 ? s(t) : r;
-    if (o(n)) return i(e(n, t));
-    throw new c(u(t) + ' is not iterable');
+var i = r(570596),
+    a = r(548828),
+    o = r(28886),
+    s = r(858698),
+    l = r(749915),
+    u = TypeError;
+e.exports = function (e, n) {
+    var r = arguments.length < 2 ? l(e) : n;
+    if (a(r)) return o(i(r, e));
+    throw new u(s(e) + ' is not iterable');
 };

@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(1561),
     u = r(481060),
     c = r(195895);
@@ -19,13 +19,13 @@ let d = {
         BACKGROUND_ACCENT: c.backgroundAccent
     },
     f = a.forwardRef(function (e, n) {
-        let { role: r, children: a, className: s, onDismiss: f, backgroundColor: _ = d.RED, icon: h = u.CircleWarningIcon, iconClassName: p } = e;
+        let { role: r, children: a, className: o, onDismiss: f, backgroundColor: p = d.RED, icon: h = u.CircleWarningIcon, iconClassName: _ } = e;
         return (0, i.jsxs)('div', {
-            className: o()(c.error, s, _),
+            className: s()(c.error, o, p),
             ref: n,
             children: [
                 (0, i.jsx)(h, {
-                    className: o()(c.icon, p),
+                    className: s()(c.icon, _),
                     color: 'currentColor'
                 }),
                 (0, i.jsx)('div', {

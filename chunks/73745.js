@@ -1,8 +1,8 @@
 var i, a;
-function s(e) {
+function o(e) {
     return e.type === i.literal;
 }
-function o(e) {
+function s(e) {
     return e.type === i.argument;
 }
 function l(e) {
@@ -20,13 +20,13 @@ function d(e) {
 function f(e) {
     return e.type === i.plural;
 }
-function _(e) {
+function p(e) {
     return e.type === i.pound;
 }
 function h(e) {
     return e.type === i.tag;
 }
-function p(e) {
+function _(e) {
     return !!(e && 'object' == typeof e && e.type === a.number);
 }
 function m(e) {
@@ -43,13 +43,13 @@ r.d(n, {
         return f;
     },
     O4: function () {
-        return s;
-    },
-    VG: function () {
         return o;
     },
+    VG: function () {
+        return s;
+    },
     Wh: function () {
-        return p;
+        return _;
     },
     Wi: function () {
         return d;
@@ -70,7 +70,7 @@ r.d(n, {
         return i;
     },
     yx: function () {
-        return _;
+        return p;
     }
 }),
     !(function (e) {

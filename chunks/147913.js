@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(47120);
-var s = r(570140);
-function o(e, n, r) {
+var o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -26,7 +26,7 @@ class l {
                 (this._initialize(),
                 Object.entries(this.actions).forEach((e) => {
                     let [n, r] = e;
-                    s.Z.subscribe(n, 'function' == typeof r ? r : r.callback);
+                    o.Z.subscribe(n, 'function' == typeof r ? r : r.callback);
                 }),
                 this.stores.forEach((e, n) => {
                     n.addChangeListener(e), e();
@@ -39,12 +39,12 @@ class l {
                 (this._terminate(),
                 Object.entries(this.actions).forEach((e) => {
                     let [n, r] = e;
-                    s.Z.unsubscribe(n, 'function' == typeof r ? r : r.callback);
+                    o.Z.unsubscribe(n, 'function' == typeof r ? r : r.callback);
                 })));
     }
     _initialize() {}
     _terminate() {}
     constructor() {
-        o(this, 'initializedCount', 0), o(this, 'actions', {}), o(this, 'stores', new Map());
+        s(this, 'initializedCount', 0), s(this, 'actions', {}), s(this, 'stores', new Map());
     }
 }

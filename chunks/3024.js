@@ -1,10 +1,10 @@
 var i = r(192379),
     a = r(723184),
-    s = r(877837),
-    o = function (e) {
+    o = r(877837),
+    s = function (e) {
         var n = e.hex,
             r = e.rgb,
-            o = e.onChange,
+            s = e.onChange,
             l = (0, a.default)({
                 default: {
                     fields: {
@@ -65,7 +65,7 @@ var i = r(192379),
             }),
             u = function (e, n) {
                 e.r || e.g || e.b
-                    ? o(
+                    ? s(
                           {
                               r: e.r || r.r,
                               g: e.g || r.g,
@@ -74,7 +74,7 @@ var i = r(192379),
                           },
                           n
                       )
-                    : o(
+                    : s(
                           {
                               hex: e.hex,
                               source: 'hex'
@@ -89,7 +89,7 @@ var i = r(192379),
                 className: 'flexbox-fix'
             },
             i.createElement('div', { style: l.active }),
-            i.createElement(s.Vm, {
+            i.createElement(o.Vm, {
                 style: {
                     wrap: l.HEXwrap,
                     input: l.HEXinput,
@@ -99,7 +99,7 @@ var i = r(192379),
                 value: n,
                 onChange: u
             }),
-            i.createElement(s.Vm, {
+            i.createElement(o.Vm, {
                 style: {
                     wrap: l.RGBwrap,
                     input: l.RGBinput,
@@ -109,7 +109,7 @@ var i = r(192379),
                 value: r.r,
                 onChange: u
             }),
-            i.createElement(s.Vm, {
+            i.createElement(o.Vm, {
                 style: {
                     wrap: l.RGBwrap,
                     input: l.RGBinput,
@@ -119,7 +119,7 @@ var i = r(192379),
                 value: r.g,
                 onChange: u
             }),
-            i.createElement(s.Vm, {
+            i.createElement(o.Vm, {
                 style: {
                     wrap: l.RGBwrap,
                     input: l.RGBinput,
@@ -131,4 +131,4 @@ var i = r(192379),
             })
         );
     };
-n.Z = o;
+n.Z = s;

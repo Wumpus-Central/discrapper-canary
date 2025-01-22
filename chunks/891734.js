@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(632471),
     a = r(740078),
-    s = r(510104),
-    o = r(126387);
+    o = r(510104),
+    s = r(126387);
 function l(e, n) {
     void 0 === n && (n = {});
     var r = n,
@@ -15,14 +15,14 @@ function l(e, n) {
         c = r.rootBoundary,
         d = r.padding,
         f = r.flipVariations,
-        _ = r.allowedAutoPlacements,
-        h = void 0 === _ ? a.Ct : _,
-        p = (0, i.Z)(l),
-        m = p
+        p = r.allowedAutoPlacements,
+        h = void 0 === p ? a.Ct : p,
+        _ = (0, i.Z)(l),
+        m = _
             ? f
                 ? a.bw
                 : a.bw.filter(function (e) {
-                      return (0, i.Z)(e) === p;
+                      return (0, i.Z)(e) === _;
                   })
             : a.mv,
         g = m.filter(function (e) {
@@ -31,12 +31,12 @@ function l(e, n) {
     0 === g.length && (g = m);
     var E = g.reduce(function (n, r) {
         return (
-            (n[r] = (0, s.Z)(e, {
+            (n[r] = (0, o.Z)(e, {
                 placement: r,
                 boundary: u,
                 rootBoundary: c,
                 padding: d
-            })[(0, o.Z)(r)]),
+            })[(0, s.Z)(r)]),
             n
         );
     }, {});

@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     modalContent: 'modalContent_ba5b9e',
     editingContainer: 'editingContainer_ba5b9e',
     imageEnabled: 'imageEnabled_ba5b9e image_ba5b9e',

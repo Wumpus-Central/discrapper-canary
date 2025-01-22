@@ -1,12 +1,12 @@
 let i, a;
-var s,
-    o = r(411104);
+var o,
+    s = r(411104);
 var l = r(442837),
     u = r(544891),
     c = r(570140),
     d = r(358085),
     f = r(981631);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -20,7 +20,7 @@ function _(e, n, r) {
     );
 }
 let h = null,
-    p = null,
+    _ = null,
     m = null;
 function g(e) {
     let { client: n } = e;
@@ -28,30 +28,30 @@ function g(e) {
 }
 function E(e) {
     let { paypalClient: n } = e;
-    p = n;
+    _ = n;
 }
 function v(e) {
     let { venmoClient: n } = e;
     m = n;
 }
-function I(e) {
-    let { paymentSourceType: n, state: r, path: a, query: s } = e;
+function y(e) {
+    let { paymentSourceType: n, state: r, path: a, query: o } = e;
     if (n !== f.HeQ.PAYPAL || r !== i) return;
-    let o = window.popupBridge.onComplete;
-    'function' == typeof o &&
-        o(null, {
+    let s = window.popupBridge.onComplete;
+    'function' == typeof s &&
+        s(null, {
             path: a,
-            queryItems: s
+            queryItems: o
         });
 }
-function T(e) {
+function b(e) {
     let { paymentSourceType: n, state: r } = e;
     n === f.HeQ.PAYPAL && (i = r);
 }
-function b() {
-    p = null;
+function I() {
+    _ = null;
 }
-function y() {
+function T() {
     m = null;
 }
 (0, d.isDesktop)() &&
@@ -64,12 +64,12 @@ function y() {
             (a = e), window.open(e), A.emitChange();
         }
     });
-class S extends (s = l.ZP.Store) {
+class S extends (o = l.ZP.Store) {
     getClient() {
         return h;
     }
     getPayPalClient() {
-        return p;
+        return _;
     }
     getVenmoClient() {
         return m;
@@ -78,14 +78,14 @@ class S extends (s = l.ZP.Store) {
         return a;
     }
 }
-_(S, 'displayName', 'BraintreeStore');
+p(S, 'displayName', 'BraintreeStore');
 let A = new S(c.Z, {
     BRAINTREE_CREATE_CLIENT_SUCCESS: g,
     BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS: E,
-    BILLING_POPUP_BRIDGE_CALLBACK: I,
-    BILLING_POPUP_BRIDGE_STATE_UPDATE: T,
-    BRAINTREE_TEARDOWN_PAYPAL_CLIENT: b,
+    BILLING_POPUP_BRIDGE_CALLBACK: y,
+    BILLING_POPUP_BRIDGE_STATE_UPDATE: b,
+    BRAINTREE_TEARDOWN_PAYPAL_CLIENT: I,
     BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: v,
-    BRAINTREE_TEARDOWN_VENMO_CLIENT: y
+    BRAINTREE_TEARDOWN_VENMO_CLIENT: T
 });
 n.Z = A;

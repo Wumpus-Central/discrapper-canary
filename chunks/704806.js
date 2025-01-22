@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(353926),
     u = r(626135),
     c = r(358085),
@@ -24,36 +24,36 @@ function f(e, n, r) {
         e
     );
 }
-let _ = { hashes: {} };
+let p = { hashes: {} };
 async function h() {
     if (!c.isPlatformEmbedded || !(0, c.isWindows)()) return [];
     await d.ZP.ensureModule('discord_media');
     let e = d.ZP.requireModule('discord_media');
     return (await e.getSystemAnalyticsBlob()) || [];
 }
-async function p() {
+async function _() {
     try {
-        let n = (await h()).filter((e) => _.hashes[e.name] !== e.hash);
+        let n = (await h()).filter((e) => p.hashes[e.name] !== e.hash);
         for (let { name: r, hash: i, data: a } of n) {
             var e;
             let n = {
                 ...a,
                 gpus: null === (e = a.gpus) || void 0 === e ? void 0 : e.map((e) => JSON.stringify(e))
             };
-            u.default.track(r, n), ((_ = { hashes: { ..._.hashes } }).hashes[r] = i);
+            u.default.track(r, n), ((p = { hashes: { ...p.hashes } }).hashes[r] = i);
         }
         n.length > 0 && E.emitChange();
     } catch (e) {}
 }
 function m() {
-    return p(), !1;
+    return _(), !1;
 }
-class g extends (i = s.ZP.PersistedStore) {
+class g extends (i = o.ZP.PersistedStore) {
     initialize(e) {
-        (_ = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(l.Z);
+        (p = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(l.Z);
     }
     getState() {
-        return _;
+        return p;
     }
     async info() {
         try {
@@ -64,7 +64,7 @@ class g extends (i = s.ZP.PersistedStore) {
     }
 }
 f(g, 'displayName', 'SystemAnalyticsStore'), f(g, 'persistKey', 'SystemAnalyticsStore');
-let E = new g(o.Z, { START_SESSION: m });
+let E = new g(s.Z, { START_SESSION: m });
 function v() {
     return E.info();
 }

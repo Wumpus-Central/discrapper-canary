@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(392711),
-    s = r.n(a),
-    o = r(314897),
+    o = r.n(a),
+    s = r(314897),
     l = r(908442),
     u = r(981631),
     c = r(388032);
@@ -16,9 +16,9 @@ function d(e, n, r) {
             valid: !1,
             reason: c.intl.string(c.t.d34xi4)
         };
-    let { releaseChannel: i, expiresAt: a, validForUserIds: d, allowedVersions: f, targetBuildOverride: _ } = e,
-        h = Object.keys(_);
-    if (0 === s().intersection(h, n).length)
+    let { releaseChannel: i, expiresAt: a, validForUserIds: d, allowedVersions: f, targetBuildOverride: p } = e,
+        h = Object.keys(p);
+    if (0 === o().intersection(h, n).length)
         return {
             valid: !1,
             reason: c.intl.formatToPlainString(c.t.wySUzs, {
@@ -57,13 +57,13 @@ function d(e, n, r) {
                 reason: c.intl.formatToPlainString(c.t.GOEF0N, { releaseChannel: f.join(', ') })
             };
     }
-    let p = null != a ? new Date(a).getTime() : null;
-    return null != p && p < Date.now()
+    let _ = null != a ? new Date(a).getTime() : null;
+    return null != _ && _ < Date.now()
         ? {
               valid: !1,
               reason: c.intl.string(c.t['8eRE6e'])
           }
-        : d.length > 0 && !d.includes(o.default.getId())
+        : d.length > 0 && !d.includes(s.default.getId())
           ? {
                 valid: !1,
                 reason: c.intl.string(c.t.qZgV0d)

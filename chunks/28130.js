@@ -1,7 +1,7 @@
 i.r(n),
     i.d(n, {
         default: function () {
-            return E;
+            return k;
         }
     }),
     i(47120);
@@ -19,12 +19,12 @@ var t = i(200651),
     x = i(914010),
     m = i(594174),
     g = i(451478),
-    b = i(626135),
-    h = i(74538),
-    C = i(621961),
-    _ = i(884858),
-    j = i(981631),
-    N = i(486324),
+    h = i(626135),
+    C = i(74538),
+    b = i(621961),
+    j = i(884858),
+    N = i(981631),
+    _ = i(486324),
     v = i(869783),
     I = i(388032),
     A = i(398497);
@@ -46,7 +46,7 @@ let T = [
         png: i(690695)
     }
 ];
-function y(e) {
+function F(e) {
     let { shouldAnimate: n = !0 } = e,
         [i, a] = o.useState(!1);
     return (0, t.jsx)('div', {
@@ -65,7 +65,7 @@ function y(e) {
         )
     });
 }
-function k(e) {
+function M(e) {
     let { guildFeature: n, guild: i } = e;
     return null == n || null == i
         ? null
@@ -78,19 +78,19 @@ function k(e) {
               })
           });
 }
-function F(e) {
+function y(e) {
     let { uploadType: n, guild: i } = e;
     return (0, t.jsxs)('div', {
         className: A.optionBoxText,
         children: [
-            (0, t.jsx)(k, {
+            (0, t.jsx)(M, {
                 guild: i,
-                guildFeature: (0, C.C)(n, { isGIF: !0 })
+                guildFeature: (0, b.C)(n, { isGIF: !0 })
             }),
             (0, t.jsxs)('div', {
                 className: A.optionBoxDescription,
                 children: [
-                    (0, C.K)(n) &&
+                    (0, b.K)(n) &&
                         (0, t.jsx)(l.TooltipContainer, {
                             className: A.nitroWheelFlairContainer,
                             text: I.intl.string(I.t['5AFxuL']),
@@ -106,19 +106,19 @@ function F(e) {
         ]
     });
 }
-function M(e) {
+function E(e) {
     let { title: n, uploadType: i, guild: o } = e;
     return (0, t.jsxs)('div', {
         className: A.optionBoxText,
         children: [
-            (0, t.jsx)(k, {
-                guildFeature: (0, C.C)(i, { isGIF: !1 }),
+            (0, t.jsx)(M, {
+                guildFeature: (0, b.C)(i, { isGIF: !1 }),
                 guild: o
             }),
             (0, t.jsxs)('div', {
                 className: A.optionBoxDescription,
                 children: [
-                    i === N.pC.BANNER &&
+                    i === _.pC.BANNER &&
                         (0, t.jsx)(l.TooltipContainer, {
                             className: A.nitroWheelFlairContainer,
                             text: I.intl.string(I.t['5AFxuL']),
@@ -134,32 +134,32 @@ function M(e) {
         ]
     });
 }
-function E(e) {
-    let { transitionState: n, onClose: c, onComplete: C, uploadType: T, maxFileSizeBytes: k, showUpsellHeader: E, filters: B, analyticsLocation: L, analyticsLocations: P = [], modalSubTitle: w, imageSpecifications: S, modalTitle: U = I.intl.string(I.t.DToW4e), uploadOptionTitle: Z = I.intl.string(I.t['MsUY/f']) } = e,
+function k(e) {
+    let { transitionState: n, onClose: c, onComplete: b, uploadType: T, maxFileSizeBytes: M, showUpsellHeader: k, filters: B, analyticsLocation: L, analyticsLocations: P = [], modalSubTitle: w, imageSpecifications: S, modalTitle: U = I.intl.string(I.t.DToW4e), uploadOptionTitle: Z = I.intl.string(I.t['MsUY/f']) } = e,
         W = (0, a.e7)([g.Z], () => g.Z.isFocused()),
         D = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         O = (0, a.e7)([x.Z], () => x.Z.getGuildId()),
         R = (0, a.e7)([p.Z], () => p.Z.getGuild(O)),
         { reducedMotion: G } = o.useContext(l.AccessibilityPreferencesContext),
         z = (0, l.useModalContext)(),
-        H = !h.ZP.canUseAnimatedAvatar(D) && T === N.pC.AVATAR,
+        H = !C.ZP.canUseAnimatedAvatar(D) && T === _.pC.AVATAR,
         { analyticsLocations: V } = (0, r.ZP)(P, s.Z.SELECT_IMAGE_MODAL);
     function K(e, n) {
         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        c(), C(e, n, i);
+        c(), b(e, n, i);
     }
     o.useEffect(() => {
         H &&
-            b.default.track(j.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: j.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+            h.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: N.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
                 location_stack: V
             }),
-            b.default.track(j.rMx.OPEN_MODAL, {
-                type: j.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+            h.default.track(N.rMx.OPEN_MODAL, {
+                type: N.jXE.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
                 location: L
             });
     }, [H, L, V]);
-    let X = T === N.pC.AVATAR || T === N.pC.BANNER,
+    let X = T === _.pC.AVATAR || T === _.pC.BANNER,
         Y = (0, f.M)(!X);
     return (0, t.jsxs)(l.ModalRoot, {
         transitionState: n,
@@ -210,7 +210,7 @@ function E(e) {
                                     (0, t.jsx)(l.Text, {
                                         variant: 'text-sm/semibold',
                                         color: 'interactive-normal',
-                                        children: (0, t.jsx)(M, {
+                                        children: (0, t.jsx)(E, {
                                             title: Z,
                                             uploadType: T,
                                             guild: R
@@ -228,7 +228,7 @@ function E(e) {
                                                             file: n,
                                                             onCrop: K,
                                                             uploadType: T,
-                                                            showUpsellHeader: E,
+                                                            showUpsellHeader: k,
                                                             allowSkip: !0,
                                                             analyticsPage: null == L ? void 0 : L.page,
                                                             ...i
@@ -237,9 +237,9 @@ function E(e) {
                                                 { contextKey: z }
                                             );
                                         },
-                                        maxFileSizeBytes: k,
+                                        maxFileSizeBytes: M,
                                         onFileSizeError: function () {
-                                            c(), (0, _.Z)(k);
+                                            c(), (0, j.Z)(M);
                                         },
                                         filters: B
                                     })
@@ -255,7 +255,7 @@ function E(e) {
                                                 (0, t.jsx)(e, {
                                                     uploadType: T,
                                                     onComplete: (e, n) => K(e, n, !0),
-                                                    showUpsellHeader: E,
+                                                    showUpsellHeader: k,
                                                     analyticsPage: null == L ? void 0 : L.page,
                                                     ...n
                                                 });
@@ -267,7 +267,7 @@ function E(e) {
                                     (0, t.jsxs)('div', {
                                         className: A.contentCircle,
                                         children: [
-                                            (0, t.jsx)(y, { shouldAnimate: W && !G.enabled }),
+                                            (0, t.jsx)(F, { shouldAnimate: W && !G.enabled }),
                                             (0, t.jsx)('div', {
                                                 className: A.gifIconContainer,
                                                 children: (0, t.jsx)(l.GifIcon, {
@@ -283,7 +283,7 @@ function E(e) {
                                     (0, t.jsx)(l.Text, {
                                         variant: 'text-sm/semibold',
                                         color: 'interactive-normal',
-                                        children: (0, t.jsx)(F, {
+                                        children: (0, t.jsx)(y, {
                                             uploadType: T,
                                             guild: R
                                         })
@@ -299,7 +299,7 @@ function E(e) {
                               children: S
                           })
                         : null,
-                    E &&
+                    k &&
                         Y &&
                         (0, t.jsx)(u.Z, {
                             uploadType: T,

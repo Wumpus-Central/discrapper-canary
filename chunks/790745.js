@@ -1,14 +1,14 @@
-var r = n(67867),
-    o = n(804104).map;
-r(
+var i = r(67867),
+    a = r(804104).map;
+i(
     {
         target: 'Array',
         proto: !0,
-        forced: !n(469624)('map')
+        forced: !r(469624)('map')
     },
     {
         map: function (e) {
-            return o(this, e, arguments.length > 1 ? arguments[1] : void 0);
+            return a(this, e, arguments.length > 1 ? arguments[1] : void 0);
         }
     }
 );

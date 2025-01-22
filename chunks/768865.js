@@ -5,11 +5,11 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(481060),
-    s = r(626135),
-    o = r(981631);
+    o = r(626135),
+    s = r(981631);
 let l = (e, n) => {
     null == n && (n = e[e.length - 1]),
-        s.default.track(o.rMx.OPEN_MODAL, {
+        o.default.track(s.rMx.OPEN_MODAL, {
             type: 'Tiered Tenure Badge Details',
             location_stack: e,
             location: n,

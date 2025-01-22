@@ -3,15 +3,15 @@ r.d(n, {
         return h;
     },
     t: function () {
-        return p;
+        return _;
     }
 });
 var i = r(608748),
     a = r(388388),
-    s = r(203731),
-    o = 0,
+    o = r(203731),
+    s = 0,
     l = function () {
-        return !!o;
+        return !!s;
     },
     u = 250,
     c = {
@@ -24,7 +24,7 @@ var i = r(608748),
     f = function (e) {
         return void 0 === e && (e = 0), Date.now() + e;
     },
-    _ = !1,
+    p = !1,
     h = new ((function () {
         function e() {
             var e = this;
@@ -36,15 +36,15 @@ var i = r(608748),
         return (
             (e.prototype.run = function (e) {
                 var n = this;
-                if ((void 0 === e && (e = u), !_)) {
-                    _ = !0;
+                if ((void 0 === e && (e = u), !p)) {
+                    p = !0;
                     var r = f(e);
-                    (0, s.p)(function () {
+                    (0, o.p)(function () {
                         var a = !1;
                         try {
                             a = (0, i.N)();
                         } finally {
-                            if (((_ = !1), (e = r - f()), !l())) return;
+                            if (((p = !1), (e = r - f()), !l())) return;
                             a ? n.run(1000) : e > 0 ? n.run(e) : n.start();
                         }
                     });
@@ -82,6 +82,6 @@ var i = r(608748),
             e
         );
     })())(),
-    p = function (e) {
-        !o && e > 0 && h.start(), (o += e) || h.stop();
+    _ = function (e) {
+        !s && e > 0 && h.start(), (s += e) || h.stop();
     };

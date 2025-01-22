@@ -1,8 +1,8 @@
 var i = r(444675);
 let a = r(620633),
-    s = r(517024),
-    o = s.isObject,
-    l = s.hasOwn;
+    o = r(517024),
+    s = o.isObject,
+    l = o.hasOwn;
 function u() {}
 (e.exports = u),
     (u.prototype.clearTimeout = function () {
@@ -95,7 +95,7 @@ let c = new Set(['ETIMEDOUT', 'ECONNRESET', 'EADDRINUSE', 'ECONNREFUSED', 'EPIPE
     }),
     (u.prototype.getHeader = u.prototype.get),
     (u.prototype.set = function (e, n) {
-        if (o(e)) {
+        if (s(e)) {
             for (let n in e) l(e, n) && this.set(n, e[n]);
             return this;
         }
@@ -107,7 +107,7 @@ let c = new Set(['ETIMEDOUT', 'ECONNRESET', 'EADDRINUSE', 'ECONNREFUSED', 'EPIPE
     (u.prototype.field = function (e, n, r) {
         if (null == e) throw Error('.field(name, val) name can not be empty');
         if (this._data) throw Error(".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()");
-        if (o(e)) {
+        if (s(e)) {
             for (let n in e) l(e, n) && this.field(n, e[n]);
             return this;
         }
@@ -158,12 +158,12 @@ let c = new Set(['ETIMEDOUT', 'ECONNRESET', 'EADDRINUSE', 'ECONNREFUSED', 'EPIPE
         };
     }),
     (u.prototype.send = function (e) {
-        let n = o(e),
+        let n = s(e),
             r = this._header['content-type'];
         if (this._formData) throw Error(".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()");
         if (n && !this._data) Array.isArray(e) ? (this._data = []) : !this._isHost(e) && (this._data = {});
         else if (e && this._data && this._isHost(this._data)) throw Error("Can't merge these send calls");
-        if (n && o(this._data))
+        if (n && s(this._data))
             for (let n in e) {
                 if ('bigint' == typeof e[n] && !e[n].toJSON) throw Error('Cannot serialize BigInt value to json');
                 l(e, n) && (this._data[n] = e[n]);

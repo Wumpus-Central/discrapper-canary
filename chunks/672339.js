@@ -1,38 +1,38 @@
 r.d(n, {
     FU: function () {
-        return x;
+        return L;
     },
     eH: function () {
         return w;
     },
     wG: function () {
-        return L;
+        return x;
     }
 });
 var i = r(66153);
 var a = r(970173);
-var s = r(520712);
-var o = r(268111);
+var o = r(520712);
+var s = r(268111);
 var l = r(941497);
 var u = r(32026);
 var c = r(480839);
 var d = r(744285);
 var f = r(492257);
-var _ = r(873817);
+var p = r(873817);
 var h = r(512722),
-    p = r.n(h),
+    _ = r.n(h),
     m = r(46973),
     g = r(594174),
     E = r(768581),
     v = r(932724),
-    I = r(716161),
-    T = r(634041),
-    b = r(647177),
-    y = r(63985),
+    y = r(716161),
+    b = r(634041),
+    I = r(647177),
+    T = r(63985),
     S = r(638457),
     A = r(678916),
-    N = r(981631);
-function C(e) {
+    C = r(981631);
+function N(e) {
     return new Promise((n, r) => {
         let i = new Image();
         (i.crossOrigin = 'anonymous'),
@@ -40,13 +40,13 @@ function C(e) {
                 let e = document.createElement('canvas');
                 (e.width = A.HE.width), (e.height = A.HE.height);
                 let r = e.getContext('2d');
-                p()(null != r, 'Canvas context is missing');
+                _()(null != r, 'Canvas context is missing');
                 let a = i.height / i.width,
-                    s = A.HE.height,
-                    o = A.HE.height / a,
-                    l = (e.width - o) / 2,
-                    u = (e.height - s) / 2;
-                r.drawImage(i, l, u, o, s);
+                    o = A.HE.height,
+                    s = A.HE.height / a,
+                    l = (e.width - s) / 2,
+                    u = (e.height - o) / 2;
+                r.drawImage(i, l, u, s, o);
                 let c = r.getImageData(0, 0, e.width, e.height);
                 n({
                     data: c.data,
@@ -65,7 +65,7 @@ async function R(e) {
     return new Uint8ClampedArray(await r.arrayBuffer());
 }
 function O(e, n, r, i, a) {
-    (0, I.RI)({
+    (0, y.RI)({
         [e]: {
             graph: r,
             target: n,
@@ -80,9 +80,9 @@ async function D(e, n, r) {
     if (null == r) return O(e, n, m.zZ.NONE);
     if (r === A.f7) return O(e, n, m.zZ.BACKGROUND_BLUR);
     if ('string' == typeof r || 'number' == typeof r) {
-        var s;
-        let e = (0, y.Z)()[r];
-        (a = null !== (s = e.isVideo) && void 0 !== s && s), (i = e.source);
+        var o;
+        let e = (0, T.Z)()[r];
+        (a = null !== (o = e.isVideo) && void 0 !== o && o), (i = e.source);
     } else {
         let e = r.asset;
         (a = (0, E.xR)(e) || (0, E.ay)(e)),
@@ -95,20 +95,20 @@ async function D(e, n, r) {
     }
     if (null != i)
         try {
-            let r = a ? void 0 : await C(i),
-                s = a ? await R(i) : void 0;
-            O(e, n, m.zZ.BACKGROUND_REPLACEMENT, r, s);
+            let r = a ? void 0 : await N(i),
+                o = a ? await R(i) : void 0;
+            O(e, n, m.zZ.BACKGROUND_REPLACEMENT, r, o);
         } catch (e) {
-            (0, I.Nm)();
+            (0, y.Nm)();
         }
 }
-async function L(e, n) {
+async function x(e, n) {
     let { track: r = !0, location: i } = n;
-    await D(m.TO.CAMERA_BACKGROUND_LIVE, { type: m.W$.INPUT_DEVICE }, e), r && (0, b.Bh)(e, i, 'Enabled');
+    await D(m.TO.CAMERA_BACKGROUND_LIVE, { type: m.W$.INPUT_DEVICE }, e), r && (0, I.Bh)(e, i, 'Enabled');
 }
-async function x(e, n, r) {
+async function L(e, n, r) {
     let { track: i = !0, location: a } = r;
-    (0, I.GS)(),
+    (0, y.GS)(),
         await D(
             m.TO.CAMERA_BACKGROUND_PREVIEW,
             {
@@ -117,11 +117,11 @@ async function x(e, n, r) {
             },
             e
         ),
-        i && (0, b.Bh)(e, a, 'Preview');
+        i && (0, I.Bh)(e, a, 'Preview');
 }
 function w() {
     let e = g.default.getCurrentUser();
     if (null == e) return;
     let n = (0, v.P)(e);
-    (0, S.Z)() && !T.Z.hasBeenApplied && null != n && L(n, { track: !1 }).catch(N.dG4);
+    (0, S.Z)() && !b.Z.hasBeenApplied && null != n && x(n, { track: !1 }).catch(C.dG4);
 }

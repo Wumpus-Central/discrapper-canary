@@ -3,7 +3,7 @@ r.d(n, {
         return u;
     },
     Yz: function () {
-        return o;
+        return s;
     },
     by: function () {
         return l;
@@ -12,7 +12,7 @@ r.d(n, {
         return a;
     },
     lx: function () {
-        return s;
+        return o;
     }
 });
 var i = r(570140);
@@ -23,21 +23,21 @@ function a() {
         timeout: e
     });
 }
-function s(e, n) {
+function o(e, n) {
     i.Z.dispatch({
         type: 'BROWSER_HANDOFF_END',
         handoffToken: e,
         fingerprint: n
     });
 }
-function o(e) {
-    let { handoffKey: n, handoffToken: r, handoffSource: a, timeout: s = 10000 } = e;
+function s(e) {
+    let { handoffKey: n, handoffToken: r, handoffSource: a, timeout: o = 10000 } = e;
     i.Z.dispatch({
         type: 'BROWSER_HANDOFF_FROM_APP',
         handoffKey: n,
         handoffToken: r,
         handoffSource: a,
-        timeout: s
+        timeout: o
     });
 }
 function l() {

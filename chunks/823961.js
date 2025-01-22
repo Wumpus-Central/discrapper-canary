@@ -1,7 +1,7 @@
 let i;
 var a,
-    s = r(47120);
-var o = r(442837),
+    o = r(47120);
+var s = r(442837),
     l = r(570140),
     u = r(959546),
     c = r(317951);
@@ -19,24 +19,24 @@ function d(e, n, r) {
     );
 }
 let f = new Map(),
-    _ = new Set(),
-    h = new Set(),
     p = new Set(),
+    h = new Set(),
+    _ = new Set(),
     m = new Map(),
     g = new Map(),
     E = null,
     v = !1;
-let I = (e) => {
-        _.add(e.skuId);
-    },
-    T = (e) => {
-        f.set(e.skuId, e.price), _.delete(e.skuId);
+let y = (e) => {
+        p.add(e.skuId);
     },
     b = (e) => {
-        _.delete(e.skuId), p.add(e.skuId);
+        f.set(e.skuId, e.price), p.delete(e.skuId);
     },
-    y = (e) => {
-        p.delete(e.skuId);
+    I = (e) => {
+        p.delete(e.skuId), _.add(e.skuId);
+    },
+    T = (e) => {
+        _.delete(e.skuId);
     },
     S = (e) => {
         if (1 !== e.entitlements.length) return;
@@ -46,10 +46,10 @@ let I = (e) => {
     A = (e) => {
         h.delete(e.skuId), m.set(e.skuId, e.entitlement), null != e.numPotions && g.set(e.skuId, e.numPotions);
     },
-    N = (e) => {
-        p.add(e.skuId), h.delete(e.skuId);
-    },
     C = (e) => {
+        _.add(e.skuId), h.delete(e.skuId);
+    },
+    N = (e) => {
         h.add(e.skuId);
     },
     R = (e) => {
@@ -61,10 +61,10 @@ let I = (e) => {
     D = () => {
         i = Date.now();
     },
-    L = (e) => {
+    x = (e) => {
         v = e.enabled;
     };
-class x extends (a = o.ZP.Store) {
+class L extends (a = s.ZP.Store) {
     get lastConfettiTrigger() {
         return i;
     }
@@ -75,10 +75,10 @@ class x extends (a = o.ZP.Store) {
         return f.get(e);
     }
     isFetchingPrice(e) {
-        return _.has(e);
+        return p.has(e);
     }
     getErrored(e) {
-        return p.has(e);
+        return _.has(e);
     }
     getEntitlement(e) {
         return m.get(e);
@@ -96,18 +96,18 @@ class x extends (a = o.ZP.Store) {
         return E;
     }
 }
-d(x, 'displayName', 'ConsumablesStore'),
-    (n.Z = new x(l.Z, {
-        CONSUMABLES_PRICE_FETCH_STARTED: I,
-        CONSUMABLES_PRICE_FETCH_SUCCEEDED: T,
-        CONSUMABLES_PRICE_FETCH_FAILED: b,
-        CONSUMABLES_CLEAR_ERROR: y,
+d(L, 'displayName', 'ConsumablesStore'),
+    (n.Z = new L(l.Z, {
+        CONSUMABLES_PRICE_FETCH_STARTED: y,
+        CONSUMABLES_PRICE_FETCH_SUCCEEDED: b,
+        CONSUMABLES_PRICE_FETCH_FAILED: I,
+        CONSUMABLES_CLEAR_ERROR: T,
         CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: A,
         SKU_PURCHASE_SUCCESS: S,
-        CONSUMABLES_ENTITLEMENT_FETCH_FAILED: N,
-        CONSUMABLES_ENTITLEMENT_FETCH_STARTED: C,
+        CONSUMABLES_ENTITLEMENT_FETCH_FAILED: C,
+        CONSUMABLES_ENTITLEMENT_FETCH_STARTED: N,
         SET_PREVIOUS_GO_LIVE_SETTINGS: R,
         CLEAR_CONSUMED_ENTITLEMENT: O,
         POTIONS_TRIGGER_MESSAGE_CONFETTI: D,
-        POTIONS_SET_CONFETTI_MODE: L
+        POTIONS_SET_CONFETTI_MODE: x
     }));

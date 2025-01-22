@@ -1,12 +1,12 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(477660);
-function s(e) {
+function o(e) {
     return (
         (e.heading = a.defaultRules.heading),
         (e.lheading = a.defaultRules.lheading),
@@ -20,20 +20,20 @@ function s(e) {
         (e.link = {
             ...e.link,
             react: function (e, n, r) {
-                let s = {};
+                let o = {};
                 if (null != e.context) {
                     let n = e.context[e.target];
-                    n && n.onClick ? ((s.onClick = n.onClick), (s.onContextMenu = n.onContextMenu)) : (s.onClick = n);
+                    n && n.onClick ? ((o.onClick = n.onClick), (o.onContextMenu = n.onContextMenu)) : (o.onClick = n);
                 }
-                if (null == s.onClick) {
-                    var o;
-                    (s.href = null !== (o = (0, a.sanitizeUrl)(e.target)) && void 0 !== o ? o : void 0), (s.target = '_blank');
+                if (null == o.onClick) {
+                    var s;
+                    (o.href = null !== (s = (0, a.sanitizeUrl)(e.target)) && void 0 !== s ? s : void 0), (o.target = '_blank');
                 }
                 return (0, i.jsx)(
                     'a',
                     {
                         title: e.title,
-                        ...s,
+                        ...o,
                         rel: 'noreferrer',
                         children: n(e.content, r)
                     },

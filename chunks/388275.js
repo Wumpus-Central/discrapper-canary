@@ -22,17 +22,17 @@ var l = n(200651),
     I = n(190417);
 function p(e) {
     let { message: t, forwardOptions: n, sendLabel: p, canSend: S, selectedDestinations: A, isSending: C, onSend: v, showPreview: L } = e,
-        T = (0, d.Z)(),
-        b = (0, f.nm)(A),
-        N = (0, f.y)(A),
+        b = (0, d.Z)(),
+        N = (0, f.nm)(A),
+        T = (0, f.y)(A),
         x = (0, _.Ad)(),
-        P = (0, a.e7)([h.Z], () => h.Z.getDraft(t.channel_id, h.d.ForwardContextMessage)),
-        [y, Z] = i.useState(() => (0, c.eK)(P)),
-        { textValue: O, richValue: R } = y,
-        [w, D] = i.useState(!1),
+        y = (0, a.e7)([h.Z], () => h.Z.getDraft(t.channel_id, h.d.ForwardContextMessage)),
+        [P, Z] = i.useState(() => (0, c.eK)(y)),
+        { textValue: O, richValue: w } = P,
+        [R, D] = i.useState(!1),
         M = i.useCallback(() => D(!0), []),
         j = i.useCallback(() => D(!1), []),
-        U = i.useCallback(
+        k = i.useCallback(
             (e, n, l) => {
                 Z({
                     textValue: n,
@@ -43,22 +43,22 @@ function p(e) {
             },
             [x, t]
         ),
-        k = i.useCallback(() => {
+        F = i.useCallback(() => {
             s.Z.clearDraft(t.channel_id, h.d.ForwardContextMessage), v(O);
         }, [t.channel_id, v, O]),
-        F = i.useCallback(
+        G = i.useCallback(
             () =>
-                !S || O.length > T
+                !S || O.length > b
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })
-                    : (k(),
+                    : (F(),
                       Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [k, O, T, S]
+            [F, O, b, S]
         );
     return (0, l.jsxs)(r.ModalFooter, {
         className: I.footerWithMessage,
@@ -69,7 +69,7 @@ function p(e) {
                     children: (0, l.jsx)(m.O, {
                         message: t,
                         forwardOptions: n,
-                        channel: b
+                        channel: N
                     })
                 }),
             (0, l.jsxs)('div', {
@@ -80,16 +80,16 @@ function p(e) {
                         children: [
                             (0, l.jsx)(u.Z, {
                                 innerClassName: I.messageInput,
-                                onChange: U,
+                                onChange: k,
                                 placeholder: E.intl.string(E.t.ZroO3N),
-                                channel: b,
+                                channel: N,
                                 textValue: O,
-                                richValue: R,
+                                richValue: w,
                                 type: o.Ie.FORWARD_MESSAGE_INPUT,
                                 onBlur: j,
                                 onFocus: M,
-                                focused: w,
-                                onSubmit: F,
+                                focused: R,
+                                onSubmit: G,
                                 parentModalKey: g.so,
                                 autoCompletePosition: 'bottom',
                                 emojiPickerCloseOnModalOuterClick: !0,
@@ -98,20 +98,20 @@ function p(e) {
                             (0, l.jsx)(r.Button, {
                                 className: I.sendWithMessage,
                                 submitting: C,
-                                disabled: !S || O.length > T,
-                                onClick: k,
+                                disabled: !S || O.length > b,
+                                onClick: F,
                                 children: p
                             })
                         ]
                     }),
-                    N.length > 0 &&
+                    T.length > 0 &&
                         O.length > 0 &&
                         (0, l.jsx)(r.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-warning',
                             children: E.intl.format(E.t.xJFpio, {
-                                count: N.length,
-                                channelNames: N.join(', ')
+                                count: T.length,
+                                channelNames: T.join(', ')
                             })
                         })
                 ]

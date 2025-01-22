@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(836560);
-var o = r(17089),
+var o = r(836560);
+var s = r(17089),
     l = r(710845),
     u = r(981631);
 function c(e, n, r) {
@@ -83,7 +83,7 @@ class d {
         return this.unsubscribe(''.concat(e, '_').concat(n), r);
     }
     constructor() {
-        c(this, 'emitter', new s.EventEmitter()), c(this, '_savedDispatches', {}), this.emitter.setMaxListeners(100);
+        c(this, 'emitter', new o.EventEmitter()), c(this, '_savedDispatches', {}), this.emitter.setMaxListeners(100);
     }
 }
 let f = new d();

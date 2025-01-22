@@ -1,7 +1,7 @@
 var i,
     a = r(392711),
-    s = r.n(a),
-    o = r(442837),
+    o = r.n(a),
+    s = r(442837),
     l = r(570140),
     u = r(314897);
 function c(e, n, r) {
@@ -19,13 +19,13 @@ function c(e, n, r) {
 }
 let d = Object.freeze([]),
     f = {};
-function _(e) {
+function p(e) {
     (f = {}),
         e.sessions.forEach((e) => {
             f[e.sessionId] = e;
         });
 }
-class h extends (i = o.ZP.Store) {
+class h extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
@@ -38,14 +38,14 @@ class h extends (i = o.ZP.Store) {
     }
     getRemoteActivities() {
         let e = u.default.getSessionId(),
-            n = s().find(f, (n) => n.active && n.sessionId !== e);
+            n = o().find(f, (n) => n.active && n.sessionId !== e);
         return null != n ? n.activities : d;
     }
     getSessionById(e) {
         return f[e];
     }
     getActiveSession() {
-        return s().find(f, (e) => {
+        return o().find(f, (e) => {
             let { active: n } = e;
             return n;
         });
@@ -53,6 +53,6 @@ class h extends (i = o.ZP.Store) {
 }
 c(h, 'displayName', 'SessionsStore'),
     (n.Z = new h(l.Z, {
-        CONNECTION_OPEN: _,
-        SESSIONS_REPLACE: _
+        CONNECTION_OPEN: p,
+        SESSIONS_REPLACE: p
     }));

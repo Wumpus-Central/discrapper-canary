@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(53281),
     u = r(869783),
     c = r(388032);
@@ -34,7 +34,7 @@ function f() {
         }
     ];
 }
-function _(e, n) {
+function p(e, n) {
     if (null != e) {
         let r = new FileReader();
         (r.onload = (r) => {
@@ -45,7 +45,7 @@ function _(e, n) {
     }
 }
 function h(e, n, r) {
-    _(e, (i) => {
+    p(e, (i) => {
         if (e.type === u.m.MP4) return n(i, e);
         let a = new Image();
         (a.src = i),
@@ -57,7 +57,7 @@ function h(e, n, r) {
             });
     });
 }
-class p extends (i = o.PureComponent) {
+class _ extends (i = s.PureComponent) {
     componentDidMount() {
         this._isMounted = !0;
     }
@@ -66,11 +66,11 @@ class p extends (i = o.PureComponent) {
         null === (e = this._ref.current) || void 0 === e || e.activateUploadDialogue();
     }
     render() {
-        let { multiple: e, disabled: n, className: r, tabIndex: i, 'aria-label': a, filters: o } = this.props;
-        return (0, s.jsx)(l.Z, {
+        let { multiple: e, disabled: n, className: r, tabIndex: i, 'aria-label': a, filters: s } = this.props;
+        return (0, o.jsx)(l.Z, {
             ref: this._ref,
             onChange: this.handleFileChange,
-            filters: null != o ? o : f(),
+            filters: null != s ? s : f(),
             multiple: e,
             disabled: n,
             className: r,
@@ -80,7 +80,7 @@ class p extends (i = o.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            d(this, '_ref', o.createRef()),
+            d(this, '_ref', s.createRef()),
             d(this, '_isMounted', !1),
             d(this, 'handleFileChange', (e) => {
                 let { onFileSizeError: n, maxFileSizeBytes: r } = this.props;
@@ -107,9 +107,9 @@ class p extends (i = o.PureComponent) {
             });
     }
 }
-d(p, 'defaultProps', {
+d(_, 'defaultProps', {
     multiple: !0,
     tabIndex: -1,
     maxFileSizeBytes: 1 / 0
 }),
-    (n.ZP = p);
+    (n.ZP = _);

@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(278074),
     s = n(263568),
     c = n(481060),
-    d = n(203143),
-    u = n(365206),
+    u = n(203143),
+    d = n(365206),
     m = n(294608),
     h = n(65145),
     f = n(920557),
@@ -73,10 +73,10 @@ function E(e) {
 }
 function C(e) {
     let { action: t, channelId: n, messageId: l, isInteractive: o, className: s } = e,
-        { actionButtonRef: u, manageFocusOnAction: m } = (0, h.dv)(),
+        { actionButtonRef: d, manageFocusOnAction: m } = (0, h.dv)(),
         f = r.useCallback(async () => {
             if ((null == t ? void 0 : t.type) != null)
-                await d.Z.handlePollActionTapped({
+                await u.Z.handlePollActionTapped({
                     channelId: n,
                     messageId: l,
                     type: t.type
@@ -89,7 +89,7 @@ function C(e) {
           ? (0, i.jsx)(
                 c.Button,
                 {
-                    buttonRef: u,
+                    buttonRef: d,
                     onClick: f,
                     disabled: !t.enabled,
                     color: 'secondaryButton' === t.presentation ? c.Button.Colors.CUSTOM : c.Button.Colors.BRAND,
@@ -106,7 +106,7 @@ function C(e) {
             )
           : 'textButton' === t.presentation
             ? (0, i.jsx)(g, {
-                  buttonRef: u,
+                  buttonRef: d,
                   onClick: f,
                   className: s,
                   children: t.label
@@ -122,7 +122,7 @@ function C(e) {
 function I(e) {
     let { message: t, poll: n, className: r } = e,
         l = (0, m.$B)(n.containerStyle),
-        d = (function (e, t) {
+        u = (function (e, t) {
             let n = {
                 answers: t.answers,
                 answersInteraction: t.answersInteraction,
@@ -135,10 +135,10 @@ function I(e) {
             };
             return (0, o.EQ)(t.layoutType)
                 .with(s.C.DEFAULT, () => (0, i.jsx)(f.K, { ...n }))
-                .with(s.C.IMAGE_ONLY_ANSWERS, () => (0, i.jsx)(u.Z, { ...n }))
+                .with(s.C.IMAGE_ONLY_ANSWERS, () => (0, i.jsx)(d.Z, { ...n }))
                 .otherwise(() => null);
         })(0, n);
-    return null == d
+    return null == u
         ? null
         : (0, i.jsx)('div', {
               className: a()(p.container, l, r),
@@ -158,7 +158,7 @@ function I(e) {
                                   })
                           ]
                       }),
-                      d,
+                      u,
                       (0, i.jsxs)('div', {
                           className: p.bottomBar,
                           children: [

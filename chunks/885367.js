@@ -1,7 +1,7 @@
-var e = n(875604),
-    o = n(743469),
-    i = Array.prototype;
-t.exports = function (t) {
-    var r = t.concat;
-    return t === i || (e(i, t) && r === i.concat) ? o : r;
+var i = r(875604),
+    a = r(743469),
+    o = Array.prototype;
+e.exports = function (e) {
+    var n = e.concat;
+    return e === o || (i(o, e) && n === o.concat) ? a : n;
 };

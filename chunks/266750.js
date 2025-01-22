@@ -1,7 +1,7 @@
 var i = r(392711),
     a = r.n(i),
-    s = r(250407),
-    o = r(710845),
+    o = r(250407),
+    s = r(710845),
     l = r(914010),
     u = r(70956),
     c = r(287328);
@@ -18,8 +18,8 @@ function d(e, n, r) {
         e
     );
 }
-let f = new o.Z('NonGuildVersions');
-class _ {
+let f = new s.Z('NonGuildVersions');
+class p {
     async getCommittedVersions() {
         try {
             let e = c.Z.nonGuildVersions();
@@ -44,7 +44,7 @@ class _ {
                 CONNECTION_OPEN: (e, n) => this.handleConnectionOpen(e, n),
                 BACKGROUND_SYNC: (e, n) => this.handleConnectionOpen(e, n)
             }),
-            !(0, s.O)())
+            !(0, o.O)())
         )
             return;
         l.Z.addChangeListener(
@@ -65,4 +65,4 @@ class _ {
         );
     }
 }
-n.Z = new _();
+n.Z = new p();

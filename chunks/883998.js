@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(481060),
-    o = r(907040),
+    o = r(481060),
+    s = r(907040),
     l = r(981631),
     u = r(185923);
 let c = {
@@ -15,26 +15,26 @@ let c = {
     },
     d = u.Hz.MESSAGE_CONFETTI;
 function f(e) {
-    let { channel: n, setEmojiConfetti: r, shouldShow: l, onRequestClose: u, position: f, align: _, children: h } = e,
-        p = a.useCallback(
+    let { channel: n, setEmojiConfetti: r, shouldShow: l, onRequestClose: u, position: f, align: p, children: h } = e,
+        _ = a.useCallback(
             (e) => {
-                r(e), u();
+                null != e && (r(e), u());
             },
             [u, r]
         );
-    return (0, i.jsx)(s.Popout, {
+    return (0, i.jsx)(o.Popout, {
         shouldShow: l,
         position: f,
-        align: _,
+        align: p,
         autoInvert: !1,
         onRequestClose: u,
         renderPopout: (e) => {
             let { closePopout: r } = e;
-            return (0, i.jsx)(o.Z, {
+            return (0, i.jsx)(s.Z, {
                 analyticsOverride: c,
                 channel: n,
                 closePopout: r,
-                onSelectEmoji: p,
+                onSelectEmoji: _,
                 pickerIntention: d,
                 includeCreateEmojiButton: !1
             });

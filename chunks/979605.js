@@ -19,16 +19,16 @@ function i(e, n) {
 function a(e, n, r) {
     (this.key = e), (this.value = n), (this._index = r);
 }
-function s(e, r) {
-    for (var a = 0, s = '_' + r, o = s; n.call(e, o); o = s + a++) if (i(e[o].key, r)) return e[o];
+function o(e, r) {
+    for (var a = 0, o = '_' + r, s = o; n.call(e, s); s = o + a++) if (i(e[s].key, r)) return e[s];
 }
-function o(e, r, s) {
-    for (var o = 0, l = '_' + r, u = l; n.call(e, u); u = l + o++)
+function s(e, r, o) {
+    for (var s = 0, l = '_' + r, u = l; n.call(e, u); u = l + s++)
         if (i(e[u].key, r)) {
-            e[u].value = s;
+            e[u].value = o;
             return;
         }
-    e.size++, (e[u] = new a(r, s, u));
+    e.size++, (e[u] = new a(r, o, u));
 }
 (e.exports = r),
     (r.prototype.forEach = function (e, n) {
@@ -38,17 +38,17 @@ function o(e, r, s) {
             }, this);
     }),
     (r.prototype.has = function (e) {
-        return !!s(this._data, e);
+        return !!o(this._data, e);
     }),
     (r.prototype.get = function (e) {
-        var n = s(this._data, e);
+        var n = o(this._data, e);
         return n && n.value;
     }),
     (r.prototype.set = function (e, n) {
-        o(this._data, e, n);
+        s(this._data, e, n);
     }),
     (r.prototype.delete = function (e) {
-        var n = s(this._data, e);
+        var n = o(this._data, e);
         n && (delete this._data[n._index], this._data.size--);
     }),
     (r.prototype.clear = function () {

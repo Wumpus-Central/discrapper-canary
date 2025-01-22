@@ -7,23 +7,23 @@ n.Z = {
         });
     },
     addFiles(e) {
-        let { files: n, channelId: r, showLargeMessageDialog: a, draftType: s } = e;
+        let { files: n, channelId: r, showLargeMessageDialog: a, draftType: o } = e;
         i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_ADD_FILES',
             channelId: r,
             files: n,
             showLargeMessageDialog: a,
-            draftType: s
+            draftType: o
         });
     },
     addFile(e) {
-        let { file: n, channelId: r, showLargeMessageDialog: a, draftType: s } = e;
+        let { file: n, channelId: r, showLargeMessageDialog: a, draftType: o } = e;
         i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_ADD_FILES',
             channelId: r,
             files: [n],
             showLargeMessageDialog: a,
-            draftType: s
+            draftType: o
         });
     },
     remove(e, n, r) {
@@ -50,35 +50,35 @@ n.Z = {
         });
     },
     update(e, n, r, a) {
-        let { description: s, filename: o, spoiler: l, thumbnail: u } = a;
+        let { description: o, filename: s, spoiler: l, thumbnail: u } = a;
         i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_UPDATE_FILE',
             channelId: e,
             id: n,
-            filename: o,
-            description: s,
+            filename: s,
+            description: o,
             thumbnail: u,
             spoiler: l,
             draftType: r
         });
     },
     setUploads(e) {
-        let { uploads: n, channelId: r, draftType: a, resetState: s } = e;
+        let { uploads: n, channelId: r, draftType: a, resetState: o } = e;
         i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_SET_UPLOADS',
             channelId: r,
-            uploads: s ? n.map((e) => e.resetState()) : n,
+            uploads: o ? n.map((e) => e.resetState()) : n,
             draftType: a
         });
     },
     setFile(e) {
-        let { file: n, channelId: r, id: a, draftType: s } = e;
+        let { file: n, channelId: r, id: a, draftType: o } = e;
         i.Z.dispatch({
             type: 'UPLOAD_ATTACHMENT_SET_FILE',
             channelId: r,
             id: a,
             file: n,
-            draftType: s
+            draftType: o
         });
     }
 };

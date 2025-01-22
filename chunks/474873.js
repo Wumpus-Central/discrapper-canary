@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(871465);
+    o = r(570140),
+    s = r(871465);
 function l(e, n, r) {
     return (
         n in e
@@ -16,7 +16,7 @@ function l(e, n, r) {
     );
 }
 let u = {
-    soundpack: o.YC.CLASSIC,
+    soundpack: s.YC.CLASSIC,
     lastSoundpackExperimentId: null
 };
 function c(e) {
@@ -28,7 +28,7 @@ function c(e) {
 }
 class d extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && ((u = e), !Object.values(o.YC).includes(u.soundpack) && (u.soundpack = o.YC.CLASSIC));
+        null != e && ((u = e), !Object.values(s.YC).includes(u.soundpack) && (u.soundpack = s.YC.CLASSIC));
     }
     getState() {
         return u;
@@ -40,4 +40,4 @@ class d extends (i = a.ZP.PersistedStore) {
         return u.lastSoundpackExperimentId;
     }
 }
-l(d, 'displayName', 'SoundpackStore'), l(d, 'persistKey', 'SoundpackStore'), (n.Z = new d(s.Z, { SET_SOUNDPACK: c }));
+l(d, 'displayName', 'SoundpackStore'), l(d, 'persistKey', 'SoundpackStore'), (n.Z = new d(o.Z, { SET_SOUNDPACK: c }));

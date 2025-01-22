@@ -11,20 +11,20 @@ var r = n(442837),
     o = n(377171),
     s = n(497089),
     c = n(703656),
-    d = n(699516),
-    u = n(626135),
+    u = n(699516),
+    d = n(626135),
     m = n(981631),
     h = n(388032),
     f = n(300444);
 function p(e) {
     let { closePopout: t } = e,
-        n = (0, r.e7)([d.Z], () => d.Z.getPendingCount());
+        n = (0, r.e7)([u.Z], () => u.Z.getPendingCount());
     return (0, i.jsx)(l.TooltipContainer, {
         text: h.intl.string(h.t['lMR96+']),
         children: (0, i.jsxs)(l.Clickable, {
             className: f.friendRequestsButton,
             onClick: () => {
-                u.default.track(m.rMx.NOTIFICATION_CENTER_ACTION, { action_type: s.ud.FRIEND_REQUESTS_BUTTON_CLICK }), (0, c.uL)(m.Z5c.FRIENDS), a.Z.setSection(m.pJs.PENDING), t();
+                d.default.track(m.rMx.NOTIFICATION_CENTER_ACTION, { action_type: s.ud.FRIEND_REQUESTS_BUTTON_CLICK }), (0, c.uL)(m.Z5c.FRIENDS), a.Z.setSection(m.pJs.PENDING), t();
             },
             children: [
                 (0, i.jsx)(l.FriendsIcon, {

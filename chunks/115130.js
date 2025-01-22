@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(789020);
-var o = r(442837),
+    o = r(789020);
+var s = r(442837),
     l = r(570140),
     u = r(695346),
     c = r(630388),
@@ -24,7 +24,7 @@ function f(e, n, r) {
         e
     );
 }
-function _() {
+function p() {
     return {
         lastUsedObject: {},
         useActivityUrlOverride: !1,
@@ -32,14 +32,14 @@ function _() {
         filter: ''
     };
 }
-let h = _();
+let h = p();
 !(function (e) {
     (e.INITIALIZED = 'INITIALIZED'), (e.LOADING = 'LOADING'), (e.LOADED = 'LOADED'), (e.ERROR = 'ERROR');
 })(i || (i = {}));
-let p = 'INITIALIZED',
+let _ = 'INITIALIZED',
     m = [];
 function g() {
-    (h = _()), (p = 'INITIALIZED'), (m = []);
+    (h = p()), (_ = 'INITIALIZED'), (m = []);
 }
 function E() {
     h.useActivityUrlOverride = !h.useActivityUrlOverride;
@@ -48,27 +48,27 @@ function v(e) {
     let { activityUrlOverride: n } = e;
     h.activityUrlOverride = n;
 }
-function I(e) {
+function y(e) {
     let { applicationId: n, timestamp: r } = e;
     if (null == m.find((e) => e.id === n)) return !1;
     h.lastUsedObject[n] = r;
 }
-function T(e) {
-    let { applications: n } = e;
-    (p = 'LOADED'), (m = n.filter((e) => null != e.flags && (0, c.yE)(e.flags, d.udG.EMBEDDED)));
-}
 function b(e) {
-    let { type: n } = e;
-    p = 'ERROR';
+    let { applications: n } = e;
+    (_ = 'LOADED'), (m = n.filter((e) => null != e.flags && (0, c.yE)(e.flags, d.udG.EMBEDDED)));
 }
-function y(e) {
+function I(e) {
+    let { type: n } = e;
+    _ = 'ERROR';
+}
+function T(e) {
     let { filter: n } = e;
     h.filter = n;
 }
-class S extends (a = o.ZP.PersistedStore) {
+class S extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         h = {
-            ..._(),
+            ...p(),
             ...(null != e ? e : {})
         };
     }
@@ -88,7 +88,7 @@ class S extends (a = o.ZP.PersistedStore) {
         return this.getIsEnabled() ? h.activityUrlOverride : null;
     }
     getFetchState() {
-        return p;
+        return _;
     }
     getFilter() {
         return this.getIsEnabled() ? h.filter : '';
@@ -107,12 +107,12 @@ f(S, 'displayName', 'DeveloperActivityShelfStore'),
         LOGOUT: g,
         DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: E,
         DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: v,
-        DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: I,
+        DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: y,
         DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
-            p = 'LOADING';
+            _ = 'LOADING';
         },
-        DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: T,
-        DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: b,
-        DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: y,
+        DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: b,
+        DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: I,
+        DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: T,
         USER_SETTINGS_PROTO_UPDATE() {}
     }));

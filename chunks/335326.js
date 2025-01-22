@@ -5,15 +5,15 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(379357),
-    o = r(442550),
+    o = r(379357),
+    s = r(442550),
     l = r(297781),
     u = r(443487),
     c = r(830677);
 let d = [l.Yl, l.Rg],
     f = (e) => {
         let { entry: n, channel: r, selected: a } = e,
-            { largeImage: f } = (0, s.rv)({ entry: n });
+            { largeImage: f } = (0, o.rv)({ entry: n });
         return (0, i.jsxs)(u.Zb, {
             selected: a,
             children: [
@@ -31,7 +31,7 @@ let d = [l.Yl, l.Rg],
                         })
                     ]
                 }),
-                (0, i.jsx)(o.f, {
+                (0, i.jsx)(s.f, {
                     src: null == f ? void 0 : f.src,
                     size: 48,
                     className: c.thumbnail,

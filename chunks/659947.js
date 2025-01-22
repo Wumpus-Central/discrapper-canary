@@ -138,7 +138,7 @@ function v(e) {
                 );
             return t ? null : n;
         })(A),
-        { focusedIndex: P, setFocusedIndex: y } = (function (e) {
+        { focusedIndex: P, setFocusedIndex: D } = (function (e) {
             let [t, n] = r.useState(0),
                 i = r.useRef(e);
             return (
@@ -158,8 +158,8 @@ function v(e) {
                 row: P
             });
     }, [P]);
-    let B = null != R ? R.length : O.length,
-        D = (() => {
+    let y = null != R ? R.length : O.length,
+        B = (() => {
             if (null != R) {
                 var e;
                 return null === (e = R[P]) || void 0 === e ? void 0 : e.id;
@@ -198,29 +198,29 @@ function v(e) {
                                         break;
                                     }
                                     case 'arrowup':
-                                        0 === P ? y(B - 1) : y(P - 1);
+                                        0 === P ? D(y - 1) : D(P - 1);
                                         break;
                                     case 'arrowdown':
-                                        P >= B - 1 ? y(0) : y(P + 1);
+                                        P >= y - 1 ? D(0) : D(P + 1);
                                 }
                         },
                         placeholder: x.intl.string(x.t.tG0r7u),
                         role: 'combobox',
                         'aria-controls': c,
-                        'aria-expanded': B > 0,
-                        'aria-activedescendant': B > 0 && null != D ? D : void 0,
+                        'aria-expanded': y > 0,
+                        'aria-activedescendant': y > 0 && null != B ? B : void 0,
                         'aria-autocomplete': 'list',
                         spellCheck: !1
                     })
                 }),
-                0 === B && '' !== A && (0, i.jsx)(I, {}),
-                (B > 0 || '' === A) &&
+                0 === y && '' !== A && (0, i.jsx)(I, {}),
+                (y > 0 || '' === A) &&
                     (0, i.jsx)(a.ListThin, {
                         innerId: c,
                         innerRole: 'listbox',
                         'aria-label': x.intl.string(x.t['+N3fW1']),
                         ref: _,
-                        sections: [B],
+                        sections: [y],
                         renderRow: function (e) {
                             let { row: t } = e,
                                 r = (() => {
@@ -238,11 +238,11 @@ function v(e) {
                                     channel: r,
                                     category: s,
                                     focused: P === t,
-                                    onMouseEnter: () => T.current && y(t),
+                                    onMouseEnter: () => T.current && D(t),
                                     onClick: () => {
                                         l(r.id), n();
                                     },
-                                    onFocus: () => y(t),
+                                    onFocus: () => D(t),
                                     children:
                                         null != a
                                             ? (0, i.jsx)('div', {

@@ -1,9 +1,9 @@
 r.d(n, {
     Dw: function () {
-        return _;
+        return p;
     },
     I: function () {
-        return o;
+        return s;
     },
     UG: function () {
         return l;
@@ -17,8 +17,8 @@ r.d(n, {
 });
 var i,
     a = r(814391),
-    s = r(388032);
-let o = {
+    o = r(388032);
+let s = {
         month: 'short',
         day: 'numeric',
         year: 'numeric',
@@ -36,18 +36,18 @@ let o = {
     (e[(e.JOINED_AT = 0)] = 'JOINED_AT'), (e[(e.ACCOUNT_AGE = 1)] = 'ACCOUNT_AGE');
 })(i || (i = {}));
 let u = () => ({
-        seconds: s.t.FsBhl5,
-        minutes: s.t['4d1mgY'],
-        hours: s.t['2wkczM'],
-        days: s.t['ocdS+f'],
-        months: s.t['az14+v'],
-        years: s.t['5Gk1np']
+        seconds: o.t.FsBhl5,
+        minutes: o.t['4d1mgY'],
+        hours: o.t['2wkczM'],
+        days: o.t['ocdS+f'],
+        months: o.t['az14+v'],
+        years: o.t['5Gk1np']
     }),
     c = () => ({
-        hours: s.t.JZP2Rk,
-        days: s.t['3moSHR'],
-        months: s.t['0Ddwr6'],
-        years: s.t.cR7lcn
+        hours: o.t.JZP2Rk,
+        days: o.t['3moSHR'],
+        months: o.t['0Ddwr6'],
+        years: o.t.cR7lcn
     });
 function d(e) {
     return 0 === e ? u : 1 === e ? c : void 0;
@@ -56,4 +56,4 @@ let f = (e, n) => {
         let r = d(n);
         return (0, a.Z)(e, r, !1);
     },
-    _ = (e) => (null != e ? new Date(e) : new Date()).getTime();
+    p = (e) => (null != e ? new Date(e) : new Date()).getTime();

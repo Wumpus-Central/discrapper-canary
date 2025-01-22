@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(927521),
     a = r(926726);
-let s = 347997,
-    o = 1080,
+let o = 347997,
+    s = 1080,
     l = 25920,
     u = 765433;
 function c(e) {
@@ -23,13 +23,13 @@ function f(e) {
         r = d(e);
     return d(e + 1) - r == 356 ? 2 : r - n == 382 ? 1 : 0;
 }
-function _(e) {
+function p(e) {
     return d(e) + f(e);
 }
 function h(e) {
-    return _(e + 1) - _(e);
+    return p(e + 1) - p(e);
 }
-function p(e) {
+function _(e) {
     let n = h(e);
     switch ((n > 380 && (n -= 30), n)) {
         case 353:
@@ -42,26 +42,26 @@ function p(e) {
 }
 function m(e, n) {
     if ((n >= 6 && !c(e) && n++, 4 === n || 7 === n || 9 === n || 11 === n || 13 === n)) return 29;
-    let r = p(e);
+    let r = _(e);
     return 2 === n ? (2 === r ? 30 : 29) : 3 === n ? (0 === r ? 29 : 30) : 6 === n ? (c(e) ? 30 : 0) : 30;
 }
 class g {
     fromJulianDay(e) {
-        let n = e - s,
+        let n = e - o,
             r = Math.floor((((n * l) / u) * 19 + 234) / 235) + 1,
-            a = _(r),
-            o = Math.floor(n - a);
-        for (; o < 1; ) o = Math.floor(n - (a = _(--r)));
+            a = p(r),
+            s = Math.floor(n - a);
+        for (; s < 1; ) s = Math.floor(n - (a = p(--r)));
         let c = 1,
             d = 0;
-        for (; d < o; ) (d += m(r, c)), c++;
-        let f = o - (d -= m(r, --c));
+        for (; d < s; ) (d += m(r, c)), c++;
+        let f = s - (d -= m(r, --c));
         return new i.aw(this, r, c, f);
     }
     toJulianDay(e) {
-        let n = _(e.year);
+        let n = p(e.year);
         for (let r = 1; r < e.month; r++) n += m(e.year, r);
-        return n + e.day + s;
+        return n + e.day + o;
     }
     getDaysInMonth(e) {
         return m(e.year, e.month);

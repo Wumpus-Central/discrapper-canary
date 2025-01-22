@@ -1,7 +1,7 @@
-var r = n(875604),
-    o = n(537828),
-    a = Function.prototype;
+var i = r(875604),
+    a = r(537828),
+    o = Function.prototype;
 e.exports = function (e) {
-    var t = e.bind;
-    return e === a || (r(a, e) && t === a.bind) ? o : t;
+    var n = e.bind;
+    return e === o || (i(o, e) && n === o.bind) ? a : n;
 };

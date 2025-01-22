@@ -6,14 +6,14 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(626135),
-    o = r(596401),
+    o = r(626135),
+    s = r(596401),
     l = r(981631),
     u = r(388032);
 let c = () => {
-    s.default.track(l.rMx.CHANGE_LOG_CTA_CLICKED, {
+    o.default.track(l.rMx.CHANGE_LOG_CTA_CLICKED, {
         cta_type: 'profile_bio',
-        target: o.D2
+        target: s.D2
     });
 };
 function d() {
@@ -31,7 +31,7 @@ function d() {
                                 onClick: c,
                                 target: '_blank',
                                 rel: 'noreferrer noopener',
-                                href: o.D2,
+                                href: s.D2,
                                 children: e
                             },
                             n

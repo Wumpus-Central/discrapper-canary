@@ -12,8 +12,8 @@ var i = n(200651),
     o = n(91192),
     s = n(442837),
     c = n(524437),
-    d = n(481060),
-    u = n(724757),
+    u = n(481060),
+    d = n(724757),
     m = n(294218),
     h = n(703656),
     f = n(45251),
@@ -65,12 +65,12 @@ function R() {
         ),
         n = (0, s.e7)([p.Z], () => p.Z.loading, []),
         l = r.useRef(null),
-        a = (0, u.Z)('scheduled-messages', l);
+        a = (0, d.Z)('scheduled-messages', l);
     return n
-        ? (0, i.jsx)(d.Spinner, { className: A.loadingPlaceholder })
+        ? (0, i.jsx)(u.Spinner, { className: A.loadingPlaceholder })
         : 0 === t.length
           ? (0, i.jsx)(N.Z, {
-                Icon: d.ClockIcon,
+                Icon: u.ClockIcon,
                 header: S.intl.string(S.t.aJQZfX),
                 tip: S.intl.string(S.t.rCN4pK)
             })
@@ -79,7 +79,7 @@ function R() {
                 children: (0, i.jsx)(o.SJ, {
                     children: (e) => {
                         let { ref: n, ...r } = e;
-                        return (0, i.jsx)(d.AdvancedScroller, {
+                        return (0, i.jsx)(u.AdvancedScroller, {
                             className: A.container,
                             ref: (e) => {
                                 var t;
@@ -156,7 +156,7 @@ let P = r.memo(function (e) {
         {
             className: A.messageContainer,
             children: r
-                ? (0, i.jsx)(d.Spinner, {})
+                ? (0, i.jsx)(u.Spinner, {})
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(
@@ -171,10 +171,10 @@ let P = r.memo(function (e) {
                               },
                               l.id
                           ),
-                          (0, i.jsx)(d.Clickable, {
+                          (0, i.jsx)(u.Clickable, {
                               className: A.cancelMessageButton,
                               onClick: () => (0, f.gD)(t.scheduledMessageId),
-                              children: (0, i.jsx)(d.CircleXIcon, {})
+                              children: (0, i.jsx)(u.CircleXIcon, {})
                           })
                       ]
                   })

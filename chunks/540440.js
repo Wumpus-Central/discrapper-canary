@@ -1,6 +1,6 @@
 r.d(n, {
     B: function () {
-        return _;
+        return p;
     },
     y: function () {
         return f;
@@ -9,8 +9,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(278074),
-    s = r(442837),
-    o = r(481060),
+    o = r(442837),
+    s = r(481060),
     l = r(26033),
     u = r(594174),
     c = r(324745),
@@ -23,29 +23,29 @@ function f(e) {
         .when(l.m9, () => d.intl.string(d.t.bK9GT0))
         .exhaustive();
 }
-function _(e) {
-    let { user: n, entry: a, display: d, onAction: _, onClose: h } = e,
-        p = (0, c.Z)({ onClose: h }),
-        m = (0, s.e7)([u.default], () => u.default.getCurrentUser());
+function p(e) {
+    let { user: n, entry: a, display: d, onAction: p, onClose: h } = e,
+        _ = (0, c.Z)({ onClose: h }),
+        m = (0, o.e7)([u.default], () => u.default.getCurrentUser());
     if (n.id !== (null == m ? void 0 : m.id) || 'live' === d || !(0, l.Rh)(a)) return null;
     let g = () => {
-        (0, o.openModalLazy)(async () => {
+        (0, s.openModalLazy)(async () => {
             let { default: e } = await r.e('26545').then(r.bind(r, 81596));
             return (r) =>
                 (0, i.jsx)(e, {
                     entry: a,
                     user: n,
-                    onAction: _,
-                    onOpenGameSettings: p,
+                    onAction: p,
+                    onOpenGameSettings: _,
                     ...r
                 });
         });
     };
-    return (0, i.jsx)(o.MenuItem, {
+    return (0, i.jsx)(s.MenuItem, {
         id: 'delete-entry-history',
         label: f(a),
         action: () => {
-            null == _ || _({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), g();
+            null == p || p({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), g();
         },
         color: 'danger'
     });

@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(757143);
-var s = r(336317),
-    o = r(768581),
+var o = r(336317),
+    s = r(768581),
     l = r(302221),
     u = r(956664),
     c = r(753090);
@@ -10,24 +10,24 @@ function f(e) {
     if (d.has(e)) return '';
     try {
         let n = 0 > e.indexOf('‍') ? e.replace('️', '') : e;
-        return r(723080)('./'.concat(s.Z.convert.toCodePoint(n), '.svg'));
+        return r(723080)('./'.concat(o.Z.convert.toCodePoint(n), '.svg'));
     } catch (n) {
         return console.warn(n, 'no emoji for', e), '';
     }
 }
-function _(e) {
+function p(e) {
     return e;
 }
 function h(e) {
     let { palette: n, shouldProcessMobileColors: r = !1 } = e;
     return n;
 }
-async function p(e) {
+async function _(e) {
     let n;
     let { id: r, name: i } = e;
     n =
         null != r
-            ? o.ZP.getEmojiURL({
+            ? s.ZP.getEmojiURL({
                   id: r,
                   size: 32,
                   animated: !1
@@ -46,8 +46,8 @@ function m(e) {
 }
 n.Z = {
     getURL: c.Z.makeMemoizer(f),
-    filterUnsupportedEmojis: _,
+    filterUnsupportedEmojis: p,
     applyPlatformToThemedEmojiColorPalette: h,
-    getEmojiColors: p,
+    getEmojiColors: _,
     triggerFullscreenAnimation: m
 };

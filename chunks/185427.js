@@ -1,15 +1,15 @@
 var i = r(126387),
     a = r(740078);
-function s(e, n, r) {
-    var s = (0, i.Z)(e),
-        o = [a.t$, a.we].indexOf(s) >= 0 ? -1 : 1,
+function o(e, n, r) {
+    var o = (0, i.Z)(e),
+        s = [a.t$, a.we].indexOf(o) >= 0 ? -1 : 1,
         l = 'function' == typeof r ? r(Object.assign({}, n, { placement: e })) : r,
         u = l[0],
         c = l[1];
     return (
         (u = u || 0),
-        (c = (c || 0) * o),
-        [a.t$, a.F2].indexOf(s) >= 0
+        (c = (c || 0) * s),
+        [a.t$, a.F2].indexOf(o) >= 0
             ? {
                   x: c,
                   y: u
@@ -20,14 +20,14 @@ function s(e, n, r) {
               }
     );
 }
-function o(e) {
+function s(e) {
     var n = e.state,
         r = e.options,
         i = e.name,
-        o = r.offset,
-        l = void 0 === o ? [0, 0] : o,
+        s = r.offset,
+        l = void 0 === s ? [0, 0] : s,
         u = a.Ct.reduce(function (e, r) {
-            return (e[r] = s(r, n.rects, l)), e;
+            return (e[r] = o(r, n.rects, l)), e;
         }, {}),
         c = u[n.placement],
         d = c.x,
@@ -39,5 +39,5 @@ n.Z = {
     enabled: !0,
     phase: 'main',
     requires: ['popperOffsets'],
-    fn: o
+    fn: s
 };

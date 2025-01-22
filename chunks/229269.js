@@ -35,7 +35,7 @@ function E() {
                 }),
                 (0, i.jsx)(C, {}),
                 (0, i.jsx)(N, {}),
-                (0, i.jsx)(y, {})
+                (0, i.jsx)(D, {})
             ]
         })
     });
@@ -185,7 +185,7 @@ function N() {
             (0, i.jsx)(p.E_, {
                 label: 'All Payment Request Wallets Enabled',
                 children: (0, i.jsx)(I, {
-                    children: (0, i.jsx)(c.Z, {
+                    children: (0, i.jsx)(c.ZP, {
                         ...e,
                         onChooseType: () => {},
                         paymentRequestWallets: ['googlePay', 'applePay']
@@ -195,7 +195,7 @@ function N() {
             (0, i.jsx)(p.E_, {
                 label: 'No Payment Wallets Enabled',
                 children: (0, i.jsx)(I, {
-                    children: (0, i.jsx)(c.Z, {
+                    children: (0, i.jsx)(c.ZP, {
                         ...e,
                         onChooseType: () => {},
                         paymentRequestWallets: []
@@ -205,7 +205,7 @@ function N() {
             (0, i.jsx)(p.E_, {
                 label: 'Is Eligible for Trial',
                 children: (0, i.jsx)(I, {
-                    children: (0, i.jsx)(c.Z, {
+                    children: (0, i.jsx)(c.ZP, {
                         ...e,
                         isEligibleForTrial: !0,
                         onChooseType: () => {},
@@ -381,7 +381,7 @@ function P() {
         ]
     });
 }
-function y() {
+function D() {
     return (0, i.jsxs)(p.$0, {
         children: [
             (0, i.jsx)(o.Heading, {

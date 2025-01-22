@@ -1,6 +1,6 @@
 var i = r(526988),
     a = TypeError,
-    s = function (e) {
+    o = function (e) {
         var n, r;
         (this.promise = new e(function (e, i) {
             if (void 0 !== n || void 0 !== r) throw a('Bad Promise constructor');
@@ -10,5 +10,5 @@ var i = r(526988),
             (this.reject = i(r));
     };
 e.exports.f = function (e) {
-    return new s(e);
+    return new o(e);
 };

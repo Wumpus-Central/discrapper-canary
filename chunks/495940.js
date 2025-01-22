@@ -1,11 +1,11 @@
-var r = n(67867),
-    o = n(558853),
-    a = n(501953);
-r(
+var i = r(67867),
+    a = r(558853),
+    o = r(501953);
+i(
     {
         target: 'Array',
         proto: !0
     },
-    { fill: o }
+    { fill: a }
 ),
-    a('fill');
+    o('fill');

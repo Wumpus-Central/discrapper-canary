@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(120356),
     u = r.n(l),
     c = r(748780),
@@ -19,7 +19,7 @@ function f(e, n, r) {
         e
     );
 }
-let _ = {
+let p = {
         friction: 14,
         tension: 200
     },
@@ -27,12 +27,12 @@ let _ = {
         DURATION: 'DURATION',
         VOLUME: 'VOLUME'
     };
-function p(e) {
+function _(e) {
     let n = 0 | e,
         r = n % 60;
     return ''.concat((n - r) / 60, ':').concat(String(r).padStart(2, '0'));
 }
-class m extends (i = o.Component) {
+class m extends (i = s.Component) {
     componentDidMount() {
         let { previewWidth: e, animatedProgress: n } = this.state;
         (this._previewId = e.addListener(this.handlePreviewChange)), (this._progressId = n.addListener(this.handleAnimatedChange));
@@ -51,7 +51,7 @@ class m extends (i = o.Component) {
         n
             ? c.Z.spring(r, {
                   toValue: e,
-                  ..._
+                  ...p
               }).start()
             : r.setValue(e);
     }
@@ -61,27 +61,27 @@ class m extends (i = o.Component) {
             props: { type: i }
         } = this;
         if (null == r) return 0;
-        let { left: a, width: s, bottom: o, height: l } = r.getBoundingClientRect();
-        return Math.min(1, Math.max(0, i === h.VOLUME ? (o - n) / l : (e - a) / s));
+        let { left: a, width: o, bottom: s, height: l } = r.getBoundingClientRect();
+        return Math.min(1, Math.max(0, i === h.VOLUME ? (s - n) / l : (e - a) / o));
     }
     render() {
         let { buffers: e, type: n, className: r, sliderClassName: i } = this.props,
-            { dragging: a, previewWidth: o, animatedProgress: l } = this.state,
-            f = a ? l : o;
-        return (0, s.jsx)('div', {
+            { dragging: a, previewWidth: s, animatedProgress: l } = this.state,
+            f = a ? l : s;
+        return (0, o.jsx)('div', {
             className: u()(r, n === h.VOLUME ? d.vertical : d.horizontal),
-            children: (0, s.jsx)('div', {
+            children: (0, o.jsx)('div', {
                 className: u()(i, a ? d.mediaBarInteractionDragging : d.mediaBarInteraction, n === h.VOLUME ? d.mediaBarInteractionVolume : null),
                 onMouseDown: this.handleDragStart,
                 onMouseMove: this.handleMouseMove,
                 ref: (e) => (this.wrapper = e),
-                children: (0, s.jsxs)('div', {
+                children: (0, o.jsxs)('div', {
                     className: u()(d.mediaBarWrapper, n === h.VOLUME ? d.mediaBarWrapperVolume : null),
                     children: [
                         null != e
                             ? e.map((e, n) => {
                                   let [r, i] = e;
-                                  return (0, s.jsx)(
+                                  return (0, o.jsx)(
                                       'div',
                                       {
                                           className: d.buffer,
@@ -95,17 +95,17 @@ class m extends (i = o.Component) {
                               })
                             : null,
                         n === h.DURATION
-                            ? (0, s.jsx)(c.Z.div, {
+                            ? (0, o.jsx)(c.Z.div, {
                                   className: d.mediaBarPreview,
                                   style: {
-                                      width: o.interpolate({
+                                      width: s.interpolate({
                                           inputRange: [0, 1],
                                           outputRange: ['0%', '100%']
                                       })
                                   }
                               })
                             : null,
-                        (0, s.jsx)(c.Z.div, {
+                        (0, o.jsx)(c.Z.div, {
                             className: d.mediaBarProgress,
                             style: {
                                 width: l.interpolate({
@@ -113,10 +113,10 @@ class m extends (i = o.Component) {
                                     outputRange: ['0%', '100%']
                                 })
                             },
-                            children: (0, s.jsx)('span', { className: d.mediaBarGrabber })
+                            children: (0, o.jsx)('span', { className: d.mediaBarGrabber })
                         }),
                         n === h.DURATION
-                            ? (0, s.jsx)(c.Z.div, {
+                            ? (0, o.jsx)(c.Z.div, {
                                   ref: this.setBubbleRef,
                                   className: d.bubble,
                                   style: {
@@ -151,7 +151,7 @@ class m extends (i = o.Component) {
                     state: { dragging: n, previewWidth: r },
                     props: { value: i }
                 } = this;
-                if (!n && null != e) e.innerText = p(r._value * i);
+                if (!n && null != e) e.innerText = _(r._value * i);
             }),
             f(this, 'handleAnimatedChange', () => {
                 let {
@@ -159,7 +159,7 @@ class m extends (i = o.Component) {
                     state: { dragging: n, animatedProgress: r },
                     props: { value: i }
                 } = this;
-                if (!!n && null != e) e.innerText = p(r._value * i);
+                if (!!n && null != e) e.innerText = _(r._value * i);
             }),
             f(this, 'handleMouseMove', (e) => {
                 let { dragging: n, previewWidth: r } = this.state;
@@ -174,7 +174,7 @@ class m extends (i = o.Component) {
             }),
             f(this, 'handleDragStart', (e) => {
                 let { onDragStart: n, onDrag: r, type: i, currentWindow: a } = this.props,
-                    { clientX: s, clientY: o } = e;
+                    { clientX: o, clientY: s } = e;
                 if ((e.preventDefault(), null == this.wrapper)) return;
                 let { left: l, width: u } = this.wrapper.getBoundingClientRect();
                 this.setState(
@@ -184,7 +184,7 @@ class m extends (i = o.Component) {
                         offsetWidth: u
                     },
                     () => {
-                        n(i), r(this.calculatePercentage(s, o), i), a.removeEventListener('mouseup', this.handleDragEnd, !1), a.removeEventListener('mousemove', this.handleDragMove, !1), a.addEventListener('mouseup', this.handleDragEnd, !1), a.addEventListener('mousemove', this.handleDragMove, !1);
+                        n(i), r(this.calculatePercentage(o, s), i), a.removeEventListener('mouseup', this.handleDragEnd, !1), a.removeEventListener('mousemove', this.handleDragMove, !1), a.addEventListener('mouseup', this.handleDragEnd, !1), a.addEventListener('mousemove', this.handleDragMove, !1);
                     }
                 );
             }),

@@ -1,10 +1,10 @@
 var i = r(192379),
     a = r(723184),
-    s = function (e) {
+    o = function (e) {
         var n = e.onClick,
             r = e.label,
-            s = e.children,
-            o = e.active,
+            o = e.children,
+            s = e.active,
             l = (0, a.default)(
                 {
                     default: {
@@ -24,7 +24,7 @@ var i = r(192379),
                     },
                     active: { button: { boxShadow: '0 0 0 1px #878787' } }
                 },
-                { active: o }
+                { active: s }
             );
         return i.createElement(
             'div',
@@ -32,7 +32,7 @@ var i = r(192379),
                 style: l.button,
                 onClick: n
             },
-            r || s
+            r || o
         );
     };
-n.C = s;
+n.C = o;

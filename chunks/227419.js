@@ -1,16 +1,16 @@
 var i = r(47120);
 var a = r(200651);
 r(192379);
-var s = r(392711),
-    o = r.n(s),
+var o = r(392711),
+    s = r.n(o),
     l = r(481060),
     u = r(493683),
     c = r(904245),
     d = r(911969),
     f = r(933557),
-    _ = r(699516),
+    p = r(699516),
     h = r(594174),
-    p = r(895924),
+    _ = r(895924),
     m = r(689079),
     g = r(981631),
     E = r(388032);
@@ -23,15 +23,15 @@ function v(e) {
             return '';
     }
 }
-let I = [
-    ...o()(g.nkL)
+let y = [
+    ...s()(g.nkL)
         .values()
         .map((e) => ({
             id: e.commandId,
             untranslatedName: e.command,
             displayName: e.command,
             type: d.yU.CHAT,
-            inputType: p.iw.BUILT_IN_INTEGRATION,
+            inputType: _.iw.BUILT_IN_INTEGRATION,
             applicationId: m.bi.BUILT_IN,
             get untranslatedDescription() {
                 return v(e.title);
@@ -65,7 +65,7 @@ let I = [
         untranslatedName: 'leave',
         displayName: 'leave',
         type: d.yU.CHAT,
-        inputType: p.iw.BUILT_IN,
+        inputType: _.iw.BUILT_IN,
         applicationId: m.bi.BUILT_IN,
         get untranslatedDescription() {
             return E.intl.string(E.t['26C4oq']);
@@ -93,19 +93,19 @@ let I = [
         },
         execute: (e, n) => {
             var r, i;
-            let { channel: s } = n,
-                o = (0, f.F6)(s, h.default, _.Z),
-                d = E.intl.formatToPlainString(E.t.hJ5Ap6, { name: o }),
-                p = E.intl.format(E.t.SSIVOj, { name: o }),
+            let { channel: o } = n,
+                s = (0, f.F6)(o, h.default, p.Z),
+                d = E.intl.formatToPlainString(E.t.hJ5Ap6, { name: s }),
+                _ = E.intl.format(E.t.SSIVOj, { name: s }),
                 m = null !== (i = null === (r = e.find((e) => 'silent' === e.name)) || void 0 === r ? void 0 : r.value) && void 0 !== i && i;
             async function g() {
                 try {
-                    await u.Z.closePrivateChannel(s.id, void 0, m);
+                    await u.Z.closePrivateChannel(o.id, void 0, m);
                 } catch (e) {
-                    c.Z.sendBotMessage(s.id, E.intl.string(E.t.YOsuT0));
+                    c.Z.sendBotMessage(o.id, E.intl.string(E.t.YOsuT0));
                 }
             }
-            s.isManaged() && ((d = E.intl.formatToPlainString(E.t.hVGjER, { name: o })), (p = E.intl.format(E.t.IK1Qvr, { name: o }))),
+            o.isManaged() && ((d = E.intl.formatToPlainString(E.t.hVGjER, { name: s })), (_ = E.intl.format(E.t.IK1Qvr, { name: s }))),
                 (0, l.openModal)((e) =>
                     (0, a.jsx)(l.ConfirmModal, {
                         header: d,
@@ -115,7 +115,7 @@ let I = [
                         ...e,
                         children: (0, a.jsx)(l.Text, {
                             variant: 'text-md/normal',
-                            children: p
+                            children: _
                         })
                     })
                 );
@@ -126,7 +126,7 @@ let I = [
         untranslatedName: 'sticker',
         displayName: 'sticker',
         type: d.yU.CHAT,
-        inputType: p.iw.BUILT_IN_INTEGRATION,
+        inputType: _.iw.BUILT_IN_INTEGRATION,
         applicationId: m.bi.BUILT_IN,
         get untranslatedDescription() {
             return E.intl.string(E.t.GUH9IC);
@@ -152,4 +152,4 @@ let I = [
         integrationTitle: 'sticker'
     }
 ];
-n.Z = I;
+n.Z = y;

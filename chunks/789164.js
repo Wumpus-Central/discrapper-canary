@@ -5,41 +5,41 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(481060),
-    o = r(15127),
+    o = r(481060),
+    s = r(15127),
     l = r(512983),
     u = r(734141);
 let c = a.forwardRef(function (e, n) {
     var r;
-    let { children: c, className: d, titleClassName: f, title: _, icon: h, disabled: p, htmlFor: m, tag: g = 'h5', ...E } = e,
+    let { children: c, className: d, titleClassName: f, title: p, icon: h, disabled: _, htmlFor: m, tag: g = 'h5', ...E } = e,
         v = a.useId(),
-        I = null !== (r = E.titleId) && void 0 !== r ? r : v;
+        y = null !== (r = E.titleId) && void 0 !== r ? r : v;
     return (0, i.jsx)('div', {
         ref: n,
         className: d,
         children:
-            null != _
-                ? (0, i.jsx)(s.HeadingLevel, {
+            null != p
+                ? (0, i.jsx)(o.HeadingLevel, {
                       component: (0, i.jsxs)('div', {
                           className: u.sectionTitle,
                           children: [
                               h,
-                              null != _
+                              null != p
                                   ? (0, i.jsx)(l.v, {
                                         tag: g,
-                                        id: I,
+                                        id: y,
                                         htmlFor: m,
-                                        disabled: p,
+                                        disabled: _,
                                         className: f,
-                                        children: _
+                                        children: p
                                     })
                                   : null
                           ]
                       }),
                       children: (0, i.jsx)('div', {
                           className: u.children,
-                          children: (0, i.jsx)(o.ol, {
-                              titleId: I,
+                          children: (0, i.jsx)(s.ol, {
+                              titleId: y,
                               children: c
                           })
                       })

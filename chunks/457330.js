@@ -1,21 +1,21 @@
 var i = r(610138);
 var a = r(216116);
-var s = r(78328);
-var o = r(815648);
+var o = r(78328);
+var s = r(815648);
 var l = r(47120);
 var u = r(990547),
     c = r(544891),
     d = r(570140),
     f = r(275759),
-    _ = r(185669),
+    p = r(185669),
     h = r(710845),
-    p = r(314897),
+    _ = r(314897),
     m = r(553795),
     g = r(626135),
     E = r(573261),
     v = r(981631);
-let I = new h.Z('ConnectedAccounts');
-function T(e, n) {
+let y = new h.Z('ConnectedAccounts');
+function b(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return c.tn.post({
         url: v.ANM.CONNECTIONS_CALLBACK(e),
@@ -23,13 +23,13 @@ function T(e, n) {
             ...n,
             insecure: r,
             friend_sync: v.BFP.has(e),
-            ...(_.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.callback' }).enabled ? { session_id: p.default.getSessionId() } : {})
+            ...(p.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.callback' }).enabled ? { session_id: _.default.getSessionId() } : {})
         },
         oldFormErrors: !0,
         rejectWithError: !1
     });
 }
-function b(e, n, r, i, a) {
+function I(e, n, r, i, a) {
     return c.tn.post({
         url: v.ANM.CONNECTIONS_SESSION_HANDOFF(e),
         body: {
@@ -42,7 +42,7 @@ function b(e, n, r, i, a) {
         rejectWithError: !1
     });
 }
-function y(e, n) {
+function T(e, n) {
     let r = new URLSearchParams();
     r.append('state', n);
     let i = ''.concat(v.ANM.CONNECTIONS_SESSION_HANDOFF(e), '?').concat(r.toString());
@@ -76,17 +76,17 @@ n.Z = {
             ),
     async authorize(e) {
         var n;
-        let { location: r, twoWayLinkType: i, userCode: a, twoWayLink: s, successRedirect: o, handle: l } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        let { location: r, twoWayLinkType: i, userCode: a, twoWayLink: o, successRedirect: s, handle: l } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         g.default.track(v.rMx.CONNECTED_ACCOUNT_INITIATED, {
             platform_type: e,
             location: r
         });
         let u = v.ANM.CONNECTIONS_AUTHORIZE(e),
             d = new URLSearchParams();
-        null != a && d.append('two_way_user_code', a), null != o && d.append('success_redirect', o), null != i ? (d.append('two_way_link_type', i), d.append('two_way_link', 'true')) : null != s && d.append('two_way_link', String(s)), null != l && d.append('handle', l);
-        let { enabled: h } = _.g.getCurrentConfig({ location: 'ConnectedAcountsActionCreators.authorize' }, { autoTrackExposure: !0 });
+        null != a && d.append('two_way_user_code', a), null != s && d.append('success_redirect', s), null != i ? (d.append('two_way_link_type', i), d.append('two_way_link', 'true')) : null != o && d.append('two_way_link', String(o)), null != l && d.append('handle', l);
+        let { enabled: h } = p.g.getCurrentConfig({ location: 'ConnectedAcountsActionCreators.authorize' }, { autoTrackExposure: !0 });
         if (h) {
-            let e = p.default.getSessionId();
+            let e = _.default.getSessionId();
             null != e && d.append('session_id', e);
         }
         u = u + '?' + d.toString();
@@ -95,17 +95,17 @@ n.Z = {
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-            { state: I } = (0, f.xp)(null !== (n = E.body.url) && void 0 !== n ? n : '');
-        return null != I && !_.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.authorize' }).enabled && m.Z.addPendingAuthorizedState(I), E;
+            { state: y } = (0, f.xp)(null !== (n = E.body.url) && void 0 !== n ? n : '');
+        return null != y && !p.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.authorize' }).enabled && m.Z.addPendingAuthorizedState(y), E;
     },
-    callback: T,
+    callback: b,
     connect(e, n, r, i, a) {
-        var s;
+        var o;
         return E.Z.put({
             url: v.ANM.CONNECTION(e, n),
             body: {
                 name: r,
-                friend_sync: null !== (s = null == a ? void 0 : a.friend_sync) && void 0 !== s ? s : v.BFP.has(e)
+                friend_sync: null !== (o = null == a ? void 0 : a.friend_sync) && void 0 !== o ? o : v.BFP.has(e)
             },
             context: { location: i },
             oldFormErrors: !0,
@@ -222,24 +222,24 @@ n.Z = {
         }),
     async completeTwoWayLink(e, n, r, i, a) {
         if (null == n) {
-            I.error('Two-way link: missing authorize location');
+            y.error('Two-way link: missing authorize location');
             return;
         }
-        let { code: s, error: o, errorDescription: l } = (0, f.xp)(n);
-        if (null != o) {
-            I.error('Two-way link: missing authorize code', {
-                error: o,
+        let { code: o, error: s, errorDescription: l } = (0, f.xp)(n);
+        if (null != s) {
+            y.error('Two-way link: missing authorize code', {
+                error: s,
                 errorDescription: l
             });
             return;
         }
-        return await T(e, {
+        return await b(e, {
             code: r,
             state: i,
-            two_way_link_code: s,
+            two_way_link_code: o,
             token_redirect_uri: a
         });
     },
-    sessionHandoff: b,
-    getHandoffStatus: y
+    sessionHandoff: I,
+    getHandoffStatus: T
 };

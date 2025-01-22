@@ -1,45 +1,45 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return u;
+        return d;
     }
 }),
-    n(47120);
-var i = n(200651);
-n(192379);
-var r = n(442837),
-    s = n(481060),
-    a = n(607070),
-    l = n(600164),
-    o = n(122890),
-    c = n(110818),
-    d = n(346007);
-function u(e) {
-    let { purchaseState: t, currentStep: n, onClose: u } = e,
-        [m, g] = (0, o.z)({
-            purchaseState: t,
-            currentStep: n,
+    t(47120);
+var l = t(200651);
+t(192379);
+var i = t(442837),
+    o = t(481060),
+    r = t(607070),
+    a = t(600164),
+    s = t(122890),
+    c = t(110818),
+    u = t(346007);
+function d(e) {
+    let { purchaseState: n, currentStep: t, onClose: d } = e,
+        [p, f] = (0, s.z)({
+            purchaseState: n,
+            currentStep: t,
             initialScene: c.fe.Scenes.ENTRY,
             purchaseScene: c.fe.Scenes.STARS,
             errorScene: c.fe.Scenes.ERROR,
             successScene: c.fe.Scenes.SUCCESS
         }),
-        h = (0, r.e7)([a.Z], () => a.Z.useReducedMotion);
-    return (0, i.jsxs)(s.ModalHeader, {
-        align: l.Z.Align.START,
-        className: d.header,
+        _ = (0, i.e7)([r.Z], () => r.Z.useReducedMotion);
+    return (0, l.jsxs)(o.ModalHeader, {
+        align: a.Z.Align.START,
+        className: u.header,
         separator: !1,
         children: [
-            (0, i.jsx)(c.fe, {
-                className: d.animation,
-                nextScene: m,
-                onScenePlay: (e) => g(c.fe.getNextScene(e)),
+            (0, l.jsx)(c.fe, {
+                className: u.animation,
+                nextScene: p,
+                onScenePlay: (e) => f(c.fe.getNextScene(e)),
                 pauseWhileUnfocused: !1,
-                pause: h
+                pause: _
             }),
-            (0, i.jsx)('div', { className: d.headerTitle }),
-            (0, i.jsx)(s.ModalCloseButton, {
-                onClick: u,
-                className: d.closeButton
+            (0, l.jsx)('div', { className: u.headerTitle }),
+            (0, l.jsx)(o.ModalCloseButton, {
+                onClick: d,
+                className: u.closeButton
             })
         ]
     });

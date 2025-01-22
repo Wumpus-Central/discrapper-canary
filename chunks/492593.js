@@ -1,8 +1,8 @@
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(481060),
+    o = r.n(a),
+    s = r(481060),
     l = r(507304);
 function u(e) {
     let {
@@ -13,9 +13,9 @@ function u(e) {
             disableInteraction: c = !1,
             childrenRepliedMessage: d,
             childrenExecutedCommand: f,
-            childrenHeader: _,
+            childrenHeader: p,
             childrenSystemMessage: h,
-            childrenButtons: p,
+            childrenButtons: _,
             childrenMessageContent: m,
             childrenAccessories: g,
             messageRef: E,
@@ -25,44 +25,44 @@ function u(e) {
                     right: 4
                 }
             },
-            hasThread: I,
-            isSystemMessage: T,
-            hasReply: b,
-            ...y
+            hasThread: y,
+            isSystemMessage: b,
+            hasReply: I,
+            ...T
         } = e,
-        S = (0, i.jsx)(o.FocusRing, {
+        S = (0, i.jsx)(s.FocusRing, {
             ...v,
             children: (0, i.jsxs)('div', {
-                className: s()(n, {
+                className: o()(n, {
                     [l.wrapper]: !0,
                     [l.contentOnly]: a,
                     [l.compact]: r,
                     [l.cozy]: !r,
                     [l.zalgo]: u,
-                    [l.hasThread]: I,
-                    [l.isSystemMessage]: T,
-                    [l.hasReply]: b
+                    [l.hasThread]: y,
+                    [l.isSystemMessage]: b,
+                    [l.hasReply]: I
                 }),
                 ref: E,
-                ...y,
+                ...T,
                 role: 'article',
                 children: [
                     d,
                     f,
                     (0, i.jsxs)('div', {
                         className: l.contents,
-                        children: [h, _, null == h && m]
+                        children: [h, p, null == h && m]
                     }),
                     g,
-                    null != p
+                    null != _
                         ? (0, i.jsx)('div', {
                               className: l.buttonContainer,
-                              children: p
+                              children: _
                           })
                         : null
                 ]
             })
         });
-    return c ? (0, i.jsx)(o.FocusBlock, { children: S }) : S;
+    return c ? (0, i.jsx)(s.FocusBlock, { children: S }) : S;
 }
 n.Z = u;

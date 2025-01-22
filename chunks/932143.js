@@ -1,14 +1,14 @@
 r.d(n, {
     W: function () {
-        return s;
+        return o;
     }
 });
 var i = r(781988),
     a = r(192379);
-function s(e) {
+function o(e) {
     let n = (0, i.d)(e),
-        [r, s] = (0, a.useState)(null),
-        [o, l] = (0, a.useState)([]),
+        [r, o] = (0, a.useState)(null),
+        [s, l] = (0, a.useState)([]),
         u = () => {
             l([]), n.close();
         },
@@ -22,15 +22,15 @@ function s(e) {
         focusStrategy: r,
         ...n,
         open(e = null) {
-            s(e), n.open();
+            o(e), n.open();
         },
         toggle(e = null) {
-            s(e), n.toggle();
+            o(e), n.toggle();
         },
         close() {
             u();
         },
-        UNSTABLE_expandedKeysStack: o,
+        UNSTABLE_expandedKeysStack: s,
         UNSTABLE_openSubmenu: c,
         UNSTABLE_closeSubmenu: d
     };

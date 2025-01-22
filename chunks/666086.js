@@ -1,23 +1,23 @@
 var i = r(47120);
 var a = r(392711);
-var s = r(106351),
-    o = r(904245),
+var o = r(106351),
+    s = r(904245),
     l = r(147913),
     u = r(367907),
     c = r(447003),
     d = r(592125),
     f = r(650774),
-    _ = r(271383),
+    p = r(271383),
     h = r(430824),
-    p = r(375954),
+    _ = r(375954),
     m = r(944486),
     g = r(626135),
     E = r(522558),
     v = r(581025),
-    I = r(795448),
-    T = r(441623),
-    b = r(474936),
-    y = r(981631);
+    y = r(795448),
+    b = r(441623),
+    I = r(474936),
+    T = r(981631);
 function S(e, n, r) {
     return (
         n in e
@@ -32,14 +32,14 @@ function S(e, n, r) {
     );
 }
 let A = 50,
-    N = 1000;
-class C extends l.Z {
+    C = 1000;
+class N extends l.Z {
     isChannelEligible(e, n) {
         switch (e.type) {
-            case s.d.DM:
-            case s.d.GROUP_DM:
+            case o.d.DM:
+            case o.d.GROUP_DM:
                 return !0;
-            case s.d.GUILD_TEXT:
+            case o.d.GUILD_TEXT:
                 let r = h.Z.getGuild(n),
                     i = f.Z.getMemberCount(n);
                 return null != i && i <= A && (null == r ? void 0 : r.rulesChannelId) !== e.id && !e.isNSFW() && !(0, c.Z)(e) && null == e.linkedLobby;
@@ -50,31 +50,31 @@ class C extends l.Z {
     maybeSendGiftingPromptSystemMessageDebounced(e, n, r, i) {
         (0, a.debounce)(() => {
             let a = m.Z.getChannelId();
-            !T.Z.isGiftIntentMessageInCooldown(r) &&
+            !b.Z.isGiftIntentMessageInCooldown(r) &&
                 e === a &&
-                p.Z.isReady(e) &&
-                (o.Z.sendGiftingPromptSystemMessage(e, {
+                _.Z.isReady(e) &&
+                (s.Z.sendGiftingPromptSystemMessage(e, {
                     giftIntentType: n,
                     recipientUserId: r,
                     giftIntentSecondaryAction: i
                 }),
-                (0, I.PV)(r));
-        }, N)();
+                (0, y.PV)(r));
+        }, C)();
     }
     handleChannelSelect(e, n) {
         let { enabled: r } = v.G.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
             { enabled: i } = E.w.getCurrentConfig({ location: 'PremiumGiftingIntentManager handleChannelSelect' }, { autoTrackExposure: !1 }),
             a = d.Z.getChannel(n);
         if ((r || i) && null != a && this.isChannelEligible(a, e)) {
-            let n = new Set(null != e ? _.ZP.getMemberIds(e) : a.recipients),
-                s = T.Z.getFriendAnniversaries().filter((e) => n.has(e));
-            if (i && s.length > 0) {
-                let e = s[0];
-                this.maybeSendGiftingPromptSystemMessageDebounced(a.id, b.hX.FRIEND_ANNIVERSARY, e, s.length > 1 ? b.X2.VIEW_ALL : b.X2.SEND_MESSAGE);
+            let n = new Set(null != e ? p.ZP.getMemberIds(e) : a.recipients),
+                o = b.Z.getFriendAnniversaries().filter((e) => n.has(e));
+            if (i && o.length > 0) {
+                let e = o[0];
+                this.maybeSendGiftingPromptSystemMessageDebounced(a.id, I.hX.FRIEND_ANNIVERSARY, e, o.length > 1 ? I.X2.VIEW_ALL : I.X2.SEND_MESSAGE);
             }
             r &&
-                g.default.track(y.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
-                    friend_anniversaries_count: s.length,
+                g.default.track(T.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
+                    friend_anniversaries_count: o.length,
                     ...(0, u.v_)(a)
                 });
         }
@@ -98,4 +98,4 @@ class C extends l.Z {
             });
     }
 }
-n.Z = new C();
+n.Z = new N();

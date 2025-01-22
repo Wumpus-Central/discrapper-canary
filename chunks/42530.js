@@ -6,10 +6,10 @@ r.d(n, {
         return i;
     },
     i$: function () {
-        return o;
+        return s;
     },
     nO: function () {
-        return s;
+        return o;
     },
     u9: function () {
         return a;
@@ -17,9 +17,9 @@ r.d(n, {
 });
 let i = [0],
     a = [0, 0],
-    s = {
+    o = {
         path: [0, 0],
         offset: 0
     },
-    o = /(\t|\s)/,
+    s = /(\t|\s)/,
     l = ['applicationCommandOption'];

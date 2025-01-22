@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140);
+var o = r(442837),
+    s = r(570140);
 function l(e, n, r) {
     return (
         n in e
@@ -20,9 +20,9 @@ let u = new Map(),
         let { roleId: n, roleConnectionEligibility: r } = e;
         u.set(n, r);
     };
-class d extends (i = s.ZP.Store) {
+class d extends (i = o.ZP.Store) {
     getGuildRoleConnectionEligibility(e) {
         return null != e ? u.get(e) : void 0;
     }
 }
-l(d, 'displayName', 'GuildRoleConnectionEligibilityStore'), (n.Z = new d(o.Z, { GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: c }));
+l(d, 'displayName', 'GuildRoleConnectionEligibilityStore'), (n.Z = new d(s.Z, { GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: c }));

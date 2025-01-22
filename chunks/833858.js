@@ -1,9 +1,9 @@
 r.d(n, {
     O8: function () {
-        return p;
+        return _;
     },
     V: function () {
-        return _;
+        return p;
     },
     tV: function () {
         return h;
@@ -11,17 +11,17 @@ r.d(n, {
 });
 var i = r(981631),
     a = r(388032),
-    s = r(337258),
-    o = r(705196),
+    o = r(337258),
+    s = r(705196),
     l = r(190878),
     u = r(991254),
     c = r(485686),
     d = r(400976),
     f = r(443909);
-let _ = () => ({
+let p = () => ({
         [i.tNA.CHILLING]: {
             title: a.intl.string(a.t['vkpn7+']),
-            icon: o,
+            icon: s,
             color: '#567C7E'
         },
         [i.tNA.GAMING]: {
@@ -36,7 +36,7 @@ let _ = () => ({
         },
         [i.tNA.BRB]: {
             title: a.intl.string(a.t['30yqZW']),
-            icon: s,
+            icon: o,
             color: '#76567E'
         },
         [i.tNA.EATING]: {
@@ -58,9 +58,9 @@ let _ = () => ({
     h = (e) => {
         if ((null == e ? void 0 : e.type) !== i.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
         let n = e.state;
-        return n === i.tNA.CUSTOM ? null : _()[n];
+        return n === i.tNA.CUSTOM ? null : p()[n];
     },
-    p = (e) => {
+    _ = (e) => {
         var n;
         return ((null == e ? void 0 : e.state) != null ? e.state : null) === i.tNA.CUSTOM ? (null == e ? void 0 : e.details) : null === (n = h(e)) || void 0 === n ? void 0 : n.title;
     };

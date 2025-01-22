@@ -1,7 +1,7 @@
-var r = n(625014).start,
-    o = n(875701);
-e.exports = o('trimStart')
+var i = r(625014).start,
+    a = r(875701);
+e.exports = a('trimStart')
     ? function () {
-          return r(this);
+          return i(this);
       }
     : ''.trimStart;

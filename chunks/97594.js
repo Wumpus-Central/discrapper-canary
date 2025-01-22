@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return v;
+            return C;
         }
     }),
     t(47120);
@@ -23,12 +23,12 @@ var i = t(200651),
     E = t(981631),
     S = t(388032),
     x = t(176598);
-function v(e) {
-    let { onClose: n, items: t, startingIndex: r, shouldRedactExplicitContent: v, shouldHideMediaOptions: C = !1, className: y, transitionState: I, ...b } = e,
+function C(e) {
+    let { onClose: n, items: t, startingIndex: r, shouldRedactExplicitContent: C, shouldHideMediaOptions: v = !1, className: y, transitionState: I, ...b } = e,
         [M, O] = l.useState(null != r ? r : 0),
         [L, T] = l.useState(!1),
         [A, R] = l.useState(!0),
-        j = l.useRef(null);
+        D = l.useRef(null);
     l.useEffect(() => {
         if (null != n)
             return (
@@ -48,7 +48,7 @@ function v(e) {
             ),
             [I]
         );
-    let D = l.useCallback((e) => {
+    let j = l.useCallback((e) => {
             O(e), (0, f.yg)(f.uG.SELECTED_ITEM_CHANGE);
         }, []),
         N = l.useMemo(
@@ -63,12 +63,12 @@ function v(e) {
         ),
         w = l.useCallback(() => {
             var e;
-            R(!0), (null !== (e = j.current) && void 0 !== e) || (j.current = new o.sW(1000, () => R(!1))), j.current.delay();
+            R(!0), (null !== (e = D.current) && void 0 !== e) || (D.current = new o.sW(1000, () => R(!1))), D.current.delay();
         }, []),
         P = l.useCallback(() => {
             w(), null == n || n();
         }, [w, n]),
-        Z = t[M];
+        k = t[M];
     return (0, i.jsx)(s.ThemeProvider, {
         theme: E.BRd.DARK,
         children: (e) =>
@@ -86,7 +86,7 @@ function v(e) {
                     value: N,
                     children: [
                         (0, i.jsx)(_.Z, {
-                            item: Z,
+                            item: k,
                             onClose: n
                         }),
                         (0, i.jsxs)(g.c7, {
@@ -94,13 +94,13 @@ function v(e) {
                                 (0, i.jsx)(p.Z, {
                                     items: t,
                                     startIndex: M,
-                                    onIndexChange: D,
-                                    shouldRedactExplicitContent: v,
-                                    shouldHideMediaOptions: C
+                                    onIndexChange: j,
+                                    shouldRedactExplicitContent: C,
+                                    shouldHideMediaOptions: v
                                 }),
                                 (0, i.jsx)(h.Z, {
-                                    item: Z,
-                                    hideMediaOptions: C
+                                    item: k,
+                                    hideMediaOptions: v
                                 })
                             ]
                         })

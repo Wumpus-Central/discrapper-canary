@@ -8,18 +8,18 @@ r.d(n, {
 });
 var i = r(230367),
     a = r(69122),
-    s = r(825842);
-let o = {
+    o = r(825842);
+let s = {
     readUnknownField: !0,
     readerFactory: (e) => new u(e)
 };
 function l(e) {
-    return e ? Object.assign(Object.assign({}, o), e) : o;
+    return e ? Object.assign(Object.assign({}, s), e) : s;
 }
 class u {
     constructor(e, n) {
-        (this.varint64 = s.sg),
-            (this.uint32 = s.jI),
+        (this.varint64 = o.sg),
+            (this.uint32 = o.jI),
             (this.buf = e),
             (this.len = e.length),
             (this.pos = 0),

@@ -41,8 +41,8 @@ function n(e) {
             { begin: e.IDENT_RE + '\\\\' + e.IDENT_RE }
         ];
     i.contains = a;
-    let s = e.inherit(e.TITLE_MODE, { begin: r }),
-        o = '(\\(.*\\)\\s*)?\\B[-=]>',
+    let o = e.inherit(e.TITLE_MODE, { begin: r }),
+        s = '(\\(.*\\)\\s*)?\\B[-=]>',
         l = {
             className: 'params',
             begin: '\\([^\\(]',
@@ -65,10 +65,10 @@ function n(e) {
             e.COMMENT('--', '$'),
             {
                 className: 'function',
-                begin: '^\\s*' + r + '\\s*=\\s*' + o,
+                begin: '^\\s*' + r + '\\s*=\\s*' + s,
                 end: '[-=]>',
                 returnBegin: !0,
-                contains: [s, l]
+                contains: [o, l]
             },
             {
                 begin: /[\(,:=]\s*/,
@@ -76,7 +76,7 @@ function n(e) {
                 contains: [
                     {
                         className: 'function',
-                        begin: o,
+                        begin: s,
                         end: '[-=]>',
                         returnBegin: !0,
                         contains: [l]
@@ -93,9 +93,9 @@ function n(e) {
                         beginKeywords: 'extends',
                         endsWithParent: !0,
                         illegal: /[:="\[\]]/,
-                        contains: [s]
+                        contains: [o]
                     },
-                    s
+                    o
                 ]
             },
             {

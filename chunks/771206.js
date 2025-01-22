@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(122289),
-    o = r(622999);
+    o = r(122289),
+    s = r(622999);
 function l() {
     let [e, n] = a.useState(null);
     return (
         a.useEffect(() => {
-            (0, o.d2)()
+            (0, s.d2)()
                 .then((e) => n(e))
                 .catch((e) => {
-                    (0, s.q2)(e);
+                    (0, o.q2)(e);
                 });
         }, []),
         e

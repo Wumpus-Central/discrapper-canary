@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(642128),
+    o = r.n(a),
+    s = r(642128),
     l = r(481060),
     u = r(583350);
 let c = Object.freeze({
@@ -20,14 +20,14 @@ let c = Object.freeze({
         x: -4
     });
 function f(e) {
-    let { selected: n = !1, hovered: r = !1, unread: a = !1, disabled: f = !1, className: _ } = e;
+    let { selected: n = !1, hovered: r = !1, unread: a = !1, disabled: f = !1, className: p } = e;
     (n = !f && n), (r = !f && r), (a = !f && a);
     let h = {
             opacity: 1,
             height: n ? 40 : r ? 20 : 8,
             x: 0
         },
-        p = (0, l.useTransition)(
+        _ = (0, l.useTransition)(
             n || r || a,
             {
                 config: c,
@@ -41,12 +41,12 @@ function f(e) {
             r || document.hasFocus() ? 'animate-always' : 'animate-never'
         );
     return (0, i.jsx)('div', {
-        className: s()(_, u.wrapper),
+        className: o()(p, u.wrapper),
         'aria-hidden': !0,
-        children: p(
+        children: _(
             (e, n) =>
                 n &&
-                (0, i.jsx)(o.animated.span, {
+                (0, i.jsx)(s.animated.span, {
                     className: u.item,
                     style: e
                 })

@@ -3,7 +3,7 @@ n.d(t, {
         return s;
     },
     P: function () {
-        return d;
+        return u;
     },
     fH: function () {
         return c;
@@ -12,7 +12,7 @@ n.d(t, {
         return m;
     },
     xt: function () {
-        return u;
+        return d;
     }
 });
 var i = n(166459),
@@ -38,10 +38,10 @@ function c(e, t, n) {
         draftType: a.d.Poll
     });
 }
-async function d(e, t, n) {
+async function u(e, t, n) {
     i.Z.remove(e, t, a.d.Poll);
 }
-async function u(e) {
+async function d(e) {
     i.Z.clearAll(e, a.d.Poll);
 }
 async function m(e) {

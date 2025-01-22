@@ -8,7 +8,7 @@ for (
             meta: 'metaKey',
             shift: 'shiftKey'
         },
-        s = {
+        o = {
             add: '+',
             break: 'pause',
             cmd: 'meta',
@@ -31,7 +31,7 @@ for (
             win: 'meta',
             windows: 'meta'
         },
-        o = {
+        s = {
             backspace: 8,
             tab: 9,
             enter: 13,
@@ -71,7 +71,7 @@ for (
     l < 20;
     l++
 )
-    o['f' + l] = 111 + l;
+    s['f' + l] = 111 + l;
 function u(e, n, r) {
     n && !('byKey' in n) && ((r = n), (n = null)), !Array.isArray(e) && (e = [e]);
     var i = e.map(function (e) {
@@ -79,7 +79,7 @@ function u(e, n, r) {
         }),
         a = function (e) {
             return i.some(function (n) {
-                return _(n, e);
+                return p(n, e);
             });
         };
     return null == r ? a : a(r);
@@ -93,33 +93,33 @@ function d(e, n) {
 function f(e, n) {
     var r = n && n.byKey,
         i = {},
-        s = (e = e.replace('++', '+add')).split('+'),
-        o = s.length;
+        o = (e = e.replace('++', '+add')).split('+'),
+        s = o.length;
     for (var l in a) i[a[l]] = !1;
     var u = !0,
         c = !1,
         d = void 0;
     try {
-        for (var f, _ = s[Symbol.iterator](); !(u = (f = _.next()).done); u = !0) {
+        for (var f, p = o[Symbol.iterator](); !(u = (f = p.next()).done); u = !0) {
             var m = f.value,
                 g = m.endsWith('?') && m.length > 1;
             g && (m = m.slice(0, -1));
-            var E = p(m),
+            var E = _(m),
                 v = a[E];
-            (1 === o || !v) && (r ? (i.key = E) : (i.which = h(m))), v && (i[v] = !g || null);
+            (1 === s || !v) && (r ? (i.key = E) : (i.which = h(m))), v && (i[v] = !g || null);
         }
     } catch (e) {
         (c = !0), (d = e);
     } finally {
         try {
-            !u && _.return && _.return();
+            !u && p.return && p.return();
         } finally {
             if (c) throw d;
         }
     }
     return i;
 }
-function _(e, n) {
+function p(e, n) {
     for (var r in e) {
         var i = e[r],
             a = void 0;
@@ -130,9 +130,9 @@ function _(e, n) {
     return !0;
 }
 function h(e) {
-    return o[(e = p(e))] || e.toUpperCase().charCodeAt(0);
+    return s[(e = _(e))] || e.toUpperCase().charCodeAt(0);
 }
-function p(e) {
-    return (e = s[(e = e.toLowerCase())] || e);
+function _(e) {
+    return (e = o[(e = e.toLowerCase())] || e);
 }
 (r = u), (r = u), (r = c), (n.isKeyHotkey = d);

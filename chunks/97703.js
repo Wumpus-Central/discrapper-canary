@@ -2,12 +2,12 @@ var i = r(531478).codes.ERR_INVALID_OPT_VALUE;
 function a(e, n, r) {
     return null != e.highWaterMark ? e.highWaterMark : n ? e[r] : null;
 }
-function s(e, n, r, s) {
-    var o = a(n, s, r);
-    if (null != o) {
-        if (!(isFinite(o) && Math.floor(o) === o) || o < 0) throw new i(s ? r : 'highWaterMark', o);
-        return Math.floor(o);
+function o(e, n, r, o) {
+    var s = a(n, o, r);
+    if (null != s) {
+        if (!(isFinite(s) && Math.floor(s) === s) || s < 0) throw new i(o ? r : 'highWaterMark', s);
+        return Math.floor(s);
     }
     return e.objectMode ? 16 : 16384;
 }
-e.exports = { getHighWaterMark: s };
+e.exports = { getHighWaterMark: o };

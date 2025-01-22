@@ -1,32 +1,32 @@
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(518950),
-    o = r(998502),
+    o = r(518950),
+    s = r(998502),
     l = r(388032);
-let u = o.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar,
+let u = s.ZP.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar,
     c = (e) => {
-        let { user: n, guildId: r, avatarDecorationOverride: o, status: c, avatarSize: d = a.AvatarSizes.SIZE_120, 'aria-hidden': f = !1, className: _, animateOnHover: h = !1, questPreviewRewardAssetUrl: p = null } = e,
+        let { user: n, guildId: r, avatarDecorationOverride: s, status: c, avatarSize: d = a.AvatarSizes.SIZE_120, 'aria-hidden': f = !1, className: p, animateOnHover: h = !1, questPreviewRewardAssetUrl: _ = null } = e,
             {
                 avatarDecorationSrc: m,
                 avatarSrc: g,
                 eventHandlers: E
-            } = (0, s.Z)({
+            } = (0, o.Z)({
                 user: n,
                 guildId: r,
                 size: d,
                 showPending: !0,
-                avatarDecorationOverride: o,
+                avatarDecorationOverride: s,
                 animateOnHover: h
             });
         return (0, i.jsx)(u, {
-            avatarDecoration: null != m ? m : p,
+            avatarDecoration: null != m ? m : _,
             src: g,
             size: d,
             status: c,
             'aria-label': f ? void 0 : l.intl.string(l.t.lqaIxM),
             'aria-hidden': f,
-            className: _,
+            className: p,
             ...E
         });
     };

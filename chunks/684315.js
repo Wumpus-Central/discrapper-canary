@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     attributionBannerContainer: 'attributionBannerContainer_d06fdd',
     avatarContainer: 'avatarContainer_d06fdd',
     bannerHeader: 'bannerHeader_d06fdd',

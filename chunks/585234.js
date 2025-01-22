@@ -3,12 +3,12 @@ function n(e) {
         r = /(r#)?/,
         i = n.concat(r, e.UNDERSCORE_IDENT_RE),
         a = n.concat(r, e.IDENT_RE),
-        s = {
+        o = {
             className: 'title.function.invoke',
             relevance: 0,
             begin: n.concat(/\b/, /(?!let|for|while|if|else|match\b)/, a, n.lookahead(/\s*\(/))
         },
-        o = '([ui](8|16|32|64|128|size)|f(32|64))?',
+        s = '([ui](8|16|32|64|128|size)|f(32|64))?',
         l = ['abstract', 'as', 'async', 'await', 'become', 'box', 'break', 'const', 'continue', 'crate', 'do', 'dyn', 'else', 'enum', 'extern', 'false', 'final', 'fn', 'for', 'if', 'impl', 'in', 'let', 'loop', 'macro', 'match', 'mod', 'move', 'mut', 'override', 'priv', 'pub', 'ref', 'return', 'self', 'Self', 'static', 'struct', 'super', 'trait', 'true', 'try', 'type', 'typeof', 'union', 'unsafe', 'unsized', 'use', 'virtual', 'where', 'while', 'yield'],
         u = ['true', 'false', 'Some', 'None', 'Ok', 'Err'],
         c = ['drop ', 'Copy', 'Send', 'Sized', 'Sync', 'Drop', 'Fn', 'FnMut', 'FnOnce', 'ToOwned', 'Clone', 'Debug', 'PartialEq', 'PartialOrd', 'Eq', 'Ord', 'AsRef', 'AsMut', 'Into', 'From', 'Default', 'Iterator', 'Extend', 'IntoIterator', 'DoubleEndedIterator', 'ExactSizeIterator', 'SliceConcatExt', 'ToString', 'assert!', 'assert_eq!', 'bitflags!', 'bytes!', 'cfg!', 'col!', 'concat!', 'concat_idents!', 'debug_assert!', 'debug_assert_eq!', 'env!', 'eprintln!', 'panic!', 'file!', 'format!', 'format_args!', 'include_bytes!', 'include_str!', 'line!', 'local_data_key!', 'module_path!', 'option_env!', 'print!', 'println!', 'select!', 'stringify!', 'try!', 'unimplemented!', 'unreachable!', 'vec!', 'write!', 'writeln!', 'macro_rules!', 'assert_ne!', 'debug_assert_ne!'],
@@ -53,7 +53,7 @@ function n(e) {
             },
             {
                 className: 'number',
-                variants: [{ begin: '\\b0b([01_]+)' + o }, { begin: '\\b0o([0-7_]+)' + o }, { begin: '\\b0x([A-Fa-f0-9_]+)' + o }, { begin: '\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)' + o }],
+                variants: [{ begin: '\\b0b([01_]+)' + s }, { begin: '\\b0o([0-7_]+)' + s }, { begin: '\\b0x([A-Fa-f0-9_]+)' + s }, { begin: '\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)' + s }],
                 relevance: 0
             },
             {
@@ -118,7 +118,7 @@ function n(e) {
                 className: 'punctuation',
                 begin: '->'
             },
-            s
+            o
         ]
     };
 }

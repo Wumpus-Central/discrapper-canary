@@ -1,36 +1,36 @@
 r.d(n, {
     K: function () {
-        return _;
+        return p;
     }
 });
 var i = r(724458);
 var a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(803997),
     u = r.n(l),
     c = r(530892),
     d = r.n(c),
     f = r(943361);
-let _ = o.forwardRef(function (e, n) {
-        let { as: r = 'div', gap: i = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: d, className: _, children: m, ...g } = e;
-        return (0, s.jsx)(r, {
+let p = s.forwardRef(function (e, n) {
+        let { as: r = 'div', gap: i = 8, direction: a = 'vertical', align: s = 'stretch', justify: l = 'start', padding: c = 0, style: d, className: p, children: m, ...g } = e;
+        return (0, o.jsx)(r, {
             ref: n,
-            'data-align': o,
+            'data-align': s,
             'data-justify': l,
             'data-direction': a,
-            className: u()(f.stack, _),
+            className: u()(f.stack, p),
             style: {
                 ...d,
                 gap: h(i),
-                ...p(c)
+                ..._(c)
             },
             ...g,
             children: m
         });
     }),
     h = (e) => 'var(--space-'.concat(e, ')'),
-    p = (e) =>
+    _ = (e) =>
         'number' == typeof e || 'string' == typeof e
             ? { padding: h(e) }
             : Object.entries(e).reduce((e, n) => {

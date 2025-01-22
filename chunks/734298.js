@@ -5,11 +5,11 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(47120);
-var s = r(46973),
-    o = r(198274);
+var o = r(46973),
+    s = r(198274);
 function l(e) {
     let n = !1;
-    e.on(s.aB.Destroy, () => (n = !0));
+    e.on(o.aB.Destroy, () => (n = !0));
     let r = async () => {
         if (n) return;
         let i = [];
@@ -28,7 +28,7 @@ function l(e) {
                     stats: n
                 });
         }
-        e.emit(s.aB.ConnectionStats, a), setTimeout(r, o.T);
+        e.emit(o.aB.ConnectionStats, a), setTimeout(r, s.T);
     };
-    setTimeout(r, o.T);
+    setTimeout(r, s.T);
 }

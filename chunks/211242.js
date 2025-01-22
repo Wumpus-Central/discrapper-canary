@@ -5,7 +5,7 @@ r.d(n, {
 });
 var i = r(818083),
     a = r(847903);
-let s = (0, i.B)({
+let o = (0, i.B)({
         kind: 'user',
         id: '2022-03_block_russian_purchases',
         label: 'Block purchases based on country',
@@ -18,7 +18,7 @@ let s = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    s = (0, i.B)({
         kind: 'user',
         id: '2022-03_block_russian_purchases_desktop',
         label: 'Block purchases based on country (desktop specific flags)',
@@ -32,9 +32,9 @@ let s = (0, i.B)({
         ]
     });
 function l() {
-    let { paymentsBlocked: e } = s.useExperiment({ location: 'c519a9_1' }, { autoTrackExposure: !1 }),
-        { checkPaymentSource: n } = o.useExperiment({ location: 'c519a9_2' }, { autoTrackExposure: !1 }),
+    let { paymentsBlocked: e } = o.useExperiment({ location: 'c519a9_1' }, { autoTrackExposure: !1 }),
+        { checkPaymentSource: n } = s.useExperiment({ location: 'c519a9_2' }, { autoTrackExposure: !1 }),
         { defaultBillingCountryCode: r } = (0, a.Z)();
     return e || (n && 'RU' === r);
 }
-n.Z = s;
+n.Z = o;

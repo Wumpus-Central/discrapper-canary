@@ -19,7 +19,7 @@ var i = r(957578).Buffer,
                     return !1;
             }
         };
-function s(e) {
+function o(e) {
     var n;
     if (!e) return 'utf8';
     for (;;)
@@ -44,16 +44,16 @@ function s(e) {
                 (e = ('' + e).toLowerCase()), (n = !0);
         }
 }
-function o(e) {
-    var n = s(e);
+function s(e) {
+    var n = o(e);
     if ('string' != typeof n && (i.isEncoding === a || !a(e))) throw Error('Unknown encoding: ' + e);
     return n || e;
 }
 function l(e) {
     var n;
-    switch (((this.encoding = o(e)), this.encoding)) {
+    switch (((this.encoding = s(e)), this.encoding)) {
         case 'utf16le':
-            (this.text = p), (this.end = m), (n = 4);
+            (this.text = _), (this.end = m), (n = 4);
             break;
         case 'utf8':
             (this.fillLast = f), (n = 4);
@@ -62,7 +62,7 @@ function l(e) {
             (this.text = g), (this.end = E), (n = 3);
             break;
         default:
-            (this.write = v), (this.end = I);
+            (this.write = v), (this.end = y);
             return;
     }
     (this.lastNeed = 0), (this.lastTotal = 0), (this.lastChar = i.allocUnsafe(n));
@@ -92,7 +92,7 @@ function f(e) {
         r = d(this, e, n);
     return void 0 !== r ? r : this.lastNeed <= e.length ? (e.copy(this.lastChar, n, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal)) : void (e.copy(this.lastChar, n, 0, e.length), (this.lastNeed -= e.length));
 }
-function _(e, n) {
+function p(e, n) {
     var r = c(this, e, n);
     if (!this.lastNeed) return e.toString('utf8', n);
     this.lastTotal = r;
@@ -103,7 +103,7 @@ function h(e) {
     var n = e && e.length ? this.write(e) : '';
     return this.lastNeed ? n + '\uFFFD' : n;
 }
-function p(e, n) {
+function _(e, n) {
     if ((e.length - n) % 2 == 0) {
         var r = e.toString('utf16le', n);
         if (r) {
@@ -133,7 +133,7 @@ function E(e) {
 function v(e) {
     return e.toString(this.encoding);
 }
-function I(e) {
+function y(e) {
     return e && e.length ? this.write(e) : '';
 }
 (n.StringDecoder = l),
@@ -147,7 +147,7 @@ function I(e) {
         return r < e.length ? (n ? n + this.text(e, r) : this.text(e, r)) : n || '';
     }),
     (l.prototype.end = h),
-    (l.prototype.text = _),
+    (l.prototype.text = p),
     (l.prototype.fillLast = function (e) {
         if (this.lastNeed <= e.length) return e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal);
         e.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, e.length), (this.lastNeed -= e.length);

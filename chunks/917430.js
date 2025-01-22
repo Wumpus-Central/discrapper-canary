@@ -1,7 +1,7 @@
 var i = r(343705),
     a = r(921155),
-    s = r(670097);
-function o(e) {
-    return (0, s.Z)(e) ? (0, i.Z)(e) : (0, a.Z)(e);
+    o = r(670097);
+function s(e) {
+    return (0, o.Z)(e) ? (0, i.Z)(e) : (0, a.Z)(e);
 }
-n.Z = o;
+n.Z = s;

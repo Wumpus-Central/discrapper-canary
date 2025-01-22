@@ -8,42 +8,42 @@ var i = t(200651),
     s = t(667204),
     c = t(826298),
     f = t(276022),
-    m = t(978983),
-    p = t(430824),
+    p = t(978983),
+    m = t(430824),
     h = t(594174),
     g = t(981631),
-    v = t(689079),
-    _ = t(388032),
+    _ = t(689079),
+    v = t(388032),
     E = t(148562);
 e.Z = (n) => {
     let e,
         { commandType: t, commandTargetId: l, channel: Z, guildId: x, onHeightUpdate: I, context: T } = n,
-        A = (0, o.e7)([p.Z], () => p.Z.getGuild(null != x ? x : Z.guild_id)),
-        b = (0, o.e7)([h.default], () => h.default.getUser(l)),
-        M = (0, f.Z)({
-            user: b,
-            guildId: null == A ? void 0 : A.id,
+        b = (0, o.e7)([m.Z], () => m.Z.getGuild(null != x ? x : Z.guild_id)),
+        M = (0, o.e7)([h.default], () => h.default.getUser(l)),
+        A = (0, f.Z)({
+            user: M,
+            guildId: null == b ? void 0 : b.id,
             context: T
         }),
         {
-            commands: S,
-            sectionDescriptors: C,
+            commands: C,
+            sectionDescriptors: S,
             loading: j
         } = u.wi({
             channel: Z,
             filters: { commandTypes: [t] },
-            options: { limit: v.lr },
+            options: { limit: _.lr },
             allowFetch: !0
         }),
         { sections: y } = r.useMemo(() => {
             let n = {};
             return (
-                C.forEach((e) => {
+                S.forEach((e) => {
                     n[e.id] = e;
                 }),
                 { sections: n }
             );
-        }, [C]),
+        }, [S]),
         N = r.useRef(j.current);
     r.useEffect(() => {
         j.current !== N.current && ((N.current = j.current), null == I || I());
@@ -74,7 +74,7 @@ e.Z = (n) => {
                             optionValues: {},
                             context: {
                                 channel: Z,
-                                guild: A
+                                guild: b
                             },
                             commandTargetId: l
                         });
@@ -83,7 +83,7 @@ e.Z = (n) => {
                 n.id
             );
         },
-        [Z, A, l, y]
+        [Z, b, l, y]
     );
     if (
         (j.current
@@ -91,36 +91,36 @@ e.Z = (n) => {
                   d.MenuItem,
                   {
                       id: 'menu-commands-placeholder',
-                      render: () => (0, i.jsx)(m.Z, {}),
+                      render: () => (0, i.jsx)(p.Z, {}),
                       disabled: !0
                   },
                   'menu-commands-placeholder'
               ))
             : ((e =
-                  0 === S.length
+                  0 === C.length
                       ? (0, i.jsx)(
                             d.MenuItem,
                             {
                                 id: 'menu-commands-empty',
-                                label: _.intl.string(_.t.YSNlV1),
+                                label: v.intl.string(v.t.YSNlV1),
                                 disabled: !0
                             },
                             'menu-commands-empty'
                         )
-                      : S.map(O)),
-              null != M &&
-                  M.length > 0 &&
+                      : C.map(O)),
+              null != A &&
+                  A.length > 0 &&
                   (e = (0, i.jsxs)(i.Fragment, {
-                      children: [e, (0, i.jsx)(d.MenuSeparator, {}, 'separator'), M]
+                      children: [e, (0, i.jsx)(d.MenuSeparator, {}, 'separator'), A]
                   }))),
         !g.TPd.TEXTUAL.has(Z.type))
     ) {
-        if (null == M) return null;
-        e = M;
+        if (null == A) return null;
+        e = A;
     }
     return (0, i.jsx)(d.MenuItem, {
         id: 'apps',
-        label: _.intl.string(_.t.PHjkRE),
+        label: v.intl.string(v.t.PHjkRE),
         listClassName: E.list,
         children: e
     });

@@ -1,8 +1,8 @@
-n(67867)(
+r(67867)(
     {
         target: 'Map',
         stat: !0,
         forced: !0
     },
-    { from: n(744370) }
+    { from: r(744370) }
 );

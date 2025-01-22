@@ -5,9 +5,9 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(411104);
-var s = r(836560);
-var o = r(392711),
-    l = r.n(o),
+var o = r(836560);
+var s = r(392711),
+    l = r.n(s),
     u = r(710845),
     c = r(596956),
     d = r(959517);
@@ -24,8 +24,8 @@ function f(e, n, r) {
         e
     );
 }
-let _ = new u.Z('UploaderBase.tsx');
-class h extends s.EventEmitter {
+let p = new u.Z('UploaderBase.tsx');
+class h extends o.EventEmitter {
     _addAttachmentsToPayload(e, n, r) {
         let i = { ...e },
             a = [...l().get(i, n, []), ...r];
@@ -35,7 +35,7 @@ class h extends s.EventEmitter {
         null != this.processingMessageChangeInterval && (clearInterval(this.processingMessageChangeInterval), (this.processingMessageChangeInterval = void 0));
     }
     cancel() {
-        _.log('cancel() for '.concat(this.id)), (this._aborted = !0), null != this._cancel && this._cancel(), this._handleComplete();
+        p.log('cancel() for '.concat(this.id)), (this._aborted = !0), null != this._cancel && this._cancel(), this._handleComplete();
     }
     cancelItem(e) {
         throw Error('cancelItem() is not implemented on UploaderBase; must implement cancelItem() on subclass');
@@ -82,12 +82,12 @@ class h extends s.EventEmitter {
             f(this, '_handleProgress', (e, n, r) => {
                 let i = Date.now(),
                     a = (0, c.S)(e, n),
-                    s = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1000));
+                    o = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1000));
                 if (null != r) {
-                    var o;
-                    null === (o = this._file.items) ||
-                        void 0 === o ||
-                        o.forEach((e) => {
+                    var s;
+                    null === (s = this._file.items) ||
+                        void 0 === s ||
+                        s.forEach((e) => {
                             e.item.progress = r[e.id];
                         });
                 }
@@ -97,7 +97,7 @@ class h extends s.EventEmitter {
                         ...this._file,
                         currentSize: n,
                         progress: a,
-                        rate: s
+                        rate: o
                     }),
                     this.emit('progress', this._file);
             }),
@@ -114,10 +114,10 @@ class h extends s.EventEmitter {
             }),
             f(this, '_handleError', (e) => {
                 let { code: n, reason: r, body: i } = e;
-                if ((this.clearProcessingMessageInterval(), !this._aborted)) (this._errored = !0), _.log('_handleError: '.concat(n, ' (').concat(JSON.stringify(r), ') for ').concat(this.id)), this.emit('error', this._file, n, i, r), this.removeAllListeners();
+                if ((this.clearProcessingMessageInterval(), !this._aborted)) (this._errored = !0), p.log('_handleError: '.concat(n, ' (').concat(JSON.stringify(r), ') for ').concat(this.id)), this.emit('error', this._file, n, i, r), this.removeAllListeners();
             }),
             f(this, '_handleComplete', (e) => {
-                this.clearProcessingMessageInterval(), _.log('_handleComplete for '.concat(this.id)), this.emit('complete', this._file, e), this.removeAllListeners();
+                this.clearProcessingMessageInterval(), p.log('_handleComplete for '.concat(this.id)), this.emit('complete', this._file, e), this.removeAllListeners();
             }),
             (this.id = l().uniqueId('Uploader')),
             (this._url = e),

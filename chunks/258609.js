@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(797258),
     u = r(979651);
 function c(e, n, r) {
@@ -19,9 +19,9 @@ function c(e, n, r) {
 }
 let d = null,
     f = null,
-    _ = new Set(),
+    p = new Set(),
     h = {},
-    p = {},
+    _ = {},
     m = new Set();
 function g(e) {
     let { sessionId: n } = e;
@@ -31,50 +31,50 @@ function E() {
     (d = null), (f = null);
 }
 function v(e) {
-    let { sessionType: n, nonce: r, channelId: i, deviceId: a, commandId: s } = e;
+    let { sessionType: n, nonce: r, channelId: i, deviceId: a, commandId: o } = e;
     f = {
         type: n,
         nonce: r,
         channelId: i,
         startedAt: Date.now(),
         deviceId: a,
-        commandId: s
+        commandId: o
     };
 }
-function I(e) {
+function y(e) {
     let { platform: n } = e;
     m.add(n);
 }
-function T(e) {
+function b(e) {
     let { platform: n, devices: r } = e;
     m.delete(n);
     let i = (h[n] = {}),
         a = {};
-    for (let e of r) (i[e.id] = e), p[n] === e.id && (a[n] = e.id);
-    p = a;
+    for (let e of r) (i[e.id] = e), _[n] === e.id && (a[n] = e.id);
+    _ = a;
 }
-function b(e) {
+function I(e) {
     let { platform: n } = e;
     m.delete(n);
 }
-function y(e) {
+function T(e) {
     let { platform: n, deviceId: r } = e;
-    p[n] = r;
+    _[n] = r;
 }
 let S = Object.freeze({});
-class A extends (i = s.ZP.DeviceSettingsStore) {
+class A extends (i = o.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (p = e.lastSelectedDeviceByPlatform), this.waitFor(l.Z, u.Z);
+        null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(l.Z, u.Z);
     }
     getUserAgnosticState() {
-        return { lastSelectedDeviceByPlatform: p };
+        return { lastSelectedDeviceByPlatform: _ };
     }
     getDevicesForPlatform(e) {
         var n;
         return null !== (n = h[e]) && void 0 !== n ? n : S;
     }
     getLastSelectedDeviceByPlatform(e) {
-        return p[e];
+        return _[e];
     }
     getDevice(e, n) {
         var r;
@@ -84,7 +84,7 @@ class A extends (i = s.ZP.DeviceSettingsStore) {
         return m.has(e);
     }
     getPendingDeviceCommands() {
-        return _;
+        return p;
     }
     getRemoteSessionId() {
         return d;
@@ -95,12 +95,12 @@ class A extends (i = s.ZP.DeviceSettingsStore) {
 }
 c(A, 'displayName', 'GameConsoleStore'),
     c(A, 'persistKey', 'GameConsoleStore'),
-    (n.Z = new A(o.Z, {
+    (n.Z = new A(s.Z, {
         REMOTE_SESSION_CONNECT: g,
         REMOTE_SESSION_DISCONNECT: E,
         WAIT_FOR_REMOTE_SESSION: v,
-        GAME_CONSOLE_FETCH_DEVICES_START: I,
-        GAME_CONSOLE_FETCH_DEVICES_SUCCESS: T,
-        GAME_CONSOLE_FETCH_DEVICES_FAIL: b,
-        GAME_CONSOLE_SELECT_DEVICE: y
+        GAME_CONSOLE_FETCH_DEVICES_START: y,
+        GAME_CONSOLE_FETCH_DEVICES_SUCCESS: b,
+        GAME_CONSOLE_FETCH_DEVICES_FAIL: I,
+        GAME_CONSOLE_SELECT_DEVICE: T
     }));

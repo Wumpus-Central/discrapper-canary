@@ -11,8 +11,8 @@ var r = n(399606),
     o = n(674180),
     s = n(430824),
     c = n(572004),
-    d = n(267101),
-    u = n(863663),
+    u = n(267101),
+    d = n(863663),
     m = n(676651),
     h = n(623488),
     f = n(942833),
@@ -29,7 +29,7 @@ function C(e) {
         }),
         Z = (0, l.U)(t, 600),
         P = (0, f.C)(t),
-        L = (0, d.SO)(j),
+        L = (0, u.SO)(j),
         { shouldHideGuildPurchaseEntryPoints: y } = (0, o.uP)(n),
         O = (0, f.k)(t);
     if (null == j || y) return null;
@@ -59,7 +59,7 @@ function C(e) {
                 (0, a.x)({ listing: t });
             },
             onCopyProductLink: () => {
-                (0, c.JG)((0, u.ar)(n, t.id));
+                (0, c.JG)((0, d.ar)(n, t.id));
             },
             onTestDownload: () => {}
         });

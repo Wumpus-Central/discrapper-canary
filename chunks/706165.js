@@ -1,4 +1,4 @@
 var i = Function.prototype.call,
     a = Object.prototype.hasOwnProperty,
-    s = r(390976);
-e.exports = s.call(i, a);
+    o = r(390976);
+e.exports = o.call(i, a);

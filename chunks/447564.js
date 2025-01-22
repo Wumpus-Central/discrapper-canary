@@ -18,8 +18,8 @@ var i,
     o = n(311570),
     s = n(692547),
     c = n(481060),
-    d = n(100527),
-    u = n(906732),
+    u = n(100527),
+    d = n(906732),
     m = n(688465),
     h = n(333867),
     f = n(980463),
@@ -62,7 +62,7 @@ function b(e) {
         { price: s, fetchingPrice: m, error: g } = (0, p.R2)(_.FX),
         { entitlement: E, fetchedEntitlement: C, error: x } = (0, p.t6)(_.FX),
         N = g || x,
-        { analyticsLocations: v } = (0, u.ZP)([d.Z.HD_STREAMING_POTION_MODAL]),
+        { analyticsLocations: v } = (0, d.ZP)([u.Z.HD_STREAMING_POTION_MODAL]),
         T = null != E && !E.consumed;
     (0, a.useEffect)(
         () => () => {
@@ -71,7 +71,7 @@ function b(e) {
         [E, t, i, N]
     );
     let S = (0, a.useCallback)(() => {
-            (0, f.Zu)(t.id, _.FX), (0, c.closeAllModals)();
+            (0, f.Zu)(t.id), (0, c.closeAllModals)();
         }, [t.id]),
         A = (0, a.useCallback)(() => {
             (0, h.Z)({

@@ -5,12 +5,12 @@ function a() {
         r = 0,
         i = 0;
     return {
-        add: function a(a, s) {
-            !s && ((s = a), (a = 0)), a > r ? (r = a) : a < i && (i = a), !e[a] && (e[a] = []), e[a].push(s), n++;
+        add: function a(a, o) {
+            !o && ((o = a), (a = 0)), a > r ? (r = a) : a < i && (i = a), !e[a] && (e[a] = []), e[a].push(o), n++;
         },
         process: function n() {
             for (var n = i; n <= r; n++) {
-                for (var a = e[n], s = 0; s < a.length; s++) (0, a[s])();
+                for (var a = e[n], o = 0; o < a.length; o++) (0, a[o])();
             }
         },
         size: function e() {
@@ -21,13 +21,13 @@ function a() {
 e.exports = function (e) {
     var n,
         r = (e = e || {}).reporter,
-        s = i.getOption(e, 'async', !0),
-        o = i.getOption(e, 'auto', !0);
-    o && !s && (r && r.warn('Invalid options combination. auto=true and async=false is invalid. Setting async=true.'), (s = !0));
+        o = i.getOption(e, 'async', !0),
+        s = i.getOption(e, 'auto', !0);
+    s && !o && (r && r.warn('Invalid options combination. auto=true and async=false is invalid. Setting async=true.'), (o = !0));
     var l = a(),
         u = !1;
     function c(e, n) {
-        !u && o && s && 0 === l.size() && _(), l.add(e, n);
+        !u && s && o && 0 === l.size() && p(), l.add(e, n);
     }
     function d() {
         for (u = !0; l.size(); ) {
@@ -37,15 +37,15 @@ e.exports = function (e) {
         u = !1;
     }
     function f(e) {
-        if (!u) void 0 === e && (e = s), n && (h(n), (n = null)), e ? _() : d();
+        if (!u) void 0 === e && (e = o), n && (h(n), (n = null)), e ? p() : d();
     }
-    function _() {
-        n = p(d);
+    function p() {
+        n = _(d);
     }
     function h(e) {
         return clearTimeout(e);
     }
-    function p(e) {
+    function _(e) {
         return (function (e) {
             return setTimeout(e, 0);
         })(e);

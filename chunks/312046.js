@@ -1,6 +1,6 @@
 r.d(n, {
     Q: function () {
-        return o;
+        return s;
     },
     s: function () {
         return l;
@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(418793),
     a = r(460597),
-    s = r(608591);
-let o = (e) => ({
+    o = r(608591);
+let s = (e) => ({
     id: e.id,
     configVersion: 2,
     startsAt: e.starts_at,
@@ -39,7 +39,7 @@ let o = (e) => ({
     },
     taskConfig: (0, a.f)(e.task_config),
     rewardsConfig: (0, i.v)(e.rewards_config),
-    videoMetadata: (0, s.F)(e.video_metadata),
+    videoMetadata: (0, o.F)(e.video_metadata),
     cosponsorMetadata: l(e.cosponsor_metadata)
 });
 function l(e) {

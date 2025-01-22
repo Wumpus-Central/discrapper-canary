@@ -1,22 +1,22 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(442837),
     a = r(311687),
-    s = r(873128);
-function o(e) {
-    let { userId: n, guildId: r, leaderboardId: o, intervalOffset: l = 0, statisticId: u } = e,
-        c = (0, i.e7)([a.Z], () => a.Z.getLastUpdateRequested(o)),
+    o = r(873128);
+function s(e) {
+    let { userId: n, guildId: r, leaderboardId: s, intervalOffset: l = 0, statisticId: u } = e,
+        c = (0, i.e7)([a.Z], () => a.Z.getLastUpdateRequested(s)),
         d = null != c ? new Date(1000 * c) : void 0,
-        f = (0, s.Z)({
+        f = (0, o.Z)({
             guildId: r,
-            leaderboardId: o,
+            leaderboardId: s,
             intervalOffset: l
         }),
-        _ = null == f ? void 0 : f.users.find((e) => e.user_id === n),
-        h = null == _ ? void 0 : _.statistics[u];
+        p = null == f ? void 0 : f.users.find((e) => e.user_id === n),
+        h = null == p ? void 0 : p.statistics[u];
     return {
         lastUpdateRequested: d,
         statisticLastUpdatedDate: null != h ? new Date(h.updated_at) : void 0

@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(434650),
-    d = n(321231),
-    u = n(230171),
+    u = n(321231),
+    d = n(230171),
     m = n(955415),
     h = n(706454),
     f = n(973616),
@@ -30,7 +30,7 @@ var i = n(200651),
 function A(e) {
     var t, n, A;
     let { code: b, message: j, embedUrl: R } = e,
-        { enabled: Z } = d.G.useExperiment({ location: 'ApplicationDirectoryProfileEmbed' }),
+        { enabled: Z } = u.G.useExperiment({ location: 'ApplicationDirectoryProfileEmbed' }),
         [P, L, y] = (0, o.Wu)([I.Z], () => [I.Z.getApplication(b), I.Z.isInvalidApplication(b), I.Z.getApplicationFetchState(b)], [b]),
         O = (0, o.e7)([h.default], () => h.default.locale),
         M = (0, o.e7)([p.Z], () => {
@@ -83,7 +83,7 @@ function A(e) {
             });
     };
     if (Z && null != P)
-        return (0, i.jsx)(u.O, {
+        return (0, i.jsx)(d.O, {
             app: f.ZP.createFromServer(P),
             embedUrl: R
         });

@@ -5,10 +5,10 @@ r.d(n, {
 });
 var i = r(757143);
 var a = r(379082);
-let s = /🏻|🏼|🏽|🏾|🏿|\uFE0F/g;
-function o(e) {
-    return e.replace(s, '');
+let o = /🏻|🏼|🏽|🏾|🏿|\uFE0F/g;
+function s(e) {
+    return e.replace(o, '');
 }
 function l(e) {
-    return a.h.has(o(e));
+    return a.h.has(s(e));
 }

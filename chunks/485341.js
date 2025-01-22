@@ -8,16 +8,16 @@ r.d(n, {
 });
 var i = r(399606),
     a = r(695346),
-    s = r(246946),
-    o = r(594174),
+    o = r(246946),
+    s = r(594174),
     l = r(388032);
 let u = 'quest_completed',
     c = 'legacy_username';
 function d(e) {
     var n;
     let r = a.R_.useSetting(),
-        u = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
-        d = (0, i.e7)([s.Z], () => s.Z.hidePersonalInformation);
+        u = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
+        d = (0, i.e7)([o.Z], () => o.Z.hidePersonalInformation);
     if (null == e) return [];
     let f = null !== (n = null == e ? void 0 : e.getBadges()) && void 0 !== n ? n : [];
     return (

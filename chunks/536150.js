@@ -1,15 +1,15 @@
 r.d(n, {
     i: function () {
-        return o;
+        return s;
     }
 });
 var i = r(544891),
     a = r(881052),
-    s = r(981631);
-async function o(e, n) {
+    o = r(981631);
+async function s(e, n) {
     try {
         await i.tn.patch({
-            url: s.ANM.MY_CONTENT_INVENTORY_APPLICATION(e),
+            url: o.ANM.MY_CONTENT_INVENTORY_APPLICATION(e),
             body: n,
             rejectWithError: !1
         });

@@ -1,20 +1,20 @@
 r.d(n, {
     Z: function () {
-        return b;
+        return I;
     }
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(990547),
+    o = r(192379),
+    s = r(990547),
     l = r(442837),
     u = r(481060),
     c = r(239091),
     d = r(40851),
     f = r(213609),
-    _ = r(314910),
+    p = r(314910),
     h = r(210887),
-    p = r(574254),
+    _ = r(574254),
     m = r(585483),
     g = r(981631);
 function E(e, n, r) {
@@ -33,23 +33,23 @@ function E(e, n, r) {
 function v() {
     window.getSelection().removeAllRanges();
 }
-let I = (e) => {
-    let { children: n, close: r, onUnmount: i, target: l, rect: c, position: h, align: p, impressionName: m, impressionProperties: E, disableClickTrap: I = !1 } = e,
-        T = s.useRef(null),
-        b = s.useMemo(() => ({ current: l }), [l]),
-        y = s.useRef(r);
-    s.useEffect(() => {
-        y.current = r;
+let y = (e) => {
+    let { children: n, close: r, onUnmount: i, target: l, rect: c, position: h, align: _, impressionName: m, impressionProperties: E, disableClickTrap: y = !1 } = e,
+        b = o.useRef(null),
+        I = o.useMemo(() => ({ current: l }), [l]),
+        T = o.useRef(r);
+    o.useEffect(() => {
+        T.current = r;
     }),
-        s.useEffect(() => {
+        o.useEffect(() => {
             var e, n, r;
-            let i = null === (e = T.current) || void 0 === e ? void 0 : e.elementRef.current;
+            let i = null === (e = b.current) || void 0 === e ? void 0 : e.elementRef.current;
             if (null == i) return;
             let a = (e) => {
                 var n;
                 let r = e.target,
-                    i = null === (n = T.current) || void 0 === n ? void 0 : n.elementRef.current;
-                if (!(null != i && (0, u.referencePortalAwareContains)(i, r))) v(), y.current();
+                    i = null === (n = b.current) || void 0 === n ? void 0 : n.elementRef.current;
+                if (!(null != i && (0, u.referencePortalAwareContains)(i, r))) v(), T.current();
             };
             return (
                 null === (n = i.ownerDocument) || void 0 === n || n.addEventListener('click', a, !0),
@@ -60,46 +60,46 @@ let I = (e) => {
                 }
             );
         }, []);
-    let S = s.useRef(i);
-    s.useEffect(() => void (S.current = i)),
-        s.useEffect(
+    let S = o.useRef(i);
+    o.useEffect(() => void (S.current = i)),
+        o.useEffect(
             () => () => {
                 var e;
                 return null === (e = S.current) || void 0 === e ? void 0 : e.call(S);
             },
             []
         ),
-        s.useLayoutEffect(() => {
+        o.useLayoutEffect(() => {
             var e;
-            null === (e = T.current) || void 0 === e || e.updatePosition();
+            null === (e = b.current) || void 0 === e || e.updatePosition();
         }),
         (0, f.Z)({
-            type: o.ImpressionTypes.MENU,
+            type: s.ImpressionTypes.MENU,
             name: m,
             properties: E
         });
     let A = (0, d.Aq)(),
-        N = s.useCallback(() => {
+        C = o.useCallback(() => {
             A.dispatch(g.CkL.POPOUT_SHOW);
         }, [A]),
-        C = s.useCallback(() => {
+        N = o.useCallback(() => {
             A.dispatch(g.CkL.POPOUT_HIDE);
         }, [A]);
-    return (0, a.jsx)(_.W5, {
-        onMount: N,
-        onUnmount: C,
-        targetRef: b,
+    return (0, a.jsx)(p.W5, {
+        onMount: C,
+        onUnmount: N,
+        targetRef: I,
         overrideTargetRect: c,
         position: null != h ? h : 'right',
-        align: null != p ? p : 'top',
+        align: null != _ ? _ : 'top',
         autoInvert: !0,
-        ref: T,
+        ref: b,
         nudgeAlignIntoViewport: !0,
-        clickTrap: !I,
+        clickTrap: !y,
         children: n
     });
 };
-class T extends s.PureComponent {
+class b extends o.PureComponent {
     componentDidMount() {
         let { renderLazy: e, renderWindow: n } = this.props;
         if ((n.addEventListener('resize', this.closeResize, !0), m.S.subscribe(g.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e)) {
@@ -124,10 +124,10 @@ class T extends s.PureComponent {
     }
     render() {
         var e, n;
-        let { appContext: r, target: i, isOpen: s, theme: o, config: l, rect: u } = this.props,
+        let { appContext: r, target: i, isOpen: o, theme: s, config: l, rect: u } = this.props,
             c = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
-        return s && null != u && null != l && null != i && null != c && l.context === r
-            ? (0, a.jsx)(I, {
+        return o && null != u && null != l && null != i && null != c && l.context === r
+            ? (0, a.jsx)(y, {
                   target: i,
                   rect: u,
                   close: this.close,
@@ -141,7 +141,7 @@ class T extends s.PureComponent {
                       let { position: a } = e;
                       return c({
                           position: a,
-                          theme: o,
+                          theme: s,
                           onHeightUpdate: n,
                           config: l,
                           target: i,
@@ -164,22 +164,22 @@ class T extends s.PureComponent {
             });
     }
 }
-function b() {
+function I() {
     let {
             contextMenu: e,
             version: n,
             isOpen: r
-        } = (0, l.cj)([p.Z], () => ({
-            contextMenu: p.Z.getContextMenu(),
-            version: p.Z.version,
-            isOpen: p.Z.isOpen()
+        } = (0, l.cj)([_.Z], () => ({
+            contextMenu: _.Z.getContextMenu(),
+            version: _.Z.version,
+            isOpen: _.Z.isOpen()
         })),
         i = (0, l.e7)([h.Z], () => h.Z.theme),
-        { appContext: o, renderWindow: u } = s.useContext(d.ZP);
+        { appContext: s, renderWindow: u } = o.useContext(d.ZP);
     return (0, a.jsx)(
-        T,
+        b,
         {
-            appContext: o,
+            appContext: s,
             renderWindow: u,
             ...e,
             isOpen: r,

@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(877837),
     u =
         Object.assign ||
@@ -16,8 +16,8 @@ var i = r(192379),
         var n = e.colors,
             r = e.onClick,
             a = void 0 === r ? function () {} : r,
-            s = e.onSwatchHover,
-            c = (0, o.default)(
+            o = e.onSwatchHover,
+            c = (0, s.default)(
                 {
                     default: {
                         colors: {
@@ -71,7 +71,7 @@ var i = r(192379),
                         u({}, n, {
                             style: c.swatch,
                             onClick: d,
-                            onHover: s,
+                            onHover: o,
                             focusStyle: { boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px ' + n.color }
                         })
                     )
@@ -80,12 +80,12 @@ var i = r(192379),
         );
     };
 (c.propTypes = {
-    colors: s().arrayOf(
-        s().oneOfType([
-            s().string,
-            s().shape({
-                color: s().string,
-                title: s().string
+    colors: o().arrayOf(
+        o().oneOfType([
+            o().string,
+            o().shape({
+                color: o().string,
+                title: o().string
             })
         ])
     ).isRequired

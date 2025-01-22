@@ -1,7 +1,7 @@
 var i = r(161581),
     a = r(325008),
-    s = r(4340),
-    o = r(572609),
+    o = r(4340),
+    s = r(572609),
     l = r(936940),
     u = i.RegExp,
     c = u.prototype;
@@ -23,17 +23,17 @@ a &&
                     }
                 });
             },
-            s = {
+            o = {
                 dotAll: 's',
                 global: 'g',
                 ignoreCase: 'i',
                 multiline: 'm',
                 sticky: 'y'
             };
-        for (var o in (e && (s.hasIndices = 'd'), s)) a(o, s[o]);
+        for (var s in (e && (o.hasIndices = 'd'), o)) a(s, o[s]);
         return Object.getOwnPropertyDescriptor(c, 'flags').get.call(n) !== i || r !== i;
     }) &&
-    s(c, 'flags', {
+    o(c, 'flags', {
         configurable: !0,
-        get: o
+        get: s
     });

@@ -3,13 +3,13 @@ function n(e) {
         r = ['div', 'mod', 'in', 'and', 'or', 'not', 'xor', 'asserterror', 'begin', 'case', 'do', 'downto', 'else', 'end', 'exit', 'for', 'local', 'if', 'of', 'repeat', 'then', 'to', 'until', 'while', 'with', 'var'],
         i = 'false true',
         a = [e.C_LINE_COMMENT_MODE, e.COMMENT(/\{/, /\}/, { relevance: 0 }), e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 })],
-        s = {
+        o = {
             className: 'string',
             begin: /'/,
             end: /'/,
             contains: [{ begin: /''/ }]
         },
-        o = {
+        s = {
             className: 'string',
             begin: /(#\d+)+/
         },
@@ -35,7 +35,7 @@ function n(e) {
                     begin: /\(/,
                     end: /\)/,
                     keywords: r,
-                    contains: [s, o, e.NUMBER_MODE]
+                    contains: [o, s, e.NUMBER_MODE]
                 },
                 ...a
             ]
@@ -65,8 +65,8 @@ function n(e) {
                 scope: 'attribute',
                 relevance: 0
             },
-            s,
             o,
+            s,
             l,
             u,
             e.NUMBER_MODE,

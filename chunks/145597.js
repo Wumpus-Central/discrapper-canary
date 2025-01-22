@@ -1,16 +1,16 @@
 let i;
 r.d(n, {
     FW: function () {
-        return _;
+        return p;
     },
     Gr: function () {
         return f;
     },
     Ht: function () {
-        return I;
+        return y;
     },
     Js: function () {
-        return p;
+        return _;
     },
     QF: function () {
         return E;
@@ -19,13 +19,13 @@ r.d(n, {
         return m;
     },
     Te: function () {
-        return T;
+        return b;
     },
     Tq: function () {
         return d;
     },
     VS: function () {
-        return y;
+        return T;
     },
     qU: function () {
         return h;
@@ -34,12 +34,12 @@ r.d(n, {
         return v;
     },
     vR: function () {
-        return b;
+        return I;
     }
 });
 var a = r(610138);
-var s = r(216116);
-var o = r(78328);
+var o = r(216116);
+var s = r(78328);
 var l = r(815648);
 var u = r(47120);
 r(490029);
@@ -50,12 +50,12 @@ let d = 2,
         width: 3840,
         height: 2160
     },
-    _ = {
+    p = {
         width: 768,
         height: 432
     },
     h = 'overlay_default',
-    p = -2,
+    _ = -2,
     m = -1,
     g = !1;
 function E() {
@@ -67,15 +67,15 @@ function E() {
 function v(e) {
     i = e;
 }
-function I() {
+function y() {
     return new URLSearchParams(window.location.search).get('rpc_auth_token');
 }
-function T(e) {
-    return !c.isPlatformEmbedded || (e.width >= _.width && e.height >= _.height);
-}
 function b(e) {
+    return !c.isPlatformEmbedded || (e.width >= p.width && e.height >= p.height);
+}
+function I(e) {
     g = e;
 }
-function y() {
+function T() {
     return g;
 }

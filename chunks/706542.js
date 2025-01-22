@@ -81,7 +81,7 @@ let j = () =>
                 ]
             })
         }),
-    y = (e) => {
+    D = (e) => {
         let { label: t, tier0Column: n, tier2Column: r, withBottomBorder: s = !0, withBottomMargin: l = !1 } = e;
         return (0, i.jsxs)('tr', {
             className: a()(b.row, {
@@ -123,13 +123,13 @@ t.Z = (e) => {
         });
     let A = (0, _.N)(),
         R = null == A ? void 0 : null === (t = A.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        B = (0, f.Ng)(),
-        D = null != B && (0, f.Wp)(B, T.Si.TIER_2),
+        y = (0, f.Ng)(),
+        B = null != y && (0, f.Wp)(y, T.Si.TIER_2),
         Z = (0, E.A)(T.Xh.PREMIUM_MONTH_TIER_2),
         L = ''.concat(Z, '/').concat((0, x.eP)(T.rV.MONTH)),
         M = (0, x.CY)(T.Xh.PREMIUM_MONTH_TIER_0),
         k = (0, x.CY)(T.Xh.PREMIUM_MONTH_TIER_2),
-        w = (0, C.a)(M, k, D, L);
+        w = (0, C.a)(M, k, B, L);
     if (!I || !N) return null;
     w.push({
         label: null,
@@ -168,7 +168,7 @@ t.Z = (e) => {
                             (0, i.jsx)(P, {}),
                             (0, i.jsx)('tbody', {
                                 children: w.map((e, t) =>
-                                    (0, r.createElement)(y, {
+                                    (0, r.createElement)(D, {
                                         ...e,
                                         key: t
                                     })

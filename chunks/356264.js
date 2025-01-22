@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -25,7 +25,7 @@ function d(e) {
 function f(e) {
     return (u[e.guildId] = { type: 'failed' }), !1;
 }
-class _ extends (i = a.ZP.Store) {
+class p extends (i = a.ZP.Store) {
     getGuild(e) {
         let n = u[e];
         if (null != n) {
@@ -39,8 +39,8 @@ class _ extends (i = a.ZP.Store) {
         return l;
     }
 }
-o(_, 'displayName', 'BasicGuildStore'),
-    (n.Z = new _(s.Z, {
+s(p, 'displayName', 'BasicGuildStore'),
+    (n.Z = new p(o.Z, {
         BASIC_GUILD_FETCH: c,
         BASIC_GUILD_FETCH_SUCCESS: d,
         BASIC_GUILD_FETCH_FAILURE: f

@@ -11,8 +11,8 @@ var r = n(657707),
     o = n(739566),
     s = n(543388),
     c = n(942951),
-    d = n(834129),
-    u = n(388032),
+    u = n(834129),
+    d = n(388032),
     m = n(560390);
 function h(e) {
     let { message: t, channel: n, author: h, compact: f } = e,
@@ -25,7 +25,7 @@ function h(e) {
         })(),
         g = (0, l.q)(t.applicationId);
     if (null == g) return null;
-    let E = u.intl.format(u.t.m7Lwam, {
+    let E = d.intl.format(d.t.m7Lwam, {
         username: p,
         usernameHook: _,
         gameName: g.name,
@@ -48,7 +48,7 @@ function h(e) {
             }),
         helpdeskArticle: '#'
     });
-    return (0, i.jsx)(d.Z, {
+    return (0, i.jsx)(u.Z, {
         iconNode: (0, i.jsx)(r.iWm, { size: 'sm' }),
         compact: f,
         contentClassName: m.content,

@@ -6,8 +6,8 @@ var i,
     o = n.n(a),
     s = n(86357),
     c = n(54936),
-    d = n(687755),
-    u = n(351465),
+    u = n(687755),
+    d = n(351465),
     m = n(669021),
     h = n(73346),
     f = n(568836),
@@ -80,7 +80,7 @@ class C extends (i = l.PureComponent) {
                             splashClassName: g.splashVideo,
                             splashPlaceholderClassName: g.splashPlaceholder
                         }),
-                        a.exclusive ? (0, r.jsx)(u.Z, { className: o()(g.exclusiveRegular, { [g.exclusivePlaying]: e }) }) : a.isTheGameAwardsWinner ? (0, r.jsx)(d.Z, { className: o()(g.exclusiveRegular, { [g.exclusivePlaying]: e }) }) : null
+                        a.exclusive ? (0, r.jsx)(d.Z, { className: o()(g.exclusiveRegular, { [g.exclusivePlaying]: e }) }) : a.isTheGameAwardsWinner ? (0, r.jsx)(u.Z, { className: o()(g.exclusiveRegular, { [g.exclusivePlaying]: e }) }) : null
                     ]
                 });
             });

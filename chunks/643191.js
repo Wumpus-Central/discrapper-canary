@@ -1,6 +1,6 @@
 r.d(n, {
     Sv: function () {
-        return s;
+        return o;
     },
     mb: function () {
         return i;
@@ -35,4 +35,4 @@ if (null == r.g.performance.timeOrigin)
     try {
         r.g.performance.timeOrigin = a;
     } catch (e) {}
-let s = r.g.performance;
+let o = r.g.performance;

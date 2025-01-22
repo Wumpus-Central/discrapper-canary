@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(481060),
     s = n(2052),
     c = n(607070),
-    d = n(317381),
-    u = n(638880),
+    u = n(317381),
+    d = n(638880),
     m = n(122613),
     h = n(527805),
     f = n(884338),
@@ -38,17 +38,17 @@ let k = r.memo((e) => {
         [n, i] = r.useState(0),
         o = (0, P.n)(),
         s = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        d = !1 === o || s;
+        u = !1 === o || s;
     return (
         r.useEffect(() => {
             let e = new a.Xp();
             return (
-                e.start(d ? 15 * R.Z.Millis.SECOND : R.Z.Millis.SECOND, () => {
+                e.start(u ? 15 * R.Z.Millis.SECOND : R.Z.Millis.SECOND, () => {
                     i((new Date().getTime() - t) / R.Z.Millis.SECOND);
                 }),
                 () => e.stop()
             );
-        }, [d, t]),
+        }, [u, t]),
         (0, N.m)(n)
     );
 });
@@ -66,11 +66,11 @@ t.Z = r.memo(function (e) {
             currentEmbeddedActivity: H,
             activityLaunchState: z
         } = (0, l.cj)(
-            [d.ZP],
+            [u.ZP],
             () => ({
-                embeddedActivity: d.ZP.getEmbeddedActivitiesForChannel(null != F ? F : '').find((e) => e.applicationId === N.id),
-                currentEmbeddedActivity: d.ZP.getCurrentEmbeddedActivity(),
-                activityLaunchState: d.ZP.getLaunchState(N.id, null != F ? F : void 0)
+                embeddedActivity: u.ZP.getEmbeddedActivitiesForChannel(null != F ? F : '').find((e) => e.applicationId === N.id),
+                currentEmbeddedActivity: u.ZP.getCurrentEmbeddedActivity(),
+                activityLaunchState: u.ZP.getLaunchState(N.id, null != F ? F : void 0)
             }),
             [F, N.id]
         ),
@@ -124,7 +124,7 @@ t.Z = r.memo(function (e) {
                       componentId: ee,
                       commandOrigin: E.bB.ACTIVITY_INSTANCE_EMBED
                   })
-                : await (0, u.Z)({
+                : await (0, d.Z)({
                       applicationId: V.applicationId,
                       activityChannelId: R,
                       locationObject: B.location,
@@ -145,7 +145,7 @@ t.Z = r.memo(function (e) {
         let r = K.length,
             l = null !== (c = null == Y ? void 0 : null === (n = Y.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== c ? c : null == Y ? void 0 : Y.created_at,
             s = J ? ei : null != X ? X : M.intl.string(M.t.oQn0h4),
-            d = (function (e) {
+            u = (function (e) {
                 switch (null == e ? void 0 : e.type) {
                     case y.IIU.STREAMING:
                         return {
@@ -181,7 +181,7 @@ t.Z = r.memo(function (e) {
                                 (0, i.jsxs)('div', {
                                     className: D.activityTimer,
                                     children: [
-                                        (0, i.jsx)(d.Icon, {
+                                        (0, i.jsx)(u.Icon, {
                                             size: 'xxs',
                                             color: 'currentColor'
                                         }),
@@ -200,7 +200,7 @@ t.Z = r.memo(function (e) {
                                     variant: 'text-xs/normal',
                                     color: 'always-white',
                                     className: D.activePlayingText,
-                                    children: [r, ' ', d.text]
+                                    children: [r, ' ', u.text]
                                 })
                             })
                         })

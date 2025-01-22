@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(442837),
-    s = r(230711),
-    o = r(607070),
+    o = r(230711),
+    s = r(607070),
     l = r(663389),
     u = r(526761),
     c = r(981631);
@@ -19,7 +19,7 @@ let d = Object.freeze({
     }),
     f = function (e, n, r) {
         let u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-            c = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+            c = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
             f = (0, a.e7)([l.Z], () => l.Z.getScrollPosition());
         (0, i.useEffect)(() => {
             let i = e.current;
@@ -30,7 +30,7 @@ let d = Object.freeze({
                             behavior: c ? 'auto' : 'smooth',
                             ...r
                         }),
-                            s.Z.clearScrollPosition(d[n]);
+                            o.Z.clearScrollPosition(d[n]);
                     });
                     return () => cancelAnimationFrame(e);
                 }, u);

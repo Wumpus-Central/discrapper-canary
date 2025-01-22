@@ -12,11 +12,11 @@ var i = (function () {
 function a(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function s(e, n) {
+function o(e, n) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
 }
-function o(e, n) {
+function s(e, n) {
     if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
     (e.prototype = Object.create(n && n.prototype, {
         constructor: {
@@ -32,11 +32,11 @@ var l = r(129629),
     u = (function (e) {
         function n(e) {
             a(this, n);
-            var r = s(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+            var r = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
             return (r._transforms = e), r;
         }
         return (
-            o(n, e),
+            s(n, e),
             i(n, [
                 {
                     key: '__getValue',

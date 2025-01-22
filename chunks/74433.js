@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(833858),
-    s = r(657305),
-    o = r(841784),
+    o = r(657305),
+    s = r(841784),
     l = r(420660),
     u = r(981631),
     c = r(388032);
@@ -33,7 +33,7 @@ function f(e, n, r) {
             return r ? c.intl.formatToPlainString(c.t.Sq9xJy, { game: n }) : c.intl.format(c.t.lFApm5, { game: n });
     }
 }
-function _(e, n) {
+function p(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 ? arguments[3] : void 0;
     if (null != e && e.type === u.IIU.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
@@ -44,31 +44,31 @@ function _(e, n) {
         let n = null != e.details && '' !== e.details ? e.details : e.name;
         return c.intl.format(d(r)[u.IIU.STREAMING], { name: n });
     }
-    return (0, o.Z)(e) ? (0, s.Z)(e.name) : f(e.type, e.name, r);
+    return (0, s.Z)(e) ? (0, o.Z)(e.name) : f(e.type, e.name, r);
 }
 function h(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 ? arguments[3] : void 0,
         a = arguments.length > 4 ? arguments[4] : void 0;
     if (Array.isArray(e)) {
-        let s = e;
-        null != n && (!a || !1 !== n.discoverable) && (s = [...s, null]);
-        let o = null;
-        for (let e of s) {
-            let a = _(e, n, r, i);
+        let o = e;
+        null != n && (!a || !1 !== n.discoverable) && (o = [...o, null]);
+        let s = null;
+        for (let e of o) {
+            let a = p(e, n, r, i);
             if (null != a)
                 return {
                     activity: e,
                     activityText: a
                 };
-            (null == e ? void 0 : e.type) === u.IIU.CUSTOM_STATUS && null != e.emoji && (o = e);
+            (null == e ? void 0 : e.type) === u.IIU.CUSTOM_STATUS && null != e.emoji && (s = e);
         }
-        return (null == o ? void 0 : o.emoji) != null
+        return (null == s ? void 0 : s.emoji) != null
             ? {
-                  activity: o,
+                  activity: s,
                   activityText: null
               }
             : null;
     }
-    return _(e, n, r, i);
+    return p(e, n, r, i);
 }

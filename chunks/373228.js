@@ -1,4 +1,4 @@
-var i, a, s, o, l, u, c;
+var i, a, o, s, l, u, c;
 r.d(n, {
     Ih: function () {
         return l;
@@ -13,13 +13,13 @@ r.d(n, {
         return d;
     },
     al: function () {
-        return o;
+        return s;
     },
     n0: function () {
         return a;
     },
     og: function () {
-        return s;
+        return o;
     },
     u3: function () {
         return i;
@@ -36,12 +36,12 @@ r.d(n, {
     })(a || (a = {})),
     !(function (e) {
         (e.PNG = 'png'), (e.APNG = 'png'), (e.LOTTIE = 'json'), (e.WEBP = 'webp'), (e.GIF = 'gif');
-    })(s || (s = {}));
+    })(o || (o = {}));
 let d = (e) => 1 !== e,
     f = (e) => 1 !== e;
 !(function (e) {
     (e[(e.STICKER = 0)] = 'STICKER'), (e[(e.CREATE_STICKER = 1)] = 'CREATE_STICKER');
-})(o || (o = {})),
+})(s || (s = {})),
     !(function (e) {
         (e.PACK = 'PACK'), (e.FAVORITE = 'FAVORITE'), (e.RECENT = 'RECENT'), (e.SEARCH_RESULTS = 'SEARCH_RESULTS'), (e.SEARCH_SUGGESTIONS = 'SEARCH_SUGGESTIONS'), (e.GUILD = 'GUILD'), (e.EMPTY_GUILD_UPSELL = 'EMPTY_GUILD_UPSELL'), (e.CREATE_STICKER = 'CREATE_STICKER');
     })(l || (l = {})),

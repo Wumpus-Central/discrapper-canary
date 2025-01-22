@@ -5,41 +5,41 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(481060),
     u = r(503438),
     c = r(100527),
     d = r(906732),
     f = r(379357),
-    _ = r(358696),
+    p = r(358696),
     h = r(649700),
-    p = r(952164),
+    _ = r(952164),
     m = r(960870),
     g = r(139793),
     E = r(994746),
     v = r(273284),
-    I = r(510659),
-    T = r(287954),
-    b = r(660579),
-    y = r(652853),
+    y = r(510659),
+    b = r(287954),
+    I = r(660579),
+    T = r(652853),
     S = r(64621),
     A = r(448980),
-    N = r(336383),
-    C = r(194811),
+    C = r(336383),
+    N = r(194811),
     R = r(373826),
     O = r(315324),
     D = r(262210),
-    L = r(666984),
-    x = r(386019),
+    x = r(666984),
+    L = r(386019),
     w = r(228168),
     P = r(249942);
 function M(e) {
     var n;
-    let { user: r, currentUser: s, activity: M, guild: k, channel: U, className: B, onClose: G, profileGuildId: F } = e,
-        { profileType: Z } = (0, y.z)(),
-        V = { [P.fullSize]: Z === w.y0.FULL_SIZE },
-        { interactionSource: j, interactionSourceId: H } = (0, I.Xo)(),
+    let { user: r, currentUser: o, activity: M, guild: k, channel: U, className: B, onClose: G, profileGuildId: Z } = e,
+        { profileType: F } = (0, T.z)(),
+        V = { [P.fullSize]: F === w.y0.FULL_SIZE },
+        { interactionSource: j, interactionSourceId: H } = (0, y.Xo)(),
         Y = (0, h.Z)({
             activity: M,
             user: r
@@ -61,29 +61,29 @@ function M(e) {
     if (!(0, u.Z)(M)) return null;
     let X = () => {
             var e, n;
-            let s = null !== (n = null === (e = M.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== n ? n : [];
-            return 0 === s.length
+            let o = null !== (n = null === (e = M.state) || void 0 === e ? void 0 : e.split(';')) && void 0 !== n ? n : [];
+            return 0 === o.length
                 ? null
                 : null == M.sync_id
                   ? (0, i.jsx)(R.Z, {
                         variant: 'text-xs/normal',
-                        text: s.join(', ')
+                        text: o.join(', ')
                     })
                   : (0, i.jsx)(R.Z, {
                         variant: 'text-xs/normal',
-                        text: s.map((e, n) =>
+                        text: o.map((e, n) =>
                             (0, i.jsxs)(
                                 a.Fragment,
                                 {
                                     children: [
                                         (0, i.jsx)(l.Clickable, {
-                                            className: o()(P.clickableText, P.inline),
+                                            className: s()(P.clickableText, P.inline),
                                             onClick: (e) => {
-                                                e.stopPropagation(), q({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(M, r.id, n);
+                                                e.stopPropagation(), q({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, _.d$)(M, r.id, n);
                                             },
                                             children: e
                                         }),
-                                        n < s.length - 1 ? ', ' : ''
+                                        n < o.length - 1 ? ', ' : ''
                                     ]
                                 },
                                 n
@@ -113,17 +113,17 @@ function M(e) {
                       onClose: G
                   }),
         ee = () =>
-            r.id === s.id
+            r.id === o.id
                 ? null
                 : (0, i.jsx)('div', {
-                      className: o()(P.actions, V),
-                      children: (0, i.jsx)(L.Z, {
+                      className: s()(P.actions, V),
+                      children: (0, i.jsx)(x.Z, {
                           user: r,
                           activity: M,
                           onAction: q
                       })
                   });
-    if (null === Z) return null;
+    if (null === F) return null;
     let et = null !== (n = M.application_id) && void 0 !== n ? n : M.name,
         en = j === w.n_.ACTIVITY && H === et;
     return (0, i.jsx)(d.Gt, {
@@ -131,17 +131,17 @@ function M(e) {
         children: (0, i.jsx)(S.Z, {
             sourceType: w.n_.ACTIVITY,
             user: r,
-            children: (0, i.jsx)(T.Z, {
+            children: (0, i.jsx)(b.Z, {
                 user: r,
-                guildId: F,
-                profileType: Z,
+                guildId: Z,
+                profileType: F,
                 sourceId: et,
                 sourceDetails: null == Y ? (0, v.Z)(M) : null,
                 entry: Y,
                 sourceType: w.n_.ACTIVITY,
                 onAction: q,
                 children: () =>
-                    (0, i.jsx)(b.Z, {
+                    (0, i.jsx)(I.Z, {
                         user: r,
                         className: P.toolbarContainer,
                         sourceType: w.n_.ACTIVITY,
@@ -149,7 +149,7 @@ function M(e) {
                         onAction: q,
                         onShowToolbar: () => q({ action: 'HOVER_ACTIVITY_CARD' }),
                         renderMoreButtonPopout: (e) =>
-                            (0, i.jsx)(x.Z, {
+                            (0, i.jsx)(L.Z, {
                                 display: 'live',
                                 user: r,
                                 activity: M,
@@ -157,25 +157,25 @@ function M(e) {
                                 onClose: G,
                                 children: e
                             }),
-                        children: (0, i.jsxs)(N.Z, {
+                        children: (0, i.jsxs)(C.Z, {
                             ref: Q,
-                            className: o()(B, { [P.hoisted]: en }),
+                            className: s()(B, { [P.hoisted]: en }),
                             onAction: q,
                             onClose: G,
                             children: [
-                                (0, i.jsx)(C.Z, { ...W }),
+                                (0, i.jsx)(N.Z, { ...W }),
                                 (0, i.jsxs)('div', {
                                     className: P.body,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: o()(P.content, V),
+                                            className: s()(P.content, V),
                                             children: [
-                                                (0, i.jsx)(_.E, {
+                                                (0, i.jsx)(p.E, {
                                                     image: K,
-                                                    size: _.J.SIZE_60,
+                                                    size: p.J.SIZE_60,
                                                     className: P.clickableImage,
                                                     onClick: (e) => {
-                                                        e.stopPropagation(), q({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(M, r.id);
+                                                        e.stopPropagation(), q({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, _.Z5)(M, r.id);
                                                     }
                                                 }),
                                                 (0, i.jsxs)('div', {
@@ -187,7 +187,7 @@ function M(e) {
                                                                     variant: 'heading-sm/semibold',
                                                                     text: M.details,
                                                                     onClick: () => {
-                                                                        q({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(M);
+                                                                        q({ action: 'OPEN_SPOTIFY_TRACK' }), (0, _.aG)(M);
                                                                     }
                                                                 }),
                                                                 X()
@@ -201,13 +201,13 @@ function M(e) {
                                                         J()
                                                     ]
                                                 }),
-                                                Z === w.y0.FULL_SIZE && ee()
+                                                F === w.y0.FULL_SIZE && ee()
                                             ]
                                         }),
                                         $()
                                     ]
                                 }),
-                                Z !== w.y0.FULL_SIZE && ee()
+                                F !== w.y0.FULL_SIZE && ee()
                             ]
                         })
                     })

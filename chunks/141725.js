@@ -5,7 +5,7 @@ r.d(n, {
 });
 var i = r(964742),
     a = r(304832);
-function s(e, n) {
+function o(e, n) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
@@ -17,16 +17,16 @@ function s(e, n) {
     }
     return r;
 }
-function o(e) {
+function s(e) {
     for (var n = 1; n < arguments.length; n++) {
         var r = null != arguments[n] ? arguments[n] : {};
         n % 2
-            ? s(Object(r), !0).forEach(function (n) {
+            ? o(Object(r), !0).forEach(function (n) {
                   l(e, n, r[n]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : s(Object(r)).forEach(function (n) {
+              : o(Object(r)).forEach(function (n) {
                     Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(r, n));
                 });
     }
@@ -64,7 +64,7 @@ function c() {
             };
         case i.$T:
             if ((0, a.YJ)(e.clientOffset, r.clientOffset)) return e;
-            return o(o({}, e), {}, { clientOffset: r.clientOffset });
+            return s(s({}, e), {}, { clientOffset: r.clientOffset });
         case i.Bs:
         case i.rp:
             return u;

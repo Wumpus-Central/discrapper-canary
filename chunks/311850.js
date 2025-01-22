@@ -1,11 +1,11 @@
 r.d(n, {
     l: function () {
-        return s;
+        return o;
     }
 });
 var i = r(724458);
 var a = r(301766);
-function s(e) {
+function o(e) {
     return null == e
         ? {}
         : Object.keys(e).reduce((n, r) => {

@@ -40,11 +40,11 @@ t.Z = function (e) {
         O = (0, d.ZP)(),
         R = (0, o.wj)(O) ? C : T,
         P = (0, h._)(t, x.Xh.PREMIUM_MONTH_TIER_2, b),
-        y = (0, m.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+        D = (0, m.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
-        B = (0, g.T4)(y.amount, y.currency);
+        y = (0, g.T4)(D.amount, D.currency);
     return null == b
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -75,7 +75,7 @@ t.Z = function (e) {
                                           children: _.intl.format(_.t.Eq1RHB, {
                                               percent: b.discount.amount,
                                               numMonths: b.discount.user_usage_limit,
-                                              price: B
+                                              price: y
                                           })
                                       })
                                   ]
@@ -89,7 +89,7 @@ t.Z = function (e) {
                                           discountedPrice: P,
                                           billingPeriod: (0, m.JP)(b.discount.user_usage_limit_interval),
                                           numMonths: b.discount.user_usage_limit,
-                                          fullPrice: B,
+                                          fullPrice: y,
                                           helpdeskArticle: u.Z.getArticleURL(f.BhN.PAID_TERMS)
                                       })
                                   })

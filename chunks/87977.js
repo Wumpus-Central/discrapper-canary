@@ -1,8 +1,8 @@
 Object.defineProperty(n, '__esModule', { value: !0 }), (n.Raised = void 0);
 var i = l(r(192379)),
     a = l(r(476400)),
-    s = l(r(723184)),
-    o = l(r(429867));
+    o = l(r(723184)),
+    s = l(r(429867));
 function l(e) {
     return e && e.__esModule ? e : { default: e };
 }
@@ -13,8 +13,8 @@ var u = (n.Raised = function (e) {
         l = e.children,
         u = e.styles,
         c = void 0 === u ? {} : u,
-        d = (0, s.default)(
-            (0, o.default)(
+        d = (0, o.default)(
+            (0, s.default)(
                 {
                     default: {
                         wrap: {

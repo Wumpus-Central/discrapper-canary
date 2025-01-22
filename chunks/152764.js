@@ -11,14 +11,14 @@ function n(e) {
             relevance: 10
         },
         a = "[A-Za-z_][A-Za-z0-9_'-]*",
-        s = {
+        o = {
             scope: 'symbol',
             match: RegExp(`<${a}(/${a})*>`)
         },
-        o = '[A-Za-z0-9_\\+\\.-]+',
+        s = '[A-Za-z0-9_\\+\\.-]+',
         l = {
             scope: 'symbol',
-            match: RegExp(`(\\.\\.|\\.|~)?/(${o})?(/${o})*(?=[\\s;])`)
+            match: RegExp(`(\\.\\.|\\.|~)?/(${s})?(/${s})*(?=[\\s;])`)
         },
         u = n.either('==', '=', '\\+\\+', '\\+', '<=', '<\\|', '<', '>=', '>', '->', '//', '/', '!=', '!', '\\|\\|', '\\|>', '\\?', '\\*', '&&'),
         c = {
@@ -55,7 +55,7 @@ function n(e) {
             ],
             relevance: 0
         },
-        _ = {
+        p = {
             beforeMatch: /(^|\{|;)\s*/,
             begin: RegExp(`${a}(\\.${a})*\\s*=(?!=)`),
             returnBegin: !0,
@@ -74,7 +74,7 @@ function n(e) {
             end: /\}/,
             keywords: r
         },
-        p = {
+        _ = {
             scope: 'char.escape',
             match: /\\(?!\$)./
         },
@@ -94,7 +94,7 @@ function n(e) {
                             scope: 'char.escape',
                             match: /'''/
                         },
-                        p
+                        _
                     ]
                 },
                 {
@@ -106,7 +106,7 @@ function n(e) {
                             match: /\\\$/
                         },
                         h,
-                        p
+                        _
                     ]
                 }
             ]
@@ -125,10 +125,10 @@ function n(e) {
             }),
             i,
             m,
-            s,
+            o,
             l,
             g,
-            _,
+            p,
             f,
             c
         ];

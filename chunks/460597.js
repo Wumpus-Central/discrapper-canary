@@ -5,7 +5,7 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(742635);
-let s = (e) => {
+let o = (e) => {
         let n = {};
         for (let r of Object.keys(e)) {
             let i = e[r];
@@ -18,7 +18,7 @@ let s = (e) => {
         }
         return n;
     },
-    o = (e) => {
+    s = (e) => {
         let n = {};
         for (let r of Object.keys(e)) {
             let i = e[r];
@@ -37,13 +37,13 @@ let s = (e) => {
             case a.L.FIRST_PARTY:
                 return {
                     type: a.L.FIRST_PARTY,
-                    tasks: s(e.tasks),
+                    tasks: o(e.tasks),
                     joinOperator: e.join_operator
                 };
             case a.L.THIRD_PARTY:
                 return {
                     type: a.L.THIRD_PARTY,
-                    tasks: o(e.tasks),
+                    tasks: s(e.tasks),
                     enrollmentUrl: e.enrollment_url,
                     developerApplicationId: e.developer_application_id,
                     joinOperator: e.join_operator

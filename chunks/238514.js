@@ -1,7 +1,7 @@
 var i,
     a = r(392711),
-    s = r.n(a),
-    o = r(442837),
+    o = r.n(a),
+    s = r(442837),
     l = r(433517),
     u = r(570140),
     c = r(981631);
@@ -19,12 +19,12 @@ function d(e, n, r) {
     );
 }
 let f = {};
-function _(e) {
+function p(e) {
     let { changes: n } = e;
     for (let e in n) {
         var r;
         let i = e,
-            { shouldSync: a, settings: s } = n[i];
+            { shouldSync: a, settings: o } = n[i];
         if (!0 === a) {
             delete f[i];
             continue;
@@ -34,13 +34,13 @@ function _(e) {
                 shouldSync: a,
                 settings: {}
             });
-        if ((null === (r = f[i]) || void 0 === r ? void 0 : r.shouldSync) === !1) for (let e in s) f[i].settings[e] = s[e];
+        if ((null === (r = f[i]) || void 0 === r ? void 0 : r.shouldSync) === !1) for (let e in o) f[i].settings[e] = o[e];
     }
 }
 function h() {
     f = {};
 }
-class p extends (i = o.ZP.PersistedStore) {
+class _ extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         f = null != e ? e : {};
     }
@@ -60,9 +60,9 @@ class p extends (i = o.ZP.PersistedStore) {
         return null === (e = f.appearance) || void 0 === e ? void 0 : e.settings;
     }
 }
-d(p, 'displayName', 'SelectivelySyncedUserSettingsStore'),
-    d(p, 'persistKey', 'SelectivelySyncedUserSettingsStore'),
-    d(p, 'migrations', [
+d(_, 'displayName', 'SelectivelySyncedUserSettingsStore'),
+    d(_, 'persistKey', 'SelectivelySyncedUserSettingsStore'),
+    d(_, 'migrations', [
         () => {
             var e, n;
             let r = null !== (e = l.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
@@ -73,12 +73,12 @@ d(p, 'displayName', 'SelectivelySyncedUserSettingsStore'),
                 !1 === r[c.oAB.TEXT] &&
                     (a.text = {
                         shouldSync: !1,
-                        settings: s().pick(i, ['inlineAttachmentMedia', 'inlineEmbedMedia', 'renderEmbeds', 'renderReactions', 'animateEmoji', 'animateStickers', 'gifAutoPlay'])
+                        settings: o().pick(i, ['inlineAttachmentMedia', 'inlineEmbedMedia', 'renderEmbeds', 'renderReactions', 'animateEmoji', 'animateStickers', 'gifAutoPlay'])
                     }),
                 !1 === r[c.oAB.APPEARANCE] &&
                     (a.appearance = {
                         shouldSync: !1,
-                        settings: s().pick(i, ['theme', 'clientThemeSettings', 'developerMode'])
+                        settings: o().pick(i, ['theme', 'clientThemeSettings', 'developerMode'])
                     }),
                 a
             );
@@ -98,7 +98,7 @@ d(p, 'displayName', 'SelectivelySyncedUserSettingsStore'),
                 };
         }
     ]),
-    (n.Z = new p(u.Z, {
-        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: _,
+    (n.Z = new _(u.Z, {
+        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: p,
         LOGOUT: h
     }));

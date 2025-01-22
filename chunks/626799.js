@@ -12,8 +12,8 @@ var i,
     o = n(442837),
     s = n(481060),
     c = n(558381),
-    d = n(410575),
-    u = n(498179),
+    u = n(410575),
+    d = n(498179),
     m = n(86357),
     h = n(914602),
     f = n(568836),
@@ -71,11 +71,11 @@ class b extends (i = l.Component) {
             o = n > f.aL;
         if (null == e || null == t) return i ? l() : (0, r.jsx)(f.OR, { isHorizontal: o });
         return e.productLine === v.POd.COLLECTIBLES
-            ? (0, r.jsx)(d.Z, {
+            ? (0, r.jsx)(u.Z, {
                   section: v.jXE.APPLICATION_EMBED,
                   children: this.renderApplicationTile(e, t)
               })
-            : (0, r.jsx)(d.Z, {
+            : (0, r.jsx)(u.Z, {
                   section: v.jXE.APPLICATION_EMBED,
                   children: (0, r.jsx)(a.rU, {
                       onClick: this.handleLinkClick,
@@ -118,7 +118,7 @@ class b extends (i = l.Component) {
             A(this, 'renderApplicationTile', (e, t) => {
                 let { inLibrary: n, width: i, renderCustomTitle: l, renderCustomTagline: a, renderCustomMedia: o } = this.props,
                     { playing: s, muted: c } = this.state,
-                    d = i > f.aL;
+                    u = i > f.aL;
                 return (0, r.jsx)(h.Z, {
                     sku: e,
                     storeListing: t,
@@ -130,7 +130,7 @@ class b extends (i = l.Component) {
                     renderCustomTitle: l,
                     renderCustomTagline: a,
                     renderCustomMedia: o,
-                    isHorizontal: d,
+                    isHorizontal: u,
                     isEmbed: !0
                 });
             }),
@@ -149,7 +149,7 @@ class b extends (i = l.Component) {
                     children: [
                         !o || c
                             ? this.renderViewInStoreButton()
-                            : (0, r.jsx)(u.Z, {
+                            : (0, r.jsx)(d.Z, {
                                   application: n,
                                   customDisabledColor: s.Button.Colors.PRIMARY,
                                   size: s.Button.Sizes.SMALL,

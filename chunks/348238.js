@@ -57,8 +57,8 @@ var i = n(200651),
     o = n(904245),
     s = n(144144),
     c = n(40851),
-    d = n(407477),
-    u = n(287941),
+    u = n(407477),
+    d = n(287941),
     m = n(235894),
     h = n(675478),
     f = n(592125),
@@ -134,8 +134,8 @@ function D(e, t) {
 }
 function k(e, t, l, o) {
     let { id: s } = t,
-        { id: d, flags: u } = e,
-        m = (0, I.yE)(u, S.iLy.EPHEMERAL),
+        { id: u, flags: d } = e,
+        m = (0, I.yE)(d, S.iLy.EPHEMERAL),
         h = (0, c.bp)();
     return r.useCallback(
         (e, t) => {
@@ -147,14 +147,14 @@ function k(e, t, l, o) {
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
             let r = f.Z.getChannel(s),
-                c = _.Z.getMessage(s, d),
-                u = p.Z.isEditing(s, d);
-            if (null != r && null != c && !u)
+                c = _.Z.getMessage(s, u),
+                d = p.Z.isEditing(s, u);
+            if (null != r && null != c && !d)
                 l({ contextMenu: !0 }),
                     (0, a.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e('33862'), n.e('93375'), n.e('37220'), n.e('59334')]).then(n.bind(n, 225138));
+                            let { default: e } = await Promise.all([n.e('33862'), n.e('93375'), n.e('37220'), n.e('49315')]).then(n.bind(n, 225138));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,
@@ -170,7 +170,7 @@ function k(e, t, l, o) {
                         }
                     );
         },
-        [m, s, d, l, h, o]
+        [m, s, u, l, h, o]
     );
 }
 function U(e, t) {
@@ -222,7 +222,7 @@ function F(e, t) {
 }
 function G(e) {
     let { groupId: t, message: n, defaultValue: i } = e,
-        { canShowReactionsOnMessageHover: l } = d.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
+        { canShowReactionsOnMessageHover: l } = u.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
         a = n.author.id,
         o = ''.concat(t, ':').concat(a),
         s = r.useRef(i),
@@ -233,7 +233,7 @@ function G(e) {
                     let n = t.target;
                     if ((0, m.U)(e)) {
                         let { x: t, y: i, width: r, height: l } = n.getBoundingClientRect();
-                        (0, u.Z)(e, {
+                        (0, d.Z)(e, {
                             x: t,
                             y: i,
                             w: r,

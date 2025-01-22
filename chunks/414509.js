@@ -5,15 +5,15 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(147913),
-    s = r(592125),
-    o = r(19780),
+    o = r(592125),
+    s = r(19780),
     l = r(699516),
     u = r(70956),
     c = r(33194);
 r(452369);
 var d = r(807031),
     f = r(189275),
-    _ = r(451092);
+    p = r(451092);
 function h(e, n, r) {
     return (
         n in e
@@ -28,18 +28,18 @@ function h(e, n, r) {
     );
 }
 r(334431);
-let p = 1 * u.Z.Millis.HOUR,
+let _ = 1 * u.Z.Millis.HOUR,
     m = 3 * u.Z.Millis.DAY;
 function g(e) {
     let { channelId: n } = e;
     if (null == n) return;
-    let r = s.Z.getChannel(n);
+    let r = o.Z.getChannel(n);
     if (null != r && r.isGroupDM()) {
         let e = r.recipients.filter((e) => l.Z.isBlocked(e)),
             i = r.recipients.filter((e) => l.Z.isIgnored(e));
         (e.length > 0 || i.length > 0) &&
             !r.blockedUserWarningDismissed &&
-            !I(n) &&
+            !y(n) &&
             (0, f.O)({
                 channelId: n,
                 blockedUserIds: e,
@@ -51,15 +51,15 @@ function E(e) {
     let { state: n } = e;
 }
 function v(e) {
-    return (0, c.Iu)(e) > Date.now() - p;
+    return (0, c.Iu)(e) > Date.now() - _;
 }
-function I(e) {
+function y(e) {
     return (0, c.Iu)(e) > Date.now() - m;
 }
-class T extends a.Z {
+class b extends a.Z {
     handleBlockedOrIgnoredUserVoiceChannelJoin(e, n) {
-        let r = o.Z.getChannelId();
-        if (e === r && null != s.Z.getChannel(e)) (0, d.wC)({ location: 'warning_manager' }) && !v(e) && (0, _.H)(r, n);
+        let r = s.Z.getChannelId();
+        if (e === r && null != o.Z.getChannel(e)) (0, d.wC)({ location: 'warning_manager' }) && !v(e) && (0, p.H)(r, n);
     }
     constructor(...e) {
         super(...e),
@@ -69,4 +69,4 @@ class T extends a.Z {
             });
     }
 }
-n.Z = new T();
+n.Z = new b();

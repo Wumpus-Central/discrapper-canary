@@ -1,13 +1,13 @@
 r.d(n, {
     H: function () {
-        return o;
+        return s;
     }
 });
 var i,
     a = r(47120);
-var s = r(124368);
+var o = r(124368);
 !(function (e) {
     e.INVITE_ACCEPT = 'invite_accept';
 })(i || (i = {})),
     (n.Z = i);
-let o = new Set([s.on.EMBED, s.on.FORUM]);
+let s = new Set([o.on.EMBED, o.on.FORUM]);

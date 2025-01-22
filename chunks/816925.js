@@ -1,8 +1,8 @@
 var i = r(961123),
     a = r(278757);
-function s(e, n) {
+function o(e, n) {
     n = i(n, e);
-    for (var r = 0, s = n.length; null != e && r < s; ) e = e[a(n[r++])];
-    return r && r == s ? e : void 0;
+    for (var r = 0, o = n.length; null != e && r < o; ) e = e[a(n[r++])];
+    return r && r == o ? e : void 0;
 }
-e.exports = s;
+e.exports = o;

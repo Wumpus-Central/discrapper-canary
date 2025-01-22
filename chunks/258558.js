@@ -5,11 +5,11 @@ var a = r(411104);
         r = e.performance || {},
         i = [],
         a = {},
-        s = function (e, n) {
-            for (var r = 0, a = i.length, s = []; r < a; r++) i[r][e] == n && s.push(i[r]);
-            return s;
-        },
         o = function (e, n) {
+            for (var r = 0, a = i.length, o = []; r < a; r++) i[r][e] == n && o.push(i[r]);
+            return o;
+        },
+        s = function (e, n) {
             for (var r, a = i.length; a--; ) (r = i[a]).entryType == e && (void 0 === n || r.name == n) && i.splice(a, 1);
         };
     !r.now &&
@@ -35,42 +35,42 @@ var a = r(411104);
         !r.measure &&
             (r.measure =
                 r.webkitMeasure ||
-                function (e, n, s) {
-                    var o, l;
-                    if (void 0 !== s && void 0 === a[s]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + s + "' does not exist.");
+                function (e, n, o) {
+                    var s, l;
+                    if (void 0 !== o && void 0 === a[o]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + o + "' does not exist.");
                     if (void 0 !== n && void 0 === a[n]) throw SyntaxError("Failed to execute 'measure' on 'Performance': The mark '" + n + "' does not exist.");
-                    (o = a[n] ? a[n].startTime : 0),
-                        (l = a[s] ? a[s].startTime : r.now()),
+                    (s = a[n] ? a[n].startTime : 0),
+                        (l = a[o] ? a[o].startTime : r.now()),
                         i.push({
                             name: e,
                             entryType: 'measure',
-                            startTime: o,
-                            duration: l - o
+                            startTime: s,
+                            duration: l - s
                         });
                 }),
         !r.getEntriesByType &&
             (r.getEntriesByType =
                 r.webkitGetEntriesByType ||
                 function (e) {
-                    return s('entryType', e);
+                    return o('entryType', e);
                 }),
         !r.getEntriesByName &&
             (r.getEntriesByName =
                 r.webkitGetEntriesByName ||
                 function (e) {
-                    return s('name', e);
+                    return o('name', e);
                 }),
         !r.clearMarks &&
             (r.clearMarks =
                 r.webkitClearMarks ||
                 function (e) {
-                    o('mark', e);
+                    s('mark', e);
                 }),
         !r.clearMeasures &&
             (r.clearMeasures =
                 r.webkitClearMeasures ||
                 function (e) {
-                    o('measure', e);
+                    s('measure', e);
                 }),
         (e.performance = r),
         'function' == typeof define &&

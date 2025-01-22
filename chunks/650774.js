@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -30,7 +30,7 @@ function f(e) {
     let { guild: n } = e;
     l[n.id] = n.member_count;
 }
-function _(e) {
+function p(e) {
     let { guild: n } = e;
     if (null == l[n.id] && null == u[n.id]) return !1;
     delete l[n.id], delete u[n.id];
@@ -40,7 +40,7 @@ function h(e) {
         a = !1;
     return l[n] !== r && ((l[n] = r), (a = !0)), u[n] !== i && ((u[n] = i), (a = !0)), a;
 }
-function p(e) {
+function _(e) {
     let { invite: n } = e,
         { guild: r, approximate_presence_count: i } = n;
     if ((null == r ? void 0 : r.id) == null || null == i) return !1;
@@ -62,14 +62,14 @@ class g extends (i = a.ZP.Store) {
         return null != e ? u[e] : null;
     }
 }
-o(g, 'displayName', 'GuildMemberCountStore'),
-    (n.Z = new g(s.Z, {
+s(g, 'displayName', 'GuildMemberCountStore'),
+    (n.Z = new g(o.Z, {
         CONNECTION_OPEN: c,
         OVERLAY_INITIALIZE: d,
         GUILD_CREATE: f,
-        GUILD_DELETE: _,
+        GUILD_DELETE: p,
         GUILD_MEMBER_LIST_UPDATE: h,
-        INVITE_ACCEPT_SUCCESS: p,
-        INVITE_RESOLVE_SUCCESS: p,
+        INVITE_ACCEPT_SUCCESS: _,
+        INVITE_RESOLVE_SUCCESS: _,
         ONLINE_GUILD_MEMBER_COUNT_UPDATE: m
     }));

@@ -9,15 +9,15 @@ r.d(n, {
 }),
     !(function (e) {
         (e.symbol = Symbol.for('protobuf-ts/unknown')),
-            (e.onRead = (r, i, a, s, o) => {
+            (e.onRead = (r, i, a, o, s) => {
                 (n(i) ? i[e.symbol] : (i[e.symbol] = [])).push({
                     no: a,
-                    wireType: s,
-                    data: o
+                    wireType: o,
+                    data: s
                 });
             }),
             (e.onWrite = (n, r, i) => {
-                for (let { no: n, wireType: a, data: s } of e.list(r)) i.tag(n, a).raw(s);
+                for (let { no: n, wireType: a, data: o } of e.list(r)) i.tag(n, a).raw(o);
             }),
             (e.list = (r, i) => {
                 if (n(r)) {

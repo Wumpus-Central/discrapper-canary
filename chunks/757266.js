@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(392711),
-    o = r.n(s),
+var o = r(392711),
+    s = r.n(o),
     l = r(442837),
     u = r(570140);
 function c(e, n, r) {
@@ -33,7 +33,7 @@ function f(e) {
         }),
         d[r].count++;
 }
-function _(e) {
+function p(e) {
     let { application: n } = e;
     if (null != n.id && null != d[n.id]) d[n.id].authenticated = !0;
 }
@@ -41,7 +41,7 @@ function h(e) {
     let { application: n } = e;
     if (null != n.id && null != d[n.id]) d[n.id].count--, 0 === d[n.id].count && delete d[n.id];
 }
-function p(e) {
+function _(e) {
     let { connectedApps: n } = e;
     d = { ...n };
 }
@@ -50,7 +50,7 @@ class m extends (i = l.ZP.Store) {
         return null != d[e];
     }
     get connections() {
-        return o().values(d);
+        return s().values(d);
     }
     getApplication(e) {
         return d[e];
@@ -61,8 +61,8 @@ class m extends (i = l.ZP.Store) {
 }
 c(m, 'displayName', 'ConnectedAppsStore'),
     (n.Z = new m(u.Z, {
-        OVERLAY_INITIALIZE: p,
+        OVERLAY_INITIALIZE: _,
         RPC_APP_CONNECTED: f,
-        RPC_APP_AUTHENTICATED: _,
+        RPC_APP_AUTHENTICATED: p,
         RPC_APP_DISCONNECTED: h
     }));

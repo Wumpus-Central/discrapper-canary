@@ -1,12 +1,12 @@
 r.d(n, {
     HZ: function () {
-        return s;
+        return o;
     },
     V1: function () {
         return u;
     },
     kf: function () {
-        return o;
+        return s;
     },
     p7: function () {
         return l;
@@ -14,7 +14,7 @@ r.d(n, {
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
         kind: 'user',
         id: '2024-12_confetti_potion',
         label: 'Confetti Potion Experiment',
@@ -48,6 +48,6 @@ let s = (0, i.B)({
             }
         ]
     }),
-    o = (e) => s.useExperiment({ location: e }, { autoTrackExposure: !1 }).canSeeConfetti,
-    l = (e) => s.useExperiment({ location: e }, { autoTrackExposure: !0 }).canSeeConfetti,
-    u = (e) => s.useExperiment({ location: e }, { autoTrackExposure: !1 }).canPurchase;
+    s = (e) => o.useExperiment({ location: e }, { autoTrackExposure: !1 }).canSeeConfetti,
+    l = (e) => o.useExperiment({ location: e }, { autoTrackExposure: !0 }).canSeeConfetti,
+    u = (e) => o.useExperiment({ location: e }, { autoTrackExposure: !1 }).canPurchase;

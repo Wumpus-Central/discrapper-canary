@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379);
-let o = 'data-focus-blocked',
+    o = r(192379);
+let s = 'data-focus-blocked',
     l = 0;
 function u() {
     return l++;
@@ -18,9 +18,9 @@ function c(e) {
     return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, { acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP) });
 }
 function d(e, n) {
-    let [r] = s.useState(() => u()),
-        i = ''.concat(o, '-').concat(r);
-    s.useLayoutEffect(() => {
+    let [r] = o.useState(() => u()),
+        i = ''.concat(s, '-').concat(r);
+    o.useLayoutEffect(() => {
         if (n) {
             let n = e.current;
             if (null != n) {
@@ -46,11 +46,11 @@ function d(e, n) {
 }
 function f(e) {
     let { children: n, className: r, enabled: i = !0 } = e,
-        o = s.useRef(null);
+        s = o.useRef(null);
     return (
-        d(o, i),
+        d(s, i),
         (0, a.jsx)('div', {
-            ref: o,
+            ref: s,
             className: r,
             children: n
         })

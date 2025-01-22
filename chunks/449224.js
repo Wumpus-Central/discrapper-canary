@@ -1,7 +1,7 @@
 let i;
 var a,
-    s = r(442837),
-    o = r(570140),
+    o = r(442837),
+    s = r(570140),
     l = r(594190),
     u = r(77498);
 function c(e, n, r) {
@@ -23,7 +23,7 @@ function d(e) {
 function f(e) {
     i = e.associatedGame;
 }
-class _ extends (a = s.ZP.Store) {
+class p extends (a = o.ZP.Store) {
     getGameForPID(e) {
         var n;
         if (__OVERLAY__ || null == e) return null;
@@ -34,8 +34,8 @@ class _ extends (a = s.ZP.Store) {
         return i;
     }
 }
-c(_, 'displayName', 'OverlayRunningGameStore'),
-    (n.Z = new _(o.Z, {
+c(p, 'displayName', 'OverlayRunningGameStore'),
+    (n.Z = new p(s.Z, {
         OVERLAY_INITIALIZE: d,
         OVERLAY_SET_ASSOCIATED_GAME: f
     }));

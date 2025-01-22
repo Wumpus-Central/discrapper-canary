@@ -1,15 +1,15 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(751571),
-    o = r(88751),
+    o = r(751571),
+    s = r(88751),
     l = r(590415),
     u = r(189786),
     c = r(314897),
     d = r(592125),
     f = r(131951),
-    _ = r(19780),
+    p = r(19780),
     h = r(876506),
-    p = r(981631),
+    _ = r(981631),
     m = r(761274);
 function g(e, n, r) {
     return (
@@ -26,19 +26,19 @@ function g(e, n, r) {
 }
 let E = null;
 function v() {
-    s.Z.requestPermission(m.Eu.AUDIO).then((e) => {
+    o.Z.requestPermission(m.Eu.AUDIO).then((e) => {
         if (!!e) (0, h.Z)(!0);
     }),
-        f.Z.getMode() === p.pM4.PUSH_TO_TALK && s.Z.requestPermission(m.Eu.INPUT_MONITORING);
+        f.Z.getMode() === _.pM4.PUSH_TO_TALK && o.Z.requestPermission(m.Eu.INPUT_MONITORING);
 }
-function I(e, n) {
+function y(e, n) {
     var r;
-    return (null === (r = d.Z.getChannel(n)) || void 0 === r ? !void 0 : !r.isListenModeCapable()) || o.ZP.isSpeaker(e, n);
+    return (null === (r = d.Z.getChannel(n)) || void 0 === r ? !void 0 : !r.isListenModeCapable()) || s.ZP.isSpeaker(e, n);
 }
-function T(e) {
+function b(e) {
     return (0, l.gf)(e) === l.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 }
-class b extends a.Z {
+class I extends a.Z {
     handleVoiceChannelSelect(e) {
         let { channelId: n } = e;
         null == n && (E = null);
@@ -47,12 +47,12 @@ class b extends a.Z {
         let { voiceStates: n } = e;
         n.forEach((e) => {
             let { userId: n, channelId: r } = e;
-            if (null != r && c.default.getId() === n && null != _.Z.getRTCConnectionId() && E !== r) {
-                if (I(n, r)) {
+            if (null != r && c.default.getId() === n && null != p.Z.getRTCConnectionId() && E !== r) {
+                if (y(n, r)) {
                     (E = r), v();
                     return;
                 }
-                T(new u.Z(e)) && ((E = r), v());
+                b(new u.Z(e)) && ((E = r), v());
             }
         });
     }
@@ -64,4 +64,4 @@ class b extends a.Z {
             });
     }
 }
-n.Z = new b();
+n.Z = new I();

@@ -1,13 +1,13 @@
 var i,
     a = r(442837),
-    s = r(433517),
-    o = r(780384),
+    o = r(433517),
+    s = r(780384),
     l = r(570140),
     u = r(695346),
     c = r(581883),
     d = r(12647),
     f = r(981631),
-    _ = r(959517);
+    p = r(959517);
 function h(e, n, r) {
     return (
         n in e
@@ -21,7 +21,7 @@ function h(e, n, r) {
         e
     );
 }
-let p = {
+let _ = {
         fontSize: f.yqN.FONT_SIZE_DEFAULT,
         zoom: f.yqN.ZOOM_DEFAULT,
         keyboardModeEnabled: !1,
@@ -45,7 +45,7 @@ let p = {
         syncProfileThemeWithUserTheme: !1,
         hideGuildTags: !1
     },
-    m = p,
+    m = _,
     g = {
         12: 'font-size-12',
         14: 'font-size-14',
@@ -63,21 +63,21 @@ function v(e) {
     if (n > f.yqN.FONT_SIZE_MAX || n < f.yqN.FONT_SIZE_MIN || m.fontSize === n) return !1;
     (m = { ...m }).fontSize = n;
 }
-function I(e) {
+function y(e) {
     if (e.zoom < f.yqN.ZOOM_MIN || e.zoom > f.yqN.ZOOM_MAX || m.zoom === e.zoom) return !1;
     ((m = { ...m }).zoom = e.zoom), d.Z.setZoomFactor(m.zoom);
 }
-function T() {
+function b() {
     let e = m.fontSize !== f.yqN.FONT_SIZE_DEFAULT,
         n = m.zoom !== f.yqN.ZOOM_DEFAULT;
     if (!e && !n) return !1;
     (m = { ...m }).fontSize !== f.yqN.FONT_SIZE_DEFAULT && (m.fontSize = f.yqN.FONT_SIZE_DEFAULT), m.zoom !== f.yqN.ZOOM_DEFAULT && ((m.zoom = f.yqN.ZOOM_DEFAULT), d.Z.setZoomFactor(m.zoom));
 }
-function b() {
+function I() {
     if (m.keyboardModeEnabled) return !1;
     (m = { ...m }).keyboardModeEnabled = !0;
 }
-function y() {
+function T() {
     if (!m.keyboardModeEnabled) return !1;
     (m = { ...m }).keyboardModeEnabled = !1;
 }
@@ -87,10 +87,10 @@ function S() {
 function A() {
     (m = { ...m }).lowContrastMode = !m.lowContrastMode;
 }
-function N(e) {
+function C(e) {
     m.syncForcedColors = e.syncForcedColors;
 }
-function C(e) {
+function N(e) {
     (m = { ...m }).saturation = e.saturation;
 }
 function R() {
@@ -102,10 +102,10 @@ function O(e) {
 function D() {
     (m = { ...m }).submitButtonEnabled = !m.submitButtonEnabled;
 }
-function L() {
+function x() {
     (m = { ...m }).syncProfileThemeWithUserTheme = !m.syncProfileThemeWithUserTheme;
 }
-function x(e) {
+function L(e) {
     if (m.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
     m = {
         ...m,
@@ -158,14 +158,14 @@ function G() {
         keyboardNavigationExplainerModalSeen: !0
     };
 }
-function F(e) {
+function Z(e) {
     let { messageGroupSpacing: n } = e;
     m = {
         ...m,
         messageGroupSpacing: n
     };
 }
-function Z(e) {
+function F(e) {
     let { contrast: n } = e;
     m = {
         ...m,
@@ -184,11 +184,11 @@ class j extends (i = a.ZP.DeviceSettingsStore) {
         this.waitFor(c.Z),
             isNaN(
                 (m = {
-                    ...p,
+                    ..._,
                     ...(null != e ? e : null)
                 }).fontSize
             ) && (m.fontSize = f.yqN.FONT_SIZE_DEFAULT),
-            0 > _.fP.indexOf(null != m.messageGroupSpacing ? m.messageGroupSpacing : -1) && (m.messageGroupSpacing = null);
+            0 > p.fP.indexOf(null != m.messageGroupSpacing ? m.messageGroupSpacing : -1) && (m.messageGroupSpacing = null);
     }
     get fontScale() {
         return (m.fontSize / f.yqN.FONT_SIZE_DEFAULT) * 100;
@@ -241,14 +241,14 @@ class j extends (i = a.ZP.DeviceSettingsStore) {
         return m.keyboardNavigationExplainerModalSeen;
     }
     get messageGroupSpacing() {
-        return null != m.messageGroupSpacing ? m.messageGroupSpacing : u.jU.getSetting() ? _.c8 : _.pq;
+        return null != m.messageGroupSpacing ? m.messageGroupSpacing : u.jU.getSetting() ? p.c8 : p.pq;
     }
     get isMessageGroupSpacingIncreased() {
-        let e = u.jU.getSetting() ? _.c8 : _.pq;
+        let e = u.jU.getSetting() ? p.c8 : p.pq;
         return this.messageGroupSpacing > e;
     }
     get isMessageGroupSpacingDecreased() {
-        let e = u.jU.getSetting() ? _.c8 : _.pq;
+        let e = u.jU.getSetting() ? p.c8 : p.pq;
         return this.messageGroupSpacing < e;
     }
     get isSubmitButtonEnabled() {
@@ -308,17 +308,17 @@ h(j, 'displayName', 'AccessibilityStore'),
             let e = 'a11yFontScale',
                 n = 'a11yZoom',
                 r = 'a11yColorblindMode',
-                i = s.K.get(e) || 100,
-                a = s.K.get(n) || f.yqN.ZOOM_DEFAULT,
-                o = s.K.get(r) || !1;
+                i = o.K.get(e) || 100,
+                a = o.K.get(n) || f.yqN.ZOOM_DEFAULT,
+                s = o.K.get(r) || !1;
             return (
-                s.K.remove(e),
-                s.K.remove(n),
-                s.K.remove(r),
+                o.K.remove(e),
+                o.K.remove(n),
+                o.K.remove(r),
                 {
                     fontScale: i,
                     zoom: a,
-                    colorblindMode: o,
+                    colorblindMode: s,
                     keyboardModeEnabled: !1
                 }
             );
@@ -365,7 +365,7 @@ h(j, 'displayName', 'AccessibilityStore'),
         }),
         (e) => ({
             ...e,
-            alwaysShowLinkDecorations: e.saturation <= o.AE
+            alwaysShowLinkDecorations: e.saturation <= s.AE
         }),
         (e) => ({
             ...e,
@@ -380,28 +380,28 @@ h(j, 'displayName', 'AccessibilityStore'),
     ]);
 let H = new j(l.Z, {
     ACCESSIBILITY_SET_FONT_SIZE: v,
-    ACCESSIBILITY_SET_ZOOM: I,
-    ACCESSIBILITY_RESET_TO_DEFAULT: T,
-    ACCESSIBILITY_KEYBOARD_MODE_ENABLE: b,
-    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: y,
+    ACCESSIBILITY_SET_ZOOM: y,
+    ACCESSIBILITY_RESET_TO_DEFAULT: b,
+    ACCESSIBILITY_KEYBOARD_MODE_ENABLE: I,
+    ACCESSIBILITY_KEYBOARD_MODE_DISABLE: T,
     ACCESSIBILITY_COLORBLIND_TOGGLE: S,
     ACCESSIBILITY_LOW_CONTRAST_TOGGLE: A,
-    ACCESSIBILITY_SET_SATURATION: C,
+    ACCESSIBILITY_SET_SATURATION: N,
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: R,
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: U,
     ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: M,
-    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: x,
+    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: L,
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: w,
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: P,
-    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: N,
+    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: C,
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: k,
     ACCESSIBILITY_SET_ROLE_STYLE: O,
     ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: B,
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: G,
-    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: F,
+    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: Z,
     ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: D,
-    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: L,
-    ACCESSIBILITY_SET_CONTRAST: Z,
+    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: x,
+    ACCESSIBILITY_SET_CONTRAST: F,
     ACCESSIBILITY_SET_HIDE_TAGS: V
 });
 n.Z = H;

@@ -1,16 +1,16 @@
 r.d(n, {
     _: function () {
-        return s;
+        return o;
     },
     g: function () {
-        return o;
+        return s;
     }
 });
 var i = r(601964),
     a = r(981631);
-let s = '373',
-    o = new i.ZP({
-        id: s,
+let o = '373',
+    s = new i.ZP({
+        id: o,
         name: 'Favorites',
         description: 'The place for all your favorite channels!',
         ownerId: '234',

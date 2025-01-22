@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(846519),
-    s = r(570140),
-    o = r(147913);
+    o = r(570140),
+    s = r(147913);
 function l(e, n, r) {
     return (
         n in e
@@ -16,7 +16,7 @@ function l(e, n, r) {
     );
 }
 let u = 3000;
-class c extends o.Z {
+class c extends s.Z {
     _terminate() {
         this.clearErrorTimeout.stop();
     }
@@ -25,7 +25,7 @@ class c extends o.Z {
             l(this, 'clearErrorTimeout', new a.V7()),
             l(this, 'actions', { MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: () => this.handleNoiseCancellationError() }),
             l(this, 'handleNoiseCancellationError', () => {
-                this.clearErrorTimeout.start(u, () => s.Z.dispatch({ type: 'MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET' }));
+                this.clearErrorTimeout.start(u, () => o.Z.dispatch({ type: 'MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET' }));
             });
     }
 }

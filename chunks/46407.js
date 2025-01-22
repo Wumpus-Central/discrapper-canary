@@ -6,12 +6,12 @@ function n(e) {
             literal: 'false true'
         },
         a = e.COMMENT('%', '$'),
-        s = {
+        o = {
             className: 'number',
             begin: '\\b(\\d+(_\\d+)*#[a-fA-F0-9]+(_[a-fA-F0-9]+)*|\\d+(_\\d+)*(\\.\\d+(_\\d+)*)?([eE][-+]?\\d+)?)',
             relevance: 0
         },
-        o = { begin: 'fun\\s+' + n + '/\\d+' },
+        s = { begin: 'fun\\s+' + n + '/\\d+' },
         l = {
             begin: r + '\\(',
             end: '\\)',
@@ -60,7 +60,7 @@ function n(e) {
                 }
             ]
         },
-        _ = {
+        p = {
             scope: 'string',
             match: /\$(\\([^0-9]|[0-9]{1,3}|)|.)/
         },
@@ -68,7 +68,7 @@ function n(e) {
             scope: 'string',
             match: /"""("*)(?!")[\s\S]*?"""\1/
         },
-        p = {
+        _ = {
             scope: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -120,8 +120,8 @@ function n(e) {
             end: 'end',
             keywords: i
         };
-    m.contains = [a, o, e.inherit(e.APOS_STRING_MODE, { className: '' }), m, l, p, h, e.QUOTE_STRING_MODE, s, u, c, d, f, _];
-    let g = [a, o, m, l, p, h, e.QUOTE_STRING_MODE, s, u, c, d, f, _];
+    m.contains = [a, s, e.inherit(e.APOS_STRING_MODE, { className: '' }), m, l, _, h, e.QUOTE_STRING_MODE, o, u, c, d, f, p];
+    let g = [a, s, m, l, _, h, e.QUOTE_STRING_MODE, o, u, c, d, f, p];
     (l.contains[1].contains = g), (u.contains = g), (f.contains[1].contains = g);
     let E = ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-moduledoc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec', '-on_load', '-nifs'],
         v = {
@@ -160,17 +160,17 @@ function n(e) {
                     $pattern: '-' + e.IDENT_RE,
                     keyword: E.map((e) => `${e}|1.5`).join(' ')
                 },
-                contains: [v, p, h, e.QUOTE_STRING_MODE]
+                contains: [v, _, h, e.QUOTE_STRING_MODE]
             },
-            s,
-            p,
+            o,
+            _,
             h,
             e.QUOTE_STRING_MODE,
             f,
             c,
             d,
             u,
-            _,
+            p,
             { begin: /\.$/ }
         ]
     };

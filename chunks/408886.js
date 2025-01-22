@@ -1,6 +1,6 @@
 var i = r(47120);
 var a = r(192379);
-let s = () => {
+let o = () => {
     let [e, n] = (0, a.useState)(null);
     return (
         (0, a.useEffect)(() => {
@@ -10,4 +10,4 @@ let s = () => {
         e
     );
 };
-n.Z = s;
+n.Z = o;

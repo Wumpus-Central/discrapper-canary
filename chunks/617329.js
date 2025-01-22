@@ -5,10 +5,10 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(348288);
-function s(e, n) {
-    return d(e) || c(e, n) || l(e, n) || o();
+function o(e, n) {
+    return d(e) || c(e, n) || l(e, n) || s();
 }
-function o() {
+function s() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
 function l(e, n) {
@@ -29,16 +29,16 @@ function c(e, n) {
         var r = [],
             i = !0,
             a = !1,
-            s = void 0;
+            o = void 0;
         try {
-            for (var o, l = e[Symbol.iterator](); !(i = (o = l.next()).done) && (r.push(o.value), !n || r.length !== n); i = !0);
+            for (var s, l = e[Symbol.iterator](); !(i = (s = l.next()).done) && (r.push(s.value), !n || r.length !== n); i = !0);
         } catch (e) {
-            (a = !0), (s = e);
+            (a = !0), (o = e);
         } finally {
             try {
                 !i && null != l.return && l.return();
             } finally {
-                if (a) throw s;
+                if (a) throw o;
             }
         }
         return r;
@@ -48,15 +48,15 @@ function d(e) {
     if (Array.isArray(e)) return e;
 }
 var f = function () {
-    var e = s((0, i.useState)(!1), 2),
+    var e = o((0, i.useState)(!1), 2),
         n = e[0],
         r = e[1],
-        o = (0, i.useContext)(a.L);
+        s = (0, i.useContext)(a.L);
     return (
         (0, i.useEffect)(
             function () {
                 var e,
-                    n = null == o ? void 0 : null === (e = o.dragDropManager) || void 0 === e ? void 0 : e.getBackend(),
+                    n = null == s ? void 0 : null === (e = s.dragDropManager) || void 0 === e ? void 0 : e.getBackend(),
                     i = {
                         backendChanged: function (e) {
                             r(e.previewEnabled());
@@ -70,7 +70,7 @@ var f = function () {
                     }
                 );
             },
-            [o, o.dragDropManager]
+            [s, s.dragDropManager]
         ),
         n
     );

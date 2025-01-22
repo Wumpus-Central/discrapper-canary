@@ -1,9 +1,9 @@
-var r = n(67867),
-    o = n(595069);
-r(
+var i = r(67867),
+    a = r(595069);
+i(
     {
         global: !0,
-        forced: parseInt !== o
+        forced: parseInt !== a
     },
-    { parseInt: o }
+    { parseInt: a }
 );

@@ -1,10 +1,10 @@
 r.r(n),
     r.d(n, {
         assign: function () {
-            return p;
+            return _;
         },
         batchedUpdates: function () {
-            return _;
+            return p;
         },
         colorNames: function () {
             return c;
@@ -33,9 +33,9 @@ r.r(n),
     });
 var i,
     a,
-    s = r(19784),
-    o = r(217348),
-    l = new s.V(),
+    o = r(19784),
+    s = r(217348),
+    l = new o.V(),
     u = function () {
         return performance.now();
     },
@@ -47,11 +47,11 @@ var i,
             : function () {
                   return -1;
               },
-    _ = function (e) {
+    p = function (e) {
         return e();
     },
-    h = o.ZT,
-    p = function (e) {
+    h = s.ZT,
+    _ = function (e) {
         var n;
         return (
             (a = (n = Object.assign(
@@ -63,7 +63,7 @@ var i,
                     skipAnimation: d,
                     createStringInterpolator: i,
                     requestAnimationFrame: f,
-                    batchedUpdates: _,
+                    batchedUpdates: p,
                     willAdvance: h
                 },
                 m(e)
@@ -74,7 +74,7 @@ var i,
             (d = n.skipAnimation),
             (i = n.createStringInterpolator),
             (f = n.requestAnimationFrame),
-            (_ = n.batchedUpdates),
+            (p = n.batchedUpdates),
             (h = n.willAdvance),
             n
         );

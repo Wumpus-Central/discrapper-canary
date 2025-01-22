@@ -1,6 +1,6 @@
 r.d(n, {
     IH: function () {
-        return o;
+        return s;
     },
     qC: function () {
         return l;
@@ -8,10 +8,10 @@ r.d(n, {
 });
 var i = r(653041);
 let a = 10,
-    s = [];
-function o(e) {
-    for (s.push(e); s.length > a; ) s.shift();
+    o = [];
+function s(e) {
+    for (o.push(e); o.length > a; ) o.shift();
 }
 function l() {
-    return s.join(' -> ');
+    return o.join(' -> ');
 }

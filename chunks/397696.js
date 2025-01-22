@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(411104);
-var s = r(230367),
-    o = r(320215),
+var o = r(230367),
+    s = r(320215),
     l = r(240773),
     u = r(495852);
 class c extends u.C {
@@ -21,14 +21,14 @@ class c extends u.C {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, o.l)(this, n, e),
+            void 0 !== e && (0, s.l)(this, n, e),
             n
         );
     }
     internalBinaryRead(e, n, r, i) {
         let a = null != i ? i : this.create(),
-            o = e.pos + n;
-        for (; e.pos < o; ) {
+            s = e.pos + n;
+        for (; e.pos < s; ) {
             let [n, i] = e.tag();
             switch (n) {
                 case 1:
@@ -41,18 +41,18 @@ class c extends u.C {
                     a.dataVersion = e.uint32();
                     break;
                 default:
-                    let o = r.readUnknownField;
-                    if ('throw' === o) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                    let s = r.readUnknownField;
+                    if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
                     let l = e.skip(i);
-                    !1 !== o && (!0 === o ? s.z.onRead : o)(this.typeName, a, n, i, l);
+                    !1 !== s && (!0 === s ? o.z.onRead : s)(this.typeName, a, n, i, l);
             }
         }
         return a;
     }
     internalBinaryWrite(e, n, r) {
-        0 !== e.clientVersion && n.tag(1, s.TD.Varint).uint32(e.clientVersion), 0 !== e.serverVersion && n.tag(2, s.TD.Varint).uint32(e.serverVersion), 0 !== e.dataVersion && n.tag(3, s.TD.Varint).uint32(e.dataVersion);
+        0 !== e.clientVersion && n.tag(1, o.TD.Varint).uint32(e.clientVersion), 0 !== e.serverVersion && n.tag(2, o.TD.Varint).uint32(e.serverVersion), 0 !== e.dataVersion && n.tag(3, o.TD.Varint).uint32(e.dataVersion);
         let i = r.writeUnknownFields;
-        return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, n), n;
+        return !1 !== i && (!0 == i ? o.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('discord_protos.discord_users.v1.Versions', [

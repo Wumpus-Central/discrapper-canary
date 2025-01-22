@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(259630),
     a = r(52948),
-    s = r(968735),
-    o = r(548097),
+    o = r(968735),
+    s = r(548097),
     l = ['type', 'style'],
     u = Date.now();
 function c(e) {
@@ -26,24 +26,24 @@ function d(e, n, r, i) {
 function f(e, n, r, u) {
     var d = e.locale,
         f = e.onError;
-    void 0 === u && (u = {}), !Intl.ListFormat && f(new s.u_('Intl.ListFormat is not available in this environment.\nTry polyfilling it using "@formatjs/intl-listformat"\n', s.jK.MISSING_INTL_API));
-    var _ = (0, a.L6)(u, l);
+    void 0 === u && (u = {}), !Intl.ListFormat && f(new o.u_('Intl.ListFormat is not available in this environment.\nTry polyfilling it using "@formatjs/intl-listformat"\n', o.jK.MISSING_INTL_API));
+    var p = (0, a.L6)(u, l);
     try {
         var h = {},
-            p = r.map(function (e, n) {
+            _ = r.map(function (e, n) {
                 if ('object' == typeof e) {
                     var r = c(n);
                     return (h[r] = e), r;
                 }
                 return String(e);
             });
-        return n(d, _)
-            .formatToParts(p)
+        return n(d, p)
+            .formatToParts(_)
             .map(function (e) {
                 return 'literal' === e.type ? e : (0, i.pi)((0, i.pi)({}, e), { value: h[e.value] || e.value });
             });
     } catch (e) {
-        f(new o.Qe('Error formatting list.', d, e));
+        f(new s.Qe('Error formatting list.', d, e));
     }
     return r;
 }

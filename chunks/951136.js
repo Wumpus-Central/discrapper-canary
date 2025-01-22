@@ -1,11 +1,11 @@
 r.d(n, {
     T: function () {
-        return s;
+        return o;
     }
 });
 var i = r(304329),
     a = r(977584),
-    s = function (e) {
+    o = function (e) {
         i.C.forEach(function (n) {
             n.activeTargets.splice(0, n.activeTargets.length),
                 n.skippedTargets.splice(0, n.skippedTargets.length),

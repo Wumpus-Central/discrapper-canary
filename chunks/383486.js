@@ -9,32 +9,32 @@ var i =
                       n(e);
                   });
         }
-        return new (r || (r = Promise))(function (r, s) {
-            function o(e) {
+        return new (r || (r = Promise))(function (r, o) {
+            function s(e) {
                 try {
                     u(i.next(e));
                 } catch (e) {
-                    s(e);
+                    o(e);
                 }
             }
             function l(e) {
                 try {
                     u(i.throw(e));
                 } catch (e) {
-                    s(e);
+                    o(e);
                 }
             }
             function u(e) {
-                e.done ? r(e.value) : a(e.value).then(o, l);
+                e.done ? r(e.value) : a(e.value).then(s, l);
             }
             u((i = i.apply(e, n || [])).next());
         });
     };
 Object.defineProperty(n, '__esModule', { value: !0 }), (n.MessageLoader = void 0), (n.loadAllMessagesInLocale = l), (n.waitForAllDefaultIntlMessagesLoaded = u), (n.createLoader = c);
 let a = r(17239);
-class s {
-    constructor(n, r, s) {
-        if (((this.messageKeys = n), (this.messages = {}), (this.localeImportMap = r), (this.supportedLocales = Object.keys(r)), (this.defaultLocale = s), (this._localeLoadingPromises = {}), (this._parseCache = {}), (this._subscribers = new Set()), (this.fallbackMessage = new a.InternalIntlMessage([], this.defaultLocale)), e.hot))
+class o {
+    constructor(n, r, o) {
+        if (((this.messageKeys = n), (this.messages = {}), (this.localeImportMap = r), (this.supportedLocales = Object.keys(r)), (this.defaultLocale = o), (this._localeLoadingPromises = {}), (this._parseCache = {}), (this._subscribers = new Set()), (this.fallbackMessage = new a.InternalIntlMessage([], this.defaultLocale)), e.hot))
             for (let [n, a] of Object.entries(r))
                 e.hot.accept(a, () =>
                     i(this, void 0, void 0, function* () {
@@ -52,22 +52,22 @@ class s {
         let i = this.getMessageValue(e, this.defaultLocale);
         if (null != i) return i;
         let a = null != this._debugKeyMap ? `"${this._debugKeyMap[e]}" (${e})` : void 0,
-            s = null != this._localeFileMap ? `${n} (${this._localeFileMap[n]})` : n,
-            o = null != this._localeFileMap ? `${this.defaultLocale} (${this._localeFileMap[this.defaultLocale]})` : this.defaultLocale;
-        return console.warn(`Requested message ${a} does not have a value in the requested locale ${s} nor the default locale ${o}`), this.fallbackMessage;
+            o = null != this._localeFileMap ? `${n} (${this._localeFileMap[n]})` : n,
+            s = null != this._localeFileMap ? `${this.defaultLocale} (${this._localeFileMap[this.defaultLocale]})` : this.defaultLocale;
+        return console.warn(`Requested message ${a} does not have a value in the requested locale ${o} nor the default locale ${s}`), this.fallbackMessage;
     }
     getMessageValue(e, n) {
-        var r, i, s;
-        let o = null === (r = this._parseCache[n]) || void 0 === r ? void 0 : r[e];
-        if (o) return o;
+        var r, i, o;
+        let s = null === (r = this._parseCache[n]) || void 0 === r ? void 0 : r[e];
+        if (s) return s;
         if (null == this.messages[n]) {
             this.supportedLocales.includes(n) && this._loadLocale(n);
             return;
         }
         if (e in this.messages[n]) {
             let r = this.messages[n][e],
-                o = new a.InternalIntlMessage(r, n);
-            return ((null !== (i = (s = this._parseCache)[n]) && void 0 !== i ? i : (s[n] = {}))[e] = o), o;
+                s = new a.InternalIntlMessage(r, n);
+            return ((null !== (i = (o = this._parseCache)[n]) && void 0 !== i ? i : (o[n] = {}))[e] = s), s;
         }
     }
     getBinds() {
@@ -87,13 +87,13 @@ class s {
                 if (!this.supportedLocales.includes(e)) return;
                 throw Error(`Requested to load locale ${e}, which should be supported, but no source for translation data was provided.`);
             }
-            let s = this.localeImportMap[e](),
-                o = null !== (a = null === (i = this._localeLoadingPromises[e]) || void 0 === i ? void 0 : i.initialized) && void 0 !== a && a;
+            let o = this.localeImportMap[e](),
+                s = null !== (a = null === (i = this._localeLoadingPromises[e]) || void 0 === i ? void 0 : i.initialized) && void 0 !== a && a;
             (this._localeLoadingPromises[e] = {
-                initialized: o,
-                current: s
+                initialized: s,
+                current: o
             }),
-                (this.messages[e] = (yield s).default),
+                (this.messages[e] = (yield o).default),
                 (this._localeLoadingPromises[e] = {
                     initialized: !0,
                     current: void 0
@@ -128,19 +128,19 @@ class s {
         });
     }
 }
-n.MessageLoader = s;
-let o = [];
+n.MessageLoader = o;
+let s = [];
 function l(e) {
     return i(this, void 0, void 0, function* () {
-        yield Promise.all(o.map((n) => n._loadLocale(e)));
+        yield Promise.all(s.map((n) => n._loadLocale(e)));
     });
 }
 function u() {
     return i(this, void 0, void 0, function* () {
-        yield Promise.all(o.map((e) => e.waitForDefaultLocale()));
+        yield Promise.all(s.map((e) => e.waitForDefaultLocale()));
     });
 }
 function c(e, n, r) {
-    let i = new s(e, n, r);
-    return o.push(i), i;
+    let i = new o(e, n, r);
+    return s.push(i), i;
 }

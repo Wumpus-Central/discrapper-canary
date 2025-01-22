@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     Z: function () {
-        return D;
+        return B;
     }
 }),
     n(47120);
@@ -36,15 +36,15 @@ var i,
     O = n(63487),
     R = n(547283),
     P = n(981631),
-    y = n(388032),
-    B = n(525319);
-function D(e) {
+    D = n(388032),
+    y = n(525319);
+function B(e) {
     var t, n, i, r, o;
     let { subscription: u, navigateToSwitchPlan: p, loadingState: x } = e,
         T = null === (t = u.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
         { renewalMutations: j, planId: R } = u,
         {
-            appId: D,
+            appId: B,
             plan: F,
             storeListing: U,
             price: V,
@@ -84,7 +84,7 @@ function D(e) {
             },
             [T, R, j, u]
         ),
-        { data: K } = (0, f.IX)(D),
+        { data: K } = (0, f.IX)(B),
         q = a.useMemo(() => (null != K ? (0, h.y)(K, 100) : null), [K]),
         Q = null !== (n = null == Y ? void 0 : Y.deleted) && void 0 !== n && n,
         X = null != Y && (0, A.OL)(Y),
@@ -99,18 +99,18 @@ function D(e) {
         et = (0, O.p)(u.currentPeriodEnd),
         en = 0 === x;
     return (0, s.jsxs)(l.l, {
-        headerClassName: B.headerWrapper,
+        headerClassName: y.headerWrapper,
         header:
             !1 === en
                 ? (0, s.jsxs)(s.Fragment, {
                       children: [
                           (0, s.jsxs)('div', {
-                              className: B.headerContent,
+                              className: y.headerContent,
                               children: [
                                   null != q &&
                                       (0, s.jsx)(d.Image, {
                                           src: q.href,
-                                          imageClassName: B.appIcon,
+                                          imageClassName: y.appIcon,
                                           width: 40,
                                           height: 40
                                       }),
@@ -118,19 +118,19 @@ function D(e) {
                                       children: [
                                           (0, s.jsx)(d.Heading, {
                                               variant: 'heading-md/semibold',
-                                              children: null !== (i = null == K ? void 0 : K.name) && void 0 !== i ? i : y.intl.string(y.t['7kqy7e'])
+                                              children: null !== (i = null == K ? void 0 : K.name) && void 0 !== i ? i : D.intl.string(D.t['7kqy7e'])
                                           }),
                                           (0, s.jsx)(d.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'header-secondary',
-                                              children: null !== (r = null == F ? void 0 : F.name) && void 0 !== r ? r : y.intl.string(y.t.sqkbMD)
+                                              children: null !== (r = null == F ? void 0 : F.name) && void 0 !== r ? r : D.intl.string(D.t.sqkbMD)
                                           })
                                       ]
                                   })
                               ]
                           }),
                           (0, s.jsx)('div', {
-                              className: B.headerButtons,
+                              className: y.headerButtons,
                               children:
                                   null != K &&
                                   null != U &&
@@ -152,33 +152,33 @@ function D(e) {
             W &&
                 (0, s.jsx)(M, {
                     type: 'warning',
-                    title: X ? y.intl.formatToPlainString(y.t.QOnM19, { subscriptionPeriodEnd: et }) : y.intl.formatToPlainString(y.t.HOaZu7, { subscriptionPeriodEnd: et })
+                    title: X ? D.intl.formatToPlainString(D.t.QOnM19, { subscriptionPeriodEnd: et }) : D.intl.formatToPlainString(D.t.HOaZu7, { subscriptionPeriodEnd: et })
                 }),
             J &&
                 (0, s.jsx)(M, {
                     type: 'danger',
-                    title: y.intl.string(y.t.fvOqBg)
+                    title: D.intl.string(D.t.fvOqBg)
                 }),
             (0, s.jsxs)('div', {
-                className: B.details,
+                className: y.details,
                 children: [
                     (0, s.jsx)(L, {
-                        title: y.intl.string(y.t['5D/KEB']),
+                        title: D.intl.string(D.t['5D/KEB']),
                         content: G
                             ? (0, s.jsxs)(s.Fragment, {
                                   children: [
                                       (0, s.jsxs)('span', {
-                                          className: B.subscriptionTypeRow,
-                                          children: [(0, s.jsx)(d.ServerIcon, { size: 'xs' }), y.intl.string(y.t.QjL3vr)]
+                                          className: y.subscriptionTypeRow,
+                                          children: [(0, s.jsx)(d.ServerIcon, { size: 'xs' }), D.intl.string(D.t.QjL3vr)]
                                       }),
                                       null != H &&
                                           (0, s.jsxs)('span', {
-                                              className: B.guildSubscriptionContentRow,
+                                              className: y.guildSubscriptionContentRow,
                                               children: [
                                                   (0, s.jsx)(d.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'text-muted',
-                                                      children: y.intl.format(y.t['7ZD8p6'], { guildName: H.name })
+                                                      children: D.intl.format(D.t['7ZD8p6'], { guildName: H.name })
                                                   }),
                                                   (0, s.jsx)(_.Z, {
                                                       guild: H,
@@ -189,17 +189,17 @@ function D(e) {
                                   ]
                               })
                             : (0, s.jsxs)('span', {
-                                  className: B.subscriptionTypeRow,
-                                  children: [(0, s.jsx)(d.UserIcon, { size: 'xs' }), y.intl.string(y.t['6anEVl'])]
+                                  className: y.subscriptionTypeRow,
+                                  children: [(0, s.jsx)(d.UserIcon, { size: 'xs' }), D.intl.string(D.t['6anEVl'])]
                               })
                     }),
                     null != V &&
                         (0, s.jsx)(L, {
-                            title: y.intl.string(y.t.KI7ER0),
+                            title: D.intl.string(D.t.KI7ER0),
                             content: V
                         }),
                     (0, s.jsx)(L, {
-                        title: y.intl.string(y.t.dnUzb2),
+                        title: D.intl.string(D.t.dnUzb2),
                         content: (0, O.p)(null !== (o = u.createdAt) && void 0 !== o ? o : u.currentPeriodStart)
                     }),
                     (0, s.jsx)(Z, {
@@ -210,9 +210,9 @@ function D(e) {
                 ]
             }),
             (0, s.jsxs)('div', {
-                className: B.payment,
+                className: y.payment,
                 children: [
-                    (0, s.jsx)(d.FormTitle, { children: y.intl.string(y.t.azZaZW) }),
+                    (0, s.jsx)(d.FormTitle, { children: D.intl.string(D.t.azZaZW) }),
                     null != ee &&
                         !(en || 2 === x) &&
                         (0, s.jsx)(C.Z, {
@@ -237,7 +237,7 @@ function Z(e) {
     if (null != i) {
         let e = (0, v.og)((0, v.T4)(i.price, i.currency), i.interval, i.intervalCount);
         return (0, s.jsx)(L, {
-            title: y.intl.string(y.t.hIhAMz),
+            title: D.intl.string(D.t.hIhAMz),
             content: (0, s.jsxs)(s.Fragment, {
                 children: [
                     (0, s.jsx)(d.Text, {
@@ -246,7 +246,7 @@ function Z(e) {
                     }),
                     (0, s.jsx)(d.Text, {
                         variant: 'text-sm/normal',
-                        children: y.intl.format(y.t.MCLbvr, {
+                        children: D.intl.format(D.t.MCLbvr, {
                             planName: i.name,
                             price: e
                         })
@@ -256,14 +256,14 @@ function Z(e) {
         });
     }
     return (0, s.jsx)(L, {
-        title: t ? y.intl.string(y.t.enxcAg) : y.intl.string(y.t['Ms+6Zm']),
+        title: t ? D.intl.string(D.t.enxcAg) : D.intl.string(D.t['Ms+6Zm']),
         content: n
     });
 }
 function L(e) {
     let { title: t, content: n } = e;
     return (0, s.jsxs)('div', {
-        className: B.row,
+        className: y.row,
         children: [
             (0, s.jsx)(d.Text, {
                 variant: 'text-sm/medium',
@@ -271,7 +271,7 @@ function L(e) {
             }),
             (0, s.jsx)(d.Text, {
                 variant: 'text-sm/medium',
-                className: B.rowContent,
+                className: y.rowContent,
                 children: n
             })
         ]
@@ -281,7 +281,7 @@ function M(e) {
     let { type: t, title: n } = e;
     return (0, s.jsx)(d.HelpMessage, {
         messageType: 'warning' === t ? d.HelpMessageTypes.WARNING : d.HelpMessageTypes.ERROR,
-        className: B.noticeBanner,
+        className: y.noticeBanner,
         children: (0, s.jsx)(d.Text, {
             variant: 'text-sm/normal',
             children: n
@@ -316,7 +316,7 @@ function k(e) {
             }
         };
     return (0, s.jsxs)('div', {
-        className: B.managementBtns,
+        className: y.managementBtns,
         children: [
             f
                 ? null
@@ -326,12 +326,12 @@ function k(e) {
                         size: d.Button.Sizes.SMALL,
                         onClick: j,
                         submitting: E,
-                        children: y.intl.string(y.t.QtMnkZ)
+                        children: D.intl.string(D.t.QtMnkZ)
                     })
                   : (0, s.jsx)(d.Button, {
                         color: d.Button.Colors.CUSTOM,
                         size: d.Button.Sizes.SMALL,
-                        className: B.secondaryBtn,
+                        className: y.secondaryBtn,
                         onClick: () => {
                             (0, d.openModalLazy)(async () => {
                                 let { default: e } = await n.e('6284').then(n.bind(n, 257514));
@@ -345,7 +345,7 @@ function k(e) {
                                     });
                             });
                         },
-                        children: y.intl.string(y.t['E8G/tr'])
+                        children: D.intl.string(D.t['E8G/tr'])
                     }),
             v &&
                 null != b &&
@@ -363,7 +363,7 @@ function k(e) {
                             renewalSkuId: h
                         });
                     },
-                    children: y.intl.string(y.t.R74ZBQ)
+                    children: D.intl.string(D.t.R74ZBQ)
                 })
         ]
     });
@@ -373,19 +373,19 @@ function w(e) {
     return (0, s.jsx)(x.Z, {
         children: (e) =>
             (0, s.jsxs)('div', {
-                className: B.benefits,
+                className: y.benefits,
                 children: [
                     (0, s.jsxs)('div', {
-                        className: B.benefitsHeader,
+                        className: y.benefitsHeader,
                         children: [
                             e &&
                                 (0, s.jsx)(d.Text, {
                                     variant: 'text-sm/semibold',
-                                    children: y.intl.string(y.t['mORL6+'])
+                                    children: D.intl.string(D.t['mORL6+'])
                                 }),
                             (0, s.jsx)(x.Z.Toggle, {
-                                className: B.benefitsBtn,
-                                text: e ? y.intl.string(y.t.gsbFAw) : y.intl.string(y.t.Iwjfxc)
+                                className: y.benefitsBtn,
+                                text: e ? D.intl.string(D.t.gsbFAw) : D.intl.string(D.t.Iwjfxc)
                             })
                         ]
                     }),

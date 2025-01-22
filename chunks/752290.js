@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(729357),
-    s = r.n(a),
-    o = r(147913),
+    o = r.n(a),
+    s = r(147913),
     l = r(557177);
 function u(e, n, r) {
     return (
@@ -19,45 +19,45 @@ function u(e, n, r) {
 let c = 100,
     d = 0.5,
     f = 500,
-    _ = (0, l.tu)('vibing_wumpus', 'vibing_wumpus', 0),
+    p = (0, l.tu)('vibing_wumpus', 'vibing_wumpus', 0),
     h = 0,
-    p = 0,
+    _ = 0,
     m = null;
 function g(e, n) {
     let r = Math.round(100 * e),
-        i = Math.round(100 * p),
+        i = Math.round(100 * _),
         a = Math.round(100 * h);
-    (r > 0 && a >= i) || (r < 0 && a <= i) ? (clearInterval(m), 0 === i && null != n && n()) : ((a += r), (h = a / 100), (_.volume = s()(h, 0, d)));
+    (r > 0 && a >= i) || (r < 0 && a <= i) ? (clearInterval(m), 0 === i && null != n && n()) : ((a += r), (h = a / 100), (p.volume = o()(h, 0, d)));
 }
 function E(e) {
-    null != m && clearInterval(m), (p = 0);
-    let n = b();
+    null != m && clearInterval(m), (_ = 0);
+    let n = I();
     m = setInterval(() => {
         g(n, e);
     }, c);
 }
 function v() {
-    null != m && clearInterval(m), _.loop(), (p = d);
-    let e = b();
+    null != m && clearInterval(m), p.loop(), (_ = d);
+    let e = I();
     m = setInterval(() => g(e), c);
 }
-function I() {
-    E(_.pause.bind(_));
-}
-function T() {
-    E(_.stop.bind(_));
+function y() {
+    E(p.pause.bind(p));
 }
 function b() {
-    return (c / f) * (p - h);
+    E(p.stop.bind(p));
 }
-class y extends o.Z {
+function I() {
+    return (c / f) * (_ - h);
+}
+class T extends s.Z {
     constructor(...e) {
         super(...e),
             u(this, 'actions', {
                 VIBING_WUMPUS_PLAY_MUSIC: v,
-                VIBING_WUMPUS_STOP_MUSIC: T,
-                VIBING_WUMPUS_PAUSE_MUSIC: I
+                VIBING_WUMPUS_STOP_MUSIC: b,
+                VIBING_WUMPUS_PAUSE_MUSIC: y
             });
     }
 }
-n.Z = new y();
+n.Z = new T();

@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(442837),
-    o = r(146282),
+    o = r(442837),
+    s = r(146282),
     l = r(327220),
     u = r(959580),
     c = r(371177);
@@ -18,9 +18,9 @@ function d(e, n) {
     return !!(null == r || r.has(n.content_type)) || !1;
 }
 function f(e) {
-    let { feed: n, filters: r } = (0, s.cj)([o.Z], () => ({
-            feed: o.Z.getFeed(e),
-            filters: o.Z.getFilters()
+    let { feed: n, filters: r } = (0, o.cj)([s.Z], () => ({
+            feed: s.Z.getFeed(e),
+            filters: s.Z.getFilters()
         })),
         i = a.useMemo(() => {
             let e = null == n ? void 0 : n.entries.map((e) => e.content);

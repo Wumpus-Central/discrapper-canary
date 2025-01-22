@@ -4,9 +4,9 @@ function r(e, n) {
         if (Array.isArray(e) || (r = i(e)) || (n && e && 'number' == typeof e.length)) {
             r && (e = r);
             var a = 0,
-                s = function () {};
+                o = function () {};
             return {
-                s: s,
+                s: o,
                 n: function () {
                     return a >= e.length
                         ? { done: !0 }
@@ -18,12 +18,12 @@ function r(e, n) {
                 e: function (e) {
                     throw e;
                 },
-                f: s
+                f: o
             };
         }
         throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
     }
-    var o,
+    var s,
         l = !0,
         u = !1;
     return {
@@ -35,13 +35,13 @@ function r(e, n) {
             return (l = e.done), e;
         },
         e: function (e) {
-            (u = !0), (o = e);
+            (u = !0), (s = e);
         },
         f: function () {
             try {
                 !l && null != r.return && r.return();
             } finally {
-                if (u) throw o;
+                if (u) throw s;
             }
         }
     };

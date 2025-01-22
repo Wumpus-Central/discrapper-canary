@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     F: function () {
-        return r;
+        return l;
     },
     n: function () {
-        return o;
+        return u;
     }
-}),
-    n(47120);
-var i = n(474936),
-    l = n(981631);
-let a = new Set([l.Sbl.FRIEND_ANNIVERSARIES_CHAT, l.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON, l.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK]);
-function r(e) {
-    if (e === i.hX.FRIEND_ANNIVERSARY)
+});
+var i = r(47120);
+var a = r(474936),
+    o = r(981631);
+let s = new Set([o.Sbl.FRIEND_ANNIVERSARIES_CHAT, o.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON, o.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK]);
+function l(e) {
+    if (e === a.hX.FRIEND_ANNIVERSARY)
         return {
-            chat: l.Sbl.FRIEND_ANNIVERSARIES_CHAT,
-            actionButton: l.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
-            actionButtonCoachmark: l.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK
+            chat: o.Sbl.FRIEND_ANNIVERSARIES_CHAT,
+            actionButton: o.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+            actionButtonCoachmark: o.Sbl.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK
         };
     return {};
 }
-function o(e) {
-    return a.has(e);
+function u(e) {
+    return s.has(e);
 }

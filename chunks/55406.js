@@ -1,45 +1,45 @@
 let i;
 r.d(n, {
     n: function () {
-        return N;
+        return C;
     }
 });
 var a = r(757143);
-var s = r(477660),
-    o = r.n(s),
+var o = r(477660),
+    s = r.n(o),
     l = r(800927),
     u = r(945884),
     c = r(594199),
     d = r(454585);
-let f = o().defaultRules.lheading,
-    _ = o().defaultRules.heading,
-    h = o().defaultRules.link,
-    p = o().defaultRules.image,
-    m = o().defaultRules.list,
-    g = o().defaultRules.blockQuote,
-    E = o().defaultRules.paragraph,
+let f = s().defaultRules.lheading,
+    p = s().defaultRules.heading,
+    h = s().defaultRules.link,
+    _ = s().defaultRules.image,
+    m = s().defaultRules.list,
+    g = s().defaultRules.blockQuote,
+    E = s().defaultRules.paragraph,
     v = /\{(.+?)}/,
-    I = /^\$(\w+?)\$/;
+    y = /^\$(\w+?)\$/;
 i = r(235375);
-let T = (e) => {
+let b = (e) => {
         let { transformUpperCase: n = !1 } = e;
         return (e, r, i) => {
             let a = v.exec(e[1]),
-                s = e[1].replace(v, '');
+                o = e[1].replace(v, '');
             return (
-                n && (s = s.toUpperCase()),
+                n && (o = o.toUpperCase()),
                 {
                     className: null != a ? a[1] : null,
                     level: '=' === e[2] ? 1 : 2,
-                    content: o().parseInline(r, s, i)
+                    content: s().parseInline(r, o, i)
                 }
             );
         };
     },
-    b = (e) => ({
+    I = (e) => ({
         ...i.baseRules,
         image: {
-            ...p,
+            ..._,
             ...('function' == typeof i.customRules.image ? i.customRules.image(e) : i.customRules.image)
         },
         link: {
@@ -52,7 +52,7 @@ let T = (e) => {
         },
         interpolation: {
             order: c.ZP.order,
-            match: (e) => I.exec(e),
+            match: (e) => y.exec(e),
             parse(e, n, r) {
                 let i = r.interpolations[e[1]];
                 return null == i
@@ -69,11 +69,11 @@ let T = (e) => {
         },
         lheading: {
             ...f,
-            parse: T({ transformUpperCase: !0 }),
+            parse: b({ transformUpperCase: !0 }),
             ...('function' == typeof i.customRules.lheading ? i.customRules.lheading(e) : i.customRules.lheading)
         },
         heading: {
-            ..._,
+            ...p,
             ...('function' == typeof i.customRules.heading ? i.customRules.heading(e) : i.customRules.heading)
         },
         blockQuote: {
@@ -85,24 +85,24 @@ let T = (e) => {
             ...('function' == typeof i.customRules.paragraph ? i.customRules.paragraph(e) : i.customRules.paragraph)
         }
     }),
-    y = (e) => ({
+    T = (e) => ({
         lheading: {
             ...f,
-            parse: T({ transformUpperCase: !1 }),
+            parse: b({ transformUpperCase: !1 }),
             ...('function' == typeof i.customRules.lheading ? i.customRules.lheading(e) : i.customRules.lheading)
         }
     }),
     S = (e) => ({
-        ...b(e),
-        newline: { ...o().defaultRules.newline },
+        ...I(e),
+        newline: { ...s().defaultRules.newline },
         text: c.ZP,
         list: l.Z,
         subtext: u.Z
     });
 function A(e) {
-    return { ...b(e) };
+    return { ...I(e) };
 }
-function N(e, n, r) {
+function C(e, n, r) {
     return {
         hasSpoilerEmbeds: !1,
         content: d.Z.reactParserFor(A(n))(e.content, !1, null != r ? { changeLog: r } : {})
@@ -111,8 +111,8 @@ function N(e, n, r) {
 n.Z = {
     getDefaultRules: A,
     getSpecialRules: (e) => ({
-        ...b(e),
-        ...y(e)
+        ...I(e),
+        ...T(e)
     }),
     getMessageRules: (e) => ({ ...S(e) })
 };

@@ -26,7 +26,7 @@ try {
 try {
     delete window.localStorage;
 } catch (e) {}
-function s() {
+function o() {
     let e = 'test';
     try {
         return i.setItem(e, e), i.removeItem(e), !0;
@@ -34,7 +34,7 @@ function s() {
         return !1;
     }
 }
-class o {
+class s {
     get(e, n) {
         let r = i.getItem(e);
         if (null != r)
@@ -97,4 +97,4 @@ class l {
         a(this, 'storage', void 0), (this.storage = {});
     }
 }
-let u = s() ? new o() : new l();
+let u = o() ? new s() : new l();

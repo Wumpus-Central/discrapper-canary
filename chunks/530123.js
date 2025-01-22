@@ -1,3 +1,3 @@
-n(113640);
-var r = n(974802);
-e.exports = r.Object.freeze;
+r(113640);
+var i = r(974802);
+e.exports = i.Object.freeze;

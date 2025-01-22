@@ -1,17 +1,17 @@
 var i = r(314545),
     a = r(757209),
-    s = r(373640),
-    o = parseFloat,
+    o = r(373640),
+    s = parseFloat,
     l = Math.min,
     u = Math.random;
 function c(e, n, r) {
-    if ((r && 'boolean' != typeof r && a(e, n, r) && (n = r = void 0), void 0 === r && ('boolean' == typeof n ? ((r = n), (n = void 0)) : 'boolean' == typeof e && ((r = e), (e = void 0))), void 0 === e && void 0 === n ? ((e = 0), (n = 1)) : ((e = s(e)), void 0 === n ? ((n = e), (e = 0)) : (n = s(n))), e > n)) {
+    if ((r && 'boolean' != typeof r && a(e, n, r) && (n = r = void 0), void 0 === r && ('boolean' == typeof n ? ((r = n), (n = void 0)) : 'boolean' == typeof e && ((r = e), (e = void 0))), void 0 === e && void 0 === n ? ((e = 0), (n = 1)) : ((e = o(e)), void 0 === n ? ((n = e), (e = 0)) : (n = o(n))), e > n)) {
         var c = e;
         (e = n), (n = c);
     }
     if (r || e % 1 || n % 1) {
         var d = u();
-        return l(e + d * (n - e + o('1e-' + ((d + '').length - 1))), n);
+        return l(e + d * (n - e + s('1e-' + ((d + '').length - 1))), n);
     }
     return i(e, n);
 }

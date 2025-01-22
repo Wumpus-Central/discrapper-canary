@@ -1,15 +1,15 @@
 var i = r(47120);
 var a = r(627494);
-var s = r(757143);
-var o = r(348326),
+var o = r(757143);
+var s = r(348326),
     l = r(710845),
     u = r(38618),
     c = r(592125),
     d = r(287328),
     f = r(59480),
-    _ = r(40455),
+    p = r(40455),
     h = r(989263),
-    p = r(513418);
+    _ = r(513418);
 function m(e, n, r) {
     return (
         n in e
@@ -26,7 +26,7 @@ function m(e, n, r) {
 let g = new l.Z('Messages');
 class E {
     static computeUsersAndMembers(e) {
-        (0, p.Z)(e);
+        (0, _.Z)(e);
         let n = new Map(),
             r = new Map();
         for (let i of e) this.addIntoMap(n, i.users, (e) => e.id), this.addIntoMap(r, i.members, (e) => e.userId);
@@ -65,7 +65,7 @@ class v {
         if (!e.optimistic && !e.isPushNotification && null == e.sendMessageOptions) (0, h.$)(e.channelId) && this.upsertOne(e.guildId, e.channelId, e.message, n);
     }
     handleMessageUpdate(e, n) {
-        if (null != e.message.id && null != e.message.channel_id && !!(0, h.$)(e.message.channel_id)) I(e.message) ? this.upsertOne(e.guildId, e.message.channel_id, e.message, n) : this.updateOne(e.guildId, e.message.channel_id, e.message, n);
+        if (null != e.message.id && null != e.message.channel_id && !!(0, h.$)(e.message.channel_id)) y(e.message) ? this.upsertOne(e.guildId, e.message.channel_id, e.message, n) : this.updateOne(e.guildId, e.message.channel_id, e.message, n);
     }
     handleMessagePreviewsLoaded(e, n) {
         for (let r of e.messages) (0, h.$)(r.channel_id) && this.insertStale(e.guildId, r.channel_id, r, n);
@@ -89,26 +89,26 @@ class v {
     resetInMemoryState() {}
     insertStale(e, n, r, i) {
         let a = d.Z.messagesTransaction(i),
-            s = u.Z.lastTimeConnectedChanged();
-        a.put(e, n, f.a.fromMessage(e, n, r, s), o.Sn.Skip);
+            o = u.Z.lastTimeConnectedChanged();
+        a.put(e, n, f.a.fromMessage(e, n, r, o), s.Sn.Skip);
     }
     upsertOne(e, n, r, i) {
         let a = d.Z.messagesTransaction(i),
-            s = u.Z.lastTimeConnectedChanged();
-        a.put(e, n, f.a.fromMessage(e, n, r, s), o.Sn.Replace), a.trimChannel(e, n, _.ZP.saveLimit(n));
+            o = u.Z.lastTimeConnectedChanged();
+        a.put(e, n, f.a.fromMessage(e, n, r, o), s.Sn.Replace), a.trimChannel(e, n, p.ZP.saveLimit(n));
     }
     upsertMany(e, n, r, i) {
         let a = d.Z.messagesTransaction(i),
-            s = u.Z.lastTimeConnectedChanged();
-        for (let i of r) a.put(e, n, f.a.fromMessage(e, n, i, s));
-        a.trimChannel(e, n, _.ZP.saveLimit(n));
+            o = u.Z.lastTimeConnectedChanged();
+        for (let i of r) a.put(e, n, f.a.fromMessage(e, n, i, o));
+        a.trimChannel(e, n, p.ZP.saveLimit(n));
     }
     replaceAll(e, n, r, i) {
         let a = d.Z.messagesTransaction(i),
-            s = u.Z.lastTimeConnectedChanged(),
-            o = _.ZP.saveLimit(n),
-            l = (r.length > o ? r.slice(r.length - o) : r).map((r) => f.a.fromMessage(e, n, r, s));
-        a.replaceAll(e, n, l), a.trimChannel(e, n, _.ZP.saveLimit(n));
+            o = u.Z.lastTimeConnectedChanged(),
+            s = p.ZP.saveLimit(n),
+            l = (r.length > s ? r.slice(r.length - s) : r).map((r) => f.a.fromMessage(e, n, r, o));
+        a.replaceAll(e, n, l), a.trimChannel(e, n, p.ZP.saveLimit(n));
     }
     async updateOne(e, n, r, i) {
         if (null == r.id) {
@@ -116,9 +116,9 @@ class v {
             return;
         }
         let a = d.Z.messages(i.database),
-            s = await a.get(e, n, r.id),
-            o = u.Z.lastTimeConnectedChanged();
-        null != s &&
+            o = await a.get(e, n, r.id),
+            s = u.Z.lastTimeConnectedChanged();
+        null != o &&
             a.put(
                 e,
                 n,
@@ -126,10 +126,10 @@ class v {
                     e,
                     n,
                     {
-                        ...s.message,
+                        ...o.message,
                         ...r
                     },
-                    o
+                    s
                 )
             );
     }
@@ -155,7 +155,7 @@ class v {
         });
     }
 }
-function I(e) {
+function y(e) {
     return null != e.author && null != e.content && null != e.mentions && null != e.timestamp;
 }
 n.ZP = new v();

@@ -1,11 +1,11 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return l;
+        return a;
     }
 });
-var i = n(563132);
-function l() {
-    let { step: e, stepConfigs: t } = (0, i.usePaymentContext)(),
-        n = t.find((t) => t.key === e);
-    return null == n ? void 0 : n.options;
+var i = r(563132);
+function a() {
+    let { step: e, stepConfigs: n } = (0, i.usePaymentContext)(),
+        r = n.find((n) => n.key === e);
+    return null == r ? void 0 : r.options;
 }

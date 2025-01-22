@@ -1,13 +1,13 @@
-let i, a, s;
-var o,
+let i, a, o;
+var s,
     l = r(47120);
 var u = r(177593);
 var c = r(442837),
     d = r(570140),
     f = r(238514),
-    _ = r(695346),
+    p = r(695346),
     h = r(581883),
-    p = r(283595);
+    _ = r(283595);
 function m(e, n, r) {
     return (
         n in e
@@ -27,37 +27,37 @@ let g = {
     },
     E = g,
     v = new Set(),
-    I = !1;
-function T() {
-    s = null;
-}
+    y = !1;
 function b() {
-    (i = null), (a = null), (v = new Set()), (E.applicationId = null), (E.originURL = null), T();
+    o = null;
 }
-function y(e) {
+function I() {
+    (i = null), (a = null), (v = new Set()), (E.applicationId = null), (E.originURL = null), b();
+}
+function T(e) {
     let { applicationId: n } = e;
-    v.add(n), (s = null);
+    v.add(n), (o = null);
 }
 function S(e) {
     let { applicationId: n, originURL: r } = e;
-    (i = n), (a = r), v.delete(n), (s = null), (E.applicationId = n), (E.originURL = r);
+    (i = n), (a = r), v.delete(n), (o = null), (E.applicationId = n), (E.originURL = r);
 }
 function A(e) {
     let { applicationId: n, error: r } = e;
-    v.delete(n), (s = r);
+    v.delete(n), (o = r);
 }
-function N(e) {
+function C(e) {
     let { testModeApplicationId: n } = e;
     i = n;
 }
-class C extends (o = c.ZP.PersistedStore) {
+class N extends (s = c.ZP.PersistedStore) {
     initialize(e) {
         (i = (E = { ...(null != e ? e : g) }).applicationId),
             (a = E.originURL),
             this.waitFor(h.Z, f.Z),
             this.syncWith([h.Z, f.Z], () => !0),
-            p.Z.whenInitialized(() => {
-                I = !0;
+            _.Z.whenInitialized(() => {
+                y = !0;
             });
     }
     inTestModeForApplication(e) {
@@ -67,7 +67,7 @@ class C extends (o = c.ZP.PersistedStore) {
         return i === e && null != a;
     }
     shouldDisplayTestMode(e) {
-        return _.Sb.getSetting() && this.inTestModeForApplication(e);
+        return p.Sb.getSetting() && this.inTestModeForApplication(e);
     }
     getState() {
         return E;
@@ -88,22 +88,22 @@ class C extends (o = c.ZP.PersistedStore) {
         return a;
     }
     get error() {
-        return s;
+        return o;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (I) return setImmediate(e), !1;
+            if (y) return setImmediate(e), !1;
         });
     }
 }
-m(C, 'displayName', 'TestModeStore'),
-    m(C, 'persistKey', 'TestModeStore'),
-    (n.Z = new C(d.Z, {
-        DEVELOPER_TEST_MODE_AUTHORIZATION_START: y,
+m(N, 'displayName', 'TestModeStore'),
+    m(N, 'persistKey', 'TestModeStore'),
+    (n.Z = new N(d.Z, {
+        DEVELOPER_TEST_MODE_AUTHORIZATION_START: T,
         DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: S,
         DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: A,
-        OVERLAY_INITIALIZE: N,
-        DEVELOPER_TEST_MODE_RESET_ERROR: T,
-        LOGOUT: b,
-        DEVELOPER_TEST_MODE_RESET: b
+        OVERLAY_INITIALIZE: C,
+        DEVELOPER_TEST_MODE_RESET_ERROR: b,
+        LOGOUT: I,
+        DEVELOPER_TEST_MODE_RESET: I
     }));

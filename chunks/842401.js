@@ -1,8 +1,8 @@
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(99690),
-    o = r(388032),
+    o = r(99690),
+    s = r(388032),
     l = r(729093);
 let u = (e) => {
     let { user: n } = e;
@@ -12,14 +12,14 @@ let u = (e) => {
             (0, i.jsx)(a.Heading, {
                 className: l.header,
                 variant: 'heading-sm/semibold',
-                children: o.intl.string(o.t['Rsth7+'])
+                children: s.intl.string(s.t['Rsth7+'])
             }),
             (0, i.jsx)('div', {
                 className: l.userContainer,
                 children: (0, i.jsxs)('div', {
                     className: l.userInfo,
                     children: [
-                        (0, i.jsx)(s.Z, {
+                        (0, i.jsx)(o.Z, {
                             className: l.userIcon,
                             user: n,
                             size: a.AvatarSizes.SIZE_40

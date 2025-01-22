@@ -1,10 +1,10 @@
 var i = r(192379),
     a = r(723184),
-    s = r(877837),
-    o = function (e) {
+    o = r(877837),
+    s = function (e) {
         var n = e.color,
             r = e.onClick,
-            o = e.onSwatchHover,
+            s = e.onSwatchHover,
             l = e.hover,
             u = e.active,
             c = e.circleSize,
@@ -38,17 +38,17 @@ var i = r(192379),
         return i.createElement(
             'div',
             { style: f.swatch },
-            i.createElement(s.m4, {
+            i.createElement(o.m4, {
                 style: f.Swatch,
                 color: n,
                 onClick: r,
-                onHover: o,
+                onHover: s,
                 focusStyle: { boxShadow: f.Swatch.boxShadow + ', 0 0 5px ' + n }
             })
         );
     };
-(o.defaultProps = {
+(s.defaultProps = {
     circleSize: 28,
     circleSpacing: 14
 }),
-    (n.Z = (0, a.handleHover)(o));
+    (n.Z = (0, a.handleHover)(s));

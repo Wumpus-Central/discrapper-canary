@@ -6,8 +6,8 @@ r.r(n),
     });
 var i,
     a = r(192379),
-    s = r(995295);
-function o(e, n) {
+    o = r(995295);
+function s(e, n) {
     (e.prototype = Object.create(n.prototype)), (e.prototype.constructor = e), l(e, n);
 }
 function l(e, n) {
@@ -22,8 +22,8 @@ function u(e, n) {
     var r,
         i,
         a = {},
-        s = Object.keys(e);
-    for (i = 0; i < s.length; i++) (r = s[i]), !(n.indexOf(r) >= 0) && (a[r] = e[r]);
+        o = Object.keys(e);
+    for (i = 0; i < o.length; i++) (r = o[i]), !(n.indexOf(r) >= 0) && (a[r] = e[r]);
     return a;
 }
 function c(e) {
@@ -41,7 +41,7 @@ function f(e, n, r) {
     }
     return e;
 }
-function _(e) {
+function p(e) {
     return document.documentElement.clientWidth <= e.clientX || document.documentElement.clientHeight <= e.clientY;
 }
 var h = function () {
@@ -56,7 +56,7 @@ var h = function () {
             return window.addEventListener('testPassiveEventSupport', r, n), window.removeEventListener('testPassiveEventSupport', r, n), e;
         }
     },
-    p = (function e(e) {
+    _ = (function e(e) {
         return (
             void 0 === e && (e = 0),
             function () {
@@ -68,11 +68,11 @@ var h = function () {
     g = {},
     E = ['touchstart', 'touchmove'],
     v = 'ignore-react-onclickoutside';
-function I(e, n) {
+function y(e, n) {
     var r = {};
     return -1 !== E.indexOf(n) && i && (r.passive = !e.props.preventDefault), r;
 }
-function T(e, n) {
+function b(e, n) {
     var r,
         l,
         d = e.displayName || e.name || 'Component';
@@ -100,7 +100,7 @@ function T(e, n) {
                         }),
                         (a.__getComponentNode = function () {
                             var e = a.getInstance();
-                            return n && 'function' == typeof n.setClickOutsideRef ? n.setClickOutsideRef()(e) : 'function' == typeof e.setClickOutsideRef ? e.setClickOutsideRef() : (0, s.findDOMNode)(e);
+                            return n && 'function' == typeof n.setClickOutsideRef ? n.setClickOutsideRef()(e) : 'function' == typeof e.setClickOutsideRef ? e.setClickOutsideRef() : (0, o.findDOMNode)(e);
                         }),
                         (a.enableOnClickOutside = function () {
                             if ('undefined' != typeof document && !g[a._uid]) {
@@ -109,7 +109,7 @@ function T(e, n) {
                                 !e.forEach && (e = [e]),
                                     (m[a._uid] = function (e) {
                                         if (null !== a.componentNode) {
-                                            if ((a.props.preventDefault && e.preventDefault(), a.props.stopPropagation && e.stopPropagation(), !(a.props.excludeScrollbar && _(e)))) {
+                                            if ((a.props.preventDefault && e.preventDefault(), a.props.stopPropagation && e.stopPropagation(), !(a.props.excludeScrollbar && p(e)))) {
                                                 var n = (e.composed && e.composedPath && e.composedPath().shift()) || e.target;
                                                 if (f(n, a.componentNode, a.props.outsideClickIgnoreClass) !== document) return;
                                                 a.__outsideClickHandler(e);
@@ -117,7 +117,7 @@ function T(e, n) {
                                         }
                                     }),
                                     e.forEach(function (e) {
-                                        document.addEventListener(e, m[a._uid], I(c(a), e));
+                                        document.addEventListener(e, m[a._uid], y(c(a), e));
                                     });
                             }
                         }),
@@ -128,7 +128,7 @@ function T(e, n) {
                                 var n = a.props.eventTypes;
                                 !n.forEach && (n = [n]),
                                     n.forEach(function (n) {
-                                        return document.removeEventListener(n, e, I(c(a), n));
+                                        return document.removeEventListener(n, e, y(c(a), n));
                                     }),
                                     delete m[a._uid];
                             }
@@ -136,11 +136,11 @@ function T(e, n) {
                         (a.getRef = function (e) {
                             return (a.instanceRef = e);
                         }),
-                        (a._uid = p()),
+                        (a._uid = _()),
                         a
                     );
                 }
-                o(l, r);
+                s(l, r);
                 var E = l.prototype;
                 return (
                     (E.getInstance = function () {
@@ -184,4 +184,4 @@ function T(e, n) {
         l
     );
 }
-n.default = T;
+n.default = b;

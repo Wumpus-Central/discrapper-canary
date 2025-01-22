@@ -1,7 +1,7 @@
 var i = r(903425),
     a = r(533206),
-    s = '[object Arguments]';
-function o(e) {
-    return a(e) && i(e) == s;
+    o = '[object Arguments]';
+function s(e) {
+    return a(e) && i(e) == o;
 }
-e.exports = o;
+e.exports = s;

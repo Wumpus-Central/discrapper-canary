@@ -15,13 +15,13 @@ r.d(n, {
         return l;
     },
     ym: function () {
-        return o;
+        return s;
     }
 });
 var i = r(653041);
 var a = r(570140),
-    s = r(509848);
-function o(e, n) {
+    o = r(509848);
+function s(e, n) {
     a.Z.dispatch({
         type: 'GUILD_SUBSCRIPTIONS_MEMBERS_ADD',
         guildId: e,
@@ -56,19 +56,19 @@ function d(e, n, r) {
     });
 }
 function f(e) {
-    let { guildId: n, channelId: r, y: i, height: a, rowHeight: o } = e;
+    let { guildId: n, channelId: r, y: i, height: a, rowHeight: s } = e;
     function l(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Math.max(0, Math.ceil(Math.ceil(e / o)) + n);
+        return Math.max(0, Math.ceil(Math.ceil(e / s)) + n);
     }
     let u = [];
     function c(e) {
-        let n = e + (s.dj - 1);
+        let n = e + (o.dj - 1);
         return u.push([e, n]), n + 1;
     }
     let f = l(0.5 * a),
-        _ = l(i, -f),
+        p = l(i, -f),
         h = l(i + a, f);
-    for (_ > 0 && (_ = Math.max(c(0), _)), _ = Math.floor(_ / s.dj) * s.dj; _ <= h; ) _ = c(_);
+    for (p > 0 && (p = Math.max(c(0), p)), p = Math.floor(p / o.dj) * o.dj; p <= h; ) p = c(p);
     d(n, r, u);
 }

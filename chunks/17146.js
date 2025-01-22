@@ -16,8 +16,8 @@ r.d(n, {
     }
 });
 let a = 3.4028234663852886e38,
-    s = -3.4028234663852886e38,
-    o = 4294967295,
+    o = -3.4028234663852886e38,
+    s = 4294967295,
     l = 2147483647,
     u = -2147483648;
 function c(e) {
@@ -26,9 +26,9 @@ function c(e) {
 }
 function d(e) {
     if ('number' != typeof e) throw Error('invalid uint 32: ' + typeof e);
-    if (!Number.isInteger(e) || e > o || e < 0) throw Error('invalid uint 32: ' + e);
+    if (!Number.isInteger(e) || e > s || e < 0) throw Error('invalid uint 32: ' + e);
 }
 function f(e) {
     if ('number' != typeof e) throw Error('invalid float 32: ' + typeof e);
-    if (Number.isFinite(e) && (e > a || e < s)) throw Error('invalid float 32: ' + e);
+    if (Number.isFinite(e) && (e > a || e < o)) throw Error('invalid float 32: ' + e);
 }

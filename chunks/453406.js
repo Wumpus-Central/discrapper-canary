@@ -1,19 +1,19 @@
-var r = n(67867),
-    o = n(43740),
-    a = n(818140).indexOf,
-    i = n(54659),
-    s = o([].indexOf),
-    c = !!s && 1 / s([1], 1, -0) < 0;
-r(
+var i = r(67867),
+    a = r(43740),
+    o = r(818140).indexOf,
+    s = r(54659),
+    l = a([].indexOf),
+    u = !!l && 1 / l([1], 1, -0) < 0;
+i(
     {
         target: 'Array',
         proto: !0,
-        forced: c || !i('indexOf')
+        forced: u || !s('indexOf')
     },
     {
         indexOf: function (e) {
-            var t = arguments.length > 1 ? arguments[1] : void 0;
-            return c ? s(this, e, t) || 0 : a(this, e, t);
+            var n = arguments.length > 1 ? arguments[1] : void 0;
+            return u ? l(this, e, n) || 0 : o(this, e, n);
         }
     }
 );

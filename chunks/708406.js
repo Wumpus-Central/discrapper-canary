@@ -6,13 +6,13 @@ r.d(n, {
 var i = r(981631);
 function a(e, n, r) {
     let a = null != n ? { [n]: 1 } : {},
-        { offset: s, limit: o, results: l, totalResults: u } = null != r ? r : {};
+        { offset: o, limit: s, results: l, totalResults: u } = null != r ? r : {};
     return {
         search_type: i.aib.GIF,
         load_id: e,
-        limit: o,
-        offset: s,
-        page: null != o && null != s ? Math.floor(s / o) + 1 : 1,
+        limit: s,
+        offset: o,
+        page: null != s && null != o ? Math.floor(o / s) + 1 : 1,
         total_results: u,
         page_results: null != l ? l : null,
         num_modifiers: Object.keys(a).length,

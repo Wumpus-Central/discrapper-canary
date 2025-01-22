@@ -5,12 +5,12 @@ r.d(n, {
 });
 var i = r(570140),
     a = r(626135),
-    s = r(474873),
-    o = r(981631);
+    o = r(474873),
+    s = r(981631);
 function l(e, n) {
-    a.default.track(o.rMx.SOUNDPACK_UPDATED, {
+    a.default.track(s.rMx.SOUNDPACK_UPDATED, {
         soundpack: e,
-        previous_soundpack: s.Z.getSoundpack()
+        previous_soundpack: o.Z.getSoundpack()
     }),
         i.Z.dispatch({
             type: 'SET_SOUNDPACK',

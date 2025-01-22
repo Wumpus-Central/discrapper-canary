@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(200651),
-    o = r(192379);
+var o = r(200651),
+    s = r(192379);
 function l(e, n, r) {
     return (
         n in e
@@ -31,11 +31,11 @@ let u = 'file-input',
         cursor: e ? 'not-allowed' : 'pointer',
         fontSize: 0
     });
-class d extends (i = o.Component) {
+class d extends (i = s.Component) {
     render() {
-        let { disabled: e, tabIndex: n, className: r, name: i, 'aria-label': a, 'aria-hidden': o, id: l } = this.props;
+        let { disabled: e, tabIndex: n, className: r, name: i, 'aria-label': a, 'aria-hidden': s, id: l } = this.props;
         if (this.props.embedded)
-            return (0, s.jsx)('div', {
+            return (0, o.jsx)('div', {
                 role: 'button',
                 style: c(e),
                 className: r || u,
@@ -44,13 +44,13 @@ class d extends (i = o.Component) {
                 onClick: e ? void 0 : this.handleNativeClick,
                 'aria-disabled': e,
                 'aria-label': a,
-                'aria-hidden': o || void 0
+                'aria-hidden': s || void 0
             });
         {
             let d = '';
             return (
                 this.props.filters && (d = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
-                (0, s.jsx)('input', {
+                (0, o.jsx)('input', {
                     id: l,
                     style: c(e),
                     className: r || u,
@@ -63,7 +63,7 @@ class d extends (i = o.Component) {
                     accept: d,
                     name: i,
                     'aria-label': a,
-                    'aria-hidden': o || void 0,
+                    'aria-hidden': s || void 0,
                     ref: (e) => (this._input = e)
                 })
             );

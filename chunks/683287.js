@@ -23,12 +23,12 @@ function n(e) {
             contains: [e.BACKSLASH_ESCAPE],
             relevance: 0
         },
-        s = {
+        o = {
             className: 'type',
             begin: '\\b_?[A-Z][\\w]*',
             relevance: 0
         },
-        o = {
+        s = {
             begin: e.IDENT_RE + "'",
             relevance: 0
         };
@@ -36,11 +36,11 @@ function n(e) {
         name: 'Pony',
         keywords: n,
         contains: [
-            s,
+            o,
             r,
             i,
             a,
-            o,
+            s,
             {
                 className: 'number',
                 begin: '(-?)(\\b0[xX][a-fA-F0-9]+|\\b0[bB][01]+|(\\b\\d+(_\\d+)?(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',

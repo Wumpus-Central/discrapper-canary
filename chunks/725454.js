@@ -402,12 +402,12 @@ var n = {
     r = Object.keys(n).join('|'),
     i = RegExp(r, 'g'),
     a = RegExp(r, ''),
-    s = function (e) {
+    o = function (e) {
         return e.replace(i, function (e) {
             return n[e];
         });
     },
-    o = function (e) {
+    s = function (e) {
         return !!e.match(a);
     };
-(e.exports = s), (e.exports.has = o), (e.exports.remove = s);
+(e.exports = o), (e.exports.has = s), (e.exports.remove = o);

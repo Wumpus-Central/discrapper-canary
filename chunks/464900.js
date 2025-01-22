@@ -1,11 +1,11 @@
 r.d(n, {
     L: function () {
-        return s;
+        return o;
     }
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2024-12_uplift_trial_nux',
     commonTriggerPoint: a.$P.CONNECTION_OPEN,

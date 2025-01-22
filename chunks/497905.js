@@ -1,6 +1,6 @@
 r.d(n, {
     S: function () {
-        return o;
+        return s;
     },
     V: function () {
         return l;
@@ -8,34 +8,34 @@ r.d(n, {
 });
 var i = r(989103),
     a = r(398928),
-    s = r(192379);
-function o(e) {
+    o = r(192379);
+function s(e) {
     let { collection: n, focusMode: r } = e,
-        o = (0, a.q)(e),
-        l = (0, s.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-        u = o.setFocusedKey;
-    o.setFocusedKey = (e, a) => {
+        s = (0, a.q)(e),
+        l = (0, o.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
+        u = s.setFocusedKey;
+    s.setFocusedKey = (e, a) => {
         if ('cell' === r && null != e) {
             let r = n.getItem(e);
             if ((null == r ? void 0 : r.type) === 'item') {
-                var s, o;
+                var o, s;
                 let l = (0, i._P)(r, n);
-                e = 'last' === a ? (null === (s = (0, i.s)(l)) || void 0 === s ? void 0 : s.key) : null === (o = (0, i.l8)(l)) || void 0 === o ? void 0 : o.key;
+                e = 'last' === a ? (null === (o = (0, i.s)(l)) || void 0 === o ? void 0 : o.key) : null === (s = (0, i.l8)(l)) || void 0 === s ? void 0 : s.key;
             }
         }
         u(e, a);
     };
-    let c = (0, s.useMemo)(() => new a.Z(n, o), [n, o]),
-        d = (0, s.useRef)(null);
+    let c = (0, o.useMemo)(() => new a.Z(n, s), [n, s]),
+        d = (0, o.useRef)(null);
     return (
-        (0, s.useEffect)(() => {
-            if (null != o.focusedKey && !n.getItem(o.focusedKey)) {
+        (0, o.useEffect)(() => {
+            if (null != s.focusedKey && !n.getItem(s.focusedKey)) {
                 let e;
-                let r = d.current.getItem(o.focusedKey),
+                let r = d.current.getItem(s.focusedKey),
                     a = null != r.parentKey && ('cell' === r.type || 'rowheader' === r.type || 'column' === r.type) ? d.current.getItem(r.parentKey) : r,
-                    s = d.current.rows,
+                    o = d.current.rows,
                     l = n.rows,
-                    u = s.length - l.length,
+                    u = o.length - l.length,
                     f = Math.min(u > 1 ? Math.max(a.index - u + 1, 0) : a.index, l.length - 1);
                 for (; f >= 0; ) {
                     if (!c.isDisabled(l[f].key) && 'headerrow' !== l[f].type) {
@@ -45,13 +45,13 @@ function o(e) {
                     f < l.length - 1 ? f++ : (f > a.index && (f = a.index), f--);
                 }
                 if (e) {
-                    let s = e.hasChildNodes ? [...(0, i._P)(e, n)] : [],
-                        l = e.hasChildNodes && a !== r && r.index < s.length ? s[r.index].key : e.key;
-                    o.setFocusedKey(l);
-                } else o.setFocusedKey(null);
+                    let o = e.hasChildNodes ? [...(0, i._P)(e, n)] : [],
+                        l = e.hasChildNodes && a !== r && r.index < o.length ? o[r.index].key : e.key;
+                    s.setFocusedKey(l);
+                } else s.setFocusedKey(null);
             }
             d.current = n;
-        }, [n, c, o, o.focusedKey]),
+        }, [n, c, s, s.focusedKey]),
         {
             collection: n,
             disabledKeys: l,
@@ -103,11 +103,11 @@ class l {
         (this.keyMap = new Map()), (this.keyMap = new Map()), (this.columnCount = null == e ? void 0 : e.columnCount), (this.rows = []);
         let r = (n) => {
                 let a,
-                    s = this.keyMap.get(n.key);
+                    o = this.keyMap.get(n.key);
                 e.visitNode && (n = e.visitNode(n)), this.keyMap.set(n.key, n);
-                let o = new Set();
-                for (let e of n.childNodes) 'cell' === e.type && null == e.parentKey && (e.parentKey = n.key), o.add(e.key), a ? ((a.nextKey = e.key), (e.prevKey = a.key)) : (e.prevKey = null), r(e), (a = e);
-                if ((a && (a.nextKey = null), s)) for (let e of s.childNodes) !o.has(e.key) && i(e);
+                let s = new Set();
+                for (let e of n.childNodes) 'cell' === e.type && null == e.parentKey && (e.parentKey = n.key), s.add(e.key), a ? ((a.nextKey = e.key), (e.prevKey = a.key)) : (e.prevKey = null), r(e), (a = e);
+                if ((a && (a.nextKey = null), o)) for (let e of o.childNodes) !s.has(e.key) && i(e);
             },
             i = (e) => {
                 for (let n of (this.keyMap.delete(e.key), e.childNodes)) this.keyMap.get(n.key) === n && i(n);

@@ -1,32 +1,32 @@
-n.d(t, {
+e.d(n, {
     Z: function () {
-        return s;
+        return u;
     }
 }),
-    n(47120);
-var i = n(192379),
-    a = n(479531),
-    r = n(388032);
-function s(e) {
-    let [t, n] = i.useState(!1),
-        [s, o] = i.useState(null);
+    e(47120);
+var i = e(192379),
+    r = e(479531),
+    l = e(388032);
+function u(t) {
+    let [n, e] = i.useState(!1),
+        [u, o] = i.useState(null);
     return [
         i.useCallback(
             async function () {
-                for (var t = arguments.length, i = Array(t), s = 0; s < t; s++) i[s] = arguments[s];
+                for (var n = arguments.length, i = Array(n), u = 0; u < n; u++) i[u] = arguments[u];
                 try {
-                    return o(null), n(!0), await e(...i);
-                } catch (e) {
-                    e.message !== r.intl.string(r.t.N2yb9f) && o(e instanceof a.Z ? e : new a.Z(e));
+                    return o(null), e(!0), await t(...i);
+                } catch (t) {
+                    t.message !== l.intl.string(l.t.N2yb9f) && o(t instanceof r.Z ? t : new r.Z(t));
                 } finally {
-                    n(!1);
+                    e(!1);
                 }
             },
-            [e]
+            [t]
         ),
         {
-            loading: t,
-            error: s
+            loading: n,
+            error: u
         }
     ];
 }

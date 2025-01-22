@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(887490);
-let o = 250,
+var o = r(887490);
+let s = 250,
     l = new WeakMap(),
     u = new WeakMap(),
     c = {
@@ -48,10 +48,10 @@ let o = 250,
             let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 i = arguments.length > 3 ? arguments[3] : void 0,
                 a = arguments.length > 4 ? arguments[4] : void 0;
-            (a = null != a ? a : e.selection), (i = null != i ? i : s.bN.richValue(e));
+            (a = null != a ? a : e.selection), (i = null != i ? i : o.bN.richValue(e));
             let { history: l } = e,
                 u = c.currentEntry(e);
-            for (null != u && (u.mergeable = !1), l.stack.length > 0 && (l.stack.length = l.index + 1); l.stack.length >= o; ) l.stack.shift();
+            for (null != u && (u.mergeable = !1), l.stack.length > 0 && (l.stack.length = l.index + 1); l.stack.length >= s; ) l.stack.shift();
             l.stack.push({
                 type: n,
                 mergeable: r,
@@ -64,19 +64,19 @@ let o = 250,
         mergeEntry(e) {
             let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 { selection: r } = e,
-                i = s.bN.richValue(e),
+                i = o.bN.richValue(e),
                 a = c.currentEntry(e);
             null != a && ((a.value = i), (a.selection = r), !n && (a.mergeable = !1));
         }
     };
 function d(e, n, r, i) {
     let a = e.children,
-        o = e.selection,
+        s = e.selection,
         u = c.isSaving(e);
     l.set(e, !1);
     try {
         let l = i();
-        return u && (r ? c.mergeEntry(e) : e.children !== a ? c.insertEntry(e, n, !1) : c.isMerging(e) && null != e.selection && (null == o || !s.M8.equals(e.selection, o)) && c.mergeEntry(e)), l;
+        return u && (r ? c.mergeEntry(e) : e.children !== a ? c.insertEntry(e, n, !1) : c.isMerging(e) && null != e.selection && (null == s || !o.M8.equals(e.selection, s)) && c.mergeEntry(e)), l;
     } finally {
         l.set(e, u);
     }

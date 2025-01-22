@@ -1,7 +1,7 @@
 Object.defineProperty(n, '__esModule', { value: !0 }), (n.isvalidColorString = n.red = n.getContrastingColor = n.isValidHex = n.toState = n.simpleCheckForValidColor = void 0);
-var i = s(r(876344)),
-    a = s(r(979590));
-function s(e) {
+var i = o(r(876344)),
+    a = o(r(979590));
+function o(e) {
     return e && e.__esModule ? e : { default: e };
 }
 n.simpleCheckForValidColor = function (e) {
@@ -15,19 +15,19 @@ n.simpleCheckForValidColor = function (e) {
         r === a && e
     );
 };
-var o = (n.toState = function (e, n) {
+var s = (n.toState = function (e, n) {
     var r = e.hex ? (0, a.default)(e.hex) : (0, a.default)(e),
         i = r.toHsl(),
-        s = r.toHsv(),
-        o = r.toRgb(),
+        o = r.toHsv(),
+        s = r.toRgb(),
         l = r.toHex();
     return (
-        0 === i.s && ((i.h = n || 0), (s.h = n || 0)),
+        0 === i.s && ((i.h = n || 0), (o.h = n || 0)),
         {
             hsl: i,
-            hex: '000000' === l && 0 === o.a ? 'transparent' : '#' + l,
-            rgb: o,
-            hsv: s,
+            hex: '000000' === l && 0 === s.a ? 'transparent' : '#' + l,
+            rgb: s,
+            hsv: o,
             oldHue: e.h || n || i.h,
             source: e.source
         }
@@ -40,7 +40,7 @@ var o = (n.toState = function (e, n) {
 }),
     (n.getContrastingColor = function (e) {
         if (!e) return '#fff';
-        var n = o(e);
+        var n = s(e);
         return 'transparent' === n.hex ? 'rgba(0,0,0,0.4)' : (299 * n.rgb.r + 587 * n.rgb.g + 114 * n.rgb.b) / 1000 >= 128 ? '#000' : '#fff';
     }),
     (n.red = {

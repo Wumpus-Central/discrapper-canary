@@ -2,9 +2,9 @@ function r(e, n, r) {
     let i = 0,
         a = e.length;
     for (; a > 0; ) {
-        let s = (a / 2) | 0,
-            o = i + s;
-        0 >= r(e[o], n) ? ((i = ++o), (a -= s + 1)) : (a = s);
+        let o = (a / 2) | 0,
+            s = i + o;
+        0 >= r(e[s], n) ? ((i = ++s), (a -= o + 1)) : (a = o);
     }
     return i;
 }

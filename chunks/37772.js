@@ -5,8 +5,8 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(25610),
-    d = n(703751),
-    u = n(628238),
+    u = n(703751),
+    d = n(628238),
     m = n(976853),
     h = n(977683),
     f = n(869765),
@@ -65,7 +65,7 @@ t.Z = r.memo(function e(t) {
         Y = p.RS.useSetting(),
         X = p.NA.useSetting(),
         Q = p.QK.useSetting(),
-        q = (0, u.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
+        q = (0, d.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
         J = (0, m.Z)(null == l ? void 0 : l.id),
         { disableReactionCreates: $ } = (0, v.Z)(l),
         { content: ee, hasSpoilerEmbeds: et } = (0, A.Z)(s, {
@@ -85,7 +85,7 @@ t.Z = r.memo(function e(t) {
             enabled: el
         }),
         eo = (0, c.V)(l.id, s.author.id),
-        es = (0, d.r)(s.id),
+        es = (0, u.r)(s.id),
         ec = (0, h.Z)(s);
     return er
         ? (0, i.jsx)(e, {

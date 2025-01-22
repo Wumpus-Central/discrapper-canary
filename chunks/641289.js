@@ -11,26 +11,26 @@ function a(e) {
     let n = e[e.length - 1];
     return 'object' == typeof n && n.constructor === Object ? (e.splice(e.length - 1, 1), n) : {};
 }
-function s(...e) {
+function o(...e) {
     return '(' + (a(e).capture ? '' : '?:') + e.map((e) => n(e)).join('|') + ')';
 }
-let o = (e) => i(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
-    l = ['Protocol', 'Type'].map(o),
-    u = ['init', 'self'].map(o),
+let s = (e) => i(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
+    l = ['Protocol', 'Type'].map(s),
+    u = ['init', 'self'].map(s),
     c = ['Any', 'Self'],
     d = ['actor', 'any', 'associatedtype', 'async', 'await', /as\?/, /as!/, 'as', 'borrowing', 'break', 'case', 'catch', 'class', 'consume', 'consuming', 'continue', 'convenience', 'copy', 'default', 'defer', 'deinit', 'didSet', 'distributed', 'do', 'dynamic', 'each', 'else', 'enum', 'extension', 'fallthrough', /fileprivate\(set\)/, 'fileprivate', 'final', 'for', 'func', 'get', 'guard', 'if', 'import', 'indirect', 'infix', /init\?/, /init!/, 'inout', /internal\(set\)/, 'internal', 'in', 'is', 'isolated', 'nonisolated', 'lazy', 'let', 'macro', 'mutating', 'nonmutating', /open\(set\)/, 'open', 'operator', 'optional', 'override', 'package', 'postfix', 'precedencegroup', 'prefix', /private\(set\)/, 'private', 'protocol', /public\(set\)/, 'public', 'repeat', 'required', 'rethrows', 'return', 'set', 'some', 'static', 'struct', 'subscript', 'super', 'switch', 'throws', 'throw', /try\?/, /try!/, 'try', 'typealias', /unowned\(safe\)/, /unowned\(unsafe\)/, 'unowned', 'var', 'weak', 'where', 'while', 'willSet'],
     f = ['false', 'nil', 'true'],
-    _ = ['assignment', 'associativity', 'higherThan', 'left', 'lowerThan', 'none', 'right'],
+    p = ['assignment', 'associativity', 'higherThan', 'left', 'lowerThan', 'none', 'right'],
     h = ['#colorLiteral', '#column', '#dsohandle', '#else', '#elseif', '#endif', '#error', '#file', '#fileID', '#fileLiteral', '#filePath', '#function', '#if', '#imageLiteral', '#keyPath', '#line', '#selector', '#sourceLocation', '#warning'],
-    p = ['abs', 'all', 'any', 'assert', 'assertionFailure', 'debugPrint', 'dump', 'fatalError', 'getVaList', 'isKnownUniquelyReferenced', 'max', 'min', 'numericCast', 'pointwiseMax', 'pointwiseMin', 'precondition', 'preconditionFailure', 'print', 'readLine', 'repeatElement', 'sequence', 'stride', 'swap', 'swift_unboxFromSwiftValueWithType', 'transcode', 'type', 'unsafeBitCast', 'unsafeDowncast', 'withExtendedLifetime', 'withUnsafeMutablePointer', 'withUnsafePointer', 'withVaList', 'withoutActuallyEscaping', 'zip'],
-    m = s(/[/=\-+!*%<>&|^~?]/, /[\u00A1-\u00A7]/, /[\u00A9\u00AB]/, /[\u00AC\u00AE]/, /[\u00B0\u00B1]/, /[\u00B6\u00BB\u00BF\u00D7\u00F7]/, /[\u2016-\u2017]/, /[\u2020-\u2027]/, /[\u2030-\u203E]/, /[\u2041-\u2053]/, /[\u2055-\u205E]/, /[\u2190-\u23FF]/, /[\u2500-\u2775]/, /[\u2794-\u2BFF]/, /[\u2E00-\u2E7F]/, /[\u3001-\u3003]/, /[\u3008-\u3020]/, /[\u3030]/),
-    g = s(m, /[\u0300-\u036F]/, /[\u1DC0-\u1DFF]/, /[\u20D0-\u20FF]/, /[\uFE00-\uFE0F]/, /[\uFE20-\uFE2F]/),
+    _ = ['abs', 'all', 'any', 'assert', 'assertionFailure', 'debugPrint', 'dump', 'fatalError', 'getVaList', 'isKnownUniquelyReferenced', 'max', 'min', 'numericCast', 'pointwiseMax', 'pointwiseMin', 'precondition', 'preconditionFailure', 'print', 'readLine', 'repeatElement', 'sequence', 'stride', 'swap', 'swift_unboxFromSwiftValueWithType', 'transcode', 'type', 'unsafeBitCast', 'unsafeDowncast', 'withExtendedLifetime', 'withUnsafeMutablePointer', 'withUnsafePointer', 'withVaList', 'withoutActuallyEscaping', 'zip'],
+    m = o(/[/=\-+!*%<>&|^~?]/, /[\u00A1-\u00A7]/, /[\u00A9\u00AB]/, /[\u00AC\u00AE]/, /[\u00B0\u00B1]/, /[\u00B6\u00BB\u00BF\u00D7\u00F7]/, /[\u2016-\u2017]/, /[\u2020-\u2027]/, /[\u2030-\u203E]/, /[\u2041-\u2053]/, /[\u2055-\u205E]/, /[\u2190-\u23FF]/, /[\u2500-\u2775]/, /[\u2794-\u2BFF]/, /[\u2E00-\u2E7F]/, /[\u3001-\u3003]/, /[\u3008-\u3020]/, /[\u3030]/),
+    g = o(m, /[\u0300-\u036F]/, /[\u1DC0-\u1DFF]/, /[\u20D0-\u20FF]/, /[\uFE00-\uFE0F]/, /[\uFE20-\uFE2F]/),
     E = i(m, g, '*'),
-    v = s(/[a-zA-Z_]/, /[\u00A8\u00AA\u00AD\u00AF\u00B2-\u00B5\u00B7-\u00BA]/, /[\u00BC-\u00BE\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u00FF]/, /[\u0100-\u02FF\u0370-\u167F\u1681-\u180D\u180F-\u1DBF]/, /[\u1E00-\u1FFF]/, /[\u200B-\u200D\u202A-\u202E\u203F-\u2040\u2054\u2060-\u206F]/, /[\u2070-\u20CF\u2100-\u218F\u2460-\u24FF\u2776-\u2793]/, /[\u2C00-\u2DFF\u2E80-\u2FFF]/, /[\u3004-\u3007\u3021-\u302F\u3031-\u303F\u3040-\uD7FF]/, /[\uF900-\uFD3D\uFD40-\uFDCF\uFDF0-\uFE1F\uFE30-\uFE44]/, /[\uFE47-\uFEFE\uFF00-\uFFFD]/),
-    I = s(v, /\d/, /[\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]/),
-    T = i(v, I, '*'),
-    b = i(/[A-Z]/, I, '*'),
-    y = ['attached', 'autoclosure', i(/convention\(/, s('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'freestanding', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', i(/objc\(/, T, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'Sendable', 'testable', 'UIApplicationMain', 'unchecked', 'unknown', 'usableFromInline', 'warn_unqualified_access'],
+    v = o(/[a-zA-Z_]/, /[\u00A8\u00AA\u00AD\u00AF\u00B2-\u00B5\u00B7-\u00BA]/, /[\u00BC-\u00BE\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u00FF]/, /[\u0100-\u02FF\u0370-\u167F\u1681-\u180D\u180F-\u1DBF]/, /[\u1E00-\u1FFF]/, /[\u200B-\u200D\u202A-\u202E\u203F-\u2040\u2054\u2060-\u206F]/, /[\u2070-\u20CF\u2100-\u218F\u2460-\u24FF\u2776-\u2793]/, /[\u2C00-\u2DFF\u2E80-\u2FFF]/, /[\u3004-\u3007\u3021-\u302F\u3031-\u303F\u3040-\uD7FF]/, /[\uF900-\uFD3D\uFD40-\uFDCF\uFDF0-\uFE1F\uFE30-\uFE44]/, /[\uFE47-\uFEFE\uFF00-\uFFFD]/),
+    y = o(v, /\d/, /[\u0300-\u036F\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]/),
+    b = i(v, y, '*'),
+    I = i(/[A-Z]/, y, '*'),
+    T = ['attached', 'autoclosure', i(/convention\(/, o('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'freestanding', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', i(/objc\(/, b, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'Sendable', 'testable', 'UIApplicationMain', 'unchecked', 'unknown', 'usableFromInline', 'warn_unqualified_access'],
     S = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
 function A(e) {
     let n = {
@@ -40,51 +40,51 @@ function A(e) {
         a = e.COMMENT('/\\*', '\\*/', { contains: ['self'] }),
         m = [e.C_LINE_COMMENT_MODE, a],
         v = {
-            match: [/\./, s(...l, ...u)],
+            match: [/\./, o(...l, ...u)],
             className: { 2: 'keyword' }
         },
         A = {
-            match: i(/\./, s(...d)),
+            match: i(/\./, o(...d)),
             relevance: 0
         },
-        N = d.filter((e) => 'string' == typeof e).concat(['_|0']),
-        C = {
+        C = d.filter((e) => 'string' == typeof e).concat(['_|0']),
+        N = {
             variants: [
                 {
                     className: 'keyword',
-                    match: s(
+                    match: o(
                         ...d
                             .filter((e) => 'string' != typeof e)
                             .concat(c)
-                            .map(o),
+                            .map(s),
                         ...u
                     )
                 }
             ]
         },
         R = {
-            $pattern: s(/\b\w+/, /#\w+/),
-            keyword: N.concat(h),
+            $pattern: o(/\b\w+/, /#\w+/),
+            keyword: C.concat(h),
             literal: f
         },
-        O = [v, A, C],
+        O = [v, A, N],
         D = {
-            match: i(/\./, s(...p)),
+            match: i(/\./, o(..._)),
             relevance: 0
         },
-        L = [
+        x = [
             D,
             {
                 className: 'built_in',
-                match: i(/\b/, s(...p), /(?=\()/)
+                match: i(/\b/, o(..._), /(?=\()/)
             }
         ],
-        x = {
+        L = {
             match: /->/,
             relevance: 0
         },
         w = [
-            x,
+            L,
             {
                 className: 'operator',
                 relevance: 0,
@@ -112,19 +112,19 @@ function A(e) {
             begin: i(/\\/, e, /\(/),
             end: /\)/
         }),
-        F = (e = '') => ({
+        Z = (e = '') => ({
             begin: i(e, /"""/),
             end: i(/"""/, e),
             contains: [U(e), B(e), G(e)]
         }),
-        Z = (e = '') => ({
+        F = (e = '') => ({
             begin: i(e, /"/),
             end: i(/"/, e),
             contains: [U(e), G(e)]
         }),
         V = {
             className: 'string',
-            variants: [F(), F('#'), F('##'), F('###'), Z(), Z('#'), Z('##'), Z('###')]
+            variants: [Z(), Z('#'), Z('##'), Z('###'), F(), F('#'), F('##'), F('###')]
         },
         j = [
             e.BACKSLASH_ESCAPE,
@@ -160,7 +160,7 @@ function A(e) {
             scope: 'regexp',
             variants: [Y('###'), Y('##'), Y('#'), H]
         },
-        K = { match: i(/`/, T, /`/) },
+        K = { match: i(/`/, b, /`/) },
         z = [
             K,
             {
@@ -169,7 +169,7 @@ function A(e) {
             },
             {
                 className: 'variable',
-                match: `\\$${I}+`
+                match: `\\$${y}+`
             }
         ],
         q = {
@@ -188,14 +188,14 @@ function A(e) {
         },
         Q = {
             scope: 'keyword',
-            match: i(/@/, s(...y), r(s(/\(/, /\s+/)))
+            match: i(/@/, o(...T), r(o(/\(/, /\s+/)))
         },
         X = [
             q,
             Q,
             {
                 scope: 'meta',
-                match: i(/@/, T)
+                match: i(/@/, b)
             }
         ],
         J = {
@@ -204,11 +204,11 @@ function A(e) {
             contains: [
                 {
                     className: 'type',
-                    match: i(/(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)/, I, '+')
+                    match: i(/(AV|CA|CF|CG|CI|CL|CM|CN|CT|MK|MP|MTK|MTL|NS|SCN|SK|UI|WK|XC)/, y, '+')
                 },
                 {
                     className: 'type',
-                    match: b,
+                    match: I,
                     relevance: 0
                 },
                 {
@@ -220,7 +220,7 @@ function A(e) {
                     relevance: 0
                 },
                 {
-                    match: i(/\s+&\s+/, r(b)),
+                    match: i(/\s+&\s+/, r(I)),
                     relevance: 0
                 }
             ]
@@ -229,7 +229,7 @@ function A(e) {
             begin: /</,
             end: />/,
             keywords: R,
-            contains: [...m, ...O, ...X, x, J]
+            contains: [...m, ...O, ...X, L, J]
         };
     J.contains.push($);
     let ee = {
@@ -240,14 +240,14 @@ function A(e) {
             contains: [
                 'self',
                 {
-                    match: i(T, /\s*:/),
+                    match: i(b, /\s*:/),
                     keywords: '_|0',
                     relevance: 0
                 },
                 ...m,
                 W,
                 ...O,
-                ...L,
+                ...x,
                 ...w,
                 k,
                 V,
@@ -268,7 +268,7 @@ function A(e) {
             keywords: R,
             contains: [
                 {
-                    begin: s(r(i(T, /\s*:/)), r(i(T, /\s+/, T, /\s*:/))),
+                    begin: o(r(i(b, /\s*:/)), r(i(b, /\s+/, b, /\s*:/))),
                     end: /:/,
                     relevance: 0,
                     contains: [
@@ -278,7 +278,7 @@ function A(e) {
                         },
                         {
                             className: 'params',
-                            match: T
+                            match: b
                         }
                     ]
                 },
@@ -295,7 +295,7 @@ function A(e) {
             illegal: /["']/
         },
         er = {
-            match: [/(func|macro)/, /\s+/, s(K.match, T, E)],
+            match: [/(func|macro)/, /\s+/, o(K.match, b, E)],
             className: {
                 1: 'keyword',
                 3: 'title.function'
@@ -316,17 +316,17 @@ function A(e) {
                 3: 'title'
             }
         },
-        es = {
-            begin: [/precedencegroup/, /\s+/, b],
+        eo = {
+            begin: [/precedencegroup/, /\s+/, I],
             className: {
                 1: 'keyword',
                 3: 'title'
             },
             contains: [J],
-            keywords: [..._, ...f],
+            keywords: [...p, ...f],
             end: /}/
         },
-        eo = {
+        es = {
             match: [/class\b/, /\s+/, /func\b/, /\s+/, /\b[A-Za-z_][A-Za-z0-9_]*\b/],
             scope: {
                 1: 'keyword',
@@ -342,7 +342,7 @@ function A(e) {
             }
         },
         eu = {
-            begin: [/(struct|protocol|class|extension|enum|actor)/, /\s+/, T, /\s*/],
+            begin: [/(struct|protocol|class|extension|enum|actor)/, /\s+/, b, /\s*/],
             beginScope: {
                 1: 'keyword',
                 3: 'title.class'
@@ -358,7 +358,7 @@ function A(e) {
                     contains: [
                         {
                             scope: 'title.class.inherited',
-                            match: b
+                            match: I
                         },
                         ...O
                     ],
@@ -369,7 +369,7 @@ function A(e) {
     for (let e of V.variants) {
         let n = e.contains.find((e) => 'interpol' === e.label);
         n.keywords = R;
-        let r = [...O, ...L, ...w, k, V, ...z];
+        let r = [...O, ...x, ...w, k, V, ...z];
         n.contains = [
             ...r,
             {
@@ -386,11 +386,11 @@ function A(e) {
             ...m,
             er,
             ei,
-            eo,
+            es,
             el,
             eu,
             ea,
-            es,
+            eo,
             {
                 beginKeywords: 'import',
                 end: /$/,
@@ -399,7 +399,7 @@ function A(e) {
             },
             W,
             ...O,
-            ...L,
+            ...x,
             ...w,
             k,
             V,

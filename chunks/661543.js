@@ -5,13 +5,13 @@ r.d(n, {
 });
 var i = r(570140);
 function a(e) {
-    let { imageSrc: n, file: r, uploadType: a, guildId: s, isTryItOutFlow: o = !1 } = e;
+    let { imageSrc: n, file: r, uploadType: a, guildId: o, isTryItOutFlow: s = !1 } = e;
     i.Z.dispatch({
         type: 'PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL',
         imageSrc: n,
         file: r,
         uploadType: a,
-        guildId: s,
-        isTryItOutFlow: o
+        guildId: o,
+        isTryItOutFlow: s
     });
 }

@@ -1,25 +1,25 @@
 var i = r(200651);
 r(192379);
 var a = r(952265),
-    s = r(468026),
-    o = r(388032);
+    o = r(468026),
+    s = r(388032);
 n.Z = {
     show(e) {
-        let { title: n, body: r, confirmColor: o, confirmText: l, cancelText: u, onConfirm: c, onCancel: d, onCloseCallback: f, secondaryConfirmText: _, onConfirmSecondary: h, className: p, titleClassName: m, contextKey: g } = e;
+        let { title: n, body: r, confirmColor: s, confirmText: l, cancelText: u, onConfirm: c, onCancel: d, onCloseCallback: f, secondaryConfirmText: p, onConfirmSecondary: h, className: _, titleClassName: m, contextKey: g } = e;
         (0, a.h7)(
             (e) =>
-                (0, i.jsx)(s.default, {
+                (0, i.jsx)(o.default, {
                     ...e,
                     title: n,
                     body: r,
-                    confirmColor: o,
+                    confirmColor: s,
                     confirmText: l,
                     cancelText: u,
                     onConfirm: c,
                     onCancel: d,
-                    secondaryConfirmText: _,
+                    secondaryConfirmText: p,
                     onConfirmSecondary: h,
-                    className: p,
+                    className: _,
                     titleClassName: m
                 }),
             { onCloseCallback: f },
@@ -33,7 +33,7 @@ n.Z = {
                 onConfirm() {
                     n(!0);
                 },
-                cancelText: o.intl.string(o.t['ETE/oK']),
+                cancelText: s.intl.string(s.t['ETE/oK']),
                 onCancel() {
                     n(!1);
                 },

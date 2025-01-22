@@ -11,14 +11,14 @@ function i(e) {
 function a(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function s(e, n) {
+function o(e, n) {
     for (var r = 0; r < n.length; r++) {
         var i = n[r];
         (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-function o(e, n, r) {
-    return n && s(e.prototype, n), r && s(e, r), e;
+function s(e, n, r) {
+    return n && o(e.prototype, n), r && o(e, r), e;
 }
 function l(e, n) {
     if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function');
@@ -39,7 +39,7 @@ function u(e, n) {
         })(e, n);
 }
 function c(e) {
-    var n = _();
+    var n = p();
     return function () {
         var r,
             i = h(e);
@@ -53,7 +53,7 @@ function f(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function _() {
+function p() {
     if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ('function' == typeof Proxy) return !0;
     try {
@@ -69,7 +69,7 @@ function h(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function p(e, n, r) {
+function _(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -93,11 +93,11 @@ var m = (function (e) {
     function r() {
         var e;
         a(this, r);
-        for (var i = arguments.length, s = Array(i), o = 0; o < i; o++) s[o] = arguments[o];
-        return p(f((e = n.call.apply(n, [this].concat(s)))), 'priority', 140), p(f(e), 'incompatibleTokens', ['R', 'u', 't', 'T']), e;
+        for (var i = arguments.length, o = Array(i), s = 0; s < i; s++) o[s] = arguments[s];
+        return _(f((e = n.call.apply(n, [this].concat(o)))), 'priority', 140), _(f(e), 'incompatibleTokens', ['R', 'u', 't', 'T']), e;
     }
     return (
-        o(r, [
+        s(r, [
             {
                 key: 'parse',
                 value: function (e, n, r) {

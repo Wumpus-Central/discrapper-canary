@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(827498);
 function u(e, n, r) {
     return (
@@ -32,8 +32,8 @@ function f(e) {
     let { closeReason: n = l.ti.DISMISSED } = e;
     return (c.show = !1), (c.entrypoint = l._b.NONE), (c.closeReason = n), (c.initialState = void 0), !0;
 }
-let _ = new Set();
-class h extends (i = s.ZP.Store) {
+let p = new Set();
+class h extends (i = o.ZP.Store) {
     initialize() {}
     shouldShowPopup() {
         return c.show && c.entrypoint === l._b.TEXT;
@@ -57,10 +57,10 @@ class h extends (i = s.ZP.Store) {
         return c.initialState;
     }
     appDMChannelsWithFailedLoads() {
-        return _;
+        return p;
     }
 }
-function p() {
+function _() {
     f({ closeReason: l.ti.DISMISSED });
 }
 function m() {
@@ -68,19 +68,19 @@ function m() {
 }
 function g(e) {
     let { channelId: n } = e;
-    _.add(n);
+    p.add(n);
 }
 function E(e) {
     let { channelId: n } = e;
-    _.delete(n);
+    p.delete(n);
 }
 u(h, 'displayName', 'AppLauncherStore'),
-    (n.Z = new h(o.Z, {
+    (n.Z = new h(s.Z, {
         APP_LAUNCHER_SHOW: d,
         APP_LAUNCHER_DISMISS: f,
-        CONNECTION_OPEN: p,
-        LOGOUT: p,
-        CHANNEL_SELECT: p,
+        CONNECTION_OPEN: _,
+        LOGOUT: _,
+        CHANNEL_SELECT: _,
         APPLICATION_COMMAND_SET_ACTIVE_COMMAND: m,
         APP_LAUNCHER_SET_ACTIVE_COMMAND: m,
         APP_LAUNCHER_ADD_FAILED_APP_DM_LOAD: g,

@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(215569),
     s = n(481060),
     c = n(833803),
-    d = n(566006),
-    u = n(60174),
+    u = n(566006),
+    d = n(60174),
     m = n(453687),
     h = n(434624),
     f = n(287151),
@@ -79,9 +79,9 @@ class x extends r.PureComponent {
                     }),
                 !t &&
                     !S &&
-                    (0, i.jsx)(u.X, {
+                    (0, i.jsx)(d.X, {
                         tabIndex: y || this.state.isHovered ? 0 : -1,
-                        type: d.O.NORMAL,
+                        type: u.O.NORMAL,
                         message: e,
                         channel: I,
                         useChatFontScaling: T,
@@ -128,12 +128,12 @@ t.Z = (e) => {
                     t.burst_count > 0 &&
                         e.push({
                             ...t,
-                            type: d.O.BURST
+                            type: u.O.BURST
                         }),
                         t.count > 0 &&
                             e.push({
                                 ...t,
-                                type: d.O.NORMAL
+                                type: u.O.NORMAL
                             }),
                         null != t.me_vote && --o;
                 }),

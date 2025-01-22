@@ -4,10 +4,10 @@ r.r(n),
             return i;
         },
         HTML: function () {
-            return o;
+            return s;
         },
         TEXT: function () {
-            return s;
+            return o;
         },
         URL: function () {
             return a;
@@ -15,5 +15,5 @@ r.r(n),
     });
 var i = '__NATIVE_FILE__',
     a = '__NATIVE_URL__',
-    s = '__NATIVE_TEXT__',
-    o = '__NATIVE_HTML__';
+    o = '__NATIVE_TEXT__',
+    s = '__NATIVE_HTML__';

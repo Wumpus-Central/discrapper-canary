@@ -3,13 +3,13 @@ r.d(n, {
         return h;
     },
     Y: function () {
-        return _;
+        return p;
     }
 });
 var i = r(200651),
     a = r(192379),
-    s = r(772848),
-    o = r(993365),
+    o = r(772848),
+    s = r(993365),
     l = r(481060),
     u = r(245216),
     c = r(561466),
@@ -58,30 +58,30 @@ function f(e) {
             return null;
     }
 }
-function _(e, n) {
+function p(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.si,
-        { position: i = c.si.position, component: a = c.si.component, duration: o = c.si.duration } = r;
+        { position: i = c.si.position, component: a = c.si.component, duration: s = c.si.duration } = r;
     return {
         message: e,
-        id: (0, s.Z)(),
+        id: (0, o.Z)(),
         type: n,
         options: {
             position: i,
             component: a,
-            duration: o
+            duration: s
         }
     };
 }
 let h = a.memo(function (e) {
-    let { message: n, type: r, id: a, options: { component: s = c.si.component } = c.si } = e;
-    return null != s
-        ? (0, i.jsx)(i.Fragment, { children: s })
+    let { message: n, type: r, id: a, options: { component: o = c.si.component } = c.si } = e;
+    return null != o
+        ? (0, i.jsx)(i.Fragment, { children: o })
         : (0, i.jsxs)('div', {
               id: a,
               className: d.toast,
               children: [
                   f(r),
-                  (0, i.jsx)(o.x, {
+                  (0, i.jsx)(s.x, {
                       className: d.__invalid_content,
                       color: 'header-primary',
                       variant: 'text-md/normal',

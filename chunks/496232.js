@@ -1,6 +1,6 @@
-n.d(t, {
+r.d(n, {
     K: function () {
         return i;
     }
 });
-let i = n(70956).Z.Millis.DAY;
+let i = r(70956).Z.Millis.DAY;

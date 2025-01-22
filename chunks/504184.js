@@ -36,17 +36,17 @@
             M: ['أقل من شهر', 'شهر واحد', ['شهران', 'شهرين'], '%d أشهر', '%d شهرا', '%d شهر'],
             y: ['أقل من عام', 'عام واحد', ['عامان', 'عامين'], '%d أعوام', '%d عامًا', '%d عام']
         },
-        s = function (e) {
-            return function (n, r, s, o) {
+        o = function (e) {
+            return function (n, r, o, s) {
                 var l = i(n),
                     u = a[e][i(n)];
                 return 2 === l && (u = u[r ? 0 : 1]), u.replace(/%d/i, n);
             };
         },
-        o = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+        s = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
     return e.defineLocale('ar', {
-        months: o,
-        monthsShort: o,
+        months: s,
+        monthsShort: s,
         weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
         weekdaysShort: 'أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت'.split('_'),
         weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
@@ -77,18 +77,18 @@
         relativeTime: {
             future: 'بعد %s',
             past: 'منذ %s',
-            s: s('s'),
-            ss: s('s'),
-            m: s('m'),
-            mm: s('m'),
-            h: s('h'),
-            hh: s('h'),
-            d: s('d'),
-            dd: s('d'),
-            M: s('M'),
-            MM: s('M'),
-            y: s('y'),
-            yy: s('y')
+            s: o('s'),
+            ss: o('s'),
+            m: o('m'),
+            mm: o('m'),
+            h: o('h'),
+            hh: o('h'),
+            d: o('d'),
+            dd: o('d'),
+            M: o('M'),
+            MM: o('M'),
+            y: o('y'),
+            yy: o('y')
         },
         preparse: function (e) {
             return e

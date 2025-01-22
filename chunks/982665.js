@@ -1,10 +1,10 @@
-var e = n(735471),
-    o = n(941332),
-    i = o.all;
-t.exports = o.IS_HTMLDDA
-    ? function (t) {
-          return 'object' == typeof t ? null !== t : e(t) || t === i;
+var i = r(735471),
+    a = r(941332),
+    o = a.all;
+e.exports = a.IS_HTMLDDA
+    ? function (e) {
+          return 'object' == typeof e ? null !== e : i(e) || e === o;
       }
-    : function (t) {
-          return 'object' == typeof t ? null !== t : e(t);
+    : function (e) {
+          return 'object' == typeof e ? null !== e : i(e);
       };

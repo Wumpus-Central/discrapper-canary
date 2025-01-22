@@ -1,6 +1,6 @@
 r.d(n, {
     C3: function () {
-        return s;
+        return o;
     },
     GW: function () {
         return a;
@@ -24,7 +24,7 @@ function a(e) {
         { enabled: r } = i.getCurrentConfig({ location: n }, { autoTrackExposure: !0 });
     return r;
 }
-function s(e) {
+function o(e) {
     let { location: n } = e,
         { enabled: r } = i.useExperiment({ location: n }, { autoTrackExposure: !0 });
     return r;

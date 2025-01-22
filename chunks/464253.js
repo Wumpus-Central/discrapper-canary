@@ -1,15 +1,15 @@
 var i = r(411104);
 var a = r(570140),
-    s = r(846027),
-    o = r(872810),
+    o = r(846027),
+    s = r(872810),
     l = r(710845),
     u = r(77014),
     c = r(361291),
     d = r(199902),
     f = r(314897),
-    _ = r(569545),
+    p = r(569545),
     h = r(803647),
-    p = r(981631),
+    _ = r(981631),
     m = r(65154);
 function g(e, n, r) {
     return (
@@ -86,9 +86,9 @@ class E {
             r = c.Z.getState();
         switch (e.type) {
             case u.A.STREAM:
-                if ((null != n && (0, o.tK)(n, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
+                if ((null != n && (0, s.tK)(n, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
                     let n = e.sourceId.split(':')[1];
-                    s.Z.setGoLiveSource({
+                    o.Z.setGoLiveSource({
                         cameraSettings: {
                             videoDeviceGuid: n,
                             audioDeviceGuid: e.audioSourceId
@@ -102,7 +102,7 @@ class E {
                     });
                 } else {
                     var i;
-                    s.Z.setGoLiveSource({
+                    o.Z.setGoLiveSource({
                         desktopSettings: {
                             sourceId: e.sourceId,
                             sound: null === (i = e.sound) || void 0 === i || i
@@ -117,7 +117,7 @@ class E {
                 }
                 break;
             case u.A.PAUSE:
-                null != n && (0, o.tK)(n, !0);
+                null != n && (0, s.tK)(n, !0);
                 break;
             case u.A.STOP:
                 null != n && (0, h.Z)(n);
@@ -128,7 +128,7 @@ class E {
     }
     _onCapturePaused(e) {
         let n = d.Z.getCurrentUserActiveStream();
-        null != n && (0, o.tK)(n, e);
+        null != n && (0, s.tK)(n, e);
     }
     _onCaptureEnded() {
         switch (this.mode) {
@@ -152,15 +152,15 @@ class E {
             (this.applications = []),
             (this.director = new u.a((e) => this._onDirectorAction(e))),
             a.Z.subscribe('STREAM_START', (e) => {
-                let { streamType: n, guildId: r, channelId: i, pid: a, sourceId: s, audioSourceId: o, sound: u } = e,
+                let { streamType: n, guildId: r, channelId: i, pid: a, sourceId: o, audioSourceId: s, sound: u } = e,
                     c = f.default.getId(),
-                    d = (0, _.V9)({
+                    d = (0, p.V9)({
                         streamType: n,
                         guildId: r,
                         channelId: i,
                         ownerId: c
                     });
-                (null == a) != (null == s) ? (null != a && this._onStreamApplication(d, a), null != s && this._onStreamDirectSource(d, s, o, u)) : new l.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(a, ', source-id: ').concat(s, ')'));
+                (null == a) != (null == o) ? (null != a && this._onStreamApplication(d, a), null != o && this._onStreamDirectSource(d, o, s, u)) : new l.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(a, ', source-id: ').concat(o, ')'));
             }),
             a.Z.subscribe('STREAM_DELETE', (e) => {
                 let { streamKey: n } = e;
@@ -176,7 +176,7 @@ class E {
             }),
             a.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: n, context: r } = e;
-                r === m.Yn.STREAM && this._onCapturePaused(n === p.FQ1.PAUSED);
+                r === m.Yn.STREAM && this._onCapturePaused(n === _.FQ1.PAUSED);
             }),
             a.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
                 let { settings: n } = e;

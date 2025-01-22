@@ -5,15 +5,15 @@ r.d(n, {
 });
 var i = r(558883);
 function a(e, n, r) {
-    let { labelProps: a, inputProps: s, isSelected: o, isPressed: l, isDisabled: u, isReadOnly: c } = (0, i.O)(e, n, r);
+    let { labelProps: a, inputProps: o, isSelected: s, isPressed: l, isDisabled: u, isReadOnly: c } = (0, i.O)(e, n, r);
     return {
         labelProps: a,
         inputProps: {
-            ...s,
+            ...o,
             role: 'switch',
-            checked: o
+            checked: s
         },
-        isSelected: o,
+        isSelected: s,
         isPressed: l,
         isDisabled: u,
         isReadOnly: c

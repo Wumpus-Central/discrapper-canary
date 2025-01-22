@@ -1,7 +1,7 @@
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(481060),
     u = r(443603),
     c = r(388032),
@@ -15,7 +15,7 @@ function f(e) {
             children: (0, i.jsx)(u.Z, {
                 className: d.button,
                 innerClassName: d.innerButton,
-                childClassName: o()(d.buttonChild, {
+                childClassName: s()(d.buttonChild, {
                     [d.disabled]: r,
                     [d.activeButtonChild]: !r
                 }),

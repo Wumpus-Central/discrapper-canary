@@ -1,6 +1,6 @@
 r.d(n, {
     EG: function () {
-        return o;
+        return s;
     },
     KC: function () {
         return u;
@@ -9,7 +9,7 @@ r.d(n, {
         return l;
     },
     Vr: function () {
-        return s;
+        return o;
     },
     cm: function () {
         return a;
@@ -22,13 +22,13 @@ let a = (e) => {
             dismissibleContent: e
         });
     },
-    s = (e) => {
+    o = (e) => {
         i.Z.dispatch({
             type: 'DCF_HANDLE_DC_DISMISSED',
             dismissibleContent: e
         });
     },
-    o = () => {
+    s = () => {
         i.Z.dispatch({ type: 'DCF_RESET' });
     },
     l = (e) => {

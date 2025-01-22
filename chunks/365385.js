@@ -1,37 +1,37 @@
-var r = n(67867),
-    o = n(570596),
-    a = n(548828),
-    i = n(653457),
-    s = n(139545),
-    c = n(730427);
-r(
+var i = r(67867),
+    a = r(570596),
+    o = r(548828),
+    s = r(653457),
+    l = r(139545),
+    u = r(730427);
+i(
     {
         target: 'Promise',
         stat: !0,
-        forced: n(871785)
+        forced: r(871785)
     },
     {
         all: function (e) {
-            var t = this,
-                n = i.f(t),
-                r = n.resolve,
-                l = n.reject,
-                u = s(function () {
-                    var n = a(t.resolve),
-                        i = [],
-                        s = 0,
-                        u = 1;
-                    c(e, function (e) {
-                        var a = s++,
-                            c = !1;
-                        u++,
-                            o(n, t, e).then(function (e) {
-                                !c && ((c = !0), (i[a] = e), --u || r(i));
-                            }, l);
+            var n = this,
+                r = s.f(n),
+                i = r.resolve,
+                c = r.reject,
+                d = l(function () {
+                    var r = o(n.resolve),
+                        s = [],
+                        l = 0,
+                        d = 1;
+                    u(e, function (e) {
+                        var o = l++,
+                            u = !1;
+                        d++,
+                            a(r, n, e).then(function (e) {
+                                !u && ((u = !0), (s[o] = e), --d || i(s));
+                            }, c);
                     }),
-                        --u || r(i);
+                        --d || i(s);
                 });
-            return u.error && l(u.value), n.promise;
+            return d.error && c(d.value), r.promise;
         }
     }
 );

@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(304329),
     a = r(899497),
-    s = r(977584),
-    o = r(229579),
+    o = r(977584),
+    s = r(229579),
     l = function () {
         var e = 1 / 0,
             n = [];
@@ -15,8 +15,8 @@ var i = r(304329),
                 var i = [];
                 r.activeTargets.forEach(function (n) {
                     var r = new a.A(n.target),
-                        l = (0, s.D)(n.target);
-                    i.push(r), (n.lastReportedSize = (0, o.Y)(n.target, n.observedBox)), l < e && (e = l);
+                        l = (0, o.D)(n.target);
+                    i.push(r), (n.lastReportedSize = (0, s.Y)(n.target, n.observedBox)), l < e && (e = l);
                 }),
                     n.push(function () {
                         r.callback.call(r.observer, i, r.observer);

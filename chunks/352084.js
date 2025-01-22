@@ -1,14 +1,14 @@
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(481060),
     u = r(436774),
     c = r(452461);
 let d = (e, n) =>
     (0, i.jsx)('div', {
         ref: n,
-        className: o()(c.nitroRewardTileAssetContainer, e.className),
+        className: s()(c.nitroRewardTileAssetContainer, e.className),
         children: (0, i.jsx)(l.NitroWheelIcon, {
             size: 'lg',
             className: c.nitroRewardTileAsset,

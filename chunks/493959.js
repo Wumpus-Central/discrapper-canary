@@ -1,14 +1,14 @@
 r.d(n, {
     TZ: function () {
-        return o;
+        return s;
     },
     sf: function () {
-        return s;
+        return o;
     }
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     id: '2025-01_valentines_gifting_2025',
     label: 'Valentines Gifting 2025',
     kind: 'user',
@@ -36,7 +36,7 @@ let s = (0, i.B)({
         }
     ]
 });
-function o() {
-    let { enableGiftingFlow: e, enableCoachmark: n } = s.useExperiment({ location: 'useIsValentinesGiftingActive' }, { autoTrackExposure: !1 });
+function s() {
+    let { enableGiftingFlow: e, enableCoachmark: n } = o.useExperiment({ location: 'useIsValentinesGiftingActive' }, { autoTrackExposure: !1 });
     return e || n;
 }

@@ -1,6 +1,6 @@
 r.d(n, {
     $U: function () {
-        return o;
+        return s;
     },
     Bs: function () {
         return l;
@@ -14,18 +14,18 @@ r.d(n, {
 });
 var i = r(388032);
 let a = 1000000,
-    s = 1000;
-function o(e) {
+    o = 1000;
+function s(e) {
     if (e < a) return i.intl.formatToPlainString(i.t.OiHat7, { value: e });
     let n = (e / a).toFixed(1);
     return i.intl.formatToPlainString(i.t.Iku48P, { value: n });
 }
 function l(e, n) {
-    if (e < s) return i.intl.formatToPlainString(i.t.OiHat7, { value: Math.floor(e) });
-    if (e < a) return i.intl.formatToPlainString(i.t['84R4TU'], { value: Math.floor(e / s) });
+    if (e < o) return i.intl.formatToPlainString(i.t.OiHat7, { value: Math.floor(e) });
+    if (e < a) return i.intl.formatToPlainString(i.t['84R4TU'], { value: Math.floor(e / o) });
     let r = Math.floor((10 * e) / a) / 10,
-        o = new Intl.NumberFormat(n, { maximumFractionDigits: 1 }).format(r);
-    return i.intl.formatToPlainString(i.t.Iku48P, { value: o });
+        s = new Intl.NumberFormat(n, { maximumFractionDigits: 1 }).format(r);
+    return i.intl.formatToPlainString(i.t.Iku48P, { value: s });
 }
 function u(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NaN;

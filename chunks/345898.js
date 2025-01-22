@@ -5,12 +5,12 @@ var r = n(120356),
     a = n(481060),
     o = n(572926);
 t.Z = (e) => {
-    let { renderTitle: t, renderTagline: n, renderActions: r, renderMedia: s, className: c, isHorizontal: d = !1 } = e;
+    let { renderTitle: t, renderTagline: n, renderActions: r, renderMedia: s, className: c, isHorizontal: u = !1 } = e;
     return (0, i.jsxs)('div', {
-        className: l()(o.tile, { [o.tileHorizontal]: d }, c),
+        className: l()(o.tile, { [o.tileHorizontal]: u }, c),
         children: [
             (0, i.jsx)('div', {
-                className: l()(o.media, { [o.mediaHorizontal]: d }),
+                className: l()(o.media, { [o.mediaHorizontal]: u }),
                 children: null == s ? void 0 : s()
             }),
             (0, i.jsxs)('div', {

@@ -31,13 +31,13 @@ r.r(n),
             return i.ax;
         },
         createIntl: function () {
-            return _.d;
+            return p.d;
         },
         createIntlCache: function () {
             return i.Sn;
         },
         defineMessage: function () {
-            return p;
+            return _;
         },
         defineMessages: function () {
             return h;
@@ -46,10 +46,10 @@ r.r(n),
             return i.L6;
         },
         formatDate: function () {
-            return o.p6;
+            return s.p6;
         },
         formatDateToParts: function () {
-            return o.OI;
+            return s.OI;
         },
         formatDisplayName: function () {
             return l.I;
@@ -58,7 +58,7 @@ r.r(n),
             return u.I;
         },
         formatMessage: function () {
-            return s.w;
+            return o.w;
         },
         formatNumber: function () {
             return f.uf;
@@ -73,10 +73,10 @@ r.r(n),
             return d.S;
         },
         formatTime: function () {
-            return o.mr;
+            return s.mr;
         },
         formatTimeToParts: function () {
-            return o.uE;
+            return s.uE;
         },
         getNamedFormat: function () {
             return i.TB;
@@ -84,17 +84,17 @@ r.r(n),
     });
 var i = r(52948),
     a = r(548097),
-    s = r(753778),
-    o = r(735896),
+    o = r(753778),
+    s = r(735896),
     l = r(667358),
     u = r(280999),
     c = r(275282),
     d = r(222987),
     f = r(33251),
-    _ = r(57288);
+    p = r(57288);
 function h(e) {
     return e;
 }
-function p(e) {
+function _(e) {
     return e;
 }

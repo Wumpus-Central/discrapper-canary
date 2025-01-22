@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(820611),
-    o = r(877837),
+    o = r(820611),
+    s = r(877837),
     l = function (e) {
         var n = e.onChange,
             r = e.rgb,
@@ -10,7 +10,7 @@ var i = r(192379),
             c = e.hsv,
             d = function (e, r) {
                 if (e.hex)
-                    s.FX(e.hex) &&
+                    o.FX(e.hex) &&
                         n(
                             {
                                 hex: e.hex,
@@ -20,7 +20,7 @@ var i = r(192379),
                         );
                 else if (e.rgb) {
                     var i = e.rgb.split(',');
-                    s.p7(e.rgb, 'rgb') &&
+                    o.p7(e.rgb, 'rgb') &&
                         n(
                             {
                                 r: i[0],
@@ -33,7 +33,7 @@ var i = r(192379),
                         );
                 } else if (e.hsv) {
                     var a = e.hsv.split(',');
-                    s.p7(e.hsv, 'hsv') &&
+                    o.p7(e.hsv, 'hsv') &&
                         ((a[2] = a[2].replace('%', '')),
                         (a[1] = a[1].replace('%', '')),
                         (a[0] = a[0].replace('\xB0', '')),
@@ -48,17 +48,17 @@ var i = r(192379),
                             r
                         ));
                 } else if (e.hsl) {
-                    var o = e.hsl.split(',');
-                    s.p7(e.hsl, 'hsl') &&
-                        ((o[2] = o[2].replace('%', '')),
-                        (o[1] = o[1].replace('%', '')),
-                        (o[0] = o[0].replace('\xB0', '')),
-                        1 == p[1] ? (p[1] = 0.01) : 1 == p[2] && (p[2] = 0.01),
+                    var s = e.hsl.split(',');
+                    o.p7(e.hsl, 'hsl') &&
+                        ((s[2] = s[2].replace('%', '')),
+                        (s[1] = s[1].replace('%', '')),
+                        (s[0] = s[0].replace('\xB0', '')),
+                        1 == _[1] ? (_[1] = 0.01) : 1 == _[2] && (_[2] = 0.01),
                         n(
                             {
-                                h: Number(o[0]),
-                                s: Number(o[1]),
-                                v: Number(o[2]),
+                                h: Number(s[0]),
+                                s: Number(s[1]),
+                                v: Number(s[2]),
                                 source: 'hsl'
                             },
                             r
@@ -140,9 +140,9 @@ var i = r(192379),
                     }
                 }
             }),
-            _ = r.r + ', ' + r.g + ', ' + r.b,
+            p = r.r + ', ' + r.g + ', ' + r.b,
             h = Math.round(l.h) + '\xB0, ' + Math.round(100 * l.s) + '%, ' + Math.round(100 * l.l) + '%',
-            p = Math.round(c.h) + '\xB0, ' + Math.round(100 * c.s) + '%, ' + Math.round(100 * c.v) + '%';
+            _ = Math.round(c.h) + '\xB0, ' + Math.round(100 * c.s) + '%, ' + Math.round(100 * c.v) + '%';
         return i.createElement(
             'div',
             {
@@ -155,7 +155,7 @@ var i = r(192379),
                 i.createElement(
                     'div',
                     { style: f.double },
-                    i.createElement(o.Vm, {
+                    i.createElement(s.Vm, {
                         style: {
                             input: f.input,
                             label: f.label
@@ -171,25 +171,12 @@ var i = r(192379),
                     i.createElement(
                         'div',
                         { style: f.single },
-                        i.createElement(o.Vm, {
+                        i.createElement(s.Vm, {
                             style: {
                                 input: f.input2,
                                 label: f.label2
                             },
                             label: 'rgb',
-                            value: _,
-                            onChange: d
-                        })
-                    ),
-                    i.createElement(
-                        'div',
-                        { style: f.single },
-                        i.createElement(o.Vm, {
-                            style: {
-                                input: f.input2,
-                                label: f.label2
-                            },
-                            label: 'hsv',
                             value: p,
                             onChange: d
                         })
@@ -197,7 +184,20 @@ var i = r(192379),
                     i.createElement(
                         'div',
                         { style: f.single },
-                        i.createElement(o.Vm, {
+                        i.createElement(s.Vm, {
+                            style: {
+                                input: f.input2,
+                                label: f.label2
+                            },
+                            label: 'hsv',
+                            value: _,
+                            onChange: d
+                        })
+                    ),
+                    i.createElement(
+                        'div',
+                        { style: f.single },
+                        i.createElement(s.Vm, {
                             style: {
                                 input: f.input2,
                                 label: f.label2

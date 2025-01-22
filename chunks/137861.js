@@ -6,7 +6,7 @@ var n = '[0-9](_*[0-9])*',
         variants: [{ begin: `(\\b(${n})((${r})|\\.)?|(${r}))[eE][+-]?(${n})[fFdD]?\\b` }, { begin: `\\b(${n})((${r})[fFdD]?\\b|\\.([fFdD]\\b)?)` }, { begin: `(${r})[fFdD]?\\b` }, { begin: `\\b(${n})[fFdD]\\b` }, { begin: `\\b0[xX]((${i})\\.?|(${i})?\\.(${i}))[pP][+-]?(${n})[fFdD]?\\b` }, { begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' }, { begin: `\\b0[xX](${i})[lL]?\\b` }, { begin: '\\b0(_*[0-7])*[lL]?\\b' }, { begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }],
         relevance: 0
     };
-function s(e) {
+function o(e) {
     let n = {
             keyword: 'abstract as val var vararg get set class object open private protected public noinline crossinline dynamic final enum if else do while for when throw try catch finally import package is in fun override companion reified inline lateinit init interface annotation data sealed internal infix operator out by constructor super tailrec where const inner suspend typealias external expect actual',
             built_in: 'Byte Short Char Int Long Boolean Float Double Void Unit Nothing',
@@ -28,13 +28,13 @@ function s(e) {
             className: 'symbol',
             begin: e.UNDERSCORE_IDENT_RE + '@'
         },
-        s = {
+        o = {
             className: 'subst',
             begin: /\$\{/,
             end: /\}/,
             contains: [e.C_NUMBER_MODE]
         },
-        o = {
+        s = {
             className: 'variable',
             begin: '\\$' + e.UNDERSCORE_IDENT_RE
         },
@@ -44,7 +44,7 @@ function s(e) {
                 {
                     begin: '"""',
                     end: '"""(?=[^"])',
-                    contains: [o, s]
+                    contains: [s, o]
                 },
                 {
                     begin: "'",
@@ -56,11 +56,11 @@ function s(e) {
                     begin: '"',
                     end: '"',
                     illegal: /\n/,
-                    contains: [e.BACKSLASH_ESCAPE, o, s]
+                    contains: [e.BACKSLASH_ESCAPE, s, o]
                 }
             ]
         };
-    s.contains.push(l);
+    o.contains.push(l);
     let u = {
             className: 'meta',
             begin: '@(?:file|property|field|get|set|receiver|param|setparam|delegate)\\s*:(?:\\s*' + e.UNDERSCORE_IDENT_RE + ')?'
@@ -78,7 +78,7 @@ function s(e) {
         },
         d = a,
         f = e.COMMENT('/\\*', '\\*/', { contains: [e.C_BLOCK_COMMENT_MODE] }),
-        _ = {
+        p = {
             variants: [
                 {
                     className: 'type',
@@ -91,10 +91,10 @@ function s(e) {
                 }
             ]
         },
-        h = _;
+        h = p;
     return (
-        (h.variants[1].contains = [_]),
-        (_.variants[1].contains = [h]),
+        (h.variants[1].contains = [p]),
+        (p.variants[1].contains = [h]),
         {
             name: 'Kotlin',
             aliases: ['kt', 'kts'],
@@ -149,7 +149,7 @@ function s(e) {
                                     begin: /:/,
                                     end: /[=,\/]/,
                                     endsWithParent: !0,
-                                    contains: [_, e.C_LINE_COMMENT_MODE, f],
+                                    contains: [p, e.C_LINE_COMMENT_MODE, f],
                                     relevance: 0
                                 },
                                 e.C_LINE_COMMENT_MODE,
@@ -204,4 +204,4 @@ function s(e) {
         }
     );
 }
-e.exports = s;
+e.exports = o;

@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(481060),
     s = n(230711),
     c = n(2052),
-    d = n(906732),
-    u = n(963249),
+    u = n(906732),
+    d = n(963249),
     m = n(594174),
     h = n(626135),
     f = n(74538),
@@ -31,9 +31,9 @@ function x() {
             }
         ),
         { location: x } = (0, c.O)(),
-        { analyticsLocations: N } = (0, d.ZP)(),
+        { analyticsLocations: N } = (0, u.ZP)(),
         v = r.useCallback(() => {
-            (0, u.Z)({
+            (0, d.Z)({
                 subscriptionTier: f.ZP.getSkuIdForPremiumType(g.p9.TIER_2),
                 analyticsLocations: N,
                 analyticsObject: {

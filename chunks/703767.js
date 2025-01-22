@@ -1,7 +1,7 @@
 var i = r(653041);
 var a = r(47120);
-var s = r(147913),
-    o = r(579806);
+var o = r(147913),
+    s = r(579806);
 r(987170);
 var l = r(998502);
 function u(e, n, r) {
@@ -24,15 +24,15 @@ function d(e) {
     return n;
 }
 let f = [];
-function _(e) {
+function p(e) {
     for (let n of e) if (n[0] === c[0] && n[1] === c[1]) return !0;
     return !1;
 }
 let h = !1;
-function p() {
+function _() {
     let e = {};
     for (let n of f)
-        if (_(n.gpus)) {
+        if (p(n.gpus)) {
             let r = n.experiment.getCurrentConfig({ location: 'updateFlags' });
             e = {
                 ...e,
@@ -41,7 +41,7 @@ function p() {
         }
     l.ZP.setChromiumSwitches(e);
 }
-class m extends s.Z {
+class m extends o.Z {
     constructor(...e) {
         super(...e),
             u(this, 'actions', {
@@ -49,10 +49,10 @@ class m extends s.Z {
                     try {
                         var e, n, r, i;
                         if (h || (null === (n = window.DiscordNative) || void 0 === n ? void 0 : null === (e = n.gpuSettings) || void 0 === e ? void 0 : e.setChromiumSwitches) == null) return;
-                        let a = await o.Z.processUtils.getSystemInfo();
+                        let a = await s.Z.processUtils.getSystemInfo();
                         for (let e of null !== (i = null === (r = a.electronGPUInfo) || void 0 === r ? void 0 : r.gpuDevice) && void 0 !== i ? i : []) !0 === e.active && (c = [e.vendorId, e.deviceId]);
-                        for (let e of ((h = !0), f)) _(e.gpus) && e.experiment.subscribe({ location: 'GPU experiment subscription' }, p);
-                        p();
+                        for (let e of ((h = !0), f)) p(e.gpus) && e.experiment.subscribe({ location: 'GPU experiment subscription' }, _);
+                        _();
                     } catch (e) {}
                 }
             });

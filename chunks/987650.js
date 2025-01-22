@@ -9,13 +9,13 @@ r.d(n, {
         return d;
     },
     bv: function () {
-        return o;
+        return s;
     },
     iP: function () {
         return u;
     },
     n0: function () {
-        return s;
+        return o;
     },
     nc: function () {
         return i;
@@ -26,8 +26,8 @@ r.d(n, {
 });
 var i,
     a,
-    s,
     o,
+    s,
     l = r(358085);
 let u = l.isPlatformEmbedded && ((0, l.isWindows)() || !1);
 function c(e) {
@@ -59,10 +59,10 @@ function c(e) {
     })(a || (a = {})),
     !(function (e) {
         (e.NewsNudge = 'News Nudge'), (e.WelcomeNudge = 'Welcome Nudge'), (e.TextChat = 'Text Chat'), (e.ActivityUserJoin = 'Activity User Join'), (e.ActivityInvite = 'Activity Invite'), (e.IncomingCall = 'Incoming Call'), (e.GoLiveNudge = 'Go Live Nudge'), (e.GoLiveNonVoiceNudge = 'Go Live Non Voice Nudge'), (e.OverlayCrashed = 'Overlay Crashed'), (e.ClipsReminderNotification = 'Clips Reminder Notification'), (e.ClipsNotification = 'Clips Notification'), (e.KeybindIndicatorsNotification = 'Keybind Indicators Notification'), (e.SendGameInvitesNotification = 'Send Game Invites Notification');
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         (e[(e.Viewed = 0)] = 'Viewed'), (e[(e.Clicked = 1)] = 'Clicked');
-    })(o || (o = {}));
+    })(s || (s = {}));
 let d = Object.freeze({
         LOW: 'background-opacity-low',
         MEDIUM: 'background-opacity-medium',

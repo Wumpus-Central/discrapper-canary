@@ -1,13 +1,13 @@
 var i = r(47120);
 var a = r(846519),
-    s = r(904245),
-    o = r(287734),
+    o = r(904245),
+    s = r(287734),
     l = r(147913),
     u = r(317381),
     c = r(592125),
     d = r(979651),
     f = r(938475),
-    _ = r(388032);
+    p = r(388032);
 function h(e, n, r) {
     return (
         n in e
@@ -21,7 +21,7 @@ function h(e, n, r) {
         e
     );
 }
-let p = 3,
+let _ = 3,
     m = 180000;
 function g() {
     let e = d.Z.getCurrentClientVoiceChannelId(null);
@@ -32,7 +32,7 @@ function g() {
 function E() {
     if (!g()) return;
     let e = d.Z.getCurrentClientVoiceChannelId(null);
-    if (null != e) s.Z.sendBotMessage(e, _.intl.formatToPlainString(_.t.XYof5O, { number: p })), o.default.selectVoiceChannel(null);
+    if (null != e) o.Z.sendBotMessage(e, p.intl.formatToPlainString(p.t.XYof5O, { number: _ })), s.default.selectVoiceChannel(null);
 }
 class v extends l.Z {
     constructor(...e) {

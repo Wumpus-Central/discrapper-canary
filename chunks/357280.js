@@ -10,8 +10,8 @@ function a(e) {
         let a = e[r];
         if (null == a) continue;
         if ((r === i && (n._misc = e[r].map((e) => e.message)), Array.isArray(a))) continue;
-        let s = a[i];
-        null != s ? (n[r] = s.map((e) => e.message)) : (n[r] = [Object.keys(a)[0]]);
+        let o = a[i];
+        null != o ? (n[r] = o.map((e) => e.message)) : (n[r] = [Object.keys(a)[0]]);
     }
     return n;
 }

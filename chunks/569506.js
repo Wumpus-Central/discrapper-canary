@@ -1,13 +1,13 @@
 var i = r(867996),
     a = r(350780),
-    s = r(661233),
-    o = r(785775),
+    o = r(661233),
+    s = r(785775),
     l = /[\\^$.*+?()[\]{}|]/g,
     u = /^\[object .+?Constructor\]$/,
     c = Object.prototype,
     d = Function.prototype.toString,
     f = c.hasOwnProperty,
-    _ = RegExp(
+    p = RegExp(
         '^' +
             d
                 .call(f)
@@ -16,6 +16,6 @@ var i = r(867996),
             '$'
     );
 function h(e) {
-    return !(!s(e) || a(e)) && (i(e) ? _ : u).test(o(e));
+    return !(!o(e) || a(e)) && (i(e) ? p : u).test(s(e));
 }
 e.exports = h;

@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(120356),
     u = r.n(l),
     c = r(934158);
@@ -18,7 +18,7 @@ function d(e, n, r) {
         e
     );
 }
-class f extends (i = o.PureComponent) {
+class f extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, n) {
         let { streamId: r } = e;
         if (n.aReady) {
@@ -52,13 +52,13 @@ class f extends (i = o.PureComponent) {
         let { children: r, mirror: i, paused: a, component: l } = this.props;
         if (null == e) {
             if (null == r) return null;
-            let e = o.Children.only(r);
-            return o.cloneElement(e, {
+            let e = s.Children.only(r);
+            return s.cloneElement(e, {
                 style: { display: n && !i ? void 0 : 'none' },
                 ...e.props
             });
         }
-        return (0, s.jsx)(l, {
+        return (0, o.jsx)(l, {
             paused: a,
             className: c.media,
             streamId: e,
@@ -67,7 +67,7 @@ class f extends (i = o.PureComponent) {
     }
     render() {
         let { mirror: e, className: n } = this.props;
-        return (0, s.jsxs)('div', {
+        return (0, o.jsxs)('div', {
             className: u()(c.video, n, { [c.mirror]: e }),
             onDoubleClick: this.handleDoubleClick,
             onContextMenu: this.handleContextMenu,

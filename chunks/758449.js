@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(789020);
 var a = r(913527),
-    s = r.n(a),
-    o = r(81825);
+    o = r.n(a),
+    s = r(81825);
 function l(e, n, r) {
     return (
         n in e
@@ -20,14 +20,14 @@ function l(e, n, r) {
         e
     );
 }
-class u extends o.Z {
+class u extends s.Z {
     static createFromServer(e) {
         var n;
         return new u({
             ...e,
             maxUses: e.max_uses,
             maxAge: e.max_age,
-            createdAt: s()(null !== (n = e.created_at) && void 0 !== n ? n : void 0),
+            createdAt: o()(null !== (n = e.created_at) && void 0 !== n ? n : void 0),
             targetType: e.target_type,
             targetUser: e.target_user,
             targetApplication: e.target_application
@@ -35,10 +35,10 @@ class u extends o.Z {
     }
     isExpired() {
         let e = this.maxAge;
-        return !!(e > 0 && s()(this.createdAt).add(e, 'seconds').isBefore(Date.now())) || !1;
+        return !!(e > 0 && o()(this.createdAt).add(e, 'seconds').isBefore(Date.now())) || !1;
     }
     getExpiresAt() {
-        return this.maxAge > 0 ? s()(this.createdAt).add(this.maxAge, 'seconds').toDate() : 1 / 0;
+        return this.maxAge > 0 ? o()(this.createdAt).add(this.maxAge, 'seconds').toDate() : 1 / 0;
     }
     toString() {
         return this.code;

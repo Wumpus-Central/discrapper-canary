@@ -1,10 +1,10 @@
 var i = r(544891),
     a = r(570140),
-    s = r(718745),
-    o = r(981631);
+    o = r(718745),
+    s = r(981631);
 n.Z = {
     search(e, n) {
-        if (null == s.Z.getResults(e, n))
+        if (null == o.Z.getResults(e, n))
             a.Z.dispatch({
                 type: 'INTEGRATION_QUERY',
                 integration: e,
@@ -12,7 +12,7 @@ n.Z = {
             }),
                 i.tn
                     .get({
-                        url: o.ANM.INTEGRATION_SEARCH('tenor'),
+                        url: s.ANM.INTEGRATION_SEARCH('tenor'),
                         query: { q: n },
                         oldFormErrors: !0,
                         rejectWithError: !0

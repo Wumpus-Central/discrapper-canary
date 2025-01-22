@@ -6,28 +6,28 @@ r.d(n, {
         return c;
     },
     y: function () {
-        return o;
+        return s;
     }
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379);
-function o(e) {
+    o = r(192379);
+function s(e) {
     let { component: n, children: r, forceLevel: i } = e,
-        o = s.useContext(u),
-        [l, c] = s.useState(null != n),
+        s = o.useContext(u),
+        [l, c] = o.useState(null != n),
         d = 1,
         f = 1;
-    null != i ? (null != n ? ((d = i), (f = i + 1)) : (f = i)) : null != n ? ((d = o.level), (f = o.level + 1)) : (f = o.level + (l ? 1 : 0));
-    let _ = s.useCallback(() => (c(!0), d), [d]),
-        h = s.useCallback(() => (c(!0), f), [f]);
+    null != i ? (null != n ? ((d = i), (f = i + 1)) : (f = i)) : null != n ? ((d = s.level), (f = s.level + 1)) : (f = s.level + (l ? 1 : 0));
+    let p = o.useCallback(() => (c(!0), d), [d]),
+        h = o.useCallback(() => (c(!0), f), [f]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             null != n
                 ? (0, a.jsx)(u.Provider, {
                       value: {
                           level: d,
-                          getLevelAndMarkUsed: _
+                          getLevelAndMarkUsed: p
                       },
                       children: n
                   })
@@ -50,12 +50,12 @@ function l(e) {
         ...e
     });
 }
-let u = s.createContext({
+let u = o.createContext({
     getLevelAndMarkUsed: () => 2,
     level: 2
 });
 function c() {
-    let { getLevelAndMarkUsed: e } = s.useContext(u);
+    let { getLevelAndMarkUsed: e } = o.useContext(u);
     return e();
 }
 u.displayName = 'HeadingLevelContext';

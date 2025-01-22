@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(661763),
     a = r(766203),
-    s = r(192379),
-    o = r(649859);
+    o = r(192379),
+    s = r(649859);
 let l = new WeakMap();
 function u(e, n, r) {
     'string' == typeof n && (n = n.replace(/\s+/g, ''));
@@ -17,39 +17,39 @@ function u(e, n, r) {
     return `${i}-${r}-${n}`;
 }
 function c(e, n, r) {
-    var s;
-    let { key: o, isDisabled: l, shouldSelectOnPressUp: c } = e,
+    var o;
+    let { key: s, isDisabled: l, shouldSelectOnPressUp: c } = e,
         { selectionManager: d, selectedKey: f } = n,
-        _ = o === f,
-        h = l || n.isDisabled || n.disabledKeys.has(o),
-        { itemProps: p, isPressed: m } = (0, a.Cs)({
+        p = s === f,
+        h = l || n.isDisabled || n.disabledKeys.has(s),
+        { itemProps: _, isPressed: m } = (0, a.Cs)({
             selectionManager: d,
-            key: o,
+            key: s,
             ref: r,
             isDisabled: h,
             shouldSelectOnPressUp: c,
             linkBehavior: 'selection'
         }),
-        g = u(n, o, 'tab'),
-        E = u(n, o, 'tabpanel'),
-        { tabIndex: v } = p,
-        I = n.collection.getItem(o),
-        T = (0, i.zL)(null == I ? void 0 : I.props, {
-            isLink: !!(null == I ? void 0 : null === (s = I.props) || void 0 === s ? void 0 : s.href),
+        g = u(n, s, 'tab'),
+        E = u(n, s, 'tabpanel'),
+        { tabIndex: v } = _,
+        y = n.collection.getItem(s),
+        b = (0, i.zL)(null == y ? void 0 : y.props, {
+            isLink: !!(null == y ? void 0 : null === (o = y.props) || void 0 === o ? void 0 : o.href),
             labelable: !0
         });
     return (
-        delete T.id,
+        delete b.id,
         {
-            tabProps: (0, i.dG)(T, p, {
+            tabProps: (0, i.dG)(b, _, {
                 id: g,
-                'aria-selected': _,
+                'aria-selected': p,
                 'aria-disabled': h || void 0,
-                'aria-controls': _ ? E : void 0,
+                'aria-controls': p ? E : void 0,
                 tabIndex: h ? void 0 : v,
                 role: 'tab'
             }),
-            isSelected: _,
+            isSelected: p,
             isDisabled: h,
             isPressed: m
         }
@@ -92,12 +92,12 @@ class d {
 }
 function f(e, n, r) {
     let { orientation: u = 'horizontal', keyboardActivation: c = 'automatic' } = e,
-        { collection: f, selectionManager: _, disabledKeys: h } = n,
-        { direction: p } = (0, o.bU)(),
-        m = (0, s.useMemo)(() => new d(f, p, u, h), [f, h, u, p]),
+        { collection: f, selectionManager: p, disabledKeys: h } = n,
+        { direction: _ } = (0, s.bU)(),
+        m = (0, o.useMemo)(() => new d(f, _, u, h), [f, h, u, _]),
         { collectionProps: g } = (0, a.gq)({
             ref: r,
-            selectionManager: _,
+            selectionManager: p,
             keyboardDelegate: m,
             selectOnFocus: 'automatic' === c,
             disallowEmptySelection: !0,

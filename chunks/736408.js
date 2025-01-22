@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return c;
+        return a;
     }
 }),
     n(610138),
@@ -8,19 +8,19 @@ n.d(t, {
     n(78328),
     n(815648),
     n(47120);
-var i = n(134432),
-    r = n(768581),
-    a = n(981631);
-let { API_ENDPOINT: o, CDN_HOST: s } = window.GLOBAL_ENV;
-function c(e) {
-    let { itemId: t, hash: n, containerWidth: c = 1024 } = e,
-        l = new URLSearchParams({ size: (0, i.oO)(c * (0, i.x_)()).toString() }).toString(),
-        u = r.$k ? 'webp' : 'png';
-    return null != s
-        ? ''.concat(location.protocol, '//').concat(s, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(u, '?').concat(l)
+var r = n(134432),
+    o = n(768581),
+    i = n(981631);
+let { API_ENDPOINT: l, CDN_HOST: c } = window.GLOBAL_ENV;
+function a(e) {
+    let { itemId: t, hash: n, containerWidth: a = 1024 } = e,
+        u = new URLSearchParams({ size: (0, r.oO)(a * (0, r.x_)()).toString() }).toString(),
+        s = o.$k ? 'webp' : 'png';
+    return null != c
+        ? ''.concat(location.protocol, '//').concat(c, '/app-assets/application-directory/collection-items/').concat(t, '/').concat(n, '.').concat(s, '?').concat(u)
         : ''
               .concat(location.protocol)
-              .concat(o)
-              .concat(a.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, u), '?')
-              .concat(l);
+              .concat(l)
+              .concat(i.ANM.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, s), '?')
+              .concat(u);
 }

@@ -3,7 +3,7 @@ r.d(n, {
         return c;
     },
     P1: function () {
-        return _;
+        return p;
     },
     TY: function () {
         return d;
@@ -18,34 +18,34 @@ r.d(n, {
         return u;
     },
     wx: function () {
-        return s.wx;
+        return o.wx;
     }
 });
 var i = r(924301),
     a = r(131704),
-    s = r(245335);
-function o(e) {
-    return e.type === s.wx.GROUP_DM || (null != e.channel && (0, a.bc)(e.channel.type));
+    o = r(245335);
+function s(e) {
+    return e.type === o.wx.GROUP_DM || (null != e.channel && (0, a.bc)(e.channel.type));
 }
 function l(e) {
     let n = e.guild_scheduled_event;
     return null != n && (0, i.Ld)(n);
 }
 function u(e) {
-    return e.target_type === s.Iq.ROLE_SUBSCRIPTIONS_PURCHASE;
+    return e.target_type === o.Iq.ROLE_SUBSCRIPTIONS_PURCHASE;
 }
 function c(e) {
     return null != e.channel && null != e.stage_instance;
 }
 function d(e) {
-    return e.target_type === s.Iq.STREAM && null != e.target_user;
+    return e.target_type === o.Iq.STREAM && null != e.target_user;
 }
 function f(e) {
-    return e.type === s.wx.FRIEND || (null == e.guild && null != e.inviter);
+    return e.type === o.wx.FRIEND || (null == e.guild && null != e.inviter);
 }
-function _(e) {
-    return e.target_type === s.Iq.EMBEDDED_APPLICATION;
+function p(e) {
+    return e.target_type === o.Iq.EMBEDDED_APPLICATION;
 }
 function h(e) {
-    return 'number' == typeof e.type ? e.type : o(e) ? s.wx.GROUP_DM : f(e) ? s.wx.FRIEND : s.wx.GUILD;
+    return 'number' == typeof e.type ? e.type : s(e) ? o.wx.GROUP_DM : f(e) ? o.wx.FRIEND : o.wx.GUILD;
 }

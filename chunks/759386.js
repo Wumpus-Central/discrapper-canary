@@ -1,68 +1,68 @@
-n.r(t),
-    n.d(t, {
+t.r(e),
+    t.d(e, {
         getApplicationPaymentSteps: function () {
-            return f;
+            return m;
         }
     }),
-    n(47120);
-var i = n(200651);
-n(192379);
-var r = n(409813),
-    o = n(276442),
-    a = n(961830),
-    l = n(721165),
-    c = n(519801),
-    s = n(589771),
-    d = n(883419),
-    u = n(388032);
-function f(e) {
-    let { guildId: t, showBenefitsFirst: n } = e;
+    t(47120);
+var i = t(200651);
+t(192379);
+var l = t(409813),
+    r = t(276442),
+    a = t(961830),
+    o = t(721165),
+    s = t(519801),
+    u = t(589771),
+    c = t(883419),
+    d = t(388032);
+function m(n) {
+    let { guildId: e, showBenefitsFirst: t } = n;
     return [
         {
             key: null,
-            renderStep: (e) =>
-                (0, i.jsx)(s.Z, {
-                    initialStep: n ? r.h8.BENEFITS : r.h8.REVIEW,
-                    guildId: t,
-                    ...e
+            renderStep: (n) =>
+                (0, i.jsx)(u.Z, {
+                    initialStep: t ? l.h8.BENEFITS : l.h8.REVIEW,
+                    guildId: e,
+                    ...n
                 })
         },
         {
-            key: r.h8.BENEFITS,
-            renderStep: (e) => (0, i.jsx)(l.Z, { ...e }),
-            options: { useBreadcrumbLabel: () => u.intl.string(u.t['5LD2+P']) }
+            key: l.h8.BENEFITS,
+            renderStep: (n) => (0, i.jsx)(o.Z, { ...n }),
+            options: { useBreadcrumbLabel: () => d.intl.string(d.t['5LD2+P']) }
         },
         {
-            key: r.h8.ADD_PAYMENT_STEPS,
-            renderStep: (e) =>
+            key: l.h8.ADD_PAYMENT_STEPS,
+            renderStep: (n) =>
                 (0, i.jsx)(i.Fragment, {
-                    children: (0, i.jsx)(o.J, {
-                        ...e,
-                        breadcrumbSteps: [r.h8.ADD_PAYMENT_STEPS, r.h8.REVIEW, r.h8.CONFIRM]
+                    children: (0, i.jsx)(r.J, {
+                        ...n,
+                        breadcrumbSteps: [l.h8.ADD_PAYMENT_STEPS, l.h8.REVIEW, l.h8.CONFIRM]
                     })
                 }),
             options: { renderHeader: !0 }
         },
         ...a.yp,
         {
-            key: r.h8.REVIEW,
-            renderStep: (e) =>
-                (0, i.jsx)(d.Z, {
-                    backButtonEligible: !!n || void 0,
-                    prevStep: n ? r.h8.BENEFITS : void 0,
-                    ...e
+            key: l.h8.REVIEW,
+            renderStep: (n) =>
+                (0, i.jsx)(c.Z, {
+                    backButtonEligible: !!t || void 0,
+                    prevStep: t ? l.h8.BENEFITS : void 0,
+                    ...n
                 }),
             options: {
                 renderHeader: !0,
-                useBreadcrumbLabel: () => u.intl.string(u.t.QBnNHh)
+                useBreadcrumbLabel: () => d.intl.string(d.t.QBnNHh)
             }
         },
         {
-            key: r.h8.CONFIRM,
-            renderStep: (e) =>
-                (0, i.jsx)(c.Z, {
-                    showBenefits: !n,
-                    ...e
+            key: l.h8.CONFIRM,
+            renderStep: (n) =>
+                (0, i.jsx)(s.Z, {
+                    showBenefits: !t,
+                    ...n
                 })
         }
     ];

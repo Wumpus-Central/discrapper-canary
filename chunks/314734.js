@@ -1,7 +1,7 @@
 var i, r;
 n.d(t, {
     Gy: function () {
-        return d;
+        return u;
     },
     Id: function () {
         return s;
@@ -10,7 +10,7 @@ n.d(t, {
         return l;
     },
     K7: function () {
-        return u;
+        return d;
     },
     NN: function () {
         return c;
@@ -38,10 +38,10 @@ let l = 'app-launcher-element',
     o = 'app-launcher-entrypoint',
     s = 'app-launcher-app-dm-entrypoint',
     c = 'app-launcher-app-details-more-menu',
-    d = 500,
-    u = 680,
-    m = 'min(100vh, '.concat(u, 'px)'),
+    u = 500,
+    d = 680,
+    m = 'min(100vh, '.concat(d, 'px)'),
     h = {
-        '--custom-app-launcher-width': ''.concat(d, 'px'),
+        '--custom-app-launcher-width': ''.concat(u, 'px'),
         '--custom-app-launcher-height': m
     };

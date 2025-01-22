@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(47120);
@@ -12,16 +12,16 @@ let a = [
         ['height', '100px'],
         ['overflow', 'scroll']
     ],
-    s = [
+    o = [
         ['width', '200px'],
         ['height', '200px']
     ];
-function o() {
+function s() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
         n = document.createElement('div'),
         r = document.createElement('div');
     for (let [e, r] of a) n.style[e] = r;
-    for (let [e, n] of s) r.style[e] = n;
+    for (let [e, n] of o) r.style[e] = n;
     n.appendChild(r), document.body.appendChild(n), (n.className = e);
     let i = {
         width: n.offsetWidth - n.clientWidth,

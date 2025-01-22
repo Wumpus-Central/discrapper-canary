@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(544891),
-    s = r(147913),
-    o = r(25733),
+    o = r(147913),
+    s = r(25733),
     l = r(981631);
 function u(e, n, r) {
     return (
@@ -21,9 +21,9 @@ function u(e, n, r) {
         e
     );
 }
-class c extends s.Z {
+class c extends o.Z {
     handleDmSettingsUpsellShow(e) {
-        o.Z.openDmSettingsUpsellModal(e.guildId);
+        s.Z.openDmSettingsUpsellModal(e.guildId);
     }
     constructor(...e) {
         super(...e), u(this, 'actions', { DM_SETTINGS_UPSELL_SHOW: this.handleDmSettingsUpsellShow });

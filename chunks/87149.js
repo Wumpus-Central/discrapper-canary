@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(633064),
     a = r(192379),
-    s = r(942069);
-function o(e) {
+    o = r(942069);
+function s(e) {
     return null != e && (!isNaN(e) || null !== String(e).match(/^(\d+)(?=%$)/));
 }
 function l(e) {
@@ -29,34 +29,34 @@ function d(e, n) {
     return null != e ? u(e, n) : 0;
 }
 function f(e, n, r, i, a) {
-    let s = !1,
+    let o = !1,
         f = n.map((n, f) => {
-            var _, h, p, m, g;
-            let E = null != r.get(n.key) ? r.get(n.key) : null !== (p = null !== (h = null !== (_ = n.width) && void 0 !== _ ? _ : n.defaultWidth) && void 0 !== h ? h : null == i ? void 0 : i(f)) && void 0 !== p ? p : '1fr',
+            var p, h, _, m, g;
+            let E = null != r.get(n.key) ? r.get(n.key) : null !== (_ = null !== (h = null !== (p = n.width) && void 0 !== p ? p : n.defaultWidth) && void 0 !== h ? h : null == i ? void 0 : i(f)) && void 0 !== _ ? _ : '1fr',
                 v = !1,
-                I = 0,
-                T = 0,
-                b = null;
-            o(E) ? ((I = u(E, e)), (v = !0)) : (T = l(E)) <= 0 && (v = !0);
-            let y = d(null !== (g = null !== (m = n.minWidth) && void 0 !== m ? m : null == a ? void 0 : a(f)) && void 0 !== g ? g : 0, e),
+                y = 0,
+                b = 0,
+                I = null;
+            s(E) ? ((y = u(E, e)), (v = !0)) : (b = l(E)) <= 0 && (v = !0);
+            let T = d(null !== (g = null !== (m = n.minWidth) && void 0 !== m ? m : null == a ? void 0 : a(f)) && void 0 !== g ? g : 0, e),
                 S = c(n.maxWidth, e),
-                A = Math.max(y, Math.min(I, S));
+                A = Math.max(T, Math.min(y, S));
             return (
-                v ? (b = A) : I > A && ((v = !0), (b = A)),
-                !v && (s = !0),
+                v ? (I = A) : y > A && ((v = !0), (I = A)),
+                !v && (o = !0),
                 {
                     frozen: v,
-                    baseSize: I,
+                    baseSize: y,
                     hypotheticalMainSize: A,
-                    min: y,
+                    min: T,
                     max: S,
-                    flex: T,
-                    targetMainSize: b,
+                    flex: b,
+                    targetMainSize: I,
                     violation: 0
                 }
             );
         });
-    for (; s; ) {
+    for (; o; ) {
         let n = 0,
             r = 0;
         f.forEach((e) => {
@@ -77,22 +77,22 @@ function f(e, n, r, i, a) {
                 (e.targetMainSize = Math.max(n, Math.min(i, r))), (e.violation = e.targetMainSize - i), (a += e.violation);
             }
         }),
-            (s = !1),
+            (o = !1),
             f.forEach((e) => {
-                0 === a || Math.sign(a) === Math.sign(e.violation) ? (e.frozen = !0) : !e.frozen && (s = !0);
+                0 === a || Math.sign(a) === Math.sign(e.violation) ? (e.frozen = !0) : !e.frozen && (o = !0);
             });
     }
-    return _(f);
+    return p(f);
 }
-function _(e) {
+function p(e) {
     let n = 0,
         r = 0,
         i = [];
     return (
         e.forEach(function (e) {
             let a = e.targetMainSize,
-                s = Math.round(a + n) - r;
-            (n += a), (r += s), i.push(s);
+                o = Math.round(a + n) - r;
+            (n += a), (r += o), i.push(o);
         }),
         i
     );
@@ -108,8 +108,8 @@ class h {
         var n, r;
         return new Map(
             Array.from(e).map(([e, i]) => {
-                var a, s;
-                return [e, null !== (r = null !== (n = i.props.defaultWidth) && void 0 !== n ? n : null === (s = (a = this).getDefaultWidth) || void 0 === s ? void 0 : s.call(a, i)) && void 0 !== r ? r : '1fr'];
+                var a, o;
+                return [e, null !== (r = null !== (n = i.props.defaultWidth) && void 0 !== n ? n : null === (o = (a = this).getDefaultWidth) || void 0 === o ? void 0 : o.call(a, i)) && void 0 !== r ? r : '1fr'];
             })
         );
     }
@@ -123,22 +123,22 @@ class h {
     getColumnMaxWidth(e) {
         return this.columnMaxWidths.get(e);
     }
-    resizeColumnWidth(e, n, r, i, a = null, s) {
+    resizeColumnWidth(e, n, r, i, a = null, o) {
         let u = this.columnWidths,
             c = 1 / 0,
             d = new Map([...r, ...i]),
-            _ = new Map(),
+            p = new Map(),
             h = new Map(),
-            p = new Map();
+            _ = new Map();
         n.columns.forEach((e, r) => {
             var f, m;
             let g, E;
-            if ((p.set(e.key, this.getDefaultMinWidth(n.columns[r])), a === e.key || e.props.width || o(i.get(e.key)) ? (a === e.key || o(e.props.width) || i.get(e.key) ? a !== e.key && (null === (f = e.props.width) || void 0 === f ? void 0 : null === (m = f.endsWith) || void 0 === m ? void 0 : m.call(f, '%')) && _.set(e.key, e.props.width) : ((g = e.key), (E = l(e.props.width)))) : ((g = e.key), (E = l(i.get(e.key)))), c < r)) {
+            if ((_.set(e.key, this.getDefaultMinWidth(n.columns[r])), a === e.key || e.props.width || s(i.get(e.key)) ? (a === e.key || s(e.props.width) || i.get(e.key) ? a !== e.key && (null === (f = e.props.width) || void 0 === f ? void 0 : null === (m = f.endsWith) || void 0 === m ? void 0 : m.call(f, '%')) && p.set(e.key, e.props.width) : ((g = e.key), (E = l(e.props.width)))) : ((g = e.key), (E = l(i.get(e.key)))), c < r)) {
                 g && h.set(g, E);
                 return;
             }
             if (e.key === a) {
-                (c = r), d.set(e.key, Math.floor(s));
+                (c = r), d.set(e.key, Math.floor(o));
                 return;
             }
             d.set(e.key, u.get(e.key));
@@ -162,7 +162,7 @@ class h {
             Array.from(h).forEach(([e]) => {
                 g.set(e, `${h.get(e)}fr`);
             }),
-            Array.from(_).forEach(([e, n]) => {
+            Array.from(p).forEach(([e, n]) => {
                 e !== a && g.set(e, n);
             }),
             g
@@ -184,9 +184,9 @@ class h {
                 (e) => this.getDefaultMinWidth(n.columns[e])
             ).forEach((r, i) => {
                 var a;
-                let s = n.columns[i].key,
-                    o = n.columns[i];
-                this.columnWidths.set(s, r), this.columnMinWidths.set(s, d(null !== (a = o.props.minWidth) && void 0 !== a ? a : this.getDefaultMinWidth(o), e)), this.columnMaxWidths.set(s, c(o.props.maxWidth, e));
+                let o = n.columns[i].key,
+                    s = n.columns[i];
+                this.columnWidths.set(o, r), this.columnMinWidths.set(o, d(null !== (a = s.props.minWidth) && void 0 !== a ? a : this.getDefaultMinWidth(s), e)), this.columnMaxWidths.set(o, c(s.props.maxWidth, e));
             }),
             this.columnWidths
         );
@@ -196,52 +196,52 @@ class h {
         (this.columnWidths = new Map()), (this.columnMinWidths = new Map()), (this.columnMaxWidths = new Map()), (this.getDefaultWidth = null !== (n = null == e ? void 0 : e.getDefaultWidth) && void 0 !== n ? n : () => '1fr'), (this.getDefaultMinWidth = null !== (r = null == e ? void 0 : e.getDefaultMinWidth) && void 0 !== r ? r : () => 75);
     }
 }
-let p = 'row-header-column-' + Math.random().toString(36).slice(2),
+let _ = 'row-header-column-' + Math.random().toString(36).slice(2),
     m = 'row-header-column-' + Math.random().toString(36).slice(2);
-for (; p === m; ) m = 'row-header-column-' + Math.random().toString(36).slice(2);
+for (; _ === m; ) m = 'row-header-column-' + Math.random().toString(36).slice(2);
 function g(e, n) {
     if (0 === n.length) return [];
     let r = [],
         i = new Map();
     for (let a of n) {
         let n = a.parentKey,
-            s = [a];
+            o = [a];
         for (; n; ) {
             let r = e.get(n);
             if (!r) break;
             if (i.has(r)) {
                 r.colspan++;
                 let { column: e, index: n } = i.get(r);
-                if (n > s.length) break;
-                for (let r = n; r < s.length; r++) e.splice(r, 0, null);
-                for (let n = s.length; n < e.length; n++) e[n] && i.has(e[n]) && (i.get(e[n]).index = n);
+                if (n > o.length) break;
+                for (let r = n; r < o.length; r++) e.splice(r, 0, null);
+                for (let n = o.length; n < e.length; n++) e[n] && i.has(e[n]) && (i.get(e[n]).index = n);
             } else
                 (r.colspan = 1),
-                    s.push(r),
+                    o.push(r),
                     i.set(r, {
-                        column: s,
-                        index: s.length - 1
+                        column: o,
+                        index: o.length - 1
                     });
             n = r.parentKey;
         }
-        r.push(s), (a.index = r.length - 1);
+        r.push(o), (a.index = r.length - 1);
     }
     let a = Math.max(...r.map((e) => e.length)),
-        s = Array(a)
+        o = Array(a)
             .fill(0)
             .map(() => []),
-        o = 0;
+        s = 0;
     for (let e of r) {
         let n = a - 1;
         for (let r of e) {
             if (r) {
-                let e = s[n],
+                let e = o[n],
                     i = e.reduce((e, n) => e + n.colspan, 0);
-                if (i < o) {
+                if (i < s) {
                     let a = {
                         type: 'placeholder',
                         key: 'placeholder-' + r.key,
-                        colspan: o - i,
+                        colspan: s - i,
                         index: i,
                         value: null,
                         rendered: null,
@@ -252,14 +252,14 @@ function g(e, n) {
                     };
                     e.length > 0 && ((e[e.length - 1].nextKey = a.key), (a.prevKey = e[e.length - 1].key)), e.push(a);
                 }
-                e.length > 0 && ((e[e.length - 1].nextKey = r.key), (r.prevKey = e[e.length - 1].key)), (r.level = n), (r.colIndex = o), e.push(r);
+                e.length > 0 && ((e[e.length - 1].nextKey = r.key), (r.prevKey = e[e.length - 1].key)), (r.level = n), (r.colIndex = s), e.push(r);
             }
             n--;
         }
-        o++;
+        s++;
     }
     let l = 0;
-    for (let e of s) {
+    for (let e of o) {
         let r = e.reduce((e, n) => e + n.colspan, 0);
         if (r < n.length) {
             let i = {
@@ -279,7 +279,7 @@ function g(e, n) {
         }
         l++;
     }
-    return s.map((e, n) => ({
+    return o.map((e, n) => ({
         type: 'headerrow',
         key: 'headerrow-' + n,
         index: n,
@@ -291,7 +291,7 @@ function g(e, n) {
         textValue: null
     }));
 }
-class E extends s.V {
+class E extends o.V {
     *[Symbol.iterator]() {
         yield* this.body.childNodes;
     }
@@ -342,11 +342,11 @@ class E extends s.V {
     constructor(e, n, r) {
         let i,
             a = new Set(),
-            s = [];
+            o = [];
         if (null == r ? void 0 : r.showSelectionCheckboxes) {
             let e = {
                 type: 'column',
-                key: p,
+                key: _,
                 value: null,
                 textValue: '',
                 level: 0,
@@ -356,7 +356,7 @@ class E extends s.V {
                 childNodes: [],
                 props: { isSelectionCell: !0 }
             };
-            s.unshift(e);
+            o.unshift(e);
         }
         if (null == r ? void 0 : r.showDragButtons) {
             let e = {
@@ -371,9 +371,9 @@ class E extends s.V {
                 childNodes: [],
                 props: { isDragButtonCell: !0 }
             };
-            s.unshift(e);
+            o.unshift(e);
         }
-        let o = [],
+        let s = [],
             l = new Map(),
             u = (e) => {
                 switch (e.type) {
@@ -381,24 +381,24 @@ class E extends s.V {
                         i = e;
                         break;
                     case 'column':
-                        l.set(e.key, e), !e.hasChildNodes && (s.push(e), e.props.isRowHeader && a.add(e.key));
+                        l.set(e.key, e), !e.hasChildNodes && (o.push(e), e.props.isRowHeader && a.add(e.key));
                         break;
                     case 'item':
-                        o.push(e);
+                        s.push(e);
                         return;
                 }
                 for (let n of e.childNodes) u(n);
             };
         for (let n of e) u(n);
-        let c = g(l, s);
-        c.forEach((e, n) => o.splice(n, 0, e)),
+        let c = g(l, o);
+        c.forEach((e, n) => s.splice(n, 0, e)),
             super({
-                columnCount: s.length,
-                items: o,
-                visitNode: (e) => ((e.column = s[e.index]), e)
+                columnCount: o.length,
+                items: s,
+                visitNode: (e) => ((e.column = o[e.index]), e)
             }),
             (this._size = 0),
-            (this.columns = s),
+            (this.columns = o),
             (this.rowHeaderColumnKeys = a),
             (this.body = i),
             (this.headerRows = c),
@@ -407,22 +407,22 @@ class E extends s.V {
     }
 }
 let v = null;
-function I(e) {
+function y(e) {
     let [n, r] = $1BfjW$useState(!1),
-        { selectionMode: i = 'none', showSelectionCheckboxes: a, showDragButtons: s } = e,
-        o = $1BfjW$useMemo(
+        { selectionMode: i = 'none', showSelectionCheckboxes: a, showDragButtons: o } = e,
+        s = $1BfjW$useMemo(
             () => ({
                 showSelectionCheckboxes: a && 'none' !== i,
-                showDragButtons: s,
+                showDragButtons: o,
                 selectionMode: i,
                 columns: []
             }),
-            [e.children, a, i, s]
+            [e.children, a, i, o]
         ),
         l = $1BfjW$useCollection(
             e,
-            $1BfjW$useCallback((e) => new E(e, null, o), [o]),
-            o
+            $1BfjW$useCallback((e) => new E(e, null, s), [s]),
+            s
         ),
         { disabledKeys: u, selectionManager: c } = $1BfjW$useGridState({
             ...e,
@@ -502,18 +502,18 @@ function I(e) {
 (function e(e) {
     return null;
 }).getCollectionNode = function* (e, n) {
-    let { title: r, children: i, childColumns: s } = e,
-        o = r || i,
-        l = e.textValue || ('string' == typeof o ? o : '') || e['aria-label'],
+    let { title: r, children: i, childColumns: o } = e,
+        s = r || i,
+        l = e.textValue || ('string' == typeof s ? s : '') || e['aria-label'],
         u = yield {
             type: 'column',
-            hasChildNodes: !!s || (r && a.Children.count(i) > 0),
-            rendered: o,
+            hasChildNodes: !!o || (r && a.Children.count(i) > 0),
+            rendered: s,
             textValue: l,
             props: e,
             *childNodes() {
-                if (s)
-                    for (let e of s)
+                if (o)
+                    for (let e of o)
                         yield {
                             type: 'column',
                             value: e
@@ -536,11 +536,11 @@ function I(e) {
         };
     c(n);
 };
-function T(e) {
+function b(e) {
     return null;
 }
-T.getCollectionNode = function* (e, n) {
-    let { children: r, textValue: i, UNSTABLE_childItems: s } = e;
+b.getCollectionNode = function* (e, n) {
+    let { children: r, textValue: i, UNSTABLE_childItems: o } = e;
     yield {
         type: 'item',
         props: e,
@@ -570,8 +570,8 @@ T.getCollectionNode = function* (e, n) {
                         element: r(e.key),
                         key: e.key
                     };
-                if (s)
-                    for (let e of s)
+                if (o)
+                    for (let e of o)
                         yield {
                             type: 'item',
                             value: e
@@ -581,7 +581,7 @@ T.getCollectionNode = function* (e, n) {
                     i = [];
                 if (
                     (a.Children.forEach(r, (r) => {
-                        if (r.type === T) {
+                        if (r.type === b) {
                             if (e.length < n.columns.length) throw Error("All of a Row's child Cells must be positioned before any child Rows.");
                             i.push({
                                 type: 'item',
@@ -616,23 +616,23 @@ T.getCollectionNode = function* (e, n) {
         hasChildNodes: !1
     };
 };
-function b(e, n, r) {
+function I(e, n, r) {
     let i;
     return 'all' === e ? (i = new Set(r.flattenedRows.filter((e) => e.props.UNSTABLE_childItems || e.props.children.length > r.userColumnCount).map((e) => e.key))).delete(n) : (i = new Set(e)).has(n) ? i.delete(n) : i.add(n), i;
 }
-function y(e) {
+function T(e) {
     return e ? ('all' === e ? 'all' : new Set(e)) : new Set();
 }
 function S(e, n) {
     let r,
         i,
         { expandedKeys: a = new Set() } = n,
-        s = [],
-        o = 0,
+        o = [],
+        s = 0,
         l = 0,
         u = [],
         c = new Map();
-    (null == n ? void 0 : n.showSelectionCheckboxes) && o++, (null == n ? void 0 : n.showDragButtons) && o++;
+    (null == n ? void 0 : n.showSelectionCheckboxes) && s++, (null == n ? void 0 : n.showDragButtons) && s++;
     let d = [],
         f = (e) => {
             switch (e.type) {
@@ -649,8 +649,8 @@ function S(e, n) {
             for (let n of e.childNodes) f(n);
         };
     for (let n of e) 'column' === n.type && u.push(n), f(n);
-    o += l;
-    let _ = 0,
+    s += l;
+    let p = 0,
         h = (e, n) => {
             let i;
             if ('item' === e.type) {
@@ -658,16 +658,16 @@ function S(e, n) {
                 for (let r of e.childNodes)
                     if ('cell' === r.type) {
                         let e = { ...r };
-                        e.index + 1 === o && (e.nextKey = null), n.push({ ...e });
+                        e.index + 1 === s && (e.nextKey = null), n.push({ ...e });
                     }
                 let i = {
                     ...e,
                     childNodes: n,
                     parentKey: r.key,
                     level: 1,
-                    index: _++
+                    index: p++
                 };
-                s.push(i);
+                o.push(i);
             }
             let l = {};
             'placeholder' !== e.type && 'column' !== e.type && (l.indexOfType = n), Object.assign(e, l), c.set(e.key, e);
@@ -683,12 +683,12 @@ function S(e, n) {
         {
             keyMap: c,
             userColumnCount: l,
-            flattenedRows: s,
+            flattenedRows: o,
             tableNodes: [
                 ...u,
                 {
                     ...r,
-                    childNodes: s
+                    childNodes: o
                 }
             ]
         }

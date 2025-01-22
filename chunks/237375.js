@@ -5,22 +5,22 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(481060),
     u = r(965386),
     c = r(118012),
     d = r(987826),
     f = r(826298),
-    _ = r(665692),
+    p = r(665692),
     h = r(388032),
-    p = r(102543);
+    _ = r(102543);
 let m = 200;
 function g(e, n, r) {
     return (0, i.jsx)(
         d.Z,
         {
-            className: p.option,
+            className: _.option,
             name: e.displayName,
             state: n,
             onClick: r
@@ -29,21 +29,21 @@ function g(e, n, r) {
     );
 }
 function E(e) {
-    let { command: n, optionStates: r, onOptionClick: s } = e,
+    let { command: n, optionStates: r, onOptionClick: o } = e,
         {
-            requiredOptions: o,
+            requiredOptions: s,
             setOptionalOptions: u,
             unsetOptionalOptions: d
         } = a.useMemo(() => {
-            var e, i, a, s;
-            let o = null !== (a = null === (e = n.options) || void 0 === e ? void 0 : e.filter((e) => e.required)) && void 0 !== a ? a : [],
-                l = null !== (s = null === (i = n.options) || void 0 === i ? void 0 : i.filter((e) => !e.required)) && void 0 !== s ? s : [],
+            var e, i, a, o;
+            let s = null !== (a = null === (e = n.options) || void 0 === e ? void 0 : e.filter((e) => e.required)) && void 0 !== a ? a : [],
+                l = null !== (o = null === (i = n.options) || void 0 === i ? void 0 : i.filter((e) => !e.required)) && void 0 !== o ? o : [],
                 u = l.filter((e) => {
                     var n;
                     return null == r ? void 0 : null === (n = r[e.name]) || void 0 === n ? void 0 : n.hasValue;
                 });
             return {
-                requiredOptions: o,
+                requiredOptions: s,
                 setOptionalOptions: u,
                 unsetOptionalOptions: l.filter((e) => {
                     var n;
@@ -52,7 +52,7 @@ function E(e) {
             };
         }, [n.options, r]),
         f = (0, i.jsx)('div', {
-            className: p.optionalNames,
+            className: _.optionalNames,
             children: d.map((e) =>
                 (0, i.jsx)(
                     l.Text,
@@ -64,17 +64,17 @@ function E(e) {
                 )
             )
         }),
-        _ = o.map((e) => g(e, null == r ? void 0 : r[e.name], s)),
+        p = s.map((e) => g(e, null == r ? void 0 : r[e.name], o)),
         E =
             u.length > 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(l.Heading, {
-                              className: p.optionalHeader,
+                              className: _.optionalHeader,
                               variant: 'heading-deprecated-12/semibold',
                               children: h.intl.string(h.t['5C107O'])
                           }),
-                          u.map((e) => g(e, null == r ? void 0 : r[e.name], s))
+                          u.map((e) => g(e, null == r ? void 0 : r[e.name], o))
                       ]
                   })
                 : null,
@@ -86,7 +86,7 @@ function E(e) {
                       delay: m,
                       children: (e) =>
                           (0, i.jsx)(c.Z, {
-                              className: p.optionalCount,
+                              className: _.optionalCount,
                               color: c.Z.Colors.MUTED,
                               ...e,
                               children: 0 === u.length ? h.intl.formatToPlainString(h.t['0mI72t'], { count: d.length }) : h.intl.formatToPlainString(h.t.BP8N0N, { count: d.length })
@@ -95,10 +95,10 @@ function E(e) {
                 : null;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            _,
+            p,
             null != E || null != v
                 ? (0, i.jsxs)('div', {
-                      className: p.optionals,
+                      className: _.optionals,
                       children: [E, v]
                   })
                 : null
@@ -106,56 +106,56 @@ function E(e) {
     });
 }
 function v(e) {
-    var n, r, s;
+    var n, r, o;
     let l,
-        { command: c, activeOptionName: d, channel: h, showOptions: m, showImage: g, optionStates: v, onOptionClick: I, section: T, isSelectable: b = !0 } = e,
-        y = a.useMemo(() => {
+        { command: c, activeOptionName: d, channel: h, showOptions: m, showImage: g, optionStates: v, onOptionClick: y, section: b, isSelectable: I = !0 } = e,
+        T = a.useMemo(() => {
             var e;
             return null == c ? void 0 : null === (e = c.options) || void 0 === e ? void 0 : e.find((e) => e.name === d);
         }, [d, c]),
         S = null != d ? (null == v ? void 0 : v[d]) : null;
     l = null != S && (null === (n = S.lastValidationResult) || void 0 === n ? void 0 : n.success) === !1 ? (null !== (r = S.lastValidationResult.error) && void 0 !== r ? r : '') : null;
-    let A = g && null != T ? (0, f.ky)(T) : null;
+    let A = g && null != b ? (0, f.ky)(b) : null;
     return (0, i.jsxs)('div', {
-        className: o()(p.wrapper, b ? null : p.disabled),
+        className: s()(_.wrapper, I ? null : _.disabled),
         children: [
             null != A
                 ? (0, i.jsx)(A, {
-                      className: p.image,
+                      className: _.image,
                       channel: h,
-                      section: T,
+                      section: b,
                       width: 32,
                       height: 32
                   })
                 : null,
             (0, i.jsxs)('div', {
-                className: p.infoWrapper,
+                className: _.infoWrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: p.usageWrapper,
+                        className: _.usageWrapper,
                         children: [
                             (0, i.jsx)(u.BR, {
-                                className: p.title,
-                                children: _.GI + c.displayName
+                                className: _.title,
+                                children: p.GI + c.displayName
                             }),
                             m
                                 ? (0, i.jsx)(E, {
                                       command: c,
                                       optionStates: v,
-                                      onOptionClick: I
+                                      onOptionClick: y
                                   })
                                 : null
                         ]
                     }),
                     (0, i.jsx)(u.wL, {
-                        className: o()(p.description, null != l ? p.error : null),
-                        children: null !== (s = null != l ? l : null == y ? void 0 : y.displayDescription) && void 0 !== s ? s : c.displayDescription
+                        className: s()(_.description, null != l ? _.error : null),
+                        children: null !== (o = null != l ? l : null == T ? void 0 : T.displayDescription) && void 0 !== o ? o : c.displayDescription
                     })
                 ]
             }),
             (0, i.jsx)(u.dY, {
-                className: p.source,
-                children: null == T ? void 0 : T.name
+                className: _.source,
+                children: null == b ? void 0 : b.name
             })
         ]
     });

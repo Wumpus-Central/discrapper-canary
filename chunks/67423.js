@@ -1,6 +1,6 @@
 r.d(n, {
     B_: function () {
-        return p;
+        return _;
     },
     Lm: function () {
         return d;
@@ -9,7 +9,7 @@ r.d(n, {
         return f;
     },
     P4: function () {
-        return _;
+        return p;
     },
     Tk: function () {
         return E;
@@ -29,8 +29,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(654861),
-    s = r.n(a);
-function o(e, n, r) {
+    o = r.n(a);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -51,11 +51,11 @@ function d(e) {
 }
 function f(e) {
     let n = e - l;
-    return n <= 0 ? '0' : s()(n).shiftLeft(c).toString();
+    return n <= 0 ? '0' : o()(n).shiftLeft(c).toString();
 }
-function _(e, n) {
+function p(e, n) {
     let r = e - l;
-    return s()(r <= 0 ? 0 : r)
+    return o()(r <= 0 ? 0 : r)
         .shiftLeft(c)
         .add(n.next())
         .toString();
@@ -63,7 +63,7 @@ function _(e, n) {
 function h(e) {
     return f(d(e) - 1);
 }
-function p(e) {
+function _(e) {
     return Date.now() - d(e);
 }
 function m(e, n) {
@@ -86,6 +86,6 @@ class E {
         this.seq = 0;
     }
     constructor() {
-        o(this, 'seq', void 0), (this.seq = 0);
+        s(this, 'seq', void 0), (this.seq = 0);
     }
 }

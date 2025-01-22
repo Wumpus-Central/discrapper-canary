@@ -1,12 +1,12 @@
 r.d(n, {
     Ct: function () {
-        return _;
+        return p;
     },
     UP: function () {
         return d;
     },
     ZP: function () {
-        return p;
+        return _;
     },
     rj: function () {
         return f;
@@ -14,8 +14,8 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(47120);
-var s = r(929991),
-    o = r(480739),
+var o = r(929991),
+    s = r(480739),
     l = r(228392),
     u = r(6496);
 function c(e, n, r) {
@@ -32,32 +32,32 @@ function c(e, n, r) {
     );
 }
 function d(e) {
-    return ''.concat(o.AT.FORUM_CHANNEL, '_').concat(e);
+    return ''.concat(s.AT.FORUM_CHANNEL, '_').concat(e);
 }
 function f(e, n, r) {
-    (0, s.a8)(d(e), n, r);
+    (0, o.a8)(d(e), n, r);
 }
-function _(e, n, r) {
-    (0, s.FL)(d(e), n, r);
+function p(e, n, r) {
+    (0, o.FL)(d(e), n, r);
 }
 function h(e) {
-    let { guildId: n, channelId: r, sessionId: i, trackedFeedItems: a, isForcedFlush: s } = e,
-        o = [],
+    let { guildId: n, channelId: r, sessionId: i, trackedFeedItems: a, isForcedFlush: o } = e,
+        s = [],
         u = [];
     for (let e of Object.keys(a)) {
-        let n = a[e].computeSeenTimeDestructive(s);
-        n > 0 && (o.push(e), u.push(n));
+        let n = a[e].computeSeenTimeDestructive(o);
+        n > 0 && (s.push(e), u.push(n));
     }
-    0 !== o.length &&
+    0 !== s.length &&
         (0, l.qs)({
             guildId: n,
             channelId: r,
             sessionId: i,
-            postIds: o,
+            postIds: s,
             additionalTimes: u
         });
 }
-class p extends o.zQ {
+class _ extends s.zQ {
     constructor({ guildId: e, channelId: n, windowId: r, isPaused: i }) {
         super({
             windowId: r,

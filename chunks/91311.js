@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140);
+var o = r(442837),
+    s = r(570140);
 function l(e, n, r) {
     return (
         n in e
@@ -34,7 +34,7 @@ let u = {
 function d(e) {
     c[e.toggle] = e.value;
 }
-class f extends (i = s.ZP.DeviceSettingsStore) {
+class f extends (i = o.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
         return { toggleStates: c };
     }
@@ -62,4 +62,4 @@ class f extends (i = s.ZP.DeviceSettingsStore) {
         });
     }
 }
-l(f, 'displayName', 'DevToolsDesignTogglesStore'), l(f, 'persistKey', 'DevToolsDesignTogglesStore'), (n.Z = new f(o.Z, { DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: d }));
+l(f, 'displayName', 'DevToolsDesignTogglesStore'), l(f, 'persistKey', 'DevToolsDesignTogglesStore'), (n.Z = new f(s.Z, { DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: d }));

@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(47120);
 var a = r(192379);
-function s() {
+function o() {
     let [e, n] = a.useState(null),
         r = a.useRef(null);
     return (

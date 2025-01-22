@@ -1,6 +1,6 @@
 r.d(n, {
     w: function () {
-        return s;
+        return o;
     }
 });
 var i = r(653041);
@@ -17,7 +17,7 @@ function a(e, n, r) {
         e
     );
 }
-class s {
+class o {
     getElement() {
         return 0 === this._elements.length ? this._createElement() : this._elements.pop();
     }

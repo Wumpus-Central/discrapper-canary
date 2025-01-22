@@ -1,35 +1,35 @@
 r.d(n, {
     Z: function () {
-        return p;
+        return _;
     }
 });
 var i = r(47120);
 var a = r(411104);
-var s = r(259443),
-    o = r(911284),
+var o = r(259443),
+    s = r(911284),
     l = r(598077),
     u = r(314897),
     c = r(456644),
     d = r(484459);
 let f = 300,
-    _ = new s.Yd('preloadUserProfileForPopout'),
+    p = new o.Yd('preloadUserProfileForPopout'),
     h = async (e) => {
         let n = u.default.getId() === e,
             { recentActivityEnabled: r } = (0, c.G)({ location: 'preloadUserProfileForPopout' });
         if (!!r && !!n)
             try {
-                await Promise.race([(0, o.Z)(e), new Promise((e) => setTimeout(e, f))]);
+                await Promise.race([(0, s.Z)(e), new Promise((e) => setTimeout(e, f))]);
             } catch (n) {
-                _.log('Failed to fetch content inventory outbox for '.concat(e, ':'), n);
+                p.log('Failed to fetch content inventory outbox for '.concat(e, ':'), n);
             }
     };
-async function p() {
+async function _() {
     let e, n, r;
-    for (var i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
-    let o = a[0],
+    for (var i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
+    let s = a[0],
         u = a[1];
-    if ('string' == typeof o && ('string' == typeof u || null == u)) (e = o), (n = u), (r = a[2]);
-    else if (o instanceof l.Z && ('object' == typeof u || null == u)) (e = o.id), (n = o.getAvatarURL(void 0, 80)), (r = u);
+    if ('string' == typeof s && ('string' == typeof u || null == u)) (e = s), (n = u), (r = a[2]);
+    else if (s instanceof l.Z && ('object' == typeof u || null == u)) (e = s.id), (n = s.getAvatarURL(void 0, 80)), (r = u);
     else throw Error('Invalid arguments');
     if (null == e) return Promise.resolve();
     let [c] = await Promise.all([

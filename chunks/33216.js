@@ -5,12 +5,12 @@ r.d(n, {
 });
 var i = r(239700);
 function a(e) {
-    let [n, r] = (0, i.zk)(s(e.value), s(e.defaultValue) || '', e.onChange);
+    let [n, r] = (0, i.zk)(o(e.value), o(e.defaultValue) || '', e.onChange);
     return {
         value: n,
         setValue: r
     };
 }
-function s(e) {
+function o(e) {
     if (null != e) return e.toString();
 }

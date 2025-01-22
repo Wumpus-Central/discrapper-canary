@@ -1,11 +1,11 @@
 r.d(n, {
     O: function () {
-        return s;
+        return o;
     }
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2025-01_remove_emoji_effects',
     label: 'Remove emoji effects',

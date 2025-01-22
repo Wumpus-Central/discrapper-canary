@@ -3,18 +3,18 @@ r.d(n, {
         return l;
     },
     k: function () {
-        return o;
+        return s;
     }
 });
 var i = r(311570),
     a = r(228624),
-    s = r(388032);
-let o = (e) => {
+    o = r(388032);
+let s = (e) => {
         let n = (0, a.hv)('useProductName') === i.v.VARIANTS_GROUP;
         if (null == e) return '';
-        let r = s.intl.string(s.t.z7y5vL);
+        let r = o.intl.string(o.t.z7y5vL);
         return n && 'baseVariantName' in e && null != e.baseVariantName && e.variantLabel !== r
-            ? s.intl.formatToPlainString(s.t.BZN5k5, {
+            ? o.intl.formatToPlainString(o.t.BZN5k5, {
                   baseVariantName: e.baseVariantName,
                   variantLabel: e.variantLabel
               })

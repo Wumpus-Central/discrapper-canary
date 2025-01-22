@@ -1,13 +1,13 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(168232),
     u = r(430824),
     c = r(594174),
     d = r(987338),
     f = r(48541);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -21,10 +21,10 @@ function _(e, n, r) {
     );
 }
 let h = 'production' === f.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL === f.C.STAGING;
-function p() {
+function _() {
     h = (0, l.QI)(c.default.getCurrentUser());
 }
-class m extends (i = s.ZP.Store) {
+class m extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(c.default, u.Z),
             Object.defineProperties(this, {
@@ -34,7 +34,7 @@ class m extends (i = s.ZP.Store) {
                     set: () => {}
                 }
             }),
-            p(),
+            _(),
             setTimeout(() => Object.freeze(this));
     }
     getExperimentDescriptor() {
@@ -49,12 +49,12 @@ class m extends (i = s.ZP.Store) {
             : null;
     }
     constructor(...e) {
-        super(...e), _(this, 'isDeveloper', !1);
+        super(...e), p(this, 'isDeveloper', !1);
     }
 }
-_(m, 'displayName', 'DeveloperExperimentStore'),
-    (n.Z = new m(o.Z, {
-        CONNECTION_OPEN: p,
-        OVERLAY_INITIALIZE: p,
-        CURRENT_USER_UPDATE: p
+p(m, 'displayName', 'DeveloperExperimentStore'),
+    (n.Z = new m(s.Z, {
+        CONNECTION_OPEN: _,
+        OVERLAY_INITIALIZE: _,
+        CURRENT_USER_UPDATE: _
     }));

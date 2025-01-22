@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(47120);
-var s = r(411104);
-var o = r(259443),
+var o = r(411104);
+var s = r(259443),
     l = r(198584),
     u = r(444675);
 function c(e, n, r) {
@@ -24,7 +24,7 @@ function c(e, n, r) {
 }
 let d = 1000000,
     f = '1' === u.env.KV_STORAGE_LOGGING,
-    _ = new o.Yd('Runtime');
+    p = new s.Yd('Runtime');
 class h {
     static nextId() {
         return ++this.counter;
@@ -96,9 +96,9 @@ class h {
                     (this.addCompletionCallback((e) => {
                         let n = e.ok ? 'completed' : 'failed',
                             r = [''.concat(e.timings.execution.toFixed(3), 'ms execution'), ''.concat(e.timings.materialization.toFixed(3), 'ms js materialization'), ''.concat(e.timings.ccTotal.toFixed(3), 'ms cc completion'), ''.concat(e.timings.jsTotal.toFixed(3), 'ms js reception')].join(', ');
-                        _.info(''.concat(e.tag, ' (#').concat(e.id, ') ').concat(n, ' in ').concat(e.timings.ccTotal.toFixed(3), 'ms (').concat(r, ').'));
+                        p.info(''.concat(e.tag, ' (#').concat(e.id, ') ').concat(n, ' in ').concat(e.timings.ccTotal.toFixed(3), 'ms (').concat(r, ').'));
                     }),
-                    this.addDatabaseStateCallback((e, n) => _.info(''.concat(e, ' (state: ').concat(n, ')')))),
+                    this.addDatabaseStateCallback((e, n) => p.info(''.concat(e, ' (state: ').concat(n, ')')))),
                 (this.initialized = !0);
     }
 }

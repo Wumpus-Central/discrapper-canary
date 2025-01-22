@@ -1,6 +1,6 @@
 r.d(n, {
     as: function () {
-        return s;
+        return o;
     },
     tX: function () {
         return l;
@@ -8,7 +8,7 @@ r.d(n, {
 });
 let i = 'undefined' != typeof global ? global : self,
     a = i.MutationObserver || i.WebKitMutationObserver;
-function s(e) {
+function o(e) {
     return function () {
         let n = setTimeout(i, 0),
             r = setInterval(i, 50);
@@ -17,7 +17,7 @@ function s(e) {
         }
     };
 }
-function o(e) {
+function s(e) {
     let n = 1,
         r = new a(e),
         i = document.createTextNode('');
@@ -28,4 +28,4 @@ function o(e) {
         }
     );
 }
-let l = 'function' == typeof a ? o : s;
+let l = 'function' == typeof a ? s : o;

@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(81825);
@@ -17,14 +17,14 @@ function a(e, n, r) {
         e
     );
 }
-class s extends i.Z {
+class o extends i.Z {
     constructor(e) {
         var n, r;
         super(), a(this, 'id', void 0), a(this, 'layoutId', void 0), a(this, 'type', void 0), a(this, 'anchor', void 0), a(this, 'size', void 0), a(this, 'pinned', void 0), a(this, 'zIndex', void 0), a(this, 'opacity', void 0), a(this, 'meta', void 0), (this.id = e.id || ''), (this.layoutId = e.layoutId || ''), (this.type = e.type);
         let {
             top: i,
-            left: s,
-            bottom: o,
+            left: o,
+            bottom: s,
             right: l
         } = null !== (n = e.anchor) && void 0 !== n
             ? n
@@ -32,12 +32,12 @@ class s extends i.Z {
                   top: 0,
                   left: 0
               };
-        'number' == typeof o ? (i = void 0) : (o = void 0),
-            'number' == typeof l ? (s = void 0) : (l = void 0),
+        'number' == typeof s ? (i = void 0) : (s = void 0),
+            'number' == typeof l ? (o = void 0) : (l = void 0),
             (this.anchor = {
                 top: i,
-                left: s,
-                bottom: o,
+                left: o,
+                bottom: s,
                 right: l
             }),
             (this.size = {

@@ -19,10 +19,10 @@ r.d(n, {
         return a;
     },
     Xp: function () {
-        return o;
+        return s;
     },
     sW: function () {
-        return s;
+        return o;
     }
 });
 class a {
@@ -44,7 +44,7 @@ class a {
         i(this, '_ref', void 0);
     }
 }
-class s {
+class o {
     set(e) {
         return (this._delay = e), this;
     }
@@ -62,7 +62,7 @@ class s {
         i(this, '_timeout', void 0), i(this, '_delay', void 0), i(this, '_handler', void 0), (this._delay = e), (this._handler = n), (this._timeout = new a());
     }
 }
-class o {
+class s {
     start(e, n) {
         this.stop(), (this._ref = window.setInterval(n, e));
     }

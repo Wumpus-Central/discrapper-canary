@@ -2,15 +2,15 @@ var n = '\uD800-\uDFFF',
     r = '[' + n + ']',
     i = '[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]',
     a = '\uD83C[\uDFFB-\uDFFF]',
-    s = '[^' + n + ']',
-    o = '(?:\uD83C[\uDDE6-\uDDFF]){2}',
+    o = '[^' + n + ']',
+    s = '(?:\uD83C[\uDDE6-\uDDFF]){2}',
     l = '[\uD800-\uDBFF][\uDC00-\uDFFF]',
     u = '(?:' + i + '|' + a + ')?',
     c = '[\\ufe0e\\ufe0f]?',
-    d = '(?:\\u200d(?:' + [s, o, l].join('|') + ')' + c + u + ')*',
+    d = '(?:\\u200d(?:' + [o, s, l].join('|') + ')' + c + u + ')*',
     f = c + u + d,
-    _ = RegExp(a + '(?=' + a + ')|' + ('(?:' + [s + i + '?', i, o, l, r].join('|') + ')') + f, 'g');
+    p = RegExp(a + '(?=' + a + ')|' + ('(?:' + [o + i + '?', i, s, l, r].join('|') + ')') + f, 'g');
 function h(e) {
-    return e.match(_) || [];
+    return e.match(p) || [];
 }
 e.exports = h;

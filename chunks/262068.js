@@ -1,6 +1,6 @@
 r.d(n, {
     vg: function () {
-        return p;
+        return _;
     },
     w7: function () {
         return h;
@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(961742),
     a = r(295415),
-    s = r(27273);
-let o = /url\((['"]?)([^'"]+?)\1\)/g,
+    o = r(27273);
+let s = /url\((['"]?)([^'"]+?)\1\)/g,
     l = /url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,
     u = /src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;
 function c(e) {
@@ -18,22 +18,22 @@ function c(e) {
 }
 function d(e) {
     let n = [];
-    return e.replace(o, (e, r, i) => (n.push(i), e)), n.filter((e) => !(0, s.pZ)(e));
+    return e.replace(s, (e, r, i) => (n.push(i), e)), n.filter((e) => !(0, o.pZ)(e));
 }
-async function f(e, n, r, o, l) {
+async function f(e, n, r, s, l) {
     try {
         let u;
         let d = r ? (0, i.Kk)(n, r) : n,
             f = (0, a.b)(n);
         if (l) {
             let e = await l(d);
-            u = (0, s.DT)(e, f);
-        } else u = await (0, s.sx)(d, f, o);
+            u = (0, o.DT)(e, f);
+        } else u = await (0, o.sx)(d, f, s);
         return e.replace(c(n), `$1${u}$3`);
     } catch (e) {}
     return e;
 }
-function _(e, { preferredFontFormat: n }) {
+function p(e, { preferredFontFormat: n }) {
     return n
         ? e.replace(u, (e) => {
               for (;;) {
@@ -45,10 +45,10 @@ function _(e, { preferredFontFormat: n }) {
         : e;
 }
 function h(e) {
-    return -1 !== e.search(o);
+    return -1 !== e.search(s);
 }
-async function p(e, n, r) {
+async function _(e, n, r) {
     if (!h(e)) return e;
-    let i = _(e, r);
+    let i = p(e, r);
     return d(i).reduce((e, i) => e.then((e) => f(e, i, n, r)), Promise.resolve(i));
 }

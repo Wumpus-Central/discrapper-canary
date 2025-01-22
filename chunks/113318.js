@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(442837),
@@ -10,11 +10,11 @@ var i = n(442837),
     o = n(592125),
     s = n(979651),
     c = n(66999),
-    d = n(981631);
-function u(e, t) {
+    u = n(981631);
+function d(e, t) {
     let n = (0, i.e7)([o.Z], () => o.Z.getChannel(t)),
-        { needSubscriptionToAccess: u } = (0, c.Z)(null == n ? void 0 : n.id);
-    if (null == n || u) return null;
+        { needSubscriptionToAccess: d } = (0, c.Z)(null == n ? void 0 : n.id);
+    if (null == n || d) return null;
     let m = n.isGuildVocal(),
         h = (0, r.ZP)({ channel: n });
     return {
@@ -26,7 +26,7 @@ function u(e, t) {
                       needSubscriptionToAccess: !1,
                       routeDirectlyToChannel: !0
                   })
-                : (0, a.uL)(d.Z5c.CHANNEL(e, n.id));
+                : (0, a.uL)(u.Z5c.CHANNEL(e, n.id));
         },
         ariaLabel: h
     };

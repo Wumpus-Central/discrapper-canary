@@ -1,13 +1,13 @@
 var i,
     a,
-    s = r(47120);
-var o = r(757143);
+    o = r(47120);
+var s = r(757143);
 var l = r(442837),
     u = r(433517),
     c = r(570140),
     d = r(591759),
     f = r(902676),
-    _ = r(616922);
+    p = r(616922);
 function h(e, n, r) {
     return (
         n in e
@@ -21,7 +21,7 @@ function h(e, n, r) {
         e
     );
 }
-let p = 'MaskedLinkStore',
+let _ = 'MaskedLinkStore',
     m = new Set(),
     g = new Set(),
     E = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace('//', '');
@@ -36,35 +36,35 @@ function v(e) {
         case location.hostname:
             return !0;
         default:
-            return _.SD.includes(n) || d.Z.isDiscordHostname(n) || m.has(n);
+            return p.SD.includes(n) || d.Z.isDiscordHostname(n) || m.has(n);
     }
 }
-function I(e) {
+function y(e) {
     let n = (0, f.E)(e);
     return g.has(n);
 }
-function T(e) {
+function b(e) {
     let { url: n } = e;
     if (v(n)) return !1;
     m.add((0, f.F)(n)),
-        u.K.set(p, {
+        u.K.set(_, {
             trustedDomains: m,
             trustedProtocols: g
         });
 }
-function b(e) {
+function I(e) {
     let { url: n } = e;
-    if (I(n)) return !1;
+    if (y(n)) return !1;
     g.add((0, f.E)(n)),
-        u.K.set(p, {
+        u.K.set(_, {
             trustedDomains: m,
             trustedProtocols: g
         });
 }
-class y extends (a = l.ZP.Store) {
+class T extends (a = l.ZP.Store) {
     initialize() {
         var e;
-        let n = null !== (e = u.K.get(p)) && void 0 !== e ? e : {};
+        let n = null !== (e = u.K.get(_)) && void 0 !== e ? e : {};
         if (Array.isArray(n)) (m = new Set(null != n ? Array.from(n) : null)), (g = new Set());
         else {
             let { trustedDomains: e, trustedProtocols: r } = n;
@@ -75,11 +75,11 @@ class y extends (a = l.ZP.Store) {
         return v(e);
     }
     isTrustedProtocol(e) {
-        return I(e);
+        return y(e);
     }
 }
-h(y, 'displayName', 'MaskedLinkStore'),
-    (n.Z = new y(c.Z, {
-        MASKED_LINK_ADD_TRUSTED_DOMAIN: T,
-        MASKED_LINK_ADD_TRUSTED_PROTOCOL: b
+h(T, 'displayName', 'MaskedLinkStore'),
+    (n.Z = new T(c.Z, {
+        MASKED_LINK_ADD_TRUSTED_DOMAIN: b,
+        MASKED_LINK_ADD_TRUSTED_PROTOCOL: I
     }));

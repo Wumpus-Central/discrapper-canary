@@ -9,12 +9,12 @@ function n(e) {
             begin: r,
             relevance: 0
         },
-        s = {
+        o = {
             className: 'number',
             begin: '[-+]?\\d+(\\.\\d+)?',
             relevance: 0
         },
-        o = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        s = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
         l = e.COMMENT(';', '$', { relevance: 0 }),
         u = {
             className: 'literal',
@@ -30,7 +30,7 @@ function n(e) {
             begin: '\\^' + r
         },
         f = e.COMMENT('\\^\\{', '\\}'),
-        _ = {
+        p = {
             className: 'symbol',
             begin: '[:]{1,2}' + r
         },
@@ -38,7 +38,7 @@ function n(e) {
             begin: '\\(',
             end: '\\)'
         },
-        p = {
+        _ = {
             endsWithParent: !0,
             relevance: 0
         },
@@ -47,18 +47,18 @@ function n(e) {
             relevance: 0,
             keywords: i,
             begin: r,
-            starts: p
+            starts: _
         },
-        g = [h, o, d, f, l, _, c, s, u, a];
+        g = [h, s, d, f, l, p, c, o, u, a];
     return (
-        (h.contains = [e.COMMENT('comment', ''), m, p]),
-        (p.contains = g),
+        (h.contains = [e.COMMENT('comment', ''), m, _]),
+        (_.contains = g),
         (c.contains = g),
         {
             name: 'Hy',
             aliases: ['hylang'],
             illegal: /\S/,
-            contains: [e.SHEBANG(), h, o, d, f, l, _, c, s, u]
+            contains: [e.SHEBANG(), h, s, d, f, l, p, c, o, u]
         }
     );
 }

@@ -5,10 +5,10 @@ r.d(n, {
 });
 var i = r(239700),
     a = r(192379);
-let s = Math.round(10000000000 * Math.random()),
-    o = 0;
+let o = Math.round(10000000000 * Math.random()),
+    s = 0;
 function l(e) {
-    let n = (0, a.useMemo)(() => e.name || `radio-group-${s}-${++o}`, [e.name]),
+    let n = (0, a.useMemo)(() => e.name || `radio-group-${o}-${++s}`, [e.name]),
         [r, l] = (0, i.zk)(e.value, e.defaultValue, e.onChange),
         [u, c] = (0, a.useState)(null);
     return {

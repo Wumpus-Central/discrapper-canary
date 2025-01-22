@@ -20,7 +20,7 @@ function n(e) {
             end: /'/,
             contains: [{ begin: /''/ }]
         },
-        s = {
+        o = {
             className: 'number',
             relevance: 0,
             variants: [
@@ -38,7 +38,7 @@ function n(e) {
                 }
             ]
         },
-        o = {
+        s = {
             className: 'string',
             variants: [{ match: /#\d[\d_]*/ }, { match: /#\$[\dA-Fa-f][\dA-Fa-f_]*/ }, { match: /#&[0-7][0-7_]*/ }, { match: /#%[01][01_]*/ }]
         },
@@ -59,7 +59,7 @@ function n(e) {
                     begin: /\(/,
                     end: /\)/,
                     keywords: n,
-                    contains: [a, o, i].concat(r)
+                    contains: [a, s, i].concat(r)
                 },
                 i
             ].concat(r)
@@ -70,7 +70,7 @@ function n(e) {
         case_insensitive: !0,
         keywords: n,
         illegal: /"|\$[G-Zg-z]|\/\*|<\/|\|/,
-        contains: [a, o, s, l, u, i].concat(r)
+        contains: [a, s, o, l, u, i].concat(r)
     };
 }
 e.exports = n;

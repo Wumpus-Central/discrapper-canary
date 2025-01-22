@@ -1,37 +1,37 @@
-n.d(t, {
+r.d(n, {
     t: function () {
-        return o;
+        return u;
     }
 });
-var a = n(200651),
-    r = n(481060),
-    l = n(502109),
-    s = n(388032),
-    i = n(245590);
-function o(e) {
-    let t,
-        { onChooseType: n, onStripePaymentMethodReceived: o, onPaymentRequestFailure: c, onValidPaymentRequest: u, paymentRequestRef: d, paymentRequestWallet: p } = e,
-        m = {
+var i = r(200651),
+    a = r(481060),
+    o = r(502109),
+    s = r(388032),
+    l = r(245590);
+function u(e) {
+    let n,
+        { onChooseType: r, onStripePaymentMethodReceived: u, onPaymentRequestFailure: c, onValidPaymentRequest: d, paymentRequestRef: f, paymentRequestWallet: p } = e,
+        h = {
             paymentLabel: s.intl.string(s.t.ZURqX1),
-            paymentRequestRef: d,
+            paymentRequestRef: f,
             renderConnectorView: !0,
-            onStripePaymentMethodReceived: o,
+            onStripePaymentMethodReceived: u,
             onPaymentRequestFailure: c,
-            onValidPaymentRequest: u,
-            onChooseType: n,
-            loadingComponent: (0, a.jsx)(r.Button, {
-                color: r.Button.Colors.TRANSPARENT,
+            onValidPaymentRequest: d,
+            onChooseType: r,
+            loadingComponent: (0, i.jsx)(a.Button, {
+                color: a.Button.Colors.TRANSPARENT,
                 submitting: !0,
-                look: r.Button.Looks.LINK
+                look: a.Button.Looks.LINK
             })
         };
     return (
-        (t = 'applePay' === p ? (0, a.jsx)(l.Ch, { ...m }) : (0, a.jsx)(l.Tr, { ...m })),
-        (0, a.jsx)('div', {
-            className: i.body,
-            children: (0, a.jsx)(r.FormSection, {
+        (n = 'applePay' === p ? (0, i.jsx)(o.Ch, { ...h }) : (0, i.jsx)(o.Tr, { ...h })),
+        (0, i.jsx)('div', {
+            className: l.body,
+            children: (0, i.jsx)(a.FormSection, {
                 title: s.intl.string(s.t.eQ2bLi),
-                children: t
+                children: n
             })
         })
     );

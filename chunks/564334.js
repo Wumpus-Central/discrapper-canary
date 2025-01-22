@@ -5,7 +5,7 @@ r.d(n, {
 });
 var i = r(757143);
 var a = r(47120);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,7 +18,7 @@ function s(e, n, r) {
         e
     );
 }
-function o(e, n, r) {
+function s(e, n, r) {
     if (/%$/.test(n)) return 3 === r ? parseFloat(n) / 100 : (255 * parseFloat(n)) / 100;
     if ('h' === e[r]) {
         if (/turn$/.test(n)) return 360 * parseFloat(n);
@@ -28,49 +28,49 @@ function o(e, n, r) {
 }
 function l(e) {
     let n,
-        { hue: r, saturation: i, lightness: a, alpha: s } = e,
-        o = (1 - Math.abs(2 * (a /= 255) - 1)) * (i /= 255),
-        l = o * (1 - Math.abs(((r / 60) % 2) - 1)),
-        u = a - o / 2,
-        c = (n = r < 60 ? [o, l, 0] : r < 120 ? [l, o, 0] : r < 180 ? [0, o, l] : r < 240 ? [0, l, o] : r < 300 ? [l, 0, o] : [o, 0, l]).map((e) => Math.round((e + u) * 255));
+        { hue: r, saturation: i, lightness: a, alpha: o } = e,
+        s = (1 - Math.abs(2 * (a /= 255) - 1)) * (i /= 255),
+        l = s * (1 - Math.abs(((r / 60) % 2) - 1)),
+        u = a - s / 2,
+        c = (n = r < 60 ? [s, l, 0] : r < 120 ? [l, s, 0] : r < 180 ? [0, s, l] : r < 240 ? [0, l, s] : r < 300 ? [l, 0, s] : [s, 0, l]).map((e) => Math.round((e + u) * 255));
     return {
         red: c[0],
         green: c[1],
         blue: c[2],
-        alpha: s
+        alpha: o
     };
 }
 function u(e) {
     let { red: n, green: r, blue: i, alpha: a } = e,
-        s = n / 255,
-        o = r / 255,
+        o = n / 255,
+        s = r / 255,
         l = i / 255,
-        u = Math.max(s, o, l),
-        c = Math.min(s, o, l),
+        u = Math.max(o, s, l),
+        c = Math.min(o, s, l),
         d = u - c,
         f = (u + c) / 2,
-        _ = d > 0 ? d / (1 - Math.abs(2 * f - 1)) : 0;
+        p = d > 0 ? d / (1 - Math.abs(2 * f - 1)) : 0;
     if (0 === d)
         return {
             hue: 0,
-            saturation: _,
+            saturation: p,
             lightness: f,
             alpha: a
         };
     let h = 0;
     switch (u) {
-        case s:
-            h = ((o - l) / d) % 6;
-            break;
         case o:
-            h = (l - s) / d + 2;
+            h = ((s - l) / d) % 6;
+            break;
+        case s:
+            h = (l - o) / d + 2;
             break;
         case l:
-            h = (o - l) / d + 4;
+            h = (s - l) / d + 4;
     }
     return {
         hue: 60 * h,
-        saturation: _,
+        saturation: p,
         lightness: f,
         alpha: a
     };
@@ -108,7 +108,7 @@ class f {
             .split(/\s*[,/\s]\s*/)
             .map((e) => e.replace(',', '').trim())
             .filter((e) => '' !== e)
-            .map((e, n) => o(r, e, n));
+            .map((e, n) => s(r, e, n));
         if ('hsl' === r.substr(0, 3)) {
             let e = l({
                 hue: a[0],
@@ -135,6 +135,6 @@ class f {
         return 0.2126 * (e <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)) + 0.7152 * (n <= 0.03928 ? n / 12.92 : Math.pow((n + 0.055) / 1.055, 2.4)) + 0.0722 * (r <= 0.03928 ? r / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4));
     }
     constructor(e, n, r, i) {
-        s(this, 'red', void 0), s(this, 'green', void 0), s(this, 'blue', void 0), s(this, 'alpha', void 0), (this.red = e), (this.green = n), (this.blue = r), (this.alpha = i);
+        o(this, 'red', void 0), o(this, 'green', void 0), o(this, 'blue', void 0), o(this, 'alpha', void 0), (this.red = e), (this.green = n), (this.blue = r), (this.alpha = i);
     }
 }

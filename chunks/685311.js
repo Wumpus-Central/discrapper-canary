@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(642128),
     u = r(442837),
     c = r(780384),
     d = r(481060),
     f = r(410030),
-    _ = r(607070),
+    p = r(607070),
     h = r(965645),
-    p = r(362061),
+    _ = r(362061),
     m = r(424496);
 let g = [
         {
@@ -77,30 +77,30 @@ let g = [
         }
     ],
     v = 7,
-    I = 1 / 300;
-function T(e) {
-    let [n, r] = o.useState(!1),
-        [i, a] = o.useState(Math.floor(Math.random() * v)),
-        s = o.useRef(i);
+    y = 1 / 300;
+function b(e) {
+    let [n, r] = s.useState(!1),
+        [i, a] = s.useState(Math.floor(Math.random() * v)),
+        o = s.useRef(i);
     return (
-        o.useEffect(() => {
-            s.current = i;
+        s.useEffect(() => {
+            o.current = i;
         }),
-        o.useEffect(() => {
+        s.useEffect(() => {
             if (e) return;
-            let n = Math.random() <= I;
+            let n = Math.random() <= y;
             if ((r(n), !n)) {
                 let e;
                 do e = Math.floor(Math.random() * v);
-                while (e === s.current);
+                while (e === o.current);
                 a(e);
             }
         }, [e]),
         [n, i]
     );
 }
-let b = (0, l.animated)(h.Z),
-    y = (0, l.animated)(p.Z),
+let I = (0, l.animated)(h.Z),
+    T = (0, l.animated)(_.Z),
     S = (0, l.animated)(d.GiftIcon);
 function A(e) {
     let {
@@ -112,9 +112,9 @@ function A(e) {
                 light: E
             }
         } = e,
-        o = (0, f.ZP)(),
-        [l, u] = T(r),
-        _ = (0, d.useSpring)({
+        s = (0, f.ZP)(),
+        [l, u] = b(r),
+        p = (0, d.useSpring)({
             reverse: !r,
             reset: !0,
             from: { scale: 1 },
@@ -125,36 +125,36 @@ function A(e) {
             }
         }),
         h = !!i && l,
-        p = i ? u : 0,
-        m = (0, c.wj)(null != n ? n : o) ? a.dark[p] : a.light[p];
+        _ = i ? u : 0,
+        m = (0, c.wj)(null != n ? n : s) ? a.dark[_] : a.light[_];
     return !r && i
-        ? (0, s.jsx)(S, {})
+        ? (0, o.jsx)(S, {})
         : h
-          ? (0, s.jsx)(y, {
-                isDark: (0, c.wj)(o),
-                style: _
+          ? (0, o.jsx)(T, {
+                isDark: (0, c.wj)(s),
+                style: p
             })
-          : (0, s.jsx)(b, {
+          : (0, o.jsx)(I, {
                 boxColor: m.box,
                 ribbonColor: m.ribbon,
-                style: _
+                style: p
             });
 }
-function N(e) {
+function C(e) {
     let { hovered: n } = e,
-        i = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
-        a = o.useMemo(() => {
+        i = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
+        a = s.useMemo(() => {
             let e = [];
             return !i && e.push(() => r.e('31496').then(r.t.bind(r, 347381, 19))), e.push(() => r.e('37711').then(r.t.bind(r, 891220, 19))), e;
         }, [i]);
     return n
-        ? (0, s.jsx)(d.ChainedLottieAnimation, {
+        ? (0, o.jsx)(d.ChainedLottieAnimation, {
               className: m.icon,
               animationData: a
           })
-        : (0, s.jsx)(A, {
+        : (0, o.jsx)(A, {
               hovered: n,
               isContentDismissed: !0
           });
 }
-n.Z = o.memo(N);
+n.Z = s.memo(C);

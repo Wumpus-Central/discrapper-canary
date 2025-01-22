@@ -1,4 +1,4 @@
-n.d(e, {
+e.d(n, {
     b: function () {
         return f;
     },
@@ -6,29 +6,29 @@ n.d(e, {
         return d;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(44315),
-    o = n(377171),
-    u = n(981631),
-    a = n(388032),
-    s = n(383011);
+var i = e(200651);
+e(192379);
+var r = e(481060),
+    l = e(44315),
+    u = e(377171),
+    o = e(981631),
+    a = e(388032),
+    s = e(383011);
 function c(t) {
-    let { label: e, backgroundColor: n = o.Z.BUTTON_SECONDARY_BACKGROUND, icon: l, iconColor: u } = t;
+    let { label: n, backgroundColor: e = u.Z.BUTTON_SECONDARY_BACKGROUND, icon: l, iconColor: o } = t;
     return (0, i.jsxs)('div', {
         className: s.badge,
-        style: { backgroundColor: n },
+        style: { backgroundColor: e },
         children: [
             (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'always-white',
                 className: s.__invalid_badgeText,
-                children: e
+                children: n
             }),
             (0, i.jsx)(l, {
                 className: s.badgeIcon,
-                color: null != u ? u : 'currentColor',
+                color: null != o ? o : 'currentColor',
                 'aria-hidden': !0
             })
         ]
@@ -45,6 +45,6 @@ function f() {
     return (0, i.jsx)(c, {
         label: a.intl.string(a.t.TgsPaG),
         icon: r.PencilIcon,
-        iconColor: (0, l.Lq)(u.Ilk.PRIMARY_330)
+        iconColor: (0, l.Lq)(o.Ilk.PRIMARY_330)
     });
 }

@@ -1,6 +1,6 @@
 r.d(n, {
     Qf: function () {
-        return p;
+        return _;
     },
     XV: function () {
         return h;
@@ -14,13 +14,13 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(392711);
-var o = r(524437),
+var o = r(392711);
+var s = r(524437),
     l = r(231338),
     u = r(388032);
 let c = [
         {
-            id: o.Us.MINT_APPLE,
+            id: s.Us.MINT_APPLE,
             theme: l.BR.LIGHT,
             colors: [
                 {
@@ -41,7 +41,7 @@ let c = [
             midpointPercentage: 27
         },
         {
-            id: o.Us.CITRUS_SHERBERT,
+            id: s.Us.CITRUS_SHERBERT,
             theme: l.BR.LIGHT,
             colors: [
                 {
@@ -58,7 +58,7 @@ let c = [
             midpointPercentage: 27
         },
         {
-            id: o.Us.RETRO_RAINCLOUD,
+            id: s.Us.RETRO_RAINCLOUD,
             theme: l.BR.LIGHT,
             colors: [
                 {
@@ -83,7 +83,7 @@ let c = [
             midpointPercentage: 50
         },
         {
-            id: o.Us.HANAMI,
+            id: s.Us.HANAMI,
             theme: l.BR.LIGHT,
             colors: [
                 {
@@ -104,7 +104,7 @@ let c = [
             midpointPercentage: 50
         },
         {
-            id: o.Us.SUNRISE,
+            id: s.Us.SUNRISE,
             theme: l.BR.LIGHT,
             colors: [
                 {
@@ -125,7 +125,7 @@ let c = [
             midpointPercentage: 50
         },
         {
-            id: o.Us.COTTON_CANDY,
+            id: s.Us.COTTON_CANDY,
             theme: l.BR.LIGHT,
             colors: [
                 {
@@ -142,7 +142,7 @@ let c = [
             midpointPercentage: 50
         },
         {
-            id: o.Us.LOFI_VIBES,
+            id: s.Us.LOFI_VIBES,
             theme: l.BR.LIGHT,
             colors: [
                 {
@@ -167,7 +167,7 @@ let c = [
             midpointPercentage: 27
         },
         {
-            id: o.Us.DESERT_KHAKI,
+            id: s.Us.DESERT_KHAKI,
             theme: l.BR.LIGHT,
             colors: [
                 {
@@ -190,7 +190,7 @@ let c = [
     ],
     d = [
         {
-            id: o.Us.SUNSET,
+            id: s.Us.SUNSET,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -207,7 +207,7 @@ let c = [
             midpointPercentage: 35
         },
         {
-            id: o.Us.CHROMA_GLOW,
+            id: s.Us.CHROMA_GLOW,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -236,7 +236,7 @@ let c = [
             midpointPercentage: 15
         },
         {
-            id: o.Us.FOREST,
+            id: s.Us.FOREST,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -265,7 +265,7 @@ let c = [
             midpointPercentage: 50
         },
         {
-            id: o.Us.CRIMSON_MOON,
+            id: s.Us.CRIMSON_MOON,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -282,7 +282,7 @@ let c = [
             midpointPercentage: 30
         },
         {
-            id: o.Us.MIDNIGHT_BLURPLE,
+            id: s.Us.MIDNIGHT_BLURPLE,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -299,7 +299,7 @@ let c = [
             midpointPercentage: 24
         },
         {
-            id: o.Us.MARS,
+            id: s.Us.MARS,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -316,7 +316,7 @@ let c = [
             midpointPercentage: 50
         },
         {
-            id: o.Us.DUSK,
+            id: s.Us.DUSK,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -333,7 +333,7 @@ let c = [
             midpointPercentage: 50
         },
         {
-            id: o.Us.UNDER_THE_SEA,
+            id: s.Us.UNDER_THE_SEA,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -354,7 +354,7 @@ let c = [
             midpointPercentage: 50
         },
         {
-            id: o.Us.RETRO_STORM,
+            id: s.Us.RETRO_STORM,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -379,7 +379,7 @@ let c = [
             midpointPercentage: 61
         },
         {
-            id: o.Us.NEON_NIGHTS,
+            id: s.Us.NEON_NIGHTS,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -400,7 +400,7 @@ let c = [
             midpointPercentage: 50
         },
         {
-            id: o.Us.STRAWBERRY_LEMONADE,
+            id: s.Us.STRAWBERRY_LEMONADE,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -421,7 +421,7 @@ let c = [
             midpointPercentage: 32
         },
         {
-            id: o.Us.AURORA,
+            id: s.Us.AURORA,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -450,7 +450,7 @@ let c = [
             midpointPercentage: 34
         },
         {
-            id: o.Us.SEPIA,
+            id: s.Us.SEPIA,
             theme: l.BR.DARK,
             colors: [
                 {
@@ -468,7 +468,7 @@ let c = [
         }
     ],
     f = {
-        id: o.Us.BLURPLE_TWILIGHT,
+        id: s.Us.BLURPLE_TWILIGHT,
         theme: l.BR.DARK,
         colors: [
             {
@@ -484,8 +484,8 @@ let c = [
         getName: () => u.intl.string(u.t.Mfoe3t),
         midpointPercentage: 50
     },
-    _ = {
-        id: o.Us.EASTER_EGG,
+    p = {
+        id: s.Us.EASTER_EGG,
         theme: l.BR.LIGHT,
         colors: [
             {
@@ -501,8 +501,8 @@ let c = [
         getName: () => u.intl.string(u.t.mFinbW),
         midpointPercentage: 50
     },
-    h = [...c, ...d, f, _],
-    p = [f, ...d, ...c, _];
+    h = [...c, ...d, f, p],
+    _ = [f, ...d, ...c, p];
 !(function (e) {
     (e[(e.DARK = 0)] = 'DARK'), (e[(e.LIGHT = 1)] = 'LIGHT'), (e[(e.SYSTEM = 2)] = 'SYSTEM');
 })(i || (i = {}));
@@ -524,4 +524,4 @@ let m = [
             getName: () => u.intl.string(u.t.zlvNOj)
         }
     ],
-    g = (0, s.keyBy)(h, 'id');
+    g = (0, o.keyBy)(h, 'id');

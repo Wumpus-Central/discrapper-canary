@@ -3,7 +3,7 @@ r.d(n, {
         return l;
     },
     gf: function () {
-        return o;
+        return s;
     },
     xO: function () {
         return i;
@@ -11,8 +11,8 @@ r.d(n, {
 });
 var i,
     a = r(442837),
-    s = r(979651);
-function o(e) {
+    o = r(979651);
+function s(e) {
     if (null == e) return 0;
     if (e.suppress && null != e.requestToSpeakTimestamp) return 1;
     if (!e.suppress && null != e.requestToSpeakTimestamp) return 2;
@@ -20,7 +20,7 @@ function o(e) {
     return 0;
 }
 function l(e, n) {
-    return (0, a.e7)([s.Z], () => (null == e || null == n ? 0 : o(s.Z.getVoiceStateForChannel(n, e))), [e, n]);
+    return (0, a.e7)([o.Z], () => (null == e || null == n ? 0 : s(o.Z.getVoiceStateForChannel(n, e))), [e, n]);
 }
 !(function (e) {
     (e[(e.NONE = 0)] = 'NONE'), (e[(e.REQUESTED_TO_SPEAK = 1)] = 'REQUESTED_TO_SPEAK'), (e[(e.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK = 2)] = 'REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK'), (e[(e.ON_STAGE = 3)] = 'ON_STAGE');

@@ -6,7 +6,7 @@ r.d(n, {
         return f;
     },
     Un: function () {
-        return p;
+        return _;
     },
     wE: function () {
         return h;
@@ -14,8 +14,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379);
-let o = function () {
+    o = r(192379);
+let s = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'transparent';
         return () =>
             (0, a.jsx)('div', {
@@ -34,40 +34,40 @@ let o = function () {
 function f(e) {
     d = e;
 }
-let _ = (e) => new Promise((n) => setTimeout(n, e));
+let p = (e) => new Promise((n) => setTimeout(n, e));
 async function h(e) {
     let { createPromise: n, webpackId: i } = e,
         a = u,
-        s = 0;
+        o = 0;
     for (;;)
         try {
             return await n();
         } catch (e) {
             if ((console.log(e), i in r.c)) throw (console.log('Module was found in webpack cache so it has loaded from the network and webpack will not retry'), e);
-            if (s >= l) throw e;
-            await _(a), await d(), (a = Math.min(c, 2 * a)), s++;
+            if (o >= l) throw e;
+            await p(a), await d(), (a = Math.min(c, 2 * a)), o++;
         }
 }
-function p(e) {
+function _(e) {
     let { createPromise: n, webpackId: r, renderLoader: i, name: l, memo: u = !1 } = e,
-        c = s.lazy(() =>
+        c = o.lazy(() =>
             h({
                 createPromise: n,
                 webpackId: r
             })
         ),
         d = (e) =>
-            (0, a.jsx)(s.Suspense, {
-                fallback: null != i ? i() : o()(),
+            (0, a.jsx)(o.Suspense, {
+                fallback: null != i ? i() : s()(),
                 children: (0, a.jsx)(c, { ...e })
             });
-    return u && (d = s.memo(d)), (d.displayName = 'Suspense('.concat(l || 'Unknown', ')')), d;
+    return u && (d = o.memo(d)), (d.displayName = 'Suspense('.concat(l || 'Unknown', ')')), d;
 }
 function m(e) {
-    let { createPromise: n, webpackId: r, render: i, renderFallback: o } = e,
-        [l, u] = s.useState(null);
+    let { createPromise: n, webpackId: r, render: i, renderFallback: s } = e,
+        [l, u] = o.useState(null);
     return (
-        s.useEffect(() => {
+        o.useEffect(() => {
             h({
                 createPromise: n,
                 webpackId: r
@@ -76,6 +76,6 @@ function m(e) {
                 return u(n);
             });
         }, []),
-        (0, a.jsx)(a.Fragment, { children: null == l ? o() : i(l) })
+        (0, a.jsx)(a.Fragment, { children: null == l ? s() : i(l) })
     );
 }

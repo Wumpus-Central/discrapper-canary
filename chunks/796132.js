@@ -15,7 +15,7 @@ function n(e) {
                 returnEnd: !0
             }
         },
-        s = {
+        o = {
             className: 'keyword',
             begin: '\\bsignal\\b',
             starts: {
@@ -24,7 +24,7 @@ function n(e) {
                 returnEnd: !0
             }
         },
-        o = {
+        s = {
             className: 'attribute',
             begin: '\\bid\\s*:',
             starts: {
@@ -102,7 +102,7 @@ function n(e) {
                 ],
                 relevance: 0
             },
-            s,
+            o,
             a,
             {
                 className: 'function',
@@ -126,7 +126,7 @@ function n(e) {
                 begin: '\\.' + e.IDENT_RE,
                 relevance: 0
             },
-            o,
+            s,
             l,
             u
         ],

@@ -1,27 +1,27 @@
-var r = n(67867),
-    o = n(570596),
-    a = n(548828),
-    i = n(653457),
-    s = n(139545),
-    c = n(730427);
-r(
+var i = r(67867),
+    a = r(570596),
+    o = r(548828),
+    s = r(653457),
+    l = r(139545),
+    u = r(730427);
+i(
     {
         target: 'Promise',
         stat: !0,
-        forced: n(871785)
+        forced: r(871785)
     },
     {
         race: function (e) {
-            var t = this,
-                n = i.f(t),
-                r = n.reject,
-                l = s(function () {
-                    var i = a(t.resolve);
-                    c(e, function (e) {
-                        o(i, t, e).then(n.resolve, r);
+            var n = this,
+                r = s.f(n),
+                i = r.reject,
+                c = l(function () {
+                    var s = o(n.resolve);
+                    u(e, function (e) {
+                        a(s, n, e).then(r.resolve, i);
                     });
                 });
-            return l.error && r(l.value), n.promise;
+            return c.error && i(c.value), r.promise;
         }
     }
 );

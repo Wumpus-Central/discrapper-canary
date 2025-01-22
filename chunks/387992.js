@@ -1,10 +1,10 @@
-var e = n(668530),
-    o = n(974802);
-t.exports = function (t, r) {
-    var n = o[t + 'Prototype'],
-        i = n && n[r];
-    if (i) return i;
-    var u = e[t],
-        s = u && u.prototype;
-    return s && s[r];
+var i = r(668530),
+    a = r(974802);
+e.exports = function (e, n) {
+    var r = a[e + 'Prototype'],
+        o = r && r[n];
+    if (o) return o;
+    var s = i[e],
+        l = s && s.prototype;
+    return l && l[n];
 };

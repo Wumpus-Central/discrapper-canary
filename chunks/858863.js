@@ -1,7 +1,7 @@
 var i = r(312089),
     a = r(910974),
-    s = r(190031),
-    o = r(987609),
+    o = r(190031),
+    s = r(987609),
     l = r(476400);
 var u = r(192379),
     c = r(57435),
@@ -13,7 +13,7 @@ var u = r(192379),
                 return e[n];
             });
         },
-    _ = {
+    p = {
         component: 'div',
         childFactory: function (e) {
             return e;
@@ -22,7 +22,7 @@ var u = r(192379),
     h = (function (e) {
         function n(n, r) {
             var i,
-                a = (i = e.call(this, n, r) || this).handleExited.bind((0, o.Z)((0, o.Z)(i)));
+                a = (i = e.call(this, n, r) || this).handleExited.bind((0, s.Z)((0, s.Z)(i)));
             return (
                 (i.state = {
                     contextValue: { isMounting: !0 },
@@ -32,7 +32,7 @@ var u = r(192379),
                 i
             );
         }
-        (0, s.Z)(n, e);
+        (0, o.Z)(n, e);
         var r = n.prototype;
         return (
             (r.componentDidMount = function () {
@@ -64,11 +64,11 @@ var u = r(192379),
                     n = e.component,
                     r = e.childFactory,
                     a = (0, i.Z)(e, ['component', 'childFactory']),
-                    s = this.state.contextValue,
-                    o = f(this.state.children).map(r);
-                return (delete a.appear, delete a.enter, delete a.exit, null === n) ? u.createElement(c.Z.Provider, { value: s }, o) : u.createElement(c.Z.Provider, { value: s }, u.createElement(n, a, o));
+                    o = this.state.contextValue,
+                    s = f(this.state.children).map(r);
+                return (delete a.appear, delete a.enter, delete a.exit, null === n) ? u.createElement(c.Z.Provider, { value: o }, s) : u.createElement(c.Z.Provider, { value: o }, u.createElement(n, a, s));
             }),
             n
         );
     })(u.Component);
-(h.propTypes = {}), (h.defaultProps = _), (n.Z = h);
+(h.propTypes = {}), (h.defaultProps = p), (n.Z = h);

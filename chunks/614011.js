@@ -8,20 +8,20 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(134432),
+    o = r(192379),
+    s = r(134432),
     l = r(747757),
     u = r(242493);
 let c = 3000;
 function d() {
-    (0, o.po)(''.concat(u, '?query=true'));
+    (0, s.po)(''.concat(u, '?query=true'));
 }
 function f(e) {
     let { onPlayed: n, played: r } = e,
-        [i, o] = s.useState(r),
-        d = s.useRef(0);
+        [i, s] = o.useState(r),
+        d = o.useRef(0);
     if (
-        (s.useEffect(
+        (o.useEffect(
             () => (
                 clearTimeout(d.current),
                 (d.current = setTimeout(() => {
@@ -33,8 +33,8 @@ function f(e) {
             ),
             [n]
         ),
-        s.useEffect(() => {
-            o((e) => !e);
+        o.useEffect(() => {
+            s((e) => !e);
         }, [r]),
         r)
     )

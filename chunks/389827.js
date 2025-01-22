@@ -46,7 +46,7 @@ function n(e) {
                 }
             ]
         },
-        s = [
+        o = [
             {
                 className: 'params',
                 begin: /\(/,
@@ -67,7 +67,7 @@ function n(e) {
                 ]
             }
         ],
-        o = {
+        s = {
             className: 'title',
             begin: e.UNDERSCORE_IDENT_RE,
             relevance: 0
@@ -79,11 +79,11 @@ function n(e) {
                     beginKeywords: n,
                     end: i,
                     excludeEnd: !0,
-                    contains: [].concat(s)
+                    contains: [].concat(o)
                 },
                 {}
             );
-            return l.contains.push(o), l.contains.push(e.C_NUMBER_MODE), l.contains.push(e.C_BLOCK_COMMENT_MODE), l.contains.push(r), l;
+            return l.contains.push(s), l.contains.push(e.C_NUMBER_MODE), l.contains.push(e.C_BLOCK_COMMENT_MODE), l.contains.push(r), l;
         },
         u = {
             className: 'built_in',

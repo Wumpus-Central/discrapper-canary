@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(749210),
-    d = n(703656),
-    u = n(430824),
+    u = n(703656),
+    d = n(430824),
     m = n(914010),
     h = n(900849),
     f = n(41776),
@@ -17,7 +17,7 @@ var i = n(200651),
     E = n(532623);
 t.Z = () => {
     let e = (0, o.e7)([m.Z], () => m.Z.getGuildId(), []),
-        t = (0, o.e7)([u.Z], () => u.Z.getGuild(e), [e]),
+        t = (0, o.e7)([d.Z], () => d.Z.getGuild(e), [e]),
         n = (0, o.e7)([f.Z], () => f.Z.getHistorySnapshot(), []),
         [l, C] = r.useState(!1);
     if (null == t) return null;
@@ -39,8 +39,8 @@ t.Z = () => {
                 className: a()(g.button, g.back),
                 innerClassName: g.iconButton,
                 onClick: () => {
-                    let e = (0, d.s1)();
-                    null != n && null != n.location ? (0, d.dL)({ ...n.location }) : e.goBack();
+                    let e = (0, u.s1)();
+                    null != n && null != n.location ? (0, u.dL)({ ...n.location }) : e.goBack();
                 },
                 children: [
                     (0, i.jsx)(s.ArrowSmallLeftIcon, {

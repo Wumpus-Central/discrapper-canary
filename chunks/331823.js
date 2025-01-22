@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(329022),
     u = r(829307),
     c = r(820611),
@@ -10,14 +10,14 @@ var i = r(192379),
         var n = e.onChange,
             r = e.onSwatchHover,
             a = e.hex,
-            s = e.colors,
+            o = e.colors,
             f = e.width,
-            _ = e.triangle,
+            p = e.triangle,
             h = e.styles,
-            p = void 0 === h ? {} : h,
+            _ = void 0 === h ? {} : h,
             m = e.className,
             g = void 0 === m ? '' : m,
-            E = (0, o.default)(
+            E = (0, s.default)(
                 (0, u.Z)(
                     {
                         default: {
@@ -108,12 +108,12 @@ var i = r(192379),
                             }
                         }
                     },
-                    p
+                    _
                 ),
                 {
-                    'hide-triangle': 'hide' === _,
-                    'top-left-triangle': 'top-left' === _,
-                    'top-right-triangle': 'top-right' === _
+                    'hide-triangle': 'hide' === p,
+                    'top-left-triangle': 'top-left' === p,
+                    'top-right-triangle': 'top-right' === p
                 }
             ),
             v = function (e, r) {
@@ -137,7 +137,7 @@ var i = r(192379),
             i.createElement(
                 'div',
                 { style: E.body },
-                (0, l.Z)(s, function (e, n) {
+                (0, l.Z)(o, function (e, n) {
                     return i.createElement(d.m4, {
                         key: n,
                         color: e,
@@ -160,10 +160,10 @@ var i = r(192379),
         );
     };
 (f.propTypes = {
-    width: s().oneOfType([s().string, s().number]),
-    triangle: s().oneOf(['hide', 'top-left', 'top-right']),
-    colors: s().arrayOf(s().string),
-    styles: s().object
+    width: o().oneOfType([o().string, o().number]),
+    triangle: o().oneOf(['hide', 'top-left', 'top-right']),
+    colors: o().arrayOf(o().string),
+    styles: o().object
 }),
     (f.defaultProps = {
         width: 276,

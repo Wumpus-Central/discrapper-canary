@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(410575),
     s = n(758119),
     c = n(622822),
-    d = n(906732),
-    u = n(924301),
+    u = n(906732),
+    d = n(924301),
     m = n(997321),
     h = n(413605),
     f = n(451603),
@@ -52,14 +52,14 @@ function P(e) {
                       state: R.r2o.RESOLVING,
                       code: ''
                   },
-        { analyticsLocations: D } = (0, d.ZP)(),
+        { analyticsLocations: D } = (0, u.ZP)(),
         k = (0, l.e7)([g.Z], () => ((null == L ? void 0 : L.guild) != null ? g.Z.getGuild(L.guild.id) : null), [L]),
         U = (0, l.e7)([_.default], () => _.default.getId()),
         B = (0, l.e7)(
-            [u.ZP],
+            [d.ZP],
             () => {
                 var e;
-                return u.ZP.getGuildScheduledEvent(null === (e = M.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
+                return d.ZP.getGuildScheduledEvent(null === (e = M.guild_scheduled_event) || void 0 === e ? void 0 : e.id);
             },
             [M]
         ),

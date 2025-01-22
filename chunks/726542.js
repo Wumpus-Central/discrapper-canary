@@ -1,7 +1,7 @@
 var i = r(627494);
 var a = r(757143);
-var s = r(392711),
-    o = r.n(s),
+var o = r(392711),
+    s = r.n(o),
     l = r(692547),
     u = r(591759),
     c = r(981631);
@@ -487,14 +487,14 @@ let d = [
             enabled: !0
         }
     ],
-    f = o().keyBy(d, 'type'),
-    _ = {};
+    f = s().keyBy(d, 'type'),
+    p = {};
 d.forEach((e) => {
     var n;
     null === (n = e.domains) ||
         void 0 === n ||
         n.forEach((n) => {
-            _[n] = e;
+            p[n] = e;
         });
 }),
     (n.Z = {
@@ -506,7 +506,7 @@ d.forEach((e) => {
             let n = u.Z.toURLSafe(e);
             if (null == n) return;
             let r = n.hostname;
-            return _[r.startsWith('www.') ? r.slice(4) : r];
+            return p[r.startsWith('www.') ? r.slice(4) : r];
         },
         isSupported: (e) => Object.prototype.hasOwnProperty.call(f, e),
         map: (e) => d.map(e),

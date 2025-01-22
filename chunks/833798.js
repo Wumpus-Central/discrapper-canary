@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(627341);
-var s = r(278074),
-    o = r(264181),
+var o = r(278074),
+    s = r(264181),
     l = r(178185),
     u = r(272280),
     c = r(806185);
@@ -32,10 +32,10 @@ class f {
                     let [n, r] = e;
                     return [
                         n,
-                        (0, s.EQ)(r)
-                            .with({ type: o.Z.COACHTIP }, (e) => c.Z.fromServer(e))
-                            .with({ type: o.Z.BADGE }, (e) => l.E.fromServer(e))
-                            .with({ type: o.Z.BANNER }, (e) => u.I.fromServer(e))
+                        (0, o.EQ)(r)
+                            .with({ type: s.Z.COACHTIP }, (e) => c.Z.fromServer(e))
+                            .with({ type: s.Z.BADGE }, (e) => l.E.fromServer(e))
+                            .with({ type: s.Z.BANNER }, (e) => u.I.fromServer(e))
                             .otherwise(() => void 0)
                     ];
                 })

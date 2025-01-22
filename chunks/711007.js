@@ -1,13 +1,13 @@
-n.d(t, {
+r.d(n, {
     p: function () {
-        return r;
+        return s;
     }
 });
-var i = n(192379),
-    l = n(409813),
-    a = n(882712);
-function r(e, t, n) {
+var i = r(192379),
+    a = r(409813),
+    o = r(882712);
+function s(e, n, r) {
     i.useEffect(() => {
-        null != e && e !== l.h8.AWAITING_PURCHASE_TOKEN_AUTH && t === a.I.PENDING ? n(l.h8.AWAITING_PURCHASE_TOKEN_AUTH) : e === l.h8.AWAITING_PURCHASE_TOKEN_AUTH && t === a.I.SUCCESS && n(l.h8.REVIEW);
-    }, [e, t, n]);
+        null != e && e !== a.h8.AWAITING_PURCHASE_TOKEN_AUTH && n === o.I.PENDING ? r(a.h8.AWAITING_PURCHASE_TOKEN_AUTH) : e === a.h8.AWAITING_PURCHASE_TOKEN_AUTH && n === o.I.SUCCESS && r(a.h8.REVIEW);
+    }, [e, n, r]);
 }

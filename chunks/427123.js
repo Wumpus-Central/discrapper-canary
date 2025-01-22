@@ -6,8 +6,8 @@ var i,
     o = n(392711),
     s = n.n(o),
     c = n(442837),
-    d = n(433517),
-    u = n(570140),
+    u = n(433517),
+    d = n(570140),
     m = n(496929),
     h = n(16084),
     f = n(728345),
@@ -48,7 +48,7 @@ function S() {
 class A extends (i = c.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(_.ZP, C.Z, E.Z), (T = null !== (e = d.K.get(x)) && void 0 !== e ? e : T);
+        this.waitFor(_.ZP, C.Z, E.Z), (T = null !== (e = u.K.get(x)) && void 0 !== e ? e : T);
     }
     getDetectedOffPlatformPremiumPerks() {
         return s().values(N);
@@ -63,7 +63,7 @@ class A extends (i = c.ZP.Store) {
               writable: !0
           })
         : (r[l] = a),
-    (t.Z = new A(u.Z, {
+    (t.Z = new A(d.Z, {
         LOGOUT: function () {
             (N = {}), (v = {});
         },
@@ -74,7 +74,7 @@ class A extends (i = c.ZP.Store) {
         DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
             let { skuId: t } = e;
             if ((delete N[t], T.includes(t))) return !1;
-            T.push(t), d.K.set(x, T);
+            T.push(t), u.K.set(x, T);
         },
         RUNNING_GAMES_CHANGE: function () {
             let e = !1;

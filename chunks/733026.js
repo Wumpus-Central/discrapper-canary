@@ -1,11 +1,11 @@
 r.d(n, {
     C: function () {
-        return s;
+        return o;
     }
 });
 var i = r(653041);
 var a = r(581364);
-function s(e) {
+function o(e) {
     let n = e.split(',').map((e) => e.trim()),
         r = [],
         i = [];

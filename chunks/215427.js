@@ -5,14 +5,14 @@ var i,
     o = n(442837),
     s = n(433517),
     c = n(570140),
-    d = n(205355);
-let u = 'MaintenanceStore',
+    u = n(205355);
+let d = 'MaintenanceStore',
     m = null,
     h = null,
     f = null;
 class p extends (a = o.ZP.Store) {
     initialize() {
-        f = s.K.get(u);
+        f = s.K.get(d);
     }
     getIncident() {
         return m;
@@ -33,7 +33,7 @@ class p extends (a = o.ZP.Store) {
     (t.Z = new p(c.Z, {
         CONNECTION_OPEN: function () {
             m = null;
-            d.Z.checkScheduledMaintenances();
+            u.Z.checkScheduledMaintenances();
         },
         STATUS_PAGE_INCIDENT: function (e) {
             m = e.incident;
@@ -43,6 +43,6 @@ class p extends (a = o.ZP.Store) {
         },
         STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function () {
             if (null == h) return !1;
-            (f = h.id), s.K.set(u, f);
+            (f = h.id), s.K.set(d, f);
         }
     }));

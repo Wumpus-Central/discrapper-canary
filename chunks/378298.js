@@ -1,6 +1,6 @@
 r.d(n, {
     Dl: function () {
-        return _;
+        return p;
     },
     Ms: function () {
         return u;
@@ -20,8 +20,8 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(570140),
-    s = r(359119),
-    o = r(981631);
+    o = r(359119),
+    s = r(981631);
 function l(e, n) {
     return (
         a.Z.dispatch({
@@ -30,7 +30,7 @@ function l(e, n) {
             warningIds: n
         }),
         i.tn.post({
-            url: o.ANM.CHANNEL_SAFETY_WARNINGS_ACK(e),
+            url: s.ANM.CHANNEL_SAFETY_WARNINGS_ACK(e),
             body: { warning_ids: n },
             oldFormErrors: !0,
             rejectWithError: !1
@@ -59,14 +59,14 @@ function d(e) {
 }
 function f(e) {
     return i.tn.post({
-        url: o.ANM.SAFETY_WARNING_FALSE_POSITIVE(e),
+        url: s.ANM.SAFETY_WARNING_FALSE_POSITIVE(e),
         rejectWithError: !1
     });
 }
-function _(e) {
+function p(e) {
     return i.tn.post({
-        url: o.ANM.ADD_SAFETY_WARNING(e),
-        body: { safety_warning_type: s.pj.STRANGER_DANGER },
+        url: s.ANM.ADD_SAFETY_WARNING(e),
+        body: { safety_warning_type: o.pj.STRANGER_DANGER },
         rejectWithError: !1
     });
 }

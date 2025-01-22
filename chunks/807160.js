@@ -35,9 +35,9 @@ var i,
     O = n(690221),
     R = n(219929),
     P = n(307643),
-    y = n(378233),
-    B = n(419922),
-    D = n(46141),
+    D = n(378233),
+    y = n(419922),
+    B = n(46141),
     Z = n(430824),
     L = n(853872),
     M = n(509545),
@@ -215,7 +215,7 @@ class ec extends (r = l.PureComponent) {
         let {
             payment: { paymentSource: e }
         } = this.props;
-        return e instanceof D.qo ? R.ZP.Types.PAYPAL : e instanceof D.dm ? R.ZP.getType(e.brand) : R.ZP.Types.UNKNOWN;
+        return e instanceof B.qo ? R.ZP.Types.PAYPAL : e instanceof B.dm ? R.ZP.getType(e.brand) : R.ZP.Types.UNKNOWN;
     }
     validateRefundRules() {
         return this.refundRules
@@ -307,7 +307,7 @@ class ec extends (r = l.PureComponent) {
                       })
                     : e.paymentGateway === Q.gg.APPLE_PARTNER
                       ? (0, a.jsx)(Y.Z, {
-                            paymentSource: new D.$z({}),
+                            paymentSource: new B.$z({}),
                             locale: t,
                             descriptionClassName: J.paymentText,
                             showLabels: !0,
@@ -537,8 +537,8 @@ class ec extends (r = l.PureComponent) {
         } else if (null != m) {
             var x;
             if (((t = i.isGuildProductPurchase && i.isSoftDeletedProduct ? X.intl.string(X.t.O7uLm5) : m.name), null != o)) {
-                let t = (0, y.Zt)(o);
-                e = (0, a.jsx)(B.ZP, {
+                let t = (0, D.Zt)(o);
+                e = (0, a.jsx)(y.ZP, {
                     disableAnimation: !d,
                     isInteracting: d,
                     sticker: t,

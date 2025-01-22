@@ -12,8 +12,8 @@ var r = n(120356),
     o = n(446411),
     s = n(454585),
     c = n(834129),
-    d = n(553385),
-    u = n(981631),
+    u = n(553385),
+    d = n(981631),
     m = n(388032),
     h = n(188312);
 function f(e) {
@@ -42,7 +42,7 @@ function f(e) {
                 children: (0, i.jsx)(a.Button, {
                     color: a.Button.Colors.PRIMARY,
                     onClick: () => {
-                        s ? (0, d.z$)(t) : (0, d.XP)(r.guild_id, r.id, t.id);
+                        s ? (0, u.z$)(t) : (0, u.XP)(r.guild_id, r.id, t.id);
                     },
                     children: m.intl.string(m.t.zdBCIi)
                 })
@@ -62,8 +62,8 @@ function p(e) {
               renderTitle: (e, t) => s.Z.parseEmbedTitle(t, !0, { channelId: n.channel_id }),
               renderDescription: (e, t, i) => s.Z.parse(t, !0, { channelId: n.channel_id }),
               autoPlayGif: !1,
-              renderImageComponent: u.VqG,
-              renderVideoComponent: u.VqG,
-              renderLinkComponent: u.VqG
+              renderImageComponent: d.VqG,
+              renderVideoComponent: d.VqG,
+              renderLinkComponent: d.VqG
           });
 }

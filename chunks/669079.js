@@ -1,6 +1,6 @@
 r.d(n, {
     Bg: function () {
-        return Z;
+        return F;
     },
     E5: function () {
         return er;
@@ -45,7 +45,7 @@ r.d(n, {
         return $;
     },
     pO: function () {
-        return F;
+        return Z;
     },
     xr: function () {
         return i;
@@ -56,49 +56,49 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(757143);
-var o = r(627341);
+var o = r(757143);
+var s = r(627341);
 var l = r(278074),
     u = r(873546),
     c = r(442837),
     d = r(34756),
     f = r(100159),
-    _ = r(912788),
+    p = r(912788),
     h = r(594174),
-    p = r(626135),
+    _ = r(626135),
     m = r(823379),
     g = r(74538),
     E = r(226951),
     v = r(73346),
-    I = r(981631),
-    T = r(474936),
-    b = r(388032);
-let y = ['discordapp.com/gifts', 'discord.com/gifts'],
+    y = r(981631),
+    b = r(474936),
+    I = r(388032);
+let T = ['discordapp.com/gifts', 'discord.com/gifts'],
     S = 3,
     A = E.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
-    N = [A, ...y.map((e) => E.Z.escape(e))].join('|'),
-    C = RegExp('(?: |^|https?://)(?:'.concat(N, ')/([a-z0-9-]+)'), 'gi'),
+    C = [A, ...T.map((e) => E.Z.escape(e))].join('|'),
+    N = RegExp('(?: |^|https?://)(?:'.concat(C, ')/([a-z0-9-]+)'), 'gi'),
     R = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => E.Z.escape(e))].join('|'),
     O = RegExp('(?: |^|https?://)(?:'.concat(R, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     D = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789',
-    L = (e, n) =>
+    x = (e, n) =>
         Array(n)
             .fill(void 0)
             .map(() => '['.concat(D, ']{').concat(e, '}'))
             .join('-?'),
-    x = L(4, 4),
-    w = L(4, 6),
-    P = L(5, 3),
+    L = x(4, 4),
+    w = x(4, 6),
+    P = x(5, 3),
     M = 'WUMP-?',
-    k = [x, w, P, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
+    k = [L, w, P, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     U = new RegExp('^('.concat(M, ')?(').concat(k, ')$')),
     B = '-';
 !(function (e) {
     (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (e[(e.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD');
 })(i || (i = {}));
 let G = (e, n) => (u.tq || u.Em ? 0 : null != e || n ? 2 : 1),
-    F = (e) => 0 !== G(e);
-function Z(e) {
+    Z = (e) => 0 !== G(e);
+function F(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         r = arguments.length > 2 ? arguments[2] : void 0;
     return ''
@@ -117,12 +117,12 @@ function V(e) {
 function j(e) {
     return e.replace(/[^A-Za-z0-9]/g, '');
 }
-let H = (e) => (null == e ? void 0 : e.type) === I.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === I.hBH.GIFT,
+let H = (e) => (null == e ? void 0 : e.type) === y.uaV.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === y.hBH.GIFT,
     Y = (e) => {
         let n;
         if (null == e) return [];
         let r = new Set();
-        for (; null != (n = C.exec(e)) && r.size < S; ) r.add(j(n[1]));
+        for (; null != (n = N.exec(e)) && r.size < S; ) r.add(j(n[1]));
         for (; null != (n = O.exec(e)) && r.size < S; ) r.add(j(n[n.length - 1]));
         return Array.from(r);
     };
@@ -138,7 +138,7 @@ async function K(e) {
     try {
         let i = (
             await (0, v.Kb)({
-                url: I.ANM.GIFT_CODE_RESOLVE(e),
+                url: y.ANM.GIFT_CODE_RESOLVE(e),
                 query: {
                     with_application: n,
                     with_subscription_plan: r
@@ -148,8 +148,8 @@ async function K(e) {
             })
         ).body;
         return (
-            p.default.track(
-                I.rMx.GIFT_CODE_RESOLVED,
+            _.default.track(
+                y.rMx.GIFT_CODE_RESOLVED,
                 {
                     resolved: !0,
                     gift_code: i.code,
@@ -165,7 +165,7 @@ async function K(e) {
         );
     } catch (n) {
         throw (
-            (p.default.track(I.rMx.GIFT_CODE_RESOLVED, {
+            (_.default.track(y.rMx.GIFT_CODE_RESOLVED, {
                 resolved: !1,
                 gift_code: e
             }),
@@ -174,104 +174,104 @@ async function K(e) {
     }
 }
 function z(e, n) {
-    p.default.track(I.rMx.GIFT_CODE_COPIED, {
+    _.default.track(y.rMx.GIFT_CODE_COPIED, {
         ...(0, f.Z)(n, !1, !1),
         ...e.analyticsData
     });
 }
-function q(e, n, r, i, a, s, o) {
-    return null == r && (i || a || null == e) ? (!o || s || i || a ? (i && (n.isSubscription || null != e) ? I.wZ8.SUCCESS : I.wZ8.CONFIRM) : I.wZ8.OPEN) : I.wZ8.ERROR;
+function q(e, n, r, i, a, o, s) {
+    return null == r && (i || a || null == e) ? (!s || o || i || a ? (i && (n.isSubscription || null != e) ? y.wZ8.SUCCESS : y.wZ8.CONFIRM) : y.wZ8.OPEN) : y.wZ8.ERROR;
 }
 function Q(e, n, r) {
     switch (e) {
-        case I.wZ8.ERROR:
-            return b.intl.formatToMarkdownString(b.t.JUvC0t, {});
-        case I.wZ8.SUCCESS:
-            return n.isSubscription ? b.intl.formatToPlainString(b.t['1C2BGx'], { skuName: r.name }) : b.intl.string(b.t['+BNMcH']);
-        case I.wZ8.CONFIRM:
+        case y.wZ8.ERROR:
+            return I.intl.formatToMarkdownString(I.t.JUvC0t, {});
+        case y.wZ8.SUCCESS:
+            return n.isSubscription ? I.intl.formatToPlainString(I.t['1C2BGx'], { skuName: r.name }) : I.intl.string(I.t['+BNMcH']);
+        case y.wZ8.CONFIRM:
         default:
-            return n.isSubscription ? b.intl.formatToPlainString(b.t['2VN4Nz'], { skuName: r.name }) : b.intl.string(b.t.RmamAA);
+            return n.isSubscription ? I.intl.formatToPlainString(I.t['2VN4Nz'], { skuName: r.name }) : I.intl.string(I.t.RmamAA);
     }
 }
 function X(e, n, r) {
     switch (e) {
-        case I.wZ8.ERROR:
-            return b.intl.string(b.t.w19zb2);
-        case I.wZ8.SUCCESS:
-            if (__OVERLAY__) return b.intl.string(b.t.zW87EB);
-            if (n.isSubscription) return b.intl.string(b.t.ex5TKi);
-            return b.intl.string(b.t.OOkjqq);
-        case I.wZ8.OPEN:
-            return b.intl.string(b.t.F8ktcn);
-        case I.wZ8.CONFIRM:
+        case y.wZ8.ERROR:
+            return I.intl.string(I.t.w19zb2);
+        case y.wZ8.SUCCESS:
+            if (__OVERLAY__) return I.intl.string(I.t.zW87EB);
+            if (n.isSubscription) return I.intl.string(I.t.ex5TKi);
+            return I.intl.string(I.t.OOkjqq);
+        case y.wZ8.OPEN:
+            return I.intl.string(I.t.F8ktcn);
+        case y.wZ8.CONFIRM:
         default:
-            if (null != r && r) return b.intl.string(b.t.n6I6k5);
-            if (null != n.giftStyle) return n.isClaimed ? b.intl.string(b.t.OgpR0d) : b.intl.string(b.t['2BWscn']);
-            return n.isSubscription ? b.intl.string(b.t.wQ1FHx) : b.intl.string(b.t.OgpR0d);
+            if (null != r && r) return I.intl.string(I.t.n6I6k5);
+            if (null != n.giftStyle) return n.isClaimed ? I.intl.string(I.t.OgpR0d) : I.intl.string(I.t['2BWscn']);
+            return n.isSubscription ? I.intl.string(I.t.wQ1FHx) : I.intl.string(I.t.OgpR0d);
     }
 }
 function J(e) {
     return (0, l.EQ)(e)
         .with(
             {
-                interval: T.rV.MONTH,
-                premiumSubscriptionType: T.p9.TIER_2
+                interval: b.rV.MONTH,
+                premiumSubscriptionType: b.p9.TIER_2
             },
-            () => b.intl.formatToPlainString(b.t['vFfV+P'], { timeInterval: b.intl.string(b.t.FPybU1) })
+            () => I.intl.formatToPlainString(I.t['vFfV+P'], { timeInterval: I.intl.string(I.t.FPybU1) })
         )
         .with(
             {
-                interval: T.rV.YEAR,
-                premiumSubscriptionType: T.p9.TIER_2
+                interval: b.rV.YEAR,
+                premiumSubscriptionType: b.p9.TIER_2
             },
-            () => b.intl.formatToPlainString(b.t['vFfV+P'], { timeInterval: b.intl.string(b.t.tfqrho) })
+            () => I.intl.formatToPlainString(I.t['vFfV+P'], { timeInterval: I.intl.string(I.t.tfqrho) })
         )
         .with(
             {
-                interval: T.rV.MONTH,
-                premiumSubscriptionType: T.p9.TIER_1
+                interval: b.rV.MONTH,
+                premiumSubscriptionType: b.p9.TIER_1
             },
-            () => b.intl.formatToPlainString(b.t.gjKbFx, { intervalCount: e.intervalCount })
+            () => I.intl.formatToPlainString(I.t.gjKbFx, { intervalCount: e.intervalCount })
         )
         .with(
             {
-                interval: T.rV.YEAR,
-                premiumSubscriptionType: T.p9.TIER_1
+                interval: b.rV.YEAR,
+                premiumSubscriptionType: b.p9.TIER_1
             },
-            () => b.intl.formatToPlainString(b.t.GIe7Bw, { intervalCount: e.intervalCount })
+            () => I.intl.formatToPlainString(I.t.GIe7Bw, { intervalCount: e.intervalCount })
         )
-        .otherwise(() => b.intl.string(b.t['5ayf7+']));
+        .otherwise(() => I.intl.string(I.t['5ayf7+']));
 }
 function $(e) {
-    let { step: n, sku: r, libraryApplication: i, error: a, accepted: s, accepting: o, onGoToLibrary: l, subscriptionPlan: u = null } = e;
+    let { step: n, sku: r, libraryApplication: i, error: a, accepted: o, accepting: s, onGoToLibrary: l, subscriptionPlan: u = null } = e;
     switch (n) {
-        case I.wZ8.ERROR:
-            return ee(i, a, s, o, l);
-        case I.wZ8.SUCCESS:
+        case y.wZ8.ERROR:
+            return ee(i, a, o, s, l);
+        case y.wZ8.SUCCESS:
             if (null != u) return J(u);
-            return b.intl.formatToPlainString(b.t['3CPsbm'], { skuName: r.name });
-        case I.wZ8.CONFIRM:
+            return I.intl.formatToPlainString(I.t['3CPsbm'], { skuName: r.name });
+        case y.wZ8.CONFIRM:
         default:
             if (null != u) {
-                let e = u.interval === T.rV.MONTH ? b.t.P9eTKi : b.t.d8rUd3;
-                return b.intl.format(e, {
+                let e = u.interval === b.rV.MONTH ? I.t.P9eTKi : I.t.d8rUd3;
+                return I.intl.format(e, {
                     skuName: r.name,
                     intervalCount: u.intervalCount
                 });
             }
-            return b.intl.formatToPlainString(b.t.l6Ea4e, { skuName: r.name });
+            return I.intl.formatToPlainString(I.t.l6Ea4e, { skuName: r.name });
     }
 }
 function ee(e, n, r, i, a) {
-    let s = r || i ? void 0 : e,
-        o = b.intl.format(b.t['5zyz9/'], { onGoToLibrary: a });
-    return null != s ? o : null == n ? null : ei(n, h.default.getCurrentUser());
+    let o = r || i ? void 0 : e,
+        s = I.intl.format(I.t['5zyz9/'], { onGoToLibrary: a });
+    return null != o ? s : null == n ? null : ei(n, h.default.getCurrentUser());
 }
 function et(e, n, r) {
     let i = n.applicationId,
         a = e.length > 0 ? e : [i],
-        s = a.map((e) => r.getLibraryApplication(i, e, !0)).filter(m.lm);
-    return s.length === a.length ? s[0] : null;
+        o = a.map((e) => r.getLibraryApplication(i, e, !0)).filter(m.lm);
+    return o.length === a.length ? o[0] : null;
 }
 function en(e) {
     let n = e.trim().split('/').pop().match(U);
@@ -280,32 +280,32 @@ function en(e) {
     return null == a ? null : a.replace(RegExp(B, 'g'), '');
 }
 let er = (e, n) =>
-    (0, c.e7)([_.Z], () => {
+    (0, c.e7)([p.Z], () => {
         if (null == e || !n) return null;
-        let r = _.Z.getGiftCode(e);
+        let r = p.Z.getGiftCode(e);
         return null == r || '' === r ? null : r;
     });
 function ei(e, n) {
     switch (e.code) {
-        case I.evJ.INVALID_GIFT_SELF_REDEMPTION:
-            return b.intl.string(b.t.wa9h7O);
-        case I.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-            return b.intl.string(b.t.Iw2TUV);
-        case I.evJ.INVALID_GIFT_REDEMPTION_OWNED:
-            return b.intl.string(b.t.mdLtb2);
-        case I.evJ.UNKNOWN_GIFT_CODE:
-            return b.intl.string(b.t.roztIi);
-        case I.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
-            return b.intl.formatToPlainString(b.t['4YTHKy'], { planName: (0, g.M5)(n, T.p9.TIER_2) ? b.intl.string(b.t['lG6a5+']) : b.intl.string(b.t['FSOz7+']) });
-        case I.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
-            return b.intl.string(b.t['9i1J39']);
-        case I.evJ.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
-            return b.intl.string(b.t.U26WX1);
-        case I.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
-            return b.intl.string(b.t.ypuSd3);
-        case I.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
-            return b.intl.string(b.t.mXMmWF);
+        case y.evJ.INVALID_GIFT_SELF_REDEMPTION:
+            return I.intl.string(I.t.wa9h7O);
+        case y.evJ.INVALID_GIFT_REDEMPTION_EXHAUSTED:
+            return I.intl.string(I.t.Iw2TUV);
+        case y.evJ.INVALID_GIFT_REDEMPTION_OWNED:
+            return I.intl.string(I.t.mdLtb2);
+        case y.evJ.UNKNOWN_GIFT_CODE:
+            return I.intl.string(I.t.roztIi);
+        case y.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
+            return I.intl.formatToPlainString(I.t['4YTHKy'], { planName: (0, g.M5)(n, b.p9.TIER_2) ? I.intl.string(I.t['lG6a5+']) : I.intl.string(I.t['FSOz7+']) });
+        case y.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
+            return I.intl.string(I.t['9i1J39']);
+        case y.evJ.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
+            return I.intl.string(I.t.U26WX1);
+        case y.evJ.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
+            return I.intl.string(I.t.ypuSd3);
+        case y.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
+            return I.intl.string(I.t.mXMmWF);
         default:
-            return b.intl.string(b.t['s9+XlJ']);
+            return I.intl.string(I.t['s9+XlJ']);
     }
 }

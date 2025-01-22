@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(496675),
     b = n(594174),
     Z = n(51144),
-    S = n(7782),
-    N = n(967128),
+    N = n(7782),
+    S = n(967128),
     T = n(320781),
     j = n(269203),
     A = n(86863),
@@ -118,7 +118,7 @@ function F(e) {
                               })
                       ]
                   }))
-                : (e = (0, i.jsx)(S.Z, {
+                : (e = (0, i.jsx)(N.Z, {
                       userId: h.getRecipientId(),
                       channel: h,
                       showingBanner: p
@@ -142,9 +142,9 @@ function F(e) {
     }
     if (h.isMultiUserDM())
         return h.isManaged()
-            ? (0, i.jsxs)(N.ZP, {
+            ? (0, i.jsxs)(S.ZP, {
                   channelId: h.id,
-                  children: [(0, i.jsx)(N.Ot, { children: B.intl.format(B.t.I3R7Vl, { channelName: v }) }), (0, i.jsx)(N.jz, { children: B.intl.string(B.t.M8Ao6O) })]
+                  children: [(0, i.jsx)(S.Ot, { children: B.intl.format(B.t.I3R7Vl, { channelName: v }) }), (0, i.jsx)(S.jz, { children: B.intl.string(B.t.M8Ao6O) })]
               })
             : h.hasFlag(w.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)
               ? (0, i.jsx)(j.Z, { channel: h })
@@ -157,8 +157,8 @@ function F(e) {
               channel: h,
               canManageRoles: L
           })
-        : (0, i.jsx)(N.ZP, {
+        : (0, i.jsx)(S.ZP, {
               channelId: h.id,
-              children: (0, i.jsx)(N.jz, { children: B.intl.format(B.t.hPVEQE, { channelName: v }) })
+              children: (0, i.jsx)(S.jz, { children: B.intl.format(B.t.hPVEQE, { channelName: v }) })
           });
 }

@@ -1,8 +1,8 @@
 var i,
     a = r(653041);
-var s = r(47120);
-var o = r(348327),
-    l = r.n(o),
+var o = r(47120);
+var s = r(348327),
+    l = r.n(s),
     u = r(442837),
     c = r(570140);
 function d(e, n, r) {
@@ -19,21 +19,21 @@ function d(e, n, r) {
     );
 }
 let f = [r(742738).Z],
-    _ = [];
+    p = [];
 function h() {
     let e = [];
     for (let n of f) {
         let r = n.getActivity();
         null != r && e.push(r);
     }
-    return !l()(e, _) && ((_ = e), !0);
+    return !l()(e, p) && ((p = e), !0);
 }
-class p extends (i = u.ZP.Store) {
+class _ extends (i = u.ZP.Store) {
     initialize() {
         this.syncWith(f, h);
     }
     getActivities() {
-        return _;
+        return p;
     }
 }
-d(p, 'displayName', 'FirstPartyRichPresenceStore'), (n.Z = new p(c.Z));
+d(_, 'displayName', 'FirstPartyRichPresenceStore'), (n.Z = new _(c.Z));

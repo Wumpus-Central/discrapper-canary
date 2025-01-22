@@ -1,12 +1,12 @@
 r.d(n, {
     k: function () {
-        return o;
+        return s;
     }
 });
 var i = r(544891),
     a = r(570140),
-    s = r(981631);
-function o(e) {
+    o = r(981631);
+function s(e) {
     return (
         a.Z.dispatch({
             type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING',
@@ -14,7 +14,7 @@ function o(e) {
         }),
         i.tn
             .get({
-                url: s.ANM.STORE_LAYOUT(e),
+                url: o.ANM.STORE_LAYOUT(e),
                 rejectWithError: !0
             })
             .then(

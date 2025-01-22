@@ -1,28 +1,28 @@
 r.d(n, {
     $: function () {
-        return o;
+        return s;
     }
 });
 var i = r(381129),
     a = r(981631),
-    s = r(388032);
-let o = [
+    o = r(388032);
+let s = [
     {
         check(e, n, r) {
             if (!r || null == n.getGuildId()) return !1;
             let a = i.Z.extractEveryoneRole(e, n);
             if (null == a || !i.Z.shouldShowEveryoneGuard(a, n)) return !1;
-            let o = i.Z.everyoneMemberCount(a, n),
-                l = Math.pow(10, Math.floor(Math.log10(o))),
-                u = s.t['47E5R0'];
+            let s = i.Z.everyoneMemberCount(a, n),
+                l = Math.pow(10, Math.floor(Math.log10(s))),
+                u = o.t['47E5R0'];
             return (
-                n.isForumPost() ? (u = s.t.sYW2c3) : n.isThread() && (u = s.t['2YaiQ0']),
+                n.isForumPost() ? (u = o.t.sYW2c3) : n.isThread() && (u = o.t['2YaiQ0']),
                 {
-                    body: s.intl.formatToPlainString(u, {
+                    body: o.intl.formatToPlainString(u, {
                         role: a,
-                        count: (Math.trunc(o / l) * l).toLocaleString()
+                        count: (Math.trunc(s / l) * l).toLocaleString()
                     }),
-                    footer: s.intl.string(s.t.mVyrtr)
+                    footer: o.intl.string(o.t.mVyrtr)
                 }
             );
         },
@@ -33,7 +33,7 @@ let o = [
         }
     },
     {
-        check: (e) => !!a.Jn9.test(e) && { body: s.intl.string(s.t.sTwS1d) },
+        check: (e) => !!a.Jn9.test(e) && { body: o.intl.string(o.t.sTwS1d) },
         analyticsType: 'API Token Warning'
     }
 ];

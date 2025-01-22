@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(96280),
     a = r(240481);
-let s = new i.W(),
-    o = new a.g(s.registerPendingError);
+let o = new i.W(),
+    s = new a.g(o.registerPendingError);
 function l(e) {
-    s.enqueueTask(o.create(e));
+    o.enqueueTask(s.create(e));
 }

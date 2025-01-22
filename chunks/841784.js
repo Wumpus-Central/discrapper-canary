@@ -1,10 +1,10 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(620662),
     a = r(981631);
-function s(e) {
+function o(e) {
     return (0, i.Z)(e, a.xjy.EMBEDDED);
 }

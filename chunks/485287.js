@@ -1,23 +1,23 @@
 r.d(n, {
     U5: function () {
-        return y;
+        return T;
     },
     pp: function () {
-        return b;
+        return I;
     }
 });
 var i = r(47120);
 var a = r(442837),
-    s = r(147913),
-    o = r(592125),
+    o = r(147913),
+    s = r(592125),
     l = r(131951),
     u = r(944486),
     c = r(979651),
     d = r(557177),
     f = r(565799),
-    _ = r(431328),
+    p = r(431328),
     h = r(501655),
-    p = r(427679),
+    _ = r(427679),
     m = r(754277);
 function g(e, n, r) {
     return (
@@ -34,73 +34,73 @@ function g(e, n, r) {
 }
 let E = (e) => e / 400,
     v = !1,
-    I = (0, d.tu)('stage_waiting', 'stage_waiting', E(l.Z.getOutputVolume()));
-function T() {
+    y = (0, d.tu)('stage_waiting', 'stage_waiting', E(l.Z.getOutputVolume()));
+function b() {
     let e = u.Z.getVoiceChannelId();
     if (null == e) {
-        I.stop(), (v = !1);
+        y.stop(), (v = !1);
         return;
     }
-    let n = o.Z.getChannel(e);
+    let n = s.Z.getChannel(e);
     if (!(null == n ? void 0 : n.isGuildStageVoice()) || l.Z.isSelfDeaf()) {
-        I.stop(), (v = !1);
+        y.stop(), (v = !1);
         return;
     }
     if (m.Z.shouldPlay()) {
-        (I.volume = E(l.Z.getOutputVolume())), I.loop(), (v = !0);
+        (y.volume = E(l.Z.getOutputVolume())), y.loop(), (v = !0);
         return;
     }
-    if (p.Z.isLive(e)) {
-        I.stop(), (v = !1);
+    if (_.Z.isLive(e)) {
+        y.stop(), (v = !1);
         return;
     }
     if (m.Z.isMuted()) {
-        I.pause(), (v = !1);
+        y.pause(), (v = !1);
         return;
     }
     let r = null != Object.values(c.Z.getVoiceStatesForChannel(e)).find((e) => !e.suppress && !e.isVoiceMuted());
-    r || v ? r && (I.pause(), (v = !1)) : ((I.volume = E(l.Z.getOutputVolume())), I.loop(), (v = !0));
+    r || v ? r && (y.pause(), (v = !1)) : ((y.volume = E(l.Z.getOutputVolume())), y.loop(), (v = !0));
 }
-function b(e) {
+function I(e) {
     let n = (0, a.e7)([u.Z], () => u.Z.getVoiceChannelId() === e),
-        r = null != (0, _.w8)(e, h.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        i = (0, a.e7)([p.Z], () => p.Z.getStageInstanceByChannel(e));
+        r = null != (0, p.w8)(e, h.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
+        i = (0, a.e7)([_.Z], () => _.Z.getStageInstanceByChannel(e));
     return n && null == i && !r;
 }
-function y(e) {
+function T(e) {
     let n = u.Z.getVoiceChannelId() === e,
         r = null != f.Z.getMutableParticipants(e, h.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        i = p.Z.getStageInstanceByChannel(e);
+        i = _.Z.getStageInstanceByChannel(e);
     return n && null == i && !r;
 }
-class S extends s.Z {
+class S extends o.Z {
     handleVoiceChannelSelect(e) {
         let { channelId: n } = e;
         if (null != n) {
-            let e = o.Z.getChannel(n);
-            (null == e ? void 0 : e.isGuildStageVoice()) ? T() : (I.stop(), (v = !1));
-        } else I.stop(), (v = !1);
+            let e = s.Z.getChannel(n);
+            (null == e ? void 0 : e.isGuildStageVoice()) ? b() : (y.stop(), (v = !1));
+        } else y.stop(), (v = !1);
     }
     handleLogout() {
-        I.stop(), (v = !1);
+        y.stop(), (v = !1);
     }
     handlePlay(e) {
         let { play: n } = e;
-        n ? T() : (I.pause(), (v = !1));
+        n ? b() : (y.pause(), (v = !1));
     }
     handleMute(e) {
         let { muted: n } = e;
-        n ? (I.pause(), (v = !1)) : T();
+        n ? (y.pause(), (v = !1)) : b();
     }
     handleVoiceStateUpdates() {
-        T();
+        b();
     }
     handleSetOutputVolume(e) {
         let { volume: n } = e;
-        I.volume = E(n);
+        y.volume = E(n);
     }
     handleToggleSelfDeaf() {
-        T();
+        b();
     }
     constructor(...e) {
         super(...e),

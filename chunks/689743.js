@@ -1,14 +1,14 @@
 var i = r(814033),
     a = r(689118),
-    s = r(806981),
-    o = r(685053);
+    o = r(806981),
+    s = r(685053);
 function l(e) {
-    s.call(this, 'mont', e), (this.a = new i(e.a, 16).toRed(this.red)), (this.b = new i(e.b, 16).toRed(this.red)), (this.i4 = new i(4).toRed(this.red).redInvm()), (this.two = new i(2).toRed(this.red)), (this.a24 = this.i4.redMul(this.a.redAdd(this.two)));
+    o.call(this, 'mont', e), (this.a = new i(e.a, 16).toRed(this.red)), (this.b = new i(e.b, 16).toRed(this.red)), (this.i4 = new i(4).toRed(this.red).redInvm()), (this.two = new i(2).toRed(this.red)), (this.a24 = this.i4.redMul(this.a.redAdd(this.two)));
 }
 function u(e, n, r) {
-    s.BasePoint.call(this, e, 'projective'), null === n && null === r ? ((this.x = this.curve.one), (this.z = this.curve.zero)) : ((this.x = new i(n, 16)), (this.z = new i(r, 16)), !this.x.red && (this.x = this.x.toRed(this.curve.red)), !this.z.red && (this.z = this.z.toRed(this.curve.red)));
+    o.BasePoint.call(this, e, 'projective'), null === n && null === r ? ((this.x = this.curve.one), (this.z = this.curve.zero)) : ((this.x = new i(n, 16)), (this.z = new i(r, 16)), !this.x.red && (this.x = this.x.toRed(this.curve.red)), !this.z.red && (this.z = this.z.toRed(this.curve.red)));
 }
-a(l, s),
+a(l, o),
     (e.exports = l),
     (l.prototype.validate = function (e) {
         var n = e.normalize().x,
@@ -16,9 +16,9 @@ a(l, s),
             i = r.redMul(n).redAdd(r.redMul(this.a)).redAdd(n);
         return 0 === i.redSqrt().redSqr().cmp(i);
     }),
-    a(u, s.BasePoint),
+    a(u, o.BasePoint),
     (l.prototype.decodePoint = function (e, n) {
-        return this.point(o.toArray(e, n), 1);
+        return this.point(s.toArray(e, n), 1);
     }),
     (l.prototype.point = function (e, n) {
         return new u(this, e, n);
@@ -54,15 +54,15 @@ a(l, s),
         var r = this.x.redAdd(this.z),
             i = this.x.redSub(this.z),
             a = e.x.redAdd(e.z),
-            s = e.x.redSub(e.z).redMul(r),
-            o = a.redMul(i),
-            l = n.z.redMul(s.redAdd(o).redSqr()),
-            u = n.x.redMul(s.redISub(o).redSqr());
+            o = e.x.redSub(e.z).redMul(r),
+            s = a.redMul(i),
+            l = n.z.redMul(o.redAdd(s).redSqr()),
+            u = n.x.redMul(o.redISub(s).redSqr());
         return this.curve.point(l, u);
     }),
     (u.prototype.mul = function (e) {
-        for (var n = e.clone(), r = this, i = this.curve.point(null, null), a = this, s = []; 0 !== n.cmpn(0); n.iushrn(1)) s.push(n.andln(1));
-        for (var o = s.length - 1; o >= 0; o--) 0 === s[o] ? ((r = r.diffAdd(i, a)), (i = i.dbl())) : ((i = r.diffAdd(i, a)), (r = r.dbl()));
+        for (var n = e.clone(), r = this, i = this.curve.point(null, null), a = this, o = []; 0 !== n.cmpn(0); n.iushrn(1)) o.push(n.andln(1));
+        for (var s = o.length - 1; s >= 0; s--) 0 === o[s] ? ((r = r.diffAdd(i, a)), (i = i.dbl())) : ((i = r.diffAdd(i, a)), (r = r.dbl()));
         return i;
     }),
     (u.prototype.mulAdd = function () {

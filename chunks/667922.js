@@ -12,9 +12,9 @@ var i = t(200651),
     u = t(995774),
     d = t(665906),
     c = t(695346),
-    m = t(496675),
+    f = t(496675),
     g = t(768581),
-    f = t(585483),
+    m = t(585483),
     h = t(176354),
     E = t(981631),
     I = t(185923),
@@ -22,10 +22,10 @@ var i = t(200651),
 function p(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
         g = (0, d.$R)(n),
-        p = (0, r.e7)([m.Z], () => (n.isPrivate() || m.Z.can(E.Plq.ADD_REACTIONS, n)) && g, [n, g]),
-        M = (0, o.MZ)(n.getGuildId());
+        p = (0, r.e7)([f.Z], () => (n.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, n)) && g, [n, g]),
+        Z = (0, o.MZ)(n.getGuildId());
     if (!c.nc.getSetting() || !p || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
-    let S = M.filter(
+    let x = Z.filter(
         (e) =>
             !h.ZP.isEmojiFilteredOrLocked({
                 emoji: e,
@@ -43,7 +43,7 @@ function p(e, n) {
                     id: null !== (d = null !== (o = l.id) && void 0 !== o ? o : l.optionallyDiverseSequence) && void 0 !== d ? d : l.name,
                     label: ':'.concat(l.name, ':'),
                     icon: (e) =>
-                        (0, i.jsx)(x, {
+                        (0, i.jsx)(M, {
                             ...e,
                             reducedMotionEnabled: t.enabled,
                             emoji: l
@@ -60,12 +60,12 @@ function p(e, n) {
         id: 'add-reaction',
         label: v.intl.string(v.t.lfIHs7),
         action: () => {
-            f.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            m.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
             children: [
-                S,
+                x,
                 (0, i.jsx)(a.MenuSeparator, {}),
                 (0, i.jsx)(a.MenuItem, {
                     color: 'default',
@@ -73,14 +73,14 @@ function p(e, n) {
                     label: v.intl.string(v.t['OBCR+v']),
                     icon: a.ReactionIcon,
                     action: () => {
-                        f.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        m.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     }
                 })
             ]
         })
     });
 }
-function x(e) {
+function M(e) {
     var n;
     let { emoji: t, reducedMotionEnabled: l, className: r = '', isFocused: a = !1 } = e;
     return (0, i.jsx)('img', {

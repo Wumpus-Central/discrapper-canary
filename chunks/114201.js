@@ -6,40 +6,40 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(99815),
-    s = r(442837),
-    o = r(481060),
+    o = r(442837),
+    s = r(481060),
     l = r(239091),
     u = r(314897),
     c = r(553795),
     d = r(430824),
     f = r(496675),
-    _ = r(626135),
+    p = r(626135),
     h = r(70956),
-    p = r(425128),
+    _ = r(425128),
     m = r(979192),
     g = r(873128),
     E = r(703733),
     v = r(463031),
-    I = r(981631),
-    T = r(388032),
-    b = r(234032);
-function y(e) {
+    y = r(981631),
+    b = r(388032),
+    I = r(234032);
+function T(e) {
     if (e > h.Z.Seconds.DAYS_30) {
         let n = Math.round(e / h.Z.Seconds.DAYS_30);
-        return T.intl.formatToPlainString(T.t['HF7p4+'], { count: n });
+        return b.intl.formatToPlainString(b.t['HF7p4+'], { count: n });
     }
     if (e > 2 * h.Z.Seconds.DAY) {
         let n = Math.round(e / h.Z.Seconds.DAY);
-        return T.intl.formatToPlainString(T.t.HkESOj, { count: n });
+        return b.intl.formatToPlainString(b.t.HkESOj, { count: n });
     }
-    if (e > h.Z.Seconds.DAY) return T.intl.string(T.t.gvgh9P);
+    if (e > h.Z.Seconds.DAY) return b.intl.string(b.t.gvgh9P);
     else if (e > h.Z.Seconds.HOUR) {
         let n = Math.round(e / h.Z.Seconds.HOUR);
-        return T.intl.formatToPlainString(T.t.mW55WV, { count: n });
+        return b.intl.formatToPlainString(b.t.mW55WV, { count: n });
     } else {
-        if (!(e > h.Z.Seconds.MINUTE)) return T.intl.string(T.t.tT0mdn);
+        if (!(e > h.Z.Seconds.MINUTE)) return b.intl.string(b.t.tT0mdn);
         let n = Math.round(e / h.Z.Seconds.MINUTE);
-        return T.intl.formatToPlainString(T.t['1mNjX1'], { count: n });
+        return b.intl.formatToPlainString(b.t['1mNjX1'], { count: n });
     }
 }
 function S(e, n) {
@@ -55,7 +55,7 @@ function S(e, n) {
             subtext: void 0
         };
     let i = null != n ? e.getTime() > n.getTime() && r < h.Z.Seconds.HOUR : r < h.Z.Seconds.HOUR,
-        a = i ? T.intl.string(T.t['3gPhoa']) : y(r);
+        a = i ? b.intl.string(b.t['3gPhoa']) : T(r);
     return {
         disabled: i,
         subtext: a
@@ -63,92 +63,92 @@ function S(e, n) {
 }
 function A(e) {
     let { guildId: n, leaderboardId: h } = e,
-        y = (0, s.e7)([u.default], () => u.default.getId()),
-        A = (0, s.e7)([c.Z], () => c.Z.getAccount(null, I.ABu.RIOT_GAMES)),
-        N = (0, s.e7)([c.Z], () => c.Z.getAccount(null, I.ABu.LEAGUE_OF_LEGENDS)),
-        C = (0, g.Z)({
+        T = (0, o.e7)([u.default], () => u.default.getId()),
+        A = (0, o.e7)([c.Z], () => c.Z.getAccount(null, y.ABu.RIOT_GAMES)),
+        C = (0, o.e7)([c.Z], () => c.Z.getAccount(null, y.ABu.LEAGUE_OF_LEGENDS)),
+        N = (0, g.Z)({
             guildId: n,
             leaderboardId: h
         }),
         { leaderboardsDisabled: R } = (0, m.O)(n, h),
         O =
-            null != N && null != A
+            null != C && null != A
                 ? () => {
-                      _.default.track(I.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
+                      p.default.track(y.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
                           leaderboard_id: h,
                           guild_id: n
                       }),
-                          (0, p._7)({
+                          (0, _._7)({
                               riotConnectionId: A.id,
-                              lolConnectionId: N.id
+                              lolConnectionId: C.id
                           });
                   }
-                : I.dG4,
-        D = null == A || R ? T.intl.string(T.t['0yRXHx']) : T.intl.string(T.t['KWpU6+']),
-        { lastUpdateRequested: L, statisticLastUpdatedDate: x } = (0, E.Z)({
-            userId: y,
+                : y.dG4,
+        D = null == A || R ? b.intl.string(b.t['0yRXHx']) : b.intl.string(b.t['KWpU6+']),
+        { lastUpdateRequested: x, statisticLastUpdatedDate: L } = (0, E.Z)({
+            userId: T,
             guildId: n,
             leaderboardId: h,
             statisticId: a.E.LOL_TOTAL_KILLS
         }),
-        { disabled: w, subtext: P } = S(L, x),
-        M = (0, s.e7)(
+        { disabled: w, subtext: P } = S(x, L),
+        M = (0, o.e7)(
             [f.Z, d.Z],
             () => {
                 let e = d.Z.getGuild(n);
-                return f.Z.can(I.Plq.ADMINISTRATOR, e);
+                return f.Z.can(y.Plq.ADMINISTRATOR, e);
             },
             [n]
         );
-    return null == C
+    return null == N
         ? null
-        : (0, i.jsx)(o.Popout, {
+        : (0, i.jsx)(s.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: a } = e;
-                  return (0, i.jsx)(o.Menu, {
+                  return (0, i.jsx)(s.Menu, {
                       navId: 'leaderboard-popout-context-menu',
                       onClose: () => {
                           (0, l.Zy)(), a();
                       },
-                      'aria-label': T.intl.string(T.t.BjCuf3),
+                      'aria-label': b.intl.string(b.t.BjCuf3),
                       onSelect: void 0,
                       children: (0, i.jsx)(i.Fragment, {
-                          children: (0, i.jsxs)(o.MenuGroup, {
+                          children: (0, i.jsxs)(s.MenuGroup, {
                               children: [
-                                  C.leaderboard_id === v.z &&
+                                  N.leaderboard_id === v.z &&
                                       null != A &&
-                                      (0, i.jsx)(o.MenuItem, {
+                                      (0, i.jsx)(s.MenuItem, {
                                           id: 'refresh-my-data',
-                                          label: T.intl.string(T.t.iopWUV),
+                                          label: b.intl.string(b.t.iopWUV),
                                           action: O,
                                           disabled: w,
                                           subtext: P
                                       }),
-                                  (0, i.jsx)(o.MenuItem, {
+                                  (0, i.jsx)(s.MenuItem, {
                                       id: 'leaderboard-modal',
                                       label: D,
                                       action: () => {
-                                          (0, o.openModalLazy)(async () => {
+                                          (0, s.openModalLazy)(async () => {
                                               let { default: e } = await r.e('73217').then(r.bind(r, 139964));
                                               return (r) =>
                                                   (0, i.jsx)(e, {
                                                       ...r,
                                                       guildId: n,
-                                                      leaderboard: C
+                                                      leaderboard: N
                                                   });
                                           }),
                                               null == a || a();
                                       }
                                   }),
                                   M
-                                      ? (0, i.jsx)(o.MenuItem, {
+                                      ? (0, i.jsx)(s.MenuItem, {
                                             id: 'leaderboard-settings-modal',
-                                            label: T.intl.string(T.t['QV4/6u']),
+                                            label: b.intl.string(b.t['QV4/6u']),
                                             action: () => {
-                                                (0, o.openModalLazy)(async () => {
+                                                (0, s.openModalLazy)(async () => {
                                                     let { default: e } = await r.e('25526').then(r.bind(r, 262918));
                                                     return (r) =>
                                                         (0, i.jsx)(e, {
@@ -167,14 +167,14 @@ function A(e) {
                   });
               },
               children: (e) =>
-                  (0, i.jsx)(o.Tooltip, {
-                      text: T.intl.string(T.t.UKOtz8),
+                  (0, i.jsx)(s.Tooltip, {
+                      text: b.intl.string(b.t.UKOtz8),
                       children: (n) =>
-                          (0, i.jsx)(o.Clickable, {
+                          (0, i.jsx)(s.Clickable, {
                               ...n,
-                              className: b.menuIcon,
+                              className: I.menuIcon,
                               ...e,
-                              children: (0, i.jsx)(o.MoreHorizontalIcon, {
+                              children: (0, i.jsx)(s.MoreHorizontalIcon, {
                                   color: 'currentColor',
                                   size: 'custom',
                                   width: 16,

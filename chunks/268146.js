@@ -1,4 +1,4 @@
-var i, a, s;
+var i, a, o;
 r.d(n, {
     X4: function () {
         return i;
@@ -7,7 +7,7 @@ r.d(n, {
         return a;
     },
     vA: function () {
-        return s;
+        return o;
     }
 }),
     !(function (e) {
@@ -18,4 +18,4 @@ r.d(n, {
     })(a || (a = {})),
     !(function (e) {
         (e.WINDOW = 'window'), (e.SCREEN = 'screen'), (e.CAMERA = 'camera');
-    })(s || (s = {}));
+    })(o || (o = {}));

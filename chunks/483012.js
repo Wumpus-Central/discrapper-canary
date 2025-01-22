@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(570140);
-function o(e, n, r) {
+var o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -27,7 +27,7 @@ class l {
         let { action: e } = this;
         (this.action = null),
             null != e &&
-                s.Z.dispatch(e).catch((n) =>
+                o.Z.dispatch(e).catch((n) =>
                     this.socket.resetSocketOnError({
                         error: n,
                         action: e.type
@@ -35,10 +35,10 @@ class l {
                 );
     }
     constructor(e, n, r) {
-        o(this, 'socket', void 0),
-            o(this, 'action', void 0),
-            o(this, 'add', void 0),
-            o(this, 'shouldFlush', void 0),
+        s(this, 'socket', void 0),
+            s(this, 'action', void 0),
+            s(this, 'add', void 0),
+            s(this, 'shouldFlush', void 0),
             (this.socket = e),
             (this.action = null),
             (this.shouldFlush = r),
@@ -48,4 +48,4 @@ class l {
             l.batchers.push(this);
     }
 }
-o(l, 'batchers', []);
+s(l, 'batchers', []);

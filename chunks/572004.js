@@ -8,10 +8,10 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(852229),
-    s = r(358085),
-    o = r(998502);
+    o = r(358085),
+    s = r(998502);
 let l = (() => {
-    if (s.isPlatformEmbedded) return null != o.ZP.copy;
+    if (o.isPlatformEmbedded) return null != s.ZP.copy;
     try {
         return document.queryCommandEnabled('copy') || document.queryCommandSupported('copy');
     } catch (e) {
@@ -19,5 +19,5 @@ let l = (() => {
     }
 })();
 function u(e) {
-    return !!l && (s.isPlatformEmbedded ? (o.ZP.copy(e), !0) : a.J(e));
+    return !!l && (o.isPlatformEmbedded ? (s.ZP.copy(e), !0) : a.J(e));
 }

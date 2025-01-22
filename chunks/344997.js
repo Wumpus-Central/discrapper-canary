@@ -11,8 +11,8 @@ var r = n(913527),
     o = n(481060),
     s = n(788080),
     c = n(800530),
-    d = n(388032),
-    u = n(816762);
+    u = n(388032),
+    d = n(816762);
 let m = (e) => l()().diff(l().unix(e), 'days');
 function h(e) {
     let { classificationId: t } = e;
@@ -29,16 +29,16 @@ function h(e) {
                     });
             });
         },
-        className: u.detailsButton,
-        children: d.intl.string(d.t.QsqdXF)
+        className: d.detailsButton,
+        children: u.intl.string(u.t.QsqdXF)
     });
 }
 function f(e) {
     let { learnMoreLink: t } = e;
     return (0, i.jsx)(o.Anchor, {
-        className: u.detailsButton,
+        className: d.detailsButton,
         href: t,
-        children: d.intl.string(d.t['8/GdRE'])
+        children: u.intl.string(u.t['8/GdRE'])
     });
 }
 function p(e) {
@@ -65,7 +65,7 @@ function _(e) {
         };
     return null != t && t in n
         ? (0, i.jsx)('div', {
-              className: u.icon,
+              className: d.icon,
               children: n[t]
           })
         : null;
@@ -73,8 +73,8 @@ function _(e) {
 function g(e) {
     let { children: t, theme: n } = e,
         r = {
-            default: u.defaultFooterContainer,
-            danger: u.dangerFooterContainer
+            default: d.defaultFooterContainer,
+            danger: d.dangerFooterContainer
         };
     return (0, i.jsx)('div', {
         className: r[null != n ? n : 'default'],
@@ -88,13 +88,13 @@ function E(e) {
     return null == r
         ? null
         : (0, i.jsxs)(o.Clickable, {
-              className: u.safetyPolicyNoticeContainer,
+              className: d.safetyPolicyNoticeContainer,
               children: [
                   (0, i.jsxs)('div', {
-                      className: u.noticeContent,
+                      className: d.noticeContent,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: u.headerRow,
+                              className: d.headerRow,
                               children: [
                                   (0, i.jsx)(_, { iconType: r.icon }),
                                   (0, i.jsx)(o.Text, {
@@ -104,14 +104,14 @@ function E(e) {
                               ]
                           }),
                           (0, i.jsx)('div', {
-                              className: u.incidentTiming,
+                              className: d.incidentTiming,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
-                                  children: d.intl.format(d.t.eevFb2, { daysAgo: m(null !== (n = r.timestamp) && void 0 !== n ? n : 0) })
+                                  children: u.intl.format(u.t.eevFb2, { daysAgo: m(null !== (n = r.timestamp) && void 0 !== n ? n : 0) })
                               })
                           }),
                           (0, i.jsx)('div', {
-                              className: u.noticeBody,
+                              className: d.noticeBody,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',

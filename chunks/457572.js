@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(570140),
-    s = r(147913),
-    o = r(70956),
+    o = r(147913),
+    s = r(70956),
     l = r(2818),
     u = r(768943);
 function c(e, n, r) {
@@ -25,9 +25,9 @@ function f(e) {
             type: 'MESSAGE_REMINDER_DUE',
             savedMessage: e
         }),
-            _();
+            p();
 }
-function _() {
+function p() {
     var e;
     let { enabled: n } = l.Z.getCurrentConfig({ location: 'MessageRemindersNotificationManager' }, { autoTrackExposure: !1 });
     if (!n) return;
@@ -37,10 +37,10 @@ function _() {
         d = null;
         return;
     }
-    let i = Date.now() + o.Z.Millis.WEEK;
+    let i = Date.now() + s.Z.Millis.WEEK;
     if (!(r.saveData.dueAt.getTime() > i)) d = setTimeout(() => f(r), r.saveData.dueAt.getTime() - Date.now());
 }
-class h extends s.Z {
+class h extends o.Z {
     constructor(...e) {
         super(...e),
             c(this, 'actions', {
@@ -49,7 +49,7 @@ class h extends s.Z {
                 SAVED_MESSAGE_DELETE: () => this.handleUpdates()
             }),
             c(this, 'handleUpdates', () => {
-                _();
+                p();
             });
     }
 }

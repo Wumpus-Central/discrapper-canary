@@ -1,14 +1,14 @@
-var r = n(67867),
-    o = n(625014).trim;
-r(
+var i = r(67867),
+    a = r(625014).trim;
+i(
     {
         target: 'String',
         proto: !0,
-        forced: n(875701)('trim')
+        forced: r(875701)('trim')
     },
     {
         trim: function () {
-            return o(this);
+            return a(this);
         }
     }
 );

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,16 +11,16 @@ var r = n(481060),
     o = n(981631),
     s = n(474936),
     c = n(388032),
-    d = n(566330);
-function u(e) {
+    u = n(566330);
+function d(e) {
     let { message: t, channel: n } = e,
-        u = null != n.guild_id ? o.jXE.TEXT_IN_VOICE : o.jXE.CHANNEL_TEXT_AREA;
+        d = null != n.guild_id ? o.jXE.TEXT_IN_VOICE : o.jXE.CHANNEL_TEXT_AREA;
     return (0, i.jsx)(a.Z, {
-        contentClassName: d.messageContentContainer,
-        iconContainerClassName: d.iconContainer,
-        iconNode: (0, i.jsx)(r.BellIcon, { colorClass: d.icon }),
+        contentClassName: u.messageContentContainer,
+        iconContainerClassName: u.iconContainer,
+        iconNode: (0, i.jsx)(r.BellIcon, { colorClass: u.icon }),
         children: (0, i.jsxs)('div', {
-            className: d.container,
+            className: u.container,
             children: [
                 (0, i.jsxs)('div', {
                     children: [
@@ -29,15 +29,15 @@ function u(e) {
                             children: t.content
                         }),
                         (0, i.jsxs)('div', {
-                            className: d.nitroBadge,
+                            className: u.nitroBadge,
                             children: [
                                 (0, i.jsx)(r.NitroWheelIcon, {
                                     size: 'xs',
-                                    colorClass: d.nitroBadgeIcon
+                                    colorClass: u.nitroBadgeIcon
                                 }),
                                 (0, i.jsx)(r.Text, {
                                     variant: 'text-xs/medium',
-                                    className: d.nitroBadgeText,
+                                    className: u.nitroBadgeText,
                                     children: c.intl.string(c.t['BMw+7O'])
                                 })
                             ]
@@ -45,15 +45,15 @@ function u(e) {
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: d.buttonContainer,
+                    className: u.buttonContainer,
                     children: (0, i.jsx)(l.Z, {
                         showGradient: !0,
-                        iconClassName: d.premiumIcon,
+                        iconClassName: u.premiumIcon,
                         subscriptionTier: s.Si.TIER_2,
                         buttonText: c.intl.string(c.t.Y2WKTk),
                         size: r.Button.Sizes.SMALL,
                         premiumModalAnalyticsLocation: {
-                            section: u,
+                            section: d,
                             object: o.qAy.MESSAGE
                         }
                     })

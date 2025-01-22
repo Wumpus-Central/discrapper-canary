@@ -3,13 +3,13 @@ r.d(n, {
         return m;
     },
     M$: function () {
-        return p;
+        return _;
     }
 });
 var i = r(653041);
 var a = r(47120);
-var s = r(392711),
-    o = r.n(s),
+var o = r(392711),
+    s = r.n(o),
     l = r(913527),
     u = r.n(l);
 function c(e, n, r) {
@@ -27,9 +27,9 @@ function c(e, n, r) {
 }
 let d = 10,
     f = 1000,
-    _ = 32,
+    p = 32,
     h = (e, n, r) => Math.ceil(e * (n / r.numOfRecentUses)),
-    p = {
+    _ = {
         original: (e) => {
             let n = 1;
             return e <= 3 ? (n = 100) : e <= 15 ? (n = 70) : e <= 30 ? (n = 50) : e <= 45 ? (n = 30) : e <= 80 && (n = 10), n;
@@ -50,7 +50,7 @@ let d = 10,
     };
 class g {
     overwriteHistory(e, n) {
-        (this.usageHistory = o().mapValues(null != e ? e : {}, (e) => ({
+        (this.usageHistory = s().mapValues(null != e ? e : {}, (e) => ({
             ...e,
             frecency: -1
         }))),
@@ -95,7 +95,7 @@ class g {
         (this.computeWeight = e),
             (this.computeFrecency = n),
             (this.calculateMaxTotalUse = r),
-            (this.usageHistory = o().mapValues(this.usageHistory, (e) => ({
+            (this.usageHistory = s().mapValues(this.usageHistory, (e) => ({
                 ...e,
                 frecency: -1
             }))),
@@ -103,13 +103,13 @@ class g {
     }
     compute() {
         let e = u()(),
-            n = this.calculateMaxTotalUse ? o().maxBy(Object.values(this.usageHistory), (e) => e.totalUses) : null;
-        o().forEach(this.usageHistory, (r, i) => {
-            let { totalUses: a, recentUses: s, frecency: l } = r;
+            n = this.calculateMaxTotalUse ? s().maxBy(Object.values(this.usageHistory), (e) => e.totalUses) : null;
+        s().forEach(this.usageHistory, (r, i) => {
+            let { totalUses: a, recentUses: o, frecency: l } = r;
             if (-1 !== l) return;
             let c = this.computeBonus(i) / 100;
             (r.score = 0),
-                o().forEach(s, (n, i) => {
+                s().forEach(o, (n, i) => {
                     if (i >= this.maxSamples) return !1;
                     let a = this.computeWeight(e.diff(u()(n), 'days'));
                     r.score += c * a;
@@ -117,13 +117,13 @@ class g {
                 r.score > 0
                     ? (r.recentUses.length > 0 &&
                           (r.frecency = this.computeFrecency(a, r.score, {
-                              numOfRecentUses: s.length,
+                              numOfRecentUses: o.length,
                               maxTotalUse: null == n ? void 0 : n.totalUses
                           })),
                       (this.usageHistory[i] = r))
                     : delete this.usageHistory[i];
         }),
-            (this.frequently = o()(this.usageHistory)
+            (this.frequently = s()(this.usageHistory)
                 .map((e, n) => {
                     let r = this.lookupKey(n);
                     return null == r ? null : [r, e.frecency];
@@ -148,8 +148,8 @@ class g {
     set frequently(e) {
         this._frequently = e;
     }
-    constructor({ computeBonus: e, computeWeight: n, computeFrecency: r = h, lookupKey: i, afterCompute: a, numFrequentlyItems: s = _, maxSamples: o = d }) {
-        c(this, 'dirty', void 0), c(this, '_frequently', void 0), c(this, 'numFrequentlyItems', void 0), c(this, 'maxSamples', void 0), c(this, 'computeBonus', void 0), c(this, 'computeWeight', void 0), c(this, 'computeFrecency', void 0), c(this, 'lookupKey', void 0), c(this, 'usageHistory', void 0), c(this, 'afterCompute', void 0), c(this, 'calculateMaxTotalUse', void 0), (this.computeBonus = e), (this.computeWeight = n), (this.computeFrecency = r), (this.afterCompute = a), (this.lookupKey = i), (this.usageHistory = {}), (this.frequently = []), (this.maxSamples = o), (this.numFrequentlyItems = s), (this.calculateMaxTotalUse = !1), (this.dirty = !1);
+    constructor({ computeBonus: e, computeWeight: n, computeFrecency: r = h, lookupKey: i, afterCompute: a, numFrequentlyItems: o = p, maxSamples: s = d }) {
+        c(this, 'dirty', void 0), c(this, '_frequently', void 0), c(this, 'numFrequentlyItems', void 0), c(this, 'maxSamples', void 0), c(this, 'computeBonus', void 0), c(this, 'computeWeight', void 0), c(this, 'computeFrecency', void 0), c(this, 'lookupKey', void 0), c(this, 'usageHistory', void 0), c(this, 'afterCompute', void 0), c(this, 'calculateMaxTotalUse', void 0), (this.computeBonus = e), (this.computeWeight = n), (this.computeFrecency = r), (this.afterCompute = a), (this.lookupKey = i), (this.usageHistory = {}), (this.frequently = []), (this.maxSamples = s), (this.numFrequentlyItems = o), (this.calculateMaxTotalUse = !1), (this.dirty = !1);
     }
 }
 n.ZP = g;

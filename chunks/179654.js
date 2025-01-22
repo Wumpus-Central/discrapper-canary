@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(848479),
     a = r(909766);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,7 +18,7 @@ function s(e, n, r) {
         e
     );
 }
-class o {
+class s {
     getStats() {
         let e = this.cpuHistogram.getReport(),
             n = this.memoryHistogram.getReport(),
@@ -61,6 +61,6 @@ class o {
         null != n && this.memoryHistogram.addSample(n);
     }
     constructor() {
-        s(this, 'cpuHistogram', new a.b()), s(this, 'memoryHistogram', new a.b()), s(this, 'startCPU', i.Z.getCumulativeCPUUsage()), s(this, 'lastCPU', this.startCPU);
+        o(this, 'cpuHistogram', new a.b()), o(this, 'memoryHistogram', new a.b()), o(this, 'startCPU', i.Z.getCumulativeCPUUsage()), o(this, 'lastCPU', this.startCPU);
     }
 }

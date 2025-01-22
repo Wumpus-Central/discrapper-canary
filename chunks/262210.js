@@ -6,39 +6,39 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(429551),
-    o = r(563081);
+    o = r(429551),
+    s = r(563081);
 function l(e) {
     let { start: n, end: r } = e,
         {
             elapsed: l,
             duration: u,
             percentage: c
-        } = (0, s.Z)({
+        } = (0, o.Z)({
             start: n,
             end: r
         });
     return (0, i.jsxs)('div', {
-        className: o.container,
+        className: s.container,
         children: [
             (0, i.jsx)(a.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-normal',
-                className: o.text,
-                children: (0, s.m)(l)
+                className: s.text,
+                children: (0, o.m)(l)
             }),
             (0, i.jsx)('div', {
-                className: o.bar,
+                className: s.bar,
                 children: (0, i.jsx)('div', {
-                    className: o.progress,
+                    className: s.progress,
                     style: { width: ''.concat(100 * c, '%') }
                 })
             }),
             (0, i.jsx)(a.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-normal',
-                className: o.text,
-                children: (0, s.m)(u)
+                className: s.text,
+                children: (0, o.m)(u)
             })
         ]
     });

@@ -1,12 +1,12 @@
 r.d(n, {
     Aq: function () {
-        return T;
+        return b;
     },
     GB: function () {
         return E;
     },
     J5: function () {
-        return p;
+        return _;
     },
     UI: function () {
         return d;
@@ -15,7 +15,7 @@ r.d(n, {
         return v;
     },
     bp: function () {
-        return I;
+        return y;
     },
     g0: function () {
         return g;
@@ -23,51 +23,51 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(585483),
+    o = r(192379),
+    s = r(585483),
     l = r(830917),
     u = r(919570),
     c = r(981631);
-let d = new o.b(),
-    f = s.createContext({
+let d = new s.b(),
+    f = o.createContext({
         appContext: c.IlC.APP,
         renderWindow: window,
         windowDispatch: d,
         windowId: (0, l.UU)()
     }),
-    _ = new Map();
+    p = new Map();
 function h(e, n) {
     let r = (0, l.ZY)(n),
-        i = _.get(r);
+        i = p.get(r);
     return (
         null == i &&
             ((i = {
                 appContext: e,
                 renderWindow: n,
-                windowDispatch: new o.b(),
+                windowDispatch: new s.b(),
                 windowId: r
             }),
-            _.set(r, i),
+            p.set(r, i),
             n.addEventListener('unload', () => {
-                _.delete(r);
+                p.delete(r);
             })),
         i
     );
 }
-function p(e) {
+function _(e) {
     var n;
     let r = e.ownerDocument.defaultView;
     if (null == r) return;
     let i = (0, l.ZY)(r);
-    return null === (n = _.get(i)) || void 0 === n ? void 0 : n.windowDispatch;
+    return null === (n = p.get(i)) || void 0 === n ? void 0 : n.windowDispatch;
 }
 function m() {
     var e;
     let n = (0, u.GR)();
-    return null == n ? null : null !== (e = _.get(n)) && void 0 !== e ? e : null;
+    return null == n ? null : null !== (e = p.get(n)) && void 0 !== e ? e : null;
 }
 function g(e) {
-    return _.get(e);
+    return p.get(e);
 }
 function E() {
     let e = m();
@@ -75,16 +75,16 @@ function E() {
 }
 function v(e) {
     let { appContext: n, renderWindow: r, children: i } = e,
-        s = h(n, r);
+        o = h(n, r);
     return (0, a.jsx)(f.Provider, {
-        value: s,
+        value: o,
         children: i
     });
 }
-function I() {
-    return s.useContext(f).appContext;
+function y() {
+    return o.useContext(f).appContext;
 }
-function T() {
-    return s.useContext(f).windowDispatch;
+function b() {
+    return o.useContext(f).windowDispatch;
 }
 n.ZP = f;

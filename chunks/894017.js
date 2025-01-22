@@ -1,14 +1,14 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     },
     c: function () {
-        return o;
+        return s;
     }
 });
 var i = r(442837),
     a = r(924301);
-function s(e, n) {
+function o(e, n) {
     return l(
         (0, i.Wu)([a.ZP], () => {
             var e, r;
@@ -17,7 +17,7 @@ function s(e, n) {
         e
     );
 }
-function o(e, n) {
+function s(e, n) {
     var r, i;
     return l(null !== (i = null === (r = a.ZP.getGuildScheduledEvent(n)) || void 0 === r ? void 0 : r.guild_scheduled_event_exceptions) && void 0 !== i ? i : [], e);
 }

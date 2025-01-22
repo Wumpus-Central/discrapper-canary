@@ -9,16 +9,16 @@ r.d(n, {
         return l;
     },
     jx: function () {
-        return _;
+        return p;
     },
     nv: function () {
-        return o;
+        return s;
     },
     sz: function () {
         return d;
     },
     te: function () {
-        return s;
+        return o;
     },
     xh: function () {
         return u;
@@ -29,24 +29,24 @@ r.d(n, {
 });
 var i = r(570140),
     a = r(145597);
-function s(e, n, r) {
-    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.Gr;
+function o(e, n, r) {
+    let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.Gr;
     i.Z.dispatch({
         type: 'LAYOUT_CREATE',
         layoutId: e,
         widgets: n,
         version: r,
-        defaultResolution: s
+        defaultResolution: o
     });
 }
-function o(e) {
-    let { widgetId: n, anchor: r, size: a, opacity: s } = e;
+function s(e) {
+    let { widgetId: n, anchor: r, size: a, opacity: o } = e;
     i.Z.dispatch({
         type: 'LAYOUT_UPDATE_WIDGET',
         widgetId: n,
         anchor: r,
         size: a,
-        opacity: s
+        opacity: o
     });
 }
 function l(e) {
@@ -74,9 +74,9 @@ function d(e) {
     });
 }
 function f(e) {
-    _([e]);
+    p([e]);
 }
-function _(e) {
+function p(e) {
     i.Z.dispatch({
         type: 'LAYOUT_CREATE_WIDGETS',
         widgetConfigs: e

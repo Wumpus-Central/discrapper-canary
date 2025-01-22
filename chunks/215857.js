@@ -7,10 +7,10 @@ function a(e, n) {
         (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-function s(e, n, r) {
+function o(e, n, r) {
     return n && a(e.prototype, n), r && a(e, r), e;
 }
-function o(e, n, r) {
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -30,10 +30,10 @@ r.d(n, {
 });
 var l = (function () {
     function e(n, r) {
-        i(this, e), o(this, 'ownerDocument', null), o(this, 'globalContext', void 0), o(this, 'optionsArgs', void 0), (this.globalContext = n), (this.optionsArgs = r);
+        i(this, e), s(this, 'ownerDocument', null), s(this, 'globalContext', void 0), s(this, 'optionsArgs', void 0), (this.globalContext = n), (this.optionsArgs = r);
     }
     return (
-        s(e, [
+        o(e, [
             {
                 key: 'window',
                 get: function () {

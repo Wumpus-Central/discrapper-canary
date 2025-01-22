@@ -1,40 +1,40 @@
-n.d(e, {
+e.d(n, {
     Z: function () {
         return c;
     }
 }),
-    n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
-    u = n(481060),
-    a = n(542508);
+    e(47120);
+var i = e(200651),
+    r = e(192379),
+    l = e(120356),
+    u = e.n(l),
+    o = e(481060),
+    a = e(542508);
 function s(t) {
-    let { alt: e, ...n } = t,
-        [l, o] = r.useState(!0);
+    let { alt: n, ...e } = t,
+        [l, u] = r.useState(!0);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             l &&
-                (0, i.jsx)(u.Spinner, {
-                    type: u.Spinner.Type.LOW_MOTION,
+                (0, i.jsx)(o.Spinner, {
+                    type: o.Spinner.Type.LOW_MOTION,
                     className: a.loader
                 }),
             (0, i.jsx)('img', {
-                ...n,
-                alt: e,
-                onLoad: () => o(!1)
+                ...e,
+                alt: n,
+                onLoad: () => u(!1)
             })
         ]
     });
 }
 function c(t) {
-    let { src: e, backgroundSrc: n, alt: r, aspectRatio: l, className: u, imageChildClassName: c, ...d } = t;
+    let { src: n, backgroundSrc: e, alt: r, aspectRatio: l, className: o, imageChildClassName: c, ...d } = t;
     return (0, i.jsxs)('div', {
-        className: o()(a.container, u),
+        className: u()(a.container, o),
         children: [
             (0, i.jsx)('img', {
-                src: n,
+                src: e,
                 alt: r,
                 className: a.backgroundImage
             }),
@@ -43,9 +43,9 @@ function c(t) {
                 style: { aspectRatio: l },
                 className: a.imageContainer,
                 children: (0, i.jsx)(s, {
-                    src: e,
+                    src: n,
                     alt: r,
-                    className: o()(a.image, c),
+                    className: u()(a.image, c),
                     ...d
                 })
             })

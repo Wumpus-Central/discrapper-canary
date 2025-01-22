@@ -1,6 +1,6 @@
 r.d(n, {
     T: function () {
-        return s;
+        return o;
     },
     _f: function () {
         return c;
@@ -9,7 +9,7 @@ r.d(n, {
         return u;
     },
     m1: function () {
-        return o;
+        return s;
     },
     nS: function () {
         return l;
@@ -20,7 +20,7 @@ r.d(n, {
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
         kind: 'user',
         id: '2023-11_app_launcher_desktop',
         label: 'App Launcher - Desktop',
@@ -33,7 +33,7 @@ let s = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    s = (0, i.B)({
         kind: 'user',
         id: '2024-06_desktop_app_launcher_in_activities_shelf',
         label: 'Desktop App Launcher In Activities Shelf',

@@ -1,3 +1,3 @@
-n(121298);
-var r = n(974802);
-e.exports = r.setInterval;
+r(121298);
+var i = r(974802);
+e.exports = i.setInterval;

@@ -8,9 +8,9 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(127225),
-    s = r(53625);
-function o() {
-    return (o =
+    o = r(53625);
+function s() {
+    return (s =
         Object.assign ||
         function (e) {
             for (var n = 1; n < arguments.length; n++) {
@@ -21,7 +21,7 @@ function o() {
         }).apply(this, arguments);
 }
 function l(e, n) {
-    return _(e) || f(e, n) || c(e, n) || u();
+    return p(e) || f(e, n) || c(e, n) || u();
 }
 function u() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
@@ -44,44 +44,44 @@ function f(e, n) {
         var r = [],
             i = !0,
             a = !1,
-            s = void 0;
+            o = void 0;
         try {
-            for (var o, l = e[Symbol.iterator](); !(i = (o = l.next()).done) && (r.push(o.value), !n || r.length !== n); i = !0);
+            for (var s, l = e[Symbol.iterator](); !(i = (s = l.next()).done) && (r.push(s.value), !n || r.length !== n); i = !0);
         } catch (e) {
-            (a = !0), (s = e);
+            (a = !0), (o = e);
         } finally {
             try {
                 !i && null != l.return && l.return();
             } finally {
-                if (a) throw s;
+                if (a) throw o;
             }
         }
         return r;
     }
 }
-function _(e) {
+function p(e) {
     if (Array.isArray(e)) return e;
 }
 function h(e, n) {
     if (null == e) return {};
     var r,
         i,
-        a = p(e, n);
+        a = _(e, n);
     if (Object.getOwnPropertySymbols) {
-        var s = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < s.length; i++) {
-            if (((r = s[i]), !(n.indexOf(r) >= 0))) Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (i = 0; i < o.length; i++) {
+            if (((r = o[i]), !(n.indexOf(r) >= 0))) Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         }
     }
     return a;
 }
-function p(e, n) {
+function _(e, n) {
     if (null == e) return {};
     var r,
         i,
         a = {},
-        s = Object.keys(e);
-    for (i = 0; i < s.length; i++) (r = s[i]), !(n.indexOf(r) >= 0) && (a[r] = e[r]);
+        o = Object.keys(e);
+    for (i = 0; i < o.length; i++) (r = o[i]), !(n.indexOf(r) >= 0) && (a[r] = e[r]);
     return a;
 }
 var m = (0, i.createContext)(null),
@@ -91,5 +91,5 @@ var m = (0, i.createContext)(null),
             u = l((0, i.useState)(null), 2),
             c = u[0],
             d = u[1];
-        return i.createElement(m.Provider, { value: null != n ? n : c }, i.createElement(a.W, o({ backend: s.Q }, r)), n ? null : i.createElement('div', { ref: d }));
+        return i.createElement(m.Provider, { value: null != n ? n : c }, i.createElement(a.W, s({ backend: o.Q }, r)), n ? null : i.createElement('div', { ref: d }));
     };

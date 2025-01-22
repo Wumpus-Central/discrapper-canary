@@ -3,13 +3,13 @@ let n = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'funct
     i = [].concat(['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'], ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'], ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError']);
 function a(e) {
     let a = ['npm', 'print'],
-        s = ['yes', 'no', 'on', 'off'],
-        o = ['then', 'unless', 'until', 'loop', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not'],
+        o = ['yes', 'no', 'on', 'off'],
+        s = ['then', 'unless', 'until', 'loop', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not'],
         l = ['var', 'const', 'let', 'function', 'static'],
         u = (e) => (n) => !e.includes(n),
         c = {
-            keyword: n.concat(o).filter(u(l)),
-            literal: r.concat(s),
+            keyword: n.concat(s).filter(u(l)),
+            literal: r.concat(o),
             built_in: i.concat(a)
         },
         d = '[A-Za-z$_][0-9A-Za-z$_]*',
@@ -19,7 +19,7 @@ function a(e) {
             end: /\}/,
             keywords: c
         },
-        _ = [
+        p = [
             e.BINARY_NUMBER_MODE,
             e.inherit(e.C_NUMBER_MODE, {
                 starts: {
@@ -84,9 +84,9 @@ function a(e) {
                 ]
             }
         ];
-    f.contains = _;
+    f.contains = p;
     let h = e.inherit(e.TITLE_MODE, { begin: d }),
-        p = '(\\(.*\\)\\s*)?\\B[-=]>',
+        _ = '(\\(.*\\)\\s*)?\\B[-=]>',
         m = {
             className: 'params',
             begin: '\\([^\\(]',
@@ -96,7 +96,7 @@ function a(e) {
                     begin: /\(/,
                     end: /\)/,
                     keywords: c,
-                    contains: ['self'].concat(_)
+                    contains: ['self'].concat(p)
                 }
             ]
         },
@@ -121,12 +121,12 @@ function a(e) {
         keywords: c,
         illegal: /\/\*/,
         contains: [
-            ..._,
+            ...p,
             e.COMMENT('###', '###'),
             e.HASH_COMMENT_MODE,
             {
                 className: 'function',
-                begin: '^\\s*' + d + '\\s*=\\s*' + p,
+                begin: '^\\s*' + d + '\\s*=\\s*' + _,
                 end: '[-=]>',
                 returnBegin: !0,
                 contains: [h, m]
@@ -137,7 +137,7 @@ function a(e) {
                 contains: [
                     {
                         className: 'function',
-                        begin: p,
+                        begin: _,
                         end: '[-=]>',
                         returnBegin: !0,
                         contains: [m]

@@ -1,18 +1,18 @@
 r.d(n, {
     V: function () {
-        return o;
+        return s;
     }
 });
 var i = r(846903);
 let a = new (r(259443).Yd)('codedLinkQueue'),
-    s = new i.default({
+    o = new i.default({
         concurrency: 5,
         intervalCap: 10,
         interval: 2000
     });
-function o(e) {
-    s.add(e);
+function s(e) {
+    o.add(e);
 }
-s.on('add', () => {
-    s.size > 0 && a.warn('Message link fetch queue backlog:', s.size);
+o.on('add', () => {
+    o.size > 0 && a.warn('Message link fetch queue backlog:', o.size);
 });

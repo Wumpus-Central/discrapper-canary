@@ -1,8 +1,8 @@
 var i = r(200651);
 r(192379);
 var a = r(442837),
-    s = r(481060),
-    o = r(565138),
+    o = r(481060),
+    s = r(565138),
     l = r(430824),
     u = r(388032),
     c = r(368144);
@@ -14,7 +14,7 @@ let d = (e) => {
         : (0, i.jsxs)('div', {
               className: c.container,
               children: [
-                  (0, i.jsx)(s.Heading, {
+                  (0, i.jsx)(o.Heading, {
                       className: c.header,
                       variant: 'heading-sm/semibold',
                       children: u.intl.string(u.t.SDTOLy)
@@ -25,19 +25,19 @@ let d = (e) => {
                           (0, i.jsxs)('div', {
                               className: c.guildInfo,
                               children: [
-                                  (0, i.jsx)(o.Z, {
+                                  (0, i.jsx)(s.Z, {
                                       guild: r,
-                                      size: o.Z.Sizes.MINI,
+                                      size: s.Z.Sizes.MINI,
                                       className: c.guildIcon
                                   }),
-                                  (0, i.jsx)(s.Text, {
+                                  (0, i.jsx)(o.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
                                       children: r.name
                                   })
                               ]
                           }),
-                          (0, i.jsx)(s.Text, {
+                          (0, i.jsx)(o.Text, {
                               variant: 'text-md/semibold',
                               color: 'header-primary',
                               children: n.name

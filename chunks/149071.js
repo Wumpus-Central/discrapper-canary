@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(544891),
-    s = r(147913),
-    o = r(680089),
+    o = r(147913),
+    s = r(680089),
     l = r(592125),
     u = r(70956),
     c = r(981631);
@@ -19,13 +19,13 @@ function d(e, n, r) {
     );
 }
 let f = {},
-    _ = 0,
+    p = 0,
     h = 15 * u.Z.Millis.SECOND;
-function p() {
-    f = { ...o.Z.getCollapsedCategories() };
+function _() {
+    f = { ...s.Z.getCollapsedCategories() };
 }
 function m() {
-    !__OVERLAY__ && (clearTimeout(_), (_ = setTimeout(() => E({}), h)));
+    !__OVERLAY__ && (clearTimeout(p), (p = setTimeout(() => E({}), h)));
 }
 async function g(e, n) {
     null == e || e === c.ME
@@ -37,9 +37,9 @@ async function g(e, n) {
         : await E(null != n ? { [null != e ? e : c.ME]: n } : {});
 }
 async function E(e) {
-    clearTimeout(_);
+    clearTimeout(p);
     let n = 0 !== Object.keys(e).length,
-        r = o.Z.getCollapsedCategories(),
+        r = s.Z.getCollapsedCategories(),
         i = v();
     for (let a in i) {
         let i = l.Z.getChannel(a);
@@ -67,15 +67,15 @@ async function E(e) {
 }
 function v() {
     let e = {},
-        n = o.Z.getCollapsedCategories();
+        n = s.Z.getCollapsedCategories();
     for (let r in n) n[r] !== f[r] && (e[r] = !0);
     for (let r in f) n[r] !== f[r] && (e[r] = !0);
     return e;
 }
-function I() {
-    f = { ...o.Z.getCollapsedCategories() };
+function y() {
+    f = { ...s.Z.getCollapsedCategories() };
 }
-class T extends s.Z {
+class b extends o.Z {
     constructor(...e) {
         super(...e),
             d(this, 'actions', {
@@ -83,11 +83,11 @@ class T extends s.Z {
                 CATEGORY_EXPAND: m,
                 CATEGORY_COLLAPSE_ALL: m,
                 CATEGORY_EXPAND_ALL: m,
-                POST_CONNECTION_OPEN: p,
-                USER_GUILD_SETTINGS_FULL_UPDATE: I
+                POST_CONNECTION_OPEN: _,
+                USER_GUILD_SETTINGS_FULL_UPDATE: y
             }),
             d(this, 'saveUserGuildSettings', g),
             d(this, 'saveUserGuildSettingsBulk', E);
     }
 }
-n.Z = new T();
+n.Z = new b();

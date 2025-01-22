@@ -6,11 +6,11 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(131951),
-    o = r(65154),
+    o = r(131951),
+    s = r(65154),
     l = r(388032);
 function u(e) {
-    s.Z.supports(o.AN.VIDEO)
+    o.Z.supports(s.AN.VIDEO)
         ? (0, a.openModalLazy)(async () => {
               let { default: n } = await r.e('67753').then(r.bind(r, 873809));
               return (r) =>
@@ -24,9 +24,9 @@ function u(e) {
           })
         : (0, a.openModalLazy)(async () => {
               let { default: n } = await r.e('67753').then(r.bind(r, 873809));
-              return (s) =>
+              return (o) =>
                   (0, i.jsx)(n, {
-                      ...s,
+                      ...o,
                       header: l.intl.string(l.t.XLw6FB),
                       body: l.intl.string(l.t.wVjKGh),
                       confirmText: l.intl.string(l.t.BK8LKy),

@@ -6,7 +6,7 @@ r.d(n, {
         return B;
     },
     $j: function () {
-        return o;
+        return s;
     },
     AN: function () {
         return d;
@@ -18,16 +18,16 @@ r.d(n, {
         return O;
     },
     Dg: function () {
-        return p;
+        return _;
     },
     Er: function () {
         return V;
     },
     Gs: function () {
-        return F;
+        return Z;
     },
     H3: function () {
-        return b;
+        return I;
     },
     JA: function () {
         return P;
@@ -36,7 +36,7 @@ r.d(n, {
         return H;
     },
     P8: function () {
-        return Z;
+        return F;
     },
     QO: function () {
         return w;
@@ -57,13 +57,13 @@ r.d(n, {
         return q;
     },
     Uc: function () {
-        return T;
+        return b;
     },
     V8: function () {
-        return I;
+        return y;
     },
     WA: function () {
-        return x;
+        return L;
     },
     XR: function () {
         return J;
@@ -81,16 +81,16 @@ r.d(n, {
         return c;
     },
     Zq: function () {
-        return L;
+        return x;
     },
     ad: function () {
         return h;
     },
     dX: function () {
-        return N;
+        return C;
     },
     ed: function () {
-        return C;
+        return N;
     },
     ef: function () {
         return Y;
@@ -102,7 +102,7 @@ r.d(n, {
         return a;
     },
     iA: function () {
-        return _;
+        return p;
     },
     jg: function () {
         return D;
@@ -120,7 +120,7 @@ r.d(n, {
         return et;
     },
     pM: function () {
-        return s;
+        return o;
     },
     pk: function () {
         return z;
@@ -138,7 +138,7 @@ r.d(n, {
         return ee;
     },
     vA: function () {
-        return y.vA;
+        return T.vA;
     },
     w5: function () {
         return R;
@@ -155,24 +155,24 @@ r.d(n, {
 });
 var i,
     a,
-    s,
     o,
+    s,
     l,
     u,
     c,
     d,
     f,
-    _,
-    h,
     p,
+    h,
+    _,
     m,
     g,
     E,
     v,
-    I,
-    T,
+    y,
     b,
-    y = r(268146);
+    I,
+    T = r(268146);
 !(function (e) {
     (e.DEFAULT = 'default'), (e.STREAM = 'stream');
 })(i || (i = {})),
@@ -181,10 +181,10 @@ var i,
     })(a || (a = {})),
     !(function (e) {
         (e.PUSH_TO_TALK = 'PUSH_TO_TALK'), (e.VOICE_ACTIVITY = 'VOICE_ACTIVITY');
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         (e.DISCONNECTED = 'DISCONNECTED'), (e.CONNECTING = 'CONNECTING'), (e.CONNECTED = 'CONNECTED'), (e.NO_ROUTE = 'NO_ROUTE'), (e.ICE_CHECKING = 'ICE_CHECKING'), (e.DTLS_CONNECTING = 'DTLS_CONNECTING');
-    })(o || (o = {})),
+    })(s || (s = {})),
     !(function (e) {
         (e[(e.TRANSPORT = 1)] = 'TRANSPORT'), (e[(e.OUTBOUND = 2)] = 'OUTBOUND'), (e[(e.INBOUND = 4)] = 'INBOUND'), (e[(e.ALL = 7)] = 'ALL');
     })(l || (l = {})),
@@ -196,13 +196,13 @@ var i,
     })(c || (c = {}));
 let S = 100,
     A = 18,
-    N = 64000,
-    C = 128000,
+    C = 64000,
+    N = 128000,
     R = 'default',
     O = 'disabled',
     D = 0.1,
-    L = -40,
-    x = -25,
+    x = -40,
+    L = -25,
     w = 1 / 15,
     P = 0.8,
     M = 600000,
@@ -210,8 +210,8 @@ let S = 100,
     U = 10000000,
     B = 5000,
     G = 15000,
-    F = 30,
-    Z = 20,
+    Z = 30,
+    F = 20,
     V = 12,
     j = 100,
     H = 50,
@@ -255,13 +255,13 @@ let S = 100,
     })(f || (f = {})),
     !(function (e) {
         (e.LEGACY = 'legacy'), (e.STANDARD = 'standard'), (e.EXPERIMENTAL = 'experimental'), (e.AUTOMATIC = 'automatic');
-    })(_ || (_ = {})),
+    })(p || (p = {})),
     !(function (e) {
         (e.OPUS = 'opus'), (e.VP8 = 'VP8'), (e.VP9 = 'VP9'), (e.H264 = 'H264'), (e.RTX = 'rtx'), (e.TEST = 'TEST');
     })(h || (h = {})),
     !(function (e) {
         (e[(e.NONE = 0)] = 'NONE'), (e[(e.VOICE = 1)] = 'VOICE'), (e[(e.SOUNDSHARE = 2)] = 'SOUNDSHARE'), (e[(e.PRIORITY = 4)] = 'PRIORITY');
-    })(p || (p = {})),
+    })(_ || (_ = {})),
     !(function (e) {
         (e.AUDIO = 'audio'), (e.VIDEO = 'video'), (e.SCREEN = 'screen'), (e.TEST = 'test');
     })(m || (m = {})),
@@ -276,10 +276,10 @@ let S = 100,
     })(v || (v = {})),
     !(function (e) {
         (e.VIDEOTOOLBOX_RATE_CONTROL = 'videotoolbox_rate_control'), (e.SIGNAL_AV1 = 'signal_av1'), (e.SIGNAL_AV1_DECODE = 'signal_av1_decode'), (e.SIGNAL_AV1_HARDWARE_DECODE = 'signal_av1_hardware_decode'), (e.STREAMER_CLIP = 'streamer_clip'), (e.VIEWER_CLIP = 'viewer_clip'), (e.MUTE_BEFORE_PROCESSING = 'mute_before_processing'), (e.PTT_BEFORE_PROCESSING = 'ptt_before_processing'), (e.SKIP_ENCODE = 'skip_encode'), (e.RESET_DECODER_ON_ERRORS = 'reset_decoder_on_errors'), (e.SOFTWARE_FALLBACK_ON_ERRORS = 'software_fallback_on_errors'), (e.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS = 'software_fallback_on_consecutive_errors');
-    })(I || (I = {})),
+    })(y || (y = {})),
     !(function (e) {
         (e[(e.AUTO = 1)] = 'AUTO'), (e[(e.FULL = 2)] = 'FULL');
-    })(T || (T = {})),
+    })(b || (b = {})),
     !(function (e) {
         (e[(e.CPU_OVERUSE = 1)] = 'CPU_OVERUSE'), (e[(e.FAILED = 2)] = 'FAILED'), (e[(e.VAD_CPU_OVERUSE = 3)] = 'VAD_CPU_OVERUSE'), (e[(e.INITIALIZED = 4)] = 'INITIALIZED');
-    })(b || (b = {}));
+    })(I || (I = {}));

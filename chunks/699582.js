@@ -1,7 +1,7 @@
 var i = r(863714),
     a = r(635535),
-    s,
-    o = {},
+    o,
+    s = {},
     l = (function () {
         var e = {};
         try {
@@ -25,7 +25,7 @@ var i = r(863714),
             for (var r = arguments[1] || 0, i = n.length; r < i; r++) if (n[r] === e) return r;
             return -1;
         },
-    _ =
+    p =
         Object.create ||
         function (e, n) {
             var r;
@@ -34,7 +34,7 @@ var i = r(863714),
             return r;
         },
     h = Array.prototype.slice,
-    p = Array.prototype.concat,
+    _ = Array.prototype.concat,
     m = Array.prototype.push,
     g = Array.prototype.join,
     E = Array.prototype.shift,
@@ -46,24 +46,24 @@ var i = r(863714),
                     r = h.call(arguments, 1);
                 return 1 === n.length
                     ? function (i) {
-                          return n.apply(e, p.call(r, h.call(arguments)));
+                          return n.apply(e, _.call(r, h.call(arguments)));
                       }
                     : function () {
-                          return n.apply(e, p.call(r, h.call(arguments)));
+                          return n.apply(e, _.call(r, h.call(arguments)));
                       };
             }),
-    I = _(null),
-    T = Math.random(),
-    b = _(null, {
+    y = p(null),
+    b = Math.random(),
+    I = p(null, {
         narrow: {},
         short: {},
         long: {}
     }),
-    y = !1,
+    T = !1,
     S = !1,
     A = /^[A-Z]{3}$/,
-    N = /-u(?:-[0-9a-z]{2,8})+/gi,
-    C = {
+    C = /-u(?:-[0-9a-z]{2,8})+/gi,
+    N = {
         tags: {
             'art-lojban': 'jbo',
             'i-ami': 'ami',
@@ -411,29 +411,29 @@ function O(e) {
 function D(e) {
     var n, r;
     r = (e = e.toLowerCase()).split('-');
-    for (var a = 1, s = r.length; a < s; a++)
+    for (var a = 1, o = r.length; a < o; a++)
         if (2 === r[a].length) r[a] = r[a].toUpperCase();
         else if (4 === r[a].length) r[a] = r[a].charAt(0).toUpperCase() + r[a].slice(1);
         else if (1 === r[a].length && 'x' !== r[a]) break;
-    (n = (e = g.call(r, '-')).match(i.expExtSequences)) && n.length > 1 && (n.sort(), (e = e.replace(RegExp('(?:' + i.expExtSequences.source + ')+', 'i'), g.call(n, '')))), c.call(C.tags, e) && (e = C.tags[e]), (r = e.split('-'));
-    for (var a = 1, s = r.length; a < s; a++) c.call(C.subtags, r[a]) ? (r[a] = C.subtags[r[a]]) : c.call(C.extLang, r[a]) && ((r[a] = C.extLang[r[a]][0]), 1 === a && C.extLang[r[1]][1] === r[0] && ((r = h.call(r, a++)), (s -= 1)));
+    (n = (e = g.call(r, '-')).match(i.expExtSequences)) && n.length > 1 && (n.sort(), (e = e.replace(RegExp('(?:' + i.expExtSequences.source + ')+', 'i'), g.call(n, '')))), c.call(N.tags, e) && (e = N.tags[e]), (r = e.split('-'));
+    for (var a = 1, o = r.length; a < o; a++) c.call(N.subtags, r[a]) ? (r[a] = N.subtags[r[a]]) : c.call(N.extLang, r[a]) && ((r[a] = N.extLang[r[a]][0]), 1 === a && N.extLang[r[1]][1] === r[0] && ((r = h.call(r, a++)), (o -= 1)));
     return g.call(r, '-');
 }
-function L() {
-    return s;
+function x() {
+    return o;
 }
-function x(e) {
+function L(e) {
     var n = em(String(e));
     return !1 !== A.test(n) && !0;
 }
 function w(e) {
     if (void 0 === e) return new eh();
     for (var n = new eh(), e = 'string' == typeof e ? [e] : e, r = eg(e), i = r.length, a = 0; a < i; ) {
-        var s = String(a);
-        if (s in r) {
-            var o = r[s];
-            if (null == o || ('string' != typeof o && 'object' != typeof o)) throw TypeError('String or Object type expected');
-            var l = String(o);
+        var o = String(a);
+        if (o in r) {
+            var s = r[o];
+            if (null == s || ('string' != typeof s && 'object' != typeof s)) throw TypeError('String or Object type expected');
+            var l = String(s);
             if (!O(l)) throw RangeError("'" + l + "' is not a structurally valid language tag");
             (l = D(l)), -1 === f.call(n, l) && m.call(n, l);
         }
@@ -451,19 +451,19 @@ function P(e, n) {
 }
 function M(e, n) {
     for (var r, i = 0, a = n.length; i < a && !r; ) {
-        var s = n[i],
-            o = String(s).replace(N, ''),
-            r = P(e, o);
+        var o = n[i],
+            s = String(o).replace(C, ''),
+            r = P(e, s);
         i++;
     }
-    var l = new e_();
+    var l = new ep();
     if (void 0 !== r) {
-        if (((l['[[locale]]'] = r), String(s) !== String(o))) {
-            var u = s.match(N)[0],
-                c = s.indexOf('-u-');
+        if (((l['[[locale]]'] = r), String(o) !== String(s))) {
+            var u = o.match(C)[0],
+                c = o.indexOf('-u-');
             (l['[[extension]]'] = u), (l['[[extensionIndex]]'] = c);
         }
-    } else l['[[locale]]'] = L();
+    } else l['[[locale]]'] = x();
     return l;
 }
 function k(e, n) {
@@ -471,139 +471,139 @@ function k(e, n) {
 }
 function U(e, n, r, i, a) {
     if (0 === e.length) throw ReferenceError('No locale data has been provided for this object yet.');
-    if ('lookup' === r['[[localeMatcher]]']) var s = M(e, n);
-    else var s = k(e, n);
-    var o = s['[[locale]]'];
-    if (c.call(s, '[[extension]]'))
-        var l = s['[[extension]]'],
-            u = s['[[extensionIndex]]'],
+    if ('lookup' === r['[[localeMatcher]]']) var o = M(e, n);
+    else var o = k(e, n);
+    var s = o['[[locale]]'];
+    if (c.call(o, '[[extension]]'))
+        var l = o['[[extension]]'],
+            u = o['[[extensionIndex]]'],
             d = String.prototype.split,
-            _ = d.call(l, '-'),
-            h = _.length;
-    var p = new e_();
-    p['[[dataLocale]]'] = o;
+            p = d.call(l, '-'),
+            h = p.length;
+    var _ = new ep();
+    _['[[dataLocale]]'] = s;
     for (var m = '-u', g = 0, E = i.length; g < E; ) {
         var v = i[g],
-            I = a[o][v],
-            T = I['0'],
-            b = '',
-            y = f;
-        if (void 0 !== _) {
-            var S = y.call(_, v);
+            y = a[s][v],
+            b = y['0'],
+            I = '',
+            T = f;
+        if (void 0 !== p) {
+            var S = T.call(p, v);
             if (-1 !== S) {
-                if (S + 1 < h && _[S + 1].length > 2) {
-                    var A = _[S + 1],
-                        N = y.call(I, A);
-                    if (-1 !== N)
-                        var T = A,
-                            b = '-' + v + '-' + T;
+                if (S + 1 < h && p[S + 1].length > 2) {
+                    var A = p[S + 1],
+                        C = T.call(y, A);
+                    if (-1 !== C)
+                        var b = A,
+                            I = '-' + v + '-' + b;
                 } else {
-                    var N = y(I, 'true');
-                    if (-1 !== N) var T = 'true';
+                    var C = T(y, 'true');
+                    if (-1 !== C) var b = 'true';
                 }
             }
         }
         if (c.call(r, '[[' + v + ']]')) {
-            var C = r['[[' + v + ']]'];
-            -1 !== y.call(I, C) && C !== T && ((T = C), (b = ''));
+            var N = r['[[' + v + ']]'];
+            -1 !== T.call(y, N) && N !== b && ((b = N), (I = ''));
         }
-        (p['[[' + v + ']]'] = T), (m += b), g++;
+        (_['[[' + v + ']]'] = b), (m += I), g++;
     }
-    if (m.length > 2) var o = o.substring(0, u) + m + o.substring(u);
-    return (p['[[locale]]'] = o), p;
+    if (m.length > 2) var s = s.substring(0, u) + m + s.substring(u);
+    return (_['[[locale]]'] = s), _;
 }
 function B(e, n) {
     for (var r = n.length, i = new eh(), a = 0; a < r; ) {
-        var s = n[a];
-        void 0 !== P(e, String(s).replace(N, '')) && m.call(i, s), a++;
+        var o = n[a];
+        void 0 !== P(e, String(o).replace(C, '')) && m.call(i, o), a++;
     }
     return h.call(i);
 }
 function G(e, n) {
     return B(e, n);
 }
-function F(e, n, r) {
+function Z(e, n, r) {
     if (void 0 !== r) {
-        var r = new e_(eg(r)),
+        var r = new ep(eg(r)),
             i = r.localeMatcher;
         if (void 0 !== i && 'lookup' !== (i = String(i)) && 'best fit' !== i) throw RangeError('matcher should be "lookup" or "best fit"');
     }
     if (void 0 === i || 'best fit' === i) var a = G(e, n);
     else var a = B(e, n);
-    for (var s in a)
-        c.call(a, s) &&
-            d(a, s, {
+    for (var o in a)
+        c.call(a, o) &&
+            d(a, o, {
                 writable: !1,
                 configurable: !1,
-                value: a[s]
+                value: a[o]
             });
     return d(a, 'length', { writable: !1 }), a;
 }
-function Z(e, n, r, i, a) {
-    var s = e[n];
-    if (void 0 !== s) {
-        if (((s = 'boolean' === r ? !!s : 'string' === r ? String(s) : s), void 0 !== i && -1 === f.call(i, s))) throw RangeError("'" + s + "' is not an allowed value for `" + n + '`');
-        return s;
+function F(e, n, r, i, a) {
+    var o = e[n];
+    if (void 0 !== o) {
+        if (((o = 'boolean' === r ? !!o : 'string' === r ? String(o) : o), void 0 !== i && -1 === f.call(i, o))) throw RangeError("'" + o + "' is not an allowed value for `" + n + '`');
+        return o;
     }
     return a;
 }
 function V(e, n, r, i, a) {
-    var s = e[n];
-    if (void 0 !== s) {
-        if (isNaN((s = Number(s))) || s < r || s > i) throw RangeError('Value is not a number or outside accepted range');
-        return Math.floor(s);
+    var o = e[n];
+    if (void 0 !== o) {
+        if (isNaN((o = Number(o))) || o < r || o > i) throw RangeError('Value is not a number or outside accepted range');
+        return Math.floor(o);
     }
     return a;
 }
 function j() {
     var e = arguments[0],
         n = arguments[1];
-    return this && this !== o ? H(eg(this), e, n) : new o.NumberFormat(e, n);
+    return this && this !== s ? H(eg(this), e, n) : new s.NumberFormat(e, n);
 }
 function H(e, n, r) {
     var i = eE(e),
-        a = ep();
+        a = e_();
     if (!0 === i['[[initializedIntlObject]]']) throw TypeError('`this` object has already been initialized as an Intl object');
     d(e, '__getInternalProperties', {
         value: function () {
-            if (arguments[0] === T) return i;
+            if (arguments[0] === b) return i;
         }
     }),
         (i['[[initializedIntlObject]]'] = !0);
-    var s = w(n);
+    var o = w(n);
     r = void 0 === r ? {} : eg(r);
-    var o = new e_(),
-        l = Z(r, 'localeMatcher', 'string', new eh('lookup', 'best fit'), 'best fit');
-    o['[[localeMatcher]]'] = l;
-    var c = I.NumberFormat['[[localeData]]'],
-        f = U(I.NumberFormat['[[availableLocales]]'], s, o, I.NumberFormat['[[relevantExtensionKeys]]'], c);
+    var s = new ep(),
+        l = F(r, 'localeMatcher', 'string', new eh('lookup', 'best fit'), 'best fit');
+    s['[[localeMatcher]]'] = l;
+    var c = y.NumberFormat['[[localeData]]'],
+        f = U(y.NumberFormat['[[availableLocales]]'], o, s, y.NumberFormat['[[relevantExtensionKeys]]'], c);
     (i['[[locale]]'] = f['[[locale]]']), (i['[[numberingSystem]]'] = f['[[nu]]']), (i['[[dataLocale]]'] = f['[[dataLocale]]']);
-    var _ = f['[[dataLocale]]'],
-        h = Z(r, 'style', 'string', new eh('decimal', 'percent', 'currency'), 'decimal');
+    var p = f['[[dataLocale]]'],
+        h = F(r, 'style', 'string', new eh('decimal', 'percent', 'currency'), 'decimal');
     i['[[style]]'] = h;
-    var p = Z(r, 'currency', 'string');
-    if (void 0 !== p && !x(p)) throw RangeError("'" + p + "' is not a valid currency code");
-    if ('currency' === h && void 0 === p) throw TypeError('Currency code is required when style is currency');
+    var _ = F(r, 'currency', 'string');
+    if (void 0 !== _ && !L(_)) throw RangeError("'" + _ + "' is not a valid currency code");
+    if ('currency' === h && void 0 === _) throw TypeError('Currency code is required when style is currency');
     if ('currency' === h) {
-        (p = p.toUpperCase()), (i['[[currency]]'] = p);
-        var m = Y(p);
+        (_ = _.toUpperCase()), (i['[[currency]]'] = _);
+        var m = Y(_);
     }
-    var g = Z(r, 'currencyDisplay', 'string', new eh('code', 'symbol', 'name'), 'symbol');
+    var g = F(r, 'currencyDisplay', 'string', new eh('code', 'symbol', 'name'), 'symbol');
     'currency' === h && (i['[[currencyDisplay]]'] = g);
     var E = V(r, 'minimumIntegerDigits', 1, 21, 1);
     i['[[minimumIntegerDigits]]'] = E;
     var v = V(r, 'minimumFractionDigits', 0, 20, 'currency' === h ? m : 0);
     i['[[minimumFractionDigits]]'] = v;
-    var b = 'currency' === h ? Math.max(v, m) : 'percent' === h ? Math.max(v, 0) : Math.max(v, 3),
-        y = V(r, 'maximumFractionDigits', v, 20, b);
-    i['[[maximumFractionDigits]]'] = y;
+    var I = 'currency' === h ? Math.max(v, m) : 'percent' === h ? Math.max(v, 0) : Math.max(v, 3),
+        T = V(r, 'maximumFractionDigits', v, 20, I);
+    i['[[maximumFractionDigits]]'] = T;
     var S = r.minimumSignificantDigits,
         A = r.maximumSignificantDigits;
     (void 0 !== S || void 0 !== A) && ((S = V(r, 'minimumSignificantDigits', 1, 21, 1)), (A = V(r, 'maximumSignificantDigits', S, 21, 21)), (i['[[minimumSignificantDigits]]'] = S), (i['[[maximumSignificantDigits]]'] = A));
-    var N = Z(r, 'useGrouping', 'boolean', void 0, !0);
-    i['[[useGrouping]]'] = N;
-    var C = c[_].patterns[h];
-    return (i['[[positivePattern]]'] = C.positivePattern), (i['[[negativePattern]]'] = C.negativePattern), (i['[[boundFormat]]'] = void 0), (i['[[initializedNumberFormat]]'] = !0), u && (e.format = W.call(e)), a.exp.test(a.input), e;
+    var C = F(r, 'useGrouping', 'boolean', void 0, !0);
+    i['[[useGrouping]]'] = C;
+    var N = c[p].patterns[h];
+    return (i['[[positivePattern]]'] = N.positivePattern), (i['[[negativePattern]]'] = N.negativePattern), (i['[[boundFormat]]'] = void 0), (i['[[initializedNumberFormat]]'] = !0), u && (e.format = W.call(e)), a.exp.test(a.input), e;
 }
 function Y(e) {
     return void 0 !== R[e] ? R[e] : 2;
@@ -622,44 +622,44 @@ function W() {
 }
 function K(e, n) {
     var r,
-        i = ep(),
+        i = e_(),
         a = eE(e),
-        s = a['[[dataLocale]]'],
-        o = a['[[numberingSystem]]'],
-        l = I.NumberFormat['[[localeData]]'][s],
-        u = l.symbols[o] || l.symbols.latn,
+        o = a['[[dataLocale]]'],
+        s = a['[[numberingSystem]]'],
+        l = y.NumberFormat['[[localeData]]'][o],
+        u = l.symbols[s] || l.symbols.latn,
         d = !1;
     if (!1 === isFinite(n)) isNaN(n) ? (r = u.nan) : ((r = u.infinity), n < 0 && (d = !0));
     else {
-        if ((n < 0 && ((d = !0), (n = -n)), 'percent' === a['[[style]]'] && (n *= 100), (r = c.call(a, '[[minimumSignificantDigits]]') && c.call(a, '[[maximumSignificantDigits]]') ? z(n, a['[[minimumSignificantDigits]]'], a['[[maximumSignificantDigits]]']) : q(n, a['[[minimumIntegerDigits]]'], a['[[minimumFractionDigits]]'], a['[[maximumFractionDigits]]'])), Q[o])) {
+        if ((n < 0 && ((d = !0), (n = -n)), 'percent' === a['[[style]]'] && (n *= 100), (r = c.call(a, '[[minimumSignificantDigits]]') && c.call(a, '[[maximumSignificantDigits]]') ? z(n, a['[[minimumSignificantDigits]]'], a['[[maximumSignificantDigits]]']) : q(n, a['[[minimumIntegerDigits]]'], a['[[minimumFractionDigits]]'], a['[[maximumFractionDigits]]'])), Q[s])) {
             var f = Q[a['[[numberingSystem]]']];
             r = String(r).replace(/\d/g, function (e) {
                 return f[e];
             });
         } else r = String(r);
         if (((r = r.replace(/\./g, u.decimal)), !0 === a['[[useGrouping]]'])) {
-            var _ = r.split(u.decimal),
-                h = _[0],
-                p = l.patterns.primaryGroupSize || 3,
-                E = l.patterns.secondaryGroupSize || p;
-            if (h.length > p) {
+            var p = r.split(u.decimal),
+                h = p[0],
+                _ = l.patterns.primaryGroupSize || 3,
+                E = l.patterns.secondaryGroupSize || _;
+            if (h.length > _) {
                 var v = new eh(),
-                    T = h.length - p,
-                    b = T % E,
-                    y = h.slice(0, b);
-                for (y.length && m.call(v, y); b < T; ) m.call(v, h.slice(b, b + E)), (b += E);
-                m.call(v, h.slice(T)), (_[0] = g.call(v, u.group));
+                    b = h.length - _,
+                    I = b % E,
+                    T = h.slice(0, I);
+                for (T.length && m.call(v, T); I < b; ) m.call(v, h.slice(I, I + E)), (I += E);
+                m.call(v, h.slice(b)), (p[0] = g.call(v, u.group));
             }
-            r = g.call(_, u.decimal);
+            r = g.call(p, u.decimal);
         }
     }
     var S = a[!0 === d ? '[[negativePattern]]' : '[[positivePattern]]'];
     if (((S = S.replace('{number}', r)), 'currency' === a['[[style]]'])) {
         var A,
-            N = a['[[currency]]'],
-            C = l.currencies[N];
-        if ('symbol' === a['[[currencyDisplay]]']) A = C || N;
-        else A = N;
+            C = a['[[currency]]'],
+            N = l.currencies[C];
+        if ('symbol' === a['[[currencyDisplay]]']) A = N || C;
+        else A = C;
         S = S.replace('{currency}', A);
     }
     return i.exp.test(i.input), S;
@@ -668,14 +668,14 @@ function z(e, n, r) {
     var i = r;
     if (0 === e)
         var a = g.call(Array(i + 1), '0'),
-            s = 0;
+            o = 0;
     else
-        var s = ec(Math.abs(e)),
-            o = Math.round(Math.exp(Math.abs(s - i + 1) * Math.LN10)),
-            a = String(Math.round(s - i + 1 < 0 ? e * o : e / o));
-    if (s >= i) return a + g.call(Array(s - i + 1 + 1), '0');
-    if (s === i - 1) return a;
-    s >= 0 ? (a = a.slice(0, s + 1) + '.' + a.slice(s + 1)) : s < 0 && (a = '0.' + g.call(Array(-(s + 1) + 1), '0') + a);
+        var o = ec(Math.abs(e)),
+            s = Math.round(Math.exp(Math.abs(o - i + 1) * Math.LN10)),
+            a = String(Math.round(o - i + 1 < 0 ? e * s : e / s));
+    if (o >= i) return a + g.call(Array(o - i + 1 + 1), '0');
+    if (o === i - 1) return a;
+    o >= 0 ? (a = a.slice(0, o + 1) + '.' + a.slice(o + 1)) : o < 0 && (a = '0.' + g.call(Array(-(o + 1) + 1), '0') + a);
     if (a.indexOf('.') >= 0 && r > n) {
         for (var l = r - n; l > 0 && '0' === a.charAt(a.length - 1); ) (a = a.slice(0, -1)), l--;
         '.' === a.charAt(a.length - 1) && (a = a.slice(0, -1));
@@ -684,31 +684,31 @@ function z(e, n, r) {
 }
 function q(e, n, r, i) {
     var a,
-        s = Number.prototype.toFixed.call(e, i),
-        o = s.split('.')[0].length,
+        o = Number.prototype.toFixed.call(e, i),
+        s = o.split('.')[0].length,
         l = i - r,
-        u = (a = s.indexOf('e')) > -1 ? s.slice(a + 1) : 0;
-    for (u && ((s = s.slice(0, a).replace('.', '')), (s += g.call(Array(u - (s.length - 1) + 1), '0') + '.' + g.call(Array(i + 1), '0')), (o = s.length)); l > 0 && '0' === s.slice(-1); ) (s = s.slice(0, -1)), l--;
-    if (('.' === s.slice(-1) && (s = s.slice(0, -1)), o < n)) var c = g.call(Array(n - o + 1), '0');
-    return (c || '') + s;
+        u = (a = o.indexOf('e')) > -1 ? o.slice(a + 1) : 0;
+    for (u && ((o = o.slice(0, a).replace('.', '')), (o += g.call(Array(u - (o.length - 1) + 1), '0') + '.' + g.call(Array(i + 1), '0')), (s = o.length)); l > 0 && '0' === o.slice(-1); ) (o = o.slice(0, -1)), l--;
+    if (('.' === o.slice(-1) && (o = o.slice(0, -1)), s < n)) var c = g.call(Array(n - s + 1), '0');
+    return (c || '') + o;
 }
-d(o, 'NumberFormat', {
+d(s, 'NumberFormat', {
     configurable: !0,
     writable: !0,
     value: j
 }),
-    d(o.NumberFormat, 'prototype', { writable: !1 }),
-    (I.NumberFormat = {
+    d(s.NumberFormat, 'prototype', { writable: !1 }),
+    (y.NumberFormat = {
         '[[availableLocales]]': [],
         '[[relevantExtensionKeys]]': ['nu'],
         '[[localeData]]': {}
     }),
-    d(o.NumberFormat, 'supportedLocalesOf', {
+    d(s.NumberFormat, 'supportedLocalesOf', {
         configurable: !0,
         writable: !0,
-        value: v.call(ed, I.NumberFormat)
+        value: v.call(ed, y.NumberFormat)
     }),
-    d(o.NumberFormat.prototype, 'format', {
+    d(s.NumberFormat.prototype, 'format', {
         configurable: !0,
         get: W
     });
@@ -739,63 +739,63 @@ var Q = {
 function X() {
     var e = arguments[0],
         n = arguments[1];
-    return this && this !== o ? J(eg(this), e, n) : new o.DateTimeFormat(e, n);
+    return this && this !== s ? J(eg(this), e, n) : new s.DateTimeFormat(e, n);
 }
 function J(e, n, r) {
     var i = eE(e),
-        a = ep();
+        a = e_();
     if (!0 === i['[[initializedIntlObject]]']) throw TypeError('`this` object has already been initialized as an Intl object');
     d(e, '__getInternalProperties', {
         value: function () {
-            if (arguments[0] === T) return i;
+            if (arguments[0] === b) return i;
         }
     }),
         (i['[[initializedIntlObject]]'] = !0);
-    var s = w(n),
+    var o = w(n),
         r = et(r, 'any', 'date'),
-        o = new e_();
-    (y = Z(r, 'localeMatcher', 'string', new eh('lookup', 'best fit'), 'best fit')), (o['[[localeMatcher]]'] = y);
-    var l = I.DateTimeFormat,
+        s = new ep();
+    (T = F(r, 'localeMatcher', 'string', new eh('lookup', 'best fit'), 'best fit')), (s['[[localeMatcher]]'] = T);
+    var l = y.DateTimeFormat,
         f = l['[[localeData]]'],
-        _ = U(l['[[availableLocales]]'], s, o, l['[[relevantExtensionKeys]]'], f);
-    (i['[[locale]]'] = _['[[locale]]']), (i['[[calendar]]'] = _['[[ca]]']), (i['[[numberingSystem]]'] = _['[[nu]]']), (i['[[dataLocale]]'] = _['[[dataLocale]]']);
-    var h = _['[[dataLocale]]'],
-        p = r.timeZone;
-    if (void 0 !== p && 'UTC' !== (p = em(p))) throw RangeError('timeZone is not supported.');
-    for (var m in ((i['[[timeZone]]'] = p), (o = new e_()), $))
+        p = U(l['[[availableLocales]]'], o, s, l['[[relevantExtensionKeys]]'], f);
+    (i['[[locale]]'] = p['[[locale]]']), (i['[[calendar]]'] = p['[[ca]]']), (i['[[numberingSystem]]'] = p['[[nu]]']), (i['[[dataLocale]]'] = p['[[dataLocale]]']);
+    var h = p['[[dataLocale]]'],
+        _ = r.timeZone;
+    if (void 0 !== _ && 'UTC' !== (_ = em(_))) throw RangeError('timeZone is not supported.');
+    for (var m in ((i['[[timeZone]]'] = _), (s = new ep()), $))
         if (c.call($, m)) {
-            var g = Z(r, m, 'string', $[m]);
-            o['[[' + m + ']]'] = g;
+            var g = F(r, m, 'string', $[m]);
+            s['[[' + m + ']]'] = g;
         }
     var E,
         v = f[h],
-        b = ee(v.formats),
-        y = Z(r, 'formatMatcher', 'string', new eh('basic', 'best fit'), 'best fit');
-    for (var m in ((v.formats = b), (E = 'basic' === y ? en(o, b) : ei(o, b)), $))
+        I = ee(v.formats),
+        T = F(r, 'formatMatcher', 'string', new eh('basic', 'best fit'), 'best fit');
+    for (var m in ((v.formats = I), (E = 'basic' === T ? en(s, I) : ei(s, I)), $))
         if (c.call($, m) && c.call(E, m)) {
             var S = E[m];
             i['[[' + m + ']]'] = S;
         }
     var A,
-        N = Z(r, 'hour12', 'boolean');
+        C = F(r, 'hour12', 'boolean');
     if (i['[[hour]]']) {
-        if (((N = void 0 === N ? v.hour12 : N), (i['[[hour12]]'] = N), !0 === N)) {
-            var C = v.hourNo0;
-            (i['[[hourNo0]]'] = C), (A = E.pattern12);
+        if (((C = void 0 === C ? v.hour12 : C), (i['[[hour12]]'] = C), !0 === C)) {
+            var N = v.hourNo0;
+            (i['[[hourNo0]]'] = N), (A = E.pattern12);
         } else A = E.pattern;
     } else A = E.pattern;
     return (i['[[pattern]]'] = A), (i['[[boundFormat]]'] = void 0), (i['[[initializedDateTimeFormat]]'] = !0), u && (e.format = ea.call(e)), a.exp.test(a.input), e;
 }
-d(o.NumberFormat.prototype, 'resolvedOptions', {
+d(s.NumberFormat.prototype, 'resolvedOptions', {
     configurable: !0,
     writable: !0,
     value: function () {
         var e,
-            n = new e_(),
+            n = new ep(),
             r = ['locale', 'numberingSystem', 'style', 'currency', 'currencyDisplay', 'minimumIntegerDigits', 'minimumFractionDigits', 'maximumFractionDigits', 'minimumSignificantDigits', 'maximumSignificantDigits', 'useGrouping'],
             i = this != null && 'object' == typeof this && eE(this);
         if (!i || !i['[[initializedNumberFormat]]']) throw TypeError('`this` value for resolvedOptions() is not an initialized Intl.NumberFormat object.');
-        for (var a = 0, s = r.length; a < s; a++)
+        for (var a = 0, o = r.length; a < o; a++)
             c.call(i, (e = '[[' + r[a] + ']]')) &&
                 (n[r[a]] = {
                     value: i[e],
@@ -803,10 +803,10 @@ d(o.NumberFormat.prototype, 'resolvedOptions', {
                     configurable: !0,
                     enumerable: !0
                 });
-        return _({}, n);
+        return p({}, n);
     }
 }),
-    d(o, 'DateTimeFormat', {
+    d(s, 'DateTimeFormat', {
         configurable: !0,
         writable: !0,
         value: X
@@ -830,33 +830,33 @@ function et(e, n, r) {
     if (void 0 === e) e = null;
     else {
         var i = eg(e);
-        for (var a in ((e = new e_()), i)) e[a] = i[a];
+        for (var a in ((e = new ep()), i)) e[a] = i[a];
     }
-    var e = _(e),
-        s = !0;
-    return ('date' === n || 'any' === n) && (void 0 !== e.weekday || void 0 !== e.year || void 0 !== e.month || void 0 !== e.day) && (s = !1), ('time' === n || 'any' === n) && (void 0 !== e.hour || void 0 !== e.minute || void 0 !== e.second) && (s = !1), s && ('date' === r || 'all' === r) && (e.year = e.month = e.day = 'numeric'), s && ('time' === r || 'all' === r) && (e.hour = e.minute = e.second = 'numeric'), e;
+    var e = p(e),
+        o = !0;
+    return ('date' === n || 'any' === n) && (void 0 !== e.weekday || void 0 !== e.year || void 0 !== e.month || void 0 !== e.day) && (o = !1), ('time' === n || 'any' === n) && (void 0 !== e.hour || void 0 !== e.minute || void 0 !== e.second) && (o = !1), o && ('date' === r || 'all' === r) && (e.year = e.month = e.day = 'numeric'), o && ('time' === r || 'all' === r) && (e.hour = e.minute = e.second = 'numeric'), e;
 }
 function en(e, n) {
     return er(e, n);
 }
 function er(e, n, r) {
-    for (var i, a = 8, s = 120, o = 20, l = 8, u = 6, d = 6, _ = 3, h = -1 / 0, p = 0, m = n.length; p < m; ) {
-        var g = n[p],
+    for (var i, a = 8, o = 120, s = 20, l = 8, u = 6, d = 6, p = 3, h = -1 / 0, _ = 0, m = n.length; _ < m; ) {
+        var g = n[_],
             E = 0;
         for (var v in $)
             if (c.call($, v)) {
-                var I = e['[[' + v + ']]'],
-                    T = c.call(g, v) ? g[v] : void 0;
-                if (void 0 === I && void 0 !== T) E -= o;
-                else if (void 0 !== I && void 0 === T) E -= s;
+                var y = e['[[' + v + ']]'],
+                    b = c.call(g, v) ? g[v] : void 0;
+                if (void 0 === y && void 0 !== b) E -= s;
+                else if (void 0 !== y && void 0 === b) E -= o;
                 else {
-                    var b = ['2-digit', 'numeric', 'narrow', 'short', 'long'],
-                        y = f.call(b, I),
-                        S = Math.max(Math.min(f.call(b, T) - y, 2), -2);
-                    r && ((('numeric' === I || '2-digit' === I) && 'numeric' !== T && '2-digit' !== T) || ('numeric' !== I && '2-digit' !== I && ('2-digit' === T || 'numeric' === T))) && (E -= a), 2 === S ? (E -= u) : 1 === S ? (E -= _) : -1 === S ? (E -= d) : -2 === S && (E -= l);
+                    var I = ['2-digit', 'numeric', 'narrow', 'short', 'long'],
+                        T = f.call(I, y),
+                        S = Math.max(Math.min(f.call(I, b) - T, 2), -2);
+                    r && ((('numeric' === y || '2-digit' === y) && 'numeric' !== b && '2-digit' !== b) || ('numeric' !== y && '2-digit' !== y && ('2-digit' === b || 'numeric' === b))) && (E -= a), 2 === S ? (E -= u) : 1 === S ? (E -= p) : -1 === S ? (E -= d) : -2 === S && (E -= l);
                 }
             }
-        E > h && ((h = E), (i = g)), p++;
+        E > h && ((h = E), (i = g)), _++;
     }
     return i;
 }
@@ -869,44 +869,44 @@ function ea() {
     if (void 0 === e['[[boundFormat]]']) {
         var n = function () {
                 var e = Number(0 == arguments.length ? Date.now() : arguments[0]);
-                return es(this, e);
+                return eo(this, e);
             },
             r = v.call(n, this);
         e['[[boundFormat]]'] = r;
     }
     return e['[[boundFormat]]'];
 }
-function es(e, n) {
+function eo(e, n) {
     if (!isFinite(n)) throw RangeError('Invalid valid date passed to format');
-    var r = e.__getInternalProperties(T),
-        i = ep(),
+    var r = e.__getInternalProperties(b),
+        i = e_(),
         a = r['[[locale]]'],
-        s = new o.NumberFormat([a], { useGrouping: !1 }),
-        l = new o.NumberFormat([a], {
+        o = new s.NumberFormat([a], { useGrouping: !1 }),
+        l = new s.NumberFormat([a], {
             minimumIntegerDigits: 2,
             useGrouping: !1
         }),
-        u = eo(n, r['[[calendar]]'], r['[[timeZone]]']),
+        u = es(n, r['[[calendar]]'], r['[[timeZone]]']),
         d = r['[[pattern]]'],
         f = r['[[dataLocale]]'],
-        _ = I.DateTimeFormat['[[localeData]]'][f].calendars,
+        p = y.DateTimeFormat['[[localeData]]'][f].calendars,
         h = r['[[calendar]]'];
-    for (var p in $)
-        if (c.call(r, '[[' + p + ']]')) {
+    for (var _ in $)
+        if (c.call(r, '[[' + _ + ']]')) {
             var m,
                 g,
-                E = r['[[' + p + ']]'],
-                v = u['[[' + p + ']]'];
-            if (('year' === p && v <= 0 ? (v = 1 - v) : 'month' === p ? v++ : 'hour' === p && !0 === r['[[hour12]]'] && ((v %= 12), (m = v !== u['[[' + p + ']]']), 0 === v && !0 === r['[[hourNo0]]'] && (v = 12)), 'numeric' === E)) g = K(s, v);
+                E = r['[[' + _ + ']]'],
+                v = u['[[' + _ + ']]'];
+            if (('year' === _ && v <= 0 ? (v = 1 - v) : 'month' === _ ? v++ : 'hour' === _ && !0 === r['[[hour12]]'] && ((v %= 12), (m = v !== u['[[' + _ + ']]']), 0 === v && !0 === r['[[hourNo0]]'] && (v = 12)), 'numeric' === E)) g = K(o, v);
             else if ('2-digit' === E) (g = K(l, v)).length > 2 && (g = g.slice(-2));
-            else if (E in b)
-                switch (p) {
+            else if (E in I)
+                switch (_) {
                     case 'month':
-                        g = ef(_, h, 'months', E, u['[[' + p + ']]']);
+                        g = ef(p, h, 'months', E, u['[[' + _ + ']]']);
                         break;
                     case 'weekday':
                         try {
-                            g = ef(_, h, 'days', E, u['[[' + p + ']]']);
+                            g = ef(p, h, 'days', E, u['[[' + _ + ']]']);
                         } catch (e) {
                             throw Error('Could not find weekday data for locale ' + a);
                         }
@@ -915,16 +915,16 @@ function es(e, n) {
                         g = '';
                         break;
                     default:
-                        g = u['[[' + p + ']]'];
+                        g = u['[[' + _ + ']]'];
                 }
-            d = d.replace('{' + p + '}', g);
+            d = d.replace('{' + _ + '}', g);
         }
-    return !0 === r['[[hour12]]'] && ((g = ef(_, h, 'dayPeriods', m ? 'pm' : 'am')), (d = d.replace('{ampm}', g))), i.exp.test(i.input), d;
+    return !0 === r['[[hour12]]'] && ((g = ef(p, h, 'dayPeriods', m ? 'pm' : 'am')), (d = d.replace('{ampm}', g))), i.exp.test(i.input), d;
 }
-function eo(e, n, r) {
+function es(e, n, r) {
     var i = new Date(e),
         a = 'get' + (r || '');
-    return new e_({
+    return new ep({
         '[[weekday]]': i[a + 'Day'](),
         '[[era]]': +(i[a + 'FullYear']() >= 0),
         '[[year]]': i[a + 'FullYear'](),
@@ -936,30 +936,30 @@ function eo(e, n, r) {
         '[[inDST]]': !1
     });
 }
-(I.DateTimeFormat = {
+(y.DateTimeFormat = {
     '[[availableLocales]]': [],
     '[[relevantExtensionKeys]]': ['ca', 'nu'],
     '[[localeData]]': {}
 }),
-    d(o.DateTimeFormat, 'supportedLocalesOf', {
+    d(s.DateTimeFormat, 'supportedLocalesOf', {
         configurable: !0,
         writable: !0,
-        value: v.call(ed, I.DateTimeFormat)
+        value: v.call(ed, y.DateTimeFormat)
     }),
-    d(o.DateTimeFormat.prototype, 'format', {
+    d(s.DateTimeFormat.prototype, 'format', {
         configurable: !0,
         get: ea
     }),
-    d(o.DateTimeFormat.prototype, 'resolvedOptions', {
+    d(s.DateTimeFormat.prototype, 'resolvedOptions', {
         writable: !0,
         configurable: !0,
         value: function () {
             var e,
-                n = new e_(),
+                n = new ep(),
                 r = ['locale', 'calendar', 'numberingSystem', 'timeZone', 'hour12', 'weekday', 'era', 'year', 'month', 'day', 'hour', 'minute', 'second', 'timeZoneName'],
                 i = this != null && 'object' == typeof this && eE(this);
             if (!i || !i['[[initializedDateTimeFormat]]']) throw TypeError('`this` value for resolvedOptions() is not an initialized Intl.DateTimeFormat object.');
-            for (var a = 0, s = r.length; a < s; a++)
+            for (var a = 0, o = r.length; a < o; a++)
                 c.call(i, (e = '[[' + r[a] + ']]')) &&
                     (n[r[a]] = {
                         value: i[e],
@@ -967,10 +967,10 @@ function eo(e, n, r) {
                         configurable: !0,
                         enumerable: !0
                     });
-            return _({}, n);
+            return p({}, n);
         }
     });
-var el = (o.__localeSensitiveProtos = {
+var el = (s.__localeSensitiveProtos = {
     Number: {},
     Date: {}
 });
@@ -979,8 +979,8 @@ function eu(e, n) {
     var r,
         i = [n],
         a = n.split('-');
-    for (a.length > 2 && 4 === a[1].length && m.call(i, a[0] + '-' + a[2]); (r = E.call(i)); ) m.call(I.NumberFormat['[[availableLocales]]'], r), (I.NumberFormat['[[localeData]]'][r] = e.number), e.date && ((e.date.nu = e.number.nu), m.call(I.DateTimeFormat['[[availableLocales]]'], r), (I.DateTimeFormat['[[localeData]]'][r] = e.date));
-    void 0 === s && (s = n), !y && (H(o.NumberFormat.prototype), (y = !0)), e.date && !S && (J(o.DateTimeFormat.prototype), (S = !0));
+    for (a.length > 2 && 4 === a[1].length && m.call(i, a[0] + '-' + a[2]); (r = E.call(i)); ) m.call(y.NumberFormat['[[availableLocales]]'], r), (y.NumberFormat['[[localeData]]'][r] = e.number), e.date && ((e.date.nu = e.number.nu), m.call(y.DateTimeFormat['[[availableLocales]]'], r), (y.DateTimeFormat['[[localeData]]'][r] = e.date));
+    void 0 === o && (o = n), !T && (H(s.NumberFormat.prototype), (T = !0)), e.date && !S && (J(s.DateTimeFormat.prototype), (S = !0));
 }
 function ec(e) {
     if ('function' == typeof Math.log10) return Math.floor(Math.log10(e));
@@ -989,25 +989,25 @@ function ec(e) {
 }
 function ed(e) {
     if (!c.call(this, '[[availableLocales]]')) throw TypeError('supportedLocalesOf() is not a constructor');
-    var n = ep(),
+    var n = e_(),
         r = arguments[1],
         i = this['[[availableLocales]]'],
         a = w(e);
-    return n.exp.test(n.input), F(i, a, r);
+    return n.exp.test(n.input), Z(i, a, r);
 }
 function ef(e, n, r, i, a) {
-    var s = e[n] && e[n][r] ? e[n][r] : e.gregory[r],
-        o = {
+    var o = e[n] && e[n][r] ? e[n][r] : e.gregory[r],
+        s = {
             narrow: ['short', 'long'],
             short: ['long', 'narrow'],
             long: ['short', 'narrow']
         },
-        l = c.call(s, i) ? s[i] : c.call(s, o[i][0]) ? s[o[i][0]] : s[o[i][1]];
+        l = c.call(o, i) ? o[i] : c.call(o, s[i][0]) ? o[s[i][0]] : o[s[i][1]];
     return null != a ? l[a] : l;
 }
-function e_(e) {
+function ep(e) {
     for (var n in e)
-        (e instanceof e_ || c.call(e, n)) &&
+        (e instanceof ep || c.call(e, n)) &&
             d(this, n, {
                 value: e[n],
                 enumerable: !0,
@@ -1022,11 +1022,11 @@ function eh() {
     }),
         arguments.length && m.apply(this, h.call(arguments));
 }
-function ep() {
-    for (var e = /[.?*+^$[\]\\(){}|-]/g, n = RegExp.lastMatch || '', r = RegExp.multiline ? 'm' : '', i = { input: RegExp.input }, a = new eh(), s = !1, o = {}, l = 1; l <= 9; l++) s = (o['$' + l] = RegExp['$' + l]) || s;
-    if (((n = n.replace(e, '\\$&')), s))
+function e_() {
+    for (var e = /[.?*+^$[\]\\(){}|-]/g, n = RegExp.lastMatch || '', r = RegExp.multiline ? 'm' : '', i = { input: RegExp.input }, a = new eh(), o = !1, s = {}, l = 1; l <= 9; l++) o = (s['$' + l] = RegExp['$' + l]) || o;
+    if (((n = n.replace(e, '\\$&')), o))
         for (var l = 1; l <= 9; l++) {
-            var u = o['$' + l];
+            var u = s['$' + l];
             u ? ((u = u.replace(e, '\\$&')), (n = n.replace(u, '(' + u + ')'))) : (n = '()' + n), m.call(a, n.slice(0, n.indexOf('(') + 1)), (n = n.slice(n.indexOf('(') + 1));
         }
     return (i.exp = new RegExp(g.call(a, '') + n, r)), i;
@@ -1043,7 +1043,7 @@ function eg(e) {
     return Object(e);
 }
 function eE(e) {
-    return c.call(e, '__getInternalProperties') ? e.__getInternalProperties(T) : _(null);
+    return c.call(e, '__getInternalProperties') ? e.__getInternalProperties(b) : p(null);
 }
 (el.Number.toLocaleString = function () {
     if ('[object Number]' !== Object.prototype.toString.call(this)) throw TypeError('`this` value must be a number for Number.prototype.toLocaleString()');
@@ -1056,7 +1056,7 @@ function eE(e) {
         var n = arguments[0],
             r = arguments[1],
             r = et(r, 'any', 'all');
-        return es(new X(n, r), e);
+        return eo(new X(n, r), e);
     }),
     (el.Date.toLocaleDateString = function () {
         if ('[object Date]' !== Object.prototype.toString.call(this)) throw TypeError('`this` value must be a Date instance for Date.prototype.toLocaleDateString()');
@@ -1065,7 +1065,7 @@ function eE(e) {
         var n = arguments[0],
             r = arguments[1],
             r = et(r, 'date', 'date');
-        return es(new X(n, r), e);
+        return eo(new X(n, r), e);
     }),
     (el.Date.toLocaleTimeString = function () {
         if ('[object Date]' !== Object.prototype.toString.call(this)) throw TypeError('`this` value must be a Date instance for Date.prototype.toLocaleTimeString()');
@@ -1074,9 +1074,9 @@ function eE(e) {
         var n = arguments[0],
             r = arguments[1],
             r = et(r, 'time', 'time');
-        return es(new X(n, r), e);
+        return eo(new X(n, r), e);
     }),
-    d(o, '__applyLocaleSensitivePrototypes', {
+    d(s, '__applyLocaleSensitivePrototypes', {
         writable: !0,
         configurable: !0,
         value: function () {
@@ -1099,12 +1099,12 @@ function eE(e) {
                     });
         }
     }),
-    d(o, '__addLocaleData', {
+    d(s, '__addLocaleData', {
         value: function (e) {
             if (!O(e.locale)) throw Error("Object passed doesn't identify itself with a valid language tag");
             eu(e, e.locale);
         }
     }),
-    (e_.prototype = _(null)),
-    (eh.prototype = _(null)),
-    (n.default = o);
+    (ep.prototype = p(null)),
+    (eh.prototype = p(null)),
+    (n.default = s);

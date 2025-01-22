@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(213919),
-    s = r(570140),
-    o = r(317770),
+    o = r(570140),
+    s = r(317770),
     l = r(358085);
 function u(e, n, r) {
     return (
@@ -16,12 +16,12 @@ function u(e, n, r) {
         e
     );
 }
-class c extends o.Z {
+class c extends s.Z {
     _initialize() {
-        s.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen);
+        o.Z.subscribe('CONNECTION_OPEN', this.handleConnectionOpen);
     }
     _terminate() {
-        s.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen);
+        o.Z.unsubscribe('CONNECTION_OPEN', this.handleConnectionOpen);
     }
     constructor(...e) {
         super(...e),

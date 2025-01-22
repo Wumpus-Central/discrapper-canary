@@ -1,12 +1,12 @@
 r.d(n, {
     Ng: function () {
-        return T;
+        return b;
     },
     OC: function () {
-        return N;
+        return C;
     },
     dg: function () {
-        return b;
+        return I;
     },
     dp: function () {
         return g;
@@ -15,13 +15,13 @@ r.d(n, {
         return v;
     },
     nA: function () {
-        return y;
+        return T;
     },
     qF: function () {
         return m;
     },
     uV: function () {
-        return I;
+        return y;
     },
     vY: function () {
         return A;
@@ -29,16 +29,16 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(112456),
-    s = r.n(a),
-    o = r(392711),
-    l = r.n(o),
+    o = r.n(a),
+    s = r(392711),
+    l = r.n(s),
     u = r(430824),
     c = r(594174),
     d = r(74538),
     f = r(981631),
-    _ = r(474936);
+    p = r(474936);
 let h = 524288000,
-    p = 524288000;
+    _ = 524288000;
 function m(e, n) {
     return e instanceof File ? e : g(e.data, e.filename, n);
 }
@@ -109,26 +109,26 @@ let E = [
     }
 ];
 function v(e) {
-    return I(e.name, e.type);
+    return y(e.name, e.type);
 }
-function I(e, n) {
+function y(e, n) {
     var r;
     e = null !== (r = null == e ? void 0 : e.toLowerCase()) && void 0 !== r ? r : '';
     let i = l().find(E, (r) => (null != r.reType && null != n ? r.reType.test(n) : null != r.reName && '' !== e && r.reName.test(e)));
     return null != i ? i.klass : 'unknown';
 }
-function T(e) {
-    return s().filesize(e);
-}
 function b(e) {
+    return o().filesize(e);
+}
+function I(e) {
     let n = c.default.getCurrentUser(),
         r = d.ZP.getUserMaxFileSize(n);
     if (null == e) return r;
     let i = u.Z.getGuild(e);
-    return Math.max(null != i ? _.HO[i.premiumTier].limits.fileSize : f.mBz, r);
+    return Math.max(null != i ? p.HO[i.premiumTier].limits.fileSize : f.mBz, r);
 }
-function y(e, n) {
-    let r = b(n);
+function T(e, n) {
+    let r = I(n);
     return Array.from(e).some((e) => e.size > r);
 }
 function S(e) {
@@ -137,9 +137,9 @@ function S(e) {
     return n;
 }
 function A(e) {
-    return S(e) > N();
+    return S(e) > C();
 }
-function N() {
+function C() {
     let e = c.default.getCurrentUser();
-    return null != e && e.isStaff() ? p : h;
+    return null != e && e.isStaff() ? _ : h;
 }

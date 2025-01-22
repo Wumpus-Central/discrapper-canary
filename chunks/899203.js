@@ -7,10 +7,10 @@ var n = (function e() {
     return n;
 })();
 function r(e, r, i, a) {
-    var s = n,
-        o = a + i;
+    var o = n,
+        s = a + i;
     e ^= -1;
-    for (var l = a; l < o; l++) e = (e >>> 8) ^ s[(e ^ r[l]) & 255];
+    for (var l = a; l < s; l++) e = (e >>> 8) ^ o[(e ^ r[l]) & 255];
     return -1 ^ e;
 }
 e.exports = r;

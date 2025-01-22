@@ -1,7 +1,7 @@
 var i,
     a = r(392711),
-    s = r.n(a),
-    o = r(442837),
+    o = r.n(a),
+    s = r(442837),
     l = r(433517),
     u = r(570140),
     c = r(65154);
@@ -19,26 +19,26 @@ function d(e, n, r) {
     );
 }
 let f = 'CertifiedDeviceStore',
-    _ = {},
+    p = {},
     h = {},
-    p = 0;
+    _ = 0;
 function m(e, n, r) {
     let i = h[e];
     return null != i ? r(i) : n;
 }
 function g(e, n) {
-    let r = _[e];
-    null != r && r.forEach((e) => delete h[e.id]), (_[e] = n), n.forEach((e) => (h[e.id] = e));
+    let r = p[e];
+    null != r && r.forEach((e) => delete h[e.id]), (p[e] = n), n.forEach((e) => (h[e.id] = e));
 }
 function E(e) {
     let { applicationId: n, devices: r } = e;
-    g(n, r), l.K.set(f, _), p++;
+    g(n, r), l.K.set(f, p), _++;
 }
-class v extends (i = o.ZP.Store) {
+class v extends (i = s.ZP.Store) {
     initialize() {
         let e = l.K.get(f);
         null != e &&
-            s().forEach(e, (e, n) => {
+            o().forEach(e, (e, n) => {
                 e.forEach((e) => {
                     'audioinput' === e.type && e.hardwareMute && (e.hardwareMute = !1);
                 }),
@@ -56,7 +56,7 @@ class v extends (i = o.ZP.Store) {
         return null != r ? ''.concat(r.vendor.name, ' ').concat(r.model.name) : n;
     }
     getCertifiedDeviceByType(e) {
-        return s().find(h, (n) => n.type === e);
+        return o().find(h, (n) => n.type === e);
     }
     isHardwareMute(e) {
         return m(e, !1, (e) => e.type === c.h7.AUDIO_INPUT && e.hardwareMute);
@@ -77,7 +77,7 @@ class v extends (i = o.ZP.Store) {
         return m(e, null, (e) => e.model);
     }
     getRevision() {
-        return p;
+        return _;
     }
 }
 d(v, 'displayName', 'CertifiedDeviceStore'), (n.Z = new v(u.Z, { CERTIFIED_DEVICES_SET: E }));

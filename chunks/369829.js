@@ -1,12 +1,12 @@
 var i = r(49691),
     a = { passive: !0 };
-function s(e) {
+function o(e) {
     var n = e.state,
         r = e.instance,
-        s = e.options,
-        o = s.scroll,
-        l = void 0 === o || o,
-        u = s.resize,
+        o = e.options,
+        s = o.scroll,
+        l = void 0 === s || s,
+        u = o.resize,
         c = void 0 === u || u,
         d = (0, i.Z)(n.elements.popper),
         f = [].concat(n.scrollParents.reference, n.scrollParents.popper);
@@ -30,6 +30,6 @@ n.Z = {
     enabled: !0,
     phase: 'write',
     fn: function () {},
-    effect: s,
+    effect: o,
     data: {}
 };

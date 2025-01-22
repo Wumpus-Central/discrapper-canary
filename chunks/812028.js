@@ -4,13 +4,13 @@ r.r(n),
             return u;
         },
         useCallbackOne: function () {
-            return o;
+            return s;
         },
         useMemo: function () {
             return l;
         },
         useMemoOne: function () {
-            return s;
+            return o;
         }
     });
 var i = r(192379);
@@ -19,18 +19,18 @@ function a(e, n) {
     for (var r = 0; r < e.length; r++) if (e[r] !== n[r]) return !1;
     return !0;
 }
-function s(e, n) {
+function o(e, n) {
     var r = (0, i.useState)(function () {
             return {
                 inputs: n,
                 result: e()
             };
         })[0],
-        s = (0, i.useRef)(!0),
-        o = (0, i.useRef)(r),
+        o = (0, i.useRef)(!0),
+        s = (0, i.useRef)(r),
         l =
-            s.current || (n && o.current.inputs && a(n, o.current.inputs))
-                ? o.current
+            o.current || (n && s.current.inputs && a(n, s.current.inputs))
+                ? s.current
                 : {
                       inputs: n,
                       result: e()
@@ -38,17 +38,17 @@ function s(e, n) {
     return (
         (0, i.useEffect)(
             function () {
-                (s.current = !1), (o.current = l);
+                (o.current = !1), (s.current = l);
             },
             [l]
         ),
         l.result
     );
 }
-function o(e, n) {
-    return s(function () {
+function s(e, n) {
+    return o(function () {
         return e;
     }, n);
 }
-var l = s,
-    u = o;
+var l = o,
+    u = s;

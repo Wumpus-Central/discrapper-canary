@@ -9,5 +9,5 @@ var i = {
         GCM: r(869133)
     },
     a = r(313739);
-for (var s in a) a[s].module = i[a[s].mode];
+for (var o in a) a[o].module = i[a[o].mode];
 e.exports = a;

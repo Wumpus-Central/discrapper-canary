@@ -1,17 +1,17 @@
 r.d(n, {
     gb: function () {
-        return o;
+        return s;
     },
     xQ: function () {
-        return s;
+        return o;
     }
 });
 let i = 7000,
     a = null;
-function s(e, n = 'assertive', r = i) {
+function o(e, n = 'assertive', r = i) {
     !a && (a = new l()), a.announce(e, n, r);
 }
-function o(e) {
+function s(e) {
     a && a.clear(e);
 }
 class l {

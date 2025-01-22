@@ -1,19 +1,19 @@
 r.d(n, {
     Fg: function () {
-        return s;
+        return o;
     },
     i6: function () {
-        return o;
+        return s;
     }
 });
 var i = r(780384),
     a = r(981631);
-function s() {
+function o() {
     let { theme: e } = (0, i.TC)();
     return e;
 }
-function o() {
-    return l(s());
+function s() {
+    return l(o());
 }
 function l(e) {
     switch (e) {
@@ -23,4 +23,4 @@ function l(e) {
             return 1;
     }
 }
-n.ZP = s;
+n.ZP = o;

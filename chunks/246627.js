@@ -5,12 +5,12 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(192379),
-    o = r(442837),
+var o = r(192379),
+    s = r(442837),
     l = r(235587);
 function u(e) {
     let { guildId: n, leaderboardId: r, intervalStart: i } = e,
-        a = (0, o.Wu)(
+        a = (0, s.Wu)(
             [l.Z],
             () => {
                 var e, a;
@@ -18,7 +18,7 @@ function u(e) {
             },
             [n, i, r]
         ),
-        u = (0, o.Wu)(
+        u = (0, s.Wu)(
             [l.Z],
             () => {
                 var e, a;
@@ -27,7 +27,7 @@ function u(e) {
             [n, i, r]
         );
     return {
-        rankChanges: s.useMemo(() => {
+        rankChanges: o.useMemo(() => {
             let e = new Map();
             a.forEach((n, r) => {
                 e.set(n, r + 1);
@@ -36,12 +36,12 @@ function u(e) {
             return (
                 u.forEach((r, i) => {
                     let a = i + 1,
-                        s = e.get(r);
-                    s !== a &&
+                        o = e.get(r);
+                    o !== a &&
                         n.push({
                             userId: r,
                             currentRank: a,
-                            previousRank: s
+                            previousRank: o
                         });
                 }),
                 n

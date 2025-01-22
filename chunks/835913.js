@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(757143);
-var s = r(47120);
-var o = r(230367),
+var o = r(47120);
+var s = r(230367),
     l = r(320215),
     u = r(240773),
     c = r(660284),
     d = r(69122),
     f = r(495852);
-class _ extends f.C {
+class p extends f.C {
     now() {
         let e = this.create(),
             n = Date.now();
@@ -62,8 +62,8 @@ class _ extends f.C {
     }
     internalBinaryRead(e, n, r, i) {
         let a = null != i ? i : this.create(),
-            s = e.pos + n;
-        for (; e.pos < s; ) {
+            o = e.pos + n;
+        for (; e.pos < o; ) {
             let [n, i] = e.tag();
             switch (n) {
                 case 1:
@@ -73,18 +73,18 @@ class _ extends f.C {
                     a.nanos = e.int32();
                     break;
                 default:
-                    let s = r.readUnknownField;
-                    if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                    let o = r.readUnknownField;
+                    if ('throw' === o) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
                     let l = e.skip(i);
-                    !1 !== s && (!0 === s ? o.z.onRead : s)(this.typeName, a, n, i, l);
+                    !1 !== o && (!0 === o ? s.z.onRead : o)(this.typeName, a, n, i, l);
             }
         }
         return a;
     }
     internalBinaryWrite(e, n, r) {
-        '0' !== e.seconds && n.tag(1, o.TD.Varint).int64(e.seconds), 0 !== e.nanos && n.tag(2, o.TD.Varint).int32(e.nanos);
+        '0' !== e.seconds && n.tag(1, s.TD.Varint).int64(e.seconds), 0 !== e.nanos && n.tag(2, s.TD.Varint).int32(e.nanos);
         let i = r.writeUnknownFields;
-        return !1 !== i && (!0 == i ? o.z.onWrite : i)(this.typeName, e, n), n;
+        return !1 !== i && (!0 == i ? s.z.onWrite : i)(this.typeName, e, n), n;
     }
     constructor() {
         super('google.protobuf.Timestamp', [
@@ -103,4 +103,4 @@ class _ extends f.C {
         ]);
     }
 }
-let h = new _();
+let h = new p();

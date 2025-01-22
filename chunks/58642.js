@@ -1,12 +1,12 @@
 r.d(n, {
     h: function () {
-        return o;
+        return s;
     }
 });
 var i = r(544891),
     a = r(570140),
-    s = r(981631);
-function o(e, n, r) {
+    o = r(981631);
+function s(e, n, r) {
     return (
         a.Z.dispatch({
             type: 'LIBRARY_APPLICATION_FLAGS_UPDATE_START',
@@ -16,7 +16,7 @@ function o(e, n, r) {
         }),
         i.tn
             .patch({
-                url: s.ANM.LIBRARY_APPLICATION_BRANCH(e, n),
+                url: o.ANM.LIBRARY_APPLICATION_BRANCH(e, n),
                 body: { flags: r },
                 oldFormErrors: !0,
                 rejectWithError: !1

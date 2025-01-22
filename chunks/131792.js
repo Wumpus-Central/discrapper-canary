@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(81825);
@@ -17,7 +17,7 @@ function a(e, n, r) {
         e
     );
 }
-class s extends i.Z {
+class o extends i.Z {
     constructor(e) {
         var n;
         super(), a(this, 'id', void 0), a(this, 'widgets', void 0), a(this, 'version', void 0), (this.version = null !== (n = Number(e.version)) && void 0 !== n ? n : 0), (this.id = e.id || ''), (this.widgets = e.widgets || []);

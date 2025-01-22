@@ -1,10 +1,10 @@
-var i, a, s, o;
+var i, a, o, s;
 r.d(n, {
     D2: function () {
         return c;
     },
     LU: function () {
-        return s;
+        return o;
     },
     Vw: function () {
         return i;
@@ -30,7 +30,7 @@ let l = 'CHANGELOG_MODAL',
     })(a || (a = {})),
     !(function (e) {
         (e[(e.NOT_LOADED = 0)] = 'NOT_LOADED'), (e[(e.LOADED_SUCCESS = 1)] = 'LOADED_SUCCESS'), (e[(e.LOADED_FAILURE = 2)] = 'LOADED_FAILURE');
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         (e.SPECIAL = 'special'), (e.STANDARD = 'standard');
-    })(o || (o = {}));
+    })(s || (s = {}));

@@ -1,6 +1,6 @@
 r.d(n, {
     Mg: function () {
-        return _;
+        return p;
     },
     eD: function () {
         return i;
@@ -14,9 +14,9 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(536091);
-var o = r(512722),
-    l = r.n(o),
+var o = r(536091);
+var s = r(512722),
+    l = r.n(s),
     u = r(392711);
 function c(e, n, r) {
     return (
@@ -66,8 +66,8 @@ class f {
         let i = null != n.parentId ? this.nodes[n.parentId] : this.root,
             a = i.children.indexOf(n);
         l()(!('folder' === e.type && 'folder' === i.type), '[GUILDS TREE] Tried moving a folder ('.concat(e.id, ') inside of another folder (').concat(i.id, ')')), l()(a >= 0, '[GUILDS TREE] target node ('.concat(n.id, ') did not exist within its specified parent (').concat(n.parentId, ')'));
-        let s = r ? 1 : 0;
-        return (i.children = [...i.children]), i.children.splice(a + s, 0, e), (e.parentId = i.id), this.version++, this;
+        let o = r ? 1 : 0;
+        return (i.children = [...i.children]), i.children.splice(a + o, 0, e), (e.parentId = i.id), this.version++, this;
     }
     moveInto(e, n) {
         let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -139,7 +139,7 @@ class f {
             (this.version = 0);
     }
 }
-function _(e, n) {
+function p(e, n) {
     return {
         type: 'guild',
         id: e,
@@ -149,14 +149,14 @@ function _(e, n) {
     };
 }
 function h(e, n, r) {
-    var i, a, s;
+    var i, a, o;
     return {
         type: 'folder',
         id: e.folderId,
         parentId: n,
         name: null !== (i = e.folderName) && void 0 !== i ? i : void 0,
         color: null !== (a = e.folderColor) && void 0 !== a ? a : void 0,
-        expanded: null != r ? r : null !== (s = e.expanded) && void 0 !== s && s,
+        expanded: null != r ? r : null !== (o = e.expanded) && void 0 !== o && o,
         children: []
     };
 }

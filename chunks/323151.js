@@ -1,39 +1,39 @@
 var i = r(687249),
     a = r(718332),
-    s = r(995542),
-    o = r(92141),
+    o = r(995542),
+    s = r(92141),
     l = r(53919),
     u = r(290677),
     c = r(551023),
     d = r(454745),
     f = 1,
-    _ = '[object Arguments]',
+    p = '[object Arguments]',
     h = '[object Array]',
-    p = '[object Object]',
+    _ = '[object Object]',
     m = Object.prototype.hasOwnProperty;
 function g(e, n, r, g, E, v) {
-    var I = u(e),
-        T = u(n),
-        b = I ? h : l(e),
-        y = T ? h : l(n);
-    (b = b == _ ? p : b), (y = y == _ ? p : y);
-    var S = b == p,
-        A = y == p,
-        N = b == y;
-    if (N && c(e)) {
+    var y = u(e),
+        b = u(n),
+        I = y ? h : l(e),
+        T = b ? h : l(n);
+    (I = I == p ? _ : I), (T = T == p ? _ : T);
+    var S = I == _,
+        A = T == _,
+        C = I == T;
+    if (C && c(e)) {
         if (!c(n)) return !1;
-        (I = !0), (S = !1);
+        (y = !0), (S = !1);
     }
-    if (N && !S) return v || (v = new i()), I || d(e) ? a(e, n, r, g, E, v) : s(e, n, b, r, g, E, v);
+    if (C && !S) return v || (v = new i()), y || d(e) ? a(e, n, r, g, E, v) : o(e, n, I, r, g, E, v);
     if (!(r & f)) {
-        var C = S && m.call(e, '__wrapped__'),
+        var N = S && m.call(e, '__wrapped__'),
             R = A && m.call(n, '__wrapped__');
-        if (C || R) {
-            var O = C ? e.value() : e,
+        if (N || R) {
+            var O = N ? e.value() : e,
                 D = R ? n.value() : n;
             return v || (v = new i()), E(O, D, r, g, v);
         }
     }
-    return !!N && (v || (v = new i()), o(e, n, r, g, E, v));
+    return !!C && (v || (v = new i()), s(e, n, r, g, E, v));
 }
 e.exports = g;

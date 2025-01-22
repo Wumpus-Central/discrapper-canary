@@ -7,21 +7,21 @@ var i = r(444675),
             return n;
         };
 e.exports = d;
-var s = r(555170),
-    o = r(833327);
-r(689118)(d, s);
-for (var l = a(o.prototype), u = 0; u < l.length; u++) {
+var o = r(555170),
+    s = r(833327);
+r(689118)(d, o);
+for (var l = a(s.prototype), u = 0; u < l.length; u++) {
     var c = l[u];
-    !d.prototype[c] && (d.prototype[c] = o.prototype[c]);
+    !d.prototype[c] && (d.prototype[c] = s.prototype[c]);
 }
 function d(e) {
     if (!(this instanceof d)) return new d(e);
-    s.call(this, e), o.call(this, e), (this.allowHalfOpen = !0), e && (!1 === e.readable && (this.readable = !1), !1 === e.writable && (this.writable = !1), !1 === e.allowHalfOpen && ((this.allowHalfOpen = !1), this.once('end', f)));
+    o.call(this, e), s.call(this, e), (this.allowHalfOpen = !0), e && (!1 === e.readable && (this.readable = !1), !1 === e.writable && (this.writable = !1), !1 === e.allowHalfOpen && ((this.allowHalfOpen = !1), this.once('end', f)));
 }
 function f() {
-    !this._writableState.ended && i.nextTick(_, this);
+    !this._writableState.ended && i.nextTick(p, this);
 }
-function _(e) {
+function p(e) {
     e.end();
 }
 Object.defineProperty(d.prototype, 'writableHighWaterMark', {

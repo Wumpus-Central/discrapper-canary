@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(906732),
     s = n(336197),
     c = n(454585),
-    d = n(171368),
-    u = n(695346),
+    u = n(171368),
+    d = n(695346),
     m = n(598077),
     h = n(594174),
     f = n(626135),
@@ -35,20 +35,20 @@ function Z(e) {
     let { item: o } = e,
         s = null === (t = o.message) || void 0 === t ? void 0 : t.content;
     if (null == s) return (0, i.jsx)('div', {});
-    let d = null !== (r = h.default.getUser(null === (n = o.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : new m.Z(o.other_user),
-        u = c.Z.parse(s);
+    let u = null !== (r = h.default.getUser(null === (n = o.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : new m.Z(o.other_user),
+        d = c.Z.parse(s);
     return (0, i.jsxs)('div', {
         className: b.messagePreviewContainer,
         children: [
             (0, i.jsx)(a.Z, {
-                user: d,
+                user: u,
                 size: l.AvatarSizes.SIZE_24
             }),
             (0, i.jsx)(l.Text, {
                 className: b.messagePreviewText,
                 variant: 'text-sm/normal',
                 lineClamp: 2,
-                children: u
+                children: d
             })
         ]
     });
@@ -94,9 +94,9 @@ function L(e) {
 }
 let y = r.memo(function (e) {
         var t;
-        let { item: a, ackedBeforeId: u } = e,
+        let { item: a, ackedBeforeId: d } = e,
             { analyticsLocations: m } = (0, o.ZP)(),
-            h = (0, x.I)(a, u),
+            h = (0, x.I)(a, d),
             A = r.useCallback(async () => {
                 if ((!h && (0, g.wt)(a), null != a.item_enum && a.item_enum === E.AM.FIND_FRIENDS)) {
                     (0, l.openModalLazy)(async () => {
@@ -119,7 +119,7 @@ let y = r.memo(function (e) {
                         let t = i.match('^/users/(\\d+)');
                         if (null != t && 2 === t.length) {
                             var e;
-                            (0, d.openUserProfileModal)({
+                            (0, u.openUserProfileModal)({
                                 userId: t[1],
                                 messageId: null === (e = a.message) || void 0 === e ? void 0 : e.id,
                                 sourceAnalyticsLocations: m,
@@ -177,7 +177,7 @@ let y = r.memo(function (e) {
     }),
     O = r.memo(function (e) {
         let { items: t } = e,
-            n = u.d$.useSetting();
+            n = d.d$.useSetting();
         return (0, i.jsx)(i.Fragment, {
             children: t.map((e) =>
                 (0, i.jsx)(

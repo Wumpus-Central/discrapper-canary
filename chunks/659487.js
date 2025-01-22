@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(724458);
-var s = r(356659);
-let o = [
+var o = r(356659);
+let s = [
         (e) => {
             let n = {
                 ...e,
@@ -34,7 +34,7 @@ function u(e) {
         : (l = e
               .object({
                   id: e.string().required(),
-                  version: e.number().positive().integer().min(0).max(s.Bg).optional(),
+                  version: e.number().positive().integer().min(0).max(o.Bg).optional(),
                   name: e.string().when('version', {
                       is: e.number().less(3),
                       then: e.string().allow('')
@@ -70,7 +70,7 @@ async function c(e) {
     try {
         n.assert(e, i);
         let r = e;
-        return null == r.version && (r.version = 0), o.slice(r.version).reduce((e, n) => n(e), r);
+        return null == r.version && (r.version = 0), s.slice(r.version).reduce((e, n) => n(e), r);
     } catch (e) {
         return null;
     }

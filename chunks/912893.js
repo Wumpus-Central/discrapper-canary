@@ -1,6 +1,6 @@
 r.d(n, {
     G: function () {
-        return s;
+        return o;
     },
     U: function () {
         return a;
@@ -16,7 +16,7 @@ function a(e, n, r, a) {
         startPosition: a
     });
 }
-function s(e, n, r) {
+function o(e, n, r) {
     i.Z.dispatch({
         type: 'BURST_REACTION_PICKER_ANIMATION_CLEAR',
         messageId: e,

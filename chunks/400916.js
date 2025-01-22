@@ -11,8 +11,8 @@ var r = n(512722),
     o = n(481060),
     s = n(671533),
     c = n(240864),
-    d = n(613810),
-    u = n(596211),
+    u = n(613810),
+    d = n(596211),
     m = n(388032),
     h = n(916060);
 function f(e) {
@@ -24,7 +24,7 @@ function f(e) {
     return E
         ? (0, i.jsxs)(o.Button, {
               onClick: function () {
-                  d.Z.open({
+                  u.Z.open({
                       guildId: p,
                       productId: _
                   });
@@ -44,7 +44,7 @@ function f(e) {
               ]
           })
         : (l()(null != C, 'No attachment'),
-          (0, i.jsxs)(u.Z, {
+          (0, i.jsxs)(d.Z, {
               guildId: p,
               productId: _,
               attachmentId: C,

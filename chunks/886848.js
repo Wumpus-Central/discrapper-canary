@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i,
     a = r(47770),
-    s = r(68721),
-    o = r(591218);
+    o = r(68721),
+    s = r(591218);
 function l(e, n, r) {
     return (
         n in e
@@ -92,7 +92,7 @@ class u extends a.Z {
     constructor(e) {
         super(),
             l(this, 'audio', void 0),
-            l(this, 'video', new o.Z()),
+            l(this, 'video', new s.Z()),
             l(this, 'desktop', null),
             l(this, 'stream', void 0),
             l(this, 'mergeStreams', () => {
@@ -115,7 +115,7 @@ class u extends a.Z {
             l(this, 'handleVideoPermission', (e) => {
                 this.emit('video-permission', e);
             }),
-            (this.audio = new s.Z(e)),
+            (this.audio = new o.Z(e)),
             this.audio.addListener('voiceactivity', this.handleVoiceActivity),
             this.audio.addListener('speaking', this.handleSpeaking),
             this.audio.addListener('stream', this.mergeStreams),

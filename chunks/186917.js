@@ -1,9 +1,9 @@
 var i = r(493773),
     a = r(580747),
-    s = r(607789);
-let o = (e, n) => {
+    o = r(607789);
+let s = (e, n) => {
     let r = (0, a.Z)('profile_effect_debug_controls'),
-        { id: o, preset: l, increment: u, decrement: c } = (0, s.Z)(e);
+        { id: s, preset: l, increment: u, decrement: c } = (0, o.Z)(e);
     return (
         (0, i.Z)(() => {
             if (!r) return;
@@ -18,9 +18,9 @@ let o = (e, n) => {
             );
         }),
         {
-            id: null != o ? o : null,
+            id: null != s ? s : null,
             preset: l
         }
     );
 };
-n.Z = o;
+n.Z = s;

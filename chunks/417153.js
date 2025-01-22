@@ -3,7 +3,7 @@ r.d(n, {
         return l;
     },
     Es: function () {
-        return o;
+        return s;
     },
     z5: function () {
         return u;
@@ -11,14 +11,14 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(15729),
-    s = r(731965);
-let o = (0, a.U)(() => ({
+    o = r(731965);
+let s = (0, a.U)(() => ({
     currentToast: null,
     queuedToasts: []
 }));
 function l(e) {
-    (0, s.j)(() => {
-        o.setState((n) =>
+    (0, o.j)(() => {
+        s.setState((n) =>
             null != n.currentToast
                 ? {
                       ...n,
@@ -32,8 +32,8 @@ function l(e) {
     });
 }
 function u() {
-    (0, s.j)(() => {
-        o.setState((e) => {
+    (0, o.j)(() => {
+        s.setState((e) => {
             let n = e.queuedToasts;
             return n.length > 0
                 ? {

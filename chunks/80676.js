@@ -7,7 +7,7 @@ function n(e) {
         },
         i = /(_[a-z_\d]+)?/,
         a = /([de][+-]?\d+)?/,
-        s = {
+        o = {
             className: 'number',
             variants: [{ begin: n.concat(/\b\d+/, /\.(\d*)/, a, i) }, { begin: n.concat(/\b\d+/, a, i) }, { begin: n.concat(/\.\d+/, a, i) }],
             relevance: 0
@@ -38,7 +38,7 @@ function n(e) {
             },
             e.COMMENT('!', '$', { relevance: 0 }),
             e.COMMENT('begin_doc', 'end_doc', { relevance: 10 }),
-            s
+            o
         ]
     };
 }

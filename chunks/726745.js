@@ -1,19 +1,19 @@
 let i, a;
 r.d(n, {
     q: function () {
-        return s;
+        return o;
     }
 });
-var s,
-    o,
+var o,
+    s,
     l = r(653041);
 var u = r(213919),
     c = r(442837),
     d = r(570140),
     f = r(990492),
-    _ = r(988965),
+    p = r(988965),
     h = r(71509);
-function p(e, n, r) {
+function _(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -28,7 +28,7 @@ function p(e, n, r) {
 }
 !(function (e) {
     (e[(e.INVALID = 0)] = 'INVALID'), (e[(e.VALIDATING = 1)] = 'VALIDATING'), (e[(e.VALID = 2)] = 'VALID');
-})(s || (s = {}));
+})(o || (o = {}));
 let m = [],
     g = !1;
 function E(e) {
@@ -52,7 +52,7 @@ function E(e) {
         (m = r).length > h.$H &&
             m.splice(h.$H).forEach((e) => {
                 let { id: n } = e;
-                I(n);
+                y(n);
             });
 }
 function v(e) {
@@ -64,14 +64,14 @@ function v(e) {
             })),
         (i = null);
 }
-function I(e) {
+function y(e) {
     (m = m.filter((n) => {
         let { id: r } = n;
         return r !== e;
     })),
         u.removeToken(e);
 }
-function T(e) {
+function b(e) {
     let { user: n } = e,
         r = m.slice(),
         i = r.find((e) => {
@@ -80,7 +80,7 @@ function T(e) {
         });
     null != i && ((i.avatar = n.avatar), (i.username = n.username), (i.discriminator = n.discriminator), (m = r));
 }
-function b(e, n) {
+function I(e, n) {
     let r = m.slice(),
         i = r.find((n) => {
             let { id: r } = n;
@@ -88,7 +88,7 @@ function b(e, n) {
         });
     null != i && ((i.tokenStatus = n), (m = r));
 }
-function y(e) {
+function T(e) {
     let { from: n, to: r } = e;
     m = (0, f.aB)(m, n, r);
 }
@@ -107,7 +107,7 @@ function A(e) {
             : e
     );
 }
-function N(e) {
+function C(e) {
     let { invalidPushSyncTokens: n } = e;
     m = m.map((e) =>
         null != e.pushSyncToken && n.includes(e.pushSyncToken)
@@ -118,7 +118,7 @@ function N(e) {
             : e
     );
 }
-class C extends (o = c.ZP.PersistedStore) {
+class N extends (s = c.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var n;
@@ -153,15 +153,15 @@ class C extends (o = c.ZP.PersistedStore) {
         });
     }
     get canUseMultiAccountNotifications() {
-        return this.getCanUseMultiAccountMobile() && _.N.getCurrentConfig({ location: '09e468_1' }, { autoTrackExposure: !1 }).isMultiAccountMobileNotificationsEnabled;
+        return this.getCanUseMultiAccountMobile() && p.N.getCurrentConfig({ location: '09e468_1' }, { autoTrackExposure: !1 }).isMultiAccountMobileNotificationsEnabled;
     }
     get isSwitchingAccount() {
         return g;
     }
 }
-p(C, 'displayName', 'MultiAccountStore'),
-    p(C, 'persistKey', 'MultiAccountStore'),
-    p(C, 'migrations', [
+_(N, 'displayName', 'MultiAccountStore'),
+    _(N, 'persistKey', 'MultiAccountStore'),
+    _(N, 'migrations', [
         (e) => {
             if (null != e) {
                 var n;
@@ -176,16 +176,16 @@ p(C, 'displayName', 'MultiAccountStore'),
             };
         }
     ]),
-    (n.Z = new C(d.Z, {
+    (n.Z = new N(d.Z, {
         CONNECTION_OPEN: E,
         LOGOUT: v,
-        MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => b(e.userId, 1),
-        MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => b(e.userId, 2),
-        MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => b(e.userId, 0),
-        MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => I(e.userId),
-        MULTI_ACCOUNT_MOVE_ACCOUNT: y,
-        CURRENT_USER_UPDATE: T,
+        MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => I(e.userId, 1),
+        MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => I(e.userId, 2),
+        MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => I(e.userId, 0),
+        MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => y(e.userId),
+        MULTI_ACCOUNT_MOVE_ACCOUNT: T,
+        CURRENT_USER_UPDATE: b,
         MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: S,
         MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: A,
-        MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: N
+        MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: C
     }));

@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(375954),
     s = n(876338),
     c = n(912332),
-    d = n(245216),
-    u = n(388032);
+    u = n(245216),
+    d = n(388032);
 function m(e) {
     let { className: t, channelId: n, messageId: m, targetKind: h, embedIndex: f } = e,
         p = r.useCallback(() => {
@@ -29,9 +29,9 @@ function m(e) {
         }, [n, f, m, h]);
     return (0, i.jsx)(a.CircleIconButton, {
         className: t,
-        tooltip: u.intl.string(u.t.I3ltXF),
+        tooltip: d.intl.string(d.t.I3ltXF),
         color: a.CircleIconButtonColors.SECONDARY,
-        icon: (0, i.jsx)(d.Z, {
+        icon: (0, i.jsx)(u.Z, {
             size: 'xs',
             color: l.Z.colors.INTERACTIVE_NORMAL
         }),

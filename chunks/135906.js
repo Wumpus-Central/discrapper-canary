@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(871465);
@@ -59,6 +59,6 @@ let a = {
         user_leave: 'winter_user_leave'
     }
 };
-function s(e) {
+function o(e) {
     return a[e];
 }

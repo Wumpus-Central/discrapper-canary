@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         ForwardModal: function () {
-            return P;
+            return y;
         }
     }),
     n(47120);
@@ -27,16 +27,16 @@ var l = n(200651),
     C = n(388275),
     v = n(912332),
     L = n(646746),
-    T = n(819727),
-    b = n(388032),
-    N = n(190417),
+    b = n(819727),
+    N = n(388032),
+    T = n(190417),
     x = n(621054);
-function P(e) {
-    let { message: t, initialSelectedDestinations: P, forwardOptions: y, onClose: Z, onRequestSent: O, ...R } = e,
-        { channel_id: w, id: D } = t,
-        { hasOneTapSendButton: M, hasMessageInput: j, hasPreview: U } = (0, p.yk)({ location: 'ForwardModal' }),
-        k = i.useMemo(() => (0, u.dL)(w), [w]),
-        [F, G] = i.useState(!1),
+function y(e) {
+    let { message: t, initialSelectedDestinations: y, forwardOptions: P, onClose: Z, onRequestSent: O, ...w } = e,
+        { channel_id: R, id: D } = t,
+        { hasOneTapSendButton: M, hasMessageInput: j, hasPreview: k } = (0, p.yk)({ location: 'ForwardModal' }),
+        F = i.useMemo(() => (0, u.dL)(R), [R]),
+        [G, U] = i.useState(!1),
         W = (0, r.e7)(
             [f.Z],
             () => {
@@ -45,41 +45,41 @@ function P(e) {
             },
             [t]
         ),
-        B = (0, r.e7)([h.Z], () => h.Z.getChannel(w), [w]),
+        B = (0, r.e7)([h.Z], () => h.Z.getChannel(R), [R]),
         H = (0, I.ZF)(),
-        z = (0, I.mh)(),
-        Q = i.useRef(0),
+        Q = (0, I.mh)(),
+        z = i.useRef(0),
         V = i.useRef(0),
-        [K, Y] = i.useState(P),
+        [K, Y] = i.useState(y),
         q = K.length,
-        X = q >= T.G,
+        X = q >= b.G,
         [J, $] = i.useState(''),
         { results: ee, updateSearchText: et } = (0, d.s)({
             selectedDestinations: K,
-            originDestination: k,
+            originDestination: F,
             includeMissingDMs: !0
         }),
         en = i.useCallback(
             (e) => {
-                $(e), et(e), (V.current += 1), '' !== e && z(w, D);
+                $(e), et(e), (V.current += 1), '' !== e && Q(R, D);
             },
-            [w, D, z, et]
+            [R, D, Q, et]
         ),
         el = i.useCallback(() => {
             (0, I.sF)({
-                channelId: w,
+                channelId: R,
                 messageId: D,
-                numDestinationChanges: Q.current,
+                numDestinationChanges: z.current,
                 numQueryChanges: V.current
             }),
                 Z();
-        }, [w, D, Z]),
+        }, [R, D, Z]),
         ei = i.useCallback(() => {
             var e;
-            let t = null === (e = h.Z.getChannel(w)) || void 0 === e ? void 0 : e.guild_id,
-                n = (0, _.wR)(t, w, D);
-            (0, s.showToast)((0, s.createToast)(b.intl.string(b.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(n), (0, I.xp)(w, D);
-        }, [w, D]),
+            let t = null === (e = h.Z.getChannel(R)) || void 0 === e ? void 0 : e.guild_id,
+                n = (0, _.wR)(t, R, D);
+            (0, s.showToast)((0, s.createToast)(N.intl.string(N.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(n), (0, I.xp)(R, D);
+        }, [R, D]),
         ea = i.useCallback(() => {
             $('');
         }, [$]),
@@ -94,7 +94,7 @@ function P(e) {
             () =>
                 (0, a.throttle)(
                     () => {
-                        (0, s.showToast)((0, s.createToast)(b.intl.string(b.t.kwmYkp), s.ToastType.FORWARD));
+                        (0, s.showToast)((0, s.createToast)(N.intl.string(N.t.kwmYkp), s.ToastType.FORWARD));
                     },
                     3000,
                     {
@@ -106,29 +106,29 @@ function P(e) {
         ),
         eo = i.useCallback(
             (e) => {
-                H(w, D, '' !== J),
+                H(R, D, '' !== J),
                     Y((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: l } = t;
                             return n === e.type && l === e.id;
                         });
-                        if (-1 === n) return X ? t : ($(''), (Q.current += 1), [e, ...t]);
+                        if (-1 === n) return X ? t : ($(''), (z.current += 1), [e, ...t]);
                         let l = [...t];
-                        return l.splice(n, 1), (Q.current += 1), l;
+                        return l.splice(n, 1), (z.current += 1), l;
                     });
             },
-            [w, X, D, J, H]
+            [R, X, D, J, H]
         ),
         ec = i.useCallback(
             async function (e) {
                 var i;
                 let { withMessage: a, transitionToDestination: r, closeAfterSend: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    _ = null !== (i = f.Z.getMessage(w, D)) && void 0 !== i ? i : t;
+                    _ = null !== (i = f.Z.getMessage(R, D)) && void 0 !== i ? i : t;
                 if (null == _) {
-                    (0, s.showToast)((0, s.createToast)(b.intl.string(b.t.R0RpRU), s.ToastType.FAILURE));
+                    (0, s.showToast)((0, s.createToast)(N.intl.string(N.t.R0RpRU), s.ToastType.FAILURE));
                     return;
                 }
-                G(!0);
+                U(!0);
                 let g = (await Promise.all(e.map(u.qx))).filter(m.lm);
                 if (
                     (0, S.Z)(_, g) &&
@@ -144,12 +144,12 @@ function P(e) {
                         });
                     }))
                 ) {
-                    G(!1);
+                    U(!1);
                     return;
                 }
                 d && (0, v.mc)(), null == O || O(), r && (await o.Z.fetchMessages({ channelId: g[0] }), (0, c.Kh)(g[0], { openTextInVoiceIfVoiceChannel: !0 }));
                 let p = await E.Z.sendForwards(_, g, {
-                        ...y,
+                        ...P,
                         withMessage: a
                     }),
                     A = g.some((e) => {
@@ -163,12 +163,12 @@ function P(e) {
                     })
                 ) {
                     (0, I.gP)({
-                        channelId: w,
+                        channelId: R,
                         messageId: D,
                         hasError: !1,
                         hasContextMessage: null != a && '' !== a,
                         numDestinations: g.length,
-                        numDestinationChanges: Q.current,
+                        numDestinationChanges: z.current,
                         numQueryChanges: V.current,
                         anyDestinationHasSlowmode: A
                     }),
@@ -176,12 +176,12 @@ function P(e) {
                     return;
                 }
                 (0, I.gP)({
-                    channelId: w,
+                    channelId: R,
                     messageId: D,
                     hasError: !0,
                     hasContextMessage: null != a && '' !== a,
                     numDestinations: g.length,
-                    numDestinationChanges: Q.current,
+                    numDestinationChanges: z.current,
                     numQueryChanges: V.current,
                     anyDestinationHasSlowmode: A
                 });
@@ -189,10 +189,10 @@ function P(e) {
                 (0, v.Np)({
                     message: _,
                     failedDestinations: C,
-                    forwardOptions: y
+                    forwardOptions: P
                 });
             },
-            [w, y, D, t, O, es]
+            [R, P, D, t, O, es]
         ),
         eu = i.useCallback(
             (e) => {
@@ -230,66 +230,66 @@ function P(e) {
                       disableSelection: X
                   })
                 : (0, l.jsxs)(s.ModalContent, {
-                      className: N.noResults,
+                      className: T.noResults,
                       children: [
                           (0, l.jsx)('img', {
-                              className: N.noResultsImg,
+                              className: T.noResultsImg,
                               src: x,
                               alt: ''
                           }),
                           (0, l.jsx)(s.Text, {
                               variant: 'text-md/normal',
                               color: 'text-muted',
-                              children: b.intl.string(b.t.V6nAfH)
+                              children: N.intl.string(N.t.V6nAfH)
                           })
                       ]
                   }),
-        e_ = q <= 1 ? b.intl.string(b.t.TXNS7e) : b.intl.formatToPlainString(b.t.jWtYUl, { count: q });
+        e_ = q <= 1 ? N.intl.string(N.t.TXNS7e) : N.intl.formatToPlainString(N.t.jWtYUl, { count: q });
     return (0, l.jsxs)(s.ModalRoot, {
-        className: N.modal,
-        'aria-label': b.intl.string(b.t['+SkRRk']),
-        ...R,
+        className: T.modal,
+        'aria-label': N.intl.string(N.t['+SkRRk']),
+        ...w,
         children: [
             (0, l.jsxs)(s.ModalHeader, {
-                className: N.header,
+                className: T.header,
                 children: [
                     (0, l.jsxs)('div', {
-                        className: N.titleLine,
+                        className: T.titleLine,
                         children: [
                             (0, l.jsx)('div', {
-                                className: N.title,
+                                className: T.title,
                                 children: (0, l.jsx)(s.HeadingLevel, {
                                     component: (0, l.jsx)(s.Heading, {
                                         variant: 'heading-lg/semibold',
-                                        children: b.intl.string(b.t['+SkRRk'])
+                                        children: N.intl.string(N.t['+SkRRk'])
                                     }),
                                     children: X
                                         ? (0, l.jsx)(s.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'text-warning',
-                                              children: b.intl.format(b.t['3Fbkio'], { count: T.G })
+                                              children: N.intl.format(N.t['3Fbkio'], { count: b.G })
                                           })
                                         : (M || j) &&
                                           (0, l.jsx)(s.Heading, {
                                               variant: 'heading-sm/normal',
                                               color: 'header-muted',
-                                              children: b.intl.string(b.t['VA+btL'])
+                                              children: N.intl.string(N.t['VA+btL'])
                                           })
                                 })
                             }),
                             (0, l.jsx)(s.ModalCloseButton, {
-                                className: N.closeButton,
+                                className: T.closeButton,
                                 onClick: el
                             })
                         ]
                     }),
                     M &&
-                        U &&
+                        k &&
                         (0, l.jsx)('div', {
-                            className: N.forwardPreviewWrapperInset,
+                            className: T.forwardPreviewWrapperInset,
                             children: (0, l.jsx)(L.O, {
                                 message: W,
-                                forwardOptions: y
+                                forwardOptions: P
                             })
                         }),
                     (0, l.jsx)(s.SearchBar, {
@@ -298,8 +298,8 @@ function P(e) {
                         query: J,
                         onChange: en,
                         onClear: ea,
-                        placeholder: b.intl.string(b.t['5h0QOD']),
-                        'aria-label': b.intl.string(b.t['5h0QOD']),
+                        placeholder: N.intl.string(N.t['5h0QOD']),
+                        'aria-label': N.intl.string(N.t['5h0QOD']),
                         autoFocus: !0
                     })
                 ]
@@ -309,19 +309,19 @@ function P(e) {
                 (j
                     ? (0, l.jsx)(C.n, {
                           message: W,
-                          forwardOptions: y,
+                          forwardOptions: P,
                           sendLabel: e_,
                           canSend: q > 0,
                           selectedDestinations: K,
-                          isSending: F,
+                          isSending: G,
                           onSend: eu,
-                          showPreview: U
+                          showPreview: k
                       })
                     : (0, l.jsxs)(s.ModalFooter, {
-                          className: N.footer,
+                          className: T.footer,
                           children: [
                               (0, l.jsx)(s.Button, {
-                                  submitting: F,
+                                  submitting: G,
                                   disabled: 0 === q,
                                   onClick: ed,
                                   children: e_
@@ -330,7 +330,7 @@ function P(e) {
                                   onClick: ei,
                                   look: s.Button.Looks.OUTLINED,
                                   color: s.Button.Colors.PRIMARY,
-                                  children: b.intl.string(b.t.WqhZsr)
+                                  children: N.intl.string(N.t.WqhZsr)
                               })
                           ]
                       }))

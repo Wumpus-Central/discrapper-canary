@@ -1,65 +1,65 @@
 r.d(n, {
     Z: function () {
-        return I;
+        return y;
     }
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(270445),
     c = r(442837),
     d = r(911969),
     f = r(998698),
-    _ = r(703558),
+    p = r(703558),
     h = r(117530),
-    p = r(91313),
+    _ = r(91313),
     m = r(436660),
     g = r(887490),
     E = r(388032),
     v = r(223979);
-function I(e, n, r) {
-    let { attributes: i, children: s, element: o } = n;
-    switch (o.type) {
+function y(e, n, r) {
+    let { attributes: i, children: o, element: s } = n;
+    switch (s.type) {
         case 'applicationCommand':
             let l = f.Z.getActiveCommand(r),
                 u = 0,
                 c = 0;
-            if (null != l && l.id === o.command.id) {
+            if (null != l && l.id === s.command.id) {
                 var d;
-                let n = p.cu(e);
+                let n = _.cu(e);
                 for (let e of null !== (d = l.options) && void 0 !== d ? d : []) n.includes(e.name) ? c++ : u++;
             }
-            let _ = {};
+            let p = {};
             if (u > 0) {
                 let e;
-                (e = c > 0 ? E.intl.formatToPlainString(E.t.BP8N0N, { count: u }) : E.intl.formatToPlainString(E.t.lziVCw, { count: u })), (_['data-trailing-placeholder'] = e);
+                (e = c > 0 ? E.intl.formatToPlainString(E.t.BP8N0N, { count: u }) : E.intl.formatToPlainString(E.t.lziVCw, { count: u })), (p['data-trailing-placeholder'] = e);
             }
             return (0, a.jsx)('div', {
                 className: v.applicationCommand,
                 ...i,
-                ..._,
-                children: s
+                ...p,
+                children: o
             });
         case 'applicationCommandOption':
-            return (0, a.jsx)(T, {
+            return (0, a.jsx)(b, {
                 attributes: i,
                 channelId: r,
-                element: o,
-                children: s
+                element: s,
+                children: o
             });
         default:
             return null;
     }
 }
-let T = (e) => {
+let b = (e) => {
     let n,
-        { channelId: r, element: i, attributes: o, children: p } = e,
-        I = (0, u.vt)(),
-        T = (0, u.UE)(),
-        b = (0, u._7)(),
-        { optionType: y, errored: S } = (0, c.cj)(
+        { channelId: r, element: i, attributes: s, children: _ } = e,
+        y = (0, u.vt)(),
+        b = (0, u.UE)(),
+        I = (0, u._7)(),
+        { optionType: T, errored: S } = (0, c.cj)(
             [f.Z],
             () => {
                 var e, n, a;
@@ -70,35 +70,35 @@ let T = (e) => {
             },
             [r, i.optionName]
         ),
-        A = (0, c.e7)([h.Z], () => h.Z.getUpload(r, i.optionName, _.d.SlashCommand), [r, i.optionName]),
-        N = i.children[i.children.length - 1],
-        C = null != N && g.LC.isText(N) && N.text.endsWith('\n'),
+        A = (0, c.e7)([h.Z], () => h.Z.getUpload(r, i.optionName, p.d.SlashCommand), [r, i.optionName]),
+        C = i.children[i.children.length - 1],
+        N = null != C && g.LC.isText(C) && C.text.endsWith('\n'),
         R = l()(v.inlineElement, v.optionPill, {
-            [v.selectedPill]: T && I,
-            [v.erroredPill]: (!T || !I) && S
+            [v.selectedPill]: b && y,
+            [v.erroredPill]: (!b || !y) && S
         }),
-        O = s.useCallback(() => {
-            !g.bN.isVoid(b, i) && m.Q.selectCommandOption(b, i.optionName, !0);
-        }, [b, i]);
+        O = o.useCallback(() => {
+            !g.bN.isVoid(I, i) && m.Q.selectCommandOption(I, i.optionName, !0);
+        }, [I, i]);
     return (
         (n =
-            y === d.jw.ATTACHMENT
+            T === d.jw.ATTACHMENT
                 ? (null == A ? void 0 : A.filename) != null
                     ? (0, a.jsxs)('span', {
                           className: l()(v.optionPillValue, v.attachmentFilename),
                           contentEditable: !1,
-                          children: [A.filename, p]
+                          children: [A.filename, _]
                       })
                     : (0, a.jsxs)('span', {
                           className: l()(v.optionPillValue, v.readonlyPillValue),
                           contentEditable: !1,
-                          children: [E.intl.string(E.t.GRdFnp), p]
+                          children: [E.intl.string(E.t.GRdFnp), _]
                       })
                 : (0, a.jsxs)('span', {
                       className: v.optionPillValue,
                       children: [
-                          p,
-                          C
+                          _,
+                          N
                               ? (0, a.jsx)('span', {
                                     className: v.newLine,
                                     contentEditable: !1
@@ -107,7 +107,7 @@ let T = (e) => {
                       ]
                   })),
         (0, a.jsxs)('span', {
-            ...o,
+            ...s,
             className: R,
             children: [
                 (0, a.jsxs)('span', {

@@ -1,6 +1,6 @@
 r.d(n, {
     U: function () {
-        return s;
+        return o;
     }
 });
 var i = r(81825);
@@ -17,10 +17,10 @@ function a(e, n, r) {
         e
     );
 }
-class s extends i.Z {
+class o extends i.Z {
     static createFromServer(e) {
         var n, r;
-        return new s({
+        return new o({
             planId: e.plan_id,
             countryCode: e.country_code,
             amount: null === (n = e.price) || void 0 === n ? void 0 : n.amount,

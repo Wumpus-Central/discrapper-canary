@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(47120);
-var s = r(47770),
-    o = r(46973),
+var o = r(47770),
+    s = r(46973),
     l = r(65154);
 function u(e, n, r) {
     return (
@@ -27,9 +27,9 @@ function c(e) {
 function d(e) {
     return null;
 }
-class f extends s.Z {
+class f extends o.Z {
     destroy() {
-        this.emit(o.aB.Destroy), this.removeAllListeners();
+        this.emit(s.aB.Destroy), this.removeAllListeners();
     }
     interact() {}
     supported() {

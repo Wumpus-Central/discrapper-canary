@@ -21,12 +21,12 @@ function r(e) {
                 ]
             })
         ]),
-        s = {
+        o = {
             className: 'regexp',
             begin: /~?\/[^\/\n]+\//,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        o = n([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
+        s = n([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
         l = n(
             [
                 {
@@ -69,8 +69,8 @@ function r(e) {
             }),
             a,
             l,
-            s,
             o,
+            s,
             u,
             {
                 className: 'meta',
@@ -86,7 +86,7 @@ function r(e) {
                 begin: /\?/,
                 end: /:/,
                 relevance: 0,
-                contains: [a, l, s, o, 'self']
+                contains: [a, l, o, s, 'self']
             },
             {
                 className: 'symbol',

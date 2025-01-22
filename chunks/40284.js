@@ -3,13 +3,13 @@ r.d(n, {
         return d;
     },
     IS: function () {
-        return o;
+        return s;
     },
     Rd: function () {
         return a;
     },
     SG: function () {
-        return s;
+        return o;
     },
     fu: function () {
         return i;
@@ -26,8 +26,8 @@ r.d(n, {
 });
 var i = 'dnd-core/ADD_SOURCE',
     a = 'dnd-core/ADD_TARGET',
-    s = 'dnd-core/REMOVE_SOURCE',
-    o = 'dnd-core/REMOVE_TARGET';
+    o = 'dnd-core/REMOVE_SOURCE',
+    s = 'dnd-core/REMOVE_TARGET';
 function l(e) {
     return {
         type: i,
@@ -42,13 +42,13 @@ function u(e) {
 }
 function c(e) {
     return {
-        type: s,
+        type: o,
         payload: { sourceId: e }
     };
 }
 function d(e) {
     return {
-        type: o,
+        type: s,
         payload: { targetId: e }
     };
 }

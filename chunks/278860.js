@@ -1,6 +1,6 @@
 var i = r(192379),
     a = r(723184),
-    s = function () {
+    o = function () {
         var e = (0, a.default)({
             default: {
                 triangle: {
@@ -40,4 +40,4 @@ var i = r(192379),
         });
         return i.createElement('div', { style: e.pointer }, i.createElement('div', { style: e.left }, i.createElement('div', { style: e.leftInside })), i.createElement('div', { style: e.right }, i.createElement('div', { style: e.rightInside })));
     };
-n.Z = s;
+n.Z = o;

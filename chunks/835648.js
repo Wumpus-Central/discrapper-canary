@@ -5,38 +5,38 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(91192),
     u = r(442837),
     c = r(481060),
     d = r(880949),
     f = r(806966),
-    _ = r(254494),
+    p = r(254494),
     h = r(593618),
-    p = r(594174),
+    _ = r(594174),
     m = r(74538),
     g = r(697426),
     E = r(526617),
     v = r(474936),
-    I = r(388032),
-    T = r(843282);
-let b = [8, 8, 8, 8],
-    y = 40;
+    y = r(388032),
+    b = r(843282);
+let I = [8, 8, 8, 8],
+    T = 40;
 function S(e) {
-    let { icon: n, isSelected: r, onClick: a, listItemProps: s, ...l } = e;
+    let { icon: n, isSelected: r, onClick: a, listItemProps: o, ...l } = e;
     return (0, i.jsx)(c.Clickable, {
-        ...s,
+        ...o,
         ...l,
         onClick: a,
-        className: o()(T.categoryIcon, { [T.selected]: r }),
+        className: s()(b.categoryIcon, { [b.selected]: r }),
         children: (0, i.jsx)(n, {
-            className: T.categoryIconIcon,
+            className: b.categoryIconIcon,
             color: 'currentColor'
         })
     });
 }
-function A(e, n, r, a, s, o) {
+function A(e, n, r, a, o, s) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
             return (0, i.jsx)(
@@ -46,7 +46,7 @@ function A(e, n, r, a, s, o) {
                     icon: c.StarIcon,
                     onClick: n,
                     isSelected: r,
-                    listItemProps: s
+                    listItemProps: o
                 },
                 e.key
             );
@@ -58,7 +58,7 @@ function A(e, n, r, a, s, o) {
                     icon: c.ClockIcon,
                     onClick: n,
                     isSelected: r,
-                    listItemProps: s
+                    listItemProps: o
                 },
                 e.key
             );
@@ -70,7 +70,7 @@ function A(e, n, r, a, s, o) {
                     icon: c.AnalyticsIcon,
                     onClick: n,
                     isSelected: r,
-                    listItemProps: s
+                    listItemProps: o
                 },
                 e.key
             );
@@ -78,14 +78,14 @@ function A(e, n, r, a, s, o) {
             return (0, i.jsx)(
                 c.Clickable,
                 {
-                    ...s,
+                    ...o,
                     ...a,
-                    className: T.category,
+                    className: b.category,
                     onClick: n,
                     children: (0, i.jsx)(d.Z, {
                         guild: e.categoryInfo.guild,
                         isSelected: r,
-                        isLocked: o
+                        isLocked: s
                     })
                 },
                 e.key
@@ -98,7 +98,7 @@ function A(e, n, r, a, s, o) {
                     icon: c.ClydeIcon,
                     onClick: n,
                     isSelected: r,
-                    listItemProps: s
+                    listItemProps: o
                 },
                 e.key
             );
@@ -106,74 +106,74 @@ function A(e, n, r, a, s, o) {
             return null;
     }
 }
-function N(e) {
+function C(e) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
-            return I.intl.string(I.t.k8fFjo);
+            return y.intl.string(y.t.k8fFjo);
         case g.bg.RECENTLY_HEARD:
-            return I.intl.string(I.t['8i/+SE']);
+            return y.intl.string(y.t['8i/+SE']);
         case g.bg.FREQUENTLY_USED:
-            return I.intl.string(I.t['+cGVV1']);
+            return y.intl.string(y.t['+cGVV1']);
         case g.bg.GUILD:
             return (0, i.jsx)(h.K, {
                 guild: e.categoryInfo.guild,
                 includeActivity: !1
             });
         case g.bg.DEFAULTS:
-            return I.intl.string(I.t.Rtvk9f);
+            return y.intl.string(y.t.Rtvk9f);
     }
 }
-function C(e) {
+function N(e) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
-            return I.intl.string(I.t.k8fFjo);
+            return y.intl.string(y.t.k8fFjo);
         case g.bg.RECENTLY_HEARD:
-            return I.intl.string(I.t['8i/+SE']);
+            return y.intl.string(y.t['8i/+SE']);
         case g.bg.FREQUENTLY_USED:
-            return I.intl.string(I.t['+cGVV1']);
+            return y.intl.string(y.t['+cGVV1']);
         case g.bg.GUILD:
             return e.categoryInfo.guild.name;
         case g.bg.DEFAULTS:
-            return I.intl.string(I.t.Rtvk9f);
+            return y.intl.string(y.t.Rtvk9f);
     }
 }
 function R(e) {
-    let { category: n, categoryIndex: r, onClick: a, isSelected: s, isNitroLocked: o } = e,
+    let { category: n, categoryIndex: r, onClick: a, isSelected: o, isNitroLocked: s } = e,
         u = (0, l.JA)('soundboard_guild_'.concat(r));
     return (0, i.jsx)(c.Tooltip, {
-        text: N(n),
-        'aria-label': C(n),
+        text: C(n),
+        'aria-label': N(n),
         position: 'right',
-        children: (e) => A(n, a, s, e, u, o)
+        children: (e) => A(n, a, o, e, u, s)
     });
 }
 function O(e) {
-    let { soundboardListRef: n, categories: r, shouldUpsellLockedCategories: s, listPadding: o = b, guildId: l, inExpressionPicker: c } = e,
+    let { soundboardListRef: n, categories: r, shouldUpsellLockedCategories: o, listPadding: s = I, guildId: l, inExpressionPicker: c } = e,
         d = a.useRef(null),
-        h = (0, u.e7)([p.default], () => p.default.getCurrentUser()),
+        h = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
         g = (0, m.I5)(h, v.p9.TIER_2),
-        I = a.useCallback(
+        y = a.useCallback(
             (e, n, r, a) => {
-                let o = s && (0, E.O)(e.categoryInfo, g, l);
+                let s = o && (0, E.O)(e.categoryInfo, g, l);
                 return (0, i.jsx)(R, {
                     category: e,
                     categoryIndex: n,
                     onClick: r,
                     isSelected: a,
-                    isNitroLocked: o
+                    isNitroLocked: s
                 });
             },
-            [l, s, g]
+            [l, o, g]
         );
-    return (0, i.jsx)(_.Z, {
-        className: c ? T.expressionPickerCategoryList : T.categoryList,
+    return (0, i.jsx)(p.Z, {
+        className: c ? b.expressionPickerCategoryList : b.categoryList,
         categoryListRef: d,
         expressionsListRef: n,
         store: f.Wq,
         categories: r,
-        listPadding: o,
-        renderCategoryListItem: I,
+        listPadding: s,
+        renderCategoryListItem: y,
         rowCount: r.length,
-        categoryHeight: y
+        categoryHeight: T
     });
 }

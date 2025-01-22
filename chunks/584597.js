@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(81825);
@@ -17,9 +17,9 @@ function a(e, n, r) {
         e
     );
 }
-class s extends i.Z {
+class o extends i.Z {
     static createFromServer(e) {
-        return new s(e);
+        return new o(e);
     }
     constructor(e) {
         super(), a(this, 'id', void 0), a(this, 'name', void 0), (this.id = e.id), (this.name = e.name);

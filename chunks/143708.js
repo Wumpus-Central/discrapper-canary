@@ -11,8 +11,8 @@ var r = n(442837),
     o = n(314897),
     s = n(944486),
     c = n(585483),
-    d = n(51144),
-    u = n(981631),
+    u = n(51144),
+    d = n(981631),
     m = n(388032),
     h = n(658412);
 function f(e) {
@@ -22,7 +22,7 @@ function f(e) {
         { author: p, banned: _ } = e,
         g = (0, r.e7)([o.default], () => o.default.getId()),
         E = (0, r.e7)([s.Z], () => s.Z.getChannelId()),
-        C = d.ZP.useName(p),
+        C = u.ZP.useName(p),
         I = g === p.id;
     return (
         I
@@ -35,8 +35,8 @@ function f(e) {
                       (n = (0, i.jsx)(a.Z.Button, {
                           onClick: function () {
                               let { id: e } = p,
-                                  t = '@'.concat(d.ZP.getUserTag(p, { decoration: 'never' }));
-                              c.S.dispatchToLastSubscribed(u.CkL.INSERT_TEXT, {
+                                  t = '@'.concat(u.ZP.getUserTag(p, { decoration: 'never' }));
+                              c.S.dispatchToLastSubscribed(d.CkL.INSERT_TEXT, {
                                   plainText: t,
                                   rawText: '<@'.concat(e, '>')
                               }),

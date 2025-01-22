@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(392711),
     u = r.n(l),
     c = r(607070);
@@ -23,7 +23,7 @@ function d(e, n, r) {
         e
     );
 }
-class f extends (i = o.Component) {
+class f extends (i = s.Component) {
     componentDidMount() {
         this.props.isShaking && this.startShaking();
     }
@@ -43,7 +43,7 @@ class f extends (i = o.Component) {
     }
     render() {
         let { className: e, children: n } = this.props;
-        return (0, s.jsx)('div', {
+        return (0, o.jsx)('div', {
             className: e,
             ref: this.ref,
             children: n
@@ -51,7 +51,7 @@ class f extends (i = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            d(this, 'ref', o.createRef()),
+            d(this, 'ref', s.createRef()),
             d(this, 'animationFrame', void 0),
             d(this, 'shouldRenderFrame', !0),
             d(this, 'animate', () => {

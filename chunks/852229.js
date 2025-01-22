@@ -11,6 +11,6 @@ function a(e) {
         i = window.getSelection(),
         a = document.createElement('textarea');
     (a.value = e), (a.contentEditable = 'true'), (a.style.visibility = 'none'), n.appendChild(a), r.selectNodeContents(a), null == i || i.removeAllRanges(), null == i || i.addRange(r), a.focus(), a.setSelectionRange(0, e.length);
-    let s = document.execCommand('copy');
-    return n.removeChild(a), s;
+    let o = document.execCommand('copy');
+    return n.removeChild(a), o;
 }

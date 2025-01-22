@@ -1,6 +1,6 @@
 r.d(n, {
     $: function () {
-        return s.$;
+        return o.$;
     },
     Z: function () {
         return a.Z;
@@ -8,4 +8,4 @@ r.d(n, {
 });
 var i = r(858685);
 var a = r(324404),
-    s = r(558985);
+    o = r(558985);

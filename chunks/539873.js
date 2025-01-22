@@ -1,57 +1,57 @@
 r.d(n, {
     Z: function () {
-        return N;
+        return C;
     }
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(442837),
     c = r(481060),
     d = r(570140),
     f = r(100527),
-    _ = r(313201),
+    p = r(313201),
     h = r(98278),
-    p = r(311476),
+    _ = r(311476),
     m = r(587446),
     g = r(996073),
     E = r(327943),
     v = r(997945),
-    I = r(401460),
-    T = r(441319),
-    b = r(981631),
-    y = r(526761),
+    y = r(401460),
+    b = r(441319),
+    I = r(981631),
+    T = r(526761),
     S = r(388032),
     A = r(337910);
-function N(e) {
-    let { className: n, disabled: i, isEditor: o, renderCTAButtons: N } = e,
-        [C, R] = (0, u.Wu)([E.Z], () => [E.Z.getCurrentDesktopIcon(), E.Z.isUpsellPreview]),
-        { enabled: O } = p.Z.getCurrentConfig(
+function C(e) {
+    let { className: n, disabled: i, isEditor: s, renderCTAButtons: C } = e,
+        [N, R] = (0, u.Wu)([E.Z], () => [E.Z.getCurrentDesktopIcon(), E.Z.isUpsellPreview]),
+        { enabled: O } = _.Z.getCurrentConfig(
             { location: 'UserSettingsAppearanceInAppIcon' },
             {
                 autoTrackExposure: R,
                 disable: !R
             }
         ),
-        D = s.useRef(null);
-    (0, g.Z)(D, y.h1.CUSTOM_APP_ICONS);
-    let L = (0, _.Dt)(),
-        x = (0, c.useRadioGroup)({
+        D = o.useRef(null);
+    (0, g.Z)(D, T.h1.CUSTOM_APP_ICONS);
+    let x = (0, p.Dt)(),
+        L = (0, c.useRadioGroup)({
             orientation: 'horizontal',
-            labelledBy: L
+            labelledBy: x
         }),
         w = (e) => {
-            if (O && !o && e !== v.aH.DEFAULT) {
+            if (O && !s && e !== v.aH.DEFAULT) {
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await r.e('69052').then(r.bind(r, 184250));
                     return (n) =>
                         (0, a.jsx)(e, {
                             analyticsSource: f.Z.APP_ICON_SELECTOR,
                             analyticsLocation: {
-                                section: b.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
-                                object: b.qAy.BUTTON_ICON
+                                section: I.jXE.SETTINGS_APPEARANCE_APP_ICON_PICKER,
+                                object: I.qAy.BUTTON_ICON
                             },
                             ...n
                         });
@@ -66,7 +66,7 @@ function N(e) {
     return (0, a.jsx)('div', {
         ref: D,
         children: (0, a.jsx)('div', {
-            ...x,
+            ...L,
             className: A.__invalid_container,
             children: (0, a.jsxs)('div', {
                 className: n,
@@ -77,7 +77,7 @@ function N(e) {
                             (0, a.jsxs)('div', {
                                 className: A.headings,
                                 children: [
-                                    !o &&
+                                    !s &&
                                         (0, a.jsxs)('div', {
                                             className: A.title,
                                             children: [
@@ -89,7 +89,7 @@ function N(e) {
                                             ]
                                         }),
                                     O
-                                        ? o
+                                        ? s
                                             ? null
                                             : (0, a.jsxs)('div', {
                                                   className: A.description,
@@ -115,26 +115,26 @@ function N(e) {
                                           })
                                 ]
                             }),
-                            null == N ? void 0 : N()
+                            null == C ? void 0 : C()
                         ]
                     }),
                     (0, a.jsx)('div', {
-                        className: l()(A.presets, { [A.presetsJustified]: O && o }),
-                        children: (0, T.wu)()
+                        className: l()(A.presets, { [A.presetsJustified]: O && s }),
+                        children: (0, b.wu)()
                             .filter((e) => {
                                 let { isHidden: n } = e;
                                 return !n;
                             })
                             .map((e, n) =>
                                 (0, a.jsx)(
-                                    I.Z,
+                                    y.Z,
                                     {
                                         icon: e,
-                                        isSelected: C === e.id,
+                                        isSelected: N === e.id,
                                         onSelect: (e) => w(e),
                                         disabled: i,
                                         tabIndex: 0 !== n || i ? void 0 : 0,
-                                        locked: O && !o && e.id !== v.aH.DEFAULT
+                                        locked: O && !s && e.id !== v.aH.DEFAULT
                                     },
                                     e.id
                                 )

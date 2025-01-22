@@ -1,7 +1,7 @@
 var i, a;
 r.d(n, {
     SV: function () {
-        return s;
+        return o;
     }
 }),
     !(function (e) {
@@ -10,8 +10,8 @@ r.d(n, {
     !(function (e) {
         (e[(e.MIGRATION_SOURCE_DOMAIN = 0)] = 'MIGRATION_SOURCE_DOMAIN'), (e[(e.MIGRATION_DESTINATION_DOMAIN = 1)] = 'MIGRATION_DESTINATION_DOMAIN');
     })(a || (a = {}));
-let s = 'domainMigrationSuccess';
-function o(e, n) {
+let o = 'domainMigrationSuccess';
+function s(e, n) {
     let r = 0 === n ? window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN : window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN;
     return e.origin === r && null != e.data.domainMigrationEvent && !0;
 }

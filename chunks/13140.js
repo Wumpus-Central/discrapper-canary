@@ -1,12 +1,12 @@
 r.d(n, {
     BB: function () {
-        return L;
+        return x;
     },
     C$: function () {
         return S;
     },
     H9: function () {
-        return y;
+        return T;
     },
     Kd: function () {
         return D;
@@ -15,36 +15,36 @@ r.d(n, {
         return O;
     },
     dU: function () {
-        return b;
+        return I;
     }
 });
 var i = r(47120);
 var a = r(757143);
-var s = r(411104);
-var o = r(724458);
+var o = r(411104);
+var s = r(724458);
 var l = r(653041);
 var u = r(921738),
     c = r.n(u),
     d = r(392711),
     f = r.n(d),
-    _ = r(714338),
+    p = r(714338),
     h = r(823379),
-    p = r(358085),
+    _ = r(358085),
     m = r(981631);
-let g = (() => ((0, p.isLinux)() ? m.HsE : (0, p.isMac)() ? m.REU : (0, p.isWindows)() ? m.iC$ : void 0))(),
+let g = (() => ((0, _.isLinux)() ? m.HsE : (0, _.isMac)() ? m.REU : (0, _.isWindows)() ? m.iC$ : void 0))(),
     E = f().invert(m.HsE);
 (E['223'] = '`'), Object.freeze(E);
 let v = Object.freeze(f().invert(m.REU)),
-    I = f().invert(m.iC$);
-(I['223'] = '`'), Object.freeze(I);
-let T = f().invert(null != g ? g : {});
-function b() {
-    if ((0, p.isLinux)()) return m.CgE.LINUX;
-    if ((0, p.isMac)()) return m.CgE.MACOS;
-    if ((0, p.isWindows)()) return m.CgE.WINDOWS;
+    y = f().invert(m.iC$);
+(y['223'] = '`'), Object.freeze(y);
+let b = f().invert(null != g ? g : {});
+function I() {
+    if ((0, _.isLinux)()) return m.CgE.LINUX;
+    if ((0, _.isMac)()) return m.CgE.MACOS;
+    if ((0, _.isWindows)()) return m.CgE.WINDOWS;
     else return m.CgE.BROWSER;
 }
-function y(e) {
+function T(e) {
     let [, n, r] = e;
     switch (r) {
         case m.CgE.LINUX:
@@ -52,15 +52,15 @@ function y(e) {
         case m.CgE.MACOS:
             return v['' + n];
         case m.CgE.WINDOWS:
-            return I['' + n];
+            return y['' + n];
         case m.CgE.BROWSER:
             return c()(n);
         default:
-            return T['' + n];
+            return b['' + n];
     }
 }
 function S(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b(),
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m.MoX.KEYBOARD_KEY;
     switch (r) {
         case m.MoX.KEYBOARD_KEY:
@@ -85,7 +85,7 @@ function S(e) {
             throw Error('Unrecognized DeviceType '.concat(r, '.'));
     }
 }
-!(0, p.isMac)() && (T['223'] = '`'), Object.freeze(T);
+!(0, _.isMac)() && (b['223'] = '`'), Object.freeze(b);
 let A = [
         ['META', '\u2318'],
         ['RIGHT META', 'RIGHT \u2318'],
@@ -110,11 +110,11 @@ let A = [
         ['TAB', '\u21E5'],
         ['SPACE', '\u2423']
     ],
-    N = (e) => {
+    C = (e) => {
         for (let [n, r] of A) if (n === e.toUpperCase()) return r;
         return e;
     },
-    C = (e) => {
+    N = (e) => {
         for (let [n, r] of A) if (r === e.toUpperCase()) return n.toLowerCase();
         return e;
     },
@@ -130,7 +130,7 @@ function O(e) {
     return null == e
         ? []
         : e.reduce((e, r) => {
-              let i = y(r),
+              let i = T(r),
                   a = { ...n };
               if (null == i)
                   return (
@@ -148,32 +148,32 @@ function O(e) {
           }, []);
 }
 function D(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b(),
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m.MoX.KEYBOARD_KEY;
     return e
         .replace(/numpad plus/i, '')
         .replace(/NUMPAD \+/i, 'numpad plus')
-        .replace(/mod/i, _.Z.modKey)
+        .replace(/mod/i, p.Z.modKey)
         .split('+')
         .map((e) => e.trim().replace('plus', '+'))
         .reduce((e, i) => {
-            let a = S(C(i), n, r);
+            let a = S(N(i), n, r);
             return null != a && e.push([r, a, n]), e;
         }, []);
 }
-function L(e) {
+function x(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         i = e
             .map((e) => {
                 let [n, r, i] = e;
                 if (n === m.MoX.KEYBOARD_KEY || n === m.MoX.KEYBOARD_MODIFIER_KEY) {
                     var a;
-                    return null !== (a = y(null != i ? [n, r, i] : [n, r])) && void 0 !== a ? a : 'UNK'.concat(r);
+                    return null !== (a = T(null != i ? [n, r, i] : [n, r])) && void 0 !== a ? a : 'UNK'.concat(r);
                 }
                 if (n === m.MoX.MOUSE_BUTTON) return 'mouse'.concat(r);
                 if (n === m.MoX.GAMEPAD_BUTTON) return 'gamepad'.concat(r);
                 else return 'dev'.concat(n, ',').concat(r);
             })
             .filter(h.lm);
-    return n ? (-1 !== r.g.navigator.appVersion.indexOf('Mac OS X') ? i.map(N) : i).join(' + ').toUpperCase() : i.join('+');
+    return n ? (-1 !== r.g.navigator.appVersion.indexOf('Mac OS X') ? i.map(C) : i).join(' + ').toUpperCase() : i.join('+');
 }

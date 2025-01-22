@@ -1,16 +1,16 @@
 Object.defineProperty(n, '__esModule', { value: !0 }), (n.IntlManager = n.DEFAULT_LOCALE = void 0);
 let i = r(942267),
     a = r(403725),
-    s = r(993477);
+    o = r(993477);
 n.DEFAULT_LOCALE = 'en-US';
-class o {
+class s {
     constructor({ initialLocale: e = n.DEFAULT_LOCALE, defaultLocale: r = n.DEFAULT_LOCALE }) {
         (this.onLocaleChange = (e) => (this._localeSubscriptions.add(e), () => this._localeSubscriptions.delete(e))),
             (this.currentLocale = e),
             (this.defaultLocale = r),
-            (this.formatConfig = s.DEFAULT_FORMAT_CONFIG),
+            (this.formatConfig = o.DEFAULT_FORMAT_CONFIG),
             (this.intl = (0, i.createIntl)({
-                formats: s.DEFAULT_FORMAT_CONFIG,
+                formats: o.DEFAULT_FORMAT_CONFIG,
                 defaultLocale: r,
                 locale: r
             })),
@@ -47,4 +47,4 @@ class o {
         return (0, a.bindFormatValues)(e, n.ast, [this.currentLocale, this.defaultLocale], this.intl.formatters, this.formatConfig, r);
     }
 }
-n.IntlManager = o;
+n.IntlManager = s;

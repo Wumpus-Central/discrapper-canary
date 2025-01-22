@@ -3,12 +3,12 @@ r.d(n, {
         return i;
     },
     i: function () {
-        return s;
+        return o;
     }
 });
 var i,
     a = r(854218);
-function s(e) {
+function o(e) {
     return e.staff ? 5 : e.verified && e.partnered ? 2 : e.verified ? 1 : e.partnered ? 0 : e.community && e.visibility === a.PZ.PUBLIC ? 4 : e.clan ? 6 : e.community ? 3 : 7;
 }
 !(function (e) {

@@ -34,38 +34,38 @@ var r = n(120356),
     O = n(833569),
     R = n(823188),
     P = n(474936),
-    y = n(981631),
-    B = n(388032),
-    D = n(236438);
+    D = n(981631),
+    y = n(388032),
+    B = n(236438);
 let Z = new h.Z('SubscriptionHeader.tsx'),
     L = {
-        page: y.ZY5.USER_SETTINGS,
-        section: y.jXE.SETTINGS_PREMIUM,
-        object: y.qAy.CARD
+        page: D.ZY5.USER_SETTINGS,
+        section: D.jXE.SETTINGS_PREMIUM,
+        object: D.qAy.CARD
     },
-    M = [y.O0b.PAUSED, y.O0b.PAUSE_PENDING, y.O0b.BILLING_RETRY];
+    M = [D.O0b.PAUSED, D.O0b.PAUSE_PENDING, D.O0b.BILLING_RETRY];
 function k(e) {
     let { wordMark: t, subscriptionInfo: n, buttons: r, statusClasses: a, shouldUseDiscountMarketing: l, discountAmount: o } = e;
     return (0, i.jsxs)('div', {
-        className: s()(D.banner, a),
+        className: s()(B.banner, a),
         children: [
-            (0, i.jsx)('div', { className: D.bannerBackgroundImage }),
+            (0, i.jsx)('div', { className: B.bannerBackgroundImage }),
             (0, i.jsxs)('div', {
-                className: D.detailsContainer,
+                className: B.detailsContainer,
                 children: [
-                    (0, i.jsx)('div', { className: D.image }),
+                    (0, i.jsx)('div', { className: B.image }),
                     (0, i.jsxs)('div', {
-                        className: D.details,
+                        className: B.details,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: D.headerLabel,
+                                className: B.headerLabel,
                                 children: [
                                     t,
                                     l &&
                                         null != o &&
                                         (0, i.jsx)(R.Cy, {
-                                            text: B.intl.formatToPlainString(B.t.iiLbvr, { percent: o }),
-                                            className: D.discountPill,
+                                            text: y.intl.formatToPlainString(y.t.iiLbvr, { percent: o }),
+                                            className: B.discountPill,
                                             colorOptions: R.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1
                                         })
@@ -77,7 +77,7 @@ function k(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: D.buttons,
+                className: B.buttons,
                 children: r
             })
         ]
@@ -86,26 +86,26 @@ function k(e) {
 function w(e) {
     let { wordMark: t, subscriptionInfo: n, buttons: r, statusClasses: a, shouldUseDiscountMarketing: l, discountAmount: o } = e;
     return (0, i.jsxs)('div', {
-        className: s()(D.banner, a, D.repositioned),
+        className: s()(B.banner, a, B.repositioned),
         children: [
-            (0, i.jsx)('div', { className: D.bannerBackgroundImage }),
+            (0, i.jsx)('div', { className: B.bannerBackgroundImage }),
             (0, i.jsx)('div', {
-                className: D.detailsContainer,
+                className: B.detailsContainer,
                 children: (0, i.jsx)('div', {
-                    className: D.details,
+                    className: B.details,
                     children: (0, i.jsxs)('div', {
-                        className: D.headerLabel,
+                        className: B.headerLabel,
                         children: [
-                            (0, i.jsx)('div', { className: D.image }),
+                            (0, i.jsx)('div', { className: B.image }),
                             (0, i.jsxs)('div', {
-                                className: D.headerColumnB,
+                                className: B.headerColumnB,
                                 children: [
                                     t,
                                     l &&
                                         null != o &&
                                         (0, i.jsx)(R.Cy, {
-                                            text: B.intl.formatToPlainString(B.t.iiLbvr, { percent: o }),
-                                            className: D.discountPill,
+                                            text: y.intl.formatToPlainString(y.t.iiLbvr, { percent: o }),
+                                            className: B.discountPill,
                                             colorOptions: R.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1
                                         }),
@@ -117,7 +117,7 @@ function w(e) {
                 })
             }),
             (0, i.jsx)('div', {
-                className: D.buttons,
+                className: B.buttons,
                 children: r
             })
         ]
@@ -125,13 +125,13 @@ function w(e) {
 }
 function F() {
     return (0, i.jsxs)('div', {
-        className: D.wordMark,
+        className: B.wordMark,
         children: [
             (0, i.jsx)(C.Z, {
-                className: D.discordWordmark,
-                'aria-label': B.intl.string(B.t['FSOz7+'])
+                className: B.discordWordmark,
+                'aria-label': y.intl.string(y.t['FSOz7+'])
             }),
-            (0, i.jsx)('div', { className: D.classicWordmark })
+            (0, i.jsx)('div', { className: B.classicWordmark })
         ]
     });
 }
@@ -140,20 +140,20 @@ function U() {
     return (0, i.jsx)(k, {
         wordMark: (0, i.jsx)(F, {}),
         subscriptionInfo: (0, i.jsx)('div', {
-            className: D.planInfo,
-            children: B.intl.string(B.t.R0GJLy)
+            className: B.planInfo,
+            children: y.intl.string(y.t.R0GJLy)
         }),
         buttons: (0, i.jsx)(j.Z, {
-            className: D.toolsButton,
+            className: B.toolsButton,
             onClick: () =>
                 (0, p.Z)({
                     subscriptionTier: P.Si.TIER_1,
                     analyticsLocations: e,
                     analyticsObject: L
                 }),
-            children: B.intl.string(B.t['/ygMUV'])
+            children: y.intl.string(y.t['/ygMUV'])
         }),
-        statusClasses: { [D.tier1]: !0 }
+        statusClasses: { [B.tier1]: !0 }
     });
 }
 t.Z = function (e) {
@@ -163,20 +163,20 @@ t.Z = function (e) {
         { fractionalState: G } = (0, g.Z)({ forceFetch: !1 }),
         H = G === P.a$.FP_SUB_PAUSED,
         { enabled: Y } = (0, v.ZP)({ location: 'subscription_header' });
-    (!P.pj.has(r.planId) || !y.JwP.ALL_PAUSEABLE.has(r.status) || H) && (Y = !1);
+    (!P.pj.has(r.planId) || !D.JwP.ALL_PAUSEABLE.has(r.status) || H) && (Y = !1);
     let W = (0, A.Ng)(),
         z = null == W ? void 0 : null === (t = W.discount) || void 0 === t ? void 0 : t.amount,
         K = (0, N.t7)(),
         q = (0, N.lr)(),
         Q = (0, o.e7)([_.ZP], () => _.ZP.inReverseTrial()),
         X = () => {
-            if (r.status === y.O0b.ACTIVE || r.status === y.O0b.PAST_DUE || r.status === y.O0b.PAUSED) ee(O.Steps.PAUSE_SELECT);
+            if (r.status === D.O0b.ACTIVE || r.status === D.O0b.PAST_DUE || r.status === D.O0b.PAUSED) ee(O.Steps.PAUSE_SELECT);
         },
         J = () => {
-            if (r.status === y.O0b.ACTIVE || r.status === y.O0b.PAST_DUE || r.status === y.O0b.PAUSE_PENDING || !!H) ee();
+            if (r.status === D.O0b.ACTIVE || r.status === D.O0b.PAST_DUE || r.status === D.O0b.PAUSE_PENDING || !!H) ee();
         },
         $ = () => {
-            if (r.status === y.O0b.BILLING_RETRY) ee(O.Steps.CONFIRM);
+            if (r.status === D.O0b.BILLING_RETRY) ee(O.Steps.CONFIRM);
         },
         ee = (e) => {
             (0, c.openModalLazy)(async () => {
@@ -224,7 +224,7 @@ t.Z = function (e) {
                 });
                 return;
             }
-            r.status === y.O0b.PAUSED
+            r.status === D.O0b.PAUSED
                 ? (0, p.Z)({
                       initialPlanId: r.planIdFromItems,
                       analyticsLocations: V,
@@ -236,7 +236,7 @@ t.Z = function (e) {
                 : d.v4(r, V);
         },
         ei = () => {
-            if (r.status === y.O0b.PAUSED) ee(O.Steps.PAUSE_SELECT);
+            if (r.status === D.O0b.PAUSED) ee(O.Steps.PAUSE_SELECT);
         },
         er = () => {
             ee(O.Steps.WHAT_YOU_LOSE);
@@ -246,25 +246,25 @@ t.Z = function (e) {
     let ea = S.ZP.getStatusFromInvoice(r, a),
         el = S.ZP.getPremiumType(es),
         eo = {
-            [D.tier0]: el === P.p9.TIER_0,
-            [D.tier1]: el === P.p9.TIER_1,
-            [D.tier2]: el === P.p9.TIER_2,
-            [D.canceled]: ea === y.O0b.CANCELED,
-            [D.pausePending]: ea === y.O0b.PAUSE_PENDING,
-            [D.paused]: ea === y.O0b.PAUSED && !H,
-            [D.failedPayment]: (0, S.zV)(ea)
+            [B.tier0]: el === P.p9.TIER_0,
+            [B.tier1]: el === P.p9.TIER_1,
+            [B.tier2]: el === P.p9.TIER_2,
+            [B.canceled]: ea === D.O0b.CANCELED,
+            [B.pausePending]: ea === D.O0b.PAUSE_PENDING,
+            [B.paused]: ea === D.O0b.PAUSED && !H,
+            [B.failedPayment]: (0, S.zV)(ea)
         },
         ec = null;
     switch (el) {
         case P.p9.TIER_0:
             ec = (0, i.jsxs)('div', {
-                className: D.wordMark,
+                className: B.wordMark,
                 children: [
                     (0, i.jsx)(C.Z, {
-                        className: D.discordWordmark,
-                        'aria-label': B.intl.string(B.t['t9uG/v'])
+                        className: B.discordWordmark,
+                        'aria-label': y.intl.string(y.t['t9uG/v'])
                     }),
-                    (0, i.jsx)('div', { className: D.basicWordmark })
+                    (0, i.jsx)('div', { className: B.basicWordmark })
                 ]
             });
             break;
@@ -273,8 +273,8 @@ t.Z = function (e) {
             break;
         case P.p9.TIER_2:
             ec = (0, i.jsx)(E.Z, {
-                className: D.planName,
-                'aria-label': B.intl.string(B.t.lpNrPj)
+                className: B.planName,
+                'aria-label': y.intl.string(y.t.lpNrPj)
             });
     }
     let ed = M.includes(r.status) && !H ? w : k;
@@ -284,9 +284,9 @@ t.Z = function (e) {
             l()(null != a, 'Expected renewalInvoicePreview');
             let t = S.ZP.getReverseTrialWeeks(r.trialId);
             return (0, i.jsx)('div', {
-                className: D.planInfo,
+                className: B.planInfo,
                 children: Q
-                    ? B.intl.format(B.t.jLglur, { weeks: t })
+                    ? y.intl.format(y.t.jLglur, { weeks: t })
                     : (0, S.qV)({
                           planId: e,
                           subscription: r,
@@ -305,12 +305,12 @@ t.Z = function (e) {
                     href: e,
                     useDefaultUnderlineStyles: !1,
                     children: (0, i.jsx)(c.Button, {
-                        className: s()(D.toolsButton, D.externalButton),
+                        className: s()(B.toolsButton, B.externalButton),
                         size: c.Button.Sizes.SMALL,
                         look: c.ButtonLooks.OUTLINED,
                         color: c.ButtonColors.WHITE,
                         submitting: R,
-                        children: B.intl.string(B.t.obRG6e)
+                        children: y.intl.string(y.t.obRG6e)
                     })
                 });
             }
@@ -318,26 +318,26 @@ t.Z = function (e) {
                 let e = S.ZP.isSwitchingPlansDisabled(r, G),
                     t = S.ZP.getSwitchingPlansDisabledMessage(r);
                 return (0, i.jsxs)('div', {
-                    className: D.toolsButtons,
+                    className: B.toolsButtons,
                     children: [
                         Y
                             ? (0, i.jsx)(c.Button, {
-                                  className: D.toolsButton,
+                                  className: B.toolsButton,
                                   size: c.Button.Sizes.SMALL,
                                   look: c.ButtonLooks.LINK,
                                   color: c.ButtonColors.WHITE,
                                   submitting: R,
                                   onClick: X,
-                                  children: B.intl.string(B.t.eFlYVF)
+                                  children: y.intl.string(y.t.eFlYVF)
                               })
                             : (0, i.jsx)(c.Button, {
-                                  className: D.toolsButton,
+                                  className: B.toolsButton,
                                   size: c.Button.Sizes.SMALL,
                                   look: c.ButtonLooks.LINK,
                                   color: c.ButtonColors.WHITE,
                                   submitting: R,
                                   onClick: J,
-                                  children: B.intl.string(B.t['ETE/oK'])
+                                  children: y.intl.string(y.t['ETE/oK'])
                               }),
                         (0, i.jsx)(c.Tooltip, {
                             text: t,
@@ -345,7 +345,7 @@ t.Z = function (e) {
                                 (0, i.jsx)(j.Z, {
                                     ...t,
                                     disabled: e,
-                                    className: D.toolsButton,
+                                    className: B.toolsButton,
                                     onClick: () => {
                                         (0, p.Z)({
                                             analyticsLocations: V,
@@ -354,7 +354,7 @@ t.Z = function (e) {
                                             subscription: r
                                         });
                                     },
-                                    children: B.intl.string(B.t['dylp//'])
+                                    children: y.intl.string(y.t['dylp//'])
                                 })
                         })
                     ]
@@ -362,83 +362,83 @@ t.Z = function (e) {
             }
             if (S.ZP.isBaseSubscriptionCanceled(r))
                 return (0, i.jsx)(c.Button, {
-                    className: D.toolsButton,
+                    className: B.toolsButton,
                     size: c.Button.Sizes.SMALL,
                     color: c.ButtonColors.BRAND_INVERTED,
                     submitting: R,
                     onClick: et,
-                    children: B.intl.string(B.t.iIvF29)
+                    children: y.intl.string(y.t.iIvF29)
                 });
             switch (e) {
-                case y.O0b.BILLING_RETRY:
+                case D.O0b.BILLING_RETRY:
                     return (0, i.jsx)(c.Button, {
-                        className: D.billingRetryCancel,
+                        className: B.billingRetryCancel,
                         size: c.Button.Sizes.SMALL,
                         color: c.ButtonColors.CUSTOM,
                         submitting: R,
                         onClick: $,
-                        children: B.intl.string(B.t['ETE/oK'])
+                        children: y.intl.string(y.t['ETE/oK'])
                     });
-                case y.O0b.PAUSE_PENDING:
+                case D.O0b.PAUSE_PENDING:
                     return (0, i.jsxs)('div', {
-                        className: D.toolsButtons,
+                        className: B.toolsButtons,
                         children: [
                             (0, i.jsx)(c.Button, {
-                                className: D.toolsButton,
+                                className: B.toolsButton,
                                 size: c.Button.Sizes.SMALL,
                                 look: c.ButtonLooks.LINK,
                                 color: c.ButtonColors.WHITE,
                                 submitting: R,
                                 onClick: J,
-                                children: B.intl.string(B.t.cM1H0N)
+                                children: y.intl.string(y.t.cM1H0N)
                             }),
                             (0, i.jsx)(c.Button, {
-                                className: D.toolsButton,
+                                className: B.toolsButton,
                                 size: c.Button.Sizes.SMALL,
                                 color: c.ButtonColors.BRAND_INVERTED,
                                 submitting: R,
                                 onClick: en,
-                                children: B.intl.string(B.t.TgV5QU)
+                                children: y.intl.string(y.t.TgV5QU)
                             })
                         ]
                     });
-                case y.O0b.PAUSED:
+                case D.O0b.PAUSED:
                     if (H) return t();
                     let { durations: n } = (0, I.AT)(r);
                     return (0, i.jsxs)('div', {
-                        className: D.toolsButtons,
+                        className: B.toolsButtons,
                         children: [
                             n.length > 0
                                 ? (0, i.jsx)(c.Button, {
-                                      className: D.linkButton,
+                                      className: B.linkButton,
                                       size: c.Button.Sizes.SMALL,
                                       look: c.ButtonLooks.LINK,
                                       color: c.ButtonColors.WHITE,
                                       submitting: R,
                                       onClick: ei,
-                                      children: B.intl.string(B.t.jNHWt7)
+                                      children: y.intl.string(y.t.jNHWt7)
                                   })
                                 : (0, i.jsx)(c.Button, {
-                                      className: D.linkButton,
+                                      className: B.linkButton,
                                       size: c.Button.Sizes.SMALL,
                                       look: c.ButtonLooks.LINK,
                                       color: c.ButtonColors.WHITE,
                                       submitting: R,
                                       onClick: er,
-                                      children: B.intl.string(B.t.cM1H0N)
+                                      children: y.intl.string(y.t.cM1H0N)
                                   }),
                             (0, i.jsx)(c.Button, {
-                                className: D.toolsButton,
+                                className: B.toolsButton,
                                 size: c.Button.Sizes.SMALL,
                                 color: c.ButtonColors.BRAND_INVERTED,
                                 submitting: R,
                                 onClick: en,
-                                children: B.intl.string(B.t.zpi5pq)
+                                children: y.intl.string(y.t.zpi5pq)
                             })
                         ]
                     });
-                case y.O0b.ACTIVE:
-                case y.O0b.PAST_DUE:
+                case D.O0b.ACTIVE:
+                case D.O0b.PAST_DUE:
                     return t();
             }
         })(),

@@ -6,7 +6,7 @@ function a(e) {
     let n = {};
     return void 0 !== e.pendingGlobalName && (n.globalName = e.pendingGlobalName), void 0 !== e.pendingAvatar && (n.avatar = e.pendingAvatar), void 0 !== e.pendingAvatarDecoration && (n.avatarDecoration = e.pendingAvatarDecoration), n;
 }
-function s(e) {
+function o(e) {
     let n = {};
     if ((void 0 !== e.pendingAvatar && (n.avatar = e.pendingAvatar), void 0 !== e.pendingNickname)) {
         var r;
@@ -19,7 +19,7 @@ r.d(n, {
         return a;
     },
     Jo: function () {
-        return s;
+        return o;
     },
     g9: function () {
         return i;

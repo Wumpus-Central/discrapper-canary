@@ -1,16 +1,16 @@
 var i = r(546299),
     a = r(261638),
-    s = r(411108),
-    o = r(21841),
+    o = r(411108),
+    s = r(21841),
     l = i.sum32,
     u = i.sum32_4,
     c = i.sum32_5,
-    d = s.ch32,
-    f = s.maj32,
-    _ = s.s0_256,
-    h = s.s1_256,
-    p = s.g0_256,
-    m = s.g1_256,
+    d = o.ch32,
+    f = o.maj32,
+    p = o.s0_256,
+    h = o.s1_256,
+    _ = o.g0_256,
+    m = o.g1_256,
     g = a.BlockHash,
     E = [1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221, 3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580, 3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882, 2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411, 3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452, 2361852424, 2428436474, 2756734187, 3204031479, 3329325298];
 function v() {
@@ -25,21 +25,21 @@ i.inherits(v, g),
     (v.padLength = 64),
     (v.prototype._update = function (e, n) {
         for (var r = this.W, i = 0; i < 16; i++) r[i] = e[n + i];
-        for (; i < r.length; i++) r[i] = u(m(r[i - 2]), r[i - 7], p(r[i - 15]), r[i - 16]);
+        for (; i < r.length; i++) r[i] = u(m(r[i - 2]), r[i - 7], _(r[i - 15]), r[i - 16]);
         var a = this.h[0],
-            s = this.h[1],
+            o = this.h[1],
             g = this.h[2],
             E = this.h[3],
             v = this.h[4],
-            I = this.h[5],
-            T = this.h[6],
-            b = this.h[7];
-        for (o(this.k.length === r.length), i = 0; i < r.length; i++) {
-            var y = c(b, h(v), d(v, I, T), this.k[i], r[i]),
-                S = l(_(a), f(a, s, g));
-            (b = T), (T = I), (I = v), (v = l(E, y)), (E = g), (g = s), (s = a), (a = l(y, S));
+            y = this.h[5],
+            b = this.h[6],
+            I = this.h[7];
+        for (s(this.k.length === r.length), i = 0; i < r.length; i++) {
+            var T = c(I, h(v), d(v, y, b), this.k[i], r[i]),
+                S = l(p(a), f(a, o, g));
+            (I = b), (b = y), (y = v), (v = l(E, T)), (E = g), (g = o), (o = a), (a = l(T, S));
         }
-        (this.h[0] = l(this.h[0], a)), (this.h[1] = l(this.h[1], s)), (this.h[2] = l(this.h[2], g)), (this.h[3] = l(this.h[3], E)), (this.h[4] = l(this.h[4], v)), (this.h[5] = l(this.h[5], I)), (this.h[6] = l(this.h[6], T)), (this.h[7] = l(this.h[7], b));
+        (this.h[0] = l(this.h[0], a)), (this.h[1] = l(this.h[1], o)), (this.h[2] = l(this.h[2], g)), (this.h[3] = l(this.h[3], E)), (this.h[4] = l(this.h[4], v)), (this.h[5] = l(this.h[5], y)), (this.h[6] = l(this.h[6], b)), (this.h[7] = l(this.h[7], I));
     }),
     (v.prototype._digest = function (e) {
         return 'hex' === e ? i.toHex32(this.h, 'big') : i.split32(this.h, 'big');

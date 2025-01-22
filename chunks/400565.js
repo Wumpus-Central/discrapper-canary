@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651),
@@ -23,7 +23,7 @@ let c = (e) => {
                   })
               });
     },
-    d = r.memo(function (e) {
+    u = r.memo(function (e) {
         let { item: t } = e,
             n = null,
             r = !1;
@@ -52,12 +52,12 @@ let c = (e) => {
                           alt: '',
                           src: o.VH[(0, o.q7)(t)]
                       });
-        let d = (0, o.Vi)(t.type);
+        let u = (0, o.Vi)(t.type);
         return (0, i.jsxs)('div', {
             className: s.container,
             children: [
                 (0, i.jsx)(l.ZP, {
-                    mask: null == d ? l.QS.AVATAR_DEFAULT : l.QS.AVATAR_STATUS_ROUND_16,
+                    mask: null == u ? l.QS.AVATAR_DEFAULT : l.QS.AVATAR_STATUS_ROUND_16,
                     width: 40,
                     height: 40,
                     rightOverhang: 3,
@@ -69,7 +69,7 @@ let c = (e) => {
                         children: n
                     })
                 }),
-                (0, i.jsx)(c, { mask: d })
+                (0, i.jsx)(c, { mask: u })
             ]
         });
     });

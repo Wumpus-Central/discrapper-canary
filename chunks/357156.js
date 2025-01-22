@@ -3,7 +3,7 @@ r.d(n, {
         return g;
     },
     Ob: function () {
-        return p;
+        return _;
     },
     XJ: function () {
         return m;
@@ -11,14 +11,14 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(149765),
-    o = r(442837),
+    o = r(149765),
+    s = r(442837),
     l = r(601964),
     u = r(496675),
     c = r(594174),
     d = r(85243),
     f = r(231338);
-let _ = {
+let p = {
         canCreateExpressions: !1,
         canCreateGuildEvent: !1,
         canManageAllExpressions: !1,
@@ -37,23 +37,23 @@ let _ = {
         }
         return !1;
     },
-    p = (e) => {
+    _ = (e) => {
         if (null == e) return [f.Pl.CREATE_EVENTS, f.Pl.MANAGE_EVENTS];
         let n = d.TT;
-        return e.isGuildStageVoice() ? (n = d.LK) : e.isGuildVoice() && (n = d.AN), [s.$e(n, f.Pl.CREATE_EVENTS), s.$e(n, f.Pl.MANAGE_EVENTS)];
+        return e.isGuildStageVoice() ? (n = d.LK) : e.isGuildVoice() && (n = d.AN), [o.$e(n, f.Pl.CREATE_EVENTS), o.$e(n, f.Pl.MANAGE_EVENTS)];
     },
     m = (e) => {
-        let [n, r] = e instanceof l.ZP ? [f.Pl.CREATE_EVENTS, f.Pl.MANAGE_EVENTS] : p(e),
-            [i, s, d, m] = (0, o.Wu)([u.Z], () => [u.Z.can(f.Pl.CREATE_GUILD_EXPRESSIONS, e), u.Z.can(f.Pl.MANAGE_GUILD_EXPRESSIONS, e), u.Z.can(n, e), u.Z.can(r, e)]),
-            g = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
-            E = a.useCallback((e) => h(e, g, s, i), [i, s, g]),
+        let [n, r] = e instanceof l.ZP ? [f.Pl.CREATE_EVENTS, f.Pl.MANAGE_EVENTS] : _(e),
+            [i, o, d, m] = (0, s.Wu)([u.Z], () => [u.Z.can(f.Pl.CREATE_GUILD_EXPRESSIONS, e), u.Z.can(f.Pl.MANAGE_GUILD_EXPRESSIONS, e), u.Z.can(n, e), u.Z.can(r, e)]),
+            g = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+            E = a.useCallback((e) => h(e, g, o, i), [i, o, g]),
             v = a.useCallback((e) => h(e, g, m, d), [m, d, g]);
         return null == e
-            ? _
+            ? p
             : {
                   canCreateExpressions: i,
                   canCreateGuildEvent: d,
-                  canManageAllExpressions: s,
+                  canManageAllExpressions: o,
                   canManageAllEvents: m,
                   canManageGuildExpression: E,
                   canManageGuildEvent: v
@@ -62,20 +62,20 @@ let _ = {
     g = function (e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Z,
             r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.default,
-            [i, a] = e instanceof l.ZP ? [f.Pl.CREATE_EVENTS, f.Pl.MANAGE_EVENTS] : p(e),
-            s = n.can(f.Pl.CREATE_GUILD_EXPRESSIONS, e),
-            o = n.can(f.Pl.MANAGE_GUILD_EXPRESSIONS, e),
+            [i, a] = e instanceof l.ZP ? [f.Pl.CREATE_EVENTS, f.Pl.MANAGE_EVENTS] : _(e),
+            o = n.can(f.Pl.CREATE_GUILD_EXPRESSIONS, e),
+            s = n.can(f.Pl.MANAGE_GUILD_EXPRESSIONS, e),
             d = n.can(i, e),
             m = n.can(a, e),
             g = r.getCurrentUser();
         return null == e
-            ? _
+            ? p
             : {
-                  canCreateExpressions: s,
+                  canCreateExpressions: o,
                   canCreateGuildEvent: d,
-                  canManageAllExpressions: o,
+                  canManageAllExpressions: s,
                   canManageAllEvents: m,
-                  canManageGuildExpression: (e) => h(e, g, o, s),
+                  canManageGuildExpression: (e) => h(e, g, s, o),
                   canManageGuildEvent: (e) => h(e, g, m, d)
               };
     };

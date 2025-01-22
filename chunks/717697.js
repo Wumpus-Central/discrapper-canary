@@ -11,11 +11,11 @@ function n(e) {
             end: "'",
             contains: [{ begin: "''" }]
         },
-        s = {
+        o = {
             className: 'string',
             begin: '(#\\d+)+'
         },
-        o = {
+        s = {
             beginKeywords: 'function constructor destructor procedure method',
             end: '[:;]',
             keywords: 'function constructor|10 destructor|10 procedure|10 method|10',
@@ -26,7 +26,7 @@ function n(e) {
                     begin: '\\(',
                     end: '\\)',
                     keywords: n,
-                    contains: [a, s]
+                    contains: [a, o]
                 },
                 r,
                 i
@@ -42,7 +42,7 @@ function n(e) {
         case_insensitive: !0,
         keywords: n,
         illegal: '("|\\$[G-Zg-z]|\\/\\*|</|=>|->)',
-        contains: [r, i, e.C_LINE_COMMENT_MODE, a, s, e.NUMBER_MODE, o, l]
+        contains: [r, i, e.C_LINE_COMMENT_MODE, a, o, e.NUMBER_MODE, s, l]
     };
 }
 e.exports = n;

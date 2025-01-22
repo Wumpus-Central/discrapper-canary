@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(411104);
-var s = r(836560);
-var o = r(259443),
+var o = r(836560);
+var s = r(259443),
     l = r(436620);
 function u(e, n, r) {
     return (
@@ -21,8 +21,8 @@ function u(e, n, r) {
         e
     );
 }
-let c = new o.Yd('PeerConnection');
-class d extends s.EventEmitter {
+let c = new s.Yd('PeerConnection');
+class d extends o.EventEmitter {
     setBitRate(e) {
         this.bitrate !== e && ((this.bitrate = e), this.negotiationNeeded());
     }

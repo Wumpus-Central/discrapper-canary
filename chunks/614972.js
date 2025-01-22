@@ -12,11 +12,11 @@ var r = n(481060),
     s = n(938530);
 function c(e) {
     let { message: t, compact: n, usernameHook: c } = e,
-        d = (0, l.ZP)(t),
-        u = c(d),
+        u = (0, l.ZP)(t),
+        d = c(u),
         m = o.intl.format(o.t.tv2DNz, {
-            username: d.nick,
-            usernameHook: u
+            username: u.nick,
+            usernameHook: d
         });
     return (0, i.jsx)(a.Z, {
         className: s.stageSystemMessage,

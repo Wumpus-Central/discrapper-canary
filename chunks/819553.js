@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(442837),
-    o = r(570140),
+    o = r(442837),
+    s = r(570140),
     l = r(981631);
 function u(e, n, r) {
     return (
@@ -32,14 +32,14 @@ function c(e) {
 })(i || (i = {}));
 let d = {},
     f = {};
-function _() {
+function p() {
     (d = {}), (f = {});
 }
 function h(e) {
     let { guildId: n } = e;
     d[n] = 'started';
 }
-function p(e) {
+function _(e) {
     let { guildId: n, enabled: r } = e;
     if ('started' !== d[n]) return !1;
     r ? (d[n] = 'ready') : (d[n] = 'not_applicable');
@@ -60,10 +60,10 @@ function v(e) {
     let { guildId: n, step: r } = e;
     f[n] = r;
 }
-function I() {
+function y() {
     f = {};
 }
-class T extends (a = s.ZP.Store) {
+class b extends (a = o.ZP.Store) {
     shouldShowOnboarding(e) {
         return !!(e !== l.ME && e !== l.I_8 && c(d[e])) || !1;
     }
@@ -78,14 +78,14 @@ class T extends (a = s.ZP.Store) {
         return null !== (n = f[e]) && void 0 !== n ? n : 'cover';
     }
 }
-u(T, 'displayName', 'GuildOnboardingStore'),
-    (n.ZP = new T(o.Z, {
-        LOGOUT: _,
+u(b, 'displayName', 'GuildOnboardingStore'),
+    (n.ZP = new b(s.Z, {
+        LOGOUT: p,
         GUILD_DELETE: E,
         GUILD_ONBOARDING_START: h,
-        GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: p,
+        GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: _,
         GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: m,
         GUILD_ONBOARDING_COMPLETE: g,
         GUILD_ONBOARDING_SET_STEP: v,
-        CONNECTION_OPEN: I
+        CONNECTION_OPEN: y
     }));

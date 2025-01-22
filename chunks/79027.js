@@ -1,18 +1,18 @@
 r.d(n, {
     o: function () {
-        return p;
+        return _;
     }
 });
 var i,
     a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(120356),
     u = r.n(l),
     c = r(748780),
     d = r(481060),
     f = r(728767);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -29,7 +29,7 @@ let h = {
     friction: 7,
     tension: 60
 };
-class p extends (i = o.Component) {
+class _ extends (i = s.Component) {
     componentWillAppear(e) {
         this.animateTo(1).start(e);
     }
@@ -64,14 +64,14 @@ class p extends (i = o.Component) {
     }
     render() {
         let { className: e, children: n } = this.props;
-        return (0, s.jsx)(c.Z.div, {
+        return (0, o.jsx)(c.Z.div, {
             className: u()(e, f.slider),
             style: this.getAnimatedStyle(),
             children: n
         });
     }
     constructor(...e) {
-        super(...e), _(this, 'animation', new c.Z.Value(0));
+        super(...e), p(this, 'animation', new c.Z.Value(0));
     }
 }
-_(p, 'contextType', d.AccessibilityPreferencesContext);
+p(_, 'contextType', d.AccessibilityPreferencesContext);

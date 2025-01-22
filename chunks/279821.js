@@ -1,6 +1,6 @@
 r.d(n, {
     d: function () {
-        return o;
+        return s;
     }
 });
 var i = r(411104);
@@ -17,7 +17,7 @@ function a(e, n, r) {
         e
     );
 }
-class s {
+class o {
     raise(e) {
         throw e;
     }
@@ -86,4 +86,4 @@ class s {
         a(this, 'callback', null);
     }
 }
-let o = new s();
+let s = new o();

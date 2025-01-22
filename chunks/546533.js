@@ -1,39 +1,39 @@
-var e = n(360518)('iterator'),
-    o = !1;
+var i = r(360518)('iterator'),
+    a = !1;
 try {
-    var i = 0,
-        u = {
+    var o = 0,
+        s = {
             next: function () {
-                return { done: !!i++ };
+                return { done: !!o++ };
             },
             return: function () {
-                o = !0;
+                a = !0;
             }
         };
-    (u[e] = function () {
+    (s[i] = function () {
         return this;
     }),
-        Array.from(u, function () {
+        Array.from(s, function () {
             throw 2;
         });
-} catch (t) {}
-t.exports = function (t, r) {
+} catch (e) {}
+e.exports = function (e, n) {
     try {
-        if (!r && !o) return !1;
-    } catch (t) {
+        if (!n && !a) return !1;
+    } catch (e) {
         return !1;
     }
-    var n = !1;
+    var r = !1;
     try {
-        var i = {};
-        (i[e] = function () {
+        var o = {};
+        (o[i] = function () {
             return {
                 next: function () {
-                    return { done: (n = !0) };
+                    return { done: (r = !0) };
                 }
             };
         }),
-            t(i);
-    } catch (t) {}
-    return n;
+            e(o);
+    } catch (e) {}
+    return r;
 };

@@ -6,7 +6,7 @@ r.d(n, {
         return g;
     },
     te: function () {
-        return p;
+        return _;
     },
     zP: function () {
         return h;
@@ -14,23 +14,23 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(481060),
     c = r(388032),
     d = r(799489);
 function f(e) {
-    let { items: n, maxLines: r, itemWidths: i, itemGapPx: a, containerWidth: s, overflowWidth: o } = e,
+    let { items: n, maxLines: r, itemWidths: i, itemGapPx: a, containerWidth: o, overflowWidth: s } = e,
         l = 0,
         u = 0,
         c = 0;
     for (let e = 0; e < n.length; e++) {
         let d = i[e];
-        if (isNaN(d) || d > s) continue;
+        if (isNaN(d) || d > o) continue;
         let f = l === r - 1,
-            _ = e === n.length - 1;
-        if (!(Math.round(u + d + (f && !_ ? o + a : 0)) < Math.round(s))) {
+            p = e === n.length - 1;
+        if (!(Math.round(u + d + (f && !p ? s + a : 0)) < Math.round(o))) {
             if (f) break;
             l++, (u = 0);
         }
@@ -38,9 +38,9 @@ function f(e) {
     }
     return c;
 }
-function _() {
-    let [e, n] = s.useState(0),
-        r = s.useRef(null),
+function p() {
+    let [e, n] = o.useState(0),
+        r = o.useRef(null),
         i = new Map(),
         a = new ResizeObserver((e) => {
             e.forEach((e) => {
@@ -69,20 +69,20 @@ function _() {
 }
 function h(e) {
     let { itemGapPx: n, items: r, maxLines: i, containerWidth: a } = e,
-        [o, l] = s.useState(0),
-        u = s.useRef([]),
-        c = s.useRef(0),
-        d = s.useRef(0),
-        _ = s.useRef(null),
-        h = s.useCallback((e, n) => {
+        [s, l] = o.useState(0),
+        u = o.useRef([]),
+        c = o.useRef(0),
+        d = o.useRef(0),
+        p = o.useRef(null),
+        h = o.useCallback((e, n) => {
             u.current[e] = n;
         }, []);
     return (
-        s.useLayoutEffect(() => {
+        o.useLayoutEffect(() => {
             var e;
-            if (null == _.current) return;
-            (u.current.length = r.length), (c.current = null !== (e = _.current.getBoundingClientRect().width) && void 0 !== e ? e : 0);
-            let s = f({
+            if (null == p.current) return;
+            (u.current.length = r.length), (c.current = null !== (e = p.current.getBoundingClientRect().width) && void 0 !== e ? e : 0);
+            let o = f({
                 items: r,
                 maxLines: i,
                 itemGapPx: n,
@@ -90,21 +90,21 @@ function h(e) {
                 itemWidths: u.current,
                 overflowWidth: c.current
             });
-            s !== d.current && ((d.current = s), l((e) => e + 1));
+            o !== d.current && ((d.current = o), l((e) => e + 1));
         }, [a, n, r, i]),
-        s.useMemo(
+        o.useMemo(
             () => ({
                 lastVisibleIndex: d.current,
                 onItemLayout: h,
-                overflowItemsRef: _,
+                overflowItemsRef: p,
                 itemWidthsRef: u,
-                version: o
+                version: s
             }),
-            [h, o]
+            [h, s]
         )
     );
 }
-function p(e) {
+function _(e) {
     let { items: n, renderItem: r, ...i } = e;
     return (0, a.jsx)(u.Tooltip, {
         ...i,
@@ -122,41 +122,41 @@ function p(e) {
 }
 function m(e) {
     let { onItemLayout: n, index: r, children: i } = e,
-        o = s.useRef(null);
+        s = o.useRef(null);
     return (
-        s.useLayoutEffect(() => {
-            if (null != o.current) n(r, o.current.getBoundingClientRect().width);
+        o.useLayoutEffect(() => {
+            if (null != s.current) n(r, s.current.getBoundingClientRect().width);
         }),
         (0, a.jsx)('div', {
-            ref: o,
+            ref: s,
             children: i
         })
     );
 }
 function g(e) {
-    let { className: n, items: r, renderItem: i, itemGapPx: o = 0, maxLines: u, renderOverflow: f } = e,
-        { ref: g, width: E } = _(),
+    let { className: n, items: r, renderItem: i, itemGapPx: s = 0, maxLines: u, renderOverflow: f } = e,
+        { ref: g, width: E } = p(),
         {
             lastVisibleIndex: v,
-            onItemLayout: I,
-            overflowItemsRef: T
+            onItemLayout: y,
+            overflowItemsRef: b
         } = h({
             items: r,
-            itemGapPx: o,
+            itemGapPx: s,
             maxLines: u,
             containerWidth: E
         }),
-        b = s.useCallback(
+        I = o.useCallback(
             (e) =>
-                (0, a.jsx)(p, {
+                (0, a.jsx)(_, {
                     items: e,
                     renderItem: i
                 }),
             [i]
         ),
-        y = null != f ? f : b,
-        S = s.useMemo(() => r.slice(0, v + 1), [r, v]),
-        A = s.useMemo(() => r.slice(v + 1), [r, v]);
+        T = null != f ? f : I,
+        S = o.useMemo(() => r.slice(0, v + 1), [r, v]),
+        A = o.useMemo(() => r.slice(v + 1), [r, v]);
     return (0, a.jsxs)('div', {
         className: l()(n, d.items),
         ref: g,
@@ -172,7 +172,7 @@ function g(e) {
                                 m,
                                 {
                                     index: n,
-                                    onItemLayout: I,
+                                    onItemLayout: y,
                                     children: i(e)
                                 },
                                 e
@@ -181,13 +181,13 @@ function g(e) {
                     }),
                     (0, a.jsx)('div', {
                         className: d.overflowMeasurement,
-                        ref: T,
+                        ref: b,
                         children: i(c.intl.formatToPlainString(c.t.vGclWl, { count: Number('1'.concat(r.length)) }))
                     })
                 ]
             }),
             S.map(i),
-            A.length > 0 && y(A)
+            A.length > 0 && T(A)
         ]
     });
 }

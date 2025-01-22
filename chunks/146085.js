@@ -12,15 +12,15 @@ r.d(n, {
         return l;
     },
     yP: function () {
-        return o;
+        return s;
     }
 });
 var i = r(47120);
 var a = r(149765),
-    s = r(981631);
-let o = a.$e(s.Plq.MANAGE_CHANNELS, s.Plq.MUTE_MEMBERS, s.Plq.MOVE_MEMBERS);
-a.$e(s.Plq.MANAGE_CHANNELS, s.Plq.MANAGE_ROLES);
-let l = new Set([s.Plq.SPEAK, s.Plq.REQUEST_TO_SPEAK, s.Plq.USE_VAD]),
-    u = a.$e(o, s.Plq.MANAGE_ROLES),
-    c = a.$e(s.Plq.CONNECT, s.Plq.VIEW_CHANNEL),
-    d = a.$e(c, s.Plq.READ_MESSAGE_HISTORY, s.Plq.REQUEST_TO_SPEAK, s.Plq.SPEAK, s.Plq.USE_VAD);
+    o = r(981631);
+let s = a.$e(o.Plq.MANAGE_CHANNELS, o.Plq.MUTE_MEMBERS, o.Plq.MOVE_MEMBERS);
+a.$e(o.Plq.MANAGE_CHANNELS, o.Plq.MANAGE_ROLES);
+let l = new Set([o.Plq.SPEAK, o.Plq.REQUEST_TO_SPEAK, o.Plq.USE_VAD]),
+    u = a.$e(s, o.Plq.MANAGE_ROLES),
+    c = a.$e(o.Plq.CONNECT, o.Plq.VIEW_CHANNEL),
+    d = a.$e(c, o.Plq.READ_MESSAGE_HISTORY, o.Plq.REQUEST_TO_SPEAK, o.Plq.SPEAK, o.Plq.USE_VAD);

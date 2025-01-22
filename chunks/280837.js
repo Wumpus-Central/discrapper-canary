@@ -8,15 +8,15 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(544891),
-    s = r(570140),
-    o = r(19780),
+    o = r(570140),
+    s = r(19780),
     l = r(823379),
     u = r(41776),
     c = r(981631);
 async function d(e) {
     let n = u.Z.lurkingGuildIds().filter((n) => !e.includes(n));
     0 !== n.length &&
-        (s.Z.dispatch({
+        (o.Z.dispatch({
             type: 'GUILD_STOP_LURKING',
             ignoredGuildIds: e
         }),
@@ -31,7 +31,7 @@ async function d(e) {
                         rejectWithError: !0
                     });
                 } catch (r) {
-                    s.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'GUILD_STOP_LURKING_FAILURE',
                         lurkingGuildId: e,
                         lurkingSource: n
@@ -44,6 +44,6 @@ async function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         n = u.Z.lurkingGuildIds();
     if (0 === n.length || !(null == e || !n.includes(e))) return;
-    let r = [e, o.Z.getGuildId()].filter(l.lm);
+    let r = [e, s.Z.getGuildId()].filter(l.lm);
     await d(r);
 }

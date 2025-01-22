@@ -1,90 +1,90 @@
 r.d(n, {
     Z: function () {
-        return C;
+        return N;
     }
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(442837),
     c = r(481060),
     d = r(420660),
     f = r(100527),
-    _ = r(906732),
+    p = r(906732),
     h = r(140701),
-    p = r(158776),
+    _ = r(158776),
     m = r(74538),
     g = r(998502),
     E = r(785717),
     v = r(369566),
-    I = r(518950),
-    T = r(652853),
-    b = r(228168),
-    y = r(981631),
+    y = r(518950),
+    b = r(652853),
+    I = r(228168),
+    T = r(981631),
     S = r(474936),
     A = r(882636);
-let N = g.ZP.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
-function C(e) {
-    let { user: n, displayProfile: r, guildId: i, channelId: o, profileType: g, animateOnHover: C, onOpenProfile: R, className: O } = e,
-        { theme: D } = (0, T.z)(),
-        { analyticsLocations: L } = (0, _.ZP)(f.Z.AVATAR),
-        { trackUserProfileAction: x } = (0, E.KZ)(),
+let C = g.ZP.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
+function N(e) {
+    let { user: n, displayProfile: r, guildId: i, channelId: s, profileType: g, animateOnHover: N, onOpenProfile: R, className: O } = e,
+        { theme: D } = (0, b.z)(),
+        { analyticsLocations: x } = (0, p.ZP)(f.Z.AVATAR),
+        { trackUserProfileAction: L } = (0, E.KZ)(),
         w = m.ZP.isPremiumAtLeast(null == r ? void 0 : r.premiumType, S.p9.TIER_2),
-        P = s.useMemo(() => n.isNonUserBot() || (0, h.W)(n, o), [n, o]),
+        P = o.useMemo(() => n.isNonUserBot() || (0, h.W)(n, s), [n, s]),
         { live: M } = (0, v.Z)(n.id),
         [k] = M,
-        { status: U, isMobileOnline: B } = (0, u.cj)([p.Z], () => ({
-            status: (0, d.Z)(k) ? y.Skl.STREAMING : p.Z.getStatus(n.id),
-            isMobileOnline: p.Z.isMobileOnline(n.id)
+        { status: U, isMobileOnline: B } = (0, u.cj)([_.Z], () => ({
+            status: (0, d.Z)(k) ? T.Skl.STREAMING : _.Z.getStatus(n.id),
+            isMobileOnline: _.Z.isMobileOnline(n.id)
         })),
-        G = g === b.y0.FULL_SIZE ? c.AvatarSizes.SIZE_120 : c.AvatarSizes.SIZE_80,
-        F = l()(
+        G = g === I.y0.FULL_SIZE ? c.AvatarSizes.SIZE_120 : c.AvatarSizes.SIZE_80,
+        Z = l()(
             A.avatar,
             {
-                [A.biteSize]: g === b.y0.BITE_SIZE,
-                [A.fullSize]: g === b.y0.FULL_SIZE,
-                [A.panel]: g === b.y0.PANEL
+                [A.biteSize]: g === I.y0.BITE_SIZE,
+                [A.fullSize]: g === I.y0.FULL_SIZE,
+                [A.panel]: g === I.y0.PANEL
             },
             O
         ),
         {
-            avatarDecorationSrc: Z,
+            avatarDecorationSrc: F,
             avatarSrc: V,
             eventHandlers: j
-        } = (0, I.Z)({
+        } = (0, y.Z)({
             user: n,
             guildId: null != r ? r.guildId : i,
             size: G,
-            animateOnHover: C
+            animateOnHover: N
         }),
-        H = (0, a.jsx)(N, {
+        H = (0, a.jsx)(C, {
             src: V,
-            avatarDecoration: Z,
+            avatarDecoration: F,
             size: G,
             'aria-label': n.username,
             imageClassName: null != R ? A.overlay : void 0,
-            status: P ? y.Skl.UNKNOWN : U,
+            status: P ? T.Skl.UNKNOWN : U,
             statusBackdropColor: w && !P ? (0, c.getStatusBackdropColor)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,
-            statusTooltipDelay: b.vB
+            statusTooltipDelay: I.vB
         });
     return null == R
         ? (0, a.jsx)('div', {
               ...j,
-              className: F,
+              className: Z,
               children: H
           })
         : (0, a.jsx)(c.Clickable, {
               ...j,
-              className: l()(F, A.clickable),
+              className: l()(Z, A.clickable),
               focusProps: { ringClassName: A.focusRing },
               onClick: () => {
-                  x({
+                  L({
                       action: 'PRESS_VIEW_PROFILE',
-                      analyticsLocations: L
+                      analyticsLocations: x
                   }),
                       null == R || R();
               },

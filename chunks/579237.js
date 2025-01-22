@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(836560);
-var s = r(68721),
-    o = r(961304),
+var o = r(68721),
+    s = r(961304),
     l = r(65154);
 function u(e, n, r) {
     return (
@@ -42,7 +42,7 @@ class d extends a.EventEmitter {
     }
     createOutput(e, n) {
         let r = this.outputs[e];
-        null == r && (((r = new o.Z(this.userId, this.audioContext)).mute = !1), (r.volume = 100), r.setSpeakingFlags(l.Dg.VOICE), r.setSinkId(this.sinkId), (this.outputs[e] = r)), r.addTrack(n), r.play();
+        null == r && (((r = new s.Z(this.userId, this.audioContext)).mute = !1), (r.volume = 100), r.setSpeakingFlags(l.Dg.VOICE), r.setSinkId(this.sinkId), (this.outputs[e] = r)), r.addTrack(n), r.play();
     }
     destroyOutput(e, n) {
         let r = this.outputs[e];
@@ -102,7 +102,7 @@ class d extends a.EventEmitter {
                 null != e.candidate && this.pc1.addIceCandidate(e.candidate);
             }),
             (this.pc2.ontrack = this.handleTrack),
-            (this.input = new s.Z(e)),
+            (this.input = new o.Z(e)),
             this.input.setSource(n),
             this.input.on('stream', this.handleStream),
             this.input.enable(),

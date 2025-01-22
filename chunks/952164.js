@@ -9,22 +9,22 @@ r.d(n, {
         return d;
     },
     d$: function () {
-        return _;
+        return p;
     }
 });
 var i = r(411104);
 var a = r(358085),
-    s = r(18323),
-    o = r(647162),
+    o = r(18323),
+    s = r(647162),
     l = r(616922);
 function u(e, n, r) {
     let i;
     !(0, a.isDesktop)() && (i = window.open('', '_blank')),
-        (0, o.iy)(e, n)
+        (0, s.iy)(e, n)
             .then((e) => r(e))
             .then((e) => {
                 let { resourceType: n, resourceId: r } = e,
-                    a = s.Z.isProtocolRegistered() ? l.C7.PLAYER_OPEN(n, r) : l.C7.WEB_OPEN(n, r);
+                    a = o.Z.isProtocolRegistered() ? l.C7.PLAYER_OPEN(n, r) : l.C7.WEB_OPEN(n, r);
                 null != i ? (i.location.href = a) : window.open(a);
             })
             .catch(() => {
@@ -40,8 +40,8 @@ function d(e) {
     if (null == r) return;
     let a = (0, l.c8)(null !== (n = null == i ? void 0 : i.type) && void 0 !== n ? n : l.Hw.TRACK);
     if (null == a) return;
-    let o = s.Z.isProtocolRegistered() ? l.C7.PLAYER_OPEN(a, r) : l.C7.WEB_OPEN(a, r);
-    window.open(o);
+    let s = o.Z.isProtocolRegistered() ? l.C7.PLAYER_OPEN(a, r) : l.C7.WEB_OPEN(a, r);
+    window.open(s);
 }
 function f(e, n) {
     u(e, n, (n) => {
@@ -53,7 +53,7 @@ function f(e, n) {
         };
     });
 }
-function _(e, n, r) {
+function p(e, n, r) {
     u(e, n, (e) => {
         let { artist_ids: n } = e;
         if (null == n) throw Error('no artist ids in metadata');

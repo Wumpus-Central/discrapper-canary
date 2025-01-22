@@ -3,7 +3,7 @@ function n(e) {
         r = n + '[:=]' + n,
         i = '[ \\t\\f]+',
         a = '([^\\\\:= \\t\\f\\n]|\\\\.)+',
-        s = {
+        o = {
             end: '(' + r + '|' + i + ')',
             relevance: 0,
             starts: {
@@ -30,7 +30,7 @@ function n(e) {
                         endsParent: !0
                     }
                 ],
-                starts: s
+                starts: o
             },
             {
                 className: 'attr',

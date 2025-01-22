@@ -1,17 +1,17 @@
-var e = n(821819),
-    o = n(360518),
-    i = n(882708),
-    u = o('species');
-t.exports = function (t) {
+var i = r(821819),
+    a = r(360518),
+    o = r(882708),
+    s = a('species');
+e.exports = function (e) {
     return (
-        i >= 51 ||
-        !e(function () {
-            var r = [];
+        o >= 51 ||
+        !i(function () {
+            var n = [];
             return (
-                ((r.constructor = {})[u] = function () {
+                ((n.constructor = {})[s] = function () {
                     return { foo: 1 };
                 }),
-                1 !== r[t](Boolean).foo
+                1 !== n[e](Boolean).foo
             );
         })
     );

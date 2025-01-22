@@ -1,6 +1,6 @@
 var i = r(192379),
     a = r(723184),
-    s = (function () {
+    o = (function () {
         function e(e, n) {
             for (var r = 0; r < n.length; r++) {
                 var i = n[r];
@@ -11,7 +11,7 @@ var i = r(192379),
             return r && e(n.prototype, r), i && e(n, i), n;
         };
     })();
-function o(e, n, r) {
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -45,11 +45,11 @@ function c(e, n) {
 }
 var d = 1,
     f = 38,
-    _ = [38, 40],
+    p = [38, 40],
     h = function (e) {
-        return _.indexOf(e) > -1;
+        return p.indexOf(e) > -1;
     },
-    p = function (e) {
+    _ = function (e) {
         return Number(String(e).replace(/%/g, ''));
     },
     m = 1,
@@ -69,7 +69,7 @@ var d = 1,
                     r.setUpdatedValue(e.target.value, e);
                 }),
                 (r.handleKeyDown = function (e) {
-                    var n = p(e.target.value);
+                    var n = _(e.target.value);
                     if (!isNaN(n) && h(e.keyCode)) {
                         var i = r.getArrowOffset(),
                             a = e.keyCode === f ? n + i : n - i;
@@ -101,7 +101,7 @@ var d = 1,
         }
         return (
             c(n, e),
-            s(n, [
+            o(n, [
                 {
                     key: 'componentDidUpdate',
                     value: function (e, n) {
@@ -124,7 +124,7 @@ var d = 1,
                 {
                     key: 'getValueObjectWithLabel',
                     value: function (e) {
-                        return o({}, this.props.label, e);
+                        return s({}, this.props.label, e);
                     }
                 },
                 {

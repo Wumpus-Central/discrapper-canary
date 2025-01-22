@@ -1,37 +1,37 @@
 r.d(n, {
     Z: function () {
-        return _;
+        return p;
     }
 });
 var i = r(200651),
     a = r(192379),
-    s = r(149765),
-    o = r(178940),
+    o = r(149765),
+    s = r(178940),
     l = r(993365),
     u = r(481060),
     c = r(422559),
     d = r(388032),
     f = r(355662);
-function _(e) {
-    let { application: n, permissions: r, deniedPermissions: _, onPermissionsChange: h, guild: p } = e,
-        m = a.useMemo(() => s.U_(p.permissions), [p.permissions]);
+function p(e) {
+    let { application: n, permissions: r, deniedPermissions: p, onPermissionsChange: h, guild: _ } = e,
+        m = a.useMemo(() => o.U_(_.permissions), [_.permissions]);
     a.useEffect(() => {
-        h(!1, s.hX(r, m));
+        h(!1, o.hX(r, m));
     }, [m, h, r]);
-    let g = c.VY.filter((e) => s.e$(r, e)),
+    let g = c.VY.filter((e) => o.e$(r, e)),
         E = g
-            .filter((e) => !s.e$(m, e))
+            .filter((e) => !o.e$(m, e))
             .map((e) => {
                 let n = (0, c.wt)(e),
-                    r = !s.e$(_, e);
+                    r = !o.e$(p, e);
                 return (0, i.jsx)(
                     'li',
                     {
                         className: f.permission,
-                        children: (0, i.jsx)(o.X, {
+                        children: (0, i.jsx)(s.X, {
                             value: r,
                             onChange: (n, r) => h(r, e),
-                            type: o.X.Types.INVERTED,
+                            type: s.X.Types.INVERTED,
                             children: (0, i.jsx)(l.x, {
                                 variant: 'text-md/normal',
                                 children: n
@@ -42,7 +42,7 @@ function _(e) {
                 );
             }),
         v = g
-            .filter((e) => s.e$(m, e))
+            .filter((e) => o.e$(m, e))
             .map((e) => {
                 let n = (0, c.wt)(e);
                 return (0, i.jsxs)(
@@ -78,7 +78,7 @@ function _(e) {
                               color: 'header-secondary',
                               children: d.intl.format(d.t.sOaT2t, {
                                   applicationName: n.name,
-                                  guildName: p.name
+                                  guildName: _.name
                               })
                           }),
                           (0, i.jsx)('ul', {

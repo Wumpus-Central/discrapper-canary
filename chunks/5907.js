@@ -14,13 +14,13 @@ let i = (e) => {
                 }
             },
             a = () => n,
-            s = {
+            o = {
                 setState: i,
                 getState: a,
-                getInitialState: () => o,
+                getInitialState: () => s,
                 subscribe: (e) => (r.add(e), () => r.delete(e))
             },
-            o = (n = e(i, a, s));
-        return s;
+            s = (n = e(i, a, o));
+        return o;
     },
     a = (e) => (e ? i(e) : i);

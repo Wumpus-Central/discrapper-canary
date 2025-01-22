@@ -1,15 +1,15 @@
 let i;
 var a,
-    s = r(47120);
-var o = r(442837),
+    o = r(47120);
+var s = r(442837),
     l = r(433517),
     u = r(570140),
     c = r(695346),
     d = r(581883),
     f = r(163612),
-    _ = r(314897),
+    p = r(314897),
     h = r(592125),
-    p = r(885110),
+    _ = r(885110),
     m = r(451478),
     g = r(981631);
 function E(e, n, r) {
@@ -26,23 +26,23 @@ function E(e, n, r) {
     );
 }
 let v = 'IncomingCallStore',
-    I = {
+    y = {
         width: 232,
         height: 315
     },
-    T = 10,
-    b = new Set(),
-    y = [],
+    b = 10,
+    I = new Set(),
+    T = [],
     S = new Map(),
     A = new Set(),
-    N = !1;
-function C() {
+    C = !1;
+function N() {
     let e = m.Z.windowSize();
-    return null != i && i.x + I.width < e.width && i.y + I.height < e.height
+    return null != i && i.x + y.width < e.width && i.y + y.height < e.height
         ? i
         : {
-              x: e.width / 2 - I.width / 2,
-              y: e.height / 2 - I.height / 2
+              x: e.width / 2 - y.width / 2,
+              y: e.height / 2 - y.height / 2
           };
 }
 function R(e) {
@@ -59,12 +59,12 @@ function O(e) {
         }).enabled
     )
         return !1;
-    let i = r.includes(_.default.getId());
+    let i = r.includes(p.default.getId());
     if (!A.has(n) && i) {
         let e = h.Z.getChannel(n);
         if (null == e) return !1;
-        let r = T * A.size,
-            { x: i, y: a } = C();
+        let r = b * A.size,
+            { x: i, y: a } = N();
         return (
             S.set(n, {
                 channel: e,
@@ -88,11 +88,11 @@ function D(e) {
         R(n)
     );
 }
-function L(e) {
+function x(e) {
     let { channelId: n } = e;
     return R(n);
 }
-function x(e) {
+function L(e) {
     let { x: n, y: r } = e;
     return (
         (i = {
@@ -108,23 +108,23 @@ function w(e) {
     return R(n.id);
 }
 function P() {
-    N = p.Z.getStatus() === g.Skl.DND || c.QZ.getSetting();
+    C = _.Z.getStatus() === g.Skl.DND || c.QZ.getSetting();
 }
-class M extends (a = o.ZP.Store) {
+class M extends (a = s.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, p.Z), this.syncWith([p.Z], P), this.syncWith([d.Z], P);
+        this.waitFor(h.Z, _.Z), this.syncWith([_.Z], P), this.syncWith([d.Z], P);
     }
     getIncomingCalls() {
-        return N ? y : Array.from(S.values());
+        return C ? T : Array.from(S.values());
     }
     getIncomingCallChannelIds() {
-        return N ? b : A;
+        return C ? I : A;
     }
     getFirstIncomingCallId() {
-        return N ? null : A.values().next().value;
+        return C ? null : A.values().next().value;
     }
     hasIncomingCalls() {
-        return !N && A.size > 0;
+        return !C && A.size > 0;
     }
 }
 E(M, 'displayName', 'IncomingCallStore'),
@@ -134,7 +134,7 @@ E(M, 'displayName', 'IncomingCallStore'),
         CALL_DELETE: D,
         GUILD_RING_START: O,
         GUILD_RING_STOP: D,
-        VOICE_CHANNEL_SELECT: L,
-        INCOMING_CALL_MOVE: x,
+        VOICE_CHANNEL_SELECT: x,
+        INCOMING_CALL_MOVE: L,
         CHANNEL_DELETE: w
     }));

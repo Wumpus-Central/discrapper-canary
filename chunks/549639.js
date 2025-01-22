@@ -12,11 +12,11 @@ var i = (function () {
 function a(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function s(e, n) {
+function o(e, n) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
 }
-function o(e, n) {
+function s(e, n) {
     if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
     (e.prototype = Object.create(n && n.prototype, {
         constructor: {
@@ -34,14 +34,14 @@ var u = r(501501),
     c = r(601102),
     d = r(887442),
     f = u.inOut(u.ease),
-    _ = (function (e) {
+    p = (function (e) {
         function n(e) {
             a(this, n);
-            var r = s(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+            var r = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
             return (r._toValue = e.toValue), (r._easing = void 0 !== e.easing ? e.easing : f), (r._duration = void 0 !== e.duration ? e.duration : 500), (r._delay = void 0 !== e.delay ? e.delay : 0), (r.__isInteraction = void 0 === e.isInteraction || e.isInteraction), r;
         }
         return (
-            o(n, e),
+            s(n, e),
             i(n, [
                 {
                     key: 'start',
@@ -75,4 +75,4 @@ var u = r(501501),
             n
         );
     })(l);
-e.exports = _;
+e.exports = p;

@@ -1,12 +1,12 @@
 r.r(n),
     r.d(n, {
         default: function () {
-            return s;
+            return o;
         }
     });
 var i = r(411104);
 var a = r(981631);
-function s(e, n) {
+function o(e, n) {
     let r;
     let i = new Date();
     switch (e) {

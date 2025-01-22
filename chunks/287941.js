@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(570140),
     a = r(607070),
-    s = r(823961),
-    o = r(111810),
+    o = r(823961),
+    s = r(111810),
     l = r(477931);
 let u = function (e) {
         var n;
@@ -20,10 +20,10 @@ let u = function (e) {
                           h: 0
                       },
             c = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            d = o.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti,
+            d = s.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti,
             f = !0;
         if (!!(f = r(451478).Z.isFocused()))
-            (s.Z.confettiMode || c) &&
+            (o.Z.confettiMode || c) &&
                 d &&
                 !a.Z.useReducedMotion &&
                 (null === (n = e.potions) ||
@@ -50,10 +50,10 @@ let u = function (e) {
                           h: 0
                       },
             l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            u = o.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti,
+            u = s.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti,
             c = !0;
         if (!!(c = r(451478).Z.isFocused()))
-            (s.Z.confettiMode || l) &&
+            (o.Z.confettiMode || l) &&
                 u &&
                 !a.Z.useReducedMotion &&
                 i.Z.dispatch({

@@ -3,17 +3,17 @@ function n(e, n) {
 }
 var r = {};
 function i(e, i, a) {
-    function s(e, n, r) {
+    function o(e, n, r) {
         return 'string' == typeof i ? i : i(e, n, r);
     }
     !a && (a = Error);
-    var o = (function (e) {
+    var s = (function (e) {
         function r(n, r, i) {
-            return e.call(this, s(n, r, i)) || this;
+            return e.call(this, o(n, r, i)) || this;
         }
         return n(r, e), r;
     })(a);
-    (o.prototype.name = a.name), (o.prototype.code = e), (r[e] = o);
+    (s.prototype.name = a.name), (s.prototype.code = e), (r[e] = s);
 }
 function a(e, n) {
     if (!Array.isArray(e)) return 'of '.concat(n, ' ').concat(String(e));
@@ -27,10 +27,10 @@ function a(e, n) {
           ? 'one of '.concat(n, ' ').concat(e[0], ' or ').concat(e[1])
           : 'of '.concat(n, ' ').concat(e[0]);
 }
-function s(e, n, r) {
+function o(e, n, r) {
     return e.substr(!r || r < 0 ? 0 : +r, n.length) === n;
 }
-function o(e, n, r) {
+function s(e, n, r) {
     return (void 0 === r || r > e.length) && (r = e.length), e.substring(r - n.length, r) === n;
 }
 function l(e, n, r) {
@@ -46,7 +46,7 @@ i(
     i(
         'ERR_INVALID_ARG_TYPE',
         function (e, n, r) {
-            if (('string' == typeof n && s(n, 'not ') ? ((i = 'must not be'), (n = n.replace(/^not /, ''))) : (i = 'must be'), o(e, ' argument'))) u = 'The '.concat(e, ' ').concat(i, ' ').concat(a(n, 'type'));
+            if (('string' == typeof n && o(n, 'not ') ? ((i = 'must not be'), (n = n.replace(/^not /, ''))) : (i = 'must be'), s(e, ' argument'))) u = 'The '.concat(e, ' ').concat(i, ' ').concat(a(n, 'type'));
             else {
                 var i,
                     u,

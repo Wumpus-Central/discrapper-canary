@@ -53,14 +53,14 @@ function n(e) {
             className: 'variable',
             begin: /&[a-z\d_]*\b/
         },
-        s = {
+        o = {
             className: 'params',
             relevance: 0,
             begin: '<',
             end: '>',
             contains: [r, a]
         },
-        o = {
+        s = {
             scope: 'punctuation',
             relevance: 0,
             match: /\};|[;{}]/
@@ -100,13 +100,13 @@ function n(e) {
                 relevance: 0,
                 scope: 'attr'
             },
-            s,
+            o,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             r,
             n,
             i,
-            o,
+            s,
             {
                 begin: e.IDENT_RE + '::',
                 keywords: ''

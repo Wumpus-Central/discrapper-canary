@@ -17,13 +17,13 @@ r.d(n, {
 });
 var i = r(695346),
     a = r(709054),
-    s = r(497089),
-    o = r(925928);
+    o = r(497089),
+    s = r(925928);
 let l = function (e) {
         let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        return (0, o.ZP)({
+        return (0, s.ZP)({
             since: e,
-            getFormatter: n ? o.d0 : o.Zk
+            getFormatter: n ? s.d0 : s.Zk
         });
     },
     u = (e, n) => e.acked || (n !== i.uL && a.default.compare(n, e.id) >= 0);
@@ -36,7 +36,7 @@ function c(e, n) {
         kind: 'notification-center-item',
         local_id: 'incoming_friend_requests_'.concat(e.id, '_').concat(r),
         deeplink: 'https://discord.com/users/'.concat(e.id),
-        type: s.O7.INCOMING_FRIEND_REQUESTS,
+        type: o.O7.INCOMING_FRIEND_REQUESTS,
         id: r
     };
 }
@@ -47,8 +47,8 @@ function d(e) {
         id: a.default.fromTimestamp(new Date().getTime()),
         kind: 'notification-center-item',
         local_id: 'mobile_update_available_'.concat(e.build),
-        type: s.O7.MOBILE_NATIVE_UPDATE_AVAILABLE,
+        type: o.O7.MOBILE_NATIVE_UPDATE_AVAILABLE,
         deeplink: e.urls.install.toString()
     };
 }
-let f = (e) => e.type === s.DY.RECENT_MENTION || e.type === s.DY.REPLY_MENTION;
+let f = (e) => e.type === o.DY.RECENT_MENTION || e.type === o.DY.REPLY_MENTION;

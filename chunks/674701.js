@@ -13,8 +13,8 @@ var i,
     o = n(120356),
     s = n.n(o),
     c = n(990547),
-    d = n(442837),
-    u = n(692547),
+    u = n(442837),
+    d = n(692547),
     m = n(481060),
     h = n(493683),
     f = n(529103),
@@ -40,9 +40,9 @@ var i,
     O = n(981125);
 function M(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: o, popoutPosition: M, analyticsPage: D, analyticsSection: k, glow: U, giftIntentSecondaryAction: B } = e,
-        w = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
+        w = (0, u.e7)([N.default], () => N.default.getCurrentUser()),
         { analyticsLocations: F } = (0, _.ZP)(),
-        G = (0, d.e7)([b.Z], () => b.Z.getFriendAnniversaryYears(i.id));
+        G = (0, u.e7)([b.Z], () => b.Z.getFriendAnniversaryYears(i.id));
     a.useEffect(() => {
         (0, g.h)({
             name: c.ImpressionNames.GIFT_INTENT_CARD,
@@ -64,7 +64,7 @@ function M(e) {
         K = H ? O.currentUserAvatarCoachmark : O.currentUserAvatar,
         Y = H ? O.subHeaderTextCoachmark : O.subHeaderText,
         X = H ? m.Button.Colors.BRAND : m.Button.Colors.WHITE,
-        Q = H ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
+        Q = H ? d.Z.colors.WHITE : d.Z.colors.BG_BRAND,
         q = H ? O.buttonTextPrimaryCoachmark : O.buttonTextPrimary,
         J = H ? O.buttonSecondaryCoachmark : O.buttonSecondary,
         $ = H ? O.buttonTextSecondaryCoachmark : O.buttonTextSecondary;

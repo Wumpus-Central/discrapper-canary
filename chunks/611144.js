@@ -8,50 +8,50 @@ r.d(n, {
 });
 var i,
     a = r(536895);
-function s(e, n) {
+function o(e, n) {
     return Number.isNaN(e) ? n : Number.isNaN(n) ? e : Math.max(e, n);
 }
-function o(e, n) {
+function s(e, n) {
     return Number.isNaN(e) ? n : Number.isNaN(n) ? e : Math.min(e, n);
 }
 function l(e, n) {
     let { columnCounts: r } = n,
-        i = o(s(0, r.length - 1), e.focusedY);
+        i = s(o(0, r.length - 1), e.focusedY);
     return {
         ...e,
         columnCounts: r,
-        focusedX: o(null == r[i] ? 0 : r[i] - 1, e.focusedX),
+        focusedX: s(null == r[i] ? 0 : r[i] - 1, e.focusedX),
         focusedY: i
     };
 }
 function u(e, n) {
     let { x: r, y: i } = n,
-        a = s(0, o(i, e.columnCounts.length - 1));
+        a = o(0, s(i, e.columnCounts.length - 1));
     return {
         ...e,
-        focusedX: s(0, o(r, e.columnCounts[a] - 1)),
+        focusedX: o(0, s(r, e.columnCounts[a] - 1)),
         focusedY: a
     };
 }
 function c(e, n) {
-    let r = s(0, e.focusedY - 1);
+    let r = o(0, e.focusedY - 1);
     return {
         ...e,
-        focusedX: o(e.columnCounts[r] - 1, e.focusedX),
+        focusedX: s(e.columnCounts[r] - 1, e.focusedX),
         focusedY: r
     };
 }
 function d(e, n) {
-    let r = o(e.focusedY + 1, e.columnCounts.length - 1);
+    let r = s(e.focusedY + 1, e.columnCounts.length - 1);
     return {
         ...e,
-        focusedX: o(e.columnCounts[r] - 1, e.focusedX),
+        focusedX: s(e.columnCounts[r] - 1, e.focusedX),
         focusedY: r
     };
 }
 function f(e, n) {
     let r = e.focusedY !== e.columnCounts.length - 1 && e.focusedX + 1 === e.columnCounts[e.focusedY],
-        i = r ? 0 : o(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
+        i = r ? 0 : s(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
         a = r ? e.focusedY + 1 : e.focusedY;
     return {
         ...e,
@@ -59,10 +59,10 @@ function f(e, n) {
         focusedY: a
     };
 }
-function _(e, n) {
+function p(e, n) {
     let r = 0 !== e.focusedY && 0 === e.focusedX,
         i = r ? e.focusedY - 1 : e.focusedY,
-        a = r ? e.columnCounts[i] - 1 : s(0, e.focusedX - 1);
+        a = r ? e.columnCounts[i] - 1 : o(0, e.focusedX - 1);
     return {
         ...e,
         focusedX: a,
@@ -75,7 +75,7 @@ function h(e, n) {
         focusedX: 0
     };
 }
-function p(e, n) {
+function _(e, n) {
     return {
         ...e,
         focusedX: e.columnCounts[e.focusedY] - 1
@@ -105,11 +105,11 @@ function E(e, n) {
         case a.Us.NAVIGATE_RIGHT:
             return f(e, n);
         case a.Us.NAVIGATE_LEFT:
-            return _(e, n);
+            return p(e, n);
         case a.Us.NAVIGATE_INLINE_START:
             return h(e, n);
         case a.Us.NAVIGATE_INLINE_END:
-            return p(e, n);
+            return _(e, n);
         case a.Us.NAVIGATE_START:
             return m(e, n);
         case a.Us.NAVIGATE_END:

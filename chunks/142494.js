@@ -4,20 +4,20 @@ r.d(n, {
         return v;
     },
     _H: function () {
-        return p;
+        return _;
     },
     yR: function () {
         return E;
     }
 });
-var s = r(47120);
-var o = r(757143);
+var o = r(47120);
+var s = r(757143);
 var l = r(400053),
     u = r.n(l),
     c = r(477660),
     d = r.n(c),
     f = r(20970),
-    _ = r(959525);
+    p = r(959525);
 function h(e, n, r) {
     return (
         n in e
@@ -31,7 +31,7 @@ function h(e, n, r) {
         e
     );
 }
-class p {
+class _ {
     format(e) {
         if (!this.hasMarkdown) return this.intlMessage.format(e);
         let [n, r] = this.getContext(e);
@@ -46,7 +46,7 @@ class p {
     }
     getContext(e) {
         let n = e,
-            r = _.yF.test(this.message),
+            r = p.yF.test(this.message),
             i = {};
         if (r) {
             let e = 0;
@@ -55,19 +55,19 @@ class p {
         return [n, i];
     }
     constructor(e, n, r) {
-        h(this, 'message', void 0), h(this, 'hasMarkdown', void 0), h(this, 'intlMessage', void 0), (this.message = r ? e : e.replace(_.hN, '')), (this.hasMarkdown = r), (this.intlMessage = new (u())(this.message, n));
+        h(this, 'message', void 0), h(this, 'hasMarkdown', void 0), h(this, 'intlMessage', void 0), (this.message = r ? e : e.replace(p.hN, '')), (this.hasMarkdown = r), (this.intlMessage = new (u())(this.message, n));
     }
 }
 function m(e, n) {
     let r = d().parserFor(n(e)),
         i = d().reactFor(d().ruleOutput(e, 'react'));
     return (e, n, a) => {
-        let s = !e.includes('\n\n');
+        let o = !e.includes('\n\n');
         return (
-            !s && (e += '\n\n'),
+            !o && (e += '\n\n'),
             i(
                 r(e, {
-                    inline: s,
+                    inline: o,
                     context: n,
                     unsafeContext: a
                 })
@@ -90,7 +90,7 @@ function E(e) {
 function v(e, n) {
     if (null == e) return '';
     null == i && E(r(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
-    let a = _.aT.test(e),
-        s = _.b9.test(e);
-    return a || s ? new p(e, n, s) : e;
+    let a = p.aT.test(e),
+        o = p.b9.test(e);
+    return a || o ? new _(e, n, o) : e;
 }

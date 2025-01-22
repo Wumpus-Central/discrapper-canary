@@ -1,19 +1,19 @@
-var r = n(67867),
-    o = n(96403),
-    a = n(505642),
-    i = n(463374),
-    s = n(342545),
-    c = n(663158),
-    l = o(''.indexOf);
-r(
+var i = r(67867),
+    a = r(96403),
+    o = r(505642),
+    s = r(463374),
+    l = r(342545),
+    u = r(663158),
+    c = a(''.indexOf);
+i(
     {
         target: 'String',
         proto: !0,
-        forced: !c('includes')
+        forced: !u('includes')
     },
     {
         includes: function (e) {
-            return !!~l(s(i(this)), s(a(e)), arguments.length > 1 ? arguments[1] : void 0);
+            return !!~c(l(s(this)), l(o(e)), arguments.length > 1 ? arguments[1] : void 0);
         }
     }
 );

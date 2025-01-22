@@ -1,4 +1,4 @@
-let i, a, s;
+let i, a, o;
 r.d(n, {
     At: function () {
         return A;
@@ -7,22 +7,22 @@ r.d(n, {
         return O;
     },
     DR: function () {
-        return N;
+        return C;
     },
     Wf: function () {
         return R;
     },
     XU: function () {
-        return T;
+        return b;
     },
     dL: function () {
-        return y;
+        return T;
     },
     eH: function () {
-        return L;
+        return x;
     },
     m1: function () {
-        return C;
+        return N;
     },
     op: function () {
         return D;
@@ -31,38 +31,38 @@ r.d(n, {
         return S;
     },
     uL: function () {
-        return I;
+        return y;
     },
     uv: function () {
-        return b;
+        return I;
     }
 });
-var o = r(653041);
+var s = r(653041);
 var l = r(757143);
 var u = r(539528),
     c = r(710845),
     d = r(585483),
     f = r(143816),
-    _ = r(981631);
+    p = r(981631);
 let h = new c.Z('Routing/Utils'),
-    p = [_.E07.DEVELOPER_PORTAL];
+    _ = [p.E07.DEVELOPER_PORTAL];
 i = __OVERLAY__ ? (0, u.PP)() : (0, u.lX)();
 let m = !1,
     g = i.listen((e, n) => {
         'REPLACE' !== n && ((m = !0), g());
     });
 function E() {
-    return !d.S.hasSubscribers(_.CkL.MODAL_CLOSE) && (r(574254).Z.close(), !0);
+    return !d.S.hasSubscribers(p.CkL.MODAL_CLOSE) && (r(574254).Z.close(), !0);
 }
 function v(e, n) {
-    return !!('string' == typeof e && p.some((n) => e.startsWith(n))) && (h.log(''.concat(n, ' - route to external path ').concat(e)), window.dispatchEvent(new Event('beforeunload')), window.location[n](e), !0);
+    return !!('string' == typeof e && _.some((n) => e.startsWith(n))) && (h.log(''.concat(n, ' - route to external path ').concat(e)), window.dispatchEvent(new Event('beforeunload')), window.location[n](e), !0);
 }
-function I(e, n) {
+function y(e, n) {
     if (v(e, 'assign')) return;
     h.log('transitionTo - Transitioning to '.concat(e));
     let r = null == n ? void 0 : n.source;
     null == n || delete n.source;
-    let o = null == n ? void 0 : n.sourceLocationStack;
+    let s = null == n ? void 0 : n.sourceLocationStack;
     null == n || delete n.sourceLocationStack,
         null == n
             ? i.push(e)
@@ -71,9 +71,9 @@ function I(e, n) {
                   ...n
               }),
         (a = r),
-        (s = o);
+        (o = s);
 }
-function T(e, n, r, i) {
+function b(e, n, r, i) {
     h.log(
         'transitionToGuild - Transitioning to '.concat(
             JSON.stringify({
@@ -83,12 +83,12 @@ function T(e, n, r, i) {
             })
         )
     ),
-        I(_.Z5c.CHANNEL(e, n, r), i);
+        y(p.Z5c.CHANNEL(e, n, r), i);
 }
-function b() {
+function I() {
     return null != a && f.H.has(a);
 }
-function y(e, n, r) {
+function T(e, n, r) {
     !v(e, 'replace') && (h.log('Replacing route with '.concat(e)), 'string' == typeof e ? i.replace(e, n) : i.replace(e), (a = r));
 }
 function S() {
@@ -97,35 +97,35 @@ function S() {
 function A() {
     return a;
 }
-function N() {
-    return s;
+function C() {
+    return o;
 }
-function C(e) {
+function N(e) {
     if (null == e) {
         var n;
         e = null !== (n = i.location.pathname) && void 0 !== n ? n : '';
     }
-    return !e.startsWith(_.Z5c.HANDOFF) && !0;
+    return !e.startsWith(p.Z5c.HANDOFF) && !0;
 }
 function R(e) {
     if (null == e) {
         var n;
         e = null !== (n = i.location.pathname) && void 0 !== n ? n : '';
     }
-    if (e.startsWith(_.Z5c.LOGIN)) return _.Usc.LOGIN;
-    if (e.startsWith(_.Z5c.REGISTER)) return _.Usc.REGISTER;
-    if (e.startsWith(_.Z5c.INVITE(''))) return _.Usc.INVITE;
-    else if (e.startsWith(_.Z5c.VERIFY)) return _.Usc.VERIFY;
-    else if (e.startsWith(_.Z5c.DISABLE_EMAIL_NOTIFICATIONS)) return _.Usc.DISABLE_EMAIL_NOTIFICATIONS;
-    else if (e.startsWith(_.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) return _.Usc.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
-    else if (e.startsWith(_.Z5c.REJECT_IP)) return _.Usc.REJECT_IP;
-    else if (e.startsWith(_.Z5c.REJECT_MFA)) return _.Usc.REJECT_MFA;
-    else if (e.startsWith(_.Z5c.AUTHORIZE_IP)) return _.Usc.AUTHORIZE_IP;
-    else if (e.startsWith(_.Z5c.AUTHORIZE_PAYMENT)) return _.Usc.AUTHORIZE_PAYMENT;
-    else if (e.startsWith(_.Z5c.RESET)) return _.Usc.RESET;
-    else if (e.startsWith(_.Z5c.REPORT)) return _.Usc.REPORT;
-    else if (e.startsWith(_.Z5c.REPORT_SECOND_LOOK)) return _.Usc.REPORT_SECOND_LOOK;
-    else if (e.startsWith(_.Z5c.ACCOUNT_REVERT(''))) return _.Usc.ACCOUNT_REVERT;
+    if (e.startsWith(p.Z5c.LOGIN)) return p.Usc.LOGIN;
+    if (e.startsWith(p.Z5c.REGISTER)) return p.Usc.REGISTER;
+    if (e.startsWith(p.Z5c.INVITE(''))) return p.Usc.INVITE;
+    else if (e.startsWith(p.Z5c.VERIFY)) return p.Usc.VERIFY;
+    else if (e.startsWith(p.Z5c.DISABLE_EMAIL_NOTIFICATIONS)) return p.Usc.DISABLE_EMAIL_NOTIFICATIONS;
+    else if (e.startsWith(p.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS)) return p.Usc.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS;
+    else if (e.startsWith(p.Z5c.REJECT_IP)) return p.Usc.REJECT_IP;
+    else if (e.startsWith(p.Z5c.REJECT_MFA)) return p.Usc.REJECT_MFA;
+    else if (e.startsWith(p.Z5c.AUTHORIZE_IP)) return p.Usc.AUTHORIZE_IP;
+    else if (e.startsWith(p.Z5c.AUTHORIZE_PAYMENT)) return p.Usc.AUTHORIZE_PAYMENT;
+    else if (e.startsWith(p.Z5c.RESET)) return p.Usc.RESET;
+    else if (e.startsWith(p.Z5c.REPORT)) return p.Usc.REPORT;
+    else if (e.startsWith(p.Z5c.REPORT_SECOND_LOOK)) return p.Usc.REPORT_SECOND_LOOK;
+    else if (e.startsWith(p.Z5c.ACCOUNT_REVERT(''))) return p.Usc.ACCOUNT_REVERT;
     return e;
 }
 function O() {
@@ -134,6 +134,6 @@ function O() {
 function D() {
     E() && ((a = null), i.goBack());
 }
-function L() {
+function x() {
     E() && ((a = null), i.goForward());
 }

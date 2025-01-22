@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i,
     a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(748780),
     c = r(846519),
     d = r(215569),
     f = r(600164),
-    _ = r(981631),
+    p = r(981631),
     h = r(161589);
-function p(e, n, r) {
+function _(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -29,12 +29,12 @@ function p(e, n, r) {
 }
 let m = 3000,
     g = {
-        [_.AEg.NORMAL]: h.normal,
-        [_.AEg.MINIMUM]: h.minimum,
-        [_.AEg.NO_CHAT]: h.noChat,
-        [_.AEg.FULL_SCREEN]: h.fullScreen
+        [p.AEg.NORMAL]: h.normal,
+        [p.AEg.MINIMUM]: h.minimum,
+        [p.AEg.NO_CHAT]: h.noChat,
+        [p.AEg.FULL_SCREEN]: h.fullScreen
     };
-class E extends s.PureComponent {
+class E extends o.PureComponent {
     componentDidAppear() {
         this.state.animation.setValue(1);
     }
@@ -63,7 +63,7 @@ class E extends s.PureComponent {
         super(e), (this.state = { animation: new u.Z.Value(0) });
     }
 }
-class v extends (i = s.PureComponent) {
+class v extends (i = o.PureComponent) {
     componentDidMount() {
         document.addEventListener('mousedown', this.handleMouseEvent, !0), document.addEventListener('mousemove', this.handleMouseEvent, !0);
     }
@@ -93,10 +93,10 @@ class v extends (i = s.PureComponent) {
         });
     }
     renderContents() {
-        let { top: e, center: n, bottom: r, layout: i, focused: s } = this.props,
-            { idle: o } = this.state;
+        let { top: e, center: n, bottom: r, layout: i, focused: o } = this.props,
+            { idle: s } = this.state;
         return (0, a.jsx)(f.Z, {
-            className: l()(h.video, g[i], { [h.idle]: o }),
+            className: l()(h.video, g[i], { [h.idle]: s }),
             direction: f.Z.Direction.VERTICAL,
             justify: f.Z.Justify.CENTER,
             children: (0, a.jsxs)(f.Z, {
@@ -105,7 +105,7 @@ class v extends (i = s.PureComponent) {
                 children: [
                     this.renderBackground(),
                     (0, a.jsxs)(f.Z, {
-                        className: l()(h.videoInner, { [h.focused]: s }),
+                        className: l()(h.videoInner, { [h.focused]: o }),
                         direction: f.Z.Direction.VERTICAL,
                         justify: f.Z.Justify.BETWEEN,
                         children: [
@@ -138,10 +138,10 @@ class v extends (i = s.PureComponent) {
     }
     constructor(e) {
         super(e),
-            p(this, '_timeout', new c.V7()),
-            p(this, 'handleMouseEvent', () => {
+            _(this, '_timeout', new c.V7()),
+            _(this, 'handleMouseEvent', () => {
                 let { layout: e } = this.props;
-                if (e === _.AEg.FULL_SCREEN || e === _.AEg.NO_CHAT) this._timeout.start(m, () => this.setState({ idle: !0 })), this.state.idle && this.setState({ idle: !1 });
+                if (e === p.AEg.FULL_SCREEN || e === p.AEg.NO_CHAT) this._timeout.start(m, () => this.setState({ idle: !0 })), this.state.idle && this.setState({ idle: !1 });
             }),
             (this.state = {
                 idle: !1,
@@ -150,7 +150,7 @@ class v extends (i = s.PureComponent) {
             });
     }
 }
-p(v, 'defaultProps', {
-    layout: _.AEg.MINIMUM,
+_(v, 'defaultProps', {
+    layout: p.AEg.MINIMUM,
     animated: !0
 });

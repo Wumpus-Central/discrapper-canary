@@ -24,7 +24,7 @@ function n(e) {
             end: /\}/,
             contains: i.contains
         },
-        s = {
+        o = {
             className: 'string',
             begin: "'\\\\?.",
             end: "'",
@@ -65,7 +65,7 @@ function n(e) {
                 keywords: 'port',
                 contains: [n]
             },
-            s,
+            o,
             e.QUOTE_STRING_MODE,
             e.C_NUMBER_MODE,
             r,

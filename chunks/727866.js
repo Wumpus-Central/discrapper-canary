@@ -1,8 +1,8 @@
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(388032);
-let o = (e, n) => {
+    o = r(388032);
+let s = (e, n) => {
     let r = {
         display: 'flex',
         gap: '4px',
@@ -29,10 +29,10 @@ let o = (e, n) => {
     );
 };
 function l(e) {
-    return e ? s.intl.format(s.t.Q1rwpq, { warningHook: o }) : s.intl.string(s.t.WQ6zpa);
+    return e ? o.intl.format(o.t.Q1rwpq, { warningHook: s }) : o.intl.string(o.t.WQ6zpa);
 }
 function u(e) {
-    return e ? s.intl.format(s.t.Rx4pbG, { warningHook: o }) : s.intl.string(s.t.cuMfHx);
+    return e ? o.intl.format(o.t.Rx4pbG, { warningHook: s }) : o.intl.string(o.t.cuMfHx);
 }
 n.Z = {
     getTextInVoiceSendMessageChannelPermissionText: l,

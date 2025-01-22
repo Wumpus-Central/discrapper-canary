@@ -8,11 +8,11 @@ var i =
             }
             return e;
         },
-    a = s(r(192379));
-function s(e) {
+    a = o(r(192379));
+function o(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function o(e, n) {
+function s(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
 function l(e, n) {
@@ -34,11 +34,11 @@ function u(e, n) {
 var c = (n.hover = function (e) {
     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
     return (function (r) {
-        function s() {
-            o(this, s);
-            for (var r, u, c, d = arguments.length, f = Array(d), _ = 0; _ < d; _++) f[_] = arguments[_];
+        function o() {
+            s(this, o);
+            for (var r, u, c, d = arguments.length, f = Array(d), p = 0; p < d; p++) f[p] = arguments[p];
             return (
-                (u = c = l(this, (r = s.__proto__ || Object.getPrototypeOf(s)).call.apply(r, [this].concat(f)))),
+                (u = c = l(this, (r = o.__proto__ || Object.getPrototypeOf(o)).call.apply(r, [this].concat(f)))),
                 (c.state = { hover: !1 }),
                 (c.handleMouseOver = function () {
                     return c.setState({ hover: !0 });
@@ -59,7 +59,7 @@ var c = (n.hover = function (e) {
                 l(c, u)
             );
         }
-        return u(s, r), s;
+        return u(o, r), o;
     })(a.default.Component);
 });
 n.default = c;

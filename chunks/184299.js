@@ -11,8 +11,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(877124),
-    o = r(65400),
+    o = r(877124),
+    s = r(65400),
     l = r(731965),
     u = r(433517);
 let c = 0.3;
@@ -22,8 +22,8 @@ let c = 0.3;
     !(function (e) {
         (e.NONE = 'NONE'), (e.FETCHING = 'FETCHING'), (e.SUCCESS = 'SUCCESS'), (e.FAILURE = 'FAILURE');
     })(a || (a = {}));
-let d = (0, o.F)()(
-    (0, s.tJ)(
+let d = (0, s.F)()(
+    (0, o.tJ)(
         (e, n) => ({
             volume: c,
             muted: !1,
@@ -39,8 +39,8 @@ let d = (0, o.F)()(
                 (0, l.j)(() => e({ muted: n }));
             },
             setVideoProgress: (r, i, a) => {
-                var s, o;
-                let u = Math.max(null !== (o = null === (s = n().videoProgress[r]) || void 0 === s ? void 0 : s.maxTimestampSec) && void 0 !== o ? o : 0, Math.floor(i));
+                var o, s;
+                let u = Math.max(null !== (s = null === (o = n().videoProgress[r]) || void 0 === o ? void 0 : o.maxTimestampSec) && void 0 !== s ? s : 0, Math.floor(i));
                 (0, l.j)(() =>
                     e({
                         videoProgress: {
@@ -82,7 +82,7 @@ let d = (0, o.F)()(
         }),
         {
             name: 'videoQuestUIState',
-            storage: (0, s.FL)(() => ({
+            storage: (0, o.FL)(() => ({
                 getItem: (e) => {
                     var n;
                     return null !== (n = u.K.get(e)) && void 0 !== n ? n : null;

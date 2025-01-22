@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(570140),
-    s = r(147913),
-    o = r(271383),
+    o = r(147913),
+    s = r(271383),
     l = r(594174),
     u = r(69882);
 function c(e, n, r) {
@@ -19,29 +19,29 @@ function c(e, n, r) {
 }
 let d = 10000,
     f = null,
-    _ = () => {
-        let e = o.ZP.getCommunicationDisabledUserMap();
+    p = () => {
+        let e = s.ZP.getCommunicationDisabledUserMap();
         Object.keys(e).forEach((n) => {
             let r = n,
-                i = (0, o.O5)(r),
-                a = (0, o.V6)(r),
-                s = e[r];
-            !(0, u.J)(s) && h(i, a);
+                i = (0, s.O5)(r),
+                a = (0, s.V6)(r),
+                o = e[r];
+            !(0, u.J)(o) && h(i, a);
         });
     },
     h = (e, n) => {
-        var r, i, s, c, d, f;
-        let _ = o.ZP.getMember(e, n),
+        var r, i, o, c, d, f;
+        let p = s.ZP.getMember(e, n),
             h = l.default.getUser(n);
-        if (null == _ || null == h || (0, u.b)(_)) return;
-        let p = {
-            ..._,
+        if (null == p || null == h || (0, u.b)(p)) return;
+        let _ = {
+            ...p,
             guildId: e,
-            nick: null !== (r = _.nick) && void 0 !== r ? r : h.username,
-            avatar: null !== (i = _.avatar) && void 0 !== i ? i : void 0,
-            avatarDecoration: null != _.avatarDecoration ? { ..._.avatarDecoration } : void 0,
-            premiumSince: null !== (s = _.premiumSince) && void 0 !== s ? s : void 0,
-            isPending: null !== (c = _.isPending) && void 0 !== c && c,
+            nick: null !== (r = p.nick) && void 0 !== r ? r : h.username,
+            avatar: null !== (i = p.avatar) && void 0 !== i ? i : void 0,
+            avatarDecoration: null != p.avatarDecoration ? { ...p.avatarDecoration } : void 0,
+            premiumSince: null !== (o = p.premiumSince) && void 0 !== o ? o : void 0,
+            isPending: null !== (c = p.isPending) && void 0 !== c && c,
             user: {
                 ...h,
                 email: null !== (d = h.email) && void 0 !== d ? d : void 0,
@@ -51,12 +51,12 @@ let d = 10000,
         };
         a.Z.dispatch({
             type: 'GUILD_MEMBER_UPDATE',
-            ...p
+            ..._
         });
     };
-class p extends s.Z {
+class _ extends o.Z {
     _initialize() {
-        f = setInterval(() => _(), d);
+        f = setInterval(() => p(), d);
     }
     _terminate() {
         clearInterval(f);
@@ -65,4 +65,4 @@ class p extends s.Z {
         super(...e), c(this, 'clearGuildMemberTimeout', h);
     }
 }
-n.Z = new p();
+n.Z = new _();

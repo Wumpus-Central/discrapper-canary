@@ -1,6 +1,6 @@
 r.d(n, {
     _E: function () {
-        return s;
+        return o;
     },
     nV: function () {
         return a;
@@ -11,6 +11,6 @@ function a() {
     var e;
     return null !== (e = i.Z.getChannelId()) && void 0 !== e ? e : void 0;
 }
-function s() {
+function o() {
     return !0;
 }

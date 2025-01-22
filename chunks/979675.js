@@ -5,15 +5,15 @@ r.d(n, {
 });
 let i = (e, n) =>
     function (r, i, a) {
-        return new Promise((s) => {
-            var o;
+        return new Promise((o) => {
+            var s;
             e.dispatch({
                 type: n,
                 event: r,
                 properties: i,
-                flush: null !== (o = null == a ? void 0 : a.flush) && void 0 !== o && o,
+                flush: null !== (s = null == a ? void 0 : a.flush) && void 0 !== s && s,
                 fingerprint: null == a ? void 0 : a.fingerprint,
-                resolve: s
+                resolve: o
             });
         });
     };

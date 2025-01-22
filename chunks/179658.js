@@ -5,7 +5,7 @@ r.d(n, {
 });
 var i = r(570140);
 function a(e) {
-    i.Z.dispatch({
+    return i.Z.dispatch({
         type: 'DEVELOPER_OPTIONS_UPDATE_SETTINGS',
         settings: e
     });

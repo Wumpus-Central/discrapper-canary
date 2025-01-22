@@ -1,7 +1,7 @@
 var i = r(990547),
     a = r(570140),
-    s = r(844889),
-    o = r(314897),
+    o = r(844889),
+    s = r(314897),
     l = r(981631);
 (0, i.analyticsTrackingStoreMaker)({
     dispatcher: a.Z,
@@ -14,7 +14,7 @@ var i = r(990547),
         TRACK: (e) => i.AnalyticsActionHandlers.handleTrack(e)
     },
     TRACKING_URL: l.ANM.TRACK,
-    waitFor: [o.default],
-    getFingerprint: o.default.getFingerprint,
-    getSessionId: () => (0, s.Gg)().then((e) => ({ sessionId: null == e ? void 0 : e.uuid }))
+    waitFor: [s.default],
+    getFingerprint: s.default.getFingerprint,
+    getSessionId: () => (0, o.Gg)().then((e) => ({ sessionId: null == e ? void 0 : e.uuid }))
 });

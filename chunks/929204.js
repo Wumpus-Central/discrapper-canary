@@ -6,11 +6,11 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(626135),
-    o = r(981631);
+    o = r(626135),
+    s = r(981631);
 function l(e) {
-    s.default.track(o.rMx.OPEN_MODAL, {
-        type: o.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
+    o.default.track(s.rMx.OPEN_MODAL, {
+        type: s.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL,
         location: e
     }),
         (0, a.openModalLazy)(async () => {

@@ -8,25 +8,25 @@ r.d(n, {
     }
 });
 var a = r(757143);
-var s = r(653041);
-var o = r(392711),
-    l = r.n(o),
+var o = r(653041);
+var s = r(392711),
+    l = r.n(s),
     u = r(579806),
     c = r(710845),
     d = r(358085),
     f = r(998502);
-let _ = [],
+let p = [],
     h = 'dosbox.exe';
-function p(e) {
+function _(e) {
     return (e = e.toLowerCase()), (0, d.isWindows)() && (e = (e = e.replace(/^[a-z]:/, '')).replace(/\\/g, '/')), e;
 }
 function m(e) {
-    null != e && '' !== e && (!(e = p(e)).endsWith('/') && (e += '/'), _.push(e));
+    null != e && '' !== e && (!(e = _(e)).endsWith('/') && (e += '/'), p.push(e));
 }
 function g(e) {
-    e = p(e);
+    e = _(e);
     let n = !1;
-    return (_.forEach((r) => {
+    return (p.forEach((r) => {
         !n && e.startsWith(r) && ((e = e.substr(r.length)), (n = !0));
     }),
     n)
@@ -45,5 +45,5 @@ async function E() {
         m(e.LOCALAPPDATA), m(e['PROGRAMFILES(X86)']), m(e.PROGRAMFILES), m(e.PROGRAMW6432), m(e.PROGRAMDATA), m('/games/'), m('/steamlibrary/steamapps/common/');
     }
     let e = u.Z.remoteApp.getPath;
-    return m(await e('home')), m(await e('appData')), m(await e('desktop')), m(await e('documents')), m(await e('downloads')), (_ = l().uniq(_)).sort((e, n) => n.length - e.length), i;
+    return m(await e('home')), m(await e('appData')), m(await e('desktop')), m(await e('documents')), m(await e('downloads')), (p = l().uniq(p)).sort((e, n) => n.length - e.length), i;
 }

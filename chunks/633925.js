@@ -1,13 +1,13 @@
 r.r(n),
     r.d(n, {
         default: function () {
-            return o;
+            return s;
         }
     });
 var i = r(528734),
     a = r(951516);
-function s(e) {
-    return (s =
+function o(e) {
+    return (o =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -16,11 +16,11 @@ function s(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function o(e) {
+function s(e) {
     var n, r;
     if (((0, a.Z)(1, arguments), e && 'function' == typeof e.forEach)) n = e;
     else {
-        if ('object' !== s(e) || null === e) return new Date(NaN);
+        if ('object' !== o(e) || null === e) return new Date(NaN);
         n = Array.prototype.slice.call(e);
     }
     return (

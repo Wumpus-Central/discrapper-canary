@@ -1,4 +1,4 @@
-var i, a, s, o;
+var i, a, o, s;
 r.r(n),
     r.d(n, {
         GLOBAL_DISCOVERY_DEFAULT_TAB: function () {
@@ -14,10 +14,10 @@ r.r(n),
             return l;
         },
         GlobalDiscoveryAnalyticsLocations: function () {
-            return o;
+            return s;
         },
         GlobalDiscoveryRoutes: function () {
-            return s;
+            return o;
         },
         GlobalDiscoverySearchBarState: function () {
             return a;
@@ -42,7 +42,7 @@ let l = ['apps', 'servers', 'quests'],
 })(a || (a = {})),
     !(function (e) {
         (e.ROOT = 'root'), (e.SERVERS_CATEGORY = 'server_tab'), (e.SERVERS_SEARCH = 'server_search');
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         e.GUILDS_BAR_ICON = 'guilds_bar_icon';
-    })(o || (o = {}));
+    })(s || (s = {}));

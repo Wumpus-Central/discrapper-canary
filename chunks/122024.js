@@ -9,8 +9,8 @@ var i =
             return e;
         },
     a = r(192379),
-    s = c(a),
-    o = c(r(723184)),
+    o = c(a),
+    s = c(r(723184)),
     l = u(r(292346));
 function u(e) {
     if (e && e.__esModule) return e;
@@ -28,8 +28,8 @@ var d = (n.Checkboard = function (e) {
         c = e.renderers,
         d = e.borderRadius,
         f = e.boxShadow,
-        _ = e.children,
-        h = (0, o.default)({
+        p = e.children,
+        h = (0, s.default)({
             default: {
                 grid: {
                     borderRadius: d,
@@ -39,7 +39,7 @@ var d = (n.Checkboard = function (e) {
                 }
             }
         });
-    return (0, a.isValidElement)(_) ? s.default.cloneElement(_, i({}, _.props, { style: i({}, _.props.style, h.grid) })) : s.default.createElement('div', { style: h.grid });
+    return (0, a.isValidElement)(p) ? o.default.cloneElement(p, i({}, p.props, { style: i({}, p.props.style, h.grid) })) : o.default.createElement('div', { style: h.grid });
 });
 (d.defaultProps = {
     size: 8,

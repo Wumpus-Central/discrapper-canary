@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(570140),
-    o = r(830917),
+    o = r(570140),
+    s = r(830917),
     l = r(692401),
     u = r(459005),
     c = r(398463);
@@ -38,11 +38,11 @@ let f =
                       });
                   }, 1);
               },
-    _ = null !== (a = window.cancelIdleCallback) && void 0 !== a ? a : clearTimeout;
+    p = null !== (a = window.cancelIdleCallback) && void 0 !== a ? a : clearTimeout;
 function h(e) {
     return null == e ? new c.Lj(c.HO, !0) : new c.Lj(e.timeRemaining(), e.didTimeout);
 }
-class p extends l.W {
+class _ extends l.W {
     _queueIdleCallback() {
         if (!this._enableRequestIdleCallback || this._criticalWorkScheduled) return this._processWorkCallback();
         this.telemetry.time(u.JV.TIME_TO_FIRE_IDLE_CALLBACK),
@@ -88,17 +88,17 @@ class p extends l.W {
             }, e));
     }
     _clearIdleCallback() {
-        null != this._flushIdleHandler && (_(this._flushIdleHandler), (this._flushIdleHandler = null)), null != this._flushIdleMaxTimeoutHandler && (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
+        null != this._flushIdleHandler && (p(this._flushIdleHandler), (this._flushIdleHandler = null)), null != this._flushIdleMaxTimeoutHandler && (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
     }
     constructor() {
         super(),
             d(this, '_flushIdleMaxTimeoutHandler', null),
-            s.Z.subscribe('WINDOW_VISIBILITY_CHANGE', (e) => {
+            o.Z.subscribe('WINDOW_VISIBILITY_CHANGE', (e) => {
                 let { visible: n, windowId: r } = e;
-                if (r === (0, o.UU)()) this._trackAppBackgrounded(!n);
+                if (r === (0, s.UU)()) this._trackAppBackgrounded(!n);
             });
     }
 }
 function m() {
-    return new p();
+    return new _();
 }

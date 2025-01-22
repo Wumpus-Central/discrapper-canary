@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(259630),
     a = r(816552),
-    s = r(739292),
-    o = r(650117);
+    o = r(739292),
+    s = r(650117);
 function l(e, n) {
     return n
         ? (0, i.pi)(
@@ -84,7 +84,7 @@ function d(e) {
     );
 }
 var f = (function () {
-    function e(n, r, a, s) {
+    function e(n, r, a, o) {
         void 0 === r && (r = e.defaultLocale);
         var l = this;
         if (
@@ -97,12 +97,12 @@ var f = (function () {
                 var n = l.formatToParts(e);
                 if (1 === n.length) return n[0].value;
                 var r = n.reduce(function (e, n) {
-                    return e.length && n.type === o.du.literal && 'string' == typeof e[e.length - 1] ? (e[e.length - 1] += n.value) : e.push(n.value), e;
+                    return e.length && n.type === s.du.literal && 'string' == typeof e[e.length - 1] ? (e[e.length - 1] += n.value) : e.push(n.value), e;
                 }, []);
                 return r.length <= 1 ? r[0] || '' : r;
             }),
             (this.formatToParts = function (e) {
-                return (0, o.FK)(l.ast, l.locales, l.formatters, l.formats, e, void 0, l.message);
+                return (0, s.FK)(l.ast, l.locales, l.formatters, l.formats, e, void 0, l.message);
             }),
             (this.resolvedOptions = function () {
                 var e;
@@ -116,12 +116,12 @@ var f = (function () {
             'string' == typeof n)
         ) {
             if (((this.message = n), !e.__parse)) throw TypeError('IntlMessageFormat.__parse must be set to process `message` of type `string`');
-            var c = s || {},
+            var c = o || {},
                 f = (c.formatters, (0, i._T)(c, ['formatters']));
             this.ast = e.__parse(n, (0, i.pi)((0, i.pi)({}, f), { locale: this.resolvedLocale }));
         } else this.ast = n;
         if (!Array.isArray(this.ast)) throw TypeError('A message must be provided as a String or AST.');
-        (this.formats = u(e.formats, a)), (this.formatters = (s && s.formatters) || d(this.formatterCache));
+        (this.formats = u(e.formats, a)), (this.formatters = (o && o.formatters) || d(this.formatterCache));
     }
     return (
         Object.defineProperty(e, 'defaultLocale', {
@@ -138,7 +138,7 @@ var f = (function () {
                 return n.length > 0 ? new Intl.Locale(n[0]) : new Intl.Locale('string' == typeof e ? e : e[0]);
             }
         }),
-        (e.__parse = s.Qc),
+        (e.__parse = o.Qc),
         (e.formats = {
             number: {
                 integer: { maximumFractionDigits: 0 },

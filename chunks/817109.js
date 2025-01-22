@@ -1,6 +1,6 @@
 r.d(n, {
     H: function () {
-        return o;
+        return s;
     }
 });
 var i = r(411104);
@@ -17,7 +17,7 @@ function a(e, n, r) {
         e
     );
 }
-function s(e, n) {
+function o(e, n) {
     if ('string' == typeof e)
         return {
             message: e,
@@ -43,13 +43,13 @@ function s(e, n) {
     }
     return {};
 }
-class o {
+class s {
     getFieldMessage(e) {
         return null != this.fields[e] ? this.fields[e][0] : null;
     }
     constructor(e, n, r = 'An unexpected error occurred.') {
         a(this, 'message', void 0), a(this, 'code', void 0), a(this, 'retryAfter', void 0), a(this, 'fields', void 0), a(this, 'error', void 0), a(this, 'status', void 0);
-        let { message: i, code: o, retryAfter: l, fields: u, status: c } = s(e, n);
-        (this.message = i || r), (this.retryAfter = l), (this.code = o || -1), (this.fields = u || {}), (this.status = c), (this.error = Error(i));
+        let { message: i, code: s, retryAfter: l, fields: u, status: c } = o(e, n);
+        (this.message = i || r), (this.retryAfter = l), (this.code = s || -1), (this.fields = u || {}), (this.status = c), (this.error = Error(i));
     }
 }

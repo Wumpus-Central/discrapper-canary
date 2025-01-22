@@ -3,18 +3,18 @@ r.d(n, {
         return i;
     },
     ZL: function () {
-        return s;
+        return o;
     },
     js: function () {
-        return o;
+        return s;
     }
 });
 var i,
     a = r(981631);
-function s(e) {
+function o(e) {
     return (null == e ? void 0 : e.type) === a.Odu.GO_LIVE;
 }
-function o(e) {
+function s(e) {
     return e.type === a.Odu.VIDEO;
 }
 !(function (e) {

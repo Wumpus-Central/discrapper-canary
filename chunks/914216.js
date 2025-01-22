@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
         kind: 'user',
         id: '2024-12_shop_link_mention',
         label: 'Collectibles Shop Link Mention Experiment',
@@ -19,4 +19,4 @@ let s = (0, i.B)({
         ],
         commonTriggerPoint: a.$P.CONNECTION_OPEN
     }),
-    o = (e) => s.getCurrentConfig({ location: e }).enabled;
+    s = (e) => o.getCurrentConfig({ location: e }).enabled;

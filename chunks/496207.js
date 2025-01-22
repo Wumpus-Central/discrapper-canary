@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(914010),
-    o = r(558217),
+    o = r(914010),
+    s = r(558217),
     l = r(185923);
 function u(e, n, r) {
     return (
@@ -20,8 +20,8 @@ class c extends a.Z {
     handleInteraction(e) {
         let { interaction: n } = e;
         if ([l.qR.EmojiButtonMouseEntered].includes(n)) {
-            let e = s.Z.getGuildId();
-            (0, o.O)(e);
+            let e = o.Z.getGuildId();
+            (0, s.O)(e);
         }
     }
     constructor(...e) {

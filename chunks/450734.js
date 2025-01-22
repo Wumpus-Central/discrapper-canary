@@ -1,69 +1,69 @@
-t.d(i, {
+r.d(n, {
     Z: function () {
-        return g;
+        return E;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(120356),
-    r = t.n(a),
-    o = t(442837),
-    s = t(481060),
-    l = t(906732),
-    c = t(1585),
-    d = t(158776),
-    u = t(998502),
-    f = t(445924),
-    p = t(654904),
-    _ = t(486324),
-    b = t(776458);
-let m = u.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
-function g(e) {
-    let { user: i, guild: t, displayProfile: a, canUsePremiumCustomization: u, previewAvatar: g, previewAvatarDecoration: x, previewTheme: h, previewPrimaryColor: v, className: C, disabledInputs: I, isTryItOutFlow: S, onUpsellClick: y } = e,
-        { analyticsLocations: k } = (0, l.ZP)(),
-        T = (0, o.e7)([d.Z], () => d.Z.getStatus(i.id)),
-        B = null == t || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || u,
-        j = (0, n.jsx)(m, {
-            src: g,
-            avatarDecoration: x,
-            imageClassName: r()(C, { [b.overlay]: !I }),
-            size: s.AvatarSizes.SIZE_80,
-            'aria-label': i.username,
-            status: T,
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    o = r.n(a),
+    s = r(442837),
+    l = r(481060),
+    u = r(906732),
+    c = r(1585),
+    d = r(158776),
+    f = r(998502),
+    p = r(445924),
+    h = r(654904),
+    _ = r(486324),
+    m = r(776458);
+let g = f.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+function E(e) {
+    let { user: n, guild: r, displayProfile: a, canUsePremiumCustomization: f, previewAvatar: E, previewAvatarDecoration: v, previewTheme: y, previewPrimaryColor: b, className: I, disabledInputs: T, isTryItOutFlow: S, onUpsellClick: A } = e,
+        { analyticsLocations: C } = (0, u.ZP)(),
+        N = (0, s.e7)([d.Z], () => d.Z.getStatus(n.id)),
+        R = null == r || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || f,
+        O = (0, i.jsx)(g, {
+            src: E,
+            avatarDecoration: v,
+            imageClassName: o()(I, { [m.overlay]: !T }),
+            size: l.AvatarSizes.SIZE_80,
+            'aria-label': n.username,
+            status: N,
             statusTooltip: !1,
-            statusBackdropColor: null != v ? (0, s.getStatusBackdropColor)(h) : void 0
+            statusBackdropColor: null != b ? (0, l.getStatusBackdropColor)(y) : void 0
         });
-    return I
-        ? (0, n.jsx)('div', {
-              className: b.avatar,
-              children: j
+    return T
+        ? (0, i.jsx)('div', {
+              className: m.avatar,
+              children: O
           })
-        : B
-          ? (0, n.jsx)(s.Popout, {
+        : R
+          ? (0, i.jsx)(l.Popout, {
                 renderPopout: (e) => {
-                    let { closePopout: i } = e;
-                    return (0, n.jsx)(f.Z, {
-                        className: b.menu,
-                        onClose: i,
-                        onChangeAvatar: () => (0, p.$r)(_.pC.AVATAR, null == t ? void 0 : t.id, S),
+                    let { closePopout: n } = e;
+                    return (0, i.jsx)(p.Z, {
+                        className: m.menu,
+                        onClose: n,
+                        onChangeAvatar: () => (0, h.$r)(_.pC.AVATAR, null == r ? void 0 : r.id, S),
                         onChangeAvatarDecoration: () => {
                             (0, c.ps)({
-                                guild: null == t ? void 0 : t,
-                                analyticsLocations: k,
+                                guild: null == r ? void 0 : r,
+                                analyticsLocations: C,
                                 isTryItOutFlow: S
                             });
                         }
                     });
                 },
                 children: (e) =>
-                    (0, n.jsxs)(s.Clickable, {
+                    (0, i.jsxs)(l.Clickable, {
                         ...e,
-                        className: r()(b.avatar, b.clickable),
+                        className: o()(m.avatar, m.clickable),
                         children: [
-                            j,
-                            (0, n.jsx)(s.PencilIcon, {
+                            O,
+                            (0, i.jsx)(l.PencilIcon, {
                                 size: 'custom',
-                                className: b.overlayIcon,
+                                className: m.overlayIcon,
                                 width: 20,
                                 height: 20,
                                 color: 'white'
@@ -71,14 +71,14 @@ function g(e) {
                         ]
                     })
             })
-          : (0, n.jsxs)(s.Clickable, {
-                onClick: y,
-                className: r()(b.avatar, b.clickable),
+          : (0, i.jsxs)(l.Clickable, {
+                onClick: A,
+                className: o()(m.avatar, m.clickable),
                 children: [
-                    j,
-                    (0, n.jsx)(s.NitroWheelIcon, {
+                    O,
+                    (0, i.jsx)(l.NitroWheelIcon, {
                         size: 'custom',
-                        className: b.overlayIcon,
+                        className: m.overlayIcon,
                         width: 20,
                         height: 20,
                         color: 'white'

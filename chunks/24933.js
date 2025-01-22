@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -35,4 +35,4 @@ class d extends (i = a.ZP.PersistedStore) {
         return u;
     }
 }
-o(d, 'displayName', 'ActivityShelfStore'), o(d, 'persistKey', 'ActivityShelfStore'), (n.Z = new d(s.Z, { LOGOUT: c }));
+s(d, 'displayName', 'ActivityShelfStore'), s(d, 'persistKey', 'ActivityShelfStore'), (n.Z = new d(o.Z, { LOGOUT: c }));

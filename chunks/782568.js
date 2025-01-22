@@ -6,11 +6,11 @@ r.d(n, {
 var i = r(358085);
 async function a(e, n) {
     let { default: a } = await Promise.resolve().then(r.bind(r, 315263)),
-        s = a(e, {
+        o = a(e, {
             skipExtensionCheck: n,
             analyticsLocations: []
         });
-    if (null != s) s(null);
+    if (null != o) o(null);
     else if (i.isPlatformEmbedded) window.open(e);
     else {
         let n = document.createElement('a');

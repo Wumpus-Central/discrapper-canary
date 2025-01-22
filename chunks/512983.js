@@ -9,13 +9,13 @@ r.d(n, {
 var i,
     a = r(200651);
 r(192379);
-var s = r(120356),
-    o = r.n(s),
+var o = r(120356),
+    s = r.n(o),
     l = r(481060),
     u = r(488256);
 function c(e) {
     let n,
-        { tag: r = 'h5', children: i, className: s, faded: c, disabled: d, required: f = !1, error: _, errorId: h, ...p } = e;
+        { tag: r = 'h5', children: i, className: o, faded: c, disabled: d, required: f = !1, error: p, errorId: h, ..._ } = e;
     switch (r) {
         case 'legend':
         case 'label':
@@ -25,22 +25,22 @@ function c(e) {
             n = l.H;
     }
     return (0, a.jsxs)(n, {
-        className: o()(u[r], 'h5' !== r ? u.defaultColor : null, s, {
-            [u['defaultMargin'.concat(r)]]: null == s,
+        className: s()(u[r], 'h5' !== r ? u.defaultColor : null, o, {
+            [u['defaultMargin'.concat(r)]]: null == o,
             [u.faded]: c,
             [u.disabled]: d,
-            [u.error]: null != _
+            [u.error]: null != p
         }),
-        ...p,
+        ..._,
         children: [
             i,
-            f && null == _
+            f && null == p
                 ? (0, a.jsx)('span', {
                       className: u.required,
                       children: '*'
                   })
                 : null,
-            null != _
+            null != p
                 ? (0, a.jsxs)('span', {
                       id: h,
                       className: u.errorMessage,
@@ -51,7 +51,7 @@ function c(e) {
                                     children: '-'
                                 })
                               : null,
-                          _
+                          p
                       ]
                   })
                 : null

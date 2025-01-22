@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(31775),
-    o = r.n(s),
+    o = r(31775),
+    s = r.n(o),
     l = r(442837),
     u = r(570140);
 function c(e, n, r) {
@@ -30,9 +30,9 @@ function f(e) {
 !(function (e) {
     (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.ERROR = 3)] = 'ERROR');
 })(i || (i = {}));
-let _ = new (o())({ max: d }),
+let p = new (s())({ max: d }),
     h = {};
-function p(e) {
+function _(e) {
     let { applicationId: n, guildId: r, page: i } = e,
         a = f({
             applicationId: n,
@@ -45,18 +45,18 @@ function p(e) {
     };
 }
 function m(e) {
-    let { applicationId: n, guildId: r, similarApplications: i, loadId: a, page: s, totalPages: o } = e,
+    let { applicationId: n, guildId: r, similarApplications: i, loadId: a, page: o, totalPages: s } = e,
         l = f({
             applicationId: n,
             guildId: r,
-            page: s
+            page: o
         });
-    _.set(l, {
+    p.set(l, {
         lastFetchTimeMs: Date.now(),
         applications: i,
         loadId: a,
-        page: s,
-        totalPages: o
+        page: o,
+        totalPages: s
     }),
         (h = {
             ...h,
@@ -84,7 +84,7 @@ class E extends (a = l.ZP.Store) {
             guildId: r,
             page: i
         });
-        return _.get(a);
+        return p.get(a);
     }
     getFetchState(e) {
         let { applicationId: n, guildId: r, page: i } = e;
@@ -100,7 +100,7 @@ class E extends (a = l.ZP.Store) {
 }
 c(E, 'displayName', 'ApplicationDirectorySimilarApplicationsStore'),
     (n.Z = new E(u.Z, {
-        APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: p,
+        APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: _,
         APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: m,
         APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: g
     }));

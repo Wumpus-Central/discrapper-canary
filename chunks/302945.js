@@ -1,25 +1,25 @@
 r.d(n, {
     Z: function () {
-        return _;
+        return p;
     }
 });
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(793030),
     u = r(422034),
     c = r(182294),
     d = r(388032),
     f = r(865048);
-function _(e) {
+function p(e) {
     let { affinities: n, className: r } = e,
-        s = (e) => (null != e.globalName ? e.globalName : e.username),
-        _ = a.useMemo(
+        o = (e) => (null != e.globalName ? e.globalName : e.username),
+        p = a.useMemo(
             () =>
                 n.length > 1
                     ? d.intl.formatToPlainString(d.t.HaVk0d, {
-                          username: s(n[0]),
+                          username: o(n[0]),
                           numFriends: n.length - 1
                       })
                     : '',
@@ -38,7 +38,7 @@ function _(e) {
         )
     );
     return (0, i.jsxs)('div', {
-        className: o()(f.container, r),
+        className: s()(f.container, r),
         children: [
             (0, i.jsx)('div', {
                 className: f.iconContainer,
@@ -48,7 +48,7 @@ function _(e) {
                 className: f.textContainer,
                 children: (0, i.jsx)(l.xv, {
                     variant: 'text-sm/medium',
-                    children: _
+                    children: p
                 })
             })
         ]

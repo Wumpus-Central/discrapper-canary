@@ -10,11 +10,11 @@ i.r(t),
             return N;
         },
         ForwardFailedAlertModal: function () {
-            return m;
+            return T;
         }
     });
-var a = i(200651),
-    n = i(192379),
+var n = i(200651),
+    a = i(192379),
     l = i(442837),
     s = i(481060),
     r = i(700582),
@@ -24,19 +24,19 @@ var a = i(200651),
     u = i(592125),
     A = i(430824),
     I = i(158776),
-    S = i(699516),
-    _ = i(594174),
+    _ = i(699516),
+    S = i(594174),
     E = i(51144),
     f = i(912332),
     h = i(388032),
     g = i(917858);
 function p(e) {
     let { icon: t, label: i } = e;
-    return (0, a.jsxs)('div', {
+    return (0, n.jsxs)('div', {
         className: g.failedRow,
         children: [
             t,
-            (0, a.jsx)(s.Text, {
+            (0, n.jsx)(s.Text, {
                 className: g.label,
                 variant: 'text-md/medium',
                 lineClamp: 1,
@@ -48,8 +48,8 @@ function p(e) {
 function L(e) {
     let { channel: t } = e,
         i = (0, c.ZP)(t);
-    return (0, a.jsx)(p, {
-        icon: (0, a.jsx)(d.Z, {
+    return (0, n.jsx)(p, {
+        icon: (0, n.jsx)(d.Z, {
             'aria-hidden': !0,
             size: s.AvatarSizes.SIZE_32,
             channel: t,
@@ -61,45 +61,45 @@ function L(e) {
 function N(e) {
     let { user: t } = e,
         i = E.ZP.useName(t),
-        n = (0, l.e7)([S.Z], () => S.Z.getNickname(t.id)),
+        a = (0, l.e7)([_.Z], () => _.Z.getNickname(t.id)),
         c = (0, l.e7)([I.Z], () => I.Z.getStatus(t.id));
-    return (0, a.jsx)(p, {
-        icon: (0, a.jsx)(r.Z, {
+    return (0, n.jsx)(p, {
+        icon: (0, n.jsx)(r.Z, {
             'aria-hidden': !0,
             size: s.AvatarSizes.SIZE_32,
             user: t,
             status: c
         }),
-        label: null != n ? n : i
+        label: null != a ? a : i
     });
 }
 function b(e) {
     let { channel: t } = e,
         i = (0, l.e7)([A.Z], () => A.Z.getGuild(null == t ? void 0 : t.guild_id)),
-        n = (0, c.ZP)(t);
-    return (0, a.jsx)(p, {
-        icon: (0, a.jsx)(o.Z, {
+        a = (0, c.ZP)(t);
+    return (0, n.jsx)(p, {
+        icon: (0, n.jsx)(o.Z, {
             size: o.E.SMALL_32,
             guild: i,
             channel: t
         }),
-        label: n
+        label: a
     });
 }
 function x(e) {
     let { destination: t } = e,
-        { channel: i, user: n } = (0, l.cj)([u.Z, _.default], () => ({
+        { channel: i, user: a } = (0, l.cj)([u.Z, S.default], () => ({
             channel: 'channel' === t.type ? u.Z.getChannel(t.id) : null,
-            user: 'user' === t.type ? _.default.getUser(t.id) : null
+            user: 'user' === t.type ? S.default.getUser(t.id) : null
         }));
-    if (null == i ? void 0 : i.isGroupDM()) return (0, a.jsx)(L, { channel: i });
-    if (null != n) return (0, a.jsx)(N, { user: n });
-    if (null != i) return (0, a.jsx)(b, { channel: i });
+    if (null == i ? void 0 : i.isGroupDM()) return (0, n.jsx)(L, { channel: i });
+    if (null != a) return (0, n.jsx)(N, { user: a });
+    if (null != i) return (0, n.jsx)(b, { channel: i });
     return null;
 }
-function m(e) {
+function T(e) {
     let { message: t, failedDestinations: i, forwardOptions: l, ...r } = e,
-        c = n.useCallback(() => {
+        c = a.useCallback(() => {
             (0, f.l8)({
                 message: t,
                 source: 'retry-modal',
@@ -107,7 +107,7 @@ function m(e) {
                 forwardOptions: l
             });
         }, [i, t, l]);
-    return (0, a.jsxs)(s.ConfirmModal, {
+    return (0, n.jsxs)(s.ConfirmModal, {
         header: h.intl.string(h.t['/OPIaG']),
         confirmText: h.intl.string(h.t['5911LS']),
         cancelText: h.intl.string(h.t['ETE/oK']),
@@ -115,13 +115,13 @@ function m(e) {
         onConfirm: c,
         ...r,
         children: [
-            (0, a.jsx)(s.Text, {
+            (0, n.jsx)(s.Text, {
                 variant: 'text-md/medium',
                 children: h.intl.format(h.t.cn9vFR, { count: i.length })
             }),
-            (0, a.jsx)('div', {
+            (0, n.jsx)('div', {
                 className: g.failedDestinations,
-                children: i.map((e, t) => (0, a.jsx)(x, { destination: e }, t))
+                children: i.map((e, t) => (0, n.jsx)(x, { destination: e }, t))
             })
         ]
     });

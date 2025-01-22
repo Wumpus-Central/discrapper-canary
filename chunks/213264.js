@@ -1,19 +1,19 @@
-t.d(n, {
+r.d(n, {
     s: function () {
-        return r;
+        return s;
     },
     u: function () {
-        return i;
+        return o;
     }
 });
-var o = t(818083),
-    l = t(987338);
-let i = (0, o.B)({
+var i = r(818083),
+    a = r(987338);
+let o = (0, i.B)({
     id: '2024-11_nitro_basic_upsell',
     label: 'Nitro Basic Upsell',
     kind: 'user',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: l.$P.PAYMENT_FLOW_STARTED,
+    commonTriggerPoint: a.$P.PAYMENT_FLOW_STARTED,
     treatments: [
         {
             id: 1,
@@ -22,6 +22,6 @@ let i = (0, o.B)({
         }
     ]
 });
-function r(e) {
-    return i.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }).enabled;
+function s(e) {
+    return o.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }).enabled;
 }

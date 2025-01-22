@@ -1,10 +1,10 @@
-var i, a, s;
+var i, a, o;
 r.d(n, {
     Oe: function () {
         return i;
     },
     fx: function () {
-        return s;
+        return o;
     },
     mX: function () {
         return a;
@@ -18,4 +18,4 @@ r.d(n, {
     })(a || (a = {})),
     !(function (e) {
         (e.AUTO = 'auto'), (e.COMPACT = 'compact'), (e.COZY = 'cozy');
-    })(s || (s = {}));
+    })(o || (o = {}));

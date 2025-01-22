@@ -1,6 +1,6 @@
 var i = r(47120);
 var a = r(287328);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -13,7 +13,7 @@ function s(e, n, r) {
         e
     );
 }
-class o {
+class s {
     async getAll() {
         let e = a.Z.guildsRequiringDeletedIdsSync();
         return null == e ? new Set() : new Set((await e.getMany()).map((e) => e.id));
@@ -37,7 +37,7 @@ class o {
     }
     resetInMemoryState() {}
     constructor() {
-        s(this, 'actions', {
+        o(this, 'actions', {
             BACKGROUND_SYNC: (e, n) => this.handleBackgroundSync(e, n),
             CONNECTION_OPEN: (e, n) => this.handleConnectionOpen(e, n),
             GUILD_CREATE: (e, n) => this.handleGuildCreate(e, n),
@@ -45,4 +45,4 @@ class o {
         });
     }
 }
-n.Z = new o();
+n.Z = new s();

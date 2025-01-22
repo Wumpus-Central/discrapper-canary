@@ -8,29 +8,29 @@ r.d(n, {
 });
 var i,
     a = r(200651),
-    s = r(192379),
-    o = r(541049),
+    o = r(192379),
+    s = r(541049),
     l = r(231338);
-let u = s.createContext({
+let u = o.createContext({
     profileType: null,
-    theme: null !== (i = (0, o.Z)()) && void 0 !== i ? i : l.BR.DARK,
+    theme: null !== (i = (0, s.Z)()) && void 0 !== i ? i : l.BR.DARK,
     primaryColor: null,
     secondaryColor: null
 });
 function c(e) {
-    let { profileType: n, theme: r, primaryColor: i, secondaryColor: o, children: l } = e,
-        c = s.useMemo(
+    let { profileType: n, theme: r, primaryColor: i, secondaryColor: s, children: l } = e,
+        c = o.useMemo(
             () => ({
                 profileType: n,
                 theme: r,
                 primaryColor: i,
-                secondaryColor: o
+                secondaryColor: s
             }),
-            [n, r, i, o]
+            [n, r, i, s]
         );
     return (0, a.jsx)(u.Provider, {
         value: c,
         children: l
     });
 }
-let d = () => s.useContext(u);
+let d = () => o.useContext(u);

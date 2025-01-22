@@ -6,7 +6,7 @@ r.d(n, {
         return c;
     },
     TB: function () {
-        return _;
+        return p;
     },
     Z0: function () {
         return u;
@@ -17,8 +17,8 @@ r.d(n, {
 });
 var i = r(259630),
     a = r(19929),
-    s = r(816552),
-    o = r(548097);
+    o = r(816552),
+    s = r(548097);
 function l(e, n, r) {
     return (
         void 0 === r && (r = {}),
@@ -66,42 +66,42 @@ function f(e) {
     void 0 === e && (e = c());
     var n = Intl.RelativeTimeFormat,
         r = Intl.ListFormat,
-        o = Intl.DisplayNames,
-        l = (0, s.H)(
+        s = Intl.DisplayNames,
+        l = (0, o.H)(
             function () {
                 for (var e, n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
                 return new ((e = Intl.DateTimeFormat).bind.apply(e, (0, i.ev)([void 0], n, !1)))();
             },
             {
                 cache: d(e.dateTime),
-                strategy: s.A.variadic
+                strategy: o.A.variadic
             }
         ),
-        u = (0, s.H)(
+        u = (0, o.H)(
             function () {
                 for (var e, n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
                 return new ((e = Intl.NumberFormat).bind.apply(e, (0, i.ev)([void 0], n, !1)))();
             },
             {
                 cache: d(e.number),
-                strategy: s.A.variadic
+                strategy: o.A.variadic
             }
         ),
-        f = (0, s.H)(
+        f = (0, o.H)(
             function () {
                 for (var e, n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
                 return new ((e = Intl.PluralRules).bind.apply(e, (0, i.ev)([void 0], n, !1)))();
             },
             {
                 cache: d(e.pluralRules),
-                strategy: s.A.variadic
+                strategy: o.A.variadic
             }
         );
     return {
         getDateTimeFormat: l,
         getNumberFormat: u,
-        getMessageFormat: (0, s.H)(
-            function (e, n, r, s) {
+        getMessageFormat: (0, o.H)(
+            function (e, n, r, o) {
                 return new a.C(
                     e,
                     n,
@@ -114,51 +114,51 @@ function f(e) {
                                 getPluralRules: f
                             }
                         },
-                        s || {}
+                        o || {}
                     )
                 );
             },
             {
                 cache: d(e.message),
-                strategy: s.A.variadic
+                strategy: o.A.variadic
             }
         ),
-        getRelativeTimeFormat: (0, s.H)(
+        getRelativeTimeFormat: (0, o.H)(
             function () {
                 for (var e = [], r = 0; r < arguments.length; r++) e[r] = arguments[r];
                 return new (n.bind.apply(n, (0, i.ev)([void 0], e, !1)))();
             },
             {
                 cache: d(e.relativeTime),
-                strategy: s.A.variadic
+                strategy: o.A.variadic
             }
         ),
         getPluralRules: f,
-        getListFormat: (0, s.H)(
+        getListFormat: (0, o.H)(
             function () {
                 for (var e = [], n = 0; n < arguments.length; n++) e[n] = arguments[n];
                 return new (r.bind.apply(r, (0, i.ev)([void 0], e, !1)))();
             },
             {
                 cache: d(e.list),
-                strategy: s.A.variadic
+                strategy: o.A.variadic
             }
         ),
-        getDisplayNames: (0, s.H)(
+        getDisplayNames: (0, o.H)(
             function () {
                 for (var e = [], n = 0; n < arguments.length; n++) e[n] = arguments[n];
-                return new (o.bind.apply(o, (0, i.ev)([void 0], e, !1)))();
+                return new (s.bind.apply(s, (0, i.ev)([void 0], e, !1)))();
             },
             {
                 cache: d(e.displayNames),
-                strategy: s.A.variadic
+                strategy: o.A.variadic
             }
         )
     };
 }
-function _(e, n, r, i) {
+function p(e, n, r, i) {
     var a,
-        s = e && e[n];
-    if ((s && (a = s[r]), a)) return a;
-    i(new o.wI('No '.concat(n, ' format named: ').concat(r)));
+        o = e && e[n];
+    if ((o && (a = o[r]), a)) return a;
+    i(new s.wI('No '.concat(n, ' format named: ').concat(r)));
 }

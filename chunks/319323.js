@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651),
@@ -10,20 +10,20 @@ var i = n(200651),
     o = n(728345),
     s = n(388032),
     c = n(22650);
-function d(e) {
+function u(e) {
     let { applicationId: t, guildId: n } = e,
         { data: r } = (0, o.IX)(t);
     return null == r
         ? null
-        : (0, i.jsx)(u, {
+        : (0, i.jsx)(d, {
               app: r,
               guildId: n
           });
 }
-function u(e) {
+function d(e) {
     let { app: t, guildId: o } = e;
     (0, a.q)(t.id);
-    let d = r.useCallback(() => {
+    let u = r.useCallback(() => {
         (0, l.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e('77803'), n.e('7657')]).then(n.bind(n, 7225));
             return (n) =>
@@ -37,7 +37,7 @@ function u(e) {
     return (0, i.jsx)(l.Button, {
         color: l.Button.Colors.BRAND,
         size: l.Button.Sizes.SMALL,
-        onClick: d,
+        onClick: u,
         children: (0, i.jsxs)('div', {
             className: c.button,
             children: [

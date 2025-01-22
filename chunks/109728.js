@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(226351);
 let a = 1000,
-    s = new i.o(),
-    o = null;
+    o = new i.o(),
+    s = null;
 function l() {
-    null != o && (s.resolve(), clearTimeout(o));
+    null != s && (o.resolve(), clearTimeout(s));
 }

@@ -1,16 +1,16 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(829307),
     u = function (e) {
         var n = e.zDepth,
             r = e.radius,
             a = e.background,
-            s = e.children,
+            o = e.children,
             u = e.styles,
             c = void 0 === u ? {} : u,
-            d = (0, o.default)(
+            d = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -39,13 +39,13 @@ var i = r(192379),
                 ),
                 { 'zDepth-1': 1 === n }
             );
-        return i.createElement('div', { style: d.wrap }, i.createElement('div', { style: d.bg }), i.createElement('div', { style: d.content }, s));
+        return i.createElement('div', { style: d.wrap }, i.createElement('div', { style: d.bg }), i.createElement('div', { style: d.content }, o));
     };
 (u.propTypes = {
-    background: s().string,
-    zDepth: s().oneOf([0, 1, 2, 3, 4, 5]),
-    radius: s().number,
-    styles: s().object
+    background: o().string,
+    zDepth: o().oneOf([0, 1, 2, 3, 4, 5]),
+    radius: o().number,
+    styles: o().object
 }),
     (u.defaultProps = {
         background: '#fff',

@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(442837),
-    o = r(570140),
+    o = r(442837),
+    s = r(570140),
     l = r(592125),
     u = r(757266),
     c = r(375954);
@@ -27,14 +27,14 @@ function d(e, n, r) {
     (e.NOT_FETCHED = 'NOT_FETCHED'), (e.FETCHING = 'FETCHING'), (e.FETCHED = 'FETCHED');
 })(i || (i = {}));
 let f = null,
-    _ = 'NOT_FETCHED';
+    p = 'NOT_FETCHED';
 function h() {
-    _ = 'FETCHING';
+    p = 'FETCHING';
 }
-function p(e) {
-    (_ = 'FETCHED'), (f = e.apps);
+function _(e) {
+    (p = 'FETCHED'), (f = e.apps);
 }
-class m extends (a = s.ZP.Store) {
+class m extends (a = o.ZP.Store) {
     initialize() {
         this.waitFor(l.Z, u.Z, c.Z);
     }
@@ -42,11 +42,11 @@ class m extends (a = s.ZP.Store) {
         return f;
     }
     getFetchState() {
-        return _;
+        return p;
     }
 }
 d(m, 'displayName', 'AuthorizedAppsStore'),
-    (n.Z = new m(o.Z, {
+    (n.Z = new m(s.Z, {
         USER_AUTHORIZED_APPS_REQUEST: h,
-        USER_AUTHORIZED_APPS_UPDATE: p
+        USER_AUTHORIZED_APPS_UPDATE: _
     }));

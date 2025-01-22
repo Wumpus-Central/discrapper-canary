@@ -5,15 +5,15 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(887490);
-let o = 'applicationCommand';
+var o = r(887490);
+let s = 'applicationCommand';
 function l(e, n) {
-    if (s.bN.areStylesDisabled(e)) return [];
+    if (o.bN.areStylesDisabled(e)) return [];
     let [r, i] = n,
         a = [];
-    if (!s.LC.isText(r)) return a;
-    let [l] = s.bN.node(e, s.C0.parent(i));
-    return s.aj.isType(l, o)
+    if (!o.LC.isText(r)) return a;
+    let [l] = o.bN.node(e, o.C0.parent(i));
+    return o.aj.isType(l, s)
         ? (r === l.children[0] &&
               a.push({
                   anchor: {

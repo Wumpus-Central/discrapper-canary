@@ -8,18 +8,18 @@ function a(e, n) {
     for (var r = '', i = 0; i < e.length; i++) {
         var a = e.charAt(i);
         if ('j' === a) {
-            for (var o = 0; i + 1 < e.length && e.charAt(i + 1) === a; ) o++, i++;
-            var l = 1 + (1 & o),
-                u = o < 2 ? 1 : 3 + (o >> 1),
+            for (var s = 0; i + 1 < e.length && e.charAt(i + 1) === a; ) s++, i++;
+            var l = 1 + (1 & s),
+                u = s < 2 ? 1 : 3 + (s >> 1),
                 c = 'a',
-                d = s(n);
+                d = o(n);
             for (('H' == d || 'k' == d) && (u = 0); u-- > 0; ) r += c;
             for (; l-- > 0; ) r = d + r;
         } else 'J' === a ? (r += 'H') : (r += a);
     }
     return r;
 }
-function s(e) {
+function o(e) {
     var n,
         r = e.hourCycle;
     if ((void 0 === r && e.hourCycles && e.hourCycles.length && (r = e.hourCycles[0]), r))

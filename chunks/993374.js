@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(498607),
-    s = r.n(a),
-    o = r(715903),
+    o = r.n(a),
+    s = r(715903),
     l = r(69882),
     u = r(709054),
     c = r(733026);
@@ -49,18 +49,18 @@ function f() {
         selectedSort: void 0
     };
 }
-let _ = Object.freeze(f());
+let p = Object.freeze(f());
 function h(e, n) {
     return null != e && (!!e.toLowerCase().includes(n.toLowerCase()) || !1);
 }
-function p(e, n) {
+function _(e, n) {
     if ('' === n.trim()) return !1;
     let [r, i] = (0, c.C)(n);
     for (let n of i) if (e.userId === n) return !0;
     for (let n of r) if (h(e.nick, n)) return !0;
     if (null == e.user) return !1;
-    let { globalName: a, username: s } = e.user;
-    for (let e of r) if (h(s, e)) return !0;
+    let { globalName: a, username: o } = e.user;
+    for (let e of r) if (h(o, e)) return !0;
     for (let e of r) if (h(a, e)) return !0;
     return !1;
 }
@@ -80,7 +80,7 @@ class g {
                 ...this._searchState,
                 ...e
             }),
-            (this.hasDefaultQuery = s()(this._searchState, _)),
+            (this.hasDefaultQuery = o()(this._searchState, p)),
             !0
         );
     }
@@ -91,9 +91,9 @@ class g {
         return this._searchState;
     }
     isMemberIncludedInSearchResults(e) {
-        let { query: n, requireUnusualDmActivity: r, requireCommunicationDisabled: i, requireUnusualAccountActivity: a, requireUsernameQuarantined: s, selectedRoleIds: c, selectedJoinDateOption: d, selectedAccountAgeOption: f, selectedSourceInviteCode: _, selectedJoinSourceType: h } = this._searchState;
-        if ((n.length > 0 && !p(e, n)) || (c.size > 0 && !m(e, c)) || (null != d.afterDate && e.joinedAtTimestamp < d.afterDate) || (null != d.beforeDate && e.joinedAtTimestamp > d.beforeDate) || (null != f.afterDate && u.default.extractTimestamp(e.userId) < f.afterDate) || (null != f.beforeDate && u.default.extractTimestamp(e.userId) > f.beforeDate) || (null != _ && e.sourceInviteCode !== _) || (null != h && e.joinSourceType !== h)) return !1;
-        if (r || i || a || s) return !!((r && e.hasUnusualDmActivity) || (i && (0, l.b)(e)) || (a && e.hasUnusualAccountActivity) || (s && (0, o.EY)(e))) || !1;
+        let { query: n, requireUnusualDmActivity: r, requireCommunicationDisabled: i, requireUnusualAccountActivity: a, requireUsernameQuarantined: o, selectedRoleIds: c, selectedJoinDateOption: d, selectedAccountAgeOption: f, selectedSourceInviteCode: p, selectedJoinSourceType: h } = this._searchState;
+        if ((n.length > 0 && !_(e, n)) || (c.size > 0 && !m(e, c)) || (null != d.afterDate && e.joinedAtTimestamp < d.afterDate) || (null != d.beforeDate && e.joinedAtTimestamp > d.beforeDate) || (null != f.afterDate && u.default.extractTimestamp(e.userId) < f.afterDate) || (null != f.beforeDate && u.default.extractTimestamp(e.userId) > f.beforeDate) || (null != p && e.sourceInviteCode !== p) || (null != h && e.joinSourceType !== h)) return !1;
+        if (r || i || a || o) return !!((r && e.hasUnusualDmActivity) || (i && (0, l.b)(e)) || (a && e.hasUnusualAccountActivity) || (o && (0, s.EY)(e))) || !1;
         return !0;
     }
     constructor(e) {

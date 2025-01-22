@@ -9,8 +9,8 @@ function a(e, n) {
     let r = [],
         i = e[0];
     for (let a = 1; a < e.length; a++) {
-        let s = e[a];
-        r.push(n(i, s)), (i = s);
+        let o = e[a];
+        r.push(n(i, o)), (i = o);
     }
     return r;
 }

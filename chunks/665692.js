@@ -3,13 +3,13 @@ r.d(n, {
         return u;
     },
     Iv: function () {
-        return s;
+        return o;
     },
     ME: function () {
         return i;
     },
     a4: function () {
-        return o;
+        return s;
     },
     jp: function () {
         return l;
@@ -20,7 +20,7 @@ r.d(n, {
 });
 let i = '@',
     a = '#',
-    s = ':',
-    o = '+:',
+    o = ':',
+    s = '+:',
     l = ':',
     u = '/';

@@ -2,8 +2,8 @@ var i = r(411104);
 r(570140);
 var a = r(147913);
 r(674588);
-var s = r(751189),
-    o = r(409059);
+var o = r(751189),
+    s = r(409059);
 r(652898);
 var l = r(728675);
 r(701190);
@@ -19,7 +19,7 @@ function f(e) {
             if (n === u.g.INVITE);
             else if (n === u.g.TEMPLATE)
                 (0, c.V)(async () => {
-                    null == o.Z.getGuildTemplate(r) && (await s.Z.resolveGuildTemplate(r));
+                    null == s.Z.getGuildTemplate(r) && (await o.Z.resolveGuildTemplate(r));
                 });
             else if (n === u.g.BUILD_OVERRIDE || n === u.g.MANUAL_BUILD_OVERRIDE);
             else if (n === u.g.EVENT);
@@ -37,9 +37,9 @@ function f(e) {
             else throw Error('Unknown coded link type: '.concat(n));
         });
 }
-class _ extends a.Z {
+class p extends a.Z {
     constructor() {
         super(), (0, l.Z)(this, f);
     }
 }
-n.Z = new _();
+n.Z = new p();

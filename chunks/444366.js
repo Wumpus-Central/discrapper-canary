@@ -1,10 +1,10 @@
 var i = r(192379),
     a = r(723184),
-    s = r(877837),
-    o = function (e) {
+    o = r(877837),
+    s = function (e) {
         var n = e.hover,
             r = e.color,
-            o = e.onClick,
+            s = e.onClick,
             l = e.onSwatchHover,
             u = {
                 position: 'relative',
@@ -28,12 +28,12 @@ var i = r(192379),
         return i.createElement(
             'div',
             { style: c.swatch },
-            i.createElement(s.m4, {
+            i.createElement(o.m4, {
                 color: r,
-                onClick: o,
+                onClick: s,
                 onHover: l,
                 focusStyle: u
             })
         );
     };
-n.Z = (0, a.handleHover)(o);
+n.Z = (0, a.handleHover)(s);

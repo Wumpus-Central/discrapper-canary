@@ -7,11 +7,11 @@ function n(e) {
             built_in: ['Abs', 'Acos', 'All', 'Angle', 'Any', 'Area', 'AreaGeodetic', 'Array', 'Asin', 'Atan', 'Atan2', 'Attachments', 'Average', 'Back', 'Bearing', 'Boolean', 'Buffer', 'BufferGeodetic', 'Ceil', 'Centroid', 'ChangeTimeZone', 'Clip', 'Concatenate', 'Console', 'Constrain', 'Contains', 'ConvertDirection', 'ConvexHull', 'Cos', 'Count', 'Crosses', 'Cut', 'Date|0', 'DateAdd', 'DateDiff', 'DateOnly', 'Day', 'Decode', 'DefaultValue', 'Densify', 'DensifyGeodetic', 'Dictionary', 'Difference', 'Disjoint', 'Distance', 'DistanceGeodetic', 'DistanceToCoordinate', 'Distinct', 'Domain', 'DomainCode', 'DomainName', 'EnvelopeIntersects', 'Equals', 'Erase', 'Exp', 'Expects', 'Extent', 'Feature', 'FeatureInFilter', 'FeatureSet', 'FeatureSetByAssociation', 'FeatureSetById', 'FeatureSetByName', 'FeatureSetByPortalItem', 'FeatureSetByRelationshipClass', 'FeatureSetByRelationshipName', 'Filter', 'FilterBySubtypeCode', 'Find', 'First|0', 'Floor', 'FromCharCode', 'FromCodePoint', 'FromJSON', 'Front', 'GdbVersion', 'Generalize', 'Geometry', 'GetEnvironment', 'GetFeatureSet', 'GetFeatureSetInfo', 'GetUser', 'GroupBy', 'Guid', 'HasKey', 'HasValue', 'Hash', 'Hour', 'IIf', 'ISOMonth', 'ISOWeek', 'ISOWeekday', 'ISOYear', 'Includes', 'IndexOf', 'Insert', 'Intersection', 'Intersects', 'IsEmpty', 'IsNan', 'IsSelfIntersecting', 'IsSimple', 'KnowledgeGraphByPortalItem', 'Left|0', 'Length', 'Length3D', 'LengthGeodetic', 'Log', 'Lower', 'Map', 'Max', 'Mean', 'MeasureToCoordinate', 'Mid', 'Millisecond', 'Min', 'Minute', 'Month', 'MultiPartToSinglePart', 'Multipoint', 'NearestCoordinate', 'NearestVertex', 'NextSequenceValue', 'None', 'Now', 'Number', 'Offset', 'OrderBy', 'Overlaps', 'Point', 'PointToCoordinate', 'Polygon', 'Polyline', 'Pop', 'Portal', 'Pow', 'Proper', 'Push', 'QueryGraph', 'Random', 'Reduce', 'Relate', 'Replace', 'Resize', 'Reverse', 'Right|0', 'RingIsClockwise', 'Rotate', 'Round', 'Schema', 'Second', 'SetGeometry', 'Simplify', 'Sin', 'Slice', 'Sort', 'Splice', 'Split', 'Sqrt', 'StandardizeFilename', 'StandardizeGuid', 'Stdev', 'SubtypeCode', 'SubtypeName', 'Subtypes', 'Sum', 'SymmetricDifference', 'Tan', 'Text', 'Time', 'TimeZone', 'TimeZoneOffset', 'Timestamp', 'ToCharCode', 'ToCodePoint', 'ToHex', 'ToLocal', 'ToUTC', 'Today', 'Top|0', 'Touches', 'TrackAccelerationAt', 'TrackAccelerationWindow', 'TrackCurrentAcceleration', 'TrackCurrentDistance', 'TrackCurrentSpeed', 'TrackCurrentTime', 'TrackDistanceAt', 'TrackDistanceWindow', 'TrackDuration', 'TrackFieldWindow', 'TrackGeometryWindow', 'TrackIndex', 'TrackSpeedAt', 'TrackSpeedWindow', 'TrackStartTime', 'TrackWindow', 'Trim', 'TypeOf', 'Union', 'Upper', 'UrlEncode', 'Variance', 'Week', 'Weekday', 'When|0', 'Within', 'Year|0']
         },
         a = ['aggregatedFeatures', 'analytic', 'config', 'datapoint', 'datastore', 'editcontext', 'feature', 'featureSet', 'feedfeature', 'fencefeature', 'fencenotificationtype', 'graph', 'join', 'layer', 'locationupdate', 'map', 'measure', 'measure', 'originalFeature', 'record', 'reference', 'rowindex', 'sourcedatastore', 'sourcefeature', 'sourcelayer', 'target', 'targetdatastore', 'targetfeature', 'targetlayer', 'userInput', 'value', 'variables', 'view'],
-        s = {
+        o = {
             className: 'symbol',
             begin: '\\$' + n.either(...a)
         },
-        o = {
+        s = {
             className: 'number',
             variants: [{ begin: '\\b(0[bB][01]+)' }, { begin: '\\b(0[oO][0-7]+)' }, { begin: e.C_NUMBER_RE }],
             relevance: 0
@@ -29,7 +29,7 @@ function n(e) {
             end: '`',
             contains: [e.BACKSLASH_ESCAPE, l]
         };
-    l.contains = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, u, o, e.REGEXP_MODE];
+    l.contains = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, u, s, e.REGEXP_MODE];
     let c = l.contains.concat([e.C_BLOCK_COMMENT_MODE, e.C_LINE_COMMENT_MODE]);
     return {
         name: 'ArcGIS Arcade',
@@ -41,8 +41,8 @@ function n(e) {
             u,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            s,
             o,
+            s,
             {
                 begin: /[{,]\s*/,
                 relevance: 0,

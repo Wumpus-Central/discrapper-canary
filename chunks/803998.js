@@ -1,16 +1,16 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(920103);
-function o(e) {
+    o = r(920103);
+function s(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',
         [r] = (0, a.useState)(
             () =>
-                new s.Z({
+                new o.Z({
                     tension: 200,
                     friction: 35,
                     mass: 2,

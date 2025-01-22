@@ -22,24 +22,24 @@ var i =
             for (var r in e) 'default' !== r && !Object.prototype.hasOwnProperty.call(n, r) && i(n, e, r);
         };
 Object.defineProperty(n, '__esModule', { value: !0 }), (n.MessageLoader = n.waitForAllDefaultIntlMessagesLoaded = n.loadAllMessagesInLocale = n.createLoader = n.DEFAULT_LOCALE = n.IntlManager = n.runtimeHashMessageKey = n.bindFormatValues = n.FormatBuilder = void 0), a(r(304690), n);
-var s = r(403725);
+var o = r(403725);
 Object.defineProperty(n, 'FormatBuilder', {
     enumerable: !0,
     get: function () {
-        return s.FormatBuilder;
+        return o.FormatBuilder;
     }
 }),
     Object.defineProperty(n, 'bindFormatValues', {
         enumerable: !0,
         get: function () {
-            return s.bindFormatValues;
+            return o.bindFormatValues;
         }
     });
-var o = r(471099);
+var s = r(471099);
 Object.defineProperty(n, 'runtimeHashMessageKey', {
     enumerable: !0,
     get: function () {
-        return o.runtimeHashMessageKey;
+        return s.runtimeHashMessageKey;
     }
 });
 var l = r(961711);

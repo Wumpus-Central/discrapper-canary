@@ -6,9 +6,9 @@ r.d(n, {
     r(200651);
 var i = r(192379),
     a = r(392711),
-    s = r.n(a);
+    o = r.n(a);
 r(902704);
-var o = r(941028);
+var s = r(941028);
 function l(e, n, r) {
     return (
         n in e
@@ -29,9 +29,9 @@ function u(e) {
 function c(e) {
     i.useEffect(
         () => (
-            s().forEach(e, (e, n) => (0, o.ym)(n, e)),
+            o().forEach(e, (e, n) => (0, s.ym)(n, e)),
             () => {
-                s().forEach(e, (e, n) => (0, o.w5)(n, e));
+                o().forEach(e, (e, n) => (0, s.w5)(n, e));
             }
         ),
         [e]

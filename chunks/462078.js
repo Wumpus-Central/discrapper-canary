@@ -1,10 +1,10 @@
-var r = n(67867),
-    o = n(184580),
-    a = n(611345),
-    i = n(474883),
-    s = n(338752),
-    c = n(15507);
-r(
+var i = r(67867),
+    a = r(184580),
+    o = r(611345),
+    s = r(474883),
+    l = r(338752),
+    u = r(15507);
+i(
     {
         target: 'Array',
         proto: !0
@@ -12,10 +12,10 @@ r(
     {
         flat: function () {
             var e = arguments.length ? arguments[0] : void 0,
-                t = a(this),
-                n = i(t),
-                r = c(t, 0);
-            return (r.length = o(r, t, t, n, 0, void 0 === e ? 1 : s(e))), r;
+                n = o(this),
+                r = s(n),
+                i = u(n, 0);
+            return (i.length = a(i, n, n, r, 0, void 0 === e ? 1 : l(e))), i;
         }
     }
 );

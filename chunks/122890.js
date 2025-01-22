@@ -1,22 +1,22 @@
-t.d(n, {
+r.d(n, {
     z: function () {
-        return r;
+        return l;
     }
-}),
-    t(47120);
-var o = t(192379),
-    l = t(409813),
-    i = t(45572);
-function r(e) {
-    let { purchaseState: n, currentStep: t, initialScene: r, purchaseScene: a, errorScene: s, successScene: c } = e,
-        [u, d] = (0, o.useState)(r);
+});
+var i = r(47120);
+var a = r(192379),
+    o = r(409813),
+    s = r(45572);
+function l(e) {
+    let { purchaseState: n, currentStep: r, initialScene: i, purchaseScene: l, errorScene: u, successScene: c } = e,
+        [d, f] = (0, a.useState)(i);
     return (
-        (0, o.useEffect)(() => {
-            n === i.A.PURCHASING ? d(a) : n === i.A.FAIL && d(s);
-        }, [n, a, s]),
-        (0, o.useEffect)(() => {
-            t === l.h8.CONFIRM && d(c);
-        }, [t, c]),
-        [u, d]
+        (0, a.useEffect)(() => {
+            n === s.A.PURCHASING ? f(l) : n === s.A.FAIL && f(u);
+        }, [n, l, u]),
+        (0, a.useEffect)(() => {
+            r === o.h8.CONFIRM && f(c);
+        }, [r, c]),
+        [d, f]
     );
 }

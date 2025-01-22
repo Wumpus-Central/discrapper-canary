@@ -8,16 +8,16 @@ r.d(n, {
 });
 var i = r(724458);
 var a = r(47120);
-var s = r(411104);
-var o = r(259443),
+var o = r(411104);
+var s = r(259443),
     l = r(510990),
     u = r(141795),
     c = r(983544),
     d = r(596956),
     f = r(865275),
-    _ = r(981631),
+    p = r(981631),
     h = r(959517),
-    p = r(388032);
+    _ = r(388032);
 function m(e, n, r) {
     return (
         n in e
@@ -31,7 +31,7 @@ function m(e, n, r) {
         e
     );
 }
-let g = new o.Yd('CloudUploaderBase.tsx');
+let g = new s.Yd('CloudUploaderBase.tsx');
 class E extends f.Z {
     _fileSize() {
         return this.files.reduce((e, n) => {
@@ -43,19 +43,19 @@ class E extends f.Z {
         var e, n;
         let r = (0, c.F)(null === (n = this.files[0]) || void 0 === n ? void 0 : null === (e = n.item) || void 0 === e ? void 0 : e.target);
         return this.files.length > r.getMaxAttachmentsCount()
-            ? (g.log('Too many attachments for '.concat(this.id)), this._handleError({ code: _.evJ.TOO_MANY_ATTACHMENTS }), !1)
+            ? (g.log('Too many attachments for '.concat(this.id)), this._handleError({ code: p.evJ.TOO_MANY_ATTACHMENTS }), !1)
             : !(this._fileSize() > r.getMaxTotalAttachmentSize()) ||
                   (this._handleError({
-                      code: _.evJ.ENTITY_TOO_LARGE,
+                      code: p.evJ.ENTITY_TOO_LARGE,
                       reason: { type: h.xi.POSTCOMPRESSION_SUM_TOO_LARGE }
                   }),
                   !1);
     }
     _filesTooLarge() {
-        return this.files.some((e) => e.error === _.evJ.ENTITY_TOO_LARGE);
+        return this.files.some((e) => e.error === p.evJ.ENTITY_TOO_LARGE);
     }
     setUploadingTextForUI() {
-        let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : p.intl.formatToPlainString(p.t.D0noUl, { count: this.files.length }),
+        let e = 1 === this.files.length && null != this.files[0].filename ? this.files[0].filename : _.intl.formatToPlainString(_.t.D0noUl, { count: this.files.length }),
             n = this.files.some((e) => e.isImage),
             r = this.files.some((e) => e.isVideo),
             i = this._fileSize();
@@ -141,7 +141,7 @@ async function v(e) {
                             i('complete');
                             break;
                         case u.m.ERROR:
-                            n && e.error !== _.evJ.ENTITY_TOO_LARGE ? e.upload() : a(Error('File failed to upload'));
+                            n && e.error !== p.evJ.ENTITY_TOO_LARGE ? e.upload() : a(Error('File failed to upload'));
                             break;
                         case u.m.CANCELED:
                             a(Error('Upload is canceled'));

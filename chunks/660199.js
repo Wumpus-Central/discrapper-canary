@@ -3,7 +3,7 @@ r.d(n, {
         return d;
     },
     He: function () {
-        return _;
+        return p;
     },
     K_: function () {
         return u;
@@ -17,15 +17,15 @@ r.d(n, {
 });
 var i = r(913527),
     a = r.n(i),
-    s = r(55935),
-    o = r(70956);
+    o = r(55935),
+    s = r(70956);
 let l = {
-        t: (e) => (0, s.vc)(e, 'LT'),
-        T: (e) => (0, s.vc)(e, 'LTS'),
-        d: (e) => (0, s.vc)(e, 'L'),
-        D: (e) => (0, s.vc)(e, 'LL'),
-        f: (e) => (0, s.vc)(e, 'LLL'),
-        F: (e) => (0, s.vc)(e, 'LLLL'),
+        t: (e) => (0, o.vc)(e, 'LT'),
+        T: (e) => (0, o.vc)(e, 'LTS'),
+        d: (e) => (0, o.vc)(e, 'L'),
+        D: (e) => (0, o.vc)(e, 'LL'),
+        f: (e) => (0, o.vc)(e, 'LLL'),
+        F: (e) => (0, o.vc)(e, 'LLLL'),
         R: (e) => {
             let n = a().relativeTimeThreshold('s');
             a().relativeTimeThreshold('s', 60);
@@ -33,11 +33,11 @@ let l = {
             a().relativeTimeThreshold('ss', -1);
             let i = a().relativeTimeThreshold('m');
             a().relativeTimeThreshold('m', 60);
-            let s = null;
+            let o = null;
             try {
-                s = a()(e.toDate()).fromNow();
+                o = a()(e.toDate()).fromNow();
             } catch (e) {}
-            return a().relativeTimeThreshold('s', n), a().relativeTimeThreshold('ss', r), a().relativeTimeThreshold('m', i), null != s ? s : a()(e.toDate()).fromNow();
+            return a().relativeTimeThreshold('s', n), a().relativeTimeThreshold('ss', r), a().relativeTimeThreshold('m', i), null != o ? o : a()(e.toDate()).fromNow();
         }
     },
     u = 'f';
@@ -45,7 +45,7 @@ Object.setPrototypeOf(l, null);
 let c = Object.keys(l).join('|'),
     d = new RegExp('^<t:(-?\\d{1,17})(?::('.concat(c, '))?>'));
 function f(e, n) {
-    let r = a()(Number(e) * o.Z.Millis.SECOND);
+    let r = a()(Number(e) * s.Z.Millis.SECOND);
     if (!r.isValid()) return null;
     let i = null != n ? l[n] : void 0;
     return (
@@ -59,6 +59,6 @@ function f(e, n) {
         }
     );
 }
-function _(e, n) {
+function p(e, n) {
     return null != n ? '<t:'.concat(e, ':').concat(n, '>') : '<t:'.concat(e, '>');
 }

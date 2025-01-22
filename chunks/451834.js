@@ -1,24 +1,24 @@
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(642128),
+    o = r.n(a),
+    s = r(642128),
     l = r(442837),
     u = r(481060),
     c = r(493683),
     d = r(607070),
     f = r(785717),
-    _ = r(510659),
+    p = r(510659),
     h = r(228168),
-    p = r(388032),
+    _ = r(388032),
     m = r(698559),
     g = r(24343);
 let E = (e) => {
         let { userId: n, onClose: r, className: a } = e,
-            { interactionTypeSent: c, showInteractionToast: f } = (0, _.Xo)(),
-            g = c === h.P.REPLY ? p.intl.string(p.t.BPaiaW) : p.intl.string(p.t.Ry2EtL),
+            { interactionTypeSent: c, showInteractionToast: f } = (0, p.Xo)(),
+            g = c === h.P.REPLY ? _.intl.string(_.t.BPaiaW) : _.intl.string(_.t.Ry2EtL),
             E = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-            T = (0, u.useTransition)(
+            b = (0, u.useTransition)(
                 f,
                 {
                     from: {
@@ -44,11 +44,11 @@ let E = (e) => {
                 'animate-always'
             );
         return (0, i.jsx)(i.Fragment, {
-            children: T(
+            children: b(
                 (e, l) =>
                     l &&
-                    (0, i.jsx)(o.animated.div, {
-                        className: s()(m.toastContainer, a),
+                    (0, i.jsx)(s.animated.div, {
+                        className: o()(m.toastContainer, a),
                         style: e,
                         children:
                             null != c
@@ -68,7 +68,7 @@ let E = (e) => {
                                       message: '',
                                       type: u.ToastType.CUSTOM,
                                       id: 'react_reply_loading_toast',
-                                      options: { component: (0, i.jsx)(I, {}) }
+                                      options: { component: (0, i.jsx)(y, {}) }
                                   })
                     })
             )
@@ -76,9 +76,9 @@ let E = (e) => {
     },
     v = (e) => {
         let { message: n, userId: r, onClose: a } = e,
-            { trackUserProfileAction: o } = (0, f.KZ)();
+            { trackUserProfileAction: s } = (0, f.KZ)();
         return (0, i.jsxs)('div', {
-            className: s()(g.toast, m.toastPadding),
+            className: o()(g.toast, m.toastPadding),
             children: [
                 (0, i.jsx)(u.CheckmarkLargeIcon, {
                     size: 'sm',
@@ -95,9 +95,9 @@ let E = (e) => {
                         }),
                         (0, i.jsx)(u.Text, {
                             variant: 'text-sm/semibold',
-                            children: p.intl.format(p.t.QEW8Mj, {
+                            children: _.intl.format(_.t.QEW8Mj, {
                                 onClick: () => {
-                                    o({ action: 'PRESS_REACT_REPLY_TOAST' }), null == a || a(), c.Z.openPrivateChannel(r);
+                                    s({ action: 'PRESS_REACT_REPLY_TOAST' }), null == a || a(), c.Z.openPrivateChannel(r);
                                 }
                             })
                         })
@@ -106,9 +106,9 @@ let E = (e) => {
             ]
         });
     },
-    I = () =>
+    y = () =>
         (0, i.jsxs)('div', {
-            className: s()(g.toast, m.toastPadding),
+            className: o()(g.toast, m.toastPadding),
             children: [
                 (0, i.jsx)(u.Spinner, {
                     type: u.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
@@ -117,7 +117,7 @@ let E = (e) => {
                 (0, i.jsx)(u.Text, {
                     color: 'header-primary',
                     variant: 'text-sm/semibold',
-                    children: p.intl.string(p.t.tcARX1)
+                    children: _.intl.string(_.t.tcARX1)
                 })
             ]
         });

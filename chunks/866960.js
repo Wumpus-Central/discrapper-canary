@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(931619),
+    o = r(570140),
+    s = r(931619),
     l = r(981631);
 function u(e, n, r) {
     return (
@@ -19,13 +19,13 @@ function u(e, n, r) {
 let c = l.IWh.UNKNOWN,
     d = l.IyS.UNKNOWN,
     f = null;
-function _(e) {
+function p(e) {
     var n;
-    (c = null != e.type ? e.type : l.IWh.UNKNOWN), (d = null !== (n = e.effectiveSpeed) && void 0 !== n ? n : l.IyS.UNKNOWN), (f = e.serviceProvider), p.emitChange();
+    (c = null != e.type ? e.type : l.IWh.UNKNOWN), (d = null !== (n = e.effectiveSpeed) && void 0 !== n ? n : l.IyS.UNKNOWN), (f = e.serviceProvider), _.emitChange();
 }
 class h extends (i = a.ZP.Store) {
     initialize() {
-        o.Z.getNetworkInformation().then(_), o.Z.addChangeCallback(_);
+        s.Z.getNetworkInformation().then(p), s.Z.addChangeCallback(p);
     }
     getType() {
         return c;
@@ -38,5 +38,5 @@ class h extends (i = a.ZP.Store) {
     }
 }
 u(h, 'displayName', 'NetworkStore');
-let p = new h(s.Z, {});
-n.Z = p;
+let _ = new h(o.Z, {});
+n.Z = _;

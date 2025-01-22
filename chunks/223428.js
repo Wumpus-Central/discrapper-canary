@@ -1,7 +1,7 @@
 var i = r(35768),
     a = r(771378),
-    s = r(778247),
-    o = r(780177),
+    o = r(778247),
+    s = r(780177),
     l = r(585754),
     u = r(957578).Buffer;
 function c(e) {
@@ -9,9 +9,9 @@ function c(e) {
     var n,
         r,
         a,
-        o = s(e, n),
-        l = o.tag,
-        c = o.data;
+        s = o(e, n),
+        l = s.tag,
+        c = s.data;
     switch (l) {
         case 'CERTIFICATE':
             a = i.certificate.decode(c, 'der').tbsCertificate.subjectPublicKeyInfo;
@@ -81,13 +81,13 @@ function c(e) {
 function d(e, n) {
     var r = e.algorithm.decrypt.kde.kdeparams.salt,
         i = parseInt(e.algorithm.decrypt.kde.kdeparams.iters.toString(), 10),
-        s = a[e.algorithm.decrypt.cipher.algo.join('.')],
+        o = a[e.algorithm.decrypt.cipher.algo.join('.')],
         c = e.algorithm.decrypt.cipher.iv,
         d = e.subjectPrivateKey,
-        f = parseInt(s.split('-')[1], 10) / 8,
-        _ = l.pbkdf2Sync(n, r, i, f, 'sha1'),
-        h = o.createDecipheriv(s, _, c),
-        p = [];
-    return p.push(h.update(d)), p.push(h.final()), u.concat(p);
+        f = parseInt(o.split('-')[1], 10) / 8,
+        p = l.pbkdf2Sync(n, r, i, f, 'sha1'),
+        h = s.createDecipheriv(o, p, c),
+        _ = [];
+    return _.push(h.update(d)), _.push(h.final()), u.concat(_);
 }
 (e.exports = c), (c.signature = i.signature);

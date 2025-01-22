@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     wrapper: 'wrapper_a8220a',
     cardHeaderImg: 'cardHeaderImg_a8220a',
     details: 'details_a8220a',

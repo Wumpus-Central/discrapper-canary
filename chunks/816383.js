@@ -7,10 +7,10 @@ function a(e, n) {
         (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-function s(e, n, r) {
+function o(e, n, r) {
     return n && a(e.prototype, n), r && a(e, r), e;
 }
-function o(e, n, r) {
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -30,35 +30,35 @@ r.d(n, {
 });
 var l = (function () {
     function e(n, r) {
-        i(this, e), o(this, 'xs', void 0), o(this, 'ys', void 0), o(this, 'c1s', void 0), o(this, 'c2s', void 0), o(this, 'c3s', void 0);
-        for (var a, s, l, u = n.length, c = [], d = 0; d < u; d++) c.push(d);
+        i(this, e), s(this, 'xs', void 0), s(this, 'ys', void 0), s(this, 'c1s', void 0), s(this, 'c2s', void 0), s(this, 'c3s', void 0);
+        for (var a, o, l, u = n.length, c = [], d = 0; d < u; d++) c.push(d);
         c.sort(function (e, r) {
             return n[e] < n[r] ? -1 : 1;
         });
-        for (var f = [], _ = [], h = [], p = 0; p < u - 1; p++) (a = n[p + 1] - n[p]), (s = r[p + 1] - r[p]), _.push(a), f.push(s), h.push(s / a);
-        for (var m = [h[0]], g = 0; g < _.length - 1; g++) {
+        for (var f = [], p = [], h = [], _ = 0; _ < u - 1; _++) (a = n[_ + 1] - n[_]), (o = r[_ + 1] - r[_]), p.push(a), f.push(o), h.push(o / a);
+        for (var m = [h[0]], g = 0; g < p.length - 1; g++) {
             var E = h[g],
                 v = h[g + 1];
             if (E * v <= 0) m.push(0);
             else {
-                a = _[g];
-                var I = _[g + 1],
-                    T = a + I;
-                m.push((3 * T) / ((T + I) / E + (T + a) / v));
+                a = p[g];
+                var y = p[g + 1],
+                    b = a + y;
+                m.push((3 * b) / ((b + y) / E + (b + a) / v));
             }
         }
         m.push(h[h.length - 1]);
-        for (var b = [], y = [], S = 0; S < m.length - 1; S++) {
+        for (var I = [], T = [], S = 0; S < m.length - 1; S++) {
             l = h[S];
             var A = m[S],
-                N = 1 / _[S],
-                C = A + m[S + 1] - l - l;
-            b.push((l - A - C) * N), y.push(C * N * N);
+                C = 1 / p[S],
+                N = A + m[S + 1] - l - l;
+            I.push((l - A - N) * C), T.push(N * C * C);
         }
-        (this.xs = n), (this.ys = r), (this.c1s = m), (this.c2s = b), (this.c3s = y);
+        (this.xs = n), (this.ys = r), (this.c1s = m), (this.c2s = I), (this.c3s = T);
     }
     return (
-        s(e, [
+        o(e, [
             {
                 key: 'interpolate',
                 value: function (e) {
@@ -66,11 +66,11 @@ var l = (function () {
                         r = this.xs,
                         i = this.ys,
                         a = this.c1s,
-                        s = this.c2s,
-                        o = this.c3s,
+                        o = this.c2s,
+                        s = this.c3s,
                         l = r.length - 1;
                     if (e === r[l]) return i[l];
-                    for (var u = 0, c = o.length - 1; u <= c; ) {
+                    for (var u = 0, c = s.length - 1; u <= c; ) {
                         var d = r[(n = Math.floor(0.5 * (u + c)))];
                         if (d < e) u = n + 1;
                         else {
@@ -79,8 +79,8 @@ var l = (function () {
                         }
                     }
                     var f = e - r[(l = Math.max(0, c))],
-                        _ = f * f;
-                    return i[l] + a[l] * f + s[l] * _ + o[l] * f * _;
+                        p = f * f;
+                    return i[l] + a[l] * f + o[l] * p + s[l] * f * p;
                 }
             }
         ]),

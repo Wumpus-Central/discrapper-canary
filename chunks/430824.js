@@ -1,15 +1,15 @@
 let i;
 var a,
-    s = r(47120);
-var o = r(442837),
+    o = r(47120);
+var s = r(442837),
     l = r(902704),
     u = r(570140),
     c = r(601964),
     d = r(411198),
     f = r(625137),
-    _ = r(709054),
+    p = r(709054),
     h = r(314897),
-    p = r(981631),
+    _ = r(981631),
     m = r(647086);
 function g(e, n, r) {
     return (
@@ -26,10 +26,10 @@ function g(e, n, r) {
 }
 let E = {},
     v = {},
-    I = !1,
-    T = [];
-function b(e) {
-    I = !0;
+    y = !1,
+    b = [];
+function I(e) {
+    y = !0;
     let n = v;
     (v = {}),
         (E = {}),
@@ -38,16 +38,16 @@ function b(e) {
             i++, (v[e.id] = d.wD(e, n[e.id])), (E[e.id] = e.roles instanceof Array ? f.C5(e.id, e.roles) : e.roles);
         });
     let r = !1;
-    if (T.length !== e.geoRestrictedGuilds.length) r = !0;
+    if (b.length !== e.geoRestrictedGuilds.length) r = !0;
     else
         for (let n = 0; n < e.geoRestrictedGuilds.length; n++)
-            if (!(0, l.Z)(T[n], e.geoRestrictedGuilds[n])) {
+            if (!(0, l.Z)(b[n], e.geoRestrictedGuilds[n])) {
                 r = !0;
                 break;
             }
-    r && (T = e.geoRestrictedGuilds);
+    r && (b = e.geoRestrictedGuilds);
 }
-function y(e) {
+function T(e) {
     for (let r of e.guilds) {
         var n;
         let e = v[r.id];
@@ -62,11 +62,11 @@ function S(e) {
 function A(e) {
     S(e.guilds);
 }
-function N(e) {
+function C(e) {
     if (0 === e.guilds.length) return !1;
     S(e.guilds);
 }
-function C(e) {
+function N(e) {
     var n;
     (v = {}),
         (E = {}),
@@ -97,8 +97,8 @@ function O(e) {
         (E[n.id] = f.C5(n.id, e.guild.roles));
 }
 function D(e) {
-    T = [
-        ...T,
+    b = [
+        ...b,
         {
             id: e.guildId,
             name: e.name,
@@ -108,22 +108,22 @@ function D(e) {
         }
     ];
 }
-function L(e) {
+function x(e) {
     let { guild: n } = e,
-        r = T.findIndex((e) => e.id === n.id);
+        r = b.findIndex((e) => e.id === n.id);
     if (-1 !== r) {
-        T.splice(r, 1), (T = [...T]);
+        b.splice(r, 1), (b = [...b]);
         return;
     }
     if (null == v[n.id] || n.unavailable) return !1;
     (v = { ...v }), delete v[n.id], (E[n.id] = void 0), i--;
 }
-function x(e) {
+function L(e) {
     let { guildId: n, role: r } = e,
         i = E[n],
         a = f.CL(r),
-        s = null == i ? void 0 : i[a.id];
-    if (null != s && (0, l.Z)(a, s)) return !1;
+        o = null == i ? void 0 : i[a.id];
+    if (null != o && (0, l.Z)(a, o)) return !1;
     (i = {
         ...i,
         [r.id]: f.CL(r)
@@ -140,37 +140,37 @@ function w(e) {
 function P(e) {
     let { guildId: n, joinedAt: r, user: i } = e,
         a = h.default.getId(),
-        s = v[n];
-    if (a !== i.id || null == s) return !1;
-    let o = 'string' == typeof r ? new Date(r) : r;
-    if (o === s.joinedAt || null == o) return !1;
+        o = v[n];
+    if (a !== i.id || null == o) return !1;
+    let s = 'string' == typeof r ? new Date(r) : r;
+    if (s === o.joinedAt || null == s) return !1;
     v = {
         ...v,
-        [n]: s.updateJoinedAt(o)
+        [n]: o.updateJoinedAt(s)
     };
 }
 function M() {
     return !0;
 }
 let k = Object.freeze({});
-class U extends (a = o.ZP.Store) {
+class U extends (a = s.ZP.Store) {
     getGuild(e) {
-        return null == e ? void 0 : e === p.I_8 ? m.g : v[e];
+        return null == e ? void 0 : e === _.I_8 ? m.g : v[e];
     }
     getGuilds() {
         return v;
     }
     getGuildIds() {
-        return _.default.keys(v);
+        return p.default.keys(v);
     }
     getGuildCount() {
         return i;
     }
     isLoaded() {
-        return I;
+        return y;
     }
     getGeoRestrictedGuilds() {
-        return T;
+        return b;
     }
     getAllGuildsRoles() {
         return E;
@@ -186,16 +186,16 @@ class U extends (a = o.ZP.Store) {
 }
 g(U, 'displayName', 'GuildStore'),
     (n.Z = new U(u.Z, {
-        BACKGROUND_SYNC: y,
-        CONNECTION_OPEN: b,
-        OVERLAY_INITIALIZE: C,
+        BACKGROUND_SYNC: T,
+        CONNECTION_OPEN: I,
+        OVERLAY_INITIALIZE: N,
         CACHE_LOADED: A,
-        CACHE_LOADED_LAZY: N,
+        CACHE_LOADED_LAZY: C,
         GUILD_CREATE: R,
         GUILD_UPDATE: O,
-        GUILD_DELETE: L,
-        GUILD_ROLE_CREATE: x,
-        GUILD_ROLE_UPDATE: x,
+        GUILD_DELETE: x,
+        GUILD_ROLE_CREATE: L,
+        GUILD_ROLE_UPDATE: L,
         GUILD_ROLE_DELETE: w,
         GUILD_MEMBER_ADD: P,
         GUILD_SETTINGS_SUBMIT_SUCCESS: M,

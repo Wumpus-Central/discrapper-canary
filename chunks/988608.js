@@ -1,8 +1,8 @@
 var i = r(706178);
 (e.exports = v), (v.simpleSieve = g), (v.fermatTest = E);
 var a = r(814033),
-    s = new a(24),
-    o = new (r(687363))(),
+    o = new a(24),
+    s = new (r(687363))(),
     l = new a(1),
     u = new a(2),
     c = new a(5);
@@ -10,20 +10,20 @@ new a(16), new a(8);
 var d = new a(10),
     f = new a(3);
 new a(7);
-var _ = new a(11),
+var p = new a(11),
     h = new a(4);
 new a(12);
-var p = null;
+var _ = null;
 function m() {
-    if (null !== p) return p;
+    if (null !== _) return _;
     var e = 1048576,
         n = [];
     n[0] = 2;
     for (var r = 1, i = 3; i < e; i += 2) {
-        for (var a = Math.ceil(Math.sqrt(i)), s = 0; s < r && n[s] <= a && i % n[s] != 0; s++);
-        (r === s || !(n[s] <= a)) && (n[r++] = i);
+        for (var a = Math.ceil(Math.sqrt(i)), o = 0; o < r && n[o] <= a && i % n[o] != 0; o++);
+        (r === o || !(n[o] <= a)) && (n[r++] = i);
     }
-    return (p = n), n;
+    return (_ = n), n;
 }
 function g(e) {
     for (var n = m(), r = 0; r < n.length; r++)
@@ -38,13 +38,13 @@ function E(e) {
     return 0 === u.toRed(n).redPow(e.subn(1)).fromRed().cmpn(1);
 }
 function v(e, n) {
-    var r, p;
+    var r, _;
     if (e < 16) return 2 === n || 5 === n ? new a([140, 123]) : new a([140, 39]);
     for (n = new a(n); ; ) {
         for (r = new a(i(Math.ceil(e / 8))); r.bitLength() > e; ) r.ishrn(1);
         if ((r.isEven() && r.iadd(l), !r.testn(1) && r.iadd(u), n.cmp(u))) {
             if (!n.cmp(c)) for (; r.mod(d).cmp(f); ) r.iadd(h);
-        } else for (; r.mod(s).cmp(_); ) r.iadd(h);
-        if (g((p = r.shrn(1))) && g(r) && E(p) && E(r) && o.test(p) && o.test(r)) return r;
+        } else for (; r.mod(o).cmp(p); ) r.iadd(h);
+        if (g((_ = r.shrn(1))) && g(r) && E(_) && E(r) && s.test(_) && s.test(r)) return r;
     }
 }

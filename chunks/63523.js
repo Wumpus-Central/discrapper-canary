@@ -17,22 +17,22 @@ r(689118)(a, i),
         function a(n) {
             e.writable && !1 === e.write(n) && r.pause && r.pause();
         }
-        function s() {
+        function o() {
             r.readable && r.resume && r.resume();
         }
-        r.on('data', a), e.on('drain', s), !e._isStdio && (!n || !1 !== n.end) && (r.on('end', l), r.on('close', u));
-        var o = !1;
+        r.on('data', a), e.on('drain', o), !e._isStdio && (!n || !1 !== n.end) && (r.on('end', l), r.on('close', u));
+        var s = !1;
         function l() {
-            !o && ((o = !0), e.end());
+            !s && ((s = !0), e.end());
         }
         function u() {
-            !o && ((o = !0), 'function' == typeof e.destroy && e.destroy());
+            !s && ((s = !0), 'function' == typeof e.destroy && e.destroy());
         }
         function c(e) {
             if ((d(), 0 === i.listenerCount(this, 'error'))) throw e;
         }
         function d() {
-            r.removeListener('data', a), e.removeListener('drain', s), r.removeListener('end', l), r.removeListener('close', u), r.removeListener('error', c), e.removeListener('error', c), r.removeListener('end', d), r.removeListener('close', d), e.removeListener('close', d);
+            r.removeListener('data', a), e.removeListener('drain', o), r.removeListener('end', l), r.removeListener('close', u), r.removeListener('error', c), e.removeListener('error', c), r.removeListener('end', d), r.removeListener('close', d), e.removeListener('close', d);
         }
         return r.on('error', c), e.on('error', c), r.on('end', d), r.on('close', d), e.on('close', d), e.emit('pipe', r), e;
     });

@@ -1,10 +1,10 @@
-var e = n(447631),
-    o = n(349446),
-    i = n(241777);
-t.exports = e
-    ? function (t, r, n) {
-          return o.f(t, r, i(1, n));
+var i = r(447631),
+    a = r(349446),
+    o = r(241777);
+e.exports = i
+    ? function (e, n, r) {
+          return a.f(e, n, o(1, r));
       }
-    : function (t, r, n) {
-          return (t[r] = n), t;
+    : function (e, n, r) {
+          return (e[n] = r), e;
       };

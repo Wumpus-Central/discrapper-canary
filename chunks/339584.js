@@ -1,20 +1,20 @@
-var r = n(156741),
-    o = n(729605),
-    a = n(338752),
-    i = n(474883),
-    s = n(54659),
-    c = Math.min,
-    l = [].lastIndexOf,
-    u = !!l && 1 / [1].lastIndexOf(1, -0) < 0,
-    d = s('lastIndexOf');
-e.exports =
-    u || !d
-        ? function (e) {
-              if (u) return r(l, this, arguments) || 0;
-              var t = o(this),
-                  n = i(t),
-                  s = n - 1;
-              for (arguments.length > 1 && (s = c(s, a(arguments[1]))), s < 0 && (s = n + s); s >= 0; s--) if (s in t && t[s] === e) return s || 0;
-              return -1;
-          }
-        : l;
+var i = r(156741),
+    a = r(729605),
+    o = r(338752),
+    s = r(474883),
+    l = r(54659),
+    u = Math.min,
+    c = [].lastIndexOf,
+    d = !!c && 1 / [1].lastIndexOf(1, -0) < 0,
+    f = l('lastIndexOf'),
+    p = d || !f;
+e.exports = p
+    ? function (e) {
+          if (d) return i(c, this, arguments) || 0;
+          var n = a(this),
+              r = s(n),
+              l = r - 1;
+          for (arguments.length > 1 && (l = u(l, o(arguments[1]))), l < 0 && (l = r + l); l >= 0; l--) if (l in n && n[l] === e) return l || 0;
+          return -1;
+      }
+    : c;

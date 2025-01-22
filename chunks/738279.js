@@ -5,15 +5,15 @@ r.d(n, {
 });
 var i = r(661763),
     a = r(662845),
-    s = r(192379),
-    o = r(726983);
+    o = r(192379),
+    s = r(726983);
 function l(e, n) {
     let { role: r = 'dialog' } = e,
         l = (0, i.mp)();
     l = e['aria-label'] ? void 0 : l;
-    let u = (0, s.useRef)(!1);
+    let u = (0, o.useRef)(!1);
     return (
-        (0, s.useEffect)(() => {
+        (0, o.useEffect)(() => {
             if (n.current && !n.current.contains(document.activeElement)) {
                 (0, a.ex)(n.current);
                 let e = setTimeout(() => {
@@ -24,7 +24,7 @@ function l(e, n) {
                 };
             }
         }, [n]),
-        (0, o.Bq)(),
+        (0, s.Bq)(),
         {
             dialogProps: {
                 ...(0, i.zL)(e, { labelable: !0 }),

@@ -1,6 +1,6 @@
 var i = r(47120);
 var a = r(992774);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -13,15 +13,15 @@ function s(e, n, r) {
         e
     );
 }
-class o {
+class s {
     addSink(e, n, r) {
         let i = this.streams,
-            s = i[e];
-        if ((null == s && (s = i[e] = new Map()), 0 === s.size)) {
+            o = i[e];
+        if ((null == o && (o = i[e] = new Map()), 0 === o.size)) {
             let n = (0, a.zS)();
-            n.setVideoOutputSink(e, this.handleImageData.bind(this, n.signalVideoOutputSinkReady.bind(n, e), s), !0);
+            n.setVideoOutputSink(e, this.handleImageData.bind(this, n.signalVideoOutputSinkReady.bind(n, e), o), !0);
         }
-        s.set(n, r);
+        o.set(n, r);
     }
     removeSink(e, n) {
         let r = this.streams,
@@ -33,7 +33,7 @@ class o {
         e();
     }
     constructor() {
-        s(this, 'streams', {});
+        o(this, 'streams', {});
     }
 }
-n.Z = new o();
+n.Z = new s();

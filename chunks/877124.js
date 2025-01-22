@@ -14,7 +14,7 @@ let i = new Map(),
         let n = i.get(e);
         return n ? Object.fromEntries(Object.entries(n.stores).map(([e, n]) => [e, n.getState()])) : {};
     },
-    s = (e, n, r) => {
+    o = (e, n, r) => {
         if (void 0 === e)
             return {
                 type: 'untracked',
@@ -27,20 +27,20 @@ let i = new Map(),
                 store: e,
                 ...a
             };
-        let s = {
+        let o = {
             connection: n.connect(r),
             stores: {}
         };
         return (
-            i.set(r.name, s),
+            i.set(r.name, o),
             {
                 type: 'tracked',
                 store: e,
-                ...s
+                ...o
             }
         );
     },
-    o = (e, n) => {
+    s = (e, n) => {
         let r;
         try {
             r = JSON.parse(e);
@@ -53,20 +53,20 @@ let i = new Map(),
         let a = i.subscribe;
         return (
             (i.subscribe = (e, n, r) => {
-                let s = e;
+                let o = e;
                 if (n) {
                     let a = (null == r ? void 0 : r.equalityFn) || Object.is,
-                        o = e(i.getState());
-                    (s = (r) => {
+                        s = e(i.getState());
+                    (o = (r) => {
                         let i = e(r);
-                        if (!a(o, i)) {
-                            let e = o;
-                            n((o = i), e);
+                        if (!a(s, i)) {
+                            let e = s;
+                            n((s = i), e);
                         }
                     }),
-                        (null == r ? void 0 : r.fireImmediately) && n(o, o);
+                        (null == r ? void 0 : r.fireImmediately) && n(s, s);
                 }
-                return a(s);
+                return a(o);
             }),
             e(n, r, i)
         );
@@ -82,8 +82,8 @@ function u(e, n) {
         getItem: (e) => {
             var i;
             let a = (e) => (null === e ? null : JSON.parse(e, null == n ? void 0 : n.reviver)),
-                s = null != (i = r.getItem(e)) ? i : null;
-            return s instanceof Promise ? s.then(a) : a(s);
+                o = null != (i = r.getItem(e)) ? i : null;
+            return o instanceof Promise ? o.then(a) : a(o);
         },
         setItem: (e, i) => r.setItem(e, JSON.stringify(i, null == n ? void 0 : n.replacer)),
         removeItem: (e) => r.removeItem(e)
@@ -109,8 +109,8 @@ let c = (e) => (n) => {
         }
     },
     d = (e, n) => (r, i, a) => {
-        let s,
-            o = {
+        let o,
+            s = {
                 storage: u(() => localStorage),
                 partialize: (e) => e,
                 version: 0,
@@ -123,25 +123,25 @@ let c = (e) => (n) => {
             l = !1,
             d = new Set(),
             f = new Set(),
-            _ = o.storage;
-        if (!_)
+            p = s.storage;
+        if (!p)
             return e(
                 (...e) => {
-                    console.warn(`[zustand persist middleware] Unable to update item '${o.name}', the given storage is currently unavailable.`), r(...e);
+                    console.warn(`[zustand persist middleware] Unable to update item '${s.name}', the given storage is currently unavailable.`), r(...e);
                 },
                 i,
                 a
             );
         let h = () => {
-                let e = o.partialize({ ...i() });
-                return _.setItem(o.name, {
+                let e = s.partialize({ ...i() });
+                return p.setItem(s.name, {
                     state: e,
-                    version: o.version
+                    version: s.version
                 });
             },
-            p = a.setState;
+            _ = a.setState;
         a.setState = (e, n) => {
-            p(e, n), h();
+            _(e, n), h();
         };
         let m = e(
             (...e) => {
@@ -153,18 +153,18 @@ let c = (e) => (n) => {
         a.getInitialState = () => m;
         let g = () => {
             var e, n;
-            if (!_) return;
+            if (!p) return;
             (l = !1),
                 d.forEach((e) => {
                     var n;
                     return e(null != (n = i()) ? n : m);
                 });
-            let a = (null == (n = o.onRehydrateStorage) ? void 0 : n.call(o, null != (e = i()) ? e : m)) || void 0;
-            return c(_.getItem.bind(_))(o.name)
+            let a = (null == (n = s.onRehydrateStorage) ? void 0 : n.call(s, null != (e = i()) ? e : m)) || void 0;
+            return c(p.getItem.bind(p))(s.name)
                 .then((e) => {
                     if (e) {
-                        if ('number' != typeof e.version || e.version === o.version) return [!1, e.state];
-                        if (o.migrate) return [!0, o.migrate(e.state, e.version)];
+                        if ('number' != typeof e.version || e.version === s.version) return [!1, e.state];
+                        if (s.migrate) return [!0, s.migrate(e.state, e.version)];
                         console.error("State loaded from storage couldn't be migrated since no migrate function was provided");
                     }
                     return [!1, void 0];
@@ -172,10 +172,10 @@ let c = (e) => (n) => {
                 .then((e) => {
                     var n;
                     let [a, l] = e;
-                    if ((r((s = o.merge(l, null != (n = i()) ? n : m)), !0), a)) return h();
+                    if ((r((o = s.merge(l, null != (n = i()) ? n : m)), !0), a)) return h();
                 })
                 .then(() => {
-                    null == a || a(s, void 0), (s = i()), (l = !0), f.forEach((e) => e(s));
+                    null == a || a(o, void 0), (o = i()), (l = !0), f.forEach((e) => e(o));
                 })
                 .catch((e) => {
                     null == a || a(void 0, e);
@@ -184,16 +184,16 @@ let c = (e) => (n) => {
         return (
             (a.persist = {
                 setOptions: (e) => {
-                    (o = {
-                        ...o,
+                    (s = {
+                        ...s,
                         ...e
                     }),
-                        e.storage && (_ = e.storage);
+                        e.storage && (p = e.storage);
                 },
                 clearStorage: () => {
-                    null == _ || _.removeItem(o.name);
+                    null == p || p.removeItem(s.name);
                 },
-                getOptions: () => o,
+                getOptions: () => s,
                 rehydrate: () => g(),
                 hasHydrated: () => l,
                 onHydrate: (e) => (
@@ -209,7 +209,7 @@ let c = (e) => (n) => {
                     }
                 )
             }),
-            !o.skipHydration && g(),
-            s || m
+            !s.skipHydration && g(),
+            o || m
         );
     };

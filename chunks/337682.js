@@ -6,23 +6,23 @@ r.d(n, {
         return l;
     },
     jS: function () {
-        return s;
+        return o;
     },
     tZ: function () {
-        return o;
+        return s;
     }
 });
 var i = r(570140);
 function a() {
     i.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE' });
 }
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE',
         activityUrlOverride: e
     });
 }
-function o(e) {
+function s(e) {
     i.Z.dispatch({
         type: 'DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED',
         applicationId: e,

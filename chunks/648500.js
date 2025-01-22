@@ -1,6 +1,6 @@
 var i = r(675717),
     a = Object.create,
-    s = (function () {
+    o = (function () {
         function e() {}
         return function (n) {
             if (!(0, i.Z)(n)) return {};
@@ -10,4 +10,4 @@ var i = r(675717),
             return (e.prototype = void 0), r;
         };
     })();
-n.Z = s;
+n.Z = o;

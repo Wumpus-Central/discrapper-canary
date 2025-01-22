@@ -3,15 +3,15 @@ var i = function (e) {
     },
     a = function (e, n, r, a) {
         if (a && !r) n[a] = i(e[1]);
-        else for (var s = 0; s < r.length; s += 1) null != e[s + 1] && (n[r[s]] = i(e[s + 1]));
+        else for (var o = 0; o < r.length; o += 1) null != e[o + 1] && (n[r[o]] = i(e[o + 1]));
     },
-    s = function (e, n, r) {
+    o = function (e, n, r) {
         var i = e.name && e.names;
         e.push && !n[e.push] ? (n[e.push] = []) : i && !n[e.name] && (n[e.name] = {});
-        var s = e.push ? {} : i ? n[e.name] : n;
-        a(r.match(e.reg), s, e.names, e.name), e.push && n[e.push].push(s);
+        var o = e.push ? {} : i ? n[e.name] : n;
+        a(r.match(e.reg), o, e.names, e.name), e.push && n[e.push].push(o);
     },
-    o = r(767172),
+    s = r(767172),
     l = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
 n.parse = function (e) {
     var n = {},
@@ -30,9 +30,9 @@ n.parse = function (e) {
                         fmtp: []
                     }),
                     (i = r[r.length - 1]));
-                for (var l = 0; l < (o[n] || []).length; l += 1) {
-                    var u = o[n][l];
-                    if (u.reg.test(a)) return s(u, i, a);
+                for (var l = 0; l < (s[n] || []).length; l += 1) {
+                    var u = s[n][l];
+                    if (u.reg.test(a)) return o(u, i, a);
                 }
             }),
         (n.media = r),

@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a = r(653041);
-var s = r(512722),
-    o = r.n(s),
+var o = r(512722),
+    s = r.n(o),
     l = r(442837),
     u = r(433517),
     c = r(570140);
@@ -53,9 +53,9 @@ class f extends (i = l.ZP.Store) {
             },
             n
         ),
-            o()(null != this.getClass().displayName, 'Snapshot stores need a display name'),
-            o()(!('CLEAR_CACHES' in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"),
-            o()(!('WRITE_CACHES' in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"),
+            s()(null != this.getClass().displayName, 'Snapshot stores need a display name'),
+            s()(!('CLEAR_CACHES' in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"),
+            s()(!('WRITE_CACHES' in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"),
             f.allStores.push(this);
     }
 }

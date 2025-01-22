@@ -1,7 +1,7 @@
 var i = r(724458);
 var a = r(259443),
-    s = r(579806),
-    o = r(77450),
+    o = r(579806),
+    s = r(77450),
     l = r(998502);
 function u(e, n, r) {
     return (
@@ -17,10 +17,10 @@ function u(e, n, r) {
     );
 }
 let c = new a.Yd('ProcessUtilsElectron');
-class d extends o.h {
+class d extends s.h {
     setupReportingTimer() {
         var e, n;
-        let r = null === s.Z || void 0 === s.Z ? void 0 : null === (e = s.Z.processUtils) || void 0 === e ? void 0 : e.setMemoryInformation;
+        let r = null === o.Z || void 0 === o.Z ? void 0 : null === (e = o.Z.processUtils) || void 0 === e ? void 0 : e.setMemoryInformation;
         if (null == r) {
             c.log('setMemoryInformation not available.');
             return;
@@ -31,24 +31,24 @@ class d extends o.h {
         (null === (n = performance.memory) || void 0 === n ? void 0 : n.usedJSHeapSize) == null && c.error('usedJSHeapSize is not available.'),
             setInterval(() => {
                 var e, n, a;
-                let s = null !== (n = null === (e = performance.memory) || void 0 === e ? void 0 : e.usedJSHeapSize) && void 0 !== n ? n : 0;
+                let o = null !== (n = null === (e = performance.memory) || void 0 === e ? void 0 : e.usedJSHeapSize) && void 0 !== n ? n : 0;
                 r({
                     memoryUsageKB: null !== (a = this.lastMemoryUsageKB) && void 0 !== a ? a : 0,
-                    usedJSHeapSizeKB: i(s)
+                    usedJSHeapSizeKB: i(o)
                 });
             }, 10000);
     }
     getProcessUptime() {
         var e, n;
-        return null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getProcessUptime) || void 0 === e ? void 0 : e.call(n);
+        return null === o.Z || void 0 === o.Z ? void 0 : null === (n = o.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getProcessUptime) || void 0 === e ? void 0 : e.call(n);
     }
     getCurrentCPUUsagePercent() {
         var e, n;
-        return null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getCurrentCPUUsagePercent) || void 0 === e ? void 0 : e.call(n);
+        return null === o.Z || void 0 === o.Z ? void 0 : null === (n = o.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getCurrentCPUUsagePercent) || void 0 === e ? void 0 : e.call(n);
     }
     getCumulativeCPUUsage() {
         var e, n;
-        return null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getCumulativeCPUUsage) || void 0 === e ? void 0 : e.call(n);
+        return null === o.Z || void 0 === o.Z ? void 0 : null === (n = o.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getCumulativeCPUUsage) || void 0 === e ? void 0 : e.call(n);
     }
     getCurrentMemoryUsageKB() {
         let e = d.getCurrentMemoryUsageKBCore();
@@ -76,11 +76,11 @@ class d extends o.h {
     }
     getMemoryUsageElectronRendererUsedHeapSize() {
         var e, n;
-        return null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getUsedHeapSize) || void 0 === e ? void 0 : e.call(n);
+        return null === o.Z || void 0 === o.Z ? void 0 : null === (n = o.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getUsedHeapSize) || void 0 === e ? void 0 : e.call(n);
     }
     constructor() {
         var e, n;
-        super(), u(this, 'lastMemoryUsageKB', void 0), (this.cpuCoreCount = null === s.Z || void 0 === s.Z ? void 0 : null === (n = s.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getCPUCoreCount) || void 0 === e ? void 0 : e.call(n)), this.setupReportingTimer();
+        super(), u(this, 'lastMemoryUsageKB', void 0), (this.cpuCoreCount = null === o.Z || void 0 === o.Z ? void 0 : null === (n = o.Z.processUtils) || void 0 === n ? void 0 : null === (e = n.getCPUCoreCount) || void 0 === e ? void 0 : e.call(n)), this.setupReportingTimer();
     }
 }
 n.Z = new d();

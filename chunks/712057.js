@@ -8,46 +8,46 @@ r.d(n, {
 });
 var i = r(564334),
     a = r(302221),
-    s = r(563114);
-let o = '#ffffff',
+    o = r(563114);
+let s = '#ffffff',
     l = '#36393e',
     u = (e) => {
         var n, r;
-        let { colors: s, saturationFactor: u = 1 } = e;
-        if (null == s || s.length < 1) return null;
-        let c = (0, a.YD)(s),
-            d = i.Z.parseString(o);
+        let { colors: o, saturationFactor: u = 1 } = e;
+        if (null == o || o.length < 1) return null;
+        let c = (0, a.YD)(o),
+            d = i.Z.parseString(s);
         if (null == d) return null;
         let f = i.Z.parseString(l);
         if (null == f) return null;
-        let _ = i.Z.parseString(c);
-        if (null == _) return null;
-        let h = (0, a.AZ)(_.red, _.blue, _.green),
-            p =
+        let p = i.Z.parseString(c);
+        if (null == p) return null;
+        let h = (0, a.AZ)(p.red, p.blue, p.green),
+            _ =
                 null !==
                     (n = (0, a.k8)({
-                        colors: [(0, a.j)(_, 0.6, !0), d],
+                        colors: [(0, a.j)(p, 0.6, !0), d],
                         ratio: 3,
                         saturationFactor: u
                     })) && void 0 !== n
                     ? n
-                    : _,
+                    : p,
             m =
                 null !==
                     (r = (0, a.k8)({
-                        colors: [(0, a.j)(_, 0.6, !1), f],
+                        colors: [(0, a.j)(p, 0.6, !1), f],
                         ratio: 5,
                         saturationFactor: u
                     })) && void 0 !== r
                     ? r
-                    : _,
+                    : p,
             g = (0, a.k8)({
-                colors: [_, d],
+                colors: [p, d],
                 ratio: 7,
                 saturationFactor: u
             }),
             E = (0, a.k8)({
-                colors: [_, f],
+                colors: [p, f],
                 ratio: 7,
                 saturationFactor: u
             });
@@ -55,10 +55,10 @@ let o = '#ffffff',
             LIGHT: {
                 accentColor: null == g ? void 0 : g.toHexString(),
                 backgroundColor: (0, a.xj)({
-                    colorRGB: p,
+                    colorRGB: _,
                     saturationFactor: u
                 }),
-                highlightColor: null == _ ? void 0 : _.toHexString(),
+                highlightColor: null == p ? void 0 : p.toHexString(),
                 opacity: (null == h ? void 0 : h.saturation) < 0.1 ? 0.35 : 0.1
             },
             DARK: {
@@ -67,7 +67,7 @@ let o = '#ffffff',
                     colorRGB: m,
                     saturationFactor: u
                 }),
-                highlightColor: null == _ ? void 0 : _.toHexString(),
+                highlightColor: null == p ? void 0 : p.toHexString(),
                 opacity: (null == h ? void 0 : h.saturation) < 0.1 ? 0.5 : 0.2
             }
         };
@@ -78,7 +78,7 @@ let o = '#ffffff',
                 colors: n,
                 saturationFactor: r
             });
-        return s.Z.applyPlatformToThemedEmojiColorPalette({
+        return o.Z.applyPlatformToThemedEmojiColorPalette({
             palette: a,
             shouldProcessMobileColors: i
         });
@@ -90,11 +90,11 @@ let o = '#ffffff',
                 colors: e,
                 saturationFactor: n
             }),
-            s = r ? (null == a ? void 0 : a.DARK) : null == a ? void 0 : a.LIGHT;
+            o = r ? (null == a ? void 0 : a.DARK) : null == a ? void 0 : a.LIGHT;
         return {
-            backgroundColor: null == s ? void 0 : s.backgroundColor,
-            accentColor: null == s ? void 0 : s.accentColor,
-            highlightColor: null == s ? void 0 : s.highlightColor,
-            opacity: null !== (i = null == s ? void 0 : s.opacity) && void 0 !== i ? i : 0.15
+            backgroundColor: null == o ? void 0 : o.backgroundColor,
+            accentColor: null == o ? void 0 : o.accentColor,
+            highlightColor: null == o ? void 0 : o.highlightColor,
+            opacity: null !== (i = null == o ? void 0 : o.opacity) && void 0 !== i ? i : 0.15
         };
     };

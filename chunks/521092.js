@@ -1,12 +1,12 @@
 var i = r(219956),
     a = r(710170),
-    s = r(481062);
-function o() {
+    o = r(481062);
+function s() {
     (this.size = 0),
         (this.__data__ = {
             hash: new i(),
-            map: new (s || a)(),
+            map: new (o || a)(),
             string: new i()
         });
 }
-e.exports = o;
+e.exports = s;

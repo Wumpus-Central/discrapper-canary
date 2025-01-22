@@ -1,6 +1,6 @@
 let i = r(13556),
-    { MAX_LENGTH: a, MAX_SAFE_INTEGER: s } = r(942177),
-    { safeRe: o, t: l } = r(646664),
+    { MAX_LENGTH: a, MAX_SAFE_INTEGER: o } = r(942177),
+    { safeRe: s, t: l } = r(646664),
     u = r(498994),
     { compareIdentifiers: c } = r(434016);
 class d {
@@ -11,16 +11,16 @@ class d {
         } else if ('string' != typeof e) throw TypeError(`Invalid version. Must be a string. Got type "${typeof e}".`);
         if (e.length > a) throw TypeError(`version is longer than ${a} characters`);
         i('SemVer', e, n), (this.options = n), (this.loose = !!n.loose), (this.includePrerelease = !!n.includePrerelease);
-        let r = e.trim().match(n.loose ? o[l.LOOSE] : o[l.FULL]);
+        let r = e.trim().match(n.loose ? s[l.LOOSE] : s[l.FULL]);
         if (!r) throw TypeError(`Invalid Version: ${e}`);
-        if (((this.raw = e), (this.major = +r[1]), (this.minor = +r[2]), (this.patch = +r[3]), this.major > s || this.major < 0)) throw TypeError('Invalid major version');
-        if (this.minor > s || this.minor < 0) throw TypeError('Invalid minor version');
-        if (this.patch > s || this.patch < 0) throw TypeError('Invalid patch version');
+        if (((this.raw = e), (this.major = +r[1]), (this.minor = +r[2]), (this.patch = +r[3]), this.major > o || this.major < 0)) throw TypeError('Invalid major version');
+        if (this.minor > o || this.minor < 0) throw TypeError('Invalid minor version');
+        if (this.patch > o || this.patch < 0) throw TypeError('Invalid patch version');
         r[4]
             ? (this.prerelease = r[4].split('.').map((e) => {
                   if (/^[0-9]+$/.test(e)) {
                       let n = +e;
-                      if (n >= 0 && n < s) return n;
+                      if (n >= 0 && n < o) return n;
                   }
                   return e;
               }))

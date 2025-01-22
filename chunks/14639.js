@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(638214);
 let a = 16,
-    s = 32768,
-    o = 30717;
+    o = 32768,
+    s = 30717;
 function l() {
-    return (0, i.P)() ? o | s : o;
+    return (0, i.P)() ? s | o : s;
 }

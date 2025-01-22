@@ -1,20 +1,20 @@
 r.r(n);
 var i = r(411104);
 var a = r(836560);
-var s = r(525654),
-    o = r.n(s),
+var o = r(525654),
+    s = r.n(o),
     l = r(664751),
     u = r(772848),
     c = r(544891),
     d = r(996106),
     f = r(981631);
-let _ = f.V6Z + f.frH - 1;
+let p = f.V6Z + f.frH - 1;
 function h(e, n) {
     if (null == e || null == n) throw Error('cmd and name required');
     return ''.concat(e, ':').concat(n);
 }
-let p = l.parse(location.search.slice(1)),
-    m = parseInt(null != p.rpc && '' !== p.rpc ? p.rpc : f.V6Z, 10),
+let _ = l.parse(location.search.slice(1)),
+    m = parseInt(null != _.rpc && '' !== _.rpc ? _.rpc : f.V6Z, 10),
     g = null;
 class E extends a.EventEmitter {
     get port() {
@@ -25,7 +25,7 @@ class E extends a.EventEmitter {
     }
     connect() {
         if (null == g) {
-            if (m > _) {
+            if (m > p) {
                 (m = f.V6Z), this.emit('disconnected');
                 return;
             }
@@ -45,21 +45,21 @@ class E extends a.EventEmitter {
                         this.emit('error', e), this.disconnect();
                         return;
                     }
-                    let { cmd: r, evt: i, nonce: a, data: s } = n;
+                    let { cmd: r, evt: i, nonce: a, data: o } = n;
                     if (r === f.Etm.DISPATCH) {
                         if (i === f.zMe.READY) {
                             this.emit('connected');
                             return;
                         }
                         if (i === f.zMe.ERROR) {
-                            this.emit('error', new d.Z({ errorCode: s.code }, s.message)), this.disconnect();
+                            this.emit('error', new d.Z({ errorCode: o.code }, o.message)), this.disconnect();
                             return;
                         }
-                        this.emit(h(r, i), s);
+                        this.emit(h(r, i), o);
                         return;
                     }
-                    let o = null;
-                    i === f.zMe.ERROR && ((o = new d.Z({ errorCode: s.code }, s.message)), (s = null)), this.emit(h(r, a), o, s);
+                    let s = null;
+                    i === f.zMe.ERROR && ((s = new d.Z({ errorCode: o.code }, o.message)), (o = null)), this.emit(h(r, a), s, o);
                 }),
                 (g.onclose = g.onerror = (e) => this.disconnect(e)));
         }
@@ -89,14 +89,14 @@ class E extends a.EventEmitter {
                     this.connect();
                 return;
             }
-            let s = (0, u.Z)(),
-                o = JSON.stringify({
+            let o = (0, u.Z)(),
+                s = JSON.stringify({
                     cmd: e,
                     args: n,
                     evt: r,
-                    nonce: s
+                    nonce: o
                 });
-            this.once(h(e, s), (e, n) => (null != e ? a(e) : i(n))), null == g || g.send(o);
+            this.once(h(e, o), (e, n) => (null != e ? a(e) : i(n))), null == g || g.send(s);
         });
     }
     requestOnce(e, n, r) {
@@ -120,7 +120,7 @@ class E extends a.EventEmitter {
             });
     }
     requestRedirect(e, n, r) {
-        if ('Chrome' === o().name && parseInt(o().version, 10) >= 58) return this.requestOnce(e, n, r);
+        if ('Chrome' === s().name && parseInt(s().version, 10) >= 58) return this.requestOnce(e, n, r);
         let i = encodeURIComponent(
                 JSON.stringify({
                     cmd: e,

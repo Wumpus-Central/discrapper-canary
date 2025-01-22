@@ -1,6 +1,6 @@
 r.d(n, {
     S: function () {
-        return o;
+        return s;
     }
 });
 var i = r(47120);
@@ -17,15 +17,15 @@ function a(e, n, r) {
         e
     );
 }
-let s = Symbol.iterator;
-class o {
+let o = Symbol.iterator;
+class s {
     get length() {
         return this.items.size;
     }
     get capacity() {
         return this.limit;
     }
-    [s]() {
+    [o]() {
         return this.items.entries();
     }
     entries() {

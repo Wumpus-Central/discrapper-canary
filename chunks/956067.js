@@ -1,6 +1,6 @@
 var i = r(733860);
 var a = r(653041);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -13,7 +13,7 @@ function s(e, n, r) {
         e
     );
 }
-let o = null == r.g.__getTotalRequireTime ? () => 0 : () => r.g.__getTotalRequireTime(),
+let s = null == r.g.__getTotalRequireTime ? () => 0 : () => r.g.__getTotalRequireTime(),
     l = 'undefined' != typeof performance;
 class u {
     get isTracing() {
@@ -60,7 +60,7 @@ class u {
                 this.addImportLogDetail());
     }
     addImportLogDetail() {
-        let e = o();
+        let e = s();
         e - this.lastImportDuration > 25 && (this.addDetail('JS Imports', Math.ceil(e) + 'ms'), (this.lastImportDuration = e));
     }
     markWithDelta(e, n) {
@@ -70,16 +70,16 @@ class u {
     markAt(e, n, r) {
         var i, a;
         if (!this.isTracing) return;
-        let s = 0;
-        for (; s < this.logs.length; s++) {
-            let { timestamp: e } = this.logs[s];
+        let o = 0;
+        for (; o < this.logs.length; o++) {
+            let { timestamp: e } = this.logs[o];
             if (null != e && e > r) break;
         }
-        this.logs.splice(s, 0, {
+        this.logs.splice(o, 0, {
             emoji: e,
             log: n,
             timestamp: r,
-            prefix: null !== (a = null === (i = this.logs[s]) || void 0 === i ? void 0 : i.prefix) && void 0 !== a ? a : ''
+            prefix: null !== (a = null === (i = this.logs[o]) || void 0 === i ? void 0 : i.prefix) && void 0 !== a ? a : ''
         });
     }
     addDetail(e, n) {
@@ -95,26 +95,26 @@ class u {
         let i = this.prefix;
         this.mark(e, 'Start '.concat(n)), (this.prefix += '| ');
         let a = Date.now(),
-            s = r(),
-            o = Date.now() - a;
-        return (this.prefix = i), this.mark(e, 'Finish '.concat(n), o), s;
+            o = r(),
+            s = Date.now() - a;
+        return (this.prefix = i), this.mark(e, 'Finish '.concat(n), s), o;
     }
     async timeAsync(e, n, r) {
         if (!this.isTracing) return r();
         this.mark(e, 'Start '.concat(n));
         let i = Date.now(),
             a = await r(),
-            s = Date.now() - i;
-        return this.mark(e, 'Finish '.concat(n), s), a;
+            o = Date.now() - i;
+        return this.mark(e, 'Finish '.concat(n), o), a;
     }
     setServerTrace(e) {
         this.logGroups[0].serverTrace = e;
     }
     constructor() {
-        s(this, 'isTracing_', !0),
-            s(this, 'endTime_', Date.now() + 15000),
-            s(this, 'lastImportDuration', 0),
-            s(this, 'logGroups', [
+        o(this, 'isTracing_', !0),
+            o(this, 'endTime_', Date.now() + 15000),
+            o(this, 'lastImportDuration', 0),
+            o(this, 'logGroups', [
                 {
                     index: 0,
                     timestamp: Date.now(),
@@ -122,8 +122,8 @@ class u {
                     nativeLogs: []
                 }
             ]),
-            s(this, 'logs', this.logGroups[0].logs),
-            s(this, 'prefix', '');
+            o(this, 'logs', this.logGroups[0].logs),
+            o(this, 'prefix', '');
     }
 }
 n.Z = new u();

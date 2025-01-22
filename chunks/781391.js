@@ -1,6 +1,6 @@
 r.d(n, {
     hi: function () {
-        return s;
+        return o;
     }
 });
 var i = r(570140);
@@ -11,7 +11,7 @@ function a(e) {
     });
 }
 r(740492), r(874893);
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'UNSYNCED_USER_SETTINGS_UPDATE',
         settings: { useSystemTheme: e }

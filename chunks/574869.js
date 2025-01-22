@@ -1,12 +1,12 @@
 r.d(n, {
     d: function () {
-        return o;
+        return s;
     }
 });
 var i = r(932143),
     a = r(155263),
-    s = r(192379);
-function o(e) {
+    o = r(192379);
+function s(e) {
     let n = (0, i.W)(e),
         r = (0, a.BA)({
             ...e,
@@ -14,7 +14,7 @@ function o(e) {
                 null != e.onSelectionChange && e.onSelectionChange(r), n.close();
             }
         }),
-        [o, l] = (0, s.useState)(!1);
+        [s, l] = (0, o.useState)(!1);
     return {
         ...r,
         ...n,
@@ -24,7 +24,7 @@ function o(e) {
         toggle(e) {
             0 !== r.collection.size && n.toggle(e);
         },
-        isFocused: o,
+        isFocused: s,
         setFocused: l
     };
 }

@@ -13,22 +13,22 @@ function i(e, n) {
     } else
         for (var i = 0; i < e.length; i++) {
             var a = e.charCodeAt(i),
-                s = a >> 8,
-                o = 255 & a;
-            s ? r.push(s, o) : r.push(o);
+                o = a >> 8,
+                s = 255 & a;
+            o ? r.push(o, s) : r.push(s);
         }
     return r;
 }
 function a(e) {
     return 1 === e.length ? '0' + e : e;
 }
-function s(e) {
+function o(e) {
     for (var n = '', r = 0; r < e.length; r++) n += a(e[r].toString(16));
     return n;
 }
 (r.toArray = i),
     (r.zero2 = a),
-    (r.toHex = s),
+    (r.toHex = o),
     (r.encode = function (e, n) {
-        return 'hex' === n ? s(e) : e;
+        return 'hex' === n ? o(e) : e;
     });

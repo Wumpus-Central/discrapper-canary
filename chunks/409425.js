@@ -1,22 +1,22 @@
-i.d(t, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var n = i(200651);
-i(192379);
-var a = i(120356),
-    r = i.n(a),
-    o = i(481060),
-    l = i(377171),
-    c = i(388032),
-    s = i(493004);
+var i = n(200651);
+n(192379);
+var a = n(120356),
+    r = n.n(a),
+    l = n(481060),
+    o = n(377171),
+    s = n(388032),
+    c = n(493004);
 function d(e) {
-    let { className: t, ...i } = e;
-    return (0, n.jsx)(o.TextBadge, {
-        ...i,
-        text: c.intl.string(c.t.LO4f0N),
-        color: l.Z.BACKGROUND_TERTIARY,
-        className: r()(t, s.partnerBadge)
+    let { className: t, ...n } = e;
+    return (0, i.jsx)(l.TextBadge, {
+        ...n,
+        text: s.intl.string(s.t.LO4f0N),
+        color: o.Z.BACKGROUND_TERTIARY,
+        className: r()(t, c.partnerBadge)
     });
 }

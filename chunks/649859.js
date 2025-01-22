@@ -1,12 +1,12 @@
 r.d(n, {
     Kq: function () {
-        return y;
+        return T;
     },
     L0: function () {
         return D;
     },
     Ux: function () {
-        return C;
+        return N;
     },
     Xe: function () {
         return O;
@@ -15,7 +15,7 @@ r.d(n, {
         return A;
     },
     bU: function () {
-        return I;
+        return y;
     },
     qb: function () {
         return S;
@@ -23,8 +23,8 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(198453),
-    s = r(133886),
-    o = r(495484),
+    o = r(133886),
+    s = r(495484),
     l = r(661763),
     u = r(881085);
 let c = new Set(['Arab', 'Syrc', 'Samr', 'Mand', 'Thaa', 'Mend', 'Nkoo', 'Adlm', 'Rohg', 'Hebr']),
@@ -39,9 +39,9 @@ function f(e) {
     let n = e.split('-')[0];
     return d.has(n);
 }
-let _ = Symbol.for('react-aria.i18n.locale');
+let p = Symbol.for('react-aria.i18n.locale');
 function h() {
-    let e = ('undefined' != typeof window && window[_]) || ('undefined' != typeof navigator && (navigator.language || navigator.userLanguage)) || 'en-US';
+    let e = ('undefined' != typeof window && window[p]) || ('undefined' != typeof navigator && (navigator.language || navigator.userLanguage)) || 'en-US';
     try {
         Intl.DateTimeFormat.supportedLocalesOf([e]);
     } catch (n) {
@@ -52,14 +52,14 @@ function h() {
         direction: f(e) ? 'rtl' : 'ltr'
     };
 }
-let p = h(),
+let _ = h(),
     m = new Set();
 function g() {
-    for (let e of ((p = h()), m)) e(p);
+    for (let e of ((_ = h()), m)) e(_);
 }
 function E() {
     let e = (0, a.Av)(),
-        [n, r] = (0, i.useState)(p);
+        [n, r] = (0, i.useState)(_);
     return ((0, i.useEffect)(
         () => (
             0 === m.size && window.addEventListener('languagechange', g),
@@ -78,29 +78,29 @@ function E() {
         : n;
 }
 let v = i.createContext(null);
-function I() {
+function y() {
     let e = E();
     return (0, i.useContext)(v) || e;
 }
-let T = new WeakMap();
-function b(e) {
-    let n = T.get(e);
-    return !n && ((n = new s.J(e)), T.set(e, n)), n;
+let b = new WeakMap();
+function I(e) {
+    let n = b.get(e);
+    return !n && ((n = new o.J(e)), b.set(e, n)), n;
 }
-function y(e, n) {
-    return (n && (0, s.J).getGlobalDictionaryForPackage(n)) || b(e);
+function T(e, n) {
+    return (n && (0, o.J).getGlobalDictionaryForPackage(n)) || I(e);
 }
 function S(e, n) {
-    let { locale: r } = I(),
-        a = y(e, n);
-    return (0, i.useMemo)(() => new s.E(r, a), [r, a]);
+    let { locale: r } = y(),
+        a = T(e, n);
+    return (0, i.useMemo)(() => new o.E(r, a), [r, a]);
 }
 function A(e) {
-    e = (0, l.vE)(null != e ? e : {}, N);
-    let { locale: n } = I();
-    return (0, i.useMemo)(() => new o.C(n, e), [n, e]);
+    e = (0, l.vE)(null != e ? e : {}, C);
+    let { locale: n } = y();
+    return (0, i.useMemo)(() => new s.C(n, e), [n, e]);
 }
-function N(e, n) {
+function C(e, n) {
     if (e === n) return !0;
     let r = Object.keys(e),
         i = Object.keys(n);
@@ -108,13 +108,13 @@ function N(e, n) {
     for (let i of r) if (n[i] !== e[i]) return !1;
     return !0;
 }
-function C(e = {}) {
-    let { locale: n } = I();
+function N(e = {}) {
+    let { locale: n } = y();
     return (0, i.useMemo)(() => new u.e(n, e), [n, e]);
 }
 let R = new Map();
 function O(e) {
-    let { locale: n } = I(),
+    let { locale: n } = y(),
         r =
             n +
             (e
@@ -133,15 +133,15 @@ function D(e) {
         }),
         r = (0, i.useCallback)((e, r) => 0 === r.length || ((e = e.normalize('NFC')), (r = r.normalize('NFC')), 0 === n.compare(e.slice(0, r.length), r)), [n]),
         a = (0, i.useCallback)((e, r) => 0 === r.length || ((e = e.normalize('NFC')), (r = r.normalize('NFC')), 0 === n.compare(e.slice(-r.length), r)), [n]),
-        s = (0, i.useCallback)(
+        o = (0, i.useCallback)(
             (e, r) => {
                 if (0 === r.length) return !0;
                 (e = e.normalize('NFC')), (r = r.normalize('NFC'));
                 let i = 0,
                     a = r.length;
                 for (; i + a <= e.length; i++) {
-                    let s = e.slice(i, i + a);
-                    if (0 === n.compare(r, s)) return !0;
+                    let o = e.slice(i, i + a);
+                    if (0 === n.compare(r, o)) return !0;
                 }
                 return !1;
             },
@@ -151,8 +151,8 @@ function D(e) {
         () => ({
             startsWith: r,
             endsWith: a,
-            contains: s
+            contains: o
         }),
-        [r, a, s]
+        [r, a, o]
     );
 }

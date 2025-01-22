@@ -6,61 +6,61 @@ r.d(n, {
         return m;
     },
     ku: function () {
-        return p;
+        return _;
     }
 });
 var i = r(789020);
 var a = r(830121),
-    s = r(754688),
-    o = r(430824),
+    o = r(754688),
+    s = r(430824),
     l = r(768581),
     u = r(5192),
     c = r(154135),
     d = r(981631),
     f = r(959517),
-    _ = r(388032);
+    p = r(388032);
 let h = 40;
-function p(e) {
-    var n, r, i, a, s;
-    let { mediaPostEmbedData: o, guild: d, parentChannel: p, postThread: m, user: E, selectedGuildId: v, canAccess: I = !1 } = e;
-    if (null == o) return null;
-    let T = (0, c.EY)(o.thumbnail),
-        b = !I && o.has_media_attachment,
-        y = I ? _.intl.string(_.t.UsZEBA) : _.intl.string(_.t.ReFzYW),
-        S = null != E ? u.ZP.getName(o.guild_id, o.channel_id, E) : void 0,
+function _(e) {
+    var n, r, i, a, o;
+    let { mediaPostEmbedData: s, guild: d, parentChannel: _, postThread: m, user: E, selectedGuildId: v, canAccess: y = !1 } = e;
+    if (null == s) return null;
+    let b = (0, c.EY)(s.thumbnail),
+        I = !y && s.has_media_attachment,
+        T = y ? p.intl.string(p.t.UsZEBA) : p.intl.string(p.t.ReFzYW),
+        S = null != E ? u.ZP.getName(s.guild_id, s.channel_id, E) : void 0,
         A = null == E ? void 0 : E.getAvatarURL(null == d ? void 0 : d.id, h);
-    (null == A || v !== o.guild_id) &&
+    (null == A || v !== s.guild_id) &&
         (A = l.ZP.getGuildIconURL({
-            id: o.guild_id,
-            icon: o.guild_icon,
+            id: s.guild_id,
+            icon: s.guild_icon,
             size: h,
             canAnimate: !1
         }));
-    let N = g(o.thumbnail) && !b,
-        C = (null === (n = o.thumbnail) || void 0 === n ? void 0 : n.filename) != null && (null === (i = o.thumbnail) || void 0 === i ? void 0 : null === (r = i.filename) || void 0 === r ? void 0 : r.startsWith(f._j));
+    let C = g(s.thumbnail) && !I,
+        N = (null === (n = s.thumbnail) || void 0 === n ? void 0 : n.filename) != null && (null === (i = s.thumbnail) || void 0 === i ? void 0 : null === (r = i.filename) || void 0 === r ? void 0 : r.startsWith(f._j));
     return {
-        title: null !== (a = o.title) && void 0 !== a ? a : '',
-        subtitle: o.description,
-        ctaText: y,
-        coverImage: T,
-        coverImageOverlayText: b ? _.intl.string(_.t.YonliY) : void 0,
-        parentChannelId: o.parent_channel_id,
-        threadId: o.channel_id,
+        title: null !== (a = s.title) && void 0 !== a ? a : '',
+        subtitle: s.description,
+        ctaText: T,
+        coverImage: b,
+        coverImageOverlayText: I ? p.intl.string(p.t.YonliY) : void 0,
+        parentChannelId: s.parent_channel_id,
+        threadId: s.channel_id,
         postThread: m,
-        messageId: o.message_id,
-        canAccess: I,
-        guildId: o.guild_id,
-        guildName: null !== (s = null == d ? void 0 : d.name) && void 0 !== s ? s : o.guild_name,
-        authorId: null == o ? void 0 : o.author_id,
+        messageId: s.message_id,
+        canAccess: y,
+        guildId: s.guild_id,
+        guildName: null !== (o = null == d ? void 0 : d.name) && void 0 !== o ? o : s.guild_name,
+        authorId: null == s ? void 0 : s.author_id,
         authorName: S,
-        channelName: null == p ? void 0 : p.name,
+        channelName: null == _ ? void 0 : _.name,
         avatarUrl: A,
-        shouldShowBlurredThumbnailImage: b,
-        shouldContainMediaWithBackground: N,
-        shouldSpoiler: C,
+        shouldShowBlurredThumbnailImage: I,
+        shouldContainMediaWithBackground: C,
+        shouldSpoiler: N,
         obscureAwaitingScan: !1,
-        flags: o.flags,
-        contentScanVersion: o.content_scan_version
+        flags: s.flags,
+        contentScanVersion: s.content_scan_version
     };
 }
 function m(e) {
@@ -68,7 +68,7 @@ function m(e) {
     let n = (0, a.FO)(e);
     if (null == n) return;
     let r = (0, a.Sq)(n);
-    if (null != r) return (0, s.Qj)(r);
+    if (null != r) return (0, o.Qj)(r);
 }
 function g(e) {
     if (null == e) return !1;
@@ -76,7 +76,7 @@ function g(e) {
     return null != n && null != r && n >= r;
 }
 function E(e, n) {
-    let r = o.Z.getGuild(e);
+    let r = s.Z.getGuild(e);
     if (null == r || null == n) return !1;
     let i = r.hasFeature(d.oNc.CREATOR_MONETIZABLE) || r.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
     return !0 === n.isMediaChannel() && i;

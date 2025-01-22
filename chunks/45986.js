@@ -3,7 +3,7 @@ r.d(n, {
         return a;
     },
     u: function () {
-        return s;
+        return o;
     }
 });
 var i = r(570140);
@@ -13,7 +13,7 @@ function a(e) {
         url: e
     });
 }
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'MASKED_LINK_ADD_TRUSTED_PROTOCOL',
         url: e

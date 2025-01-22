@@ -3,16 +3,16 @@ r.d(n, {
         return l;
     },
     s: function () {
-        return o;
+        return s;
     }
 });
 var i = r(311570),
     a = r(46973),
-    s = r(37113);
-let o = (e, n, r) => {
+    o = r(37113);
+let s = (e, n, r) => {
         let i = {
             qualityOptions: {
-                preset: s.tI.PRESET_CUSTOM,
+                preset: o.tI.PRESET_CUSTOM,
                 resolution: e,
                 frameRate: n
             },

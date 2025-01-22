@@ -1,14 +1,14 @@
-var e = n(821819),
-    o = n(982665),
-    i = n(726433),
-    u = n(448894),
-    s = Object.isExtensible,
-    c = e(function () {
-        s(1);
+var i = r(821819),
+    a = r(982665),
+    o = r(726433),
+    s = r(448894),
+    l = Object.isExtensible,
+    u = i(function () {
+        l(1);
     });
-t.exports =
-    c || u
-        ? function (t) {
-              return !!o(t) && (!u || 'ArrayBuffer' !== i(t)) && (!s || s(t));
+e.exports =
+    u || s
+        ? function (e) {
+              return !!a(e) && (!s || 'ArrayBuffer' !== o(e)) && (!l || l(e));
           }
-        : s;
+        : l;

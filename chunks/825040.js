@@ -5,19 +5,19 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(665443),
-    o = r.n(s),
+    o = r(665443),
+    s = r.n(o),
     l = r(970838),
     u = r(376398);
 function c(e) {
-    let { streamId: n, paused: r, onReady: s, onResize: c, className: d, ...f } = e,
-        _ = a.useRef(null),
+    let { streamId: n, paused: r, onReady: o, onResize: c, className: d, ...f } = e,
+        p = a.useRef(null),
         h = a.useRef({
             width: 0,
             height: 0
         });
     a.useLayoutEffect(() => {
-        let e = _.current;
+        let e = p.current;
         if (null != e)
             return (
                 (0, l.rY)(n),
@@ -30,32 +30,32 @@ function c(e) {
         a.useEffect(() => {
             var e, i;
             return (
-                r ? (null === (e = _.current) || void 0 === e || e.pause(), (0, l.Bw)(n)) : null === (i = _.current) || void 0 === i || i.play().catch(() => {}),
+                r ? (null === (e = p.current) || void 0 === e || e.pause(), (0, l.Bw)(n)) : null === (i = p.current) || void 0 === i || i.play().catch(() => {}),
                 () => {
                     r && (0, l.rY)(n);
                 }
             );
         }, [r]);
-    let p = a.useCallback(() => {
+    let _ = a.useCallback(() => {
         var e, n, r, i;
-        let { width: a, height: s } = h.current,
-            o = null !== (r = null === (e = _.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== r ? r : 0,
-            l = null !== (i = null === (n = _.current) || void 0 === n ? void 0 : n.videoHeight) && void 0 !== i ? i : 0;
-        if (a !== o || s !== l) {
+        let { width: a, height: o } = h.current,
+            s = null !== (r = null === (e = p.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== r ? r : 0,
+            l = null !== (i = null === (n = p.current) || void 0 === n ? void 0 : n.videoHeight) && void 0 !== i ? i : 0;
+        if (a !== s || o !== l) {
             let e = {
-                width: o,
+                width: s,
                 height: l
             };
             null == c || c(e), (h.current = e);
         }
     }, [c]);
     a.useLayoutEffect(() => {
-        let e = _.current;
-        if (null != e) return e.addEventListener('resize', p), () => e.removeEventListener('resize', p);
-    }, [p]);
+        let e = p.current;
+        if (null != e) return e.addEventListener('resize', _), () => e.removeEventListener('resize', _);
+    }, [_]);
     let m = a.useCallback(() => {
-            null == s || s();
-        }, [s]),
+            null == o || o();
+        }, [o]),
         g = a.useCallback(
             (e) => {
                 !r && e.currentTarget.play();
@@ -63,8 +63,8 @@ function c(e) {
             [r]
         );
     return (0, i.jsx)('video', {
-        className: o()('media-engine-video', d),
-        ref: _,
+        className: s()('media-engine-video', d),
+        ref: p,
         autoPlay: !0,
         onPause: g,
         onCanPlayThrough: m,

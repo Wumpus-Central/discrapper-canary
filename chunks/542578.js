@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(41776),
+    o = r(570140),
+    s = r(41776),
     l = r(222677),
     u = r(598077),
     c = r(592125),
@@ -19,44 +19,44 @@ function f(e, n, r) {
         e
     );
 }
-let _ = {};
+let p = {};
 class h {
     static ensure(e, n, r) {
         var i, a;
-        let s = ''
+        let o = ''
             .concat(e, ':')
             .concat(n.name, ':')
             .concat(null !== (i = n.id) && void 0 !== i ? i : '', ':')
             .concat(r);
-        return (_[s] = null !== (a = _[s]) && void 0 !== a ? a : new h());
+        return (p[o] = null !== (a = p[o]) && void 0 !== a ? a : new h());
     }
     constructor() {
         f(this, 'users', void 0), f(this, 'fetched', void 0), (this.fetched = !1), (this.users = {});
     }
 }
-function p() {
-    _ = {};
+function _() {
+    p = {};
 }
 function m(e) {
-    let { type: n, messageId: r, userId: i, emoji: a, reactionType: s } = e,
-        o = h.ensure(r, a, s);
+    let { type: n, messageId: r, userId: i, emoji: a, reactionType: o } = e,
+        s = h.ensure(r, a, o);
     if ('MESSAGE_REACTION_ADD' === n) {
         let e = d.default.getUser(i);
-        null != e && (o.users[i] = e);
-    } else delete o.users[i];
+        null != e && (s.users[i] = e);
+    } else delete s.users[i];
 }
 function g(e) {
     let { messageId: n, users: r, emoji: i, reactionType: a } = e,
-        s = h.ensure(n, i, a);
-    r.forEach((e) => (s.users[e.id] = new u.Z(e)));
+        o = h.ensure(n, i, a);
+    r.forEach((e) => (o.users[e.id] = new u.Z(e)));
 }
 class E extends (i = a.ZP.Store) {
     getReactions(e, n, r, i, a) {
-        let s = h.ensure(n, r, a);
-        if (!s.fetched) {
+        let o = h.ensure(n, r, a);
+        if (!o.fetched) {
             let u = c.Z.getChannel(e),
                 d = null != u ? u.getGuildId() : null;
-            if (null != d && o.Z.isLurking(d)) return;
+            if (null != d && s.Z.isLurking(d)) return;
             l.U0({
                 channelId: e,
                 messageId: n,
@@ -64,14 +64,14 @@ class E extends (i = a.ZP.Store) {
                 limit: i,
                 type: a
             }),
-                (s.fetched = !0);
+                (o.fetched = !0);
         }
-        return s.users;
+        return o.users;
     }
 }
 f(E, 'displayName', 'MessageReactionsStore'),
-    (n.Z = new E(s.Z, {
-        CONNECTION_OPEN: p,
+    (n.Z = new E(o.Z, {
+        CONNECTION_OPEN: _,
         MESSAGE_REACTION_ADD: m,
         MESSAGE_REACTION_REMOVE: m,
         MESSAGE_REACTION_ADD_USERS: g

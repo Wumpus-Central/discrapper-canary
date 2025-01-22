@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(224706),
-    s = r(978085),
-    o = r(147913),
+    o = r(978085),
+    s = r(147913),
     l = r(283595),
     u = r(358085);
 function c(e, n, r) {
@@ -17,9 +17,9 @@ function c(e, n, r) {
         e
     );
 }
-class d extends o.Z {
+class d extends s.Z {
     handlePostConnectionOpen() {
-        (0, u.isDesktop)() && (!l.Z.fetched && (0, s.b8)(), a.Z.getDetectableGames());
+        (0, u.isDesktop)() && (!l.Z.fetched && (0, o.b8)(), a.Z.getDetectableGames());
     }
     constructor(...e) {
         super(...e), c(this, 'actions', { POST_CONNECTION_OPEN: this.handlePostConnectionOpen });

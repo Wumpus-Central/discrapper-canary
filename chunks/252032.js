@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return N;
     }
 }),
     n(789020),
@@ -42,9 +42,9 @@ function b(e) {
         C = (0, r.e7)([p.Z], () => p.Z.getGuild(f), [f]),
         x = t.type === _.d4z.GUILD_ANNOUNCEMENT,
         b = null != C && C.hasFeature(_.oNc.NEWS),
-        S = x && b,
+        N = x && b,
         {
-            editingMessage: N,
+            editingMessage: S,
             editingTextValue: T,
             editingRichValue: j
         } = (0, r.cj)(
@@ -61,10 +61,10 @@ function b(e) {
             (e, n, i) => {
                 let { content: l } = i,
                     r = m.Z.can(_.Plq.MANAGE_MESSAGES, t),
-                    o = null != N && null != N.author ? N.author.id : null;
-                return S && (o === A || r) && null != N && (0, g.yE)(N.flags, _.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
+                    o = null != S && null != S.author ? S.author.id : null;
+                return N && (o === A || r) && null != S && (0, g.yE)(S.flags, _.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
             },
-            [N, S, A, t]
+            [S, N, A, t]
         ),
         P = l.useCallback(
             (e) =>
@@ -132,7 +132,7 @@ function Z(e) {
         )
     );
 }
-function S(e, t, n) {
+function N(e, t, n) {
     let { message: l, channel: r } = e;
     return n
         ? (0, i.jsx)(b, {

@@ -1,20 +1,20 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
 });
-var r = n(335832),
-    o = n(665336);
-function a(e, t, n) {
+var i = r(335832),
+    a = r(665336);
+function o(e, n, r) {
     return (
-        (t = (0, o.Z)(t)) in e
-            ? r(e, t, {
-                  value: n,
+        (n = (0, a.Z)(n)) in e
+            ? i(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = r),
         e
     );
 }

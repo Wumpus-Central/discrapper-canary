@@ -11,8 +11,8 @@ var i,
     o = n(200651),
     s = n(192379),
     c = n(120356),
-    d = n.n(c),
-    u = n(481060),
+    u = n.n(c),
+    d = n(481060),
     m = n(388032),
     h = n(708332);
 function f(e) {
@@ -33,8 +33,8 @@ class _ extends (i = s.PureComponent) {
         let f = -1 === i;
         return (0, o.jsxs)(o.Fragment, {
             children: [
-                (0, o.jsxs)(u.Clickable, {
-                    className: d()(h.queryContainer, { [h.focused]: f }),
+                (0, o.jsxs)(d.Clickable, {
+                    className: u()(h.queryContainer, { [h.focused]: f }),
                     ...p(n, -1, f),
                     onMouseEnter: a,
                     onClick: r,
@@ -46,7 +46,7 @@ class _ extends (i = s.PureComponent) {
                         (0, o.jsx)('div', {
                             className: h.queryShortcut,
                             'aria-hidden': !0,
-                            children: (0, o.jsx)(u.KeyCombo, {
+                            children: (0, o.jsx)(d.KeyCombo, {
                                 shortcut: 'return',
                                 dim: !0,
                                 className: h.keyCombo
@@ -55,8 +55,8 @@ class _ extends (i = s.PureComponent) {
                     ]
                 }),
                 c &&
-                    (0, o.jsxs)(u.Clickable, {
-                        className: d()(h.queryContainer, { [h.focused]: f }),
+                    (0, o.jsxs)(d.Clickable, {
+                        className: u()(h.queryContainer, { [h.focused]: f }),
                         ...p(n, -1, f),
                         onMouseEnter: a,
                         onClick: l,
@@ -68,7 +68,7 @@ class _ extends (i = s.PureComponent) {
                             (0, o.jsx)('div', {
                                 className: h.queryShortcut,
                                 'aria-hidden': !0,
-                                children: (0, o.jsx)(u.KeyCombo, {
+                                children: (0, o.jsx)(d.KeyCombo, {
                                     shortcut: 'shift+return',
                                     dim: !0,
                                     className: h.keyCombo

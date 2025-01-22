@@ -4,7 +4,7 @@ r.d(n, {
         return a;
     },
     RN: function () {
-        return s;
+        return o;
     },
     Wq: function () {
         return i;
@@ -16,7 +16,7 @@ r.d(n, {
         return l;
     },
     iF: function () {
-        return o;
+        return s;
     },
     kt: function () {
         return c;
@@ -25,8 +25,8 @@ r.d(n, {
         return u;
     }
 });
-let s = /([^A-Za-z0-9_.]+)/g,
-    o = /\.+/g;
+let o = /([^A-Za-z0-9_.]+)/g,
+    s = /\.+/g;
 !(function (e) {
     (e.NONE = 'none'), (e.EDIT_DISPLAY_NAME = 'display-name'), (e.EDIT_USERNAME = 'username'), (e.PREVIEW = 'preview'), (e.SUGGESTION = 'suggestion');
 })(i || (i = {})),

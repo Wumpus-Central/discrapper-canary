@@ -1,4 +1,4 @@
-var i, a, s;
+var i, a, o;
 r.d(n, {
     R8: function () {
         return a;
@@ -7,7 +7,7 @@ r.d(n, {
         return i;
     },
     hy: function () {
-        return s;
+        return o;
     }
 }),
     !(function (e) {
@@ -18,4 +18,4 @@ r.d(n, {
     })(a || (a = {})),
     !(function (e) {
         (e.HORIZONTAL = 'horizontal'), (e.VERTICAL = 'vertical');
-    })(s || (s = {}));
+    })(o || (o = {}));

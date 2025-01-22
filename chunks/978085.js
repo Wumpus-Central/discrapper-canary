@@ -11,12 +11,12 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(570140),
-    s = r(85521),
-    o = r(73346),
+    o = r(85521),
+    s = r(73346),
     l = r(981631);
 async function u() {
     try {
-        let e = await (0, o.Kb)(
+        let e = await (0, s.Kb)(
             {
                 url: l.ANM.LIBRARY,
                 oldFormErrors: !0,
@@ -47,7 +47,7 @@ async function c(e) {
             })
             .then((e) => e.body)
     ).map((r) =>
-        s.Z.createForTestMode({
+        o.Z.createForTestMode({
             id: e.id,
             skuId: n,
             branch: r

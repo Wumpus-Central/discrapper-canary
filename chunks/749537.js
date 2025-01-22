@@ -1,6 +1,6 @@
 r.d(n, {
     s: function () {
-        return s;
+        return o;
     }
 });
 let i = (e, n) => ({
@@ -17,13 +17,13 @@ let i = (e, n) => ({
               }
             : i(n, r);
     },
-    s = (e, n) => {
+    o = (e, n) => {
         let r = e.getClientOffset();
         if (null === r) return null;
         if (!n.current || !n.current.getBoundingClientRect) return i(r, a(e));
-        let s = n.current.getBoundingClientRect();
+        let o = n.current.getBoundingClientRect();
         return i(r, {
-            x: s.width / 2,
-            y: s.height / 2
+            x: o.width / 2,
+            y: o.height / 2
         });
     };

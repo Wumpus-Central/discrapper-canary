@@ -1,9 +1,9 @@
 r.d(n, {
     Ig: function () {
-        return s;
+        return o;
     },
     UU: function () {
-        return o;
+        return s;
     },
     ZY: function () {
         return a;
@@ -13,10 +13,10 @@ var i = r(392711);
 function a(e) {
     return e.__DISCORD_WINDOW_ID;
 }
-function s(e) {
+function o(e) {
     let n = (0, i.uniqueId)('window-');
     return (e.__DISCORD_WINDOW_ID = n), n;
 }
-function o() {
+function s() {
     return a(window);
 }

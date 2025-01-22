@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return S;
     }
 }),
     n(653041);
@@ -26,9 +26,9 @@ var i = n(200651),
     E = n(251564),
     b = n(695492),
     Z = n(981631),
-    S = n(948899);
-function N(e) {
-    let { participants: t, onClick: n, onDoubleClick: N, onContextMenu: T, channel: j, className: A, inCall: y, totalNumberOfParticipants: P, paused: M = !1 } = e,
+    N = n(948899);
+function S(e) {
+    let { participants: t, onClick: n, onDoubleClick: S, onContextMenu: T, channel: j, className: A, inCall: y, totalNumberOfParticipants: P, paused: M = !1 } = e,
         R = (0, c.bp)() === Z.IlC.POPOUT,
         L = (0, s.e7)([x.Z], () => x.Z.getGuild(j.guild_id), [j.guild_id]),
         { dismissedActivityEntryPointTileChannel: k } = (0, E.d)(),
@@ -60,10 +60,10 @@ function N(e) {
                     {
                         participant: e,
                         channel: j,
-                        className: S.tile,
+                        className: N.tile,
                         paused: M,
                         onClick: n,
-                        onDoubleClick: N,
+                        onDoubleClick: S,
                         onContextMenu: T,
                         inCall: y,
                         width: t,

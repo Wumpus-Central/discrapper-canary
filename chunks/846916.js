@@ -15,11 +15,11 @@ function n(e) {
             begin: /(\b0x[\d_]*(\.[\d_]*)?|0x\.\d[\d_]*)p[-+]?\d+|\b0[box][a-fA-F0-9][a-fA-F0-9_]*|(\b\d[\d_]*(\.[\d_]*)?|\.\d[\d_]*)([eEfF][-+]?\d+)?/,
             relevance: 0
         },
-        s = {
+        o = {
             className: 'string',
             begin: /'(.|\\[xXuU][a-zA-Z0-9]+)'/
         },
-        o = {
+        s = {
             className: 'subst',
             begin: /\$\(/,
             end: /\)/,
@@ -31,7 +31,7 @@ function n(e) {
         },
         u = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, o, l],
+            contains: [e.BACKSLASH_ESCAPE, s, l],
             variants: [
                 {
                     begin: /\w*"""/,
@@ -46,7 +46,7 @@ function n(e) {
         },
         c = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, o, l],
+            contains: [e.BACKSLASH_ESCAPE, s, l],
             begin: '`',
             end: '`'
         },
@@ -72,7 +72,7 @@ function n(e) {
         (i.name = 'Julia'),
         (i.contains = [
             a,
-            s,
+            o,
             u,
             c,
             d,
@@ -84,7 +84,7 @@ function n(e) {
             },
             { begin: /<:/ }
         ]),
-        (o.contains = i.contains),
+        (s.contains = i.contains),
         i
     );
 }

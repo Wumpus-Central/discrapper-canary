@@ -8,22 +8,22 @@ r.d(n, {
 });
 var i = r(661763),
     a = r(192379),
-    s = r(766203),
-    o = r(921336),
+    o = r(766203),
+    s = r(921336),
     l = r(649859),
     u = r(523603),
     c = r(184495),
     d = r(464170),
     f = r(867824);
-let _ = new WeakMap();
+let p = new WeakMap();
 function h(e, n, r) {
-    let { keyboardDelegate: d, isDisabled: f, isRequired: h, name: p, validationBehavior: m = 'aria' } = e,
+    let { keyboardDelegate: d, isDisabled: f, isRequired: h, name: _, validationBehavior: m = 'aria' } = e,
         g = (0, l.Xe)({
             usage: 'search',
             sensitivity: 'base'
         }),
-        E = (0, a.useMemo)(() => d || new s.dp(n.collection, n.disabledKeys, null, g), [d, n.collection, n.disabledKeys, g]),
-        { menuTriggerProps: v, menuProps: I } = (0, c.u4)(
+        E = (0, a.useMemo)(() => d || new o.dp(n.collection, n.disabledKeys, null, g), [d, n.collection, n.disabledKeys, g]),
+        { menuTriggerProps: v, menuProps: y } = (0, c.u4)(
             {
                 isDisabled: f,
                 type: 'listbox'
@@ -31,7 +31,7 @@ function h(e, n, r) {
             n,
             r
         ),
-        T = (e) => {
+        b = (e) => {
             switch (e.key) {
                 case 'ArrowLeft': {
                     e.preventDefault();
@@ -46,49 +46,49 @@ function h(e, n, r) {
                 }
             }
         },
-        { typeSelectProps: b } = (0, s.ip)({
+        { typeSelectProps: I } = (0, o.ip)({
             keyboardDelegate: E,
             selectionManager: n.selectionManager,
             onTypeSelect(e) {
                 n.setSelectedKey(e);
             }
         }),
-        { isInvalid: y, validationErrors: S, validationDetails: A } = n.displayValidation,
+        { isInvalid: T, validationErrors: S, validationDetails: A } = n.displayValidation,
         {
-            labelProps: N,
-            fieldProps: C,
+            labelProps: C,
+            fieldProps: N,
             descriptionProps: R,
             errorMessageProps: O
         } = (0, u.U)({
             ...e,
             labelElementType: 'span',
-            isInvalid: y,
+            isInvalid: T,
             errorMessage: e.errorMessage || S
         });
-    (b.onKeyDown = b.onKeyDownCapture), delete b.onKeyDownCapture;
+    (I.onKeyDown = I.onKeyDownCapture), delete I.onKeyDownCapture;
     let D = (0, i.zL)(e, { labelable: !0 }),
-        L = (0, i.dG)(b, v, C),
-        x = (0, i.Me)();
+        x = (0, i.dG)(I, v, N),
+        L = (0, i.Me)();
     return (
-        _.set(n, {
+        p.set(n, {
             isDisabled: f,
             isRequired: h,
-            name: p,
+            name: _,
             validationBehavior: m
         }),
         {
             labelProps: {
-                ...N,
+                ...C,
                 onClick: () => {
-                    !e.isDisabled && (r.current.focus(), (0, o._w)('keyboard'));
+                    !e.isDisabled && (r.current.focus(), (0, s._w)('keyboard'));
                 }
             },
             triggerProps: (0, i.dG)(D, {
-                ...L,
+                ...x,
                 isDisabled: f,
-                onKeyDown: (0, i.tS)(L.onKeyDown, T, e.onKeyDown),
+                onKeyDown: (0, i.tS)(x.onKeyDown, b, e.onKeyDown),
                 onKeyUp: e.onKeyUp,
-                'aria-labelledby': [x, L['aria-labelledby'], L['aria-label'] && !L['aria-labelledby'] ? L.id : null].filter(Boolean).join(' '),
+                'aria-labelledby': [L, x['aria-labelledby'], x['aria-label'] && !x['aria-labelledby'] ? x.id : null].filter(Boolean).join(' '),
                 onFocus(r) {
                     !n.isFocused && (e.onFocus && e.onFocus(r), e.onFocusChange && e.onFocusChange(!0), n.setFocused(!0));
                 },
@@ -96,9 +96,9 @@ function h(e, n, r) {
                     !n.isOpen && (e.onBlur && e.onBlur(r), e.onFocusChange && e.onFocusChange(!1), n.setFocused(!1));
                 }
             }),
-            valueProps: { id: x },
+            valueProps: { id: L },
             menuProps: {
-                ...I,
+                ...y,
                 autoFocus: n.focusStrategy || !0,
                 shouldSelectOnPressUp: !0,
                 shouldFocusOnHover: !0,
@@ -107,22 +107,22 @@ function h(e, n, r) {
                 onBlur: (r) => {
                     !r.currentTarget.contains(r.relatedTarget) && (e.onBlur && e.onBlur(r), e.onFocusChange && e.onFocusChange(!1), n.setFocused(!1));
                 },
-                'aria-labelledby': [C['aria-labelledby'], L['aria-label'] && !C['aria-labelledby'] ? L.id : null].filter(Boolean).join(' ')
+                'aria-labelledby': [N['aria-labelledby'], x['aria-label'] && !N['aria-labelledby'] ? x.id : null].filter(Boolean).join(' ')
             },
             descriptionProps: R,
             errorMessageProps: O,
-            isInvalid: y,
+            isInvalid: T,
             validationErrors: S,
             validationDetails: A
         }
     );
 }
-function p(e, n, r) {
+function _(e, n, r) {
     var a;
-    let s = _.get(n) || {},
-        { autoComplete: l, name: u = s.name, isDisabled: c = s.isDisabled } = e,
-        { validationBehavior: h, isRequired: p } = s,
-        m = (0, o.Kf)(),
+    let o = p.get(n) || {},
+        { autoComplete: l, name: u = o.name, isDisabled: c = o.isDisabled } = e,
+        { validationBehavior: h, isRequired: _ } = o,
+        m = (0, s.Kf)(),
         { visuallyHiddenProps: g } = (0, f.S)();
     return (
         (0, i.y$)(e.selectRef, n.selectedKey, n.setSelectedKey),
@@ -151,7 +151,7 @@ function p(e, n, r) {
                 tabIndex: -1,
                 autoComplete: l,
                 disabled: c,
-                required: 'native' === h && p,
+                required: 'native' === h && _,
                 name: u,
                 value: null !== (a = n.selectedKey) && void 0 !== a ? a : '',
                 onChange: (e) => n.setSelectedKey(e.target.value)
@@ -161,13 +161,13 @@ function p(e, n, r) {
 }
 function m(e) {
     var n;
-    let { state: r, triggerRef: i, label: s, name: o, isDisabled: l } = e,
+    let { state: r, triggerRef: i, label: o, name: s, isDisabled: l } = e,
         u = (0, a.useRef)(null),
         {
             containerProps: c,
             inputProps: d,
             selectProps: f
-        } = p(
+        } = _(
             {
                 ...e,
                 selectRef: u
@@ -186,7 +186,7 @@ function m(e) {
               a.createElement(
                   'label',
                   null,
-                  s,
+                  o,
                   a.createElement(
                       'select',
                       {
@@ -209,11 +209,11 @@ function m(e) {
                   )
               )
           )
-        : o
+        : s
           ? a.createElement('input', {
                 type: 'hidden',
                 autoComplete: f.autoComplete,
-                name: o,
+                name: s,
                 disabled: l,
                 value: null !== (n = r.selectedKey) && void 0 !== n ? n : ''
             })

@@ -1,18 +1,18 @@
 r.d(n, {
     Y: function () {
-        return _;
+        return p;
     }
 });
 var i = r(558030),
     a = r(246733),
-    s = r(165352),
-    o = r(152450),
+    o = r(165352),
+    s = r(152450),
     l = r(516558),
     u = r(281257),
     c = r(742442),
     d = r(554385),
     f = r(546914);
-function _(e) {
+function p(e) {
     switch (e) {
         case 'buddhist':
             return new i.M();
@@ -23,7 +23,7 @@ function _(e) {
         case 'coptic':
             return new a.Y0();
         case 'hebrew':
-            return new o.H();
+            return new s.H();
         case 'indian':
             return new l.t();
         case 'islamic-civil':
@@ -39,6 +39,6 @@ function _(e) {
         case 'roc':
             return new f.t();
         default:
-            return new s.IQ();
+            return new o.IQ();
     }
 }

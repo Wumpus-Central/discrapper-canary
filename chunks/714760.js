@@ -1,4 +1,4 @@
-var r = n(570596);
-e.exports = function (e, t, n) {
-    for (var o, a, i = n ? e : e.iterator, s = e.next; !(o = r(s, i)).done; ) if (void 0 !== (a = t(o.value))) return a;
+var i = r(570596);
+e.exports = function (e, n, r) {
+    for (var a, o, s = r ? e : e.iterator, l = e.next; !(a = i(l, s)).done; ) if (void 0 !== (o = n(a.value))) return o;
 };

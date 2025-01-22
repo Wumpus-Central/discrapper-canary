@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(433517),
-    s = r(147913);
-function o(e, n, r) {
+    o = r(147913);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -15,7 +15,7 @@ function o(e, n, r) {
     );
 }
 let l = 'formGuidelinesStorageKey';
-class u extends s.Z {
+class u extends o.Z {
     _initialize() {
         let e = a.K.get(l);
         null != e && (this.seenForumGuidelines = new Set(e));
@@ -30,7 +30,7 @@ class u extends s.Z {
         return this.seenForumGuidelines.has(e);
     }
     constructor(...e) {
-        super(...e), o(this, 'seenForumGuidelines', new Set());
+        super(...e), s(this, 'seenForumGuidelines', new Set());
     }
 }
 n.Z = new u();

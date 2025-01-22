@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i,
     a = r(259443),
-    s = r(47770),
-    o = r(740197),
+    o = r(47770),
+    s = r(740197),
     l = r(376398),
     u = r(65154);
 function c(e, n, r) {
@@ -29,7 +29,7 @@ let d = new a.Yd('Output');
 !(function (e) {
     (e.InteractionRequired = 'interactionrequired'), (e.Speaking = 'speaking'), (e.Video = 'video');
 })(i || (i = {}));
-class f extends s.Z {
+class f extends o.Z {
     play() {
         var e;
         null === (e = this.audioElement) || void 0 === e || e.play();
@@ -105,7 +105,7 @@ class f extends s.Z {
         if (null != e) {
             (e.muted = this._mute), (e.volume = this._volume / 100);
             let n = this.sinkId;
-            null != n && o.ZA && e.setSinkId(n);
+            null != n && s.ZA && e.setSinkId(n);
         }
     }
     constructor(e, n) {

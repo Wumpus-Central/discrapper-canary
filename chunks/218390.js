@@ -33,9 +33,9 @@ var i = n(200651),
     O = n(703656),
     R = n(246946),
     P = n(78839),
-    y = n(483444),
-    B = n(626135),
-    D = n(63063),
+    D = n(483444),
+    y = n(626135),
+    B = n(63063),
     Z = n(74538),
     L = n(140465),
     M = n(286961),
@@ -128,7 +128,7 @@ function en() {
             (0, i.jsxs)('div', {
                 className: Q.tierInfo,
                 children: [
-                    (0, i.jsx)(y.Z, { className: Q.tierTitle }),
+                    (0, i.jsx)(D.Z, { className: Q.tierTitle }),
                     d
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
@@ -141,7 +141,7 @@ function en() {
                                       variant: 'heading-md/normal',
                                       color: 'always-white',
                                       className: Q.fractionalPremiumSubheader,
-                                      children: q.intl.format(q.t.sK7fGh, { helpCenterLink: D.Z.getArticleURL(K.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                                      children: q.intl.format(q.t.sK7fGh, { helpCenterLink: B.Z.getArticleURL(K.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                                   })
                               ]
                           })
@@ -159,7 +159,7 @@ function en() {
                         className: Q.tierCardButton,
                         color: m.Button.Colors.WHITE,
                         onClick: () => {
-                            B.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            y.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
@@ -177,7 +177,7 @@ function en() {
                         look: m.Button.Looks.OUTLINED,
                         color: m.Button.Colors.WHITE,
                         onClick: () => {
-                            B.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            y.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_subscriptions_button',
                                 target: 'subscriptions settings'
                             }),
@@ -244,7 +244,7 @@ function ei(e) {
                         buttonTextClassName: Q.giftButtonCTA,
                         color: m.Button.Colors.CUSTOM,
                         onClick: () => {
-                            B.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            y.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: $,
                                 target: ee
                             });
@@ -289,7 +289,7 @@ function er() {
                               buttonTextClassName: Q.giftButtonCTA,
                               color: m.Button.Colors.CUSTOM,
                               onClick: () => {
-                                  B.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                  y.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: $,
                                       target: ee
                                   });
@@ -322,13 +322,13 @@ t.Z = function () {
         }),
         (0, F.B)(T);
     let O = (0, w.b)(T),
-        y = (0, Y.pn)(T);
+        D = (0, Y.pn)(T);
     r.useEffect(() => {
         g.Z.wait(async () => {
             !C && !e && (await Promise.all([h.jg(), h.tZ(), (0, x.Y2)(f, null, K.JjL.DISCOVERY)])), o(!1);
         });
     }, [f, C, e]);
-    let [D, Z] = r.useState(!1);
+    let [B, Z] = r.useState(!1);
     if (C) return (0, i.jsx)(_.Z, {});
     if (e) return (0, i.jsx)(A.c8, {});
     let L = s && null !== n && a,
@@ -348,7 +348,7 @@ t.Z = function () {
                     className: Q.__invalid_container,
                     children: [
                         (0, i.jsx)(en, {}),
-                        (O || y) && (0, i.jsx)(W.Z, { isInSettings: !0 }),
+                        (O || D) && (0, i.jsx)(W.Z, { isInSettings: !0 }),
                         (0, i.jsx)(er, {}),
                         (0, i.jsx)(H.Z, {
                             className: Q.__invalid_planComparisonTable,
@@ -362,7 +362,7 @@ t.Z = function () {
                 }),
                 (0, i.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !D && (B.default.track(K.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), Z(!0));
+                        e && !B && (y.default.track(K.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), Z(!0));
                     },
                     children: (0, i.jsx)('div', { className: Q.bottomOfPageVisibilitySensor })
                 })

@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(313261),
-    o = r(38618);
+    o = r(313261),
+    s = r(38618);
 function l(e, n, r) {
     return (
         n in e
@@ -17,8 +17,8 @@ function l(e, n, r) {
 }
 class u extends a.Z {
     handleCheckExperiments() {
-        let { enabled: e } = s.O.getCurrentConfig({ location: 'gateway' }, { autoTrackExposure: !0 });
-        o.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
+        let { enabled: e } = o.O.getCurrentConfig({ location: 'gateway' }, { autoTrackExposure: !0 });
+        s.Z.getSocket().dispatcher.toggleRequestIdleCallback(e);
     }
     constructor(...e) {
         super(...e),

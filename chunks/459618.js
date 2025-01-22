@@ -1,15 +1,15 @@
 var i = r(47120);
 var a = r(259443),
-    s = r(442837),
-    o = r(570140),
+    o = r(442837),
+    s = r(570140),
     l = r(186102),
     u = r(873741),
     c = r(592125),
     d = r(650774),
     f = r(866960),
-    _ = r(626135),
+    p = r(626135),
     h = r(981631);
-function p(e, n, r) {
+function _(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -36,7 +36,7 @@ function E(e) {
     let r = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         i = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
         a = (0, u.d)();
-    _.default.track(h.rMx.SEND_MESSAGE_ROUNDTRIP, {
+    p.default.track(h.rMx.SEND_MESSAGE_ROUNDTRIP, {
         ...(0, l.Z)(),
         api_latency_ms: r,
         gateway_latency_ms: i,
@@ -51,9 +51,9 @@ function E(e) {
 function v(e) {
     let { optimistic: n, message: r } = e,
         i = r.nonce;
-    if (!n && null != i) T.recordGatewayResponse(i);
+    if (!n && null != i) b.recordGatewayResponse(i);
 }
-class I extends s.ZP.Store {
+class y extends o.ZP.Store {
     recordMessageSendAttempt(e, n) {
         let r = {
             initialSendTimestamp: Date.now(),
@@ -88,8 +88,8 @@ class I extends s.ZP.Store {
         }
     }
     constructor(...e) {
-        super(...e), p(this, 'pendingMessages', new Map());
+        super(...e), _(this, 'pendingMessages', new Map());
     }
 }
-let T = new I(o.Z, { MESSAGE_CREATE: v });
-n.Z = T;
+let b = new y(s.Z, { MESSAGE_CREATE: v });
+n.Z = b;

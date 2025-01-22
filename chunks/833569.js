@@ -38,9 +38,9 @@ var i,
     O = n(314684),
     R = n(653798),
     P = n(625881),
-    y = n(440984),
-    B = n(398775),
-    D = n(807163),
+    D = n(440984),
+    y = n(398775),
+    B = n(807163),
     Z = n(311821),
     L = n(42818),
     M = n(798769),
@@ -354,7 +354,7 @@ function X(e) {
         { churnUserDiscountOffer: ei, isFetchingChurnDiscountOffer: er } = (0, j.WR)(!en || 1 !== Y);
     switch (Y) {
         case 6:
-            n = (0, s.jsx)(B.of, {
+            n = (0, s.jsx)(y.of, {
                 premiumSubscription: i,
                 premiumType: R,
                 setStep: z,
@@ -395,7 +395,7 @@ function X(e) {
                     e)
                 );
             }
-            n = (0, s.jsx)(B.Sz, {
+            n = (0, s.jsx)(y.Sz, {
                 premiumSubscription: i,
                 premiumType: R,
                 setStep: z,
@@ -405,7 +405,7 @@ function X(e) {
             });
             break;
         case 1:
-            n = (0, s.jsx)(D.Z, {
+            n = (0, s.jsx)(B.Z, {
                 premiumType: R,
                 titleText: G.intl.string(G.t.PWq8TE),
                 subtitleText: I ? G.intl.string(G.t.QagLCA) : G.intl.format(G.t.nsGVzs, {}),
@@ -478,7 +478,7 @@ function X(e) {
             });
             break;
         case 5:
-            n = (0, s.jsx)(y.D, {
+            n = (0, s.jsx)(D.D, {
                 premiumSubscription: i,
                 premiumType: R,
                 onClose: () => et(Y),

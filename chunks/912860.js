@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a = r(836560);
-let s = 160,
-    o = 500;
+let o = 160,
+    s = 500;
 !(function (e) {
     (e.VERTICAL = 'vertical'), (e.HORIZONTAL = 'horizontal');
 })(i || (i = {}));
@@ -36,8 +36,8 @@ class d extends a.EventEmitter {
         return l;
     }
     check() {
-        let e = u() > s,
-            n = c() > s,
+        let e = u() > o,
+            n = c() > o,
             r = e ? 'vertical' : 'horizontal';
         if (!(n && e) && (e || n)) {
             let e = l.open;
@@ -49,6 +49,6 @@ class d extends a.EventEmitter {
         } else l.open && ((l.open = !1), this.emit('changed', l));
     }
     constructor() {
-        super(), setInterval(() => this.check(), o);
+        super(), setInterval(() => this.check(), s);
     }
 }

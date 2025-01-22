@@ -6,30 +6,30 @@ r.d(n, {
         return A;
     },
     _2: function () {
-        return C;
+        return N;
     },
     bE: function () {
-        return y;
+        return T;
     },
     gq: function () {
         return a;
     },
     nf: function () {
-        return b;
+        return I;
     }
 });
 var i,
     a,
-    s,
-    o = r(653041);
+    o,
+    s = r(653041);
 var l = r(544891),
     u = r(780384),
     c = r(410030),
     d = r(726542),
     f = r(122021),
-    _ = r(981631),
+    p = r(981631),
     h = r(388032);
-let p = {};
+let _ = {};
 function m(e, n) {
     return e + n;
 }
@@ -40,18 +40,18 @@ function E(e) {
     return e.split('-')[1];
 }
 function v(e) {
-    return e.filter((e) => p[e] <= 1).map(E);
+    return e.filter((e) => _[e] <= 1).map(E);
 }
-function I(e, n) {
+function y(e, n) {
     e.forEach((e) => {
-        p[e] = n;
+        _[e] = n;
     });
 }
-function T(e, n, r) {
-    p[m(e, n)] = r;
+function b(e, n, r) {
+    _[m(e, n)] = r;
 }
-function b(e, n) {
-    n.forEach((n) => T(e, n, 3));
+function I(e, n) {
+    n.forEach((n) => b(e, n, 3));
 }
 !(function (e) {
     (e[(e.FAILED = 0)] = 'FAILED'), (e[(e.UNFETCHED = 1)] = 'UNFETCHED'), (e[(e.PENDING = 2)] = 'PENDING'), (e[(e.SUCCEEDED = 3)] = 'SUCCEEDED'), (e[(e.FAILED_NO_RETRY = 4)] = 'FAILED_NO_RETRY');
@@ -59,7 +59,7 @@ function b(e, n) {
     !(function (e) {
         (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.BOT = 1)] = 'BOT'), (e[(e.INTEGRATION = 2)] = 'INTEGRATION'), (e[(e.DISCOVERY = 3)] = 'DISCOVERY'), (e[(e.HUB = 4)] = 'HUB'), (e[(e.INVITE = 5)] = 'INVITE'), (e[(e.VANITY_URL = 6)] = 'VANITY_URL'), (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION');
     })(a || (a = {}));
-let y = function (e) {
+let T = function (e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
         r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     switch (e) {
@@ -84,7 +84,7 @@ let y = function (e) {
 };
 !(function (e) {
     (e.DISCORD = 'discord'), (e.TWITCH = 'twitch'), (e.YOUTUBE = 'youtube'), (e.GUILD_SUBSCRIPTION = 'guild_subscription');
-})(s || (s = {}));
+})(o || (o = {}));
 let S = (e) => {
         switch (e) {
             case 'twitch':
@@ -100,7 +100,7 @@ let S = (e) => {
             r = (0, c.ZP)();
         return null != n && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, u.wj)(r) ? n.icon.darkSVG : n.icon.lightSVG, "')") : null;
     };
-function N(e) {
+function C(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -109,30 +109,30 @@ function N(e) {
         integrationType: e.integration_type
     };
 }
-async function C(e, n) {
+async function N(e, n) {
     let r = g(e, n),
         i = v(r);
     if (0 === i.length) return [];
-    I(r, 2);
+    y(r, 2);
     try {
         let n = await l.tn.post({
-            url: _.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
+            url: p.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
             body: { user_ids: i },
             rejectWithError: !0
         });
-        if (!Array.isArray(n.body)) return I(r, 0), [];
-        let a = n.body.map(N),
-            s = [];
+        if (!Array.isArray(n.body)) return y(r, 0), [];
+        let a = n.body.map(C),
+            o = [];
         a.forEach((e) => {
             let { userId: n } = e;
-            return s.push(n);
+            return o.push(n);
         });
-        let o = g(e, s),
-            u = i.filter((e) => !s.includes(e)),
+        let s = g(e, o),
+            u = i.filter((e) => !o.includes(e)),
             c = g(e, u);
-        return I(o, 3), I(c, 0), a;
+        return y(s, 3), y(c, 0), a;
     } catch (e) {
-        I(r, 0);
+        y(r, 0);
     }
     return [];
 }

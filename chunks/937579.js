@@ -8,17 +8,17 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(704215),
-    s = r(570140),
-    o = r(605236),
+    o = r(570140),
+    s = r(605236),
     l = r(675478),
     u = r(626135),
     c = r(981631);
 async function d(e, n) {
     let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     if (r) {
-        s.Z.dispatch({ type: 'BILLING_USER_OFFER_FETCH_START' });
+        o.Z.dispatch({ type: 'BILLING_USER_OFFER_FETCH_START' });
         try {
-            var d, f, _;
+            var d, f, p;
             null != e && u.default.track(c.rMx.FETCH_USER_OFFER_STARTED, { call_location: e });
             let r = await i.tn.post({
                     url: c.ANM.USER_OFFER,
@@ -26,24 +26,24 @@ async function d(e, n) {
                     rejectWithError: !0
                 }),
                 h = null !== (d = r.body.user_trial_offer) && void 0 !== d ? d : null,
-                p = null !== (f = r.body.user_discount) && void 0 !== f ? f : null,
-                m = null !== (_ = r.body.user_discount_offer) && void 0 !== _ ? _ : null;
+                _ = null !== (f = r.body.user_discount) && void 0 !== f ? f : null,
+                m = null !== (p = r.body.user_discount_offer) && void 0 !== p ? p : null;
             return (
-                null == h && (0, o.un)(a.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, l.w9)(a.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
-                s.Z.dispatch({
+                null == h && (0, s.un)(a.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, l.w9)(a.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
+                o.Z.dispatch({
                     type: 'BILLING_USER_OFFER_FETCH_SUCCESS',
                     userTrialOffer: h,
-                    userDiscount: p,
+                    userDiscount: _,
                     userDiscountOffer: m
                 }),
                 {
                     userTrialOffer: h,
-                    userDiscount: p,
+                    userDiscount: _,
                     userDiscountOffer: m
                 }
             );
         } catch (e) {
-            s.Z.dispatch({ type: 'BILLING_USER_OFFER_FETCH_FAIL' });
+            o.Z.dispatch({ type: 'BILLING_USER_OFFER_FETCH_FAIL' });
         }
     }
 }
@@ -63,7 +63,7 @@ function f(e, n) {
             })
             .then((e) => {
                 var n, r, i;
-                s.Z.dispatch({
+                o.Z.dispatch({
                     type: 'BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS',
                     userTrialOffer: null !== (n = e.body.user_trial_offer) && void 0 !== n ? n : null,
                     userDiscount: null !== (r = e.body.user_discount) && void 0 !== r ? r : null,
@@ -72,7 +72,7 @@ function f(e, n) {
             })
             .catch((e) => {
                 404 === e.status &&
-                    s.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS',
                         userTrialOffer: null,
                         userDiscount: null,

@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(311850);
@@ -17,14 +17,14 @@ function a(e, n, r) {
         e
     );
 }
-class s {
+class o {
     static fromServer(e) {
-        let { prices: n, type: r, premium_type: a, name: o, sku_id: l, summary: u } = e;
-        return new s({
+        let { prices: n, type: r, premium_type: a, name: s, sku_id: l, summary: u } = e;
+        return new o({
             prices: (0, i.l)(n),
             type: r,
             premiumType: a,
-            name: o,
+            name: s,
             skuId: l,
             summary: u
         });

@@ -1,8 +1,8 @@
-function r(e, t) {
-    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+function i(e, n) {
+    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

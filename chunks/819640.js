@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140);
+var o = r(442837),
+    s = r(570140);
 function l(e, n, r) {
     return (
         n in e
@@ -28,7 +28,7 @@ function d() {
 function f() {
     u = [];
 }
-class _ extends (i = s.ZP.Store) {
+class p extends (i = o.ZP.Store) {
     hasLayers() {
         return u.length > 0;
     }
@@ -36,8 +36,8 @@ class _ extends (i = s.ZP.Store) {
         return u;
     }
 }
-l(_, 'displayName', 'LayerStore'),
-    (n.Z = new _(o.Z, {
+l(p, 'displayName', 'LayerStore'),
+    (n.Z = new p(s.Z, {
         LAYER_PUSH: c,
         LAYER_POP: d,
         LAYER_POP_ALL: f,

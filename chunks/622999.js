@@ -1,7 +1,7 @@
 let i;
 r.d(n, {
     az: function () {
-        return _;
+        return p;
     },
     d2: function () {
         return f;
@@ -14,8 +14,8 @@ r.d(n, {
     }
 });
 var a,
-    s = r(47120);
-var o = r(657610),
+    o = r(47120);
+var s = r(657610),
     l = r(544891),
     u = r(981631);
 !(function (e) {
@@ -29,8 +29,8 @@ let c = (e) => {
                 let i = parseInt(e);
                 return isNaN(i) && n(''.concat(r, ' is not a number.')), i < 1 && n(''.concat(i, ' is less than one.')), i;
             }),
-            [a, s] = i[0] > 12 ? [i[1], i[0]] : [i[0], i[1]];
-        return a > 12 && n('Month must be a number 1-12, not '.concat(a, '.')), s < 100 && (s += 2000), [a, s];
+            [a, o] = i[0] > 12 ? [i[1], i[0]] : [i[0], i[1]];
+        return a > 12 && n('Month must be a number 1-12, not '.concat(a, '.')), o < 100 && (o += 2000), [a, o];
     },
     d = (e) => {
         let n, r;
@@ -44,18 +44,18 @@ let c = (e) => {
         return i.setMonth(i.getMonth() - 1), i.setMonth(i.getMonth() + 1, 1), i > a;
     };
 function f() {
-    return null != i ? Promise.resolve(i) : (0, o.loadStripe)(u.Ai1.STRIPE.KEY).then((e) => ((i = e), e));
+    return null != i ? Promise.resolve(i) : (0, s.loadStripe)(u.Ai1.STRIPE.KEY).then((e) => ((i = e), e));
 }
-function _(e) {
-    var n, r, i, a, s, o, l, u;
+function p(e) {
+    var n, r, i, a, o, s, l, u;
     let { billing_details: c } = e,
         d = null !== (n = c.address) && void 0 !== n ? n : {},
         f = {
             name: null !== (r = c.name) && void 0 !== r ? r : '',
             line1: null !== (i = d.line1) && void 0 !== i ? i : '',
             line2: null !== (a = d.line2) && void 0 !== a ? a : '',
-            city: null !== (s = d.city) && void 0 !== s ? s : '',
-            state: null !== (o = d.state) && void 0 !== o ? o : '',
+            city: null !== (o = d.city) && void 0 !== o ? o : '',
+            state: null !== (s = d.state) && void 0 !== s ? s : '',
             country: null !== (l = d.country) && void 0 !== l ? l : '',
             postalCode: null !== (u = d.postal_code) && void 0 !== u ? u : ''
         };
@@ -78,13 +78,13 @@ async function h(e) {
         let { error: i, paymentIntent: a } = await r.retrievePaymentIntent(n);
         if (null != i) return { error: i.message };
         if (null == a) return { error: 'payment intent does not exist' };
-        let s = {};
-        switch (('requires_payment_method' === a.status && null != a.last_payment_error && null != a.last_payment_error.payment_method && (s.payment_method = a.last_payment_error.payment_method.id), a.status)) {
+        let o = {};
+        switch (('requires_payment_method' === a.status && null != a.last_payment_error && null != a.last_payment_error.payment_method && (o.payment_method = a.last_payment_error.payment_method.id), a.status)) {
             case 'requires_payment_method':
             case 'requires_confirmation':
             case 'requires_action':
-                let { error: o } = await r.confirmCardPayment(n, s);
-                if (null != o) return { error: o.message };
+                let { error: s } = await r.confirmCardPayment(n, o);
+                if (null != s) return { error: s.message };
                 return {};
             case 'succeeded':
             case 'processing':

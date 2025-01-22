@@ -1,10 +1,10 @@
 var i = r(570140);
 n.Z = {
-    show(e, n, r, a, s) {
+    show(e, n, r, a, o) {
         i.Z.dispatch({
             type: 'NOTICE_SHOW',
             notice: {
-                id: s,
+                id: o,
                 type: e,
                 message: n,
                 buttonText: r,

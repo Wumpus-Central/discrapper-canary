@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = !0,
     a = 'Invariant failed';
-function s(e, n) {
+function o(e, n) {
     if (!e) {
         if (i) throw Error(a);
         var r = 'function' == typeof n ? n() : n;

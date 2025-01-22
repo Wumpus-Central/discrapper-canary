@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(820611),
-    o = r(176213),
+    o = r(820611),
+    s = r(176213),
     l = r(877837),
     u = r(830429),
     c = (function () {
@@ -22,7 +22,7 @@ function f(e, n) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
 }
-function _(e, n) {
+function p(e, n) {
     if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
     (e.prototype = Object.create(n && n.prototype, {
         constructor: {
@@ -44,7 +44,7 @@ var h = (function (e) {
             }),
             (r.handleChange = function (e, n) {
                 e.hex
-                    ? s.FX(e.hex) &&
+                    ? o.FX(e.hex) &&
                       r.props.onChange(
                           {
                               hex: e.hex,
@@ -81,8 +81,8 @@ var h = (function (e) {
                           r.props.onChange(
                               {
                                   h: e.h || r.props.hsl.h,
-                                  s: Number((0, o.Z)(e.s) ? r.props.hsl.s : e.s),
-                                  l: Number((0, o.Z)(e.l) ? r.props.hsl.l : e.l),
+                                  s: Number((0, s.Z)(e.s) ? r.props.hsl.s : e.s),
+                                  l: Number((0, s.Z)(e.l) ? r.props.hsl.l : e.l),
                                   source: 'hsl'
                               },
                               n
@@ -99,7 +99,7 @@ var h = (function (e) {
         );
     }
     return (
-        _(n, e),
+        p(n, e),
         c(
             n,
             [

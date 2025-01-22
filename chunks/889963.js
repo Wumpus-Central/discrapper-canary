@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(47120);
-var o = r(653041);
+    o = r(47120);
+var s = r(653041);
 var l = r(192379),
     u = r(392711),
     c = r.n(u);
@@ -34,21 +34,21 @@ class f extends (a = l.PureComponent) {
         let { totalPageCount: e, maxVisiblePages: n, selectedPage: r } = this.props,
             i = Math.ceil(n / 2),
             a = Math.floor(n / 2),
-            s = [1, e],
-            [o, l] = (s = r <= i ? [1, n] : r > e - a ? [e - n + 1, e] : [r - i + 1, r + a]);
-        return [Math.max(o, 1), Math.min(l, e)];
+            o = [1, e],
+            [s, l] = (o = r <= i ? [1, n] : r > e - a ? [e - n + 1, e] : [r - i + 1, r + a]);
+        return [Math.max(s, 1), Math.min(l, e)];
     }
     getPageList() {
         let { totalPageCount: e, selectedPage: n, hideMaxPage: r } = this.props,
             [i, a] = this.getNeighborBounds(),
-            s = {
+            o = {
                 type: 'BACK',
                 key: 'back',
                 disabled: 1 === n,
                 selected: !1,
                 navigateToPage: this.handleBackward
             },
-            o = {
+            s = {
                 type: 'NEXT',
                 key: 'next',
                 disabled: n === e,
@@ -88,7 +88,7 @@ class f extends (a = l.PureComponent) {
                     }),
                 (a -= 2)),
             [
-                s,
+                o,
                 ...l,
                 ...c()
                     .range(i, a + 1)
@@ -101,7 +101,7 @@ class f extends (a = l.PureComponent) {
                         navigateToPage: () => this.handleJump(e)
                     })),
                 ...u,
-                o
+                s
             ]
         );
     }

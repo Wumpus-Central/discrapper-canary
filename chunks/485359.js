@@ -1,16 +1,16 @@
 var i = r(47120);
 var a = r(200651);
 r(192379);
-var s = r(525654),
-    o = r.n(s),
+var o = r(525654),
+    s = r.n(o),
     l = r(481060),
     u = r(570140),
     c = r(468026),
     d = r(317770),
     f = r(63063),
-    _ = r(981631),
+    p = r(981631),
     h = r(388032);
-function p(e, n, r) {
+function _(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -32,9 +32,9 @@ class m extends d.Z {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'handlePermission', (e) => {
+            _(this, 'handlePermission', (e) => {
                 let { kind: n, granted: r } = e,
-                    i = 'Firefox' === o().name ? _.BhN.ENABLE_MIC_FIREFOX : _.BhN.ENABLE_MIC_CHROME;
+                    i = 'Firefox' === s().name ? p.BhN.ENABLE_MIC_FIREFOX : p.BhN.ENABLE_MIC_CHROME;
                 if (!r) {
                     let e = 'audio' !== n;
                     (0, l.openModal)((n) =>

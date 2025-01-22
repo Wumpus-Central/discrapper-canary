@@ -3,7 +3,7 @@ r.d(n, {
         return v;
     },
     Rt: function () {
-        return I;
+        return y;
     },
     UM: function () {
         return E;
@@ -11,16 +11,16 @@ r.d(n, {
 });
 var i = r(789020);
 var a = r(610138);
-var s = r(216116);
-var o = r(78328);
+var o = r(216116);
+var s = r(78328);
 var l = r(815648);
 var u = r(47120);
 var c = r(442837),
     d = r(544891),
     f = r(570140),
-    _ = r(264043),
+    p = r(264043),
     h = r(973616),
-    p = r(630388),
+    _ = r(630388),
     m = r(812206),
     g = r(981631);
 async function E(e) {
@@ -58,7 +58,7 @@ async function E(e) {
 n.ZP = {
     async createApplication(e) {
         let { name: n, guildId: r, type: i, teamId: a } = e,
-            s = (
+            o = (
                 await d.tn.post({
                     url: g.ANM.APPLICATIONS,
                     body: {
@@ -75,9 +75,9 @@ n.ZP = {
                 null != i &&
                 f.Z.dispatch({
                     type: 'APPLICATION_FETCH_SUCCESS',
-                    application: s
+                    application: o
                 }),
-            s
+            o
         );
     },
     async getApplicationsForGuild(e) {
@@ -124,7 +124,7 @@ n.ZP = {
             let n = (e) => {
                 var n, r;
                 let i = m.Z.getApplication(e),
-                    a = (0, p.yE)(null !== (r = null == i ? void 0 : i.flags) && void 0 !== r ? r : 0, g.udG.EMBEDDED) && ((null == i ? void 0 : null === (n = i.embeddedActivityConfig) || void 0 === n ? void 0 : n.supported_platforms) == null || (null == i ? void 0 : i.bot) == null);
+                    a = (0, _.yE)(null !== (r = null == i ? void 0 : i.flags) && void 0 !== r ? r : 0, g.udG.EMBEDDED) && ((null == i ? void 0 : null === (n = i.embeddedActivityConfig) || void 0 === n ? void 0 : n.supported_platforms) == null || (null == i ? void 0 : i.bot) == null);
                 return !(null != i && !a) && !m.Z.isFetchingApplication(e) && !m.Z.didFetchingApplicationFail(e) && e.length > 0;
             };
             r = e.filter(n);
@@ -166,14 +166,14 @@ let v = (0, c.Kb)(m.Z, {
     load: (e, n) => (null != n ? E(n, !1, e).then(g.dG4) : Promise.resolve()),
     useStateHook: c.e7
 });
-function I(e) {
+function y(e) {
     let { data: n, isLoading: r, error: i } = v(e);
     return {
         app: (0, c.e7)(
-            [_.Z],
+            [p.Z],
             () => {
                 if (null == n) {
-                    let n = _.Z.getApplication(e);
+                    let n = p.Z.getApplication(e);
                     if (null != n) return h.ZP.createFromServer(n);
                 }
                 return n;

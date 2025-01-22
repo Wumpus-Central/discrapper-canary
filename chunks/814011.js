@@ -5,15 +5,15 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(327432),
-    s = r(772096),
-    o = r(925994),
+    o = r(772096),
+    s = r(925994),
     l = r(436660),
     u = r(887490);
 function c(e) {
     return (
         (e.setFragmentData = (n) => {
             if (null != e.selection) {
-                let r = (0, o.sk)(u.bN.richValue(e), {
+                let r = (0, s.sk)(u.bN.richValue(e), {
                     mode: 'plain',
                     range: e.selection,
                     preventEmojiSurrogates: !0
@@ -30,9 +30,9 @@ function c(e) {
             if (0 === r.length) return !1;
             if (null != e.selection && u.M8.isExpanded(e.selection)) {
                 let n = a.ML.string(e, e.selection),
-                    i = (0, s.yw)(r),
-                    o = (0, s.yw)(n);
-                if (null != i && null == o) {
+                    i = (0, o.yw)(r),
+                    s = (0, o.yw)(n);
+                if (null != i && null == s) {
                     let [n, r] = u.M8.edges(e.selection);
                     return (
                         u.bN.withoutNormalizing(e, () => {
@@ -41,7 +41,7 @@ function c(e) {
                         !0
                     );
                 }
-                if (null != i && null != o) return l.Q.delete(e, { at: e.selection }), e.insertText(i.target), !0;
+                if (null != i && null != s) return l.Q.delete(e, { at: e.selection }), e.insertText(i.target), !0;
                 l.Q.delete(e, { at: e.selection });
             }
             return e.insertText(r), !0;

@@ -11,7 +11,7 @@ let a = (e) => {
                 document.body.appendChild(r);
         });
     },
-    s = (e) => {
+    o = (e) => {
         i.useEffect(() => {
             if ('loading' === document.readyState) {
                 let n = () => {
@@ -27,4 +27,4 @@ let a = (e) => {
             a(e);
         }, [e]);
     };
-n.Z = s;
+n.Z = o;

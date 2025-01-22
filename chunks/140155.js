@@ -1,15 +1,15 @@
 var i,
     a = r(47120);
-var s = r(653041);
-var o = r(442837),
+var o = r(653041);
+var s = r(442837),
     l = r(570140),
     u = r(924301),
     c = r(786761),
     d = r(922611),
     f = r(23750),
-    _ = r(594174),
+    p = r(594174),
     h = r(709054),
-    p = r(497089),
+    _ = r(497089),
     m = r(178480),
     g = r(981631);
 function E(e, n, r) {
@@ -39,10 +39,10 @@ let v = {
     notifCenterActive: !1,
     notifCenterTabFocused: !1
 };
-function I(e) {
+function y(e) {
     return null != e.id && null != e.type;
 }
-function T() {
+function b() {
     v = {
         loading: !1,
         initialized: !1,
@@ -58,10 +58,10 @@ function T() {
         notifCenterTabFocused: !1
     };
 }
-function b() {
+function I() {
     v.loading = !0;
 }
-function y() {
+function T() {
     (v.loading = !1), (v.initialized = !0), (v.errored = !0);
 }
 function S(e) {
@@ -72,12 +72,12 @@ function S(e) {
     };
 }
 function A(e) {
-    T();
+    b();
     let n = [];
     e.relationships.forEach((e) => {
-        let { type: r, user: i, since: a, is_spam_request: s, user_ignored: o } = e;
-        if (r !== g.OGo.PENDING_INCOMING || s || ((0, d.JX)({ location: 'notification-center' }) && o) || null == i || null == a) return null;
-        let l = _.default.getUser(i.id);
+        let { type: r, user: i, since: a, is_spam_request: o, user_ignored: s } = e;
+        if (r !== g.OGo.PENDING_INCOMING || o || ((0, d.JX)({ location: 'notification-center' }) && s) || null == i || null == a) return null;
+        let l = p.default.getUser(i.id);
         if (null == l) return null;
         n.push((0, m.mH)(l, a));
     }),
@@ -88,13 +88,13 @@ function A(e) {
         }),
         (v.notifCenterLocalItems = n);
 }
-function N(e) {
+function C(e) {
     let { items: n, hasMore: r, cursor: i } = e;
     if (!!v.loading) (v.loading = !1), (v.initialized = !0), (v.errored = !1), (v.isDataStale = !1), (null == i || !v.notifCenterIds.has(i)) && ((v.paginationHasMore = n.length > 0 && r), (v.paginationCursor = n.length > 0 ? i : void 0)), (v.notifCenterItems = [...v.notifCenterItems, ...n.map(S).filter((e) => !v.notifCenterIds.has(e.id))]), v.notifCenterItems.sort((e, n) => h.default.compare(n.id, e.id)), n.forEach((e) => v.notifCenterIds.add(e.id));
 }
-function C(e) {
+function N(e) {
     let n = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? S(e.item) : e.item;
-    if (!v.initialized || !I(n) || v.notifCenterIds.has(n.id)) return !1;
+    if (!v.initialized || !y(n) || v.notifCenterIds.has(n.id)) return !1;
     v.notifCenterIds.add(n.id), (v.notifCenterItems = [n, ...v.notifCenterItems]), v.notifCenterItems.sort((e, n) => h.default.compare(n.id, e.id));
 }
 function R(e) {
@@ -112,17 +112,17 @@ function O(e, n) {
                   }
                 : r
         )
-        .filter(I);
+        .filter(y);
 }
 function D(e) {
     let { ids: n } = e;
     O(n, !0);
 }
-function L(e) {
+function x(e) {
     let { ids: n } = e;
     O(n, !1);
 }
-function x(e) {
+function L(e) {
     let { active: n } = e;
     v.notifCenterActive = n;
 }
@@ -136,30 +136,30 @@ function P(e, n, r) {
 }
 function M(e) {
     let { relationship: n } = e,
-        { id: r, type: i, isSpamRequest: a, userIgnored: s, user: o, since: l } = n;
-    if (i === g.OGo.PENDING_INCOMING && !a && !((0, d.JX)({ location: 'notification-center' }) && s)) {
+        { id: r, type: i, isSpamRequest: a, userIgnored: o, user: s, since: l } = n;
+    if (i === g.OGo.PENDING_INCOMING && !a && !((0, d.JX)({ location: 'notification-center' }) && o)) {
         if (null == l) return null;
-        if (null != o) {
-            let e = _.default.getUser(o.id);
+        if (null != s) {
+            let e = p.default.getUser(s.id);
             null != e && (v.notifCenterLocalItems = [...v.notifCenterLocalItems, (0, m.mH)(e, l)]);
         }
     }
     i === g.OGo.FRIEND &&
         (v.notifCenterLocalItems = v.notifCenterLocalItems.map((e) =>
-            P(e, p.O7.INCOMING_FRIEND_REQUESTS, n.user.id)
+            P(e, _.O7.INCOMING_FRIEND_REQUESTS, n.user.id)
                 ? {
                       ...e,
                       acked: !0,
                       forceUnacked: !1,
-                      local_id: 'incoming_friend_requests_accepted_'.concat(o.id, '_').concat(e.id),
-                      type: p.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED
+                      local_id: 'incoming_friend_requests_accepted_'.concat(s.id, '_').concat(e.id),
+                      type: _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED
                   }
                 : e
         )),
-        (i === g.OGo.BLOCKED || s) && (v.notifCenterLocalItems = v.notifCenterLocalItems.filter((e) => !P(e, p.O7.INCOMING_FRIEND_REQUESTS, r) && !P(e, p.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, r)));
+        (i === g.OGo.BLOCKED || o) && (v.notifCenterLocalItems = v.notifCenterLocalItems.filter((e) => !P(e, _.O7.INCOMING_FRIEND_REQUESTS, r) && !P(e, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, r)));
 }
 function k(e) {
-    v.notifCenterLocalItems = v.notifCenterLocalItems.filter((n) => !P(n, p.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !P(n, p.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
+    v.notifCenterLocalItems = v.notifCenterLocalItems.filter((n) => !P(n, _.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !P(n, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
 }
 function U(e) {
     let { item_enum: n } = e;
@@ -173,7 +173,7 @@ function U(e) {
                   }
                 : e
         )
-        .filter(I);
+        .filter(y);
 }
 function B(e) {
     let { guildScheduledEvent: n } = e;
@@ -182,7 +182,7 @@ function B(e) {
 function G(e) {
     if (!!(0, u.Z2)(e))
         v.notifCenterItems = v.notifCenterItems.map((n) =>
-            n.type === p.DY.GUILD_SCHEDULED_EVENT_STARTED && n.guild_scheduled_event_id === e.id
+            n.type === _.DY.GUILD_SCHEDULED_EVENT_STARTED && n.guild_scheduled_event_id === e.id
                 ? {
                       ...n,
                       disable_action: !0
@@ -190,16 +190,16 @@ function G(e) {
                 : n
         );
 }
-function F(e) {
+function Z(e) {
     let { newBuild: n } = e;
     if (null !== n) {
         let e = (0, m.hn)(n);
         void 0 === v.notifCenterLocalItems.find((n) => n.local_id === e.local_id) && (v.notifCenterLocalItems = [...v.notifCenterLocalItems.filter((n) => n.kind !== e.kind), e]);
     }
 }
-class Z extends (i = o.ZP.PersistedStore) {
+class F extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(_.default), null != e)) {
+        if ((this.waitFor(p.default), null != e)) {
             let n = (e) => ({
                     ...e,
                     message: null != e.message ? new f.ZP(e.message) : void 0
@@ -254,27 +254,27 @@ class Z extends (i = o.ZP.PersistedStore) {
         return v.notifCenterTabFocused;
     }
 }
-E(Z, 'displayName', 'NotificationCenterItemsStore'), E(Z, 'persistKey', 'NotificationCenterItemsStore_v2');
-let V = new Z(l.Z, {
+E(F, 'displayName', 'NotificationCenterItemsStore'), E(F, 'persistKey', 'NotificationCenterItemsStore_v2');
+let V = new F(l.Z, {
     CONNECTION_OPEN: A,
-    LOGOUT: T,
+    LOGOUT: b,
     NOTIFICATION_CENTER_ITEMS_ACK: D,
-    NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: L,
+    NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: x,
     GUILD_SCHEDULED_EVENT_UPDATE: B,
-    NOTIFICATION_CENTER_ITEM_CREATE: C,
+    NOTIFICATION_CENTER_ITEM_CREATE: N,
     NOTIFICATION_CENTER_ITEM_DELETE: R,
-    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: C,
-    LOAD_NOTIFICATION_CENTER_ITEMS: b,
-    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: y,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: N,
-    RESET_NOTIFICATION_CENTER: T,
-    NOTIFICATION_CENTER_SET_ACTIVE: x,
+    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: N,
+    LOAD_NOTIFICATION_CENTER_ITEMS: I,
+    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: T,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: C,
+    RESET_NOTIFICATION_CENTER: b,
+    NOTIFICATION_CENTER_SET_ACTIVE: L,
     NOTIFICATION_CENTER_TAB_FOCUSED: w,
     RELATIONSHIP_ADD: M,
     RELATIONSHIP_UPDATE: M,
     RELATIONSHIP_REMOVE: k,
     NOTIFICATION_CENTER_ITEM_COMPLETED: U,
-    SET_RECENT_MENTIONS_FILTER: T,
-    MOBILE_NATIVE_UPDATE_CHECK_FINISHED: F
+    SET_RECENT_MENTIONS_FILTER: b,
+    MOBILE_NATIVE_UPDATE_CHECK_FINISHED: Z
 });
 n.Z = V;

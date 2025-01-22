@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     xL: function () {
-        return N;
+        return S;
     }
 });
 var i = n(200651),
@@ -28,12 +28,12 @@ var i = n(200651),
     E = n(314734),
     b = n(700559);
 let Z = (0, s.U)(() => ({ visible: !1 })),
-    S = (e) => {
+    N = (e) => {
         (0, o.j)(() => {
             Z.setState({ visible: e });
         });
     },
-    N = Z;
+    S = Z;
 function T(e) {
     let { channel: t, entryPointCommandButtonRef: n, type: r } = e,
         { isInitialLoading: a, application: s, primaryEntryPointCommand: o } = (0, p.Z)({ channel: t }),
@@ -54,9 +54,9 @@ function T(e) {
         Z = !a && null != s && !0 === b;
     return (l.useEffect(
         () => (
-            S(Z),
+            N(Z),
             () => {
-                S(!1);
+                N(!1);
             }
         ),
         [Z]
@@ -101,12 +101,12 @@ function j(e) {
             setIsExecutingLaunchInteraction: x,
             analyticsLocations: I
         }),
-        S = p ? c.Button.Colors.RED : c.Button.Colors.BRAND,
-        N = (0, v.R6)('LoadedEntryPointCommandButton');
+        N = p ? c.Button.Colors.RED : c.Button.Colors.BRAND,
+        S = (0, v.R6)('LoadedEntryPointCommandButton');
     return (0, i.jsx)(c.Button, {
         className: a()(b.entryPointAppCommandButton, E.Id),
-        size: N ? c.Button.Sizes.SMALL : c.Button.Sizes.LARGE,
-        color: S,
+        size: S ? c.Button.Sizes.SMALL : c.Button.Sizes.LARGE,
+        color: N,
         submitting: u,
         onClick: Z,
         buttonRef: s,

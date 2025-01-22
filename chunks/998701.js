@@ -5,7 +5,7 @@ r.d(n, {
 });
 var i,
     a = r(388032);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -21,7 +21,7 @@ function s(e, n, r) {
 !(function (e) {
     (e[(e.GENERAL = 0)] = 'GENERAL'), (e[(e.NO_FILE = 1)] = 'NO_FILE'), (e[(e.PROGRESS = 2)] = 'PROGRESS'), (e[(e.UPLOAD = 3)] = 'UPLOAD'), (e[(e.READ = 4)] = 'READ');
 })(i || (i = {}));
-class o {
+class s {
     get displayMessage() {
         switch (this.code) {
             case 1:
@@ -37,7 +37,7 @@ class o {
         }
     }
     constructor(e) {
-        s(this, 'code', void 0), (this.code = e);
+        o(this, 'code', void 0), (this.code = e);
     }
 }
-n.Z = o;
+n.Z = s;

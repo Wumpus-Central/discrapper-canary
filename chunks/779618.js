@@ -1,12 +1,12 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(358085),
     a = r(924557),
-    s = r(65154);
-function o(e) {
+    o = r(65154);
+function s(e) {
     let { ignorePlatformRestriction: n } = a.NV.getCurrentConfig({ location: 'isClipsClientCapable' }, { autoTrackExposure: !1 });
-    return n || (i.isDesktop() && e.getMediaEngine().supports(s.AN.CLIPS));
+    return n || (i.isDesktop() && e.getMediaEngine().supports(o.AN.CLIPS));
 }

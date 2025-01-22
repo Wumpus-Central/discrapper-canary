@@ -11,15 +11,15 @@ var r = n(481060),
     o = n(447564),
     s = n(63063),
     c = n(739566),
-    d = n(942951),
-    u = n(834129),
+    u = n(942951),
+    d = n(834129),
     m = n(981631),
     h = n(388032),
     f = n(505984);
 function p(e) {
     let { compact: t, message: n, channel: p } = e,
         _ = (0, c.ZP)(n),
-        g = (0, d.l)({
+        g = (0, u.l)({
             user: n.author,
             channelId: n.channel_id,
             guildId: p.guild_id,
@@ -32,7 +32,7 @@ function p(e) {
         children: [
             (0, i.jsx)('div', {
                 className: f.parentContainer,
-                children: (0, i.jsx)(u.Z, {
+                children: (0, i.jsx)(d.Z, {
                     iconNode: (0, i.jsx)(r.PotionIcon, { size: 'sm' }),
                     timestamp: n.timestamp,
                     compact: t,

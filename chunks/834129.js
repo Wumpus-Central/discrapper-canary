@@ -6,7 +6,7 @@ var r = n(120356),
     o = n(318713),
     s = n(251753);
 function c(e) {
-    let { icon: t, iconNode: n, timestamp: r, className: a, children: c, contentClassName: d, iconClassName: u, iconContainerClassName: m, compact: h = !1 } = e;
+    let { icon: t, iconNode: n, timestamp: r, className: a, children: c, contentClassName: u, iconClassName: d, iconContainerClassName: m, compact: h = !1 } = e;
     return (0, i.jsxs)('div', {
         className: l()(a, {
             [s.container]: !0,
@@ -24,12 +24,12 @@ function c(e) {
                     className: s.iconContainer,
                     children: (0, i.jsx)('div', {
                         'data-accessibility': 'desaturate',
-                        className: l()(s.icon, s.iconSize, u),
+                        className: l()(s.icon, s.iconSize, d),
                         style: { backgroundImage: "url('".concat(t, "')") }
                     })
                 }),
             (0, i.jsxs)('div', {
-                className: l()(d, s.content),
+                className: l()(u, s.content),
                 children: [c, null != r && (0, i.jsx)(o.Z, { timestamp: r })]
             })
         ]

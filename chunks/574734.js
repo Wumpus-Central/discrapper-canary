@@ -1,3 +1,3 @@
-n(462078), n(149320);
-var r = n(387992);
-e.exports = r('Array', 'flat');
+r(462078), r(149320);
+var i = r(387992);
+e.exports = i('Array', 'flat');

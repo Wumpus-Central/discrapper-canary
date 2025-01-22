@@ -15,22 +15,22 @@ r.d(n, {
         return d;
     },
     af: function () {
-        return T;
+        return b;
     },
     k0: function () {
-        return I;
+        return y;
     },
     km: function () {
         return v;
     },
     no: function () {
-        return _;
+        return p;
     },
     o6: function () {
         return E;
     },
     tI: function () {
-        return s;
+        return o;
     },
     ws: function () {
         return a;
@@ -41,8 +41,8 @@ r.d(n, {
 });
 var i,
     a,
-    s,
-    o = r(411104);
+    o,
+    s = r(411104);
 var l = r(981631),
     u = r(474936),
     c = r(388032);
@@ -84,8 +84,8 @@ function f(e) {
     })(a || (a = {})),
     !(function (e) {
         (e[(e.PRESET_VIDEO = 1)] = 'PRESET_VIDEO'), (e[(e.PRESET_DOCUMENTS = 2)] = 'PRESET_DOCUMENTS'), (e[(e.PRESET_CUSTOM = 3)] = 'PRESET_CUSTOM');
-    })(s || (s = {}));
-let _ = {
+    })(o || (o = {}));
+let p = {
         2: [
             {
                 resolution: 0,
@@ -210,7 +210,7 @@ let _ = {
             fps: 5
         }
     ];
-function p(e, n) {
+function _(e, n) {
     return {
         value: e,
         get label() {
@@ -218,9 +218,9 @@ function p(e, n) {
         }
     };
 }
-let m = [p(720), p(1080), p(1440), p(0, () => c.intl.string(c.t.XjXqzs))],
-    g = [p(720), p(1080), p(1440)],
+let m = [_(720), _(1080), _(1440), _(0, () => c.intl.string(c.t.XjXqzs))],
+    g = [_(720), _(1080), _(1440)],
     E = (e) => (0 === e ? c.intl.string(c.t.XjXqzs) : c.intl.formatToPlainString(c.t.TEOC0N, { resolution: e })),
-    v = [p(480, () => E(480)), p(720, () => E(720)), p(1080, () => E(1080)), p(1440, () => E(1440)), p(0, () => E(0))],
-    I = [p(15), p(30), p(60)],
-    T = [p(15, () => c.intl.formatToPlainString(c.t['bW+JCQ'], { value: 15 })), p(30, () => c.intl.formatToPlainString(c.t['bW+JCQ'], { value: 30 })), p(60, () => c.intl.formatToPlainString(c.t['bW+JCQ'], { value: 60 }))];
+    v = [_(480, () => E(480)), _(720, () => E(720)), _(1080, () => E(1080)), _(1440, () => E(1440)), _(0, () => E(0))],
+    y = [_(15), _(30), _(60)],
+    b = [_(15, () => c.intl.formatToPlainString(c.t['bW+JCQ'], { value: 15 })), _(30, () => c.intl.formatToPlainString(c.t['bW+JCQ'], { value: 30 })), _(60, () => c.intl.formatToPlainString(c.t['bW+JCQ'], { value: 60 }))];

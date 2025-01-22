@@ -5,18 +5,18 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(271383),
-    o = r(594174),
+var o = r(271383),
+    s = r(594174),
     l = r(981631);
 class u {
     static fromMessage(e, n, r, i) {
-        let [a, s] = u.deriveMemberUsers(e, r);
+        let [a, o] = u.deriveMemberUsers(e, r);
         return {
             id: r.id,
             channelId: n,
             message: r,
             members: a,
-            users: s,
+            users: o,
             connectionId: i
         };
     }
@@ -27,8 +27,8 @@ class u {
             f = [];
         for (let n of c) {
             if (null == n) continue;
-            let r = o.default.getUser(n),
-                i = s.ZP.getTrueMember(null != e ? e : l.lds, n);
+            let r = s.default.getUser(n),
+                i = o.ZP.getTrueMember(null != e ? e : l.lds, n);
             null != r && f.push(r), null != i && d.push(i);
         }
         return [d, f];

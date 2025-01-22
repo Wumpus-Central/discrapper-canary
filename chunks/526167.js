@@ -1,37 +1,37 @@
 r.d(n, {
     G6: function () {
-        return T;
+        return b;
     },
     hY: function () {
         return g;
     },
     og: function () {
-        return I;
+        return y;
     },
     rO: function () {
-        return b;
+        return I;
     },
     vu: function () {
-        return _;
+        return p;
     }
 });
 var i,
     a,
-    s,
     o,
+    s,
     l,
     u = r(525654),
     c = r.n(u);
 let d = (null !== (i = c().name) && void 0 !== i ? i : 'unknown').toLowerCase(),
     f = 'chrome' === d.toLowerCase() ? parseInt(null !== (a = c().version) && void 0 !== a ? a : '', 10) : -1;
-function _() {
+function p() {
     return f;
 }
-let h = 'electron' === d.toLowerCase() ? parseInt(null !== (s = c().version) && void 0 !== s ? s : '', 10) : -1;
-function p() {
+let h = 'electron' === d.toLowerCase() ? parseInt(null !== (o = c().version) && void 0 !== o ? o : '', 10) : -1;
+function _() {
     return h;
 }
-let m = 'firefox' === d.toLowerCase() ? parseInt(null !== (o = c().version) && void 0 !== o ? o : '', 10) : -1;
+let m = 'firefox' === d.toLowerCase() ? parseInt(null !== (s = c().version) && void 0 !== s ? s : '', 10) : -1;
 function g() {
     return m;
 }
@@ -39,17 +39,17 @@ let E = 'edge' === d.toLowerCase() ? parseInt(null !== (l = c().version) && void
 function v() {
     return E;
 }
-function I() {
-    return -1 !== _() || -1 !== p() || -1 !== g() || -1 !== v();
+function y() {
+    return -1 !== p() || -1 !== _() || -1 !== g() || -1 !== v();
 }
-function T() {
+function b() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : navigator.userAgent,
         n = e.toLowerCase();
     return -1 !== n.indexOf('safari') && !(-1 !== n.indexOf('chrome')) && -1 !== n.indexOf('version/');
 }
-function b() {
+function I() {
     var e;
     let n = window.navigator,
         r = (null === (e = n.mediaCapabilities) || void 0 === e ? void 0 : e.decodingInfo) != null;
-    return T(n.userAgent) && r;
+    return b(n.userAgent) && r;
 }

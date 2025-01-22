@@ -1,8 +1,8 @@
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(481060),
+    o = r.n(a),
+    s = r(481060),
     l = r(457926),
     u = r(388032),
     c = r(400357);
@@ -11,7 +11,7 @@ function d(e) {
         a = null;
     switch (n) {
         case 'voice':
-            a = (0, i.jsx)(o.VoiceNormalIcon, {
+            a = (0, i.jsx)(s.VoiceNormalIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -19,7 +19,7 @@ function d(e) {
             });
             break;
         case 'voice-locked':
-            a = (0, i.jsx)(o.LockIcon, {
+            a = (0, i.jsx)(s.LockIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -27,7 +27,7 @@ function d(e) {
             });
             break;
         case 'stage':
-            a = (0, i.jsx)(o.StageIcon, {
+            a = (0, i.jsx)(s.StageIcon, {
                 size: 'lg',
                 color: 'currentColor',
                 className: c.icon,
@@ -35,7 +35,7 @@ function d(e) {
             });
             break;
         case 'stage-locked':
-            a = (0, i.jsx)(o.LockIcon, {
+            a = (0, i.jsx)(s.LockIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -43,7 +43,7 @@ function d(e) {
             });
             break;
         case 'thread':
-            a = (0, i.jsx)(o.ThreadIcon, {
+            a = (0, i.jsx)(s.ThreadIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -51,7 +51,7 @@ function d(e) {
             });
             break;
         case 'text':
-            a = (0, i.jsx)(o.TextIcon, {
+            a = (0, i.jsx)(s.TextIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -59,7 +59,7 @@ function d(e) {
             });
             break;
         case 'forum':
-            a = (0, i.jsx)(o.ForumIcon, {
+            a = (0, i.jsx)(s.ForumIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -67,7 +67,7 @@ function d(e) {
             });
             break;
         case 'post':
-            a = (0, i.jsx)(o.ChatIcon, {
+            a = (0, i.jsx)(s.ChatIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -76,7 +76,7 @@ function d(e) {
             break;
         case 'home':
         case 'guide':
-            a = (0, i.jsx)(o.SignPostIcon, {
+            a = (0, i.jsx)(s.SignPostIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -85,7 +85,7 @@ function d(e) {
             break;
         case 'browse':
         case 'customize':
-            a = (0, i.jsx)(o.ChannelListMagnifyingGlassIcon, {
+            a = (0, i.jsx)(s.ChannelListMagnifyingGlassIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -93,7 +93,7 @@ function d(e) {
             });
             break;
         case 'message':
-            a = (0, i.jsx)(o.ChatIcon, {
+            a = (0, i.jsx)(s.ChatIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -101,7 +101,7 @@ function d(e) {
             });
             break;
         case 'locked':
-            a = (0, i.jsx)(o.LockIcon, {
+            a = (0, i.jsx)(s.LockIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -109,7 +109,7 @@ function d(e) {
             });
             break;
         case 'media':
-            a = (0, i.jsx)(o.ImageIcon, {
+            a = (0, i.jsx)(s.ImageIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -117,7 +117,7 @@ function d(e) {
             });
             break;
         case 'linked-roles':
-            a = (0, i.jsx)(o.LinkIcon, {
+            a = (0, i.jsx)(s.LinkIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon,
@@ -125,7 +125,7 @@ function d(e) {
             });
     }
     return (0, i.jsxs)('span', {
-        className: s()('channelWithIcon', { [c.iconMentionText]: 'text' === n }),
+        className: o()('channelWithIcon', { [c.iconMentionText]: 'text' === n }),
         children: [
             (0, i.jsx)(l.Z, { children: a }),
             null != r && '' !== r

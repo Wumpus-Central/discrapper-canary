@@ -8,40 +8,40 @@ r.d(n, {
 });
 var i,
     a = r(627341);
-var s = r(192379),
-    o = r(278074),
+var o = r(192379),
+    s = r(278074),
     l = r(442837),
     u = r(594174),
     c = r(74538),
     d = r(125900),
     f = r(710111),
-    _ = r(388032);
+    p = r(388032);
 function h(e, n, r, i) {
     let a = e.guildId === f.X8,
         h = (0, l.e7)([u.default], () => c.ZP.canUseSoundboardEverywhere(u.default.getCurrentUser())),
-        p = (0, d.V2)({ location: 'useSoundmojiGuildInfoData' }),
+        _ = (0, d.V2)({ location: 'useSoundmojiGuildInfoData' }),
         m = e.guildId !== (null == n ? void 0 : n.guild_id),
-        g = s.useMemo(() => (a || !p ? 2 : p && !h ? 1 : r || null == i ? 2 : 0), [a, h, p, r, i]);
+        g = o.useMemo(() => (a || !_ ? 2 : _ && !h ? 1 : r || null == i ? 2 : 0), [a, h, _, r, i]);
     return {
         buttonType: g,
-        description: s.useMemo(() => {
+        description: o.useMemo(() => {
             let e = null != i;
-            return (0, o.EQ)({
+            return (0, s.EQ)({
                 hasSoundmojiPermissions: h,
                 isInGuild: r,
                 isGuildDiscoverable: e,
                 isSoundFromDifferentGuild: m,
-                canSendSoundmojis: p,
+                canSendSoundmojis: _,
                 isDefaultSound: a
             })
-                .with({ canSendSoundmojis: !1 }, () => _.intl.string(_.t.x2kyyM))
-                .with({ isDefaultSound: !0 }, () => _.intl.string(_.t.AabHen))
+                .with({ canSendSoundmojis: !1 }, () => p.intl.string(p.t.x2kyyM))
+                .with({ isDefaultSound: !0 }, () => p.intl.string(p.t.AabHen))
                 .with(
                     {
                         isInGuild: !1,
                         isGuildDiscoverable: !1
                     },
-                    () => _.intl.string(_.t.MRYt09)
+                    () => p.intl.string(p.t.MRYt09)
                 )
                 .with(
                     {
@@ -49,7 +49,7 @@ function h(e, n, r, i) {
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !1
                     },
-                    () => _.intl.string(_.t.p17MQE)
+                    () => p.intl.string(p.t.p17MQE)
                 )
                 .with(
                     {
@@ -57,7 +57,7 @@ function h(e, n, r, i) {
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !0
                     },
-                    () => _.intl.string(_.t.Lkbm5u)
+                    () => p.intl.string(p.t.Lkbm5u)
                 )
                 .with(
                     {
@@ -65,7 +65,7 @@ function h(e, n, r, i) {
                         isInGuild: !1,
                         isGuildDiscoverable: !0
                     },
-                    () => _.intl.string(_.t.GTJmaW)
+                    () => p.intl.string(p.t.GTJmaW)
                 )
                 .with(
                     {
@@ -73,7 +73,7 @@ function h(e, n, r, i) {
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !1
                     },
-                    () => _.intl.string(_.t['sj/imZ'])
+                    () => p.intl.string(p.t['sj/imZ'])
                 )
                 .with(
                     {
@@ -82,7 +82,7 @@ function h(e, n, r, i) {
                         isSoundFromDifferentGuild: !0,
                         canSendSoundmojis: !0
                     },
-                    () => _.intl.string(_.t['3Ru2//'])
+                    () => p.intl.string(p.t['3Ru2//'])
                 )
                 .with(
                     {
@@ -90,10 +90,10 @@ function h(e, n, r, i) {
                         isInGuild: !1,
                         isGuildDiscoverable: !0
                     },
-                    () => _.intl.string(_.t.qRkWhY)
+                    () => p.intl.string(p.t.qRkWhY)
                 )
                 .exhaustive();
-        }, [a, i, h, r, m, p])
+        }, [a, i, h, r, m, _])
     };
 }
 !(function (e) {

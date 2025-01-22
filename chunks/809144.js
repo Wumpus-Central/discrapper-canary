@@ -1,26 +1,26 @@
-t.d(n, {
+r.d(n, {
     P: function () {
-        return u;
+        return d;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(481060),
-    r = t(609194),
-    s = t(669079),
-    a = t(987209),
-    c = t(388032),
-    o = t(926617);
-function u(e) {
-    let { giftMessage: n = c.intl.string(c.t.DrgnS0) } = e,
-        { isGift: t, giftRecipient: u } = (0, a.wD)();
-    return !t || (0, s.pO)(u)
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    o = r(609194),
+    s = r(669079),
+    l = r(987209),
+    u = r(388032),
+    c = r(926617);
+function d(e) {
+    let { giftMessage: n = u.intl.string(u.t.DrgnS0) } = e,
+        { isGift: r, giftRecipient: d } = (0, l.wD)();
+    return !r || (0, s.pO)(d)
         ? null
-        : (0, i.jsx)(r.Z, {
-              className: o.paymentNote,
-              iconSize: r.Z.Sizes.SMALL,
-              icon: l.GiftIcon,
-              color: null == n ? r.Z.Colors.PRIMARY : r.Z.Colors.SECONDARY,
+        : (0, i.jsx)(o.Z, {
+              className: c.paymentNote,
+              iconSize: o.Z.Sizes.SMALL,
+              icon: a.GiftIcon,
+              color: null == n ? o.Z.Colors.PRIMARY : o.Z.Colors.SECONDARY,
               children: n
           });
 }

@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(846519),
-    o = r(864106),
+    o = r(846519),
+    s = r(864106),
     l = r(215023);
 let u = 2147483647;
 function c(e) {
@@ -19,12 +19,12 @@ function c(e) {
                     r(!1);
                     return;
                 }
-                let a = (0, o.fO)(e);
+                let a = (0, s.fO)(e);
                 r(a);
                 let c = (null == e ? void 0 : e.skuId) === '1251324401459265537' || (null == e ? void 0 : e.skuId) === '1252353273256480818' ? 950400000 : l.Cm,
                     d = 1000 * e.expiresAt + c - Date.now();
                 if (!a && d > 0) {
-                    let e = new s.V7();
+                    let e = new o.V7();
                     e.start(Math.min(u, d), () => n()), (i.current = e);
                 }
             };

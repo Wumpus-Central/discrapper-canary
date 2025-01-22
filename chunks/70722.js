@@ -3,7 +3,7 @@ r.d(n, {
         return l;
     },
     Ec: function () {
-        return o;
+        return s;
     },
     I9: function () {
         return d;
@@ -21,7 +21,7 @@ r.d(n, {
         return f;
     },
     tB: function () {
-        return _;
+        return p;
     },
     yG: function () {
         return u;
@@ -29,11 +29,11 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(214627);
+    o = r(214627);
 !(function (e) {
     (e.BLACK_SCREEN = 'BLACK_SCREEN'), (e.BLURRY = 'BLURRY'), (e.LAGGING = 'LAGGING'), (e.OUT_OF_SYNC = 'OUT_OF_SYNC'), (e.AUDIO_MISSING = 'AUDIO_MISSING'), (e.AUDIO_POOR = 'AUDIO_POOR'), (e.GAME_ISSUE = 'GAME_ISSUE'), (e.STREAM_STOPPED = 'STREAM_STOPPED'), (e.NO_ISSUE = 'NO_ISSUE'), (e.OTHER = 'OTHER');
 })(i || (i = {}));
-let o = '>=19.0.0',
+let s = '>=19.0.0',
     l = '>=22.0.0',
     u = '>=22.0.0',
     c = '>=24.0.0',
@@ -42,4 +42,4 @@ let o = '>=19.0.0',
 !(function (e) {
     (e.GUILD = 'guild'), (e.CALL = 'call');
 })(a || (a = {}));
-let _ = s.T.StreamNotificationsGuildMaxSize;
+let p = o.T.StreamNotificationsGuildMaxSize;

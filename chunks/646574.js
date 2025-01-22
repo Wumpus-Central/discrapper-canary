@@ -5,31 +5,31 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(642128),
     c = r(442837),
     d = r(704215),
     f = r(481060),
-    _ = r(607070),
+    p = r(607070),
     h = r(243778),
-    p = r(594174),
+    _ = r(594174),
     m = r(74538),
     g = r(921944),
     E = r(388032),
     v = r(140787);
-let I = {
+let y = {
         tension: 750,
         mass: 2.5,
         friction: 70
     },
-    T = 20;
-function b(e) {
+    b = 20;
+function I(e) {
     let { tooltipText: n, headingText: r, textColor: i } = e,
-        s = null != r;
+        o = null != r;
     return (0, a.jsxs)('span', {
-        className: s ? void 0 : v.tooltipContainer,
+        className: o ? void 0 : v.tooltipContainer,
         children: [
             (0, a.jsxs)('span', {
                 className: v.tooltipContainer,
@@ -39,7 +39,7 @@ function b(e) {
                         color: 'currentColor',
                         className: v.nitroWheel
                     }),
-                    s
+                    o
                         ? (0, a.jsx)(f.Heading, {
                               color: null != i ? i : 'text-normal',
                               variant: 'heading-sm/semibold',
@@ -49,43 +49,43 @@ function b(e) {
                 ]
             }),
             (0, a.jsx)(f.Text, {
-                variant: s ? 'text-xs/normal' : 'text-sm/medium',
+                variant: o ? 'text-xs/normal' : 'text-sm/medium',
                 color: null != i ? i : 'text-normal',
                 children: n
             })
         ]
     });
 }
-function y(e) {
+function T(e) {
     return e ? E.intl.string(E.t['5cRA/f']) : E.intl.string(E.t.buV4am);
 }
 function S(e) {
     let { checked: n, onClick: r, id: i = 'burst-reaction-toggle-button' } = e,
-        o = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
-        S = p.default.getCurrentUser(),
+        s = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
+        S = _.default.getCurrentUser(),
         A = null == S || (0, m.I5)(S) ? [d.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [N, C] = (0, h.US)(A),
-        [R, O] = s.useState(!1),
-        [D, L] = (0, f.useSpring)(() => ({})),
-        x = (0, u.animated)(f.SuperReactionIcon);
+        [C, N] = (0, h.US)(A),
+        [R, O] = o.useState(!1),
+        [D, x] = (0, f.useSpring)(() => ({})),
+        L = (0, u.animated)(f.SuperReactionIcon);
     function w() {
-        L({
+        x({
             from: { rotate: n ? '360deg' : '0deg' },
             to: { rotate: n ? '0deg' : '360deg' },
-            config: I
+            config: y
         }),
             null == r || r(),
             O(!1);
     }
-    s.useEffect(() => {
-        let e = N === d.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (C(g.L.DISMISS), setTimeout(() => O(e), 200));
-    }, [N, C]);
-    let P = R ? E.intl.string(E.t['Osi/u7']) : y(n),
+    o.useEffect(() => {
+        let e = C === d.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        e && (N(g.L.DISMISS), setTimeout(() => O(e), 200));
+    }, [C, N]);
+    let P = R ? E.intl.string(E.t['Osi/u7']) : T(n),
         M = R ? E.intl.string(E.t.ORK94u) : void 0;
     return (0, a.jsxs)(f.TooltipContainer, {
         position: 'top',
-        text: (0, a.jsx)(b, {
+        text: (0, a.jsx)(I, {
             textColor: 'always-white',
             tooltipText: P,
             headingText: M
@@ -109,14 +109,14 @@ function S(e) {
                     n
                         ? (0, a.jsx)(f.Shine, {
                               className: v.shine,
-                              shinePaused: o
+                              shinePaused: s
                           })
                         : null,
-                    (0, a.jsx)(x, {
-                        style: o ? void 0 : D,
+                    (0, a.jsx)(L, {
+                        style: s ? void 0 : D,
                         size: 'custom',
-                        width: T,
-                        height: T,
+                        width: b,
+                        height: b,
                         color: n ? 'white' : 'currentColor',
                         className: v.icon
                     }),

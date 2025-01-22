@@ -1,40 +1,40 @@
 var i = r(192379),
     a = r(969710);
-function s(e, n) {
+function o(e, n) {
     return (e === n && (0 !== e || 1 / e == 1 / n)) || (e != e && n != n);
 }
-var o = 'function' == typeof Object.is ? Object.is : s,
+var s = 'function' == typeof Object.is ? Object.is : o,
     l = a.useSyncExternalStore,
     u = i.useRef,
     c = i.useEffect,
     d = i.useMemo,
     f = i.useDebugValue;
 n.useSyncExternalStoreWithSelector = function (e, n, r, i, a) {
-    var s = u(null);
-    if (null === s.current) {
-        var _ = {
+    var o = u(null);
+    if (null === o.current) {
+        var p = {
             hasValue: !1,
             value: null
         };
-        s.current = _;
-    } else _ = s.current;
+        o.current = p;
+    } else p = o.current;
     var h = l(
         e,
-        (s = d(
+        (o = d(
             function () {
                 function e(e) {
                     if (!u) {
-                        if (((u = !0), (s = e), (e = i(e)), void 0 !== a && _.hasValue)) {
-                            var n = _.value;
+                        if (((u = !0), (o = e), (e = i(e)), void 0 !== a && p.hasValue)) {
+                            var n = p.value;
                             if (a(n, e)) return (l = n);
                         }
                         return (l = e);
                     }
-                    if (((n = l), o(s, e))) return n;
+                    if (((n = l), s(o, e))) return n;
                     var r = i(e);
-                    return void 0 !== a && a(n, r) ? n : ((s = e), (l = r));
+                    return void 0 !== a && a(n, r) ? n : ((o = e), (l = r));
                 }
-                var s,
+                var o,
                     l,
                     u = !1,
                     c = void 0 === r ? null : r;
@@ -51,12 +51,12 @@ n.useSyncExternalStoreWithSelector = function (e, n, r, i, a) {
             },
             [n, r, i, a]
         ))[0],
-        s[1]
+        o[1]
     );
     return (
         c(
             function () {
-                (_.hasValue = !0), (_.value = h);
+                (p.hasValue = !0), (p.value = h);
             },
             [h]
         ),

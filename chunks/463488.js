@@ -3,8 +3,8 @@ function n(e) {
         r = /[a-zA-Z]\w*/,
         i = ['as', 'break', 'class', 'construct', 'continue', 'else', 'for', 'foreign', 'if', 'import', 'in', 'is', 'return', 'static', 'var', 'while'],
         a = ['true', 'false', 'null'],
-        s = ['this', 'super'],
-        o = ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System'],
+        o = ['this', 'super'],
+        s = ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System'],
         l = ['-', '~', /\*/, '%', /\.\.\./, /\.\./, /\+/, '<<', '>>', '>=', '<=', '<', '>', /\^/, /!=/, /!/, /\bis\b/, '==', '&&', '&', /\|\|/, /\|/, /\?:/, '='],
         u = {
             relevance: 0,
@@ -50,7 +50,7 @@ function n(e) {
             match: n.either(...l),
             className: 'operator'
         },
-        _ = {
+        p = {
             className: 'string',
             begin: /"""/,
             end: /"""/
@@ -62,7 +62,7 @@ function n(e) {
             excludeBegin: !0,
             relevance: 0
         },
-        p = {
+        _ = {
             relevance: 0,
             match: n.concat(/\b_/, r),
             scope: 'variable'
@@ -71,7 +71,7 @@ function n(e) {
             relevance: 0,
             match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
             scope: 'title.class',
-            keywords: { _: o }
+            keywords: { _: s }
         },
         g = e.C_NUMBER_MODE,
         E = {
@@ -91,29 +91,29 @@ function n(e) {
                 'self'
             ]
         }),
-        I = {
+        y = {
             scope: 'subst',
             begin: /%\(/,
             end: /\)/,
-            contains: [g, m, u, p, f]
+            contains: [g, m, u, _, f]
         },
-        T = {
+        b = {
             scope: 'string',
             begin: /"/,
             end: /"/,
             contains: [
-                I,
+                y,
                 {
                     scope: 'char.escape',
                     variants: [{ match: /\\\\|\\["0%abefnrtv]/ }, { match: /\\x[0-9A-F]{2}/ }, { match: /\\u[0-9A-F]{4}/ }, { match: /\\U[0-9A-F]{8}/ }]
                 }
             ]
         };
-    I.contains.push(T);
-    let b = [...i, ...s, ...a],
-        y = {
+    y.contains.push(b);
+    let I = [...i, ...o, ...a],
+        T = {
             relevance: 0,
-            match: n.concat('\\b(?!', b.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
+            match: n.concat('\\b(?!', I.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
             className: 'variable'
         },
         S = {
@@ -137,10 +137,10 @@ function n(e) {
         name: 'Wren',
         keywords: {
             keyword: i,
-            'variable.language': s,
+            'variable.language': o,
             literal: a
         },
-        contains: [S, g, T, _, v, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, m, d, E, c, u, f, p, h, y]
+        contains: [S, g, b, p, v, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, m, d, E, c, u, f, _, h, T]
     };
 }
 e.exports = n;

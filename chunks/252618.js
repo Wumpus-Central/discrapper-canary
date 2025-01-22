@@ -3,22 +3,22 @@ r.d(n, {
         return g;
     },
     PR: function () {
-        return p;
+        return _;
     },
     Tt: function () {
-        return I;
+        return y;
     },
     ZD: function () {
         return S;
     },
     yY: function () {
-        return T;
+        return b;
     }
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(232713),
-    o = r(65400),
+    o = r(232713),
+    s = r(65400),
     l = r(731965);
 let u = { base: r(358085).isPlatformEmbedded ? void 0 : 'Discord' },
     c = 0,
@@ -27,12 +27,12 @@ let u = { base: r(358085).isPlatformEmbedded ? void 0 : 'Discord' },
         onlyWhenBlurred: !1,
         interval: 1000
     },
-    f = (0, o.F)(() => ({
+    f = (0, s.F)(() => ({
         titles: [u],
         notificationCount: void 0,
         flashQueue: []
     }));
-function _(e) {
+function p(e) {
     let n, r, i;
     for (let a of e.titles) {
         if (null != n && null != r) break;
@@ -44,7 +44,7 @@ function h(e) {
     let { notificationCount: n } = e;
     return null == n || 0 === n ? '' : n < 0 ? '\u2022 ' : '('.concat(n, ') ');
 }
-function p(e) {
+function _(e) {
     (0, l.j)(() => f.setState({ notificationCount: e }));
 }
 function m(e) {
@@ -79,28 +79,28 @@ function E(e) {
 function v() {
     f.setState({ flashQueue: [] });
 }
-function I(e) {
+function y(e) {
     a.useEffect(() => m(e), [...Object.values(e)]);
 }
-function T(e) {
-    return I(e), null;
+function b(e) {
+    return y(e), null;
 }
-function b() {
+function I() {
     let [e, n] = f((e) => {
             let { flashQueue: n } = e,
-                r = _(e)
+                r = p(e)
                     .filter((e) => null != e)
                     .join(' | '),
                 i = h(e);
             return [''.concat(i).concat(r), n[0]];
-        }, s.X),
+        }, o.X),
         [r, i] = a.useState(!1),
-        o = a.useRef(0),
-        l = null == n ? void 0 : n.messages[o.current % n.messages.length];
+        s = a.useRef(0),
+        l = null == n ? void 0 : n.messages[s.current % n.messages.length];
     return (
         a.useEffect(() => {
             if (null == n) {
-                (o.current = 0), i(!1);
+                (s.current = 0), i(!1);
                 return;
             }
             if (document.hasFocus() && n.onlyWhenBlurred) {
@@ -108,18 +108,18 @@ function b() {
                 return;
             }
             let e = setInterval(() => {
-                if (o.current >= n.count) {
+                if (s.current >= n.count) {
                     E(n.id), i(!1);
                     return;
                 }
-                i((e) => !e || ((o.current += 1), !1));
+                i((e) => !e || ((s.current += 1), !1));
             }, n.interval);
             return () => clearInterval(e);
         }, [n]),
         r ? l : e
     );
 }
-function y() {
+function T() {
     a.useEffect(() => {
         function e() {
             v();
@@ -129,8 +129,8 @@ function y() {
 }
 function S() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    y();
-    let n = b();
+    T();
+    let n = I();
     a.useEffect(() => {
         let r = n === u.base;
         if (!e || !r) document.title = n;

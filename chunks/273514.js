@@ -1,14 +1,14 @@
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(565138),
-    o = r(592125),
+    o = r(565138),
+    s = r(592125),
     l = r(430824),
     u = r(388032),
     c = r(411773);
 let d = (e) => {
     let { entry: n } = e,
-        r = o.Z.getChannel(n.channelId);
+        r = s.Z.getChannel(n.channelId);
     if (null == r) return null;
     let d = l.Z.getGuild(r.guild_id);
     return null == d
@@ -27,9 +27,9 @@ let d = (e) => {
                           (0, i.jsxs)('div', {
                               className: c.hubInfo,
                               children: [
-                                  (0, i.jsx)(s.Z, {
+                                  (0, i.jsx)(o.Z, {
                                       guild: d,
-                                      size: s.Z.Sizes.MINI,
+                                      size: o.Z.Sizes.MINI,
                                       className: c.hubIcon
                                   }),
                                   (0, i.jsx)(a.Text, {

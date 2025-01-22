@@ -31,8 +31,8 @@ var i = n(913527),
     o = n(709054),
     s = n(624138),
     c = n(219496),
-    d = n(801461),
-    u = n(388032);
+    u = n(801461),
+    d = n(388032);
 function m(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return a.ZP.getUserAvatarURL(
@@ -47,7 +47,7 @@ function m(e) {
     );
 }
 function h(e) {
-    let t = (0, s._I)(e.username).replace(d.RN, '').replace(d.iF, '.').toLowerCase();
+    let t = (0, s._I)(e.username).replace(u.RN, '').replace(u.iF, '.').toLowerCase();
     return ''.concat(t).concat(e.discriminator).substring(0, 32);
 }
 let f = ['@', '#', ':'],
@@ -58,7 +58,7 @@ function g(e) {
     let i = e.username.toLowerCase();
     if (
         ((t = i),
-        (n = d.kt),
+        (n = u.kt),
         t
             .split('')
             .filter((e) => !n.includes(e.charCodeAt(0)))
@@ -84,7 +84,7 @@ function I(e) {
     return (0, l.EQ)(e)
         .with({ rateLimited: !0 }, () => ({
             type: c.K.RATE_LIMIT,
-            message: u.intl.string(u.t.T15lqq)
+            message: d.intl.string(d.t.T15lqq)
         }))
         .with({ error: l.P.not(l.P.nullish) }, (e) => {
             let { error: t } = e;
@@ -95,11 +95,11 @@ function I(e) {
         })
         .with({ taken: !1 }, () => ({
             type: c.K.AVAILABLE,
-            message: u.intl.string(u.t.PgfBS0)
+            message: d.intl.string(d.t.PgfBS0)
         }))
         .with({ taken: !0 }, () => ({
             type: c.K.ERROR,
-            message: u.intl.string(u.t.mCrAUV)
+            message: d.intl.string(d.t.mCrAUV)
         }))
         .with({ error: l.P.nullish }, () => ({
             type: c.K.INTERNAL_ERROR,

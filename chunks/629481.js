@@ -1,7 +1,7 @@
-var i, r, l, o;
-n.d(e, {
+var i, r, l, u;
+e.d(n, {
     Hr: function () {
-        return u;
+        return o;
     },
     P4: function () {
         return s;
@@ -23,9 +23,9 @@ n.d(e, {
     (l.DISMISS_FULL_PREVIEW = 'dismiss_full_preview'),
     (l.DISMISS_TAB_PREVIEW = 'dismiss_tab_preview'),
     (l.DISMISS_CHANNEL_ROW = 'dismiss_channel_row'),
-    ((o = r || (r = {})).CHANNEL_ROW_CONTEXT_MENU = 'channel_row_context_menu'),
-    (o.SHOP_HEADER_BUTTON = 'shop_header_button');
-let u = 'hasClickedGuildShopProductPreviewTab',
+    ((u = r || (r = {})).CHANNEL_ROW_CONTEXT_MENU = 'channel_row_context_menu'),
+    (u.SHOP_HEADER_BUTTON = 'shop_header_button');
+let o = 'hasClickedGuildShopProductPreviewTab',
     a = 'hasClickedGuildShopChannelRow',
     s = 'https://discord.com/servershop',
     c = '1 GB';

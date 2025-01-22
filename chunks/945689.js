@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(31775),
-    s = r.n(a);
-function o(e, n, r) {
+    o = r.n(a);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -36,7 +36,7 @@ class u {
         var n;
         return null !== (n = this._subscriptions[e]) && void 0 !== n
             ? n
-            : new (s())({
+            : new (o())({
                   max: l,
                   updateAgeOnGet: !0
               });
@@ -54,6 +54,6 @@ class u {
         return !!r.has(n) && (r.del(n), this._onChange(e, r.keys()), !0);
     }
     constructor(e) {
-        o(this, '_subscriptions', {}), o(this, '_onChange', void 0), (this._onChange = e);
+        s(this, '_subscriptions', {}), s(this, '_onChange', void 0), (this._onChange = e);
     }
 }

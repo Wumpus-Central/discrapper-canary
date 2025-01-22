@@ -1,7 +1,7 @@
 var i,
     a = Object.prototype.toString,
-    s = Function.prototype.toString,
-    o = /^\s*(?:function)?\*/,
+    o = Function.prototype.toString,
+    s = /^\s*(?:function)?\*/,
     l = r(703825)(),
     u = Object.getPrototypeOf,
     c = function () {
@@ -12,7 +12,7 @@ var i,
     };
 e.exports = function (e) {
     if ('function' != typeof e) return !1;
-    if (o.test(s.call(e))) return !0;
+    if (s.test(o.call(e))) return !0;
     if (!l) return '[object GeneratorFunction]' === a.call(e);
     if (!u) return !1;
     if (void 0 === i) {

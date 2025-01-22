@@ -5,13 +5,13 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(481060),
-    s = r(1585),
-    o = r(125988),
+    o = r(1585),
+    s = r(125988),
     l = r(287008);
 function u(e) {
-    let { user: n, guildId: r, size: u, showPending: c = !1, showTryItOut: d = !1, animateOnHover: f = !1, avatarDecorationOverride: _, avatarOverride: h } = e,
+    let { user: n, guildId: r, size: u, showPending: c = !1, showTryItOut: d = !1, animateOnHover: f = !1, avatarDecorationOverride: p, avatarOverride: h } = e,
         {
-            avatarSrc: p,
+            avatarSrc: _,
             isAvatarAnimating: m,
             eventHandlers: g
         } = (0, l.Z)({
@@ -25,29 +25,29 @@ function u(e) {
         {
             avatarPlaceholderSrc: E,
             avatarDecorationSrc: v,
-            eventHandlers: I
-        } = (0, o.Z)({
+            eventHandlers: y
+        } = (0, s.Z)({
             user: n,
             guildId: null != r ? r : void 0,
-            size: (0, s.y9)(u),
+            size: (0, o.y9)(u),
             showPending: c,
             onlyAnimateOnHover: f,
-            avatarDecorationOverride: _,
+            avatarDecorationOverride: p,
             showTryItOut: d
         }),
-        T = i.useCallback(() => {
-            g.onMouseEnter(), I.onMouseEnter();
-        }, [g, I]);
+        b = i.useCallback(() => {
+            g.onMouseEnter(), y.onMouseEnter();
+        }, [g, y]);
     return {
         avatarPlaceholderSrc: E,
         avatarDecorationSrc: v,
-        avatarSrc: p,
+        avatarSrc: _,
         isAnimating: m,
         eventHandlers: {
-            onMouseEnter: T,
+            onMouseEnter: b,
             onMouseLeave: i.useCallback(() => {
-                g.onMouseLeave(), I.onMouseLeave();
-            }, [g, I])
+                g.onMouseLeave(), y.onMouseLeave();
+            }, [g, y])
         }
     };
 }

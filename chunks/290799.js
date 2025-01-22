@@ -1,13 +1,13 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(481060),
     c = r(63063),
     d = r(981631),
     f = r(388032),
-    _ = r(208802);
+    p = r(208802);
 let h = [
     {
         getQuestion: () => f.intl.string(f.t.C4J8UF),
@@ -26,52 +26,52 @@ let h = [
         getAnswer: () => f.intl.string(f.t['+OURPj'])
     }
 ];
-function p(e) {
+function _(e) {
     let { className: n } = e,
-        [r, i] = s.useState(null);
+        [r, i] = o.useState(null);
     return (0, a.jsxs)('div', {
-        className: l()(_.wrapper, n),
+        className: l()(p.wrapper, n),
         children: [
             (0, a.jsx)(u.Heading, {
-                className: _.heading,
+                className: p.heading,
                 variant: 'heading-xxl/bold',
                 children: f.intl.string(f.t.HPJ6Nj)
             }),
             (0, a.jsx)('ul', {
-                className: _.list,
+                className: p.list,
                 children: h.map((e, n) => {
-                    let s = r === n;
+                    let o = r === n;
                     return (0, a.jsxs)(
                         'div',
                         {
-                            className: _.listItem,
+                            className: p.listItem,
                             children: [
                                 (0, a.jsxs)(u.Clickable, {
-                                    className: l()(_.questionWrapper, { [_.questionWrapperExpanded]: s }),
+                                    className: l()(p.questionWrapper, { [p.questionWrapperExpanded]: o }),
                                     onClick: () => i((e) => (e === n ? null : n)),
                                     tag: 'li',
                                     children: [
                                         (0, a.jsx)(u.Text, {
-                                            className: _.question,
+                                            className: p.question,
                                             variant: 'text-lg/normal',
                                             children: e.getQuestion()
                                         }),
-                                        s
+                                        o
                                             ? (0, a.jsx)(u.MinusIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: _.questionIcon
+                                                  className: p.questionIcon
                                               })
                                             : (0, a.jsx)(u.PlusSmallIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: _.questionIcon
+                                                  className: p.questionIcon
                                               })
                                     ]
                                 }),
-                                s &&
+                                o &&
                                     (0, a.jsx)(u.Text, {
-                                        className: _.answer,
+                                        className: p.answer,
                                         color: 'text-normal',
                                         variant: 'text-md/normal',
                                         children: e.getAnswer()
@@ -85,4 +85,4 @@ function p(e) {
         ]
     });
 }
-n.Z = p;
+n.Z = _;

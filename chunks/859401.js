@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(47120);
-var s = r(392711),
-    o = r.n(s);
+var o = r(392711),
+    s = r.n(o);
 function l(e, n, r) {
     return (
         n in e
@@ -27,7 +27,7 @@ class c {
         return u.push(e), e.record;
     }
     getTotalBytes() {
-        return o().sum(Object.values(this.bytes));
+        return s().sum(Object.values(this.bytes));
     }
     constructor() {
         l(this, 'bytes', {}),

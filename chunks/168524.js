@@ -1,22 +1,22 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(492423),
     a = r(774073);
-function s(e) {
+function o(e) {
     let { onOpened: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { applicationId: r } = e,
-        s = (0, a.ZP)(e);
-    return s.shouldOpenGameProfile && null != r
+        o = (0, a.ZP)(e);
+    return o.shouldOpenGameProfile && null != r
         ? (a) => {
               a.stopPropagation(),
                   a.preventDefault(),
                   i.Z.openGameProfileModal({
                       ...e,
                       applicationId: r,
-                      gameProfileModalChecks: s
+                      gameProfileModalChecks: o
                   }),
                   null == n || n();
           }

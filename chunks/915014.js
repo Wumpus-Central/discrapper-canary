@@ -6,32 +6,32 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(318374),
-    o = r(522289),
+    o = r(318374),
+    s = r(522289),
     l = r(565138),
     u = r(697927),
     c = r(200634),
     d = r(708108),
     f = r(146078),
-    _ = r(228168),
+    p = r(228168),
     h = r(182294),
-    p = r(636565);
+    _ = r(636565);
 let m = 3;
 function g(e) {
     let { user: n, onOpenProfile: r } = e,
         { mutualFriends: g } = (0, u.Z)(n.id),
         { mutualGuilds: E } = (0, c.Z)(n.id),
         v = null != g && g.length > 0,
-        I = null != E && E.length > 0,
-        T = v && I ? 'text-xs/normal' : 'text-sm/normal';
-    if (!v && !I) return null;
-    let b = () =>
+        y = null != E && E.length > 0,
+        b = v && y ? 'text-xs/normal' : 'text-sm/normal';
+    if (!v && !y) return null;
+    let I = () =>
             v
                 ? (0, i.jsxs)(a.Clickable, {
-                      className: p.section,
-                      onClick: () => (null == r ? void 0 : r(_.oh.MUTUAL_FRIENDS)),
+                      className: _.section,
+                      onClick: () => (null == r ? void 0 : r(p.oh.MUTUAL_FRIENDS)),
                       children: [
-                          (0, i.jsx)(s.Z, {
+                          (0, i.jsx)(o.Z, {
                               maxUsers: m,
                               users: g.map((e) => {
                                   let { user: n } = e;
@@ -42,29 +42,29 @@ function g(e) {
                               disableUsernameTooltip: !0
                           }),
                           (0, i.jsx)(a.Text, {
-                              className: p.text,
-                              variant: T,
+                              className: _.text,
+                              variant: b,
                               color: 'interactive-normal',
                               children: (0, d.Z)(g.length)
                           })
                       ]
                   })
                 : null,
-        y = () =>
-            v && I
+        T = () =>
+            v && y
                 ? (0, i.jsx)('div', {
                       'aria-hidden': 'true',
-                      className: p.spacer
+                      className: _.spacer
                   })
                 : null,
         S = () =>
-            I
+            y
                 ? (0, i.jsxs)(a.Clickable, {
-                      className: p.section,
-                      onClick: () => (null == r ? void 0 : r(_.oh.MUTUAL_GUILDS)),
+                      className: _.section,
+                      onClick: () => (null == r ? void 0 : r(p.oh.MUTUAL_GUILDS)),
                       children: [
                           !v &&
-                              (0, i.jsx)(o.Z, {
+                              (0, i.jsx)(s.Z, {
                                   maxGuilds: m,
                                   guilds: E.map((e) => {
                                       let { guild: n } = e;
@@ -75,8 +75,8 @@ function g(e) {
                                   disableGuildNameTooltip: !0
                               }),
                           (0, i.jsx)(a.Text, {
-                              className: p.text,
-                              variant: T,
+                              className: _.text,
+                              variant: b,
                               color: 'interactive-normal',
                               children: (0, f.Z)(E.length)
                           })
@@ -84,7 +84,7 @@ function g(e) {
                   })
                 : null;
     return (0, i.jsxs)('div', {
-        className: p.mutuals,
-        children: [b(), y(), S()]
+        className: _.mutuals,
+        children: [I(), T(), S()]
     });
 }

@@ -1,12 +1,12 @@
 r.d(n, {
     Vb: function () {
-        return o;
+        return s;
     },
     YI: function () {
         return l;
     },
     u5: function () {
-        return s;
+        return o;
     },
     vJ: function () {
         return a;
@@ -14,9 +14,9 @@ r.d(n, {
 });
 var i = r(969090);
 let a = r(139458).B || !1;
-function s() {
+function o() {
     let e = r(610398).Z;
-    return o()
+    return s()
         .filter((e) => {
             let { enabled: n } = e;
             return n;
@@ -35,12 +35,12 @@ function s() {
             return (r = r.toLowerCase()), r < (i = i.toLowerCase()) ? -1 : r > i ? 1 : 0;
         });
 }
-function o() {
+function s() {
     return r(515297);
 }
 function l(e, n) {
     var r, i;
-    let a = o()
+    let a = s()
         .filter((e) => {
             let { enabled: n } = e;
             return n;
@@ -50,6 +50,6 @@ function l(e, n) {
             return n;
         });
     if (a.includes(e)) return e;
-    let s = e.split('-');
-    return a.includes(s[0]) ? s[0] : 'zh' === s[0] && s.length > 1 && 'Hant' === s[1] ? (null !== (r = a.find((e) => 'zh-TW' === e)) && void 0 !== r ? r : n) : null !== (i = a.find((e) => e.split('-')[0] === s[0])) && void 0 !== i ? i : n;
+    let o = e.split('-');
+    return a.includes(o[0]) ? o[0] : 'zh' === o[0] && o.length > 1 && 'Hant' === o[1] ? (null !== (r = a.find((e) => 'zh-TW' === e)) && void 0 !== r ? r : n) : null !== (i = a.find((e) => e.split('-')[0] === o[0])) && void 0 !== i ? i : n;
 }

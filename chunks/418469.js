@@ -6,18 +6,18 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(442837),
-    s = r(481060),
-    o = r(569545),
+    o = r(481060),
+    s = r(569545),
     l = r(687516),
     u = r(314897),
     c = r(959457),
     d = r(388032);
 function f(e, n, f) {
-    var _;
+    var p;
     let h = (0, l.Cf)(e),
-        p = (0, a.e7)([u.default], () => u.default.getId()),
-        m = null != e ? (0, o.V9)(e) : c.Z.getActiveStreamKey(),
-        g = null !== (_ = c.Z.getVideoStats(m)) && void 0 !== _ ? _ : {},
+        _ = (0, a.e7)([u.default], () => u.default.getId()),
+        m = null != e ? (0, s.V9)(e) : c.Z.getActiveStreamKey(),
+        g = null !== (p = c.Z.getVideoStats(m)) && void 0 !== p ? p : {},
         E = {
             media_session_id: c.Z.getMediaSessionId(m),
             rtc_connection_id: c.Z.getRtcConnectionId(m),
@@ -28,13 +28,13 @@ function f(e, n, f) {
         v = () => {
             null == f || f(),
                 null != e &&
-                    (0, s.openModalLazy)(async () => {
+                    (0, o.openModalLazy)(async () => {
                         let { default: n } = await r.e('18912').then(r.bind(r, 340140));
                         return (r) =>
                             (0, i.jsx)(n, {
                                 stream: e,
                                 streamApplication: h,
-                                isStreamer: p === (null == e ? void 0 : e.ownerId),
+                                isStreamer: _ === (null == e ? void 0 : e.ownerId),
                                 analyticsData: E,
                                 ...r
                             });
@@ -42,7 +42,7 @@ function f(e, n, f) {
         };
     return null == e
         ? null
-        : (0, i.jsx)(s.MenuItem, {
+        : (0, i.jsx)(o.MenuItem, {
               id: 'report-stream-problem',
               label: d.intl.string(d.t.sdnCxc),
               action: v

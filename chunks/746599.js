@@ -12,20 +12,20 @@ r.d(n, {
         return a;
     },
     pM: function () {
-        return s;
+        return o;
     },
     qA: function () {
-        return o;
+        return s;
     }
 });
 var i = r(570140);
 function a() {
     i.Z.dispatch({ type: 'PERMIUM_PERKS_DEMO_FRAME_ANIMATION_PLAYED' });
 }
-function s() {
+function o() {
     i.Z.dispatch({ type: 'PREMIUM_PERKS_DEMO_POPOUT_DISMISSED' });
 }
-function o() {
+function s() {
     i.Z.dispatch({ type: 'PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_DISMISSED' });
 }
 function l(e) {

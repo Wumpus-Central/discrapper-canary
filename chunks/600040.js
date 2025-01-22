@@ -1,11 +1,11 @@
 var i,
     a = r(264344),
-    s = r.n(a),
-    o = r(345546);
+    o = r.n(a),
+    s = r(345546);
 (window.AudioContext = null !== (i = window.AudioContext) && void 0 !== i ? i : window.webkitAudioContext),
     null != window.RTCPeerConnection &&
-        'Chrome' === s().name &&
-        52 > (0, o.n)() &&
+        'Chrome' === o().name &&
+        52 > (0, s.n)() &&
         ['createOffer', 'createAnswer'].forEach((e) => {
             let n = RTCPeerConnection.prototype[e];
             RTCPeerConnection.prototype[e] = function () {

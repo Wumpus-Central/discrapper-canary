@@ -1,14 +1,14 @@
-n(771008);
-var r = n(327192),
-    o = n(141603),
-    a = n(875604),
-    i = n(996211),
-    s = Array.prototype,
-    c = {
+r(771008);
+var i = r(327192),
+    a = r(141603),
+    o = r(875604),
+    s = r(996211),
+    l = Array.prototype,
+    u = {
         DOMTokenList: !0,
         NodeList: !0
     };
 e.exports = function (e) {
-    var t = e.values;
-    return e === s || (a(s, e) && t === s.values) || o(c, r(e)) ? i : t;
+    var n = e.values;
+    return e === l || (o(l, e) && n === l.values) || a(u, i(e)) ? s : n;
 };

@@ -38,9 +38,9 @@ let j = {
     O = (0, c.range)(0, 11),
     R = (0, c.range)(0, 2.25, 0.25),
     P = (0, c.range)(1, 11),
-    y = (0, c.range)(1, 26);
+    D = (0, c.range)(1, 26);
 ((s = i || (i = {}))[(s.CONFETTI = 0)] = 'CONFETTI'), (s[(s.SHAKE = 1)] = 'SHAKE'), ((a = r || (r = {}))[(a.USER_SETTINGS = 0)] = 'USER_SETTINGS'), (a[(a.ACHIEVEMENT_LIST = 1)] = 'ACHIEVEMENT_LIST');
-let B = () => [
+let y = () => [
         {
             location: I.Hn.CHAT_INPUT,
             title: v.intl.string(v.t.elTty8),
@@ -62,7 +62,7 @@ let B = () => [
             description: v.intl.string(v.t.fiHV7u)
         }
     ],
-    D = () => [
+    B = () => [
         {
             location: I.oZ.CHAT_INPUT,
             title: v.intl.string(v.t.vUcvPD),
@@ -192,10 +192,10 @@ function k(e) {
                     (0, l.jsx)(L, { children: v.intl.string(v.t.xoldVl) }),
                     (0, l.jsx)(m.Slider, {
                         disabled: o,
-                        markers: y,
+                        markers: D,
                         stickToMarkers: !0,
-                        minValue: y[0],
-                        maxValue: y[y.length - 1],
+                        minValue: D[0],
+                        maxValue: D[D.length - 1],
                         initialValue: r,
                         onValueChange: (e) => a({ confettiSize: e }, 0),
                         onValueRender: (e) => ''.concat(e)
@@ -204,7 +204,7 @@ function k(e) {
             }),
             (0, l.jsx)(Z, {
                 disabled: o,
-                locations: B(),
+                locations: y(),
                 settingsLocations: s,
                 onChange: (e) => a({ confettiEnabledLocations: e }, 0)
             })
@@ -300,7 +300,7 @@ function F(e) {
             }),
             (0, l.jsx)(Z, {
                 disabled: o,
-                locations: D(),
+                locations: B(),
                 settingsLocations: r,
                 onChange: (e) => s({ screenshakeEnabledLocations: e }, 1)
             })

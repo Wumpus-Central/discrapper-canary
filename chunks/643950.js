@@ -12,9 +12,9 @@ function a(e, n, r) {
         e
     );
 }
-class s {
+class o {
     getConsoleArgs(e, n) {
-        return [''.concat(s.getDateTimeString(), ' ').concat(this.name, ': ').concat(e), ...n];
+        return [''.concat(o.getDateTimeString(), ' ').concat(this.name, ': ').concat(e), ...n];
     }
     log(e) {
         for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];

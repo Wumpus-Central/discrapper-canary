@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(818083);
-let s = 'bandwidth_estimation',
-    o = (0, a.B)({
+let o = 'bandwidth_estimation',
+    s = (0, a.B)({
         kind: 'user',
         id: '2024-06_rtc_pacer__simulcast',
         label: 'RTC Pacer & Golive Simulcast',
@@ -69,7 +69,7 @@ let s = 'bandwidth_estimation',
     });
 n.Z = {
     getConfig(e, n) {
-        let r = o.getCurrentConfig({ location: 'e1c55b_1' }, { autoTrackExposure: e });
+        let r = s.getCurrentConfig({ location: 'e1c55b_1' }, { autoTrackExposure: e });
         return !this.supportsBandwidthEstimationExperimentFullname(r.fullname, n) && (r.enabled = !1), r;
     },
     supportsBandwidthEstimationExperimentFullname(e, n) {
@@ -80,6 +80,6 @@ n.Z = {
     },
     getMediaEngineExperiments(e) {
         let n = e.split('/');
-        return 3 !== n.length || n[0] !== s ? null : n[1].split(',').filter((e) => 0 !== e.length);
+        return 3 !== n.length || n[0] !== o ? null : n[1].split(',').filter((e) => 0 !== e.length);
     }
 };

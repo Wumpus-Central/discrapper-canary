@@ -1,4 +1,4 @@
-var i, a, s, o, l;
+var i, a, o, s, l;
 function u(e) {
     return (null == e ? void 0 : e.type) === 0 || (null == e ? void 0 : e.type) === 1;
 }
@@ -10,7 +10,7 @@ function d(e) {
 }
 r.d(n, {
     $i: function () {
-        return _;
+        return p;
     },
     I: function () {
         return d;
@@ -31,10 +31,10 @@ r.d(n, {
         return l;
     },
     dF: function () {
-        return s;
+        return o;
     },
     e5: function () {
-        return p;
+        return _;
     },
     fO: function () {
         return i;
@@ -43,7 +43,7 @@ r.d(n, {
         return f;
     },
     wR: function () {
-        return o;
+        return s;
     }
 }),
     !(function (e) {
@@ -54,10 +54,10 @@ r.d(n, {
     })(a || (a = {})),
     !(function (e) {
         (e.NONE = 'NONE'), (e.AUTO = 'AUTO');
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE'), (e[(e.XBOX = 2)] = 'XBOX'), (e[(e.PLAYSTATION = 3)] = 'PLAYSTATION');
-    })(o || (o = {}));
+    })(s || (s = {}));
 !(function (e) {
     (e[(e.VIDEO = 0)] = 'VIDEO'), (e[(e.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW');
 })(l || (l = {}));
@@ -65,7 +65,7 @@ let f = {
         0: 320,
         1: 160
     },
-    _ = {
+    p = {
         0: 960,
         1: 480
     },
@@ -73,4 +73,4 @@ let f = {
         0: 200,
         1: 160
     },
-    p = 8;
+    _ = 8;

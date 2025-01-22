@@ -8,11 +8,11 @@ r.d(n, {
 });
 var i = r(570140),
     a = r(788983),
-    s = r(214629),
-    o = r(981631);
+    o = r(214629),
+    s = r(981631);
 function l() {
     var e;
-    let n = s.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled;
+    let n = o.ZP.getCurrentConfig({ location: 'shouldOpenActivityInPopoutWindow' }).enabled;
     return (null === (e = platform) || void 0 === e ? void 0 : e.name) !== 'Firefox' && n;
 }
 async function u(e) {
@@ -27,5 +27,5 @@ async function u(e) {
     } catch {
         n = !1;
     }
-    return !n && r && a.xv(o.KJ3.ACTIVITY_POPOUT), n;
+    return !n && r && a.xv(s.KJ3.ACTIVITY_POPOUT), n;
 }

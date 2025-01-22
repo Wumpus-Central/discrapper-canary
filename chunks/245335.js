@@ -1,9 +1,9 @@
 r.d(n, {
     Iq: function () {
-        return s;
+        return o;
     },
     RV: function () {
-        return o;
+        return s;
     },
     wx: function () {
         return a;
@@ -14,8 +14,8 @@ r.d(n, {
 });
 var i,
     a,
-    s,
     o,
+    s,
     l = r(47120);
 !(function (e) {
     (e.SENDING = 'sending'), (e.SENT = 'sent'), (e.ERROR = 'error');
@@ -26,7 +26,7 @@ var i,
 let u = new Set([0, 1]);
 !(function (e) {
     (e[(e.STREAM = 1)] = 'STREAM'), (e[(e.EMBEDDED_APPLICATION = 2)] = 'EMBEDDED_APPLICATION'), (e[(e.ROLE_SUBSCRIPTIONS_PURCHASE = 3)] = 'ROLE_SUBSCRIPTIONS_PURCHASE');
-})(s || (s = {})),
+})(o || (o = {})),
     !(function (e) {
         (e.MAIN = 'main'), (e.SETTINGS = 'settings');
-    })(o || (o = {}));
+    })(s || (s = {}));

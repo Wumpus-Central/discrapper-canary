@@ -1,40 +1,40 @@
-t.d(n, {
+c.d(t, {
     Z: function () {
-        return p;
+        return b;
     }
 });
-var a = t(200651),
-    i = t(192379),
-    c = t(120356),
-    o = t.n(c),
-    s = t(53691),
-    r = t(378879),
-    d = t(981631),
-    l = t(486324),
-    u = t(388032),
-    f = t(173318);
-function p(e) {
-    let { uploadType: n, className: t, ...c } = e,
-        p = i.useCallback(() => {
-            (0, r.openProfileUpsellModal)(n, void 0);
-        }, [n]),
-        A = i.useMemo(() => {
-            switch (n) {
-                case l.pC.AVATAR:
-                    return u.intl.format(u.t['pvw/HB'], { onClick: p });
-                case l.pC.BANNER:
-                    return u.intl.format(u.t.aCrz1d, { onClick: p });
+var e = c(200651),
+    a = c(192379),
+    d = c(120356),
+    s = c.n(d),
+    o = c(53691),
+    i = c(378879),
+    f = c(981631),
+    p = c(486324),
+    r = c(388032),
+    A = c(173318);
+function b(n) {
+    let { uploadType: t, className: c, ...d } = n,
+        b = a.useCallback(() => {
+            (0, i.openProfileUpsellModal)(t, void 0);
+        }, [t]),
+        u = a.useMemo(() => {
+            switch (t) {
+                case p.pC.AVATAR:
+                    return r.intl.format(r.t['pvw/HB'], { onClick: b });
+                case p.pC.BANNER:
+                    return r.intl.format(r.t.aCrz1d, { onClick: b });
                 default:
                     return '';
             }
-        }, [n, p]);
-    return n === l.pC.AVATAR || n === l.pC.BANNER
-        ? (0, a.jsx)(s.p, {
-              text: A,
-              button: u.intl.string(u.t.BmJkbW),
-              buttonAnalyticsObject: { section: d.jXE.USER_PROFILE },
-              className: o()(f.container, t),
-              ...c
+        }, [t, b]);
+    return t === p.pC.AVATAR || t === p.pC.BANNER
+        ? (0, e.jsx)(o.p, {
+              text: u,
+              button: r.intl.string(r.t.BmJkbW),
+              buttonAnalyticsObject: { section: f.jXE.USER_PROFILE },
+              className: s()(A.container, c),
+              ...d
           })
         : null;
 }

@@ -9,16 +9,16 @@ function n(e) {
             literal: ['true', 'false', 'undefined', 'null']
         },
         a = /""|"[^"]+"/,
-        s = /''|'[^']+'/,
-        o = /\[\]|\[[^\]]+\]/,
+        o = /''|'[^']+'/,
+        s = /\[\]|\[[^\]]+\]/,
         l = /[^\s!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]+/,
         u = /(\.|\/)/,
-        c = n.either(a, s, o, l),
+        c = n.either(a, o, s, l),
         d = n.concat(n.optional(/\.|\.\/|\//), c, n.anyNumberOfTimes(n.concat(u, c))),
-        f = n.concat('(', o, '|', l, ')(?==)'),
-        _ = { begin: d },
-        h = e.inherit(_, { keywords: i }),
-        p = {
+        f = n.concat('(', s, '|', l, ')(?==)'),
+        p = { begin: d },
+        h = e.inherit(p, { keywords: i }),
+        _ = {
             begin: /\(/,
             end: /\)/
         },
@@ -30,7 +30,7 @@ function n(e) {
                 begin: /=/,
                 end: /=/,
                 starts: {
-                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, h, p]
+                    contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, h, _]
                 }
             }
         },
@@ -41,25 +41,25 @@ function n(e) {
             contains: [{ begin: /\w+/ }]
         },
         E = {
-            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, g, m, h, p],
+            contains: [e.NUMBER_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, g, m, h, _],
             returnEnd: !0
         },
-        v = e.inherit(_, {
+        v = e.inherit(p, {
             className: 'name',
             keywords: r,
             starts: e.inherit(E, { end: /\)/ })
         });
-    p.contains = [v];
-    let I = e.inherit(_, {
+    _.contains = [v];
+    let y = e.inherit(p, {
             keywords: r,
             className: 'name',
             starts: e.inherit(E, { end: /\}\}/ })
         }),
-        T = e.inherit(_, {
+        b = e.inherit(p, {
             keywords: r,
             className: 'name'
         }),
-        b = e.inherit(_, {
+        I = e.inherit(p, {
             className: 'name',
             keywords: r,
             starts: e.inherit(E, { end: /\}\}/ })
@@ -84,7 +84,7 @@ function n(e) {
                 className: 'template-tag',
                 begin: /\{\{\{\{(?!\/)/,
                 end: /\}\}\}\}/,
-                contains: [I],
+                contains: [y],
                 starts: {
                     end: /\{\{\{\{\//,
                     returnEnd: !0,
@@ -95,13 +95,13 @@ function n(e) {
                 className: 'template-tag',
                 begin: /\{\{\{\{\//,
                 end: /\}\}\}\}/,
-                contains: [T]
+                contains: [b]
             },
             {
                 className: 'template-tag',
                 begin: /\{\{#/,
                 end: /\}\}/,
-                contains: [I]
+                contains: [y]
             },
             {
                 className: 'template-tag',
@@ -119,19 +119,19 @@ function n(e) {
                 className: 'template-tag',
                 begin: /\{\{\//,
                 end: /\}\}/,
-                contains: [T]
+                contains: [b]
             },
             {
                 className: 'template-variable',
                 begin: /\{\{\{/,
                 end: /\}\}\}/,
-                contains: [b]
+                contains: [I]
             },
             {
                 className: 'template-variable',
                 begin: /\{\{/,
                 end: /\}\}/,
-                contains: [b]
+                contains: [I]
             }
         ]
     };

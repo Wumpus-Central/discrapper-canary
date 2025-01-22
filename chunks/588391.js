@@ -1,9 +1,9 @@
-n.d(t, {
+r.d(n, {
     X: function () {
-        return a;
+        return i;
     }
 });
-let a = [
+let i = [
     {
         label: 'Alberta',
         value: 'AB'

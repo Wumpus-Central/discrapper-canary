@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(573654),
     a = r(964742),
-    s = r(144459);
-function o(e, n) {
+    o = r(144459);
+function s(e, n) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
@@ -22,12 +22,12 @@ function l(e) {
     for (var n = 1; n < arguments.length; n++) {
         var r = null != arguments[n] ? arguments[n] : {};
         n % 2
-            ? o(Object(r), !0).forEach(function (n) {
+            ? s(Object(r), !0).forEach(function (n) {
                   u(e, n, r[n]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : o(Object(r)).forEach(function (n) {
+              : s(Object(r)).forEach(function (n) {
                     Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(r, n));
                 });
     }
@@ -52,8 +52,8 @@ function c(e) {
             r = e.getMonitor(),
             i = e.getRegistry();
         d(r),
-            h(r).forEach(function (s, o) {
-                var u = f(s, o, i, r),
+            h(r).forEach(function (o, s) {
+                var u = f(o, s, i, r),
                     c = {
                         type: a.rp,
                         payload: { dropResult: l(l({}, n), u) }
@@ -67,11 +67,11 @@ function d(e) {
 }
 function f(e, n, r, i) {
     var a = r.getTarget(e),
-        s = a ? a.drop(i, e) : void 0;
-    return _(s), void 0 === s && (s = 0 === n ? {} : i.getDropResult()), s;
+        o = a ? a.drop(i, e) : void 0;
+    return p(o), void 0 === o && (o = 0 === n ? {} : i.getDropResult()), o;
 }
-function _(e) {
-    (0, i.k)(void 0 === e || (0, s.Kn)(e), 'Drop result must either be an object or undefined.');
+function p(e) {
+    (0, i.k)(void 0 === e || (0, o.Kn)(e), 'Drop result must either be an object or undefined.');
 }
 function h(e) {
     var n = e.getTargetIds().filter(e.canDropOnTarget, e);

@@ -41,8 +41,8 @@ function T() {
             (0, i.jsx)(O, {}),
             (0, i.jsx)(Z, {}),
             (0, i.jsx)(L, {}),
-            (0, i.jsx)(B, {}),
             (0, i.jsx)(y, {}),
+            (0, i.jsx)(D, {}),
             (0, i.jsx)(P, {}),
             (0, i.jsx)(R, {}),
             (0, i.jsx)(k, {}),
@@ -360,7 +360,7 @@ function O() {
                     children: 'Large'
                 })
             }),
-            (0, i.jsx)(D, {})
+            (0, i.jsx)(B, {})
         ]
     });
 }
@@ -519,7 +519,7 @@ function P() {
         ]
     });
 }
-function y() {
+function D() {
     return (0, i.jsxs)('div', {
         className: f.section,
         children: [
@@ -576,7 +576,7 @@ function y() {
         ]
     });
 }
-function B() {
+function y() {
     let [e, t] = r.useState(!1),
         [n, s] = r.useState(!1),
         [a, l] = r.useState('auto');
@@ -778,7 +778,7 @@ function B() {
         ]
     });
 }
-function D() {
+function B() {
     return (0, i.jsxs)('div', {
         className: f.shinyButtonExamples,
         children: [

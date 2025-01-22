@@ -1,7 +1,7 @@
 var i = r(570140),
     a = r(367907),
-    s = r(626135),
-    o = r(585483),
+    o = r(626135),
+    s = r(585483),
     l = r(981631);
 n.Z = {
     rebuildRTCActiveChannels() {
@@ -16,7 +16,7 @@ n.Z = {
     },
     updateLayout(e, n) {
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.IlC.APP;
-        s.default.track(l.rMx.VIDEO_LAYOUT_TOGGLED, {
+        o.default.track(l.rMx.VIDEO_LAYOUT_TOGGLED, {
             video_layout: n,
             ...(0, a.AB)(e)
         }),
@@ -70,8 +70,8 @@ n.Z = {
         }),
             n
                 ? setTimeout(() => {
-                      o.S.dispatch(l.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      s.S.dispatch(l.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   }, 0)
-                : o.S.dispatch(l.CkL.FOCUS_CHAT_BUTTON);
+                : s.S.dispatch(l.CkL.FOCUS_CHAT_BUTTON);
     }
 };

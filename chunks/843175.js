@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(829307),
     u = r(877837),
     c = r(871810),
@@ -10,11 +10,11 @@ var i = r(192379),
         var n = e.hsl,
             r = e.onChange,
             a = e.pointer,
-            s = e.styles,
-            d = void 0 === s ? {} : s,
+            o = e.styles,
+            d = void 0 === o ? {} : o,
             f = e.className,
-            _ = void 0 === f ? '' : f,
-            h = (0, o.default)(
+            p = void 0 === f ? '' : f,
+            h = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -32,7 +32,7 @@ var i = r(192379),
             'div',
             {
                 style: h.wrap || {},
-                className: 'slider-picker ' + _
+                className: 'slider-picker ' + p
             },
             i.createElement(
                 'div',
@@ -54,7 +54,7 @@ var i = r(192379),
             )
         );
     };
-(f.propTypes = { styles: s().object }),
+(f.propTypes = { styles: o().object }),
     (f.defaultProps = {
         pointer: d.Z,
         styles: {}

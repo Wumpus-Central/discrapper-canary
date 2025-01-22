@@ -1,8 +1,8 @@
-var r = n(28886),
-    o = n(982665),
-    a = n(653457);
-e.exports = function (e, t) {
-    if ((r(e), o(t) && t.constructor === e)) return t;
-    var n = a.f(e);
-    return (0, n.resolve)(t), n.promise;
+var i = r(28886),
+    a = r(982665),
+    o = r(653457);
+e.exports = function (e, n) {
+    if ((i(e), a(n) && n.constructor === e)) return n;
+    var r = o.f(e);
+    return (0, r.resolve)(n), r.promise;
 };

@@ -8,14 +8,14 @@ r.d(n, {
 });
 var i,
     a = r(818083),
-    s = r(638395);
+    o = r(638395);
 r(171393);
-var o = r(987338);
+var s = r(987338);
 let l = (0, a.B)({
         kind: 'user',
         id: '2024-07_icymi',
         label: 'In-case-you-missed-it tab',
-        commonTriggerPoint: o.$P.CONNECTION_OPEN_MOBILE,
+        commonTriggerPoint: s.$P.CONNECTION_OPEN_MOBILE,
         defaultConfig: { enabled: !1 },
         treatments: [
             {
@@ -48,7 +48,7 @@ let l = (0, a.B)({
         kind: 'user',
         id: '2024-10_icymi_sorting_fe',
         label: 'FE experiment for sorting on ICYMI',
-        commonTriggerPoint: o.$P.CONNECTION_OPEN_MOBILE,
+        commonTriggerPoint: s.$P.CONNECTION_OPEN_MOBILE,
         defaultConfig: { enabled: !1 },
         treatments: [
             {
@@ -159,10 +159,10 @@ let d = (0, a.B)({
 });
 function f(e) {
     let { location: n, autoTrackExposure: r = !0 } = e,
-        i = s.Z.get('hide_icymi_tab'),
+        i = o.Z.get('hide_icymi_tab'),
         a = h(n, !1),
         {
-            enabled: o,
+            enabled: s,
             tabBadgeVariant: l,
             removeHomeMentionBadges: u
         } = d.getCurrentConfig(
@@ -173,12 +173,12 @@ function f(e) {
             }
         );
     return {
-        enabled: o && !i && a,
+        enabled: s && !i && a,
         tabBadgeVariant: l,
         removeHomeMentionBadges: u
     };
 }
-function _(e) {
+function p(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = l.useExperiment(
             { location: e },

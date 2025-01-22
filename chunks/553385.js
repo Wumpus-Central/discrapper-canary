@@ -1,9 +1,9 @@
 r.d(n, {
     N7: function () {
-        return _;
+        return p;
     },
     XP: function () {
-        return p;
+        return _;
     },
     j8: function () {
         return h;
@@ -14,14 +14,14 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(430742),
-    s = r(904245),
-    o = r(623292),
+    o = r(904245),
+    s = r(623292),
     l = r(592125),
     u = r(703558),
     c = r(375954),
     d = r(585483),
     f = r(981631);
-function _(e) {
+function p(e) {
     i.tn.post({
         url: f.ANM.INITIATE_CHANNEL_PROMPTS,
         body: { guild_ids: e },
@@ -36,7 +36,7 @@ function h(e) {
         rejectWithError: !0
     });
 }
-async function p(e, n, r) {
+async function _(e, n, r) {
     await i.tn.post({
         url: f.ANM.SEND_GAMING_STATS(n),
         body: {
@@ -58,7 +58,7 @@ async function m(e) {
     if (null != n.text && '' !== n.text) {
         let r = l.Z.getChannel(e.channel_id);
         null != r &&
-            ((0, o.fE)({
+            ((0, s.fE)({
                 channel: r,
                 message: e,
                 shouldMention: !1,
@@ -69,5 +69,5 @@ async function m(e) {
     }
 }
 function g(e) {
-    c.Z.getMessages(e).hasMoreAfter ? s.Z.jumpToPresent(e, f.AQB) : d.S.dispatch(f.CkL.SCROLLTO_PRESENT);
+    c.Z.getMessages(e).hasMoreAfter ? o.Z.jumpToPresent(e, f.AQB) : d.S.dispatch(f.CkL.SCROLLTO_PRESENT);
 }

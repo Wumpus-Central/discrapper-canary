@@ -8,18 +8,18 @@ r.d(n, {
 });
 var i = r(518263);
 var a = r(970173);
-var s = r(520712);
-var o = r(268111);
+var o = r(520712);
+var s = r(268111);
 var l = r(941497);
 var u = r(32026);
 var c = r(480839);
 var d = r(744285);
 var f = r(492257);
-var _ = r(873817);
+var p = r(873817);
 var h = r(998502);
-let p = null;
+let _ = null;
 function m() {
-    return null == p && (p = g()), p;
+    return null == _ && (_ = g()), _;
 }
 function g() {
     if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;

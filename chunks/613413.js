@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(232713),
     c = r(442837),
     d = r(481060),
     f = r(314910),
-    _ = r(906467),
+    p = r(906467),
     h = r(857192),
-    p = r(835225),
+    _ = r(835225),
     m = r(117795),
     g = r(565384),
     E = r(854035);
@@ -27,33 +27,33 @@ function v() {
             u.X
         ),
         r = (0, c.e7)([h.default], () => h.default.isAnalyticsDebuggerEnabled),
-        i = (0, c.e7)([_.Z], () => _.Z.isDeveloper),
-        [o, v] = s.useState(!1),
-        { name: I, ...T } = null != e ? e : {},
-        b = null != I;
+        i = (0, c.e7)([p.Z], () => p.Z.isDeveloper),
+        [s, v] = o.useState(!1),
+        { name: y, ...b } = null != e ? e : {},
+        I = null != y;
     return i && r
         ? (0, a.jsx)(f.ZP, {
               children: (0, a.jsxs)('div', {
                   className: l()(E.container, {
-                      [E.containerMinimized]: o,
-                      [E.notTracked]: !b
+                      [E.containerMinimized]: s,
+                      [E.notTracked]: !I
                   }),
                   children: [
                       (0, a.jsx)(d.Clickable, {
                           className: E.minimizeButton,
                           onClick: () => {
-                              v(!o);
+                              v(!s);
                           },
-                          children: o ? (0, a.jsx)(p.Z, {}) : (0, a.jsx)(m.Z, {})
+                          children: s ? (0, a.jsx)(_.Z, {}) : (0, a.jsx)(m.Z, {})
                       }),
                       (0, a.jsxs)('div', {
-                          className: l()(E.content, { [E.contentMinimized]: o }),
+                          className: l()(E.content, { [E.contentMinimized]: s }),
                           children: [
                               (0, a.jsxs)(d.Text, {
-                                  className: l()(E.label, { [E.notTracked]: !b }),
+                                  className: l()(E.label, { [E.notTracked]: !I }),
                                   variant: 'text-xxs/normal',
                                   children: [
-                                      b
+                                      I
                                           ? (0, a.jsx)(d.CircleCheckIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
@@ -64,15 +64,15 @@ function v() {
                                                 color: 'currentColor',
                                                 className: E.iconNotTracked
                                             }),
-                                      null != I ? I : '(untracked)'
+                                      null != y ? y : '(untracked)'
                                   ]
                               }),
                               (0, a.jsx)('div', {
                                   className: E.current,
-                                  children: JSON.stringify(T, void 0, 2)
+                                  children: JSON.stringify(b, void 0, 2)
                               }),
                               (0, a.jsx)(d.Text, {
-                                  className: l()(E.label, { [E.notTracked]: !b }),
+                                  className: l()(E.label, { [E.notTracked]: !I }),
                                   variant: 'text-xxs/normal',
                                   children: 'impressions stack'
                               }),

@@ -9,24 +9,24 @@ function a(e) {
         }
     };
 }
-function s() {}
-function o(e) {
+function o() {}
+function s(e) {
     return e.setHeader && 'function' == typeof e.abort;
 }
 function l(e, n, r) {
     if ('function' == typeof n) return l(e, null, n);
-    !n && (n = {}), (r = a(r || s));
+    !n && (n = {}), (r = a(r || o));
     var u = n.readable || (!1 !== n.readable && e.readable),
         c = n.writable || (!1 !== n.writable && e.writable),
         d = function () {
-            !e.writable && _();
+            !e.writable && p();
         },
         f = e._writableState && e._writableState.finished,
-        _ = function () {
+        p = function () {
             (c = !1), (f = !0), !u && r.call(e);
         },
         h = e._readableState && e._readableState.endEmitted,
-        p = function () {
+        _ = function () {
             (u = !1), (h = !0), !c && r.call(e);
         },
         m = function (n) {
@@ -37,16 +37,16 @@ function l(e, n, r) {
             return u && !h ? ((!e._readableState || !e._readableState.ended) && (n = new i()), r.call(e, n)) : c && !f ? ((!e._writableState || !e._writableState.ended) && (n = new i()), r.call(e, n)) : void 0;
         },
         E = function () {
-            e.req.on('finish', _);
+            e.req.on('finish', p);
         };
     return (
-        o(e) ? (e.on('complete', _), e.on('abort', g), e.req ? E() : e.on('request', E)) : c && !e._writableState && (e.on('end', d), e.on('close', d)),
-        e.on('end', p),
-        e.on('finish', _),
+        s(e) ? (e.on('complete', p), e.on('abort', g), e.req ? E() : e.on('request', E)) : c && !e._writableState && (e.on('end', d), e.on('close', d)),
+        e.on('end', _),
+        e.on('finish', p),
         !1 !== n.error && e.on('error', m),
         e.on('close', g),
         function () {
-            e.removeListener('complete', _), e.removeListener('abort', g), e.removeListener('request', E), e.req && e.req.removeListener('finish', _), e.removeListener('end', d), e.removeListener('close', d), e.removeListener('finish', _), e.removeListener('end', p), e.removeListener('error', m), e.removeListener('close', g);
+            e.removeListener('complete', p), e.removeListener('abort', g), e.removeListener('request', E), e.req && e.req.removeListener('finish', p), e.removeListener('end', d), e.removeListener('close', d), e.removeListener('finish', p), e.removeListener('end', _), e.removeListener('error', m), e.removeListener('close', g);
         }
     );
 }

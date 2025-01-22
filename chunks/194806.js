@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(653041);
-var s = r(47120);
-var o = r(956067),
+var o = r(47120);
+var s = r(956067),
     l = r(930145),
     u = r(350167),
     c = r(503461);
@@ -57,12 +57,12 @@ class f {
                         handle: 0
                     });
                 });
-        return null === n ? i() : o.Z.timeAsync('\uD83D\uDCBE', ''.concat(null != n ? n : e.type, ' ').concat(null != r ? r : ''), i);
+        return null === n ? i() : s.Z.timeAsync('\uD83D\uDCBE', ''.concat(null != n ? n : e.type, ' ').concat(null != r ? r : ''), i);
     }
     executeSync(e) {
         if (null == this.raw) throw Error('database is no longer open (database: '.concat(this));
         let n = 'key' in e ? e.key[0] : e.table;
-        return o.Z.time('\uD83D\uDCBE', 'SYNC: '.concat(e.type, ' ').concat(null != n ? n : ''), () =>
+        return s.Z.time('\uD83D\uDCBE', 'SYNC: '.concat(e.type, ' ').concat(null != n ? n : ''), () =>
             this.raw.execute(
                 null,
                 {
@@ -103,7 +103,7 @@ class f {
         return this.lastState;
     }
     transaction(e, n) {
-        let r = new _(this);
+        let r = new p(this);
         return Promise.resolve(e(r)).then(() =>
             r.operations.length > 0
                 ? this.execute(
@@ -131,7 +131,7 @@ class f {
             }));
     }
 }
-class _ {
+class p {
     add(e) {
         this.operations.push(e);
     }

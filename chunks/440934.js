@@ -1,48 +1,48 @@
-n.r(t),
-    n.d(t, {
+e.r(n),
+    e.d(n, {
         default: function () {
-            return _;
+            return p;
         },
         openInteractionModal: function () {
-            return p;
+            return S;
         }
     });
-var i = n(200651);
-n(192379);
-var o = n(481060),
-    r = n(118012),
-    a = n(970184),
-    s = n(471073),
-    c = n(293979),
-    l = n(954654),
-    u = n(388032),
-    d = n(517753);
-function _(e) {
-    let { title: t, onClose: n, transitionState: _ } = e,
-        { components: p, applicationIconURL: S, applicationName: I, submissionState: f, error: C, validators: T, onSubmit: m } = (0, c.X9)(e, n);
+var i = e(200651);
+e(192379);
+var o = e(481060),
+    r = e(118012),
+    s = e(970184),
+    l = e(471073),
+    a = e(293979),
+    c = e(954654),
+    u = e(388032),
+    d = e(517753);
+function p(t) {
+    let { title: n, onClose: e, transitionState: p } = t,
+        { components: S, applicationIconURL: I, applicationName: _, submissionState: T, error: C, validators: f, onSubmit: N } = (0, a.X9)(t, e);
     return (0, i.jsx)('form', {
-        onSubmit: (e) => {
-            e.preventDefault(), m();
+        onSubmit: (t) => {
+            t.preventDefault(), N();
         },
         children: (0, i.jsxs)(o.ModalRoot, {
-            transitionState: _,
+            transitionState: p,
             children: [
                 (0, i.jsxs)(o.ModalHeader, {
                     separator: !1,
                     children: [
                         (0, i.jsx)(o.Avatar, {
-                            src: S,
+                            src: I,
                             size: o.AvatarSizes.SIZE_24,
-                            'aria-label': I,
+                            'aria-label': _,
                             className: d.applicationIcon
                         }),
                         (0, i.jsx)(r.Z, {
                             color: r.Z.Colors.HEADER_PRIMARY,
                             size: r.Z.Sizes.SIZE_24,
-                            children: t
+                            children: n
                         }),
                         (0, i.jsx)(o.ModalCloseButton, {
-                            onClick: n,
+                            onClick: e,
                             className: d.closeButton
                         })
                     ]
@@ -59,13 +59,13 @@ function _(e) {
                         (0, i.jsx)(o.HelpMessage, {
                             messageType: o.HelpMessageTypes.WARNING,
                             className: d.submissionWarning,
-                            children: u.intl.format(u.t['dSTy//'], { applicationName: I })
+                            children: u.intl.format(u.t['dSTy//'], { applicationName: _ })
                         }),
                         (0, i.jsx)(o.FormSection, {
-                            children: (0, i.jsx)(a.Il, {
-                                modal: e,
-                                validators: T,
-                                children: (0, l.xX)(p)
+                            children: (0, i.jsx)(s.Il, {
+                                modal: t,
+                                validators: f,
+                                children: (0, c.xX)(S)
                             })
                         })
                     ]
@@ -76,13 +76,13 @@ function _(e) {
                             type: 'submit',
                             color: o.Button.Colors.BRAND,
                             size: o.Button.Sizes.MEDIUM,
-                            submitting: f === s.i.IN_FLIGHT,
+                            submitting: T === l.i.IN_FLIGHT,
                             children: u.intl.string(u.t.geKm7u)
                         }),
                         (0, i.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
-                            onClick: n,
+                            onClick: e,
                             children: u.intl.string(u.t['ETE/oK'])
                         })
                     ]
@@ -91,11 +91,11 @@ function _(e) {
         })
     });
 }
-function p(e) {
-    (0, o.openModal)((t) =>
-        (0, i.jsx)(_, {
-            ...t,
-            ...e
+function S(t) {
+    (0, o.openModal)((n) =>
+        (0, i.jsx)(p, {
+            ...n,
+            ...t
         })
     );
 }

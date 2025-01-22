@@ -12,8 +12,8 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(834129),
-    d = n(623292),
-    u = n(926491),
+    u = n(623292),
+    d = n(926491),
     m = n(419922),
     h = n(626135),
     f = n(585483),
@@ -23,7 +23,7 @@ var i = n(200651),
     E = n(268102);
 function C(e) {
     let { message: t, channel: l, compact: C } = e,
-        I = (0, o.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        I = (0, o.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
         [x, N] = r.useState(null);
     return (r.useEffect(() => {
         let e = setInterval(() => {
@@ -62,7 +62,7 @@ function C(e) {
                                           action_type: 'upload_file'
                                       }),
                                           f.S.dispatch(_.CkL.UPLOAD_FILE),
-                                          (0, d.fE)({
+                                          (0, u.fE)({
                                               message: t,
                                               channel: l,
                                               shouldMention: !0

@@ -3,19 +3,19 @@ r.d(n, {
         return v;
     },
     u$: function () {
-        return I;
+        return y;
     }
 });
 var i,
     a = r(47120);
-var s = r(724458);
-var o = r(200651),
+var o = r(724458);
+var s = r(200651),
     l = r(192379),
     u = r(392711),
     c = r.n(u),
     d = r(748780),
     f = r(692547),
-    _ = r(808674);
+    p = r(808674);
 function h(e, n, r) {
     return (
         n in e
@@ -29,7 +29,7 @@ function h(e, n, r) {
         e
     );
 }
-let p = 12,
+let _ = 12,
     m = [f.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, f.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
 class g extends l.PureComponent {
     render() {
@@ -37,12 +37,12 @@ class g extends l.PureComponent {
             props: { height: e },
             state: { backgroundColor: n }
         } = this;
-        return (0, o.jsx)('div', {
+        return (0, s.jsx)('div', {
             style: {
                 height: e,
                 backgroundColor: n
             },
-            className: _.gif
+            className: p.gif
         });
     }
     constructor(...e) {
@@ -72,10 +72,10 @@ class E extends (i = l.Component) {
     }
     render() {
         let { blocks: e } = this.state;
-        return (0, o.jsxs)(d.Z.div, {
-            className: _.column,
+        return (0, s.jsxs)(d.Z.div, {
+            className: p.column,
             style: this.getAnimatedStyle(),
-            children: [e.map((e, n) => (0, o.jsx)(g, { height: e }, n)), e.map((e, n) => (0, o.jsx)(g, { height: e }, 'alt'.concat(n)))]
+            children: [e.map((e, n) => (0, s.jsx)(g, { height: e }, n)), e.map((e, n) => (0, s.jsx)(g, { height: e }, 'alt'.concat(n)))]
         });
     }
     constructor(e) {
@@ -85,8 +85,8 @@ class E extends (i = l.Component) {
                         props: { direction: e },
                         state: { translateY: n, height: r }
                     } = this,
-                    i = e > 0 ? 0 : -r / 2 + p,
-                    a = e > 0 ? -r / 2 + p : 0;
+                    i = e > 0 ? 0 : -r / 2 + _,
+                    a = e > 0 ? -r / 2 + _ : 0;
                 n.setValue(i),
                     d.Z.timing(n, {
                         toValue: a,
@@ -99,7 +99,7 @@ class E extends (i = l.Component) {
             .map(() => c().random(40, 150));
         this.state = {
             blocks: n,
-            height: 2 * n.reduce((e, n) => e + n + p, p),
+            height: 2 * n.reduce((e, n) => e + n + _, _),
             translateY: new d.Z.Value(0)
         };
     }
@@ -107,17 +107,17 @@ class E extends (i = l.Component) {
 h(E, 'defaultProps', { direction: -1 });
 let v = (e) => {
     let { columns: n } = e;
-    return (0, o.jsx)('div', {
-        className: _.column,
+    return (0, s.jsx)('div', {
+        className: p.column,
         style: { width: ''.concat(100 / n, '%') },
-        children: [, , , ,].fill(null).map((e, n) => (0, o.jsx)('div', { className: _.categoryLoader }, n))
+        children: [, , , ,].fill(null).map((e, n) => (0, s.jsx)('div', { className: p.categoryLoader }, n))
     });
 };
-class I extends l.PureComponent {
+class y extends l.PureComponent {
     render() {
         let { columns: e, renderColumn: n } = this.props;
-        return (0, o.jsx)('div', {
-            className: _.container,
+        return (0, s.jsx)('div', {
+            className: p.container,
             children: Array(e)
                 .fill(null)
                 .map((r, i) => n(e, i))

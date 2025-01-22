@@ -1,41 +1,41 @@
 let i = r(689118),
     a = r(988324).Buffer,
-    s = r(206424),
-    o = r(375990);
+    o = r(206424),
+    s = r(375990);
 function l(e) {
     (this.enc = 'der'), (this.name = e.name), (this.entity = e), (this.tree = new u()), this.tree._init(e.body);
 }
 function u(e) {
-    s.call(this, 'der', e);
+    o.call(this, 'der', e);
 }
 function c(e) {
     return e < 10 ? '0' + e : e;
 }
 function d(e, n, r, i) {
     let a;
-    if (('seqof' === e ? (e = 'seq') : 'setof' === e && (e = 'set'), o.tagByName.hasOwnProperty(e))) a = o.tagByName[e];
+    if (('seqof' === e ? (e = 'seq') : 'setof' === e && (e = 'set'), s.tagByName.hasOwnProperty(e))) a = s.tagByName[e];
     else {
         if ('number' != typeof e || (0 | e) !== e) return i.error('Unknown tag: ' + e);
         a = e;
     }
-    return a >= 31 ? i.error('Multi-octet tag encoding unsupported') : (!n && (a |= 32), (a |= o.tagClassByName[r || 'universal'] << 6));
+    return a >= 31 ? i.error('Multi-octet tag encoding unsupported') : (!n && (a |= 32), (a |= s.tagClassByName[r || 'universal'] << 6));
 }
 (e.exports = l),
     (l.prototype.encode = function (e, n) {
         return this.tree._encode(e, n).join();
     }),
-    i(u, s),
+    i(u, o),
     (u.prototype._encodeComposite = function (e, n, r, i) {
-        let s = d(e, n, r, this.reporter);
+        let o = d(e, n, r, this.reporter);
         if (i.length < 128) {
             let e = a.alloc(2);
-            return (e[0] = s), (e[1] = i.length), this._createEncoderBuffer([e, i]);
+            return (e[0] = o), (e[1] = i.length), this._createEncoderBuffer([e, i]);
         }
-        let o = 1;
-        for (let e = i.length; e >= 256; e >>= 8) o++;
-        let l = a.alloc(2 + o);
-        (l[0] = s), (l[1] = 128 | o);
-        for (let e = 1 + o, n = i.length; n > 0; e--, n >>= 8) l[e] = 255 & n;
+        let s = 1;
+        for (let e = i.length; e >= 256; e >>= 8) s++;
+        let l = a.alloc(2 + s);
+        (l[0] = o), (l[1] = 128 | s);
+        for (let e = 1 + s, n = i.length; n > 0; e--, n >>= 8) l[e] = 255 & n;
         return this._createEncoderBuffer([l, i]);
     }),
     (u.prototype._encodeStr = function (e, n) {
@@ -71,13 +71,13 @@ function d(e, n, r, i) {
             let r = e[n];
             for (i++; r >= 128; r >>= 7) i++;
         }
-        let s = a.alloc(i),
-            o = s.length - 1;
+        let o = a.alloc(i),
+            s = o.length - 1;
         for (let n = e.length - 1; n >= 0; n--) {
             let r = e[n];
-            for (s[o--] = 127 & r; (r >>= 7) > 0; ) s[o--] = 128 | (127 & r);
+            for (o[s--] = 127 & r; (r >>= 7) > 0; ) o[s--] = 128 | (127 & r);
         }
-        return this._createEncoderBuffer(s);
+        return this._createEncoderBuffer(o);
     }),
     (u.prototype._encodeTime = function (e, n) {
         let r;
@@ -121,8 +121,8 @@ function d(e, n, r, i) {
         let i;
         let a = this._baseState;
         if (null === a.default) return !1;
-        let s = e.join();
-        if ((void 0 === a.defaultBuffer && (a.defaultBuffer = this._encodeValue(a.default, n, r).join()), s.length !== a.defaultBuffer.length)) return !1;
-        for (i = 0; i < s.length; i++) if (s[i] !== a.defaultBuffer[i]) return !1;
+        let o = e.join();
+        if ((void 0 === a.defaultBuffer && (a.defaultBuffer = this._encodeValue(a.default, n, r).join()), o.length !== a.defaultBuffer.length)) return !1;
+        for (i = 0; i < o.length; i++) if (o[i] !== a.defaultBuffer[i]) return !1;
         return !0;
     });

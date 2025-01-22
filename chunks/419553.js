@@ -1,7 +1,7 @@
-n(67867)(
+r(67867)(
     {
         target: 'Object',
         stat: !0
     },
-    { setPrototypeOf: n(600385) }
+    { setPrototypeOf: r(600385) }
 );

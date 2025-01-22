@@ -13,8 +13,8 @@ var i = n(200651),
     o = n(470167),
     s = n(481060),
     c = n(572691),
-    d = n(313201),
-    u = n(70097),
+    u = n(313201),
+    d = n(70097),
     m = n(406432),
     h = n(584656),
     f = n(247206),
@@ -44,7 +44,7 @@ let E = (e) => {
         return (0, i.jsx)('div', {
             className: g.mediaContainer,
             children: r
-                ? (0, i.jsx)(u.Z, {
+                ? (0, i.jsx)(d.Z, {
                       className: a()(g.video, g.media),
                       controls: !0,
                       src: t
@@ -65,8 +65,8 @@ function x(e) {
         e();
 }
 function N(e) {
-    let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: u, transitionState: m, onClose: h } = e,
-        p = (0, d.Dt)(),
+    let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: d, transitionState: m, onClose: h } = e,
+        p = (0, u.Dt)(),
         I = r.useCallback(() => {
             (0, f.aP)({
                 action: f.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
@@ -77,14 +77,14 @@ function N(e) {
                 h();
         }, [t, n, a, h]),
         x = r.useCallback(() => {
-            null == u || u(),
+            null == d || d(),
                 (0, f.aP)({
                     action: f.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: t,
                     messageId: n,
                     context: a
                 });
-        }, [t, n, a, u]);
+        }, [t, n, a, d]);
     return (
         r.useEffect(() => {
             (0, f.aP)({

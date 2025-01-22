@@ -6,7 +6,7 @@ r.d(n, {
         return l;
     },
     Qb: function () {
-        return o;
+        return s;
     },
     UI: function () {
         return u;
@@ -15,18 +15,18 @@ r.d(n, {
         return a;
     },
     je: function () {
-        return s;
+        return o;
     }
 });
 var i = Symbol.for('FluidValue:config'),
     a = function (e) {
-        return !!o(e);
+        return !!s(e);
     };
-function s(e) {
-    var n = o(e);
+function o(e) {
+    var n = s(e);
     return n ? n.get() : e;
 }
-function o(e) {
+function s(e) {
     if (e) return e[i];
 }
 function l(e, n) {
@@ -36,7 +36,7 @@ function l(e, n) {
     });
 }
 function u(e, n) {
-    var r = o(e);
+    var r = s(e);
     if (r)
         return (
             r.addChild(n),

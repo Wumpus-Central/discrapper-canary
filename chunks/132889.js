@@ -1,12 +1,12 @@
 var i = r(725660),
     a = r(595022),
-    s = r(483266);
-function o() {
+    o = r(483266);
+function s() {
     (this.size = 0),
         (this.__data__ = {
             hash: new i.Z(),
-            map: new (s.Z || a.Z)(),
+            map: new (o.Z || a.Z)(),
             string: new i.Z()
         });
 }
-n.Z = o;
+n.Z = s;

@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(740436),
-    s = r.n(a);
-function o(e, n, r) {
+    o = r.n(a);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -20,7 +20,7 @@ function o(e, n, r) {
     );
 }
 function l(e, n, r, i) {
-    null != n && e.splice(s()(e, n, i), 1), null != r && e.splice(s()(e, r, i), 0, r);
+    null != n && e.splice(o()(e, n, i), 1), null != r && e.splice(o()(e, r, i), 0, r);
 }
 let u = [];
 class c {
@@ -70,6 +70,6 @@ class c {
         return null == n && ((n = []), (this.valueIndexes[e] = n)), n;
     }
     constructor(e, n, r = (e, n) => e === n) {
-        o(this, 'indexBy', void 0), o(this, 'sortBy', void 0), o(this, 'isEqual', void 0), o(this, 'valueMap', new Map()), o(this, 'valueArray', []), o(this, 'valueIndexes', {}), o(this, 'valueIndexesForGetter', {}), o(this, 'dirty', !1), o(this, '_version', 0), (this.indexBy = e), (this.sortBy = n), (this.isEqual = r);
+        s(this, 'indexBy', void 0), s(this, 'sortBy', void 0), s(this, 'isEqual', void 0), s(this, 'valueMap', new Map()), s(this, 'valueArray', []), s(this, 'valueIndexes', {}), s(this, 'valueIndexesForGetter', {}), s(this, 'dirty', !1), s(this, '_version', 0), (this.indexBy = e), (this.sortBy = n), (this.isEqual = r);
     }
 }

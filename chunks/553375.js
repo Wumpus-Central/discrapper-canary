@@ -6,14 +6,14 @@ r.d(n, {
         return f;
     },
     uj: function () {
-        return _;
+        return p;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(26033),
-    o = r(810568),
+    o = r(26033),
+    s = r(810568),
     l = r(168524),
     u = r(858042),
     c = r(981631),
@@ -22,7 +22,7 @@ function f(e) {
     let { user: n, activity: r, entry: i } = e;
     return null != i
         ? {
-              applicationId: (0, s.dX)(i) ? i.extra.application_id : void 0,
+              applicationId: (0, o.dX)(i) ? i.extra.application_id : void 0,
               sourceUserId: i.author_id
           }
         : null != r
@@ -35,7 +35,7 @@ function f(e) {
                 sourceUserId: void 0
             };
 }
-function _(e) {
+function p(e) {
     let { user: n, activity: r, entry: i } = e,
         { applicationId: a } = f({
             activity: r,
@@ -48,26 +48,26 @@ function _(e) {
     });
 }
 function h(e) {
-    let { user: n, activity: r, entry: s, onAction: u, isMenuOpen: c } = e,
-        { applicationId: _, sourceUserId: h } = f({
+    let { user: n, activity: r, entry: o, onAction: u, isMenuOpen: c } = e,
+        { applicationId: p, sourceUserId: h } = f({
             activity: r,
-            entry: s,
+            entry: o,
             user: n
         }),
-        p = (0, l.Z)({
+        _ = (0, l.Z)({
             location: 'UserProfileActivityContextMenu',
-            source: o.m1.UserProfileCardContextMenu,
+            source: s.m1.UserProfileCardContextMenu,
             trackEntryPointImpression: c,
-            applicationId: _,
+            applicationId: p,
             sourceUserId: h
         });
-    return null == p
+    return null == _
         ? null
         : (0, i.jsx)(a.MenuItem, {
               id: 'game-profile',
               label: d.intl.string(d.t.ajHoOj),
               action: (e) => {
-                  null == u || u({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), p(e);
+                  null == u || u({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), _(e);
               }
           });
 }

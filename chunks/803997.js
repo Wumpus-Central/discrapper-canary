@@ -4,12 +4,12 @@
         for (var e = [], i = 0; i < arguments.length; i++) {
             var a = arguments[i];
             if (a) {
-                var s = typeof a;
-                if ('string' === s || 'number' === s) e.push(a);
+                var o = typeof a;
+                if ('string' === o || 'number' === o) e.push(a);
                 else if (Array.isArray(a) && a.length) {
-                    var o = r.apply(null, a);
-                    o && e.push(o);
-                } else if ('object' === s) for (var l in a) n.call(a, l) && a[l] && e.push(l);
+                    var s = r.apply(null, a);
+                    s && e.push(s);
+                } else if ('object' === o) for (var l in a) n.call(a, l) && a[l] && e.push(l);
             }
         }
         return e.join(' ');

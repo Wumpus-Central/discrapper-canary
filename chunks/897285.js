@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(914010),
-    o = r(924301),
+    o = r(914010),
+    s = r(924301),
     l = r(482241);
 function u(e, n, r) {
     return (
@@ -19,19 +19,19 @@ function u(e, n, r) {
 let c = {},
     d = new Set(),
     f = new Set(),
-    _ = 1800000,
+    p = 1800000,
     h = async (e) => {
-        if (!(0 === o.ZP.getGuildScheduledEventsForGuild(e).length || d.has(e) || f.has(e)))
+        if (!(0 === s.ZP.getGuildScheduledEventsForGuild(e).length || d.has(e) || f.has(e)))
             try {
                 d.add(e), await l.Z.getGuildEventsForCurrentUser(e), f.add(e);
             } catch (n) {
                 d.delete(e);
             }
     };
-class p extends a.Z {
+class _ extends a.Z {
     async getGuildEventUserCounts(e, n, r) {
-        let i = r.filter((r) => null == c[''.concat(e, '-').concat(n, '-').concat(r)] || Date.now() - c[''.concat(e, '-').concat(n, '-').concat(r)] > _);
-        if (!(Date.now() - c[''.concat(e, '-').concat(n)] < _) || 0 !== i.length) {
+        let i = r.filter((r) => null == c[''.concat(e, '-').concat(n, '-').concat(r)] || Date.now() - c[''.concat(e, '-').concat(n, '-').concat(r)] > p);
+        if (!(Date.now() - c[''.concat(e, '-').concat(n)] < p) || 0 !== i.length) {
             (c[''.concat(e, '-').concat(n)] = Date.now()), i.forEach((r) => (c[''.concat(e, '-').concat(n, '-').concat(r)] = Date.now()));
             try {
                 await l.Z.fetchGuildEventUserCounts(e, n, i);
@@ -45,7 +45,7 @@ class p extends a.Z {
         return h(e);
     }
     async handleConnectionOpen() {
-        d.clear(), f.clear(), (c = {}), s.Z.getLastSelectedGuildId();
+        d.clear(), f.clear(), (c = {}), o.Z.getLastSelectedGuildId();
     }
     handleGuildUnavailable(e) {
         let { guildId: n } = e;
@@ -66,7 +66,7 @@ class p extends a.Z {
     async handleChannelSelect(e) {
         let { guildId: n } = e;
         if (null != n)
-            for (let e of o.ZP.getGuildScheduledEventsForGuild(n))
+            for (let e of s.ZP.getGuildScheduledEventsForGuild(n))
                 try {
                     await this.getGuildEventUserCounts(n, e.id, []);
                 } finally {
@@ -84,4 +84,4 @@ class p extends a.Z {
             });
     }
 }
-n.Z = new p();
+n.Z = new _();

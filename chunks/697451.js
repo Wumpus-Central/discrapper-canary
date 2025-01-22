@@ -10,9 +10,9 @@ var i,
     o = n(120356),
     s = n.n(o),
     c = n(512722),
-    d = n.n(c),
-    u = n(913527),
-    m = n.n(u),
+    u = n.n(c),
+    d = n(913527),
+    m = n.n(d),
     h = n(481060),
     f = n(911969),
     p = n(595519),
@@ -54,9 +54,9 @@ function M(e) {
 ((i = r || (r = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
 function D(e, t, n, i, r) {
     var a, o, c;
-    let { message: d, compact: u, channel: m, isInteractionUserBlocked: f, isInteractionUserIgnored: p, showAvatarPopout: _, showTargetAvatarPopout: g, onClickAvatar: E, onUserContextMenu: C, onClickTargetAvatar: I, onTargetUserContextMenu: x, onPopoutRequestClose: N } = e;
-    if (u && 1 === n) return null;
-    if ((u && null == d.activityInstance) || f || p)
+    let { message: u, compact: d, channel: m, isInteractionUserBlocked: f, isInteractionUserIgnored: p, showAvatarPopout: _, showTargetAvatarPopout: g, onClickAvatar: E, onUserContextMenu: C, onClickTargetAvatar: I, onTargetUserContextMenu: x, onPopoutRequestClose: N } = e;
+    if (d && 1 === n) return null;
+    if ((d && null == u.activityInstance) || f || p)
         return (0, l.jsx)('div', {
             className: O.replyBadge,
             children: (0, l.jsx)(M, { className: O.commandIcon })
@@ -103,7 +103,7 @@ function D(e, t, n, i, r) {
         : T();
 }
 function k(e, t, n, i, r) {
-    let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: d, onUserContextMenu: u, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: f } = e;
+    let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: u, onUserContextMenu: d, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: f } = e;
     return (0, l.jsx)(R.Z, {
         className: 1 === n ? O.targetUsername : '',
         compact: !0,
@@ -113,8 +113,8 @@ function k(e, t, n, i, r) {
         userOverride: t,
         showPopout: 1 === n ? c : s,
         renderPopout: r,
-        onClick: 1 === n ? m : d,
-        onContextMenu: 1 === n ? h : u,
+        onClick: 1 === n ? m : u,
+        onContextMenu: 1 === n ? h : d,
         onPopoutRequestClose: f
     });
 }
@@ -131,7 +131,7 @@ function B(e) {
         { analyticsLocations: o } = (0, C.ZP)(E.Z.EXECUTED_COMMAND),
         c = a.useMemo(
             () => (e, t, n) => (
-                d()(null != r && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
+                u()(null != r && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
                 (0, l.jsx)(v.Z, {
                     ...e,
                     channelId: r.id,
@@ -143,9 +143,9 @@ function B(e) {
             ),
             [r, i.id]
         ),
-        u = a.useMemo(
+        d = a.useMemo(
             () => (e) => (
-                d()(null != r, 'ExecutedCommand: channel cannot be null'),
+                u()(null != r, 'ExecutedCommand: channel cannot be null'),
                 (0, l.jsx)(Z.Z, {
                     ...e,
                     channel: r,
@@ -241,7 +241,7 @@ function B(e) {
                             }
                         }
                     });
-                })(e, u);
+                })(e, d);
                 return (0, l.jsx)(a.Fragment, { children: t }, 'command');
             }
         })),

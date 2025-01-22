@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(724458);
 var a = r(653041);
-var s = r(979554),
-    o = r(778787),
+var o = r(979554),
+    s = r(778787),
     l = r(803358);
 function u(e, n, r) {
     return (
@@ -23,12 +23,12 @@ function u(e, n, r) {
 }
 class c extends l.Z {
     static fromServer(e) {
-        let { products: n, logo: r, hero_ranking: i, pdp_bg: a, mobile_bg: l, success_modal_bg: u, mobile_banner: d, hero_banner: f, hero_banner_asset: _, featured_block: h, hero_logo: p, ...m } = e;
+        let { products: n, logo: r, hero_ranking: i, pdp_bg: a, mobile_bg: l, success_modal_bg: u, mobile_banner: d, hero_banner: f, hero_banner_asset: p, featured_block: h, hero_logo: _, ...m } = e;
         return new c({
             ...super.fromServer(m),
             products: n.reduce((e, n) => {
-                let r = o.Z.fromServer(n);
-                return 0 === (r.type !== s.Z.VARIANTS_GROUP && r.items.length) ? e : (e.push(r), e);
+                let r = s.Z.fromServer(n);
+                return 0 === (r.type !== o.Z.VARIANTS_GROUP && r.items.length) ? e : (e.push(r), e);
             }, []),
             logo: r,
             heroRanking: i,
@@ -37,9 +37,9 @@ class c extends l.Z {
             successModalBg: u,
             mobileBanner: d,
             heroBanner: f,
-            heroBannerAsset: _,
+            heroBannerAsset: p,
             featuredBlock: h,
-            heroLogo: p
+            heroLogo: _
         });
     }
     constructor(e) {

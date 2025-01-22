@@ -1,18 +1,18 @@
 let i;
 var a = r(653041);
 i = r(538036).Z;
-let s = [],
-    o = !1;
+let o = [],
+    s = !1;
 n.Z = {
     ...i,
     awaitOnline: () =>
         new Promise((e) => {
             if (i.isOnline()) return e();
             {
-                if ((s.push(e), o)) return;
-                o = !0;
+                if ((o.push(e), s)) return;
+                s = !0;
                 let n = () => {
-                    s.forEach((e) => e()), (s.length = 0), (o = !1), i.removeOnlineCallback(n);
+                    o.forEach((e) => e()), (o.length = 0), (s = !1), i.removeOnlineCallback(n);
                 };
                 i.addOnlineCallback(n);
             }

@@ -33,7 +33,7 @@ var i = n(200651),
     O = n(388032),
     R = n(142529),
     P = n(232186);
-function y(e, t, n) {
+function D(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function y(e, t, n) {
         e
     );
 }
-function B(e) {
+function y(e) {
     let {
             code: { code: t, consumed: n }
         } = e,
@@ -80,7 +80,7 @@ function B(e) {
         })
     });
 }
-class D extends r.PureComponent {
+class B extends r.PureComponent {
     maskPhoneNumber(e) {
         return null == e ? '' : ''.concat('*'.repeat(e.length - 4)).concat(e.slice(-4));
     }
@@ -178,7 +178,7 @@ class D extends r.PureComponent {
                     children: O.intl.string(O.t.qZZUy8)
                 })
             });
-            let r = (e) => e.map((e) => (0, i.jsx)(B, { code: e }, e.code));
+            let r = (e) => e.map((e) => (0, i.jsx)(y, { code: e }, e.code));
             e = (0, i.jsxs)(o.FormSection, {
                 title: O.intl.string(O.t.GfqHPj),
                 children: [
@@ -322,14 +322,14 @@ class D extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            y(this, 'state', {
+            D(this, 'state', {
                 revealed: !1,
                 password: ''
             }),
-            y(this, 'togglePhoneNumberVisibility', (e) => {
+            D(this, 'togglePhoneNumberVisibility', (e) => {
                 e.preventDefault(), this.setState({ revealed: !this.state.revealed });
             }),
-            y(this, 'handleDisableMFA', () => {
+            D(this, 'handleDisableMFA', () => {
                 d.Z.show({
                     title: O.intl.string(O.t['D+aE7u']),
                     body: O.intl.string(O.t.EA4ZEh),
@@ -337,11 +337,11 @@ class D extends r.PureComponent {
                     onConfirm: () => c.Z.disable()
                 });
             }),
-            y(this, 'generateBackupCodes', async () => {
+            D(this, 'generateBackupCodes', async () => {
                 let e = C.Z.getVerificationKey();
                 await c.Z.confirmViewBackupCodes(e, !0);
             }),
-            y(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
+            D(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
                 (0, o.openModal)((e) =>
                     (0, i.jsx)(g.default, {
                         ...e,
@@ -354,7 +354,7 @@ class D extends r.PureComponent {
                     })
                 );
             }),
-            y(this, 'viewBackupCodes', (e) => {
+            D(this, 'viewBackupCodes', (e) => {
                 (0, o.openModal)((t) =>
                     (0, i.jsx)(m.Z, {
                         ...t,
@@ -371,7 +371,7 @@ class D extends r.PureComponent {
                     })
                 );
             }),
-            y(this, 'getDownloadFileContents', () => {
+            D(this, 'getDownloadFileContents', () => {
                 let e = this.props.backupCodes
                         .map((e) => {
                             let { consumed: t, code: n } = e;
@@ -384,10 +384,10 @@ class D extends r.PureComponent {
                     t = O.intl.formatToPlainString(O.t.uYWwh4, { email: this.props.currentUser.email });
                 return ''.concat(t, '\r\n\r\n').concat(e);
             }),
-            y(this, 'handleChangePhoneNumber', () => {
+            D(this, 'handleChangePhoneNumber', () => {
                 this.openPhoneVerificationModal();
             }),
-            y(this, 'handleEnableSMS', () => {
+            D(this, 'handleEnableSMS', () => {
                 let { currentUser: e } = this.props,
                     t = () => {
                         (0, o.openModal)((e) =>
@@ -400,7 +400,7 @@ class D extends r.PureComponent {
                     };
                 null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: t }) : t();
             }),
-            y(this, 'handleDisableSMS', () => {
+            D(this, 'handleDisableSMS', () => {
                 (0, o.openModal)((e) =>
                     (0, i.jsx)(g.default, {
                         ...e,
@@ -419,7 +419,7 @@ function Z(e) {
         togglingSMS: C.Z.togglingSMS,
         hasTOTPEnabled: E.default.hasTOTPEnabled()
     }));
-    return (0, i.jsx)(D, {
+    return (0, i.jsx)(B, {
         currentUser: t,
         ...n,
         ...e

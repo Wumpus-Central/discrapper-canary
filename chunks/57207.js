@@ -1,6 +1,6 @@
 r.d(n, {
     B: function () {
-        return _;
+        return p;
     },
     i: function () {
         return f;
@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(399606),
     a = r(704215),
-    s = r(314897),
-    o = r(70956),
+    o = r(314897),
+    s = r(70956),
     l = r(709054),
     u = r(68985);
 let c = {
@@ -32,10 +32,10 @@ let c = {
         [a.z.TRIAL_NUX_EMOJI_PICKER]: 0,
         [a.z.TRIAL_NUX_STREAM_COACH_MARK]: 0
     },
-    d = o.Z.Millis.DAY;
+    d = s.Z.Millis.DAY;
 function f(e) {
-    let { userId: n, newUserMinAgeRequiredOverridden: r } = (0, i.cj)([s.default, u.Z], () => ({
-        userId: s.default.getId(),
+    let { userId: n, newUserMinAgeRequiredOverridden: r } = (0, i.cj)([o.default, u.Z], () => ({
+        userId: o.default.getId(),
         newUserMinAgeRequiredOverridden: u.Z.newUserMinAgeRequiredOverridden
     }));
     if (r) return e;
@@ -45,9 +45,9 @@ function f(e) {
         return a > (null !== (n = c[e]) && void 0 !== n ? n : d);
     });
 }
-function _(e) {
+function p(e) {
     var n;
     if (u.Z.newUserMinAgeRequiredOverridden) return !1;
-    let r = null != s.default.getId() ? l.default.age(s.default.getId()) : 0;
+    let r = null != o.default.getId() ? l.default.age(o.default.getId()) : 0;
     return r < (null !== (n = c[e]) && void 0 !== n ? n : d);
 }

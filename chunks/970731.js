@@ -3,7 +3,7 @@ r.d(n, {
         return i;
     },
     ZP: function () {
-        return _;
+        return p;
     },
     _F: function () {
         return a;
@@ -11,24 +11,24 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(200651);
+    o = r(200651);
 r(192379);
-var o = r(120356),
-    l = r.n(o),
+var s = r(120356),
+    l = r.n(s),
     u = r(481060),
     c = r(493773),
     d = r(921944),
     f = r(44669);
-function _(e) {
+function p(e) {
     let {
         className: n,
         header: r,
         headerClassName: i,
         content: a,
-        contentClassName: o,
-        buttonCTA: _,
+        contentClassName: s,
+        buttonCTA: p,
         secondaryButtonCTA: h,
-        onClick: p,
+        onClick: _,
         onSecondaryClick: m,
         buttonProps: g = {
             color: u.Button.Colors.BRAND,
@@ -36,60 +36,60 @@ function _(e) {
         },
         secondaryButtonProps: E = { color: u.Button.Colors.BRAND_INVERTED },
         onComponentMount: v,
-        asset: I,
-        markAsDismissed: T,
-        caretPosition: b = 'caretTopCenter',
-        buttonLayout: y = 0
+        asset: y,
+        markAsDismissed: b,
+        caretPosition: I = 'caretTopCenter',
+        buttonLayout: T = 0
     } = e;
     (0, c.Z)(() => {
         null == v || v();
     });
     let S = null != h,
         A = (e) => {
-            p(e), null == T || T(d.L.PRIMARY);
+            _(e), null == b || b(d.L.PRIMARY);
         },
-        N = () => {
-            null == m || m(), null == T || T(d.L.SECONDARY);
+        C = () => {
+            null == m || m(), null == b || b(d.L.SECONDARY);
         };
-    return (0, s.jsxs)('div', {
-        className: l()(n, f.upsellTooltipWrapper, f[b]),
+    return (0, o.jsxs)('div', {
+        className: l()(n, f.upsellTooltipWrapper, f[I]),
         children: [
-            I,
+            y,
             null == r
                 ? null
-                : (0, s.jsx)(u.Heading, {
+                : (0, o.jsx)(u.Heading, {
                       className: l()(i, f.upsellTooltipHeader),
                       variant: 'heading-md/semibold',
                       children: r
                   }),
-            (0, s.jsx)(u.Text, {
+            (0, o.jsx)(u.Text, {
                 color: 'always-white',
-                className: l()(o, f.content),
+                className: l()(s, f.content),
                 variant: 'text-sm/normal',
                 children: a
             }),
-            null != _ || S
-                ? (0, s.jsxs)('div', {
+            null != p || S
+                ? (0, o.jsxs)('div', {
                       className: l()(f.upsellButtonsContainer, {
-                          [f.upsellButtonsAdjacent]: 0 === y,
-                          [f.upsellButtonsStacked]: 1 === y
+                          [f.upsellButtonsAdjacent]: 0 === T,
+                          [f.upsellButtonsStacked]: 1 === T
                       }),
                       children: [
                           S
-                              ? (0, s.jsx)(u.Button, {
+                              ? (0, o.jsx)(u.Button, {
                                     ...E,
-                                    fullWidth: 1 === y,
-                                    onClick: N,
+                                    fullWidth: 1 === T,
+                                    onClick: C,
                                     children: h
                                 })
                               : null,
-                          null == _
+                          null == p
                               ? null
-                              : (0, s.jsx)(u.Button, {
+                              : (0, o.jsx)(u.Button, {
                                     ...g,
-                                    fullWidth: !S || 1 === y,
+                                    fullWidth: !S || 1 === T,
                                     onClick: A,
-                                    children: _
+                                    children: p
                                 })
                       ]
                   })
@@ -103,5 +103,5 @@ function _(e) {
     !(function (e) {
         (e[(e.ADJACENT = 0)] = 'ADJACENT'), (e[(e.STACKED = 1)] = 'STACKED');
     })(a || (a = {})),
-    (_.CaretPosition = i),
-    (_.ButtonLayout = a);
+    (p.CaretPosition = i),
+    (p.ButtonLayout = a);

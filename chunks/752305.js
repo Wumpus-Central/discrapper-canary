@@ -9,7 +9,7 @@ r.d(n, {
         return u;
     },
     eK: function () {
-        return s;
+        return o;
     }
 });
 var i = r(411104);
@@ -24,13 +24,13 @@ function a() {
         ]
     };
 }
-function s(e) {
+function o(e) {
     return {
         textValue: e,
         richValue: l(e)
     };
 }
-let o = Object.freeze([
+let s = Object.freeze([
     Object.freeze({
         type: 'line',
         children: Object.freeze([Object.freeze({ text: '' })])
@@ -42,7 +42,7 @@ function l(e) {
               type: 'line',
               children: [{ text: e }]
           }))
-        : o;
+        : s;
 }
 function u(e) {
     switch (e.type) {

@@ -5,38 +5,38 @@ r.d(n, {
 });
 var i = r(526167),
     a = r(621554),
-    s = r(328756),
-    o = r(639525),
+    o = r(328756),
+    s = r(639525),
     l = r(131812),
     u = r(265174),
     c = r(926425),
     d = r(844049),
     f = r(712386),
-    _ = r(602722),
+    p = r(602722),
     h = r(534109),
-    p = r(859500),
+    _ = r(859500),
     m = r(484542),
     g = r(881500),
     E = r(910826),
     v = r(307244),
-    I = r(669730),
-    T = r(666828),
-    b = r(131999),
-    y = r(649272),
+    y = r(669730),
+    b = r(666828),
+    I = r(131999),
+    T = r(649272),
     S = r(241372),
     A = r(538387),
-    N = r(213921),
-    C = r(34721),
+    C = r(213921),
+    N = r(34721),
     R = r(410693),
     O = r(185672),
     D = r(235731);
-let L = [s, o, l, u, c, d],
-    x = [f, _, h, p, m, g, E, v],
-    w = [y, S, A, N, C, R],
+let x = [o, s, l, u, c, d],
+    L = [f, p, h, _, m, g, E, v],
+    w = [T, S, A, C, N, R],
     P = {
         clyde: O,
-        nitro: T,
-        nitro_wumpus: b
+        nitro: b,
+        nitro_wumpus: I
     };
 function M() {
     return i.og();
@@ -46,10 +46,10 @@ function k() {
     return e ? D : a;
 }
 n.Z = {
-    DEFAULT_AVATARS: L,
+    DEFAULT_AVATARS: x,
     DEFAULT_PROVISIONAL_AVATARS: w,
-    DEFAULT_GROUP_DM_AVATARS: x,
+    DEFAULT_GROUP_DM_AVATARS: L,
     BOT_AVATARS: P,
-    DEFAULT_CHANNEL_ICON: I,
+    DEFAULT_CHANNEL_ICON: y,
     canUseWebp: M
 };

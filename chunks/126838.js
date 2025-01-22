@@ -1,19 +1,19 @@
 e.exports = function (e, n, r, i, a) {
-    var s,
-        o = this;
-    o.directMap[e + ':' + r] = n;
+    var o,
+        s = this;
+    s.directMap[e + ':' + r] = n;
     var l = (e = e.replace(/\s+/g, ' ')).split(' ');
     if (l.length > 1) {
-        o.bindSequence(e, l, n, r);
+        s.bindSequence(e, l, n, r);
         return;
     }
-    (s = o.getKeyInfo(e, r)),
-        (o.callbacks[s.key] = o.callbacks[s.key] || []),
-        o.getMatches(s.key, s.modifiers, { type: s.action }, i, e, a),
-        o.callbacks[s.key][i ? 'unshift' : 'push']({
+    (o = s.getKeyInfo(e, r)),
+        (s.callbacks[o.key] = s.callbacks[o.key] || []),
+        s.getMatches(o.key, o.modifiers, { type: o.action }, i, e, a),
+        s.callbacks[o.key][i ? 'unshift' : 'push']({
             callback: n,
-            modifiers: s.modifiers,
-            action: s.action,
+            modifiers: o.modifiers,
+            action: o.action,
             seq: i,
             level: a,
             combo: e

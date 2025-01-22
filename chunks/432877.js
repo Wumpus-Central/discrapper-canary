@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(47120);
-var o = r(442837),
+    o = r(47120);
+var s = r(442837),
     l = r(570140);
 function u(e, n, r) {
     return (
@@ -70,7 +70,7 @@ let c = {
 function f(e) {
     d[e.toggle] = e.value;
 }
-class _ extends (a = o.ZP.DeviceSettingsStore) {
+class p extends (a = s.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
         return { toggleStates: d };
     }
@@ -103,4 +103,4 @@ class _ extends (a = o.ZP.DeviceSettingsStore) {
             });
     }
 }
-u(_, 'displayName', 'DevToolsDevSettingsStore'), u(_, 'persistKey', 'DevToolsDevSettingsStore'), (n.ZP = new _(l.Z, { DEV_TOOLS_DEV_SETTING_SET: f }));
+u(p, 'displayName', 'DevToolsDevSettingsStore'), u(p, 'persistKey', 'DevToolsDevSettingsStore'), (n.ZP = new p(l.Z, { DEV_TOOLS_DEV_SETTING_SET: f }));

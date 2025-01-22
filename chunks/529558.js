@@ -1,6 +1,6 @@
 r.d(n, {
     N: function () {
-        return s;
+        return o;
     },
     m: function () {
         return a;
@@ -26,7 +26,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    s = (0, i.B)({
+    o = (0, i.B)({
         kind: 'guild',
         id: '2024-08_secure_frames_encryption_guilds_v2',
         label: 'Allowing testing DAVE protocol for voice/video (Guilds)',

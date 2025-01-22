@@ -3,13 +3,13 @@ r.d(n, {
         return d;
     },
     RM: function () {
-        return _;
+        return p;
     },
     SC: function () {
         return f;
     },
     iA: function () {
-        return p;
+        return _;
     },
     pj: function () {
         return c;
@@ -20,22 +20,22 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(150438),
-    o = r(993365),
+    o = r(150438),
+    s = r(993365),
     l = r(481060),
     u = r(207792);
 function c(e) {
-    return (0, i.jsx)(s.bL, {
+    return (0, i.jsx)(o.bL, {
         ...e,
         className: u.cell
     });
 }
 function d(e) {
     let { children: n, ...r } = e;
-    return (0, i.jsx)(s.sg, {
+    return (0, i.jsx)(o.sg, {
         ...r,
         className: u.column,
-        children: (0, i.jsx)(o.x, {
+        children: (0, i.jsx)(s.x, {
             variant: 'eyebrow',
             className: u.columnText,
             children: n
@@ -43,25 +43,25 @@ function d(e) {
     });
 }
 function f(e) {
-    return (0, i.jsx)(s.X2, {
+    return (0, i.jsx)(o.X2, {
         ...e,
         className: u.row
     });
 }
-function _(e) {
-    return (0, i.jsx)(s.RM, {
+function p(e) {
+    return (0, i.jsx)(o.RM, {
         ...e,
         className: u.body
     });
 }
 function h(e) {
-    return (0, i.jsx)(s.xD, {
+    return (0, i.jsx)(o.xD, {
         ...e,
         className: u.header
     });
 }
-function p(e) {
-    let { title: n, header: r, footer: o, ...c } = e,
+function _(e) {
+    let { title: n, header: r, footer: s, ...c } = e,
         d = a.useId();
     return (0, i.jsxs)('div', {
         className: u.container,
@@ -78,15 +78,15 @@ function p(e) {
                     (0, i.jsx)('div', { children: r })
                 ]
             }),
-            (0, i.jsx)(s.iA, {
+            (0, i.jsx)(o.iA, {
                 ...c,
                 'aria-labelledby': d,
                 className: u.table
             }),
-            null != o &&
+            null != s &&
                 (0, i.jsx)('div', {
                     className: u.footer,
-                    children: o
+                    children: s
                 })
         ]
     });

@@ -1,19 +1,19 @@
-var r = n(67867),
-    o = n(818140).includes,
-    a = n(821819),
-    i = n(501953);
-r(
+var i = r(67867),
+    a = r(818140).includes,
+    o = r(821819),
+    s = r(501953);
+i(
     {
         target: 'Array',
         proto: !0,
-        forced: a(function () {
+        forced: o(function () {
             return ![,].includes();
         })
     },
     {
         includes: function (e) {
-            return o(this, e, arguments.length > 1 ? arguments[1] : void 0);
+            return a(this, e, arguments.length > 1 ? arguments[1] : void 0);
         }
     }
 ),
-    i('includes');
+    s('includes');

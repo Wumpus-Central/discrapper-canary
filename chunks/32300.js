@@ -6,13 +6,13 @@ r.d(n, {
         return l;
     },
     XE: function () {
-        return _;
+        return p;
     },
     b4: function () {
         return c;
     },
     o4: function () {
-        return o;
+        return s;
     },
     zu: function () {
         return u;
@@ -20,7 +20,7 @@ r.d(n, {
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2024-10_overlay_v3',
     label: 'Overlay V3 Shared Context OOP',
@@ -33,12 +33,12 @@ let s = (0, i.B)({
         }
     ]
 });
-function o(e) {
-    return s.useExperiment({ location: e }).useOverlayV3;
+function s(e) {
+    return o.useExperiment({ location: e }).useOverlayV3;
 }
 function l(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return s.getCurrentConfig({ location: e }, { autoTrackExposure: n }).useOverlayV3;
+    return o.getCurrentConfig({ location: e }, { autoTrackExposure: n }).useOverlayV3;
 }
 let u = (0, i.B)({
     kind: 'user',
@@ -65,8 +65,8 @@ function f(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return l(e, n) || c(e, n);
 }
-function _(e) {
-    let n = o(e),
+function p(e) {
+    let n = s(e),
         r = d(e);
     return n || r;
 }

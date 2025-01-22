@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(47120);
-var s = r(653041);
-var o = r(65154);
+var o = r(653041);
+var s = r(65154);
 function l(e, n, r) {
     return (
         n in e
@@ -66,7 +66,7 @@ class u {
         }
         let i = {},
             a = 0,
-            s = 100;
+            o = 100;
         for (let n = 1; n <= 25; ++n) {
             let l = 0,
                 c = 0,
@@ -76,22 +76,22 @@ class u {
                 (l = i.width), (c = i.height), (d = i.budgetPortion);
             }
             if (a !== l) {
-                let e = u.getMutedFramerate(s);
-                (i[s] = {
+                let e = u.getMutedFramerate(o);
+                (i[o] = {
                     width: l,
                     height: c,
                     budgetPortion: d,
                     mutedFramerate: e,
-                    framerate: o.Gs
+                    framerate: s.Gs
                 }),
-                    (s -= 10),
+                    (o -= 10),
                     (a = l);
             }
         }
         return i;
     }
     static getMutedFramerate(e) {
-        return e <= 20 ? o.Er : o.P8;
+        return e <= 20 ? s.Er : s.P8;
     }
     static calculateOrderedLadder(e) {
         let n = [];
@@ -108,7 +108,7 @@ class u {
         }
         return n;
     }
-    constructor(e = o.kS) {
+    constructor(e = s.kS) {
         l(this, 'pixelBudget', void 0), l(this, 'ladder', void 0), l(this, 'orderedLadder', void 0);
         let { width: n, height: r } = e.videoBudget;
         if (n <= 0 || r <= 0) throw Error('Invalid argument');

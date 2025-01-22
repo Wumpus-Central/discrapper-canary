@@ -1,11 +1,11 @@
 r.d(n, {
     K: function () {
-        return s;
+        return o;
     }
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2024-08_mobile_perguild_collectibles_edit',
     label: 'Mobile Per-guild Collectibles Edit',

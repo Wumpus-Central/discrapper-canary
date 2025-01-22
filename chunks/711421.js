@@ -42,12 +42,12 @@ function n(e) {
                 }
             ]
         },
-        s = {
+        o = {
             className: 'type',
             begin: '\\b[A-Z][A-Za-z0-9_]*',
             relevance: 0
         },
-        o = {
+        s = {
             className: 'title',
             begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
             relevance: 0
@@ -70,7 +70,7 @@ function n(e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [s, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                    contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
                 },
                 {
                     className: 'params',
@@ -79,16 +79,16 @@ function n(e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     relevance: 0,
-                    contains: [s, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                    contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
                 },
-                o
+                s
             ]
         },
         u = {
             className: 'function',
             beginKeywords: 'def',
             end: n.lookahead(/[:={\[(\n;]/),
-            contains: [o]
+            contains: [s]
         },
         c = {
             begin: [/^\s*/, 'extension', /\s+(?=[[(])/],
@@ -108,7 +108,7 @@ function n(e) {
                 keywords: 'inline'
             }
         ],
-        _ = {
+        p = {
             begin: [/\(\s*/, /using/, /\s+(?!\))/],
             beginScope: { 2: 'keyword' }
         };
@@ -137,14 +137,14 @@ function n(e) {
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             a,
-            s,
+            o,
             u,
             l,
             e.C_NUMBER_MODE,
             c,
             d,
             ...f,
-            _,
+            p,
             r
         ]
     };

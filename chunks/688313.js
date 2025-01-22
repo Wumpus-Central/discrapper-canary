@@ -1,13 +1,13 @@
-var r = n(294377),
-    o = n(96403),
-    a = n(937443),
-    i = n(502640),
-    s = n(28886),
-    c = o([].concat);
+var i = r(294377),
+    a = r(96403),
+    o = r(937443),
+    s = r(502640),
+    l = r(28886),
+    u = a([].concat);
 e.exports =
-    r('Reflect', 'ownKeys') ||
+    i('Reflect', 'ownKeys') ||
     function (e) {
-        var t = a.f(s(e)),
-            n = i.f;
-        return n ? c(t, n(e)) : t;
+        var n = o.f(l(e)),
+            r = s.f;
+        return r ? u(n, r(e)) : n;
     };

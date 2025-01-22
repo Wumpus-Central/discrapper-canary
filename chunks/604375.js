@@ -5,6 +5,6 @@ r.d(n, {
 });
 var i = r(596691),
     a = r(91641),
-    s = r(89805),
-    o = r(987338);
-let l = new a.E([s.NR, s.ZI, s.Ob, s.uc, s.m1, i.K], o.$P.OPEN_USER_SETTINGS, { location: 'open user settings' });
+    o = r(89805),
+    s = r(987338);
+let l = new a.E([o.NR, o.ZI, o.Ob, o.uc, o.m1, i.K], s.$P.OPEN_USER_SETTINGS, { location: 'open user settings' });

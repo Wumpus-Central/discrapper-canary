@@ -1,21 +1,21 @@
 r.d(n, {
     Z: function () {
-        return I;
+        return y;
     }
 });
 var i = r(47120);
 var a = r(200651);
 r(192379);
-var s = r(442837),
-    o = r(704215),
+var o = r(442837),
+    s = r(704215),
     l = r(481060),
     u = r(194359),
     c = r(377171),
     d = r(243778),
     f = r(922611),
-    _ = r(240515),
+    p = r(240515),
     h = r(699516),
-    p = r(594174),
+    _ = r(594174),
     m = r(921944),
     g = r(388032),
     E = r(469619);
@@ -25,30 +25,30 @@ function v() {
         text: g.intl.string(g.t.y2b7CA)
     });
 }
-function I(e) {
-    let { user: n, guildId: r, channelId: i, onBlock: c, onIgnore: I, onUnignore: T, location: b = 'ContextMenu' } = e,
-        { id: y } = n,
-        S = (0, s.e7)(
-            [p.default],
+function y(e) {
+    let { user: n, guildId: r, channelId: i, onBlock: c, onIgnore: y, onUnignore: b, location: I = 'ContextMenu' } = e,
+        { id: T } = n,
+        S = (0, o.e7)(
+            [_.default],
             () => {
                 var e;
-                return (null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === y;
+                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === T;
             },
-            [y]
+            [T]
         ),
-        { isIgnored: A, isBlocked: N } = (0, s.cj)(
+        { isIgnored: A, isBlocked: C } = (0, o.cj)(
             [h.Z],
             () => ({
-                isIgnored: h.Z.isIgnored(y),
-                isBlocked: h.Z.isBlocked(y)
+                isIgnored: h.Z.isIgnored(T),
+                isBlocked: h.Z.isBlocked(T)
             }),
-            [y]
+            [T]
         ),
-        C = (0, f.Do)({ location: 'use-block-user-item-web' }),
-        R = C ? [o.z.IGNORE_USER_NEW_BADGE] : [],
+        N = (0, f.Do)({ location: 'use-block-user-item-web' }),
+        R = N ? [s.z.IGNORE_USER_NEW_BADGE] : [],
         [O, D] = (0, d.US)(R),
-        L = O === o.z.IGNORE_USER_NEW_BADGE;
-    return !C || S || N
+        x = O === s.z.IGNORE_USER_NEW_BADGE;
+    return !N || S || C
         ? null
         : (0, a.jsx)(l.MenuItem, {
               id: 'ignore',
@@ -57,23 +57,23 @@ function I(e) {
                   ? g.intl.string(g.t['8wXU9P'])
                   : (0, a.jsxs)('div', {
                         className: E.label,
-                        children: [g.intl.string(g.t.ytCpKi), L ? (0, a.jsx)(v, {}) : null]
+                        children: [g.intl.string(g.t.ytCpKi), x ? (0, a.jsx)(v, {}) : null]
                     }),
               action: A
                   ? () => {
-                        null == T || T(), u.Z.unignoreUser(y, null != b ? b : 'use-ignore-user-item-web', null != i ? i : void 0);
+                        null == b || b(), u.Z.unignoreUser(T, null != I ? I : 'use-ignore-user-item-web', null != i ? i : void 0);
                     }
                   : () => {
-                        L && D(m.L.TAKE_ACTION),
+                        x && D(m.L.TAKE_ACTION),
                             (0, l.openModal)((e) =>
-                                (0, a.jsx)(_.Z, {
+                                (0, a.jsx)(p.Z, {
                                     ...e,
                                     guildId: r,
                                     channelId: i,
                                     user: n,
-                                    onIgnore: I,
+                                    onIgnore: y,
                                     onBlock: c,
-                                    location: b
+                                    location: I
                                 })
                             );
                     }

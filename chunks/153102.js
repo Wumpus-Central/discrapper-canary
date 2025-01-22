@@ -1,7 +1,7 @@
 var i = r(177593);
 var a = r(47120);
-var s = r(411104);
-var o = r(259443),
+var o = r(411104);
+var s = r(259443),
     l = r(625306);
 function u(e, n, r) {
     return (
@@ -16,10 +16,10 @@ function u(e, n, r) {
         e
     );
 }
-let c = new o.Yd('Flux'),
+let c = new s.Yd('Flux'),
     d = 100,
     f = (e) => e();
-class _ {
+class p {
     destroy() {
         this.changedStores.clear(), this.reactChangedStores.clear(), (f = (e) => e());
     }
@@ -108,4 +108,4 @@ class _ {
         u(this, 'changedStores', new Set()), u(this, 'reactChangedStores', new Set()), u(this, 'changeSentinel', 0), u(this, 'isBatchEmitting', !1), u(this, 'isDispatching', !1), u(this, 'isPaused', !1), u(this, 'pauseTimer', null);
     }
 }
-n.Z = new _();
+n.Z = new p();

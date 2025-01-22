@@ -1,6 +1,6 @@
 r.d(n, {
     I3: function () {
-        return p;
+        return _;
     },
     d9: function () {
         return g;
@@ -14,8 +14,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(411104);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(836560);
 var u = r(211266),
     c = r(585483);
@@ -46,7 +46,7 @@ class f {
         d(this, 'emitter', new l.EventEmitter());
     }
 }
-class _ {
+class p {
     subscribe(e, n) {
         c.S.subscribe(e, n);
     }
@@ -55,13 +55,13 @@ class _ {
     }
     bumpDispatchPriority() {}
 }
-let h = o.createContext(new _()),
-    p = o.forwardRef(function (e, n) {
+let h = s.createContext(new p()),
+    _ = s.forwardRef(function (e, n) {
         let { children: r } = e,
             i = (0, u.Z)(() => new f());
         return (
-            o.useImperativeHandle(n, () => i, [i]),
-            (0, s.jsx)(h.Provider, {
+            s.useImperativeHandle(n, () => i, [i]),
+            (0, o.jsx)(h.Provider, {
                 value: i,
                 children: r
             })
@@ -69,15 +69,15 @@ let h = o.createContext(new _()),
     });
 function m(e) {
     let { event: n, handler: r } = e,
-        i = o.useContext(h),
-        a = o.useRef(r);
-    o.useEffect(() => {
+        i = s.useContext(h),
+        a = s.useRef(r);
+    s.useEffect(() => {
         a.current = r;
     }, [r]);
-    let s = null == r;
+    let o = null == r;
     return (
-        o.useEffect(() => {
-            if (s) return;
+        s.useEffect(() => {
+            if (o) return;
             let e = function () {
                 for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
                 null === (e = a.current) || void 0 === e || e.call(a, ...r);
@@ -88,7 +88,7 @@ function m(e) {
                     i.unsubscribe(n, e);
                 }
             );
-        }, [i, n, s]),
+        }, [i, n, o]),
         null
     );
 }

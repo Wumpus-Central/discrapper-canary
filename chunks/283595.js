@@ -1,15 +1,15 @@
 var i,
     a = r(47120);
-var s = r(789020);
-var o = r(177593);
+var o = r(789020);
+var s = r(177593);
 var l = r(392711),
     u = r.n(l),
     c = r(442837),
     d = r(433517),
     f = r(570140),
-    _ = r(85521),
+    p = r(85521),
     h = r(630388),
-    p = r(780570),
+    _ = r(780570),
     m = r(314897),
     g = r(981631);
 function E(e, n, r) {
@@ -26,41 +26,41 @@ function E(e, n, r) {
     );
 }
 let v = 'LibraryApplicationStore';
-function I() {
+function y() {
     var e;
     return null !== (e = d.K.get(v)) && void 0 !== e ? e : {};
 }
-let T = !1,
-    b = {},
-    y = {},
+let b = !1,
+    I = {},
+    T = {},
     S = new Set(),
     A = {},
-    N = {},
-    C = !1;
+    C = {},
+    N = !1;
 function R() {
     d.K.set(v, {
-        ...I(),
-        activeLaunchOptionIds: N
+        ...y(),
+        activeLaunchOptionIds: C
     });
 }
 function O() {
     d.K.set(v, {
-        ...I(),
+        ...y(),
         activeLibraryApplicationBranchIds: A
     });
 }
 function D(e) {
     for (let n of e) {
-        let e = _.Z.createFromServer(n);
-        b[(0, p.Tu)(e.id, e.branchId)] = e;
+        let e = p.Z.createFromServer(n);
+        I[(0, _.Tu)(e.id, e.branchId)] = e;
     }
 }
-function L() {
-    T = !1;
+function x() {
+    b = !1;
 }
-function x(e) {
+function L(e) {
     let { libraryApplications: n } = e;
-    (b = {}), D(n), (T = !0);
+    (I = {}), D(n), (b = !0);
 }
 function w(e) {
     let { libraryApplications: n } = e;
@@ -68,19 +68,19 @@ function w(e) {
 }
 function P(e) {
     let { applicationId: n, branchId: r, flags: i } = e,
-        a = (0, p.Tu)(n, r),
-        s = Z(n, r);
-    null != s && !s.isHidden() && h.yE(i, g.eHb.HIDDEN) && (C = !0), S.add(a);
+        a = (0, _.Tu)(n, r),
+        o = F(n, r);
+    null != o && !o.isHidden() && h.yE(i, g.eHb.HIDDEN) && (N = !0), S.add(a);
 }
 function M(e) {
     let { libraryApplication: n } = e,
-        r = _.Z.createFromServer(n),
-        i = (0, p.Tu)(r.id, r.branchId);
-    (b[i] = r), S.delete(i);
+        r = p.Z.createFromServer(n),
+        i = (0, _.Tu)(r.id, r.branchId);
+    (I[i] = r), S.delete(i);
 }
 function k(e) {
     let { applicationId: n, branchId: r, launchOptionId: i } = e;
-    (N[(0, p.Tu)(n, r)] = i), R();
+    (C[(0, _.Tu)(n, r)] = i), R();
 }
 function U(e) {
     let { applicationId: n, branchId: r } = e;
@@ -89,12 +89,12 @@ function U(e) {
 }
 function B(e) {
     let { libraryApplications: n } = e;
-    for (let e of n) y[(0, p.Tu)(e.id, e.branchId)] = e;
+    for (let e of n) T[(0, _.Tu)(e.id, e.branchId)] = e;
 }
 function G() {
-    y = {};
+    T = {};
 }
-function F(e) {
+function Z(e) {
     let n = V();
     return (
         Object.keys(n).forEach((r) => {
@@ -103,25 +103,25 @@ function F(e) {
         n
     );
 }
-function Z(e, n) {
+function F(e, n) {
     var r;
-    let i = (0, p.Tu)(e, n);
-    return null !== (r = b[i]) && void 0 !== r ? r : y[i];
+    let i = (0, _.Tu)(e, n);
+    return null !== (r = I[i]) && void 0 !== r ? r : T[i];
 }
 function V() {
     return {
-        ...y,
-        ...b
+        ...T,
+        ...I
     };
 }
 class j extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(m.default);
         let e = d.K.get(v);
-        null != e && (null == e.activeLaunchOptionIds ? R() : (N = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? O() : (A = e.activeLibraryApplicationBranchIds));
+        null != e && (null == e.activeLaunchOptionIds ? R() : (C = e.activeLaunchOptionIds), null == e.activeLibraryApplicationBranchIds ? O() : (A = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
-        return F((e) => !e.isHidden());
+        return Z((e) => !e.isHidden());
     }
     getAllLibraryApplications() {
         return V();
@@ -131,59 +131,59 @@ class j extends (i = c.ZP.Store) {
     }
     hasApplication(e, n) {
         let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = Z(e, n);
-        return !(null == i || (!r && i.isHidden())) && (0, p.Je)(i);
+            i = F(e, n);
+        return !(null == i || (!r && i.isHidden())) && (0, _.Je)(i);
     }
     getLibraryApplication(e, n) {
         let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = Z(e, n);
-        return r && null != i ? ((0, p.Je)(i) ? i : null) : i;
+            i = F(e, n);
+        return r && null != i ? ((0, _.Je)(i) ? i : null) : i;
     }
     getActiveLibraryApplication(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             r = A[e];
         if (null != r) {
             var i;
-            let a = (0, p.Tu)(e, r),
-                s = null !== (i = b[a]) && void 0 !== i ? i : y[a];
-            if (null != s && (0, p.Je)(s) && (n || !s.isHidden())) return s;
+            let a = (0, _.Tu)(e, r),
+                o = null !== (i = I[a]) && void 0 !== i ? i : T[a];
+            if (null != o && (0, _.Je)(o) && (n || !o.isHidden())) return o;
         }
         let a = V();
         for (let r in a)
             if (a[r].id === e) {
                 let e = a[r];
-                if ((0, p.Je)(e) && (n || !e.isHidden())) return e;
+                if ((0, _.Je)(e) && (n || !e.isHidden())) return e;
             }
     }
     isUpdatingFlags(e, n) {
-        return S.has((0, p.Tu)(e, n));
+        return S.has((0, _.Tu)(e, n));
     }
     getActiveLaunchOptionId(e, n) {
-        return N[(0, p.Tu)(e, n)];
+        return C[(0, _.Tu)(e, n)];
     }
     get fetched() {
-        return T;
+        return b;
     }
     get entitledBranchIds() {
         return u()(V())
             .values()
-            .filter((e) => (0, p.Je)(e))
+            .filter((e) => (0, _.Je)(e))
             .map((e) => e.branchId)
             .value();
     }
     get hasRemovedLibraryApplicationThisSession() {
-        return C;
+        return N;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (T) return setImmediate(e), !1;
+            if (b) return setImmediate(e), !1;
         });
     }
 }
 E(j, 'displayName', 'LibraryApplicationStore'),
     (n.Z = new j(f.Z, {
-        LOGOUT: L,
-        LIBRARY_FETCH_SUCCESS: x,
+        LOGOUT: x,
+        LIBRARY_FETCH_SUCCESS: L,
         SKU_PURCHASE_SUCCESS: w,
         LIBRARY_APPLICATION_FLAGS_UPDATE_START: P,
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: M,

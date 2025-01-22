@@ -1,50 +1,50 @@
-var n = i(200651),
-    s = i(192379),
-    o = i(120356),
-    a = i.n(o),
-    r = i(481060),
-    c = i(600164),
-    l = i(276326),
-    d = i(232186);
-class u extends s.PureComponent {
+var i = n(200651),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(600164),
+    c = n(276326),
+    d = n(232186);
+class u extends l.PureComponent {
     render() {
-        let { title: t, description: e, agreement: i, disagreement: s, onAgree: o, onDisagree: u, imageClassName: g } = this.props;
-        return (0, n.jsxs)(c.Z, {
-            className: l.gatedContent,
-            justify: c.Z.Justify.CENTER,
-            align: c.Z.Align.CENTER,
-            direction: c.Z.Direction.VERTICAL,
+        let { title: e, description: t, agreement: n, disagreement: l, onAgree: r, onDisagree: u, imageClassName: h } = this.props;
+        return (0, i.jsxs)(o.Z, {
+            className: c.gatedContent,
+            justify: o.Z.Justify.CENTER,
+            align: o.Z.Align.CENTER,
+            direction: o.Z.Direction.VERTICAL,
             children: [
-                (0, n.jsx)('div', { className: a()(l.image, g) }),
-                (0, n.jsx)('div', {
-                    className: a()(l.title, d.marginBottom8),
-                    children: t
-                }),
-                (0, n.jsx)('div', {
-                    className: a()(l.description, d.marginBottom20),
+                (0, i.jsx)('div', { className: a()(c.image, h) }),
+                (0, i.jsx)('div', {
+                    className: a()(c.title, d.marginBottom8),
                     children: e
                 }),
-                (0, n.jsxs)(c.Z, {
-                    justify: c.Z.Justify.CENTER,
-                    align: c.Z.Align.CENTER,
+                (0, i.jsx)('div', {
+                    className: a()(c.description, d.marginBottom20),
+                    children: t
+                }),
+                (0, i.jsxs)(o.Z, {
+                    justify: o.Z.Justify.CENTER,
+                    align: o.Z.Align.CENTER,
                     grow: 0,
                     children: [
-                        null != s
-                            ? (0, n.jsx)(r.Button, {
-                                  className: l.action,
-                                  size: r.ButtonSizes.LARGE,
-                                  color: r.ButtonColors.PRIMARY,
+                        null != l
+                            ? (0, i.jsx)(s.Button, {
+                                  className: c.action,
+                                  size: s.ButtonSizes.LARGE,
+                                  color: s.ButtonColors.PRIMARY,
                                   onClick: u,
-                                  children: s
+                                  children: l
                               })
                             : null,
-                        null != i
-                            ? (0, n.jsx)(r.Button, {
-                                  className: l.action,
-                                  color: r.Button.Colors.RED,
-                                  size: r.ButtonSizes.LARGE,
-                                  onClick: o,
-                                  children: i
+                        null != n
+                            ? (0, i.jsx)(s.Button, {
+                                  className: c.action,
+                                  color: s.Button.Colors.RED,
+                                  size: s.ButtonSizes.LARGE,
+                                  onClick: r,
+                                  children: n
                               })
                             : null
                     ]
@@ -53,4 +53,4 @@ class u extends s.PureComponent {
         });
     }
 }
-e.Z = u;
+t.Z = u;

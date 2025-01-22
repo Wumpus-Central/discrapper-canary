@@ -1,23 +1,23 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(47120);
 var a = r(192379);
-function s(e) {
+function o(e) {
     var n;
     let { stepConfigs: r, breadcrumbs: i } = e,
-        [s, o] = a.useState(null === (n = r[0]) || void 0 === n ? void 0 : n.key),
+        [o, s] = a.useState(null === (n = r[0]) || void 0 === n ? void 0 : n.key),
         l = a.useRef(null);
     a.useEffect(() => {
-        l.current = s;
-    }, [l, s]);
+        l.current = o;
+    }, [l, o]);
     let u = r.map((e) => e.key).filter((e) => null != e);
     return {
         steps: u,
-        step: s,
-        setStep: o,
+        step: o,
+        setStep: s,
         breadcrumbsData: r
             .filter((e) => {
                 var n;

@@ -1,44 +1,44 @@
 var r;
 function i(e) {
-    for (let n = 0; n < e.length; n++) e[n] = s(e[n]);
+    for (let n = 0; n < e.length; n++) e[n] = o(e[n]);
     return !0;
 }
 function a(e) {
-    let [n, a, s, o, l] = e;
-    for (let e in s) i(s[e]), (s[e] = { value: s[e] });
+    let [n, a, o, s, l] = e;
+    for (let e in o) i(o[e]), (o[e] = { value: o[e] });
     return n === r.Plural
         ? {
               type: n,
               value: a,
-              options: s,
-              offset: o,
+              options: o,
+              offset: s,
               pluralType: l
           }
         : {
               type: n,
               value: a,
-              options: s,
-              offset: o
+              options: o,
+              offset: s
           };
 }
-function s(e) {
+function o(e) {
     if ('string' == typeof e)
         return {
             type: 0,
             value: e
         };
-    let [s] = e;
-    switch (s) {
+    let [o] = e;
+    switch (o) {
         case r.Argument:
             return {
-                type: s,
+                type: o,
                 value: e[1]
             };
         case r.Number:
         case r.Date:
         case r.Time:
             return {
-                type: s,
+                type: o,
                 value: e[1],
                 style: e[2]
             };
@@ -48,24 +48,24 @@ function s(e) {
         case r.Pound:
             return n.FORMAT_JS_POUND;
         case r.Tag: {
-            let [n, r, a, s] = e;
+            let [n, r, a, o] = e;
             return (
                 i(a),
-                null != s && i(s),
+                null != o && i(o),
                 {
                     type: n,
                     value: r,
                     children: a,
-                    control: s
+                    control: o
                 }
             );
         }
         default:
-            throw Error(`FormatJS keyless JSON encountered an unknown type: ${s}`);
+            throw Error(`FormatJS keyless JSON encountered an unknown type: ${o}`);
     }
 }
-function o(e) {
-    return 'string' == typeof e ? s(e) : 'string' == typeof e[0] ? (i(e), e) : 0 === e.length ? e : Array.isArray(e[0]) ? (i(e), e) : s(e);
+function s(e) {
+    return 'string' == typeof e ? o(e) : 'string' == typeof e[0] ? (i(e), e) : 0 === e.length ? e : Array.isArray(e[0]) ? (i(e), e) : o(e);
 }
 function l(e) {
     if (Array.isArray(e)) return e.map((e) => l(e));
@@ -99,7 +99,7 @@ function u(e) {
 }
 Object.defineProperty(n, '__esModule', { value: !0 }),
     (n.FORMAT_JS_POUND = n.FormatJsNodeType = void 0),
-    (n.hydrateFormatJsAst = o),
+    (n.hydrateFormatJsAst = s),
     (n.compressFormatJsToAst = l),
     (n.isCompressedAst = u),
     !(function (e) {

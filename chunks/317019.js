@@ -13,7 +13,7 @@ var i = r(192379),
             }
             return e;
         },
-    s = (function () {
+    o = (function () {
         function e(e, n) {
             for (var r = 0; r < n.length; r++) {
                 var i = n[r];
@@ -24,7 +24,7 @@ var i = r(192379),
             return r && e(n.prototype, r), i && e(n, i), n;
         };
     })();
-function o(e, n) {
+function s(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
 function l(e, n) {
@@ -47,8 +47,8 @@ var c = function (e) {
     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
     return (function (r) {
         function c() {
-            o(this, c);
-            for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
+            s(this, c);
+            for (var e, n, r, i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
             return (
                 (n = r = l(this, (e = c.__proto__ || Object.getPrototypeOf(c)).call.apply(e, [this].concat(a)))),
                 (r.state = { focus: !1 }),
@@ -63,7 +63,7 @@ var c = function (e) {
         }
         return (
             u(c, r),
-            s(c, [
+            o(c, [
                 {
                     key: 'render',
                     value: function () {

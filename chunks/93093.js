@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -38,7 +38,7 @@ class l extends a.ZP.Store {
     }
     constructor() {
         super(
-            s.Z,
+            o.Z,
             {
                 CACHE_LOADED: (e) => this.handleCacheLoaded(e),
                 CACHE_LOADED_LAZY: (e) => this.handleCacheLoadedLazy(e),
@@ -46,9 +46,9 @@ class l extends a.ZP.Store {
                 GUILD_CREATE: (e) => this.handleGuildCreate(e),
                 GUILD_DELETE: (e) => this.handleGuildDelete(e)
             },
-            s.c.Early
+            o.c.Early
         ),
-            o(this, 'guildIds', new Set());
+            s(this, 'guildIds', new Set());
     }
 }
 n.Z = new l();

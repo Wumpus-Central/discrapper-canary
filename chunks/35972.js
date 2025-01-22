@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return o;
+        return a;
     }
 });
-var r = n(871074);
-function o() {
-    if ('undefined' == typeof Reflect || !r || r.sham) return !1;
+var i = r(871074);
+function a() {
+    if ('undefined' == typeof Reflect || !i || i.sham) return !1;
     if ('function' == typeof Proxy) return !0;
     try {
-        return Boolean.prototype.valueOf.call(r(Boolean, [], function () {})), !0;
+        return Boolean.prototype.valueOf.call(i(Boolean, [], function () {})), !0;
     } catch (e) {
         return !1;
     }

@@ -1,33 +1,33 @@
-var i, a, s, o, l, u, c;
+var i, a, o, s, l, u, c;
 function d(e, n) {
-    let { sound_id: r, emoji_id: i, emoji_name: a, user_id: s, available: o, ...l } = e;
+    let { sound_id: r, emoji_id: i, emoji_name: a, user_id: o, available: s, ...l } = e;
     return {
         ...l,
         soundId: r,
         guildId: n,
         emojiId: i,
         emojiName: a,
-        userId: s,
-        available: null == o || o
+        userId: o,
+        available: null == s || s
     };
 }
 function f(e) {
-    let { soundId: n, guildId: r, emojiId: i, emojiName: a, userId: s, ...o } = e;
+    let { soundId: n, guildId: r, emojiId: i, emojiName: a, userId: o, ...s } = e;
     return {
-        ...o,
+        ...s,
         sound_id: n,
         guild_id: r,
         emoji_id: i,
         emoji_name: a,
-        user_id: s
+        user_id: o
     };
 }
 r.d(n, {
     H$: function () {
-        return o;
+        return s;
     },
     MW: function () {
-        return s;
+        return o;
     },
     Pb: function () {
         return i;
@@ -59,10 +59,10 @@ r.d(n, {
     })(a || (a = {})),
     !(function (e) {
         (e.ADDED = 'added'), (e.UPDATED = 'updated'), (e.REMOVED = 'removed');
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         (e.DEFAULT = 'default'), (e.CUSTOM = 'custom');
-    })(o || (o = {})),
+    })(s || (s = {})),
     !(function (e) {
         (e[(e.FAVORITES = 0)] = 'FAVORITES'), (e[(e.RECENTLY_HEARD = 1)] = 'RECENTLY_HEARD'), (e[(e.FREQUENTLY_USED = 2)] = 'FREQUENTLY_USED'), (e[(e.GUILD = 3)] = 'GUILD'), (e[(e.DEFAULTS = 4)] = 'DEFAULTS'), (e[(e.SEARCH = 5)] = 'SEARCH');
     })(l || (l = {})),

@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(724458);
-var o = r(442837),
+var o = r(724458);
+var s = r(442837),
     l = r(570140),
     u = r(981631),
     c = r(65154);
@@ -19,9 +19,9 @@ function d(e, n, r) {
     );
 }
 let f = null,
-    _ = null,
+    p = null,
     h = {};
-function p(e, n) {
+function _(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         i = h[e];
     if (null == i) return;
@@ -34,44 +34,44 @@ function p(e, n) {
 function m(e, n, r, i) {
     var a;
     !(e in h) && (h[e] = {});
-    let s = null !== (a = h[e][null != n ? n : u.kod]) && void 0 !== a ? a : {};
+    let o = null !== (a = h[e][null != n ? n : u.kod]) && void 0 !== a ? a : {};
     h[e][null != n ? n : u.kod] = {
-        ...s,
+        ...o,
         [i]: { streamId: r }
     };
 }
 function g(e) {
     let { user: n, sessionId: r } = e;
-    (f = n.id), (_ = r);
+    (f = n.id), (p = r);
 }
 function E(e) {
     let { user: n, sessionId: r } = e;
-    (f = n.id), (_ = r);
+    (f = n.id), (p = r);
 }
 function v(e) {
     let { userId: n, guildId: r, streamId: i, context: a } = e;
-    null != i ? m(n, r, i, a) : p(n, r, a);
+    null != i ? m(n, r, i, a) : _(n, r, a);
 }
-function I(e) {
+function y(e) {
     let { voiceStates: n } = e;
     return n.reduce((e, n) => {
         var r;
-        let { userId: i, sessionId: a, channelId: s, guildId: o } = n;
-        if (null == s && i === f) {
-            if (a !== _) return e;
+        let { userId: i, sessionId: a, channelId: o, guildId: s } = n;
+        if (null == o && i === f) {
+            if (a !== p) return e;
             h = {};
         } else {
-            if (null != s || (null === (r = h[i]) || void 0 === r ? void 0 : r[null != o ? o : u.kod]) == null) return e;
-            p(i, o);
+            if (null != o || (null === (r = h[i]) || void 0 === r ? void 0 : r[null != s ? s : u.kod]) == null) return e;
+            _(i, s);
         }
         return !0;
     }, !1);
 }
-class T extends (i = o.ZP.Store) {
+class b extends (i = s.ZP.Store) {
     getStreamId(e, n) {
         var r, i, a;
-        let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT;
-        return null === (a = h[e]) || void 0 === a ? void 0 : null === (i = a[null != n ? n : u.kod]) || void 0 === i ? void 0 : null === (r = i[s]) || void 0 === r ? void 0 : r.streamId;
+        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT;
+        return null === (a = h[e]) || void 0 === a ? void 0 : null === (i = a[null != n ? n : u.kod]) || void 0 === i ? void 0 : null === (r = i[o]) || void 0 === r ? void 0 : r.streamId;
     }
     getUserStreamData(e, n) {
         var r, i;
@@ -79,10 +79,10 @@ class T extends (i = o.ZP.Store) {
         return null === (i = h[e]) || void 0 === i ? void 0 : null === (r = i[null != n ? n : u.kod]) || void 0 === r ? void 0 : r[a];
     }
 }
-d(T, 'displayName', 'VideoStreamStore'),
-    (n.Z = new T(l.Z, {
+d(b, 'displayName', 'VideoStreamStore'),
+    (n.Z = new b(l.Z, {
         CONNECTION_OPEN: g,
         OVERLAY_INITIALIZE: E,
         RTC_CONNECTION_VIDEO: v,
-        VOICE_STATE_UPDATES: I
+        VOICE_STATE_UPDATES: y
     }));

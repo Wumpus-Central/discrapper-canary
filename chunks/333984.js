@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(592125),
-    s = r(412788);
-function o(e, n, r) {
+    o = r(412788);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -24,7 +24,7 @@ function f(e) {
     let n = !1;
     return d(e) && !l.has(e.id) && (l.add(e.id), (n = !0)), !d(e) && l.has(e.id) && (l.delete(e.id), (n = !0)), !d(e) && u.has(e.id) && (u.delete(e.id), (n = !0)), n;
 }
-function _() {
+function p() {
     l.clear(),
         u.clear(),
         Object.values(a.Z.getMutablePrivateChannels()).forEach((e) => {
@@ -36,7 +36,7 @@ function h(e) {
     let { channelId: n } = e;
     u.add(n);
 }
-function p(e) {
+function _(e) {
     let { channel: n } = e;
     return f(n);
 }
@@ -49,7 +49,7 @@ function g(e) {
         r = !1;
     return l.has(n.id) && (l.delete(n.id), (r = !0)), r;
 }
-class E extends s.Z {
+class E extends o.Z {
     initialize() {
         this.waitFor(a.Z);
     }
@@ -80,14 +80,14 @@ class E extends s.Z {
     }
     constructor() {
         super({
-            CONNECTION_OPEN: _,
-            CONNECTION_OPEN_SUPPLEMENTAL: _,
+            CONNECTION_OPEN: p,
+            CONNECTION_OPEN_SUPPLEMENTAL: p,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: p,
+            CHANNEL_CREATE: _,
             CHANNEL_UPDATES: m,
             CHANNEL_DELETE: g,
             MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
         });
     }
 }
-o(E, 'displayName', 'SpamMessageRequestStore'), o(E, 'LATEST_SNAPSHOT_VERSION', 1), (n.Z = new E());
+s(E, 'displayName', 'SpamMessageRequestStore'), s(E, 'LATEST_SNAPSHOT_VERSION', 1), (n.Z = new E());

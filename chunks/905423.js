@@ -1,21 +1,21 @@
-var l = t(512969),
-    i = t(65400),
-    a = t(731965),
-    u = t(893607),
-    r = t(981631);
-function o(n) {
-    let e = (0, l.LX)(null != n ? n : '', { path: r.Z5c.CHANNEL(u.Hw.guildId(), u.Hw.channelId({ optional: !0 }), ':messageId?') });
-    if (null != e) {
-        let { guildId: n, channelId: t } = e.params;
+var a = n(512969),
+    r = n(65400),
+    l = n(731965),
+    i = n(893607),
+    o = n(981631);
+function s(e) {
+    let t = (0, a.LX)(null != e ? e : '', { path: o.Z5c.CHANNEL(i.Hw.guildId(), i.Hw.channelId({ optional: !0 }), ':messageId?') });
+    if (null != t) {
+        let { guildId: e, channelId: n } = t.params;
         return {
-            guildId: n === r.ME ? null : n,
-            channelId: null != t ? t : null
+            guildId: e === o.ME ? null : e,
+            channelId: null != n ? n : null
         };
     }
-    let t = (0, l.LX)(null != n ? n : '', { path: r.Z5c.GUILD_BOOSTING_MARKETING(u.Hw.guildId()) });
-    return null != t
+    let n = (0, a.LX)(null != e ? e : '', { path: o.Z5c.GUILD_BOOSTING_MARKETING(i.Hw.guildId()) });
+    return null != n
         ? {
-              guildId: t.params.guildId,
+              guildId: n.params.guildId,
               channelId: null
           }
         : {
@@ -23,29 +23,29 @@ function o(n) {
               channelId: null
           };
 }
-e.Z = (0, i.F)((n) => ({
+t.Z = (0, r.F)((e) => ({
     path: null,
     basePath: '/',
     guildId: null,
     channelId: null,
-    updatePath(e) {
-        let { guildId: t, channelId: l } = o(e);
-        (0, a.j)(() =>
-            n({
-                path: e,
-                guildId: t,
-                channelId: l
+    updatePath(t) {
+        let { guildId: n, channelId: a } = s(t);
+        (0, l.j)(() =>
+            e({
+                path: t,
+                guildId: n,
+                channelId: a
             })
         );
     },
-    resetPath(e) {
-        let { guildId: t, channelId: l } = o(e);
-        (0, a.j)(() =>
-            n({
+    resetPath(t) {
+        let { guildId: n, channelId: a } = s(t);
+        (0, l.j)(() =>
+            e({
                 path: null,
-                guildId: t,
-                channelId: l,
-                basePath: e
+                guildId: n,
+                channelId: a,
+                basePath: t
             })
         );
     }

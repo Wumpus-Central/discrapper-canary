@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(442837),
     s = n(524437),
     c = n(481060),
-    d = n(317632),
-    u = n(174767),
+    u = n(317632),
+    d = n(174767),
     m = n(240126),
     h = n(791914),
     f = n(326838),
@@ -20,8 +20,8 @@ var i = n(200651),
     _ = n(366475);
 function g(e) {
     let { setTab: t, badgeState: l, closePopout: g } = e,
-        C = (0, o.Wu)([d.Z], () => d.Z.getInvites()),
-        I = (0, o.e7)([d.Z], () => d.Z.getInviteStatuses()),
+        C = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
+        I = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
         [x, N] = r.useMemo(
             () =>
                 a().partition(C, (e) => {
@@ -31,7 +31,7 @@ function g(e) {
             [C, I]
         );
     return (r.useEffect(() => {
-        (0, u.sJ)();
+        (0, d.sJ)();
     }),
     0 === C.length)
         ? (0, i.jsxs)('div', {

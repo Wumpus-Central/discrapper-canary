@@ -42,8 +42,8 @@ function E(e) {
             });
     }, [v, A]);
     let P = null != n,
-        y = b || void 0 !== j ? null != j : null != N,
-        B = T ? l.ShinyButton : l.Button;
+        D = b || void 0 !== j ? null != j : null != N,
+        y = T ? l.ShinyButton : l.Button;
     return (0, i.jsx)(g.Z, {
         forcedDivider: C,
         borderType: h.Y.PREMIUM,
@@ -55,13 +55,13 @@ function E(e) {
         children: (0, i.jsxs)('div', {
             className: _.buttonsContainer,
             children: [
-                (0, i.jsx)(B, {
+                (0, i.jsx)(y, {
                     size: l.Button.Sizes.SMALL,
                     onClick: R,
                     className: a()({ [_.buttonHighlighted]: T }),
                     children: f.intl.string(f.t['0nEVoK'])
                 }),
-                y &&
+                D &&
                     (0, i.jsx)(l.Button, {
                         className: _.removeButton,
                         color: l.Button.Colors.PRIMARY,

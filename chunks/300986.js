@@ -12,8 +12,8 @@ var r = n(442837),
     o = n(706454),
     s = n(594174),
     c = n(626135),
-    d = n(63063),
-    u = n(51144),
+    u = n(63063),
+    d = n(51144),
     m = n(665149),
     h = n(981631),
     f = n(388032);
@@ -22,9 +22,9 @@ function _(e) {
     let { className: t } = e,
         n = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
         _ = (0, r.e7)([o.default], () => o.default.locale),
-        g = (0, u.EO)(n);
+        g = (0, d.EO)(n);
     return (0, i.jsx)(a.Anchor, {
-        href: d.w,
+        href: u.w,
         target: '_blank',
         tabIndex: -1,
         children: (0, i.jsx)(m.JO, {

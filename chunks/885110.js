@@ -1,23 +1,23 @@
 var i,
     a = r(47120);
-var s = r(348327),
-    o = r.n(s),
+var o = r(348327),
+    s = r.n(o),
     l = r(392711),
     u = r.n(l),
     c = r(442837),
     d = r(570140),
     f = r(503438),
-    _ = r(768419),
+    p = r(768419),
     h = r(695346),
-    p = r(581883),
+    _ = r(581883),
     m = r(780570),
     g = r(77498),
     E = r(517100),
     v = r(283595),
-    I = r(293273),
-    T = r(158776),
-    b = r(797258),
-    y = r(981631);
+    y = r(293273),
+    b = r(158776),
+    I = r(797258),
+    T = r(981631);
 function S(e, n, r) {
     return (
         n in e
@@ -32,13 +32,13 @@ function S(e, n, r) {
     );
 }
 let A = !1,
-    N = y.Skl.ONLINE,
-    C = y.Skl.UNKNOWN,
+    C = T.Skl.ONLINE,
+    N = T.Skl.UNKNOWN,
     R = 0,
     O = [],
     D = !1,
-    L = !0,
-    x = Object.freeze([]),
+    x = !0,
+    L = Object.freeze([]),
     w = [];
 function P(e) {
     return (0, m.OT)(e, v.Z);
@@ -49,76 +49,76 @@ function M(e) {
 }
 function k(e) {
     switch (e.type) {
-        case y.IIU.LISTENING:
-            if ((0, f.Z)(e)) return _.Z.shouldShowActivity();
+        case T.IIU.LISTENING:
+            if ((0, f.Z)(e)) return p.Z.shouldShowActivity();
             if (null != e.application_id) return P(e.application_id);
             return !1;
-        case y.IIU.PLAYING:
+        case T.IIU.PLAYING:
             return null != e.application_id ? P(e.application_id) : M(e.name);
-        case y.IIU.STREAMING:
-        case y.IIU.WATCHING:
+        case T.IIU.STREAMING:
+        case T.IIU.WATCHING:
         default:
             return null == e.application_id || P(e.application_id);
     }
 }
 function U() {
-    (L = !0), (C = N), B();
+    (x = !0), (N = C), B();
 }
 function B() {
     var e;
-    if (((R = null !== (e = E.Z.getIdleSince()) && void 0 !== e ? e : 0), (D = E.Z.isAFK()), L)) N = C;
-    else if (A) N = y.Skl.INVISIBLE;
+    if (((R = null !== (e = E.Z.getIdleSince()) && void 0 !== e ? e : 0), (D = E.Z.isAFK()), x)) C = N;
+    else if (A) C = T.Skl.INVISIBLE;
     else {
         let e = h.co.getSetting();
-        N = e !== y.Skl.UNKNOWN ? e : y.Skl.ONLINE;
+        C = e !== T.Skl.UNKNOWN ? e : T.Skl.ONLINE;
     }
-    N === y.Skl.ONLINE && R > 0 && (N = y.Skl.IDLE);
+    C === T.Skl.ONLINE && R > 0 && (C = T.Skl.IDLE);
     let n = !1,
-        r = L || N === y.Skl.INVISIBLE ? [] : I.Z.getActivities().filter(k);
-    !o()(O, r) && ((O = r), (n = !0));
-    let i = b.Z.getRemoteActivities();
-    if ((x !== i && ((x = i), (n = !0)), n)) {
-        let e = O.find((e) => e.type === y.IIU.CUSTOM_STATUS);
+        r = x || C === T.Skl.INVISIBLE ? [] : y.Z.getActivities().filter(k);
+    !s()(O, r) && ((O = r), (n = !0));
+    let i = I.Z.getRemoteActivities();
+    if ((L !== i && ((L = i), (n = !0)), n)) {
+        let e = O.find((e) => e.type === T.IIU.CUSTOM_STATUS);
         w =
-            O.filter((e) => e.type !== y.IIU.CUSTOM_STATUS).length > 0
+            O.filter((e) => e.type !== T.IIU.CUSTOM_STATUS).length > 0
                 ? O
                 : null != e
                   ? [
                         e,
-                        ...u()(x)
-                            .filter((e) => e.type !== y.IIU.CUSTOM_STATUS)
+                        ...u()(L)
+                            .filter((e) => e.type !== T.IIU.CUSTOM_STATUS)
                             .uniqBy((e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name))
                             .value()
                     ]
-                  : u().uniqBy(x, (e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name));
+                  : u().uniqBy(L, (e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name));
     }
 }
 function G(e) {
     return (A = e.invisible), B();
 }
-function F() {
+function Z() {
     return (A = !1), B();
 }
-function Z() {
-    (L = !1), (C = y.Skl.UNKNOWN), B(), T.Z.setCurrentUserOnConnectionOpen(N, w);
+function F() {
+    (x = !1), (N = T.Skl.UNKNOWN), B(), b.Z.setCurrentUserOnConnectionOpen(C, w);
 }
 function V() {
-    Z();
+    F();
 }
 class j extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, p.Z, I.Z, b.Z, v.Z, g.Z), this.syncWith([I.Z], B);
+        this.waitFor(E.Z, _.Z, y.Z, I.Z, v.Z, g.Z), this.syncWith([y.Z], B);
     }
     getLocalPresence() {
         return {
-            status: N,
+            status: C,
             since: R,
             activities: O,
             afk: D
         };
     }
     getStatus() {
-        return N;
+        return C;
     }
     getActivities() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -141,8 +141,8 @@ S(j, 'displayName', 'SelfPresenceStore'),
     (n.Z = new j(d.Z, {
         START_SESSION: B,
         CONNECTION_OPEN: V,
-        CONNECTION_OPEN_SUPPLEMENTAL: Z,
-        OVERLAY_INITIALIZE: Z,
+        CONNECTION_OPEN_SUPPLEMENTAL: F,
+        OVERLAY_INITIALIZE: F,
         CONNECTION_CLOSED: B,
         IDLE: B,
         AFK: B,
@@ -159,5 +159,5 @@ S(j, 'displayName', 'SelfPresenceStore'),
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: B,
         LOGOUT: U,
         FORCE_INVISIBLE: G,
-        WINDOW_FOCUS: F
+        WINDOW_FOCUS: Z
     }));

@@ -1,11 +1,11 @@
 r.d(n, {
     N: function () {
-        return o;
+        return s;
     }
 });
 var i = r(503461),
     a = r(190313);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,12 +18,12 @@ function s(e, n, r) {
         e
     );
 }
-class o {
+class s {
     get prefix() {
         return this.table.prefix;
     }
     withoutLogging() {
-        return new o(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new s(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e) {
         return this.table.get([e]);
@@ -73,7 +73,7 @@ class o {
         return this.table.getMapEntriesSyncUnsafe();
     }
     constructor(e, n, r, i = !0) {
-        s(this, 'originalPrefix', void 0), s(this, 'table', void 0), (this.originalPrefix = e), (this.table = new a.i([e], n, r, i));
+        o(this, 'originalPrefix', void 0), o(this, 'table', void 0), (this.originalPrefix = e), (this.table = new a.i([e], n, r, i));
     }
 }
 class l {
@@ -95,6 +95,6 @@ class l {
         return 0 == arguments.length ? this.transaction.delete() : this.transaction.delete([e]);
     }
     constructor(e) {
-        s(this, 'transaction', void 0), (this.transaction = e);
+        o(this, 'transaction', void 0), (this.transaction = e);
     }
 }

@@ -1,19 +1,19 @@
 r.d(n, {
     NW: function () {
-        return s;
+        return o;
     },
     tf: function () {
         return a;
     },
     zH: function () {
-        return o;
+        return s;
     }
 });
 var i = r(192379),
     a = function (e) {
         return (0, i.useEffect)(e, []);
     },
-    s = function () {
+    o = function () {
         var e = (0, i.useState)(0)[1],
             n = (0, i.useRef)(!1);
         return (
@@ -27,7 +27,7 @@ var i = r(192379),
             }
         );
     };
-function o(e) {
+function s(e) {
     var n = (0, i.useRef)(void 0);
     return (
         (0, i.useEffect)(function () {

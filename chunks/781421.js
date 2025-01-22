@@ -1,7 +1,7 @@
 var i = r(690244),
     a = r(834889),
-    s = r(134533)(),
-    o = r(49662),
+    o = r(134533)(),
+    s = r(49662),
     l = r(815329),
     u = i('%Math.floor%');
 e.exports = function (e, n) {
@@ -10,9 +10,9 @@ e.exports = function (e, n) {
     var r = arguments.length > 2 && !!arguments[2],
         i = !0,
         c = !0;
-    if ('length' in e && o) {
-        var d = o(e, 'length');
+    if ('length' in e && s) {
+        var d = s(e, 'length');
         d && !d.configurable && (i = !1), d && !d.writable && (c = !1);
     }
-    return (i || c || !r) && (s ? a(e, 'length', n, !0, !0) : a(e, 'length', n)), e;
+    return (i || c || !r) && (o ? a(e, 'length', n, !0, !0) : a(e, 'length', n)), e;
 };

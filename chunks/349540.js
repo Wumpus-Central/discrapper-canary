@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(594174),
-    o = r(74538),
+    o = r(594174),
+    s = r(74538),
     l = r(163684),
     u = r(748770),
     c = r(474936);
@@ -23,8 +23,8 @@ class f extends a.Z {
         this.maybeFetchActiveOutboundPromotions();
     }
     maybeFetchActiveOutboundPromotions() {
-        let e = s.default.getCurrentUser(),
-            n = o.ZP.isPremiumExactly(e, c.p9.TIER_2),
+        let e = o.default.getCurrentUser(),
+            n = s.ZP.isPremiumExactly(e, c.p9.TIER_2),
             r = l.g.getCurrentConfig(
                 { location: 'maybeFetchActiveOutboundPromotions' },
                 {

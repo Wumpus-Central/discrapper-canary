@@ -6,7 +6,7 @@ r.d(n, {
         return u;
     },
     Cp: function () {
-        return o;
+        return s;
     },
     Cz: function () {
         return d;
@@ -21,7 +21,7 @@ r.d(n, {
         return f;
     },
     xv: function () {
-        return s;
+        return o;
     }
 });
 var i = r(570140);
@@ -34,13 +34,13 @@ function a(e, n) {
         props: r
     });
 }
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_CLOSE',
         id: e
     });
 }
-function o(e) {
+function s(e) {
     i.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_HIDE',
         id: e

@@ -1,17 +1,17 @@
 let i, a;
 r.d(n, {
     $0: function () {
-        return p;
+        return _;
     },
     CF: function () {
         return m;
     },
     lw: function () {
-        return b;
+        return I;
     }
 });
-var s = r(927521);
-let o = 1948440,
+var o = r(927521);
+let s = 1948440,
     l = 1948439,
     u = 1300,
     c = 1600,
@@ -19,21 +19,21 @@ let o = 1948440,
 function f(e, n, r, i) {
     return i + Math.ceil(29.5 * (r - 1)) + (n - 1) * 354 + Math.floor((3 + 11 * n) / 30) + e - 1;
 }
-function _(e, n, r) {
+function p(e, n, r) {
     let i = Math.floor((30 * (r - n) + 10646) / 10631),
         a = Math.min(12, Math.ceil((r - (29 + f(n, i, 1, 1))) / 29.5) + 1),
-        o = r - f(n, i, a, 1) + 1;
-    return new s.aw(e, i, a, o);
+        s = r - f(n, i, a, 1) + 1;
+    return new o.aw(e, i, a, s);
 }
 function h(e) {
     return (14 + 11 * e) % 30 < 11;
 }
-class p {
+class _ {
     fromJulianDay(e) {
-        return _(this, o, e);
+        return p(this, s, e);
     }
     toJulianDay(e) {
-        return f(o, e.year, e.month, e.day);
+        return f(s, e.year, e.month, e.day);
     }
     getDaysInMonth(e) {
         let n = 29 + (e.month % 2);
@@ -55,9 +55,9 @@ class p {
         this.identifier = 'islamic-civil';
     }
 }
-class m extends p {
+class m extends _ {
     fromJulianDay(e) {
-        return _(this, l, e);
+        return p(this, l, e);
     }
     toJulianDay(e) {
         return f(l, e.year, e.month, e.day);
@@ -74,17 +74,17 @@ function v(e, n) {
     let r = 1 << (11 - (n - 1));
     return (i[e - u] & r) == 0 ? 29 : 30;
 }
-function I(e, n) {
+function y(e, n) {
     let r = E(e);
     for (let i = 1; i < n; i++) r += v(e, i);
     return r;
 }
-function T(e) {
+function b(e) {
     return a[e + 1 - u] - a[e - u];
 }
-class b extends p {
+class I extends _ {
     fromJulianDay(e) {
-        let n = e - o,
+        let n = e - s,
             r = E(u),
             i = E(c);
         if (n < r || n > i) return super.fromJulianDay(e);
@@ -94,7 +94,7 @@ class b extends p {
                 i = 1;
             for (; i > 0; ) {
                 i = n - E(++e) + 1;
-                let a = T(e);
+                let a = b(e);
                 if (i === a) {
                     r = 12;
                     break;
@@ -105,17 +105,17 @@ class b extends p {
                     break;
                 }
             }
-            return new s.aw(this, e, r, n - I(e, r) + 1);
+            return new o.aw(this, e, r, n - y(e, r) + 1);
         }
     }
     toJulianDay(e) {
-        return e.year < u || e.year > c ? super.toJulianDay(e) : o + I(e.year, e.month) + (e.day - 1);
+        return e.year < u || e.year > c ? super.toJulianDay(e) : s + y(e.year, e.month) + (e.day - 1);
     }
     getDaysInMonth(e) {
         return e.year < u || e.year > c ? super.getDaysInMonth(e) : v(e.year, e.month);
     }
     getDaysInYear(e) {
-        return e.year < u || e.year > c ? super.getDaysInYear(e) : T(e.year);
+        return e.year < u || e.year > c ? super.getDaysInYear(e) : b(e.year);
     }
     constructor() {
         if ((super(), (this.identifier = 'islamic-umalqura'), !i && (i = new Uint16Array(Uint8Array.from(atob(g), (e) => e.charCodeAt(0)).buffer)), !a)) {

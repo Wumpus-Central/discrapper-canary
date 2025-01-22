@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(939350),
+    o = r.n(a),
+    s = r(939350),
     l = r(450793);
 function u(e) {
     let { contents: n, label: r, className: a, color: u = 'default' } = e;
@@ -20,7 +20,7 @@ function u(e) {
               children: [
                   null != r
                       ? (0, i.jsx)('div', {
-                            className: s()(l.groupLabel, l.hideInteraction, o._[u]),
+                            className: o()(l.groupLabel, l.hideInteraction, s._[u]),
                             children: r
                         })
                       : null,

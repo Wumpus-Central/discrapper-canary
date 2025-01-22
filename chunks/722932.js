@@ -3,15 +3,15 @@ r.d(n, {
         return l;
     },
     uH: function () {
-        return o;
+        return s;
     },
     zv: function () {
-        return s;
+        return o;
     }
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     id: '2024-11_soundmoji_rendering',
     label: 'Render soundmojis',
     kind: 'user',
@@ -25,11 +25,11 @@ let s = (0, i.B)({
         }
     ]
 });
-function o(e) {
+function s(e) {
     let { location: n } = e;
-    return s.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
+    return o.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
 }
 function l(e) {
     let { location: n } = e;
-    return s.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled;
+    return o.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled;
 }

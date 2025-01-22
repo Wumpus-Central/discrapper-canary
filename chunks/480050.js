@@ -13,7 +13,7 @@ n.Z = l.memo(function (e) {
             x: 0,
             y: 0
         }),
-        [v, C] = (0, l.useState)({
+        [C, v] = (0, l.useState)({
             x: 0,
             y: 0
         }),
@@ -27,7 +27,7 @@ n.Z = l.memo(function (e) {
                 x: 0,
                 y: 0
             }),
-            C({
+            v({
                 x: 0,
                 y: 0
             }));
@@ -42,7 +42,7 @@ n.Z = l.memo(function (e) {
                         x: n,
                         y: i
                     }),
-                    C({
+                    v({
                         x: n - y.x,
                         y: i - y.y
                     });
@@ -68,7 +68,7 @@ n.Z = l.memo(function (e) {
                 let [i, l, r, a] = [null == p ? void 0 : p.top, null == p ? void 0 : p.right, null == p ? void 0 : p.bottom, null == p ? void 0 : p.left].map((e) => (null != e ? e : 0)),
                     [o, s] = [t.width + a + l > window.innerWidth, t.height + i + r > window.innerHeight];
                 if (!o && !s) return;
-                let [u, c] = [o ? e.clientX - v.x : 0, s ? e.clientY - v.y : 0],
+                let [u, c] = [o ? e.clientX - C.x : 0, s ? e.clientY - C.y : 0],
                     [d, f] = [u - y.x, c - y.y];
                 o && d + t.x - a >= 0 && (u = y.x - t.x + a), s && f + t.y - i >= 0 && (c = y.y - t.y + i);
                 let [m, h] = [t.x + t.width, t.y + t.height];
@@ -79,7 +79,7 @@ n.Z = l.memo(function (e) {
                         y: c
                     });
             },
-            [_, y, v.x, v.y, p]
+            [_, y, C.x, C.y, p]
         ),
         L = t ? (0, o.vV)(d, f, m, h) : 1,
         T = (0, l.useCallback)(() => {

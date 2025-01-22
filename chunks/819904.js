@@ -16,7 +16,7 @@ function n(e) {
             className: 'symbol',
             variants: [{ begin: /=[lgenxc]=/ }, { begin: /\$/ }]
         },
-        s = {
+        o = {
             className: 'comment',
             variants: [
                 {
@@ -31,11 +31,11 @@ function n(e) {
             illegal: '\\n',
             contains: [e.BACKSLASH_ESCAPE]
         },
-        o = {
+        s = {
             begin: '/',
             end: '/',
             keywords: r,
-            contains: [s, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, e.C_NUMBER_MODE]
+            contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, e.C_NUMBER_MODE]
         },
         l = /[a-z0-9&#*=?@\\><:,()$[\]_.{}!+%^-]+/,
         u = {
@@ -44,8 +44,8 @@ function n(e) {
             end: '$',
             endsWithParent: !0,
             contains: [
-                s,
                 o,
+                s,
                 {
                     className: 'comment',
                     begin: n.concat(l, n.anyNumberOfTimes(n.concat(/[ ]+/, l))),
@@ -80,7 +80,7 @@ function n(e) {
             {
                 beginKeywords: 'set sets parameter parameters variable variables scalar scalars equation equations',
                 end: ';',
-                contains: [e.COMMENT('^\\*', '$'), e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, o, u]
+                contains: [e.COMMENT('^\\*', '$'), e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, s, u]
             },
             {
                 beginKeywords: 'table',

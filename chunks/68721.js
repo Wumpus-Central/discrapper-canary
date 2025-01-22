@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(836560);
-var s = r(259443),
-    o = r(740197),
+var o = r(259443),
+    s = r(740197),
     l = r(106617),
     u = r(290488),
     c = r(830795),
     d = r(65154),
     f = r(231338);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -25,12 +25,12 @@ function _(e, n, r) {
         e
     );
 }
-let h = new s.Yd('Output'),
-    p = new l.Z();
+let h = new o.Yd('Output'),
+    _ = new l.Z();
 class m extends a.EventEmitter {
     destroy() {
         var e, n, r;
-        this.removeAllListeners(), null === (e = (n = this).cleanup) || void 0 === e || e.call(n), this.reset(), null != this.stream && (p.release(this.stream), (this.stream = void 0)), null === (r = this._audioFilter) || void 0 === r || r.dispose(), (this._audioFilter = void 0), (this.destroyed = !0);
+        this.removeAllListeners(), null === (e = (n = this).cleanup) || void 0 === e || e.call(n), this.reset(), null != this.stream && (_.release(this.stream), (this.stream = void 0)), null === (r = this._audioFilter) || void 0 === r || r.dispose(), (this._audioFilter = void 0), (this.destroyed = !0);
     }
     reset() {
         this.setSpeaking(!1);
@@ -81,8 +81,8 @@ class m extends a.EventEmitter {
         this._automaticGainControl !== e && ((this._automaticGainControl = e), null != this.stream && this.enable());
     }
     async enable() {
-        null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && (p.release(this.stream), (this.stream = void 0));
-        let e = await (0, o.Hg)(),
+        null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && (_.release(this.stream), (this.stream = void 0));
+        let e = await (0, s.Hg)(),
             n = {
                 echoCancellation: this.echoCancellation,
                 noiseSuppression: this.noiseSuppression,
@@ -90,8 +90,8 @@ class m extends a.EventEmitter {
             };
         e.some((e) => e.id === this.sourceId) && (n.deviceId = this.sourceId);
         try {
-            let e = await p.acquire({ audio: n });
-            if (this.destroyed) throw (p.release(e), Error('AudioInput: Already destroyed'));
+            let e = await _.acquire({ audio: n });
+            if (this.destroyed) throw (_.release(e), Error('AudioInput: Already destroyed'));
             if (this._noiseCancellation)
                 try {
                     let n = await (0, u.n)();
@@ -101,7 +101,7 @@ class m extends a.EventEmitter {
                             null === (n = this._audioFilter) || void 0 === n || n.enable();
                         }),
                         this._audioFilter.addEventListener('dispose', (n) => {
-                            p.release(e);
+                            _.release(e);
                         });
                     let r = this.context.createMediaStreamSource(e),
                         i = this.context.createMediaStreamDestination();
@@ -171,24 +171,24 @@ class m extends a.EventEmitter {
     }
     constructor(e) {
         super(),
-            _(this, 'stream', void 0),
-            _(this, 'context', void 0),
-            _(this, 'sourceId', void 0),
-            _(this, '_mute', !1),
-            _(this, '_echoCancellation', !0),
-            _(this, '_noiseSuppression', !0),
-            _(this, '_automaticGainControl', !0),
-            _(this, '_noiseCancellation', !1),
-            _(this, '_audioFilter', void 0),
-            _(this, 'speaking', !1),
-            _(this, 'mode', d.pM.VOICE_ACTIVITY),
-            _(this, 'modeOptions', {
+            p(this, 'stream', void 0),
+            p(this, 'context', void 0),
+            p(this, 'sourceId', void 0),
+            p(this, '_mute', !1),
+            p(this, '_echoCancellation', !0),
+            p(this, '_noiseSuppression', !0),
+            p(this, '_automaticGainControl', !0),
+            p(this, '_noiseCancellation', !1),
+            p(this, '_audioFilter', void 0),
+            p(this, 'speaking', !1),
+            p(this, 'mode', d.pM.VOICE_ACTIVITY),
+            p(this, 'modeOptions', {
                 delay: 20,
                 threshold: -40
             }),
-            _(this, 'cleanup', void 0),
-            _(this, 'pttReleaseDelayTimeout', void 0),
-            _(this, 'destroyed', !1),
+            p(this, 'cleanup', void 0),
+            p(this, 'pttReleaseDelayTimeout', void 0),
+            p(this, 'destroyed', !1),
             (this.context = e);
     }
 }

@@ -3,7 +3,7 @@ r.d(n, {
         return f;
     },
     eE: function () {
-        return _;
+        return p;
     },
     jZ: function () {
         return i;
@@ -12,8 +12,8 @@ r.d(n, {
 var i,
     a = r(200651);
 r(192379);
-var s = r(120356),
-    o = r.n(s),
+var o = r(120356),
+    s = r.n(o),
     l = r(692547),
     u = r(481060),
     c = r(388032),
@@ -25,27 +25,27 @@ let f = {
         LARGE: d.liveLarge,
         SMALL: d.liveSmall
     },
-    _ = {
+    p = {
         [u.BadgeShapes.ROUND]: d.liveShapeRound,
         [u.BadgeShapes.ROUND_LEFT]: d.liveShapeRoundLeft,
         [u.BadgeShapes.ROUND_RIGHT]: d.liveShapeRoundRight,
         [u.BadgeShapes.SQUARE]: ''
     };
 function h(e) {
-    let { className: n, style: r, shape: i = u.BadgeShapes.ROUND, look: s = 'RED', size: h = f.LARGE } = e;
-    return 'RED' === s
+    let { className: n, style: r, shape: i = u.BadgeShapes.ROUND, look: o = 'RED', size: h = f.LARGE } = e;
+    return 'RED' === o
         ? (0, a.jsx)(u.TextBadge, {
               text: c.intl.string(c.t.dI3q4u),
-              className: o()(n, d.live, h),
+              className: s()(n, d.live, h),
               color: l.Z.unsafe_rawColors.RED_400.css,
-              shape: _[i],
+              shape: p[i],
               style: r
           })
         : (0, a.jsx)(u.TextBadge, {
               text: c.intl.string(c.t.dI3q4u),
-              className: o()(n, d.live, h, d.grey),
+              className: s()(n, d.live, h, d.grey),
               disableColor: !0,
-              shape: _[i],
+              shape: p[i],
               style: r
           });
 }

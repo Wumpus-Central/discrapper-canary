@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(150039),
-    s = r(768581),
-    o = r(74538),
+    o = r(768581),
+    s = r(74538),
     l = r(474936);
 function u(e, n, r) {
     return (
@@ -39,7 +39,7 @@ class d {
         return null !== (n = null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) && void 0 !== n ? n : this.accentColor;
     }
     get canUsePremiumProfileCustomization() {
-        return o.ZP.isPremiumAtLeast(this.premiumType, l.p9.TIER_2);
+        return s.ZP.isPremiumAtLeast(this.premiumType, l.p9.TIER_2);
     }
     get canEditThemes() {
         return this.canUsePremiumProfileCustomization;
@@ -72,14 +72,14 @@ class d {
     getBannerURL(e) {
         let { canAnimate: n, size: r } = e;
         return null != this.guildId && this.isUsingGuildMemberBanner()
-            ? (0, s.tp)({
+            ? (0, o.tp)({
                   id: this.userId,
                   guildId: this.guildId,
                   banner: this.banner,
                   canAnimate: n,
                   size: r
               })
-            : (0, s.aN)({
+            : (0, o.aN)({
                   id: this.userId,
                   banner: this.banner,
                   canAnimate: n,
@@ -92,7 +92,7 @@ class d {
             ? e
             : null === e
               ? this.isUsingGuildMemberBanner()
-                  ? (0, s.aN)({
+                  ? (0, o.aN)({
                         id: this.userId,
                         banner: this._userProfile.banner,
                         canAnimate: n,

@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(392711),
-    o = r.n(s),
+var o = r(392711),
+    s = r.n(o),
     l = r(442837),
     u = r(570140),
     c = r(131704),
@@ -19,28 +19,28 @@ function f(e, n, r) {
         e
     );
 }
-let _ = {};
+let p = {};
 function h(e) {
-    _ = o().omitBy(_, (n) => n.guildId === e);
+    p = s().omitBy(p, (n) => n.guildId === e);
 }
-function p(e) {
-    _ = o().omitBy(_, (n) => n.parentId === e);
+function _(e) {
+    p = s().omitBy(p, (n) => n.parentId === e);
 }
 function m(e) {
     var n;
     null === (n = e.threads) || void 0 === n || n.forEach(E);
 }
 function g(e) {
-    if (!(e.id in _)) {
+    if (!(e.id in p)) {
         var n, r;
-        _[e.id] = {
+        p[e.id] = {
             guildId: e.guild_id,
             parentId: e.parent_id,
             memberCount: null !== (n = e.memberCount) && void 0 !== n ? n : 0,
             memberIdsPreview: null !== (r = e.memberIdsPreview) && void 0 !== r ? r : []
         };
     }
-    return _[e.id];
+    return p[e.id];
 }
 function E(e) {
     if (!c.AW.has(e.type)) return !1;
@@ -48,21 +48,21 @@ function E(e) {
     null != e.memberCount && (n.memberCount = e.memberCount), null != e.memberIdsPreview && (n.memberIdsPreview = e.memberIdsPreview);
 }
 function v(e) {
-    (_ = {}), e.guilds.forEach(m);
+    (p = {}), e.guilds.forEach(m);
 }
-function I(e) {
+function y(e) {
     let { threadMembers: n } = e;
-    _ = { ...n };
-}
-function T(e) {
-    let { guild: n } = e;
-    m(n);
+    p = { ...n };
 }
 function b(e) {
     let { guild: n } = e;
+    m(n);
+}
+function I(e) {
+    let { guild: n } = e;
     h(n.id);
 }
-function y(e) {
+function T(e) {
     let { channel: n } = e;
     return E(n);
 }
@@ -74,13 +74,13 @@ function A(e) {
     let { threads: n } = e;
     n.forEach(D);
 }
-function N(e) {
-    let { channel: n } = e;
-    p(n.id);
-}
 function C(e) {
     let { channel: n } = e;
-    delete _[n.id];
+    _(n.id);
+}
+function N(e) {
+    let { channel: n } = e;
+    delete p[n.id];
 }
 function R(e) {
     let n = !1;
@@ -98,48 +98,48 @@ function O(e) {
     );
 }
 function D(e) {
-    if (null != e && !(e.id in _)) {
+    if (null != e && !(e.id in p)) {
         let n = d.Z.getChannel(e.id);
         if (null != n) return E(n), !0;
     }
     return !1;
 }
-function L(e) {
-    let n = _[e.id];
+function x(e) {
+    let n = p[e.id];
     if (null == n) return !1;
     null != e.memberIdsPreview && (n.memberIdsPreview = e.memberIdsPreview), (n.memberCount = e.memberCount);
 }
-class x extends (i = l.ZP.Store) {
+class L extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
     getMemberCount(e) {
         var n, r;
-        return null !== (r = null === (n = _[e]) || void 0 === n ? void 0 : n.memberCount) && void 0 !== r ? r : null;
+        return null !== (r = null === (n = p[e]) || void 0 === n ? void 0 : n.memberCount) && void 0 !== r ? r : null;
     }
     getMemberIdsPreview(e) {
         var n, r;
-        return null !== (r = null === (n = _[e]) || void 0 === n ? void 0 : n.memberIdsPreview) && void 0 !== r ? r : null;
+        return null !== (r = null === (n = p[e]) || void 0 === n ? void 0 : n.memberIdsPreview) && void 0 !== r ? r : null;
     }
     getInitialOverlayState() {
-        return _;
+        return p;
     }
 }
-f(x, 'displayName', 'ThreadMembersStore'),
-    (n.Z = new x(u.Z, {
+f(L, 'displayName', 'ThreadMembersStore'),
+    (n.Z = new L(u.Z, {
         CONNECTION_OPEN: v,
-        OVERLAY_INITIALIZE: I,
-        GUILD_CREATE: T,
-        GUILD_DELETE: b,
-        CHANNEL_DELETE: N,
-        THREAD_CREATE: y,
-        THREAD_UPDATE: y,
+        OVERLAY_INITIALIZE: y,
+        GUILD_CREATE: b,
+        GUILD_DELETE: I,
+        CHANNEL_DELETE: C,
+        THREAD_CREATE: T,
+        THREAD_UPDATE: T,
         THREAD_LIST_SYNC: S,
-        THREAD_MEMBERS_UPDATE: L,
+        THREAD_MEMBERS_UPDATE: x,
         SEARCH_FINISH: O,
         MOD_VIEW_SEARCH_FINISH: O,
         LOAD_THREADS_SUCCESS: A,
         LOAD_ARCHIVED_THREADS_SUCCESS: A,
-        THREAD_DELETE: C,
+        THREAD_DELETE: N,
         LOAD_MESSAGES_SUCCESS: R
     }));

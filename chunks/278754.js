@@ -1,9 +1,9 @@
 r.d(n, {
     AW: function () {
-        return s;
+        return o;
     },
     Ju: function () {
-        return o;
+        return s;
     },
     pR: function () {
         return l;
@@ -11,14 +11,14 @@ r.d(n, {
 });
 var i = r(695346),
     a = r(990266);
-function s(e) {
+function o(e) {
     i.up.updateSetting(e);
 }
-function o() {
+function s() {
     let { disabled: e } = a.Z.useExperiment({ location: 'ExpressionSuggestions' });
     return e;
 }
 function l() {
     let e = i.up.useSetting();
-    return !o() && e;
+    return !s() && e;
 }

@@ -1,10 +1,10 @@
-t.d(n, {
+r.d(n, {
     T: function () {
-        return l;
+        return a;
     }
 });
-var i = t(388032);
-function l(e) {
+var i = r(388032);
+function a(e) {
     switch (e) {
         case 'brl':
             return i.intl.string(i.t.qEyr9v);

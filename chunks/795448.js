@@ -3,10 +3,10 @@ r.d(n, {
         return l;
     },
     Ni: function () {
-        return o;
+        return s;
     },
     PV: function () {
-        return s;
+        return o;
     },
     d$: function () {
         return a;
@@ -16,13 +16,13 @@ var i = r(570140);
 function a() {
     i.Z.dispatch({ type: 'FRIENDS_LIST_GIFT_INTENTS_SHOWN' });
 }
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'MESSAGE_GIFT_INTENT_SHOWN',
         recipientUserId: e
     });
 }
-function o(e) {
+function s(e) {
     i.Z.dispatch({
         type: 'GIFT_INTENT_FLOW_PURCHASED_GIFT',
         recipientUserId: e

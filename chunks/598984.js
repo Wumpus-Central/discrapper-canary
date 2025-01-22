@@ -1,6 +1,6 @@
 r.d(n, {
     NR: function () {
-        return s;
+        return o;
     },
     Ob: function () {
         return u;
@@ -9,7 +9,7 @@ r.d(n, {
         return d;
     },
     ZI: function () {
-        return o;
+        return s;
     },
     m1: function () {
         return c;
@@ -20,7 +20,7 @@ r.d(n, {
 });
 var i = r(987170),
     a = r(987338);
-let s = (0, i.Z)({
+let o = (0, i.Z)({
         kind: 'user',
         id: '2024-06_ctp_app_open_vanilla',
         label: 'CTP app open - A/A test - Vanilla',
@@ -34,7 +34,7 @@ let s = (0, i.Z)({
             }
         ]
     }),
-    o = (0, i.Z)({
+    s = (0, i.Z)({
         kind: 'user',
         id: '2024-06_ctp_app_open_filters',
         label: 'CTP app open - A/A test - Filters',

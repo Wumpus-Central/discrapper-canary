@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(653041);
-var s = r(31775),
-    o = r.n(s),
+var o = r(31775),
+    s = r.n(o),
     l = r(147913),
     u = r(626135),
     c = r(709054),
@@ -19,9 +19,9 @@ function f(e, n, r) {
         e
     );
 }
-let _ = 60000,
+let p = 60000,
     h = 1000,
-    p = 10,
+    _ = 10,
     m = 2000,
     g = 500;
 class E extends l.Z {
@@ -29,7 +29,7 @@ class E extends l.Z {
         let { messageId: n } = e;
         if (null != this.currentlyVisibleMessageTimers[n] || this.viewsInCurrentChannel.has(n)) return;
         let r = this.recentViewTimes.get(n);
-        if (null != r && Date.now() - r < _) return;
+        if (null != r && Date.now() - r < p) return;
         let i = setTimeout(() => {
             delete this.currentlyVisibleMessageTimers[n], this.viewsInCurrentChannel.add(n), this.recentViewTimes.set(n, Date.now()), this.bufferViewTrack(e);
         }, h);
@@ -60,7 +60,7 @@ class E extends l.Z {
         (this.batchBuffer = []), null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
     }
     bufferViewTrack(e) {
-        this.batchBuffer.length >= p && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), m));
+        this.batchBuffer.length >= _ && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), m));
     }
     constructor(...e) {
         super(...e),
@@ -69,9 +69,9 @@ class E extends l.Z {
             f(
                 this,
                 'recentViewTimes',
-                new (o())({
+                new (s())({
                     max: g,
-                    maxAge: _
+                    maxAge: p
                 })
             ),
             f(this, 'batchBuffer', []),

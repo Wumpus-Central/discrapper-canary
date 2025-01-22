@@ -7,7 +7,7 @@ r.d(n, {
         return a;
     },
     nf: function () {
-        return s;
+        return o;
     }
 }),
     !(function (e) {
@@ -16,7 +16,7 @@ r.d(n, {
     !(function (e) {
         (e[(e.Low = 0)] = 'Low'), (e[(e.Medium = 1)] = 'Medium'), (e[(e.High = 2)] = 'High');
     })(a || (a = {}));
-let s = {
+let o = {
     careALot: {
         monthOpenPerc: 0.01,
         yearOpenPerc: 0.01,

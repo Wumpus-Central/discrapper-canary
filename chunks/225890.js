@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(281956),
     s = n(922482),
     c = n(592125),
-    d = n(271383),
-    u = n(430824),
+    u = n(271383),
+    d = n(430824),
     m = n(594174),
     h = n(897285),
     f = n(924301),
@@ -28,17 +28,17 @@ function E(e) {
             channel: N,
             isMember: v
         } = (0, l.cj)(
-            [f.ZP, u.Z, c.Z, d.ZP, m.default],
+            [f.ZP, d.Z, c.Z, u.ZP, m.default],
             () => {
                 var e, t;
                 let i = null !== (t = f.ZP.getGuildScheduledEvent(E)) && void 0 !== t ? t : void 0,
-                    r = u.Z.getGuild(n),
+                    r = d.Z.getGuild(n),
                     l = c.Z.getChannel(null == i ? void 0 : i.channel_id);
                 return {
                     guildScheduledEvent: i,
                     guild: r,
                     channel: l,
-                    isMember: d.ZP.isMember(n, null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
+                    isMember: u.ZP.isMember(n, null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
                 };
             },
             [n, E]

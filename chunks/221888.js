@@ -1,58 +1,58 @@
 r.d(n, {
     Z: function () {
-        return L;
+        return x;
     }
 });
 var i = r(411104);
 var a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(120356),
     u = r.n(l),
     c = r(392711),
     d = r.n(c),
     f = r(442837),
-    _ = r(846519),
+    p = r(846519),
     h = r(481060),
-    p = r(239091),
+    _ = r(239091),
     m = r(410575),
     g = r(751688),
     E = r(199902),
     v = r(594174),
-    I = r(823379),
-    T = r(5192),
-    b = r(354459),
-    y = r(981631),
+    y = r(823379),
+    b = r(5192),
+    I = r(354459),
+    T = r(981631),
     S = r(388032),
     A = r(140369);
-let N = 150;
-function C(e, n) {
+let C = 150;
+function N(e, n) {
     switch (e) {
-        case b.fO.ACTIVITY:
+        case I.fO.ACTIVITY:
             return S.intl.formatToPlainString(S.t.TCM94e, { numUsers: n });
-        case b.fO.STREAM:
+        case I.fO.STREAM:
             return S.intl.formatToPlainString(S.t.BR7Tnp, { numViewers: n });
         default:
             throw Error('Unknown participant type.');
     }
 }
 function R(e) {
-    let { users: n, disableInteraction: r, guildId: i, participantType: a, channelId: o, handleUserContextMenu: l } = e,
-        c = C(a, n.length);
-    return (0, s.jsx)(h.Dialog, {
+    let { users: n, disableInteraction: r, guildId: i, participantType: a, channelId: s, handleUserContextMenu: l } = e,
+        c = N(a, n.length);
+    return (0, o.jsx)(h.Dialog, {
         'aria-label': c,
         className: A.popoutWrapper,
-        children: (0, s.jsxs)(h.Scroller, {
+        children: (0, o.jsxs)(h.Scroller, {
             className: A.scroller,
             children: [
-                (0, s.jsx)(h.Heading, {
+                (0, o.jsx)(h.Heading, {
                     variant: 'heading-deprecated-12/semibold',
                     className: A.memberListHeader,
                     children: c
                 }),
-                (0, s.jsx)('div', {
+                (0, o.jsx)('div', {
                     children: n.map((e) =>
-                        (0, s.jsx)(
+                        (0, o.jsx)(
                             g.Z,
                             {
                                 guildId: null != i ? i : void 0,
@@ -60,7 +60,7 @@ function R(e) {
                                 textClassName: A.memberListItemText,
                                 user: e,
                                 disablePopout: r,
-                                nick: T.ZP.getNickname(i, o, e),
+                                nick: b.ZP.getNickname(i, s, e),
                                 onContextMenu: (n) => (r ? null : l(n, e))
                             },
                             e.id
@@ -72,33 +72,33 @@ function R(e) {
     });
 }
 function O(e) {
-    let { users: n, guildId: r, channelId: i, maxVisibleUsers: a = 3, className: o, participantType: l } = e,
-        c = C(l, n.length),
+    let { users: n, guildId: r, channelId: i, maxVisibleUsers: a = 3, className: s, participantType: l } = e,
+        c = N(l, n.length),
         d =
             n.length < a
                 ? n.map((e) =>
-                      (0, s.jsx)(
+                      (0, o.jsx)(
                           'div',
                           {
                               className: A.viewersTooltipItem,
-                              children: T.ZP.getName(r, i, e)
+                              children: b.ZP.getName(r, i, e)
                           },
                           e.id
                       )
                   )
                 : c;
-    return (0, s.jsx)(h.TooltipContainer, {
+    return (0, o.jsx)(h.TooltipContainer, {
         text: d,
         'aria-label': c,
-        children: (0, s.jsxs)('div', {
-            className: u()(A.viewers, o),
+        children: (0, o.jsxs)('div', {
+            className: u()(A.viewers, s),
             children: [
-                (0, s.jsx)(h.EyeIcon, {
+                (0, o.jsx)(h.EyeIcon, {
                     size: 'xs',
                     color: 'currentColor',
                     className: A.viewersIcon
                 }),
-                (0, s.jsx)('span', {
+                (0, o.jsx)('span', {
                     'aria-hidden': 'true',
                     children: n.length
                 })
@@ -107,42 +107,42 @@ function O(e) {
     });
 }
 let D = [];
-function L(e) {
-    let { channelId: n, guildId: i, participant: a, className: l, compact: c = !1, disableInteraction: g = !1, maxVisibleUsers: T = 3 } = e,
-        [S, C] = o.useState(!1),
-        L = o.useRef(new _.sW(N, () => C(!1))),
-        x = (0, f.Wu)(
+function x(e) {
+    let { channelId: n, guildId: i, participant: a, className: l, compact: c = !1, disableInteraction: g = !1, maxVisibleUsers: b = 3 } = e,
+        [S, N] = s.useState(!1),
+        x = s.useRef(new p.sW(C, () => N(!1))),
+        L = (0, f.Wu)(
             [E.Z, v.default],
             () => {
-                if (a.type === b.fO.STREAM) {
+                if (a.type === I.fO.STREAM) {
                     let e = E.Z.getViewerIds(a.id);
-                    return e.length > 0 ? e.map((e) => v.default.getUser(e)).filter(I.lm) : D;
+                    return e.length > 0 ? e.map((e) => v.default.getUser(e)).filter(y.lm) : D;
                 }
-                return a.type === b.fO.ACTIVITY
+                return a.type === I.fO.ACTIVITY
                     ? a.participants.length > 0
                         ? Array.from(a.participants)
                               .map((e) => v.default.getUser(e.userId))
-                              .filter(I.lm)
+                              .filter(y.lm)
                         : D
                     : D;
             },
             [a]
         ),
-        w = o.useCallback(() => {
-            L.current.cancel(), C(!0);
+        w = s.useCallback(() => {
+            x.current.cancel(), N(!0);
         }, []),
-        P = o.useCallback(() => {
-            L.current.delay();
+        P = s.useCallback(() => {
+            x.current.delay();
         }, []),
-        M = o.useCallback(
+        M = s.useCallback(
             (e, n) => {
                 w(),
-                    (0, p.jW)(
+                    (0, _.jW)(
                         e,
                         async () => {
                             let { default: e } = await Promise.all([r.e('79695'), r.e('69220'), r.e('351')]).then(r.bind(r, 881351));
                             return (r) =>
-                                (0, s.jsx)(e, {
+                                (0, o.jsx)(e, {
                                     ...r,
                                     user: n
                                 });
@@ -152,20 +152,20 @@ function L(e) {
             },
             [P, w]
         );
-    if (0 === x.length) return null;
+    if (0 === L.length) return null;
     if (c)
-        return (0, s.jsx)(O, {
-            maxVisibleUsers: T,
-            users: x,
+        return (0, o.jsx)(O, {
+            maxVisibleUsers: b,
+            users: L,
             guildId: i,
             channelId: n,
             className: l,
             participantType: a.type
         });
-    let k = d()(x)
-        .take(T)
+    let k = d()(L)
+        .take(b)
         .map((e) =>
-            (0, s.jsx)(
+            (0, o.jsx)(
                 h.Avatar,
                 {
                     src: e.getAvatarURL(i, 24),
@@ -178,34 +178,34 @@ function L(e) {
         )
         .value();
     return (
-        x.length > T &&
-            (k[k.length - 1] = (0, s.jsxs)(
+        L.length > b &&
+            (k[k.length - 1] = (0, o.jsxs)(
                 'div',
                 {
                     className: A.overflow,
-                    children: ['+', x.length - T + 1]
+                    children: ['+', L.length - b + 1]
                 },
                 'overflow'
             )),
-        (0, s.jsx)(m.Z, {
-            section: y.jXE.STREAM_VIEWER_POPOUT,
-            children: (0, s.jsx)('div', {
+        (0, o.jsx)(m.Z, {
+            section: T.jXE.STREAM_VIEWER_POPOUT,
+            children: (0, o.jsx)('div', {
                 onMouseEnter: w,
                 onMouseLeave: P,
-                children: (0, s.jsx)(h.Popout, {
+                children: (0, o.jsx)(h.Popout, {
                     renderPopout: () =>
-                        (0, s.jsx)(R, {
+                        (0, o.jsx)(R, {
                             participantType: a.type,
                             handleUserContextMenu: M,
                             guildId: i,
                             channelId: n,
-                            users: x,
+                            users: L,
                             disableInteraction: g
                         }),
                     shouldShow: S,
                     position: 'top',
                     children: () =>
-                        (0, s.jsx)('div', {
+                        (0, o.jsx)('div', {
                             className: u()(A.viewers, l),
                             children: k
                         })

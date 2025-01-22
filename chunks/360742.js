@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(81825),
     a = r(598077);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,15 +18,15 @@ function s(e, n, r) {
         e
     );
 }
-class o extends i.Z {
+class s extends i.Z {
     static createFromServer(e) {
-        return new o({
+        return new s({
             ...e,
             user: new a.Z(e.user)
         });
     }
     constructor(e) {
         var n;
-        super(), s(this, 'id', void 0), s(this, 'name', void 0), s(this, 'type', void 0), s(this, 'user', void 0), s(this, 'displayName', void 0), (this.id = e.id), (this.name = e.name), (this.type = e.type), (this.user = e.user), (this.displayName = null !== (n = e.name_localized) && void 0 !== n ? n : e.name);
+        super(), o(this, 'id', void 0), o(this, 'name', void 0), o(this, 'type', void 0), o(this, 'user', void 0), o(this, 'displayName', void 0), (this.id = e.id), (this.name = e.name), (this.type = e.type), (this.user = e.user), (this.displayName = null !== (n = e.name_localized) && void 0 !== n ? n : e.name);
     }
 }

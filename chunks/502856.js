@@ -1,5 +1,5 @@
-e.exports = function (e, t) {
+e.exports = function (e, n) {
     try {
-        1 == arguments.length ? console.error(e) : console.error(e, t);
+        1 == arguments.length ? console.error(e) : console.error(e, n);
     } catch (e) {}
 };

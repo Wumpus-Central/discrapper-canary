@@ -5,12 +5,12 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(442837),
-    o = r(258609),
+    o = r(442837),
+    s = r(258609),
     l = r(548204);
 function u(e) {
     let { body: n, dismissCallback: r, errorCodeMessage: u } = e,
-        c = (0, s.e7)([o.Z], () => o.Z.getRemoteSessionId());
+        c = (0, o.e7)([s.Z], () => s.Z.getRemoteSessionId());
     return (a.useEffect(() => {
         null != c && r();
     }, [c, r]),

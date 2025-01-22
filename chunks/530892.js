@@ -1,6 +1,6 @@
 var i = r(44091),
     a = r(757647);
-function s(e) {
+function o(e) {
     return a(i(e).toLowerCase());
 }
-e.exports = s;
+e.exports = o;

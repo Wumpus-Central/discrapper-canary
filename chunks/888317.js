@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(481060),
-    s = r(499254),
-    o = r(827498),
+    o = r(499254),
+    s = r(827498),
     l = r(541716),
     u = r(26033),
     c = r(388032);
@@ -17,7 +17,7 @@ function d(e) {
               id: 'view-activity',
               label: c.intl.string(c.t.GDWYR0),
               action: () => {
-                  null == d || d({ action: 'PRESS_VIEW_ACTIVITY_MENU_ITEM' }), null == f || f(), (0, s.__)(o._b.TEXT, l.Ie.NORMAL, { applicationId: r.extra.application_id });
+                  null == d || d({ action: 'PRESS_VIEW_ACTIVITY_MENU_ITEM' }), null == f || f(), (0, o.__)(s._b.TEXT, l.Ie.NORMAL, { applicationId: r.extra.application_id });
               }
           })
         : null;

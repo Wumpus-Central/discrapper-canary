@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(778787);
@@ -17,10 +17,10 @@ function a(e, n, r) {
         e
     );
 }
-class s extends i.q {
+class o extends i.q {
     static fromServer(e) {
         let { purchased_at: n, purchase_type: r, expires_at: i, ...a } = e;
-        return new s({
+        return new o({
             ...super.fromServer(a),
             purchaseType: r,
             purchasedAt: null != n ? new Date(n) : n,

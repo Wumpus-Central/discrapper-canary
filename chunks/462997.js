@@ -1,11 +1,11 @@
 r.d(n, {
     q: function () {
-        return s;
+        return o;
     }
 });
 var i = r(481060),
     a = r(228168);
-let s = {
+let o = {
     [a.y0.BITE_SIZE]: {
         avatarSize: i.AvatarSizes.SIZE_80,
         avatarOffsetX: 10,

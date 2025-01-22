@@ -6,10 +6,10 @@ r.d(n, {
         return f;
     },
     HR: function () {
-        return _;
+        return p;
     },
     Mr: function () {
-        return o;
+        return s;
     },
     f1: function () {
         return d;
@@ -24,7 +24,7 @@ r.d(n, {
         return i;
     },
     zf: function () {
-        return s;
+        return o;
     }
 });
 var i,
@@ -32,11 +32,11 @@ var i,
 !(function (e) {
     (e[(e.DISCORD_EMPLOYEE_ASKED_ME_TO = 0)] = 'DISCORD_EMPLOYEE_ASKED_ME_TO'), (e[(e.SOMEONE_ASKED_ME_TO = 1)] = 'SOMEONE_ASKED_ME_TO'), (e[(e.NEW_EMAIL = 2)] = 'NEW_EMAIL'), (e[(e.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');
 })(i || (i = {}));
-let s = [0, 1, 2, 3],
-    o = new Set([0, 1]),
+let o = [0, 1, 2, 3],
+    s = new Set([0, 1]),
     l = 'https://discord.com/safety/understanding-and-avoiding-common-scams',
     u = 1024,
     c = 'verification',
     d = 'AGREEMENTS_MODAL_KEY',
     f = 'Email Verification',
-    _ = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';
+    p = 'PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY';

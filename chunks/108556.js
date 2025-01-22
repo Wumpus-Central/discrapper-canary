@@ -1,3 +1,3 @@
-n(456043);
-var r = n(974802);
-e.exports = r.Object.entries;
+r(456043);
+var i = r(974802);
+e.exports = i.Object.entries;

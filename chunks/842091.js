@@ -1,18 +1,18 @@
 var i = r(477660),
     a = r.n(i),
-    s = r(840498);
-function o(e, n, r, i, a) {
-    let o;
+    o = r(840498);
+function s(e, n, r, i, a) {
+    let s;
     return (
         !r && (n += '\n\n'),
-        (o = e(n, {
+        (s = e(n, {
             inline: r,
             ...i
         })),
-        (o = (0, s.ge)(o)),
-        (o = (0, s.RA)(o)),
-        null != a && (o = a(o, r)),
-        o
+        (s = (0, o.ge)(s)),
+        (s = (0, o.RA)(s)),
+        null != a && (s = a(s, r)),
+        s
     );
 }
 n.Z = {
@@ -23,8 +23,8 @@ n.Z = {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
                 i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            return r(o(n, e, i, a, s), a);
+                o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            return r(s(n, e, i, a, o), a);
         };
     },
     astParserFor(e) {
@@ -34,7 +34,7 @@ n.Z = {
                 r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            return o(n, e, r, i, a);
+            return s(n, e, r, i, a);
         };
     }
 };

@@ -1,16 +1,16 @@
-var r = n(67867),
-    o = n(570596),
-    a = n(653457);
-r(
+var i = r(67867),
+    a = r(570596),
+    o = r(653457);
+i(
     {
         target: 'Promise',
         stat: !0,
-        forced: n(732116).CONSTRUCTOR
+        forced: r(732116).CONSTRUCTOR
     },
     {
         reject: function (e) {
-            var t = a.f(this);
-            return o(t.reject, void 0, e), t.promise;
+            var n = o.f(this);
+            return a(n.reject, void 0, e), n.promise;
         }
     }
 );

@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(120356),
     u = r.n(l),
     c = r(532712),
     d = r(84735),
     f = r(981631);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -25,18 +25,18 @@ function _(e, n, r) {
         e
     );
 }
-class h extends (i = o.Component) {
+class h extends (i = s.Component) {
     renderNonInteractive() {
-        let { tag: e, focusProps: n, innerRef: r, onClick: i, role: a, tabIndex: s, ...l } = this.props;
-        return o.createElement(e, {
+        let { tag: e, focusProps: n, innerRef: r, onClick: i, role: a, tabIndex: o, ...l } = this.props;
+        return s.createElement(e, {
             ref: this.setRef,
             ...l
         });
     }
     renderInner() {
-        let { tag: e, onClick: n, className: r, children: i, focusProps: a, innerRef: s, ...l } = this.props;
+        let { tag: e, onClick: n, className: r, children: i, focusProps: a, innerRef: o, ...l } = this.props;
         return null == n
-            ? o.createElement(
+            ? s.createElement(
                   e,
                   {
                       ref: this.setRef,
@@ -45,7 +45,7 @@ class h extends (i = o.Component) {
                   },
                   i
               )
-            : o.createElement(
+            : s.createElement(
                   e,
                   {
                       onClick: n,
@@ -60,27 +60,27 @@ class h extends (i = o.Component) {
     render() {
         return this.context
             ? this.renderNonInteractive()
-            : (0, s.jsx)(d.t, {
+            : (0, o.jsx)(d.t, {
                   ...this.props.focusProps,
                   children: this.renderInner()
               });
     }
     constructor(...e) {
         super(...e),
-            _(this, 'ref', void 0),
-            _(this, 'handleKeyPress', (e) => {
+            p(this, 'ref', void 0),
+            p(this, 'handleKeyPress', (e) => {
                 let { onClick: n, href: r, onKeyPress: i, ignoreKeyPress: a } = this.props;
                 !e.repeat && (!a && null != n && null != this.ref && (e.charCode === f.yXg.SPACE || e.charCode === f.yXg.ENTER) && (null == r && e.preventDefault(), null == this.ref.click ? n(e) : this.ref.click()), null != i && i(e));
             }),
-            _(this, 'setRef', (e) => {
+            p(this, 'setRef', (e) => {
                 this.ref = e;
                 let { innerRef: n } = this.props;
                 null != n && ('function' == typeof n ? n(e) : n.hasOwnProperty('current') && (n.current = e));
             });
     }
 }
-_(h, 'contextType', c.g),
-    _(h, 'defaultProps', {
+p(h, 'contextType', c.g),
+    p(h, 'defaultProps', {
         tag: 'div',
         role: 'button',
         tabIndex: 0

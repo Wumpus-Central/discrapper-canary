@@ -17,8 +17,8 @@ var i = t(200651),
     E = t(358085),
     S = t(998502),
     x = t(254109),
-    v = t(212459),
-    C = t(369171),
+    C = t(212459),
+    v = t(369171),
     y = t(701865),
     I = t(388032),
     b = t(197736);
@@ -48,7 +48,7 @@ function O(e) {
     });
 }
 function L() {
-    let { zoomed: e, setZoomed: n } = (0, v.Y)();
+    let { zoomed: e, setZoomed: n } = (0, C.Y)();
     return (0, i.jsx)(O, {
         onClick: () => {
             (0, x.yg)(e ? x.uG.ZOOM_OUT_BUTTON_PRESSED : x.uG.ZOOM_IN_BUTTON_PRESSED), n(!e);
@@ -127,7 +127,7 @@ function R(e) {
         children: (0, i.jsx)(o.WindowLaunchIcon, {})
     });
 }
-function j(e) {
+function D(e) {
     var n, t;
     let { item: l, canCopyImage: r, canCopyLink: a, onClose: u, onSelect: c } = e,
         d = (null === (t = l.sourceMetadata) || void 0 === t ? void 0 : null === (n = t.identifier) || void 0 === n ? void 0 : n.type) === 'attachment' ? l.sourceMetadata.identifier.attachmentId : null,
@@ -138,9 +138,9 @@ function j(e) {
         p = (function (e) {
             var n;
             let { alt: t, sourceMetadata: l, width: r, height: a } = e,
-                s = D(I.intl.string(I.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
-                u = D(I.intl.string(I.t.sPO3io), 'size'),
-                c = D(I.intl.string(I.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
+                s = j(I.intl.string(I.t.ILJuBg), 'name', { subtextLineClamp: 1 }),
+                u = j(I.intl.string(I.t.sPO3io), 'size'),
+                c = j(I.intl.string(I.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
             if ((null == l ? void 0 : null === (n = l.identifier) || void 0 === n ? void 0 : n.type) !== 'attachment') return null;
             let d = (0, m.Z)(l.identifier),
                 f = (0, g.BU)(l.identifier.size / 1000);
@@ -215,7 +215,7 @@ function j(e) {
         ]
     });
 }
-function D(e, n, t) {
+function j(e, n, t) {
     let r = l.useCallback((e) => {
         (0, p.JG)(e),
             (0, o.showToast)({
@@ -255,7 +255,7 @@ function N(e) {
               onRequestClose: () => s(!1),
               animation: o.Popout.Animation.NONE,
               renderPopout: () =>
-                  (0, i.jsx)(j, {
+                  (0, i.jsx)(D, {
                       item: r,
                       canCopyImage: c,
                       canCopyLink: d,
@@ -279,7 +279,7 @@ n.Z = l.memo(function (e) {
     let { item: n, hideMediaOptions: t } = e;
     return (
         ('IMAGE' === n.type || !t) &&
-        (0, i.jsx)(C.ZP, {
+        (0, i.jsx)(v.ZP, {
             children: (e) =>
                 (0, i.jsxs)('div', {
                     className: a()(b.actionButtons, e),

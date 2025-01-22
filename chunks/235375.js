@@ -9,33 +9,33 @@ r.r(n),
     });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(477660),
     c = r.n(u),
     d = r(481060),
     f = r(37234),
-    _ = r(230711),
+    p = r(230711),
     h = r(454585),
-    p = r(703656),
+    _ = r(703656),
     m = r(626135),
     g = r(981631),
     E = r(596401);
 let v = c().defaultRules.link,
-    I = { section: g.jXE.SETTINGS_CHANGELOG };
-function T() {
-    m.default.track(g.rMx.PREMIUM_PROMOTION_OPENED, { location: I });
+    y = { section: g.jXE.SETTINGS_CHANGELOG };
+function b() {
+    m.default.track(g.rMx.PREMIUM_PROMOTION_OPENED, { location: y });
 }
-function b(e, n) {
+function I(e, n) {
     return null == n ? [] : n.split(' ').map((n) => e[n]);
 }
-let y = (e) => {
+let T = (e) => {
         let { level: n, children: r, className: i = null, styleSheet: a = {} } = e,
-            o = (0, d.usePrivateHeadingLevel)(),
+            s = (0, d.usePrivateHeadingLevel)(),
             u = parseInt(n, 10),
-            c = o + (isNaN(u) ? 1 : u) - 1;
-        return s.createElement('h'.concat(c), { className: l()(...b(a, i)) }, r);
+            c = s + (isNaN(u) ? 1 : u) - 1;
+        return o.createElement('h'.concat(c), { className: l()(...I(a, i)) }, r);
     },
     S = null != h.Z ? h.Z.defaultRules : null,
     A = {
@@ -43,18 +43,18 @@ let y = (e) => {
             parse(e, n, r) {
                 let i;
                 let a = e[2],
-                    s = a.startsWith('https://discordapp.com/nitro') || a.startsWith('https://discord.com/nitro'),
-                    o = a.startsWith('https://discordapp.com/hypesquad') || a.startsWith('https://discord.com/hypesquad'),
+                    o = a.startsWith('https://discordapp.com/nitro') || a.startsWith('https://discord.com/nitro'),
+                    s = a.startsWith('https://discordapp.com/hypesquad') || a.startsWith('https://discord.com/hypesquad'),
                     l = a.startsWith('/shop/fullscreen?source=1') || a.startsWith('/activities');
                 return (
                     (i =
-                        s || o
+                        o || s
                             ? (e) => {
-                                  T(), s ? _.Z.open(g.oAB.PREMIUM) : o && _.Z.open(g.oAB.HYPESQUAD_ONLINE), r.changeLog.track(g.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, d.closeModal)(E.Xd), e.preventDefault();
+                                  b(), o ? p.Z.open(g.oAB.PREMIUM) : s && p.Z.open(g.oAB.HYPESQUAD_ONLINE), r.changeLog.track(g.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, d.closeModal)(E.Xd), e.preventDefault();
                               }
                             : l
                               ? (e) => {
-                                    (0, p.uL)(a), r.changeLog.track(g.rMx.CHANGE_LOG_CTA_CLICKED, { ...m.default.getCampaignParams(a) }), (0, f.Ou)(), (0, d.closeModal)(E.Xd), e.preventDefault();
+                                    (0, _.uL)(a), r.changeLog.track(g.rMx.CHANGE_LOG_CTA_CLICKED, { ...m.default.getCampaignParams(a) }), (0, f.Ou)(), (0, d.closeModal)(E.Xd), e.preventDefault();
                                 }
                               : () => {
                                     r && 'function' == typeof r.onLinkClick && r.onLinkClick(a),
@@ -87,7 +87,7 @@ let y = (e) => {
         lheading: (e) => ({
             react: (n, r, i) =>
                 (0, a.jsx)(
-                    y,
+                    T,
                     {
                         level: n.level,
                         className: n.className,
@@ -100,7 +100,7 @@ let y = (e) => {
         heading: {
             react: (e, n, r) =>
                 (0, a.jsx)(
-                    y,
+                    T,
                     {
                         level: e.level,
                         children: n(e.content, r)
@@ -110,12 +110,12 @@ let y = (e) => {
         },
         image: {
             react(e, n, i) {
-                let s = r(595173)('./'.concat(e.target));
+                let o = r(595173)('./'.concat(e.target));
                 return (0, a.jsx)(
                     'img',
                     {
                         alt: e.alt,
-                        src: s
+                        src: o
                     },
                     i.key
                 );

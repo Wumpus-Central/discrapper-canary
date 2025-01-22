@@ -15,14 +15,14 @@ function n(e) {
                 }
             ]
         },
-        s = {
+        o = {
             match: [/new\s+/, i],
             className: {
                 1: 'keyword',
                 2: 'class.title'
             }
         },
-        o = {
+        s = {
             relevance: 0,
             match: [/\./, i],
             className: { 2: 'property' }
@@ -55,9 +55,9 @@ function n(e) {
                     7: 'title.class.inherited'
                 }
             },
-            s,
-            a,
             o,
+            a,
+            s,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.APOS_STRING_MODE,

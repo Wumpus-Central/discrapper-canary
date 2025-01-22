@@ -5,22 +5,22 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(411104);
-var s = r(518263);
-var o = r(970173);
+var o = r(518263);
+var s = r(970173);
 var l = r(520712);
 var u = r(268111);
 var c = r(941497);
 var d = r(32026);
 var f = r(480839);
-var _ = r(744285);
+var p = r(744285);
 var h = r(492257);
-var p = r(873817);
+var _ = r(873817);
 var m = r(47120);
 var g = r(710845),
     E = r(358085),
     v = r(374023),
-    I = r(988348);
-function T(e, n, r) {
+    y = r(988348);
+function b(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -33,11 +33,11 @@ function T(e, n, r) {
         e
     );
 }
-let { NativeModules: b } = {},
-    y = {},
+let { NativeModules: I } = {},
+    T = {},
     S = 65535,
     A = [];
-class N {
+class C {
     static canUse() {
         return !1;
     }
@@ -47,13 +47,13 @@ class N {
         this._onDataReady = e;
     }
     constructor(e) {
-        T(this, '_onDataReady', void 0), T(this, '_gatewayEncoding', void 0), (this._onDataReady = null), (this._gatewayEncoding = e);
+        b(this, '_onDataReady', void 0), b(this, '_gatewayEncoding', void 0), (this._onDataReady = null), (this._gatewayEncoding = e);
     }
 }
 A.push(
-    class extends N {
+    class extends C {
         static canUse() {
-            return (0, I.N)();
+            return (0, y.N)();
         }
         getAlgorithm() {
             return 'zstd-stream';
@@ -69,12 +69,12 @@ A.push(
         }
         close() {}
         constructor(e) {
-            super(e), T(this, '_decoder', null), T(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? (this._decoder = new TextDecoder('utf-8')) : (this._decoder = null), (this._stream = (0, I.G)());
+            super(e), b(this, '_decoder', null), b(this, '_stream', void 0), this._gatewayEncoding.wantsString() ? (this._decoder = new TextDecoder('utf-8')) : (this._decoder = null), (this._stream = (0, y.G)());
         }
     }
 ),
     A.push(
-        class extends N {
+        class extends C {
             static canUse() {
                 return void 0 !== window.Uint8Array;
             }
@@ -105,14 +105,14 @@ A.push(
                 }
                 if (e !== r.Z_OK) throw Error('zlib error, '.concat(e, ', ').concat(i.strm.msg));
                 let { chunks: a } = i,
-                    s = a.length;
-                if (this._gatewayEncoding.wantsString()) n = s > 1 ? a.join('') : a[0];
-                else if (s > 1) {
+                    o = a.length;
+                if (this._gatewayEncoding.wantsString()) n = o > 1 ? a.join('') : a[0];
+                else if (o > 1) {
                     let e = 0;
-                    for (let n = 0; n < s; n++) e += a[n].length;
+                    for (let n = 0; n < o; n++) e += a[n].length;
                     let r = new Uint8Array(e),
                         i = 0;
-                    for (let e = 0; e < s; e++) {
+                    for (let e = 0; e < o; e++) {
                         let n = a[e];
                         r.set(n, i), (i += n.length);
                     }
@@ -122,11 +122,11 @@ A.push(
             }
             constructor(e) {
                 super(e),
-                    T(this, '_inflate', void 0),
-                    T(this, '_pako', r(457854)),
-                    T(this, '_usesZstd', !1),
-                    T(this, '_zstdDecoder', null),
-                    T(this, '_zstdStream', null),
+                    b(this, '_inflate', void 0),
+                    b(this, '_pako', r(457854)),
+                    b(this, '_usesZstd', !1),
+                    b(this, '_zstdDecoder', null),
+                    b(this, '_zstdStream', null),
                     (this._inflate = new this._pako.Inflate({
                         chunkSize: 65536,
                         to: this._gatewayEncoding.wantsString() ? 'string' : ''
@@ -136,7 +136,7 @@ A.push(
         }
     ),
     A.push(
-        class extends N {
+        class extends C {
             static canUse() {
                 return !0;
             }
@@ -153,20 +153,20 @@ A.push(
             }
             close() {}
             constructor(...e) {
-                super(...e), T(this, '_pako', r(457854));
+                super(...e), b(this, '_pako', r(457854));
             }
         }
     ),
     A.push(
-        class extends N {
+        class extends C {
             static canUse() {
                 return !1;
             }
             bindWebSocket(e) {
-                this.close(), (this._socketId = e._socketId), (0, I.N)() ? ((0, E.isAndroid)() ? null == y || y.enableZstdStreamSupport(this._socketId) : b.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)) : (0, E.isAndroid)() ? null == y || y.enableZlibStreamSupport(this._socketId) : b.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
+                this.close(), (this._socketId = e._socketId), (0, y.N)() ? ((0, E.isAndroid)() ? null == T || T.enableZstdStreamSupport(this._socketId) : I.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)) : (0, E.isAndroid)() ? null == T || T.enableZlibStreamSupport(this._socketId) : I.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
             }
             getAlgorithm() {
-                return (0, I.N)() ? 'zstd-stream' : 'zlib-stream';
+                return (0, y.N)() ? 'zstd-stream' : 'zlib-stream';
             }
             usesLegacyCompression() {
                 return !1;
@@ -177,14 +177,14 @@ A.push(
             }
             close() {
                 let e = this._socketId;
-                (this._socketId = null), null !== e && ((0, E.isAndroid)() ? null == y || y.disableZlibStreamSupport(e) : b.DCDCompressionManager.disableZlibStreamSupport(e));
+                (this._socketId = null), null !== e && ((0, E.isAndroid)() ? null == T || T.disableZlibStreamSupport(e) : I.DCDCompressionManager.disableZlibStreamSupport(e));
             }
             constructor(e) {
-                super(e), T(this, '_socketId', void 0), (this._socketId = null);
+                super(e), b(this, '_socketId', void 0), (this._socketId = null);
             }
         }
     );
-class C extends N {
+class N extends C {
     static canUse() {
         return !0;
     }
@@ -201,8 +201,8 @@ class C extends N {
     close() {}
 }
 function R(e) {
-    if (v.s.isDiscordGatewayPlaintextSet()) return new C(e);
+    if (v.s.isDiscordGatewayPlaintextSet()) return new N(e);
     for (var n of A) if (n.canUse()) return new n(e);
-    return new C(e);
+    return new N(e);
 }
-A.push(C);
+A.push(N);

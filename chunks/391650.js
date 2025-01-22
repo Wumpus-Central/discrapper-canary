@@ -9,8 +9,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(952265),
-    s = r(723359),
-    o = r(231338);
+    o = r(723359),
+    s = r(231338);
 function l(e) {
     (0, a.ZD)(
         async () => {
@@ -18,8 +18,8 @@ function l(e) {
             return (n) => (0, i.jsx)(e, { ...n });
         },
         {
-            modalKey: s.$$,
-            onCloseRequest: o.dG,
+            modalKey: o.$$,
+            onCloseRequest: s.dG,
             onCloseCallback: e
         }
     );
@@ -37,7 +37,7 @@ function u() {
                 });
         },
         {
-            onCloseRequest: e ? o.dG : null,
+            onCloseRequest: e ? s.dG : null,
             onCloseCallback: n
         }
     );

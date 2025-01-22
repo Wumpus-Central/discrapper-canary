@@ -5,19 +5,19 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(512969),
     c = r(481060),
     d = r(624138),
     f = r(369455);
-let _ = [18, 18, 16, 16, 14, 12, 10];
+let p = [18, 18, 16, 16, 14, 12, 10];
 function h(e) {
     var n;
-    return null !== (n = _[e.length - 1]) && void 0 !== n ? n : _[_.length - 1];
+    return null !== (n = p[e.length - 1]) && void 0 !== n ? n : p[p.length - 1];
 }
-function p(e, n) {
+function _(e, n) {
     return l()({
         [f.childWrapper]: !0,
         [f.childWrapperNoHoverBg]: 'always' === e,
@@ -27,26 +27,26 @@ function p(e, n) {
 let m = (e) => {
     let n,
         r,
-        { backgroundStyle: i = 'always', children: o, icon: _, name: m, ariaLabel: g, className: E, style: v, to: I, onClick: T, selected: b = !1, ...y } = e,
+        { backgroundStyle: i = 'always', children: s, icon: p, name: m, ariaLabel: g, className: E, style: v, to: y, onClick: b, selected: I = !1, ...T } = e,
         S = (0, u.k6)();
-    null == _ && null != m && (r = h((n = (0, d.Zg)(m))));
-    let A = s.useCallback(
+    null == p && null != m && (r = h((n = (0, d.Zg)(m))));
+    let A = o.useCallback(
             (e) => {
-                if (null == I);
-                else if ('string' == typeof I) S.push(I);
+                if (null == y);
+                else if ('string' == typeof y) S.push(y);
                 else {
-                    let { pathname: e = '', state: n } = I;
+                    let { pathname: e = '', state: n } = y;
                     S.push(e, n);
                 }
-                null != T && T(e);
+                null != b && b(e);
             },
-            [S, I, T]
+            [S, y, b]
         ),
-        N = (0, c.useToken)(c.tokens.modules.guildbar.AVATAR_SIZE);
+        C = (0, c.useToken)(c.tokens.modules.guildbar.AVATAR_SIZE);
     return (0, a.jsxs)(c.Clickable, {
-        ...y,
+        ...T,
         onClick: A,
-        className: l()(E, f.wrapper, { [f.selected]: b }),
+        className: l()(E, f.wrapper, { [f.selected]: I }),
         'aria-label': null != g && '' !== g ? g : null != m ? m : '',
         style: {
             ...v,
@@ -56,25 +56,25 @@ let m = (e) => {
         children: [
             null != n
                 ? (0, a.jsx)('div', {
-                      className: l()(p(i, !1), f.acronym),
+                      className: l()(_(i, !1), f.acronym),
                       'aria-hidden': !0,
                       children: n
                   })
                 : null,
-            null != _
+            null != p
                 ? (0, a.jsx)('img', {
                       className: f.icon,
-                      src: _,
+                      src: p,
                       alt: ' ',
-                      width: N,
-                      height: N,
+                      width: C,
+                      height: C,
                       'aria-hidden': !0
                   })
                 : null,
-            null != o
+            null != s
                 ? (0, a.jsx)('div', {
-                      className: p(i, !0),
-                      children: o
+                      className: _(i, !0),
+                      children: s
                   })
                 : null
         ]

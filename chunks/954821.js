@@ -50,7 +50,7 @@ let _ = (e) => {
             O = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.CHANNEL),
             R = o.role_benefits.benefits.filter((e) => e.ref_type === p.Qs.INTANGIBLE),
             P = a()(E.currentPeriodEnd).format('MMMM Do, YYYY'),
-            y = x.intl.formatToPlainString(x.t.KsMRPz, {
+            D = x.intl.formatToPlainString(x.t.KsMRPz, {
                 numChannels: O.length,
                 numAdditionalBenefits: R.length,
                 subscriptionEndDate: P
@@ -87,7 +87,7 @@ let _ = (e) => {
                         (0, i.jsx)(l.Text, {
                             className: f.description,
                             variant: 'text-sm/normal',
-                            children: y
+                            children: D
                         }),
                         (0, i.jsx)(h.c, {
                             listingId: o.id,

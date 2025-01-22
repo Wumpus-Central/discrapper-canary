@@ -1,12 +1,12 @@
 r.d(n, {
     K: function () {
-        return b;
+        return I;
     }
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(411104);
-var o = r(192379),
+var o = r(411104);
+var s = r(192379),
     l = r(399606);
 function u(e, n) {
     if (n.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
@@ -22,7 +22,7 @@ function f(e, n) {
     var r = d(e, n, 'get');
     return c(e, r);
 }
-function _(e, n, r) {
+function p(e, n, r) {
     u(e, n), n.set(e, r);
 }
 function h(e, n, r) {
@@ -38,14 +38,14 @@ function h(e, n, r) {
         e
     );
 }
-var p = new WeakMap(),
+var _ = new WeakMap(),
     m = new WeakMap();
 class g {
     doesDataNeedValidation(e) {
         return !0 === f(this.search(e), m).isStale;
     }
     getOrCreate(e) {
-        return null == f(this, p)[e] && (f(this, p)[e] = new g()), f(this, p)[e];
+        return null == f(this, _)[e] && (f(this, _)[e] = new g()), f(this, _)[e];
     }
     getState(e) {
         var n;
@@ -77,10 +77,10 @@ class g {
         let n = this.search(e),
             r = [];
         'function' == typeof f(n, m).validateData && r.push(f(n, m).validateData);
-        let i = Object.values(f(n, p));
+        let i = Object.values(f(n, _));
         for (; i.length > 0; ) {
             let e = i.pop();
-            null != e && ((f(e, m).isStale = !0), g.resetErrorState(e), i.push(...Object.values(f(e, p))), 'function' == typeof f(e, m).validateData && r.push(f(e, m).validateData));
+            null != e && ((f(e, m).isStale = !0), g.resetErrorState(e), i.push(...Object.values(f(e, _))), 'function' == typeof f(e, m).validateData && r.push(f(e, m).validateData));
         }
         (f(n, m).isStale = !0), g.resetErrorState(n), r.forEach((e) => e());
     }
@@ -88,11 +88,11 @@ class g {
         (f(e, m).error = void 0), (f(e, m).fetchFailCounter = 0);
     }
     constructor() {
-        _(this, p, {
+        p(this, _, {
             writable: !0,
             value: {}
         }),
-            _(this, m, {
+            p(this, m, {
                 writable: !0,
                 value: { fetchFailCounter: 0 }
             });
@@ -100,7 +100,7 @@ class g {
 }
 let E = new g(),
     v = 5;
-class I extends Error {
+class y extends Error {
     setStatus(e) {
         this.status = e;
     }
@@ -108,14 +108,14 @@ class I extends Error {
         super(...e), h(this, 'name', 'HTTPResponseError'), h(this, 'status', 0);
     }
 }
-function T(e) {
+function b(e) {
     if (e instanceof Error) return e;
     if ('object' == typeof e) {
         if ('body' in e && null != e.body && 'message' in e.body) {
-            let n = new I(String(e.body.message));
+            let n = new y(String(e.body.message));
             return n.setStatus(e.status), n;
         }
-        let n = new I(
+        let n = new y(
             Object.entries(e)
                 .map((e, n) => ''.concat(e, ': [').concat(String(n), ']'))
                 .join(',')
@@ -124,48 +124,48 @@ function T(e) {
     }
     return Error(String(e));
 }
-function b(e, n) {
-    let { dangerousAbortOnCleanup: r = !1, get: i, load: a, maxNumFetchErrors: s = v, queryId: u, useStateHook: c } = n;
+function I(e, n) {
+    let { dangerousAbortOnCleanup: r = !1, get: i, load: a, maxNumFetchErrors: o = v, queryId: u, useStateHook: c } = n;
     return function () {
         for (var n = arguments.length, d = Array(n), f = 0; f < n; f++) d[f] = arguments[f];
-        let _ = (0, o.useMemo)(() => u(...d), d),
+        let p = (0, s.useMemo)(() => u(...d), d),
             h = c(Array.isArray(e) ? e : [e], () => i(...d), d),
-            p = E.getState(_),
-            m = p.error,
-            g = !0 === p.isLoading,
-            v = (0, o.useRef)(d),
-            b = (0, o.useCallback)(() => {
-                if (null == _ || !0 === g) return;
+            _ = E.getState(p),
+            m = _.error,
+            g = !0 === _.isLoading,
+            v = (0, s.useRef)(d),
+            I = (0, s.useCallback)(() => {
+                if (null == p || !0 === g) return;
                 let e = !1;
                 c === l.Wu ? h.length > 0 && (e = !0) : null != h && (e = !0);
-                let n = E.doesDataNeedValidation(_),
+                let n = E.doesDataNeedValidation(p),
                     i = null != m;
                 if ((e || i) && !n) return;
-                E.loadingStart(_);
-                let o = new AbortController();
+                E.loadingStart(p);
+                let s = new AbortController();
                 return (
-                    a(o.signal, ...v.current)
-                        .then((e) => (E.loadingDone(_, !0), e))
+                    a(s.signal, ...v.current)
+                        .then((e) => (E.loadingDone(p, !0), e))
                         .catch((e) => {
-                            if ((E.loadingDone(_), o.signal.aborted)) return;
-                            let n = T(e);
-                            if (!!(p.fetchFailCounter >= s) || !(n instanceof I) || (!(n.status >= 500) && 429 !== n.status)) E.setError(_, n);
+                            if ((E.loadingDone(p), s.signal.aborted)) return;
+                            let n = b(e);
+                            if (!!(_.fetchFailCounter >= o) || !(n instanceof y) || (!(n.status >= 500) && 429 !== n.status)) E.setError(p, n);
                         }),
                     () => {
-                        r && o.abort();
+                        r && s.abort();
                     }
                 );
-            }, [h, p.fetchFailCounter, m, _, g]);
+            }, [h, _.fetchFailCounter, m, p, g]);
         return (
-            (0, o.useEffect)(
+            (0, s.useEffect)(
                 () => (
-                    b(),
-                    E.subscribe(_, b),
+                    I(),
+                    E.subscribe(p, I),
                     () => {
-                        E.subscribe(_, void 0);
+                        E.subscribe(p, void 0);
                     }
                 ),
-                [_, b]
+                [p, I]
             ),
             {
                 data: h,

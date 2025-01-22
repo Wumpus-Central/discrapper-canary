@@ -1,12 +1,12 @@
 r.d(n, {
     Ou: function () {
-        return o;
+        return s;
     },
     jN: function () {
         return a;
     },
     xf: function () {
-        return s;
+        return o;
     }
 });
 var i = r(570140);
@@ -16,9 +16,9 @@ function a(e) {
         component: e
     });
 }
-function s() {
+function o() {
     i.Z.dispatch({ type: 'LAYER_POP' });
 }
-function o() {
+function s() {
     i.Z.dispatch({ type: 'LAYER_POP_ALL' });
 }

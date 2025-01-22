@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(430824),
-    o = r(70956),
+    o = r(430824),
+    s = r(70956),
     l = r(709054),
     u = r(553385),
     c = r(556178),
@@ -19,7 +19,7 @@ function f(e, n, r) {
         e
     );
 }
-let _ = 0;
+let p = 0;
 class h extends a.Z {
     constructor(...e) {
         super(...e),
@@ -31,10 +31,10 @@ class h extends a.Z {
                 this._attemptDeadchatPrompt(), this._triggerGamingStatsSetupExperiment();
             }),
             f(this, 'handleIdleChange', () => {
-                Date.now() - _ > o.Z.Millis.HOUR && this._attemptDeadchatPrompt();
+                Date.now() - p > s.Z.Millis.HOUR && this._attemptDeadchatPrompt();
             }),
             f(this, '_attemptDeadchatPrompt', () => {
-                let e = s.Z.getGuilds(),
+                let e = o.Z.getGuilds(),
                     n = l.default.keys(e).filter(
                         (e) =>
                             d.Z.getCurrentConfig({
@@ -42,10 +42,10 @@ class h extends a.Z {
                                 location: 'manager'
                             }).triggerDeadchat
                     );
-                n.length > 0 && ((_ = Date.now()), (0, u.N7)(n));
+                n.length > 0 && ((p = Date.now()), (0, u.N7)(n));
             }),
             f(this, '_triggerGamingStatsSetupExperiment', () => {
-                let e = s.Z.getGuilds();
+                let e = o.Z.getGuilds();
                 l.default.keys(e).forEach((e) => {
                     c.g.trackExposure({
                         guildId: e,

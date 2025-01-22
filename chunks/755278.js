@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(789020);
 var a = r(928801),
-    s = r(924557),
-    o = r(435064),
+    o = r(924557),
+    s = r(435064),
     l = r(779618),
     u = r(594190),
     c = r(441167),
     d = r(695346),
     f = r(199902),
-    _ = r(592125),
+    p = r(592125),
     h = r(131951),
-    p = r(936349),
+    _ = r(936349),
     m = r(630388),
     g = r(981631);
 function E(e, n, r) {
@@ -42,14 +42,14 @@ class v extends a.Z {
         let i = 0,
             a = d.tU.getSetting();
         i = (0, m.mB)(i, g.BVn.ALLOW_VOICE_RECORDING, a);
-        let _ = (0, l.Z)(h.Z),
-            p = (0, s.ln)() && o.Z.getSettings().clipsEnabled && ((null === (e = f.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === g.jm8.ACTIVE || (null === (n = f.Z.getCurrentUserActiveStream()) || void 0 === n ? void 0 : n.state) === g.jm8.PAUSED),
-            E = o.Z.isDecoupledGameClippingEnabled(),
-            v = _ && o.Z.getSettings().decoupledClipsEnabled && (null === (r = u.ZP.getVisibleGame()) || void 0 === r ? void 0 : r.windowHandle) != null && E;
-        i = (0, m.mB)(i, g.BVn.CLIPS_ENABLED, p || v);
-        let { enableViewerClipping: I } = c.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
-            T = I && _ && o.Z.getSettings().viewerClipsEnabled;
-        return (i = (0, m.mB)(i, g.BVn.ALLOW_ANY_VIEWER_CLIPS, T));
+        let p = (0, l.Z)(h.Z),
+            _ = (0, o.ln)() && s.Z.getSettings().clipsEnabled && ((null === (e = f.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === g.jm8.ACTIVE || (null === (n = f.Z.getCurrentUserActiveStream()) || void 0 === n ? void 0 : n.state) === g.jm8.PAUSED),
+            E = s.Z.isDecoupledGameClippingEnabled(),
+            v = p && s.Z.getSettings().decoupledClipsEnabled && (null === (r = u.ZP.getVisibleGame()) || void 0 === r ? void 0 : r.windowHandle) != null && E;
+        i = (0, m.mB)(i, g.BVn.CLIPS_ENABLED, _ || v);
+        let { enableViewerClipping: y } = c.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
+            b = y && p && s.Z.getSettings().viewerClipsEnabled;
+        return (i = (0, m.mB)(i, g.BVn.ALLOW_ANY_VIEWER_CLIPS, b));
     }
     getInitialState() {
         return {
@@ -72,8 +72,8 @@ class v extends a.Z {
             selfMute: h.Z.isSelfMute(),
             selfDeaf: h.Z.isSelfDeaf(),
             selfVideo: h.Z.isVideoEnabled(),
-            preferredRegion: p.Z.getPreferredRegion(),
-            preferredRegions: p.Z.getPreferredRegions(),
+            preferredRegion: _.Z.getPreferredRegion(),
+            preferredRegions: _.Z.getPreferredRegions(),
             videoStreamParameters: h.Z.getVideoStreamParameters(),
             flags: this.computeVoiceFlags()
         };
@@ -83,14 +83,14 @@ class v extends a.Z {
     }
     didCommit(e) {
         var n;
-        let { guildId: r, channelId: i, selfMute: a, selfDeaf: s, selfVideo: o, preferredRegion: l, preferredRegions: u, videoStreamParameters: c, flags: d = 0 } = e;
-        o && (null === (n = _.Z.getChannel(i)) || void 0 === n ? void 0 : n.type) === g.d4z.GUILD_STAGE_VOICE
+        let { guildId: r, channelId: i, selfMute: a, selfDeaf: o, selfVideo: s, preferredRegion: l, preferredRegions: u, videoStreamParameters: c, flags: d = 0 } = e;
+        s && (null === (n = p.Z.getChannel(i)) || void 0 === n ? void 0 : n.type) === g.d4z.GUILD_STAGE_VOICE
             ? this.socket.voiceStateUpdate({
                   guildId: r,
                   channelId: i,
                   selfMute: a,
-                  selfDeaf: s,
-                  selfVideo: o,
+                  selfDeaf: o,
+                  selfVideo: s,
                   preferredRegion: l,
                   preferredRegions: u,
                   videoStreamParameters: c,
@@ -100,8 +100,8 @@ class v extends a.Z {
                   guildId: r,
                   channelId: i,
                   selfMute: a,
-                  selfDeaf: s,
-                  selfVideo: o,
+                  selfDeaf: o,
+                  selfVideo: s,
                   preferredRegion: l,
                   preferredRegions: u,
                   flags: d

@@ -1,4 +1,4 @@
-var r = n(141603);
+var i = r(141603);
 e.exports = function (e) {
-    return void 0 !== e && (r(e, 'value') || r(e, 'writable'));
+    return void 0 !== e && (i(e, 'value') || i(e, 'writable'));
 };

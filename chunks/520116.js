@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(91192),
     s = n(442837),
     c = n(481060),
-    d = n(135938),
-    u = n(900164),
+    u = n(135938),
+    d = n(900164),
     m = n(554838),
     h = n(493892),
     f = n(661824),
@@ -33,7 +33,7 @@ let A = {
 };
 function b(e) {
     var t;
-    let { channel: n, message: l, compact: a, isGroupStart: s, treatSpam: d, gotoChannel: u } = e,
+    let { channel: n, message: l, compact: a, isGroupStart: s, treatSpam: u, gotoChannel: d } = e,
         m = (0, o.JA)(null !== (t = l.id) && void 0 !== t ? t : ''),
         h = r.useCallback(
             (e) => {
@@ -55,7 +55,7 @@ function b(e) {
                 children: [
                     (0, i.jsx)(x.Z, {
                         className: S.jumpButton,
-                        onJump: (e) => u(e, l.id)
+                        onJump: (e) => d(e, l.id)
                     }),
                     (0, i.jsx)(p.Z, {
                         id: l.id,
@@ -66,7 +66,7 @@ function b(e) {
                         animateAvatar: !1,
                         isGroupStart: s,
                         onKeyDown: h,
-                        treatSpam: d
+                        treatSpam: u
                     })
                 ]
             },
@@ -77,7 +77,7 @@ function b(e) {
 function j(e) {
     var t, n;
     let { channel: r, channelRecord: l, gotoChannel: o } = e,
-        { enabled: p } = d.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
+        { enabled: p } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         x = _.jU.useSetting(),
         A = (0, s.e7)([E.Z], () => E.Z.can(v.Plq.CREATE_INSTANT_INVITE, l)),
         j = (0, h.P1)(l),
@@ -90,7 +90,7 @@ function j(e) {
             t = null,
             n = r.messages.slice(0, N.hC);
         n.forEach((n) => {
-            if (!(0, u.Z)(n, A)) {
+            if (!(0, d.Z)(n, A)) {
                 if (!Z && (null == e || !e.isSame(n.timestamp, 'day'))) {
                     let t = (0, I.vc)(n.timestamp, 'LL');
                     L.push(
@@ -140,7 +140,7 @@ function j(e) {
             0 === L.length && (L = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
     }
     return (
-        R && j && d.Z.trackExposure({ location: '20e3b0_2' }),
+        R && j && u.Z.trackExposure({ location: '20e3b0_2' }),
         (0, i.jsx)('div', {
             className: S.messages,
             children: L

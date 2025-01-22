@@ -1,13 +1,13 @@
 let i = r(689118),
     a = r(814033),
-    s = r(873994).DecoderBuffer,
-    o = r(206424),
+    o = r(873994).DecoderBuffer,
+    s = r(206424),
     l = r(375990);
 function u(e) {
     (this.enc = 'der'), (this.name = e.name), (this.entity = e), (this.tree = new c()), this.tree._init(e.body);
 }
 function c(e) {
-    o.call(this, 'der', e);
+    s.call(this, 'der', e);
 }
 function d(e, n) {
     let r = e.readUInt8(n);
@@ -21,12 +21,12 @@ function d(e, n) {
             (r <<= 7), (r |= 127 & i);
         }
     } else r &= 31;
-    let s = l.tag[r];
+    let o = l.tag[r];
     return {
         cls: i,
         primitive: a,
         tag: r,
-        tagStr: s
+        tagStr: o
     };
 }
 function f(e, n, r) {
@@ -47,9 +47,9 @@ function f(e, n, r) {
 }
 (e.exports = u),
     (u.prototype.decode = function (e, n) {
-        return !s.isDecoderBuffer(e) && (e = new s(e, n)), this.tree._decode(e, n);
+        return !o.isDecoderBuffer(e) && (e = new o(e, n)), this.tree._decode(e, n);
     }),
-    i(c, o),
+    i(c, s),
     (c.prototype._peekTag = function (e, n, r) {
         if (e.isEmpty()) return !1;
         let i = e.save(),
@@ -63,9 +63,9 @@ function f(e, n, r) {
         if (e.isError(a)) return a;
         if (!r && i.tag !== n && i.tagStr !== n && i.tagStr + 'of' !== n) return e.error('Failed to match tag: "' + n + '"');
         if (i.primitive || null !== a) return e.skip(a, 'Failed to match body of: "' + n + '"');
-        let s = e.save(),
-            o = this._skipUntilEnd(e, 'Failed to skip indefinite length body: "' + this.tag + '"');
-        return e.isError(o) ? o : ((a = e.offset - s.offset), e.restore(s), e.skip(a, 'Failed to match body of: "' + n + '"'));
+        let o = e.save(),
+            s = this._skipUntilEnd(e, 'Failed to skip indefinite length body: "' + this.tag + '"');
+        return e.isError(s) ? s : ((a = e.offset - o.offset), e.restore(o), e.skip(a, 'Failed to match body of: "' + n + '"'));
     }),
     (c.prototype._skipUntilEnd = function (e, n) {
         for (;;) {
@@ -83,9 +83,9 @@ function f(e, n, r) {
         for (; !e.isEmpty(); ) {
             let n = this._peekTag(e, 'end');
             if (e.isError(n)) return n;
-            let s = r.decode(e, 'der', i);
-            if (e.isError(s) && n) break;
-            a.push(s);
+            let o = r.decode(e, 'der', i);
+            if (e.isError(o) && n) break;
+            a.push(o);
         }
         return a;
     }),
@@ -120,10 +120,10 @@ function f(e, n, r) {
     (c.prototype._decodeObjid = function (e, n, r) {
         let i;
         let a = [],
-            s = 0,
-            o = 0;
-        for (; !e.isEmpty(); ) (o = e.readUInt8()), (s <<= 7), (s |= 127 & o), (128 & o) == 0 && (a.push(s), (s = 0));
-        128 & o && a.push(s);
+            o = 0,
+            s = 0;
+        for (; !e.isEmpty(); ) (s = e.readUInt8()), (o <<= 7), (o |= 127 & s), (128 & s) == 0 && (a.push(o), (o = 0));
+        128 & s && a.push(o);
         let l = (a[0] / 40) | 0,
             u = a[0] % 40;
         if (((i = r ? a : [l, u].concat(a.slice(1))), n)) {
@@ -133,14 +133,14 @@ function f(e, n, r) {
         return i;
     }),
     (c.prototype._decodeTime = function (e, n) {
-        let r, i, a, s, o, l;
+        let r, i, a, o, s, l;
         let u = e.raw().toString();
-        if ('gentime' === n) (r = 0 | u.slice(0, 4)), (i = 0 | u.slice(4, 6)), (a = 0 | u.slice(6, 8)), (s = 0 | u.slice(8, 10)), (o = 0 | u.slice(10, 12)), (l = 0 | u.slice(12, 14));
+        if ('gentime' === n) (r = 0 | u.slice(0, 4)), (i = 0 | u.slice(4, 6)), (a = 0 | u.slice(6, 8)), (o = 0 | u.slice(8, 10)), (s = 0 | u.slice(10, 12)), (l = 0 | u.slice(12, 14));
         else {
             if ('utctime' !== n) return e.error('Decoding ' + n + ' time is not supported yet');
-            (r = 0 | u.slice(0, 2)), (i = 0 | u.slice(2, 4)), (a = 0 | u.slice(4, 6)), (s = 0 | u.slice(6, 8)), (o = 0 | u.slice(8, 10)), (l = 0 | u.slice(10, 12)), (r = r < 70 ? 2000 + r : 1900 + r);
+            (r = 0 | u.slice(0, 2)), (i = 0 | u.slice(2, 4)), (a = 0 | u.slice(4, 6)), (o = 0 | u.slice(6, 8)), (s = 0 | u.slice(8, 10)), (l = 0 | u.slice(10, 12)), (r = r < 70 ? 2000 + r : 1900 + r);
         }
-        return Date.UTC(r, i - 1, a, s, o, l, 0);
+        return Date.UTC(r, i - 1, a, o, s, l, 0);
     }),
     (c.prototype._decodeNull = function () {
         return null;

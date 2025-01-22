@@ -1,7 +1,7 @@
 var i = r(512722),
     a = r.n(i),
-    s = r(392711),
-    o = r.n(s),
+    o = r(392711),
+    s = r.n(o),
     l = r(830496);
 function u(e) {
     var n, r;
@@ -11,7 +11,7 @@ function u(e) {
         {
             filename: i.name,
             file_size: i.size,
-            id: o().uniqueId(),
+            id: s().uniqueId(),
             is_clip: null != e.clip,
             title: null === (n = e.clip) || void 0 === n ? void 0 : n.name,
             application_id: null === (r = e.clip) || void 0 === r ? void 0 : r.applicationId,

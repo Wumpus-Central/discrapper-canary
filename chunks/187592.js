@@ -1,14 +1,14 @@
-var e = n(294377),
-    o = n(942282),
-    i = n(360518),
-    u = n(447631),
-    s = i('species');
-t.exports = function (t) {
-    var r = e(t);
-    u &&
-        r &&
-        !r[s] &&
-        o(r, s, {
+var i = r(294377),
+    a = r(942282),
+    o = r(360518),
+    s = r(447631),
+    l = o('species');
+e.exports = function (e) {
+    var n = i(e);
+    s &&
+        n &&
+        !n[l] &&
+        a(n, l, {
             configurable: !0,
             get: function () {
                 return this;

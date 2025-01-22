@@ -1,12 +1,12 @@
 var i = r(544891),
     a = r(570140),
-    s = r(981631);
+    o = r(981631);
 n.Z = {
     fetch() {
         a.Z.dispatch({ type: 'USER_AUTHORIZED_APPS_REQUEST' }),
             i.tn
                 .get({
-                    url: s.ANM.OAUTH2_TOKENS,
+                    url: o.ANM.OAUTH2_TOKENS,
                     oldFormErrors: !0,
                     rejectWithError: !0
                 })
@@ -26,7 +26,7 @@ n.Z = {
     delete(e) {
         i.tn
             .del({
-                url: s.ANM.OAUTH2_TOKEN(e),
+                url: o.ANM.OAUTH2_TOKEN(e),
                 oldFormErrors: !0,
                 rejectWithError: !0
             })

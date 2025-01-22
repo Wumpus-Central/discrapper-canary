@@ -3,10 +3,10 @@ r.d(n, {
         return c;
     },
     Xv: function () {
-        return s;
+        return o;
     },
     Zo: function () {
-        return o;
+        return s;
     },
     ai: function () {
         return l;
@@ -17,7 +17,7 @@ r.d(n, {
 });
 var i = r(818083),
     a = r(293810);
-let s = (0, i.B)({
+let o = (0, i.B)({
         kind: 'guild',
         id: '2021-06_guild_role_subscriptions',
         label: 'Guild Role Subscriptions',
@@ -30,7 +30,7 @@ let s = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    s = (0, i.B)({
         kind: 'user',
         id: '2021-08_guild_role_subscription_users',
         label: 'Guild Role Subscription Users',

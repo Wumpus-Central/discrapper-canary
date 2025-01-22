@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(81825),
     a = r(74538),
-    s = r(659181),
-    o = r(981631);
+    o = r(659181),
+    s = r(981631);
 function l(e, n, r) {
     return (
         n in e
@@ -41,16 +41,16 @@ class u extends i.Z {
             giftStyle: e.gift_style,
             guildId: e.guild_id,
             deleted: e.deleted,
-            sku: null != e.sku ? s.Z.createFromServer(e.sku) : null
+            sku: null != e.sku ? o.Z.createFromServer(e.sku) : null
         });
     }
     get isGiftable() {
-        return this.type === o.qc2.USER_GIFT && null == this.gifterId;
+        return this.type === s.qc2.USER_GIFT && null == this.gifterId;
     }
     isValid(e, n) {
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         if (this.isGiftable || this.deleted) return !1;
-        if (this.type === o.qc2.PREMIUM_SUBSCRIPTION) {
+        if (this.type === s.qc2.PREMIUM_SUBSCRIPTION) {
             let r = n.get(this.skuId);
             if ((null != r && !r.premium) || !a.ZP.canInstallPremiumApplications(e)) return !1;
         }

@@ -2,34 +2,34 @@ var i = r(192379);
 function a(e, n) {
     return (e === n && (0 !== e || 1 / e == 1 / n)) || (e != e && n != n);
 }
-var s = 'function' == typeof Object.is ? Object.is : a,
-    o = i.useState,
+var o = 'function' == typeof Object.is ? Object.is : a,
+    s = i.useState,
     l = i.useEffect,
     u = i.useLayoutEffect,
     c = i.useDebugValue;
 function d(e, n) {
     var r = n(),
-        i = o({
+        i = s({
             inst: {
                 value: r,
                 getSnapshot: n
             }
         }),
         a = i[0].inst,
-        s = i[1];
+        o = i[1];
     return (
         u(
             function () {
-                (a.value = r), (a.getSnapshot = n), f(a) && s({ inst: a });
+                (a.value = r), (a.getSnapshot = n), f(a) && o({ inst: a });
             },
             [e, r, n]
         ),
         l(
             function () {
                 return (
-                    f(a) && s({ inst: a }),
+                    f(a) && o({ inst: a }),
                     e(function () {
-                        f(a) && s({ inst: a });
+                        f(a) && o({ inst: a });
                     })
                 );
             },
@@ -44,13 +44,13 @@ function f(e) {
     e = e.value;
     try {
         var r = n();
-        return !s(e, r);
+        return !o(e, r);
     } catch (e) {
         return !0;
     }
 }
-function _(e, n) {
+function p(e, n) {
     return n();
 }
-var h = 'undefined' == typeof window || void 0 === window.document || void 0 === window.document.createElement ? _ : d;
+var h = 'undefined' == typeof window || void 0 === window.document || void 0 === window.document.createElement ? p : d;
 n.useSyncExternalStore = void 0 !== i.useSyncExternalStore ? i.useSyncExternalStore : h;

@@ -3,12 +3,12 @@ r.d(n, {
         return i;
     },
     a: function () {
-        return o;
+        return s;
     }
 });
 var i,
     a = r(75834);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -24,7 +24,7 @@ function s(e, n, r) {
 !(function (e) {
     (e.STREAM = 'stream'), (e.PAUSE = 'pause'), (e.STOP = 'stop');
 })(i || (i = {}));
-class o {
+class s {
     onStreamBegin(e, n) {
         let r = (0, a.e)(e, n);
         null == r || null == r.windowHandle ? this.callback({ type: 'stop' }) : this._stream(r);
@@ -72,6 +72,6 @@ class o {
         this.active && ((this.application.windowHandle = null), this.callback({ type: 'pause' }));
     }
     constructor(e) {
-        s(this, 'callback', void 0), s(this, 'active', void 0), s(this, 'application', void 0), (this.callback = e), (this.active = !1), (this.application = null);
+        o(this, 'callback', void 0), o(this, 'active', void 0), o(this, 'application', void 0), (this.callback = e), (this.active = !1), (this.application = null);
     }
 }

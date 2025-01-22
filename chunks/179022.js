@@ -1,12 +1,12 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
 });
-var r = n(824523),
-    o = n(664060);
-function a(e, t) {
-    if (t && ('object' === (0, r.Z)(t) || 'function' == typeof t)) return t;
-    if (void 0 !== t) throw TypeError('Derived constructors may only return object or undefined');
-    return (0, o.Z)(e);
+var i = r(824523),
+    a = r(664060);
+function o(e, n) {
+    if (n && ('object' === (0, i.Z)(n) || 'function' == typeof n)) return n;
+    if (void 0 !== n) throw TypeError('Derived constructors may only return object or undefined');
+    return (0, a.Z)(e);
 }

@@ -1,8 +1,8 @@
-var r = n(67867),
-    o = n(228042),
-    a = n(730427),
-    i = n(146321).set;
-r(
+var i = r(67867),
+    a = r(228042),
+    o = r(730427),
+    s = r(146321).set;
+i(
     {
         target: 'Map',
         proto: !0,
@@ -12,15 +12,15 @@ r(
     },
     {
         merge: function (e) {
-            for (var t = o(this), n = arguments.length, r = 0; r < n; )
-                a(
-                    arguments[r++],
-                    function (e, n) {
-                        i(t, e, n);
+            for (var n = a(this), r = arguments.length, i = 0; i < r; )
+                o(
+                    arguments[i++],
+                    function (e, r) {
+                        s(n, e, r);
                     },
                     { AS_ENTRIES: !0 }
                 );
-            return t;
+            return n;
         }
     }
 );

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,12 +11,12 @@ var r = n(692547),
     o = n(834129),
     s = n(388032),
     c = n(938530);
-function d(e) {
-    let { message: t, compact: n, usernameHook: d } = e,
-        u = (0, a.ZP)(t),
-        m = d(u),
+function u(e) {
+    let { message: t, compact: n, usernameHook: u } = e,
+        d = (0, a.ZP)(t),
+        m = u(d),
         h = s.intl.format(s.t['Rv+TSE'], {
-            username: u.nick,
+            username: d.nick,
             usernameHook: m,
             topic: t.content
         });

@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(47120);
-var o = r(442837),
+    o = r(47120);
+var s = r(442837),
     l = r(570140),
     u = r(973616);
 function c(e, n, r) {
@@ -27,9 +27,9 @@ function c(e, n, r) {
 })(i || (i = {}));
 let d = {},
     f = {},
-    _ = new Set(),
+    p = new Set(),
     h = {};
-function p(e) {
+function _(e) {
     let { applicationId: n } = e;
     f = {
         ...f,
@@ -51,7 +51,7 @@ function m(e) {
         ...h,
         [n.id]: r
     }),
-        _.has(n.id) && (_.delete(n.id), (_ = new Set(_)));
+        p.has(n.id) && (p.delete(n.id), (p = new Set(p)));
 }
 function g(e) {
     let { applicationId: n, isInvalidApplication: r } = e;
@@ -59,9 +59,9 @@ function g(e) {
         ...f,
         [n]: 2
     }),
-        r && (_.add(n), (_ = new Set(_)));
+        r && (p.add(n), (p = new Set(p)));
 }
-class E extends (a = o.ZP.Store) {
+class E extends (a = s.ZP.Store) {
     getApplication(e) {
         if (null != e) return d[e];
     }
@@ -80,10 +80,10 @@ class E extends (a = o.ZP.Store) {
         return f;
     }
     isInvalidApplication(e) {
-        return null != e && _.has(e);
+        return null != e && p.has(e);
     }
     getInvalidApplicationIds() {
-        return _;
+        return p;
     }
     isFetching(e) {
         return 0 === this.getApplicationFetchState(e);
@@ -94,7 +94,7 @@ class E extends (a = o.ZP.Store) {
 }
 c(E, 'displayName', 'ApplicationDirectoryApplicationsStore'),
     (n.Z = new E(l.Z, {
-        APPLICATION_DIRECTORY_FETCH_APPLICATION: p,
+        APPLICATION_DIRECTORY_FETCH_APPLICATION: _,
         APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: m,
         APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: g
     }));

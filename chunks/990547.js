@@ -2,46 +2,46 @@ let i, a;
 r.r(n),
     r.d(n, {
         AnalyticsActionHandlers: function () {
-            return T.X;
+            return b.X;
         },
         Impression: function () {
-            return b.Impression;
+            return I.Impression;
         },
         ImpressionGroups: function () {
-            return b.A;
+            return I.A;
         },
         ImpressionNames: function () {
-            return y.z;
+            return T.z;
         },
         ImpressionSchema: function () {
-            return y.ImpressionSchema;
+            return T.ImpressionSchema;
         },
         ImpressionTypes: function () {
-            return b.n;
+            return I.n;
         },
         NetworkActionNames: function () {
-            return y.a;
+            return T.a;
         },
         StandardAnalyticsLocation: function () {
-            return b.StandardAnalyticsLocation;
+            return I.StandardAnalyticsLocation;
         },
         StandardAnalyticsSchemaNameMap: function () {
-            return y.StandardAnalyticsSchemaNameMap;
+            return T.StandardAnalyticsSchemaNameMap;
         },
         TypedEventProperties: function () {
-            return b.TypedEventProperties;
+            return I.TypedEventProperties;
         },
         analyticsTrackingStoreMaker: function () {
-            return T.l;
+            return b.l;
         },
         encodeProperties: function () {
-            return I.Z;
+            return y.Z;
         },
         extendSuperProperties: function () {
             return W;
         },
         getCampaignParams: function () {
-            return L;
+            return x;
         },
         getDevice: function () {
             return k;
@@ -62,36 +62,36 @@ r.r(n),
             return K;
         }
     });
-var s,
-    o = r(757143);
+var o,
+    s = r(757143);
 var l = r(47120);
 var u = r(348327),
     c = r.n(u),
     d = r(512722),
     f = r.n(d),
-    _ = r(264344),
-    h = r.n(_);
+    p = r(264344),
+    h = r.n(p);
 r(804098);
-var p = r(903772),
+var _ = r(903772),
     m = r(627420),
     g = r(433517),
     E = r(298444),
     v = r(979675),
-    I = r(947486),
-    T = r(699407),
-    b = r(20281),
-    y = r(525769);
+    y = r(947486),
+    b = r(699407),
+    I = r(20281),
+    T = r(525769);
 let S = 'deviceProperties',
     A = 'referralProperties',
-    N = {},
     C = {},
+    N = {},
     R = window.DiscordNative;
 if (null != R) {
     let e;
     let n = R.remoteApp.getVersion(),
         r = R.process.platform,
         a = R.os.release,
-        o = R.os.arch,
+        s = R.os.arch,
         l = R.os.appArch,
         u = R.remoteApp.getReleaseChannel(),
         c = (0, m.qf)();
@@ -115,12 +115,12 @@ if (null != R) {
             release_channel: u || 'unknown',
             client_version: n,
             os_version: a,
-            os_arch: o,
+            os_arch: s,
             app_arch: l,
             system_locale: c,
-            has_client_mods: (0, p.e)()
+            has_client_mods: (0, _.e)()
         }),
-        (null === (s = h().name) || void 0 === s ? void 0 : s.toLocaleLowerCase()) === 'electron' && ((i.browser_user_agent = h().ua || ''), (i.browser_version = h().version || '')),
+        (null === (o = h().name) || void 0 === o ? void 0 : o.toLocaleLowerCase()) === 'electron' && ((i.browser_user_agent = h().ua || ''), (i.browser_version = h().version || '')),
         'linux' === r)
     ) {
         let e = R.crashReporter.getMetadata();
@@ -134,7 +134,7 @@ function D(e, n) {
     let r = new RegExp('[\\?&]'.concat(n, '=([^&#]*)')).exec(e);
     return null === r || ('string' != typeof r[1] && r[1].length) ? '' : decodeURIComponent(r[1]).replace(/\+/g, ' ');
 }
-function L(e) {
+function x(e) {
     let n = {};
     return (
         O.forEach((r) => {
@@ -144,7 +144,7 @@ function L(e) {
         n
     );
 }
-function x() {
+function L() {
     let e = document.referrer;
     if (0 === e.search('https?://(.*)google.([^/?]*)')) return 'google';
     if (0 === e.search('https?://(.*)bing.com')) return 'bing';
@@ -155,7 +155,7 @@ function x() {
 function w() {
     let e = {},
         n = document.referrer,
-        r = x(),
+        r = L(),
         i = 'yahoo' !== r ? 'q' : 'p';
     if (null != r) {
         e.search_engine = r;
@@ -207,7 +207,7 @@ function U() {
 function B() {
     let e = {},
         n = M();
-    return (e.os = n), (e.browser = P()), (e.device = k()), (e.system_locale = (0, m.qf)()), (e.has_client_mods = (0, p.e)()), e;
+    return (e.os = n), (e.browser = P()), (e.device = k()), (e.system_locale = (0, m.qf)()), (e.has_client_mods = (0, _.e)()), e;
 }
 function G() {
     var e, n;
@@ -220,19 +220,19 @@ function G() {
         os_version: null !== (n = null === h() || void 0 === h() ? void 0 : null === (e = h().os) || void 0 === e ? void 0 : e.version) && void 0 !== n ? n : ''
     };
 }
-function F() {
+function Z() {
     let e = {};
     return (
         (e.referrer = document.referrer),
         (e.referring_domain = U()),
         (e = {
             ...e,
-            ...L(window.location.href),
+            ...x(window.location.href),
             ...w()
         })
     );
 }
-function Z(e, n) {
+function F(e, n) {
     let r = {};
     return Object.keys(e).map((i) => (r[''.concat(i).concat(n)] = e[i])), r;
 }
@@ -240,10 +240,10 @@ function V() {
     let e = g.K.get(S);
     null == e && ((e = B()), g.K.set(S, e));
     let n = g.K.get(A);
-    null == n && ((n = F()), g.K.set(A, n));
+    null == n && ((n = Z()), g.K.set(A, n));
     let r = E.x.get(A);
     return (
-        null == r && ((r = Z(F(), '_current')), E.x.set(A, r)),
+        null == r && ((r = F(Z(), '_current')), E.x.set(A, r)),
         {
             ...e,
             ...G(),
@@ -263,13 +263,13 @@ function H() {
     let i = {},
         a = window.GLOBAL_ENV.RELEASE_CHANNEL;
     a && (i.release_channel = a.split('-')[0]);
-    let s = parseInt(((r = '361005'), '361005'), 10);
-    !isNaN(s) && (i.client_build_number = s);
-    let o = null == R ? void 0 : null === (e = (n = R.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(n);
-    return !isNaN(o) && (i.native_build_number = o), (i.client_event_source = j()), (i.has_client_mods = (0, p.e)()), i;
+    let o = parseInt(((r = '361090'), '361090'), 10);
+    !isNaN(o) && (i.client_build_number = o);
+    let s = null == R ? void 0 : null === (e = (n = R.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(n);
+    return !isNaN(s) && (i.native_build_number = s), (i.client_event_source = j()), (i.has_client_mods = (0, _.e)()), i;
 }
 function Y(e) {
-    return null != N[e] && N[e] > Date.now();
+    return null != C[e] && C[e] > Date.now();
 }
 if (null == i)
     try {
@@ -282,37 +282,37 @@ function W(e) {
         ...i,
         ...e
     }),
-        (a = (0, I.Z)(i));
+        (a = (0, y.Z)(i));
 }
 W(H());
 let K = (e) => {
     let { analyticEventConfigs: n, dispatcher: i, TRACK_ACTION_NAME: a } = e,
-        s = (0, v.$)(i, a);
+        o = (0, v.$)(i, a);
     return function e(e, i) {
         let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         if (null != r.g.isServerRendering && !0 === r.g.isServerRendering) return Promise.resolve();
-        let o = null != i ? i : {},
+        let s = null != i ? i : {},
             l = n[e];
         if ('function' == typeof l) {
             var u;
-            l = null !== (u = l(o)) && void 0 !== u ? u : null;
+            l = null !== (u = l(s)) && void 0 !== u ? u : null;
         }
         if (null != l) {
             if ('throttlePeriod' in l) {
-                let n = [e, ...l.throttleKeys(o)].join('_');
+                let n = [e, ...l.throttleKeys(s)].join('_');
                 if (Y(n)) return Promise.resolve();
                 if ('number' == typeof l.throttlePercent && Math.random() > l.throttlePercent) return Promise.resolve();
                 if (l.deduplicate) {
-                    let e = C[n];
-                    if (c()(e, o)) return Promise.resolve();
-                    C[n] = o;
+                    let e = N[n];
+                    if (c()(e, s)) return Promise.resolve();
+                    N[n] = s;
                 }
-                N[n] = Date.now() + l.throttlePeriod;
+                C[n] = Date.now() + l.throttlePeriod;
             } else if ('throttlePercent' in l) {
                 if (Math.random() > l.throttlePercent) return Promise.resolve();
             } else f()(!1, 'Unsupported analytics event config: '.concat(l));
         }
-        return s(e, i, a);
+        return o(e, i, a);
     };
 };
 function z() {

@@ -1,66 +1,66 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return A;
+        return L;
     }
 }),
-    t(47120);
-var l = t(200651),
-    s = t(192379),
-    o = t(120356),
-    a = t.n(o),
-    i = t(442837),
-    r = t(481060),
-    c = t(239091),
-    d = t(2052),
-    u = t(493773),
-    g = t(100527),
-    m = t(906732),
-    p = t(70097),
-    x = t(142497),
-    k = t(810788),
-    O = t(626135),
-    j = t(768581),
-    f = t(709054),
-    I = t(647177),
-    N = t(63985),
-    h = t(678916),
-    v = t(981631),
-    C = t(190378),
-    T = t(486324),
-    E = t(474936),
-    _ = t(388032),
-    b = t(821492);
-function S(e) {
-    let { icon: n, onClick: t, text: s, children: o, className: i, selected: c = !1, disabled: d = !1, onMouseLeave: u, onBlur: g } = e;
-    return (0, l.jsxs)(r.Clickable, {
-        className: a()(i, b.backgroundOption, {
-            [b.backgroundOptionSelected]: c,
-            [b.backgroundOptionDisabled]: d
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(442837),
+    o = n(481060),
+    c = n(239091),
+    d = n(2052),
+    u = n(493773),
+    m = n(100527),
+    g = n(906732),
+    h = n(70097),
+    p = n(142497),
+    x = n(810788),
+    f = n(626135),
+    _ = n(768581),
+    E = n(709054),
+    C = n(647177),
+    T = n(63985),
+    S = n(678916),
+    b = n(981631),
+    I = n(190378),
+    N = n(486324),
+    v = n(474936),
+    A = n(388032),
+    j = n(821492);
+function O(e) {
+    let { icon: t, onClick: n, text: r, children: s, className: l, selected: c = !1, disabled: d = !1, onMouseLeave: u, onBlur: m } = e;
+    return (0, i.jsxs)(o.Clickable, {
+        className: a()(l, j.backgroundOption, {
+            [j.backgroundOptionSelected]: c,
+            [j.backgroundOptionDisabled]: d
         }),
         onMouseLeave: u,
-        onBlur: g,
-        onClick: d ? void 0 : t,
+        onBlur: m,
+        onClick: d ? void 0 : n,
         children: [
-            c ? (0, l.jsx)('div', { className: b.backgroundOptionRing }) : null,
-            (0, l.jsxs)('div', {
-                className: b.backgroundOptionInner,
+            c ? (0, i.jsx)('div', { className: j.backgroundOptionRing }) : null,
+            (0, i.jsxs)('div', {
+                className: j.backgroundOptionInner,
                 children: [
-                    o,
-                    (0, l.jsxs)('div', {
-                        className: b.backgroundOptionContent,
+                    s,
+                    (0, i.jsxs)('div', {
+                        className: j.backgroundOptionContent,
                         children: [
-                            (0, l.jsx)(n, {
-                                className: a()(b.backgroundIconOptionIcon),
+                            (0, i.jsx)(t, {
+                                className: a()(j.backgroundIconOptionIcon),
                                 color: 'currentColor',
                                 size: 'custom',
                                 width: 18,
                                 height: 18
                             }),
-                            (0, l.jsx)(r.Text, {
-                                className: b.backgroundOptionText,
+                            (0, i.jsx)(o.Text, {
+                                className: j.backgroundOptionText,
                                 color: 'none',
                                 variant: 'text-sm/normal',
-                                children: s
+                                children: r
                             })
                         ]
                     })
@@ -69,289 +69,289 @@ function S(e) {
         ]
     });
 }
-function B(e) {
-    let { option: n, source: t, isAnimated: o } = e,
-        [a, i] = s.useState(!1);
+function R(e) {
+    let { option: t, source: n, isAnimated: s } = e,
+        [a, l] = r.useState(!1);
     if (
-        (s.useEffect(() => {
-            new Image().src = t;
-        }, [t]),
-        !o || null == n)
+        (r.useEffect(() => {
+            new Image().src = n;
+        }, [n]),
+        !s || null == t)
     )
-        return (0, l.jsx)('div', {
-            className: b.backgroundImageOption,
-            style: { backgroundImage: 'url('.concat(t, ')') }
+        return (0, i.jsx)('div', {
+            className: j.backgroundImageOption,
+            style: { backgroundImage: 'url('.concat(n, ')') }
         });
-    let r = (0, j.rI)({
-        userId: n.user_id,
-        assetId: n.id,
-        assetHash: n.asset,
+    let o = (0, _.rI)({
+        userId: t.user_id,
+        assetId: t.id,
+        assetHash: t.asset,
         size: 720,
         canAnimate: !1
     });
-    return (0, l.jsx)('img', {
-        onMouseMove: () => i(!0),
-        onMouseLeave: () => i(!1),
-        className: b.backgroundImageOption,
-        src: a ? t : r,
-        alt: n.id
+    return (0, i.jsx)('img', {
+        onMouseMove: () => l(!0),
+        onMouseLeave: () => l(!1),
+        className: j.backgroundImageOption,
+        src: a ? n : o,
+        alt: t.id
     });
 }
-function D(e) {
-    let { option: n, source: s, selected: o = !1, onSelectOption: u, isAnimatedImage: j, isVideo: f, hotspotLocation: N, ...h } = e,
-        C = (0, d.O)(),
-        { analyticsLocations: T } = (0, m.ZP)(g.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
-        S = (0, i.e7)([k.Z], () => null != N && k.Z.hasHotspot(N)),
-        D = f
-            ? (0, l.jsx)(p.Z, {
-                  className: b.backgroundImageOption,
-                  src: s,
+function P(e) {
+    let { option: t, source: r, selected: s = !1, onSelectOption: u, isAnimatedImage: _, isVideo: E, hotspotLocation: T, ...S } = e,
+        I = (0, d.O)(),
+        { analyticsLocations: N } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
+        O = (0, l.e7)([x.Z], () => null != T && x.Z.hasHotspot(T)),
+        P = E
+            ? (0, i.jsx)(h.Z, {
+                  className: j.backgroundImageOption,
+                  src: r,
                   loop: !0,
                   playOnHover: !0,
                   muted: !0
               })
-            : (0, l.jsx)(B, {
-                  isAnimated: j,
-                  option: (0, I.rD)(n) ? n : void 0,
-                  source: s
+            : (0, i.jsx)(R, {
+                  isAnimated: _,
+                  option: (0, C.rD)(t) ? t : void 0,
+                  source: r
               });
-    function U() {
-        null != N &&
-            S &&
-            (x.Kw(N),
-            O.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: E.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
-                location: C.location,
-                location_stack: T
+    function D() {
+        null != T &&
+            O &&
+            (p.Kw(T),
+            f.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: v.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
+                location: I.location,
+                location_stack: N
             }));
     }
-    return (0, l.jsxs)(r.Clickable, {
-        ...h,
-        className: a()(b.backgroundOption, { [b.backgroundOptionSelected]: o }),
-        onClick: () => u(n),
+    return (0, i.jsxs)(o.Clickable, {
+        ...S,
+        className: a()(j.backgroundOption, { [j.backgroundOptionSelected]: s }),
+        onClick: () => u(t),
         onContextMenu: (e) =>
             (0, c.jW)(e, async () => {
-                let { default: e } = await t.e('99414').then(t.bind(t, 187658));
-                return (t) =>
-                    (0, l.jsx)(e, {
-                        ...t,
-                        backgroundOption: n,
-                        optionIsInUse: o
+                let { default: e } = await n.e('99414').then(n.bind(n, 187658));
+                return (n) =>
+                    (0, i.jsx)(e, {
+                        ...n,
+                        backgroundOption: t,
+                        optionIsInUse: s
                     });
             }),
         children: [
-            o ? (0, l.jsx)('div', { className: b.backgroundOptionRing }) : null,
-            (0, l.jsx)('div', {
-                onFocus: U,
-                onMouseEnter: U,
-                className: b.backgroundOptionInner,
-                children: D
+            s ? (0, i.jsx)('div', { className: j.backgroundOptionRing }) : null,
+            (0, i.jsx)('div', {
+                onFocus: D,
+                onMouseEnter: D,
+                className: j.backgroundOptionInner,
+                children: P
             }),
-            f || j
-                ? (0, l.jsx)('div', {
-                      className: b.playIcon,
-                      children: (0, l.jsx)(r.PlayIcon, {
+            E || _
+                ? (0, i.jsx)('div', {
+                      className: j.playIcon,
+                      children: (0, i.jsx)(o.PlayIcon, {
                           size: 'xxs',
                           color: 'currentColor'
                       })
                   })
                 : null,
-            S &&
-                (0, l.jsx)(r.TextBadge, {
-                    text: _.intl.string(_.t.y2b7CA),
-                    className: b.newTextBadge
+            O &&
+                (0, i.jsx)(o.TextBadge, {
+                    text: A.intl.string(A.t.y2b7CA),
+                    className: j.newTextBadge
                 })
         ]
     });
 }
-function U() {
-    return (0, l.jsxs)('div', {
-        className: b.customBackgroundTooltip,
+function D() {
+    return (0, i.jsxs)('div', {
+        className: j.customBackgroundTooltip,
         children: [
-            (0, l.jsx)(r.NitroWheelIcon, {
+            (0, i.jsx)(o.NitroWheelIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: b.customBackgroundTooltipIcon
+                className: j.customBackgroundTooltipIcon
             }),
-            (0, l.jsx)(r.Text, {
+            (0, i.jsx)(o.Text, {
                 variant: 'text-sm/normal',
-                children: _.intl.string(_.t['T+yRY2'])
+                children: A.intl.string(A.t['T+yRY2'])
             })
         ]
     });
 }
 function y(e) {
-    let { onClick: n, tooltipText: t, disabled: s = !1 } = e,
-        o = (0, i.e7)([k.Z], () => k.Z.hasHotspot(C.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
+    let { onClick: t, tooltipText: n, disabled: r = !1 } = e,
+        s = (0, l.e7)([x.Z], () => x.Z.hasHotspot(I.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW));
     function a() {
-        x.Kw(C.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
+        p.Kw(I.v.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
-    let c = o ? _.intl.string(_.t['5TUJOj']) : t;
-    return (0, l.jsxs)(r.TooltipContainer, {
+    let c = s ? A.intl.string(A.t['5TUJOj']) : n;
+    return (0, i.jsxs)(o.TooltipContainer, {
         text: c,
-        className: b.newBackgroundTooltipContainer,
+        className: j.newBackgroundTooltipContainer,
         children: [
-            (0, l.jsxs)(S, {
-                className: b.__invalid_backgroundOptionBlurred,
-                disabled: s,
-                icon: r.ImagePlusIcon,
-                onClick: n,
+            (0, i.jsxs)(O, {
+                className: j.__invalid_backgroundOptionBlurred,
+                disabled: r,
+                icon: o.ImagePlusIcon,
+                onClick: t,
                 onMouseLeave: a,
                 onBlur: a,
-                text: (0, l.jsxs)('div', {
-                    className: b.backgroundCustomInlineUpsell,
+                text: (0, i.jsxs)('div', {
+                    className: j.backgroundCustomInlineUpsell,
                     children: [
-                        (0, l.jsx)(r.NitroWheelIcon, {
+                        (0, i.jsx)(o.NitroWheelIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: b.backgroundCustomInlineUpsellIcon
+                            className: j.backgroundCustomInlineUpsellIcon
                         }),
-                        (0, l.jsx)('div', {
-                            className: b.overflowEllipsis,
-                            children: _.intl.string(_.t['1t7U8f'])
+                        (0, i.jsx)('div', {
+                            className: j.overflowEllipsis,
+                            children: A.intl.string(A.t['1t7U8f'])
                         })
                     ]
                 }),
-                children: [(0, l.jsx)('div', { className: b.backgroundCustomInlineUpsellBackground }), (0, l.jsx)('div', { className: b.backgroundCustomInlineUpsellBackgroundDarkener })]
+                children: [(0, i.jsx)('div', { className: j.backgroundCustomInlineUpsellBackground }), (0, i.jsx)('div', { className: j.backgroundCustomInlineUpsellBackgroundDarkener })]
             }),
-            o &&
-                (0, l.jsx)(r.TextBadge, {
-                    text: _.intl.string(_.t.y2b7CA),
-                    className: b.newTextBadge
+            s &&
+                (0, i.jsx)(o.TextBadge, {
+                    text: A.intl.string(A.t.y2b7CA),
+                    className: j.newTextBadge
                 })
         ]
     });
 }
-function M(e) {
-    let { onClick: n } = e,
-        t = (0, d.O)(),
-        { analyticsLocations: s } = (0, m.ZP)(g.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
+function B(e) {
+    let { onClick: t } = e,
+        n = (0, d.O)(),
+        { analyticsLocations: r } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_CUSTOM_UPSELL);
     return (
         (0, u.Z)(() => {
-            O.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: E.cd.VIDEO_BACKGROUNDS_INLINE,
-                location: t.location,
-                location_stack: s
+            f.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: v.cd.VIDEO_BACKGROUNDS_INLINE,
+                location: n.location,
+                location_stack: r
             });
         }),
-        (0, l.jsx)(y, {
-            onClick: n,
-            tooltipText: _.intl.string(_.t.IqE0T0)
+        (0, i.jsx)(y, {
+            onClick: t,
+            tooltipText: A.intl.string(A.t.IqE0T0)
         })
     );
 }
 function Z(e) {
-    let { onAddBackgroundImage: n, disabled: s } = e,
-        o = (0, r.useModalContext)(),
-        a = s ? _.intl.formatToPlainString(_.t.ykGFeH, { maxCustomBackgrounds: 25 }) : _.intl.string(_.t.Qx0tFR),
-        i = [
+    let { onAddBackgroundImage: t, disabled: r } = e,
+        s = (0, o.useModalContext)(),
+        a = r ? A.intl.formatToPlainString(A.t.ykGFeH, { maxCustomBackgrounds: 25 }) : A.intl.string(A.t.Qx0tFR),
+        l = [
             {
-                name: _.intl.string(_.t.Sp2NFx),
+                name: A.intl.string(A.t.Sp2NFx),
                 extensions: ['jpg', 'jpeg', 'png', 'gif', 'mp4']
             }
         ];
-    return (0, l.jsx)(y, {
-        disabled: s,
+    return (0, i.jsx)(y, {
+        disabled: r,
         onClick: function () {
-            (0, r.openModalLazy)(
+            (0, o.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([t.e('70687'), t.e('83332')]).then(t.bind(t, 28130));
-                    return (t) =>
-                        (0, l.jsx)(e, {
-                            maxFileSizeBytes: h.SJ,
-                            onComplete: n,
-                            uploadType: T.pC.VIDEO_BACKGROUND,
-                            filters: i,
-                            modalTitle: _.intl.string(_.t.yG2pUl),
-                            imageSpecifications: _.intl.string(_.t['72OaxM']),
-                            uploadOptionTitle: _.intl.string(_.t.xsW8u7),
+                    let { default: e } = await Promise.all([n.e('70687'), n.e('74752')]).then(n.bind(n, 28130));
+                    return (n) =>
+                        (0, i.jsx)(e, {
+                            maxFileSizeBytes: S.SJ,
+                            onComplete: t,
+                            uploadType: N.pC.VIDEO_BACKGROUND,
+                            filters: l,
+                            modalTitle: A.intl.string(A.t.yG2pUl),
+                            imageSpecifications: A.intl.string(A.t['72OaxM']),
+                            uploadOptionTitle: A.intl.string(A.t.xsW8u7),
                             showUpsellHeader: !0,
-                            ...t
+                            ...n
                         });
                 },
-                { contextKey: o }
+                { contextKey: s }
             );
         },
         tooltipText: a
     });
 }
-function A(e) {
-    let { canUseCustomBackgrounds: n, customBackgroundOptions: t, selectedOption: o, onSelectOption: a, onUpsellClick: i, onAddBackgroundImage: c, smallerOptions: d } = e,
-        u = s.useMemo(() => t.sort((e, n) => (null == e.last_used || null == n.last_used ? f.default.compare(n.id, e.id) : new Date(n.last_used).getTime() - new Date(e.last_used).getTime())), [t]),
-        p = u.length >= 25,
-        { analyticsLocations: x } = (0, m.ZP)(g.Z.VIDEO_BACKGROUND_OPTIONS),
-        k = Object.values((0, N.Z)()).sort((e, n) => h.E1[e.id] - h.E1[n.id]);
-    return (0, l.jsx)(m.Gt, {
-        value: x,
-        children: (0, l.jsxs)('div', {
-            className: d ? b.backgroundOptionsSmall : b.backgroundOptionsLarge,
+function L(e) {
+    let { canUseCustomBackgrounds: t, customBackgroundOptions: n, selectedOption: s, onSelectOption: a, onUpsellClick: l, onAddBackgroundImage: c, smallerOptions: d } = e,
+        u = r.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? E.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
+        h = u.length >= 25,
+        { analyticsLocations: p } = (0, g.ZP)(m.Z.VIDEO_BACKGROUND_OPTIONS),
+        x = Object.values((0, T.Z)()).sort((e, t) => S.E1[e.id] - S.E1[t.id]);
+    return (0, i.jsx)(g.Gt, {
+        value: p,
+        children: (0, i.jsxs)('div', {
+            className: d ? j.backgroundOptionsSmall : j.backgroundOptionsLarge,
             children: [
-                (0, l.jsx)(S, {
-                    selected: null == o,
-                    icon: r.DenyIcon,
+                (0, i.jsx)(O, {
+                    selected: null == s,
+                    icon: o.DenyIcon,
                     onClick: () => a(null),
-                    text: _.intl.string(_.t.fUdMeH)
+                    text: A.intl.string(A.t.fUdMeH)
                 }),
-                (0, l.jsx)(S, {
-                    className: b.__invalid_backgroundOptionBlurred,
-                    selected: o === h.f7,
-                    icon: r.BlurBackgroundIcon,
-                    onClick: () => a(h.f7),
-                    text: _.intl.string(_.t.LhSyLy),
-                    children: (0, l.jsx)('div', { className: b.backgroundOptionBlurBackground })
+                (0, i.jsx)(O, {
+                    className: j.__invalid_backgroundOptionBlurred,
+                    selected: s === S.f7,
+                    icon: o.BlurBackgroundIcon,
+                    onClick: () => a(S.f7),
+                    text: A.intl.string(A.t.LhSyLy),
+                    children: (0, i.jsx)('div', { className: j.backgroundOptionBlurBackground })
                 }),
-                n
-                    ? (0, l.jsx)(Z, {
+                t
+                    ? (0, i.jsx)(Z, {
                           onAddBackgroundImage: c,
-                          disabled: p
+                          disabled: h
                       })
-                    : (0, l.jsx)(M, { onClick: i }),
+                    : (0, i.jsx)(B, { onClick: l }),
                 u.map((e) =>
-                    (0, l.jsx)(
-                        r.Tooltip,
+                    (0, i.jsx)(
+                        o.Tooltip,
                         {
-                            text: (0, l.jsx)(U, {}),
-                            'aria-label': _.intl.string(_.t['T+yRY2']),
-                            children: (n) => {
-                                let t = (0, j.rI)({
+                            text: (0, i.jsx)(D, {}),
+                            'aria-label': A.intl.string(A.t['T+yRY2']),
+                            children: (t) => {
+                                let n = (0, _.rI)({
                                     userId: e.user_id,
                                     assetId: e.id,
                                     assetHash: e.asset,
                                     size: 720
                                 });
-                                return null == t
+                                return null == n
                                     ? null
-                                    : (0, s.createElement)(D, {
-                                          ...n,
+                                    : (0, r.createElement)(P, {
+                                          ...t,
                                           key: e.id,
                                           option: e,
-                                          source: t,
-                                          selected: (0, I.rD)(o) && o.id === e.id,
+                                          source: n,
+                                          selected: (0, C.rD)(s) && s.id === e.id,
                                           onSelectOption: a,
-                                          isVideo: (0, j.ay)(e.asset),
-                                          isAnimatedImage: (0, j.xR)(e.asset)
+                                          isVideo: (0, _.ay)(e.asset),
+                                          isAnimatedImage: (0, _.xR)(e.asset)
                                       });
                             }
                         },
                         e.id
                     )
                 ),
-                k.map((e) => {
-                    let n = !0 === e.isVideo;
-                    return (0, l.jsx)(
-                        r.Tooltip,
+                x.map((e) => {
+                    let t = !0 === e.isVideo;
+                    return (0, i.jsx)(
+                        o.Tooltip,
                         {
                             text: e.name,
                             'aria-label': e.name,
-                            children: (t) =>
-                                (0, s.createElement)(D, {
-                                    ...t,
+                            children: (n) =>
+                                (0, r.createElement)(P, {
+                                    ...n,
                                     key: e.id,
                                     option: e.id,
                                     source: e.source,
-                                    selected: o === e.id,
+                                    selected: s === e.id,
                                     onSelectOption: a,
-                                    isVideo: n,
+                                    isVideo: t,
                                     isAnimatedImage: !1,
                                     hotspotLocation: e.hotspotLocation
                                 })

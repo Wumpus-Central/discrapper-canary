@@ -1,18 +1,18 @@
 r.d(n, {
     $p: function () {
-        return b;
+        return I;
     },
     FQ: function () {
-        return T;
+        return b;
     },
     Il: function () {
-        return y;
+        return T;
     },
     Jf: function () {
-        return C;
+        return N;
     },
     SA: function () {
-        return L;
+        return x;
     },
     Um: function () {
         return A;
@@ -21,10 +21,10 @@ r.d(n, {
         return R;
     },
     hW: function () {
-        return x;
+        return L;
     },
     lY: function () {
-        return N;
+        return C;
     },
     pk: function () {
         return S;
@@ -35,22 +35,22 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(392711),
-    s = r.n(a),
-    o = r(544891),
+    o = r.n(a),
+    s = r(544891),
     l = r(570140),
     u = r(668781),
     c = r(38618),
     d = r(706454),
     f = r(675478),
-    _ = r(598077),
+    p = r(598077),
     h = r(486472),
-    p = r(594174),
+    _ = r(594174),
     m = r(73346),
     g = r(926491),
     E = r(981631),
     v = r(526761),
-    I = r(388032);
-let T = async (e, n) => {
+    y = r(388032);
+let b = async (e, n) => {
         let { body: r } = await (0, m.Kb)({
             url: E.ANM.STICKER_PACK(e),
             rejectWithError: !1
@@ -65,7 +65,7 @@ let T = async (e, n) => {
             r
         );
     },
-    b = async function () {
+    I = async function () {
         let { locale: e = d.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (g.Z.isFetchingStickerPacks || g.Z.hasLoadedStickerPacks) return;
         l.Z.wait(() => {
@@ -73,7 +73,7 @@ let T = async (e, n) => {
         });
         let {
             body: { sticker_packs: n }
-        } = await o.tn.get({
+        } = await s.tn.get({
             url: E.ANM.STICKER_PACKS,
             query: { locale: e },
             rejectWithError: !1
@@ -83,8 +83,8 @@ let T = async (e, n) => {
             packs: n
         });
     },
-    y = async (e) => {
-        let { body: n } = await o.tn.get({
+    T = async (e) => {
+        let { body: n } = await s.tn.get({
             url: E.ANM.STICKER(e),
             rejectWithError: !1
         });
@@ -94,7 +94,7 @@ let T = async (e, n) => {
         });
     },
     S = async (e) => {
-        let { body: n } = await o.tn.get({
+        let { body: n } = await s.tn.get({
             url: E.ANM.GUILD_STICKER_PACKS(e),
             rejectWithError: !1
         });
@@ -105,20 +105,20 @@ let T = async (e, n) => {
                 null != e.user
                     ? {
                           ...e,
-                          user: new _.Z(e.user)
+                          user: new p.Z(e.user)
                       }
                     : e
             )
         });
     },
     A = async (e) => {
-        await o.tn.del({
+        await s.tn.del({
             url: E.ANM.GUILD_STICKER(e.guild_id, e.id),
             rejectWithError: !1
         });
     },
-    N = async (e, n) => {
-        let r = await o.tn.post({
+    C = async (e, n) => {
+        let r = await s.tn.post({
             url: E.ANM.GUILD_STICKER_PACKS(e),
             body: n,
             rejectWithError: !1
@@ -129,15 +129,15 @@ let T = async (e, n) => {
                 guildId: e,
                 sticker: {
                     ...r.body,
-                    user: p.default.getCurrentUser()
+                    user: _.default.getCurrentUser()
                 }
             }),
             r.body
         );
     },
-    C = async (e, n, r) =>
+    N = async (e, n, r) =>
         (
-            await o.tn.patch({
+            await s.tn.patch({
                 url: E.ANM.GUILD_STICKER(e, n),
                 body: r,
                 rejectWithError: !1
@@ -161,21 +161,21 @@ function O(e, n) {
 function D(e) {
     return h.Z.totalUnavailableGuilds > 0 || !c.Z.isConnected() ? e : e.filter((e) => null != g.Z.getStickerById(e));
 }
-function L(e) {
+function x(e) {
     f.DZ.updateAsync(
         'favoriteStickers',
         (n) =>
-            ((n.stickerIds = D(n.stickerIds)), s().size(n.stickerIds) >= v.oX)
+            ((n.stickerIds = D(n.stickerIds)), o().size(n.stickerIds) >= v.oX)
                 ? (u.Z.show({
-                      title: I.intl.string(I.t['+XYXtb']),
-                      body: I.intl.formatToPlainString(I.t.JaIyFh, { count: v.oX })
+                      title: y.intl.string(y.t['+XYXtb']),
+                      body: y.intl.formatToPlainString(y.t.JaIyFh, { count: v.oX })
                   }),
                   !1)
                 : !n.stickerIds.includes(e) && void n.stickerIds.push(e),
         v.fy.INFREQUENT_USER_ACTION
     );
 }
-function x(e) {
+function L(e) {
     f.DZ.updateAsync(
         'favoriteStickers',
         (n) => {

@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(524437),
-    o = r(695346);
+    o = r(524437),
+    s = r(695346);
 function l() {
     let [e, n] = a.useState('cozy');
     return (
@@ -26,14 +26,14 @@ function l() {
     );
 }
 function u() {
-    let e = o.YC.useSetting(),
+    let e = s.YC.useSetting(),
         n = l();
     switch (e) {
-        case s.Pi.RESPONSIVE:
+        case o.Pi.RESPONSIVE:
             return n;
-        case s.Pi.COZY:
+        case o.Pi.COZY:
             return 'cozy';
-        case s.Pi.COMPACT:
+        case o.Pi.COMPACT:
         default:
             return 'compact';
     }

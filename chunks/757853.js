@@ -29,20 +29,20 @@ var l,
     C = n(987509),
     v = n(592125),
     L = n(430824),
-    T = n(158776),
-    b = n(306680),
-    N = n(699516),
+    b = n(158776),
+    N = n(306680),
+    T = n(699516),
     x = n(594174),
-    P = n(626135),
-    y = n(55935),
+    y = n(626135),
+    P = n(55935),
     Z = n(823379),
     O = n(51144),
-    R = n(784384),
-    w = n(981631),
+    w = n(784384),
+    R = n(981631),
     D = n(490897),
     M = n(388032),
     j = n(190417);
-function U(e) {
+function k(e) {
     let { message: t, destination: n, rowMode: l, icon: i, label: s, subLabel: c, selected: u, disabled: h, onPressDestination: _, 'aria-setsize': m, 'aria-posinset': E } = e,
         I = (0, d.JA)(n.id),
         [p, S] = r.useState(!1),
@@ -55,7 +55,7 @@ function U(e) {
             null == _ || _(n);
         }, [l, _, n]),
         v = r.useCallback(() => {
-            P.default.track(w.rMx.FORWARD_ONE_TAP_VIEW, {
+            y.default.track(R.rMx.FORWARD_ONE_TAP_VIEW, {
                 channel_id: t.channel_id,
                 message_id: t.id
             }),
@@ -69,7 +69,7 @@ function U(e) {
         L = r.useCallback(() => {
             S(!1),
                 (A.current = !1),
-                P.default.track(w.rMx.FORWARD_ONE_TAP_UNDO, {
+                y.default.track(R.rMx.FORWARD_ONE_TAP_UNDO, {
                     channel_id: t.channel_id,
                     message_id: t.id
                 });
@@ -165,13 +165,13 @@ function U(e) {
         })
     );
 }
-function k(e) {
+function F(e) {
     let { user: t, subLabel: n, ...l } = e,
         i = O.ZP.useName(t),
         r = O.ZP.useUserTag(t, { decoration: 'never' }),
-        s = (0, h.e7)([N.Z], () => N.Z.getNickname(t.id)),
-        o = (0, h.e7)([T.Z], () => T.Z.getStatus(t.id));
-    return (0, a.jsx)(U, {
+        s = (0, h.e7)([T.Z], () => T.Z.getNickname(t.id)),
+        o = (0, h.e7)([b.Z], () => b.Z.getStatus(t.id));
+    return (0, a.jsx)(k, {
         ...l,
         icon: (0, a.jsx)(_.Z, {
             'aria-hidden': !0,
@@ -183,11 +183,11 @@ function k(e) {
         subLabel: null != n ? n : r
     });
 }
-function F(e) {
+function G(e) {
     let { channel: t, subLabel: n, ...l } = e,
         i = (0, I.ZP)(t),
         r = (0, A._)(t);
-    return (0, a.jsx)(U, {
+    return (0, a.jsx)(k, {
         ...l,
         icon: (0, a.jsx)(p.Z, {
             'aria-hidden': !0,
@@ -199,15 +199,15 @@ function F(e) {
         subLabel: null != n ? n : r
     });
 }
-function G(e) {
+function U(e) {
     let { channel: t, subLabel: n, ...l } = e,
         i = (0, h.e7)([L.Z], () => L.Z.getGuild(null == t ? void 0 : t.guild_id)),
         r = (0, I.ZP)(t),
-        s = (0, h.e7)([v.Z, x.default, N.Z], () => {
+        s = (0, h.e7)([v.Z, x.default, T.Z], () => {
             let e = v.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, I.F6)(e, x.default, N.Z, !1);
+            return null == e ? null : (0, I.F6)(e, x.default, T.Z, !1);
         }),
-        o = (0, h.e7)([b.ZP], () => b.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
+        o = (0, h.e7)([N.ZP], () => N.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
         c = null == i ? void 0 : i.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? f.ForumIcon : f.TextIcon;
@@ -236,7 +236,7 @@ function G(e) {
                               (0, a.jsx)(f.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-secondary',
-                                  children: (0, y.Xf)(u()(o))
+                                  children: (0, P.Xf)(u()(o))
                               })
                           ]
                       })
@@ -244,7 +244,7 @@ function G(e) {
             ]
         });
     }
-    return (0, a.jsx)(U, {
+    return (0, a.jsx)(k, {
         ...l,
         icon: (0, a.jsx)(S.Z, {
             size: S.E.SMALL_32,
@@ -280,7 +280,7 @@ function W(e) {
                                   id: d.id
                               },
                     f = (0, C.hC)(h),
-                    _ = (0, R.HY)(l, i, d),
+                    _ = (0, w.HY)(l, i, d),
                     m = g.includes(f),
                     I = {
                         key: f,
@@ -295,17 +295,17 @@ function W(e) {
                         'aria-setsize': t.length
                     };
                 if (u === E.h8.USER)
-                    return (0, a.jsx)(k, {
+                    return (0, a.jsx)(F, {
                         user: d,
                         ...I
                     });
                 if (u === E.h8.GROUP_DM)
-                    return (0, a.jsx)(F, {
+                    return (0, a.jsx)(G, {
                         channel: d,
                         ...I
                     });
                 if (u === E.h8.TEXT_CHANNEL || u === E.h8.VOICE_CHANNEL)
-                    return (0, a.jsx)(G, {
+                    return (0, a.jsx)(U, {
                         channel: d,
                         ...I
                     });

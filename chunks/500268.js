@@ -1,14 +1,14 @@
 function r(e, n, r, i) {
     var a = [],
-        o = {},
+        s = {},
         l = {},
         u = {};
     return function c(d) {
-        (o[d] = !0), a.push(d), (u[d] = !0);
+        (s[d] = !0), a.push(d), (u[d] = !0);
         for (let n = 0; n < e[d].length; n++) {
             let r = e[d][n];
-            if (o[r]) {
-                if (u[r] && (a.push(r), !i)) throw new s(a);
+            if (s[r]) {
+                if (u[r] && (a.push(r), !i)) throw new o(a);
             } else c(r);
         }
         a.pop(), delete u[d], (!n || 0 === e[d].length) && !l[d] && (r.push(d), (l[d] = !0));
@@ -90,28 +90,28 @@ a.prototype = {
             i = [],
             a = Object.keys(this.nodes);
         if (0 === a.length) return i;
-        var s = r(this.outgoingEdges, !1, [], this.circular);
+        var o = r(this.outgoingEdges, !1, [], this.circular);
         a.forEach(function (e) {
-            s(e);
+            o(e);
         });
-        var o = r(this.outgoingEdges, e, i, this.circular);
+        var s = r(this.outgoingEdges, e, i, this.circular);
         return (
             a
                 .filter(function (e) {
                     return 0 === n.incomingEdges[e].length;
                 })
                 .forEach(function (e) {
-                    o(e);
+                    s(e);
                 }),
             i
         );
     }
 };
-var s = (i = function (e) {
+var o = (i = function (e) {
     var n = Error('Dependency Cycle Found: ' + e.join(' -> '));
-    return (n.cyclePath = e), Object.setPrototypeOf(n, Object.getPrototypeOf(this)), Error.captureStackTrace && Error.captureStackTrace(n, s), n;
+    return (n.cyclePath = e), Object.setPrototypeOf(n, Object.getPrototypeOf(this)), Error.captureStackTrace && Error.captureStackTrace(n, o), n;
 });
-(s.prototype = Object.create(Error.prototype, {
+(o.prototype = Object.create(Error.prototype, {
     constructor: {
         value: Error,
         enumerable: !1,
@@ -119,4 +119,4 @@ var s = (i = function (e) {
         configurable: !0
     }
 })),
-    Object.setPrototypeOf(s, Error);
+    Object.setPrototypeOf(o, Error);

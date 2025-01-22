@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(928518),
-    o = r(776862),
+    o = r(928518),
+    s = r(776862),
     l = r(626135),
     u = r(981631);
 function c(e, n) {
@@ -23,22 +23,22 @@ function c(e, n) {
         type: c,
         location: e.analyticsSourceLocation
     });
-    let { openInPopoutEnabled: f, ..._ } = e,
-        h = s.Z.getWindowOpen(u.KJ3.CHANNEL_CALL_POPOUT) && null != f && f;
-    h && (0, o.Z)(u.KJ3.CHANNEL_CALL_POPOUT);
-    let p = h ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+    let { openInPopoutEnabled: f, ...p } = e,
+        h = o.Z.getWindowOpen(u.KJ3.CHANNEL_CALL_POPOUT) && null != f && f;
+    h && (0, s.Z)(u.KJ3.CHANNEL_CALL_POPOUT);
+    let _ = h ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
     (0, a.openModalLazy)(
         async () => {
             let { default: e } = await r.e('89675').then(r.bind(r, 146747));
             return (n) =>
                 (0, i.jsx)(e, {
-                    ..._,
+                    ...p,
                     ...n
                 });
         },
         {
             onCloseCallback: d,
-            contextKey: p
+            contextKey: _
         }
     );
 }

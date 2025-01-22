@@ -1,19 +1,19 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
-    a = n(321065);
-function l(e) {
-    let { children: t, tag: n, className: r } = e;
+var a = n(120356),
+    r = n.n(a),
+    l = n(321065);
+function o(e) {
+    let { children: t, tag: n, className: a } = e;
     return (
         (n = null != n ? n : 'h3'),
         (0, i.jsx)(n, {
-            className: s()(a.title, r),
+            className: r()(l.title, a),
             children: t
         })
     );

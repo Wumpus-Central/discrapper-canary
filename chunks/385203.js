@@ -1,7 +1,7 @@
 var i = r(223428),
     a = r(855467),
-    s = r(972566),
-    o = r(814033),
+    o = r(972566),
+    s = r(814033),
     l = r(530917),
     u = r(108381),
     c = r(895598),
@@ -9,25 +9,25 @@ var i = r(223428),
 function f(e, n) {
     var r = e.modulus.byteLength(),
         i = u('sha1').update(d.alloc(0)).digest(),
-        o = i.length;
+        s = i.length;
     if (0 !== n[0]) throw Error('decryption error');
-    var l = n.slice(1, o + 1),
-        c = n.slice(o + 1),
-        f = s(l, a(c, o)),
-        _ = s(c, a(f, r - o - 1));
-    if (h(i, _.slice(0, o))) throw Error('decryption error');
-    for (var p = o; 0 === _[p]; ) p++;
-    if (1 !== _[p++]) throw Error('decryption error');
-    return _.slice(p);
+    var l = n.slice(1, s + 1),
+        c = n.slice(s + 1),
+        f = o(l, a(c, s)),
+        p = o(c, a(f, r - s - 1));
+    if (h(i, p.slice(0, s))) throw Error('decryption error');
+    for (var _ = s; 0 === p[_]; ) _++;
+    if (1 !== p[_++]) throw Error('decryption error');
+    return p.slice(_);
 }
-function _(e, n, r) {
-    for (var i = n.slice(0, 2), a = 2, s = 0; 0 !== n[a++]; )
+function p(e, n, r) {
+    for (var i = n.slice(0, 2), a = 2, o = 0; 0 !== n[a++]; )
         if (a >= n.length) {
-            s++;
+            o++;
             break;
         }
-    var o = n.slice(2, a - 1);
-    if (((('0002' !== i.toString('hex') && !r) || ('0001' !== i.toString('hex') && r)) && s++, o.length < 8 && s++, s)) throw Error('decryption error');
+    var s = n.slice(2, a - 1);
+    if (((('0002' !== i.toString('hex') && !r) || ('0001' !== i.toString('hex') && r)) && o++, s.length < 8 && o++, o)) throw Error('decryption error');
     return n.slice(a);
 }
 function h(e, n) {
@@ -41,14 +41,14 @@ function h(e, n) {
 e.exports = function (e, n, r) {
     a = e.padding ? e.padding : r ? 1 : 4;
     var a,
-        s,
+        o,
         u = i(e),
         h = u.modulus.byteLength();
-    if (n.length > h || new o(n).cmp(u.modulus) >= 0) throw Error('decryption error');
-    s = r ? c(new o(n), u) : l(n, u);
-    var p = d.alloc(h - s.length);
-    if (((s = d.concat([p, s], h)), 4 === a)) return f(u, s);
-    if (1 === a) return _(u, s, r);
-    if (3 === a) return s;
+    if (n.length > h || new s(n).cmp(u.modulus) >= 0) throw Error('decryption error');
+    o = r ? c(new s(n), u) : l(n, u);
+    var _ = d.alloc(h - o.length);
+    if (((o = d.concat([_, o], h)), 4 === a)) return f(u, o);
+    if (1 === a) return p(u, o, r);
+    if (3 === a) return o;
     else throw Error('unknown padding');
 };

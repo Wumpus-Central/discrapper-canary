@@ -1,25 +1,25 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(626135),
     a = r(981631);
-function s(e) {
-    let { type: n, source: r, userId: s, guildId: o, channelId: l, channelType: u, applicationId: c, partyId: d, messageId: f, locationObject: _, analyticsLocations: h, referrerId: p, inviterUserId: m } = e;
+function o(e) {
+    let { type: n, source: r, userId: o, guildId: s, channelId: l, channelType: u, applicationId: c, partyId: d, messageId: f, locationObject: p, analyticsLocations: h, referrerId: _, inviterUserId: m } = e;
     i.default.track(a.rMx.APPLICATION_OPENED, {
         type: n,
         source: r,
-        guild_id: o,
+        guild_id: s,
         channel_id: l,
         channel_type: u,
         application_id: c,
         party_id: null != d ? d : void 0,
-        other_user_id: s,
+        other_user_id: o,
         message_id: f,
-        location: _,
+        location: p,
         location_stack: h,
-        referrer_id: p,
+        referrer_id: _,
         invite_inviter_id: m
     });
 }

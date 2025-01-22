@@ -1,34 +1,34 @@
 r.d(n, {
     Z: function () {
-        return p;
+        return _;
     }
 });
 var i = r(200651),
     a = r(192379),
-    s = r(665443),
-    o = r.n(s),
+    o = r(665443),
+    s = r.n(o),
     l = r(39383),
     u = r.n(l),
     c = r(992774),
     d = r(672784),
     f = r(369711),
-    _ = r(649754);
+    p = r(649754);
 function h(e) {
     var n, r, i, a;
-    let s = null === (a = window) || void 0 === a ? void 0 : null === (i = a.DiscordNative) || void 0 === i ? void 0 : null === (r = i.app) || void 0 === r ? void 0 : null === (n = r.getReleaseChannel) || void 0 === n ? void 0 : n.call(r);
-    return 'canary' === s || 'development' === s ? (0, f.m)(e) : (0, d.y)(e);
+    let o = null === (a = window) || void 0 === a ? void 0 : null === (i = a.DiscordNative) || void 0 === i ? void 0 : null === (r = i.app) || void 0 === r ? void 0 : null === (n = r.getReleaseChannel) || void 0 === n ? void 0 : n.call(r);
+    return 'canary' === o || 'development' === o ? (0, f.m)(e) : (0, d.y)(e);
 }
-function p(e) {
-    let { streamId: n, paused: r, onReady: s, onResize: l, className: d, ...f } = e,
-        p = a.useRef(null),
+function _(e) {
+    let { streamId: n, paused: r, onReady: o, onResize: l, className: d, ...f } = e,
+        _ = a.useRef(null),
         { current: m } = a.useRef(u()('media-engine-video-'));
     return (
         a.useEffect(() => {
-            let e = p.current;
+            let e = _.current;
             if (!r && null != e) {
                 let r = !1,
                     i = (n, i) => {
-                        !r && (null == s || s(), (r = !0)),
+                        !r && (null == o || o(), (r = !0)),
                             (e.width !== n || e.height !== i) &&
                                 ((e.width = n),
                                 (e.height = i),
@@ -50,22 +50,22 @@ function p(e) {
                     let r = h(e);
                     if (null == r) return;
                     return (
-                        _.Z.addSink(n, p, (e) => {
+                        p.Z.addSink(n, _, (e) => {
                             i(e.width, e.height), r.render(e);
                         }),
                         () => {
-                            _.Z.removeSink(n, p);
+                            p.Z.removeSink(n, _);
                         }
                     );
                 }
             }
-        }, [n, r, l, s, m]),
+        }, [n, r, l, o, m]),
         (0, i.jsx)('canvas', {
             id: m,
-            className: o()('media-engine-video', d),
-            ref: p,
+            className: s()('media-engine-video', d),
+            ref: _,
             ...f
         })
     );
 }
-p.defaultProps = { paused: !1 };
+_.defaultProps = { paused: !1 };

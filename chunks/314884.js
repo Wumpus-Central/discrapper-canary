@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(78839);
 function u(e, n, r) {
     return (
@@ -26,7 +26,7 @@ function f(e) {
         }),
         (c = !0);
 }
-function _(e) {
+function p(e) {
     let { guildBoostSlot: n } = e;
     d = {
         ...d,
@@ -36,14 +36,14 @@ function _(e) {
 function h() {
     (d = {}), (c = !1);
 }
-function p() {
+function _() {
     let e = {};
     for (let n of Object.values(d)) (e[n.id] = n), (n.subscription = l.ZP.getSubscriptionById(n.subscriptionId));
     d = e;
 }
-class m extends (i = s.ZP.Store) {
+class m extends (i = o.ZP.Store) {
     initialize() {
-        this.syncWith([l.ZP], p);
+        this.syncWith([l.ZP], _);
     }
     get hasFetched() {
         return c;
@@ -56,10 +56,10 @@ class m extends (i = s.ZP.Store) {
     }
 }
 u(m, 'displayName', 'GuildBoostSlotStore'),
-    (n.Z = new m(o.Z, {
+    (n.Z = new m(s.Z, {
         GUILD_BOOST_SLOTS_FETCH_SUCCESS: f,
-        GUILD_BOOST_SLOT_UPDATE_SUCCESS: _,
-        GUILD_BOOST_SLOT_CREATE: _,
-        GUILD_BOOST_SLOT_UPDATE: _,
+        GUILD_BOOST_SLOT_UPDATE_SUCCESS: p,
+        GUILD_BOOST_SLOT_CREATE: p,
+        GUILD_BOOST_SLOT_UPDATE: p,
         LOGOUT: h
     }));

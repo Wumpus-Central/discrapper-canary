@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(442837),
-    s = r(626135),
-    o = r(327943),
+    o = r(626135),
+    s = r(327943),
     l = r(981631),
     u = r(474936);
 function c() {
-    let { previewPaneVariant: e, originalIcon: n } = (0, a.cj)([o.Z], () => ({
-            previewPaneVariant: o.Z.isUpsellPreview ? u.h1.FREE : u.h1.PREMIUM_STANDARD,
-            originalIcon: o.Z.getCurrentDesktopIcon()
+    let { previewPaneVariant: e, originalIcon: n } = (0, a.cj)([s.Z], () => ({
+            previewPaneVariant: s.Z.isUpsellPreview ? u.h1.FREE : u.h1.PREMIUM_STANDARD,
+            originalIcon: s.Z.getCurrentDesktopIcon()
         })),
         r = i.useRef(n);
     return (
@@ -20,7 +20,7 @@ function c() {
             r.current = n;
         }),
         i.useCallback(() => {
-            s.default.track(l.rMx.APP_ICON_PREVIEW_VIEWED, {
+            o.default.track(l.rMx.APP_ICON_PREVIEW_VIEWED, {
                 preview_pane_variant: e,
                 original_icon: r.current
             });

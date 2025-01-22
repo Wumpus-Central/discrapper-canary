@@ -5,32 +5,32 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(803997),
-    o = r.n(s),
+    o = r(803997),
+    s = r.n(o),
     l = r(696689),
     u = r.n(l),
     c = r(692547),
     d = r(537054),
     f = r(770151);
-let _ = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [u()(e), e])),
+let p = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [u()(e), e])),
     h = a.forwardRef(function (e, n) {
         let r,
-            { variant: a, tag: s = 'div', selectable: l = !1, className: u, lineClamp: h, color: p, tabularNumbers: m = !1, scaleFontToUserSetting: g = !1, ...E } = e,
-            v = s,
-            I = '',
-            T = {};
+            { variant: a, tag: o = 'div', selectable: l = !1, className: u, lineClamp: h, color: _, tabularNumbers: m = !1, scaleFontToUserSetting: g = !1, ...E } = e,
+            v = o,
+            y = '',
+            b = {};
         if (
             (null != h &&
                 (1 === h
-                    ? (I = d.lineClamp1)
-                    : ((I = d.lineClamp2Plus),
-                      (T = {
+                    ? (y = d.lineClamp1)
+                    : ((y = d.lineClamp2Plus),
+                      (b = {
                           lineClamp: h,
                           WebkitLineClamp: h
                       }))),
-            void 0 !== p)
+            void 0 !== _)
         )
-            switch (p) {
+            switch (_) {
                 case 'currentColor':
                     r = 'currentColor';
                     break;
@@ -41,29 +41,29 @@ let _ = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [u()(e), e])),
                     r = 'white';
                     break;
                 default:
-                    var b;
-                    r = null === (b = c.Z.colors[_[p]]) || void 0 === b ? void 0 : b.css;
+                    var I;
+                    r = null === (I = c.Z.colors[p[_]]) || void 0 === I ? void 0 : I.css;
             }
-        let y = {
+        let T = {
             color: r,
-            ...T,
+            ...b,
             ...E.style
         };
         return (0, i.jsx)(v, {
             ref: n,
-            className: o()(
+            className: s()(
                 {
-                    [d.defaultColor]: void 0 === p,
+                    [d.defaultColor]: void 0 === _,
                     [d.selectable]: l,
                     [d.tabularNumbers]: m,
                     [f.fontScaling]: g
                 },
-                I,
+                y,
                 f[a],
                 u
             ),
             ...E,
-            style: Object.values(y).filter(Boolean).length > 0 ? y : void 0,
+            style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
             'data-text-variant': a
         });
     });

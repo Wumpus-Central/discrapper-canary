@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(81825);
@@ -17,7 +17,7 @@ function a(e, n, r) {
         e
     );
 }
-class s extends i.Z {
+class o extends i.Z {
     toString() {
         return this.name;
     }

@@ -1,7 +1,7 @@
 var i,
     a = r(724458);
-var s = r(442837),
-    o = r(570140);
+var o = r(442837),
+    s = r(570140);
 function l(e, n, r) {
     return (
         n in e
@@ -21,7 +21,7 @@ let u = {},
 function f(e, n) {
     null == n ? e in u && delete u[e] : null != e && (u[e] = n);
 }
-function _(e) {
+function p(e) {
     let { required_actions: n, user_id: r } = e;
     f((c = r), n);
 }
@@ -29,7 +29,7 @@ function h(e) {
     let { user: n } = e;
     d = n.id;
 }
-function p(e) {
+function _(e) {
     let { userId: n } = e;
     f(n, null);
 }
@@ -41,7 +41,7 @@ function g(e) {
     let { userId: n } = e;
     f(n, null);
 }
-class E extends (i = s.ZP.PersistedStore) {
+class E extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         null != e && (u = e);
     }
@@ -62,11 +62,11 @@ class E extends (i = s.ZP.PersistedStore) {
 }
 l(E, 'displayName', 'LoginRequiredActionStore'),
     l(E, 'persistKey', 'LoginRequiredActionStore'),
-    (n.Z = new E(o.Z, {
-        LOGIN_ATTEMPTED: _,
+    (n.Z = new E(s.Z, {
+        LOGIN_ATTEMPTED: p,
         CONNECTION_OPEN: h,
         CURRENT_USER_UPDATE: h,
         LOGOUT: m,
-        PASSWORD_UPDATED: p,
+        PASSWORD_UPDATED: _,
         MULTI_ACCOUNT_REMOVE_ACCOUNT: g
     }));

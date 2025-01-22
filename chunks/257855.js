@@ -22,11 +22,11 @@ function n(e) {
             begin: '<<',
             end: '>>'
         },
-        s = {
+        o = {
             className: 'number',
             begin: '[0-9]+#[0-9A-Z_]+(\\.[0-9-A-Z_]+)?#?([Ee][+-]?[0-9]+)?'
         },
-        o = {
+        s = {
             beginKeywords: 'import',
             end: '$',
             keywords: n,
@@ -50,7 +50,7 @@ function n(e) {
         name: 'XL',
         aliases: ['tao'],
         keywords: n,
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, r, i, a, l, o, s, e.NUMBER_MODE]
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, r, i, a, l, s, o, e.NUMBER_MODE]
     };
 }
 e.exports = n;

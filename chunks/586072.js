@@ -1,6 +1,6 @@
 r.d(n, {
     AC: function () {
-        return o;
+        return s;
     },
     IW: function () {
         return l;
@@ -12,7 +12,7 @@ r.d(n, {
         return a;
     },
     z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(818083);
@@ -29,7 +29,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    s = (0, i.B)({
+    o = (0, i.B)({
         kind: 'guild',
         id: '2022-09_creator_monetization_raven',
         label: 'Creator Monetization Onboarding v2',
@@ -42,7 +42,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    s = (0, i.B)({
         kind: 'user',
         id: '2022-09_creator_monetization_raven_users',
         label: 'Creator Monetization Onboarding v2 Users',

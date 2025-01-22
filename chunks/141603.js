@@ -1,8 +1,8 @@
-var e = n(96403),
-    o = n(611345),
-    i = e({}.hasOwnProperty);
-t.exports =
+var i = r(96403),
+    a = r(611345),
+    o = i({}.hasOwnProperty);
+e.exports =
     Object.hasOwn ||
-    function (t, r) {
-        return i(o(t), r);
+    function (e, n) {
+        return o(a(e), n);
     };

@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(264181);
@@ -17,9 +17,9 @@ function a(e, n, r) {
         e
     );
 }
-class s {
+class o {
     static fromServer(e) {
-        return new s({
+        return new o({
             ...e,
             dismissibleContent: e.dismissible_content,
             refTargetBackground: e.ref_target_background

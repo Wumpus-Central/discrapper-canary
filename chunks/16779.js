@@ -3,7 +3,7 @@ r.d(n, {
         return m;
     },
     Xh: function () {
-        return p;
+        return _;
     },
     ho: function () {
         return h;
@@ -12,29 +12,29 @@ r.d(n, {
 var i = r(627341);
 var a = r(200651);
 r(192379);
-var s = r(278074),
-    o = r(481060),
+var o = r(278074),
+    s = r(481060),
     l = r(841784),
     u = r(297781),
     c = r(371991),
     d = r(561308),
     f = r(232174),
-    _ = r(981631);
+    p = r(981631);
 function h(e) {
     var n, r, i;
     let { activity: d } = e,
         h = null !== (i = null === (n = d.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== i ? i : d.created_at;
     if (null == h || (0, f.Z)(d)) return null;
-    let p = (0, s.EQ)(d)
-        .when(l.Z, () => o.AppsIcon)
-        .with({ type: _.IIU.LISTENING }, () => o.RecordPlayerIcon)
-        .with({ type: _.IIU.WATCHING }, () => o.TvIcon)
-        .otherwise(() => o.GameControllerIcon);
+    let _ = (0, o.EQ)(d)
+        .when(l.Z, () => s.AppsIcon)
+        .with({ type: p.IIU.LISTENING }, () => s.RecordPlayerIcon)
+        .with({ type: p.IIU.WATCHING }, () => s.TvIcon)
+        .otherwise(() => s.GameControllerIcon);
     return (0, a.jsxs)(u.m7, {
         children: [
-            (0, a.jsx)(p, {
+            (0, a.jsx)(_, {
                 size: 'xxs',
-                color: o.tokens.colors.TEXT_POSITIVE
+                color: s.tokens.colors.TEXT_POSITIVE
             }),
             (0, a.jsx)(c.x3, {
                 entry: {
@@ -47,14 +47,14 @@ function h(e) {
         ]
     });
 }
-function p(e) {
+function _(e) {
     let { activity: n } = e;
     if ((0, l.Z)(n) || null == n.party) return null;
     let r = (0, d.bT)(n.state, n.party);
     return null == r
         ? null
         : (0, a.jsx)(u.ej, {
-              Icon: o.GroupIcon,
+              Icon: s.GroupIcon,
               text: r
           });
 }
@@ -65,7 +65,7 @@ function m(e) {
     return null == i
         ? null
         : (0, a.jsx)(u.ej, {
-              Icon: o.TopicsIcon,
+              Icon: s.TopicsIcon,
               text: i
           });
 }

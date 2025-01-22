@@ -1,9 +1,9 @@
 var i = r(192379),
     a = r(723184),
-    s = function (e) {
+    o = function (e) {
         var n = e.rgb,
             r = e.currentColor,
-            s = (0, a.default)({
+            o = (0, a.default)({
                 default: {
                     swatches: {
                         border: '1px solid #B3B3B3',
@@ -28,6 +28,6 @@ var i = r(192379),
                     }
                 }
             });
-        return i.createElement('div', null, i.createElement('div', { style: s.label }, 'new'), i.createElement('div', { style: s.swatches }, i.createElement('div', { style: s.new }), i.createElement('div', { style: s.current })), i.createElement('div', { style: s.label }, 'current'));
+        return i.createElement('div', null, i.createElement('div', { style: o.label }, 'new'), i.createElement('div', { style: o.swatches }, i.createElement('div', { style: o.new }), i.createElement('div', { style: o.current })), i.createElement('div', { style: o.label }, 'current'));
     };
-n.Z = s;
+n.Z = o;

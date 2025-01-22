@@ -1,10 +1,10 @@
 var i = r(444675),
     a = r(607974),
-    s = r(64750);
+    o = r(64750);
 if (r(322499)() || r(882171)()) {
-    var o = Symbol.iterator;
+    var s = Symbol.iterator;
     e.exports = function (e) {
-        return null != e && void 0 !== e[o] ? e[o]() : a(e) ? Array.prototype[o].call(e) : void 0;
+        return null != e && void 0 !== e[s] ? e[s]() : a(e) ? Array.prototype[s].call(e) : void 0;
     };
 } else {
     var l = r(189612),
@@ -12,15 +12,15 @@ if (r(322499)() || r(882171)()) {
         c = r(690244),
         d = c('%Map%', !0),
         f = c('%Set%', !0),
-        _ = r(192853),
-        h = _('Array.prototype.push'),
-        p = _('String.prototype.charCodeAt'),
-        m = _('String.prototype.slice'),
+        p = r(192853),
+        h = p('Array.prototype.push'),
+        _ = p('String.prototype.charCodeAt'),
+        m = p('String.prototype.slice'),
         g = function (e, n) {
             if (n + 1 >= e.length) return n + 1;
-            var r = p(e, n);
+            var r = _(e, n);
             if (r < 55296 || r > 56319) return n + 1;
-            var i = p(e, n + 1);
+            var i = _(e, n + 1);
             return i < 56320 || i > 57343 ? n + 1 : n + 2;
         },
         E = function (e) {
@@ -60,37 +60,37 @@ if (r(322499)() || r(882171)()) {
             if (n && void 0 !== e['_es6-shim iterator_']) return e['_es6-shim iterator_']();
         };
     if (d || f) {
-        var I = r(403006),
-            T = r(72859),
-            b = _('Map.prototype.forEach', !0),
-            y = _('Set.prototype.forEach', !0);
+        var y = r(403006),
+            b = r(72859),
+            I = p('Map.prototype.forEach', !0),
+            T = p('Set.prototype.forEach', !0);
         if (void 0 === i || !i.versions || !i.versions.node) {
-            var S = _('Map.prototype.iterator', !0),
-                A = _('Set.prototype.iterator', !0);
+            var S = p('Map.prototype.iterator', !0),
+                A = p('Set.prototype.iterator', !0);
         }
-        var N = _('Map.prototype.@@iterator', !0) || _('Map.prototype._es6-shim iterator_', !0),
-            C = _('Set.prototype.@@iterator', !0) || _('Set.prototype._es6-shim iterator_', !0),
+        var C = p('Map.prototype.@@iterator', !0) || p('Map.prototype._es6-shim iterator_', !0),
+            N = p('Set.prototype.@@iterator', !0) || p('Set.prototype._es6-shim iterator_', !0),
             R = function (e) {
-                if (I(e)) {
-                    if (S) return s(S(e));
-                    if (N) return N(e);
-                    if (b) {
+                if (y(e)) {
+                    if (S) return o(S(e));
+                    if (C) return C(e);
+                    if (I) {
                         var n = [];
                         return (
-                            b(e, function (e, r) {
+                            I(e, function (e, r) {
                                 h(n, [r, e]);
                             }),
                             E(n)
                         );
                     }
                 }
-                if (T(e)) {
-                    if (A) return s(A(e));
-                    if (C) return C(e);
-                    if (y) {
+                if (b(e)) {
+                    if (A) return o(A(e));
+                    if (N) return N(e);
+                    if (T) {
                         var r = [];
                         return (
-                            y(e, function (e) {
+                            T(e, function (e) {
                                 h(r, e);
                             }),
                             E(r)

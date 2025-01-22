@@ -1,6 +1,6 @@
 r.d(n, {
     LT: function () {
-        return o;
+        return s;
     },
     Sp: function () {
         return u;
@@ -9,7 +9,7 @@ r.d(n, {
         return l;
     },
     mR: function () {
-        return s.Key;
+        return o.Key;
     },
     vn: function () {
         return i;
@@ -17,17 +17,17 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(15858);
-let o = s.Key.F6,
+var o = r(15858);
+let s = o.Key.F6,
     l = new Map([
-        [s.Key.F6, 'f6'],
-        [s.Key.Tab, 'tab'],
-        [s.Key.ArrowDown, 'down'],
-        [s.Key.ArrowUp, 'up'],
-        [s.Key.ArrowLeft, 'left'],
-        [s.Key.ArrowRight, 'right'],
-        [s.Key.Home, 'home'],
-        [s.Key.End, 'end']
+        [o.Key.F6, 'f6'],
+        [o.Key.Tab, 'tab'],
+        [o.Key.ArrowDown, 'down'],
+        [o.Key.ArrowUp, 'up'],
+        [o.Key.ArrowLeft, 'left'],
+        [o.Key.ArrowRight, 'right'],
+        [o.Key.Home, 'home'],
+        [o.Key.End, 'end']
     ]),
     u = new Set(['tab', 'shift+tab', 'down', 'up', 'left', 'right', 'home', 'end']);
 !(function (e) {

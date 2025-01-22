@@ -1,7 +1,7 @@
 var i = r(814033),
     a = r(685053),
-    s = a.getNAF,
-    o = a.getJSF,
+    o = a.getNAF,
+    s = a.getJSF,
     l = a.assert;
 function u(e, n) {
     (this.type = e), (this.p = new i(n.p, 16)), (this.red = n.prime ? i.red(n.prime) : i.mont(this.p)), (this.zero = new i(0).toRed(this.red)), (this.one = new i(1).toRed(this.red)), (this.two = new i(2).toRed(this.red)), (this.n = n.n && new i(n.n, 16)), (this.g = n.g && this.pointFromJSON(n.g, n.gRed)), (this._wnafT1 = [, , , ,]), (this._wnafT2 = [, , , ,]), (this._wnafT3 = [, , , ,]), (this._wnafT4 = [, , , ,]), (this._bitLength = this.n ? this.n.bitLength() : 0);
@@ -23,18 +23,18 @@ function c(e, n) {
         var r,
             i,
             a = e._getDoubles(),
-            o = s(n, 1, this._bitLength),
+            s = o(n, 1, this._bitLength),
             u = (1 << (a.step + 1)) - (a.step % 2 == 0 ? 2 : 1);
         u /= 3;
         var c = [];
-        for (r = 0; r < o.length; r += a.step) {
+        for (r = 0; r < s.length; r += a.step) {
             i = 0;
-            for (var d = r + a.step - 1; d >= r; d--) i = (i << 1) + o[d];
+            for (var d = r + a.step - 1; d >= r; d--) i = (i << 1) + s[d];
             c.push(i);
         }
-        for (var f = this.jpoint(null, null, null), _ = this.jpoint(null, null, null), h = u; h > 0; h--) {
-            for (r = 0; r < c.length; r++) (i = c[r]) === h ? (_ = _.mixedAdd(a.points[r])) : i === -h && (_ = _.mixedAdd(a.points[r].neg()));
-            f = f.add(_);
+        for (var f = this.jpoint(null, null, null), p = this.jpoint(null, null, null), h = u; h > 0; h--) {
+            for (r = 0; r < c.length; r++) (i = c[r]) === h ? (p = p.mixedAdd(a.points[r])) : i === -h && (p = p.mixedAdd(a.points[r].neg()));
+            f = f.add(p);
         }
         return f.toP();
     }),
@@ -42,10 +42,10 @@ function c(e, n) {
         var r = 4,
             i = e._getNAFPoints(r);
         r = i.wnd;
-        for (var a = i.points, o = s(n, r, this._bitLength), u = this.jpoint(null, null, null), c = o.length - 1; c >= 0; c--) {
-            for (var d = 0; c >= 0 && 0 === o[c]; c--) d++;
+        for (var a = i.points, s = o(n, r, this._bitLength), u = this.jpoint(null, null, null), c = s.length - 1; c >= 0; c--) {
+            for (var d = 0; c >= 0 && 0 === s[c]; c--) d++;
             if ((c >= 0 && d++, (u = u.dblp(d)), c < 0)) break;
-            var f = o[c];
+            var f = s[c];
             l(0 !== f), (u = 'affine' === e.type ? (f > 0 ? u.mixedAdd(a[(f - 1) >> 1]) : u.mixedAdd(a[(-f - 1) >> 1].neg())) : f > 0 ? u.add(a[(f - 1) >> 1]) : u.add(a[(-f - 1) >> 1].neg()));
         }
         return 'affine' === e.type ? u.toP() : u;
@@ -56,49 +56,49 @@ function c(e, n) {
             c,
             d = this._wnafT1,
             f = this._wnafT2,
-            _ = this._wnafT3,
+            p = this._wnafT3,
             h = 0;
         for (l = 0; l < i; l++) {
-            var p = (c = n[l])._getNAFPoints(e);
-            (d[l] = p.wnd), (f[l] = p.points);
+            var _ = (c = n[l])._getNAFPoints(e);
+            (d[l] = _.wnd), (f[l] = _.points);
         }
         for (l = i - 1; l >= 1; l -= 2) {
             var m = l - 1,
                 g = l;
             if (1 !== d[m] || 1 !== d[g]) {
-                (_[m] = s(r[m], d[m], this._bitLength)), (_[g] = s(r[g], d[g], this._bitLength)), (h = Math.max(_[m].length, h)), (h = Math.max(_[g].length, h));
+                (p[m] = o(r[m], d[m], this._bitLength)), (p[g] = o(r[g], d[g], this._bitLength)), (h = Math.max(p[m].length, h)), (h = Math.max(p[g].length, h));
                 continue;
             }
             var E = [n[m], null, null, n[g]];
             0 === n[m].y.cmp(n[g].y) ? ((E[1] = n[m].add(n[g])), (E[2] = n[m].toJ().mixedAdd(n[g].neg()))) : 0 === n[m].y.cmp(n[g].y.redNeg()) ? ((E[1] = n[m].toJ().mixedAdd(n[g])), (E[2] = n[m].add(n[g].neg()))) : ((E[1] = n[m].toJ().mixedAdd(n[g])), (E[2] = n[m].toJ().mixedAdd(n[g].neg())));
             var v = [-3, -1, -5, -7, 0, 7, 5, 1, 3],
-                I = o(r[m], r[g]);
-            for (u = 0, h = Math.max(I[0].length, h), _[m] = Array(h), _[g] = Array(h); u < h; u++) {
-                var T = 0 | I[0][u],
-                    b = 0 | I[1][u];
-                (_[m][u] = v[(T + 1) * 3 + (b + 1)]), (_[g][u] = 0), (f[m] = E);
+                y = s(r[m], r[g]);
+            for (u = 0, h = Math.max(y[0].length, h), p[m] = Array(h), p[g] = Array(h); u < h; u++) {
+                var b = 0 | y[0][u],
+                    I = 0 | y[1][u];
+                (p[m][u] = v[(b + 1) * 3 + (I + 1)]), (p[g][u] = 0), (f[m] = E);
             }
         }
-        var y = this.jpoint(null, null, null),
+        var T = this.jpoint(null, null, null),
             S = this._wnafT4;
         for (l = h; l >= 0; l--) {
             for (var A = 0; l >= 0; ) {
-                var N = !0;
-                for (u = 0; u < i; u++) (S[u] = 0 | _[u][l]), 0 !== S[u] && (N = !1);
-                if (!N) break;
+                var C = !0;
+                for (u = 0; u < i; u++) (S[u] = 0 | p[u][l]), 0 !== S[u] && (C = !1);
+                if (!C) break;
                 A++, l--;
             }
-            if ((l >= 0 && A++, (y = y.dblp(A)), l < 0)) break;
+            if ((l >= 0 && A++, (T = T.dblp(A)), l < 0)) break;
             for (u = 0; u < i; u++) {
-                var C = S[u];
-                if (0 !== C) {
-                    C > 0 ? (c = f[u][(C - 1) >> 1]) : C < 0 && (c = f[u][(-C - 1) >> 1].neg());
-                    y = 'affine' === c.type ? y.mixedAdd(c) : y.add(c);
+                var N = S[u];
+                if (0 !== N) {
+                    N > 0 ? (c = f[u][(N - 1) >> 1]) : N < 0 && (c = f[u][(-N - 1) >> 1].neg());
+                    T = 'affine' === c.type ? T.mixedAdd(c) : T.add(c);
                 }
             }
         }
         for (l = 0; l < i; l++) f[l] = null;
-        return a ? y : y.toP();
+        return a ? T : T.toP();
     }),
     (u.BasePoint = c),
     (c.prototype.eq = function () {
@@ -142,7 +142,7 @@ function c(e, n) {
     (c.prototype._getDoubles = function (e, n) {
         if (this.precomputed && this.precomputed.doubles) return this.precomputed.doubles;
         for (var r = [this], i = this, a = 0; a < n; a += e) {
-            for (var s = 0; s < e; s++) i = i.dbl();
+            for (var o = 0; o < e; o++) i = i.dbl();
             r.push(i);
         }
         return {

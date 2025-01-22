@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(88758),
-    o = r(716708),
+    o = r(88758),
+    s = r(716708),
     l =
         Object.assign ||
         function (e) {
@@ -41,14 +41,14 @@ function f(e, n) {
     })),
         n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
 }
-var _ = (function (e) {
+var p = (function (e) {
     function n() {
         c(this, n);
-        for (var e, r, i, a = arguments.length, o = Array(a), l = 0; l < a; l++) o[l] = arguments[l];
+        for (var e, r, i, a = arguments.length, s = Array(a), l = 0; l < a; l++) s[l] = arguments[l];
         return (
-            (r = i = d(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(o)))),
+            (r = i = d(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(s)))),
             (i.handleChange = function (e) {
-                var n = s.T(e, i.props.hsl, i.props.direction, i.props.a, i.container);
+                var n = o.T(e, i.props.hsl, i.props.direction, i.props.a, i.container);
                 n && 'function' == typeof i.props.onChange && i.props.onChange(n, e);
             }),
             (i.handleMouseDown = function (e) {
@@ -131,7 +131,7 @@ var _ = (function (e) {
                     return i.createElement(
                         'div',
                         { style: r.alpha },
-                        i.createElement('div', { style: r.checkboard }, i.createElement(o.Z, { renderers: this.props.renderers })),
+                        i.createElement('div', { style: r.checkboard }, i.createElement(s.Z, { renderers: this.props.renderers })),
                         i.createElement('div', { style: r.gradient }),
                         i.createElement(
                             'div',
@@ -153,4 +153,4 @@ var _ = (function (e) {
         n
     );
 })(i.PureComponent || i.Component);
-n.Z = _;
+n.Z = p;

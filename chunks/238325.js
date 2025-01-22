@@ -1,15 +1,15 @@
-var r = n(67867),
-    o = n(96403),
-    a = Date,
-    i = o(a.prototype.getTime);
-r(
+var i = r(67867),
+    a = r(96403),
+    o = Date,
+    s = a(o.prototype.getTime);
+i(
     {
         target: 'Date',
         stat: !0
     },
     {
         now: function () {
-            return i(new a());
+            return s(new o());
         }
     }
 );

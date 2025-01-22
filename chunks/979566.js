@@ -1,9 +1,9 @@
-var e = n(952256),
-    o = n(571240),
-    i = n(982665),
-    u = n(360518)('species'),
-    s = Array;
-t.exports = function (t) {
-    var r;
-    return e(t) && (o((r = t.constructor)) && (r === s || e(r.prototype)) ? (r = void 0) : i(r) && null === (r = r[u]) && (r = void 0)), void 0 === r ? s : r;
+var i = r(952256),
+    a = r(571240),
+    o = r(982665),
+    s = r(360518)('species'),
+    l = Array;
+e.exports = function (e) {
+    var n;
+    return i(e) && (a((n = e.constructor)) && (n === l || i(n.prototype)) ? (n = void 0) : o(n) && null === (n = n[s]) && (n = void 0)), void 0 === n ? l : n;
 };

@@ -1,8 +1,8 @@
-t.exports = function (t, r) {
+e.exports = function (e, n) {
     return {
-        enumerable: !(1 & t),
-        configurable: !(2 & t),
-        writable: !(4 & t),
-        value: r
+        enumerable: !(1 & e),
+        configurable: !(2 & e),
+        writable: !(4 & e),
+        value: n
     };
 };

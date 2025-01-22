@@ -6,7 +6,7 @@ r.d(n, {
         return l;
     },
     k: function () {
-        return o;
+        return s;
     },
     oj: function () {
         return u;
@@ -14,8 +14,8 @@ r.d(n, {
 });
 var i = r(311570),
     a = r(818083),
-    s = r(987338);
-let o = (0, a.B)({
+    o = r(987338);
+let s = (0, a.B)({
         kind: 'user',
         id: '2024-10_shop_variants',
         label: 'Shop Variants Experiment',
@@ -27,8 +27,8 @@ let o = (0, a.B)({
                 config: { variantsReturnStyle: i.v.VARIANTS_GROUP }
             }
         ],
-        commonTriggerPoint: s.$P.COLLECTIBLES_SHOP_OPEN
+        commonTriggerPoint: o.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    l = (e) => o.useExperiment({ location: e }).variantsReturnStyle,
-    u = (e) => o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).variantsReturnStyle,
+    l = (e) => s.useExperiment({ location: e }).variantsReturnStyle,
+    u = (e) => s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).variantsReturnStyle,
     c = (e) => l(e) === i.v.VARIANTS_GROUP;

@@ -1,7 +1,7 @@
 var i = n(200651);
 n(192379);
-var r = n(788307),
-    l = n(588688),
+var r = n(747017),
+    l = n(372276),
     a = n(565640),
     s = n(51144),
     o = n(388032),
@@ -15,7 +15,7 @@ t.Z = function (e) {
               children: o.intl.string(o.t.tFY5ZW)
           })
         : n.length > 0
-          ? (0, i.jsx)(r.ZP, {
+          ? (0, i.jsx)(r.Z, {
                 className: c.activity,
                 textClassName: c.text,
                 emojiClassName: c.customStatusEmoji,

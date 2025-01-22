@@ -8,15 +8,15 @@ r.d(n, {
 });
 var i = r(442837),
     a = r(496675),
-    s = r(700785),
-    o = r(231338);
-let l = [o.Pl.SET_VOICE_CHANNEL_STATUS, o.Pl.CONNECT, o.Pl.VIEW_CHANNEL],
-    u = [o.Pl.SET_VOICE_CHANNEL_STATUS];
+    o = r(700785),
+    s = r(231338);
+let l = [s.Pl.SET_VOICE_CHANNEL_STATUS, s.Pl.CONNECT, s.Pl.VIEW_CHANNEL],
+    u = [s.Pl.SET_VOICE_CHANNEL_STATUS];
 function c(e, n, r, i) {
     return (r ? u : l).every((r) =>
         null == i
             ? n.can(r, e)
-            : s.BT({
+            : o.BT({
                   permission: r,
                   user: i,
                   context: e

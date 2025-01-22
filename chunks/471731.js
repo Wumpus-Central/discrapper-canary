@@ -7,9 +7,9 @@ var i = n(200651);
 n(192379);
 var r = n(331595);
 function l(e) {
-    let { width: t = 124, height: n = 24, color: l = 'currentColor', foreground: c, ...s } = e;
+    let { width: t = 124, height: n = 24, color: l = 'currentColor', foreground: c, ...o } = e;
     return (0, i.jsx)('svg', {
-        ...(0, r.Z)(s),
+        ...(0, r.Z)(o),
         width: t,
         height: n,
         viewBox: '0 0 124 24',

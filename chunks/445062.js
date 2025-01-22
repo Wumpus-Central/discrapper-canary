@@ -6,24 +6,24 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(864094),
-    s = r(871499),
-    o = r(388032);
+    o = r(871499),
+    s = r(388032);
 function l(e) {
-    return e ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy);
+    return e ? s.intl.string(s.t.S5anIS) : s.intl.string(s.t.q3O3Jy);
 }
 function u(e) {
-    let { isSelfStream: n, centerButton: r = !1, onMouseEnter: o, onMouseLeave: u, ...c } = e,
-        d = r ? s.d : s.Z,
-        { Component: f, events: _ } = (0, a.P)('disable');
+    let { isSelfStream: n, centerButton: r = !1, onMouseEnter: s, onMouseLeave: u, ...c } = e,
+        d = r ? o.d : o.Z,
+        { Component: f, events: p } = (0, a.P)('disable');
     return (0, i.jsx)(d, {
         label: l(n),
         iconComponent: f,
         isActive: !0,
         onMouseEnter: (e) => {
-            null == o || o(e), _.onMouseEnter();
+            null == s || s(e), p.onMouseEnter();
         },
         onMouseLeave: (e) => {
-            null == u || u(e), _.onMouseLeave();
+            null == u || u(e), p.onMouseLeave();
         },
         ...c
     });

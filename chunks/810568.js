@@ -3,7 +3,7 @@ r.d(n, {
         return f;
     },
     MH: function () {
-        return p;
+        return _;
     },
     UE: function () {
         return h;
@@ -18,13 +18,13 @@ r.d(n, {
         return a;
     },
     wz: function () {
-        return _;
+        return p;
     }
 });
 var i,
     a,
-    s = r(772848),
-    o = r(146282),
+    o = r(772848),
+    s = r(146282),
     l = r(626135),
     u = r(981631),
     c = r(206583);
@@ -34,54 +34,54 @@ var i,
     !(function (e) {
         (e.ActivityCard = 'activity_card'), (e.ActivityCardContextMenu = 'activity_card_context_menu'), (e.UserProfile = 'user_profile'), (e.UserProfileCardContextMenu = 'user_profile_card_context_menu'), (e.SimilarGames = 'similar_games'), (e.DevTools = 'dev_tools'), (e.Embed = 'embed'), (e.RtcPanel = 'rtc_panel'), (e.FriendsActivityFeed = 'friends_activity_feed');
     })(a || (a = {}));
-let d = () => (0, s.Z)(),
+let d = () => (0, o.Z)(),
     f = (e) => {
-        let { viewId: n, source: r, gameName: i, applicationId: a, authorId: s } = e;
+        let { viewId: n, source: r, gameName: i, applicationId: a, authorId: o } = e;
         return (
             l.default.track(u.rMx.GAME_PROFILE_OPEN, {
                 view_id: n,
                 source: r,
                 game_name: i,
                 application_id: a,
-                author_id: s,
-                request_id: o.Z.getFeedRequestId(c.YN.GAME_PROFILE_FEED)
+                author_id: o,
+                request_id: s.Z.getFeedRequestId(c.YN.GAME_PROFILE_FEED)
             }),
             n
         );
     },
-    _ = (e) => {
-        let { viewId: n, gameName: r, applicationId: i, playedFriendIds: a, playedFriendsData: s, similarGames: d, officialGuildId: f } = e;
+    p = (e) => {
+        let { viewId: n, gameName: r, applicationId: i, playedFriendIds: a, playedFriendsData: o, similarGames: d, officialGuildId: f } = e;
         l.default.track(u.rMx.GAME_PROFILE_CLOSE, {
             view_id: n,
             game_name: r,
             application_id: i,
             played_friend_ids: a,
-            played_friends_data: s,
+            played_friends_data: o,
             similar_games: d,
-            request_id: o.Z.getFeedRequestId(c.YN.GAME_PROFILE_FEED),
+            request_id: s.Z.getFeedRequestId(c.YN.GAME_PROFILE_FEED),
             official_guild_id: f
         });
     },
     h = (e) => {
-        let { gameName: n, applicationId: r, action: i, recipientUserId: a, similarGameId: s, viewId: o, officialGuildId: c } = e;
+        let { gameName: n, applicationId: r, action: i, recipientUserId: a, similarGameId: o, viewId: s, officialGuildId: c } = e;
         l.default.track(u.rMx.GAME_PROFILE_ACTION, {
             game_name: n,
             application_id: r,
             action: i,
             recipient_user_id: a,
-            similar_game_id: s,
-            view_id: o,
+            similar_game_id: o,
+            view_id: s,
             official_guild_id: c
         });
     },
-    p = (e) => {
-        let { viewId: n, applicationId: r, suggestedGameName: i, suggestedGameApplicationId: a, feedback: s, submitted: o } = e;
+    _ = (e) => {
+        let { viewId: n, applicationId: r, suggestedGameName: i, suggestedGameApplicationId: a, feedback: o, submitted: s } = e;
         return l.default.track(u.rMx.GAME_PROFILE_FEEDBACK, {
             view_id: n,
             application_id: r,
             suggested_game_name: i,
             suggested_game_application_id: a,
-            feedback: s,
-            submitted: o
+            feedback: o,
+            submitted: s
         });
     };

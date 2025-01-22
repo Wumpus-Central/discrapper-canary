@@ -1,8 +1,8 @@
-n(67867)(
+r(67867)(
     {
         target: 'Object',
         stat: !0,
-        sham: !n(447631)
+        sham: !r(447631)
     },
-    { create: n(224106) }
+    { create: r(224106) }
 );

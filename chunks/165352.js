@@ -12,16 +12,16 @@ r.d(n, {
         return c;
     },
     g_: function () {
-        return o;
+        return s;
     }
 });
 var i = r(927521),
     a = r(926726);
-let s = 1721426;
-function o(e, n, r, i) {
+let o = 1721426;
+function s(e, n, r, i) {
     let a = (n = u(e, n)) - 1,
-        o = -2;
-    return r <= 2 ? (o = 0) : l(n) && (o = -1), s - 1 + 365 * a + Math.floor(a / 4) - Math.floor(a / 100) + Math.floor(a / 400) + Math.floor((367 * r - 362) / 12 + o + i);
+        s = -2;
+    return r <= 2 ? (s = 0) : l(n) && (s = -1), o - 1 + 365 * a + Math.floor(a / 4) - Math.floor(a / 100) + Math.floor(a / 400) + Math.floor((367 * r - 362) / 12 + s + i);
 }
 function l(e) {
     return e % 4 == 0 && (e % 100 != 0 || e % 400 == 0);
@@ -40,23 +40,23 @@ let d = {
 class f {
     fromJulianDay(e) {
         let n = e,
-            r = n - s,
+            r = n - o,
             u = Math.floor(r / 146097),
             d = (0, a.wQ)(r, 146097),
             f = Math.floor(d / 36524),
-            _ = (0, a.wQ)(d, 36524),
-            h = Math.floor(_ / 1461),
-            p = Math.floor((0, a.wQ)(_, 1461) / 365),
-            [m, g] = c(400 * u + 100 * f + 4 * h + p + (4 !== f && 4 !== p ? 1 : 0)),
-            E = n - o(m, g, 1, 1),
+            p = (0, a.wQ)(d, 36524),
+            h = Math.floor(p / 1461),
+            _ = Math.floor((0, a.wQ)(p, 1461) / 365),
+            [m, g] = c(400 * u + 100 * f + 4 * h + _ + (4 !== f && 4 !== _ ? 1 : 0)),
+            E = n - s(m, g, 1, 1),
             v = 2;
-        n < o(m, g, 3, 1) ? (v = 0) : l(g) && (v = 1);
-        let I = Math.floor(((E + v) * 12 + 373) / 367),
-            T = n - o(m, g, I, 1) + 1;
-        return new i.aw(m, g, I, T);
+        n < s(m, g, 3, 1) ? (v = 0) : l(g) && (v = 1);
+        let y = Math.floor(((E + v) * 12 + 373) / 367),
+            b = n - s(m, g, y, 1) + 1;
+        return new i.aw(m, g, y, b);
     }
     toJulianDay(e) {
-        return o(e.era, e.year, e.month, e.day);
+        return s(e.era, e.year, e.month, e.day);
     }
     getDaysInMonth(e) {
         return d[l(e.year) ? 'leapyear' : 'standard'][e.month - 1];

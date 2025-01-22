@@ -1,29 +1,29 @@
 var i = r(200651),
     a = r(192379),
-    s = r(513431),
-    o = r(442837),
+    o = r(513431),
+    s = r(442837),
     l = r(607070),
     u = r(217702);
 function c(e) {
     e.removeAttribute('src'),
         Array.from(e.children).forEach((e) => {
-            (0, s.k)(e, HTMLSourceElement) && (e.removeAttribute('src'), e.removeAttribute('type')), (0, s.k)(e, HTMLImageElement) && e.removeAttribute('src');
+            (0, o.k)(e, HTMLSourceElement) && (e.removeAttribute('src'), e.removeAttribute('type')), (0, o.k)(e, HTMLImageElement) && e.removeAttribute('src');
         });
     try {
         e.load();
     } catch (e) {}
 }
 let d = (e) => {
-    let { externalRef: n, autoPlay: r, playOnHover: s, responsive: d, mediaLayoutType: f, ..._ } = e,
-        h = !(0, o.e7)([l.Z], () => l.Z.useReducedMotion) && !s && r,
-        p = a.useRef(null);
+    let { externalRef: n, autoPlay: r, playOnHover: o, responsive: d, mediaLayoutType: f, ...p } = e,
+        h = !(0, s.e7)([l.Z], () => l.Z.useReducedMotion) && !o && r,
+        _ = a.useRef(null);
     function m() {
         var e;
-        s && (null == p || null === (e = p.current) || void 0 === e || e.play());
+        o && (null == _ || null === (e = _.current) || void 0 === e || e.play());
     }
     function g() {
         var e;
-        s && (null == p || null === (e = p.current) || void 0 === e || e.pause());
+        o && (null == _ || null === (e = _.current) || void 0 === e || e.pause());
     }
     function E() {
         return f === u.hV.MOSAIC
@@ -39,8 +39,8 @@ let d = (e) => {
     }
     function v() {
         return {
-            maxWidth: _.width,
-            maxHeight: _.height,
+            maxWidth: p.width,
+            maxHeight: p.height,
             width: '100%',
             height: '100%'
         };
@@ -48,29 +48,29 @@ let d = (e) => {
     return (
         a.useLayoutEffect(
             () => () => {
-                let { current: e } = p;
+                let { current: e } = _;
                 null != e && c(e);
             },
             []
         ),
         a.useLayoutEffect(
             () => (
-                'function' == typeof n ? (n(null), n(p.current)) : null != n && (n.current = p.current),
+                'function' == typeof n ? (n(null), n(_.current)) : null != n && (n.current = _.current),
                 () => {
                     'function' == typeof n ? n(null) : null != n && (n.current = null);
                 }
             ),
-            [n, p]
+            [n, _]
         ),
         (0, i.jsx)('video', {
-            ref: p,
+            ref: _,
             autoPlay: h,
             onMouseEnter: m,
             onMouseLeave: g,
             onFocus: m,
             onBlur: g,
             style: E(),
-            ..._
+            ...p
         })
     );
 };

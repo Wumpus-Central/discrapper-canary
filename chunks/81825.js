@@ -26,15 +26,15 @@ class a {
         for (let i in e) {
             if (!e.hasOwnProperty(i)) continue;
             let a = n[i],
-                s = e[i];
-            if (!(s instanceof Date) || !(a instanceof Date) || s.getTime() !== a.getTime()) a !== s && (null == r && (r = { ...this }), (r[i] = e[i]));
+                o = e[i];
+            if (!(o instanceof Date) || !(a instanceof Date) || o.getTime() !== a.getTime()) a !== o && (null == r && (r = { ...this }), (r[i] = e[i]));
         }
         return null != r ? new this.constructor(r) : this;
     }
     update(e, n, r) {
         null == r && ((r = n), (n = void 0));
         let i = this,
-            s = i[e];
-        return s instanceof a || (s instanceof Array ? (s = [...s]) : s instanceof Object && (s = { ...s })), void 0 === s && (s = n), this.set(e, r(s));
+            o = i[e];
+        return o instanceof a || (o instanceof Array ? (o = [...o]) : o instanceof Object && (o = { ...o })), void 0 === o && (o = n), this.set(e, r(o));
     }
 }

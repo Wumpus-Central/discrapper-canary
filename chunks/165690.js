@@ -1,27 +1,27 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(829307),
     u = r(877837),
     c = r(122900),
     d = r(717487),
     f = r(99737),
-    _ = function (e) {
+    p = function (e) {
         var n = e.width,
             r = e.onChange,
             a = e.disableAlpha,
-            s = e.rgb,
-            _ = e.hsl,
+            o = e.rgb,
+            p = e.hsl,
             h = e.hsv,
-            p = e.hex,
+            _ = e.hex,
             m = e.renderers,
             g = e.styles,
             E = void 0 === g ? {} : g,
             v = e.className,
-            I = void 0 === v ? '' : v,
-            T = e.defaultView,
-            b = (0, o.default)(
+            y = void 0 === v ? '' : v,
+            b = e.defaultView,
+            I = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -56,7 +56,7 @@ var i = r(192379),
                                 absolute: '0px 0px 0px 0px',
                                 borderRadius: '8px',
                                 boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.1)',
-                                background: 'rgba(' + s.r + ', ' + s.g + ', ' + s.b + ', ' + s.a + ')',
+                                background: 'rgba(' + o.r + ', ' + o.g + ', ' + o.b + ', ' + o.a + ')',
                                 zIndex: '2'
                             },
                             toggles: { flex: '1' },
@@ -90,15 +90,15 @@ var i = r(192379),
         return i.createElement(
             'div',
             {
-                style: b.picker,
-                className: 'chrome-picker ' + I
+                style: I.picker,
+                className: 'chrome-picker ' + y
             },
             i.createElement(
                 'div',
-                { style: b.saturation },
+                { style: I.saturation },
                 i.createElement(u.OQ, {
-                    style: b.Saturation,
-                    hsl: _,
+                    style: I.Saturation,
+                    hsl: p,
                     hsv: h,
                     pointer: f.Z,
                     onChange: r
@@ -106,34 +106,34 @@ var i = r(192379),
             ),
             i.createElement(
                 'div',
-                { style: b.body },
+                { style: I.body },
                 i.createElement(
                     'div',
                     {
-                        style: b.controls,
+                        style: I.controls,
                         className: 'flexbox-fix'
                     },
-                    i.createElement('div', { style: b.color }, i.createElement('div', { style: b.swatch }, i.createElement('div', { style: b.active }), i.createElement(u.QN, { renderers: m }))),
+                    i.createElement('div', { style: I.color }, i.createElement('div', { style: I.swatch }, i.createElement('div', { style: I.active }), i.createElement(u.QN, { renderers: m }))),
                     i.createElement(
                         'div',
-                        { style: b.toggles },
+                        { style: I.toggles },
                         i.createElement(
                             'div',
-                            { style: b.hue },
+                            { style: I.hue },
                             i.createElement(u.PS, {
-                                style: b.Hue,
-                                hsl: _,
+                                style: I.Hue,
+                                hsl: p,
                                 pointer: d.Z,
                                 onChange: r
                             })
                         ),
                         i.createElement(
                             'div',
-                            { style: b.alpha },
+                            { style: I.alpha },
                             i.createElement(u.xV, {
-                                style: b.Alpha,
-                                rgb: s,
-                                hsl: _,
+                                style: I.Alpha,
+                                rgb: o,
+                                hsl: p,
                                 pointer: d.Z,
                                 renderers: m,
                                 onChange: r
@@ -142,25 +142,25 @@ var i = r(192379),
                     )
                 ),
                 i.createElement(c.Z, {
-                    rgb: s,
-                    hsl: _,
-                    hex: p,
-                    view: T,
+                    rgb: o,
+                    hsl: p,
+                    hex: _,
+                    view: b,
                     onChange: r,
                     disableAlpha: a
                 })
             )
         );
     };
-(_.propTypes = {
-    width: s().oneOfType([s().string, s().number]),
-    disableAlpha: s().bool,
-    styles: s().object,
-    defaultView: s().oneOf(['hex', 'rgb', 'hsl'])
+(p.propTypes = {
+    width: o().oneOfType([o().string, o().number]),
+    disableAlpha: o().bool,
+    styles: o().object,
+    defaultView: o().oneOf(['hex', 'rgb', 'hsl'])
 }),
-    (_.defaultProps = {
+    (p.defaultProps = {
         width: 225,
         disableAlpha: !1,
         styles: {}
     }),
-    (0, u.t1)(_);
+    (0, u.t1)(p);

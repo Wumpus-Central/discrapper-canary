@@ -5,17 +5,17 @@ function i(e) {
     };
 }
 var a,
-    s = r(531478).codes,
-    o = s.ERR_MISSING_ARGS,
-    l = s.ERR_STREAM_DESTROYED;
+    o = r(531478).codes,
+    s = o.ERR_MISSING_ARGS,
+    l = o.ERR_STREAM_DESTROYED;
 function u(e) {
     if (e) throw e;
 }
 function c(e) {
     return e.setHeader && 'function' == typeof e.abort;
 }
-function d(e, n, s, o) {
-    o = i(o);
+function d(e, n, o, s) {
+    s = i(s);
     var u = !1;
     e.on('close', function () {
         u = !0;
@@ -25,11 +25,11 @@ function d(e, n, s, o) {
             e,
             {
                 readable: n,
-                writable: s
+                writable: o
             },
             function (e) {
-                if (e) return o(e);
-                (u = !0), o();
+                if (e) return s(e);
+                (u = !0), s();
             }
         );
     var d = !1;
@@ -38,7 +38,7 @@ function d(e, n, s, o) {
             if (!d) {
                 if (((d = !0), c(e))) return e.abort();
                 if ('function' == typeof e.destroy) return e.destroy();
-                o(n || new l('pipe'));
+                s(n || new l('pipe'));
             }
         }
     };
@@ -46,22 +46,22 @@ function d(e, n, s, o) {
 function f(e) {
     e();
 }
-function _(e, n) {
+function p(e, n) {
     return e.pipe(n);
 }
 function h(e) {
     return e.length && 'function' == typeof e[e.length - 1] ? e.pop() : u;
 }
-function p() {
+function _() {
     for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
     var a = h(r);
-    if ((Array.isArray(r[0]) && (r = r[0]), r.length < 2)) throw new o('streams');
-    var s = r.map(function (n, i) {
-        var o = i < r.length - 1;
-        return d(n, o, i > 0, function (n) {
-            !e && (e = n), n && s.forEach(f), !o && (s.forEach(f), a(e));
+    if ((Array.isArray(r[0]) && (r = r[0]), r.length < 2)) throw new s('streams');
+    var o = r.map(function (n, i) {
+        var s = i < r.length - 1;
+        return d(n, s, i > 0, function (n) {
+            !e && (e = n), n && o.forEach(f), !s && (o.forEach(f), a(e));
         });
     });
-    return r.reduce(_);
+    return r.reduce(p);
 }
-e.exports = p;
+e.exports = _;

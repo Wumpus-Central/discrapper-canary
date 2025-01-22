@@ -33,9 +33,9 @@ if (
             });
 else
     try {
-        var s = r(865605);
-        if ('function' != typeof s.randomBytes) throw Error('Not supported');
+        var o = r(865605);
+        if ('function' != typeof o.randomBytes) throw Error('Not supported');
         a.prototype._rand = function (e) {
-            return s.randomBytes(e);
+            return o.randomBytes(e);
         };
     } catch (e) {}

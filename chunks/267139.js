@@ -1,16 +1,16 @@
 var r = Symbol.for('react.element'),
     i = Symbol.for('react.portal'),
     a = Symbol.for('react.fragment'),
-    s = Symbol.for('react.strict_mode'),
-    o = Symbol.for('react.profiler'),
+    o = Symbol.for('react.strict_mode'),
+    s = Symbol.for('react.profiler'),
     l = Symbol.for('react.provider'),
     u = Symbol.for('react.context'),
     c = Symbol.for('react.forward_ref'),
     d = Symbol.for('react.suspense'),
     f = Symbol.for('react.memo'),
-    _ = Symbol.for('react.lazy'),
+    p = Symbol.for('react.lazy'),
     h = Symbol.iterator;
-function p(e) {
+function _(e) {
     return null === e || 'object' != typeof e ? null : 'function' == typeof (e = (h && e[h]) || e['@@iterator']) ? e : null;
 }
 var m = {
@@ -26,8 +26,8 @@ var m = {
 function v(e, n, r) {
     (this.props = e), (this.context = n), (this.refs = E), (this.updater = r || m);
 }
-function I() {}
-function T(e, n, r) {
+function y() {}
+function b(e, n, r) {
     (this.props = e), (this.context = n), (this.refs = E), (this.updater = r || m);
 }
 (v.prototype.isReactComponent = {}),
@@ -38,37 +38,37 @@ function T(e, n, r) {
     (v.prototype.forceUpdate = function (e) {
         this.updater.enqueueForceUpdate(this, e, 'forceUpdate');
     }),
-    (I.prototype = v.prototype);
-var b = (T.prototype = new I());
-(b.constructor = T), g(b, v.prototype), (b.isPureReactComponent = !0);
-var y = Array.isArray,
+    (y.prototype = v.prototype);
+var I = (b.prototype = new y());
+(I.constructor = b), g(I, v.prototype), (I.isPureReactComponent = !0);
+var T = Array.isArray,
     S = Object.prototype.hasOwnProperty,
     A = { current: null },
-    N = {
+    C = {
         key: !0,
         ref: !0,
         __self: !0,
         __source: !0
     };
-function C(e, n, i) {
+function N(e, n, i) {
     var a,
-        s = {},
-        o = null,
+        o = {},
+        s = null,
         l = null;
-    if (null != n) for (a in (void 0 !== n.ref && (l = n.ref), void 0 !== n.key && (o = '' + n.key), n)) S.call(n, a) && !N.hasOwnProperty(a) && (s[a] = n[a]);
+    if (null != n) for (a in (void 0 !== n.ref && (l = n.ref), void 0 !== n.key && (s = '' + n.key), n)) S.call(n, a) && !C.hasOwnProperty(a) && (o[a] = n[a]);
     var u = arguments.length - 2;
-    if (1 === u) s.children = i;
+    if (1 === u) o.children = i;
     else if (1 < u) {
         for (var c = Array(u), d = 0; d < u; d++) c[d] = arguments[d + 2];
-        s.children = c;
+        o.children = c;
     }
-    if (e && e.defaultProps) for (a in (u = e.defaultProps)) void 0 === s[a] && (s[a] = u[a]);
+    if (e && e.defaultProps) for (a in (u = e.defaultProps)) void 0 === o[a] && (o[a] = u[a]);
     return {
         $$typeof: r,
         type: e,
-        key: o,
+        key: s,
         ref: l,
-        props: s,
+        props: o,
         _owner: A.current
     };
 }
@@ -97,11 +97,11 @@ function D(e) {
         })
     );
 }
-var L = /\/+/g;
-function x(e, n) {
+var x = /\/+/g;
+function L(e, n) {
     return 'object' == typeof e && null !== e && null != e.key ? D('' + e.key) : n.toString(36);
 }
-function w(e, n, a, s, o) {
+function w(e, n, a, o, s) {
     var l = typeof e;
     ('undefined' === l || 'boolean' === l) && (e = null);
     var u = !1;
@@ -121,23 +121,23 @@ function w(e, n, a, s, o) {
         }
     if (u)
         return (
-            (o = o((u = e))),
-            (e = '' === s ? '.' + x(u, 0) : s),
-            y(o)
+            (s = s((u = e))),
+            (e = '' === o ? '.' + L(u, 0) : o),
+            T(s)
                 ? ((a = ''),
-                  null != e && (a = e.replace(L, '$&/') + '/'),
-                  w(o, n, a, '', function (e) {
+                  null != e && (a = e.replace(x, '$&/') + '/'),
+                  w(s, n, a, '', function (e) {
                       return e;
                   }))
-                : null != o && (O(o) && (o = R(o, a + (!o.key || (u && u.key === o.key) ? '' : ('' + o.key).replace(L, '$&/') + '/') + e)), n.push(o)),
+                : null != s && (O(s) && (s = R(s, a + (!s.key || (u && u.key === s.key) ? '' : ('' + s.key).replace(x, '$&/') + '/') + e)), n.push(s)),
             1
         );
-    if (((u = 0), (s = '' === s ? '.' : s + ':'), y(e)))
+    if (((u = 0), (o = '' === o ? '.' : o + ':'), T(e)))
         for (var c = 0; c < e.length; c++) {
-            var d = s + x((l = e[c]), c);
-            u += w(l, n, a, d, o);
+            var d = o + L((l = e[c]), c);
+            u += w(l, n, a, d, s);
         }
-    else if ('function' == typeof (d = p(e))) for (e = d.call(e), c = 0; !(l = e.next()).done; ) (d = s + x((l = l.value), c++)), (u += w(l, n, a, d, o));
+    else if ('function' == typeof (d = _(e))) for (e = d.call(e), c = 0; !(l = e.next()).done; ) (d = o + L((l = l.value), c++)), (u += w(l, n, a, d, s));
     else if ('object' === l) throw Error('Objects are not valid as a React child (found: ' + ('[object Object]' === (n = String(e)) ? 'object with keys {' + Object.keys(e).join(', ') + '}' : n) + '). If you meant to render a collection of children, use an array instead.');
     return u;
 }
@@ -212,21 +212,21 @@ function G() {
 }),
     (n.Component = v),
     (n.Fragment = a),
-    (n.Profiler = o),
-    (n.PureComponent = T),
-    (n.StrictMode = s),
+    (n.Profiler = s),
+    (n.PureComponent = b),
+    (n.StrictMode = o),
     (n.Suspense = d),
     (n.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = B),
     (n.act = G),
     (n.cloneElement = function (e, n, i) {
         if (null == e) throw Error('React.cloneElement(...): The argument must be a React element, but you passed ' + e + '.');
         var a = g({}, e.props),
-            s = e.key,
-            o = e.ref,
+            o = e.key,
+            s = e.ref,
             l = e._owner;
         if (null != n) {
-            if ((void 0 !== n.ref && ((o = n.ref), (l = A.current)), void 0 !== n.key && (s = '' + n.key), e.type && e.type.defaultProps)) var u = e.type.defaultProps;
-            for (c in n) S.call(n, c) && !N.hasOwnProperty(c) && (a[c] = void 0 === n[c] && void 0 !== u ? u[c] : n[c]);
+            if ((void 0 !== n.ref && ((s = n.ref), (l = A.current)), void 0 !== n.key && (o = '' + n.key), e.type && e.type.defaultProps)) var u = e.type.defaultProps;
+            for (c in n) S.call(n, c) && !C.hasOwnProperty(c) && (a[c] = void 0 === n[c] && void 0 !== u ? u[c] : n[c]);
         }
         var c = arguments.length - 2;
         if (1 === c) a.children = i;
@@ -238,8 +238,8 @@ function G() {
         return {
             $$typeof: r,
             type: e.type,
-            key: s,
-            ref: o,
+            key: o,
+            ref: s,
             props: a,
             _owner: l
         };
@@ -262,9 +262,9 @@ function G() {
             (e.Consumer = e)
         );
     }),
-    (n.createElement = C),
+    (n.createElement = N),
     (n.createFactory = function (e) {
-        var n = C.bind(null, e);
+        var n = N.bind(null, e);
         return (n.type = e), n;
     }),
     (n.createRef = function () {
@@ -279,7 +279,7 @@ function G() {
     (n.isValidElement = O),
     (n.lazy = function (e) {
         return {
-            $$typeof: _,
+            $$typeof: p,
             _payload: {
                 _status: -1,
                 _result: e

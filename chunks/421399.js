@@ -8,67 +8,67 @@ r.d(n, {
 });
 var i,
     a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(873546),
     c = r(442837),
     d = r(481060),
     f = r(607070),
-    _ = r(100527),
+    p = r(100527),
     h = r(906732),
-    p = r(385499),
+    _ = r(385499),
     m = r(979264),
     g = r(372900),
     E = r(477734),
     v = r(184301),
-    I = r(768581),
-    T = r(463396),
-    b = r(981631),
-    y = r(507304);
+    y = r(768581),
+    b = r(463396),
+    I = r(981631),
+    T = r(507304);
 function S(e) {
     let { compact: n } = e;
-    return (0, a.jsx)(p.Z, {
-        className: n ? y.botTagCompact : y.botTagCozy,
-        type: p.Z.Types.REMIX,
+    return (0, a.jsx)(_.Z, {
+        className: n ? T.botTagCompact : T.botTagCozy,
+        type: _.Z.Types.REMIX,
         useRemSizes: !0
     });
 }
 function A(e) {
     var n;
     let r,
-        { author: i, message: o, channel: p, userOverride: A, compact: N = !1, withMentionPrefix: C = !1, showPopout: R = !1, className: O, onClick: D, onContextMenu: L, onPopoutRequestClose: x, renderPopout: w, renderRemixTag: P = !1, decorations: M } = e,
-        k = s.useContext(g.Z),
-        U = null !== (n = null == p ? void 0 : p.guild_id) && void 0 !== n ? n : k,
-        { analyticsLocations: B } = (0, h.ZP)(_.Z.USERNAME),
-        G = C ? '@' : '',
-        { nick: F, colorString: Z, colorRoleName: V } = i,
-        j = null != o.messageReference && null != o.webhookId && o.hasFlag(b.iLy.IS_CROSSPOST),
+        { author: i, message: s, channel: _, userOverride: A, compact: C = !1, withMentionPrefix: N = !1, showPopout: R = !1, className: O, onClick: D, onContextMenu: x, onPopoutRequestClose: L, renderPopout: w, renderRemixTag: P = !1, decorations: M } = e,
+        k = o.useContext(g.Z),
+        U = null !== (n = null == _ ? void 0 : _.guild_id) && void 0 !== n ? n : k,
+        { analyticsLocations: B } = (0, h.ZP)(p.Z.USERNAME),
+        G = N ? '@' : '',
+        { nick: Z, colorString: F, colorRoleName: V } = i,
+        j = null != s.messageReference && null != s.webhookId && s.hasFlag(I.iLy.IS_CROSSPOST),
         H = (0, c.e7)([f.Z], () => f.Z.roleStyle),
         Y = 'username' === H,
         W = 'dot' === H,
         K = (0, E.X$)(),
-        z = s.useMemo(
+        z = o.useMemo(
             () => ({
-                source: b.jXE.CHANNEL,
-                messageId: o.id,
-                tagUserId: o.author.id
+                source: I.jXE.CHANNEL,
+                messageId: s.id,
+                tagUserId: s.author.id
             }),
-            [o.id, o.author.id]
+            [s.id, s.author.id]
         ),
         q = {
-            className: y.username,
-            style: Y && null != Z ? { color: Z } : void 0,
+            className: T.username,
+            style: Y && null != F ? { color: F } : void 0,
             onClick: D,
-            onContextMenu: L,
-            children: (0, a.jsx)(a.Fragment, { children: G + F })
+            onContextMenu: x,
+            children: (0, a.jsx)(a.Fragment, { children: G + Z })
         };
     function Q() {
-        let e = null != A ? A : o.author;
+        let e = null != A ? A : s.author;
         return (0, v.Z)(
             e.id,
             null != i.guildMemberAvatar && null != U
-                ? (0, I.JM)({
+                ? (0, y.JM)({
                       guildId: U,
                       userId: e.id,
                       avatar: i.guildMemberAvatar,
@@ -77,22 +77,22 @@ function A(e) {
                 : e.getAvatarURL(U, 80),
             {
                 guildId: U,
-                channelId: o.channel_id
+                channelId: s.channel_id
             }
         );
     }
-    let X = s.useMemo(
+    let X = o.useMemo(
         () =>
-            N
+            C
                 ? (0, a.jsx)(m.ZP, {
                       primaryGuild: i.primaryGuild,
-                      userId: o.author.id,
+                      userId: s.author.id,
                       contextGuildId: U,
-                      className: y.clanTagChiplet,
+                      className: T.clanTagChiplet,
                       profileViewedAnalytics: z
                   })
                 : null,
-        [N, z, i.primaryGuild, U, o.author.id]
+        [C, z, i.primaryGuild, U, s.author.id]
     );
     r =
         null != w && null != R
@@ -101,7 +101,7 @@ function A(e) {
                   renderPopout: w,
                   shouldShow: R,
                   position: u.tq ? 'window_center' : 'right',
-                  onRequestClose: x,
+                  onRequestClose: L,
                   children: (e) => {
                       let { onClick: n, ...r } = e;
                       return (0, a.jsxs)(a.Fragment, {
@@ -110,7 +110,7 @@ function A(e) {
                                   tag: 'span',
                                   ...r,
                                   ...q,
-                                  className: l()(q.className, y.clickable, O)
+                                  className: l()(q.className, T.clickable, O)
                               }),
                               X
                           ]
@@ -131,32 +131,32 @@ function A(e) {
     return (0, a.jsxs)(h.Gt, {
         value: B,
         children: [
-            null != J && N
+            null != J && C
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [' ', J, ' ']
                   })
                 : null,
             W
                 ? (0, a.jsx)(d.RoleDot, {
-                      color: Z,
+                      color: F,
                       name: V,
-                      className: y.roleDot
+                      className: T.roleDot
                   })
                 : null,
             r,
-            !N &&
+            !C &&
                 (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsx)(m.ZP, {
                         primaryGuild: i.primaryGuild,
-                        userId: o.author.id,
+                        userId: s.author.id,
                         contextGuildId: U,
-                        className: y.clanTagChiplet,
+                        className: T.clanTagChiplet,
                         profileViewedAnalytics: z
                     })
                 }),
             null != $ ? (0, a.jsx)(a.Fragment, { children: $ }) : null,
-            null == J || N ? null : J,
-            null != o && (0, T.f)(o) && K && P ? (0, a.jsx)(S, {}) : null
+            null == J || C ? null : J,
+            null != s && (0, b.f)(s) && K && P ? (0, a.jsx)(S, {}) : null
         ]
     });
 }

@@ -1,10 +1,10 @@
 var i = r(192379),
     a = r(723184),
-    s = function (e) {
+    o = function (e) {
         var n = e.hsl,
             r = e.offset,
-            s = e.onClick,
-            o = void 0 === s ? function () {} : s,
+            o = e.onClick,
+            s = void 0 === o ? function () {} : o,
             l = e.active,
             u = e.first,
             c = e.last,
@@ -33,7 +33,7 @@ var i = r(192379),
                 }
             ),
             f = function (e) {
-                return o(
+                return s(
                     {
                         h: n.h,
                         s: 0.5,
@@ -48,4 +48,4 @@ var i = r(192379),
             onClick: f
         });
     };
-n.Z = s;
+n.Z = o;

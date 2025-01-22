@@ -1,14 +1,14 @@
 n.r(i),
     n.d(i, {
         default: function () {
-            return E;
+            return I;
         }
     }),
     n(47120);
 var t = n(200651),
     o = n(192379),
-    r = n(120356),
-    l = n.n(r),
+    l = n(120356),
+    r = n.n(l),
     a = n(481060),
     c = n(100527),
     s = n(906732),
@@ -16,27 +16,27 @@ var t = n(200651),
     u = n(455708),
     g = n(222062),
     f = n(530329),
-    p = n(626135),
-    _ = n(488499),
-    h = n(58384),
-    N = n(981631),
-    T = n(486324),
-    m = n(388032),
-    x = n(415617);
-function E(e) {
-    let { transitionState: i, onClose: r, onComplete: E, uploadType: b, showUpsellHeader: I, analyticsPage: B } = e,
-        [C, j] = o.useState(!1),
-        R = (0, a.useModalContext)(),
-        A = (0, d.Dt)(),
+    _ = n(626135),
+    N = n(488499),
+    T = n(58384),
+    p = n(981631),
+    m = n(486324),
+    E = n(388032),
+    h = n(415617);
+function I(e) {
+    let { transitionState: i, onClose: l, onComplete: I, uploadType: b, showUpsellHeader: B, analyticsPage: x } = e,
+        [C, R] = o.useState(!1),
+        A = (0, a.useModalContext)(),
+        j = (0, d.Dt)(),
         { analyticsLocations: P } = (0, s.ZP)(c.Z.GIF_PICKER);
     async function Z(e) {
         let { gifSrc: i } = e;
         if (null == i || C) return;
-        j(!0);
-        let o = (0, h.Q)(i),
-            l = await fetch(o),
-            c = await l.blob();
-        r(),
+        R(!0);
+        let o = (0, T.Q)(i),
+            r = await fetch(o),
+            c = await r.blob();
+        l(),
             (0, a.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('48017'), n.e('27371')]).then(n.bind(n, 850085));
@@ -44,70 +44,70 @@ function E(e) {
                         (0, t.jsx)(e, {
                             imgURI: o,
                             file: new File([c], 'tenor.gif', { type: 'image/gif' }),
-                            onCrop: E,
+                            onCrop: I,
                             uploadType: b,
-                            showUpsellHeader: I,
+                            showUpsellHeader: B,
                             ...i
                         });
                 },
-                { contextKey: R }
+                { contextKey: A }
             );
     }
     o.useEffect(() => {
-        p.default.track(N.rMx.OPEN_MODAL, {
-            type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location: { page: B }
+        _.default.track(p.rMx.OPEN_MODAL, {
+            type: p.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+            location: { page: x }
         });
-    }, [B]);
-    let k = b === T.pC.AVATAR || b === T.pC.BANNER,
+    }, [x]);
+    let k = b === m.pC.AVATAR || b === m.pC.BANNER,
         v = (0, g.M)(!k);
     return (0, t.jsx)(s.Gt, {
         value: P,
         children: (0, t.jsxs)(a.ModalRoot, {
-            'aria-labelledby': A,
+            'aria-labelledby': j,
             transitionState: i,
             size: a.ModalSize.SMALL,
             children: [
-                I &&
+                B &&
                     !v &&
-                    (0, t.jsx)(_.Z, {
+                    (0, t.jsx)(N.Z, {
                         type: b,
-                        analyticsPage: B,
-                        analyticsSection: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+                        analyticsPage: x,
+                        analyticsSection: p.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                         isGIF: !0
                     }),
                 (0, t.jsxs)(a.ModalHeader, {
-                    className: x.modalHeader,
+                    className: h.modalHeader,
                     separator: !1,
                     children: [
                         (0, t.jsx)(a.FormTitle, {
-                            className: x.titleCase,
+                            className: h.titleCase,
                             tag: a.FormTitleTags.H1,
-                            children: m.intl.string(m.t['xsC+//'])
+                            children: E.intl.string(E.t['xsC+//'])
                         }),
                         (0, t.jsx)(a.ModalCloseButton, {
-                            onClick: r,
-                            className: x.modalCloseButton
+                            onClick: l,
+                            className: h.modalCloseButton
                         })
                     ]
                 }),
                 (0, t.jsxs)('div', {
                     children: [
                         (0, t.jsx)(u.Z, {
-                            contentClassName: l()({ [x.gifPickerContent]: I && v }),
-                            className: l()(x.gifPicker, { [x.loadingOverlay]: C }),
+                            contentClassName: r()({ [h.gifPickerContent]: B && v }),
+                            className: r()(h.gifPicker, { [h.loadingOverlay]: C }),
                             onSelectGIF: Z,
                             hideFavorites: !0
                         }),
-                        C && (0, t.jsx)(a.Spinner, { className: x.spinner })
+                        C && (0, t.jsx)(a.Spinner, { className: h.spinner })
                     ]
                 }),
-                I &&
+                B &&
                     v &&
                     (0, t.jsx)(f.Z, {
                         uploadType: b,
                         showUpsell: !0,
-                        className: x.nitroUpsell
+                        className: h.nitroUpsell
                     })
             ]
         })

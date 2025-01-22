@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140);
+var o = r(442837),
+    s = r(570140);
 function l(e, n, r) {
     return (
         n in e
@@ -21,7 +21,7 @@ let u = new Map(),
 function f() {
     (u = new Map()), (c = new Set()), (d = new Set());
 }
-function _(e) {
+function p(e) {
     let { applicationIds: n } = e;
     n.forEach((e) => {
         c.add(e), d.delete(e);
@@ -33,32 +33,32 @@ function h(e) {
         c.delete(e), d.delete(e);
     }),
         r.forEach((e) => {
-            let { application_id: n, name: r, summary: i, websites: a, themes: s, genres: o, platforms: l, artwork_urls: c, screenshot_urls: d, cover_image_url: f, first_release_date: _, summary_localized: h, publisher_names: p, developer_names: m } = e;
+            let { application_id: n, name: r, summary: i, websites: a, themes: o, genres: s, platforms: l, artwork_urls: c, screenshot_urls: d, cover_image_url: f, first_release_date: p, summary_localized: h, publisher_names: _, developer_names: m } = e;
             u.set(n, {
                 applicationId: n,
                 name: r,
                 summary: i,
                 summaryLocalized: h,
                 websites: a,
-                themes: s,
-                genres: o,
+                themes: o,
+                genres: s,
                 platforms: l,
                 artwork: c,
                 screenshots: d,
                 coverImageUrl: f,
-                firstReleaseDate: _,
-                publishers: null != p ? p : [],
+                firstReleaseDate: p,
+                publishers: null != _ ? _ : [],
                 developers: null != m ? m : []
             });
         });
 }
-function p(e) {
+function _(e) {
     let { applicationIds: n } = e;
     n.forEach((e) => {
         c.delete(e), d.add(e);
     });
 }
-class m extends (i = s.ZP.Store) {
+class m extends (i = o.ZP.Store) {
     canFetch(e) {
         return !c.has(e) && !d.has(e) && !u.has(e);
     }
@@ -86,9 +86,9 @@ class m extends (i = s.ZP.Store) {
     }
 }
 l(m, 'displayName', 'DetectableGameSupplementalStore'),
-    (n.Z = new m(o.Z, {
+    (n.Z = new m(s.Z, {
         LOGOUT: f,
-        DETECTABLE_GAME_SUPPLEMENTAL_FETCH: _,
+        DETECTABLE_GAME_SUPPLEMENTAL_FETCH: p,
         DETECTABLE_GAME_SUPPLEMENTAL_FETCH_SUCCESS: h,
-        DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: p
+        DETECTABLE_GAME_SUPPLEMENTAL_FETCH_FAILURE: _
     }));

@@ -1,10 +1,10 @@
-function r(e, t) {
-    (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
-    return r;
+function i(e, n) {
+    (null == n || n > e.length) && (n = e.length);
+    for (var r = 0, i = Array(n); r < n; r++) i[r] = e[r];
+    return i;
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

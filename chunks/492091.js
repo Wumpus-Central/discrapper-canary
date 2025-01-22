@@ -1,22 +1,22 @@
-var e = n(96403),
-    o = n(952256),
-    i = n(735471),
-    u = n(726433),
-    s = n(342545),
-    c = e([].push);
-t.exports = function (t) {
-    if (i(t)) return t;
-    if (o(t)) {
-        for (var r = t.length, n = [], e = 0; e < r; e++) {
-            var f = t[e];
-            'string' == typeof f ? c(n, f) : ('number' == typeof f || 'Number' === u(f) || 'String' === u(f)) && c(n, s(f));
+var i = r(96403),
+    a = r(952256),
+    o = r(735471),
+    s = r(726433),
+    l = r(342545),
+    u = i([].push);
+e.exports = function (e) {
+    if (o(e)) return e;
+    if (a(e)) {
+        for (var n = e.length, r = [], i = 0; i < n; i++) {
+            var c = e[i];
+            'string' == typeof c ? u(r, c) : ('number' == typeof c || 'Number' === s(c) || 'String' === s(c)) && u(r, l(c));
         }
-        var a = n.length,
-            p = !0;
-        return function (t, r) {
-            if (p) return (p = !1), r;
-            if (o(this)) return r;
-            for (var e = 0; e < a; e++) if (n[e] === t) return r;
+        var d = r.length,
+            f = !0;
+        return function (e, n) {
+            if (f) return (f = !1), n;
+            if (a(this)) return n;
+            for (var i = 0; i < d; i++) if (r[i] === e) return n;
         };
     }
 };

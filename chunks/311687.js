@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -33,4 +33,4 @@ class c extends (i = a.ZP.PersistedStore) {
         return l.lastUpdateRequested[e];
     }
 }
-o(c, 'displayName', 'UserLeaderboardStore'), o(c, 'persistKey', 'UserLeaderboardStore'), (n.Z = new c(s.Z, { SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED: u }));
+s(c, 'displayName', 'UserLeaderboardStore'), s(c, 'persistKey', 'UserLeaderboardStore'), (n.Z = new c(o.Z, { SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED: u }));

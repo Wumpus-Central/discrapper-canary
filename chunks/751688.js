@@ -1,15 +1,15 @@
 var i,
     a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(120356),
     u = r.n(l),
     c = r(481060),
     d = r(129861),
     f = r(600164),
-    _ = r(184301),
+    p = r(184301),
     h = r(347475),
-    p = r(329957);
+    _ = r(329957);
 function m(e, n, r) {
     return (
         n in e
@@ -23,22 +23,22 @@ function m(e, n, r) {
         e
     );
 }
-class g extends (i = o.Component) {
+class g extends (i = s.Component) {
     render() {
         let { popoutOpen: e } = this.state,
-            { user: n, disablePopout: r, ignoreModalClicks: i, guildId: a, channelId: o } = this.props;
-        return (0, s.jsx)(c.Popout, {
+            { user: n, disablePopout: r, ignoreModalClicks: i, guildId: a, channelId: s } = this.props;
+        return (0, o.jsx)(c.Popout, {
             preload: () =>
-                (0, _.Z)(n.id, n.getAvatarURL(a, 80), {
+                (0, p.Z)(n.id, n.getAvatarURL(a, 80), {
                     guildId: a,
-                    channelId: o
+                    channelId: s
                 }),
             renderPopout: (e) =>
-                (0, s.jsx)(h.Z, {
+                (0, o.jsx)(h.Z, {
                     ...e,
                     userId: n.id,
                     guildId: a,
-                    channelId: o
+                    channelId: s
                 }),
             position: 'left',
             onRequestClose: this.handleUserPopoutClose,
@@ -59,29 +59,29 @@ class g extends (i = o.Component) {
                 this.setState({ popoutOpen: !1 }), null == e || e();
             }),
             m(this, 'renderUserPopout', (e) => {
-                let { className: n, disablePopout: r, onContextMenu: i, user: a, status: o, textClassName: l, nick: _, guildId: h } = this.props;
-                return (0, s.jsxs)(f.Z, {
+                let { className: n, disablePopout: r, onContextMenu: i, user: a, status: s, textClassName: l, nick: p, guildId: h } = this.props;
+                return (0, o.jsxs)(f.Z, {
                     align: f.Z.Align.CENTER,
-                    className: u()(p.memberListItem, n, { [p.popoutDisabled]: r }),
+                    className: u()(_.memberListItem, n, { [_.popoutDisabled]: r }),
                     onContextMenu: i,
                     onMouseDown: e.onMouseDown,
                     onKeyDown: e.onKeyDown,
                     onClick: this.handleClickUser,
                     children: [
-                        (0, s.jsx)(c.Avatar, {
+                        (0, o.jsx)(c.Avatar, {
                             src: a.getAvatarURL(h, 24),
-                            className: p.avatar,
+                            className: _.avatar,
                             'aria-label': a.username,
                             size: c.AvatarSizes.SIZE_24,
-                            status: o
+                            status: s
                         }),
-                        (0, s.jsx)(c.Text, {
-                            className: u()(p.memberListItemTag, l),
+                        (0, o.jsx)(c.Text, {
+                            className: u()(_.memberListItemTag, l),
                             variant: 'text-sm/normal',
-                            children: (0, s.jsx)(d.Z, {
+                            children: (0, o.jsx)(d.Z, {
                                 user: a,
-                                nick: _,
-                                usernameClass: p.username,
+                                nick: p,
+                                usernameClass: _.username,
                                 hideDiscriminator: !0
                             })
                         })

@@ -1,6 +1,6 @@
 r.d(n, {
     d: function () {
-        return _;
+        return p;
     },
     h: function () {
         return f;
@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(119617),
-    o = r(399606),
+    o = r(119617),
+    s = r(399606),
     l = r(607070),
     u = r(981631);
 let c = 20,
@@ -24,10 +24,10 @@ let c = 20,
         removeClickListener: u.dG4
     },
     f = a.createContext(d);
-function _(e) {
-    let { children: n, confettiCanvas: r, spriteCanvas: u, baseConfig: _, addClickListener: h, removeClickListener: p } = e,
-        m = (0, s.uR)(r, u),
-        g = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
+function p(e) {
+    let { children: n, confettiCanvas: r, spriteCanvas: u, baseConfig: p, addClickListener: h, removeClickListener: _ } = e,
+        m = (0, o.uR)(r, u),
+        g = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         E = a.useMemo(
             () =>
                 g
@@ -38,7 +38,7 @@ function _(e) {
                           createConfetti: (e, n) =>
                               m.createConfetti(
                                   {
-                                      ..._,
+                                      ...p,
                                       ...e
                                   },
                                   n
@@ -46,7 +46,7 @@ function _(e) {
                           createConfettiAt: (e, n, r, i) =>
                               m.createConfetti(
                                   {
-                                      ..._,
+                                      ...p,
                                       position: {
                                           type: 'static',
                                           value: {
@@ -63,7 +63,7 @@ function _(e) {
                                   r = arguments.length > 2 ? arguments[2] : void 0;
                               return m.createMultipleConfetti(
                                   {
-                                      ..._,
+                                      ...p,
                                       ...e
                                   },
                                   n,
@@ -75,7 +75,7 @@ function _(e) {
                                   a = arguments.length > 4 ? arguments[4] : void 0;
                               return m.createMultipleConfetti(
                                   {
-                                      ..._,
+                                      ...p,
                                       position: {
                                           type: 'static',
                                           value: {
@@ -90,9 +90,9 @@ function _(e) {
                               );
                           },
                           addClickListener: h,
-                          removeClickListener: p
+                          removeClickListener: _
                       },
-            [h, _, m, r, g, p]
+            [h, p, m, r, g, _]
         );
     return (0, i.jsx)(f.Provider, {
         value: E,

@@ -1,15 +1,15 @@
 var i,
     a = r(47120);
-var s = r(653041);
-var o = r(392711),
-    l = r.n(o),
+var o = r(653041);
+var s = r(392711),
+    l = r.n(s),
     u = r(314794),
     c = r(442837),
     d = r(570140),
     f = r(959546),
-    _ = r(283595),
+    p = r(283595),
     h = r(780570),
-    p = r(55563),
+    _ = r(55563),
     m = r(981631),
     g = r(474936);
 function E(e, n, r) {
@@ -26,96 +26,96 @@ function E(e, n, r) {
     );
 }
 let v = {},
-    I = {},
-    T = {},
+    y = {},
     b = {},
-    y = !1,
+    I = {},
+    T = !1,
     S = !1,
     A = new Set(),
-    N = new Set(),
-    C = {};
+    C = new Set(),
+    N = {};
 function R() {
-    (v = {}), (T = {}), (b = {}), (y = !1), (S = !1), (A = new Set()), (N = new Set());
+    (v = {}), (b = {}), (I = {}), (T = !1), (S = !1), (A = new Set()), (C = new Set());
 }
 function O(e) {
-    (v[e.id] = f.Z.createFromServer(e)), null == T[e.sku_id] && (T[e.sku_id] = new Set()), null == b[e.application_id] && (b[e.application_id] = new Set()), null != e.subscription_id && (null == C[e.subscription_id] && (C[e.subscription_id] = new Set()), C[e.subscription_id].add(e.id)), b[e.application_id].add(e.id), T[e.sku_id].add(e.id);
+    (v[e.id] = f.Z.createFromServer(e)), null == b[e.sku_id] && (b[e.sku_id] = new Set()), null == I[e.application_id] && (I[e.application_id] = new Set()), null != e.subscription_id && (null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)), I[e.application_id].add(e.id), b[e.sku_id].add(e.id);
 }
 function D(e) {
-    I[e.id] = f.Z.createFromServer(e);
+    y[e.id] = f.Z.createFromServer(e);
 }
-function L(e) {
+function x(e) {
     delete v[e.id];
-    let n = b[e.application_id];
+    let n = I[e.application_id];
     null != n && n.delete(e.id);
-    let r = T[e.sku_id];
+    let r = b[e.sku_id];
     if ((null != r && r.delete(e.id), null != e.subscription_id)) {
-        let n = C[e.subscription_id];
+        let n = N[e.subscription_id];
         null != n && n.delete(e.id);
     }
 }
-function x(e) {
+function L(e) {
     let { applicationId: n } = e;
     A.add(n);
 }
 function w(e) {
     let { applicationId: n, entitlements: r } = e;
-    for (let e of (A.delete(n), N.add(n), r)) !0 !== e.consumed && O(e);
+    for (let e of (A.delete(n), C.add(n), r)) !0 !== e.consumed && O(e);
 }
 function P(e) {
     let { entitlements: n } = e;
-    (I = {}), n.forEach(D);
+    (y = {}), n.forEach(D);
 }
 function M() {}
 function k() {
-    y = !0;
+    T = !0;
 }
 function U(e) {
     let { entitlements: n } = e;
-    for (let e of ((S = !0), (y = !1), n)) O(e);
+    for (let e of ((S = !0), (T = !1), n)) O(e);
 }
 function B() {
-    (S = !1), (y = !1);
+    (S = !1), (T = !1);
 }
 function G(e) {
     let { entitlements: n } = e;
     for (let e of n) O(e);
 }
-function F(e) {
+function Z(e) {
     let { libraryApplications: n } = e;
     for (let e of n) if (null != e.entitlements) for (let n of e.entitlements) O(n);
 }
-function Z(e) {
+function F(e) {
     return O(e.entitlement);
 }
 function V(e) {
-    return L(e.entitlement);
+    return x(e.entitlement);
 }
 class j extends (i = c.yh) {
     initialize() {
-        this.syncWith([_.Z], () => !0);
+        this.syncWith([p.Z], () => !0);
     }
     get(e) {
         return v[e];
     }
     getGiftable() {
-        return l().values(I);
+        return l().values(y);
     }
     getForApplication(e) {
-        let n = b[e];
+        let n = I[e];
         if (null == n) return null;
         let r = new Set();
         for (let e of n) r.add(v[e]);
         return r;
     }
     getForSku(e) {
-        let n = T[e];
+        let n = b[e];
         if (null == n) return null;
         let r = new Set();
         for (let e of n) r.add(v[e]);
         return r;
     }
     get fetchingAllEntitlements() {
-        return y;
+        return T;
     }
     get fetchedAllEntitlements() {
         return S;
@@ -124,7 +124,7 @@ class j extends (i = c.yh) {
         return A;
     }
     get applicationIdsFetched() {
-        return N;
+        return C;
     }
     isFetchingForApplication(e) {
         return this.fetchingAllEntitlements || (null != e && this.applicationIdsFetching.has(e));
@@ -133,7 +133,7 @@ class j extends (i = c.yh) {
         return this.fetchedAllEntitlements || (null != e && this.applicationIdsFetched.has(e));
     }
     getForSubscription(e) {
-        let n = C[e];
+        let n = N[e];
         if (null == n) return null;
         let r = new Set();
         for (let e of n) r.add(v[e]);
@@ -141,18 +141,18 @@ class j extends (i = c.yh) {
     }
     isEntitledToSku(e, n, r) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-            a = T[n];
+            a = b[n];
         if (null != a)
             for (let n of a) {
                 let r = v[n];
-                if (null != r && r.isValid(e, p.Z, i)) return !0;
+                if (null != r && r.isValid(e, _.Z, i)) return !0;
             }
-        if (N.has(r)) return !1;
-        let s = null != i ? _.Z.getLibraryApplication(r, i) : _.Z.getActiveLibraryApplication(r);
-        return !!(null != s && s.sku.id === n && (0, h.Je)(s)) || null;
+        if (C.has(r)) return !1;
+        let o = null != i ? p.Z.getLibraryApplication(r, i) : p.Z.getActiveLibraryApplication(r);
+        return !!(null != o && o.sku.id === n && (0, h.Je)(o)) || null;
     }
     hasFetchedForApplicationIds(e) {
-        return e.every((e) => N.has(e));
+        return e.every((e) => C.has(e));
     }
     getFractionalPremium(e) {
         var n;
@@ -183,15 +183,15 @@ class j extends (i = c.yh) {
 }
 E(j, 'displayName', 'EntitlementStore'),
     (n.Z = new j(d.Z, {
-        ENTITLEMENT_FETCH_APPLICATION_START: x,
+        ENTITLEMENT_FETCH_APPLICATION_START: L,
         ENTITLEMENT_FETCH_APPLICATION_SUCCESS: w,
         ENTITLEMENT_FETCH_APPLICATION_FAIL: M,
         ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: P,
         SKU_PURCHASE_SUCCESS: G,
         VIRTUAL_CURRENCY_REDEEM_SUCCESS: G,
-        LIBRARY_FETCH_SUCCESS: F,
-        ENTITLEMENT_CREATE: Z,
-        ENTITLEMENT_UPDATE: Z,
+        LIBRARY_FETCH_SUCCESS: Z,
+        ENTITLEMENT_CREATE: F,
+        ENTITLEMENT_UPDATE: F,
         ENTITLEMENT_DELETE: V,
         LOGOUT: R,
         ENTITLEMENTS_FETCH_FOR_USER_START: k,

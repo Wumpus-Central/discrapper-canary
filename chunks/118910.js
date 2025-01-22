@@ -6,20 +6,20 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(378298),
-    o = r(473092),
+    o = r(378298),
+    s = r(473092),
     l = r(237292);
 function u(e) {
     let { channelId: n, warningId: u, senderId: c, warningType: d } = e;
     if (!(0, l.mG)({ location: 'takeover-modal' })) return;
     let f = () => {
-        (0, s.T)(n, [u]),
-            (0, o.qc)({
+        (0, o.T)(n, [u]),
+            (0, s.qc)({
                 channelId: n,
                 senderId: c,
                 warningId: u,
                 warningType: d,
-                cta: o.NM.USER_TAKEOVER_MODAL_DISMISS,
+                cta: s.NM.USER_TAKEOVER_MODAL_DISMISS,
                 isNudgeWarning: !1
             });
     };

@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(829307),
     u = r(877837),
     c = r(361016),
@@ -18,14 +18,14 @@ var i = r(192379),
         var n = e.width,
             r = e.height,
             a = e.onChange,
-            s = e.hsl,
+            o = e.hsl,
             c = e.direction,
             f = e.pointer,
-            _ = e.styles,
-            h = void 0 === _ ? {} : _,
-            p = e.className,
-            m = void 0 === p ? '' : p,
-            g = (0, o.default)(
+            p = e.styles,
+            h = void 0 === p ? {} : p,
+            _ = e.className,
+            m = void 0 === _ ? '' : _,
+            g = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -57,7 +57,7 @@ var i = r(192379),
             i.createElement(
                 u.PS,
                 d({}, g.hue, {
-                    hsl: s,
+                    hsl: o,
                     pointer: f,
                     onChange: E,
                     direction: c
@@ -65,7 +65,7 @@ var i = r(192379),
             )
         );
     };
-(f.propTypes = { styles: s().object }),
+(f.propTypes = { styles: o().object }),
     (f.defaultProps = {
         width: '316px',
         height: '16px',

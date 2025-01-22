@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(442837),
-    o = r(594174),
+    o = r(442837),
+    s = r(594174),
     l = r(823379);
 let u = [];
 function c(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
-        r = (0, s.Wu)(
-            [o.default],
+        r = (0, o.Wu)(
+            [s.default],
             () => {
-                let n = e.participants.map((e) => o.default.getUser(e)).filter(l.lm),
+                let n = e.participants.map((e) => s.default.getUser(e)).filter(l.lm),
                     r = n.find((n) => n.id === e.author_id),
                     i = n.filter((n) => n.id !== e.author_id);
                 return null == r ? u : [...i, r];

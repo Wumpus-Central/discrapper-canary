@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(376398),
+    o = r(192379),
+    s = r(376398),
     l = r(825040);
 function u(e) {
     null != e && e.getTracks().forEach((e) => e.stop());
@@ -30,18 +30,18 @@ async function c(e) {
 }
 function d(e) {
     let { deviceId: n, width: r, height: i, disabled: d } = e,
-        [f, _] = s.useState();
+        [f, p] = o.useState();
     return (
-        s.useEffect(() => {
+        o.useEffect(() => {
             let e = c({
                 deviceId: n,
                 width: r,
                 height: i,
                 disabled: d
             }).then((e) => {
-                let n = null != e ? (0, o.N7)(e) : null;
+                let n = null != e ? (0, s.N7)(e) : null;
                 return (
-                    _(n),
+                    p(n),
                     {
                         stream: e,
                         streamId: n
@@ -51,7 +51,7 @@ function d(e) {
             return () => {
                 e.then((e) => {
                     let { stream: n, streamId: r } = e;
-                    u(n), null != r && (0, o.jC)(r);
+                    u(n), null != r && (0, s.jC)(r);
                 });
             };
         }, [n, r, i, d]),

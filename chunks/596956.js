@@ -1,6 +1,6 @@
 r.d(n, {
     S: function () {
-        return s;
+        return o;
     },
     T: function () {
         return a;
@@ -20,6 +20,6 @@ function a(e, n) {
     }
     return !1;
 }
-function s(e, n) {
+function o(e, n) {
     return 0 === n ? 0 : Math.min(Math.floor((e / n) * 100), 100);
 }

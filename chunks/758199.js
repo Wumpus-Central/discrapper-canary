@@ -11,8 +11,8 @@ var r = n(481060),
     o = n(388032),
     s = n(210550);
 function c(e) {
-    let { title: t, header: n, info: c, bannerSrc: d, iconSrc: u, embedUrl: m, actions: h = [] } = e,
-        { primaryColor: f, secondaryColor: p } = (0, l.Z)(null != u ? u : d),
+    let { title: t, header: n, info: c, bannerSrc: u, iconSrc: d, embedUrl: m, actions: h = [] } = e,
+        { primaryColor: f, secondaryColor: p } = (0, l.Z)(null != d ? d : u),
         _ = 'linear-gradient(45deg, '.concat(f, ', ').concat(p, ')'),
         g =
             a.wS && null != m
@@ -33,10 +33,10 @@ function c(e) {
     return (0, i.jsxs)('div', {
         className: s.embed,
         children: [
-            null != d &&
+            null != u &&
                 (0, i.jsx)('div', {
                     className: s.banner,
-                    style: { backgroundImage: 'url('.concat(d, ')') }
+                    style: { backgroundImage: 'url('.concat(u, ')') }
                 }),
             (0, i.jsxs)('div', {
                 className: s.contentContainer,
@@ -57,10 +57,10 @@ function c(e) {
                     (0, i.jsxs)('div', {
                         className: s.contentWrapper,
                         children: [
-                            null != u &&
+                            null != d &&
                                 (0, i.jsx)('div', {
                                     className: s.img,
-                                    style: { backgroundImage: 'url('.concat(u, ')') }
+                                    style: { backgroundImage: 'url('.concat(d, ')') }
                                 }),
                             (0, i.jsxs)('div', {
                                 className: s.content,
@@ -86,10 +86,10 @@ function c(e) {
                             children: h.map((e, t) => {
                                 let { label: n, onClick: l, disabledReason: a, submitting: o } = e,
                                     c = null != a,
-                                    d = 0 === t,
-                                    u = {
-                                        color: d ? r.Button.Colors.WHITE : r.Button.Colors.TRANSPARENT,
-                                        className: d ? void 0 : s.alwaysWhiteText,
+                                    u = 0 === t,
+                                    d = {
+                                        color: u ? r.Button.Colors.WHITE : r.Button.Colors.TRANSPARENT,
+                                        className: u ? void 0 : s.alwaysWhiteText,
                                         onClick: l,
                                         disabled: c,
                                         submitting: o,
@@ -103,14 +103,14 @@ function c(e) {
                                               children: (e) => {
                                                   let { ...t } = e;
                                                   return (0, i.jsx)(r.Button, {
-                                                      ...u,
+                                                      ...d,
                                                       ...t
                                                   });
                                               }
                                           },
                                           n
                                       )
-                                    : (0, i.jsx)(r.Button, { ...u }, n);
+                                    : (0, i.jsx)(r.Button, { ...d }, n);
                             })
                         })
                 ]

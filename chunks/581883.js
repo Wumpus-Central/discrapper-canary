@@ -1,15 +1,15 @@
 var i,
     a = r(512722),
-    s = r.n(a),
-    o = r(392711),
-    l = r.n(o),
+    o = r.n(a),
+    s = r(392711),
+    l = r.n(s),
     u = r(442837),
     c = r(377108),
     d = r(524437),
     f = r(835913),
-    _ = r(570140),
+    p = r(570140),
     h = r(262847),
-    p = r(48481),
+    _ = r(48481),
     m = r(526761);
 function g(e, n, r) {
     return (
@@ -36,67 +36,67 @@ let E = {
         lazyLoaded: !0,
         editInfo: (0, m.JC)()
     },
-    I = {
+    y = {
         [m.yP.PRELOADED_USER_SETTINGS]: E,
         [m.yP.FRECENCY_AND_FAVORITES_SETTINGS]: v
     },
-    T = !1;
-function b(e) {
+    b = !1;
+function I(e) {
     let { userSettingsProto: n } = e;
-    null != n && ((E.proto = n), s()('string' != typeof E.proto, 'UserSettingsProto cannot be a string'));
-    let { proto: r, isDirty: i, cleanupFuncs: a } = (0, p.xt)(E.proto, h.Z[m.yP.PRELOADED_USER_SETTINGS]);
-    i && N(E),
+    null != n && ((E.proto = n), o()('string' != typeof E.proto, 'UserSettingsProto cannot be a string'));
+    let { proto: r, isDirty: i, cleanupFuncs: a } = (0, _.xt)(E.proto, h.Z[m.yP.PRELOADED_USER_SETTINGS]);
+    i && C(E),
         (E.proto = r),
-        s()('string' != typeof E.proto, 'UserSettingsProto cannot be a string'),
+        o()('string' != typeof E.proto, 'UserSettingsProto cannot be a string'),
         (E.editInfo.triggeredMigrations = i),
         (E.editInfo.cleanupFuncs = a),
         (E.editInfo.loaded = !0),
-        Object.values(I).forEach((e) => {
+        Object.values(y).forEach((e) => {
             e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
         }),
         A();
 }
-function y() {
+function T() {
     A();
 }
 function S() {
     A(),
-        Object.values(I).forEach((e) => {
+        Object.values(y).forEach((e) => {
             (e.proto = e.ProtoClass.create()), (e.editInfo = (0, m.JC)());
         });
 }
 function A() {
-    Object.values(I).forEach((e) => {
+    Object.values(y).forEach((e) => {
         if (null != e.editInfo.timeout) {
             var n, r;
             clearTimeout(e.editInfo.timeout), (e.editInfo.timeout = void 0), (e.editInfo.timeoutDelay = Number.MAX_SAFE_INTEGER), (e.editInfo.rateLimited = !1), (e.editInfo.offlineEditDataVersion = null !== (r = null === (n = e.proto.versions) || void 0 === n ? void 0 : n.dataVersion) && void 0 !== r ? r : 0);
         }
     });
 }
-function N(e) {
+function C(e) {
     null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, m.JC)());
 }
-function C(e) {
+function N(e) {
     let { userSettingsProto: n } = e;
-    (E.proto = (0, p.ac)(n)), s()('string' != typeof E.proto, 'UserSettingsProto cannot be a string');
+    (E.proto = (0, _.ac)(n)), o()('string' != typeof E.proto, 'UserSettingsProto cannot be a string');
 }
 function R(e) {
     let {
         settings: { proto: n, type: r },
         partial: i,
         resetEditInfo: a,
-        local: o
+        local: s
     } = e;
-    T = !o;
-    let l = I[r];
-    a && N(l), i ? ((l.proto = (0, p.re)(l.ProtoClass, l.proto, n)), s()('string' != typeof l.proto, 'UserSettingsProto cannot be a string')) : ((l.proto = n), s()('string' != typeof l.proto, 'UserSettingsProto cannot be a string'), (l.editInfo.loaded = !0), (l.editInfo.loading = !1));
+    b = !s;
+    let l = y[r];
+    a && C(l), i ? ((l.proto = (0, _.re)(l.ProtoClass, l.proto, n)), o()('string' != typeof l.proto, 'UserSettingsProto cannot be a string')) : ((l.proto = n), o()('string' != typeof l.proto, 'UserSettingsProto cannot be a string'), (l.editInfo.loaded = !0), (l.editInfo.loading = !1));
 }
 function O(e) {
     let {
         settings: { type: n, changes: r }
     } = e;
-    s()(!__OVERLAY__, 'this cannot run in the overlay');
-    let i = I[n];
+    o()(!__OVERLAY__, 'this cannot run in the overlay');
+    let i = y[n];
     return (
         (i.editInfo = {
             ...i.editInfo,
@@ -107,39 +107,39 @@ function O(e) {
 }
 function D(e) {
     let { userSettings: n } = e;
-    L(n);
+    x(n);
 }
-function L(e) {
+function x(e) {
     null != e &&
-        l().forEach(I, (n, r) => {
+        l().forEach(y, (n, r) => {
             var i, a;
-            let o = e[Number(r)];
-            if (null == o) return;
-            let l = null !== (i = null == o ? void 0 : o.proto) && void 0 !== i ? i : '',
-                u = (0, p.d5)(n.ProtoClass, l);
+            let s = e[Number(r)];
+            if (null == s) return;
+            let l = null !== (i = null == s ? void 0 : s.proto) && void 0 !== i ? i : '',
+                u = (0, _.d5)(n.ProtoClass, l);
             if (null == u) return;
-            (n.proto = u), s()('string' != typeof n.proto, 'UserSettingsProto cannot be a string');
-            let c = null !== (a = null == o ? void 0 : o.protoToSave) && void 0 !== a ? a : null;
-            if (null == c || null == o.offlineEditDataVersion) return;
-            let d = (0, p.d5)(n.ProtoClass, c);
-            null != d && ((n.editInfo.protoToSave = d), (n.editInfo.offlineEditDataVersion = o.offlineEditDataVersion));
+            (n.proto = u), o()('string' != typeof n.proto, 'UserSettingsProto cannot be a string');
+            let c = null !== (a = null == s ? void 0 : s.protoToSave) && void 0 !== a ? a : null;
+            if (null == c || null == s.offlineEditDataVersion) return;
+            let d = (0, _.d5)(n.ProtoClass, c);
+            null != d && ((n.editInfo.protoToSave = d), (n.editInfo.offlineEditDataVersion = s.offlineEditDataVersion));
         });
 }
-class x extends (i = u.ZP.PersistedStore) {
+class L extends (i = u.ZP.PersistedStore) {
     initialize(e) {
-        L(e);
+        x(e);
     }
     getState() {
         return this.computeState();
     }
     computeState() {
-        return l().mapValues(I, (e) => {
-            let n = { proto: (0, p.xU)(e.ProtoClass, e.proto) };
-            return null != e.editInfo.offlineEditDataVersion && null != e.editInfo.protoToSave && ((n.protoToSave = (0, p.xU)(e.ProtoClass, e.editInfo.protoToSave)), (n.offlineEditDataVersion = e.editInfo.offlineEditDataVersion)), n;
+        return l().mapValues(y, (e) => {
+            let n = { proto: (0, _.xU)(e.ProtoClass, e.proto) };
+            return null != e.editInfo.offlineEditDataVersion && null != e.editInfo.protoToSave && ((n.protoToSave = (0, _.xU)(e.ProtoClass, e.editInfo.protoToSave)), (n.offlineEditDataVersion = e.editInfo.offlineEditDataVersion)), n;
         });
     }
     hasLoaded(e) {
-        return I[e].editInfo.loaded;
+        return y[e].editInfo.loaded;
     }
     get settings() {
         return E.proto;
@@ -148,10 +148,10 @@ class x extends (i = u.ZP.PersistedStore) {
         return v.proto;
     }
     get wasMostRecentUpdateFromServer() {
-        return T;
+        return b;
     }
     getFullState() {
-        return I;
+        return y;
     }
     getGuildFolders() {
         var e;
@@ -161,12 +161,12 @@ class x extends (i = u.ZP.PersistedStore) {
             : n.map((e) => {
                   var n, r, i;
                   let a = null === (n = e.id) || void 0 === n ? void 0 : n.value,
-                      s = null === (r = e.color) || void 0 === r ? void 0 : r.value;
+                      o = null === (r = e.color) || void 0 === r ? void 0 : r.value;
                   return {
                       guildIds: e.guildIds,
                       folderId: null == a ? void 0 : Number(a),
                       folderName: null === (i = e.name) || void 0 === i ? void 0 : i.value,
-                      folderColor: null == s ? void 0 : Number(s)
+                      folderColor: null == o ? void 0 : Number(o)
                   };
               });
     }
@@ -185,16 +185,16 @@ class x extends (i = u.ZP.PersistedStore) {
         return null !== (n = null === (e = this.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : null;
     }
 }
-g(x, 'displayName', 'UserSettingsProtoStore'),
-    g(x, 'persistKey', 'UserSettingsProtoStore-Cache'),
-    (n.Z = new x(_.Z, {
+g(L, 'displayName', 'UserSettingsProtoStore'),
+    g(L, 'persistKey', 'UserSettingsProtoStore-Cache'),
+    (n.Z = new L(p.Z, {
         CACHE_LOADED: D,
         USER_SETTINGS_PROTO_UPDATE: R,
         USER_SETTINGS_PROTO_ENQUEUE_UPDATE: R,
         USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: O,
-        CONNECTION_OPEN: b,
-        CONNECTION_CLOSED: y,
-        CONNECTION_RESUMED: y,
-        OVERLAY_INITIALIZE: C,
+        CONNECTION_OPEN: I,
+        CONNECTION_CLOSED: T,
+        CONNECTION_RESUMED: T,
+        OVERLAY_INITIALIZE: N,
         LOGOUT: S
     }));

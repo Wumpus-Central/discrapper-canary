@@ -1,8 +1,8 @@
-function r() {
+function i() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return r;
+        return i;
     }
 });

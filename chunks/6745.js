@@ -5,26 +5,26 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(507274),
     u = r(838331),
     c = r(431989);
 function d(e) {
-    let { children: n, placeholder: r, value: s, onChange: d, onClose: f, showScrollbar: _, className: h, multiSelect: p, ...m } = e,
+    let { children: n, placeholder: r, value: o, onChange: d, onClose: f, showScrollbar: p, className: h, multiSelect: _, ...m } = e,
         g = a.useCallback(
             (e) => {
-                d(e), !p && (null == f || f());
+                d(e), !_ && (null == f || f());
             },
-            [d, f, p]
+            [d, f, _]
         );
     return (0, i.jsx)(l.V, {
-        className: o()(c.container, h, { [c.scroller]: _ }),
+        className: s()(c.container, h, { [c.scroller]: p }),
         children: (0, i.jsx)(u.hQ, {
             ...m,
-            showScrollbar: _,
-            value: s,
-            multiSelect: p,
+            showScrollbar: p,
+            value: o,
+            multiSelect: _,
             onChange: g,
             placeholder: r,
             children: n,

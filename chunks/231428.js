@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return B;
     }
 }),
     n(47120);
@@ -97,7 +97,7 @@ function P(e) {
         })
     });
 }
-class y extends (i = s.PureComponent) {
+class D extends (i = s.PureComponent) {
     get numPages() {
         return Math.max(Math.ceil(this.props.payments.length / 10), 1);
     }
@@ -178,19 +178,19 @@ class y extends (i = s.PureComponent) {
         super(...e), R(this, 'scrollerRef', s.createRef());
     }
 }
-function B(e) {
+function y(e) {
     var t;
     let n = e.skuId,
         i = null === (t = e.subscription) || void 0 === t ? void 0 : t.items[0].planId;
     return !(null == n || null == i || Object.values(N.Si).includes(n) || (0, b.PV)(i));
 }
-function D(e) {
+function B(e) {
     let t = (0, u.e7)([C.Z], () => C.Z.getPayments()),
         n = (0, u.e7)([S.ZP], () => S.ZP.getPremiumTypeSubscription()),
         i = s.useMemo(
             () =>
                 new Set(
-                    t.filter(B).map((e) => {
+                    t.filter(y).map((e) => {
                         let { subscription: t } = e;
                         return null == t ? void 0 : t.items[0].planId;
                     })
@@ -200,7 +200,7 @@ function D(e) {
         a = s.useMemo(
             () =>
                 new Set(
-                    t.filter(B).map((e) => {
+                    t.filter(y).map((e) => {
                         let { skuId: t } = e;
                         return t;
                     })
@@ -216,11 +216,11 @@ function D(e) {
                     a.forEach((e) => (0, x.GZ)(e, void 0, void 0, !0, void 0));
                 });
         }, [o, a]),
-        (0, r.jsx)(y, {
+        (0, r.jsx)(D, {
             ...e,
             payments: t,
             subscription: n
         })
     );
 }
-R(y, 'defaultProps', { compactMode: !1 });
+R(D, 'defaultProps', { compactMode: !1 });

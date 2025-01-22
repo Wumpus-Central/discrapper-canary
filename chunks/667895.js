@@ -5,13 +5,13 @@ var i = r(261168),
         medium: 'MMM d, y',
         short: 'MM/dd/yyyy'
     },
-    s = {
+    o = {
         full: 'h:mm:ss a zzzz',
         long: 'h:mm:ss a z',
         medium: 'h:mm:ss a',
         short: 'h:mm a'
     },
-    o = {
+    s = {
         full: "{{date}} 'at' {{time}}",
         long: "{{date}} 'at' {{time}}",
         medium: '{{date}}, {{time}}',
@@ -23,11 +23,11 @@ var i = r(261168),
             defaultWidth: 'full'
         }),
         time: (0, i.Z)({
-            formats: s,
+            formats: o,
             defaultWidth: 'full'
         }),
         dateTime: (0, i.Z)({
-            formats: o,
+            formats: s,
             defaultWidth: 'full'
         })
     };

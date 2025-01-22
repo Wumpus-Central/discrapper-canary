@@ -1,7 +1,7 @@
 let i;
 var a,
-    s = r(442837),
-    o = r(570140),
+    o = r(442837),
+    s = r(570140),
     l = r(353368);
 function u(e, n, r) {
     return (
@@ -19,7 +19,7 @@ function u(e, n, r) {
 let c = () => {
     i = i === l.q.BASIC ? l.q.PREMIUM : l.q.BASIC;
 };
-class d extends (a = s.ZP.PersistedStore) {
+class d extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         var n;
         i = null !== (n = null == e ? void 0 : e.animationType) && void 0 !== n ? n : l.q.PREMIUM;
@@ -28,4 +28,4 @@ class d extends (a = s.ZP.PersistedStore) {
         return { animationType: i };
     }
 }
-u(d, 'displayName', 'VoiceChannelEffectsPersistedStore'), u(d, 'persistKey', 'VoiceChannelEffectsPersistedStore'), (n.Z = new d(o.Z, { VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: c }));
+u(d, 'displayName', 'VoiceChannelEffectsPersistedStore'), u(d, 'persistKey', 'VoiceChannelEffectsPersistedStore'), (n.Z = new d(s.Z, { VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: c }));

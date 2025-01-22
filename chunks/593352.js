@@ -1,12 +1,12 @@
-for (var e = n(293303), o = n(294377), i = n(96403), u = n(538769), s = n(360518), c = o('Symbol'), f = c.isWellKnownSymbol, a = o('Object', 'getOwnPropertyNames'), p = i(c.prototype.valueOf), v = e('wks'), l = 0, y = a(c), h = y.length; l < h; l++)
+for (var i = r(293303), a = r(294377), o = r(96403), s = r(538769), l = r(360518), u = a('Symbol'), c = u.isWellKnownSymbol, d = a('Object', 'getOwnPropertyNames'), f = o(u.prototype.valueOf), p = i('wks'), h = 0, _ = d(u), m = _.length; h < m; h++)
     try {
-        var x = y[l];
-        u(c[x]) && s(x);
-    } catch (t) {}
-t.exports = function (t) {
-    if (f && f(t)) return !0;
+        var g = _[h];
+        s(u[g]) && l(g);
+    } catch (e) {}
+e.exports = function (e) {
+    if (c && c(e)) return !0;
     try {
-        for (var r = p(t), n = 0, e = a(v), o = e.length; n < o; n++) if (v[e[n]] == r) return !0;
-    } catch (t) {}
+        for (var n = f(e), r = 0, i = d(p), a = i.length; r < a; r++) if (p[i[r]] == n) return !0;
+    } catch (e) {}
     return !1;
 };

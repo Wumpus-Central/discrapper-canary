@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(442837),
-    s = r(339085),
-    o = r(633302),
+    o = r(339085),
+    s = r(633302),
     l = r(695346),
     u = r(981631);
 function c(e, n) {
@@ -21,7 +21,7 @@ function c(e, n) {
             animated: n.animated
         };
     else if (null != e.emojiName && '' !== e.emojiName) {
-        let n = o.ZP.getByName(o.ZP.convertSurrogateToName(e.emojiName, !1));
+        let n = s.ZP.getByName(s.ZP.convertSurrogateToName(e.emojiName, !1));
         r =
             null != n
                 ? {
@@ -42,11 +42,11 @@ function c(e, n) {
 }
 function d(e) {
     let { emojiId: n } = e;
-    return c(e, null != n && '0' !== n ? s.ZP.getUsableCustomEmojiById(n) : null);
+    return c(e, null != n && '0' !== n ? o.ZP.getUsableCustomEmojiById(n) : null);
 }
 function f() {
     let e = l.Ok.useSetting(),
         n = null == e ? void 0 : e.emojiId,
-        r = (0, a.e7)([s.ZP], () => (null != n && '0' !== n ? s.ZP.getUsableCustomEmojiById(n) : null), [n]);
+        r = (0, a.e7)([o.ZP], () => (null != n && '0' !== n ? o.ZP.getUsableCustomEmojiById(n) : null), [n]);
     return (0, i.useMemo)(() => (null != e ? c(e, r) : null), [e, r]);
 }

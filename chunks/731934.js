@@ -209,7 +209,7 @@ function P(e) {
         })
     });
 }
-let y = () => {
+let D = () => {
         let e = (0, p.Z)(),
             t = (0, x.mq)(S.ne.ACTIVE),
             n = e ? S.AG : S.i0,
@@ -243,7 +243,7 @@ let y = () => {
                       })
         });
     },
-    B = () => {
+    y = () => {
         let e = (0, x.VM)(),
             t = (0, p.Z)() ? S.AG : S.i0,
             n = (0, g.o)(I.intl.formatToPlainString(I.t['1/PzIi'], { maxConnections: t }), I.intl.formatToPlainString(I.t.RcTgiI, { maxConnections: t }));
@@ -258,7 +258,7 @@ let y = () => {
               })
             : null;
     },
-    D = () => {
+    B = () => {
         let e = (0, h.o)(),
             t = (0, m.zF)('family-center-requests-page-desktop'),
             n = (0, l.EQ)({
@@ -301,6 +301,6 @@ t.Z = () => {
     let e = (0, p.Z)();
     return (0, i.jsxs)('div', {
         className: N.container,
-        children: [e ? (0, i.jsx)(O, {}) : (0, i.jsx)(R, {}), (0, i.jsx)(y, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(B, {}), (0, i.jsx)(D, {})]
+        children: [e ? (0, i.jsx)(O, {}) : (0, i.jsx)(R, {}), (0, i.jsx)(D, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(y, {}), (0, i.jsx)(B, {})]
     });
 };

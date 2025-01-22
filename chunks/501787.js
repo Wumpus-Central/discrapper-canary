@@ -4,10 +4,10 @@ r.r(n),
             return l;
         },
         OVERLAY_TILE_MIN_WIDTH: function () {
-            return o;
+            return s;
         },
         OVERLAY_TILE_WIDTH: function () {
-            return s;
+            return o;
         },
         OVERLAY_V3_KEY: function () {
             return i;
@@ -18,6 +18,6 @@ r.r(n),
     });
 let i = 'DISCORD_OutOfProcessOverlay',
     a = 'overlay_v3_default',
-    s = 192,
-    o = 120,
+    o = 192,
+    s = 120,
     l = 4;

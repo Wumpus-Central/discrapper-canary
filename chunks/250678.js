@@ -1,19 +1,19 @@
 (function () {
     function e(n, r, i) {
-        function a(o, l) {
-            if (!r[o]) {
-                if (!n[o]) {
+        function a(s, l) {
+            if (!r[s]) {
+                if (!n[s]) {
                     var u = void 0;
-                    if (!l && u) return require(o, !0);
-                    if (s) return s(o, !0);
-                    var c = Error("Cannot find module '" + o + "'");
+                    if (!l && u) return require(s, !0);
+                    if (o) return o(s, !0);
+                    var c = Error("Cannot find module '" + s + "'");
                     throw ((c.code = 'MODULE_NOT_FOUND'), c);
                 }
-                var d = (r[o] = { exports: {} });
-                n[o][0].call(
+                var d = (r[s] = { exports: {} });
+                n[s][0].call(
                     d.exports,
                     function (e) {
-                        return a(n[o][1][e] || e);
+                        return a(n[s][1][e] || e);
                     },
                     d,
                     d.exports,
@@ -23,9 +23,9 @@
                     i
                 );
             }
-            return r[o].exports;
+            return r[s].exports;
         }
-        for (var s = void 0, o = 0; o < i.length; o++) a(i[o]);
+        for (var o = void 0, s = 0; s < i.length; s++) a(i[s]);
         return a;
     }
     return e;
@@ -43,8 +43,8 @@
                 Object.defineProperty(r, '__esModule', { value: !0 }), (r.adapterFactory = d);
                 var i = c(e('./utils')),
                     a = c(e('./chrome/chrome_shim')),
-                    s = c(e('./edge/edge_shim')),
-                    o = c(e('./firefox/firefox_shim')),
+                    o = c(e('./edge/edge_shim')),
+                    s = c(e('./firefox/firefox_shim')),
                     l = c(e('./safari/safari_shim')),
                     u = c(e('./common_shim'));
                 function c(e) {
@@ -83,18 +83,18 @@
                             c('adapter.js shimming chrome.'), (f.browserShim = a), a.shimGetUserMedia(n), a.shimMediaStream(n), a.shimPeerConnection(n), a.shimOnTrack(n), a.shimAddTrackRemoveTrack(n), a.shimGetSendersWithDtmf(n), a.shimGetStats(n), a.shimSenderReceiverGetStats(n), a.fixNegotiationNeeded(n), u.shimRTCIceCandidate(n), u.shimConnectionState(n), u.shimMaxMessageSize(n), u.shimSendThrowTypeError(n), u.removeAllowExtmapMixed(n);
                             break;
                         case 'firefox':
-                            if (!o || !o.shimPeerConnection || !r.shimFirefox) {
+                            if (!s || !s.shimPeerConnection || !r.shimFirefox) {
                                 c('Firefox shim is not included in this adapter release.');
                                 break;
                             }
-                            c('adapter.js shimming firefox.'), (f.browserShim = o), o.shimGetUserMedia(n), o.shimPeerConnection(n), o.shimOnTrack(n), o.shimRemoveStream(n), o.shimSenderGetStats(n), o.shimReceiverGetStats(n), o.shimRTCDataChannel(n), o.shimAddTransceiver(n), o.shimCreateOffer(n), o.shimCreateAnswer(n), u.shimRTCIceCandidate(n), u.shimConnectionState(n), u.shimMaxMessageSize(n), u.shimSendThrowTypeError(n);
+                            c('adapter.js shimming firefox.'), (f.browserShim = s), s.shimGetUserMedia(n), s.shimPeerConnection(n), s.shimOnTrack(n), s.shimRemoveStream(n), s.shimSenderGetStats(n), s.shimReceiverGetStats(n), s.shimRTCDataChannel(n), s.shimAddTransceiver(n), s.shimCreateOffer(n), s.shimCreateAnswer(n), u.shimRTCIceCandidate(n), u.shimConnectionState(n), u.shimMaxMessageSize(n), u.shimSendThrowTypeError(n);
                             break;
                         case 'edge':
-                            if (!s || !s.shimPeerConnection || !r.shimEdge) {
+                            if (!o || !o.shimPeerConnection || !r.shimEdge) {
                                 c('MS edge shim is not included in this adapter release.');
                                 break;
                             }
-                            c('adapter.js shimming edge.'), (f.browserShim = s), s.shimGetUserMedia(n), s.shimGetDisplayMedia(n), s.shimPeerConnection(n), s.shimReplaceTrack(n), u.shimMaxMessageSize(n), u.shimSendThrowTypeError(n);
+                            c('adapter.js shimming edge.'), (f.browserShim = o), o.shimGetUserMedia(n), o.shimGetDisplayMedia(n), o.shimPeerConnection(n), o.shimReplaceTrack(n), u.shimMaxMessageSize(n), u.shimSendThrowTypeError(n);
                             break;
                         case 'safari':
                             if (!l || !r.shimSafari) {
@@ -136,23 +136,23 @@
                         return a.shimGetUserMedia;
                     }
                 });
-                var s = e('./getdisplaymedia');
+                var o = e('./getdisplaymedia');
                 Object.defineProperty(r, 'shimGetDisplayMedia', {
                     enumerable: !0,
                     get: function () {
-                        return s.shimGetDisplayMedia;
+                        return o.shimGetDisplayMedia;
                     }
                 }),
                     (r.shimMediaStream = c),
                     (r.shimOnTrack = d),
                     (r.shimGetSendersWithDtmf = f),
-                    (r.shimGetStats = _),
+                    (r.shimGetStats = p),
                     (r.shimSenderReceiverGetStats = h),
-                    (r.shimAddTrackRemoveTrackWithNative = p),
+                    (r.shimAddTrackRemoveTrackWithNative = _),
                     (r.shimAddTrackRemoveTrack = m),
                     (r.shimPeerConnection = g),
                     (r.fixNegotiationNeeded = E);
-                var o = l(e('../utils.js'));
+                var s = l(e('../utils.js'));
                 function l(e) {
                     if (e && e.__esModule) return e;
                     var n = {};
@@ -177,7 +177,7 @@
                 }
                 function d(e) {
                     if ((void 0 === e ? 'undefined' : i(e)) !== 'object' || !e.RTCPeerConnection || 'ontrack' in e.RTCPeerConnection.prototype)
-                        o.wrapPeerConnectionEvent(e, 'track', function (e) {
+                        s.wrapPeerConnectionEvent(e, 'track', function (e) {
                             return !e.transceiver && Object.defineProperty(e, 'transceiver', { value: { receiver: e.receiver } }), e;
                         });
                     else {
@@ -204,8 +204,8 @@
                                                       return e.track && e.track.id === i.track.id;
                                                   })
                                                 : { track: i.track };
-                                            var s = new Event('track');
-                                            (s.track = i.track), (s.receiver = a), (s.transceiver = { receiver: a }), (s.streams = [n.stream]), r.dispatchEvent(s);
+                                            var o = new Event('track');
+                                            (o.track = i.track), (o.receiver = a), (o.transceiver = { receiver: a }), (o.streams = [n.stream]), r.dispatchEvent(o);
                                         }),
                                             n.stream.getTracks().forEach(function (i) {
                                                 var a = void 0;
@@ -214,8 +214,8 @@
                                                           return e.track && e.track.id === i.id;
                                                       })
                                                     : { track: i };
-                                                var s = new Event('track');
-                                                (s.track = i), (s.receiver = a), (s.transceiver = { receiver: a }), (s.streams = [n.stream]), r.dispatchEvent(s);
+                                                var o = new Event('track');
+                                                (o.track = i), (o.receiver = a), (o.transceiver = { receiver: a }), (o.streams = [n.stream]), r.dispatchEvent(o);
                                             });
                                     }),
                                     this.addEventListener('addstream', this._ontrackpoly)),
@@ -251,20 +251,20 @@
                                 -1 !== n && this._senders.splice(n, 1);
                             };
                         }
-                        var s = e.RTCPeerConnection.prototype.addStream;
+                        var o = e.RTCPeerConnection.prototype.addStream;
                         e.RTCPeerConnection.prototype.addStream = function (e) {
                             var r = this;
                             (this._senders = this._senders || []),
-                                s.apply(this, [e]),
+                                o.apply(this, [e]),
                                 e.getTracks().forEach(function (e) {
                                     r._senders.push(n(r, e));
                                 });
                         };
-                        var o = e.RTCPeerConnection.prototype.removeStream;
+                        var s = e.RTCPeerConnection.prototype.removeStream;
                         e.RTCPeerConnection.prototype.removeStream = function (e) {
                             var n = this;
                             (this._senders = this._senders || []),
-                                o.apply(this, [e]),
+                                s.apply(this, [e]),
                                 e.getTracks().forEach(function (e) {
                                     var r = n._senders.find(function (n) {
                                         return n.track === e;
@@ -291,7 +291,7 @@
                             });
                     }
                 }
-                function _(e) {
+                function p(e) {
                     if (!!e.RTCPeerConnection) {
                         var n = e.RTCPeerConnection.prototype.getStats;
                         e.RTCPeerConnection.prototype.getStats = function () {
@@ -299,10 +299,10 @@
                                 r = Array.prototype.slice.call(arguments),
                                 i = r[0],
                                 a = r[1],
-                                s = r[2];
+                                o = r[2];
                             if (arguments.length > 0 && 'function' == typeof i) return n.apply(this, arguments);
                             if (0 === n.length && (0 == arguments.length || 'function' != typeof i)) return n.apply(this, []);
-                            var o = function (e) {
+                            var s = function (e) {
                                     var n = {};
                                     return (
                                         e.result().forEach(function (e) {
@@ -332,18 +332,18 @@
                                 };
                             if (arguments.length >= 2) {
                                 var u = function (e) {
-                                    a(l(o(e)));
+                                    a(l(s(e)));
                                 };
                                 return n.apply(this, [u, i]);
                             }
                             return new Promise(function (r, i) {
                                 n.apply(e, [
                                     function (e) {
-                                        r(l(o(e)));
+                                        r(l(s(e)));
                                     },
                                     i
                                 ]);
-                            }).then(a, s);
+                            }).then(a, o);
                         };
                     }
                 }
@@ -371,7 +371,7 @@
                             (e.RTCRtpSender.prototype.getStats = function () {
                                 var e = this;
                                 return this._pc.getStats().then(function (n) {
-                                    return o.filterStats(n, e.track, !0);
+                                    return s.filterStats(n, e.track, !0);
                                 });
                             });
                     }
@@ -388,18 +388,18 @@
                                     n
                                 );
                             }),
-                            o.wrapPeerConnectionEvent(e, 'track', function (e) {
+                            s.wrapPeerConnectionEvent(e, 'track', function (e) {
                                 return (e.receiver._pc = e.srcElement), e;
                             }),
                             (e.RTCRtpReceiver.prototype.getStats = function () {
                                 var e = this;
                                 return this._pc.getStats().then(function (n) {
-                                    return o.filterStats(n, e.track, !1);
+                                    return s.filterStats(n, e.track, !1);
                                 });
                             });
                     }
                     if (!!('getStats' in e.RTCRtpSender.prototype && 'getStats' in e.RTCRtpReceiver.prototype)) {
-                        var s = e.RTCPeerConnection.prototype.getStats;
+                        var o = e.RTCPeerConnection.prototype.getStats;
                         e.RTCPeerConnection.prototype.getStats = function () {
                             if (arguments.length > 0 && arguments[0] instanceof e.MediaStreamTrack) {
                                 var n = arguments[0],
@@ -420,11 +420,11 @@
                                 else if (i) return i.getStats();
                                 return Promise.reject(new DOMException('There is no sender or receiver for the track.', 'InvalidAccessError'));
                             }
-                            return s.apply(this, arguments);
+                            return o.apply(this, arguments);
                         };
                     }
                 }
-                function p(e) {
+                function _(e) {
                     e.RTCPeerConnection.prototype.getLocalStreams = function () {
                         var e = this;
                         return (
@@ -480,8 +480,8 @@
                 }
                 function m(e) {
                     if (!!e.RTCPeerConnection) {
-                        var n = o.detectBrowser(e);
-                        if (e.RTCPeerConnection.prototype.addTrack && n.version >= 65) return p(e);
+                        var n = s.detectBrowser(e);
+                        if (e.RTCPeerConnection.prototype.addTrack && n.version >= 65) return _(e);
                         var r = e.RTCPeerConnection.prototype.getLocalStreams;
                         e.RTCPeerConnection.prototype.getLocalStreams = function () {
                             var e = this,
@@ -536,15 +536,15 @@
                                 )
                                     throw new DOMException('Track already exists.', 'InvalidAccessError');
                                 (this._streams = this._streams || {}), (this._reverseStreams = this._reverseStreams || {});
-                                var s = this._streams[r.id];
-                                if (s)
-                                    s.addTrack(n),
+                                var o = this._streams[r.id];
+                                if (o)
+                                    o.addTrack(n),
                                         Promise.resolve().then(function () {
                                             i.dispatchEvent(new Event('negotiationneeded'));
                                         });
                                 else {
-                                    var o = new e.MediaStream([n]);
-                                    (this._streams[r.id] = o), (this._reverseStreams[o.id] = r), this.addStream(o);
+                                    var s = new e.MediaStream([n]);
+                                    (this._streams[r.id] = s), (this._reverseStreams[s.id] = r), this.addStream(s);
                                 }
                                 return this.getSenders().find(function (e) {
                                     return e.track === n;
@@ -573,9 +573,9 @@
                                     });
                                 e.RTCPeerConnection.prototype[n] = i[n];
                             });
-                        var s = e.RTCPeerConnection.prototype.setLocalDescription;
+                        var o = e.RTCPeerConnection.prototype.setLocalDescription;
                         e.RTCPeerConnection.prototype.setLocalDescription = function () {
-                            return arguments.length && arguments[0].type ? ((arguments[0] = d(this, arguments[0])), s.apply(this, arguments)) : s.apply(this, arguments);
+                            return arguments.length && arguments[0].type ? ((arguments[0] = d(this, arguments[0])), o.apply(this, arguments)) : o.apply(this, arguments);
                         };
                         var l = Object.getOwnPropertyDescriptor(e.RTCPeerConnection.prototype, 'localDescription');
                         Object.defineProperty(e.RTCPeerConnection.prototype, 'localDescription', {
@@ -629,7 +629,7 @@
                     }
                 }
                 function g(e) {
-                    var n = o.detectBrowser(e);
+                    var n = s.detectBrowser(e);
                     if ((!e.RTCPeerConnection && e.webkitRTCPeerConnection && (e.RTCPeerConnection = e.webkitRTCPeerConnection), !!e.RTCPeerConnection)) {
                         var r = 0 === e.RTCPeerConnection.prototype.addIceCandidate.length;
                         n.version < 53 &&
@@ -647,7 +647,7 @@
                     }
                 }
                 function E(e) {
-                    o.wrapPeerConnectionEvent(e, 'negotiationneeded', function (e) {
+                    s.wrapPeerConnectionEvent(e, 'negotiationneeded', function (e) {
                         if ('stable' === e.target.signalingState) return e;
                     });
                 }
@@ -670,13 +670,13 @@
                             return n(r).then(function (n) {
                                 var i = r.video && r.video.width,
                                     a = r.video && r.video.height,
-                                    s = r.video && r.video.frameRate;
+                                    o = r.video && r.video.frameRate;
                                 return (
                                     (r.video = {
                                         mandatory: {
                                             chromeMediaSource: 'desktop',
                                             chromeMediaSourceId: n,
-                                            maxFrameRate: s || 3
+                                            maxFrameRate: o || 3
                                         }
                                     }),
                                     i && (r.video.mandatory.maxWidth = i),
@@ -703,19 +703,19 @@
                               return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
                           };
                 r.shimGetUserMedia = l;
-                var a = s(e('../utils.js'));
-                function s(e) {
+                var a = o(e('../utils.js'));
+                function o(e) {
                     if (e && e.__esModule) return e;
                     var n = {};
                     if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
                     return (n.default = e), n;
                 }
-                var o = a.log;
+                var s = a.log;
                 function l(e) {
                     var n = e && e.navigator;
                     if (!!n.mediaDevices) {
                         var r = a.detectBrowser(e),
-                            s = function (e) {
+                            o = function (e) {
                                 if ((void 0 === e ? 'undefined' : i(e)) !== 'object' || e.mandatory || e.optional) return e;
                                 var n = {};
                                 return (
@@ -723,18 +723,18 @@
                                         if ('require' !== r && 'advanced' !== r && 'mediaSource' !== r) {
                                             var a = 'object' === i(e[r]) ? e[r] : { ideal: e[r] };
                                             void 0 !== a.exact && 'number' == typeof a.exact && (a.min = a.max = a.exact);
-                                            var s = function (e, n) {
+                                            var o = function (e, n) {
                                                 return e ? e + n.charAt(0).toUpperCase() + n.slice(1) : 'deviceId' === n ? 'sourceId' : n;
                                             };
                                             if (void 0 !== a.ideal) {
                                                 n.optional = n.optional || [];
-                                                var o = {};
-                                                'number' == typeof a.ideal ? ((o[s('min', r)] = a.ideal), n.optional.push(o), ((o = {})[s('max', r)] = a.ideal)) : (o[s('', r)] = a.ideal), n.optional.push(o);
+                                                var s = {};
+                                                'number' == typeof a.ideal ? ((s[o('min', r)] = a.ideal), n.optional.push(s), ((s = {})[o('max', r)] = a.ideal)) : (s[o('', r)] = a.ideal), n.optional.push(s);
                                             }
                                             void 0 !== a.exact && 'number' != typeof a.exact
-                                                ? ((n.mandatory = n.mandatory || {}), (n.mandatory[s('', r)] = a.exact))
+                                                ? ((n.mandatory = n.mandatory || {}), (n.mandatory[o('', r)] = a.exact))
                                                 : ['min', 'max'].forEach(function (e) {
-                                                      void 0 !== a[e] && ((n.mandatory = n.mandatory || {}), (n.mandatory[s(e, r)] = a[e]));
+                                                      void 0 !== a[e] && ((n.mandatory = n.mandatory || {}), (n.mandatory[o(e, r)] = a[e]));
                                                   });
                                         }
                                     }),
@@ -748,7 +748,7 @@
                                     var l = function (e, n, r) {
                                         n in e && !(r in e) && ((e[r] = e[n]), delete e[n]);
                                     };
-                                    l((e = JSON.parse(JSON.stringify(e))).audio, 'autoGainControl', 'googAutoGainControl'), l(e.audio, 'noiseSuppression', 'googNoiseSuppression'), (e.audio = s(e.audio));
+                                    l((e = JSON.parse(JSON.stringify(e))).audio, 'autoGainControl', 'googAutoGainControl'), l(e.audio, 'noiseSuppression', 'googNoiseSuppression'), (e.audio = o(e.audio));
                                 }
                                 if (e && 'object' === i(e.video)) {
                                     var u = e.video.facingMode;
@@ -766,12 +766,12 @@
                                                         return e.label.toLowerCase().includes(n);
                                                     });
                                                 });
-                                                return !r && n.length && d.includes('back') && (r = n[n.length - 1]), r && (e.video.deviceId = u.exact ? { exact: r.deviceId } : { ideal: r.deviceId }), (e.video = s(e.video)), o('chrome: ' + JSON.stringify(e)), a(e);
+                                                return !r && n.length && d.includes('back') && (r = n[n.length - 1]), r && (e.video.deviceId = u.exact ? { exact: r.deviceId } : { ideal: r.deviceId }), (e.video = o(e.video)), s('chrome: ' + JSON.stringify(e)), a(e);
                                             });
                                     }
-                                    e.video = s(e.video);
+                                    e.video = o(e.video);
                                 }
-                                return o('chrome: ' + JSON.stringify(e)), a(e);
+                                return s('chrome: ' + JSON.stringify(e)), a(e);
                             },
                             u = function (e) {
                                 return r.version >= 64
@@ -843,10 +843,10 @@
                         : function (e) {
                               return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
                           };
-                (r.shimRTCIceCandidate = u), (r.shimMaxMessageSize = c), (r.shimSendThrowTypeError = d), (r.shimConnectionState = f), (r.removeAllowExtmapMixed = _);
+                (r.shimRTCIceCandidate = u), (r.shimMaxMessageSize = c), (r.shimSendThrowTypeError = d), (r.shimConnectionState = f), (r.removeAllowExtmapMixed = p);
                 var a = l(e('sdp')),
-                    s = o(e('./utils'));
-                function o(e) {
+                    o = s(e('./utils'));
+                function s(e) {
                     if (e && e.__esModule) return e;
                     var n = {};
                     if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
@@ -876,7 +876,7 @@
                             return new n(e);
                         }),
                             (e.RTCIceCandidate.prototype = n.prototype),
-                            s.wrapPeerConnectionEvent(e, 'icecandidate', function (n) {
+                            o.wrapPeerConnectionEvent(e, 'icecandidate', function (n) {
                                 return (
                                     n.candidate &&
                                         Object.defineProperty(n, 'candidate', {
@@ -890,7 +890,7 @@
                 }
                 function c(e) {
                     if (!!e.RTCPeerConnection) {
-                        var n = s.detectBrowser(e);
+                        var n = o.detectBrowser(e);
                         !('sctp' in e.RTCPeerConnection.prototype) &&
                             Object.defineProperty(e.RTCPeerConnection.prototype, 'sctp', {
                                 get: function () {
@@ -914,15 +914,15 @@
                                 var r = parseInt(n[1], 10);
                                 return r != r ? -1 : r;
                             },
-                            o = function (e) {
+                            s = function (e) {
                                 var r = 65536;
                                 return 'firefox' === n.browser && (r = n.version < 57 ? (-1 === e ? 16384 : 2147483637) : n.version < 60 ? (57 === n.version ? 65535 : 65536) : 2147483637), r;
                             },
                             l = function (e, r) {
                                 var i = 65536;
                                 'firefox' === n.browser && 57 === n.version && (i = 65535);
-                                var s = a.default.matchPrefix(e.sdp, 'a=max-message-size:');
-                                return s.length > 0 ? (i = parseInt(s[0].substr(19), 10)) : 'firefox' === n.browser && -1 !== r && (i = 2147483637), i;
+                                var o = a.default.matchPrefix(e.sdp, 'a=max-message-size:');
+                                return o.length > 0 ? (i = parseInt(o[0].substr(19), 10)) : 'firefox' === n.browser && -1 !== r && (i = 2147483637), i;
                             },
                             u = e.RTCPeerConnection.prototype.setRemoteDescription;
                         e.RTCPeerConnection.prototype.setRemoteDescription = function () {
@@ -941,10 +941,10 @@
                                 r(arguments[0]))
                             ) {
                                 var e = i(arguments[0]),
-                                    a = o(e),
-                                    s = l(arguments[0], e),
+                                    a = s(e),
+                                    o = l(arguments[0], e),
                                     c = void 0;
-                                c = 0 === a && 0 === s ? Number.POSITIVE_INFINITY : 0 === a || 0 === s ? Math.max(a, s) : Math.min(a, s);
+                                c = 0 === a && 0 === o ? Number.POSITIVE_INFINITY : 0 === a || 0 === o ? Math.max(a, o) : Math.min(a, o);
                                 var d = {};
                                 Object.defineProperty(d, 'maxMessageSize', {
                                     get: function () {
@@ -964,7 +964,7 @@
                             var e = n.apply(this, arguments);
                             return r(e, this), e;
                         }),
-                            s.wrapPeerConnectionEvent(e, 'datachannel', function (e) {
+                            o.wrapPeerConnectionEvent(e, 'datachannel', function (e) {
                                 return r(e.channel, e.target), e;
                             });
                     }
@@ -1024,9 +1024,9 @@
                             });
                     }
                 }
-                function _(e) {
+                function p(e) {
                     if (!e.RTCPeerConnection) return;
-                    var n = s.detectBrowser(e);
+                    var n = o.detectBrowser(e);
                     if ('chrome' !== n.browser || !(n.version >= 71)) {
                         var r = e.RTCPeerConnection.prototype.setRemoteDescription;
                         e.RTCPeerConnection.prototype.setRemoteDescription = function (e) {
@@ -1069,23 +1069,23 @@
                         return a.shimGetUserMedia;
                     }
                 });
-                var s = e('./getdisplaymedia');
+                var o = e('./getdisplaymedia');
                 Object.defineProperty(r, 'shimGetDisplayMedia', {
                     enumerable: !0,
                     get: function () {
-                        return s.shimGetDisplayMedia;
+                        return o.shimGetDisplayMedia;
                     }
                 }),
                     (r.shimOnTrack = c),
                     (r.shimPeerConnection = d),
                     (r.shimSenderGetStats = f),
-                    (r.shimReceiverGetStats = _),
+                    (r.shimReceiverGetStats = p),
                     (r.shimRemoveStream = h),
-                    (r.shimRTCDataChannel = p),
+                    (r.shimRTCDataChannel = _),
                     (r.shimAddTransceiver = m),
                     (r.shimCreateOffer = g),
                     (r.shimCreateAnswer = E);
-                var o = l(e('../utils'));
+                var s = l(e('../utils'));
                 function l(e) {
                     if (e && e.__esModule) return e;
                     var n = {};
@@ -1117,7 +1117,7 @@
                         });
                 }
                 function d(e) {
-                    var n = o.detectBrowser(e);
+                    var n = s.detectBrowser(e);
                     if ((void 0 === e ? 'undefined' : i(e)) === 'object' && !!(e.RTCPeerConnection || e.mozRTCPeerConnection)) {
                         if (
                             (!e.RTCPeerConnection && e.mozRTCPeerConnection && (e.RTCPeerConnection = e.mozRTCPeerConnection),
@@ -1143,13 +1143,13 @@
                                 localcandidate: 'local-candidate',
                                 remotecandidate: 'remote-candidate'
                             },
-                            s = e.RTCPeerConnection.prototype.getStats;
+                            o = e.RTCPeerConnection.prototype.getStats;
                         e.RTCPeerConnection.prototype.getStats = function () {
                             var e = Array.prototype.slice.call(arguments),
                                 r = e[0],
                                 i = e[1],
-                                o = e[2];
-                            return s
+                                s = e[2];
+                            return o
                                 .apply(this, [r || null])
                                 .then(function (e) {
                                     if (n.version < 53 && !i)
@@ -1165,7 +1165,7 @@
                                         }
                                     return e;
                                 })
-                                .then(i, o);
+                                .then(i, s);
                         };
                     }
                 }
@@ -1194,7 +1194,7 @@
                             });
                     }
                 }
-                function _(e) {
+                function p(e) {
                     if (!!((void 0 === e ? 'undefined' : i(e)) === 'object' && e.RTCPeerConnection && e.RTCRtpSender) && (!e.RTCRtpSender || !('getStats' in e.RTCRtpReceiver.prototype))) {
                         var n = e.RTCPeerConnection.prototype.getReceivers;
                         n &&
@@ -1208,7 +1208,7 @@
                                     r
                                 );
                             }),
-                            o.wrapPeerConnectionEvent(e, 'track', function (e) {
+                            s.wrapPeerConnectionEvent(e, 'track', function (e) {
                                 return (e.receiver._pc = e.srcElement), e;
                             }),
                             (e.RTCRtpReceiver.prototype.getStats = function () {
@@ -1220,13 +1220,13 @@
                     if (!!e.RTCPeerConnection && !('removeStream' in e.RTCPeerConnection.prototype))
                         e.RTCPeerConnection.prototype.removeStream = function (e) {
                             var n = this;
-                            o.deprecated('removeStream', 'removeTrack'),
+                            s.deprecated('removeStream', 'removeTrack'),
                                 this.getSenders().forEach(function (r) {
                                     r.track && e.getTracks().includes(r.track) && n.removeTrack(r);
                                 });
                         };
                 }
-                function p(e) {
+                function _(e) {
                     e.DataChannel && !e.RTCDataChannel && (e.RTCDataChannel = e.DataChannel);
                 }
                 function m(e) {
@@ -1246,8 +1246,8 @@
                                 var i = n.apply(this, arguments);
                                 if (r) {
                                     var a = i.sender,
-                                        s = a.getParameters();
-                                    !('encodings' in s) && ((s.encodings = e.sendEncodings), this.setParametersPromises.push(a.setParameters(s).catch(function () {})));
+                                        o = a.getParameters();
+                                    !('encodings' in o) && ((o.encodings = e.sendEncodings), this.setParametersPromises.push(a.setParameters(o).catch(function () {})));
                                 }
                                 return i;
                             });
@@ -1323,44 +1323,44 @@
                         : function (e) {
                               return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
                           };
-                r.shimGetUserMedia = o;
-                var a = s(e('../utils'));
-                function s(e) {
+                r.shimGetUserMedia = s;
+                var a = o(e('../utils'));
+                function o(e) {
                     if (e && e.__esModule) return e;
                     var n = {};
                     if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
                     return (n.default = e), n;
                 }
-                function o(e) {
+                function s(e) {
                     var n = a.detectBrowser(e),
                         r = e && e.navigator,
-                        s = e && e.MediaStreamTrack;
+                        o = e && e.MediaStreamTrack;
                     if (
                         ((r.getUserMedia = function (e, n, i) {
                             a.deprecated('navigator.getUserMedia', 'navigator.mediaDevices.getUserMedia'), r.mediaDevices.getUserMedia(e).then(n, i);
                         }),
                         !(n.version > 55 && 'autoGainControl' in r.mediaDevices.getSupportedConstraints()))
                     ) {
-                        var o = function (e, n, r) {
+                        var s = function (e, n, r) {
                                 n in e && !(r in e) && ((e[r] = e[n]), delete e[n]);
                             },
                             l = r.mediaDevices.getUserMedia.bind(r.mediaDevices);
                         if (
                             ((r.mediaDevices.getUserMedia = function (e) {
-                                return (void 0 === e ? 'undefined' : i(e)) === 'object' && 'object' === i(e.audio) && (o((e = JSON.parse(JSON.stringify(e))).audio, 'autoGainControl', 'mozAutoGainControl'), o(e.audio, 'noiseSuppression', 'mozNoiseSuppression')), l(e);
+                                return (void 0 === e ? 'undefined' : i(e)) === 'object' && 'object' === i(e.audio) && (s((e = JSON.parse(JSON.stringify(e))).audio, 'autoGainControl', 'mozAutoGainControl'), s(e.audio, 'noiseSuppression', 'mozNoiseSuppression')), l(e);
                             }),
-                            s && s.prototype.getSettings)
+                            o && o.prototype.getSettings)
                         ) {
-                            var u = s.prototype.getSettings;
-                            s.prototype.getSettings = function () {
+                            var u = o.prototype.getSettings;
+                            o.prototype.getSettings = function () {
                                 var e = u.apply(this, arguments);
-                                return o(e, 'mozAutoGainControl', 'autoGainControl'), o(e, 'mozNoiseSuppression', 'noiseSuppression'), e;
+                                return s(e, 'mozAutoGainControl', 'autoGainControl'), s(e, 'mozNoiseSuppression', 'noiseSuppression'), e;
                             };
                         }
-                        if (s && s.prototype.applyConstraints) {
-                            var c = s.prototype.applyConstraints;
-                            s.prototype.applyConstraints = function (e) {
-                                return 'audio' === this.kind && (void 0 === e ? 'undefined' : i(e)) === 'object' && (o((e = JSON.parse(JSON.stringify(e))), 'autoGainControl', 'mozAutoGainControl'), o(e, 'noiseSuppression', 'mozNoiseSuppression')), c.apply(this, [e]);
+                        if (o && o.prototype.applyConstraints) {
+                            var c = o.prototype.applyConstraints;
+                            o.prototype.applyConstraints = function (e) {
+                                return 'audio' === this.kind && (void 0 === e ? 'undefined' : i(e)) === 'object' && (s((e = JSON.parse(JSON.stringify(e))), 'autoGainControl', 'mozAutoGainControl'), s(e, 'noiseSuppression', 'mozNoiseSuppression')), c.apply(this, [e]);
                             };
                         }
                     }
@@ -1379,15 +1379,15 @@
                         : function (e) {
                               return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
                           };
-                (r.shimLocalStreamsAPI = o), (r.shimRemoteStreamsAPI = l), (r.shimCallbacksAPI = u), (r.shimGetUserMedia = c), (r.shimConstraints = d), (r.shimRTCIceServerUrls = f), (r.shimTrackEventTransceiver = _), (r.shimCreateOfferLegacy = h);
-                var a = s(e('../utils'));
-                function s(e) {
+                (r.shimLocalStreamsAPI = s), (r.shimRemoteStreamsAPI = l), (r.shimCallbacksAPI = u), (r.shimGetUserMedia = c), (r.shimConstraints = d), (r.shimRTCIceServerUrls = f), (r.shimTrackEventTransceiver = p), (r.shimCreateOfferLegacy = h);
+                var a = o(e('../utils'));
+                function o(e) {
                     if (e && e.__esModule) return e;
                     var n = {};
                     if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
                     return (n.default = e), n;
                 }
-                function o(e) {
+                function s(e) {
                     if ((void 0 === e ? 'undefined' : i(e)) === 'object' && !!e.RTCPeerConnection) {
                         if (
                             (!('getLocalStreams' in e.RTCPeerConnection.prototype) &&
@@ -1409,7 +1409,7 @@
                                     });
                             }),
                                 (e.RTCPeerConnection.prototype.addTrack = function (e) {
-                                    for (var r = this, i = arguments.length, a = Array(i > 1 ? i - 1 : 0), s = 1; s < i; s++) a[s - 1] = arguments[s];
+                                    for (var r = this, i = arguments.length, a = Array(i > 1 ? i - 1 : 0), o = 1; o < i; o++) a[o - 1] = arguments[o];
                                     return (
                                         a &&
                                             a.forEach(function (e) {
@@ -1493,8 +1493,8 @@
                         var n = e.RTCPeerConnection.prototype,
                             r = n.createOffer,
                             a = n.createAnswer,
-                            s = n.setLocalDescription,
-                            o = n.setRemoteDescription,
+                            o = n.setLocalDescription,
+                            s = n.setRemoteDescription,
                             l = n.addIceCandidate;
                         (n.createOffer = function (e, n) {
                             var i = arguments.length >= 2 ? arguments[2] : arguments[0],
@@ -1507,12 +1507,12 @@
                                 return n ? (i.then(e, n), Promise.resolve()) : i;
                             });
                         var u = function (e, n, r) {
-                            var i = s.apply(this, [e]);
+                            var i = o.apply(this, [e]);
                             return r ? (i.then(n, r), Promise.resolve()) : i;
                         };
                         (n.setLocalDescription = u),
                             (u = function (e, n, r) {
-                                var i = o.apply(this, [e]);
+                                var i = s.apply(this, [e]);
                                 return r ? (i.then(n, r), Promise.resolve()) : i;
                             }),
                             (n.setRemoteDescription = u),
@@ -1546,9 +1546,9 @@
                     var n = e.RTCPeerConnection;
                     (e.RTCPeerConnection = function (e, r) {
                         if (e && e.iceServers) {
-                            for (var i = [], s = 0; s < e.iceServers.length; s++) {
-                                var o = e.iceServers[s];
-                                !o.hasOwnProperty('urls') && o.hasOwnProperty('url') ? (a.deprecated('RTCIceServer.url', 'RTCIceServer.urls'), ((o = JSON.parse(JSON.stringify(o))).urls = o.url), delete o.url, i.push(o)) : i.push(e.iceServers[s]);
+                            for (var i = [], o = 0; o < e.iceServers.length; o++) {
+                                var s = e.iceServers[o];
+                                !s.hasOwnProperty('urls') && s.hasOwnProperty('url') ? (a.deprecated('RTCIceServer.url', 'RTCIceServer.urls'), ((s = JSON.parse(JSON.stringify(s))).urls = s.url), delete s.url, i.push(s)) : i.push(e.iceServers[o]);
                             }
                             e.iceServers = i;
                         }
@@ -1562,7 +1562,7 @@
                                 }
                             });
                 }
-                function _(e) {
+                function p(e) {
                     (void 0 === e ? 'undefined' : i(e)) === 'object' &&
                         e.RTCTrackEvent &&
                         'receiver' in e.RTCTrackEvent.prototype &&
@@ -1617,9 +1617,9 @@
                         e
                     );
                 }
-                (r.extractVersion = l), (r.wrapPeerConnectionEvent = u), (r.disableLog = c), (r.disableWarnings = d), (r.log = f), (r.deprecated = _), (r.detectBrowser = h), (r.compactObject = m), (r.walkStats = g), (r.filterStats = E);
-                var s = !0,
-                    o = !0;
+                (r.extractVersion = l), (r.wrapPeerConnectionEvent = u), (r.disableLog = c), (r.disableWarnings = d), (r.log = f), (r.deprecated = p), (r.detectBrowser = h), (r.compactObject = m), (r.walkStats = g), (r.filterStats = E);
+                var o = !0,
+                    s = !0;
                 function l(e, n, r) {
                     var i = e.match(n);
                     return i && i.length >= r && parseInt(i[r], 10);
@@ -1630,17 +1630,17 @@
                             a = i.addEventListener;
                         i.addEventListener = function (e, i) {
                             if (e !== n) return a.apply(this, arguments);
-                            var s = function (e) {
+                            var o = function (e) {
                                 var n = r(e);
                                 n && i(n);
                             };
-                            return (this._eventMap = this._eventMap || {}), (this._eventMap[i] = s), a.apply(this, [e, s]);
+                            return (this._eventMap = this._eventMap || {}), (this._eventMap[i] = o), a.apply(this, [e, o]);
                         };
-                        var s = i.removeEventListener;
+                        var o = i.removeEventListener;
                         (i.removeEventListener = function (e, r) {
-                            if (e !== n || !this._eventMap || !this._eventMap[r]) return s.apply(this, arguments);
+                            if (e !== n || !this._eventMap || !this._eventMap[r]) return o.apply(this, arguments);
                             var i = this._eventMap[r];
-                            return delete this._eventMap[r], s.apply(this, [e, i]);
+                            return delete this._eventMap[r], o.apply(this, [e, i]);
                         }),
                             Object.defineProperty(i, 'on' + n, {
                                 get: function () {
@@ -1655,18 +1655,18 @@
                     }
                 }
                 function c(e) {
-                    return 'boolean' != typeof e ? Error('Argument type: ' + (void 0 === e ? 'undefined' : i(e)) + '. Please use a boolean.') : ((s = e), e ? 'adapter.js logging disabled' : 'adapter.js logging enabled');
+                    return 'boolean' != typeof e ? Error('Argument type: ' + (void 0 === e ? 'undefined' : i(e)) + '. Please use a boolean.') : ((o = e), e ? 'adapter.js logging disabled' : 'adapter.js logging enabled');
                 }
                 function d(e) {
-                    return 'boolean' != typeof e ? Error('Argument type: ' + (void 0 === e ? 'undefined' : i(e)) + '. Please use a boolean.') : ((o = !e), 'adapter.js deprecation warnings ' + (e ? 'disabled' : 'enabled'));
+                    return 'boolean' != typeof e ? Error('Argument type: ' + (void 0 === e ? 'undefined' : i(e)) + '. Please use a boolean.') : ((s = !e), 'adapter.js deprecation warnings ' + (e ? 'disabled' : 'enabled'));
                 }
                 function f() {
                     if (('undefined' == typeof window ? 'undefined' : i(window)) === 'object') {
-                        if (!s) 'undefined' != typeof console && 'function' == typeof console.log && console.log.apply(console, arguments);
+                        if (!o) 'undefined' != typeof console && 'function' == typeof console.log && console.log.apply(console, arguments);
                     }
                 }
-                function _(e, n) {
-                    if (!!o) console.warn(e + ' is deprecated, please use ' + n + ' instead.');
+                function p(e, n) {
+                    if (!!s) console.warn(e + ' is deprecated, please use ' + n + ' instead.');
                 }
                 function h(e) {
                     var n = e.navigator,
@@ -1676,16 +1676,16 @@
                         };
                     return void 0 !== e && e.navigator ? (n.mozGetUserMedia ? ((r.browser = 'firefox'), (r.version = l(n.userAgent, /Firefox\/(\d+)\./, 1))) : n.webkitGetUserMedia || (!1 === e.isSecureContext && e.webkitRTCPeerConnection && !e.RTCIceGatherer) ? ((r.browser = 'chrome'), (r.version = l(n.userAgent, /Chrom(e|ium)\/(\d+)\./, 2))) : n.mediaDevices && n.userAgent.match(/Edge\/(\d+).(\d+)$/) ? ((r.browser = 'edge'), (r.version = l(n.userAgent, /Edge\/(\d+).(\d+)$/, 2))) : e.RTCPeerConnection && n.userAgent.match(/AppleWebKit\/(\d+)\./) ? ((r.browser = 'safari'), (r.version = l(n.userAgent, /AppleWebKit\/(\d+)\./, 1)), (r.supportsUnifiedPlan = e.RTCRtpTransceiver && 'currentDirection' in e.RTCRtpTransceiver.prototype)) : (r.browser = 'Not a supported browser.'), r) : ((r.browser = 'Not a browser.'), r);
                 }
-                function p(e) {
+                function _(e) {
                     return '[object Object]' === Object.prototype.toString.call(e);
                 }
                 function m(e) {
-                    return p(e)
+                    return _(e)
                         ? Object.keys(e).reduce(function (n, r) {
-                              var i = p(e[r]),
-                                  s = i ? m(e[r]) : e[r],
-                                  o = i && !Object.keys(s).length;
-                              return void 0 === s || o ? n : Object.assign(n, a({}, r, s));
+                              var i = _(e[r]),
+                                  o = i ? m(e[r]) : e[r],
+                                  s = i && !Object.keys(o).length;
+                              return void 0 === o || s ? n : Object.assign(n, a({}, r, o));
                           }, {})
                         : e;
                 }
@@ -1705,12 +1705,12 @@
                     var i = r ? 'outbound-rtp' : 'inbound-rtp',
                         a = new Map();
                     if (null === n) return a;
-                    var s = [];
+                    var o = [];
                     return (
                         e.forEach(function (e) {
-                            'track' === e.type && e.trackIdentifier === n.id && s.push(e);
+                            'track' === e.type && e.trackIdentifier === n.id && o.push(e);
                         }),
-                        s.forEach(function (n) {
+                        o.forEach(function (n) {
                             e.forEach(function (r) {
                                 r.type === i && r.trackId === n.id && g(e, r, a);
                             });
@@ -1953,12 +1953,12 @@
                             a < r.length;
                             a++
                         ) {
-                            var s = r[a],
-                                o = i.matchPrefix(e, 'a=rtpmap:' + s + ' ')[0];
-                            if (o) {
-                                var l = i.parseRtpMap(o),
-                                    u = i.matchPrefix(e, 'a=fmtp:' + s + ' ');
-                                switch (((l.parameters = u.length ? i.parseFmtp(u[0]) : {}), (l.rtcpFeedback = i.matchPrefix(e, 'a=rtcp-fb:' + s + ' ').map(i.parseRtcpFb)), n.codecs.push(l), l.name.toUpperCase())) {
+                            var o = r[a],
+                                s = i.matchPrefix(e, 'a=rtpmap:' + o + ' ')[0];
+                            if (s) {
+                                var l = i.parseRtpMap(s),
+                                    u = i.matchPrefix(e, 'a=fmtp:' + o + ' ');
+                                switch (((l.parameters = u.length ? i.parseFmtp(u[0]) : {}), (l.rtcpFeedback = i.matchPrefix(e, 'a=rtcp-fb:' + o + ' ').map(i.parseRtcpFb)), n.codecs.push(l), l.name.toUpperCase())) {
                                     case 'RED':
                                     case 'ULPFEC':
                                         n.fecMechanisms.push(l.name.toUpperCase());
@@ -2008,8 +2008,8 @@
                         var n,
                             r = [],
                             a = i.parseRtpParameters(e),
-                            s = -1 !== a.fecMechanisms.indexOf('RED'),
-                            o = -1 !== a.fecMechanisms.indexOf('ULPFEC'),
+                            o = -1 !== a.fecMechanisms.indexOf('RED'),
+                            s = -1 !== a.fecMechanisms.indexOf('ULPFEC'),
                             l = i
                                 .matchPrefix(e, 'a=ssrc:')
                                 .map(function (e) {
@@ -2036,10 +2036,10 @@
                                     };
                                     u && n && (i.rtx = { ssrc: n }),
                                         r.push(i),
-                                        s &&
+                                        o &&
                                             (((i = JSON.parse(JSON.stringify(i))).fec = {
                                                 ssrc: u,
-                                                mechanism: o ? 'red+ulpfec' : 'red'
+                                                mechanism: s ? 'red+ulpfec' : 'red'
                                             }),
                                             r.push(i));
                                 }
@@ -2068,8 +2068,8 @@
                         r && ((n.cname = r.value), (n.ssrc = r.ssrc));
                         var a = i.matchPrefix(e, 'a=rtcp-rsize');
                         (n.reducedSize = a.length > 0), (n.compound = 0 === a.length);
-                        var s = i.matchPrefix(e, 'a=rtcp-mux');
-                        return (n.mux = s.length > 0), n;
+                        var o = i.matchPrefix(e, 'a=rtcp-mux');
+                        return (n.mux = o.length > 0), n;
                     }),
                     (i.parseMsid = function (e) {
                         var n,
@@ -2098,18 +2098,18 @@
                             r = i.parseMLine(e),
                             a = i.matchPrefix(e, 'a=max-message-size:');
                         a.length > 0 && (n = parseInt(a[0].substr(19), 10)), isNaN(n) && (n = 65536);
-                        var s = i.matchPrefix(e, 'a=sctp-port:');
-                        if (s.length > 0)
+                        var o = i.matchPrefix(e, 'a=sctp-port:');
+                        if (o.length > 0)
                             return {
-                                port: parseInt(s[0].substr(12), 10),
+                                port: parseInt(o[0].substr(12), 10),
                                 protocol: r.fmt,
                                 maxMessageSize: n
                             };
                         if (i.matchPrefix(e, 'a=sctpmap:').length > 0) {
-                            var o = i.matchPrefix(e, 'a=sctpmap:')[0].substr(10).split(' ');
+                            var s = i.matchPrefix(e, 'a=sctpmap:')[0].substr(10).split(' ');
                             return {
-                                port: parseInt(o[0], 10),
-                                protocol: o[1],
+                                port: parseInt(s[0], 10),
+                                protocol: s[1],
                                 maxMessageSize: n
                             };
                         }
@@ -2123,16 +2123,16 @@
                     }),
                     (i.writeSessionBoilerplate = function (e, n, r) {
                         var a,
-                            s = void 0 !== n ? n : 2;
-                        return 'v=0\r\no=' + (r || 'thisisadapterortc') + ' ' + (a = e ? e : i.generateSessionId()) + ' ' + s + ' IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\n';
+                            o = void 0 !== n ? n : 2;
+                        return 'v=0\r\no=' + (r || 'thisisadapterortc') + ' ' + (a = e ? e : i.generateSessionId()) + ' ' + o + ' IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\n';
                     }),
                     (i.writeMediaSection = function (e, n, r, a) {
-                        var s = i.writeRtpDescription(e.kind, n);
-                        if (((s += i.writeIceParameters(e.iceGatherer.getLocalParameters()) + i.writeDtlsParameters(e.dtlsTransport.getLocalParameters(), 'offer' === r ? 'actpass' : 'active') + ('a=mid:' + e.mid + '\r\n')), e.direction ? (s += 'a=' + e.direction + '\r\n') : e.rtpSender && e.rtpReceiver ? (s += 'a=sendrecv\r\n') : e.rtpSender ? (s += 'a=sendonly\r\n') : e.rtpReceiver ? (s += 'a=recvonly\r\n') : (s += 'a=inactive\r\n'), e.rtpSender)) {
-                            var o = 'msid:' + a.id + ' ' + e.rtpSender.track.id + '\r\n';
-                            (s += 'a=' + o + ('a=ssrc:' + e.sendEncodingParameters[0].ssrc + ' ' + o)), e.sendEncodingParameters[0].rtx && (s += 'a=ssrc:' + e.sendEncodingParameters[0].rtx.ssrc + ' ' + o + ('a=ssrc-group:FID ' + e.sendEncodingParameters[0].ssrc + ' ' + e.sendEncodingParameters[0].rtx.ssrc + '\r\n'));
+                        var o = i.writeRtpDescription(e.kind, n);
+                        if (((o += i.writeIceParameters(e.iceGatherer.getLocalParameters()) + i.writeDtlsParameters(e.dtlsTransport.getLocalParameters(), 'offer' === r ? 'actpass' : 'active') + ('a=mid:' + e.mid + '\r\n')), e.direction ? (o += 'a=' + e.direction + '\r\n') : e.rtpSender && e.rtpReceiver ? (o += 'a=sendrecv\r\n') : e.rtpSender ? (o += 'a=sendonly\r\n') : e.rtpReceiver ? (o += 'a=recvonly\r\n') : (o += 'a=inactive\r\n'), e.rtpSender)) {
+                            var s = 'msid:' + a.id + ' ' + e.rtpSender.track.id + '\r\n';
+                            (o += 'a=' + s + ('a=ssrc:' + e.sendEncodingParameters[0].ssrc + ' ' + s)), e.sendEncodingParameters[0].rtx && (o += 'a=ssrc:' + e.sendEncodingParameters[0].rtx.ssrc + ' ' + s + ('a=ssrc-group:FID ' + e.sendEncodingParameters[0].ssrc + ' ' + e.sendEncodingParameters[0].rtx.ssrc + '\r\n'));
                         }
-                        return (s += 'a=ssrc:' + e.sendEncodingParameters[0].ssrc + ' cname:' + i.localCName + '\r\n'), e.rtpSender && e.sendEncodingParameters[0].rtx && (s += 'a=ssrc:' + e.sendEncodingParameters[0].rtx.ssrc + ' cname:' + i.localCName + '\r\n'), s;
+                        return (o += 'a=ssrc:' + e.sendEncodingParameters[0].ssrc + ' cname:' + i.localCName + '\r\n'), e.rtpSender && e.sendEncodingParameters[0].rtx && (o += 'a=ssrc:' + e.sendEncodingParameters[0].rtx.ssrc + ' cname:' + i.localCName + '\r\n'), o;
                     }),
                     (i.getDirection = function (e, n) {
                         for (var r = i.splitLines(e), a = 0; a < r.length; a++)

@@ -1,7 +1,7 @@
-n(20858);
-var e = n(974802),
-    o = n(156741);
-!e.JSON && (e.JSON = { stringify: JSON.stringify }),
-    (t.exports = function (t, r, n) {
-        return o(e.JSON.stringify, null, arguments);
+r(20858);
+var i = r(974802),
+    a = r(156741);
+!i.JSON && (i.JSON = { stringify: JSON.stringify }),
+    (e.exports = function (e, n, r) {
+        return a(i.JSON.stringify, null, arguments);
     });

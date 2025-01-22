@@ -2,11 +2,11 @@ let i = r(868667),
     a = (e, n) => {
         let r = i(e, null, !0),
             a = i(n, null, !0),
-            s = r.compare(a);
-        if (0 === s) return null;
-        let o = s > 0,
-            l = o ? r : a,
-            u = o ? a : r,
+            o = r.compare(a);
+        if (0 === o) return null;
+        let s = o > 0,
+            l = s ? r : a,
+            u = s ? a : r,
             c = !!l.prerelease.length;
         if (u.prerelease.length && !c) return u.patch || u.minor ? (l.patch ? 'patch' : l.minor ? 'minor' : 'major') : 'major';
         let d = c ? 'pre' : '';

@@ -11,10 +11,10 @@ let c = {
         MEDIUM: s.dropdownMedium,
         LARGE: s.dropdownLarge
     },
-    d = (e) => {
-        let { onDropdownClick: t, children: n, contentClassName: i, dropdownSize: r = 'MEDIUM', ...d } = e;
+    u = (e) => {
+        let { onDropdownClick: t, children: n, contentClassName: i, dropdownSize: r = 'MEDIUM', ...u } = e;
         return (0, l.jsx)(a.Button, {
-            ...d,
+            ...u,
             children: (0, l.jsxs)(o.Z, {
                 align: o.Z.Align.CENTER,
                 children: [
@@ -42,4 +42,4 @@ let c = {
             })
         });
     };
-(d.DropdownSizes = r), (d.Sizes = a.Button.Sizes), (d.Colors = a.Button.Colors), (d.Looks = a.Button.Looks), (t.Z = d);
+(u.DropdownSizes = r), (u.Sizes = a.Button.Sizes), (u.Colors = a.Button.Colors), (u.Looks = a.Button.Looks), (t.Z = u);

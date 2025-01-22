@@ -13,9 +13,9 @@ var i = t(200651),
     u = t(324701),
     d = t(575016),
     c = t(768943),
-    m = t(175006),
+    f = t(175006),
     g = t(742989),
-    f = t(898150),
+    m = t(898150),
     h = t(70956),
     E = t(388032);
 function I(e) {
@@ -41,8 +41,8 @@ function I(e) {
                         }),
                     [n.channel_id, n.id]
                 ),
-                c = (0, f.useMessageReminderDurationSuggestions)({ createReminder: s }),
-                { dueInText: m } = (0, d.AT)({
+                c = (0, m.useMessageReminderDurationSuggestions)({ createReminder: s }),
+                { dueInText: f } = (0, d.AT)({
                     dueAt: null == t ? void 0 : t.saveData.dueAt,
                     now: r,
                     type: d.hQ.LONG
@@ -53,7 +53,7 @@ function I(e) {
                       children: c
                   })
                 : (0, i.jsxs)(a.MenuGroup, {
-                      label: m,
+                      label: f,
                       children: [
                           (0, i.jsx)(a.MenuItem, {
                               id: 'mark-complete',
@@ -78,7 +78,7 @@ function I(e) {
             savedMessage: I
         });
     return n || t
-        ? null != I || (0, m.Z)()
+        ? null != I || (0, f.Z)()
             ? (0, i.jsxs)(a.MenuItem, {
                   id: 'save-for-later',
                   label: E.intl.string(E.t.tpxJtr),

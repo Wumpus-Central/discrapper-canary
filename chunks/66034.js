@@ -1,7 +1,7 @@
 var i = r(690244),
     a = i('%Array.prototype%'),
-    s = i('%RangeError%'),
-    o = i('%SyntaxError%'),
+    o = i('%RangeError%'),
+    s = i('%SyntaxError%'),
     l = i('%TypeError%'),
     u = r(73871),
     c = 4294967295,
@@ -15,11 +15,11 @@ var i = r(690244),
             : null);
 e.exports = function (e) {
     if (!u(e) || e < 0) throw new l('Assertion failed: `length` must be an integer Number >= 0');
-    if (e > c) throw new s('length is greater than (2**32 - 1)');
+    if (e > c) throw new o('length is greater than (2**32 - 1)');
     var n = arguments.length > 1 ? arguments[1] : a,
         r = [];
     if (n !== a) {
-        if (!f) throw new o('ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]');
+        if (!f) throw new s('ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]');
         f(r, n);
     }
     return 0 !== e && (r.length = e), r;

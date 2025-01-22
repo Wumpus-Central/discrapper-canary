@@ -6,27 +6,27 @@ r.d(n, {
         return u;
     },
     q3: function () {
-        return o;
+        return s;
     }
 });
 var i = r(200651),
     a = r(192379),
-    s = r(981631);
-let o = a.createContext({
+    o = r(981631);
+let s = a.createContext({
     titleId: void 0,
     errorId: void 0,
     error: void 0,
     isFocused: void 0,
-    setIsFocused: s.dG4,
+    setIsFocused: o.dG4,
     hasValue: void 0,
-    setHasValue: s.dG4
+    setHasValue: o.dG4
 });
 function l() {
-    return a.useContext(o);
+    return a.useContext(s);
 }
 function u(e) {
     let { children: n, ...r } = e;
-    return (0, i.jsx)(o.Provider, {
+    return (0, i.jsx)(s.Provider, {
         value: r,
         children: n
     });

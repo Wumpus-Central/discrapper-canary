@@ -1,11 +1,11 @@
 r.d(n, {
     b: function () {
-        return s;
+        return o;
     }
 });
 var i = r(815790),
     a = r(588215);
-function s(e, n) {
+function o(e, n) {
     let r = (0, i.Dw)(e.joinedAt);
     switch (n) {
         case a.d$.ORDER_BY_GUILD_JOINED_AT_ASC:

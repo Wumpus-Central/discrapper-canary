@@ -6,19 +6,19 @@ r.d(n, {
 var i,
     a = r(200651);
 r(192379);
-var s = r(120356),
-    o = r.n(s),
+var o = r(120356),
+    s = r.n(o),
     l = r(873546),
     u = r(481060),
     c = r(388032),
     d = r(121139);
 function f(e) {
-    let { closeAction: n, variant: r = '', keybind: i, className: s } = e;
+    let { closeAction: n, variant: r = '', keybind: i, className: o } = e;
     return (0, a.jsxs)('div', {
-        className: o()(d.container, s),
+        className: s()(d.container, o),
         children: [
             (0, a.jsx)(u.Clickable, {
-                className: o()(d.closeButton, {
+                className: s()(d.closeButton, {
                     [d.closeButtonBold]: 'Bold' === r,
                     [d.closeButtonSolid]: 'Solid' === r
                 }),
@@ -40,7 +40,7 @@ function f(e) {
             l.tq
                 ? null
                 : (0, a.jsx)('div', {
-                      className: o()(d.keybind),
+                      className: s()(d.keybind),
                       'aria-hidden': !0,
                       children: i
                   })

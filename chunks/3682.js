@@ -3,16 +3,16 @@ r.d(n, {
         return i;
     },
     jR: function () {
-        return o;
+        return s;
     },
     o: function () {
         return a;
     },
     z3: function () {
-        return s;
+        return o;
     }
 });
 let i = 3,
     a = 0.5,
-    s = 1,
-    o = 2.5;
+    o = 1,
+    s = 2.5;

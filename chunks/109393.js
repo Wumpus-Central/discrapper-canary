@@ -22,7 +22,7 @@ var i = function (e, n) {
                 return e;
             }).apply(this, arguments);
     };
-function s(e) {
+function o(e) {
     var n = 'function' == typeof Symbol && Symbol.iterator,
         r = n && e[n],
         i = 0;
@@ -41,25 +41,25 @@ function s(e) {
         };
     throw TypeError(n ? 'Object is not iterable.' : 'Symbol.iterator is not defined.');
 }
-function o(e, n) {
+function s(e, n) {
     var r = 'function' == typeof Symbol && e[Symbol.iterator];
     if (!r) return e;
     var i,
         a,
-        s = r.call(e),
-        o = [];
+        o = r.call(e),
+        s = [];
     try {
-        for (; (void 0 === n || n-- > 0) && !(i = s.next()).done; ) o.push(i.value);
+        for (; (void 0 === n || n-- > 0) && !(i = o.next()).done; ) s.push(i.value);
     } catch (e) {
         a = { error: e };
     } finally {
         try {
-            i && !i.done && (r = s.return) && r.call(s);
+            i && !i.done && (r = o.return) && r.call(o);
         } finally {
             if (a) throw a.error;
         }
     }
-    return o;
+    return s;
 }
 function l(e) {
     return this instanceof l ? ((this.v = e), this) : new l(e);

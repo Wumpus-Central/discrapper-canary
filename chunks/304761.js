@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(442837),
-    o = r(570140),
+    o = r(442837),
+    s = r(570140),
     l = r(865427);
 function u(e, n, r) {
     return (
@@ -27,11 +27,11 @@ function u(e, n, r) {
 let c = 0,
     d = null,
     f = {};
-function _() {
+function p() {
     0 === c &&
         ((c = 1),
         (0, l.Ce)().then((e) => {
-            o.Z.dispatch({
+            s.Z.dispatch({
                 type: 'CURRENT_BUILD_OVERRIDE_RESOLVED',
                 overrides: e
             });
@@ -41,7 +41,7 @@ function h(e) {
     let { overrides: n } = e;
     (c = 2), (d = n);
 }
-function p(e) {
+function _(e) {
     if (e in f) return;
     let n = (0, l.r4)(e);
     if (null == n) {
@@ -64,7 +64,7 @@ function p(e) {
         }
     };
     (0, l._I)(n.url).then((n) => {
-        o.Z.dispatch({
+        s.Z.dispatch({
             type: 'BUILD_OVERRIDE_RESOLVED',
             url: e,
             override: n
@@ -83,10 +83,10 @@ function m(e) {
         }
     };
 }
-class g extends (a = s.ZP.Store) {
+class g extends (a = o.ZP.Store) {
     getCurrentBuildOverride() {
         return (
-            _(),
+            p(),
             {
                 state: c,
                 overrides: d
@@ -94,14 +94,14 @@ class g extends (a = s.ZP.Store) {
         );
     }
     getBuildOverride(e) {
-        return p(e), f[e];
+        return _(e), f[e];
     }
     getBuildOverrides() {
         return f;
     }
 }
 u(g, 'displayName', 'BuildOverrideStore'),
-    (n.C = new g(o.Z, {
+    (n.C = new g(s.Z, {
         BUILD_OVERRIDE_RESOLVED: m,
         CURRENT_BUILD_OVERRIDE_RESOLVED: h
     }));

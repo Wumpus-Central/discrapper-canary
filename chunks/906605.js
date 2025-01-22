@@ -1,12 +1,12 @@
 r.d(n, {
     Sc: function () {
-        return p;
+        return _;
     },
     UP: function () {
         return m;
     },
     Zx: function () {
-        return _;
+        return p;
     },
     _s: function () {
         return h;
@@ -14,17 +14,17 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(570140),
-    s = r(339085),
-    o = r(592125),
+    o = r(339085),
+    s = r(592125),
     l = r(19780),
     u = r(944486),
     c = r(626135),
     d = r(106301),
     f = r(981631);
-function _(e, n) {
+function p(e, n) {
     var r;
     if (null == e) {
-        p(n);
+        _(n);
         return;
     }
     a.Z.dispatch({
@@ -35,14 +35,14 @@ function _(e, n) {
         c.default.track(f.rMx.SET_HANG_STATUS, {
             status_type: e,
             channel_id: u.Z.getVoiceChannelId(),
-            guild_id: null === (r = o.Z.getChannel(u.Z.getVoiceChannelId())) || void 0 === r ? void 0 : r.guild_id,
+            guild_id: null === (r = s.Z.getChannel(u.Z.getVoiceChannelId())) || void 0 === r ? void 0 : r.guild_id,
             media_session_id: l.Z.getMediaSessionId()
         });
 }
 function h(e, n, r) {
     var i;
     if ('' === e || null == n) {
-        p(r);
+        _(r);
         return;
     }
     a.Z.dispatch({
@@ -54,11 +54,11 @@ function h(e, n, r) {
         c.default.track(f.rMx.SET_HANG_STATUS, {
             status_type: e,
             channel_id: u.Z.getVoiceChannelId(),
-            guild_id: null === (i = o.Z.getChannel(u.Z.getVoiceChannelId())) || void 0 === i ? void 0 : i.guild_id,
+            guild_id: null === (i = s.Z.getChannel(u.Z.getVoiceChannelId())) || void 0 === i ? void 0 : i.guild_id,
             media_session_id: l.Z.getMediaSessionId()
         });
 }
-function p(e) {
+function _(e) {
     var n;
     a.Z.dispatch({
         type: 'CLEAR_HANG_STATUS',
@@ -66,14 +66,14 @@ function p(e) {
     }),
         c.default.track(f.rMx.CLEAR_HANG_STATUS, {
             channel_id: u.Z.getVoiceChannelId(),
-            guild_id: null === (n = o.Z.getChannel(u.Z.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
+            guild_id: null === (n = s.Z.getChannel(u.Z.getVoiceChannelId())) || void 0 === n ? void 0 : n.guild_id,
             media_session_id: l.Z.getMediaSessionId()
         });
 }
 function m() {
     let e = [d.Z.getCustomHangStatus(), ...d.Z.getRecentCustomStatuses()].filter((e) => {
         var n;
-        return null != e && null != e.emoji && (null === (n = e.emoji) || void 0 === n ? void 0 : n.id) != null && null == s.ZP.getCustomEmojiById(e.emoji.id);
+        return null != e && null != e.emoji && (null === (n = e.emoji) || void 0 === n ? void 0 : n.id) != null && null == o.ZP.getCustomEmojiById(e.emoji.id);
     });
     e.length > 0 &&
         a.Z.dispatch({

@@ -85,7 +85,7 @@ let R = (e) => {
                   })
             : (0, i.jsx)(u.Spinner, {});
     },
-    y = (e) => {
+    D = (e) => {
         let { isCancelled: t, onCancelSubscriptionClick: n, isResubscribing: r, onResubscribeClick: s } = e;
         return (0, i.jsxs)('div', {
             children: [
@@ -110,7 +110,7 @@ t.Z = (e) => {
     let { subscription: t } = e,
         { storeListing: s, groupListing: l, guild: d, expanded: g, handleToggleExpanded: p, subscriptionInfo: C, application: T } = (0, v.Z)(t),
         b = (0, x.Dt)(),
-        [B, D] = r.useState(!1),
+        [y, B] = r.useState(!1),
         { analyticsLocations: Z } = (0, h.ZP)();
     if (null == l || null == s || null == C) return null;
     let L = () => {
@@ -129,7 +129,7 @@ t.Z = (e) => {
         },
         M = async () => {
             try {
-                D(!0);
+                B(!0);
                 let { subscription: e } = await m.pl(t, Z);
                 null != e &&
                     (0, u.openModalLazy)(async () => {
@@ -142,7 +142,7 @@ t.Z = (e) => {
                             });
                     });
             } finally {
-                D(!1);
+                B(!1);
             }
         },
         { isCancelled: k, isDeleted: w, isPastDue: F, subscriptionPlanPrice: U, subscribedSinceDate: V, currentPeriodEndDate: G, currentPeriodEndLabel: H } = C,
@@ -277,10 +277,10 @@ t.Z = (e) => {
                                   disabled: w
                               }),
                           !z &&
-                              (0, i.jsx)(y, {
+                              (0, i.jsx)(D, {
                                   isCancelled: k,
                                   onCancelSubscriptionClick: L,
-                                  isResubscribing: B,
+                                  isResubscribing: y,
                                   onResubscribeClick: M
                               })
                       ]

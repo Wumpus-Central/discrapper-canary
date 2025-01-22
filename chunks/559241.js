@@ -12,7 +12,7 @@ function a(e, n, r) {
         e
     );
 }
-class s {
+class o {
     constructor() {
         a(this, 'filterTagIds', null),
             a(this, 'sortOrder', null),
@@ -38,4 +38,4 @@ class s {
             });
     }
 }
-n.Z = new s();
+n.Z = new o();

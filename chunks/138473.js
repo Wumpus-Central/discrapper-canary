@@ -11,8 +11,8 @@ var i = (function () {
         };
     })(),
     a = r(192379),
-    s = d(a),
-    o = d(r(723184)),
+    o = d(a),
+    s = d(r(723184)),
     l = d(r(123763)),
     u = c(r(733244));
 function c(e) {
@@ -27,7 +27,7 @@ function d(e) {
 function f(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function _(e, n) {
+function p(e, n) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
 }
@@ -43,10 +43,10 @@ function h(e, n) {
     })),
         n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
 }
-var p = (n.Saturation = (function (e) {
+var _ = (n.Saturation = (function (e) {
     function n(e) {
         f(this, n);
-        var r = _(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this, e));
+        var r = p(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this, e));
         return (
             (r.handleChange = function (e) {
                 'function' == typeof r.props.onChange && r.throttle(r.props.onChange, u.calculateChange(e, r.props.hsl, r.container), e);
@@ -98,7 +98,7 @@ var p = (n.Saturation = (function (e) {
                         a = n.black,
                         l = n.pointer,
                         u = n.circle,
-                        c = (0, o.default)(
+                        c = (0, s.default)(
                             {
                                 default: {
                                     color: {
@@ -140,7 +140,7 @@ var p = (n.Saturation = (function (e) {
                             },
                             { custom: !!this.props.style }
                         );
-                    return s.default.createElement(
+                    return o.default.createElement(
                         'div',
                         {
                             style: c.color,
@@ -151,18 +151,18 @@ var p = (n.Saturation = (function (e) {
                             onTouchMove: this.handleChange,
                             onTouchStart: this.handleChange
                         },
-                        s.default.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
-                        s.default.createElement(
+                        o.default.createElement('style', null, '\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        '),
+                        o.default.createElement(
                             'div',
                             {
                                 style: c.white,
                                 className: 'saturation-white'
                             },
-                            s.default.createElement('div', {
+                            o.default.createElement('div', {
                                 style: c.black,
                                 className: 'saturation-black'
                             }),
-                            s.default.createElement('div', { style: c.pointer }, this.props.pointer ? s.default.createElement(this.props.pointer, this.props) : s.default.createElement('div', { style: c.circle }))
+                            o.default.createElement('div', { style: c.pointer }, this.props.pointer ? o.default.createElement(this.props.pointer, this.props) : o.default.createElement('div', { style: c.circle }))
                         )
                     );
                 }
@@ -171,4 +171,4 @@ var p = (n.Saturation = (function (e) {
         n
     );
 })(a.PureComponent || a.Component));
-n.default = p;
+n.default = _;

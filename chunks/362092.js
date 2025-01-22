@@ -6,19 +6,19 @@ r.d(n, {
         return f;
     },
     rN: function () {
-        return _;
+        return p;
     }
 });
 var i = r(47120);
 var a = r(411104);
-var s = r(653041);
-var o = r(147519);
+var o = r(653041);
+var s = r(147519);
 r(364964);
-let l = o.Z.listLanguages(),
+let l = s.Z.listLanguages(),
     u = {};
 for (let e of l) {
     e = e.toLowerCase();
-    let n = o.Z.getLanguage(e);
+    let n = s.Z.getLanguage(e);
     if (null == n) continue;
     let r = n.aliases;
     if (((u[e] = e), null != r)) for (let n of r) u[n.toLowerCase()] = e;
@@ -29,7 +29,7 @@ for (let e in u) if (null == e.match(c)) throw Error('Language name does not mat
 function f(e) {
     return e.toLowerCase() in u;
 }
-function _(e) {
+function p(e) {
     let n;
     let r = [],
         i = /\\|```/g;

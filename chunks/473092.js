@@ -20,43 +20,43 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(594174),
-    o = r(626135),
+    o = r(594174),
+    s = r(626135),
     l = r(981631);
 function u(e, n) {
-    let { channelId: r, warningId: i, senderId: a, warningType: s } = n;
-    o.default.track(e, {
+    let { channelId: r, warningId: i, senderId: a, warningType: o } = n;
+    s.default.track(e, {
         channel_id: r,
         warning_id: null != i ? parseInt(i) : void 0,
-        warning_type: s,
+        warning_type: o,
         other_user_id: a
     });
 }
 function c(e) {
-    let { channelId: n, warningId: r, senderId: i, warningType: a, viewName: s, isNudgeWarning: u } = e;
-    o.default.track(l.rMx.SAFETY_WARNING_VIEWED, {
+    let { channelId: n, warningId: r, senderId: i, warningType: a, viewName: o, isNudgeWarning: u } = e;
+    s.default.track(l.rMx.SAFETY_WARNING_VIEWED, {
         channel_id: n,
         warning_id: null != r ? parseInt(r) : void 0,
         warning_type: a,
         other_user_id: i,
-        view_name: s,
+        view_name: o,
         is_nudge_warning: u
     });
 }
 function d(e) {
-    let { channelId: n, warningId: r, senderId: i, warningType: a, cta: s, isNudgeWarning: u } = e;
-    o.default.track(l.rMx.SAFETY_WARNING_CTA_CLICKED, {
+    let { channelId: n, warningId: r, senderId: i, warningType: a, cta: o, isNudgeWarning: u } = e;
+    s.default.track(l.rMx.SAFETY_WARNING_CTA_CLICKED, {
         channel_id: n,
         warning_id: null != r ? parseInt(r) : void 0,
         warning_type: a,
         other_user_id: i,
-        cta: s,
+        cta: o,
         is_nudge_warning: u
     });
 }
 function f() {
     var e;
-    return !1 === (null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
+    return !1 === (null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed);
 }
 !(function (e) {
     (e.SAFETY_WARNING_BANNER = 'safety_warning_banner'), (e.SAFETY_TAKEOVER_MODAL = 'safety_takeover_modal'), (e.SAFETY_TOOLS_NUDGE_TOOLTIP = 'safety_tools_nudge_tooltip'), (e.SAFETY_TOOLS_BUTTON = 'safety_tools_button');

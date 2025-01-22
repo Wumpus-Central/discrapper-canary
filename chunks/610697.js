@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
     n(47120);
@@ -11,7 +11,7 @@ var i = n(192379),
     o = n(907877),
     s = n(355298);
 let c = new Set(['GB']);
-function d() {
+function u() {
     let e = (0, o.f)({ location: 'useIsStricterMessageRequests' }),
         t = (0, r.e7)([s.Z], () => s.Z.getUserCountryCode()),
         n =

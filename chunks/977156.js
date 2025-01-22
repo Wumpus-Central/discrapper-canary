@@ -3,10 +3,10 @@ r.d(n, {
         return u;
     },
     Zy: function () {
-        return o;
+        return s;
     },
     cB: function () {
-        return s;
+        return o;
     }
 });
 var i = r(818083);
@@ -28,11 +28,11 @@ let a = (0, i.B)({
             }
         ]
     }),
-    s = (e) => {
+    o = (e) => {
         let { location: n } = e;
         return a.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
     },
-    o = (e) => {
+    s = (e) => {
         let { location: n } = e;
         return a.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled;
     },

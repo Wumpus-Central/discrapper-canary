@@ -1,7 +1,7 @@
 var i = r(200651);
 r(192379);
 var a = r(908486);
-let s = (e) => {
+let o = (e) => {
     let { children: n, shouldAnimate: r } = e;
     return r
         ? (0, i.jsx)('div', {
@@ -13,4 +13,4 @@ let s = (e) => {
           })
         : n;
 };
-n.Z = s;
+n.Z = o;

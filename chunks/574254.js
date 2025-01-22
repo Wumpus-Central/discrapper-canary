@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(585483),
+    o = r(570140),
+    s = r(585483),
     l = r(981631);
 function u(e, n, r) {
     return (
@@ -22,7 +22,7 @@ function f(e) {
     let { contextMenu: n } = e;
     d++, (c = n);
 }
-function _() {
+function p() {
     c = null;
 }
 class h extends (i = a.ZP.Store) {
@@ -36,14 +36,14 @@ class h extends (i = a.ZP.Store) {
         return c;
     }
     close() {
-        return !!this.isOpen() && (o.S.dispatch(l.CkL.CONTEXT_MENU_CLOSE), !0);
+        return !!this.isOpen() && (s.S.dispatch(l.CkL.CONTEXT_MENU_CLOSE), !0);
     }
 }
 u(h, 'displayName', 'ContextMenuStore'),
-    (n.Z = new h(s.Z, {
+    (n.Z = new h(o.Z, {
         CONTEXT_MENU_OPEN: f,
-        LAYER_PUSH: _,
-        CONTEXT_MENU_CLOSE: _,
-        OVERLAY_SET_INPUT_LOCKED: _,
-        OVERLAY_DEACTIVATE_ALL_REGIONS: _
+        LAYER_PUSH: p,
+        CONTEXT_MENU_CLOSE: p,
+        OVERLAY_SET_INPUT_LOCKED: p,
+        OVERLAY_DEACTIVATE_ALL_REGIONS: p
     }));

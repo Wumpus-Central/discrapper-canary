@@ -1,6 +1,6 @@
 r.d(n, {
     M: function () {
-        return o;
+        return s;
     },
     Z: function () {
         return l;
@@ -8,7 +8,7 @@ r.d(n, {
 });
 var i = r(979554),
     a = r(656698);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -21,7 +21,7 @@ function s(e, n, r) {
         e
     );
 }
-let o = (e) => e instanceof l;
+let s = (e) => e instanceof l;
 class l extends a.Z {
     static fromServer(e) {
         return new l({
@@ -30,6 +30,6 @@ class l extends a.Z {
         });
     }
     constructor(e) {
-        super(e), s(this, 'asset', void 0), s(this, 'label', void 0), (this.type = i.Z.AVATAR_DECORATION), (this.asset = e.asset), (this.label = e.label);
+        super(e), o(this, 'asset', void 0), o(this, 'label', void 0), (this.type = i.Z.AVATAR_DECORATION), (this.asset = e.asset), (this.label = e.label);
     }
 }

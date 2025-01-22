@@ -28,7 +28,7 @@ var i = n(200651),
     O = n(735825),
     R = n(388032),
     P = n(11146);
-function y(e) {
+function D(e) {
     let { guildBoostSlot: t, isCancellable: n, onCancel: s, onUncancel: a, premiumSubscription: l, useReducedMotion: o, fractionalPremiumState: d } = e,
         u = r.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
         g = (0, T.tl)(t),
@@ -109,7 +109,7 @@ function y(e) {
         t.id
     );
 }
-function B(e) {
+function y(e) {
     (0, c.openModalLazy)(
         async () => (t) =>
             (0, i.jsx)(p.default, {
@@ -118,7 +118,7 @@ function B(e) {
             })
     );
 }
-function D(e) {
+function B(e) {
     (0, c.openModalLazy)(
         async () => (t) =>
             (0, i.jsx)(x.default, {
@@ -322,12 +322,12 @@ t.Z = function (e) {
                             className: P.unappliedBoostSlots,
                             children: V.map((e) =>
                                 (0, i.jsx)(
-                                    y,
+                                    D,
                                     {
                                         guildBoostSlot: e,
                                         isCancellable: K,
-                                        onCancel: B,
-                                        onUncancel: D,
+                                        onCancel: y,
+                                        onUncancel: B,
                                         premiumSubscription: x,
                                         useReducedMotion: Z,
                                         fractionalPremiumState: p

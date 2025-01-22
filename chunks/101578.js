@@ -6,8 +6,8 @@ var r = n(442837),
     o = n(973616),
     s = n(789407),
     c = n(314897),
-    d = n(158776),
-    u = n(981631),
+    u = n(158776),
+    d = n(981631),
     m = n(616922),
     h = n(634303);
 t.Z = (e) => {
@@ -16,13 +16,13 @@ t.Z = (e) => {
         { analyticsLocations: _ } = (0, a.ZP)(),
         g = (0, r.e7)([c.default], () => c.default.getId()),
         E = (0, r.e7)(
-            [d.Z],
+            [u.Z],
             () => {
-                if (null == f.application) return d.Z.findActivity(f.author.id, (e) => e.type === u.IIU.LISTENING);
+                if (null == f.application) return u.Z.findActivity(f.author.id, (e) => e.type === d.IIU.LISTENING);
                 {
                     var e;
                     let t = f.author.id;
-                    return (null === (e = f.activity) || void 0 === e ? void 0 : e.type) === u.mFx.JOIN_REQUEST && (t = t === g && n.isPrivate() ? n.getRecipientId() : g), d.Z.getApplicationActivity(t, f.application.id);
+                    return (null === (e = f.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST && (t = t === g && n.isPrivate() ? n.getRecipientId() : g), u.Z.getApplicationActivity(t, f.application.id);
                 }
             },
             [f, n, g]

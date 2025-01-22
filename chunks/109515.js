@@ -1,7 +1,7 @@
 var i = r(475637),
     a = r(925300),
-    s = /^(\d+)(th|st|nd|rd)?/i,
-    o = /\d+/i,
+    o = /^(\d+)(th|st|nd|rd)?/i,
+    s = /\d+/i,
     l = {
         narrow: /^(b|a)/i,
         abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
@@ -23,7 +23,7 @@ var i = r(475637),
         abbreviated: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
         wide: /^(january|february|march|april|may|june|july|august|september|october|november|december)/i
     },
-    _ = {
+    p = {
         narrow: [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i],
         any: [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^may/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i]
     },
@@ -33,7 +33,7 @@ var i = r(475637),
         abbreviated: /^(sun|mon|tue|wed|thu|fri|sat)/i,
         wide: /^(sunday|monday|tuesday|wednesday|thursday|friday|saturday)/i
     },
-    p = {
+    _ = {
         narrow: [/^s/i, /^m/i, /^t/i, /^w/i, /^t/i, /^f/i, /^s/i],
         any: [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i]
     },
@@ -55,8 +55,8 @@ var i = r(475637),
     },
     E = {
         ordinalNumber: (0, a.Z)({
-            matchPattern: s,
-            parsePattern: o,
+            matchPattern: o,
+            parsePattern: s,
             valueCallback: function (e) {
                 return parseInt(e, 10);
             }
@@ -79,13 +79,13 @@ var i = r(475637),
         month: (0, i.Z)({
             matchPatterns: f,
             defaultMatchWidth: 'wide',
-            parsePatterns: _,
+            parsePatterns: p,
             defaultParseWidth: 'any'
         }),
         day: (0, i.Z)({
             matchPatterns: h,
             defaultMatchWidth: 'wide',
-            parsePatterns: p,
+            parsePatterns: _,
             defaultParseWidth: 'any'
         }),
         dayPeriod: (0, i.Z)({

@@ -33,12 +33,12 @@ var i = n(200651),
 function R() {
     let e = (0, l.e7)([h.Z], () => h.Z.getHardwareEncoding()),
         { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: s, clipsLength: R, clipsQuality: P } = (0, l.cj)([f.Z], () => f.Z.getSettings()),
-        y = (0, l.e7)([f.Z], () => f.Z.getHardwareClassification()),
-        B = (0, l.e7)([p.Z], () => p.Z.getKeybindForAction(b.kg4.SAVE_CLIP, !0)),
-        D = f.Z.isDecoupledGameClippingEnabled(),
+        D = (0, l.e7)([f.Z], () => f.Z.getHardwareClassification()),
+        y = (0, l.e7)([p.Z], () => p.Z.getKeybindForAction(b.kg4.SAVE_CLIP, !0)),
+        B = f.Z.isDecoupledGameClippingEnabled(),
         Z = (0, E.Z)(h.Z),
         { showClipsHeaderEntrypoint: L } = x.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
-    a()(null != B, 'Save clip keybind unset');
+    a()(null != y, 'Save clip keybind unset');
     let M = (0, l.e7)([m.default], () => m.default.locale),
         k = r.useMemo(
             () => [
@@ -102,11 +102,11 @@ function R() {
         U = r.useCallback(
             (e) => {
                 c.Z.setKeybind({
-                    ...B,
+                    ...y,
                     shortcut: e
                 });
             },
-            [B]
+            [y]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -119,7 +119,7 @@ function R() {
                             className: j.formItem,
                             children: v.intl.format(v.t.kiaF4e, { onClick: () => d.Z.open(b.oAB.VOICE, null, { scrollPosition: N.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
-                    y === _.x.BELOW_MINIMUM
+                    D === _.x.BELOW_MINIMUM
                         ? (0, i.jsx)(g.Z, {
                               look: g.z.WARNING,
                               className: j.formItem,
@@ -146,7 +146,7 @@ function R() {
                         })
                 ]
             }),
-            D &&
+            B &&
                 Z &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -230,7 +230,7 @@ function R() {
                         children: (0, i.jsx)('div', {
                             className: A.keyRecorder,
                             children: (0, i.jsx)(u.Z, {
-                                defaultValue: B.shortcut,
+                                defaultValue: y.shortcut,
                                 onChange: U
                             })
                         })

@@ -5,14 +5,14 @@ r.d(n, {
     }
 });
 var a,
-    s = r(200651),
-    o = r(192379),
+    o = r(200651),
+    s = r(192379),
     l = r(120356),
     u = r.n(l),
     c = r(58654),
     d = r(84735),
     f = r(763971);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -26,8 +26,8 @@ function _(e, n, r) {
     );
 }
 let h = '\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n',
-    p = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'text-transform', 'width', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
-class m extends (a = o.PureComponent) {
+    _ = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'text-transform', 'width', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
+class m extends (a = s.PureComponent) {
     componentDidMount() {
         var e, n;
         null === (e = (n = this.props).onResize) || void 0 === e || e.call(n, void 0), Promise.resolve().then(() => this.calculateSize());
@@ -44,16 +44,16 @@ class m extends (a = o.PureComponent) {
         let n = this._textArea;
         if (null == n) return;
         let { fontWidthEstimate: r, rows: a } = this.props,
-            s = null !== (e = this.props.value) && void 0 !== e ? e : n.value;
-        if (null != r && -1 === s.indexOf('\n') && s.length * r < 0.8 * n.offsetWidth) {
+            o = null !== (e = this.props.value) && void 0 !== e ? e : n.value;
+        if (null != r && -1 === o.indexOf('\n') && o.length * r < 0.8 * n.offsetWidth) {
             this.setState({ height: void 0 });
             return;
         }
         null == i && null != document.body && ((i = document.createElement('textarea')), document.body.appendChild(i));
-        let { paddingSize: o, borderSize: l, boxSizing: u, sizingStyle: c } = this.calculateNodeStyling(n);
-        i.setAttribute('style', c + ';' + h), (i.value = s), null != a ? i.setAttribute('rows', ''.concat(a)) : i.removeAttribute('rows');
+        let { paddingSize: s, borderSize: l, boxSizing: u, sizingStyle: c } = this.calculateNodeStyling(n);
+        i.setAttribute('style', c + ';' + h), (i.value = o), null != a ? i.setAttribute('rows', ''.concat(a)) : i.removeAttribute('rows');
         let d = i.scrollHeight;
-        'border-box' === u ? (d += l) : 'content-box' === u && (d -= o), this.setState({ height: d });
+        'border-box' === u ? (d += l) : 'content-box' === u && (d -= s), this.setState({ height: d });
     }
     calculateNodeStyling(e) {
         let n = window.getComputedStyle(e),
@@ -61,7 +61,7 @@ class m extends (a = o.PureComponent) {
             i = parseFloat(n.getPropertyValue('padding-bottom')) + parseFloat(n.getPropertyValue('padding-top')),
             a = parseFloat(n.getPropertyValue('border-bottom-width')) + parseFloat(n.getPropertyValue('border-top-width'));
         return {
-            sizingStyle: p.map((e) => ''.concat(e, ':').concat(n.getPropertyValue(e))).join(';'),
+            sizingStyle: _.map((e) => ''.concat(e, ':').concat(n.getPropertyValue(e))).join(';'),
             paddingSize: i,
             borderSize: a,
             boxSizing: r
@@ -100,8 +100,8 @@ class m extends (a = o.PureComponent) {
             ...this.state,
             ...e
         };
-        return (0, s.jsx)(d.t, {
-            children: (0, s.jsx)('textarea', {
+        return (0, o.jsx)(d.t, {
+            children: (0, o.jsx)('textarea', {
                 ...i,
                 className: u()(n, f.scrollbarGhostHairline),
                 ref: this.handleSetRef,
@@ -112,18 +112,18 @@ class m extends (a = o.PureComponent) {
     }
     constructor(e) {
         super(e),
-            _(this, '_textArea', void 0),
-            _(this, 'handleSetRef', (e) => {
+            p(this, '_textArea', void 0),
+            p(this, 'handleSetRef', (e) => {
                 this._textArea = e;
             }),
-            _(this, 'handleChange', (e) => {
+            p(this, 'handleChange', (e) => {
                 let { onChange: n } = this.props;
                 null == n || n(e), this.calculateSize();
             }),
             (this.state = { height: void 0 });
     }
 }
-_(m, 'defaultProps', {
+p(m, 'defaultProps', {
     autoFocus: !1,
     disabled: !1,
     autoCorrect: 'off'

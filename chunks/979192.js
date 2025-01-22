@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(442837),
     a = r(675478),
-    s = r(581883),
-    o = r(626135),
+    o = r(581883),
+    s = r(626135),
     l = r(434382),
     u = r(981631);
 async function c(e, n) {
@@ -14,7 +14,7 @@ async function c(e, n) {
         e,
         (r) => {
             (r.leaderboardsDisabled = !r.leaderboardsDisabled),
-                o.default.track(u.rMx.LEADERBOARD_USER_OPT_OUT_UPDATED, {
+                s.default.track(u.rMx.LEADERBOARD_USER_OPT_OUT_UPDATED, {
                     leaderboard_id: n,
                     guild_id: e,
                     leaderboards_disabled: r.leaderboardsDisabled
@@ -31,10 +31,10 @@ async function c(e, n) {
 }
 function d(e, n) {
     let r = (0, i.e7)(
-        [s.Z],
+        [o.Z],
         () => {
             var n, r;
-            return null === (r = s.Z.settings.guilds) || void 0 === r ? void 0 : null === (n = r.guilds) || void 0 === n ? void 0 : n[e];
+            return null === (r = o.Z.settings.guilds) || void 0 === r ? void 0 : null === (n = r.guilds) || void 0 === n ? void 0 : n[e];
         },
         [e]
     );

@@ -21,7 +21,7 @@ n.d(t, {
         return P;
     },
     s8: function () {
-        return y;
+        return D;
     }
 }),
     n(47120);
@@ -538,7 +538,7 @@ class P extends s.Component {
         });
     }
 }
-class y extends s.Component {
+class D extends s.Component {
     renderContent() {
         let e, t;
         let { navigationRecord: n, children: i } = this.props;

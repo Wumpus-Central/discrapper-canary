@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(53529),
-    s = r(436660),
-    o = r(887490);
+    o = r(436660),
+    s = r(887490);
 let l = ['applicationCommand'];
 function u(e) {
     let { insertBreak: n, insertText: r } = e;
@@ -29,13 +29,13 @@ function u(e) {
             }
             a.T.withSingleEntry(e, () => {
                 let n = !1;
-                for (let a of i) n && s.Q.splitNodes(e, { always: !0 }), r(a), (n = !0);
+                for (let a of i) n && o.Q.splitNodes(e, { always: !0 }), r(a), (n = !0);
             });
         }),
         e
     );
 }
 function c(e) {
-    let n = o.bN.getCurrentBlock(e);
+    let n = s.bN.getCurrentBlock(e);
     return null != n && !l.includes(n[0].type);
 }

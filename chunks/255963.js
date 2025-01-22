@@ -3,7 +3,7 @@ r.d(n, {
         return a;
     },
     x: function () {
-        return s;
+        return o;
     }
 });
 var i = r(570140);
@@ -13,7 +13,7 @@ let a = (e) => {
         guildId: e
     });
 };
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'EMOJI_INTERACTION_INITIATED',
         interaction: e

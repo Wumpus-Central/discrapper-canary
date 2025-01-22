@@ -1,22 +1,22 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(544891),
     a = r(981631),
-    s = r(388032);
-class o extends i.sX {
+    o = r(388032);
+class s extends i.sX {
     constructor(e, n) {
         super(
             e,
             n,
             null != n
-                ? s.intl.formatToPlainString(s.t.aKRa0d, {
+                ? o.intl.formatToPlainString(o.t.aKRa0d, {
                       statusPageURL: a.yXt.STATUS,
                       details: ''.concat(n)
                   })
-                : s.intl.formatToPlainString(s.t.aTVNen, { statusPageURL: a.yXt.STATUS })
+                : o.intl.formatToPlainString(o.t.aTVNen, { statusPageURL: a.yXt.STATUS })
         );
     }
 }

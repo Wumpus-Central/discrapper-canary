@@ -5,10 +5,10 @@ r.d(n, {
 });
 var i = r(259630),
     a = r(816552);
-function s(e, n, r, i) {
+function o(e, n, r, i) {
     !e.get(n) && e.set(n, Object.create(null)), (e.get(n)[r] = i);
 }
-function o(e, n) {
+function s(e, n) {
     for (var r = [], i = 2; i < arguments.length; i++) r[i - 2] = arguments[i];
     var a = e.get(n);
     if (!a) throw TypeError(''.concat(n, ' InternalSlot has not been initialized'));

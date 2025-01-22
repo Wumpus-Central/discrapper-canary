@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(119617),
+    o = r(192379),
+    s = r(119617),
     l = r(40851),
     u = r(745510),
     c = r(661637),
     d = r(146128),
     f = r(981631);
-let _ = 1000 / 60,
+let p = 1000 / 60,
     h = 24,
-    p = {
+    _ = {
         velocity: {
             type: 'static-random',
             minValue: {
@@ -69,24 +69,24 @@ let _ = 1000 / 60,
     g = [r(123353), ...(0, c.Z)(['snowflake'])];
 function E(e) {
     let { children: n } = e,
-        [r, i] = s.useState(!1),
+        [r, i] = o.useState(!1),
         c = (0, l.bp)(),
-        [E, v] = s.useState(null),
-        { confettiCanvas: I } = s.useContext(u.h),
-        T = (0, o.uR)(I, E),
-        b = s.useMemo(
+        [E, v] = o.useState(null),
+        { confettiCanvas: y } = o.useContext(u.h),
+        b = (0, s.uR)(y, E),
+        I = o.useMemo(
             () => ({
                 triggerAnimation: () => i(!0),
                 untriggerAnimation: () => i(!1)
             }),
             []
         ),
-        y = s.useCallback(() => {
-            let e = null == I ? void 0 : I.getCanvas();
+        T = o.useCallback(() => {
+            let e = null == y ? void 0 : y.getCanvas();
             if (null == e) return;
             let n = e.getBoundingClientRect();
-            T.createConfetti({
-                ...p,
+            b.createConfetti({
+                ..._,
                 position: {
                     type: 'static-random',
                     minValue: {
@@ -99,18 +99,18 @@ function E(e) {
                     }
                 }
             });
-        }, [T, I]);
-    return (s.useEffect(() => {
-        let e = r ? setInterval(y, _) : null;
+        }, [b, y]);
+    return (o.useEffect(() => {
+        let e = r ? setInterval(T, p) : null;
         return () => clearInterval(e);
-    }, [r, y]),
+    }, [r, T]),
     c === f.IlC.OVERLAY)
         ? (0, a.jsx)(a.Fragment, { children: n })
         : (0, a.jsxs)(d.Rm.Provider, {
-              value: b,
+              value: I,
               children: [
                   n,
-                  (0, a.jsx)(o.Ji, {
+                  (0, a.jsx)(s.Ji, {
                       ref: v,
                       colors: m,
                       sprites: g,

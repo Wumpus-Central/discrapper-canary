@@ -21,22 +21,22 @@ var l,
     E = n(594174),
     b = n(981631);
 let Z = !1,
-    S = '',
-    N = 0,
+    N = '',
+    S = 0,
     T = [],
     j = !1,
     A = new Set(),
     y = null;
 function P() {
-    (S = ''), (N = 0), (T = []), (A = new Set()), (Z = !1), (y = null);
+    (N = ''), (S = 0), (T = []), (A = new Set()), (Z = !1), (y = null);
 }
 function M(e) {
-    (S = e), (N = 0), R();
+    (N = e), (S = 0), R();
 }
 function R() {
     if (!Z) return !1;
     let e = x.Z.getChannel(y);
-    if (0 === S.trim().length)
+    if (0 === N.trim().length)
         return (
             null != i && i.clearQuery(),
             (T = (function (e) {
@@ -63,7 +63,7 @@ function R() {
     return (
         null != i &&
             i.setQuery(
-                S,
+                N,
                 {
                     friends: !0,
                     provisional: !1
@@ -109,7 +109,7 @@ function k(e, t) {
 }
 function O(e) {
     let { results: t } = e;
-    if (!Z || '' === S) return;
+    if (!Z || '' === N) return;
     let n = [];
     for (let { id: e, comparator: i } of t) {
         let t = E.default.getUser(e);
@@ -149,12 +149,12 @@ class H extends (l = d.ZP.Store) {
         return A;
     }
     getQuery() {
-        return S;
+        return N;
     }
     getState() {
         return {
-            query: S,
-            selectedRow: N,
+            query: N,
+            selectedRow: S,
             selectedUsers: A,
             results: T,
             hasFriends: j
@@ -192,7 +192,7 @@ let G = new H(u.Z, {
         (y = e.channelId), M(e.query);
     },
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
-        N = e.row;
+        S = e.row;
     },
     PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
         let { userId: t } = e;

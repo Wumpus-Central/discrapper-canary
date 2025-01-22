@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(626135),
+    o = r(570140),
+    s = r(626135),
     l = r(314897),
     u = r(981631);
 function c(e, n, r) {
@@ -18,7 +18,7 @@ function c(e, n, r) {
     );
 }
 function d(e, n) {
-    o.default.track(u.rMx.STREAMER_MODE_TOGGLE, {
+    s.default.track(u.rMx.STREAMER_MODE_TOGGLE, {
         enabled: e,
         automatic: n
     });
@@ -32,17 +32,17 @@ let f = {
         disableNotifications: !0,
         enableContentProtection: !1
     },
-    _ = {},
+    p = {},
     h = { ...f };
-function p(e) {
-    let n = _[e];
-    return null == n && (n = _[e] = { ...f }), n;
+function _(e) {
+    let n = p[e];
+    return null == n && (n = p[e] = { ...f }), n;
 }
 function m(e) {
-    !e.isSwitchingAccount && (_ = {});
+    !e.isSwitchingAccount && (p = {});
 }
 function g(e) {
-    e.userId in _ && delete _[e.userId];
+    e.userId in p && delete p[e.userId];
 }
 function E(e) {
     let n = { ...h };
@@ -50,7 +50,7 @@ function E(e) {
         (h[e.key] = e.value),
         'enabled' === e.key
             ? d(e.value, !1)
-            : o.default.track(u.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
+            : s.default.track(u.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
                   enabled: h.enabled,
                   automatic: h.autoToggle,
                   disable_notifications: h.disableNotifications,
@@ -76,16 +76,16 @@ function v(e) {
         return (h.enabled = n), d(n, !0), !0;
     }
 }
-class I extends (i = a.ZP.PersistedStore) {
+class y extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        Object.assign(_, e),
+        Object.assign(p, e),
             this.syncWith([l.default], () => {
                 let e = l.default.getId();
-                h = null != e ? p(e) : { ...f };
+                h = null != e ? _(e) : { ...f };
             });
     }
     getState() {
-        return _;
+        return p;
     }
     getSettings() {
         return h;
@@ -112,15 +112,15 @@ class I extends (i = a.ZP.PersistedStore) {
         return this.enabled && h.enableContentProtection;
     }
 }
-c(I, 'displayName', 'StreamerModeStore'),
-    c(I, 'persistKey', 'StreamerModeStore'),
-    c(I, 'migrations', [
+c(y, 'displayName', 'StreamerModeStore'),
+    c(y, 'persistKey', 'StreamerModeStore'),
+    c(y, 'migrations', [
         (e) => {
             let n = l.default.getId();
             return null == e || null == n ? {} : { [n]: { ...e } };
         }
     ]),
-    (n.Z = new I(s.Z, {
+    (n.Z = new y(o.Z, {
         LOGOUT: m,
         MULTI_ACCOUNT_REMOVE_ACCOUNT: g,
         STREAMER_MODE_UPDATE: E,

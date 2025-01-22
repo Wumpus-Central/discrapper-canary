@@ -1,12 +1,12 @@
 r.d(n, {
     s: function () {
-        return o;
+        return s;
     }
 });
 var i = r(280551),
     a = r(706454),
-    s = r(388032);
-function o(e) {
+    o = r(388032);
+function s(e) {
     let n;
     let r = a.default.locale;
     try {
@@ -16,9 +16,9 @@ function o(e) {
     }
     if (null != i.s)
         try {
-            let a = r === s.initialLocale,
-                o = null != r && r.split('-')[0] === (null === s.systemLocale || void 0 === s.systemLocale ? void 0 : s.systemLocale.split('-')[0]),
-                l = (0, i.s)(a && o ? void 0 : r, e);
+            let a = r === o.initialLocale,
+                s = null != r && r.split('-')[0] === (null === o.systemLocale || void 0 === o.systemLocale ? void 0 : o.systemLocale.split('-')[0]),
+                l = (0, i.s)(a && s ? void 0 : r, e);
             if (null != l)
                 return function (e) {
                     try {

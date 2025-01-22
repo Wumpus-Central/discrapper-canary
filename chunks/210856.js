@@ -4,6 +4,6 @@ function a(e, n, r) {
     return (e._prev = i.concat([e._prev.slice(1), i.from([r ? n : a])])), a;
 }
 n.encrypt = function (e, n, r) {
-    for (var s = n.length, o = i.allocUnsafe(s), l = -1; ++l < s; ) o[l] = a(e, n[l], r);
-    return o;
+    for (var o = n.length, s = i.allocUnsafe(o), l = -1; ++l < o; ) s[l] = a(e, n[l], r);
+    return s;
 };

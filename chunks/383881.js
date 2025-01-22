@@ -3,16 +3,16 @@ r.d(n, {
         return u;
     },
     O: function () {
-        return o;
+        return s;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(772848),
-    s = r(689201);
-function o() {
+    o = r(689201);
+function s() {
     return (0, i.jsx)('svg', {
-        className: s.headerWave,
+        className: o.headerWave,
         version: '1.1',
         preserveAspectRatio: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
@@ -30,7 +30,7 @@ function o() {
 let l = (0, a.Z)();
 function u() {
     return (0, i.jsxs)('svg', {
-        className: s.bodyWave,
+        className: o.bodyWave,
         version: '1.1',
         preserveAspectRatio: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
@@ -50,15 +50,15 @@ function u() {
                 children: [
                     (0, i.jsx)('stop', {
                         offset: '0',
-                        className: s.bodyWaveGradientStop1
+                        className: o.bodyWaveGradientStop1
                     }),
                     (0, i.jsx)('stop', {
                         offset: '0.5',
-                        className: s.bodyWaveGradientStop2
+                        className: o.bodyWaveGradientStop2
                     }),
                     (0, i.jsx)('stop', {
                         offset: '1',
-                        className: s.bodyWaveGradientStop3
+                        className: o.bodyWaveGradientStop3
                     })
                 ]
             }),

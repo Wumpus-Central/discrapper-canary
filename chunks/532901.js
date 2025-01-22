@@ -1,23 +1,23 @@
 r.d(n, {
     Z: function () {
-        return _;
+        return p;
     }
 });
 var i = r(200651),
     a = r(192379),
-    s = r(25209),
-    o = r(794295),
+    o = r(25209),
+    s = r(794295),
     l = r(865427),
     u = r(853425),
     c = r(49012),
     d = r(773352);
 let f = 1024;
-function _(e) {
+function p(e) {
     return {
-        react(n, r, _) {
-            if (e.enableBuildOverrides && (0, l._G)(n.target)) return (0, i.jsx)(a.Fragment, { children: (0, i.jsx)(u.Z, { url: n.target }, n.target) }, _.key);
-            let h = r(n.content, _),
-                p = 'string' == typeof n.title && 0 !== n.title.length ? n.title : (0, s.Rp)(n.content),
+        react(n, r, p) {
+            if (e.enableBuildOverrides && (0, l._G)(n.target)) return (0, i.jsx)(a.Fragment, { children: (0, i.jsx)(u.Z, { url: n.target }, n.target) }, p.key);
+            let h = r(n.content, p),
+                _ = 'string' == typeof n.title && 0 !== n.title.length ? n.title : (0, o.Rp)(n.content),
                 m = () => (0, d.r)(n),
                 g = (null == e ? void 0 : e.mustConfirmExternalLink)
                     ? (e) => (
@@ -26,37 +26,37 @@ function _(e) {
                           (0, c.q)({
                               href: n.target,
                               shouldConfirm: !0,
-                              messageId: _.messageId,
-                              channelId: _.channelId
+                              messageId: p.messageId,
+                              channelId: p.channelId
                           }),
                           null
                       )
                     : void 0;
-            if (_.previewLinkTarget && !(0, d.r)(n)) {
+            if (p.previewLinkTarget && !(0, d.r)(n)) {
                 let e = '\n\n('.concat(n.target, ')');
-                p.length + e.length > f && ((e = '...' + e), (p = (p = p.substr(0, f - e.length)).trimEnd())), (p += e);
+                _.length + e.length > f && ((e = '...' + e), (_ = (_ = _.substr(0, f - e.length)).trimEnd())), (_ += e);
             }
-            return _.noStyleAndInteraction
+            return p.noStyleAndInteraction
                 ? (0, i.jsx)(
                       'span',
                       {
-                          title: p,
+                          title: _,
                           children: h
                       },
-                      _.key
+                      p.key
                   )
                 : (0, i.jsx)(
-                      o.Z,
+                      s.Z,
                       {
-                          title: p,
+                          title: _,
                           href: n.target,
                           trusted: m,
                           onClick: g,
-                          messageId: _.messageId,
-                          channelId: _.channelId,
+                          messageId: p.messageId,
+                          channelId: p.channelId,
                           children: h
                       },
-                      _.key
+                      p.key
                   );
         }
     };

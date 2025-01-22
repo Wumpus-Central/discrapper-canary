@@ -5,16 +5,16 @@
         n,
         i,
         a,
-        s = 'undefined' != typeof window ? window : (r.g, r.g),
-        o = (s.cancelRequestAnimationFrame && s.requestAnimationFrame) || setTimeout,
-        l = s.cancelRequestAnimationFrame || clearTimeout,
+        o = 'undefined' != typeof window ? window : (r.g, r.g),
+        s = (o.cancelRequestAnimationFrame && o.requestAnimationFrame) || setTimeout,
+        l = o.cancelRequestAnimationFrame || clearTimeout,
         u = [],
         c = 0,
         d = !1,
         f = 7,
-        _ = 35,
+        p = 35,
         h = 125,
-        p = 0,
+        _ = 0,
         m = 0,
         g = 0,
         E = {
@@ -26,62 +26,62 @@
                 return e < 0 ? 0 : e;
             }
         },
-        v = I(function () {
-            (f = 22), (h = 66), (_ = 0);
+        v = y(function () {
+            (f = 22), (h = 66), (p = 0);
         });
-    function I(e) {
+    function y(e) {
         var n,
             r,
             i = 99,
             a = function () {
-                var s = Date.now() - r;
-                s < i ? (n = setTimeout(a, i - s)) : ((n = null), e());
+                var o = Date.now() - r;
+                o < i ? (n = setTimeout(a, i - o)) : ((n = null), e());
             };
         return function () {
             (r = Date.now()), !n && (n = setTimeout(a, i));
         };
     }
-    function T() {
+    function b() {
         d && (a && l(a), i && clearTimeout(i), (d = !1));
     }
-    function b() {
-        125 != h && ((f = 7), (h = 125), (_ = 35), d && (T(), A())), v();
+    function I() {
+        125 != h && ((f = 7), (h = 125), (p = 35), d && (b(), A())), v();
     }
-    function y() {
-        (a = null), (i = setTimeout(N, 0));
+    function T() {
+        (a = null), (i = setTimeout(C, 0));
     }
     function S() {
-        (i = null), o(y);
+        (i = null), s(T);
     }
     function A() {
-        if (!d) (n = h - (Date.now() - m)), (e = Date.now()), (d = !0), _ && n < _ && (n = _), n > 9 ? (i = setTimeout(S, n)) : ((n = 0), S());
+        if (!d) (n = h - (Date.now() - m)), (e = Date.now()), (d = !0), p && n < p && (n = p), n > 9 ? (i = setTimeout(S, n)) : ((n = 0), S());
     }
-    function N() {
+    function C() {
         var r,
             a,
-            s,
-            o = f > 9 ? 9 : 1;
-        if (((m = Date.now()), (d = !1), (i = null), c > 2 || m - n - 50 < e)) for (a = 0, s = u.length; a < s && E.timeRemaining() > o; a++) (r = u.shift()), g++, r && r(E);
+            o,
+            s = f > 9 ? 9 : 1;
+        if (((m = Date.now()), (d = !1), (i = null), c > 2 || m - n - 50 < e)) for (a = 0, o = u.length; a < o && E.timeRemaining() > s; a++) (r = u.shift()), g++, r && r(E);
         u.length ? A() : (c = 0);
     }
-    function C(e) {
-        return p++, u.push(e), A(), p;
+    function N(e) {
+        return _++, u.push(e), A(), _;
     }
     function R(e) {
         var n = e - 1 - g;
         u[n] && (u[n] = null);
     }
-    if (s.requestIdleCallback && s.cancelIdleCallback)
+    if (o.requestIdleCallback && o.cancelIdleCallback)
         try {
-            s.requestIdleCallback(function () {}, { timeout: 0 });
+            o.requestIdleCallback(function () {}, { timeout: 0 });
         } catch (e) {
             !(function (e) {
                 var n, r;
                 if (
-                    ((s.requestIdleCallback = function (n, r) {
+                    ((o.requestIdleCallback = function (n, r) {
                         return r && 'number' == typeof r.timeout ? e(n, r.timeout) : e(n);
                     }),
-                    s.IdleCallbackDeadline && (n = IdleCallbackDeadline.prototype))
+                    o.IdleCallbackDeadline && (n = IdleCallbackDeadline.prototype))
                 ) {
                     if (!(r = Object.getOwnPropertyDescriptor(n, 'timeRemaining')) || !r.configurable || !r.get) return;
                     Object.defineProperty(n, 'timeRemaining', {
@@ -92,31 +92,31 @@
                         configurable: !0
                     });
                 }
-            })(s.requestIdleCallback);
+            })(o.requestIdleCallback);
         }
     else
-        (s.requestIdleCallback = C),
-            (s.cancelIdleCallback = R),
-            s.document &&
+        (o.requestIdleCallback = N),
+            (o.cancelIdleCallback = R),
+            o.document &&
                 document.addEventListener &&
-                (s.addEventListener('scroll', b, !0),
-                s.addEventListener('resize', b),
-                document.addEventListener('focus', b, !0),
-                document.addEventListener('mouseover', b, !0),
+                (o.addEventListener('scroll', I, !0),
+                o.addEventListener('resize', I),
+                document.addEventListener('focus', I, !0),
+                document.addEventListener('mouseover', I, !0),
                 ['click', 'keypress', 'touchstart', 'mousedown'].forEach(function (e) {
-                    document.addEventListener(e, b, {
+                    document.addEventListener(e, I, {
                         capture: !0,
                         passive: !0
                     });
                 }),
-                s.MutationObserver &&
-                    new MutationObserver(b).observe(document.documentElement, {
+                o.MutationObserver &&
+                    new MutationObserver(I).observe(document.documentElement, {
                         childList: !0,
                         subtree: !0,
                         attributes: !0
                     }));
     return {
-        request: C,
+        request: N,
         cancel: R
     };
 });

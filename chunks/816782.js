@@ -1,5 +1,5 @@
 var l = t(570140);
-e.Z = {
+n.Z = {
     toggleMembersSection() {
         l.Z.dispatch({ type: 'CHANNEL_TOGGLE_MEMBERS_SECTION' });
     },

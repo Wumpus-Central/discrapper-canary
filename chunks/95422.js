@@ -1,11 +1,11 @@
 r.d(n, {
     a: function () {
-        return s;
+        return o;
     }
 });
 var i = r(228624),
     a = r(388032);
-let s = (e) => {
+let o = (e) => {
     let n = (0, i.ed)('usePurchasedProductName');
     if (null == e) return '';
     let r = a.intl.string(a.t.z7y5vL);

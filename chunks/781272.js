@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(477660),
-    s = r.n(a),
-    o = r(481060);
+    o = r.n(a),
+    s = r(481060);
 function l(e) {
     return (
         (e.paragraph = {
@@ -25,9 +25,9 @@ function l(e) {
                     n && n.onClick ? ((a.onClick = n.onClick), (a.onContextMenu = n.onContextMenu)) : (a.onClick = n);
                 }
                 return (
-                    null == a.onClick && (a.href = s().sanitizeUrl(e.target)),
+                    null == a.onClick && (a.href = o().sanitizeUrl(e.target)),
                     (0, i.jsx)(
-                        o.Anchor,
+                        s.Anchor,
                         {
                             title: e.title,
                             ...a,

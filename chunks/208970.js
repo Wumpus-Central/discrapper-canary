@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(592125);
+    o = r(570140),
+    s = r(592125);
 function l(e, n, r) {
     return (
         n in e
@@ -17,7 +17,7 @@ function l(e, n, r) {
 }
 let u = {};
 function c(e) {
-    let n = o.Z.getChannel(e);
+    let n = s.Z.getChannel(e);
     return !!(null != n && n.isForumLikeChannel()) || !1;
 }
 function d(e) {
@@ -42,7 +42,7 @@ function f(e) {
         results: null
     };
 }
-function _(e) {
+function p(e) {
     let { channelId: n } = e;
     if (!c(n)) return !1;
     let r = d(n);
@@ -61,7 +61,7 @@ function h(e) {
         results: r
     };
 }
-function p(e) {
+function _(e) {
     let { channelId: n } = e;
     if (!c(n)) return !1;
     let r = d(n);
@@ -94,7 +94,7 @@ function E(e) {
 function v() {
     u = {};
 }
-class I extends (i = a.ZP.Store) {
+class y extends (i = a.ZP.Store) {
     getSearchQuery(e) {
         let n = u[e];
         return null == n ? void 0 : n.query;
@@ -113,14 +113,14 @@ class I extends (i = a.ZP.Store) {
         return (null == n ? void 0 : n.results) != null && n.results.length > 0;
     }
 }
-l(I, 'displayName', 'ForumSearchStore'),
-    (n.Z = new I(s.Z, {
+l(y, 'displayName', 'ForumSearchStore'),
+    (n.Z = new y(o.Z, {
         CONNECTION_OPEN: v,
         THREAD_DELETE: g,
         CHANNEL_DELETE: E,
         FORUM_SEARCH_QUERY_UPDATED: f,
-        FORUM_SEARCH_START: _,
+        FORUM_SEARCH_START: p,
         FORUM_SEARCH_SUCCESS: h,
-        FORUM_SEARCH_FAILURE: p,
+        FORUM_SEARCH_FAILURE: _,
         FORUM_SEARCH_CLEAR: m
     }));

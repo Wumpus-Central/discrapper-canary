@@ -1,11 +1,11 @@
 r.d(n, {
     y: function () {
-        return s;
+        return o;
     }
 });
 var i = r(927923),
     a = r(981631);
-function s(e) {
+function o(e) {
     switch (e) {
         case a.ABu.XBOX:
             return i.YE.XBOX;

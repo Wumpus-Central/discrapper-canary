@@ -21,24 +21,24 @@ var a = {
                 e.set(n.subarray(r, r + i), a);
                 return;
             }
-            for (var s = 0; s < i; s++) e[a + s] = n[r + s];
+            for (var o = 0; o < i; o++) e[a + o] = n[r + o];
         },
         flattenChunks: function (e) {
-            var n, r, i, a, s, o;
+            var n, r, i, a, o, s;
             for (n = 0, i = 0, r = e.length; n < r; n++) i += e[n].length;
-            for (n = 0, o = new Uint8Array(i), a = 0, r = e.length; n < r; n++) (s = e[n]), o.set(s, a), (a += s.length);
-            return o;
+            for (n = 0, s = new Uint8Array(i), a = 0, r = e.length; n < r; n++) (o = e[n]), s.set(o, a), (a += o.length);
+            return s;
         }
     },
-    s = {
+    o = {
         arraySet: function (e, n, r, i, a) {
-            for (var s = 0; s < i; s++) e[a + s] = n[r + s];
+            for (var o = 0; o < i; o++) e[a + o] = n[r + o];
         },
         flattenChunks: function (e) {
             return [].concat.apply([], e);
         }
     };
 (n.setTyped = function (e) {
-    e ? ((n.Buf8 = Uint8Array), (n.Buf16 = Uint16Array), (n.Buf32 = Int32Array), n.assign(n, a)) : ((n.Buf8 = Array), (n.Buf16 = Array), (n.Buf32 = Array), n.assign(n, s));
+    e ? ((n.Buf8 = Uint8Array), (n.Buf16 = Uint16Array), (n.Buf32 = Int32Array), n.assign(n, a)) : ((n.Buf8 = Array), (n.Buf16 = Array), (n.Buf32 = Array), n.assign(n, o));
 }),
     n.setTyped(r);

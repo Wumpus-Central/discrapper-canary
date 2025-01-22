@@ -19,7 +19,7 @@ function n(e) {
                 ]
             }
         },
-        s = [
+        o = [
             a,
             {
                 begin: '\\n\\n',
@@ -50,7 +50,7 @@ function n(e) {
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: s
+                    contains: o
                 }
             },
             {
@@ -76,7 +76,7 @@ function n(e) {
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: s
+                    contains: o
                 }
             },
             e.inherit(a, { relevance: 0 })

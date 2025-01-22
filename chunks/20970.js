@@ -1,14 +1,14 @@
 r.d(n, {
     j: function () {
-        return p;
+        return _;
     }
 });
 var i = r(477660);
-let { newline: a, paragraph: s, url: o, link: l, strong: u, u: c, br: d, em: f, image: _, text: h } = i.defaultRules,
-    p = {
+let { newline: a, paragraph: o, url: s, link: l, strong: u, u: c, br: d, em: f, image: p, text: h } = i.defaultRules,
+    _ = {
         newline: a,
-        paragraph: s,
-        url: o,
+        paragraph: o,
+        url: s,
         link: {
             ...l,
             parse(e, n, r) {
@@ -20,7 +20,7 @@ let { newline: a, paragraph: s, url: o, link: l, strong: u, u: c, br: d, em: f, 
         u: c,
         br: d,
         em: f,
-        image: _,
+        image: p,
         hook: {
             order: h.order,
             match: (0, i.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),

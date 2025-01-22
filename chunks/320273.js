@@ -1,37 +1,37 @@
 r(996173);
 var i = r(147018),
     a = r(161581),
-    s = r(926515),
-    o = r(581031),
+    o = r(926515),
+    s = r(581031),
     l = r(325008),
     u = r(259230),
     c = r(859209),
     d = r(4340),
     f = r(90338),
-    _ = r(865312),
+    p = r(865312),
     h = r(673743),
-    p = r(644659),
+    _ = r(644659),
     m = r(603528),
     g = r(354848),
     E = r(740362),
     v = r(566885),
-    I = r(974971),
-    T = r(24033),
-    b = r(622281),
-    y = r(714050),
+    y = r(974971),
+    b = r(24033),
+    I = r(622281),
+    T = r(714050),
     S = r(803938),
     A = r(879),
-    N = r(981971),
-    C = r(11697),
+    C = r(981971),
+    N = r(11697),
     R = r(202934),
     O = r(641236),
     D = r(976418),
-    L = O('iterator'),
-    x = 'URLSearchParams',
-    w = x + 'Iterator',
-    P = p.set,
-    M = p.getterFor(x),
-    k = p.getterFor(w),
+    x = O('iterator'),
+    L = 'URLSearchParams',
+    w = L + 'Iterator',
+    P = _.set,
+    M = _.getterFor(L),
+    k = _.getterFor(w),
     U = Object.getOwnPropertyDescriptor,
     B = function (e) {
         if (!l) return a[e];
@@ -39,22 +39,22 @@ var i = r(147018),
         return n && n.value;
     },
     G = B('fetch'),
-    F = B('Request'),
-    Z = B('Headers'),
-    V = F && F.prototype,
-    j = Z && Z.prototype,
+    Z = B('Request'),
+    F = B('Headers'),
+    V = Z && Z.prototype,
+    j = F && F.prototype,
     H = a.RegExp,
     Y = a.TypeError,
     W = a.decodeURIComponent,
     K = a.encodeURIComponent,
-    z = o(''.charAt),
-    q = o([].join),
-    Q = o([].push),
-    X = o(''.replace),
-    J = o([].shift),
-    $ = o([].splice),
-    ee = o(''.split),
-    et = o(''.slice),
+    z = s(''.charAt),
+    q = s([].join),
+    Q = s([].push),
+    X = s(''.replace),
+    J = s([].shift),
+    $ = s([].splice),
+    ee = s(''.split),
+    et = s(''.slice),
     en = /\+/g,
     er = [, , , ,],
     ei = function (e) {
@@ -67,7 +67,7 @@ var i = r(147018),
             return e;
         }
     },
-    es = function (e) {
+    eo = function (e) {
         var n = X(e, en, ' '),
             r = 4;
         try {
@@ -77,7 +77,7 @@ var i = r(147018),
             return n;
         }
     },
-    eo = /[!'()~]|%20/g,
+    es = /[!'()~]|%20/g,
     el = {
         '!': '%21',
         "'": '%27',
@@ -90,13 +90,13 @@ var i = r(147018),
         return el[e];
     },
     ec = function (e) {
-        return X(K(e), eo, eu);
+        return X(K(e), es, eu);
     },
     ed = h(
         function (e, n) {
             P(this, {
                 type: w,
-                iterator: N(M(e).entries),
+                iterator: C(M(e).entries),
                 kind: n
             });
         },
@@ -111,10 +111,10 @@ var i = r(147018),
         !0
     ),
     ef = function (e) {
-        (this.entries = []), (this.url = null), void 0 !== e && (b(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === z(e, 0) ? et(e, 1) : e) : y(e)));
+        (this.entries = []), (this.url = null), void 0 !== e && (I(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === z(e, 0) ? et(e, 1) : e) : T(e)));
     };
 ef.prototype = {
-    type: x,
+    type: L,
     bindURL: function (e) {
         (this.url = e), this.update();
     },
@@ -123,16 +123,16 @@ ef.prototype = {
             r,
             i,
             a,
-            o,
+            s,
             l,
             u,
-            c = C(e);
+            c = N(e);
         if (c)
-            for (r = (n = N(e, c)).next; !(i = s(r, n)).done; ) {
-                if ((l = s((o = (a = N(T(i.value))).next), a)).done || (u = s(o, a)).done || !s(o, a).done) throw Y('Expected sequence with length 2');
+            for (r = (n = C(e, c)).next; !(i = o(r, n)).done; ) {
+                if ((l = o((s = (a = C(b(i.value))).next), a)).done || (u = o(s, a)).done || !o(s, a).done) throw Y('Expected sequence with length 2');
                 Q(this.entries, {
-                    key: y(l.value),
-                    value: y(u.value)
+                    key: T(l.value),
+                    value: T(u.value)
                 });
             }
         else
@@ -140,7 +140,7 @@ ef.prototype = {
                 E(e, d) &&
                     Q(this.entries, {
                         key: d,
-                        value: y(e[d])
+                        value: T(e[d])
                     });
     },
     parseQuery: function (e) {
@@ -149,8 +149,8 @@ ef.prototype = {
                 (n = i[a++]).length &&
                     ((r = ee(n, '=')),
                     Q(this.entries, {
-                        key: es(J(r)),
-                        value: es(q(r, '='))
+                        key: eo(J(r)),
+                        value: eo(q(r, '='))
                     }));
         }
     },
@@ -165,13 +165,13 @@ ef.prototype = {
         this.url && this.url.update();
     }
 };
-var e_ = function () {
+var ep = function () {
         m(this, eh);
         var e = arguments.length > 0 ? arguments[0] : void 0,
             n = P(this, new ef(e));
         !l && (this.size = n.entries.length);
     },
-    eh = e_.prototype;
+    eh = ep.prototype;
 if (
     (f(
         eh,
@@ -180,17 +180,17 @@ if (
                 var r = M(this);
                 R(arguments.length, 2),
                     Q(r.entries, {
-                        key: y(e),
-                        value: y(n)
+                        key: T(e),
+                        value: T(n)
                     }),
                     !l && this.length++,
                     r.updateURL();
             },
             delete: function (e) {
-                for (var n = M(this), r = R(arguments.length, 1), i = n.entries, a = y(e), s = r < 2 ? void 0 : arguments[1], o = void 0 === s ? s : y(s), u = 0; u < i.length; ) {
+                for (var n = M(this), r = R(arguments.length, 1), i = n.entries, a = T(e), o = r < 2 ? void 0 : arguments[1], s = void 0 === o ? o : T(o), u = 0; u < i.length; ) {
                     var c = i[u];
-                    if (c.key === a && (void 0 === o || c.value === o)) {
-                        if (($(i, u, 1), void 0 !== o)) break;
+                    if (c.key === a && (void 0 === s || c.value === s)) {
+                        if (($(i, u, 1), void 0 !== s)) break;
                     } else u++;
                 }
                 !l && (this.size = i.length), n.updateURL();
@@ -198,19 +198,19 @@ if (
             get: function (e) {
                 var n = M(this).entries;
                 R(arguments.length, 1);
-                for (var r = y(e), i = 0; i < n.length; i++) if (n[i].key === r) return n[i].value;
+                for (var r = T(e), i = 0; i < n.length; i++) if (n[i].key === r) return n[i].value;
                 return null;
             },
             getAll: function (e) {
                 var n = M(this).entries;
                 R(arguments.length, 1);
-                for (var r = y(e), i = [], a = 0; a < n.length; a++) n[a].key === r && Q(i, n[a].value);
+                for (var r = T(e), i = [], a = 0; a < n.length; a++) n[a].key === r && Q(i, n[a].value);
                 return i;
             },
             has: function (e) {
-                for (var n = M(this).entries, r = R(arguments.length, 1), i = y(e), a = r < 2 ? void 0 : arguments[1], s = void 0 === a ? a : y(a), o = 0; o < n.length; ) {
-                    var l = n[o++];
-                    if (l.key === i && (void 0 === s || l.value === s)) return !0;
+                for (var n = M(this).entries, r = R(arguments.length, 1), i = T(e), a = r < 2 ? void 0 : arguments[1], o = void 0 === a ? a : T(a), s = 0; s < n.length; ) {
+                    var l = n[s++];
+                    if (l.key === i && (void 0 === o || l.value === o)) return !0;
                 }
                 return !1;
             },
@@ -218,10 +218,10 @@ if (
                 var r,
                     i = M(this);
                 R(arguments.length, 1);
-                for (var a = i.entries, s = !1, o = y(e), u = y(n), c = 0; c < a.length; c++) (r = a[c]).key === o && (s ? $(a, c--, 1) : ((s = !0), (r.value = u)));
-                !s &&
+                for (var a = i.entries, o = !1, s = T(e), u = T(n), c = 0; c < a.length; c++) (r = a[c]).key === s && (o ? $(a, c--, 1) : ((o = !0), (r.value = u)));
+                !o &&
                     Q(a, {
-                        key: o,
+                        key: s,
                         value: u
                     }),
                     !l && (this.size = a.length),
@@ -249,7 +249,7 @@ if (
         },
         { enumerable: !0 }
     ),
-    c(eh, L, eh.entries, { name: 'entries' }),
+    c(eh, x, eh.entries, { name: 'entries' }),
     c(
         eh,
         'toString',
@@ -266,28 +266,28 @@ if (
             configurable: !0,
             enumerable: !0
         }),
-    _(e_, x),
+    p(ep, L),
     i(
         {
             global: !0,
             constructor: !0,
             forced: !u
         },
-        { URLSearchParams: e_ }
+        { URLSearchParams: ep }
     ),
-    !u && g(Z))
+    !u && g(F))
 ) {
-    var ep = o(j.has),
-        em = o(j.set),
+    var e_ = s(j.has),
+        em = s(j.set),
         eg = function (e) {
-            if (b(e)) {
+            if (I(e)) {
                 var n,
                     r = e.body;
-                if (I(r) === x)
+                if (y(r) === L)
                     return (
-                        !ep((n = e.headers ? new Z(e.headers) : new Z()), 'content-type') && em(n, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
+                        !e_((n = e.headers ? new F(e.headers) : new F()), 'content-type') && em(n, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
                         S(e, {
-                            body: A(0, y(r)),
+                            body: A(0, T(r)),
                             headers: A(0, n)
                         })
                     );
@@ -309,10 +309,10 @@ if (
                     }
                 }
             ),
-        g(F))
+        g(Z))
     ) {
         var eE = function (e) {
-            return m(this, V), new F(e, arguments.length > 1 ? eg(arguments[1]) : {});
+            return m(this, V), new Z(e, arguments.length > 1 ? eg(arguments[1]) : {});
         };
         (V.constructor = eE),
             (eE.prototype = V),
@@ -328,6 +328,6 @@ if (
     }
 }
 e.exports = {
-    URLSearchParams: e_,
+    URLSearchParams: ep,
     getState: M
 };

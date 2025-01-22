@@ -1,11 +1,11 @@
 r.d(n, {
     U: function () {
-        return o;
+        return s;
     }
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2024-12_quests_nitro_permadecos',
     label: 'Quests Nitro Permadecos',
@@ -18,6 +18,6 @@ let s = (0, i.B)({
         }
     ]
 });
-function o() {
-    return s.getCurrentConfig({ location: 'quest_nitro_permadecos' }, { autoTrackExposure: !1 }).enabled;
+function s() {
+    return o.getCurrentConfig({ location: 'quest_nitro_permadecos' }, { autoTrackExposure: !1 }).enabled;
 }

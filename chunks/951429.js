@@ -3,7 +3,7 @@ r.d(n, {
         return a;
     },
     P: function () {
-        return s;
+        return o;
     }
 });
 var i = r(576838);
@@ -12,19 +12,19 @@ function a(e) {
         r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100;
     if (0 === e) return 0;
     let a = e / r,
-        s = i.Z.getCurrentConfig({ location: 'perceptualToAmplitude' });
-    return (n = a < 1 && s.gamma >= 0 ? Math.pow(a, s.gamma) : Math.pow(10, ((a - 1) * (a > 1 ? s.boostRange : s.attenuationRange)) / 20)) * r;
+        o = i.Z.getCurrentConfig({ location: 'perceptualToAmplitude' });
+    return (n = a < 1 && o.gamma >= 0 ? Math.pow(a, o.gamma) : Math.pow(10, ((a - 1) * (a > 1 ? o.boostRange : o.attenuationRange)) / 20)) * r;
 }
-function s(e) {
+function o(e) {
     let n,
         r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100;
     if (0 === e) return 0;
     let a = e / r,
-        s = i.Z.getCurrentConfig({ location: 'amplitudeToPerceptual' });
-    if (a < 1 && s.gamma >= 0) n = Math.pow(a, 1 / s.gamma);
+        o = i.Z.getCurrentConfig({ location: 'amplitudeToPerceptual' });
+    if (a < 1 && o.gamma >= 0) n = Math.pow(a, 1 / o.gamma);
     else {
         let e = 20 * Math.log10(a);
-        n = e / (e > 0 ? s.boostRange : s.attenuationRange) + 1;
+        n = e / (e > 0 ? o.boostRange : o.attenuationRange) + 1;
     }
     return n * r;
 }

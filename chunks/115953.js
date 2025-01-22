@@ -14,9 +14,9 @@ function i(e, n) {
         );
     if ('object' == typeof e || 'object' == typeof n) {
         var a = r(e),
-            s = r(n);
-        return a !== e || s !== n
-            ? i(a, s)
+            o = r(n);
+        return a !== e || o !== n
+            ? i(a, o)
             : Object.keys(Object.assign({}, e, n)).every(function (r) {
                   return i(e[r], n[r]);
               });

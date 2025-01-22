@@ -1,34 +1,34 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(218867),
+    o = r(192379),
+    s = r(218867),
     l = r(74538),
     u = r(28546),
     c = r(98528),
     d = r(695606);
 let f = 20,
-    _ = s.forwardRef(function (e, n) {
-        let { categories: r, store: i, hasSearchResults: _, listPadding: h, renderRow: p, renderSection: m, renderSectionHeader: g, renderSectionFooter: E, renderInspector: v, renderEmptySearchState: I, rowCount: T, rowCountBySection: b, rowHeight: y, sectionHeaderHeight: S, sectionFooterHeight: A, renderUpsell: N, setShowUpsell: C } = e,
-            R = s.useRef(!1),
-            O = s.useRef(null),
+    p = o.forwardRef(function (e, n) {
+        let { categories: r, store: i, hasSearchResults: p, listPadding: h, renderRow: _, renderSection: m, renderSectionHeader: g, renderSectionFooter: E, renderInspector: v, renderEmptySearchState: y, rowCount: b, rowCountBySection: I, rowHeight: T, sectionHeaderHeight: S, sectionFooterHeight: A, renderUpsell: C, setShowUpsell: N } = e,
+            R = o.useRef(!1),
+            O = o.useRef(null),
             D = (0, u.Iu)((e) => e.searchQuery),
-            L = i.useStore((e) => e.activeCategoryIndex),
-            x = r.map((e) => ((0, l._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
+            x = i.useStore((e) => e.activeCategoryIndex),
+            L = r.map((e) => ((0, l._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
             w = (0, c.Uf)({
                 listRef: O,
                 searchQuery: D,
-                nitroLockedSectionStates: x,
-                setShowUpsell: C
+                nitroLockedSectionStates: L,
+                setShowUpsell: N
             }),
             P = (0, c.Qs)({
-                activeCategoryIndex: L,
+                activeCategoryIndex: x,
                 isScrolling: R,
                 listRef: O,
                 onActiveCategoryIndexChange: i.setActiveCategoryIndex,
                 scrollOffset: f,
                 searchQuery: D
             }),
-            M = s.useCallback(
+            M = o.useCallback(
                 (e) => {
                     w(e), P(e);
                 },
@@ -37,10 +37,10 @@ let f = 20,
         return (
             (0, c.Xs)({
                 searchQuery: D,
-                activeCategoryIndex: L,
+                activeCategoryIndex: x,
                 listRef: O
             }),
-            s.useImperativeHandle(
+            o.useImperativeHandle(
                 n,
                 () => ({
                     scrollTo: function () {
@@ -86,28 +86,28 @@ let f = 20,
             (0, a.jsxs)('div', {
                 className: d.wrapper,
                 children: [
-                    D.length > 0 && !_ && null != I
-                        ? I()
-                        : (0, a.jsx)(o.Z, {
+                    D.length > 0 && !p && null != y
+                        ? y()
+                        : (0, a.jsx)(s.Z, {
                               role: 'none presentation',
                               listPadding: h,
                               onScroll: M,
-                              renderRow: p,
+                              renderRow: _,
                               renderSection: m,
                               renderSectionHeader: g,
                               renderSectionFooter: E,
-                              rowCount: T,
-                              rowCountBySection: b,
-                              rowHeight: y,
+                              rowCount: b,
+                              rowCountBySection: I,
+                              rowHeight: T,
                               sectionHeaderHeight: S,
                               sectionFooterHeight: A,
                               stickyHeaders: !0,
                               ref: O
                           }),
-                    null == N ? void 0 : N(),
+                    null == C ? void 0 : C(),
                     null == v ? void 0 : v()
                 ]
             })
         );
     });
-n.Z = _;
+n.Z = p;

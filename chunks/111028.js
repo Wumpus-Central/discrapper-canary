@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(481060),
     u = r(680357);
 let c = 500;
 function d(e) {
-    let { children: n, 'aria-label': r, className: s, position: d, ...f } = e,
-        _ = a.useRef(null),
+    let { children: n, 'aria-label': r, className: o, position: d, ...f } = e,
+        p = a.useRef(null),
         h = null != r ? r : 'string' == typeof n && n;
     return (0, i.jsx)(l.Tooltip, {
         ...f,
@@ -23,11 +23,11 @@ function d(e) {
         children: (r) => {
             let { onMouseEnter: a, onMouseLeave: l } = r;
             return (0, i.jsx)('div', {
-                className: o()(s, u.overflow),
-                ref: _,
+                className: s()(o, u.overflow),
+                ref: p,
                 'aria-hidden': e['aria-hidden'],
                 onMouseEnter: () => {
-                    let { current: e } = _;
+                    let { current: e } = p;
                     null != e && e.offsetWidth < e.scrollWidth && (null == a || a());
                 },
                 onMouseLeave: l,

@@ -1,24 +1,24 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(329022),
     u = r(829307),
     c = r(705513),
     d = r(877837),
     f = r(214811),
-    _ = function (e) {
+    p = function (e) {
         var n = e.width,
             r = e.height,
             a = e.onChange,
-            s = e.onSwatchHover,
+            o = e.onSwatchHover,
             c = e.colors,
-            _ = e.hex,
+            p = e.hex,
             h = e.styles,
-            p = void 0 === h ? {} : h,
+            _ = void 0 === h ? {} : h,
             m = e.className,
             g = void 0 === m ? '' : m,
-            E = (0, o.default)(
+            E = (0, s.default)(
                 (0, u.Z)(
                     {
                         default: {
@@ -34,7 +34,7 @@ var i = r(192379),
                             clear: { clear: 'both' }
                         }
                     },
-                    p
+                    _
                 )
             ),
             v = function (e, n) {
@@ -65,9 +65,9 @@ var i = r(192379),
                             return i.createElement(f.Z, {
                                 key: e.toString(),
                                 group: e,
-                                active: _,
+                                active: p,
                                 onClick: v,
-                                onSwatchHover: s
+                                onSwatchHover: o
                             });
                         }),
                         i.createElement('div', { style: E.clear })
@@ -76,13 +76,13 @@ var i = r(192379),
             )
         );
     };
-(_.propTypes = {
-    width: s().oneOfType([s().string, s().number]),
-    height: s().oneOfType([s().string, s().number]),
-    colors: s().arrayOf(s().arrayOf(s().string)),
-    styles: s().object
+(p.propTypes = {
+    width: o().oneOfType([o().string, o().number]),
+    height: o().oneOfType([o().string, o().number]),
+    colors: o().arrayOf(o().arrayOf(o().string)),
+    styles: o().object
 }),
-    (_.defaultProps = {
+    (p.defaultProps = {
         width: 320,
         height: 240,
         colors: [
@@ -108,4 +108,4 @@ var i = r(192379),
         ],
         styles: {}
     }),
-    (0, d.t1)(_);
+    (0, d.t1)(p);

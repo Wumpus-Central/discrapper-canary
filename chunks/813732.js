@@ -27,9 +27,9 @@ var i = n(200651),
     O = n(853872),
     R = n(78839),
     P = n(580130),
-    y = n(626135),
-    B = n(63063),
-    D = n(74538),
+    D = n(626135),
+    y = n(63063),
+    B = n(74538),
     Z = n(391077),
     L = n(639056),
     M = n(52164),
@@ -78,7 +78,7 @@ function W() {
                     className: H.accountCreditDescription,
                     children: G.intl.string(G.t.kNEjGh)
                 }),
-                null != e && D.ZP.hasAccountCredit(e)
+                null != e && B.ZP.hasAccountCredit(e)
                     ? (0, i.jsx)(L.Z, {
                           className: H.accountCredit,
                           entitlements: e
@@ -99,7 +99,7 @@ t.Z = function () {
         E = (0, l.e7)([O.Z], () => (null != n && null != n.paymentSourceId ? O.Z.getPaymentSource(n.paymentSourceId) : null), [n]),
         C = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         P = (0, l.e7)([j.Z], () => j.Z.isBusy),
-        D = (0, _.V)(),
+        B = (0, _.V)(),
         L = (0, l.e7)([A.Z], () => A.Z.getSubsection()),
         Y = (0, l.e7)([R.ZP], () => {
             var e, t;
@@ -129,7 +129,7 @@ t.Z = function () {
         v.Z.enabled)
     )
         return (0, i.jsx)(p.Z, {});
-    if (!C || !D)
+    if (!C || !B)
         return (0, i.jsx)('div', {
             className: a()(H.container, H.loading),
             children: (0, i.jsx)(o.Spinner, {})
@@ -163,7 +163,7 @@ t.Z = function () {
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
                                 className: H.accountCreditDescription,
-                                children: G.intl.format(G.t['7Zi06e'], { helpCenterLink: B.Z.getArticleURL(F.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                                children: G.intl.format(G.t['7Zi06e'], { helpCenterLink: y.Z.getArticleURL(F.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                             }),
                             (0, i.jsx)(Z.Z, {
                                 className: H.accountCredit,
@@ -193,7 +193,7 @@ t.Z = function () {
                             (0, i.jsx)(b.Z, {
                                 count: Y,
                                 onClickManageSubscription: () => {
-                                    h.Z.setSection(F.oAB.SUBSCRIPTIONS, U.XZ), y.default.track(F.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
+                                    h.Z.setSection(F.oAB.SUBSCRIPTIONS, U.XZ), D.default.track(F.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
                                 }
                             })
                         ]

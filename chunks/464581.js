@@ -1,12 +1,12 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(192379),
     a = r(887490);
-function s(e, n, r) {
-    let s = i.useCallback(
+function o(e, n, r) {
+    let o = i.useCallback(
             (e) => {
                 if (n) return !0;
                 if (!0 === e.defaultPrevented) return !1;
@@ -15,15 +15,15 @@ function s(e, n, r) {
             },
             [n, r]
         ),
-        o = i.useCallback(
+        s = i.useCallback(
             (n) => {
                 let { event: r } = n;
-                !s(r) && (r.preventDefault(), r.stopPropagation(), null != r.clipboardData && (e.insertData(r.clipboardData), a.bN.focus(e)));
+                !o(r) && (r.preventDefault(), r.stopPropagation(), null != r.clipboardData && (e.insertData(r.clipboardData), a.bN.focus(e)));
             },
-            [e, s]
+            [e, o]
         );
     return {
-        handlePaste: s,
-        handleGlobalPaste: o
+        handlePaste: o,
+        handleGlobalPaste: s
     };
 }

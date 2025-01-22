@@ -1,11 +1,11 @@
 r.d(n, {
     w: function () {
-        return s;
+        return o;
     }
 });
 var i = r(668781),
     a = r(388032);
-let s = () => {
+let o = () => {
     i.Z.show({
         title: a.intl.string(a.t.otsg2d),
         body: a.intl.string(a.t['/Yx5qa']),

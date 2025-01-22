@@ -1,6 +1,6 @@
 r.d(n, {
     Dj: function () {
-        return o;
+        return s;
     },
     NO: function () {
         return c;
@@ -21,12 +21,12 @@ r.d(n, {
 var i = r(710845);
 function a() {
     for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-    return n.find((e) => null != e && s(e));
-}
-function s(e) {
-    return null != e.requestFullscreen || null != e.webkitRequestFullscreen || e.webkitSupportsFullscreen || null != e.mozRequestFullScreen || null != e.msRequestFullscreen;
+    return n.find((e) => null != e && o(e));
 }
 function o(e) {
+    return null != e.requestFullscreen || null != e.webkitRequestFullscreen || e.webkitSupportsFullscreen || null != e.mozRequestFullScreen || null != e.msRequestFullscreen;
+}
+function s(e) {
     'function' == typeof e.requestFullscreen ? e.requestFullscreen() : 'function' == typeof e.webkitRequestFullscreen ? e.webkitRequestFullscreen() : 'function' == typeof e.webkitEnterFullscreen ? e.webkitEnterFullscreen() : 'function' == typeof e.mozRequestFullScreen ? e.mozRequestFullScreen() : 'function' == typeof e.msRequestFullscreen ? e.msRequestFullscreen() : new i.Z('FullScreenUtils').warn('Fullscreen API is not supported.');
 }
 function l(e, n) {

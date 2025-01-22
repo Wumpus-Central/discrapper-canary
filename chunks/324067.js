@@ -1,15 +1,15 @@
 var i,
     a = r(653041);
-var s = r(47120);
-var o = r(724458);
+var o = r(47120);
+var s = r(724458);
 var l = r(442837),
     u = r(570140),
     c = r(740504),
     d = r(853856),
     f = r(314897),
-    _ = r(592125),
+    p = r(592125),
     h = r(984933),
-    p = r(430824),
+    _ = r(430824),
     m = r(981631);
 function g(e, n, r) {
     return (
@@ -26,20 +26,20 @@ function g(e, n, r) {
 }
 let E = null,
     v = {},
-    I = null;
-function T() {
+    y = null;
+function b() {
     return {
         _categories: [],
         null: []
     };
 }
-let b = T();
-function y(e, n) {
+let I = b();
+function T(e, n) {
     e.index = n;
 }
 function S(e) {
     let n = h.ZP.getChannels(e),
-        r = T(),
+        r = b(),
         i = (e) => {
             var n;
             let { channel: i } = e;
@@ -59,7 +59,7 @@ function S(e) {
         }),
         n[h.sH].forEach(i),
         n[h.Zb].forEach(i),
-        (0, c.Z)(r._categories, r).forEach(y),
+        (0, c.Z)(r._categories, r).forEach(T),
         (v[e] = r),
         r
     );
@@ -67,13 +67,13 @@ function S(e) {
 function A() {
     (v = {}), null != E && S(E);
 }
-function N(e) {
+function C(e) {
     let {
         guild: { id: n }
     } = e;
     (v[n] = void 0), E === n && S(n);
 }
-function C(e) {
+function N(e) {
     let {
         guild: { id: n }
     } = e;
@@ -97,28 +97,28 @@ function D(e) {
     if (f.default.getId() !== r.id) return !1;
     (v[n] = void 0), n === E && S(n);
 }
-function L() {
+function x() {
     if (null == E) return !1;
     S(E);
 }
-function x(e) {
+function L(e) {
     let { guildId: n } = e;
     (v[n] = void 0), n === E && S(n);
 }
 function w(e, n) {
-    if (((I = n), null == e || null == e.getGuildId())) return !1;
+    if (((y = n), null == e || null == e.getGuildId())) return !1;
     let r = e.getGuildId();
     return null != r && ((v[r] = void 0), r === E && S(r), !0);
 }
 function P(e) {
     let { channelId: n } = e;
-    return null == n && null != I ? w(_.Z.getChannel(I), null) : w(_.Z.getChannel(n), n);
+    return null == n && null != y ? w(p.Z.getChannel(y), null) : w(p.Z.getChannel(n), n);
 }
 function M(e) {
     let { voiceStates: n } = e;
     return n.reduce((e, n) => {
         let { channelId: r, sessionId: i } = n;
-        return f.default.getSessionId() !== i ? e : w(_.Z.getChannel(r), r) || e;
+        return f.default.getSessionId() !== i ? e : w(p.Z.getChannel(r), r) || e;
     }, !1);
 }
 function k(e) {
@@ -135,10 +135,10 @@ function B(e) {
 }
 class G extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(h.ZP, p.Z, f.default, _.Z, d.Z), this.syncWith([d.Z], U);
+        this.waitFor(h.ZP, _.Z, f.default, p.Z, d.Z), this.syncWith([d.Z], U);
     }
     getCategories(e) {
-        return null != e ? B(e) : b;
+        return null != e ? B(e) : I;
     }
 }
 g(G, 'displayName', 'GuildCategoryStore'),
@@ -147,19 +147,19 @@ g(G, 'displayName', 'GuildCategoryStore'),
         CONNECTION_OPEN: A,
         OVERLAY_INITIALIZE: A,
         CACHE_LOADED_LAZY: A,
-        GUILD_CREATE: N,
-        GUILD_UPDATE: N,
-        GUILD_DELETE: C,
+        GUILD_CREATE: C,
+        GUILD_UPDATE: C,
+        GUILD_DELETE: N,
         CHANNEL_CREATE: R,
         CHANNEL_DELETE: R,
         CHANNEL_UPDATES: O,
         GUILD_MEMBER_UPDATE: D,
-        CURRENT_USER_UPDATE: L,
-        GUILD_ROLE_CREATE: x,
-        GUILD_ROLE_UPDATE: x,
-        GUILD_ROLE_DELETE: x,
-        IMPERSONATE_UPDATE: x,
-        IMPERSONATE_STOP: x,
+        CURRENT_USER_UPDATE: x,
+        GUILD_ROLE_CREATE: L,
+        GUILD_ROLE_UPDATE: L,
+        GUILD_ROLE_DELETE: L,
+        IMPERSONATE_UPDATE: L,
+        IMPERSONATE_STOP: L,
         VOICE_CHANNEL_SELECT: P,
         VOICE_STATE_UPDATES: M
     }));

@@ -1,5 +1,5 @@
-n(620342);
-var r = n(974802).Object;
-e.exports = function (e, t) {
-    return r.create(e, t);
+r(620342);
+var i = r(974802).Object;
+e.exports = function (e, n) {
+    return i.create(e, n);
 };

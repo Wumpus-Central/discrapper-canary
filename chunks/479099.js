@@ -1,144 +1,144 @@
-l.d(t, {
+e.d(n, {
     Z: function () {
-        return v;
+        return I;
     },
     f: function () {
-        return E;
+        return T;
     }
 }),
-    l(47120);
+    e(47120);
 var i,
-    n,
-    a = l(200651),
-    s = l(192379),
-    o = l(120356),
-    r = l.n(o),
-    d = l(91192),
-    u = l(442837),
-    c = l(481060),
-    m = l(239091),
-    f = l(596454),
-    g = l(607070),
-    h = l(339085),
-    p = l(695346),
-    x = l(572004),
-    _ = l(388032),
-    b = l(680475);
-function v(e) {
-    let { tag: t, size: i = 1, disabled: n, className: o, onClick: v, onRemove: E, selected: I, ariaLabel: j } = e,
-        { name: M, emojiId: C, emojiName: P } = t,
-        A = null != E,
-        [S, z] = s.useState(!1),
-        T = (0, u.e7)([h.ZP], () => (null != C ? h.ZP.getUsableCustomEmojiById(C) : null)),
-        y = A || null != v,
-        Z = (!A || !S) && (null != C || null != P),
-        L = 0 === i,
-        N = s.useRef(null),
-        w = (0, u.e7)([g.Z], () => g.Z.keyboardModeEnabled),
-        R = (e) => {
-            let i = p.Sb.getSetting();
-            x.wS &&
+    r,
+    l = e(200651),
+    u = e(192379),
+    o = e(120356),
+    a = e.n(o),
+    s = e(91192),
+    c = e(442837),
+    d = e(481060),
+    f = e(239091),
+    _ = e(596454),
+    E = e(607070),
+    p = e(339085),
+    g = e(695346),
+    S = e(572004),
+    m = e(388032),
+    C = e(680475);
+function I(t) {
+    let { tag: n, size: i = 1, disabled: r, className: o, onClick: I, onRemove: T, selected: h, ariaLabel: v } = t,
+        { name: N, emojiId: A, emojiName: O } = n,
+        P = null != T,
+        [L, b] = u.useState(!1),
+        M = (0, c.e7)([p.ZP], () => (null != A ? p.ZP.getUsableCustomEmojiById(A) : null)),
+        R = P || null != I,
+        y = (!P || !L) && (null != A || null != O),
+        Z = 0 === i,
+        D = u.useRef(null),
+        U = (0, c.e7)([E.Z], () => E.Z.keyboardModeEnabled),
+        j = (t) => {
+            let i = g.Sb.getSetting();
+            S.wS &&
                 i &&
-                (0, m.jW)(e, async () => {
-                    let { default: e } = await l.e('29646').then(l.bind(l, 955116));
-                    return (l) =>
-                        (0, a.jsx)(e, {
-                            ...l,
-                            tag: t
+                (0, f.jW)(t, async () => {
+                    let { default: t } = await e.e('29646').then(e.bind(e, 955116));
+                    return (e) =>
+                        (0, l.jsx)(t, {
+                            ...e,
+                            tag: n
                         });
                 });
         },
-        B = (0, a.jsxs)(a.Fragment, {
+        x = (0, l.jsxs)(l.Fragment, {
             children: [
-                Z
-                    ? (0, a.jsx)(f.Z, {
-                          className: r()(b.emoji, { [b.small]: L }),
-                          emojiId: C,
-                          emojiName: P,
-                          animated: !!(null == T ? void 0 : T.animated),
+                y
+                    ? (0, l.jsx)(_.Z, {
+                          className: a()(C.emoji, { [C.small]: Z }),
+                          emojiId: A,
+                          emojiName: O,
+                          animated: !!(null == M ? void 0 : M.animated),
                           size: 'reaction'
                       })
                     : null,
-                S &&
-                    A &&
-                    (0, a.jsx)('div', {
-                        className: b.closeCircle,
-                        children: (0, a.jsx)(c.XSmallIcon, {
+                L &&
+                    P &&
+                    (0, l.jsx)('div', {
+                        className: C.closeCircle,
+                        children: (0, l.jsx)(d.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: b.close
+                            className: C.close
                         })
                     }),
-                (0, a.jsx)(c.Text, {
-                    variant: L ? 'text-xs/semibold' : 'text-sm/semibold',
+                (0, l.jsx)(d.Text, {
+                    variant: Z ? 'text-xs/semibold' : 'text-sm/semibold',
                     lineClamp: 1,
-                    children: M
+                    children: N
                 })
             ]
         }),
-        U = {
-            key: t.id,
-            className: r()(
-                b.pill,
+        G = {
+            key: n.id,
+            className: a()(
+                C.pill,
                 {
-                    [b.disabled]: n,
-                    [b.clickable]: y,
-                    [b.small]: L,
-                    [b.selected]: I
+                    [C.disabled]: r,
+                    [C.clickable]: R,
+                    [C.small]: Z,
+                    [C.selected]: h
                 },
                 o
             ),
-            onClick: (e) => {
-                null == v || v(e), null == E || E(t), !w && null != N.current && N.current.blur();
+            onClick: (t) => {
+                null == I || I(t), null == T || T(n), !U && null != D.current && D.current.blur();
             },
-            onContextMenu: (e) => R(e),
-            onMouseEnter: () => A && z(!0),
-            onMouseLeave: () => A && z(!1)
+            onContextMenu: (t) => j(t),
+            onMouseEnter: () => P && b(!0),
+            onMouseLeave: () => P && b(!1)
         },
-        D = (0, d.JA)('forum-tag-'.concat(t.id));
-    return y
-        ? (0, a.jsx)(c.Clickable, {
-              ...D,
-              innerRef: N,
-              focusProps: { ringTarget: N },
-              'aria-label': null != j ? j : _.intl.formatToPlainString(_.t.iyRTLi, { tagName: M }),
+        F = (0, s.JA)('forum-tag-'.concat(n.id));
+    return R
+        ? (0, l.jsx)(d.Clickable, {
+              ...F,
+              innerRef: D,
+              focusProps: { ringTarget: D },
+              'aria-label': null != v ? v : m.intl.formatToPlainString(m.t.iyRTLi, { tagName: N }),
               role: 'button',
-              'aria-pressed': I,
-              ...U,
-              children: B
+              'aria-pressed': h,
+              ...G,
+              children: x
           })
-        : (0, a.jsx)('div', {
-              ...U,
-              children: B
+        : (0, l.jsx)('div', {
+              ...G,
+              children: x
           });
 }
-function E(e) {
-    let { tags: t, count: l, size: i = 1 } = e,
-        n = 0 === i;
-    return (0, a.jsx)(c.Tooltip, {
-        'aria-label': _.intl.string(_.t['P/y+sr']),
-        text: (0, a.jsx)(a.Fragment, {
-            children: t.map((e) =>
-                (0, a.jsx)(
-                    v,
+function T(t) {
+    let { tags: n, count: e, size: i = 1 } = t,
+        r = 0 === i;
+    return (0, l.jsx)(d.Tooltip, {
+        'aria-label': m.intl.string(m.t['P/y+sr']),
+        text: (0, l.jsx)(l.Fragment, {
+            children: n.map((t) =>
+                (0, l.jsx)(
+                    I,
                     {
-                        tag: e,
-                        className: b.tooltipPill,
-                        size: v.Sizes.SMALL
+                        tag: t,
+                        className: C.tooltipPill,
+                        size: I.Sizes.SMALL
                     },
-                    e.id
+                    t.id
                 )
             )
         }),
-        children: (e) =>
-            (0, a.jsx)('div', {
-                ...e,
-                className: r()(b.pill, { [b.small]: n }),
-                children: (0, a.jsxs)(c.Text, {
-                    variant: n ? 'text-xs/semibold' : 'text-sm/semibold',
-                    children: ['+', l]
+        children: (t) =>
+            (0, l.jsx)('div', {
+                ...t,
+                className: a()(C.pill, { [C.small]: r }),
+                children: (0, l.jsxs)(d.Text, {
+                    variant: r ? 'text-xs/semibold' : 'text-sm/semibold',
+                    children: ['+', e]
                 })
             })
     });
 }
-((n = i || (i = {}))[(n.SMALL = 0)] = 'SMALL'), (n[(n.MEDIUM = 1)] = 'MEDIUM'), (v.Sizes = i);
+((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (I.Sizes = i);

@@ -6,13 +6,13 @@ r.r(n),
     });
 var i = r(411104);
 var a = r(592125),
-    s = r(19780),
-    o = r(981631),
+    o = r(19780),
+    s = r(981631),
     l = r(176505);
 function u(e, n) {
     let r;
     switch (e) {
-        case o.rMx.CHANNEL_OPENED_CLICKSTREAM:
+        case s.rMx.CHANNEL_OPENED_CLICKSTREAM:
             var i, u;
             let c = (r = n).channelId;
             switch (c) {
@@ -26,26 +26,26 @@ function u(e, n) {
                 case l.oC.GUILD_ONBOARDING:
                     return;
             }
-            let d = null !== (u = null === (i = a.Z.getChannel(c)) || void 0 === i ? void 0 : i.type) && void 0 !== u ? u : o.d4z.UNKNOWN;
+            let d = null !== (u = null === (i = a.Z.getChannel(c)) || void 0 === i ? void 0 : i.type) && void 0 !== u ? u : s.d4z.UNKNOWN;
             return {
                 timestamp: new Date(),
-                rtc_state: s.Z.getState(),
+                rtc_state: o.Z.getState(),
                 channelId: c,
                 channelType: d
             };
-        case o.rMx.GUILD_VIEWED_CLICKSTREAM:
+        case s.rMx.GUILD_VIEWED_CLICKSTREAM:
             let f = (r = n).guildId;
             return {
                 timestamp: new Date(),
-                rtc_state: s.Z.getState(),
+                rtc_state: o.Z.getState(),
                 guildId: f
             };
-        case o.rMx.FRIENDS_LIST_VIEWED_CLICKSTREAM:
+        case s.rMx.FRIENDS_LIST_VIEWED_CLICKSTREAM:
             return (
                 (r = n),
                 {
                     timestamp: new Date(),
-                    rtc_state: s.Z.getState(),
+                    rtc_state: o.Z.getState(),
                     tab_opened: r.tab_opened,
                     num_friends: r.num_friends,
                     now_playing_visible: r.now_playing_visible,

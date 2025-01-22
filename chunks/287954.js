@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(510659),
-    o = r(511341),
+    o = r(510659),
+    s = r(511341),
     l = r(215105),
     u = r(429974),
     c = r(228168);
@@ -27,23 +27,23 @@ function d(e, n) {
           };
 }
 function f(e) {
-    let { user: n, guildId: r, channelId: f, profileType: _, onClose: h, children: p, ...m } = e,
-        { interactionType: g, interactionSource: E, resetInteraction: v, interactionSourceId: I } = (0, s.Xo)(),
-        T = _ === c.y0.FULL_SIZE ? (0, u.z)(n.id, r) : void 0,
-        b = E === m.sourceType && g === c.P.REACT,
-        y = E === m.sourceType && g === c.P.REPLY,
-        S = (b || y) && I === m.sourceId;
+    let { user: n, guildId: r, channelId: f, profileType: p, onClose: h, children: _, ...m } = e,
+        { interactionType: g, interactionSource: E, resetInteraction: v, interactionSourceId: y } = (0, o.Xo)(),
+        b = p === c.y0.FULL_SIZE ? (0, u.z)(n.id, r) : void 0,
+        I = E === m.sourceType && g === c.P.REACT,
+        T = E === m.sourceType && g === c.P.REPLY,
+        S = (I || T) && y === m.sourceId;
     return (0, i.jsx)(a.Popout, {
         renderPopout: (e) => {
             let { setPopoutRef: a } = e,
-                s = b ? o.Z : l.Z;
-            return (0, i.jsx)(s, {
+                o = I ? s.Z : l.Z;
+            return (0, i.jsx)(o, {
                 user: n,
                 guildId: r,
                 channelId: f,
-                profileType: _,
+                profileType: p,
                 onClose: h,
-                modalKey: T,
+                modalKey: b,
                 setPopoutRef: a,
                 ...m
             });
@@ -52,7 +52,7 @@ function f(e) {
             v(), null == h || h();
         },
         shouldShow: S,
-        ...d(g, _),
-        children: p
+        ...d(g, p),
+        children: _
     });
 }

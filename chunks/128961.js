@@ -24,11 +24,11 @@ var r = function (e, n) {
     },
     a = function (e, n) {
         var a,
-            s = e.match(/(P+)(p+)?/) || [],
-            o = s[1],
-            l = s[2];
+            o = e.match(/(P+)(p+)?/) || [],
+            s = o[1],
+            l = o[2];
         if (!l) return r(e, n);
-        switch (o) {
+        switch (s) {
             case 'P':
                 a = n.dateTime({ width: 'short' });
                 break;
@@ -41,10 +41,10 @@ var r = function (e, n) {
             default:
                 a = n.dateTime({ width: 'full' });
         }
-        return a.replace('{{date}}', r(o, n)).replace('{{time}}', i(l, n));
+        return a.replace('{{date}}', r(s, n)).replace('{{time}}', i(l, n));
     },
-    s = {
+    o = {
         p: i,
         P: a
     };
-n.Z = s;
+n.Z = o;

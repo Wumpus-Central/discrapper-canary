@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(355467),
-    s = r(147913),
-    o = r(400407);
+    o = r(147913),
+    s = r(400407);
 function l(e, n, r) {
     return (
         n in e
@@ -15,12 +15,12 @@ function l(e, n, r) {
         e
     );
 }
-class u extends s.Z {
+class u extends o.Z {
     constructor(...e) {
         super(...e),
             l(this, 'actions', {
                 POST_CONNECTION_OPEN: () => {
-                    let { enabled: e } = o.A.getCurrentConfig({ location: 'cd74f0_1' }, { autoTrackExposure: !1 });
+                    let { enabled: e } = s.A.getCurrentConfig({ location: 'cd74f0_1' }, { autoTrackExposure: !1 });
                     e && (0, a.B$)();
                 }
             });

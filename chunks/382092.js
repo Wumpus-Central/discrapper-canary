@@ -1,8 +1,8 @@
 Object.defineProperty(n, '__esModule', { value: !0 }), (n.reactFormatter = n.DEFAULT_REACT_RICH_TEXT_ELEMENTS = void 0), (n.formatReact = l), (n.makeReactFormatter = u);
 let i = r(192379),
     a = r(403725),
-    s = i.createElement;
-function o(e) {
+    o = i.createElement;
+function s(e) {
     return class extends a.FormatBuilder {
         constructor() {
             super(...arguments), (this._nodeKey = 0), (this.result = []);
@@ -27,16 +27,16 @@ function l(e, n, r) {
 function u(e) {
     return {
         format: l,
-        builder: o(e)
+        builder: s(e)
     };
 }
 (n.DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
-    $b: (e, n) => s('strong', { key: n }, e),
-    $i: (e, n) => s('em', { key: n }, e),
-    $del: (e, n) => s('del', { key: n }, e),
-    $code: (e, n) => s('code', { key: n }, e),
+    $b: (e, n) => o('strong', { key: n }, e),
+    $i: (e, n) => o('em', { key: n }, e),
+    $del: (e, n) => o('del', { key: n }, e),
+    $code: (e, n) => o('code', { key: n }, e),
     $link: (e, n, [r]) =>
-        s(
+        o(
             'a',
             {
                 href: r,
@@ -44,6 +44,6 @@ function u(e) {
             },
             e
         ),
-    $p: (e, n) => s('p', { key: n }, e)
+    $p: (e, n) => o('p', { key: n }, e)
 }),
     (n.reactFormatter = u(n.DEFAULT_REACT_RICH_TEXT_ELEMENTS));

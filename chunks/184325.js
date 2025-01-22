@@ -1,36 +1,36 @@
 r.d(n, {
     Z: function () {
-        return x;
+        return L;
     }
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(481060),
     c = r(315263),
     d = r(100527),
     f = r(906732),
-    _ = r(787528),
+    p = r(787528),
     h = r(768865),
-    p = r(617136),
+    _ = r(617136),
     m = r(497505),
     g = r(594174),
     E = r(483444),
     v = r(626135),
-    I = r(111361),
-    T = r(291175),
-    b = r(785717),
-    y = r(221292),
+    y = r(111361),
+    b = r(291175),
+    I = r(785717),
+    T = r(221292),
     S = r(485341),
     A = r(797321),
-    N = r(228168),
-    C = r(981631),
+    C = r(228168),
+    N = r(981631),
     R = r(474936),
     O = r(388032),
     D = r(153225);
-let L = (e) => {
+let x = (e) => {
     if (null != e)
         switch (e) {
             case R.JN.PREMIUM_TENURE_1_MONTH:
@@ -53,45 +53,45 @@ let L = (e) => {
                 return;
         }
 };
-function x(e) {
-    let { badges: n, className: r, badgeClassName: i, onClose: o } = e,
-        { analyticsLocations: x } = (0, f.ZP)(d.Z.BADGE),
-        { context: w, trackUserProfileAction: P } = (0, b.KZ)(),
-        [M, k] = s.useState(!1),
+function L(e) {
+    let { badges: n, className: r, badgeClassName: i, onClose: s } = e,
+        { analyticsLocations: L } = (0, f.ZP)(d.Z.BADGE),
+        { context: w, trackUserProfileAction: P } = (0, I.KZ)(),
+        [M, k] = o.useState(!1),
         U = g.default.getCurrentUser(),
-        B = (0, I.yd)(null == U ? void 0 : U.premiumType, R.p9.TIER_2);
+        B = (0, y.yd)(null == U ? void 0 : U.premiumType, R.p9.TIER_2);
     return (0, a.jsx)('div', {
         className: l()(D.container, r),
         'aria-label': O.intl.string(O.t.VWV0y8),
         role: 'group',
         children: n.map((e) => {
-            let n = (0, T.fv)(e.id),
+            let n = (0, b.fv)(e.id),
                 r = (r) => {
                     if (
                         (P({ action: 'PRESS_BADGE' }),
-                        (0, y.NE)({
+                        (0, T.NE)({
                             badge: e.id,
-                            analyticsLocations: x,
+                            analyticsLocations: L,
                             ...w
                         }),
                         null != n && 2 === n.badgeVersion && (r.preventDefault(), !B))
                     ) {
-                        (0, h.k)(x), null == o || o();
+                        (0, h.k)(L), null == s || s();
                         return;
                     }
-                    let i = null != e.link ? (0, c.default)(e.link, { analyticsLocations: x }) : null;
-                    if (null != i) return null == o || o(), i(r);
+                    let i = null != e.link ? (0, c.default)(e.link, { analyticsLocations: L }) : null;
+                    if (null != i) return null == s || s(), i(r);
                 },
-                s = () => {
-                    e.id === S.i && v.default.track(C.rMx.QUEST_CONTENT_VIEWED, { ...(0, p.mH)(m.jn.QUEST_BADGE) }),
+                o = () => {
+                    e.id === S.i && v.default.track(N.rMx.QUEST_CONTENT_VIEWED, { ...(0, _.mH)(m.jn.QUEST_BADGE) }),
                         P({ action: 'HOVER_BADGE' }),
-                        (0, y.Qf)({
+                        (0, T.Qf)({
                             badge: e.id,
-                            analyticsLocations: x,
+                            analyticsLocations: L,
                             ...w
                         });
                 },
-                d = L(null == n ? void 0 : n.id),
+                d = x(null == n ? void 0 : n.id),
                 f = null != n && M,
                 g =
                     (null == n ? void 0 : n.badgeVersion) === 2
@@ -99,7 +99,7 @@ function x(e) {
                               className: D.tieredTenureBadgeTooltip,
                               children: [
                                   (0, a.jsx)('img', {
-                                      src: (0, _.J)(n.id),
+                                      src: (0, p.J)(n.id),
                                       alt: ''
                                   }),
                                   (0, a.jsx)('div', {
@@ -127,19 +127,19 @@ function x(e) {
                 {
                     text: g,
                     'aria-label': e.description,
-                    delay: N.vB,
+                    delay: C.vB,
                     tooltipClassName: d,
                     onTooltipShow: () => k(null != n && 1 === n.badgeVersion),
                     onTooltipHide: () => k(!1),
                     children: (0, a.jsxs)(u.Anchor, {
                         onClick: r,
-                        onMouseEnter: s,
+                        onMouseEnter: o,
                         href: e.link,
                         children: [
                             (0, a.jsx)('img', {
                                 alt: ' ',
                                 'aria-hidden': !0,
-                                src: (0, N.jC)(e.icon),
+                                src: (0, C.jC)(e.icon),
                                 className: l()(D.badge, i)
                             }),
                             f &&

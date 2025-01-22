@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(512722),
-    o = r.n(s),
+    o = r(512722),
+    s = r.n(o),
     l = r(392711),
     u = r.n(l);
 function c(e, n, r) {
@@ -69,7 +69,7 @@ class d extends a.Component {
                     let n = e.lastDirection * e.intensity,
                         r = u().random(-e.intensity, e.intensity, !0),
                         i = Math.max(0, Math.cbrt(e.duration - e.progress / 1000));
-                    (e.intensity *= Math.min(1, i)), (e.lastDirection *= -1), o()(null != this.ref.current, 'Shakeable style set when not mounted'), (this.ref.current.style.transform = 'translate3d('.concat(n, 'px,').concat(r, 'px,0px)'));
+                    (e.intensity *= Math.min(1, i)), (e.lastDirection *= -1), s()(null != this.ref.current, 'Shakeable style set when not mounted'), (this.ref.current.style.transform = 'translate3d('.concat(n, 'px,').concat(r, 'px,0px)'));
                 }
                 (e.frameCount += 1), (this._animationFrame = requestAnimationFrame(this._animate));
             }),

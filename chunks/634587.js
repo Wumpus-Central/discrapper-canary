@@ -1,8 +1,8 @@
 var i,
     a = r(444675);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
-        (n = o(n)) in e
+        (n = s(n)) in e
             ? Object.defineProperty(e, n, {
                   value: r,
                   enumerable: !0,
@@ -13,7 +13,7 @@ function s(e, n, r) {
         e
     );
 }
-function o(e) {
+function s(e) {
     var n = l(e, 'string');
     return 'symbol' == typeof n ? n : String(n);
 }
@@ -31,9 +31,9 @@ var u = r(133495),
     c = Symbol('lastResolve'),
     d = Symbol('lastReject'),
     f = Symbol('error'),
-    _ = Symbol('ended'),
+    p = Symbol('ended'),
     h = Symbol('lastPromise'),
-    p = Symbol('handlePromise'),
+    _ = Symbol('handlePromise'),
     m = Symbol('stream');
 function g(e, n) {
     return {
@@ -51,20 +51,20 @@ function E(e) {
 function v(e) {
     a.nextTick(E, e);
 }
-function I(e, n) {
+function y(e, n) {
     return function (r, i) {
         e.then(function () {
-            if (n[_]) {
+            if (n[p]) {
                 r(g(void 0, !0));
                 return;
             }
-            n[p](r, i);
+            n[_](r, i);
         }, i);
     };
 }
-var T = Object.getPrototypeOf(function () {}),
-    b = Object.setPrototypeOf(
-        (s(
+var b = Object.getPrototypeOf(function () {}),
+    I = Object.setPrototypeOf(
+        (o(
             (i = {
                 get stream() {
                     return this[m];
@@ -74,7 +74,7 @@ var T = Object.getPrototypeOf(function () {}),
                         n = this,
                         r = this[f];
                     if (null !== r) return Promise.reject(r);
-                    if (this[_]) return Promise.resolve(g(void 0, !0));
+                    if (this[p]) return Promise.resolve(g(void 0, !0));
                     if (this[m].destroyed)
                         return new Promise(function (e, r) {
                             a.nextTick(function () {
@@ -82,11 +82,11 @@ var T = Object.getPrototypeOf(function () {}),
                             });
                         });
                     var i = this[h];
-                    if (i) e = new Promise(I(i, this));
+                    if (i) e = new Promise(y(i, this));
                     else {
-                        var s = this[m].read();
-                        if (null !== s) return Promise.resolve(g(s, !1));
-                        e = new Promise(this[p]);
+                        var o = this[m].read();
+                        if (null !== o) return Promise.resolve(g(o, !1));
+                        e = new Promise(this[_]);
                     }
                     return (this[h] = e), e;
                 }
@@ -96,7 +96,7 @@ var T = Object.getPrototypeOf(function () {}),
                 return this;
             }
         ),
-        s(i, 'return', function () {
+        o(i, 'return', function () {
             var e = this;
             return new Promise(function (n, r) {
                 e[m].destroy(null, function (e) {
@@ -109,33 +109,33 @@ var T = Object.getPrototypeOf(function () {}),
             });
         }),
         i),
-        T
+        b
     ),
-    y = function (e) {
+    T = function (e) {
         var n,
             r = Object.create(
-                b,
-                (s((n = {}), m, {
+                I,
+                (o((n = {}), m, {
                     value: e,
                     writable: !0
                 }),
-                s(n, c, {
+                o(n, c, {
                     value: null,
                     writable: !0
                 }),
-                s(n, d, {
+                o(n, d, {
                     value: null,
                     writable: !0
                 }),
-                s(n, f, {
+                o(n, f, {
                     value: null,
                     writable: !0
                 }),
-                s(n, _, {
+                o(n, p, {
                     value: e._readableState.endEmitted,
                     writable: !0
                 }),
-                s(n, p, {
+                o(n, _, {
                     value: function (e, n) {
                         var i = r[m].read();
                         i ? ((r[h] = null), (r[c] = null), (r[d] = null), e(g(i, !1))) : ((r[c] = e), (r[d] = n));
@@ -153,10 +153,10 @@ var T = Object.getPrototypeOf(function () {}),
                     return;
                 }
                 var i = r[c];
-                null !== i && ((r[h] = null), (r[c] = null), (r[d] = null), i(g(void 0, !0))), (r[_] = !0);
+                null !== i && ((r[h] = null), (r[c] = null), (r[d] = null), i(g(void 0, !0))), (r[p] = !0);
             }),
             e.on('readable', v.bind(null, r)),
             r
         );
     };
-e.exports = y;
+e.exports = T;

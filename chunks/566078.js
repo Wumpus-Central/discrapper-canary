@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(47120);
-var s = r(319245),
-    o = r(918701);
+var o = r(319245),
+    s = r(918701);
 function l(e, n, r) {
     return (
         n in e
@@ -53,7 +53,7 @@ class u {
         return this.quest.rewardsConfig.platforms;
     }
     get questType() {
-        return (0, o.q8)({ config: this.quest }) ? s.W.VIDEO : s.W.GAMEPLAY;
+        return (0, s.q8)({ config: this.quest }) ? o.W.VIDEO : o.W.GAMEPLAY;
     }
     constructor(e) {
         l(this, 'quest', void 0), (this.quest = e);

@@ -5,9 +5,9 @@ r.d(n, {
 });
 var i = r(717029),
     a = r(846042),
-    s = r(395913);
-function o(e) {
-    return (o =
+    o = r(395913);
+function s(e) {
+    return (s =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -46,7 +46,7 @@ function f(e, n) {
             return (e.__proto__ = n), e;
         })(e, n);
 }
-function _(e) {
+function p(e) {
     var n = m();
     return function () {
         var r,
@@ -55,9 +55,9 @@ function _(e) {
     };
 }
 function h(e, n) {
-    return n && ('object' === o(n) || 'function' == typeof n) ? n : p(e);
+    return n && ('object' === s(n) || 'function' == typeof n) ? n : _(e);
 }
-function p(e) {
+function _(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
@@ -92,28 +92,28 @@ function E(e, n, r) {
 }
 var v = (function (e) {
     d(r, e);
-    var n = _(r);
+    var n = p(r);
     function r() {
         var e;
         l(this, r);
-        for (var i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
-        return E(p((e = n.call.apply(n, [this].concat(a)))), 'priority', 90), E(p(e), 'incompatibleTokens', ['y', 'R', 'u', 'q', 'Q', 'M', 'L', 'I', 'd', 'D', 'E', 'i', 'c', 't', 'T']), e;
+        for (var i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
+        return E(_((e = n.call.apply(n, [this].concat(a)))), 'priority', 90), E(_(e), 'incompatibleTokens', ['y', 'R', 'u', 'q', 'Q', 'M', 'L', 'I', 'd', 'D', 'E', 'i', 'c', 't', 'T']), e;
     }
     return (
         c(r, [
             {
                 key: 'parse',
                 value: function (e, n, r, i) {
-                    var s = function (e) {
+                    var o = function (e) {
                         var n = 7 * Math.floor((e - 1) / 7);
                         return ((e + i.weekStartsOn + 6) % 7) + n;
                     };
                     switch (n) {
                         case 'e':
                         case 'ee':
-                            return (0, a.jg)((0, a.ZL)(n.length, e), s);
+                            return (0, a.jg)((0, a.ZL)(n.length, e), o);
                         case 'eo':
-                            return (0, a.jg)(r.ordinalNumber(e, { unit: 'day' }), s);
+                            return (0, a.jg)(r.ordinalNumber(e, { unit: 'day' }), o);
                         case 'eee':
                             return (
                                 r.day(e, {
@@ -176,7 +176,7 @@ var v = (function (e) {
             {
                 key: 'set',
                 value: function (e, n, r, i) {
-                    return (e = (0, s.Z)(e, r, i)).setUTCHours(0, 0, 0, 0), e;
+                    return (e = (0, o.Z)(e, r, i)).setUTCHours(0, 0, 0, 0), e;
                 }
             }
         ]),

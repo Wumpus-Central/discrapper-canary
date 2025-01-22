@@ -6,12 +6,12 @@ r.d(n, {
         return u;
     },
     TT: function () {
-        return o;
+        return s;
     }
 });
 var i = r(149765),
     a = r(146085),
-    s = r(981631);
-let o = s.Plq.VIEW_CHANNEL,
-    l = i.$e(o, s.Plq.CONNECT),
-    u = i.$e(o, a.yP);
+    o = r(981631);
+let s = o.Plq.VIEW_CHANNEL,
+    l = i.$e(s, o.Plq.CONNECT),
+    u = i.$e(s, a.yP);

@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
-    d = n(524437),
-    u = n(481060),
+    u = n(524437),
+    d = n(481060),
     m = n(239091),
     h = n(294218),
     f = n(703656),
@@ -43,20 +43,20 @@ function b(e) {
         className: T.container,
         children: [
             (0, i.jsx)(x.Z, {
-                tab: d.X.TODOS,
+                tab: u.X.TODOS,
                 setTab: t,
                 closePopout: n
             }),
             (0, i.jsxs)('div', {
                 className: T.headerText,
                 children: [
-                    (0, i.jsx)(u.Heading, {
+                    (0, i.jsx)(d.Heading, {
                         variant: 'heading-lg/bold',
                         children: a ? v.intl.string(v.t['0KeMAw']) : v.intl.string(v.t.j5ZHEB)
                     }),
-                    (0, i.jsx)(u.Anchor, {
+                    (0, i.jsx)(d.Anchor, {
                         onClick: () => o(!a),
-                        children: (0, i.jsx)(u.Text, {
+                        children: (0, i.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
                             children: a ? v.intl.formatToPlainString(v.t['/VlKx8'], { count: s.length }) : v.intl.formatToPlainString(v.t.QEO4Ii, { count: l.length })
@@ -64,7 +64,7 @@ function b(e) {
                     })
                 ]
             }),
-            0 === m.length ? (0, i.jsx)(R, {}) : (0, i.jsx)(u.AdvancedScrollerThin, { children: m.map((e) => (0, i.jsx)(j, { messageReminder: e }, e.saveData.messageId)) })
+            0 === m.length ? (0, i.jsx)(R, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: m.map((e) => (0, i.jsx)(j, { messageReminder: e }, e.saveData.messageId)) })
         ]
     });
 }
@@ -73,9 +73,9 @@ function j(e) {
         { messageReminder: r } = e,
         l = r.saveData,
         o = r.message,
-        d = (0, c.e7)([E.Z], () => E.Z.getChannel(l.channelId)),
+        u = (0, c.e7)([E.Z], () => E.Z.getChannel(l.channelId)),
         _ = () => {
-            (0, f.uL)(N.Z5c.CHANNEL(null == d ? void 0 : d.getGuildId(), l.channelId, l.messageId));
+            (0, f.uL)(N.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), l.channelId, l.messageId));
         },
         x = null;
     return (null != l.dueAt &&
@@ -92,25 +92,25 @@ function j(e) {
                       .duration(Date.now() - l.dueAt.getTime(), 'millisecond')
                       .humanize()
               })))),
-    null == o || null == d)
+    null == o || null == u)
         ? null
         : (0, i.jsxs)('div', {
               className: S.container,
               children: [
                   (0, i.jsx)(I.Z, {
-                      channel: d,
+                      channel: u,
                       gotoChannel: _,
                       children: (0, i.jsxs)('div', {
                           className: T.reminderActions,
                           children: [
                               null != r.saveData.notes && r.saveData.notes.length > 0
-                                  ? (0, i.jsxs)(u.Text, {
+                                  ? (0, i.jsxs)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-muted',
                                         className: T.notes,
                                         selectable: !0,
                                         children: [
-                                            (0, i.jsx)(u.FileIcon, {
+                                            (0, i.jsx)(d.FileIcon, {
                                                 size: 'xxs',
                                                 color: 'currentColor'
                                             }),
@@ -119,15 +119,15 @@ function j(e) {
                                     })
                                   : null,
                               null != x
-                                  ? (0, i.jsx)(u.Text, {
+                                  ? (0, i.jsx)(d.Text, {
                                         variant: 'text-sm/medium',
                                         color: t,
                                         children: x
                                     })
                                   : null,
-                              (0, i.jsx)(u.TooltipContainer, {
+                              (0, i.jsx)(d.TooltipContainer, {
                                   text: v.intl.string(v.t.GtBCn5),
-                                  children: (0, i.jsx)(u.Clickable, {
+                                  children: (0, i.jsx)(d.Clickable, {
                                       onClick: (e) =>
                                           (0, m.jW)(e, async () => {
                                               let { default: e } = await n.e('6045').then(n.bind(n, 883150));
@@ -138,7 +138,7 @@ function j(e) {
                                                   });
                                           }),
                                       className: T.clock,
-                                      children: (0, i.jsx)(u.ClockIcon, {
+                                      children: (0, i.jsx)(d.ClockIcon, {
                                           size: 'custom',
                                           width: 20,
                                           height: 20,
@@ -146,12 +146,12 @@ function j(e) {
                                       })
                                   })
                               }),
-                              (0, i.jsx)(u.TooltipContainer, {
+                              (0, i.jsx)(d.TooltipContainer, {
                                   text: v.intl.string(v.t['1GzslZ']),
-                                  children: (0, i.jsx)(u.Clickable, {
+                                  children: (0, i.jsx)(d.Clickable, {
                                       onClick: () => (0, p.x)(l),
                                       className: T.delete,
-                                      children: (0, i.jsx)(u.TrashIcon, {
+                                      children: (0, i.jsx)(d.TrashIcon, {
                                           size: 'custom',
                                           width: 20,
                                           height: 20,
@@ -173,7 +173,7 @@ function j(e) {
                               h.Z,
                               {
                                   message: o,
-                                  channel: d,
+                                  channel: u,
                                   className: S.message,
                                   compact: g.jU.getSetting(),
                                   animateAvatar: !1,

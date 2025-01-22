@@ -6,7 +6,7 @@ n.d(t, {
         return c;
     },
     fU: function () {
-        return d;
+        return u;
     }
 });
 var i = n(65400),
@@ -41,7 +41,7 @@ function s(e) {
 function c(e, t, n) {
     o.getState().updatePollState(e, t, n);
 }
-function d(e, t) {
+function u(e, t) {
     var n;
     return null === (n = o.getState().polls[e]) || void 0 === n ? void 0 : n[t];
 }

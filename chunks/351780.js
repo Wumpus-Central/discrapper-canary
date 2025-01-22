@@ -1,7 +1,7 @@
 var i,
     a = r(392711);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(524484);
 function u(e, n, r) {
     return (
@@ -42,7 +42,7 @@ let c = !1,
         warningSeen: !1
     },
     f = (0, a.cloneDeep)(d);
-function _(e) {
+function p(e) {
     let { settings: n } = e;
     f = {
         ...f,
@@ -52,7 +52,7 @@ function _(e) {
 function h() {
     c = !0;
 }
-class p extends (i = s.ZP.DeviceSettingsStore) {
+class _ extends (i = o.ZP.DeviceSettingsStore) {
     initialize(e) {
         f = {
             ...f,
@@ -90,9 +90,9 @@ class p extends (i = s.ZP.DeviceSettingsStore) {
         return f.comboSoundsEnabled;
     }
 }
-u(p, 'displayName', 'PoggermodeSettingsStore'),
-    u(p, 'persistKey', 'PoggermodeSettingsStore'),
-    (n.Z = new p(o.Z, {
-        POGGERMODE_SETTINGS_UPDATE: _,
+u(_, 'displayName', 'PoggermodeSettingsStore'),
+    u(_, 'persistKey', 'PoggermodeSettingsStore'),
+    (n.Z = new _(s.Z, {
+        POGGERMODE_SETTINGS_UPDATE: p,
         POGGERMODE_TEMPORARILY_DISABLED: h
     }));

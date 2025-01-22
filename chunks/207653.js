@@ -247,9 +247,9 @@ var i = {
     './zh-tw.js': '685767'
 };
 function a(e) {
-    return r(s(e));
+    return r(o(e));
 }
-function s(e) {
+function o(e) {
     if (!r.o(i, e)) {
         var n = Error("Cannot find module '" + e + "'");
         throw ((n.code = 'MODULE_NOT_FOUND'), n);
@@ -259,6 +259,6 @@ function s(e) {
 (a.keys = function () {
     return Object.keys(i);
 }),
-    (a.resolve = s),
+    (a.resolve = o),
     (e.exports = a),
     (a.id = '207653');

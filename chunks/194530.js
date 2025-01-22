@@ -1,132 +1,132 @@
-n.r(t),
-    n.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
-            return h;
+            return v;
         }
     }),
     n(47120);
-var i = n(200651),
-    r = n(192379),
-    s = n(442837),
-    a = n(481060),
-    l = n(809206),
-    o = n(118012),
-    c = n(25990),
+var o = n(200651),
+    s = n(192379),
+    l = n(442837),
+    i = n(481060),
+    r = n(809206),
+    a = n(118012),
+    u = n(25990),
     d = n(155433),
-    u = n(981631),
+    c = n(981631),
     m = n(388032),
-    g = n(998976);
-function h(e) {
-    var t, n, h, p;
-    let { transitionState: x, onSuccess: f, onClose: _, requirementsUpdated: E, noSkip: C = !1 } = e,
-        [T, S] = r.useState(''),
-        [b, I] = r.useState(''),
-        [N, v] = r.useState(''),
-        [A, j] = r.useState(null),
-        [O, R] = r.useState(null),
-        P = (0, s.e7)([c.Z], () => c.Z.getErrors()),
-        y = (0, s.e7)([c.Z], () => c.Z.getFormState()),
-        B = r.useRef(null);
-    async function D(e) {
-        e.preventDefault(), (0, l.b9)();
-        let t = !1;
-        if (('' === b ? (j(m.intl.string(m.t['/7/oPT'])), (t = !0)) : j(null), b !== N ? (R(m.intl.string(m.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
-        let n = await (0, l.Mn)({
-            password: T,
-            newPassword: b
+    h = n(998976);
+function v(t) {
+    var e, n, v, p;
+    let { transitionState: x, onSuccess: f, onClose: g, requirementsUpdated: b, noSkip: w = !1 } = t,
+        [j, C] = s.useState(''),
+        [I, T] = s.useState(''),
+        [B, M] = s.useState(''),
+        [E, S] = s.useState(null),
+        [N, R] = s.useState(null),
+        _ = (0, l.e7)([u.Z], () => u.Z.getErrors()),
+        Z = (0, l.e7)([u.Z], () => u.Z.getFormState()),
+        k = s.useRef(null);
+    async function P(t) {
+        t.preventDefault(), (0, r.b9)();
+        let e = !1;
+        if (('' === I ? (S(m.intl.string(m.t['/7/oPT'])), (e = !0)) : S(null), I !== B ? (R(m.intl.string(m.t.IEKYZ2)), (e = !0)) : R(null), e)) return;
+        let n = await (0, r.Mn)({
+            password: j,
+            newPassword: I
         });
         if (null == n ? void 0 : n.ok) f();
         else {
-            var i;
-            (null == n ? void 0 : null === (i = n.body) || void 0 === i ? void 0 : i.username) != null && (0, d.P)();
+            var o;
+            (null == n ? void 0 : null === (o = n.body) || void 0 === o ? void 0 : o.username) != null && (0, d.P)();
         }
     }
     return (
-        r.useEffect(() => {
-            if (x === a.ModalTransitionState.ENTERED) {
-                var e;
-                null === (e = B.current) || void 0 === e || e.focus();
+        s.useEffect(() => {
+            if (x === i.ModalTransitionState.ENTERED) {
+                var t;
+                null === (t = k.current) || void 0 === t || t.focus();
             }
         }, [x]),
-        (0, i.jsxs)(a.ModalRoot, {
+        (0, o.jsxs)(i.ModalRoot, {
             transitionState: x,
             children: [
-                (0, i.jsxs)(a.ModalHeader, {
+                (0, o.jsxs)(i.ModalHeader, {
                     separator: !1,
-                    className: g.header,
+                    className: h.header,
                     children: [
-                        (0, i.jsx)(o.Z, {
-                            color: o.Z.Colors.HEADER_PRIMARY,
-                            size: o.Z.Sizes.SIZE_24,
-                            className: g.title,
+                        (0, o.jsx)(a.Z, {
+                            color: a.Z.Colors.HEADER_PRIMARY,
+                            size: a.Z.Sizes.SIZE_24,
+                            className: h.title,
                             children: m.intl.string(m.t['geta7+'])
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, o.jsx)(i.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            className: g.subtitle,
-                            children: E ? m.intl.string(m.t['37iHbW']) : m.intl.string(m.t.iOurYm)
+                            className: h.subtitle,
+                            children: b ? m.intl.string(m.t['37iHbW']) : m.intl.string(m.t.iOurYm)
                         }),
-                        !0 !== C &&
-                            (0, i.jsx)(a.ModalCloseButton, {
-                                onClick: _,
-                                className: g.modalCloseButton
+                        !0 !== w &&
+                            (0, o.jsx)(i.ModalCloseButton, {
+                                onClick: g,
+                                className: h.modalCloseButton
                             })
                     ]
                 }),
-                (0, i.jsxs)('form', {
-                    onSubmit: D,
+                (0, o.jsxs)('form', {
+                    onSubmit: P,
                     children: [
-                        (0, i.jsxs)(a.ModalContent, {
-                            className: g.content,
+                        (0, o.jsxs)(i.ModalContent, {
+                            className: h.content,
                             children: [
-                                (0, i.jsx)(a.FormItem, {
+                                (0, o.jsx)(i.FormItem, {
                                     title: m.intl.string(m.t.WBqMRU),
-                                    error: null == P ? void 0 : null === (t = P.password) || void 0 === t ? void 0 : t[0],
-                                    children: (0, i.jsx)(a.TextInput, {
+                                    error: null == _ ? void 0 : null === (e = _.password) || void 0 === e ? void 0 : e[0],
+                                    children: (0, o.jsx)(i.TextInput, {
                                         type: 'password',
-                                        value: T,
-                                        onChange: S,
-                                        inputRef: B
+                                        value: j,
+                                        onChange: C,
+                                        inputRef: k
                                     })
                                 }),
-                                (0, i.jsx)(a.FormItem, {
-                                    className: g.newPassword,
+                                (0, o.jsx)(i.FormItem, {
+                                    className: h.newPassword,
                                     title: m.intl.string(m.t['8dM4FB']),
-                                    error: null !== (p = null !== (h = null == P ? void 0 : null === (n = P.new_password) || void 0 === n ? void 0 : n[0]) && void 0 !== h ? h : A) && void 0 !== p ? p : void 0,
-                                    children: (0, i.jsx)(a.TextInput, {
+                                    error: null !== (p = null !== (v = null == _ ? void 0 : null === (n = _.new_password) || void 0 === n ? void 0 : n[0]) && void 0 !== v ? v : E) && void 0 !== p ? p : void 0,
+                                    children: (0, o.jsx)(i.TextInput, {
                                         type: 'password',
-                                        value: b,
-                                        onChange: I
+                                        value: I,
+                                        onChange: T
                                     })
                                 }),
-                                (0, i.jsx)(a.FormItem, {
-                                    className: g.newPassword,
+                                (0, o.jsx)(i.FormItem, {
+                                    className: h.newPassword,
                                     title: m.intl.string(m.t.iQG2KC),
-                                    error: null != O ? O : void 0,
-                                    children: (0, i.jsx)(a.TextInput, {
+                                    error: null != N ? N : void 0,
+                                    children: (0, o.jsx)(i.TextInput, {
                                         type: 'password',
-                                        value: N,
-                                        onChange: v
+                                        value: B,
+                                        onChange: M
                                     })
                                 })
                             ]
                         }),
-                        (0, i.jsxs)(a.ModalFooter, {
+                        (0, o.jsxs)(i.ModalFooter, {
                             children: [
-                                (0, i.jsx)(a.Button, {
+                                (0, o.jsx)(i.Button, {
                                     type: 'submit',
-                                    color: a.Button.Colors.BRAND,
-                                    size: a.Button.Sizes.MEDIUM,
-                                    submitting: y === u.QZA.SUBMITTING,
+                                    color: i.Button.Colors.BRAND,
+                                    size: i.Button.Sizes.MEDIUM,
+                                    submitting: Z === c.QZA.SUBMITTING,
                                     children: m.intl.string(m.t.i4jeWV)
                                 }),
-                                !0 !== C &&
-                                    (0, i.jsx)(a.Button, {
-                                        className: g.cancel,
-                                        look: a.Button.Looks.LINK,
-                                        color: a.Button.Colors.PRIMARY,
-                                        onClick: _,
+                                !0 !== w &&
+                                    (0, o.jsx)(i.Button, {
+                                        className: h.cancel,
+                                        look: i.Button.Looks.LINK,
+                                        color: i.Button.Colors.PRIMARY,
+                                        onClick: g,
                                         children: m.intl.string(m.t['ETE/oK'])
                                     })
                             ]

@@ -1,10 +1,10 @@
 var i;
 i = { value: !0 };
 let a = r(438774),
-    s = r(471356),
-    o = r(466809),
+    o = r(471356),
+    s = r(466809),
     l = () => {},
-    u = new s.TimeoutError();
+    u = new o.TimeoutError();
 class c extends a {
     constructor(e) {
         var n, r, i, a;
@@ -24,7 +24,7 @@ class c extends a {
                             interval: 0,
                             concurrency: 1 / 0,
                             autoStart: !0,
-                            queueClass: o.default
+                            queueClass: s.default
                         },
                         e
                     )).intervalCap && e.intervalCap >= 1
@@ -104,7 +104,7 @@ class c extends a {
                     let a =
                         void 0 === this._timeout && void 0 === n.timeout
                             ? e()
-                            : s.default(Promise.resolve(e()), void 0 === n.timeout ? this._timeout : n.timeout, () => {
+                            : o.default(Promise.resolve(e()), void 0 === n.timeout ? this._timeout : n.timeout, () => {
                                   (void 0 === n.throwOnTimeout ? this._throwOnTimeout : n.throwOnTimeout) && i(u);
                               });
                     r(await a);

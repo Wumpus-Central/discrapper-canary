@@ -1,7 +1,7 @@
-n(67867)(
+r(67867)(
     {
         target: 'Array',
         stat: !0
     },
-    { isArray: n(952256) }
+    { isArray: r(952256) }
 );

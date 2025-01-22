@@ -8,14 +8,14 @@ function a(e, n) {
         : (this._readableState && (this._readableState.destroyed = !0),
           this._writableState && (this._writableState.destroyed = !0),
           this._destroy(e || null, function (e) {
-              !n && e ? (r._writableState ? (r._writableState.errorEmitted ? i.nextTick(o, r) : ((r._writableState.errorEmitted = !0), i.nextTick(s, r, e))) : i.nextTick(s, r, e)) : n ? (i.nextTick(o, r), n(e)) : i.nextTick(o, r);
+              !n && e ? (r._writableState ? (r._writableState.errorEmitted ? i.nextTick(s, r) : ((r._writableState.errorEmitted = !0), i.nextTick(o, r, e))) : i.nextTick(o, r, e)) : n ? (i.nextTick(s, r), n(e)) : i.nextTick(s, r);
           }),
           this);
 }
-function s(e, n) {
-    u(e, n), o(e);
+function o(e, n) {
+    u(e, n), s(e);
 }
-function o(e) {
+function s(e) {
     if (!e._writableState || !!e._writableState.emitClose) (!e._readableState || e._readableState.emitClose) && e.emit('close');
 }
 function l() {

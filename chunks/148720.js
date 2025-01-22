@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(668781),
     a = r(728345),
-    s = r(835873),
-    o = r(973616),
+    o = r(835873),
+    s = r(973616),
     l = r(592125),
     u = r(430824),
     c = r(496675),
     d = r(594174),
     f = r(979651),
-    _ = r(317381),
+    p = r(317381),
     h = r(638880),
-    p = r(782769),
+    _ = r(782769),
     m = r(527805),
     g = r(388032);
 function E(e) {
@@ -24,7 +24,7 @@ function E(e) {
             null == r || r();
             break;
         case m.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-            (0, s.w)();
+            (0, o.w)();
             break;
         case m.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
             i.Z.show({
@@ -59,40 +59,40 @@ function E(e) {
     }
 }
 async function v(e) {
-    let { channelId: n, applicationId: r, launchId: i, inputApplication: s, analyticsLocations: g, launchingComponentId: v, sectionName: I, inviterUserId: T } = e,
-        b = _.ZP.getEmbeddedActivitiesForChannel(n).find((e) => e.applicationId === r && (null == i || e.launchId === i)),
-        y = s;
-    if (null == y) {
+    let { channelId: n, applicationId: r, launchId: i, inputApplication: o, analyticsLocations: g, launchingComponentId: v, sectionName: y, inviterUserId: b } = e,
+        I = p.ZP.getEmbeddedActivitiesForChannel(n).find((e) => e.applicationId === r && (null == i || e.launchId === i)),
+        T = o;
+    if (null == T) {
         let e = await a.ZP.fetchApplication(r);
-        y = o.ZP.createFromServer(e);
+        T = s.ZP.createFromServer(e);
     }
-    if (null == b || null == y) return;
+    if (null == I || null == T) return;
     let S = d.default.getCurrentUser(),
         A = l.Z.getChannel(n);
-    async function N() {
-        if (null != b)
+    async function C() {
+        if (null != I)
             await (0, h.Z)({
-                applicationId: b.applicationId,
+                applicationId: I.applicationId,
                 activityChannelId: n,
                 locationObject: {},
                 analyticsLocations: g,
                 componentId: v,
-                sectionName: I,
-                inviterUserId: T
+                sectionName: y,
+                inviterUserId: b
             });
     }
     E({
         embeddedActivityJoinability: (0, m.ZP)({
             userId: null == S ? void 0 : S.id,
-            application: y,
+            application: T,
             channelId: n,
             currentUser: S,
-            isActivitiesEnabledForCurrentPlatform: (0, p.a)(A),
+            isActivitiesEnabledForCurrentPlatform: (0, _.a)(A),
             ChannelStore: l.Z,
             VoiceStateStore: f.Z,
             PermissionStore: c.Z,
             GuildStore: u.Z
         }),
-        handleCanJoin: N
+        handleCanJoin: C
     });
 }

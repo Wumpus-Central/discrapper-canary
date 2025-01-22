@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(442837),
-    s = r(570140),
-    o = r(355467),
+    o = r(570140),
+    s = r(355467),
     l = r(314897),
     u = r(351402),
     c = r(853872);
@@ -16,12 +16,12 @@ function d() {
         r = (0, a.e7)([l.default], () => l.default.isAuthenticated());
     return (
         i.useEffect(() => {
-            s.Z.wait(() => {
-                r && !u.Z.isPaymentSourceFetching && !c.Z.hasFetchedPaymentSources && o.tZ();
+            o.Z.wait(() => {
+                r && !u.Z.isPaymentSourceFetching && !c.Z.hasFetchedPaymentSources && s.tZ();
             });
         }, [r]),
         i.useEffect(() => {
-            r && !u.Z.ipCountryCodeLoaded && o.GE();
+            r && !u.Z.ipCountryCodeLoaded && s.GE();
         }, [n, r]),
         {
             defaultBillingCountryCode: e,

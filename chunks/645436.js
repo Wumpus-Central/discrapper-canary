@@ -1,6 +1,6 @@
 r.d(n, {
     Y: function () {
-        return s;
+        return o;
     },
     a: function () {
         return a;
@@ -10,6 +10,6 @@ let i = !1;
 function a() {
     return i;
 }
-function s(e) {
+function o(e) {
     i = e;
 }

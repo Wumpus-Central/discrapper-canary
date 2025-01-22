@@ -1,6 +1,6 @@
 var i = r(192379),
     a = r(723184),
-    s = function (e) {
+    o = function (e) {
         var n = e.hsl,
             r = (0, a.default)(
                 {
@@ -19,4 +19,4 @@ var i = r(192379),
             );
         return i.createElement('div', { style: r.picker });
     };
-n.Z = s;
+n.Z = o;

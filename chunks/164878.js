@@ -1,6 +1,6 @@
 r.d(n, {
     k: function () {
-        return s;
+        return o;
     },
     v: function () {
         return a;
@@ -45,7 +45,7 @@ function a(e) {
     let { location: n, autoTrackExposure: r } = e;
     return i.getCurrentConfig({ location: n }, { autoTrackExposure: r });
 }
-function s(e) {
+function o(e) {
     let { autoTrackExposure: n, location: r } = e;
     return i.useExperiment({ location: r }, { autoTrackExposure: n });
 }

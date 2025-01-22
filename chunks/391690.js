@@ -1,13 +1,13 @@
 let i;
 var a,
-    s = r(47120);
-var o = r(757143);
+    o = r(47120);
+var s = r(757143);
 var l = r(442837),
     u = r(570140),
     c = r(579806),
     d = r(358085),
     f = r(417363),
-    _ = r(388032);
+    p = r(388032);
 function h(e, n, r) {
     return (
         n in e
@@ -21,20 +21,20 @@ function h(e, n, r) {
         e
     );
 }
-let p = {},
+let _ = {},
     m = (() => ((0, d.isWindows)() ? ''.concat(c.Z.process.env.LOCALAPPDATA, '\\DiscordGames') : (0, d.isMac)() ? '/Applications/DiscordGames' : '/tmp'))();
 function g(e, n) {
     var r;
-    p = {
-        ...p,
+    _ = {
+        ..._,
         [e]: {
-            ...(null !== (r = p[e]) && void 0 !== r ? r : {}),
+            ...(null !== (r = _[e]) && void 0 !== r ? r : {}),
             ...n
         }
     };
 }
 function E(e) {
-    (p = { ...p }), delete p[e];
+    (_ = { ..._ }), delete _[e];
 }
 function v(e, n) {
     i.pathLabels = {
@@ -42,11 +42,11 @@ function v(e, n) {
         [e]: n
     };
 }
-function I(e) {
+function y(e) {
     if (null == i.pathLabels[e]) return !1;
     (i.pathLabels = { ...i.pathLabels }), delete i.pathLabels[e];
 }
-function T(e) {
+function b(e) {
     let { applicationId: n, branchId: r, installationPath: a } = e;
     null == i.installations[n] && (i.installations[n] = {}),
         (i.installations[n][r] = { installationPath: a }),
@@ -56,18 +56,18 @@ function T(e) {
                 metadata: {}
             });
 }
-function b(e) {
+function I(e) {
     let { applicationId: n, branchId: r } = e,
         i = f.Z.getState(n, r);
     null != i &&
         null == i.buildId &&
         null == i.manifestIds &&
-        y({
+        T({
             applicationId: n,
             branchId: r
         });
 }
-function y(e) {
+function T(e) {
     let { applicationId: n, branchId: r } = e;
     if (null == i.installations[n]) return !1;
     delete i.installations[n][r], 0 === Object.keys(i.installations[n]).length && delete i.installations[n];
@@ -82,14 +82,14 @@ function A(e) {
     let { path: n } = e;
     if (!i.installationPaths.has(n) || i.defaultInstallationPath === n) return !1;
     let r = new Set(i.installationPaths);
-    r.delete(n), (i.installationPaths = r), E(n), I(n);
+    r.delete(n), (i.installationPaths = r), E(n), y(n);
 }
-function N(e) {
+function C(e) {
     let { path: n, label: r, isDefault: a } = e;
     if (!i.installationPaths.has(n)) return !1;
     null != r && '' !== r && i.pathLabels[n] !== r && v(n, r), a && i.defaultInstallationPath !== n && (i.defaultInstallationPath = n);
 }
-function C(e) {
+function N(e) {
     let { metadataPayload: n } = e;
     for (let e in n) g(e, n[e]);
 }
@@ -111,7 +111,7 @@ class R extends (a = l.ZP.PersistedStore) {
         }));
     }
     get installationPathsMetadata() {
-        return p;
+        return _;
     }
     hasGamesInstalledInPath(e) {
         let { installations: n } = i;
@@ -127,7 +127,7 @@ class R extends (a = l.ZP.PersistedStore) {
     getLabelFromPath(e) {
         var n, r;
         return e === m
-            ? _.intl.string(_.t.VdDrjo)
+            ? p.intl.string(p.t.VdDrjo)
             : null !==
                     (r =
                         null !== (n = c.Z.fileManager.basename(e)) && void 0 !== n
@@ -143,12 +143,12 @@ class R extends (a = l.ZP.PersistedStore) {
 h(R, 'displayName', 'InstallationManagerStore'),
     h(R, 'persistKey', 'InstallationManagerStore'),
     (n.Z = new R(u.Z, {
-        DISPATCH_APPLICATION_INSTALL: T,
-        DISPATCH_APPLICATION_UNINSTALL: y,
-        DISPATCH_APPLICATION_CANCEL: b,
+        DISPATCH_APPLICATION_INSTALL: b,
+        DISPATCH_APPLICATION_UNINSTALL: T,
+        DISPATCH_APPLICATION_CANCEL: I,
         INSTALLATION_LOCATION_ADD: S,
         INSTALLATION_LOCATION_REMOVE: A,
-        INSTALLATION_LOCATION_UPDATE: N,
-        INSTALLATION_LOCATION_FETCH_METADATA: C,
-        DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: T
+        INSTALLATION_LOCATION_UPDATE: C,
+        INSTALLATION_LOCATION_FETCH_METADATA: N,
+        DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: b
     }));

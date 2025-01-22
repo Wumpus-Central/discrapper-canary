@@ -1,16 +1,16 @@
-var i, a, s;
+var i, a, o;
 r.d(n, {
     Jx: function () {
         return a;
     },
     Ng: function () {
-        return s;
+        return o;
     },
     SR: function () {
         return i;
     },
     r: function () {
-        return o;
+        return s;
     }
 }),
     !(function (e) {
@@ -21,8 +21,8 @@ r.d(n, {
     })(a || (a = {})),
     !(function (e) {
         (e[(e.QUNS_UNKNOWN = -1)] = 'QUNS_UNKNOWN'), (e[(e.QUNS_NOT_PRESENT = 1)] = 'QUNS_NOT_PRESENT'), (e[(e.QUNS_BUSY = 2)] = 'QUNS_BUSY'), (e[(e.QUNS_RUNNING_D3D_FULL_SCREEN = 3)] = 'QUNS_RUNNING_D3D_FULL_SCREEN'), (e[(e.QUNS_PRESENTATION_MODE = 4)] = 'QUNS_PRESENTATION_MODE'), (e[(e.QUNS_ACCEPTS_NOTIFICATIONS = 5)] = 'QUNS_ACCEPTS_NOTIFICATIONS'), (e[(e.QUNS_QUIET_TIME = 6)] = 'QUNS_QUIET_TIME'), (e[(e.QUNS_APP = 7)] = 'QUNS_APP');
-    })(s || (s = {}));
-let o = {
+    })(o || (o = {}));
+let s = {
     compatibilityHook: !1,
     warn: !1,
     enabled: !1,

@@ -5,25 +5,25 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(403182),
-    o = r(640108);
+    o = r(403182),
+    s = r(640108);
 class l extends a.PureComponent {
     render() {
-        let { src: e, fileSize: n, fileName: r, className: a, playable: l, volume: u, renderLinkComponent: c, onVolumeChange: d, onVolumeShow: f, onVolumeHide: _, autoMute: h, onMute: p, mimeType: m, onPlay: g } = this.props;
-        return (0, i.jsx)(o.ZP, {
+        let { src: e, fileSize: n, fileName: r, className: a, playable: l, volume: u, renderLinkComponent: c, onVolumeChange: d, onVolumeShow: f, onVolumeHide: p, autoMute: h, onMute: _, mimeType: m, onPlay: g } = this.props;
+        return (0, i.jsx)(s.ZP, {
             src: e,
             fileName: r,
-            fileSize: (0, s.Ng)(n),
+            fileSize: (0, o.Ng)(n),
             fileSizeBytes: n,
-            type: o.ZP.Types.AUDIO,
+            type: s.ZP.Types.AUDIO,
             className: a,
             playable: l,
             volume: u,
-            onMute: p,
+            onMute: _,
             autoMute: h,
             onVolumeChange: d,
             onVolumeShow: f,
-            onVolumeHide: _,
+            onVolumeHide: p,
             renderLinkComponent: c,
             mimeType: m,
             onPlay: g

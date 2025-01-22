@@ -38,9 +38,9 @@ function O(e) {
             return s()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
         {
-            pendingAvatar: y,
-            pendingNickname: B,
-            pendingBanner: D,
+            pendingAvatar: D,
+            pendingNickname: y,
+            pendingBanner: B,
             pendingBio: Z,
             pendingPronouns: L,
             pendingThemeColors: M,
@@ -65,8 +65,8 @@ function O(e) {
         V = (0, a.e7)([_.ZP], () => (null == F.id ? null : _.ZP.getMember(F.id, P.id))),
         G = (0, a.e7)([f.Z], () => f.Z.getGuildMemberProfile(P.id, F.id)),
         H = C.ZP.canUsePremiumProfileCustomization(P),
-        Y = (0, c.gd)(y, null == V ? void 0 : V.avatar),
-        W = (0, c.f$)(D, null == G ? void 0 : G.banner),
+        Y = (0, c.gd)(D, null == V ? void 0 : V.avatar),
+        W = (0, c.f$)(B, null == G ? void 0 : G.banner),
         z = (0, I.p)(M, null == G ? void 0 : G.themeColors),
         K = null !== (t = null == G ? void 0 : G.bio) && void 0 !== t ? t : '',
         q = null !== (n = null == G ? void 0 : G.pronouns) && void 0 !== n ? n : '',
@@ -81,7 +81,7 @@ function O(e) {
                 {
                     errors: null !== (r = null == k ? void 0 : k.nick) && void 0 !== r ? r : null == U ? void 0 : U.nick,
                     username: T.ZP.getName(P),
-                    pendingNick: B,
+                    pendingNick: y,
                     currentNick: null == V ? void 0 : V.nick,
                     guild: F
                 },
@@ -189,7 +189,7 @@ function O(e) {
                     ),
                     (0, i.jsx)(p.Z, {
                         user: P,
-                        pendingAvatar: y,
+                        pendingAvatar: D,
                         pendingColors: M,
                         onThemeColorsChange: (e) => {
                             (0, I.ce)(e, null == G ? void 0 : G.themeColors);

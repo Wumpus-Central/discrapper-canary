@@ -6,13 +6,13 @@ r.d(n, {
         return a;
     },
     zQ: function () {
-        return p;
+        return _;
     }
 });
 var i,
     a,
-    s = r(653041);
-var o = r(47120);
+    o = r(653041);
+var s = r(47120);
 var l = r(512722),
     u = r.n(l),
     c = r(570140);
@@ -30,7 +30,7 @@ function d(e, n, r) {
     );
 }
 let f = 60000,
-    _ = 3000;
+    p = 3000;
 !(function (e) {
     e.FORUM_CHANNEL = 'forum_channel';
 })(i || (i = {})),
@@ -71,9 +71,9 @@ class h {
         d(this, 'seenIntervals', void 0), (this.seenIntervals = []);
     }
 }
-class p {
+class _ {
     maybeFlushSeenItems(e) {
-        if ((null == e && Date.now() - this._lastFlushTimeMillis < f) || (1 === e && Date.now() - this._lastFlushTimeMillis < _)) return Promise.resolve();
+        if ((null == e && Date.now() - this._lastFlushTimeMillis < f) || (1 === e && Date.now() - this._lastFlushTimeMillis < p)) return Promise.resolve();
         let n = this.createFlushSeenItemsFunction(e);
         return null == n
             ? Promise.resolve()
@@ -115,24 +115,24 @@ class p {
                 var n, r;
                 let i = e.id,
                     a = e.timestampMillis,
-                    s = e.feedItemId;
+                    o = e.feedItemId;
                 if (i !== this._id) return;
                 if (this._paused) {
-                    this._pausedFeedItemIds.add(s);
+                    this._pausedFeedItemIds.add(o);
                     return;
                 }
-                let o = this.getTrackedFeedItem(s).maybeMarkSeen(a);
-                null === (n = (r = this).onFeedItemSeen) || void 0 === n || n.call(r, s, o);
+                let s = this.getTrackedFeedItem(o).maybeMarkSeen(a);
+                null === (n = (r = this).onFeedItemSeen) || void 0 === n || n.call(r, o, s);
             }),
             d(this, 'handleFeedItemUnseen', (e) => {
                 var n, r;
                 let i = e.id,
                     a = e.timestampMillis,
-                    s = e.feedItemId;
+                    o = e.feedItemId;
                 if (i !== this._id) return;
-                this._paused && this._pausedFeedItemIds.delete(s);
-                let o = this.getTrackedFeedItem(s).maybeMarkUnseen(a);
-                null === (n = (r = this).onFeedItemUnseen) || void 0 === n || n.call(r, s, o), this.maybeFlushSeenItems();
+                this._paused && this._pausedFeedItemIds.delete(o);
+                let s = this.getTrackedFeedItem(o).maybeMarkUnseen(a);
+                null === (n = (r = this).onFeedItemUnseen) || void 0 === n || n.call(r, o, s), this.maybeFlushSeenItems();
             }),
             d(this, 'getTrackedFeedItem', (e) => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new h()), this.trackedFeedItems[e])),
             d(

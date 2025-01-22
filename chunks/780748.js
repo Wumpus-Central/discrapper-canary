@@ -5,12 +5,12 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(998698),
-    s = r(436660),
-    o = r(515270),
+    o = r(436660),
+    s = r(515270),
     l = r(417662),
     u = r(981631);
 function c(e) {
-    let { editor: n, channel: r, disableEnterToSubmit: c, onKeyDown: d, onKeyUp: f, onTab: _, onEnter: h, allowNewLines: p, submit: m, hideAutocomplete: g, moveSelection: E } = e,
+    let { editor: n, channel: r, disableEnterToSubmit: c, onKeyDown: d, onKeyUp: f, onTab: p, onEnter: h, allowNewLines: _, submit: m, hideAutocomplete: g, moveSelection: E } = e,
         v = i.useCallback(
             (e) => {
                 var i;
@@ -43,12 +43,12 @@ function c(e) {
                         null == g || g();
                         break;
                     case u.yXg.TAB:
-                        if ((0, l.E)(e, {}) && (null == _ ? void 0 : _())) {
+                        if ((0, l.E)(e, {}) && (null == p ? void 0 : p())) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
                         if (null != a.Z.getActiveCommand(r.id)) {
-                            e.preventDefault(), e.stopPropagation(), e.shiftKey ? s.Q.selectPreviousCommandOption(n) : s.Q.selectNextCommandOption(n);
+                            e.preventDefault(), e.stopPropagation(), e.shiftKey ? o.Q.selectPreviousCommandOption(n) : o.Q.selectNextCommandOption(n);
                             return;
                         }
                         break;
@@ -62,9 +62,9 @@ function c(e) {
                     e.preventDefault(), e.stopPropagation();
                     return;
                 }
-                e.which === u.yXg.ENTER && ((!e.altKey && !e.shiftKey && (!c || e.ctrlKey) && !(0, o.L6)(n)) || !p) && (e.preventDefault(), e.stopPropagation(), m()), null == d || d(e);
+                e.which === u.yXg.ENTER && ((!e.altKey && !e.shiftKey && (!c || e.ctrlKey) && !(0, s.L6)(n)) || !_) && (e.preventDefault(), e.stopPropagation(), m()), null == d || d(e);
             },
-            [p, r.id, c, n, g, E, h, d, _, m]
+            [_, r.id, c, n, g, E, h, d, p, m]
         );
     return {
         handleKeyDown: v,

@@ -1,16 +1,16 @@
 r.r(n),
     r.d(n, {
         DISCORD_EPOCH: function () {
-            return s.cj;
+            return o.cj;
         },
         SnowflakeSequence: function () {
-            return s.Tk;
+            return o.Tk;
         }
     });
 var i = r(392711),
     a = r.n(i),
-    s = r(67423);
-function o(e) {
+    o = r(67423);
+function s(e) {
     return Object.keys(e);
 }
 function l(e) {
@@ -23,25 +23,25 @@ function c(e, n) {
     a().forEach(e, (e, r) => n(e, r));
 }
 function d(e) {
-    return s.Ol(e);
+    return o.Ol(e);
 }
 function f(e, n) {
-    return s.P4(e, n);
-}
-function _(e) {
-    return s.cO(e);
-}
-function h(e) {
-    return s.B_(e);
+    return o.P4(e, n);
 }
 function p(e) {
-    return s.Lm(e);
+    return o.cO(e);
+}
+function h(e) {
+    return o.B_(e);
+}
+function _(e) {
+    return o.Lm(e);
 }
 function m(e, n) {
-    return s.qu(e, n);
+    return o.qu(e, n);
 }
 function g(e) {
-    return s.qi(e);
+    return o.qi(e);
 }
 function E(e) {
     return e;
@@ -49,26 +49,26 @@ function E(e) {
 function v(e) {
     return E(e);
 }
-function I(e) {
+function y(e) {
     return E(e);
 }
-function T(e) {
+function b(e) {
     return E(e);
 }
 n.default = {
     age: h,
-    extractTimestamp: p,
+    extractTimestamp: _,
     compare: m,
-    atPreviousMillisecond: _,
+    atPreviousMillisecond: p,
     fromTimestamp: d,
     fromTimestampWithSequence: f,
-    keys: o,
+    keys: s,
     forEach: c,
     forEachKey: u,
     entries: l,
     isProbablyAValidSnowflake: g,
     castChannelIdAsMessageId: v,
-    castMessageIdAsChannelId: I,
-    castGuildIdAsEveryoneGuildRoleId: T,
+    castMessageIdAsChannelId: y,
+    castGuildIdAsEveryoneGuildRoleId: b,
     cast: E
 };

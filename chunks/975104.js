@@ -1,15 +1,15 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(411104);
 var a = r(200651),
-    s = r(192379);
-function o() {
-    let e = s.createContext(void 0);
+    o = r(192379);
+function s() {
+    let e = o.createContext(void 0);
     function n() {
-        let n = s.useContext(e);
+        let n = o.useContext(e);
         if (null == n) throw Error('Context was used outside of defined provider.');
         return n;
     }

@@ -6,8 +6,8 @@ var r = n(481060),
     o = n(91802),
     s = n(222727),
     c = n(981631),
-    d = n(921944),
-    u = n(388032),
+    u = n(921944),
+    d = n(388032),
     m = n(230278);
 t.Z = (e) => {
     let { notice: t, noticeType: n, dismissCurrentNotice: h } = e,
@@ -21,7 +21,7 @@ t.Z = (e) => {
         color: f ? r.NoticeColors.BRAND : r.NoticeColors.PREMIUM_TIER_2,
         children: [
             (0, i.jsx)(r.NoticeCloseButton, {
-                onClick: () => h(d.L.UNKNOWN),
+                onClick: () => h(u.L.UNKNOWN),
                 noticeType: n
             }),
             !f &&
@@ -33,10 +33,10 @@ t.Z = (e) => {
             (0, a.Gv)(_, g, E, f),
             (0, i.jsx)(r.PrimaryCTANoticeButton, {
                 onClick: () => {
-                    h(d.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM);
+                    h(u.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM);
                 },
                 noticeType: n,
-                children: u.intl.string(u.t.hvVgAQ)
+                children: d.intl.string(d.t.hvVgAQ)
             })
         ]
     });

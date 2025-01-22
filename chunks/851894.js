@@ -50,7 +50,7 @@ function O(e) {
         }),
         O = (0, l.e7)([x.Z], () => !x.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
         R = (0, l.e7)([f.Z], () => f.Z.hidePersonalInformation),
-        { source: P, ...y } = (0, l.cj)([S.Z], () => ({
+        { source: P, ...D } = (0, l.cj)([S.Z], () => ({
             ...S.Z.getAllPending(),
             source: S.Z.getSource()
         }));
@@ -89,7 +89,7 @@ function O(e) {
                                           guild: t,
                                           canUsePremiumCustomization: C.ZP.canUsePremiumProfileCustomization(s),
                                           onUpsellClick: j,
-                                          ...y
+                                          ...D
                                       }),
                                       children: (0, i.jsx)(I.Z, {})
                                   })

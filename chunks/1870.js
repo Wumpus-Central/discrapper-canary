@@ -1,5 +1,5 @@
-let i, a, s;
-var o,
+let i, a, o;
+var s,
     l = r(47120);
 var u = r(392711);
 var c = r(442837),
@@ -17,36 +17,36 @@ function f(e, n, r) {
         e
     );
 }
-let _ = new Map(),
-    h = _,
-    p = !1;
+let p = new Map(),
+    h = p,
+    _ = !1;
 let m = !1,
     g = (e) => {
-        (p = !0), (a = void 0);
+        (_ = !0), (a = void 0);
     },
     E = (e) => {
         let { error: n } = e;
-        (h = _), (p = !1), (a = n), (m = !0);
+        (h = p), (_ = !1), (a = n), (m = !0);
     },
     v = (e) => {
-        0 === e.purchases.length ? (h = _) : !(0, u.isEqual)([...h.values()], e.purchases) && (h = new Map(e.purchases.map((e) => [e.skuId, e]))), (m = !0), (p = !1), (a = void 0);
-    },
-    I = (e) => {
-        (i = e.skuId), (s = void 0);
-    },
-    T = (e) => {
-        null == e.purchases || 0 === e.purchases.length ? (h = _) : !(0, u.isEqual)([...h.values()], e.purchases) && (h = new Map(e.purchases.map((e) => [e.skuId, e]))), (i = void 0), (s = void 0);
-    },
-    b = (e) => {
-        let { error: n, skuId: r } = e;
-        (i = r), (s = n);
+        0 === e.purchases.length ? (h = p) : !(0, u.isEqual)([...h.values()], e.purchases) && (h = new Map(e.purchases.map((e) => [e.skuId, e]))), (m = !0), (_ = !1), (a = void 0);
     },
     y = (e) => {
-        (h = _), (p = !1), (i = void 0), (a = void 0), (s = void 0);
+        (i = e.skuId), (o = void 0);
+    },
+    b = (e) => {
+        null == e.purchases || 0 === e.purchases.length ? (h = p) : !(0, u.isEqual)([...h.values()], e.purchases) && (h = new Map(e.purchases.map((e) => [e.skuId, e]))), (i = void 0), (o = void 0);
+    },
+    I = (e) => {
+        let { error: n, skuId: r } = e;
+        (i = r), (o = n);
+    },
+    T = (e) => {
+        (h = p), (_ = !1), (i = void 0), (a = void 0), (o = void 0);
     };
-class S extends (o = c.ZP.Store) {
+class S extends (s = c.ZP.Store) {
     get isFetching() {
-        return p;
+        return _;
     }
     get isClaiming() {
         return i;
@@ -58,7 +58,7 @@ class S extends (o = c.ZP.Store) {
         return a;
     }
     get claimError() {
-        return s;
+        return o;
     }
     get hasPreviouslyFetched() {
         return m;
@@ -72,8 +72,8 @@ f(S, 'displayName', 'CollectiblesPurchaseStore'),
         COLLECTIBLES_PURCHASES_FETCH: g,
         COLLECTIBLES_PURCHASES_FETCH_SUCCESS: v,
         COLLECTIBLES_PURCHASES_FETCH_FAILURE: E,
-        COLLECTIBLES_CLAIM: I,
-        COLLECTIBLES_CLAIM_SUCCESS: T,
-        COLLECTIBLES_CLAIM_FAILURE: b,
-        LOGOUT: y
+        COLLECTIBLES_CLAIM: y,
+        COLLECTIBLES_CLAIM_SUCCESS: b,
+        COLLECTIBLES_CLAIM_FAILURE: I,
+        LOGOUT: T
     }));

@@ -18,7 +18,7 @@ function a(e, n, r) {
     );
 }
 r(200651), r(192379);
-class s {
+class o {
     addValue(e) {
         var n, r;
         this.count++;
@@ -32,20 +32,20 @@ class s {
         a(this, 'totalMicroseconds', 0), a(this, 'count', 0), a(this, 'minMicroseconds', null), a(this, 'maxMicroseconds', null);
     }
 }
-let o = {},
+let s = {},
     l = !0;
 function u(e, n) {
     let r = e.length > n ? n : e.length;
     return e.substring(0, r).padEnd(n, ' ');
 }
 function c() {
-    if (0 === Object.keys(o).length) return '';
+    if (0 === Object.keys(s).length) return '';
     let e = 'Component Render Stats (microseconds):\n',
         n = '|'.concat(u('id', 20), '|').concat(u('Mounts', 8), '|').concat(u('Mount Mean', 20), '|').concat(u('Updates', 8), '|').concat(u('Update Mean', 20), '|').concat(u('Nested', 8), '|').concat(u('Nested Mean', 20), '|\n');
     return (
         e +
         n +
-        Object.entries(o).map((e) => {
+        Object.entries(s).map((e) => {
             let [n, r] = e;
             return '|'.concat(u(n, 20), '|').concat(u(r.mount.count.toString(), 8), '|').concat(u(r.mount.mean.toString(), 20), '|').concat(u(r.update.count.toString(), 8), '|').concat(u(r.update.mean.toString(), 20), '|').concat(u(r.nestedUpdate.count.toString(), 8), '|').concat(u(r.nestedUpdate.mean.toString(), 20), '|\n');
         })

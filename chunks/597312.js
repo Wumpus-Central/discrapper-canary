@@ -3,14 +3,14 @@ r.d(n, {
         return l;
     },
     w0: function () {
-        return o;
+        return s;
     },
     zJ: function () {
-        return s;
+        return o;
     }
 });
 var i = r(627472),
     a = r(553624);
-let s = (0, i.z)(a.thin, a.fade),
-    o = (0, i.z)(a.auto, a.fade),
+let o = (0, i.z)(a.thin, a.fade),
+    s = (0, i.z)(a.auto, a.fade),
     l = (0, i.z)(a.none, a.fade);

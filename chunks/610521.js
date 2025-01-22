@@ -3,17 +3,17 @@ r.d(n, {
         return f;
     },
     ZP: function () {
-        return _;
+        return p;
     },
     fC: function () {
-        return o;
+        return s;
     }
 });
 var i = r(192379),
     a = function () {
         (this.locks = []), (this.listeners = []);
     };
-function s(e, n, r) {
+function o(e, n, r) {
     void 0 === r && (r = !1);
     var i = (function (e) {
             return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
@@ -23,8 +23,8 @@ function s(e, n, r) {
             });
         })(e),
         a = n.compareDocumentPosition(e),
-        s = null;
-    a & Node.DOCUMENT_POSITION_PRECEDING || r ? (s = i.firstChild()) : a & Node.DOCUMENT_POSITION_FOLLOWING && (s = i.lastChild()), (null != s ? s : e).focus();
+        o = null;
+    a & Node.DOCUMENT_POSITION_PRECEDING || r ? (o = i.firstChild()) : a & Node.DOCUMENT_POSITION_FOLLOWING && (o = i.lastChild()), (null != o ? o : e).focus();
 }
 (a.prototype.add = function (e, n) {
     var r = {
@@ -76,12 +76,12 @@ function s(e, n, r) {
             return r(n, e.locks);
         });
     });
-var o = new a(),
+var s = new a(),
     l = 0;
 function u(e) {
     (0, i.useEffect)(
         function () {
-            return o.subscribe(e);
+            return s.subscribe(e);
         },
         [e]
     );
@@ -108,11 +108,11 @@ function d(e) {
         (0, i.useLayoutEffect)(
             function () {
                 return (
-                    o.add(n, function (e) {
+                    s.add(n, function (e) {
                         return (r.current = e);
                     }),
                     function () {
-                        return o.remove(n);
+                        return s.remove(n);
                     }
                 );
             },
@@ -136,18 +136,18 @@ var f = (0, i.memo)(function () {
         })
     );
 });
-function _(e, n) {
+function p(e, n) {
     void 0 === n && (n = {});
     var r = n.disableReturnRef,
         a = n.attachTo;
     void 0 === a && (a = document);
-    var o = n.disable,
+    var s = n.disable,
         l = d();
     (0, i.useEffect)(
         function () {
-            o && (l.current = !1);
+            s && (l.current = !1);
         },
-        [o]
+        [s]
     ),
         (0, i.useLayoutEffect)(
             function () {
@@ -157,7 +157,7 @@ function _(e, n) {
                         var r = e.current;
                         if (null != r) {
                             var i = n.target || document.body;
-                            r.contains(i) || (n.preventDefault(), n.stopImmediatePropagation(), s(r, i));
+                            r.contains(i) || (n.preventDefault(), n.stopImmediatePropagation(), o(r, i));
                         }
                     }
                 }
@@ -167,12 +167,12 @@ function _(e, n) {
                         if (null != r) {
                             (null != n.relatedTarget && n.relatedTarget !== document.body) || (n.preventDefault(), r.focus());
                             var i = n.target || document.body;
-                            r.contains(i) || s(r, i);
+                            r.contains(i) || o(r, i);
                         }
                     }
                 }
                 return (
-                    null == n || null == document.activeElement || n.contains(document.activeElement) || null != n.querySelector('[autofocus]') || s(n, document.activeElement, !0),
+                    null == n || null == document.activeElement || n.contains(document.activeElement) || null != n.querySelector('[autofocus]') || o(n, document.activeElement, !0),
                     a.addEventListener('focusin', r, { capture: !0 }),
                     a.addEventListener('focusout', i, { capture: !0 }),
                     function () {

@@ -33,9 +33,9 @@ var i = n(200651),
     O = n(572004),
     R = n(51144),
     P = n(998502),
-    y = n(695346),
-    B = n(461877),
-    D = n(726985),
+    D = n(695346),
+    y = n(461877),
+    B = n(726985),
     Z = n(981631),
     L = n(815660),
     M = n(801461),
@@ -260,7 +260,7 @@ function H(e) {
                 buttonColor: u.Button.Colors.PRIMARY,
                 valueMessage: (0, i.jsx)(G, {
                     text: e,
-                    censor: B.E,
+                    censor: y.E,
                     revealLabel: k.intl.string(k.t['Zvx+yc']),
                     hideLabel: k.intl.string(k.t.nqTD4e)
                 }),
@@ -322,7 +322,7 @@ function Y(e) {
         (t = c
             ? (0, i.jsx)(G, {
                   text: l,
-                  censor: B.n,
+                  censor: y.n,
                   revealLabel: k.intl.string(k.t.eY3xlZ),
                   hideLabel: k.intl.string(k.t.jllbv7)
               })
@@ -405,7 +405,7 @@ function W(e) {
             id: t.id,
             label: k.intl.string(k.t['/AXYnJ'])
         });
-    return y.Sb.useSetting() && O.wS
+    return D.Sb.useSetting() && O.wS
         ? (0, i.jsx)(u.Popout, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -442,7 +442,7 @@ function K() {
         }),
         n = (0, b.ZP)(t.id),
         r = (0, S.Z)(n),
-        s = y.co.useSetting(),
+        s = D.co.useSetting(),
         a = (0, c.e7)([A.Z], () => A.Z.getErrors()),
         l = null == a ? void 0 : null === (e = a.avatar) || void 0 === e ? void 0 : e[0],
         { avatarSrc: d, avatarDecorationSrc: m } = (0, I.Z)({
@@ -515,25 +515,25 @@ function K() {
                         className: w.fieldList,
                         children: [
                             (0, i.jsx)(T.F, {
-                                setting: D.s6.ACCOUNT_DISPLAY_NAME,
+                                setting: B.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, i.jsx)(V, {
                                     className: w.fieldSpacerBottom,
                                     user: t
                                 })
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: D.s6.ACCOUNT_USERNAME,
+                                setting: B.s6.ACCOUNT_USERNAME,
                                 children: (0, i.jsx)(U, { user: t })
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: D.s6.ACCOUNT_EMAIL,
+                                setting: B.s6.ACCOUNT_EMAIL,
                                 children: (0, i.jsx)(H, {
                                     className: w.fieldSpacer,
                                     user: t
                                 })
                             }),
                             (0, i.jsx)(T.F, {
-                                setting: D.s6.ACCOUNT_PHONE_NUMBER,
+                                setting: B.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, i.jsx)(Y, {
                                     className: w.fieldSpacer,
                                     user: t

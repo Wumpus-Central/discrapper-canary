@@ -3,11 +3,11 @@ e.exports = function (e, n, r, i) {
     if (void 0 !== a) return !!a;
     if (e === n) return !0;
     if ('object' != typeof e || !e || 'object' != typeof n || !n) return !1;
-    var s = Object.keys(e),
-        o = Object.keys(n);
-    if (s.length !== o.length) return !1;
-    for (var l = Object.prototype.hasOwnProperty.bind(n), u = 0; u < s.length; u++) {
-        var c = s[u];
+    var o = Object.keys(e),
+        s = Object.keys(n);
+    if (o.length !== s.length) return !1;
+    for (var l = Object.prototype.hasOwnProperty.bind(n), u = 0; u < o.length; u++) {
+        var c = o[u];
         if (!l(c)) return !1;
         var d = e[c],
             f = n[c];

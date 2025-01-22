@@ -14,14 +14,14 @@ r.d(n, {
 });
 var i = r(987170),
     a = r(535201),
-    s = r(987338);
-let o = new Date('2025-01-06T07:59:59.000Z'),
+    o = r(987338);
+let s = new Date('2025-01-06T07:59:59.000Z'),
     l = (0, i.Z)({
         id: '2024-11_seasonal_gifting',
         label: 'Seasonal Gifting 2024',
         kind: 'user',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: s.$P.CONNECTION_OPEN,
+        commonTriggerPoint: o.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -48,7 +48,7 @@ let o = new Date('2025-01-06T07:59:59.000Z'),
         label: 'Seasonal Gifting Reminder 2024',
         kind: 'user',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: s.$P.CONNECTION_OPEN,
+        commonTriggerPoint: o.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -58,7 +58,7 @@ let o = new Date('2025-01-06T07:59:59.000Z'),
         ]
     });
 function d() {
-    return (0, a.p)(o);
+    return (0, a.p)(s);
 }
 function f() {
     let e = d(),

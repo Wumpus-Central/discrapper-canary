@@ -5,11 +5,11 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653041);
-let s = {
+let o = {
         1: 'bold',
         4: 'underline'
     },
-    o = {
+    s = {
         30: 'black',
         31: 'red',
         32: 'green',
@@ -40,7 +40,7 @@ function d() {
                 endsParent: !0
             }
         },
-        n = [..._('foreground', o, ['38', '39'], !0), ..._('background', l, ['48', '49'], !0), ..._('style', s, [], !1), e];
+        n = [...p('foreground', s, ['38', '39'], !0), ...p('background', l, ['48', '49'], !0), ...p('style', o, [], !1), e];
     return (
         h(n),
         {
@@ -65,7 +65,7 @@ function f(e, n, r, i) {
         }
     };
 }
-function _(e, n, r, i) {
+function p(e, n, r, i) {
     let a = ['0', ...r];
     return (
         i && a.push(...Object.keys(n)),

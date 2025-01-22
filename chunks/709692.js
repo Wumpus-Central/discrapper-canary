@@ -17,42 +17,42 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(97613),
-    o = r.n(s),
+    o = r(97613),
+    s = r.n(o),
     l = r(493773),
     u = r(952265),
     c = r(307616),
     d = r(466377);
 function f(e) {
     let { renderModal: n, onCloseRequest: r, onCloseCallback: i } = e,
-        [s] = a.useState(() => o()()),
+        [o] = a.useState(() => s()()),
         d = (0, c.v)();
     (0, l.N)(
         () => (
             (0, u.h7)(
                 n,
                 {
-                    modalKey: s,
+                    modalKey: o,
                     onCloseRequest: r,
                     onCloseCallback: i
                 },
                 d
             ),
             () => {
-                (0, u.Mr)(s, d);
+                (0, u.Mr)(o, d);
             }
         )
     );
     let f = a.useRef(!0),
-        _ = {
+        p = {
             contextKey: d,
-            modalKey: s,
+            modalKey: o,
             onCloseCallback: i
         },
-        h = a.useRef(_);
+        h = a.useRef(p);
     return (
         a.useEffect(() => {
-            h.current = _;
+            h.current = p;
         }),
         a.useLayoutEffect(() => {
             let { contextKey: e, modalKey: i, onCloseCallback: a } = h.current;

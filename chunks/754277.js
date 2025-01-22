@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -27,7 +27,7 @@ function d(e) {
 function f() {
     u = !1;
 }
-class _ extends (i = a.ZP.DeviceSettingsStore) {
+class p extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         null != e && (l = e);
     }
@@ -41,9 +41,9 @@ class _ extends (i = a.ZP.DeviceSettingsStore) {
         return l;
     }
 }
-o(_, 'displayName', 'StageMusicStore'),
-    o(_, 'persistKey', 'StageMusicStore'),
-    (n.Z = new _(s.Z, {
+s(p, 'displayName', 'StageMusicStore'),
+    s(p, 'persistKey', 'StageMusicStore'),
+    (n.Z = new p(o.Z, {
         STAGE_MUSIC_MUTE: c,
         STAGE_MUSIC_PLAY: d,
         VOICE_CHANNEL_SELECT: f

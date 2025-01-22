@@ -3,10 +3,10 @@ function n(e) {
         r = '([0-9a-fA-F]_*)+',
         i = '([01]_*)+',
         a = '([0-7]_*)+',
-        s = '[!#$%&*+.\\/<=>?@\\\\^~-]',
-        o = '(\\p{S}|\\p{P})',
+        o = '[!#$%&*+.\\/<=>?@\\\\^~-]',
+        s = '(\\p{S}|\\p{P})',
         l = '[(),;\\[\\]`|{}]',
-        u = `(${s}|(?!(${l}|[_:"']))${o})`,
+        u = `(${o}|(?!(${l}|[_:"']))${s})`,
         c = {
             variants: [e.COMMENT('--+', '$'), e.COMMENT(/\{-/, /-\}/, { contains: ['self'] })]
         },
@@ -20,7 +20,7 @@ function n(e) {
             begin: '^#',
             end: '$'
         },
-        _ = {
+        p = {
             className: 'type',
             begin: "\\b[A-Z][\\w']*",
             relevance: 0
@@ -40,7 +40,7 @@ function n(e) {
                 c
             ]
         },
-        p = {
+        _ = {
             begin: /\{/,
             end: /\}/,
             contains: h.contains
@@ -75,19 +75,19 @@ function n(e) {
                 begin: '^(\\s*)?(class|instance)\\b',
                 end: 'where',
                 keywords: 'class family instance where',
-                contains: [_, h, c]
+                contains: [p, h, c]
             },
             {
                 className: 'class',
                 begin: '\\b(data|(new)?type)\\b',
                 end: '$',
                 keywords: 'data family type newtype deriving',
-                contains: [d, _, h, p, c]
+                contains: [d, p, h, _, c]
             },
             {
                 beginKeywords: 'default',
                 end: '$',
-                contains: [_, h, c]
+                contains: [p, h, c]
             },
             {
                 beginKeywords: 'infix infixl infixr',
@@ -98,7 +98,7 @@ function n(e) {
                 begin: '\\bforeign\\b',
                 end: '$',
                 keywords: 'foreign import export ccall stdcall cplusplus jvm dotnet safe unsafe',
-                contains: [_, e.QUOTE_STRING_MODE, c]
+                contains: [p, e.QUOTE_STRING_MODE, c]
             },
             {
                 className: 'meta',
@@ -120,7 +120,7 @@ function n(e) {
             },
             e.QUOTE_STRING_MODE,
             m,
-            _,
+            p,
             e.inherit(e.TITLE_MODE, { begin: "^[_a-z][\\w']*" }),
             { begin: `(?!-)${u}--+|--+(?!-)${u}` },
             c,

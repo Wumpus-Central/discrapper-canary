@@ -63,8 +63,8 @@ var r = {
     },
     i = function (e, n, i) {
         var a,
-            s = r[e];
-        if (((a = 'string' == typeof s ? s : 1 === n ? s.one : s.other.replace('{{count}}', n.toString())), null != i && i.addSuffix)) return i.comparison && i.comparison > 0 ? 'in ' + a : a + ' ago';
+            o = r[e];
+        if (((a = 'string' == typeof o ? o : 1 === n ? o.one : o.other.replace('{{count}}', n.toString())), null != i && i.addSuffix)) return i.comparison && i.comparison > 0 ? 'in ' + a : a + ' ago';
         return a;
     };
 n.Z = i;

@@ -3,7 +3,7 @@ r.d(n, {
         return a;
     },
     ov: function () {
-        return s;
+        return o;
     }
 });
 let i = (0, r(818083).B)({
@@ -23,7 +23,7 @@ let i = (0, r(818083).B)({
         let { enabled: e } = i.useExperiment({ location: 'force_migration' }, { autoTrackExposure: !1 });
         return e;
     },
-    s = () => {
+    o = () => {
         let { enabled: e } = i.getCurrentConfig({ location: 'force_migration' }, { autoTrackExposure: !1 });
         return e;
     };

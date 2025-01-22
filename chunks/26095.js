@@ -12,7 +12,7 @@ var i = r(165566),
         propTypes: !0,
         type: !0
     },
-    s = {
+    o = {
         name: !0,
         length: !0,
         prototype: !0,
@@ -21,7 +21,7 @@ var i = r(165566),
         arguments: !0,
         arity: !0
     },
-    o = {
+    s = {
         $$typeof: !0,
         render: !0,
         defaultProps: !0,
@@ -40,24 +40,24 @@ var i = r(165566),
 function c(e) {
     return i.isMemo(e) ? l : u[e.$$typeof] || a;
 }
-(u[i.ForwardRef] = o), (u[i.Memo] = l);
+(u[i.ForwardRef] = s), (u[i.Memo] = l);
 var d = Object.defineProperty,
     f = Object.getOwnPropertyNames,
-    _ = Object.getOwnPropertySymbols,
+    p = Object.getOwnPropertySymbols,
     h = Object.getOwnPropertyDescriptor,
-    p = Object.getPrototypeOf,
+    _ = Object.getPrototypeOf,
     m = Object.prototype;
 function g(e, n, r) {
     if ('string' != typeof n) {
         if (m) {
-            var i = p(n);
+            var i = _(n);
             i && i !== m && g(e, i, r);
         }
         var a = f(n);
-        _ && (a = a.concat(_(n)));
-        for (var o = c(e), l = c(n), u = 0; u < a.length; ++u) {
+        p && (a = a.concat(p(n)));
+        for (var s = c(e), l = c(n), u = 0; u < a.length; ++u) {
             var E = a[u];
-            if (!s[E] && !(r && r[E]) && !(l && l[E]) && !(o && o[E])) {
+            if (!o[E] && !(r && r[E]) && !(l && l[E]) && !(s && s[E])) {
                 var v = h(n, E);
                 try {
                     d(e, E, v);

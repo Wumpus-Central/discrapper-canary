@@ -1,13 +1,13 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(192379),
     a = r(995295);
-let s = Object.freeze({ box: 'border-box' });
-function o(e) {
-    let { ref: n, onUpdate: r, resizeObserver: o, listenerMap: l, key: u } = e;
+let o = Object.freeze({ box: 'border-box' });
+function s(e) {
+    let { ref: n, onUpdate: r, resizeObserver: s, listenerMap: l, key: u } = e;
     (0, i.useLayoutEffect)(() => {
         let e = (e) => {
                 (0, a.flushSync)(() => {
@@ -16,10 +16,10 @@ function o(e) {
             },
             { current: i } = n;
         return (
-            null != i && (l.set(i, e), o.observe(i, s)),
+            null != i && (l.set(i, e), s.observe(i, o)),
             () => {
-                null != i && (o.unobserve(i), l.delete(i));
+                null != i && (s.unobserve(i), l.delete(i));
             }
         );
-    }, [r, o, n, l, u]);
+    }, [r, s, n, l, u]);
 }

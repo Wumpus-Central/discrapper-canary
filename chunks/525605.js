@@ -9,8 +9,8 @@ r.d(n, {
 var i,
     a = r(200651);
 r(192379);
-var s = r(120356),
-    o = r.n(s),
+var o = r(120356),
+    s = r.n(o),
     l = r(481060),
     u = r(552633);
 function c(e) {
@@ -38,22 +38,22 @@ function d(e) {
     }
 }
 function f(e) {
-    let { children: n, messageType: r, className: i, textColor: s = 'text-normal', textVariant: f = 'text-sm/medium' } = e,
-        _ = c(r),
+    let { children: n, messageType: r, className: i, textColor: o = 'text-normal', textVariant: f = 'text-sm/medium' } = e,
+        p = c(r),
         h = d(r);
     return (0, a.jsxs)('div', {
-        className: o()(u.container, h, i),
+        className: s()(u.container, h, i),
         children: [
             (0, a.jsx)('div', {
                 className: u.iconDiv,
-                children: (0, a.jsx)(_, {
+                children: (0, a.jsx)(p, {
                     className: u.icon,
                     color: 'currentColor'
                 })
             }),
             (0, a.jsx)(l.Text, {
                 className: u.text,
-                color: s,
+                color: o,
                 variant: f,
                 children: n
             })

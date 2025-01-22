@@ -2,7 +2,7 @@ var i = r(570140),
     a = r(188785);
 n.Z = {
     openNativeAppModal(e, n) {
-        let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         if (!a.a)
             i.Z.dispatch({
                 type: 'NATIVE_APP_MODAL_OPENING',
@@ -14,7 +14,7 @@ n.Z = {
                         let { default: i } = r;
                         i.request(n, {
                             code: e,
-                            ...s
+                            ...o
                         })
                             .then((n) => {
                                 var r;

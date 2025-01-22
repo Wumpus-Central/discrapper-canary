@@ -6,21 +6,21 @@ r.d(n, {
 var i = r(47120);
 var a = r(200651);
 r(192379);
-var s = r(120356),
-    o = r.n(s),
+var o = r(120356),
+    s = r.n(o),
     l = r(628692),
     u = r(845537),
     c = r(653309),
     d = r(982862),
     f = r(223979),
-    _ = r(665162);
+    p = r(665162);
 function h(e, n, r) {
-    var i, s;
+    var i, o;
     let { attributes: c, children: f, element: h, decorations: g } = e,
         E = m(null !== (i = null == g ? void 0 : g[0]) && void 0 !== i ? i : {});
     switch (h.type) {
         case 'line':
-            if (null === (s = h.codeBlockState) || void 0 === s ? void 0 : s.isInCodeBlock)
+            if (null === (o = h.codeBlockState) || void 0 === o ? void 0 : o.isInCodeBlock)
                 return (0, a.jsx)('div', {
                     className: d.codeLine,
                     spellCheck: null == h.codeBlockState || null == h.codeBlockState.lang,
@@ -32,33 +32,33 @@ function h(e, n, r) {
                 children: f
             });
         case 'blockQuote': {
-            let e = o()(_.blockquoteContainer, _.slateBlockquoteContainer);
+            let e = s()(p.blockquoteContainer, p.slateBlockquoteContainer);
             return (0, a.jsxs)('div', {
                 ...c,
                 className: e,
                 children: [
                     (0, a.jsx)('span', {
                         contentEditable: !1,
-                        className: _.blockquoteDivider
+                        className: p.blockquoteDivider
                     }),
                     (0, a.jsx)('blockquote', { children: f })
                 ]
             });
         }
         case 'emoji':
-            return (0, a.jsxs)(p, {
+            return (0, a.jsxs)(_, {
                 attributes: c,
                 className: E,
                 children: [(0, a.jsx)(u.dy, { emoji: h.emoji }), f]
             });
         case 'customEmoji':
-            return (0, a.jsxs)(p, {
+            return (0, a.jsxs)(_, {
                 attributes: c,
                 className: E,
                 children: [(0, a.jsx)(u.wP, { emoji: h.emoji }), f]
             });
         case 'textMention':
-            return (0, a.jsxs)(p, {
+            return (0, a.jsxs)(_, {
                 attributes: c,
                 className: E,
                 children: [
@@ -71,7 +71,7 @@ function h(e, n, r) {
                 ]
             });
         case 'userMention':
-            return (0, a.jsxs)(p, {
+            return (0, a.jsxs)(_, {
                 attributes: c,
                 className: E,
                 children: [
@@ -84,7 +84,7 @@ function h(e, n, r) {
                 ]
             });
         case 'roleMention':
-            return (0, a.jsxs)(p, {
+            return (0, a.jsxs)(_, {
                 attributes: c,
                 className: E,
                 children: [
@@ -96,13 +96,13 @@ function h(e, n, r) {
                 ]
             });
         case 'channelMention':
-            return (0, a.jsxs)(p, {
+            return (0, a.jsxs)(_, {
                 attributes: c,
                 className: E,
                 children: [(0, a.jsx)(u.Io, { id: h.channelId }), f]
             });
         case 'staticRouteLink':
-            return (0, a.jsxs)(p, {
+            return (0, a.jsxs)(_, {
                 attributes: c,
                 className: E,
                 children: [
@@ -115,13 +115,13 @@ function h(e, n, r) {
                 ]
             });
         case 'soundboard':
-            return (0, a.jsxs)(p, {
+            return (0, a.jsxs)(_, {
                 attributes: c,
                 className: E,
                 children: [(0, a.jsx)(l.ku, { soundId: h.soundId }), f]
             });
         case 'commandMention':
-            return (0, a.jsxs)(p, {
+            return (0, a.jsxs)(_, {
                 attributes: c,
                 className: E,
                 children: [
@@ -133,7 +133,7 @@ function h(e, n, r) {
                 ]
             });
         case 'timestamp':
-            return (0, a.jsxs)(p, {
+            return (0, a.jsxs)(_, {
                 attributes: c,
                 className: E,
                 children: [(0, a.jsx)(u.EK, { timestamp: h.parsed }), f]
@@ -142,12 +142,12 @@ function h(e, n, r) {
             return null;
     }
 }
-let p = (e) => {
+let _ = (e) => {
     let { className: n, attributes: r, children: i } = e,
-        s = o()(f.inlineElement, f.inlineVoid, n);
+        o = s()(f.inlineElement, f.inlineVoid, n);
     return (0, a.jsx)('span', {
         ...r,
-        className: s,
+        className: o,
         contentEditable: !1,
         children: i
     });

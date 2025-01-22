@@ -1,11 +1,11 @@
 var i = r(429614),
     a = r(286113),
-    s = r(607991),
-    o = r(898042),
+    o = r(607991),
+    s = r(898042),
     l = Object.getOwnPropertySymbols
         ? function (e) {
-              for (var n = []; e; ) i(n, s(e)), (e = a(e));
+              for (var n = []; e; ) i(n, o(e)), (e = a(e));
               return n;
           }
-        : o;
+        : s;
 e.exports = l;

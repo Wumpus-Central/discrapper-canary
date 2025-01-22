@@ -3,12 +3,12 @@ r.d(n, {
         return a;
     },
     U: function () {
-        return s;
+        return o;
     }
 });
 var i = r(661763);
 function a(e) {
-    let { id: n, label: r, 'aria-labelledby': a, 'aria-label': s, labelElementType: o = 'label' } = e;
+    let { id: n, label: r, 'aria-labelledby': a, 'aria-label': o, labelElementType: s = 'label' } = e;
     n = (0, i.Me)(n);
     let l = (0, i.Me)(),
         u = {};
@@ -17,24 +17,24 @@ function a(e) {
             ? ((a = a ? `${l} ${a}` : l),
               (u = {
                   id: l,
-                  htmlFor: 'label' === o ? n : void 0
+                  htmlFor: 'label' === s ? n : void 0
               }))
-            : !a && !s && console.warn('If you do not provide a visible label, you must specify an aria-label or aria-labelledby attribute for accessibility'),
+            : !a && !o && console.warn('If you do not provide a visible label, you must specify an aria-label or aria-labelledby attribute for accessibility'),
         {
             labelProps: u,
             fieldProps: (0, i.bE)({
                 id: n,
-                'aria-label': s,
+                'aria-label': o,
                 'aria-labelledby': a
             })
         }
     );
 }
-function s(e) {
-    let { description: n, errorMessage: r, isInvalid: s, validationState: o } = e,
+function o(e) {
+    let { description: n, errorMessage: r, isInvalid: o, validationState: s } = e,
         { labelProps: l, fieldProps: u } = a(e),
-        c = (0, i.mp)([!!n, !!r, s, o]),
-        d = (0, i.mp)([!!n, !!r, s, o]);
+        c = (0, i.mp)([!!n, !!r, o, s]),
+        d = (0, i.mp)([!!n, !!r, o, s]);
     return {
         labelProps: l,
         fieldProps: (u = (0, i.dG)(u, {

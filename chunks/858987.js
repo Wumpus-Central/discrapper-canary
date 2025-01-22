@@ -1,69 +1,69 @@
-t.d(n, {
+r.d(n, {
     K: function () {
-        return A;
+        return b;
     },
     Z: function () {
-        return g;
+        return T;
     }
-}),
-    t(789020);
-var i = t(200651);
-t(192379);
-var r = t(512722),
-    a = t.n(r),
-    l = t(481060),
-    s = t(115130),
-    o = t(906732),
-    c = t(563132),
-    u = t(630388),
-    d = t(74538),
-    p = t(296848),
-    f = t(244923),
-    m = t(981631),
-    b = t(231338),
-    v = t(388032),
-    h = t(963074),
-    P = t(74316);
-function A(e) {
-    let { purchaseType: n, plan: t, premiumSubscription: i, isGift: r, planGroup: l, isPrepaidPaymentSource: s, inReverseTrial: o } = e;
-    if (n === b.GZ.ONE_TIME) return r ? v.intl.string(v.t.ouo4FB) : v.intl.string(v.t.ExD0Nj);
-    if ((a()(null != t, 'Subscription plan must be selected to render SubscriptionReviewButton'), r)) return v.intl.string(v.t.ouo4FB);
-    if (o) return v.intl.string(v.t.LQVQIi);
-    if ((0, d.PV)(t.id)) {
-        if (s) return v.intl.string(v.t.cRCCJy);
-        if (null != i) return i.isPaused ? v.intl.string(v.t.zpi5pq) : (0, p.R4)(i, t.id, l) ? v.intl.string(v.t.IJI7ys) : v.intl.string(v.t.VPuTc3);
-        return (0, d.W_)(null, t);
+});
+var i = r(789020);
+var a = r(200651);
+r(192379);
+var o = r(512722),
+    s = r.n(o),
+    l = r(481060),
+    u = r(115130),
+    c = r(906732),
+    d = r(563132),
+    f = r(630388),
+    p = r(74538),
+    h = r(296848),
+    _ = r(244923),
+    m = r(981631),
+    g = r(231338),
+    E = r(388032),
+    v = r(963074),
+    y = r(74316);
+function b(e) {
+    let { purchaseType: n, plan: r, premiumSubscription: i, isGift: a, planGroup: o, isPrepaidPaymentSource: l, inReverseTrial: u } = e;
+    if (n === g.GZ.ONE_TIME) return a ? E.intl.string(E.t.ouo4FB) : E.intl.string(E.t.ExD0Nj);
+    if ((s()(null != r, 'Subscription plan must be selected to render SubscriptionReviewButton'), a)) return E.intl.string(E.t.ouo4FB);
+    if (u) return E.intl.string(E.t.LQVQIi);
+    if ((0, p.PV)(r.id)) {
+        if (l) return E.intl.string(E.t.cRCCJy);
+        if (null != i) return i.isPaused ? E.intl.string(E.t.zpi5pq) : (0, h.R4)(i, r.id, o) ? E.intl.string(E.t.IJI7ys) : E.intl.string(E.t.VPuTc3);
+        return (0, p.W_)(null, r);
     }
-    return v.intl.string(v.t.YScQSE);
+    return E.intl.string(E.t.YScQSE);
 }
-function T(e, n) {
+function I(e, n) {
     null != e.current && (e.current.scrollIntoView({ behavior: 'smooth' }), n());
 }
-function g(e) {
+function T(e) {
     var n;
-    let { legalTermsNodeRef: t, invoiceError: r, planError: a, disablePurchase: d, flashLegalTerms: p, isSubmitting: b, premiumSubscription: g, isGift: y, planGroup: E, isPrepaid: I, isTrial: x, makePurchase: _, needsPaymentSource: N, inReverseTrial: C, onNext: R } = e,
-        { application: S, selectedPlan: M, hasAcceptedTerms: L, purchaseType: j, paymentSourceId: k, activeSubscription: U, devShelfFetchState: O } = (0, c.usePaymentContext)(),
-        B = A({
-            purchaseType: j,
-            plan: M,
+    let { legalTermsNodeRef: r, invoiceError: i, planError: o, disablePurchase: s, flashLegalTerms: p, isSubmitting: h, premiumSubscription: g, isGift: T, planGroup: S, isPrepaid: A, isTrial: C, makePurchase: N, needsPaymentSource: R, inReverseTrial: O, onNext: D } = e,
+        { application: x, selectedPlan: L, hasAcceptedTerms: w, purchaseType: P, paymentSourceId: M, activeSubscription: k, devShelfFetchState: U } = (0, d.usePaymentContext)(),
+        B = b({
+            purchaseType: P,
+            plan: L,
             premiumSubscription: g,
-            isGift: y,
-            planGroup: E,
-            isPrepaidPaymentSource: I,
-            inReverseTrial: C
+            isGift: T,
+            planGroup: S,
+            isPrepaidPaymentSource: A,
+            inReverseTrial: O
         }),
-        { analyticsLocations: Z } = (0, o.ZP)();
-    if (null != r || null != a || d)
-        return (0, i.jsx)(l.Button, {
+        { analyticsLocations: G } = (0, c.ZP)();
+    if (null != i || null != o || s)
+        return (0, a.jsx)(l.Button, {
             color: l.Button.Colors.GREEN,
             disabled: !0,
             children: B
         });
-    if (N)
-        return (0, i.jsx)(l.Tooltip, {
-            text: v.intl.string(v.t.L7jbQU),
+    if (R)
+        return (0, a.jsx)(l.Tooltip, {
+            text: E.intl.string(E.t.L7jbQU),
             children: (e) =>
-                (0, i.jsx)(l.Button, {
+                (0, a.jsx)(l.Button, {
                     ...e,
                     color: l.Button.Colors.GREEN,
                     type: 'submit',
@@ -72,11 +72,11 @@ function g(e) {
                     children: B
                 })
         });
-    if ((0, u.yE)(null !== (n = null == S ? void 0 : S.flags) && void 0 !== n ? n : 0, m.udG.EMBEDDED) && O === s.O.LOADING)
-        return (0, i.jsx)(l.Tooltip, {
-            text: v.intl.string(v.t.cjA5tr),
+    if ((0, f.yE)(null !== (n = null == x ? void 0 : x.flags) && void 0 !== n ? n : 0, m.udG.EMBEDDED) && U === u.O.LOADING)
+        return (0, a.jsx)(l.Tooltip, {
+            text: E.intl.string(E.t.cjA5tr),
             children: (e) =>
-                (0, i.jsx)(l.Button, {
+                (0, a.jsx)(l.Button, {
                     ...e,
                     color: l.Button.Colors.GREEN,
                     type: 'submit',
@@ -85,50 +85,50 @@ function g(e) {
                     children: B
                 })
         });
-    else if (x)
-        return (0, i.jsxs)(l.ShinyButton, {
-            innerClassName: h.innerButton,
-            'data-testid': L ? 'purchase' : 'submitButton',
-            onClick: L ? _ : () => T(t, p),
+    else if (C)
+        return (0, a.jsxs)(l.ShinyButton, {
+            innerClassName: v.innerButton,
+            'data-testid': w ? 'purchase' : 'submitButton',
+            onClick: w ? N : () => I(r, p),
             color: l.Button.Colors.GREEN,
-            submitting: b,
+            submitting: h,
             children: [
-                (0, i.jsx)('img', {
+                (0, a.jsx)('img', {
                     alt: '',
-                    className: h.nitroIcon,
-                    src: P
+                    className: v.nitroIcon,
+                    src: y
                 }),
                 B
             ]
         });
-    else if (!L)
-        return (0, i.jsx)(l.Tooltip, {
-            text: v.intl.string(v.t.XdvBLS),
+    else if (!w)
+        return (0, a.jsx)(l.Tooltip, {
+            text: E.intl.string(E.t.XdvBLS),
             children: (e) =>
-                (0, i.jsx)(l.Button, {
+                (0, a.jsx)(l.Button, {
                     ...e,
                     color: l.Button.Colors.GREEN,
                     type: 'submit',
-                    onClick: () => T(t, p),
+                    onClick: () => I(r, p),
                     'data-testid': 'submitButton',
                     children: B
                 })
         });
-    else if (C && null != U && null != k)
-        return (0, i.jsx)(f.Z, {
-            activeSubscription: U,
-            onNext: R,
-            isSubmitting: b,
-            paymentSourceId: k,
+    else if (O && null != k && null != M)
+        return (0, a.jsx)(_.Z, {
+            activeSubscription: k,
+            onNext: D,
+            isSubmitting: h,
+            paymentSourceId: M,
             buttonLabel: B,
-            analyticsLocations: Z
+            analyticsLocations: G
         });
     else
-        return (0, i.jsx)(l.Button, {
+        return (0, a.jsx)(l.Button, {
             'data-testid': 'purchase',
-            onClick: _,
+            onClick: N,
             color: l.Button.Colors.GREEN,
-            submitting: b,
+            submitting: h,
             children: B
         });
 }

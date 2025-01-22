@@ -11,14 +11,14 @@ var i = n(200651),
     o = n(481060),
     s = n(317632),
     c = n(174767),
-    d = n(594174),
-    u = n(388032),
+    u = n(594174),
+    d = n(388032),
     m = n(542532);
 function h(e) {
     let { inboxIconRef: t, recentsPopoutShown: n } = e,
         [h, f] = r.useState(!1),
         p = (0, l.e7)([s.Z], () => s.Z.getLastUnseenInvite()),
-        _ = (0, l.e7)([d.default], () => (null != p ? d.default.getUser(p.inviter_id) : null));
+        _ = (0, l.e7)([u.default], () => (null != p ? u.default.getUser(p.inviter_id) : null));
     return (r.useEffect(() => {
         n && f(!1);
     }, [n]),
@@ -71,7 +71,7 @@ function h(e) {
                           (0, i.jsx)(o.Text, {
                               className: m.__invalid_title,
                               variant: 'text-xs/semibold',
-                              children: u.intl.format(u.t['8gTZ8v'], { username: _.username })
+                              children: d.intl.format(d.t['8gTZ8v'], { username: _.username })
                           }),
                           (0, i.jsx)(o.Text, {
                               className: m.__invalid_subtitle,

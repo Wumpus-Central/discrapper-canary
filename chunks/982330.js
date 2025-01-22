@@ -1,9 +1,9 @@
 r.d(n, {
     Kc: function () {
-        return o;
+        return s;
     },
     Yu: function () {
-        return s;
+        return o;
     },
     dP: function () {
         return l;
@@ -11,7 +11,7 @@ r.d(n, {
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2024-10_improved_media_viewer',
     label: 'Improved Desktop Media Viewer',
@@ -39,10 +39,10 @@ let s = (0, i.B)({
         }
     ]
 });
-function o(e) {
-    let { improvedDesktopMediaViewerEnabled: n } = s.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+function s(e) {
+    let { improvedDesktopMediaViewerEnabled: n } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return n;
 }
 function l(e) {
-    return s.useExperiment({ location: e }, { autoTrackExposure: !1 });
+    return o.useExperiment({ location: e }, { autoTrackExposure: !1 });
 }

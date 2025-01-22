@@ -1,12 +1,12 @@
 r.d(n, {
     Tm: function () {
-        return _;
+        return p;
     }
 });
 var i = r(411104);
 var a = r(47120);
-var s = r(547545),
-    o = r(444591),
+var o = r(547545),
+    s = r(444591),
     l = r(53566);
 function u(e, n, r) {
     return (
@@ -31,7 +31,7 @@ function d(e) {
 function f(e, n) {
     return n.includes(e.key);
 }
-function _(e) {
+function p(e) {
     var n;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (!!r && !1 === e.isTrusted) || ((null === (n = e.key) || void 0 === n ? void 0 : n.toLowerCase()) === 'd' && (e.metaKey || e.ctrlKey) && !e.altKey);
@@ -54,15 +54,15 @@ function h(e) {
         y: r
     };
 }
-class p {
+class _ {
     setup() {
         var e;
-        if (p.isSetUp) throw Error('Cannot have two Keyboard backends at the same time.');
-        (p.isSetUp = !0), (this._handlingFirstEvent = !0), null === (e = this.context.window) || void 0 === e || e.addEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 });
+        if (_.isSetUp) throw Error('Cannot have two Keyboard backends at the same time.');
+        (_.isSetUp = !0), (this._handlingFirstEvent = !0), null === (e = this.context.window) || void 0 === e || e.addEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 });
     }
     teardown() {
         var e;
-        (p.isSetUp = !1), null === (e = this.context.window) || void 0 === e || e.removeEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 }), this.endDrag();
+        (_.isSetUp = !1), null === (e = this.context.window) || void 0 === e || e.removeEventListener('keydown', this.handleGlobalKeyDown, { capture: !0 }), this.endDrag();
     }
     setDndMode(e) {
         var n;
@@ -128,7 +128,7 @@ class p {
             u(this, 'getSourceClientOffset', (e) => h(this.sourceNodes.get(e))),
             u(this, 'handleDragStart', (e, n) => {
                 var r;
-                if (!_(n, this._handlingFirstEvent)) return;
+                if (!p(n, this._handlingFirstEvent)) return;
                 if (((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e))) return;
                 if (this.monitor.isDragging()) {
                     this.actions.publishDragSource();
@@ -160,10 +160,10 @@ class p {
             (this.sourcePreviewNodes = new Map()),
             (this.sourcePreviewNodeOptions = new Map()),
             (this.targetNodes = new Map()),
-            (this._previewer = new o.Z(n.document)),
-            (this._announcer = new s.Z(null == r ? void 0 : r.announcer));
+            (this._previewer = new s.Z(n.document)),
+            (this._announcer = new o.Z(null == r ? void 0 : r.announcer));
     }
 }
-u(p, 'isSetUp', void 0);
-let m = (e, n, r) => new p(e, n, r);
+u(_, 'isSetUp', void 0);
+let m = (e, n, r) => new _(e, n, r);
 n.ZP = m;

@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(592125),
-    o = r(944486),
+    o = r(592125),
+    s = r(944486),
     l = r(116347),
     u = r(237292),
     c = r(118910);
@@ -21,7 +21,7 @@ function d(e, n, r) {
 function f(e) {
     let { channelId: n } = e;
     if (null == n || !(0, u.mG)({ location: 'channel_select' }) || !(0, l.dg)()) return !1;
-    let r = s.Z.getChannel(n);
+    let r = o.Z.getChannel(n);
     if (null == r || !r.isDM()) return !1;
     let i = (0, l.uu)(n);
     return (
@@ -35,10 +35,10 @@ function f(e) {
         !0)
     );
 }
-function _(e) {
+function p(e) {
     let { channels: n } = e;
     if (!(0, u.mG)({ location: 'channel_updates' }) || !(0, l.dg)()) return !1;
-    let r = o.Z.getCurrentlySelectedChannelId();
+    let r = s.Z.getCurrentlySelectedChannelId();
     if (null == r) return !1;
     let i = n.find((e) => e.id === r);
     if (null == i) return !1;
@@ -59,7 +59,7 @@ class h extends a.Z {
         super(...e),
             d(this, 'actions', {
                 CHANNEL_SELECT: f,
-                CHANNEL_UPDATES: _
+                CHANNEL_UPDATES: p
             });
     }
 }

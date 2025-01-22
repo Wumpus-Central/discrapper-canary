@@ -3,20 +3,20 @@ function i(e) {
 }
 Object.defineProperty(n, '__esModule', { value: !0 });
 var a = r(698091),
-    s = i(r(21217)),
-    o = i(r(719427)),
+    o = i(r(21217)),
+    s = i(r(719427)),
     l = i(r(271491)),
     u = r(239189),
     c = r(192379),
     d = r(985445),
     f = Symbol.for('Animated:node'),
-    _ = function (e) {
+    p = function (e) {
         return !!e && e[f] === e;
     },
     h = function (e) {
         return e && e[f];
     },
-    p = function (e, n) {
+    _ = function (e, n) {
         return a.defineHidden(e, f, n);
     },
     m = function (e) {
@@ -24,7 +24,7 @@ var a = r(698091),
     },
     g = (function () {
         function e() {
-            (this.payload = void 0), p(this, this);
+            (this.payload = void 0), _(this, this);
         }
         return (
             (e.prototype.getPayload = function () {
@@ -38,7 +38,7 @@ var a = r(698091),
             var r;
             return ((r = e.call(this) || this)._value = n), (r.done = !0), (r.elapsedTime = void 0), (r.lastPosition = void 0), (r.lastVelocity = void 0), (r.v0 = void 0), a.is.num(r._value) && (r.lastPosition = r._value), r;
         }
-        s(n, e),
+        o(n, e),
             (n.create = function (e, r) {
                 return new n(e);
             });
@@ -73,7 +73,7 @@ var a = r(698091),
                 i
             );
         }
-        s(n, e),
+        o(n, e),
             (n.create = function (e, r) {
                 if ((void 0 === r && (r = e), a.is.str(e) && a.is.str(r))) return new n(e, r);
                 throw TypeError('Expected "from" and "to" to be strings');
@@ -102,13 +102,13 @@ var a = r(698091),
             n
         );
     })(E),
-    I = { current: null },
-    T = (function (e) {
+    y = { current: null },
+    b = (function (e) {
         function n(n) {
             var r;
             return void 0 === n && (n = null), ((r = e.call(this) || this).source = void 0), r.setValue(n), r;
         }
-        s(n, e);
+        o(n, e);
         var r = n.prototype;
         return (
             (r.getValue = function (e) {
@@ -116,10 +116,10 @@ var a = r(698091),
                 var n = {};
                 return (
                     a.each(this.source, function (r, i) {
-                        if (_(r)) n[i] = r.getValue(e);
+                        if (p(r)) n[i] = r.getValue(e);
                         else {
-                            var s = a.getFluidConfig(r);
-                            s ? (n[i] = s.get()) : !e && (n[i] = r);
+                            var o = a.getFluidConfig(r);
+                            o ? (n[i] = o.get()) : !e && (n[i] = r);
                         }
                     }),
                     n
@@ -142,7 +142,7 @@ var a = r(698091),
             }),
             (r._addToPayload = function (e) {
                 var n = this;
-                a.getFluidConfig(e) && I.current && I.current.dependencies.add(e);
+                a.getFluidConfig(e) && y.current && y.current.dependencies.add(e);
                 var r = m(e);
                 r &&
                     a.each(r, function (e) {
@@ -152,12 +152,12 @@ var a = r(698091),
             n
         );
     })(g),
-    b = (function (e) {
+    I = (function (e) {
         function n(n, r) {
             var i;
-            return ((i = e.call(this, null) || this).source = void 0), e.prototype.setValue.call(o(i), i._makeAnimated(n, r)), i;
+            return ((i = e.call(this, null) || this).source = void 0), e.prototype.setValue.call(s(i), i._makeAnimated(n, r)), i;
         }
-        s(n, e),
+        o(n, e),
             (n.create = function (e, r) {
                 return new n(e, r);
             });
@@ -188,22 +188,22 @@ var a = r(698091),
             }),
             n
         );
-    })(T),
-    y = (function (e) {
+    })(b),
+    T = (function (e) {
         function n(n) {
             var r;
             return ((r = e.call(this, null) || this).update = n), (r.dirty = !1), r;
         }
-        s(n, e);
+        o(n, e);
         var r = n.prototype;
         return (
             (r.setValue = function (n, r) {
                 if (n) {
-                    if (r && ((I.current = r), n.style)) {
+                    if (r && ((y.current = r), n.style)) {
                         var i = r.host.createAnimatedStyle;
                         n = l(l({}, n), {}, { style: i(n.style) });
                     }
-                    e.prototype.setValue.call(this, n), (I.current = null);
+                    e.prototype.setValue.call(this, n), (y.current = null);
                 }
             }),
             (r.onParentChange = function (e) {
@@ -218,29 +218,29 @@ var a = r(698091),
             }),
             n
         );
-    })(T),
+    })(b),
     S = function (e, n) {
         return c.forwardRef(function (r, i) {
-            var s = c.useRef(null),
-                o = !a.is.fun(e) || (e.prototype && e.prototype.isReactComponent),
+            var o = c.useRef(null),
+                s = !a.is.fun(e) || (e.prototype && e.prototype.isReactComponent),
                 u = a.useForceUpdate(),
-                f = new y(function () {
-                    var e = s.current;
-                    if (!o || !!e) !1 === (!!e && n.applyAnimatedValues(e, f.getValue(!0))) && u();
+                f = new T(function () {
+                    var e = o.current;
+                    if (!s || !!e) !1 === (!!e && n.applyAnimatedValues(e, f.getValue(!0))) && u();
                 }),
-                _ = new Set();
+                p = new Set();
             return (
                 f.setValue(r, {
-                    dependencies: _,
+                    dependencies: p,
                     host: n
                 }),
                 d.useLayoutEffect(function () {
                     return (
-                        a.each(_, function (e) {
+                        a.each(p, function (e) {
                             return e.addChild(f);
                         }),
                         function () {
-                            return a.each(_, function (e) {
+                            return a.each(p, function (e) {
                                 return e.removeChild(f);
                             });
                         }
@@ -250,9 +250,9 @@ var a = r(698091),
                     e,
                     l({}, n.getComponentProps(f.getValue()), {
                         ref:
-                            o &&
+                            s &&
                             function (e) {
-                                s.current = A(i, e);
+                                o.current = A(i, e);
                             }
                     })
                 )
@@ -262,26 +262,26 @@ var a = r(698091),
 function A(e, n) {
     return e && (a.is.fun(e) ? e(n) : (e.current = n)), n;
 }
-var N = Symbol.for('AnimatedComponent'),
-    C = function (e, n) {
+var C = Symbol.for('AnimatedComponent'),
+    N = function (e, n) {
         var r = void 0 === n ? {} : n,
             i = r.applyAnimatedValues,
-            s =
+            o =
                 void 0 === i
                     ? function () {
                           return !1;
                       }
                     : i,
-            o = r.createAnimatedStyle,
+            s = r.createAnimatedStyle,
             l =
-                void 0 === o
+                void 0 === s
                     ? function (e) {
-                          return new T(e);
+                          return new b(e);
                       }
-                    : o,
+                    : s,
             u = r.getComponentProps,
             c = {
-                applyAnimatedValues: s,
+                applyAnimatedValues: o,
                 createAnimatedStyle: l,
                 getComponentProps:
                     void 0 === u
@@ -292,7 +292,7 @@ var N = Symbol.for('AnimatedComponent'),
             },
             d = function (e) {
                 var n = R(e) || 'Anonymous';
-                return ((e = a.is.str(e) ? S(e, c) : e[N] || (e[N] = S(e, c))).displayName = 'Animated(' + n + ')'), e;
+                return ((e = a.is.str(e) ? S(e, c) : e[C] || (e[C] = S(e, c))).displayName = 'Animated(' + n + ')'), e;
             };
         return (
             a.each(e, function (e, n) {
@@ -304,4 +304,4 @@ var N = Symbol.for('AnimatedComponent'),
     R = function (e) {
         return a.is.str(e) ? e : e && a.is.str(e.displayName) ? e.displayName : (a.is.fun(e) && e.name) || null;
     };
-(n.Animated = g), (n.AnimatedArray = b), (n.AnimatedObject = T), (n.AnimatedProps = y), (n.AnimatedString = v), (n.AnimatedValue = E), (n.createHost = C), (n.getAnimated = h), (n.getPayload = m), (n.isAnimated = _), (n.setAnimated = p);
+(n.Animated = g), (n.AnimatedArray = I), (n.AnimatedObject = b), (n.AnimatedProps = T), (n.AnimatedString = v), (n.AnimatedValue = E), (n.createHost = N), (n.getAnimated = h), (n.getPayload = m), (n.isAnimated = p), (n.setAnimated = _);

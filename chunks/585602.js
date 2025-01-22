@@ -1,19 +1,19 @@
-t.d(n, {
+r.d(n, {
     Z: function () {
-        return s;
+        return l;
     }
 });
-var i = t(200651);
-t(192379);
-var r = t(937615),
-    a = t(653798),
-    l = t(388032);
-function s(e) {
+var i = r(200651);
+r(192379);
+var a = r(937615),
+    o = r(653798),
+    s = r(388032);
+function l(e) {
     let { invoice: n } = e;
     return n.taxInclusive || n.tax <= 0
         ? null
-        : (0, i.jsx)(a.R$, {
-              label: l.intl.string(l.t.jiRvCw),
-              value: (0, r.T4)(n.tax, n.currency)
+        : (0, i.jsx)(o.R$, {
+              label: s.intl.string(s.t.jiRvCw),
+              value: (0, a.T4)(n.tax, n.currency)
           });
 }

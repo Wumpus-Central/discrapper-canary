@@ -1,7 +1,7 @@
-var i, a, s, o;
+var i, a, o, s;
 r.d(n, {
     Eu: function () {
-        return s;
+        return o;
     },
     NZ: function () {
         return i;
@@ -18,7 +18,7 @@ r.d(n, {
     })(a || (a = {})),
     !(function (e) {
         (e.AUDIO = 'audio'), (e.CAMERA = 'camera'), (e.STORAGE = 'storage'), (e.NOTIFICATIONS = 'notifications'), (e.PHOTOS = 'photos'), (e.CONTACTS = 'contacts'), (e.INPUT_MONITORING = 'input_monitoring'), (e.SCREEN_RECORDING = 'screen_recording');
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         (e[(e.UNDETERMINED = 0)] = 'UNDETERMINED'), (e[(e.DENIED = 1)] = 'DENIED'), (e[(e.AUTHORIZED = 2)] = 'AUTHORIZED'), (e[(e.PROVISIONAL = 3)] = 'PROVISIONAL'), (e[(e.EPHEMERAL = 4)] = 'EPHEMERAL');
-    })(o || (o = {}));
+    })(s || (s = {}));

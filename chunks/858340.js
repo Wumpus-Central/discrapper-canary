@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(981631);
+    o = r(570140),
+    s = r(981631);
 function l(e, n, r) {
     return (
         n in e
@@ -20,22 +20,22 @@ function c() {
     u = {};
 }
 function d() {
-    delete u[o.K3D.SOUND];
+    delete u[s.K3D.SOUND];
 }
 function f(e) {
     let { errorMessage: n, errorCode: r } = e;
-    u[o.K3D.SOUND] = {
+    u[s.K3D.SOUND] = {
         errorMessage: n,
         errorCode: r
     };
 }
-class _ extends (i = a.ZP.Store) {
+class p extends (i = a.ZP.Store) {
     getHookError(e) {
         return u[e];
     }
 }
-l(_, 'displayName', 'HookErrorStore'),
-    (n.Z = new _(s.Z, {
+l(p, 'displayName', 'HookErrorStore'),
+    (n.Z = new p(o.Z, {
         MEDIA_ENGINE_SET_GO_LIVE_SOURCE: c,
         MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: d,
         MEDIA_ENGINE_SOUNDSHARE_FAILED: f

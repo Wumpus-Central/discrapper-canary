@@ -1,20 +1,20 @@
 r.d(n, {
     Z: function () {
-        return b;
+        return I;
     }
 });
 var i = r(47120);
 var a = r(411104);
-var s = r(264344),
-    o = r.n(s),
+var o = r(264344),
+    s = r.n(o),
     l = r(259443),
     u = r(47770),
     c = r(46973),
     d = r(734298),
     f = r(997545),
-    _ = r(501950),
+    p = r(501950),
     h = r(992774),
-    p = r(656795),
+    _ = r(656795),
     m = r(650886),
     g = r(65154),
     E = r(149396);
@@ -31,13 +31,13 @@ function v(e, n, r) {
         e
     );
 }
-function I(e) {
+function y(e) {
     return (null != e ? e : E.Qx) / E.Qx;
 }
-function T(e, n, r) {
+function b(e, n, r) {
     return n + ((r - n) * e) / 100;
 }
-class b extends u.Z {
+class I extends u.Z {
     destroy() {
         this.eachConnection((e) => e.destroy()), this.emit(c.aB.Destroy), this.removeAllListeners();
     }
@@ -75,11 +75,11 @@ class b extends u.Z {
                 return (0, h.eJ)(E.eR.HYBRID_VIDEO);
             case E.AN.ATTENUATION:
             case E.AN.VIDEO_HOOK:
-                return (null === o() || void 0 === o() ? void 0 : null === (n = o().os) || void 0 === n ? void 0 : n.family) != null && /^win/i.test(o().os.family);
+                return (null === s() || void 0 === s() ? void 0 : null === (n = s().os) || void 0 === n ? void 0 : n.family) != null && /^win/i.test(s().os.family);
             case E.AN.EXPERIMENTAL_SOUNDSHARE:
                 return (0, h.eJ)(E.eR.SOUNDSHARE_LOOPBACK);
             case E.AN.OPEN_H264:
-                return (null === o() || void 0 === o() ? void 0 : null === (r = o().os) || void 0 === r ? void 0 : r.family) != null && /^win|linux|OS X/i.test(o().os.family);
+                return (null === s() || void 0 === s() ? void 0 : null === (r = s().os) || void 0 === r ? void 0 : r.family) != null && /^win|linux|OS X/i.test(s().os.family);
             case E.AN.EXPERIMENTAL_ENCODERS:
                 return (0, h.eJ)(E.eR.EXPERIMENTAL_ENCODERS);
             case E.AN.REMOTE_LOCUS_NETWORK_CONTROL:
@@ -178,37 +178,37 @@ class b extends u.Z {
         return Promise.resolve();
     }
     setInputVolume(e) {
-        (0, h.zS)().setInputVolume(I(e));
+        (0, h.zS)().setInputVolume(y(e));
     }
     setOutputVolume(e) {
-        (0, h.zS)().setOutputVolume(I(e));
+        (0, h.zS)().setOutputVolume(y(e));
     }
     getAudioInputDevices() {
-        return (0, _.Hg)();
+        return (0, p.Hg)();
     }
     setAudioInputDevice(e) {
         (0, h.eJ)(E.eR.SET_AUDIO_DEVICE_BY_ID)
             ? (0, h.zS)().setInputDevice(e)
-            : (0, _.Hg)().then((n) => {
+            : (0, p.Hg)().then((n) => {
                   var r;
                   let i = null !== (r = n.find((n) => n.id === e)) && void 0 !== r ? r : n[0];
                   null != i && (0, h.zS)().setInputDevice(i.index);
               });
     }
     getAudioOutputDevices() {
-        return (0, _.HS)();
+        return (0, p.HS)();
     }
     setAudioOutputDevice(e) {
         (0, h.eJ)(E.eR.SET_AUDIO_DEVICE_BY_ID)
             ? (0, h.zS)().setOutputDevice(e)
-            : (0, _.HS)().then((n) => {
+            : (0, p.HS)().then((n) => {
                   var r;
                   let i = null !== (r = n.find((n) => n.id === e)) && void 0 !== r ? r : n[0];
                   null != i && (0, h.zS)().setOutputDevice(i.index);
               });
     }
     getVideoInputDevices() {
-        return (0, _.l0)();
+        return (0, p.l0)();
     }
     async setVideoInputDevice(e) {
         let n = (await this.getVideoInputDevices()).find((n) => n.id === e),
@@ -250,9 +250,9 @@ class b extends u.Z {
             return;
         }
         let { frameRate: i, resolution: a } = e.quality,
-            s = a <= 480 ? (a / 3) * 4 : (a / 9) * 16,
-            o = a,
-            { id: l, soundshareId: u, useLoopback: d, useVideoHook: f, useGraphicsCapture: _, useQuartzCapturer: p, allowScreenCaptureKit: m, hdrCaptureMode: g } = e.desktopDescription;
+            o = a <= 480 ? (a / 3) * 4 : (a / 9) * 16,
+            s = a,
+            { id: l, soundshareId: u, useLoopback: d, useVideoHook: f, useGraphicsCapture: p, useQuartzCapturer: _, allowScreenCaptureKit: m, hdrCaptureMode: g } = e.desktopDescription;
         r.setOnClipsRecordingEvent((n) => {
             this.logger.info('Clips recording event: '.concat(E.Pf[n], ' received for stream ').concat(l, ' and sound ').concat(u, '.')), n === E.Pf.GoLiveEnded ? this.emit(c.aB.ClipsRecordingRestartNeeded) : n === E.Pf.Error ? this.emit(c.aB.ClipsInitFailure, 'Failed to set clips source in media engine', e.applicationName) : (n === E.Pf.Ended || n === E.Pf.StoppedByGoLive) && this.emit(c.aB.ClipsRecordingEnded, l, u);
         }),
@@ -260,18 +260,18 @@ class b extends u.Z {
                 void 0 === n ||
                 n.call(r, {
                     useVideoHook: f,
-                    useGraphicsCapture: _,
-                    useQuartzCapturer: p,
+                    useGraphicsCapture: p,
+                    useQuartzCapturer: _,
                     allowScreenCaptureKit: m,
                     hdrCaptureMode: g,
                     soundshareLoopback: d,
                     frameRate: i,
-                    width: s,
-                    height: o
+                    width: o,
+                    height: s
                 });
-        let [v, I] = null != l ? l.split(':') : ['', ''];
+        let [v, y] = null != l ? l.split(':') : ['', ''];
         r.setClipsSource({
-            id: I,
+            id: y,
             soundshareId: null != u ? u : 0
         });
     }
@@ -326,7 +326,7 @@ class b extends u.Z {
         let i = (0, h.zS)();
         return null == i.saveClipForUser
             ? Promise.reject('unsupported')
-            : new Promise((a, s) => {
+            : new Promise((a, o) => {
                   i.saveClipForUser(
                       e,
                       n,
@@ -336,7 +336,7 @@ class b extends u.Z {
                               duration: e,
                               clipStats: JSON.parse(r)
                           }),
-                      (e) => s(JSON.parse(e))
+                      (e) => o(JSON.parse(e))
                   );
               });
     }
@@ -532,13 +532,13 @@ class b extends u.Z {
     setSidechainCompressionStrength(e) {
         var n, r;
         let i = 100 - e,
-            a = T(i, g.Zq, g.WA),
-            s = T(i, g.QO, g.JA);
+            a = b(i, g.Zq, g.WA),
+            o = b(i, g.QO, g.JA);
         null === (n = (r = (0, h.zS)()).applySidechainCompressionSettings) ||
             void 0 === n ||
             n.call(r, {
                 threshold: a,
-                ratio: s
+                ratio: o
             });
     }
     setNativeDesktopVideoSourcePickerActive(e) {
@@ -570,7 +570,7 @@ class b extends u.Z {
         super(),
             (e = this),
             v(this, 'Video', m.Z),
-            v(this, 'Camera', p.Z),
+            v(this, 'Camera', _.Z),
             v(this, 'videoInputDeviceId', E.Av),
             v(this, 'connections', new Set()),
             v(this, 'lastVoiceActivity', -1),
@@ -584,7 +584,7 @@ class b extends u.Z {
                 let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                     i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-                e.deviceChangeGeneration++, e.emit(c.aB.DeviceChange, (0, _.C1)(E.h7.AUDIO_INPUT, n), (0, _.C1)(E.h7.AUDIO_OUTPUT, r), (0, _.C1)(E.h7.VIDEO_INPUT, i));
+                e.deviceChangeGeneration++, e.emit(c.aB.DeviceChange, (0, p.C1)(E.h7.AUDIO_INPUT, n), (0, p.C1)(E.h7.AUDIO_OUTPUT, r), (0, p.C1)(E.h7.VIDEO_INPUT, i));
             }),
             v(this, 'handleVolumeChange', (e, n) => {
                 this.emit(c.aB.VolumeChange, e * E.Qx, n * E.Qx);
@@ -630,18 +630,18 @@ class b extends u.Z {
             v(this, 'handleAudioDeviceModuleErrorCallback', (e, n) => {
                 -100 !== e && this.emit(c.aB.AudioDeviceModuleError, 'RustAudioDeviceModule', e, n);
             });
-        let s = (0, h.zS)();
-        s.setDeviceChangeCallback(this.handleDeviceChange),
-            s.setVolumeChangeCallback(this.handleVolumeChange),
-            s.setOnVoiceCallback(this.handleVoiceActivity),
-            null === (n = s.setVideoInputInitializationCallback) || void 0 === n || n.call(s, this.handleVideoInputInitialization),
-            null === (r = s.setAudioInputInitializationCallback) || void 0 === r || r.call(s, this.handleAudioInputInitialization),
-            s.setTransportOptions({
+        let o = (0, h.zS)();
+        o.setDeviceChangeCallback(this.handleDeviceChange),
+            o.setVolumeChangeCallback(this.handleVolumeChange),
+            o.setOnVoiceCallback(this.handleVoiceActivity),
+            null === (n = o.setVideoInputInitializationCallback) || void 0 === n || n.call(o, this.handleVideoInputInitialization),
+            null === (r = o.setAudioInputInitializationCallback) || void 0 === r || r.call(o, this.handleAudioInputInitialization),
+            o.setTransportOptions({
                 idleJitterBufferFlush: !0,
                 ducking: !1
             }),
-            null === (i = s.setNativeScreenSharePickerCallbacks) || void 0 === i || i.call(s, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
-            null === (a = s.setAudioDeviceModuleErrorCallback) || void 0 === a || a.call(s, this.handleAudioDeviceModuleErrorCallback),
+            null === (i = o.setNativeScreenSharePickerCallbacks) || void 0 === i || i.call(o, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
+            null === (a = o.setAudioDeviceModuleErrorCallback) || void 0 === a || a.call(o, this.handleAudioDeviceModuleErrorCallback),
             this.on('removeListener', this.handleRemoveListener),
             this.on('newListener', this.handleNewListener),
             null != (0, h.zS)().getAudioSubsystem
@@ -649,8 +649,8 @@ class b extends u.Z {
                       (this.audioSubsystem = e), (this.audioLayer = n);
                   })
                 : null != (0, h.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, h.zS)().getUseLegacyAudioDevice() ? E.iA.LEGACY : E.iA.STANDARD),
-            null != s.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
-            null != s.setActiveSinksChangeCallback && s.setActiveSinksChangeCallback(this.handleActiveSinksChange),
+            null != o.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
+            null != o.setActiveSinksChangeCallback && o.setActiveSinksChangeCallback(this.handleActiveSinksChange),
             (0, d.Z)(this);
     }
 }

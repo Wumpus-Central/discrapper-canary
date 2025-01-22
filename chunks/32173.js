@@ -33,9 +33,9 @@ var a = n(399606),
     O = n(768865),
     R = n(119269),
     P = n(391110),
-    y = n(75077),
-    B = n(474936),
-    D = n(735825),
+    D = n(75077),
+    y = n(474936),
+    B = n(735825),
     Z = n(981631),
     L = n(526761),
     M = n(332325),
@@ -74,22 +74,22 @@ var a = n(399606),
 t.Z = () => {
     let { analyticsLocations: e } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, o.ZP)(),
-        n = (0, C.BU)(B.Uq / 1024, { useKibibytes: !0 }),
+        n = (0, C.BU)(y.Uq / 1024, { useKibibytes: !0 }),
         i = (0, a.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
         r = null != i ? S.ZP.getPremiumPlanItem(i) : null,
-        ep = (null != r ? S.ZP.getSkuIdForPlan(r.planId) : null) === B.Si.TIER_2,
+        ep = (null != r ? S.ZP.getSkuIdForPlan(r.planId) : null) === y.Si.TIER_2,
         ex = _.default.getCurrentUser(),
-        ef = (0, S.I5)(ex, B.p9.TIER_2),
-        e_ = (0, S.I5)(ex, B.p9.TIER_0),
+        ef = (0, S.I5)(ex, y.p9.TIER_2),
+        e_ = (0, S.I5)(ex, y.p9.TIER_0),
         eE = (0, N.bq)({ showAnimations: !0 }),
         eC = null != eE ? eE.initialPercentage : void 0,
         eT = null != eE ? eE.percentage : void 0,
         eS = (0, m.Z)(f.Z),
         eb = (0, v.ZP)(),
         eI = (0, v.aJ)(),
-        eN = (0, N.Kb)(D.qY),
+        eN = (0, N.Kb)(B.qY),
         { fractionalState: ev } = (0, u.Z)(),
-        eA = ev === B.a$.FP_ONLY,
+        eA = ev === y.a$.FP_ONLY,
         ej = (0, h.Z)({
             scrollPosition: L.Y_.TRY_IT_OUT,
             analyticsLocations: e
@@ -106,7 +106,7 @@ t.Z = () => {
         eP = () => {
             l.Z.open(Z.oAB.APPEARANCE, null, { scrollPosition: L.h1.CUSTOM_APP_ICONS });
         },
-        ey = {
+        eD = {
             clientThemes: {
                 name: 'clientThemes',
                 title: k.intl.string(k.t.kWM48P),
@@ -388,14 +388,14 @@ t.Z = () => {
                 name: 'customSoundsEverywhere',
                 title: k.intl.string(k.t.LWsAra),
                 subtitle: k.intl.string(k.t.bTzbVl),
-                perkImage: (0, y.gx)(t, U, V),
+                perkImage: (0, D.gx)(t, U, V),
                 description: k.intl.string(k.t.JLnOMz)
             },
             specialStickerAccess: {
                 name: 'specialStickerAccess',
                 title: k.intl.string(k.t.tzdIwM),
                 subtitle: k.intl.string(k.t.FXlU29),
-                perkImage: (0, y.gx)(t, G, eo),
+                perkImage: (0, D.gx)(t, G, eo),
                 description: k.intl.string(k.t.e7FKCg)
             },
             largeUploads: {
@@ -447,14 +447,14 @@ t.Z = () => {
                 className: w.cardComponent,
                 children: (0, s.jsx)(R.ZP, {
                     progressCircleVariation: R.Qo.AVATAR_DECO,
-                    avatarDecoAssetId: D.VA,
+                    avatarDecoAssetId: B.VA,
                     avatarDecoAssetDescription: k.intl.string(k.t['9o4F4+']),
                     showAnimations: !0,
                     percentage: eT,
                     initialPercentage: eC
                 })
             });
-        ey.tenureRewardCollectible = {
+        eD.tenureRewardCollectible = {
             name: 'tenureRewardCollectible',
             title: t,
             subtitle: n,
@@ -485,7 +485,7 @@ t.Z = () => {
                     initialPercentage: eC
                 })
             });
-        ey.freeBoost = {
+        eD.freeBoost = {
             name: 'freeBoost',
             title: t,
             subtitle: n,
@@ -500,12 +500,12 @@ t.Z = () => {
             dismissibleContentType: o
         };
     }
-    let eB = (0, A.kG)(),
-        { enabled: eD } = (0, I.Z)();
+    let ey = (0, A.kG)(),
+        { enabled: eB } = (0, I.Z)();
     return (
-        null != eB &&
-            eD &&
-            (ey.tenureBadge = {
+        null != ey &&
+            eB &&
+            (eD.tenureBadge = {
                 name: 'tenureBadge',
                 title: k.intl.string(k.t.rnsqpa),
                 pillText: k.intl.string(k.t.jyYgZ2).toLocaleUpperCase(),
@@ -514,7 +514,7 @@ t.Z = () => {
                 onClick: () => (0, O.k)(e)
             }),
         (0, b.ZP)('usePerksDiscoverabilityCard') === b.P0.SUMMER_2024 &&
-            (ey.shyProject = {
+            (eD.shyProject = {
                 name: 'shyProject',
                 title: k.intl.string(k.t['0Mykgo']),
                 subtitle: k.intl.string(k.t.opgqDQ),
@@ -525,6 +525,6 @@ t.Z = () => {
                 perkImage: z,
                 isPremiumGetCta: !ef
             }),
-        ey
+        eD
     );
 };

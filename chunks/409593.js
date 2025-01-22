@@ -23,7 +23,7 @@ function n(e) {
             contains: [n, r]
         },
         a = { begin: '^' + e.UNDERSCORE_IDENT_RE + '\\s*(?=[:+?]?=)' },
-        s = {
+        o = {
             className: 'meta',
             begin: /^\.PHONY:/,
             end: /$/,
@@ -32,7 +32,7 @@ function n(e) {
                 keyword: '.PHONY'
             }
         },
-        o = {
+        s = {
             className: 'section',
             begin: /^[^\s]+:/,
             end: /$/,
@@ -45,7 +45,7 @@ function n(e) {
             $pattern: /[\w-]+/,
             keyword: 'define endef undefine ifdef ifndef ifeq ifneq else endif include -include sinclude override export unexport private vpath'
         },
-        contains: [e.HASH_COMMENT_MODE, n, r, i, a, s, o]
+        contains: [e.HASH_COMMENT_MODE, n, r, i, a, o, s]
     };
 }
 e.exports = n;

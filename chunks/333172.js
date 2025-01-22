@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(925489),
-    o = (function () {
+    o = r(925489),
+    s = (function () {
         function e(e, n) {
             for (var r = 0; r < n.length; r++) {
                 var i = n[r];
@@ -34,11 +34,11 @@ function c(e, n) {
 var d = (function (e) {
     function n() {
         l(this, n);
-        for (var e, r, i, a = arguments.length, o = Array(a), c = 0; c < a; c++) o[c] = arguments[c];
+        for (var e, r, i, a = arguments.length, s = Array(a), c = 0; c < a; c++) s[c] = arguments[c];
         return (
-            (r = i = u(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(o)))),
+            (r = i = u(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(s)))),
             (i.handleChange = function (e) {
-                var n = s.T(e, i.props.direction, i.props.hsl, i.container);
+                var n = o.T(e, i.props.direction, i.props.hsl, i.container);
                 n && 'function' == typeof i.props.onChange && i.props.onChange(n, e);
             }),
             (i.handleMouseDown = function (e) {
@@ -52,7 +52,7 @@ var d = (function (e) {
     }
     return (
         c(n, e),
-        o(n, [
+        s(n, [
             {
                 key: 'componentWillUnmount',
                 value: function () {
@@ -71,7 +71,7 @@ var d = (function (e) {
                     var e = this,
                         n = this.props.direction,
                         r = void 0 === n ? 'horizontal' : n,
-                        s = (0, a.default)(
+                        o = (0, a.default)(
                             {
                                 default: {
                                     hue: {
@@ -110,12 +110,12 @@ var d = (function (e) {
                         );
                     return i.createElement(
                         'div',
-                        { style: s.hue },
+                        { style: o.hue },
                         i.createElement(
                             'div',
                             {
                                 className: 'hue-' + r,
-                                style: s.container,
+                                style: o.container,
                                 ref: function (n) {
                                     return (e.container = n);
                                 },
@@ -124,7 +124,7 @@ var d = (function (e) {
                                 onTouchStart: this.handleChange
                             },
                             i.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '),
-                            i.createElement('div', { style: s.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: s.slider }))
+                            i.createElement('div', { style: o.pointer }, this.props.pointer ? i.createElement(this.props.pointer, this.props) : i.createElement('div', { style: o.slider }))
                         )
                     );
                 }

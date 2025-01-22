@@ -35,8 +35,8 @@ function v() {
         A = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
         { subsection: j, setSubsection: O } = (0, C.Z)(),
         { analyticsLocations: R } = (0, o.ZP)(),
-        { hasSearchResults: P, searchResults: y } = (0, p.E)();
-    function B(t) {
+        { hasSearchResults: P, searchResults: D } = (0, p.E)();
+    function y(t) {
         if (j !== t) {
             if (n) {
                 _.S.dispatch(T.CkL.SHAKE_APP, {
@@ -52,10 +52,10 @@ function v() {
     r.useEffect(() => {
         null != A && (0, g.Z)(A.id, A.getAvatarURL(null == v ? void 0 : v.id, 80), { guildId: null == v ? void 0 : v.id });
     }, [null == v ? void 0 : v.id, A]);
-    let D = !0,
+    let B = !0,
         Z = !0;
     return (
-        P && 1 === y.length && (y.includes(b.s6.PROFILE_SERVER_PROFILES) ? (B(S.NB.GUILD), (Z = !1)) : y.includes(b.s6.PROFILE_USER_PROFILE) && (B(S.NB.USER_PROFILE), (D = !1))),
+        P && 1 === D.length && (D.includes(b.s6.PROFILE_SERVER_PROFILES) ? (y(S.NB.GUILD), (Z = !1)) : D.includes(b.s6.PROFILE_USER_PROFILE) && (y(S.NB.USER_PROFILE), (B = !1))),
         (0, i.jsx)(o.Gt, {
             value: R,
             children: (0, i.jsxs)(a.HeadingLevel, {
@@ -69,7 +69,7 @@ function v() {
                         type: 'top',
                         look: 'brand',
                         selectedItem: j,
-                        onItemSelect: B,
+                        onItemSelect: y,
                         children: [
                             Z
                                 ? (0, i.jsx)(
@@ -82,7 +82,7 @@ function v() {
                                       S.NB.USER_PROFILE
                                   )
                                 : null,
-                            D
+                            B
                                 ? (0, i.jsx)(
                                       a.TabBar.Item,
                                       {

@@ -1,16 +1,16 @@
 r.d(n, {
     M: function () {
-        return o;
+        return s;
     }
 });
 var i = r(927521),
     a = r(165352);
-let s = -543;
-class o extends a.IQ {
+let o = -543;
+class s extends a.IQ {
     fromJulianDay(e) {
         let n = super.fromJulianDay(e),
             r = (0, a.J4)(n.era, n.year);
-        return new i.aw(this, r - s, n.month, n.day);
+        return new i.aw(this, r - o, n.month, n.day);
     }
     toJulianDay(e) {
         return super.toJulianDay(l(e));
@@ -27,6 +27,6 @@ class o extends a.IQ {
     }
 }
 function l(e) {
-    let [n, r] = (0, a.JD)(e.year + s);
+    let [n, r] = (0, a.JD)(e.year + o);
     return new i.aw(n, r, e.month, e.day);
 }

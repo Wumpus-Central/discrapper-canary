@@ -5,15 +5,15 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(223143);
-let o = '1157412779335090267';
+    o = r(223143);
+let s = '1157412779335090267';
 function l() {
     let [e, n] = a.useState(),
-        { purchases: r, hasPreviouslyFetched: i } = (0, s.c7)(),
+        { purchases: r, hasPreviouslyFetched: i } = (0, o.c7)(),
         l = a.useRef(!1);
     return (
         a.useEffect(() => {
-            i && !l.current && (n(null != r.get(o)), (l.current = !0));
+            i && !l.current && (n(null != r.get(s)), (l.current = !0));
         }, [r, i]),
         e
     );

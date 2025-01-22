@@ -3,8 +3,8 @@ function n(e) {
         r = '[eE][-+]?' + n,
         i = n + '(\\.' + n + ')?(' + r + ')?',
         a = '\\w+',
-        s = '\\b(' + (n + '#' + a + '(\\.' + a + ')?#(' + r + ')?') + '|' + i + ')',
-        o = '[A-Za-z](_?[A-Za-z0-9.])*',
+        o = '\\b(' + (n + '#' + a + '(\\.' + a + ')?#(' + r + ')?') + '|' + i + ')',
+        s = '[A-Za-z](_?[A-Za-z0-9.])*',
         l = '[]\\{\\}%#\'"',
         u = e.COMMENT('--', '$'),
         c = {
@@ -22,7 +22,7 @@ function n(e) {
                 },
                 {
                     className: 'type',
-                    begin: o,
+                    begin: s,
                     endsParent: !0,
                     relevance: 0
                 }
@@ -54,12 +54,12 @@ function n(e) {
             },
             {
                 className: 'number',
-                begin: s,
+                begin: o,
                 relevance: 0
             },
             {
                 className: 'symbol',
-                begin: "'" + o
+                begin: "'" + s
             },
             {
                 className: 'title',

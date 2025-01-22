@@ -6,7 +6,7 @@ r.d(n, {
         return i;
     },
     R7: function () {
-        return s;
+        return o;
     },
     cS: function () {
         return u;
@@ -17,10 +17,10 @@ r.d(n, {
 });
 var i,
     a,
-    s,
-    o = r(70956),
+    o,
+    s = r(70956),
     l = r(388032);
-let u = 5 * o.Z.Millis.SECOND;
+let u = 5 * s.Z.Millis.SECOND;
 function c() {
     return [
         {
@@ -57,4 +57,4 @@ function c() {
     })(a || (a = {})),
     !(function (e) {
         (e.DUPLICATED = 'DUPLICATED'), (e.TOO_GENERIC = 'TOO_GENERIC'), (e.TOO_MANY = 'TOO_MANY'), (e.INACCURATE = 'INACCURATE'), (e.NOT_USEFUL = 'NOT_USEFUL'), (e.OTHER = 'OTHER');
-    })(s || (s = {}));
+    })(o || (o = {}));

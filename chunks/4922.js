@@ -20,11 +20,11 @@ function n(e) {
             className: 'variable',
             variants: [{ begin: /\$[\w\d"][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }]
         },
-        s = {
+        o = {
             className: 'literal',
             begin: /\bon|off|true|false|yes|no\b/
         },
-        o = {
+        s = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -51,7 +51,7 @@ function n(e) {
         l = {
             begin: /\[/,
             end: /\]/,
-            contains: [i, s, a, o, r, 'self'],
+            contains: [i, o, a, s, r, 'self'],
             relevance: 0
         },
         u = /[A-Za-z0-9_-]+/,
@@ -75,7 +75,7 @@ function n(e) {
                 className: 'attr',
                 starts: {
                     end: /$/,
-                    contains: [i, l, s, a, o, r]
+                    contains: [i, l, o, a, s, r]
                 }
             }
         ]

@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(358221),
-    o = r(729052),
+    o = r(358221),
+    s = r(729052),
     l = r(592125),
     u = r(979651),
     c = r(556076);
@@ -23,8 +23,8 @@ class f extends a.Z {
         let { channelId: n, guildId: r } = e;
         if (null == n || null == r) return;
         let i = l.Z.getChannel(n);
-        if (null != i && (0, o.vS)(i) && i.isGuildVoice()) {
-            let e = s.Z.getParticipants(n).length,
+        if (null != i && (0, s.vS)(i) && i.isGuildVoice()) {
+            let e = o.Z.getParticipants(n).length,
                 r = u.Z.isInChannel(n),
                 i = e === (r ? 1 : 0),
                 a = e === (r ? 2 : 1);

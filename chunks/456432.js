@@ -9,19 +9,19 @@ var r = n(481060),
     l = n(733597);
 function a(e) {
     let { activity: t, user: n, source: a, ...o } = e,
-        { label: s, tooltip: c, loading: d, disabled: u, onClick: m } = (0, l.Lz)(t, n, a);
+        { label: s, tooltip: c, loading: u, disabled: d, onClick: m } = (0, l.Lz)(t, n, a);
     return (0, i.jsx)(r.Tooltip, {
         text: c,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
             return (0, i.jsx)(r.Button, {
                 ...o,
-                color: u ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
+                color: d ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
                 onClick: m,
                 onMouseEnter: t,
                 onMouseLeave: n,
-                disabled: !d && u,
-                submitting: d,
+                disabled: !u && d,
+                submitting: u,
                 children: s
             });
         }

@@ -105,13 +105,13 @@ var a = {
             }
         }
     },
-    s = !!('undefined' != typeof window && window.document && window.document.createElement),
-    o = {
-        canUseDOM: s,
+    o = !!('undefined' != typeof window && window.document && window.document.createElement),
+    s = {
+        canUseDOM: o,
         canUseWorkers: 'undefined' != typeof Worker,
-        canUseEventListeners: s && !!(window.addEventListener || window.attachEvent),
-        canUseViewport: s && !!window.screen,
-        isInWorker: !s
+        canUseEventListeners: o && !!(window.addEventListener || window.attachEvent),
+        canUseViewport: o && !!window.screen,
+        isInWorker: !o
     },
     l = a.isUnitlessNumber;
 function u(e, n, r) {
@@ -134,10 +134,10 @@ var d = function () {};
         return e;
     });
 var f = !1;
-if (o.canUseDOM) {
-    var _ = document.createElement('div').style;
+if (s.canUseDOM) {
+    var p = document.createElement('div').style;
     try {
-        _.font = '';
+        p.font = '';
     } catch (e) {
         f = !0;
     }
@@ -146,16 +146,16 @@ var h = {
     createDangerousStringForStyles: function (e) {},
     setValueForStyles: function (e, n, r) {
         var i = e.style;
-        for (var s in n) {
-            if (!!n.hasOwnProperty(s)) {
-                var o = 0 === s.indexOf('--'),
-                    l = u(s, n[s], o);
-                if (('float' === s && (s = 'cssFloat'), o)) i.setProperty(s, l);
-                else if (l) i[s] = l;
+        for (var o in n) {
+            if (!!n.hasOwnProperty(o)) {
+                var s = 0 === o.indexOf('--'),
+                    l = u(o, n[o], s);
+                if (('float' === o && (o = 'cssFloat'), s)) i.setProperty(o, l);
+                else if (l) i[o] = l;
                 else {
-                    var c = f && a.shorthandPropertyExpansions[s];
+                    var c = f && a.shorthandPropertyExpansions[o];
                     if (c) for (var d in c) i[d] = '';
-                    else i[s] = '';
+                    else i[o] = '';
                 }
             }
         }

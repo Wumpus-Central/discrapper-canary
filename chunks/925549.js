@@ -1,6 +1,6 @@
 var i = r(570140);
 n.Z = {
-    updateChannelDimensions(e, n, r, a, s) {
+    updateChannelDimensions(e, n, r, a, o) {
         i.Z.wait(() => {
             i.Z.dispatch({
                 type: 'UPDATE_CHANNEL_DIMENSIONS',
@@ -9,7 +9,7 @@ n.Z = {
                 scrollHeight: r,
                 offsetHeight: a
             }),
-                null != s && s();
+                null != o && o();
         });
     },
     updateChannelListScroll(e, n) {

@@ -3,10 +3,10 @@ r.d(n, {
         return i;
     },
     LH: function () {
-        return s;
+        return o;
     },
     Wj: function () {
-        return o;
+        return s;
     },
     aQ: function () {
         return a;
@@ -17,6 +17,6 @@ r.d(n, {
 });
 let i = 'hello',
     a = 'version',
-    s = 'force-resync-version',
-    o = 3,
+    o = 'force-resync-version',
+    s = 3,
     l = 'stable-53';

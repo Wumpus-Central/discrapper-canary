@@ -1,15 +1,15 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(200651),
     a = r(192379),
-    s = r(626135);
-function o(e) {
+    o = r(626135);
+function s(e) {
     var n;
     let r = a.forwardRef((n, r) =>
-        (0, i.jsx)(s.AnalyticsContext.Consumer, {
+        (0, i.jsx)(o.AnalyticsContext.Consumer, {
             children: (a) =>
                 (0, i.jsx)(e, {
                     ...n,

@@ -1,24 +1,24 @@
 var i = r(47120);
 var a = r(200651);
 r(192379);
-var s = r(481060),
-    o = r(259580),
+var o = r(481060),
+    s = r(259580),
     l = r(847273);
 let u = (e) => {
         let { child: n, onClick: r } = e,
             [i] = n;
-        return (0, a.jsxs)(s.Clickable, {
+        return (0, a.jsxs)(o.Clickable, {
             className: l.childButton,
             onClick: () => r(n),
             children: [
-                (0, a.jsx)(s.Text, {
+                (0, a.jsx)(o.Text, {
                     className: l.childText,
                     variant: 'text-md/semibold',
                     children: i
                 }),
-                (0, a.jsx)(o.Z, {
+                (0, a.jsx)(s.Z, {
                     className: l.childIcon,
-                    direction: o.Z.Directions.RIGHT
+                    direction: s.Z.Directions.RIGHT
                 })
             ]
         });

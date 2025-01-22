@@ -9,38 +9,38 @@ r.d(n, {
         return c;
     },
     lp: function () {
-        return o;
+        return s;
     }
 });
 var i = r(149765),
     a = r(231338),
-    s = r(388032);
-let o = 2,
+    o = r(388032);
+let s = 2,
     l = 2,
     u = () => [
         {
             value: 1,
-            label: s.intl.string(s.t['GA/d4O'])
+            label: o.intl.string(o.t['GA/d4O'])
         },
         {
             value: 2,
-            label: s.intl.string(s.t['+rHFen'])
+            label: o.intl.string(o.t['+rHFen'])
         },
         {
             value: 4,
-            label: s.intl.string(s.t['5CNt/P'])
+            label: o.intl.string(o.t['5CNt/P'])
         },
         {
             value: 6,
-            label: s.intl.string(s.t.oQ4PND)
+            label: o.intl.string(o.t.oQ4PND)
         },
         {
             value: 12,
-            label: s.intl.string(s.t.LOQ0j4)
+            label: o.intl.string(o.t.LOQ0j4)
         },
         {
             value: 24,
-            label: s.intl.string(s.t['W0+Lsb'])
+            label: o.intl.string(o.t['W0+Lsb'])
         }
     ],
     c = i.$e(a.Pl.ADMINISTRATOR, a.Pl.MANAGE_GUILD, a.Pl.BAN_MEMBERS, a.Pl.KICK_MEMBERS, a.Pl.MODERATE_MEMBERS);

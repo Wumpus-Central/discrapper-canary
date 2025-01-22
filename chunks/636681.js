@@ -4,8 +4,8 @@ IntlMessageFormat.__addLocaleData({
         var r = String(e).split('.'),
             i = r[1] || '',
             a = Number(r[0]) == e,
-            s = a && r[0].slice(-1),
-            o = a && r[0].slice(-2);
-        return n ? 'other' : 1 == s && (o < 11 || o > 19) ? 'one' : s >= 2 && s <= 9 && (o < 11 || o > 19) ? 'few' : 0 != i ? 'many' : 'other';
+            o = a && r[0].slice(-1),
+            s = a && r[0].slice(-2);
+        return n ? 'other' : 1 == o && (s < 11 || s > 19) ? 'one' : o >= 2 && o <= 9 && (s < 11 || s > 19) ? 'few' : 0 != i ? 'many' : 'other';
     }
 });

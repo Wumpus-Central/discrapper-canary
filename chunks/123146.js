@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(861990),
     a = r(981631);
-class s {
+class o {
     getCreateAttachmentURL(e) {
         return a.ANM.GRAVITY_ATTACHMENTS;
     }

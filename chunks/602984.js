@@ -1,6 +1,6 @@
 r.d(n, {
     U: function () {
-        return s;
+        return o;
     }
 });
 var i = {},
@@ -8,12 +8,12 @@ var i = {},
         if ('undefined' == typeof document && !i) return null;
         var a = i ? new i() : document.createElement('canvas');
         (a.width = 2 * r), (a.height = 2 * r);
-        var s = a.getContext('2d');
-        return s ? ((s.fillStyle = e), s.fillRect(0, 0, a.width, a.height), (s.fillStyle = n), s.fillRect(0, 0, r, r), s.translate(r, r), s.fillRect(0, 0, r, r), a.toDataURL()) : null;
+        var o = a.getContext('2d');
+        return o ? ((o.fillStyle = e), o.fillRect(0, 0, a.width, a.height), (o.fillStyle = n), o.fillRect(0, 0, r, r), o.translate(r, r), o.fillRect(0, 0, r, r), a.toDataURL()) : null;
     },
-    s = function (e, n, r, s) {
-        var o = e + '-' + n + '-' + r + (s ? '-server' : '');
-        if (i[o]) return i[o];
-        var l = a(e, n, r, s);
-        return (i[o] = l), l;
+    o = function (e, n, r, o) {
+        var s = e + '-' + n + '-' + r + (o ? '-server' : '');
+        if (i[s]) return i[s];
+        var l = a(e, n, r, o);
+        return (i[s] = l), l;
     };

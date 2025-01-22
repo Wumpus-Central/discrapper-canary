@@ -17,9 +17,9 @@ function a(e, n, r) {
         e
     );
 }
-let s = Symbol.iterator;
-class o {
-    [s]() {
+let o = Symbol.iterator;
+class s {
+    [o]() {
         return this;
     }
     next() {
@@ -39,5 +39,5 @@ class o {
 }
 function l() {
     for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-    return new o(n);
+    return new s(n);
 }

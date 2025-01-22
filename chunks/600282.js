@@ -12,12 +12,12 @@ function n(e) {
             contains: [{ begin: /""/ }]
         },
         a = /\d{1,2}\/\d{1,2}\/\d{4}/,
-        s = /\d{4}-\d{1,2}-\d{1,2}/,
-        o = /(\d|1[012])(:\d+){0,2} *(AM|PM)/,
+        o = /\d{4}-\d{1,2}-\d{1,2}/,
+        s = /(\d|1[012])(:\d+){0,2} *(AM|PM)/,
         l = /\d{1,2}(:\d{1,2}){1,2}/,
         u = {
             className: 'literal',
-            variants: [{ begin: n.concat(/# */, n.either(s, a), / *#/) }, { begin: n.concat(/# */, l, / *#/) }, { begin: n.concat(/# */, o, / *#/) }, { begin: n.concat(/# */, n.either(s, a), / +/, n.either(o, l), / *#/) }]
+            variants: [{ begin: n.concat(/# */, n.either(o, a), / *#/) }, { begin: n.concat(/# */, l, / *#/) }, { begin: n.concat(/# */, s, / *#/) }, { begin: n.concat(/# */, n.either(o, a), / +/, n.either(s, l), / *#/) }]
         },
         c = {
             className: 'number',
@@ -37,7 +37,7 @@ function n(e) {
                 }
             ]
         }),
-        _ = e.COMMENT(null, /$/, {
+        p = e.COMMENT(null, /$/, {
             variants: [{ begin: /'/ }, { begin: /([\t ]|^)REM(?=\s)/ }]
         }),
         h = {
@@ -45,7 +45,7 @@ function n(e) {
             begin: /[\t ]*#(const|disable|else|elseif|enable|end|externalsource|if|region)\b/,
             end: /$/,
             keywords: { keyword: 'const disable else elseif enable end externalsource if region then' },
-            contains: [_]
+            contains: [p]
         };
     return {
         name: 'Visual Basic .NET',
@@ -59,7 +59,7 @@ function n(e) {
             literal: 'true false nothing'
         },
         illegal: '//|\\{|\\}|endif|gosub|variant|wend|^\\$ ',
-        contains: [r, i, u, c, d, f, _, h]
+        contains: [r, i, u, c, d, f, p, h]
     };
 }
 e.exports = n;

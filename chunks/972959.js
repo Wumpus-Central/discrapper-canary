@@ -5,13 +5,13 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(877124),
-    s = r(65400),
-    o = r(731965);
+    o = r(65400),
+    s = r(731965);
 function l(e, n) {
     return e === n;
 }
 function u(e) {
-    let n = (0, s.F)((0, a.XR)((n, r, i) => e((e) => (0, o.j)(() => n(e)), r, i)));
+    let n = (0, o.F)((0, a.XR)((n, r, i) => e((e) => (0, s.j)(() => n(e)), r, i)));
     function r(e, r) {
         return n(e, r);
     }
@@ -32,11 +32,11 @@ function u(e) {
     function f(e) {
         return u(c(e));
     }
-    let _ = (e) => {
-        (0, o.j)(() => n.setState(e));
+    let p = (e) => {
+        (0, s.j)(() => n.setState(e));
     };
     function h() {
-        _(n.getInitialState());
+        p(n.getInitialState());
     }
     return {
         useState: r,
@@ -46,7 +46,7 @@ function u(e) {
         subscribe: function e(e, r, i) {
             return n.subscribe(e, r, i);
         },
-        setState: _,
+        setState: p,
         resetState: h
     };
 }

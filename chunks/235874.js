@@ -8,16 +8,16 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(411104);
-var o = r(47120);
+    o = r(411104);
+var s = r(47120);
 var l = r(200651),
     u = r(192379),
     c = r(922770),
     d = r(493773),
     f = r(930295),
-    _ = r(126306),
+    p = r(126306),
     h = r(588921);
-function p(e, n, r) {
+function _(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -34,9 +34,9 @@ function p(e, n, r) {
     (e.NONE = '1'), (e.TRANSLATE = '2'), (e.SCALE = '3'), (e.FADE = '4');
 })(i || (i = {}));
 let m = Object.freeze({
-    2: _.l.Types.TRANSLATE,
-    3: _.l.Types.SCALE,
-    4: _.l.Types.FADE
+    2: p.l.Types.TRANSLATE,
+    3: p.l.Types.SCALE,
+    4: p.l.Types.FADE
 });
 function g(e) {
     switch (e) {
@@ -54,42 +54,42 @@ function g(e) {
 }
 class E extends (a = u.Component) {
     render() {
-        let { children: e, shouldShow: n, position: r, onRequestOpen: i, onRequestClose: a, align: s, autoInvert: o, fixed: u, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: _, onShiftClick: h, positionKey: p, preload: m, disablePointerEvents: E, ignoreModalClicks: v, closeOnScroll: I, useMouseEnter: T, renderPopout: b, layerContext: y, clickTrap: S = !1 } = this.props;
+        let { children: e, shouldShow: n, position: r, onRequestOpen: i, onRequestClose: a, align: o, autoInvert: s, fixed: u, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: p, onShiftClick: h, positionKey: _, preload: m, disablePointerEvents: E, ignoreModalClicks: v, closeOnScroll: y, useMouseEnter: b, renderPopout: I, layerContext: T, clickTrap: S = !1 } = this.props;
         return (0, l.jsx)(f.H, {
             ref: this.ref,
             preload: m,
             position: r,
-            align: null != s ? s : g(r),
-            autoInvert: o,
+            align: null != o ? o : g(r),
+            autoInvert: s,
             fixed: u,
             nudgeAlignIntoViewport: c,
             useRawTargetDimensions: d,
             renderPopout: this.renderPopout,
-            spacing: _,
-            shouldShow: null != b && n,
+            spacing: p,
+            shouldShow: null != I && n,
             onRequestOpen: i,
             onRequestClose: a,
             onShiftClick: h,
-            positionKey: p,
+            positionKey: _,
             disablePointerEvents: E,
             ignoreModalClicks: v,
-            closeOnScroll: I,
-            useMouseEnter: T,
-            layerContext: y,
+            closeOnScroll: y,
+            useMouseEnter: b,
+            layerContext: T,
             clickTrap: S,
             children: e
         });
     }
     constructor(...e) {
         super(...e),
-            p(this, 'ref', u.createRef()),
-            p(this, 'renderPopout', (e) => {
+            _(this, 'ref', u.createRef()),
+            _(this, 'renderPopout', (e) => {
                 let { renderPopout: n, animation: r, animationPosition: i } = this.props;
                 switch ((null != i && null != e.position && (e.position = i), r)) {
                     case '2':
                     case '3':
                     case '4':
-                        return (0, l.jsx)(_.l, {
+                        return (0, l.jsx)(p.l, {
                             position: e.position,
                             type: m[r],
                             children: n(e)
@@ -104,14 +104,14 @@ class E extends (a = u.Component) {
 function v(e) {
     let { renderPopout: n, ...r } = e,
         i = u.useRef(null),
-        [a, s] = u.useState(0);
-    function o() {
-        return _(), (0, l.jsx)(l.Fragment, {});
+        [a, o] = u.useState(0);
+    function s() {
+        return p(), (0, l.jsx)(l.Fragment, {});
     }
     u.useLayoutEffect(() => {
         if (a > 0) {
-            var e, n, r, s, o;
-            null === (o = i.current) || void 0 === o || null === (s = o.ref) || void 0 === s || null === (r = s.current) || void 0 === r || null === (n = r.layerRef) || void 0 === n || null === (e = n.current) || void 0 === e || e.updatePosition();
+            var e, n, r, o, s;
+            null === (s = i.current) || void 0 === s || null === (o = s.ref) || void 0 === o || null === (r = o.current) || void 0 === r || null === (n = r.layerRef) || void 0 === n || null === (e = n.current) || void 0 === e || e.updatePosition();
         }
     }, [a]),
         (0, d.Z)(() => {
@@ -119,36 +119,36 @@ function v(e) {
             return () => clearTimeout(e);
         });
     let f = u.useRef(!1);
-    async function _() {
+    async function p() {
         if (!f.current) {
             f.current = !0;
             let e = setTimeout(() => {
-                    g(() => p), s((e) => e + 1);
+                    g(() => _), o((e) => e + 1);
                 }, 300),
                 r = await n();
-            g(() => r), s((e) => e + 1), clearTimeout(e);
+            g(() => r), o((e) => e + 1), clearTimeout(e);
         }
     }
-    function p() {
+    function _() {
         var e, n, r, a;
-        let s = null === (a = i.current) || void 0 === a ? void 0 : null === (r = a.ref) || void 0 === r ? void 0 : null === (n = r.current) || void 0 === n ? void 0 : null === (e = n.domElementRef) || void 0 === e ? void 0 : e.current,
-            o = Math.max(100, null == s ? 100 : s.offsetWidth - 20);
+        let o = null === (a = i.current) || void 0 === a ? void 0 : null === (r = a.ref) || void 0 === r ? void 0 : null === (n = r.current) || void 0 === n ? void 0 : null === (e = n.domElementRef) || void 0 === e ? void 0 : e.current,
+            s = Math.max(100, null == o ? 100 : o.offsetWidth - 20);
         return (0, l.jsx)('div', {
             className: h.loader,
-            style: { width: o },
+            style: { width: s },
             children: (0, l.jsx)(c.$, {})
         });
     }
-    let [m, g] = u.useState(() => o),
-        v = u.useRef(o);
+    let [m, g] = u.useState(() => s),
+        v = u.useRef(s);
     return (
         u.useEffect(() => {
-            v.current = o;
+            v.current = s;
         }),
         u.useEffect(() => {
             f.current
                 ? n().then((e) => {
-                      g(() => e), s((e) => e + 1);
+                      g(() => e), o((e) => e + 1);
                   })
                 : g(v.current);
         }, [n]),
@@ -159,8 +159,8 @@ function v(e) {
         })
     );
 }
-p(E, 'Animation', i),
-    p(E, 'defaultProps', {
+_(E, 'Animation', i),
+    _(E, 'defaultProps', {
         position: 'right',
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,

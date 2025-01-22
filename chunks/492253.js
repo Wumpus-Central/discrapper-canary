@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(820611),
-    o = r(877837),
+    o = r(820611),
+    s = r(877837),
     l = function (e) {
         var n = e.onChange,
             r = e.rgb,
@@ -74,7 +74,7 @@ var i = r(192379),
             }),
             d = function (e, i) {
                 e['#']
-                    ? s.FX(e['#']) &&
+                    ? o.FX(e['#']) &&
                       n(
                           {
                               hex: e['#'],
@@ -106,7 +106,7 @@ var i = r(192379),
         return i.createElement(
             'div',
             { style: c.fields },
-            i.createElement(o.Vm, {
+            i.createElement(s.Vm, {
                 style: {
                     wrap: c.RGBwrap,
                     input: c.RGBinput,
@@ -116,7 +116,7 @@ var i = r(192379),
                 value: Math.round(l.h),
                 onChange: d
             }),
-            i.createElement(o.Vm, {
+            i.createElement(s.Vm, {
                 style: {
                     wrap: c.RGBwrap,
                     input: c.RGBinput,
@@ -126,7 +126,7 @@ var i = r(192379),
                 value: Math.round(100 * l.s),
                 onChange: d
             }),
-            i.createElement(o.Vm, {
+            i.createElement(s.Vm, {
                 style: {
                     wrap: c.RGBwrap,
                     input: c.RGBinput,
@@ -137,7 +137,7 @@ var i = r(192379),
                 onChange: d
             }),
             i.createElement('div', { style: c.divider }),
-            i.createElement(o.Vm, {
+            i.createElement(s.Vm, {
                 style: {
                     wrap: c.RGBwrap,
                     input: c.RGBinput,
@@ -147,7 +147,7 @@ var i = r(192379),
                 value: r.r,
                 onChange: d
             }),
-            i.createElement(o.Vm, {
+            i.createElement(s.Vm, {
                 style: {
                     wrap: c.RGBwrap,
                     input: c.RGBinput,
@@ -157,7 +157,7 @@ var i = r(192379),
                 value: r.g,
                 onChange: d
             }),
-            i.createElement(o.Vm, {
+            i.createElement(s.Vm, {
                 style: {
                     wrap: c.RGBwrap,
                     input: c.RGBinput,
@@ -168,7 +168,7 @@ var i = r(192379),
                 onChange: d
             }),
             i.createElement('div', { style: c.divider }),
-            i.createElement(o.Vm, {
+            i.createElement(s.Vm, {
                 style: {
                     wrap: c.HEXwrap,
                     input: c.HEXinput,

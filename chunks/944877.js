@@ -6,31 +6,31 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(481060),
+    o = r.n(a),
+    s = r(481060),
     l = r(689079),
     u = r(426838);
 let c = (e) => {
     switch (e.id) {
         case l.bi.BUILT_IN:
-            return o.SlashBoxIcon;
+            return s.SlashBoxIcon;
         case l.bi.FRECENCY:
-            return o.ClockIcon;
+            return s.ClockIcon;
         default:
             return;
     }
 };
 function d(e) {
-    let { section: n, className: r, width: a, height: o, padding: l, isSelected: d, selectable: f = !1, ..._ } = e,
+    let { section: n, className: r, width: a, height: s, padding: l, isSelected: d, selectable: f = !1, ...p } = e,
         h = c(n);
     return (0, i.jsx)('div', {
-        className: s()(u.wrapper, r, {
+        className: o()(u.wrapper, r, {
             [u.selectable]: f,
             [u.selected]: f && d
         }),
         style: {
             width: a,
-            height: o,
+            height: s,
             padding: null != l ? l : 0
         },
         children:
@@ -40,8 +40,8 @@ function d(e) {
                       color: 'currentColor',
                       size: 'custom',
                       width: a,
-                      height: o,
-                      ..._
+                      height: s,
+                      ...p
                   })
                 : null
     });

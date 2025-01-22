@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(442837),
+    o = r(192379),
+    s = r(442837),
     l = r(434650),
     u = r(110924),
     c = r(451478),
     d = r(915750);
 let f = (e) => {
-        let [n, r] = s.useState(!1),
+        let [n, r] = o.useState(!1),
             i = null != e ? e : n,
             a = i !== (0, u.Z)(i);
         return {
@@ -21,8 +21,8 @@ let f = (e) => {
             reference: (0, l.O)((e) => r(e), d.PI)
         };
     },
-    _ = () => {
-        let e = (0, o.e7)([c.Z], () => c.Z.isFocused()),
+    p = () => {
+        let e = (0, s.e7)([c.Z], () => c.Z.isFocused()),
             n = e !== (0, u.Z)(e);
         return {
             focused: e,
@@ -30,16 +30,16 @@ let f = (e) => {
         };
     };
 function h(e) {
-    let { focused: n, focusedChanged: r } = _(),
-        { visible: i, visibleChanged: o, reference: l } = f(e.overrideVisibility),
+    let { focused: n, focusedChanged: r } = p(),
+        { visible: i, visibleChanged: s, reference: l } = f(e.overrideVisibility),
         u = {
             ...e,
             focused: n,
             focusedChanged: r,
             visible: i,
-            visibleChanged: o,
+            visibleChanged: s,
             reference: l,
-            impression: s.useRef(null)
+            impression: o.useRef(null)
         };
     return (0, a.jsx)(d.ui, { ...u }, (0, d.B5)(e.questOrQuests, e.questContent));
 }

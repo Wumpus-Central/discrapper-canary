@@ -1,20 +1,20 @@
 var i = r(316138),
     a = r(882159);
-function s(e) {
+function o(e) {
     var n = e.state;
     Object.keys(n.elements).forEach(function (e) {
         var r = n.styles[e] || {},
-            s = n.attributes[e] || {},
-            o = n.elements[e];
-        if (!!(0, a.Re)(o) && !!(0, i.Z)(o))
-            Object.assign(o.style, r),
-                Object.keys(s).forEach(function (e) {
-                    var n = s[e];
-                    !1 === n ? o.removeAttribute(e) : o.setAttribute(e, !0 === n ? '' : n);
+            o = n.attributes[e] || {},
+            s = n.elements[e];
+        if (!!(0, a.Re)(s) && !!(0, i.Z)(s))
+            Object.assign(s.style, r),
+                Object.keys(o).forEach(function (e) {
+                    var n = o[e];
+                    !1 === n ? s.removeAttribute(e) : s.setAttribute(e, !0 === n ? '' : n);
                 });
     });
 }
-function o(e) {
+function s(e) {
     var n = e.state,
         r = {
             popper: {
@@ -32,15 +32,15 @@ function o(e) {
         n.elements.arrow && Object.assign(n.elements.arrow.style, r.arrow),
         function () {
             Object.keys(n.elements).forEach(function (e) {
-                var s = n.elements[e],
-                    o = n.attributes[e] || {},
+                var o = n.elements[e],
+                    s = n.attributes[e] || {},
                     l = Object.keys(n.styles.hasOwnProperty(e) ? n.styles[e] : r[e]).reduce(function (e, n) {
                         return (e[n] = ''), e;
                     }, {});
-                if (!!(0, a.Re)(s) && !!(0, i.Z)(s))
-                    Object.assign(s.style, l),
-                        Object.keys(o).forEach(function (e) {
-                            s.removeAttribute(e);
+                if (!!(0, a.Re)(o) && !!(0, i.Z)(o))
+                    Object.assign(o.style, l),
+                        Object.keys(s).forEach(function (e) {
+                            o.removeAttribute(e);
                         });
             });
         }
@@ -50,7 +50,7 @@ n.Z = {
     name: 'applyStyles',
     enabled: !0,
     phase: 'write',
-    fn: s,
-    effect: o,
+    fn: o,
+    effect: s,
     requires: ['computeStyles']
 };

@@ -1,13 +1,13 @@
 r.d(n, {
     V: function () {
-        return s;
+        return o;
     }
 });
 var i = r(200651),
     a = r(192379);
-let s = a.forwardRef(function (e, n) {
-    let { className: r, children: s } = e,
-        o = a.useRef(null),
+let o = a.forwardRef(function (e, n) {
+    let { className: r, children: o } = e,
+        s = a.useRef(null),
         l = a.useRef(null);
     return (
         a.useImperativeHandle(
@@ -15,7 +15,7 @@ let s = a.forwardRef(function (e, n) {
             () => ({
                 focus: () => {
                     var e;
-                    let n = o.current;
+                    let n = s.current;
                     null != n && (null == l.current && (l.current = n.querySelector('[tabindex="0"]')), null === (e = l.current) || void 0 === e || e.focus());
                 },
                 blur: () => {
@@ -27,7 +27,7 @@ let s = a.forwardRef(function (e, n) {
             []
         ),
         a.useLayoutEffect(() => {
-            let e = o.current;
+            let e = s.current;
             if (null != e)
                 return (
                     e.addEventListener('focusin', n),
@@ -40,10 +40,10 @@ let s = a.forwardRef(function (e, n) {
             }
         }, []),
         (0, i.jsx)('div', {
-            ref: o,
+            ref: s,
             className: r,
             style: { position: 'relative' },
-            children: s
+            children: o
         })
     );
 });

@@ -4,52 +4,52 @@ var i,
 i = {
     enumerable: !0,
     get: function () {
-        return _(a).default;
+        return p(a).default;
     }
 };
-var s = r(122024);
+var o = r(122024);
 i = {
     enumerable: !0,
     get: function () {
-        return _(s).default;
+        return p(o).default;
     }
 };
-var o = r(101401);
+var s = r(101401);
 i = {
     enumerable: !0,
     get: function () {
-        return _(o).default;
+        return p(s).default;
     }
 };
 var l = r(302019);
 Object.defineProperty(n, 'Hue', {
     enumerable: !0,
     get: function () {
-        return _(l).default;
+        return p(l).default;
     }
 });
 var u = r(87977);
 i = {
     enumerable: !0,
     get: function () {
-        return _(u).default;
+        return p(u).default;
     }
 };
 var c = r(138473);
 Object.defineProperty(n, 'Saturation', {
     enumerable: !0,
     get: function () {
-        return _(c).default;
+        return p(c).default;
     }
 });
 var d = r(15488);
 i = {
     enumerable: !0,
     get: function () {
-        return _(d).default;
+        return p(d).default;
     }
 };
 var f = r(393377);
-function _(e) {
+function p(e) {
     return e && e.__esModule ? e : { default: e };
 }

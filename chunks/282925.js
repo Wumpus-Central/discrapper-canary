@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(921944),
-    o = r(388032),
+    o = r(921944),
+    s = r(388032),
     l = r(844451),
     u = r(905287);
 function c(e) {
@@ -32,12 +32,12 @@ function c(e) {
                     (0, i.jsx)(a.Heading, {
                         className: l.text,
                         variant: 'heading-sm/semibold',
-                        children: o.intl.string(o.t['YMI+UV'])
+                        children: s.intl.string(s.t['YMI+UV'])
                     }),
                     (0, i.jsx)(a.Text, {
                         className: l.text,
                         variant: 'text-sm/normal',
-                        children: o.intl.string(o.t.BIBwbm)
+                        children: s.intl.string(s.t.BIBwbm)
                     })
                 ]
             }),
@@ -47,7 +47,7 @@ function c(e) {
                     className: l.ctaButton,
                     color: a.Button.Colors.BRAND_INVERTED,
                     onClick: () => r(),
-                    children: o.intl.string(o.t.RzWDqa)
+                    children: s.intl.string(s.t.RzWDqa)
                 })
             }),
             (0, i.jsx)('div', { className: l.pointer })
@@ -55,7 +55,7 @@ function c(e) {
     });
 }
 function d(e) {
-    let { onComplete: n, onCheckItOutClick: r, markAsDismissed: o } = e;
+    let { onComplete: n, onCheckItOutClick: r, markAsDismissed: s } = e;
     return (0, i.jsx)(a.Popout, {
         spacing: 0,
         shouldShow: !0,
@@ -65,10 +65,10 @@ function d(e) {
             (0, i.jsx)(c, {
                 ...e,
                 onDismissClick: () => {
-                    n(), o(s.L.USER_DISMISS);
+                    n(), s(o.L.USER_DISMISS);
                 },
                 onCheckItOutClick: () => {
-                    r(), n(), o(s.L.TAKE_ACTION);
+                    r(), n(), s(o.L.TAKE_ACTION);
                 }
             }),
         onRequestClose: () => void 0,

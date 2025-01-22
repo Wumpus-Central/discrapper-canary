@@ -1,8 +1,8 @@
 var i;
 if (!Object.keys) {
     var a = Object.prototype.hasOwnProperty,
-        s = Object.prototype.toString,
-        o = r(560640),
+        o = Object.prototype.toString,
+        s = r(560640),
         l = Object.prototype.propertyIsEnumerable,
         u = !l.call({ toString: null }, 'toString'),
         c = l.call(function () {}, 'prototype'),
@@ -11,7 +11,7 @@ if (!Object.keys) {
             var n = e.constructor;
             return n && n.prototype === e;
         },
-        _ = {
+        p = {
             $applicationCache: !0,
             $console: !0,
             $external: !0,
@@ -40,7 +40,7 @@ if (!Object.keys) {
             if ('undefined' == typeof window) return !1;
             for (var e in window)
                 try {
-                    if (!_['$' + e] && a.call(window, e) && null !== window[e] && 'object' == typeof window[e])
+                    if (!p['$' + e] && a.call(window, e) && null !== window[e] && 'object' == typeof window[e])
                         try {
                             f(window[e]);
                         } catch (e) {
@@ -51,7 +51,7 @@ if (!Object.keys) {
                 }
             return !1;
         })(),
-        p = function (e) {
+        _ = function (e) {
             if ('undefined' == typeof window || !h) return f(e);
             try {
                 return f(e);
@@ -61,17 +61,17 @@ if (!Object.keys) {
         };
     i = function (e) {
         var n = null !== e && 'object' == typeof e,
-            r = '[object Function]' === s.call(e),
-            i = o(e),
-            l = n && '[object String]' === s.call(e),
+            r = '[object Function]' === o.call(e),
+            i = s(e),
+            l = n && '[object String]' === o.call(e),
             f = [];
         if (!n && !r && !i) throw TypeError('Object.keys called on a non-object');
-        var _ = c && r;
+        var p = c && r;
         if (l && e.length > 0 && !a.call(e, 0)) for (var h = 0; h < e.length; ++h) f.push(String(h));
         if (i && e.length > 0) for (var m = 0; m < e.length; ++m) f.push(String(m));
-        else for (var g in e) !(_ && 'prototype' === g) && a.call(e, g) && f.push(String(g));
+        else for (var g in e) !(p && 'prototype' === g) && a.call(e, g) && f.push(String(g));
         if (u) {
-            for (var E = p(e), v = 0; v < d.length; ++v) !(E && 'constructor' === d[v]) && a.call(e, d[v]) && f.push(d[v]);
+            for (var E = _(e), v = 0; v < d.length; ++v) !(E && 'constructor' === d[v]) && a.call(e, d[v]) && f.push(d[v]);
         }
         return f;
     };

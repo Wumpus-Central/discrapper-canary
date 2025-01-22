@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(703558);
+    o = r(570140),
+    s = r(703558);
 function l(e, n, r) {
     return (
         n in e
@@ -19,25 +19,25 @@ let u = {},
     c = {};
 function d(e) {
     let { channelId: n, sticker: r, draftType: i } = e;
-    (i === o.d.FirstThreadMessage ? c : u)[n] = [r];
+    (i === s.d.FirstThreadMessage ? c : u)[n] = [r];
 }
 function f(e) {
     let { channelId: n, draftType: r } = e,
-        i = r === o.d.FirstThreadMessage ? c : u;
+        i = r === s.d.FirstThreadMessage ? c : u;
     null != i[n] && delete i[n];
 }
-function _() {
+function p() {
     (u = {}), (c = {});
 }
 class h extends (i = a.ZP.Store) {
     getStickerPreview(e, n) {
-        return (n === o.d.FirstThreadMessage ? c : u)[e];
+        return (n === s.d.FirstThreadMessage ? c : u)[e];
     }
 }
 l(h, 'displayName', 'StickerMessagePreviewStore');
-let p = new h(s.Z, {
+let _ = new h(o.Z, {
     ADD_STICKER_PREVIEW: d,
     CLEAR_STICKER_PREVIEW: f,
-    LOGOUT: _
+    LOGOUT: p
 });
-n.Z = p;
+n.Z = _;

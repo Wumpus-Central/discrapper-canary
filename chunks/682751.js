@@ -4,12 +4,12 @@ var i = r(799761),
         abbreviated: ['BC', 'AD'],
         wide: ['Before Christ', 'Anno Domini']
     },
-    s = {
+    o = {
         narrow: ['1', '2', '3', '4'],
         abbreviated: ['Q1', 'Q2', 'Q3', 'Q4'],
         wide: ['1st quarter', '2nd quarter', '3rd quarter', '4th quarter']
     },
-    o = {
+    s = {
         narrow: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
         abbreviated: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         wide: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -104,14 +104,14 @@ var i = r(799761),
             defaultWidth: 'wide'
         }),
         quarter: (0, i.Z)({
-            values: s,
+            values: o,
             defaultWidth: 'wide',
             argumentCallback: function (e) {
                 return e - 1;
             }
         }),
         month: (0, i.Z)({
-            values: o,
+            values: s,
             defaultWidth: 'wide'
         }),
         day: (0, i.Z)({

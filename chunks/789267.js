@@ -9,10 +9,10 @@ var r = n(739566),
     l = n(834129),
     a = n(388032);
 function o(e) {
-    let { message: t, compact: o, missed: s, joinable: c, usernameHook: d, onClickJoinCall: u } = e,
+    let { message: t, compact: o, missed: s, joinable: c, usernameHook: u, onClickJoinCall: d } = e,
         m = (0, r.ZP)(t),
         h = m.nick,
-        f = d(m),
+        f = u(m),
         p = (function (e) {
             let t = null != e.call ? e.call.duration : null;
             return null != t ? t.humanize() : null;
@@ -51,7 +51,7 @@ function o(e) {
                         }),
                   c
                       ? (0, i.jsx)(l.Z.Action, {
-                            onClick: u,
+                            onClick: d,
                             children: a.intl.string(a.t.oa9mvb)
                         })
                       : null

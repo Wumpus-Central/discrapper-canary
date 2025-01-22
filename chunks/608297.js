@@ -17,16 +17,16 @@ function a(e, n) {
             configurable: !0
         }
     })),
-        n && s(e, n);
+        n && o(e, n);
 }
-function s(e, n) {
-    return (s =
+function o(e, n) {
+    return (o =
         Object.setPrototypeOf ||
         function (e, n) {
             return (e.__proto__ = n), e;
         })(e, n);
 }
-function o(e) {
+function s(e) {
     var n = c();
     return function () {
         var r,
@@ -60,16 +60,16 @@ function d(e) {
 function f(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function _(e, n) {
+function p(e, n) {
     for (var r = 0; r < n.length; r++) {
         var i = n[r];
         (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
 function h(e, n, r) {
-    return n && _(e.prototype, n), r && _(e, r), e;
+    return n && p(e.prototype, n), r && p(e, r), e;
 }
-function p(e, n, r) {
+function _(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -93,7 +93,7 @@ r.d(n, {
 var m = 10,
     g = (function () {
         function e() {
-            f(this, e), p(this, 'subPriority', 0);
+            f(this, e), _(this, 'subPriority', 0);
         }
         return (
             h(e, [
@@ -109,10 +109,10 @@ var m = 10,
     })(),
     E = (function (e) {
         a(r, e);
-        var n = o(r);
-        function r(e, i, a, s, o) {
+        var n = s(r);
+        function r(e, i, a, o, s) {
             var l;
-            return f(this, r), ((l = n.call(this)).value = e), (l.validateValue = i), (l.setValue = a), (l.priority = s), o && (l.subPriority = o), l;
+            return f(this, r), ((l = n.call(this)).value = e), (l.validateValue = i), (l.setValue = a), (l.priority = o), s && (l.subPriority = s), l;
         }
         return (
             h(r, [
@@ -134,12 +134,12 @@ var m = 10,
     })(g),
     v = (function (e) {
         a(r, e);
-        var n = o(r);
+        var n = s(r);
         function r() {
             var e;
             f(this, r);
-            for (var i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
-            return p(u((e = n.call.apply(n, [this].concat(a)))), 'priority', m), p(u(e), 'subPriority', -1), e;
+            for (var i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
+            return _(u((e = n.call.apply(n, [this].concat(a)))), 'priority', m), _(u(e), 'subPriority', -1), e;
         }
         return (
             h(r, [

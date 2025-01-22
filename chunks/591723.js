@@ -1,12 +1,12 @@
 r.d(n, {
     V: function () {
-        return b;
+        return I;
     }
 });
 var i = r(573654),
     a = r(40284),
-    s = r(481732),
-    o = r(478413),
+    o = r(481732),
+    s = r(478413),
     l = r(919513),
     u = r(158851);
 function c(e, n) {
@@ -21,13 +21,13 @@ function d(e, n) {
 function f(e, n, r) {
     return n && d(e.prototype, n), r && d(e, r), e;
 }
-function _(e, n) {
-    return E(e) || g(e, n) || p(e, n) || h();
+function p(e, n) {
+    return E(e) || g(e, n) || _(e, n) || h();
 }
 function h() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
-function p(e, n) {
+function _(e, n) {
     if (e) {
         if ('string' == typeof e) return m(e, n);
         var r = Object.prototype.toString.call(e).slice(8, -1);
@@ -45,16 +45,16 @@ function g(e, n) {
         var r = [],
             i = !0,
             a = !1,
-            s = void 0;
+            o = void 0;
         try {
-            for (var o, l = e[Symbol.iterator](); !(i = (o = l.next()).done) && (r.push(o.value), !n || r.length !== n); i = !0);
+            for (var s, l = e[Symbol.iterator](); !(i = (s = l.next()).done) && (r.push(s.value), !n || r.length !== n); i = !0);
         } catch (e) {
-            (a = !0), (s = e);
+            (a = !0), (o = e);
         } finally {
             try {
                 !i && null != l.return && l.return();
             } finally {
-                if (a) throw s;
+                if (a) throw o;
             }
         }
         return r;
@@ -64,38 +64,38 @@ function E(e) {
     if (Array.isArray(e)) return e;
 }
 function v(e) {
-    var n = (0, s.p)().toString();
+    var n = (0, o.p)().toString();
     switch (e) {
-        case o.t.SOURCE:
+        case s.t.SOURCE:
             return 'S'.concat(n);
-        case o.t.TARGET:
+        case s.t.TARGET:
             return 'T'.concat(n);
         default:
             throw Error('Unknown Handler Role: '.concat(e));
     }
 }
-function I(e) {
+function y(e) {
     switch (e[0]) {
         case 'S':
-            return o.t.SOURCE;
+            return s.t.SOURCE;
         case 'T':
-            return o.t.TARGET;
+            return s.t.TARGET;
         default:
             (0, i.k)(!1, 'Cannot parse handler ID: '.concat(e));
     }
 }
-function T(e, n) {
+function b(e, n) {
     var r = e.entries(),
         i = !1;
     do {
         var a = r.next(),
-            s = a.done;
-        if (_(a.value, 2)[1] === n) return !0;
-        i = !!s;
+            o = a.done;
+        if (p(a.value, 2)[1] === n) return !0;
+        i = !!o;
     } while (!i);
     return !1;
 }
-var b = (function () {
+var I = (function () {
     function e(n) {
         c(this, e), (this.types = new Map()), (this.dragSources = new Map()), (this.dropTargets = new Map()), (this.pinnedSourceId = null), (this.pinnedSource = null), (this.store = n);
     }
@@ -105,7 +105,7 @@ var b = (function () {
                 key: 'addSource',
                 value: function (e, n) {
                     (0, l.sM)(e), (0, l.up)(n);
-                    var r = this.addHandler(o.t.SOURCE, e, n);
+                    var r = this.addHandler(s.t.SOURCE, e, n);
                     return this.store.dispatch((0, a.j1)(r)), r;
                 }
             },
@@ -113,14 +113,14 @@ var b = (function () {
                 key: 'addTarget',
                 value: function (e, n) {
                     (0, l.sM)(e, !0), (0, l.JP)(n);
-                    var r = this.addHandler(o.t.TARGET, e, n);
+                    var r = this.addHandler(s.t.TARGET, e, n);
                     return this.store.dispatch((0, a.jn)(r)), r;
                 }
             },
             {
                 key: 'containsHandler',
                 value: function (e) {
-                    return T(this.dragSources, e) || T(this.dropTargets, e);
+                    return b(this.dragSources, e) || b(this.dropTargets, e);
                 }
             },
             {
@@ -151,13 +151,13 @@ var b = (function () {
             {
                 key: 'isSourceId',
                 value: function (e) {
-                    return I(e) === o.t.SOURCE;
+                    return y(e) === s.t.SOURCE;
                 }
             },
             {
                 key: 'isTargetId',
                 value: function (e) {
-                    return I(e) === o.t.TARGET;
+                    return y(e) === s.t.TARGET;
                 }
             },
             {
@@ -194,7 +194,7 @@ var b = (function () {
                 key: 'addHandler',
                 value: function (e, n, r) {
                     var i = v(e);
-                    return this.types.set(i, n), e === o.t.SOURCE ? this.dragSources.set(i, r) : e === o.t.TARGET && this.dropTargets.set(i, r), i;
+                    return this.types.set(i, n), e === s.t.SOURCE ? this.dragSources.set(i, r) : e === s.t.TARGET && this.dropTargets.set(i, r), i;
                 }
             }
         ]),

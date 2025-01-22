@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a = r(796075),
-    s = r(803997),
-    o = r.n(s),
+    o = r(803997),
+    s = r.n(o),
     l = r(355336),
     u = r(553624);
-let c = (0, l.$)(o()(u.auto, u.disableScrollAnchor), null !== (i = window.ResizeObserver) && void 0 !== i ? i : a.d);
+let c = (0, l.$)(s()(u.auto, u.disableScrollAnchor), null !== (i = window.ResizeObserver) && void 0 !== i ? i : a.d);

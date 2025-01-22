@@ -8,30 +8,30 @@ var i =
             return e;
         },
     a = r(512722),
-    s = r(129629),
-    o = r(420633),
+    o = r(129629),
+    s = r(420633),
     l = r(52738),
     u = r(535308),
     c = r(11746),
     d = r(728613),
     f = r(322659),
-    _ = r(919924),
+    p = r(919924),
     h = r(691181);
 r(328794);
-var p = r(549639),
+var _ = r(549639),
     m = r(466657),
     g = r(173821),
     E = function (e, n, r) {
         if (e instanceof l) {
             var a = i({}, n),
-                s = i({}, n);
-            for (var o in n) {
-                var u = n[o],
+                o = i({}, n);
+            for (var s in n) {
+                var u = n[s],
                     c = u.x,
                     d = u.y;
-                void 0 !== c && void 0 !== d && ((a[o] = c), (s[o] = d));
+                void 0 !== c && void 0 !== d && ((a[s] = c), (o[s] = d));
             }
-            return y([r(e.x, a), r(e.y, s)], { stopTogether: !1 });
+            return T([r(e.x, a), r(e.y, o)], { stopTogether: !1 });
         }
         return null;
     },
@@ -41,7 +41,7 @@ var p = r(549639),
                 start: function (e) {
                     var i = n,
                         a = r;
-                    i.stopTracking(), r.toValue instanceof s ? i.track(new _(i, r.toValue, g, a, e)) : i.animate(new g(a), e);
+                    i.stopTracking(), r.toValue instanceof o ? i.track(new p(i, r.toValue, g, a, e)) : i.animate(new g(a), e);
                 },
                 stop: function () {
                     n.stopAnimation();
@@ -49,13 +49,13 @@ var p = r(549639),
             }
         );
     },
-    I = function e(n, r) {
+    y = function e(n, r) {
         return (
             E(n, r, e) || {
                 start: function (e) {
                     var i = n,
                         a = r;
-                    i.stopTracking(), r.toValue instanceof s ? i.track(new _(i, r.toValue, p, a, e)) : i.animate(new p(a), e);
+                    i.stopTracking(), r.toValue instanceof o ? i.track(new p(i, r.toValue, _, a, e)) : i.animate(new _(a), e);
                 },
                 stop: function () {
                     n.stopAnimation();
@@ -63,7 +63,7 @@ var p = r(549639),
             }
         );
     },
-    T = function e(n, r) {
+    b = function e(n, r) {
         return (
             E(n, r, e) || {
                 start: function (e) {
@@ -77,7 +77,7 @@ var p = r(549639),
             }
         );
     },
-    b = function (e) {
+    I = function (e) {
         var n = 0;
         return {
             start: function (r) {
@@ -95,25 +95,25 @@ var p = r(549639),
             }
         };
     },
-    y = function (e, n) {
+    T = function (e, n) {
         var r = 0,
             i = {},
             a = !(n && !1 === n.stopTogether),
-            s = {
+            o = {
                 start: function (n) {
                     if (r === e.length) {
                         n && n({ finished: !0 });
                         return;
                     }
-                    e.forEach(function (o, l) {
-                        var u = function (o) {
+                    e.forEach(function (s, l) {
+                        var u = function (s) {
                             if (((i[l] = !0), ++r === e.length)) {
-                                (r = 0), n && n(o);
+                                (r = 0), n && n(s);
                                 return;
                             }
-                            !o.finished && a && s.stop();
+                            !s.finished && a && o.stop();
                         };
-                        o ? o.start(u) : u({ finished: !0 });
+                        s ? s.start(u) : u({ finished: !0 });
                     });
                 },
                 stop: function () {
@@ -122,28 +122,28 @@ var p = r(549639),
                     });
                 }
             };
-        return s;
+        return o;
     },
     S = function (e) {
-        return I(new o(0), {
+        return y(new s(0), {
             toValue: 0,
             delay: e,
             duration: 0
         });
     },
     A = function (e, n) {
-        return y(
+        return T(
             n.map(function (n, r) {
-                return b([S(e * r), n]);
+                return I([S(e * r), n]);
             })
         );
     },
-    N = function (e, n) {
+    C = function (e, n) {
         return function () {
-            for (var r = arguments.length, i = Array(r), s = 0; s < r; s++) i[s] = arguments[s];
+            for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
             var l = function e(n, r, i) {
                 if ('number' == typeof r) {
-                    a(n instanceof o, 'Bad mapping of type ' + typeof n + ' for key ' + i + ', event value must map to AnimatedValue'), n.setValue(r);
+                    a(n instanceof s, 'Bad mapping of type ' + typeof n + ' for key ' + i + ', event value must map to AnimatedValue'), n.setValue(r);
                     return;
                 }
                 for (var i in (a('object' == typeof n, 'Bad mapping of type ' + typeof n + ' for key ' + i), a('object' == typeof r, 'Bad event of type ' + typeof r + ' for key ' + i), n)) e(n[i], r[i], i);
@@ -155,10 +155,10 @@ var p = r(549639),
         };
     };
 e.exports = {
-    Value: o,
+    Value: s,
     ValueXY: l,
-    decay: T,
-    timing: I,
+    decay: b,
+    timing: y,
     spring: v,
     add: function (e, n) {
         return new u(e, n);
@@ -174,10 +174,10 @@ e.exports = {
         return new f(e, r);
     },
     delay: S,
-    sequence: b,
-    parallel: y,
+    sequence: I,
+    parallel: T,
     stagger: A,
-    event: N,
+    event: C,
     isAnimated: h,
     createAnimatedComponent: r(350323),
     inject: {

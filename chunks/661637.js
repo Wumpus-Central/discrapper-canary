@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(653041);
 var a = r(633302);
-function s(e) {
+function o(e) {
     let n = [];
     return (
         e.forEach((e) => {

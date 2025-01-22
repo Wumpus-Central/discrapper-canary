@@ -117,8 +117,8 @@ function a(e, n, r, i) {
         var i = new n();
         if (r < e || r < 0) return i;
         e < 0 && (e = 0), r > this.length && (r = this.length);
-        for (var a = 0, s = this.head; null !== s && a < e; a++) s = s.next;
-        for (; null !== s && a < r; a++, s = s.next) i.push(s.value);
+        for (var a = 0, o = this.head; null !== o && a < e; a++) o = o.next;
+        for (; null !== o && a < r; a++, o = o.next) i.push(o.value);
         return i;
     }),
     (n.prototype.sliceReverse = function (e, r) {
@@ -126,8 +126,8 @@ function a(e, n, r, i) {
         var i = new n();
         if (r < e || r < 0) return i;
         e < 0 && (e = 0), r > this.length && (r = this.length);
-        for (var a = this.length, s = this.tail; null !== s && a > r; a--) s = s.prev;
-        for (; null !== s && a > e; a--, s = s.prev) i.push(s.value);
+        for (var a = this.length, o = this.tail; null !== o && a > r; a--) o = o.prev;
+        for (; null !== o && a > e; a--, o = o.prev) i.push(o.value);
         return i;
     }),
     (n.prototype.reverse = function () {

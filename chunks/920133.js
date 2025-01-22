@@ -1,6 +1,6 @@
 r.d(n, {
     L: function () {
-        return o;
+        return s;
     },
     Q: function () {
         return i;
@@ -8,9 +8,9 @@ r.d(n, {
 });
 var i,
     a = r(626135),
-    s = r(981631);
-function o(e, n) {
-    a.default.track(s.rMx.DM_SETTINGS_UPSELL_ACTION, {
+    o = r(981631);
+function s(e, n) {
+    a.default.track(o.rMx.DM_SETTINGS_UPSELL_ACTION, {
         action: e,
         guild_id: n
     });

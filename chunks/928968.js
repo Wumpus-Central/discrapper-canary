@@ -1,18 +1,18 @@
 r.d(n, {
     f: function () {
-        return s;
+        return o;
     },
     w: function () {
-        return o;
+        return s;
     }
 });
 var i = r(515652),
     a = r(926028);
-function s(e, n) {
+function o(e, n) {
     var r = new a.p(i.s[e]);
     return r.loadDataTransfer(n), r;
 }
-function o(e) {
+function s(e) {
     if (!e) return null;
     var n = Array.prototype.slice.call(e.types || []);
     return (

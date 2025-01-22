@@ -3,7 +3,7 @@ r.d(n, {
         return d;
     },
     s: function () {
-        return _;
+        return p;
     }
 });
 var i = r(192379);
@@ -13,7 +13,7 @@ function a(e) {
 (function e(e) {
     return null;
 }).getCollectionNode = function* (e, n) {
-    let { childItems: r, title: s, children: o } = e,
+    let { childItems: r, title: o, children: s } = e,
         l = e.title || e.children,
         u = e.textValue || ('string' == typeof l ? l : '') || e['aria-label'] || '';
     !u && !(null == n ? void 0 : n.suppressTextValueWarning) && console.warn('<Item> with non-plain text contents is unsupported by type to select for accessibility. Please add a `textValue` prop.'),
@@ -31,9 +31,9 @@ function a(e) {
                             type: 'item',
                             value: e
                         };
-                else if (s) {
+                else if (o) {
                     let e = [];
-                    i.Children.forEach(o, (n) => {
+                    i.Children.forEach(s, (n) => {
                         e.push({
                             type: 'item',
                             element: n
@@ -76,9 +76,9 @@ function a(e) {
         }
     };
 };
-class s {
+class o {
     build(e, n) {
-        return (this.context = n), o(() => this.iterateCollection(e));
+        return (this.context = n), s(() => this.iterateCollection(e));
     }
     *iterateCollection(e) {
         let { children: n, items: r } = e;
@@ -107,8 +107,8 @@ class s {
         if ('cell' === n.type && null != n.key) return `${i}${n.key}`;
         let a = n.value;
         if (null != a) {
-            var s;
-            let e = null !== (s = a.key) && void 0 !== s ? s : a.id;
+            var o;
+            let e = null !== (o = a.key) && void 0 !== o ? o : a.id;
             if (null == e) throw Error('No key found for item');
             return e;
         }
@@ -128,42 +128,42 @@ class s {
             a = n.renderer(e.value);
         }
         if ($tyW6A$react.isValidElement(a)) {
-            let s = a.type;
-            if ('function' != typeof s && 'function' != typeof s.getCollectionNode) {
+            let o = a.type;
+            if ('function' != typeof o && 'function' != typeof o.getCollectionNode) {
                 let e = 'function' == typeof a.type ? a.type.name : a.type;
                 throw Error(`Unknown element <${e}> in collection.`);
             }
-            let o = s.getCollectionNode(a.props, this.context),
+            let s = o.getCollectionNode(a.props, this.context),
                 c = e.index,
-                d = o.next();
+                d = s.next();
             for (; !d.done && d.value; ) {
-                let s = d.value;
+                let o = d.value;
                 e.index = c;
-                let f = s.key;
-                !f && (f = s.element ? null : this.getKey(a, e, n, r));
-                let _ = [
+                let f = o.key;
+                !f && (f = o.element ? null : this.getKey(a, e, n, r));
+                let p = [
                     ...this.getFullNode(
                         {
-                            ...s,
+                            ...o,
                             key: f,
                             index: c,
-                            wrapper: l(e.wrapper, s.wrapper)
+                            wrapper: l(e.wrapper, o.wrapper)
                         },
-                        this.getChildState(n, s),
+                        this.getChildState(n, o),
                         r ? `${r}${a.key}` : a.key,
                         i
                     )
                 ];
-                for (let n of _) {
-                    if (((n.value = s.value || e.value), n.value && this.cache.set(n.value, n), e.type && n.type !== e.type)) throw Error(`Unsupported type <${u(n.type)}> in <${u(i.type)}>. Only <${u(e.type)}> is supported.`);
+                for (let n of p) {
+                    if (((n.value = o.value || e.value), n.value && this.cache.set(n.value, n), e.type && n.type !== e.type)) throw Error(`Unsupported type <${u(n.type)}> in <${u(i.type)}>. Only <${u(e.type)}> is supported.`);
                     c++, yield n;
                 }
-                d = o.next(_);
+                d = s.next(p);
             }
             return;
         }
         if (null == e.key) return;
-        let s = this,
+        let o = this,
             c = {
                 type: e.type,
                 props: e.props,
@@ -178,10 +178,10 @@ class s {
                 wrapper: e.wrapper,
                 shouldInvalidate: e.shouldInvalidate,
                 hasChildNodes: e.hasChildNodes,
-                childNodes: o(function* () {
+                childNodes: s(function* () {
                     if (!e.hasChildNodes) return;
                     let r = 0;
-                    for (let i of e.childNodes()) for (let e of (null != i.key && (i.key = `${c.key}${i.key}`), (i.index = r), s.getFullNode(i, s.getChildState(n, i), c.key, c))) r++, yield e;
+                    for (let i of e.childNodes()) for (let e of (null != i.key && (i.key = `${c.key}${i.key}`), (i.index = r), o.getFullNode(i, o.getChildState(n, i), c.key, c))) r++, yield e;
                 })
             };
         yield c;
@@ -190,7 +190,7 @@ class s {
         this.cache = new WeakMap();
     }
 }
-function o(e) {
+function s(e) {
     let n = [],
         r = null;
     return {
@@ -220,7 +220,7 @@ function f(e, n) {
         r++;
     }
 }
-function _(e) {
+function p(e) {
     let n;
     for (let r of e) n = r;
     return n;
@@ -230,4 +230,4 @@ function h(e, n) {
     for (; (null == n ? void 0 : n.parentKey) != null; ) (n = e.getItem(n.parentKey)), r.unshift(n);
     return r;
 }
-let p = new WeakMap();
+let _ = new WeakMap();

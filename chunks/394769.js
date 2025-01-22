@@ -1,14 +1,14 @@
 var i = r(200651);
 r(192379);
 var a = r(642128),
-    s = r(481060),
-    o = r(565138),
+    o = r(481060),
+    s = r(565138),
     l = r(678558),
     u = r(981631),
     c = r(509532);
 function d(e) {
     let { closeLayer: n, guild: r, isVisible: d } = e,
-        f = (0, s.useSpring)({
+        f = (0, o.useSpring)({
             transform: d ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: d ? 1 : 0,
             config: {
@@ -25,12 +25,12 @@ function d(e) {
                 (0, i.jsxs)('div', {
                     className: c.guildInfo,
                     children: [
-                        (0, i.jsx)(o.Z, {
+                        (0, i.jsx)(s.Z, {
                             className: c.guildIcon,
                             guild: r,
-                            size: o.Z.Sizes.LARGER
+                            size: s.Z.Sizes.LARGER
                         }),
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(o.Heading, {
                             className: c.guildName,
                             variant: 'text-lg/bold',
                             children: r.name
@@ -48,7 +48,7 @@ function d(e) {
                     },
                     closeLayer: n,
                     pauseAnimation: !d,
-                    size: s.Button.Sizes.LARGE
+                    size: o.Button.Sizes.LARGE
                 })
             ]
         })

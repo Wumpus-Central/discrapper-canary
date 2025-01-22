@@ -4,11 +4,11 @@ function i(e) {
             i = n.match(e.matchPattern);
         if (!i) return null;
         var a = i[0],
-            s = n.match(e.parsePattern);
-        if (!s) return null;
-        var o = e.valueCallback ? e.valueCallback(s[0]) : s[0];
+            o = n.match(e.parsePattern);
+        if (!o) return null;
+        var s = e.valueCallback ? e.valueCallback(o[0]) : o[0];
         return {
-            value: (o = r.valueCallback ? r.valueCallback(o) : o),
+            value: (s = r.valueCallback ? r.valueCallback(s) : s),
             rest: n.slice(a.length)
         };
     };

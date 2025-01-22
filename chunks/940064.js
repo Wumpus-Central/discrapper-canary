@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var a = n(120356),
     r = n.n(a),
-    o = n(481060),
-    l = n(665692),
+    l = n(481060),
+    o = n(665692),
     s = n(135807);
 function c(e) {
     let { commands: t, className: n } = e;
@@ -20,13 +20,13 @@ function c(e) {
                 {
                     className: s.row,
                     children: [
-                        (0, i.jsxs)(o.Text, {
+                        (0, i.jsxs)(l.Text, {
                             className: s.commandName,
                             variant: 'text-md/semibold',
                             color: 'header-primary',
-                            children: [l.GI, e.displayName]
+                            children: [o.GI, e.displayName]
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             children: e.displayDescription
                         })

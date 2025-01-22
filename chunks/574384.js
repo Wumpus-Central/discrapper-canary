@@ -5,21 +5,21 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(793030),
+    o = r(192379),
+    s = r(793030),
     l = r(993365),
     u = r(481060),
     c = r(489863),
     d = r(388032),
     f = r(804537);
-let _ = 5;
+let p = 5;
 function h(e) {
     var n;
-    let { selectedGuildId: r, selectedChannelId: i, onChannelChange: h, error: p } = e,
-        [m, g] = s.useState(null),
-        E = s.useRef(!1);
+    let { selectedGuildId: r, selectedChannelId: i, onChannelChange: h, error: _ } = e,
+        [m, g] = o.useState(null),
+        E = o.useRef(!1);
     if (
-        (s.useEffect(() => {
+        (o.useEffect(() => {
             async function e(e) {
                 let n = await (0, c.UR)(e);
                 r === e &&
@@ -32,7 +32,7 @@ function h(e) {
             }
             g(null), null == r ? h(null) : e(r);
         }, [h, r]),
-        s.useEffect(() => {
+        o.useEffect(() => {
             if (!!E.current) null == m ? null != i && h(null) : !m.channels.some((e) => e.id === i) && h(null);
         }, [m, h, i, r]),
         null == r)
@@ -48,21 +48,21 @@ function h(e) {
     return (0, a.jsxs)('div', {
         className: f.selectorGroup,
         children: [
-            (0, a.jsx)(o.X6, {
+            (0, a.jsx)(s.X6, {
                 variant: 'heading-deprecated-12/semibold',
                 className: f.sectionLabel,
                 children: d.intl.string(d.t['8qKd+P'])
             }),
-            null != p && '' !== p
+            null != _ && '' !== _
                 ? (0, a.jsx)(l.x, {
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: p
+                      children: _
                   })
                 : null,
             (0, a.jsx)(u.SearchableSelect, {
                 wrapperClassName: f.select,
-                maxVisibleItems: _,
+                maxVisibleItems: p,
                 onChange: h,
                 placeholder: d.intl.string(d.t['Re/64e']),
                 options: v,

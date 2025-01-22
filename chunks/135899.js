@@ -18,10 +18,10 @@ r.d(n, {
         return c;
     },
     mu: function () {
-        return _;
+        return p;
     },
     tA: function () {
-        return p;
+        return _;
     },
     zs: function () {
         return l;
@@ -29,16 +29,16 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(149765),
-    o = r(981631);
+var o = r(149765),
+    s = r(981631);
 let l = 'publicSuccessModalSeen',
     u = '667560445975986187',
     c = '669627189624307712',
     d = '1',
-    f = [o.Plq.ADMINISTRATOR, o.Plq.KICK_MEMBERS, o.Plq.BAN_MEMBERS, o.Plq.MANAGE_GUILD, o.Plq.MANAGE_CHANNELS, o.Plq.MANAGE_ROLES, o.Plq.MANAGE_MESSAGES, o.Plq.MANAGE_GUILD_EXPRESSIONS, o.Plq.CREATE_GUILD_EXPRESSIONS, o.Plq.MANAGE_EVENTS, o.Plq.CREATE_EVENTS, o.Plq.MODERATE_MEMBERS, o.Plq.MENTION_EVERYONE],
-    _ = s.$e(...f),
+    f = [s.Plq.ADMINISTRATOR, s.Plq.KICK_MEMBERS, s.Plq.BAN_MEMBERS, s.Plq.MANAGE_GUILD, s.Plq.MANAGE_CHANNELS, s.Plq.MANAGE_ROLES, s.Plq.MANAGE_MESSAGES, s.Plq.MANAGE_GUILD_EXPRESSIONS, s.Plq.CREATE_GUILD_EXPRESSIONS, s.Plq.MANAGE_EVENTS, s.Plq.CREATE_EVENTS, s.Plq.MODERATE_MEMBERS, s.Plq.MENTION_EVERYONE],
+    p = o.$e(...f),
     h = 1000,
-    p = 'Enable Community Modal';
+    _ = 'Enable Community Modal';
 !(function (e) {
     (e.SAFETY_CHECK = 'safety_check'), (e.BASICS = 'basics'), (e.FINISH = 'finish');
 })(i || (i = {}));

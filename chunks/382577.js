@@ -1,24 +1,24 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
 });
-var i = n(192379),
-    l = n(570140);
-function a(e) {
-    let t = (0, i.useRef)(e);
+var i = r(192379),
+    a = r(570140);
+function o(e) {
+    let n = (0, i.useRef)(e);
     (0, i.useEffect)(() => {
-        t.current = e;
+        n.current = e;
     }, [e]),
         (0, i.useEffect)(() => {
             if (__OVERLAY__) {
                 function e(e) {
-                    e.locked && t.current();
+                    e.locked && n.current();
                 }
                 return (
-                    l.Z.subscribe('OVERLAY_SET_INPUT_LOCKED', e),
+                    a.Z.subscribe('OVERLAY_SET_INPUT_LOCKED', e),
                     () => {
-                        l.Z.unsubscribe('OVERLAY_SET_INPUT_LOCKED', e);
+                        a.Z.unsubscribe('OVERLAY_SET_INPUT_LOCKED', e);
                     }
                 );
             }

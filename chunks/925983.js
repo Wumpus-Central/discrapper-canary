@@ -1,6 +1,6 @@
 var i = r(767172),
     a = /%[sdv%]/g,
-    s = function (e) {
+    o = function (e) {
         var n = 1,
             r = arguments,
             i = r.length;
@@ -19,15 +19,15 @@ var i = r(767172),
             }
         });
     },
-    o = function (e, n, r) {
+    s = function (e, n, r) {
         var i = [e + '=' + (n.format instanceof Function ? n.format(n.push ? r : r[n.name]) : n.format)];
         if (n.names)
             for (var a = 0; a < n.names.length; a += 1) {
-                var o = n.names[a];
-                n.name ? i.push(r[n.name][o]) : i.push(r[n.names[a]]);
+                var s = n.names[a];
+                n.name ? i.push(r[n.name][s]) : i.push(r[n.names[a]]);
             }
         else i.push(r[n.name]);
-        return s.apply(null, i);
+        return o.apply(null, i);
     },
     l = ['v', 'o', 's', 'i', 'u', 'e', 'p', 'c', 'b', 't', 'r', 'z', 'a'],
     u = ['i', 'c', 'b', 'a'];
@@ -40,33 +40,33 @@ e.exports = function (e, n) {
         });
     var r = n.outerOrder || l,
         a = n.innerOrder || u,
-        s = [];
+        o = [];
     return (
         r.forEach(function (n) {
             i[n].forEach(function (r) {
                 r.name in e && null != e[r.name]
-                    ? s.push(o(n, r, e))
+                    ? o.push(s(n, r, e))
                     : r.push in e &&
                       null != e[r.push] &&
                       e[r.push].forEach(function (e) {
-                          s.push(o(n, r, e));
+                          o.push(s(n, r, e));
                       });
             });
         }),
         e.media.forEach(function (e) {
-            s.push(o('m', i.m[0], e)),
+            o.push(s('m', i.m[0], e)),
                 a.forEach(function (n) {
                     i[n].forEach(function (r) {
                         r.name in e && null != e[r.name]
-                            ? s.push(o(n, r, e))
+                            ? o.push(s(n, r, e))
                             : r.push in e &&
                               null != e[r.push] &&
                               e[r.push].forEach(function (e) {
-                                  s.push(o(n, r, e));
+                                  o.push(s(n, r, e));
                               });
                     });
                 });
         }),
-        s.join('\r\n') + '\r\n'
+        o.join('\r\n') + '\r\n'
     );
 };

@@ -8,7 +8,7 @@ var i =
             return e;
         },
     a = 'src/createAnimatedComponent.js',
-    s = (function () {
+    o = (function () {
         function e(e, n) {
             for (var r = 0; r < n.length; r++) {
                 var i = n[r];
@@ -19,7 +19,7 @@ var i =
             return r && e(n.prototype, r), i && e(n, i), n;
         };
     })();
-function o(e, n) {
+function s(e, n) {
     var r = {};
     for (var i in e) {
         if (!(n.indexOf(i) >= 0)) Object.prototype.hasOwnProperty.call(e, i) && (r[i] = e[i]);
@@ -47,7 +47,7 @@ function c(e, n) {
 }
 var d = r(192379),
     f = r(724027),
-    _ = r(457958);
+    p = r(457958);
 function h(e) {
     var n = 'node',
         r = (function (r) {
@@ -56,7 +56,7 @@ function h(e) {
             }
             return (
                 c(h, r),
-                s(h, [
+                o(h, [
                     {
                         key: 'componentWillUnmount',
                         value: function () {
@@ -66,7 +66,7 @@ function h(e) {
                     {
                         key: 'setNativeProps',
                         value: function (e) {
-                            !1 === _.current(this.refs[n], e, this) && this.forceUpdate();
+                            !1 === p.current(this.refs[n], e, this) && this.forceUpdate();
                         }
                     },
                     {
@@ -81,7 +81,7 @@ function h(e) {
                             var r = this,
                                 i = this._propsAnimated,
                                 a = function () {
-                                    !1 === _.current(r.refs[n], r._propsAnimated.__getAnimatedValue(), r) && r.forceUpdate();
+                                    !1 === p.current(r.refs[n], r._propsAnimated.__getAnimatedValue(), r) && r.forceUpdate();
                                 };
                             (this._propsAnimated = new f(e, a)), i && i.__detach();
                         }
@@ -96,12 +96,12 @@ function h(e) {
                         key: 'render',
                         value: function () {
                             var r = this._propsAnimated.__getValue(),
-                                s = r.style,
-                                l = o(r, ['style']);
+                                o = r.style,
+                                l = s(r, ['style']);
                             return d.createElement(
                                 e,
                                 i({}, l, {
-                                    style: _.transformStyles(s),
+                                    style: p.transformStyles(o),
                                     ref: n,
                                     __source: {
                                         fileName: a,

@@ -5,14 +5,14 @@ var i,
     o = n(442837),
     s = n(570140);
 let c = !1,
-    d = !1,
-    u = !1;
+    u = !1,
+    d = !1;
 class m extends (a = o.ZP.Store) {
     getIsTargeted() {
-        return u;
+        return d;
     }
     shouldFetchCheckoutRecovery() {
-        return !c && !d;
+        return !c && !u;
     }
 }
 (l = 'CheckoutRecoveryStore'),
@@ -26,15 +26,15 @@ class m extends (a = o.ZP.Store) {
         : (i[r] = l),
     (t.Z = new m(s.Z, {
         CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS: function (e) {
-            (d = !0), (c = !1), (u = e.isTargeted);
+            (u = !0), (c = !1), (d = e.isTargeted);
         },
         CHECKOUT_RECOVERY_STATUS_FETCH_FAILURE: function () {
-            (d = !0), (c = !1);
+            (u = !0), (c = !1);
         },
         CHECKOUT_RECOVERY_STATUS_FETCH: function () {
             c = !0;
         },
         LOGOUT: function () {
-            (c = !1), (d = !1), (u = !1);
+            (c = !1), (u = !1), (d = !1);
         }
     }));

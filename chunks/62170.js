@@ -1,20 +1,20 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(623113);
-n.Z = s.forwardRef(function (e, n) {
+    o = r(192379),
+    s = r(623113);
+n.Z = o.forwardRef(function (e, n) {
     let { muted: r, volume: i, playing: l, ...u } = e,
-        [c, d] = (0, o.Z)(n);
+        [c, d] = (0, s.Z)(n);
     return (
-        s.useEffect(() => {
+        o.useEffect(() => {
             let e = c.current;
             if (null != e) void 0 !== r && (e.muted = r);
         }, [c, r]),
-        s.useEffect(() => {
+        o.useEffect(() => {
             let e = c.current;
             if (null != e) void 0 !== i && (e.volume = i);
         }, [c, i]),
-        s.useEffect(() => {
+        o.useEffect(() => {
             let e = c.current;
             if (null != e) void 0 !== l && (l ? e.play() : e.pause());
         }, [c, l]),

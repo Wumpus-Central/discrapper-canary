@@ -3,10 +3,10 @@ n.d(t, {
         return s;
     },
     HL: function () {
-        return d;
+        return u;
     },
     Yc: function () {
-        return u;
+        return d;
     },
     xe: function () {
         return c;
@@ -38,7 +38,7 @@ function c(e) {
         children: a.intl.string(a.t.tu6tOT)
     });
 }
-function d(e) {
+function u(e) {
     let { message: t, compact: n } = e;
     return (0, i.jsx)(l.Z, {
         iconNode: (0, i.jsx)(r.CircleWarningIcon, {
@@ -54,7 +54,7 @@ function d(e) {
         children: a.intl.string(a.t.vzfXqq)
     });
 }
-function u(e) {
+function d(e) {
     let { message: t, compact: n } = e;
     return (0, i.jsx)(l.Z, {
         iconNode: (0, i.jsx)(r.CircleWarningIcon, {

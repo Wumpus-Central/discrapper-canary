@@ -1,11 +1,11 @@
-var r = n(67867),
-    o = n(38548);
-r(
+var i = r(67867),
+    a = r(38548);
+i(
     {
         target: 'String',
         proto: !0,
         name: 'trimStart',
-        forced: ''.trimLeft !== o
+        forced: ''.trimLeft !== a
     },
-    { trimLeft: o }
+    { trimLeft: a }
 );

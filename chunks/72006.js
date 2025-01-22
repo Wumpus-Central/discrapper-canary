@@ -60,8 +60,8 @@ var i = n(5148),
     o = n.n(a),
     s = n(283852),
     c = n.n(s),
-    d = n(115129),
-    u = n.n(d),
+    u = n(115129),
+    d = n.n(u),
     m = n(357062),
     h = n.n(m),
     f = n(34399),
@@ -91,10 +91,10 @@ function S(e, t, n, r) {
     let l, a;
     let s = t.getCurrentContent(),
         c = s.getFirstBlock(),
-        d = c.getText();
+        u = c.getText();
     'number' == typeof n
-        ? (n > d.length && (n = d.length),
-          null != r && r > d.length && (r = d.length),
+        ? (n > u.length && (n = u.length),
+          null != r && r > u.length && (r = u.length),
           (l = new i.SelectionState({
               anchorKey: c.getKey(),
               anchorOffset: n,
@@ -102,9 +102,9 @@ function S(e, t, n, r) {
               focusOffset: null != r && 0 !== r ? r : n
           })))
         : (l = t.getSelection());
-    let u = t.getCurrentInlineStyle(),
+    let d = t.getCurrentInlineStyle(),
         m = o()(s, l);
-    return l.isCollapsed() ? ((s = i.Modifier.insertText(s, l, e, u, m)), (a = 'insert-characters')) : ((s = i.Modifier.replaceText(s, l, e, u, m)), (a = 'replace-characters')), i.EditorState.push(t, s, a);
+    return l.isCollapsed() ? ((s = i.Modifier.insertText(s, l, e, d, m)), (a = 'insert-characters')) : ((s = i.Modifier.replaceText(s, l, e, d, m)), (a = 'replace-characters')), i.EditorState.push(t, s, a);
 }
 function A(e, t) {
     switch (e) {
@@ -115,7 +115,7 @@ function A(e, t) {
         case 'backspace':
             return C()(t);
         case 'backspace-word':
-            return u()(t);
+            return d()(t);
         case 'backspace-to-start-of-line':
             return c()(t);
         default:

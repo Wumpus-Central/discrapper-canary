@@ -1,13 +1,13 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(314897),
+    o = r(570140),
+    s = r(314897),
     l = r(592125),
     u = r(131951),
     c = r(496675),
     d = r(19780),
     f = r(979651),
-    _ = r(981631);
+    p = r(981631);
 function h(e, n, r) {
     return (
         n in e
@@ -21,7 +21,7 @@ function h(e, n, r) {
         e
     );
 }
-let p = !0,
+let _ = !0,
     m = !0;
 function g(e) {
     return null == e || !!e.suppress || null != e.requestToSpeakTimestamp || !1;
@@ -32,31 +32,31 @@ function E() {
     if (null == n) e = !0;
     else {
         let r = l.Z.getChannel(n),
-            i = f.Z.getVoiceState(null == r ? void 0 : r.getGuildId(), o.default.getId());
-        e = u.Z.getMode() !== _.pM4.VOICE_ACTIVITY || null == r || r.isPrivate() || r.isGuildStageVoice() || c.Z.can(_.Plq.USE_VAD, r) || g(i);
+            i = f.Z.getVoiceState(null == r ? void 0 : r.getGuildId(), s.default.getId());
+        e = u.Z.getMode() !== p.pM4.VOICE_ACTIVITY || null == r || r.isPrivate() || r.isGuildStageVoice() || c.Z.can(p.Plq.USE_VAD, r) || g(i);
     }
-    if (p === e) return !1;
+    if (_ === e) return !1;
     (m = e),
-        (p = e),
-        s.Z.dispatch({
+        (_ = e),
+        o.Z.dispatch({
             type: 'SET_VAD_PERMISSION',
-            hasPermission: p
+            hasPermission: _
         });
 }
 function v(e) {
     let { voiceStates: n } = e;
     return n.some((e) => {
         let { userId: n } = e;
-        return n === o.default.getId() && E();
+        return n === s.default.getId() && E();
     });
 }
-function I() {
+function y() {
     m = !0;
 }
-function T() {
-    m = p;
+function b() {
+    m = _;
 }
-class b extends (i = a.ZP.Store) {
+class I extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, u.Z, d.Z, f.Z);
     }
@@ -64,11 +64,11 @@ class b extends (i = a.ZP.Store) {
         return !m;
     }
     canUseVoiceActivity() {
-        return p;
+        return _;
     }
 }
-h(b, 'displayName', 'PermissionVADStore'),
-    (n.Z = new b(s.Z, {
+h(I, 'displayName', 'PermissionVADStore'),
+    (n.Z = new I(o.Z, {
         RTC_CONNECTION_STATE: E,
         MEDIA_ENGINE_SET_AUDIO_ENABLED: E,
         AUDIO_SET_MODE: E,
@@ -79,6 +79,6 @@ h(b, 'displayName', 'PermissionVADStore'),
         IMPERSONATE_UPDATE: E,
         IMPERSONATE_STOP: E,
         VOICE_STATE_UPDATES: v,
-        AUDIO_TOGGLE_SELF_MUTE: T,
-        PERMISSION_CLEAR_VAD_WARNING: I
+        AUDIO_TOGGLE_SELF_MUTE: b,
+        PERMISSION_CLEAR_VAD_WARNING: y
     }));

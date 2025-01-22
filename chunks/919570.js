@@ -1,12 +1,12 @@
 r.d(n, {
     GR: function () {
-        return s;
+        return o;
     },
     HQ: function () {
         return l;
     },
     gK: function () {
-        return o;
+        return s;
     },
     wu: function () {
         return i;
@@ -14,10 +14,10 @@ r.d(n, {
 });
 let i = ['click', 'mousedown', 'mouseup', 'keydown', 'keyup', 'keypress', 'contextmenu'],
     a = null;
-function s() {
+function o() {
     return a;
 }
-function o(e) {
+function s(e) {
     a = e;
 }
 function l(e) {

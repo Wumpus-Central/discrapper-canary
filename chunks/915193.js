@@ -1,6 +1,6 @@
 t.d(e, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var i = t(200651);
@@ -14,7 +14,7 @@ var r = t(442837),
     s = t(594174),
     c = t(388032),
     f = t(597539);
-function m(n) {
+function p(n) {
     let { color: e, className: t } = n;
     return (0, i.jsx)('svg', {
         className: t,
@@ -47,7 +47,7 @@ function m(n) {
         })
     });
 }
-function p(n, e) {
+function m(n, e) {
     let t = (0, r.e7)([s.default], () => s.default.getCurrentUser());
     return null == t || e.ownerId !== t.id || n.id === t.id
         ? null
@@ -68,7 +68,7 @@ function p(n, e) {
                               onConfirm: () => o.Z.setDMOwner(e.id, n.id),
                               ...t,
                               children: [
-                                  (0, i.jsx)(m, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                  (0, i.jsx)(p, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
                                   (0, i.jsxs)('div', {
                                       className: f.fromToWrapper,
                                       children: [

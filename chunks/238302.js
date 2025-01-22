@@ -1,6 +1,6 @@
 r.d(n, {
     Kq: function () {
-        return o;
+        return s;
     },
     Mo: function () {
         return l;
@@ -9,7 +9,7 @@ r.d(n, {
         return u;
     },
     xs: function () {
-        return s;
+        return o;
     },
     zO: function () {
         return a;
@@ -22,13 +22,13 @@ let a = (e) => {
             presetId: e
         });
     },
-    s = () => {
+    o = () => {
         i.Z.dispatch({
             type: 'UPDATE_BACKGROUND_GRADIENT_PRESET',
             presetId: null
         });
     },
-    o = () => {
+    s = () => {
         i.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_OPEN' });
     },
     l = () => {

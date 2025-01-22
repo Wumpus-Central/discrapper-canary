@@ -1,10 +1,10 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
 });
-var r = n(208694),
-    o = n(15568);
-function a(e) {
-    if (r(e)) return (0, o.Z)(e);
+var i = r(208694),
+    a = r(15568);
+function o(e) {
+    if (i(e)) return (0, a.Z)(e);
 }

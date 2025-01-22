@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(411104);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(902704),
     u = r(250919);
 function c(e, n, r) {
@@ -18,17 +18,17 @@ function c(e, n, r) {
     );
 }
 function d(e, n, r) {
-    return null != r && r.forwardRef ? _(e, n) : h(e, n);
+    return null != r && r.forwardRef ? p(e, n) : h(e, n);
 }
 function f(e) {
     var n, r;
     return null !== (r = null !== (n = e.displayName) && void 0 !== n ? n : e.name) && void 0 !== r ? r : '<Unknown>';
 }
-function _(e, n) {
+function p(e, n) {
     return (r) => {
         var i;
         let a = 'FluxContainer('.concat(f(r), ')');
-        class d extends (i = o.Component) {
+        class d extends (i = s.Component) {
             componentDidMount() {
                 this.listener.attach(a);
             }
@@ -38,7 +38,7 @@ function _(e, n) {
             render() {
                 let { forwardedConnectStoresRef: e, childProps: n } = this.props,
                     i = this.memoizedGetStateFromStores(n);
-                return (0, s.jsx)(r, {
+                return (0, o.jsx)(r, {
                     ref: e,
                     ...n,
                     ...i
@@ -46,7 +46,7 @@ function _(e, n) {
             }
             constructor(...r) {
                 super(...r),
-                    c(this, 'memoizedGetStateFromStores', p(n)),
+                    c(this, 'memoizedGetStateFromStores', _(n)),
                     c(
                         this,
                         'listener',
@@ -58,20 +58,20 @@ function _(e, n) {
             }
         }
         c(d, 'displayName', a);
-        let _ = o.forwardRef((e, n) =>
-            (0, s.jsx)(d, {
+        let p = s.forwardRef((e, n) =>
+            (0, o.jsx)(d, {
                 childProps: e,
                 forwardedConnectStoresRef: n
             })
         );
-        return (_.displayName = 'ForwardRef('.concat(a, ')')), _;
+        return (p.displayName = 'ForwardRef('.concat(a, ')')), p;
     };
 }
 function h(e, n) {
     return (r) => {
         var i;
         let a = 'FluxContainer('.concat(f(r), ')');
-        class d extends (i = o.Component) {
+        class d extends (i = s.Component) {
             componentDidMount() {
                 this.listener.attach(a);
             }
@@ -80,14 +80,14 @@ function h(e, n) {
             }
             render() {
                 let e = this.memoizedGetStateFromStores(this.props);
-                return (0, s.jsx)(r, {
+                return (0, o.jsx)(r, {
                     ...this.props,
                     ...e
                 });
             }
             constructor(...r) {
                 super(...r),
-                    c(this, 'memoizedGetStateFromStores', p(n)),
+                    c(this, 'memoizedGetStateFromStores', _(n)),
                     c(
                         this,
                         'listener',
@@ -101,13 +101,13 @@ function h(e, n) {
         return c(d, 'displayName', a), d;
     };
 }
-function p(e) {
+function _(e) {
     let n = null,
         r = null,
         i = (e) => (null != n && null != r && (0, l.Z)(n, e) ? r : null != n && null != r && (0, l.Z)(n, e) ? ((n = e), r) : null),
         a = (a) => {
-            let s = i(a);
-            return null != s ? s : (r = e((n = a)));
+            let o = i(a);
+            return null != o ? o : (r = e((n = a)));
         };
     return (
         (a.getCachedResult = i),

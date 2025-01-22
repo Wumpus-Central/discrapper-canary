@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(786547),
-    o = r(64412),
+    o = r(786547),
+    s = r(64412),
     l = (function () {
         function e(e, n) {
             for (var r = 0; r < n.length; r++) {
@@ -38,7 +38,7 @@ var f = (function (e) {
         var r = c(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this, e));
         return (
             (r.handleChange = function (e) {
-                'function' == typeof r.props.onChange && r.throttle(r.props.onChange, o.T(e, r.props.hsl, r.container), e);
+                'function' == typeof r.props.onChange && r.throttle(r.props.onChange, s.T(e, r.props.hsl, r.container), e);
             }),
             (r.handleMouseDown = function (e) {
                 r.handleChange(e);
@@ -48,7 +48,7 @@ var f = (function (e) {
             (r.handleMouseUp = function () {
                 r.unbindEventListeners();
             }),
-            (r.throttle = (0, s.Z)(function (e, n, r) {
+            (r.throttle = (0, o.Z)(function (e, n, r) {
                 e(n, r);
             }, 50)),
             r
@@ -83,8 +83,8 @@ var f = (function (e) {
                     var e = this,
                         n = this.props.style || {},
                         r = n.color,
-                        s = n.white,
-                        o = n.black,
+                        o = n.white,
+                        s = n.black,
                         l = n.pointer,
                         u = n.circle,
                         c = (0, a.default)(
@@ -121,8 +121,8 @@ var f = (function (e) {
                                 },
                                 custom: {
                                     color: r,
-                                    white: s,
-                                    black: o,
+                                    white: o,
+                                    black: s,
                                     pointer: l,
                                     circle: u
                                 }

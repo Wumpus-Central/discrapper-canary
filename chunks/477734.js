@@ -3,7 +3,7 @@ r.d(n, {
         return a;
     },
     _f: function () {
-        return s;
+        return o;
     }
 }),
     r(906732);
@@ -49,6 +49,6 @@ let i = (0, r(818083).B)({
 function a() {
     return i.useExperiment({ location: 'canSeeRemixBadge' }, { autoTrackExposure: !0 }).canSeeRemixBadge;
 }
-function s() {
+function o() {
     return !!i.useExperiment({ location: 'isRemixANitroPerkHook' }, { autoTrackExposure: !0 }).isNitroPerk;
 }

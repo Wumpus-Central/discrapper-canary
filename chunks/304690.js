@@ -19,29 +19,29 @@ Object.defineProperty(n, 'markdownFormatter', {
         return a.markdownFormatter;
     }
 });
-var s = r(382092);
+var o = r(382092);
 Object.defineProperty(n, 'reactFormatter', {
     enumerable: !0,
     get: function () {
-        return s.reactFormatter;
+        return o.reactFormatter;
     }
 }),
     Object.defineProperty(n, 'makeReactFormatter', {
         enumerable: !0,
         get: function () {
-            return s.makeReactFormatter;
+            return o.makeReactFormatter;
         }
     }),
     Object.defineProperty(n, 'DEFAULT_REACT_RICH_TEXT_ELEMENTS', {
         enumerable: !0,
         get: function () {
-            return s.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
+            return o.DEFAULT_REACT_RICH_TEXT_ELEMENTS;
         }
     });
-var o = r(20271);
+var s = r(20271);
 Object.defineProperty(n, 'stringFormatter', {
     enumerable: !0,
     get: function () {
-        return o.stringFormatter;
+        return s.stringFormatter;
     }
 });

@@ -1,7 +1,7 @@
-var e = n(875604),
-    o = n(955161),
-    i = Array.prototype;
-t.exports = function (t) {
-    var r = t.find;
-    return t === i || (e(i, t) && r === i.find) ? o : r;
+var i = r(875604),
+    a = r(955161),
+    o = Array.prototype;
+e.exports = function (e) {
+    var n = e.find;
+    return e === o || (i(o, e) && n === o.find) ? a : n;
 };

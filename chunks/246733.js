@@ -6,13 +6,13 @@ r.d(n, {
         return h;
     },
     zY: function () {
-        return _;
+        return p;
     }
 });
 var i = r(927521);
 let a = 1723856,
-    s = 1824665,
-    o = 5500;
+    o = 1824665,
+    s = 5500;
 function l(e, n, r, i) {
     return e + 365 * n + Math.floor(n / 4) + 30 * (r - 1) + i - 1;
 }
@@ -30,13 +30,13 @@ function d(e, n) {
 }
 class f {
     fromJulianDay(e) {
-        let [n, r, s] = u(a, e),
+        let [n, r, o] = u(a, e),
             l = 'AM';
-        return n <= 0 && ((l = 'AA'), (n += o)), new i.aw(this, l, n, r, s);
+        return n <= 0 && ((l = 'AA'), (n += s)), new i.aw(this, l, n, r, o);
     }
     toJulianDay(e) {
         let n = e.year;
-        return 'AA' === e.era && (n -= o), l(a, n, e.month, e.day);
+        return 'AA' === e.era && (n -= s), l(a, n, e.month, e.day);
     }
     getDaysInMonth(e) {
         return d(e.year, e.month);
@@ -57,10 +57,10 @@ class f {
         this.identifier = 'ethiopic';
     }
 }
-class _ extends f {
+class p extends f {
     fromJulianDay(e) {
-        let [n, r, s] = u(a, e);
-        return (n += o), new i.aw(this, 'AA', n, r, s);
+        let [n, r, o] = u(a, e);
+        return (n += s), new i.aw(this, 'AA', n, r, o);
     }
     getEras() {
         return ['AA'];
@@ -74,13 +74,13 @@ class _ extends f {
 }
 class h extends f {
     fromJulianDay(e) {
-        let [n, r, a] = u(s, e),
-            o = 'CE';
-        return n <= 0 && ((o = 'BCE'), (n = 1 - n)), new i.aw(this, o, n, r, a);
+        let [n, r, a] = u(o, e),
+            s = 'CE';
+        return n <= 0 && ((s = 'BCE'), (n = 1 - n)), new i.aw(this, s, n, r, a);
     }
     toJulianDay(e) {
         let n = e.year;
-        return 'BCE' === e.era && (n = 1 - n), l(s, n, e.month, e.day);
+        return 'BCE' === e.era && (n = 1 - n), l(o, n, e.month, e.day);
     }
     getDaysInMonth(e) {
         let n = e.year;

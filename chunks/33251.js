@@ -8,20 +8,20 @@ r.d(n, {
 });
 var i = r(548097),
     a = r(52948),
-    s = ['style', 'currency', 'unit', 'unitDisplay', 'useGrouping', 'minimumIntegerDigits', 'minimumFractionDigits', 'maximumFractionDigits', 'minimumSignificantDigits', 'maximumSignificantDigits', 'compactDisplay', 'currencyDisplay', 'currencySign', 'notation', 'signDisplay', 'unit', 'unitDisplay', 'numberingSystem', 'trailingZeroDisplay', 'roundingPriority', 'roundingIncrement', 'roundingMode'];
-function o(e, n, r) {
+    o = ['style', 'currency', 'unit', 'unitDisplay', 'useGrouping', 'minimumIntegerDigits', 'minimumFractionDigits', 'maximumFractionDigits', 'minimumSignificantDigits', 'maximumSignificantDigits', 'compactDisplay', 'currencyDisplay', 'currencySign', 'notation', 'signDisplay', 'unit', 'unitDisplay', 'numberingSystem', 'trailingZeroDisplay', 'roundingPriority', 'roundingIncrement', 'roundingMode'];
+function s(e, n, r) {
     var i = e.locale,
-        o = e.formats,
+        s = e.formats,
         l = e.onError;
     void 0 === r && (r = {});
     var u = r.format,
-        c = (u && (0, a.TB)(o, 'number', u, l)) || {};
-    return n(i, (0, a.L6)(r, s, c));
+        c = (u && (0, a.TB)(s, 'number', u, l)) || {};
+    return n(i, (0, a.L6)(r, o, c));
 }
 function l(e, n, r, a) {
     void 0 === a && (a = {});
     try {
-        return o(e, n, a).format(r);
+        return s(e, n, a).format(r);
     } catch (n) {
         e.onError(new i.Qe('Error formatting number.', e.locale, n));
     }
@@ -30,7 +30,7 @@ function l(e, n, r, a) {
 function u(e, n, r, a) {
     void 0 === a && (a = {});
     try {
-        return o(e, n, a).formatToParts(r);
+        return s(e, n, a).formatToParts(r);
     } catch (n) {
         e.onError(new i.Qe('Error formatting number.', e.locale, n));
     }

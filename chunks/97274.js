@@ -6,14 +6,14 @@ var n = '[0-9](_*[0-9])*',
         variants: [{ begin: `(\\b(${n})((${r})|\\.)?|(${r}))[eE][+-]?(${n})[fFdD]?\\b` }, { begin: `\\b(${n})((${r})[fFdD]?\\b|\\.([fFdD]\\b)?)` }, { begin: `(${r})[fFdD]?\\b` }, { begin: `\\b(${n})[fFdD]\\b` }, { begin: `\\b0[xX]((${i})\\.?|(${i})?\\.(${i}))[pP][+-]?(${n})[fFdD]?\\b` }, { begin: '\\b(0|[1-9](_*[0-9])*)[lL]?\\b' }, { begin: `\\b0[xX](${i})[lL]?\\b` }, { begin: '\\b0(_*[0-7])*[lL]?\\b' }, { begin: '\\b0[bB][01](_*[01])*[lL]?\\b' }],
         relevance: 0
     };
-function s(e, n, r) {
-    return -1 === r ? '' : e.replace(n, (i) => s(e, n, r - 1));
+function o(e, n, r) {
+    return -1 === r ? '' : e.replace(n, (i) => o(e, n, r - 1));
 }
-function o(e) {
+function s(e) {
     let n = e.regex,
         r = '[À-ʸa-zA-Z_$][À-ʸa-zA-Z_$0-9]*',
-        i = r + s('(?:<' + r + '~~~(?:\\s*,\\s*' + r + '~~~)*>)?', /~~~/g, 2),
-        o = {
+        i = r + o('(?:<' + r + '~~~(?:\\s*,\\s*' + r + '~~~)*>)?', /~~~/g, 2),
+        s = {
             keyword: ['synchronized', 'abstract', 'private', 'var', 'static', 'if', 'const ', 'for', 'while', 'strictfp', 'finally', 'protected', 'import', 'native', 'final', 'void', 'enum', 'else', 'break', 'transient', 'catch', 'instanceof', 'volatile', 'case', 'assert', 'package', 'default', 'public', 'try', 'switch', 'continue', 'throws', 'protected', 'public', 'private', 'module', 'requires', 'exports', 'do', 'sealed', 'yield', 'permits', 'goto', 'when'],
             literal: ['false', 'true', 'null'],
             type: ['char', 'boolean', 'long', 'float', 'int', 'byte', 'short', 'double'],
@@ -34,7 +34,7 @@ function o(e) {
             className: 'params',
             begin: /\(/,
             end: /\)/,
-            keywords: o,
+            keywords: s,
             relevance: 0,
             contains: [e.C_BLOCK_COMMENT_MODE],
             endsParent: !0
@@ -42,7 +42,7 @@ function o(e) {
     return {
         name: 'Java',
         aliases: ['jsp'],
-        keywords: o,
+        keywords: s,
         illegal: /<\/|#/,
         contains: [
             e.COMMENT('/\\*\\*', '\\*/', {
@@ -107,13 +107,13 @@ function o(e) {
             {
                 begin: ['(?:' + i + '\\s+)', e.UNDERSCORE_IDENT_RE, /\s*(?=\()/],
                 className: { 2: 'title.function' },
-                keywords: o,
+                keywords: s,
                 contains: [
                     {
                         className: 'params',
                         begin: /\(/,
                         end: /\)/,
-                        keywords: o,
+                        keywords: s,
                         relevance: 0,
                         contains: [l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, a, e.C_BLOCK_COMMENT_MODE]
                     },
@@ -126,4 +126,4 @@ function o(e) {
         ]
     };
 }
-e.exports = o;
+e.exports = s;

@@ -26,7 +26,7 @@ var i = n(200651),
     E = n(488131),
     b = n(981631),
     Z = n(388032);
-function S(e) {
+function N(e) {
     let { channel: t } = e,
         [n, a] = l.useState(!1);
     function s() {
@@ -41,7 +41,7 @@ function S(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(N, {
+            return (0, i.jsx)(S, {
                 ...e,
                 channel: t
             });
@@ -59,14 +59,14 @@ function S(e) {
         }
     });
 }
-function N(e) {
+function S(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
         C = (0, o.Z)(t, 'Sidebar Overflow'),
         x = (0, d.Z)(t),
         I = (0, p.Z)(t),
         E = (0, m.Z)(t),
-        S = (0, a.Z)(t),
-        N = (0, c.Z)(t),
+        N = (0, a.Z)(t),
+        S = (0, c.Z)(t),
         T = (0, h.Z)(t.id),
         j = (0, u.Z)(t),
         A = (0, s.Z)(t),
@@ -124,7 +124,7 @@ function N(e) {
                 ]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [P, S, N, A]
+                children: [P, N, S, A]
             }),
             (0, i.jsx)(r.MenuGroup, { children: y })
         ]
@@ -135,7 +135,7 @@ function T(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t.isForumPost() ? null : (0, i.jsx)(I.Z, { channel: t }),
-            (0, i.jsx)(S, { channel: t }),
+            (0, i.jsx)(N, { channel: t }),
             (0, i.jsx)(x.ZP.Icon, {
                 icon: r.XSmallIcon,
                 tooltip: Z.intl.string(Z.t.cpT0Cg),

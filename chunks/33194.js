@@ -1,6 +1,6 @@
 r.d(n, {
     Iu: function () {
-        return o;
+        return s;
     },
     OS: function () {
         return l;
@@ -14,7 +14,7 @@ r.d(n, {
 });
 var i = r(15729),
     a = r(877124);
-let s = (0, i.U)(
+let o = (0, i.U)(
     (0, a.tJ)(
         (e) => ({
             channelDismissTimestamps: {},
@@ -26,17 +26,17 @@ let s = (0, i.U)(
         }
     )
 );
-function o(e) {
-    return s.getState().channelDismissTimestamps[e];
+function s(e) {
+    return o.getState().channelDismissTimestamps[e];
 }
 function l() {
-    return s.getState().queuedWarning;
+    return o.getState().queuedWarning;
 }
 function u() {
-    s.setState({ queuedWarning: !1 });
+    o.setState({ queuedWarning: !1 });
 }
 function c(e) {
-    s.setState((n) => ({
+    o.setState((n) => ({
         channelDismissTimestamps: {
             ...n.channelDismissTimestamps,
             [e]: Date.now()

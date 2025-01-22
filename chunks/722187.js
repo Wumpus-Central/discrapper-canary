@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(766646),
+    o = r.n(a),
+    s = r(766646),
     l = r(481060),
     u = r(388032),
     c = r(558328);
@@ -16,7 +16,7 @@ function d(e) {
     return (0, i.jsxs)(l.Text, {
         tag: 'label',
         variant: 'heading-deprecated-12/normal',
-        className: s()(c.label, r, {
+        className: o()(c.label, r, {
             [c.defaultMargin]: null == r,
             [c.disabled]: a
         }),
@@ -31,7 +31,7 @@ function d(e) {
                             'aria-hidden': !0,
                             children: '*'
                         }),
-                        (0, i.jsx)(o.n, { children: u.intl.string(u.t.EkokLy) })
+                        (0, i.jsx)(s.n, { children: u.intl.string(u.t.EkokLy) })
                     ]
                 })
         ]

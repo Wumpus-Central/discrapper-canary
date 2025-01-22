@@ -1,6 +1,6 @@
 r.d(n, {
     d: function () {
-        return s;
+        return o;
     }
 });
 var i = r(149765);
@@ -10,7 +10,7 @@ function a(e) {
         permissions: i.vB(e.permissions)
     }));
 }
-function s(e) {
+function o(e) {
     return null == e.guilds
         ? e
         : {

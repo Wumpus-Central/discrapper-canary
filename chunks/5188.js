@@ -1,7 +1,7 @@
 var i = r(910974),
     a = r(312089),
-    s = r(190031),
-    o = r(476400);
+    o = r(190031),
+    s = r(476400);
 var l = r(898061),
     u = r(862127),
     c = r(192379),
@@ -15,7 +15,7 @@ var l = r(898061),
             })
         );
     },
-    _ = function (e, n) {
+    p = function (e, n) {
         return (
             e &&
             n &&
@@ -57,19 +57,19 @@ var l = r(898061),
                     var r = n.props.classNames,
                         i = 'string' == typeof r,
                         a = i && r ? r + '-' : '',
-                        s = i ? '' + a + e : r[e],
-                        o = i ? s + '-active' : r[e + 'Active'],
-                        l = i ? s + '-done' : r[e + 'Done'];
+                        o = i ? '' + a + e : r[e],
+                        s = i ? o + '-active' : r[e + 'Active'],
+                        l = i ? o + '-done' : r[e + 'Done'];
                     return {
-                        baseClassName: s,
-                        activeClassName: o,
+                        baseClassName: o,
+                        activeClassName: s,
                         doneClassName: l
                     };
                 }),
                 n
             );
         }
-        (0, s.Z)(n, e);
+        (0, o.Z)(n, e);
         var r = n.prototype;
         return (
             (r.addClass = function (e, n, r) {
@@ -80,8 +80,8 @@ var l = r(898061),
                 var r = this.appliedClasses[n],
                     i = r.base,
                     a = r.active,
-                    s = r.done;
-                (this.appliedClasses[n] = {}), i && _(e, i), a && _(e, a), s && _(e, s);
+                    o = r.done;
+                (this.appliedClasses[n] = {}), i && p(e, i), a && p(e, a), o && p(e, o);
             }),
             (r.render = function () {
                 var e = this.props,

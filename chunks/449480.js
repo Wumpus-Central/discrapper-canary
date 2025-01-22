@@ -1,15 +1,15 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(97028),
     c = r(481060),
     d = r(686546),
     f = r(353093),
-    _ = r(388032),
+    p = r(388032),
     h = r(894979);
-let p = 4,
+let _ = 4,
     m = 10,
     g = 2;
 function E(e) {
@@ -20,19 +20,19 @@ function E(e) {
             let n = e.getIconURL(24);
             if (null == n) return null;
             let i = null == r ? void 0 : r[e.id],
-                s = (null == i ? void 0 : i.level) === u.m.HIGH,
-                o = (0, a.jsxs)(c.Text, {
+                o = (null == i ? void 0 : i.level) === u.m.HIGH,
+                s = (0, a.jsxs)(c.Text, {
                     variant: 'text-xs/semibold',
                     color: 'interactive-active',
                     className: h.tooltipGameName,
                     children: [
                         e.name,
-                        s &&
+                        o &&
                             (0, a.jsx)(c.Text, {
                                 tag: 'div',
                                 variant: 'text-xxs/normal',
                                 color: 'text-muted',
-                                children: _.intl.string(_.t.gTQrTU)
+                                children: p.intl.string(p.t.gTQrTU)
                             })
                     ]
                 });
@@ -49,7 +49,7 @@ function E(e) {
                                 className: h.tooltipGameImage
                             })
                         }),
-                        o
+                        s
                     ]
                 },
                 e.id
@@ -59,11 +59,11 @@ function E(e) {
 }
 function v(e) {
     var n;
-    let { game: r, gameActivity: i, highlighted: s = !1 } = e,
-        o = r.getIconURL(24);
-    if (null == o) return null;
+    let { game: r, gameActivity: i, highlighted: o = !1 } = e,
+        s = r.getIconURL(24);
+    if (null == s) return null;
     let f = (null == i ? void 0 : null === (n = i[r.id]) || void 0 === n ? void 0 : n.level) === u.m.HIGH,
-        p = (0, a.jsxs)(c.Text, {
+        _ = (0, a.jsxs)(c.Text, {
             variant: 'text-sm/semibold',
             color: 'interactive-active',
             className: h.tooltipText,
@@ -74,21 +74,21 @@ function v(e) {
                         tag: 'div',
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        children: _.intl.string(_.t.gTQrTU)
+                        children: p.intl.string(p.t.gTQrTU)
                     })
             ]
         });
     return (0, a.jsx)(c.Tooltip, {
-        text: p,
+        text: _,
         position: 'bottom',
         'aria-label': r.name,
         children: (e) =>
             (0, a.jsxs)('div', {
                 ...e,
-                className: l()(h.gameImageContainer, s && h.highlighted),
+                className: l()(h.gameImageContainer, o && h.highlighted),
                 children: [
                     (0, a.jsx)('img', {
-                        src: o,
+                        src: s,
                         alt: r.name,
                         className: h.gameImage
                     }),
@@ -112,37 +112,37 @@ function v(e) {
             })
     });
 }
-let I = (e) => (n, r) => {
-    var i, a, s, o;
-    let l = null !== (s = null == e ? void 0 : null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== s ? s : 0,
-        u = null !== (o = null == e ? void 0 : null === (a = e[r.id]) || void 0 === a ? void 0 : a.score) && void 0 !== o ? o : 0;
+let y = (e) => (n, r) => {
+    var i, a, o, s;
+    let l = null !== (o = null == e ? void 0 : null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== o ? o : 0,
+        u = null !== (s = null == e ? void 0 : null === (a = e[r.id]) || void 0 === a ? void 0 : a.score) && void 0 !== s ? s : 0;
     return l !== u ? u - l : 0;
 };
-n.Z = s.memo(function (e) {
-    let { games: n, prioritizedGameIds: r = new Set(), gameActivity: i = {}, onInteraction: o } = e,
-        l = s.useMemo(() => {
+n.Z = o.memo(function (e) {
+    let { games: n, prioritizedGameIds: r = new Set(), gameActivity: i = {}, onInteraction: s } = e,
+        l = o.useMemo(() => {
             let e = n.filter((e) => null != e && null != e.icon),
-                a = e.filter((e) => !r.has(e.id)).sort(I(i));
-            return [...e.filter((e) => r.has(e.id)).sort(I(i)), ...a];
+                a = e.filter((e) => !r.has(e.id)).sort(y(i));
+            return [...e.filter((e) => r.has(e.id)).sort(y(i)), ...a];
         }, [i, n, r]),
-        u = l.slice(0, p - 1),
-        d = s.useMemo(() => {
+        u = l.slice(0, _ - 1),
+        d = o.useMemo(() => {
             var e;
-            let n = l[p - 1];
+            let n = l[_ - 1];
             if (null == n) return null;
             let r = n.getIconURL(24);
             if (null == r) return null;
-            if (l.length <= p)
+            if (l.length <= _)
                 return (0, a.jsx)(v, {
                     game: n,
                     gameActivity: i
                 });
-            let s = l.slice(p - 1);
+            let o = l.slice(_ - 1);
             return (0, a.jsx)(c.Tooltip, {
-                'aria-label': null !== (e = (0, f.f6)(s.map((e) => e.name))) && void 0 !== e ? e : '',
-                onTooltipShow: () => (null == o ? void 0 : o()),
+                'aria-label': null !== (e = (0, f.f6)(o.map((e) => e.name))) && void 0 !== e ? e : '',
+                onTooltipShow: () => (null == s ? void 0 : s()),
                 text: (0, a.jsx)(E, {
-                    games: s,
+                    games: o,
                     gameActivity: i
                 }),
                 position: 'bottom',
@@ -161,13 +161,13 @@ n.Z = s.memo(function (e) {
                                 children: (0, a.jsx)(c.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'always-white',
-                                    children: '+'.concat(s.length)
+                                    children: '+'.concat(o.length)
                                 })
                             })
                         ]
                     })
             });
-        }, [i, l, o]);
+        }, [i, l, s]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             u.map((e) =>

@@ -3,20 +3,20 @@ function i(e) {
 }
 r.d(n, {
     MT: function () {
-        return _;
+        return p;
     }
 });
 var a = (function () {
         return ('function' == typeof Symbol && Symbol.observable) || '@@observable';
     })(),
-    s = function () {
+    o = function () {
         return Math.random().toString(36).substring(7).split('').join('.');
     },
-    o = {
-        INIT: '@@redux/INIT' + s(),
-        REPLACE: '@@redux/REPLACE' + s(),
+    s = {
+        INIT: '@@redux/INIT' + o(),
+        REPLACE: '@@redux/REPLACE' + o(),
         PROBE_UNKNOWN_ACTION: function () {
-            return '@@redux/PROBE_UNKNOWN_ACTION' + s();
+            return '@@redux/PROBE_UNKNOWN_ACTION' + o();
         }
     };
 function l(e) {
@@ -37,20 +37,20 @@ function f(e) {
     var n = typeof e;
     return n;
 }
-function _(e, n, r) {
+function p(e, n, r) {
     if (('function' == typeof n && 'function' == typeof r) || ('function' == typeof r && 'function' == typeof arguments[3])) throw Error(i(0));
     if (('function' == typeof n && void 0 === r && ((r = n), (n = void 0)), void 0 !== r)) {
         if ('function' != typeof r) throw Error(i(1));
-        return r(_)(e, n);
+        return r(p)(e, n);
     }
     if ('function' != typeof e) throw Error(i(2));
-    var s,
+    var o,
         u = e,
         c = n,
         d = [],
         f = d,
         h = !1;
-    function p() {
+    function _() {
         f === d && (f = d.slice());
     }
     function m() {
@@ -62,12 +62,12 @@ function _(e, n, r) {
         if (h) throw Error(i(5));
         var n = !0;
         return (
-            p(),
+            _(),
             f.push(e),
             function () {
                 if (!!n) {
                     if (h) throw Error(i(6));
-                    (n = !1), p();
+                    (n = !1), _();
                     var r = f.indexOf(e);
                     f.splice(r, 1), (d = null);
                 }
@@ -88,9 +88,9 @@ function _(e, n, r) {
     }
     function v(e) {
         if ('function' != typeof e) throw Error(i(10));
-        (u = e), E({ type: o.REPLACE });
+        (u = e), E({ type: s.REPLACE });
     }
-    function I() {
+    function y() {
         var e,
             n = g;
         return (
@@ -109,24 +109,24 @@ function _(e, n, r) {
         );
     }
     return (
-        E({ type: o.INIT }),
-        ((s = {
+        E({ type: s.INIT }),
+        ((o = {
             dispatch: E,
             subscribe: g,
             getState: m,
             replaceReducer: v
-        })[a] = I),
-        s
+        })[a] = y),
+        o
     );
 }
 function h(e) {
     Object.keys(e).forEach(function (n) {
         var r = e[n];
-        if (void 0 === r(void 0, { type: o.INIT })) throw Error(i(12));
-        if (void 0 === r(void 0, { type: o.PROBE_UNKNOWN_ACTION() })) throw Error(i(13));
+        if (void 0 === r(void 0, { type: s.INIT })) throw Error(i(12));
+        if (void 0 === r(void 0, { type: s.PROBE_UNKNOWN_ACTION() })) throw Error(i(13));
     });
 }
-function p(e, n) {
+function _(e, n) {
     return function () {
         return n(e.apply(this, arguments));
     };

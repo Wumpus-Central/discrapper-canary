@@ -1,13 +1,13 @@
 var i,
     a = r(411104);
-var s = r(47120);
-var o = r(442837),
+var o = r(47120);
+var s = r(442837),
     l = r(759174),
     u = r(570140),
     c = r(786761),
     d = r(594174),
     f = r(686478);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -21,7 +21,7 @@ function _(e, n, r) {
     );
 }
 let h = 10000000000000;
-function p(e) {
+function _(e) {
     if (null == e) return h;
     try {
         return new Date(e).getTime();
@@ -30,7 +30,7 @@ function p(e) {
     }
 }
 function m(e) {
-    return p(e.dueAt) - p(e.savedAt);
+    return _(e.dueAt) - _(e.savedAt);
 }
 let g = new l.h(
         (e) => {
@@ -44,11 +44,11 @@ let g = new l.h(
     ),
     E = !0,
     v = 0,
-    I = new Set(),
-    T = new Set(),
-    b = new Map();
-function y(e) {
-    let n = b.get(e);
+    y = new Set(),
+    b = new Set(),
+    I = new Map();
+function T(e) {
+    let n = I.get(e);
     return null != n && n.size > 0;
 }
 function S(e) {
@@ -61,37 +61,37 @@ function A(e) {
     null == g.get(r) && (v = Date.now()), g.set(r, e);
     let i = e.saveData.messageId,
         a = e.saveData.channelId,
-        s = null !== (n = b.get(a)) && void 0 !== n ? n : new Set();
-    s.add(i), b.set(a, s), null == e.message && T.add(i), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? I.add(i) : I.delete(i);
+        o = null !== (n = I.get(a)) && void 0 !== n ? n : new Set();
+    o.add(i), I.set(a, o), null == e.message && b.add(i), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? y.add(i) : y.delete(i);
 }
-function N(e) {
+function C(e) {
     var n;
     let r = S(e),
         i = g.get(r);
     if (null == i) return !1;
     g.delete(r);
     let a = e.messageId;
-    null === (n = b.get(i.saveData.channelId)) || void 0 === n || n.delete(a), T.delete(a), I.delete(a), (v = Date.now());
+    null === (n = I.get(i.saveData.channelId)) || void 0 === n || n.delete(a), b.delete(a), y.delete(a), (v = Date.now());
 }
-function C() {
+function N() {
     E = !0;
 }
 function R() {
-    (E = !0), g.clear(), b.clear(), T.clear();
+    (E = !0), g.clear(), I.clear(), b.clear();
 }
 function O(e) {
     let { savedMessages: n } = e;
-    for (let e of ((E = !1), g.clear(), b.clear(), T.clear(), n)) A(e);
+    for (let e of ((E = !1), g.clear(), I.clear(), b.clear(), n)) A(e);
 }
 function D(e) {
     let { savedMessage: n } = e;
     A(n);
 }
-function L(e) {
-    let { savedMessageData: n } = e;
-    return N(n);
-}
 function x(e) {
+    let { savedMessageData: n } = e;
+    return C(n);
+}
+function L(e) {
     let { messageId: n, channelId: r } = e,
         i = S({
             messageId: n,
@@ -99,12 +99,12 @@ function x(e) {
         }),
         a = g.get(i);
     if ((null == a ? void 0 : a.message) == null) return !1;
-    let s = { ...a };
-    return (s.message = null), g.set(i, s), !0;
+    let o = { ...a };
+    return (o.message = null), g.set(i, o), !0;
 }
 function w(e) {
     let { id: n, channelId: r } = e;
-    return x({
+    return L({
         messageId: n,
         channelId: r
     });
@@ -112,7 +112,7 @@ function w(e) {
 function P(e) {
     let { ids: n, channelId: r } = e;
     for (let e of n)
-        x({
+        L({
             messageId: e,
             channelId: r
         });
@@ -130,39 +130,39 @@ function M(e) {
     (a.message = (0, c.wi)(i.message, n)), g.set(r, a);
 }
 function k() {
-    if (0 === T.size || E) return !1;
+    if (0 === b.size || E) return !1;
     E = !0;
 }
 function U(e) {
     let { channel: n } = e;
-    if (0 === T.size || E || !y(n.id)) return !1;
+    if (0 === b.size || E || !T(n.id)) return !1;
     E = !0;
 }
 function B(e) {
     let { channels: n } = e;
-    if (0 === T.size || E) return !1;
+    if (0 === b.size || E) return !1;
     let r = !1;
     for (let e of n) {
-        if (!!y(e.id)) (E = !0), (r = !0);
+        if (!!T(e.id)) (E = !0), (r = !0);
     }
     return r;
 }
 function G(e) {
     let { channel: n } = e;
-    if (0 === T.size || E || !y(n.id)) return !1;
-    E = !0;
-}
-function F(e) {
-    var n;
-    let { user: r } = e;
-    if (0 === T.size || E || r.id !== (null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id)) return !1;
+    if (0 === b.size || E || !T(n.id)) return !1;
     E = !0;
 }
 function Z(e) {
-    let { savedMessage: n } = e;
-    I.add(n.saveData.messageId);
+    var n;
+    let { user: r } = e;
+    if (0 === b.size || E || r.id !== (null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id)) return !1;
+    E = !0;
 }
-class V extends (i = o.ZP.Store) {
+function F(e) {
+    let { savedMessage: n } = e;
+    y.add(n.saveData.messageId);
+}
+class V extends (i = s.ZP.Store) {
     initialize() {}
     getSavedMessages() {
         return g.values(f._l.ALL);
@@ -182,10 +182,10 @@ class V extends (i = o.ZP.Store) {
         return g.values(f._l.REMINDER);
     }
     getOverdueMessageReminderCount() {
-        return I.size;
+        return y.size;
     }
     hasOverdueReminder() {
-        return I.size > 0;
+        return y.size > 0;
     }
     getSavedMessageCount() {
         return g.size();
@@ -215,13 +215,13 @@ class V extends (i = o.ZP.Store) {
         return null != r && null != r.saveData.dueAt;
     }
 }
-_(V, 'displayName', 'SavedMessagesStore'),
+p(V, 'displayName', 'SavedMessagesStore'),
     (n.Z = new V(u.Z, {
-        POST_CONNECTION_OPEN: C,
+        POST_CONNECTION_OPEN: N,
         LOGOUT: R,
         SAVED_MESSAGES_UPDATE: O,
         SAVED_MESSAGE_CREATE: D,
-        SAVED_MESSAGE_DELETE: L,
+        SAVED_MESSAGE_DELETE: x,
         MESSAGE_DELETE: w,
         MESSAGE_DELETE_BULK: P,
         MESSAGE_UPDATE: M,
@@ -231,9 +231,9 @@ _(V, 'displayName', 'SavedMessagesStore'),
         CHANNEL_CREATE: U,
         CHANNEL_UPDATES: B,
         CHANNEL_DELETE: G,
-        GUILD_MEMBER_UPDATE: F,
+        GUILD_MEMBER_UPDATE: Z,
         GUILD_ROLE_CREATE: k,
         GUILD_ROLE_UPDATE: k,
         GUILD_ROLE_DELETE: k,
-        MESSAGE_REMINDER_DUE: Z
+        MESSAGE_REMINDER_DUE: F
     }));

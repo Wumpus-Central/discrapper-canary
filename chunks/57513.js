@@ -5,40 +5,40 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(379649),
-    s = r(846519),
-    o = r(570140),
+    o = r(846519),
+    s = r(570140),
     l = r(706454),
     u = r(283595),
     c = r(129542),
     d = r(70956),
     f = r(981631);
-let _ = 10 * d.Z.Millis.MINUTE,
+let p = 10 * d.Z.Millis.MINUTE,
     h = 10 * d.Z.Millis.MINUTE,
-    p = 1 * d.Z.Millis.MINUTE,
+    _ = 1 * d.Z.Millis.MINUTE,
     m = {};
 function g(e, n) {
-    null == m[n] && (m[n] = new s.V7()),
-        m[n].start(_ + Math.random() * h, () => {
+    null == m[n] && (m[n] = new o.V7()),
+        m[n].start(p + Math.random() * h, () => {
             null != u.Z.getLibraryApplication(e, n) && E(e, n);
         });
 }
 async function E(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        s = l.default.locale;
+        o = l.default.locale;
     return (
-        o.Z.dispatch({
+        s.Z.dispatch({
             type: 'APPLICATION_BUILD_FETCH_START',
             applicationId: e,
             branchId: n,
-            locale: s
+            locale: o
         }),
-        r && (await (0, a._v)(Math.random() * p)),
+        r && (await (0, a._v)(Math.random() * _)),
         i.tn
             .get({
                 url: f.ANM.APPLICATION_LIVE_BUILD(e, n),
                 query: {
                     platform: (0, c.D)(),
-                    locale: s
+                    locale: o
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
@@ -47,25 +47,25 @@ async function E(e, n) {
                 (r) => {
                     let i = r.body;
                     if (0 === i.manifests.length) {
-                        o.Z.dispatch({
+                        s.Z.dispatch({
                             type: 'APPLICATION_BUILD_NOT_FOUND',
                             applicationId: e,
                             branchId: n
                         });
                         return;
                     }
-                    o.Z.dispatch({
+                    s.Z.dispatch({
                         type: 'APPLICATION_BUILD_FETCH_SUCCESS',
                         applicationId: e,
                         branchId: n,
-                        locale: s,
+                        locale: o,
                         build: i
                     });
                 },
                 (r) => {
                     let { status: i } = r;
                     404 === i
-                        ? o.Z.dispatch({
+                        ? s.Z.dispatch({
                               type: 'APPLICATION_BUILD_NOT_FOUND',
                               applicationId: e,
                               branchId: n

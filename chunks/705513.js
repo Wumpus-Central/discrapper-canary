@@ -6,16 +6,16 @@ r.d(n, {
         return E;
     },
     BU: function () {
-        return T;
+        return b;
     },
     Dz: function () {
         return g;
     },
     LR: function () {
-        return p;
+        return _;
     },
     P_: function () {
-        return I;
+        return y;
     },
     Q6: function () {
         return i;
@@ -30,7 +30,7 @@ r.d(n, {
         return v;
     },
     ek: function () {
-        return _;
+        return p;
     },
     er: function () {
         return m;
@@ -45,13 +45,13 @@ r.d(n, {
         return a;
     },
     jk: function () {
-        return s;
+        return o;
     },
     sl: function () {
         return d;
     },
     vq: function () {
-        return o;
+        return s;
     }
 });
 var i = {
@@ -86,7 +86,7 @@ var i = {
         a400: '#f50057',
         a700: '#c51162'
     },
-    s = {
+    o = {
         50: '#f3e5f5',
         100: '#e1bee7',
         200: '#ce93d8',
@@ -102,7 +102,7 @@ var i = {
         a400: '#d500f9',
         a700: '#aa00ff'
     },
-    o = {
+    s = {
         50: '#ede7f6',
         100: '#d1c4e9',
         200: '#b39ddb',
@@ -198,7 +198,7 @@ var i = {
         a400: '#1de9b6',
         a700: '#00bfa5'
     },
-    _ = {
+    p = {
         50: '#e8f5e9',
         100: '#c8e6c9',
         200: '#a5d6a7',
@@ -230,7 +230,7 @@ var i = {
         a400: '#76ff03',
         a700: '#64dd17'
     },
-    p = {
+    _ = {
         50: '#f9fbe7',
         100: '#f0f4c3',
         200: '#e6ee9c',
@@ -310,7 +310,7 @@ var i = {
         a400: '#ff3d00',
         a700: '#dd2c00'
     },
-    I = {
+    y = {
         50: '#efebe9',
         100: '#d7ccc8',
         200: '#bcaaa4',
@@ -322,7 +322,7 @@ var i = {
         800: '#4e342e',
         900: '#3e2723'
     },
-    T = {
+    b = {
         50: '#eceff1',
         100: '#cfd8dc',
         200: '#b0bec5',

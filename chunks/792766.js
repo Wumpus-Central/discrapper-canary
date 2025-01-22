@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(481060),
     s = n(528144),
     c = n(118012),
-    d = n(686546),
-    u = n(565138),
+    u = n(686546),
+    d = n(565138),
     m = n(601964),
     h = n(598077),
     f = n(388032),
@@ -54,13 +54,13 @@ let _ = (e) => {
                 (0, i.jsxs)('div', {
                     className: p.guild,
                     children: [
-                        (0, i.jsx)(d.ZP, {
-                            mask: d.ZP.Masks.SQUIRCLE,
+                        (0, i.jsx)(u.ZP, {
+                            mask: u.ZP.Masks.SQUIRCLE,
                             width: 40,
                             height: 40,
-                            children: (0, i.jsx)(u.Z, {
+                            children: (0, i.jsx)(d.Z, {
                                 guild: r,
-                                size: u.Z.Sizes.MEDIUM,
+                                size: d.Z.Sizes.MEDIUM,
                                 active: !0
                             })
                         }),
@@ -154,13 +154,13 @@ t.Z = (e) => {
                     (0, i.jsxs)('div', {
                         className: a()(p.guild, { [p.embed]: g }),
                         children: [
-                            (0, i.jsx)(d.ZP, {
-                                mask: d.ZP.Masks.SQUIRCLE,
+                            (0, i.jsx)(u.ZP, {
+                                mask: u.ZP.Masks.SQUIRCLE,
                                 width: 20,
                                 height: 20,
-                                children: (0, i.jsx)(u.Z, {
+                                children: (0, i.jsx)(d.Z, {
                                     guild: C,
-                                    size: u.Z.Sizes.MINI,
+                                    size: d.Z.Sizes.MINI,
                                     active: !0
                                 })
                             }),

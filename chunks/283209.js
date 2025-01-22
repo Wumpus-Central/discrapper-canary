@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(995295),
-    s = r(978008),
-    o = r(427753),
-    l = r.n(o),
+    o = r(978008),
+    s = r(427753),
+    l = r.n(s),
     u = r(632590),
     c = [],
     d = function (e, n, r) {
         void 0 === r && (r = {});
-        var o = i.useRef(null),
+        var s = i.useRef(null),
             d = {
                 onFirstUpdate: r.onFirstUpdate,
                 placement: r.placement || 'bottom',
@@ -30,9 +30,9 @@ var i = r(192379),
                 },
                 attributes: {}
             }),
-            _ = f[0],
+            p = f[0],
             h = f[1],
-            p = i.useMemo(function () {
+            _ = i.useMemo(function () {
                 return {
                     name: 'updateState',
                     enabled: !0,
@@ -65,16 +65,16 @@ var i = r(192379),
                         placement: d.placement,
                         strategy: d.strategy,
                         modifiers: [].concat(d.modifiers, [
-                            p,
+                            _,
                             {
                                 name: 'applyStyles',
                                 enabled: !1
                             }
                         ])
                     };
-                    return l()(o.current, e) ? o.current || e : ((o.current = e), e);
+                    return l()(s.current, e) ? s.current || e : ((s.current = e), e);
                 },
-                [d.onFirstUpdate, d.placement, d.strategy, d.modifiers, p]
+                [d.onFirstUpdate, d.placement, d.strategy, d.modifiers, _]
             ),
             g = i.useRef();
         return (
@@ -87,7 +87,7 @@ var i = r(192379),
             (0, u.LI)(
                 function () {
                     if (null != e && null != n) {
-                        var i = (r.createPopper || s.fi)(e, n, m);
+                        var i = (r.createPopper || o.fi)(e, n, m);
                         return (
                             (g.current = i),
                             function () {
@@ -100,8 +100,8 @@ var i = r(192379),
             ),
             {
                 state: g.current ? g.current.state : null,
-                styles: _.styles,
-                attributes: _.attributes,
+                styles: p.styles,
+                attributes: p.attributes,
                 update: g.current ? g.current.update : null,
                 forceUpdate: g.current ? g.current.forceUpdate : null
             }

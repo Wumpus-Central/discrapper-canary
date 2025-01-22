@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(19780),
-    o = r(358221);
+    o = r(19780),
+    s = r(358221);
 function l(e, n, r) {
     return (
         n in e
@@ -17,16 +17,16 @@ function l(e, n, r) {
 }
 class u extends a.Z {
     handleFocusParticipant() {
-        let e = s.Z.getChannelId();
+        let e = o.Z.getChannelId();
         if (null != e) {
             var n, r;
-            let i = o.Z.getSelectedParticipantId(e),
-                a = o.Z.getVideoParticipants(e);
-            null === (r = s.Z.getRTCConnection()) || void 0 === r || r.setSelectedParticipant(null === (n = a.find((e) => e.id === i && !e.localVideoDisabled)) || void 0 === n ? void 0 : n.id);
+            let i = s.Z.getSelectedParticipantId(e),
+                a = s.Z.getVideoParticipants(e);
+            null === (r = o.Z.getRTCConnection()) || void 0 === r || r.setSelectedParticipant(null === (n = a.find((e) => e.id === i && !e.localVideoDisabled)) || void 0 === n ? void 0 : n.id);
         }
     }
     constructor(...e) {
-        super(...e), l(this, 'stores', new Map().set(o.Z, this.handleFocusParticipant));
+        super(...e), l(this, 'stores', new Map().set(s.Z, this.handleFocusParticipant));
     }
 }
 n.Z = new u();

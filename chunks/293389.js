@@ -78,7 +78,7 @@ function P(e) {
         ]
     });
 }
-function y(e) {
+function D(e) {
     var t;
     let { rawGame: n, nowPlaying: s = !1, isOverride: h } = e,
         E = (0, l.cj)([x.Z, g.ZP, f.Z], () => (0, g.FZ)(n)),
@@ -93,13 +93,13 @@ function y(e) {
     function P() {
         d.Z.deleteEntry(E);
     }
-    function y() {
+    function D() {
         E.name !== N && d.Z.editName(E, N);
     }
-    function B(e) {
+    function y(e) {
         13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
     }
-    function D() {
+    function B() {
         d.Z.toggleDetection(E);
     }
     function Z() {
@@ -149,8 +149,8 @@ function y(e) {
                               type: 'text',
                               maxLength: 128,
                               value: N,
-                              onBlur: y,
-                              onKeyDown: B,
+                              onBlur: D,
+                              onKeyDown: y,
                               onChange: (e) => j(e.target.value)
                           }),
                     (function () {
@@ -219,7 +219,7 @@ function y(e) {
                             return (0, i.jsx)(c.Clickable, {
                                 'aria-label': b.intl.string(b.t.QmitzM),
                                 className: I.toggleIcon,
-                                onClick: D,
+                                onClick: B,
                                 onMouseEnter: n,
                                 onMouseLeave: r,
                                 children: t
@@ -287,7 +287,7 @@ function y(e) {
         ]
     });
 }
-function B() {
+function y() {
     return (0, i.jsx)('div', {
         className: a()(v.flexCenter, I.notDetected, I.activeGame),
         children: (0, i.jsxs)('div', {
@@ -305,7 +305,7 @@ function B() {
         })
     });
 }
-function D(e) {
+function B(e) {
     let { children: t } = e;
     return (0, i.jsxs)(O, {
         className: j.marginTop40,
@@ -340,7 +340,7 @@ t.Z = function (e) {
             children: [
                 null != o
                     ? (0, i.jsx)(
-                          y,
+                          D,
                           {
                               rawGame: o,
                               isOverride: d.has(o.exePath),
@@ -348,7 +348,7 @@ t.Z = function (e) {
                           },
                           (0, g.rH)(o)
                       )
-                    : (0, i.jsx)(B, {}),
+                    : (0, i.jsx)(y, {}),
                 (0, i.jsxs)('div', {
                     className: a()(I.nowPlayingAdd, j.marginReset, j.marginTop8, j.marginBottom20),
                     children: [
@@ -372,7 +372,7 @@ t.Z = function (e) {
                     ]
                 }),
                 0 === s.length
-                    ? (0, i.jsx)(D, { children: (0, i.jsx)(c.EmptyStateText, { children: b.intl.string(b.t['1yiJws']) }) })
+                    ? (0, i.jsx)(B, { children: (0, i.jsx)(c.EmptyStateText, { children: b.intl.string(b.t['1yiJws']) }) })
                     : (0, i.jsxs)(c.FormSection, {
                           className: j.marginTop40,
                           children: [
@@ -386,7 +386,7 @@ t.Z = function (e) {
                               }),
                               s.map((e) =>
                                   (0, i.jsx)(
-                                      y,
+                                      D,
                                       {
                                           rawGame: e,
                                           isOverride: d.has(e.exePath)

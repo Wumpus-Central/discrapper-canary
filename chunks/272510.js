@@ -6,21 +6,21 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(100527),
-    o = r(906732),
+    o = r(100527),
+    s = r(906732),
     l = r(299206),
     u = r(389052),
     c = r(158508),
     d = r(710631),
     f = r(622724),
-    _ = r(785717),
+    p = r(785717),
     h = r(475413),
-    p = r(388032);
+    _ = r(388032);
 function m(e) {
     let { user: n, guildId: r, viewProfileItem: m } = e,
-        { trackUserProfileAction: g } = (0, _.KZ)(),
-        { analyticsLocations: E, newestAnalyticsLocation: v } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
-        I = (0, d.Z)({
+        { trackUserProfileAction: g } = (0, p.KZ)(),
+        { analyticsLocations: E, newestAnalyticsLocation: v } = (0, s.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
+        y = (0, d.Z)({
             user: n,
             guildId: r,
             onAction: () =>
@@ -29,7 +29,7 @@ function m(e) {
                     analyticsLocations: E
                 })
         }),
-        T = (0, u.Z)({
+        b = (0, u.Z)({
             user: n,
             guildId: r,
             location: v,
@@ -50,7 +50,7 @@ function m(e) {
                     analyticsLocations: E
                 })
         }),
-        b = (0, c.Z)({
+        I = (0, c.Z)({
             user: n,
             guildId: r,
             location: v,
@@ -70,7 +70,7 @@ function m(e) {
                     analyticsLocations: E
                 })
         }),
-        y = (0, f.Z)({
+        T = (0, f.Z)({
             user: n,
             guildId: r,
             location: v,
@@ -93,12 +93,12 @@ function m(e) {
                 })
         }),
         A = [
-            [m, I],
-            [b, T, y, S],
+            [m, y],
+            [I, b, T, S],
             [
                 (0, l.Z)({
                     id: n.id,
-                    label: p.intl.string(p.t['/AXYnJ']),
+                    label: _.intl.string(_.t['/AXYnJ']),
                     onSuccess: () =>
                         g({
                             action: 'COPY_USER_ID',
@@ -109,7 +109,7 @@ function m(e) {
         ];
     return A.every((e) => e.every((e) => null == e))
         ? null
-        : (0, i.jsx)(o.Gt, {
+        : (0, i.jsx)(s.Gt, {
               value: E,
               children: (0, i.jsx)(a.Popout, {
                   renderPopout: (e) => {
@@ -118,7 +118,7 @@ function m(e) {
                           navId: 'user-profile-overflow-menu',
                           onSelect: void 0,
                           onClose: n,
-                          'aria-label': p.intl.string(p.t.AXIHpa),
+                          'aria-label': _.intl.string(_.t.AXIHpa),
                           children: A.map((e, n) => (0, i.jsx)(a.MenuGroup, { children: e.map((e) => e) }, n))
                       });
                   },
@@ -126,7 +126,7 @@ function m(e) {
                       (0, i.jsx)(h.oY, {
                           action: 'PRESS_OPTIONS',
                           icon: a.MoreHorizontalIcon,
-                          tooltipText: p.intl.string(p.t.UKOtz8),
+                          tooltipText: _.intl.string(_.t.UKOtz8),
                           ...e
                       })
               })

@@ -1,12 +1,12 @@
 var i = r(706165),
     a = r(690244)('%TypeError%'),
-    s = r(632384),
-    o = r(710157),
+    o = r(632384),
+    s = r(710157),
     l = r(713720);
 e.exports = function (e) {
-    if ('Object' !== s(e)) throw new a('ToPropertyDescriptor requires an object');
+    if ('Object' !== o(e)) throw new a('ToPropertyDescriptor requires an object');
     var n = {};
-    if ((i(e, 'enumerable') && (n['[[Enumerable]]'] = o(e.enumerable)), i(e, 'configurable') && (n['[[Configurable]]'] = o(e.configurable)), i(e, 'value') && (n['[[Value]]'] = e.value), i(e, 'writable') && (n['[[Writable]]'] = o(e.writable)), i(e, 'get'))) {
+    if ((i(e, 'enumerable') && (n['[[Enumerable]]'] = s(e.enumerable)), i(e, 'configurable') && (n['[[Configurable]]'] = s(e.configurable)), i(e, 'value') && (n['[[Value]]'] = e.value), i(e, 'writable') && (n['[[Writable]]'] = s(e.writable)), i(e, 'get'))) {
         var r = e.get;
         if (void 0 !== r && !l(r)) throw new a('getter must be a function');
         n['[[Get]]'] = r;

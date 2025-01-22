@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     a = n(192379),
     r = n(481060),
-    o = n(434650),
-    l = n(626135),
+    l = n(434650),
+    o = n(626135),
     s = n(463571),
     c = n(744142),
     d = n(132871),
@@ -16,18 +16,18 @@ var i = n(200651),
     p = n(388032),
     m = n(535040);
 function _(e) {
-    let { applicationId: t, applications: n, className: c, listingClassName: _, title: g, showViewAll: h, onViewOne: I, onViewAll: b } = e,
-        v = (function (e) {
+    let { applicationId: t, applications: n, className: c, listingClassName: _, title: g, showViewAll: h, onViewOne: I, onViewAll: v } = e,
+        b = (function (e) {
             let { applicationId: t, similarAppIds: n } = e,
                 i = (0, d.useApplicationDirectoryHistory)((e) => e.guildId),
                 [r, s] = a.useState(),
-                c = (0, o.O)((e) => {
+                c = (0, l.O)((e) => {
                     e && s(t);
                 });
             return (
                 a.useEffect(() => {
                     r === t &&
-                        l.default.track(u.rMx.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
+                        o.default.track(u.rMx.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
                             application_id: t,
                             suggested_application_ids: n,
                             guild_id: i
@@ -41,7 +41,7 @@ function _(e) {
         });
     return (0, i.jsxs)('div', {
         className: c,
-        ref: v,
+        ref: b,
         children: [
             null != g
                 ? (0, i.jsxs)('div', {
@@ -55,7 +55,7 @@ function _(e) {
                               ? (0, i.jsx)(r.Button, {
                                     look: r.Button.Looks.LINK,
                                     color: r.Button.Colors.LINK,
-                                    onClick: b,
+                                    onClick: v,
                                     children: p.intl.string(p.t['e+T3go'])
                                 })
                               : null

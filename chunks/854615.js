@@ -33,8 +33,8 @@ function n(e) {
             ]
         },
         a = ['break', 'breakWith', 'breakOut', 'breakTo', 'case', 'catch', 'continue', 'continueWith', 'default', 'do', 'else', 'exit', 'exitWith', 'for', 'forEach', 'from', 'if', 'local', 'private', 'switch', 'step', 'then', 'throw', 'to', 'try', 'waitUntil', 'while', 'with'],
-        s = ['blufor', 'civilian', 'configNull', 'controlNull', 'displayNull', 'diaryRecordNull', 'east', 'endl', 'false', 'grpNull', 'independent', 'lineBreak', 'locationNull', 'nil', 'objNull', 'opfor', 'pi', 'resistance', 'scriptNull', 'sideAmbientLife', 'sideEmpty', 'sideEnemy', 'sideFriendly', 'sideLogic', 'sideUnknown', 'taskNull', 'teamMemberNull', 'true', 'west'],
-        o = [
+        o = ['blufor', 'civilian', 'configNull', 'controlNull', 'displayNull', 'diaryRecordNull', 'east', 'endl', 'false', 'grpNull', 'independent', 'lineBreak', 'locationNull', 'nil', 'objNull', 'opfor', 'pi', 'resistance', 'scriptNull', 'sideAmbientLife', 'sideEmpty', 'sideEnemy', 'sideFriendly', 'sideLogic', 'sideUnknown', 'taskNull', 'teamMemberNull', 'true', 'west'],
+        s = [
             'abs',
             'accTime',
             'acos',
@@ -2518,8 +2518,8 @@ function n(e) {
         case_insensitive: !0,
         keywords: {
             keyword: a,
-            built_in: o,
-            literal: s
+            built_in: s,
+            literal: o
         },
         contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, e.NUMBER_MODE, n, r, i, l],
         illegal: [/\$[^a-fA-F0-9]/, /\w\$/, /\?/, /@/, / \| /, /[a-zA-Z_]\./, /\:\=/, /\[\:/]

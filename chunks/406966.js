@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(710845),
-    s = r(430824),
-    o = r(287328);
+    o = r(430824),
+    s = r(287328);
 function l(e, n, r) {
     return (
         n in e
@@ -19,7 +19,7 @@ let u = new a.Z('GuildVersions');
 class c {
     async getCommittedVersions() {
         try {
-            let e = o.Z.guildVersions();
+            let e = s.Z.guildVersions();
             if (null == e) return {};
             let n = (await e.getMany()).map((e) => [e.id, e.version]);
             return Object.fromEntries(null != n ? n : []);
@@ -31,7 +31,7 @@ class c {
         this.deleteWith(e), this.commit(n);
     }
     handleBackgroundSync(e, n) {
-        for (let r of e.guilds) 'unavailable' !== r.data_mode && this.updateWith(r.id, [r]), null == s.Z.getGuild(r.id) && this.remove(r.id, n);
+        for (let r of e.guilds) 'unavailable' !== r.data_mode && this.updateWith(r.id, [r]), null == o.Z.getGuild(r.id) && this.remove(r.id, n);
         this.commit(n);
     }
     handleConnectionOpen(e, n) {
@@ -87,8 +87,8 @@ class c {
         if (null != n) {
             var r, i;
             let a = Math.max(null !== (r = this.committed.get(e)) && void 0 !== r ? r : 0, null !== (i = this.pending.get(e)) && void 0 !== i ? i : 0),
-                s = this.computeLatestVersion(a, n);
-            s > a && this.pending.set(e, s);
+                o = this.computeLatestVersion(a, n);
+            o > a && this.pending.set(e, o);
         }
     }
     computeLatestVersion(e, n) {
@@ -101,7 +101,7 @@ class c {
     }
     commit(e) {
         if (this.pending.size > 0) {
-            let n = o.Z.guildVersionsTransaction(e);
+            let n = s.Z.guildVersionsTransaction(e);
             for (let [e, r] of this.pending)
                 null != r
                     ? (n.put({

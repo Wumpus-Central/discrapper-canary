@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(329022),
-    o = r(730320),
+    o = r(329022),
+    s = r(730320),
     l = function (e) {
         var n = e.onClick,
             r = e.onSwatchHover,
@@ -20,8 +20,8 @@ var i = r(192379),
         return i.createElement(
             'div',
             { style: c.group },
-            (0, s.Z)(l, function (e, a) {
-                return i.createElement(o.Z, {
+            (0, o.Z)(l, function (e, a) {
+                return i.createElement(s.Z, {
                     key: e,
                     color: e,
                     active: e.toLowerCase() === u,

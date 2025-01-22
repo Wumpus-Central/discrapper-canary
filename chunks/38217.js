@@ -1,9 +1,9 @@
 r.d(n, {
     ZP: function () {
-        return s;
+        return o;
     },
     _$: function () {
-        return o;
+        return s;
     },
     d7: function () {
         return l;
@@ -11,7 +11,7 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(149765);
-function s(e) {
+function o(e) {
     for (let { permissionOverwrites_: n } of e)
         if (null != n)
             for (let e in n) {
@@ -19,8 +19,8 @@ function s(e) {
                 (r.allow = a.vB(r.allow)), (r.deny = a.vB(r.deny));
             }
 }
-function o(e) {
-    for (let [n, r] of e) s(r);
+function s(e) {
+    for (let [n, r] of e) o(r);
 }
 function l(e) {
     let { permissionOverwrites_: n } = e;

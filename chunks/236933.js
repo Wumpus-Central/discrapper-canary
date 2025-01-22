@@ -1,15 +1,15 @@
 var i = r(334389),
     a = 'Expected a function';
-function s(e, n) {
+function o(e, n) {
     if ('function' != typeof e || (null != n && 'function' != typeof n)) throw TypeError(a);
     var r = function () {
         var i = arguments,
             a = n ? n.apply(this, i) : i[0],
-            s = r.cache;
-        if (s.has(a)) return s.get(a);
-        var o = e.apply(this, i);
-        return (r.cache = s.set(a, o) || s), o;
+            o = r.cache;
+        if (o.has(a)) return o.get(a);
+        var s = e.apply(this, i);
+        return (r.cache = o.set(a, s) || o), s;
     };
-    return (r.cache = new (s.Cache || i.Z)()), r;
+    return (r.cache = new (o.Cache || i.Z)()), r;
 }
-(s.Cache = i.Z), (n.Z = s);
+(o.Cache = i.Z), (n.Z = o);

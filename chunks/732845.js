@@ -1,6 +1,6 @@
 r.d(n, {
     a: function () {
-        return s;
+        return o;
     },
     x: function () {
         return a;
@@ -20,7 +20,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    s = (0, i.B)({
+    o = (0, i.B)({
         kind: 'user',
         id: '2023-09_server_shop_phantom_preview',
         label: 'Server Shop Phantom Preview',

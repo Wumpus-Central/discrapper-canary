@@ -1,9 +1,9 @@
 r.d(n, {
     DR: function () {
-        return b;
+        return I;
     },
     bD: function () {
-        return T;
+        return b;
     },
     oK: function () {
         return v;
@@ -12,16 +12,16 @@ r.d(n, {
 var i = r(627341);
 var a = r(200651);
 r(192379);
-var s = r(120356),
-    o = r.n(s),
+var o = r(120356),
+    s = r.n(o),
     l = r(278074),
     u = r(442837),
     c = r(692547),
     d = r(780384),
     f = r(481060),
-    _ = r(210887),
+    p = r(210887),
     h = r(47760),
-    p = r(798728),
+    _ = r(798728),
     m = r(981631),
     g = r(388032),
     E = r(37037);
@@ -37,8 +37,8 @@ function v() {
         })
     });
 }
-function I(e) {
-    let { name: n, className: r, style: i, onSelect: s, isSelected: l = !1, tabIndex: u, children: c, showBadge: d, showLockedBadge: _ } = e,
+function y(e) {
+    let { name: n, className: r, style: i, onSelect: o, isSelected: l = !1, tabIndex: u, children: c, showBadge: d, showLockedBadge: p } = e,
         h = (0, f.useRadioItem)({
             label: n,
             isSelected: l
@@ -53,14 +53,14 @@ function I(e) {
                         ...e,
                         ...h,
                         tabIndex: null != u ? u : h.tabIndex,
-                        className: o()(E.themeSelection, { [E.selected]: l }, r),
+                        className: s()(E.themeSelection, { [E.selected]: l }, r),
                         style: i,
-                        onClick: l ? m.dG4 : s,
+                        onClick: l ? m.dG4 : o,
                         children: c
                     }),
                     l && (0, a.jsx)(v, {}),
                     !l && d && (0, a.jsx)('div', { className: E.redCircle }),
-                    _ &&
+                    p &&
                         (0, a.jsx)('div', {
                             className: E.lockedBadgeContainer,
                             children: (0, a.jsx)(f.LockIcon, {
@@ -72,13 +72,13 @@ function I(e) {
             })
     });
 }
-function T(e) {
+function b(e) {
     let { theme: n, isSelected: r, onSelect: i } = e,
-        s = (0, u.e7)([_.Z], () => _.Z.systemPrefersColorScheme),
+        o = (0, u.e7)([p.Z], () => p.Z.systemPrefersColorScheme),
         h = (e) => ((0, d.ap)(e) ? c.Z.unsafe_rawColors.PRIMARY_600.css : c.Z.unsafe_rawColors.WHITE_500.css),
         v = (0, l.EQ)({
             theme: n,
-            systemPrefersColorScheme: s
+            systemPrefersColorScheme: o
         })
             .with(
                 {
@@ -92,41 +92,41 @@ function T(e) {
             .with({ theme: m.BRd.DARKER }, () => E.darkerIcon)
             .with({ theme: m.BRd.MIDNIGHT }, () => E.midnightIcon)
             .otherwise(() => E.darkIcon),
-        T = (0, l.EQ)(n)
+        b = (0, l.EQ)(n)
             .with(m.BRd.LIGHT, () => g.intl.string(g.t.K2sFfn))
             .with(m.BRd.DARK, () => g.intl.string(g.t.b8Cei4))
             .with(m.BRd.DARKER, () => 'Darker')
             .with(m.BRd.MIDNIGHT, () => g.intl.string(g.t.pQwSpa))
             .with('system', () => g.intl.string(g.t['7rOU6u']))
             .exhaustive(),
-        b = (0, f.useRedesignIconContext)().enabled;
-    return (0, a.jsx)(I, {
+        I = (0, f.useRedesignIconContext)().enabled;
+    return (0, a.jsx)(y, {
         onSelect: i,
         isSelected: r,
-        name: T,
-        className: o()(E.defaultThemeSelection, v),
+        name: b,
+        className: s()(E.defaultThemeSelection, v),
         children:
             'system' === n &&
             (0, a.jsx)('div', {
                 className: E.iconWrapper,
-                children: b ? (0, a.jsx)(f.RefreshIcon, { color: h(s) }) : (0, a.jsx)(p.Z, { fill: h(s) })
+                children: I ? (0, a.jsx)(f.RefreshIcon, { color: h(o) }) : (0, a.jsx)(_.Z, { fill: h(o) })
             })
     });
 }
-function b(e) {
-    let { preset: n, isSelected: r, disabled: i, tabIndex: s, onSelect: l, showBadge: u, showLockedBadge: c } = e,
-        { colors: f, angle: _, theme: p } = n,
+function I(e) {
+    let { preset: n, isSelected: r, disabled: i, tabIndex: o, onSelect: l, showBadge: u, showLockedBadge: c } = e,
+        { colors: f, angle: p, theme: _ } = n,
         m = (0, h.VK)({
             colors: f,
-            angle: _
+            angle: p
         });
-    return (0, a.jsx)(I, {
+    return (0, a.jsx)(y, {
         onSelect: i ? void 0 : l,
         isSelected: r,
         name: n.getName(),
-        className: o()([i ? E.disabled : null, (0, d.wj)(p) ? E.darkOverlay : E.lightOverlay]),
+        className: s()([i ? E.disabled : null, (0, d.wj)(_) ? E.darkOverlay : E.lightOverlay]),
         style: { background: 'var(--bg-overlay), '.concat(m) },
-        tabIndex: s,
+        tabIndex: o,
         showBadge: u,
         showLockedBadge: c
     });

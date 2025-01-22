@@ -1,13 +1,13 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(823379),
     u = r(592125),
     c = r(486472),
     d = r(984933),
     f = r(981631);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -21,9 +21,9 @@ function _(e, n, r) {
     );
 }
 let h = {},
-    p = 0;
+    _ = 0;
 function m() {
-    p += 1;
+    _ += 1;
 }
 function g(e) {
     if (null == h[e]) return !1;
@@ -38,10 +38,10 @@ function v(e) {
     let { id: n } = e;
     return g(n);
 }
-function I(e) {
+function y(e) {
     for (let n of (!e.userGuildSettings.partial && (h = {}), e.userGuildSettings.entries)) if (null != n.channel_overrides) for (let e of n.channel_overrides) e.collapsed ? (h[e.channel_id] = !0) : delete h[e.channel_id];
 }
-function T(e) {
+function b(e) {
     let { userGuildSettings: n } = e,
         r = new Set(n.map((e) => e.guild_id).filter(l.lm));
     for (let e in h) {
@@ -50,13 +50,13 @@ function T(e) {
     }
     for (let e of n) for (let n of e.channel_overrides) n.collapsed && (h[n.channel_id] = !0);
 }
-function b(e) {
+function I(e) {
     let {
         channel: { id: n }
     } = e;
     return g(n);
 }
-function y(e) {
+function T(e) {
     let { guildId: n } = e;
     d.ZP.getChannels(n)[f.d4z.GUILD_CATEGORY].forEach((e) => {
         let { channel: n } = e;
@@ -70,7 +70,7 @@ function S(e) {
         delete h[n.id];
     });
 }
-class A extends (i = s.ZP.PersistedStore) {
+class A extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), this.removeChangeListener(m), this.addChangeListener(m), (h = null != e ? e : {});
     }
@@ -84,17 +84,17 @@ class A extends (i = s.ZP.PersistedStore) {
         return h;
     }
     get version() {
-        return p;
+        return _;
     }
 }
-_(A, 'displayName', 'CategoryCollapseStore'),
-    _(A, 'persistKey', 'collapsedCategories'),
-    (n.Z = new A(o.Z, {
-        CONNECTION_OPEN: I,
-        USER_GUILD_SETTINGS_FULL_UPDATE: T,
+p(A, 'displayName', 'CategoryCollapseStore'),
+    p(A, 'persistKey', 'collapsedCategories'),
+    (n.Z = new A(s.Z, {
+        CONNECTION_OPEN: y,
+        USER_GUILD_SETTINGS_FULL_UPDATE: b,
         CATEGORY_COLLAPSE: E,
         CATEGORY_EXPAND: v,
-        CATEGORY_COLLAPSE_ALL: y,
+        CATEGORY_COLLAPSE_ALL: T,
         CATEGORY_EXPAND_ALL: S,
-        CHANNEL_DELETE: b
+        CHANNEL_DELETE: I
     }));

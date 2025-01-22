@@ -1,9 +1,9 @@
 r.d(n, {
     d: function () {
-        return s;
+        return o;
     }
 });
 var i = r(392711),
     a = r.n(i);
-let s = (e) => ('function' == typeof e ? e() : e);
-a().curry((e, n, r) => (s(n) ? e(r) : r({})));
+let o = (e) => ('function' == typeof e ? e() : e);
+a().curry((e, n, r) => (o(n) ? e(r) : r({})));

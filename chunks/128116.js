@@ -13,13 +13,13 @@ function n(e) {
             relevance: 0
         },
         a = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        s = {
+        o = {
             className: 'meta',
             keywords: { keyword: 'include use' },
             begin: 'include|use <',
             end: '>'
         },
-        o = {
+        s = {
             begin: '[*!#%]',
             relevance: 0
         },
@@ -45,7 +45,7 @@ function n(e) {
             literal: 'false true PI undef',
             built_in: 'circle square polygon text sphere cube cylinder polyhedron translate rotate scale resize mirror multmatrix color offset hull minkowski union difference intersection abs sign sin cos tan acos asin atan atan2 floor round ceil ln log pow sqrt exp rands min max concat lookup str chr search version version_num norm cross parent_module echo import import_dxf dxf_linear_extrude linear_extrude rotate_extrude surface projection render children dxf_cross dxf_dim let assign'
         },
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, i, s, a, n, o, l]
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, i, o, a, n, s, l]
     };
 }
 e.exports = n;

@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(981631);
+    o = r(570140),
+    s = r(981631);
 function l(e, n, r) {
     return (
         n in e
@@ -18,11 +18,11 @@ function l(e, n, r) {
 let u = 0;
 function c(e) {
     let { port: n } = e;
-    u = o.V6Z - n;
+    u = s.V6Z - n;
 }
 class d extends (i = a.ZP.Store) {
     getId() {
         return u;
     }
 }
-l(d, 'displayName', 'InstanceIdStore'), (n.Z = new d(s.Z, { RPC_SERVER_READY: c }));
+l(d, 'displayName', 'InstanceIdStore'), (n.Z = new d(o.Z, { RPC_SERVER_READY: c }));

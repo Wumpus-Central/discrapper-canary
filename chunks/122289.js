@@ -1,6 +1,6 @@
 r.d(n, {
     E2: function () {
-        return o;
+        return s;
     },
     cn: function () {
         return l;
@@ -14,14 +14,14 @@ r.d(n, {
 });
 var i = r(751767),
     a = r(960048),
-    s = r(231338);
-function o(e, n) {
+    o = r(231338);
+function s(e, n) {
     let r = new Date();
     return r.setMonth(e - 1), r.toLocaleString(n, { month: 'short' });
 }
 async function l(e) {
     let n = null;
-    if (null != e && e.paymentGateway === s.gg.BRAINTREE) {
+    if (null != e && e.paymentGateway === o.gg.BRAINTREE) {
         let e = await (0, i.A)();
         null != e && (n = { braintree_device_data: e });
     }

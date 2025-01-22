@@ -42,16 +42,16 @@ class a {
         return d() && (!this.resolvedHourCycle && (this.resolvedHourCycle = f(e.locale, this.options)), (e.hourCycle = this.resolvedHourCycle), (e.hour12 = 'h11' === this.resolvedHourCycle || 'h12' === this.resolvedHourCycle)), 'ethiopic-amete-alem' === e.calendar && (e.calendar = 'ethioaa'), e;
     }
     constructor(e, n = {}) {
-        (this.formatter = o(e, n)), (this.options = n);
+        (this.formatter = s(e, n)), (this.options = n);
     }
 }
-let s = {
+let o = {
     true: { ja: 'h11' },
     false: {}
 };
-function o(e, n = {}) {
+function s(e, n = {}) {
     if ('boolean' == typeof n.hour12 && u()) {
-        let r = s[String((n = { ...n }).hour12)][e.split('-')[0]],
+        let r = o[String((n = { ...n }).hour12)][e.split('-')[0]],
             i = n.hour12 ? 'h12' : 'h23';
         (n.hourCycle = null != r ? r : i), delete n.hour12;
     }
@@ -95,7 +95,7 @@ function d() {
 function f(e, n) {
     if (!n.timeStyle && !n.hour) return;
     e = e.replace(/(-u-)?-nu-[a-zA-Z0-9]+/, '');
-    let r = o((e += (e.includes('-u-') ? '' : '-u') + '-nu-latn'), {
+    let r = s((e += (e.includes('-u-') ? '' : '-u') + '-nu-latn'), {
             ...n,
             timeZone: void 0
         }),

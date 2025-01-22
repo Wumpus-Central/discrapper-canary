@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(836560);
-var s = r(376398);
-function o(e, n, r) {
+var o = r(376398);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -37,7 +37,7 @@ class l extends a.EventEmitter {
         throw Error('UNKNOWN');
     }
     destroy() {
-        this.removeAllListeners(), (0, s.jC)(this.streamId), this.stream.getTracks().forEach((e) => e.stop());
+        this.removeAllListeners(), (0, o.jC)(this.streamId), this.stream.getTracks().forEach((e) => e.stop());
     }
     reset() {
         this.refreshSpeaking();
@@ -53,9 +53,9 @@ class l extends a.EventEmitter {
     }
     constructor(e) {
         super(),
-            o(this, 'id', void 0),
-            o(this, 'stream', void 0),
-            o(this, 'streamId', void 0),
+            s(this, 'id', void 0),
+            s(this, 'stream', void 0),
+            s(this, 'streamId', void 0),
             e.getVideoTracks().forEach((e) => {
                 e.onended = () => {
                     this.emit('desktopsourceend');
@@ -63,6 +63,6 @@ class l extends a.EventEmitter {
             }),
             (this.id = e.getVideoTracks()[0].label),
             (this.stream = e),
-            (this.streamId = (0, s.N7)(e));
+            (this.streamId = (0, o.N7)(e));
     }
 }

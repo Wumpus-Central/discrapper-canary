@@ -3,10 +3,10 @@ r.d(n, {
         return u;
     },
     Yk: function () {
-        return o;
+        return s;
     },
     oU: function () {
-        return s;
+        return o;
     },
     zP: function () {
         return l;
@@ -14,13 +14,13 @@ r.d(n, {
 });
 var i = r(15729),
     a = r(731965);
-let s = (0, i.U)((e) => ({ inDndMode: !1 }));
-function o(e) {
-    (0, a.j)(() => s.setState({ inDndMode: e }));
+let o = (0, i.U)((e) => ({ inDndMode: !1 }));
+function s(e) {
+    (0, a.j)(() => o.setState({ inDndMode: e }));
 }
 function l() {
-    return s((e) => e.inDndMode);
+    return o((e) => e.inDndMode);
 }
 function u() {
-    return s.getState().inDndMode;
+    return o.getState().inDndMode;
 }

@@ -3,7 +3,7 @@ r(192379);
 var a = r(481060);
 n.Z = {
     show(e) {
-        let { url: n, trustUrl: s, onConfirm: o, onCancel: l, isProtocol: u, contextKey: c } = e;
+        let { url: n, trustUrl: o, onConfirm: s, onCancel: l, isProtocol: u, contextKey: c } = e;
         (0, a.openModalLazy)(
             async () => {
                 let { default: e } = await r.e('85668').then(r.bind(r, 720553));
@@ -12,8 +12,8 @@ n.Z = {
                         ...r,
                         url: n,
                         isProtocol: u,
-                        trustUrl: s,
-                        onConfirm: o,
+                        trustUrl: o,
+                        onConfirm: s,
                         onCancel: l
                     });
             },

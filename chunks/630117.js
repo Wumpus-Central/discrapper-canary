@@ -1,21 +1,21 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(441319),
-    s = r(388032);
-function o(e) {
+    o = r(388032);
+function s(e) {
     let { id: n, width: r = a.M9 } = e,
-        o = (0, a.aW)(n);
-    return null == o
+        s = (0, a.aW)(n);
+    return null == s
         ? null
         : (0, i.jsx)('img', {
-              src: o.iconSource,
+              src: s.iconSource,
               width: r,
-              alt: s.intl.string(s.t.N4YDam),
+              alt: o.intl.string(o.t.N4YDam),
               draggable: !1
           });
 }

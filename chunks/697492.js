@@ -1,9 +1,9 @@
 r.d(n, {
     Gd: function () {
-        return s;
+        return o;
     },
     ME: function () {
-        return o;
+        return s;
     },
     Ym: function () {
         return l;
@@ -24,14 +24,14 @@ function a(e, n, r) {
         emoji: e
     });
 }
-function s(e, n) {
+function o(e, n) {
     i.Z.dispatch({
         type: 'HIGH_FIVE_REMOVE',
         channelId: n,
         userId: e
     });
 }
-function o(e) {
+function s(e) {
     i.Z.dispatch({
         type: 'HIGH_FIVE_SET_ENABLED',
         enabled: e

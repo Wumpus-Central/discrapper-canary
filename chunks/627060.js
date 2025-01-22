@@ -1,8 +1,8 @@
 var i = r(24033),
     a = r(776245);
-e.exports = function (e, n, r, s) {
+e.exports = function (e, n, r, o) {
     try {
-        return s ? n(i(r)[0], r[1]) : n(r);
+        return o ? n(i(r)[0], r[1]) : n(r);
     } catch (n) {
         a(e, 'throw', n);
     }

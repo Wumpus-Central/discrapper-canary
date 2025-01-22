@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(317019),
-    o = r(716708),
+    o = r(317019),
+    s = r(716708),
     l =
         Object.assign ||
         function (e) {
@@ -15,13 +15,13 @@ var i = r(192379),
     c = function (e) {
         var n = e.color,
             r = e.style,
-            s = e.onClick,
-            c = void 0 === s ? function () {} : s,
+            o = e.onClick,
+            c = void 0 === o ? function () {} : o,
             d = e.onHover,
             f = e.title,
-            _ = void 0 === f ? n : f,
+            p = void 0 === f ? n : f,
             h = e.children,
-            p = e.focus,
+            _ = e.focus,
             m = e.focusStyle,
             g = void 0 === m ? {} : m,
             E = 'transparent' === n,
@@ -37,41 +37,41 @@ var i = r(192379),
                             outline: 'none'
                         },
                         r,
-                        p ? g : {}
+                        _ ? g : {}
                     )
                 }
             }),
-            I = function (e) {
+            y = function (e) {
                 return c(n, e);
             },
-            T = function (e) {
+            b = function (e) {
                 return e.keyCode === u && c(n, e);
             },
-            b = function (e) {
+            I = function (e) {
                 return d(n, e);
             },
-            y = {};
+            T = {};
         return (
-            d && (y.onMouseOver = b),
+            d && (T.onMouseOver = I),
             i.createElement(
                 'div',
                 l(
                     {
                         style: v.swatch,
-                        onClick: I,
-                        title: _,
+                        onClick: y,
+                        title: p,
                         tabIndex: 0,
-                        onKeyDown: T
+                        onKeyDown: b
                     },
-                    y
+                    T
                 ),
                 h,
                 E &&
-                    i.createElement(o.Z, {
+                    i.createElement(s.Z, {
                         borderRadius: v.swatch.borderRadius,
                         boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'
                     })
             )
         );
     };
-n.Z = (0, s.I)(c);
+n.Z = (0, o.I)(c);

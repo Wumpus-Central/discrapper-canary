@@ -22,10 +22,10 @@ function C(e) {
     var t, l;
     let { stream: a, applicationId: C, channel: x, exitFullScreen: v, appContext: _, analyticsLocation: I, className: E, ...b } = e,
         Z = null == x ? void 0 : x.getGuildId(),
-        S = null == x ? void 0 : x.id,
-        N = (0, o.e7)([h.Z], () => (null != Z ? h.Z.getGuild(Z) : null), [Z]),
-        T = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(S), [S]);
-    if (((t = N), (l = x), !(null != t && null != l && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, l)))) return null;
+        N = null == x ? void 0 : x.id,
+        S = (0, o.e7)([h.Z], () => (null != Z ? h.Z.getGuild(Z) : null), [Z]),
+        T = (0, o.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(N), [N]);
+    if (((t = S), (l = x), !(null != t && null != l && p.Z.can(m.Plq.CREATE_INSTANT_INVITE, l)))) return null;
     let j = f.intl.string(f.t.VINpSE);
     return (
         null != a ? (j = f.intl.string(f.t['6VQaqa'])) : null != C && (j = f.intl.string(f.t['OzOM/v'])),
@@ -35,7 +35,7 @@ function C(e) {
                     size: c.Button.Sizes.SMALL,
                     color: g.buttonColor,
                     onClick: () => {
-                        s()(null != N, 'guild cannot be null'),
+                        s()(null != S, 'guild cannot be null'),
                             s()(null != x, 'channel cannot be null'),
                             !(function (e) {
                                 let { guild: t, channel: l, streamUserId: r, applicationId: a, appContext: s, exitFullScreen: o, analyticsLocation: d, guildScheduledEvent: u } = e;
@@ -61,7 +61,7 @@ function C(e) {
                                         }
                                     );
                             })({
-                                guild: N,
+                                guild: S,
                                 channel: x,
                                 streamUserId: null == a ? void 0 : a.ownerId,
                                 applicationId: C,

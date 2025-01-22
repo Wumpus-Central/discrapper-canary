@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(186102),
-    s = r(873741),
-    o = r(866960),
+    o = r(873741),
+    s = r(866960),
     l = r(626135),
     u = r(981631);
 function c(e, n, r) {
@@ -21,17 +21,17 @@ let d = 0.1;
 function f(e) {
     if (Math.random() > d) return;
     let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
-        r = (0, s.d)();
+        r = (0, o.d)();
     l.default.track(u.rMx.QUEST_DECISION_ROUNDTRIP, {
         ...(0, a.Z)(),
         endpoint: e.endpoint,
         was_successful: e.wasSuccessful,
         api_latency_ms: n,
-        mobile_network_type: o.Z.getType(),
+        mobile_network_type: s.Z.getType(),
         ...(null != r && { mobile_signal_strength_level: r })
     });
 }
-class _ {
+class p {
     recordQuestRequestAttempt(e) {
         let n = {
             initialSendTimestamp: Date.now(),
@@ -60,4 +60,4 @@ class _ {
         c(this, 'pendingRequests', new Map());
     }
 }
-n.Z = new _();
+n.Z = new p();

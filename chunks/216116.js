@@ -1,13 +1,13 @@
 var i = r(859209),
     a = r(581031),
-    s = r(714050),
-    o = r(202934),
+    o = r(714050),
+    s = r(202934),
     l = URLSearchParams,
     u = l.prototype,
     c = a(u.append),
     d = a(u.delete),
     f = a(u.forEach),
-    _ = a([].push),
+    p = a([].push),
     h = new l('a=1&a=2&b=3');
 h.delete('a', 1),
     h.delete('b', void 0),
@@ -22,14 +22,14 @@ h.delete('a', 1),
                 if (r && void 0 === i) return d(this, e);
                 var a = [];
                 f(this, function (e, n) {
-                    _(a, {
+                    p(a, {
                         key: n,
                         value: e
                     });
                 }),
-                    o(r, 1);
-                for (var l = s(e), u = s(i), h = 0, p = 0, m = !1, g = a.length; h < g; ) (n = a[h++]), m || n.key === l ? ((m = !0), d(this, n.key)) : p++;
-                for (; p < g; ) !((n = a[p++]).key === l && n.value === u) && c(this, n.key, n.value);
+                    s(r, 1);
+                for (var l = o(e), u = o(i), h = 0, _ = 0, m = !1, g = a.length; h < g; ) (n = a[h++]), m || n.key === l ? ((m = !0), d(this, n.key)) : _++;
+                for (; _ < g; ) !((n = a[_++]).key === l && n.value === u) && c(this, n.key, n.value);
             },
             {
                 enumerable: !0,

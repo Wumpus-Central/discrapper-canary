@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(820611),
-    o = r(877837),
+    o = r(820611),
+    s = r(877837),
     l = r(197499),
     u = function (e) {
         var n = e.color,
@@ -10,7 +10,7 @@ var i = r(192379),
             c = e.onSwatchHover,
             d = e.first,
             f = e.last,
-            _ = e.active,
+            p = e.active,
             h = (0, a.default)(
                 {
                     default: {
@@ -22,7 +22,7 @@ var i = r(192379),
                             marginBottom: '1px'
                         },
                         check: {
-                            color: s.Qg(n),
+                            color: o.Qg(n),
                             marginLeft: '8px',
                             display: 'none'
                         }
@@ -49,13 +49,13 @@ var i = r(192379),
                 {
                     first: d,
                     last: f,
-                    active: _,
+                    active: p,
                     'color-#FFFFFF': '#FFFFFF' === n,
                     transparent: 'transparent' === n
                 }
             );
         return i.createElement(
-            o.m4,
+            s.m4,
             {
                 color: n,
                 style: h.color,

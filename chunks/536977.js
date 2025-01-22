@@ -3,7 +3,7 @@ function a(e, n) {
     return function (r, a) {
         if (null == r) return r;
         if (!i(r)) return e(r, a);
-        for (var s = r.length, o = n ? s : -1, l = Object(r); (n ? o-- : ++o < s) && !1 !== a(l[o], o, l); );
+        for (var o = r.length, s = n ? o : -1, l = Object(r); (n ? s-- : ++s < o) && !1 !== a(l[s], s, l); );
         return r;
     };
 }

@@ -7,10 +7,10 @@ class a {
     reserialize() {
         if ('string' == typeof this.ast) return this.ast;
         let e = { value: '' };
-        return s(this.ast, e), e.value;
+        return o(this.ast, e), e.value;
     }
 }
-function s(e, n) {
+function o(e, n) {
     for (let r of e) {
         if ('string' == typeof r) {
             n.value += r;
@@ -31,7 +31,7 @@ function s(e, n) {
                 break;
             case i.FormatJsNodeType.Plural: {
                 let e = 'ordinal' == r[4] ? 'selectordinal' : 'plural';
-                for (let [i, a] of ((n.value += '{' + r[1] + ', ' + e + ','), r[3] && (n.value += ' offset:' + r[3]), Object.entries(r[2]))) (n.value += ' ' + i + ' {'), s(a, n), (n.value += '}');
+                for (let [i, a] of ((n.value += '{' + r[1] + ', ' + e + ','), r[3] && (n.value += ' offset:' + r[3]), Object.entries(r[2]))) (n.value += ' ' + i + ' {'), o(a, n), (n.value += '}');
                 n.value += '}';
                 break;
             }
@@ -39,35 +39,35 @@ function s(e, n) {
                 n.value += '#';
                 break;
             case i.FormatJsNodeType.Select:
-                for (let [e, i] of ((n.value += '{' + r[1] + ', select,'), Object.entries(r[2]))) (n.value += ' ' + e + ' {'), s(i, n), (n.value += '}');
+                for (let [e, i] of ((n.value += '{' + r[1] + ', select,'), Object.entries(r[2]))) (n.value += ' ' + e + ' {'), o(i, n), (n.value += '}');
                 n.value += '}';
                 break;
             case i.FormatJsNodeType.Tag:
-                o(r, n);
+                s(r, n);
         }
     }
 }
-function o(e, n) {
+function s(e, n) {
     switch (e[1]) {
         case '$b':
-            (n.value += '**'), s(e[2], n), (n.value += '**');
+            (n.value += '**'), o(e[2], n), (n.value += '**');
             break;
         case '$i':
-            (n.value += '*'), s(e[2], n), (n.value += '*');
+            (n.value += '*'), o(e[2], n), (n.value += '*');
             break;
         case '$code':
-            (n.value += '`'), s(e[2], n), (n.value += '`');
+            (n.value += '`'), o(e[2], n), (n.value += '`');
             break;
         case '$p':
-            s(e[2], n), (n.value += '\n\n');
+            o(e[2], n), (n.value += '\n\n');
             break;
         case '$link':
             let r = e[2],
                 i = e[3];
-            (n.value += '['), s(r, n), (n.value += ']('), null != i && s(i, n), (n.value += ')');
+            (n.value += '['), o(r, n), (n.value += ']('), null != i && o(i, n), (n.value += ')');
             break;
         default:
-            (n.value += '$['), s(e[2], n), (n.value += '](' + e[1] + ')');
+            (n.value += '$['), o(e[2], n), (n.value += '](' + e[1] + ')');
     }
 }
 n.InternalIntlMessage = a;

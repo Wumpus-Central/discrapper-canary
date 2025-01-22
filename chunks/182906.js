@@ -10,7 +10,7 @@ var i = n(200651),
     a = n(761074);
 function o(e) {
     let { imageBackground: t, applicationName: n, imageClassName: o, imageNotFoundClassName: s } = e,
-        [c, d] = r.useState(!1);
+        [c, u] = r.useState(!1);
     return 'not-found' === t.state || c
         ? (0, i.jsx)('div', {
               className: s,
@@ -22,6 +22,6 @@ function o(e) {
                 alt: n,
                 className: o,
                 src: t.url,
-                onError: () => d(!0)
+                onError: () => u(!0)
             });
 }

@@ -1,7 +1,7 @@
 var i = r(653041);
 var a = r(981631);
-let s = [],
-    o = !1;
+let o = [],
+    s = !1;
 function l() {
     let e = window.navigator.connection;
     return null == e
@@ -15,25 +15,25 @@ function l() {
           };
 }
 function u() {
-    if (!0 === o) return;
+    if (!0 === s) return;
     let e = window.navigator.connection;
-    null != e && ((o = !0), e.addEventListener('change', d));
+    null != e && ((s = !0), e.addEventListener('change', d));
 }
 function c() {
-    if (!1 === o) return;
+    if (!1 === s) return;
     let e = window.navigator.connection;
-    null != e && 0 === s.length && null != e && (e.removeEventListener('change', d), (o = !1));
+    null != e && 0 === o.length && null != e && (e.removeEventListener('change', d), (s = !1));
 }
 function d() {
     let e = l();
-    s.forEach((n) => n(e));
+    o.forEach((n) => n(e));
 }
 function f(e) {
-    s.push(e), u();
+    o.push(e), u();
 }
-function _(e) {
-    let n = s.indexOf(e);
-    -1 !== n && (s.splice(n, 1), c());
+function p(e) {
+    let n = o.indexOf(e);
+    -1 !== n && (o.splice(n, 1), c());
 }
 n.Z = {
     addOnlineCallback(e) {
@@ -52,7 +52,7 @@ n.Z = {
         f(e);
     },
     removeChangeCallback(e) {
-        _(e);
+        p(e);
     },
     getNetworkInformation: () => Promise.resolve(l()),
     isOnline() {

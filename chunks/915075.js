@@ -3,11 +3,11 @@ let n = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'funct
     i = [].concat(['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'], ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'], ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError']);
 function a(e) {
     let a = ['npm', 'print'],
-        s = ['yes', 'no', 'on', 'off', 'it', 'that', 'void'],
-        o = ['then', 'unless', 'until', 'loop', 'of', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not', 'it', 'that', 'otherwise', 'from', 'to', 'til', 'fallthrough', 'case', 'enum', 'native', 'list', 'map', '__hasProp', '__extends', '__slice', '__bind', '__indexOf'],
+        o = ['yes', 'no', 'on', 'off', 'it', 'that', 'void'],
+        s = ['then', 'unless', 'until', 'loop', 'of', 'by', 'when', 'and', 'or', 'is', 'isnt', 'not', 'it', 'that', 'otherwise', 'from', 'to', 'til', 'fallthrough', 'case', 'enum', 'native', 'list', 'map', '__hasProp', '__extends', '__slice', '__bind', '__indexOf'],
         l = {
-            keyword: n.concat(o),
-            literal: r.concat(s),
+            keyword: n.concat(s),
+            literal: r.concat(o),
             built_in: i.concat(a)
         },
         u = '[A-Za-z$_](?:-[0-9A-Za-z$_]|[0-9A-Za-z$_])*',
@@ -24,7 +24,7 @@ function a(e) {
             end: /(?:-[0-9A-Za-z$_]|[0-9A-Za-z$_])*/,
             keywords: l
         },
-        _ = [
+        p = [
             e.BINARY_NUMBER_MODE,
             {
                 className: 'number',
@@ -85,7 +85,7 @@ function a(e) {
                 subLanguage: 'javascript'
             }
         ];
-    d.contains = _;
+    d.contains = p;
     let h = {
             className: 'params',
             begin: '\\(',
@@ -95,11 +95,11 @@ function a(e) {
                     begin: /\(/,
                     end: /\)/,
                     keywords: l,
-                    contains: ['self'].concat(_)
+                    contains: ['self'].concat(p)
                 }
             ]
         },
-        p = { begin: '(#=>|=>|\\|>>|-?->|!->)' },
+        _ = { begin: '(#=>|=>|\\|>>|-?->|!->)' },
         m = {
             variants: [
                 {
@@ -120,10 +120,10 @@ function a(e) {
         aliases: ['ls'],
         keywords: l,
         illegal: /\/\*/,
-        contains: _.concat([
+        contains: p.concat([
             e.COMMENT('\\/\\*', '\\*\\/'),
             e.HASH_COMMENT_MODE,
-            p,
+            _,
             {
                 className: 'function',
                 contains: [c, h],

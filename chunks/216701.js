@@ -9,18 +9,18 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(596454),
-    s = r(307707),
-    o = r(928797);
+    o = r(307707),
+    s = r(928797);
 let l = {
-    SMALL: o.small,
-    MEDIUM: o.medium,
-    LARGE: o.large
+    SMALL: s.small,
+    MEDIUM: s.medium,
+    LARGE: s.large
 };
 function u(e) {
-    let { emojiId: n, emojiName: r, defaultComponent: o, size: u = l.MEDIUM } = e,
-        { customEmoji: c, unicodeEmoji: d } = (0, s.Z)(n, r);
+    let { emojiId: n, emojiName: r, defaultComponent: s, size: u = l.MEDIUM } = e,
+        { customEmoji: c, unicodeEmoji: d } = (0, o.Z)(n, r);
     return null == c && null == d
-        ? (0, i.jsx)(i.Fragment, { children: o })
+        ? (0, i.jsx)(i.Fragment, { children: s })
         : (0, i.jsx)(a.Z, {
               emojiName: null != c ? (null == c ? void 0 : c.name) : r,
               animated: null != c && c.animated,

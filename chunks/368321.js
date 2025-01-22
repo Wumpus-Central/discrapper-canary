@@ -1,7 +1,7 @@
 var i = r(442837),
     a = r(570140),
-    s = r(710845),
-    o = r(70956),
+    o = r(710845),
+    s = r(70956),
     l = r(287328);
 function u(e, n, r) {
     return (
@@ -16,10 +16,10 @@ function u(e, n, r) {
         e
     );
 }
-let c = new s.Z('FileSystemStore'),
+let c = new o.Z('FileSystemStore'),
     d = 1048576,
-    f = 10 * o.Z.Millis.MINUTE;
-class _ extends i.ZP.Store {
+    f = 10 * s.Z.Millis.MINUTE;
+class p extends i.ZP.Store {
     handlePostConnectionOpen() {
         return this.refresh(), !1;
     }
@@ -47,4 +47,4 @@ class _ extends i.ZP.Store {
             setInterval(() => this.refresh(), f);
     }
 }
-n.Z = new _();
+n.Z = new p();

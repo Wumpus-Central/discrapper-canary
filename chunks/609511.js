@@ -1,27 +1,27 @@
 var i = r(939793),
     a = r(861960),
-    s = r(777994),
-    o = r(326048),
+    o = r(777994),
+    s = r(326048),
     l = r(688709),
     u = '[object Boolean]',
     c = '[object Date]',
     d = '[object Map]',
     f = '[object Number]',
-    _ = '[object RegExp]',
+    p = '[object RegExp]',
     h = '[object Set]',
-    p = '[object String]',
+    _ = '[object String]',
     m = '[object Symbol]',
     g = '[object ArrayBuffer]',
     E = '[object DataView]',
     v = '[object Float32Array]',
-    I = '[object Float64Array]',
-    T = '[object Int8Array]',
-    b = '[object Int16Array]',
-    y = '[object Int32Array]',
+    y = '[object Float64Array]',
+    b = '[object Int8Array]',
+    I = '[object Int16Array]',
+    T = '[object Int32Array]',
     S = '[object Uint8Array]',
     A = '[object Uint8ClampedArray]',
-    N = '[object Uint16Array]',
-    C = '[object Uint32Array]';
+    C = '[object Uint16Array]',
+    N = '[object Uint32Array]';
 function R(e, n, r) {
     var R = e.constructor;
     switch (n) {
@@ -33,26 +33,26 @@ function R(e, n, r) {
         case E:
             return a(e, r);
         case v:
+        case y:
+        case b:
         case I:
         case T:
-        case b:
-        case y:
         case S:
         case A:
-        case N:
         case C:
+        case N:
             return l(e, r);
         case d:
             return new R();
         case f:
-        case p:
-            return new R(e);
         case _:
-            return s(e);
+            return new R(e);
+        case p:
+            return o(e);
         case h:
             return new R();
         case m:
-            return o(e);
+            return s(e);
     }
 }
 e.exports = R;

@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
     n(47120),
     n(653041);
 var i = n(836560),
-    r = n(358085),
-    s = n(998502),
-    a = n(13140),
-    l = n(981631);
-let o = [],
-    c = (e, t, n) => {
-        let i = (0, r.isWindows)() ? 0 : 1;
-        if (e !== l.MoX.MOUSE_BUTTON || n !== i) o.forEach((i) => i._handleEvent(e, t, n));
+    s = n(358085),
+    r = n(998502),
+    l = n(13140),
+    o = n(981631);
+let a = [],
+    d = (e, t, n) => {
+        let i = (0, s.isWindows)() ? 0 : 1;
+        if (e !== o.MoX.MOUSE_BUTTON || n !== i) a.forEach((i) => i._handleEvent(e, t, n));
     };
-class d extends i.EventEmitter {
+class u extends i.EventEmitter {
     destroy() {
-        this.removeAllListeners(), 0 === (o = o.filter((e) => e !== this)).length && s.ZP.setOnInputEventCallback(null);
+        this.removeAllListeners(), 0 === (a = a.filter((e) => e !== this)).length && r.ZP.setOnInputEventCallback(null);
     }
     toString() {
-        return (0, a.BB)(this.combo);
+        return (0, l.BB)(this.combo);
     }
     _handleEvent(e, t, n) {
         0 === t
             ? (this.combo = this.combo.filter((t) => {
-                  let [i, r] = t;
-                  return !(i === e && r === n);
+                  let [i, s] = t;
+                  return !(i === e && s === n);
               }))
-            : (this.combo.push([e, n, (0, a.dU)()]), this.emit('change', this));
+            : (this.combo.push([e, n, (0, l.dU)()]), this.emit('change', this));
     }
     constructor() {
         var e, t, n;
@@ -43,7 +43,7 @@ class d extends i.EventEmitter {
                       writable: !0
                   })
                 : (e[t] = n),
-            o.push(this),
-            1 === o.length && s.ZP.setOnInputEventCallback(c);
+            a.push(this),
+            1 === a.length && r.ZP.setOnInputEventCallback(d);
     }
 }

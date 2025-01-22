@@ -19,7 +19,7 @@ r.r(n),
             return g;
         },
         systemLocale: function () {
-            return p;
+            return _;
         },
         t: function () {
             return E;
@@ -27,24 +27,24 @@ r.r(n),
     });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(969090);
+    o = r(192379),
+    s = r(969090);
 var l = r(477660),
     u = r.n(l),
     c = r(424395),
     d = r(610398),
     f = r(754419),
-    _ = r(776288);
+    p = r(776288);
 function h(e) {
     return [Array.isArray(navigator.languages) ? navigator.languages[0] : null, navigator.language, navigator.browserLanguage, navigator.userLanguage, e].find((e) => null != e && '' !== e);
 }
-let p = h('en-US'),
-    m = (0, c.YI)(p, 'en-US'),
-    g = new o.IntlManager({
+let _ = h('en-US'),
+    m = (0, c.YI)(_, 'en-US'),
+    g = new s.IntlManager({
         initialLocale: m,
         defaultLocale: 'en-US'
     }).withFormatters({
-        format: (0, o.makeReactFormatter)({
+        format: (0, s.makeReactFormatter)({
             $i: (e, n) => (0, a.jsx)('em', { children: e }, n),
             $b: (e, n) => (0, a.jsx)('strong', { children: e }, n),
             $del: (e, n) => (0, a.jsx)('del', { children: e }, n),
@@ -52,7 +52,7 @@ let p = h('en-US'),
             $code: (e, n) => (0, a.jsx)('code', { children: e }, n),
             $link: (e, n, i) => {
                 let [a] = i,
-                    { Anchor: o } = r(756715),
+                    { Anchor: s } = r(756715),
                     l = {};
                 switch (typeof a) {
                     case 'string':
@@ -67,8 +67,8 @@ let p = h('en-US'),
                         if (null == a) break;
                         (l.onClick = null !== (c = a.onClick) && void 0 !== c ? c : a), (l.onContextMenu = a.onContextMenu);
                 }
-                return (0, s.createElement)(
-                    o,
+                return (0, o.createElement)(
+                    s,
                     {
                         ...l,
                         key: n
@@ -77,11 +77,11 @@ let p = h('en-US'),
                 );
             }
         }),
-        formatToPlainString: o.stringFormatter,
-        formatToMarkdownString: o.markdownFormatter,
-        formatToParts: o.astFormatter
+        formatToPlainString: s.stringFormatter,
+        formatToMarkdownString: s.markdownFormatter,
+        formatToParts: s.astFormatter
     }),
     E = {
         ...d.Z,
-        ..._.Z
+        ...p.Z
     };

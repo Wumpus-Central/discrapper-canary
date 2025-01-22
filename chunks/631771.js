@@ -1,6 +1,6 @@
 r.d(n, {
     Gi: function () {
-        return o;
+        return s;
     },
     Qs: function () {
         return l;
@@ -11,8 +11,8 @@ r.d(n, {
 });
 var i = r(818083),
     a = r(311476),
-    s = r(474936);
-let o = (0, i.B)({
+    o = r(474936);
+let s = (0, i.B)({
     id: '2024-06_premium_emoji_desktop_upsell',
     label: 'Premium Emoji Desktop Upsell',
     kind: 'user',
@@ -107,14 +107,14 @@ let l = (0, i.B)({
 });
 function u(e) {
     switch (e) {
-        case s.cd.CLIENT_THEMES_UPSELL:
-        case s.cd.APP_ICON_UPSELL:
+        case o.cd.CLIENT_THEMES_UPSELL:
+        case o.cd.APP_ICON_UPSELL:
             return a.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
-        case s.cd.ANIMATED_AVATAR_MODAL_UPSELL:
-        case s.cd.ANIMATED_BANNER_MODAL_UPSELL:
-        case s.cd.PROFILE_EFFECT_MODAL_UPSELL:
-        case s.cd.AVATAR_DECORATION_MODAL_UPSELL:
-        case s.cd.FOR_LATER_MODAL_UPSELL:
+        case o.cd.ANIMATED_AVATAR_MODAL_UPSELL:
+        case o.cd.ANIMATED_BANNER_MODAL_UPSELL:
+        case o.cd.PROFILE_EFFECT_MODAL_UPSELL:
+        case o.cd.AVATAR_DECORATION_MODAL_UPSELL:
+        case o.cd.FOR_LATER_MODAL_UPSELL:
             return !0;
         default:
             return !1;

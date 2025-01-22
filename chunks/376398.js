@@ -1,6 +1,6 @@
 r.d(n, {
     N7: function () {
-        return o;
+        return s;
     },
     aG: function () {
         return u;
@@ -11,14 +11,14 @@ r.d(n, {
 });
 var i = r(39383),
     a = r.n(i);
-let s = {};
-function o(e) {
+let o = {};
+function s(e) {
     let n = a()('VideoStream');
-    return (s[n] = e), n;
+    return (o[n] = e), n;
 }
 function l(e) {
-    delete s[e];
+    delete o[e];
 }
 function u(e) {
-    return s[e];
+    return o[e];
 }

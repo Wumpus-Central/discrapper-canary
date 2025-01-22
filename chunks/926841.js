@@ -1,14 +1,14 @@
-n.d(t, {
+r.d(n, {
     a: function () {
         return s;
     },
     b: function () {
-        return l;
+        return o;
     }
 });
-var a = n(818083),
-    r = n(987338);
-let l = (0, a.B)({
+var i = r(818083),
+    a = r(987338);
+let o = (0, i.B)({
     kind: 'user',
     id: '2024-11_checkout_optimization_desktop_client_google_pay',
     label: 'Checkout Optimization Browser Autofill Google Pay',
@@ -16,7 +16,7 @@ let l = (0, a.B)({
         enabled: !1,
         delay: !1
     },
-    commonTriggerPoint: r.$P.PAYMENT_FLOW_STARTED,
+    commonTriggerPoint: a.$P.PAYMENT_FLOW_STARTED,
     treatments: [
         {
             id: 1,
@@ -29,5 +29,5 @@ let l = (0, a.B)({
     ]
 });
 function s() {
-    return l.getCurrentConfig({ location: 'premium_payment_flow_started_1' }, { autoTrackExposure: !0 });
+    return o.getCurrentConfig({ location: 'premium_payment_flow_started_1' }, { autoTrackExposure: !0 });
 }

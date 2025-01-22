@@ -1,9 +1,9 @@
 r.d(n, {
     gw: function () {
-        return s;
+        return o;
     },
     rE: function () {
-        return o;
+        return s;
     },
     tk: function () {
         return l;
@@ -11,15 +11,15 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(911969);
-function s(e, n) {
+function o(e, n) {
     return e === a.yU.CHAT ? '/' + n : n;
 }
 r(895924);
-function o(e, n) {
+function s(e, n) {
     return ''.concat(e, ':').concat(n);
 }
 function l(e) {
-    return Object.fromEntries(e.map((e) => [o(e.id, e.type), e]));
+    return Object.fromEntries(e.map((e) => [s(e.id, e.type), e]));
 }
 function u(e, n) {
     let r = {};

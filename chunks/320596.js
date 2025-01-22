@@ -1,49 +1,49 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(481060),
+    o = r(192379),
+    s = r(481060),
     l = r(454585),
     u = r(273744),
     c = r(388032),
     d = r(852206),
     f = r(232186);
-let _ = (e) => {
+let p = (e) => {
         let {
-                data: { title: n, subtitle: r, placeholder: i, rows: _, character_limit: h, pattern: p },
+                data: { title: n, subtitle: r, placeholder: i, rows: p, character_limit: h, pattern: _ },
                 onChange: m,
                 initialText: g,
                 isRequired: E
             } = e,
-            v = s.useRef(
+            v = o.useRef(
                 l.Z.reactParserFor({
                     ...l.Z.defaultRules,
                     link: u.s
                 })
             ),
-            [I, T] = s.useState(''),
-            [b, y] = s.useState('');
-        s.useEffect(() => {
+            [y, b] = o.useState(''),
+            [I, T] = o.useState('');
+        o.useEffect(() => {
             var e;
-            T(null !== (e = null == g ? void 0 : g.value) && void 0 !== e ? e : '');
+            b(null !== (e = null == g ? void 0 : g.value) && void 0 !== e ? e : '');
         }, [g]);
-        let S = s.useCallback(
+        let S = o.useCallback(
             (e) => {
-                let n = null != p ? new RegExp(p) : null;
+                let n = null != _ ? new RegExp(_) : null;
                 null != n && null == n.exec(e)
-                    ? (y(c.intl.string(c.t['24xrGR'])),
+                    ? (T(c.intl.string(c.t['24xrGR'])),
                       m({
                           value: e,
                           isValid: !1
                       }))
                     : null != e &&
-                      (y(''),
-                      T(e),
+                      (T(''),
+                      b(e),
                       m({
                           value: e,
                           isValid: !0
                       }));
             },
-            [m, p]
+            [m, _]
         );
         return (0, a.jsxs)('div', {
             className: f.marginBottom8,
@@ -51,7 +51,7 @@ let _ = (e) => {
                 null != n &&
                     (0, a.jsx)('div', {
                         className: f.marginBottom8,
-                        children: (0, a.jsxs)(o.Text, {
+                        children: (0, a.jsxs)(s.Text, {
                             variant: 'text-sm/bold',
                             children: [
                                 n,
@@ -63,18 +63,18 @@ let _ = (e) => {
                             ]
                         })
                     }),
-                (0, a.jsx)(o.TextArea, {
+                (0, a.jsx)(s.TextArea, {
                     maxLength: h,
                     onChange: S,
-                    value: I,
-                    error: b,
-                    rows: _,
+                    value: y,
+                    error: I,
+                    rows: p,
                     placeholder: i,
                     autoFocus: !0
                 }),
                 null != r &&
                     (0, a.jsx)('div', {
-                        children: (0, a.jsx)(o.Text, {
+                        children: (0, a.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             children: v.current(r)
                         })
@@ -84,20 +84,20 @@ let _ = (e) => {
     },
     h = (e) => {
         let { elements: n, onChange: r, state: i } = e,
-            s = n.map((e) => {
+            o = n.map((e) => {
                 var n;
-                let s = e.name;
+                let o = e.name;
                 return (0, a.jsx)(
-                    _,
+                    p,
                     {
                         data: e.data,
-                        onChange: (e) => r(s, e.value, e.isValid),
-                        initialText: null !== (n = null == i ? void 0 : i[s]) && void 0 !== n ? n : void 0,
+                        onChange: (e) => r(o, e.value, e.isValid),
+                        initialText: null !== (n = null == i ? void 0 : i[o]) && void 0 !== n ? n : void 0,
                         isRequired: e.should_submit_data
                     },
-                    s
+                    o
                 );
             });
-        return (0, a.jsx)('div', { children: s });
+        return (0, a.jsx)('div', { children: o });
     };
 n.Z = h;

@@ -1,10 +1,10 @@
 var i, a;
-function s(e) {
+function o(e) {
     return e;
 }
 r.d(n, {
     FF: function () {
-        return s;
+        return o;
     },
     gH: function () {
         return i;

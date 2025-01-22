@@ -1,15 +1,15 @@
 var i,
     a,
-    s,
-    o = r(392711),
-    l = r.n(o),
+    o,
+    s = r(392711),
+    l = r.n(s),
     u = r(442837),
     c = r(433517),
     d = r(570140),
     f = r(540059),
-    _ = r(541049),
+    p = r(541049),
     h = r(36645),
-    p = r(874893),
+    _ = r(874893),
     m = r(981631),
     g = r(957825),
     E = r(969943);
@@ -32,11 +32,11 @@ function v(e, n, r) {
     !(function (e) {
         (e.VERY_LOW = 'very_low'), (e.LOW = 'low'), (e.MEDIUM = 'medium'), (e.HIGH = 'high'), (e.VERY_HIGH = 'very_high');
     })(a || (a = {}));
-let I = (window.innerWidth - m.PrS) / 2,
-    T = 'standard',
-    b = null;
-function y() {
-    return null == b && (b = Math.max((window.innerWidth - m.PrS) * 0.4, m.$Y6)), b;
+let y = (window.innerWidth - m.PrS) / 2,
+    b = 'standard',
+    I = null;
+function T() {
+    return null == I && (I = Math.max((window.innerWidth - m.PrS) * 0.4, m.$Y6)), I;
 }
 let S = {};
 function A(e) {
@@ -45,13 +45,13 @@ function A(e) {
         ...e.settings
     };
 }
-function N() {
+function C() {
     S = {
         useSystemTheme: S.useSystemTheme,
         darkSidebar: S.darkSidebar
     };
 }
-function C() {
+function N() {
     null == S && (S = {});
 }
 function R() {}
@@ -63,7 +63,7 @@ function D() {
     let n = u.ZP.PersistedStore.migrateAndReadStoreState('AccessibilityStore', []).state;
     return null !== (e = null == n ? void 0 : n.darkSidebar) && void 0 !== e && e;
 }
-class L extends (s = u.ZP.DeviceSettingsStore) {
+class x extends (o = u.ZP.DeviceSettingsStore) {
     initialize(e) {
         var n;
         S = null != e ? e : {};
@@ -82,7 +82,7 @@ class L extends (s = u.ZP.DeviceSettingsStore) {
     }
     get videoUploadQuality() {
         var e;
-        return null !== (e = S.videoUploadQuality) && void 0 !== e ? e : T;
+        return null !== (e = S.videoUploadQuality) && void 0 !== e ? e : b;
     }
     get dataSavingMode() {
         var e, n;
@@ -102,7 +102,7 @@ class L extends (s = u.ZP.DeviceSettingsStore) {
     }
     get postSidebarWidth() {
         var e;
-        return null !== (e = S.postSidebarWidth) && void 0 !== e ? e : I;
+        return null !== (e = S.postSidebarWidth) && void 0 !== e ? e : y;
     }
     get callChatSidebarWidth() {
         var e;
@@ -110,7 +110,7 @@ class L extends (s = u.ZP.DeviceSettingsStore) {
     }
     get homeSidebarWidth() {
         var e;
-        return null !== (e = S.homeSidebarWidth) && void 0 !== e ? e : y();
+        return null !== (e = S.homeSidebarWidth) && void 0 !== e ? e : T();
     }
     get callParticipantsSidebarWidth() {
         var e;
@@ -121,7 +121,7 @@ class L extends (s = u.ZP.DeviceSettingsStore) {
     }
     get useSystemTheme() {
         var e;
-        return null !== (e = S.useSystemTheme) && void 0 !== e ? e : p.K.UNSET;
+        return null !== (e = S.useSystemTheme) && void 0 !== e ? e : _.K.UNSET;
     }
     get activityPanelHeight() {
         return S.activityPanelHeight;
@@ -192,9 +192,9 @@ class L extends (s = u.ZP.DeviceSettingsStore) {
         return null !== (e = S.listDensity) && void 0 !== e ? e : E.fx.COZY;
     }
 }
-v(L, 'displayName', 'UnsyncedUserSettingsStore'),
-    v(L, 'persistKey', 'UnsyncedUserSettingsStore'),
-    v(L, 'migrations', [
+v(x, 'displayName', 'UnsyncedUserSettingsStore'),
+    v(x, 'persistKey', 'UnsyncedUserSettingsStore'),
+    v(x, 'migrations', [
         () => {
             let e = c.K.get('UserSettingsStore');
             return c.K.remove('UserSettingsStore'), l().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations', 'showPlayAgain');
@@ -203,10 +203,10 @@ v(L, 'displayName', 'UnsyncedUserSettingsStore'),
             delete e.disableVisualRefresh;
         }
     ]),
-    (n.ZP = new L(d.Z, {
+    (n.ZP = new x(d.Z, {
         UNSYNCED_USER_SETTINGS_UPDATE: A,
-        LOGOUT: N,
-        LOGIN_SUCCESS: C,
+        LOGOUT: C,
+        LOGIN_SUCCESS: N,
         REGISTER_SUCCESS: R,
         ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: O
     }));

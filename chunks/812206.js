@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(653041);
-var o = r(442837),
+var o = r(653041);
+var s = r(442837),
     l = r(570140),
     u = r(973616);
 function c(e, n, r) {
@@ -19,32 +19,32 @@ function c(e, n, r) {
 }
 let d = [],
     f = {},
-    _ = {},
-    h = {},
     p = {},
+    h = {},
+    _ = {},
     m = {},
     g = { botUserIdToAppUsage: {} },
     E = 10;
 function v(e) {
     let n = f[e.id];
-    p[e.id] = Date.now();
+    _[e.id] = Date.now();
     let r = e;
     for (let i of (null != n && (r = n.mergeFromApplicationUpdate(e)), (f[e.id] = r), (h[e.name.toLowerCase()] = r), e.aliases)) h[i.toLowerCase()] = r;
     delete m[e.id];
 }
-function I() {
-    (f = {}), (_ = {}), (h = {}), (p = {}), (m = {});
+function y() {
+    (f = {}), (p = {}), (h = {}), (_ = {}), (m = {});
 }
-function T(e) {
+function b(e) {
     let { applications: n } = e;
     for (let e of n) v(new u.ZP(e));
 }
-function b(e) {
+function I(e) {
     let { applicationId: n } = e,
         r = m[n];
     return (m[n] = !0), !0 !== r;
 }
-function y(e) {
+function T(e) {
     let { application: n } = e;
     A(n);
 }
@@ -55,7 +55,7 @@ function S(e) {
 function A(e) {
     v(u.ZP.createFromServer(e));
 }
-function N(e) {
+function C(e) {
     let { userId: n, applicationId: r } = e,
         i = g.botUserIdToAppUsage[n];
     null == i
@@ -69,14 +69,14 @@ function N(e) {
           });
     let a = new Map();
     for (let [e, n] of Object.entries(g.botUserIdToAppUsage)) a.set(e, n);
-    let s = Array.from(a.entries()).sort((e, n) => n[1].lastUsedMs - e[1].lastUsedMs);
-    for (let e = 0; e < s.length; e++)
+    let o = Array.from(a.entries()).sort((e, n) => n[1].lastUsedMs - e[1].lastUsedMs);
+    for (let e = 0; e < o.length; e++)
         if (e >= E) {
-            let n = s[e][0];
+            let n = o[e][0];
             delete g.botUserIdToAppUsage[n];
         }
 }
-function C(e) {
+function N(e) {
     let { applicationId: n } = e,
         r = m[n];
     return (m[n] = !1), !1 !== r;
@@ -98,7 +98,7 @@ function D(e) {
     let { applications: n } = e;
     for (let e of n) v(u.ZP.createFromServer(e));
 }
-function L(e) {
+function x(e) {
     let { recommendations: n } = e;
     n.forEach((e) => {
         e.items.forEach((e) => {
@@ -106,11 +106,11 @@ function L(e) {
         });
     });
 }
-function x(e) {
+function L(e) {
     let { user: n, application: r } = e;
     n.bot &&
         null != r &&
-        N({
+        C({
             userId: n.id,
             applicationId: r.id
         });
@@ -143,7 +143,7 @@ function k(e) {
     let { guildId: n, applications: r } = e,
         i = [];
     for (let e of r) i.push(e.id), v(u.ZP.createFromServer(e));
-    _[n] = i;
+    p[n] = i;
 }
 function U(e) {
     let { payments: n } = e,
@@ -167,12 +167,12 @@ function G(e) {
     if ((null === (n = r.store_listing) || void 0 === n ? void 0 : n.sku.application) == null) return !1;
     v(u.ZP.createFromServer(r.store_listing.sku.application));
 }
-function F(e) {
+function Z(e) {
     let { invite: n } = e;
     if (null == n.target_application) return !1;
     v(u.ZP.createFromServer(n.target_application));
 }
-function Z(e) {
+function F(e) {
     let { storeListing: n } = e;
     if (null == n.sku.application) return !1;
     v(u.ZP.createFromServer(n.sku.application));
@@ -194,13 +194,13 @@ function H(e) {
         v(u.ZP.createFromServer(e.application));
         let n = e.application.bot;
         null != n &&
-            N({
+            C({
                 userId: n.id,
                 applicationId: e.application.id
             });
     });
 }
-class Y extends (i = o.ZP.PersistedStore) {
+class Y extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         if (null != e && 'object' == typeof e.botUserIdToAppUsage)
             for (let n in e.botUserIdToAppUsage) {
@@ -233,7 +233,7 @@ class Y extends (i = o.ZP.PersistedStore) {
     }
     getGuildApplicationIds(e) {
         var n;
-        return null == e ? d : null !== (n = _[e]) && void 0 !== n ? n : d;
+        return null == e ? d : null !== (n = p[e]) && void 0 !== n ? n : d;
     }
     getApplication(e) {
         if (null != e) return f[e];
@@ -244,7 +244,7 @@ class Y extends (i = o.ZP.PersistedStore) {
         return Object.prototype.hasOwnProperty.call(h, n) ? h[n] : void 0;
     }
     getApplicationLastUpdated(e) {
-        return p[e];
+        return _[e];
     }
     isFetchingApplication(e) {
         return !0 === m[e];
@@ -263,28 +263,28 @@ class Y extends (i = o.ZP.PersistedStore) {
 c(Y, 'displayName', 'ApplicationStore'),
     c(Y, 'persistKey', 'ApplicationStore'),
     (n.Z = new Y(l.Z, {
-        LOGOUT: I,
-        OVERLAY_INITIALIZE: T,
-        APPLICATION_FETCH: b,
+        LOGOUT: y,
+        OVERLAY_INITIALIZE: b,
+        APPLICATION_FETCH: I,
         APPLICATION_FETCH_SUCCESS: S,
-        APPLICATION_FETCH_FAIL: C,
+        APPLICATION_FETCH_FAIL: N,
         APPLICATIONS_FETCH: R,
         APPLICATIONS_FETCH_SUCCESS: D,
         APPLICATIONS_FETCH_FAIL: P,
-        APPLICATION_UPDATE: y,
+        APPLICATION_UPDATE: T,
         APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: M,
         ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
         ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: M,
         GUILD_APPLICATIONS_FETCH_SUCCESS: k,
         BILLING_PAYMENTS_FETCH_SUCCESS: U,
         PAYMENT_UPDATE: B,
-        INVITE_RESOLVE_SUCCESS: F,
+        INVITE_RESOLVE_SUCCESS: Z,
         GIFT_CODE_RESOLVE_SUCCESS: G,
         LIBRARY_FETCH_SUCCESS: O,
-        STORE_LISTING_FETCH_SUCCESS: Z,
+        STORE_LISTING_FETCH_SUCCESS: F,
         LOAD_MESSAGES_SUCCESS: V,
-        APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: L,
-        USER_PROFILE_FETCH_SUCCESS: x,
+        APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: x,
+        USER_PROFILE_FETCH_SUCCESS: L,
         APP_DM_OPEN: w,
         USER_AUTHORIZED_APPS_UPDATE: H
     }));

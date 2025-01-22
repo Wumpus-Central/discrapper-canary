@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(877837),
-    o = r(68688),
+    o = r(877837),
+    s = r(68688),
     l =
         Object.assign ||
         function (e) {
@@ -14,20 +14,20 @@ var i = r(192379),
     u = function (e) {
         var n = e.rgb,
             r = e.hsl,
-            o = e.width,
+            s = e.width,
             u = e.height,
             c = e.onChange,
             d = e.direction,
             f = e.style,
-            _ = e.renderers,
+            p = e.renderers,
             h = e.pointer,
-            p = e.className,
-            m = void 0 === p ? '' : p,
+            _ = e.className,
+            m = void 0 === _ ? '' : _,
             g = (0, a.default)({
                 default: {
                     picker: {
                         position: 'relative',
-                        width: o,
+                        width: s,
                         height: u
                     },
                     alpha: {
@@ -43,12 +43,12 @@ var i = r(192379),
                 className: 'alpha-picker ' + m
             },
             i.createElement(
-                s.xV,
+                o.xV,
                 l({}, g.alpha, {
                     rgb: n,
                     hsl: r,
                     pointer: h,
-                    renderers: _,
+                    renderers: p,
                     onChange: c,
                     direction: d
                 })
@@ -59,6 +59,6 @@ var i = r(192379),
     width: '316px',
     height: '16px',
     direction: 'horizontal',
-    pointer: o.Z
+    pointer: s.Z
 }),
-    (0, s.t1)(u);
+    (0, o.t1)(u);

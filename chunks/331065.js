@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(81825),
     a = r(156570);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,11 +18,11 @@ function s(e, n, r) {
         e
     );
 }
-class o extends i.Z {
+class s extends i.Z {
     static createFromServer(e) {
-        return new o({
-            subscriptions: e.subscriptions.map((e) => a.Z.createFromServer(o.convertStoreListing(e))),
-            otps: e.otps.map((e) => a.Z.createFromServer(o.convertStoreListing(e)))
+        return new s({
+            subscriptions: e.subscriptions.map((e) => a.Z.createFromServer(s.convertStoreListing(e))),
+            otps: e.otps.map((e) => a.Z.createFromServer(s.convertStoreListing(e)))
         });
     }
     static convertStoreListing(e) {
@@ -34,6 +34,6 @@ class o extends i.Z {
         };
     }
     constructor(e) {
-        super(), s(this, 'subscriptions', void 0), s(this, 'otps', void 0), (this.subscriptions = e.subscriptions), (this.otps = e.otps);
+        super(), o(this, 'subscriptions', void 0), o(this, 'otps', void 0), (this.subscriptions = e.subscriptions), (this.otps = e.otps);
     }
 }

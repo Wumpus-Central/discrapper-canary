@@ -24,20 +24,20 @@ var l = e(512722),
     I = e(981631);
 function S(n) {
     let { initialPlanId: t, activeSubscription: l, analyticsObject: r, analyticsLocation: o, analyticsLocations: d, analyticsSubscriptionType: f, renderHeader: p, planGroup: S, skuId: h, guildId: g, reviewWarningMessage: Z, applicationId: A, showBenefitsFirst: N, onComplete: b, forcesTransitionToGuild: E } = n,
-        P = (0, u.Z)(),
-        C = !1;
+        C = (0, u.Z)(),
+        L = !1;
     (0, a.openModalLazy)(
         async () => {
             let { PaymentContextProvider: n } = await Promise.resolve().then(e.bind(e, 563132)),
-                u = (await Promise.all([e.e('52249'), e.e('26182'), e.e('32776'), e.e('62347')]).then(e.bind(e, 405083))).default,
-                { getApplicationPaymentSteps: a } = await Promise.all([e.e('77298'), e.e('23357'), e.e('12013'), e.e('68956'), e.e('26182'), e.e('95900'), e.e('34958')]).then(e.bind(e, 759386)),
+                u = (await e.e('7458').then(e.bind(e, 405083))).default,
+                { getApplicationPaymentSteps: a } = await e.e('86513').then(e.bind(e, 759386)),
                 s = a({
                     guildId: g,
                     showBenefitsFirst: N
                 });
             return (e) =>
                 (0, i.jsx)(n, {
-                    loadId: P,
+                    loadId: C,
                     applicationId: A,
                     activeSubscription: l,
                     stepConfigs: s,
@@ -57,7 +57,7 @@ function S(n) {
                             applicationId: A,
                             guildId: null != g ? g : void 0,
                             onComplete: () => {
-                                (C = !0), null == b || b();
+                                (L = !0), null == b || b();
                             },
                             forcesTransitionToGuild: E
                         })
@@ -66,9 +66,9 @@ function S(n) {
         },
         {
             onCloseCallback: () => {
-                !C &&
+                !L &&
                     (m.default.track(I.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: P,
+                        load_id: C,
                         payment_type: I.Zuq[I.GZQ.SUBSCRIPTION],
                         location: null != o ? o : r,
                         is_gift: !1,

@@ -11,8 +11,8 @@ r.d(n, {
 });
 var i = r(818083),
     a = r(32300),
-    s = r(987338);
-let o = (0, i.B)({
+    o = r(987338);
+let s = (0, i.B)({
     kind: 'user',
     id: '2024-11_activity_popout_window',
     label: 'Activity Popout Window Experiment',
@@ -21,7 +21,7 @@ let o = (0, i.B)({
         enableOverlayInActivityPopoutWindow: !1,
         enableGoLiveFromActivityCard: !1
     },
-    commonTriggerPoint: s.$P.CONNECTION_OPEN,
+    commonTriggerPoint: o.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -54,13 +54,13 @@ let o = (0, i.B)({
 });
 function l() {
     let e = (0, a.Rb)('ActivityPopout');
-    return o.getCurrentConfig({ location: 'getIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
+    return s.getCurrentConfig({ location: 'getIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
 }
 function u() {
     let e = (0, a.o4)('ActivityPopout');
-    return o.useExperiment({ location: 'useIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
+    return s.useExperiment({ location: 'useIsActivityPopoutOverlayEnabled' }).enableOverlayInActivityPopoutWindow && e;
 }
 function c() {
-    return o.useExperiment({ location: 'useCanGoLiveActivityFromActivityCard' }).enableGoLiveFromActivityCard;
+    return s.useExperiment({ location: 'useCanGoLiveActivityFromActivityCard' }).enableGoLiveFromActivityCard;
 }
-n.ZP = o;
+n.ZP = s;

@@ -1,7 +1,7 @@
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(481060),
     u = r(600164),
     c = r(186133);
@@ -9,7 +9,7 @@ class d extends a.PureComponent {
     render() {
         let { note: e, title: n, action: r, className: a } = this.props;
         return (0, i.jsx)('div', {
-            className: o()(c.wrapper, a),
+            className: s()(c.wrapper, a),
             children: (0, i.jsxs)(u.Z, {
                 className: c.flexWrapper,
                 direction: u.Z.Direction.VERTICAL,

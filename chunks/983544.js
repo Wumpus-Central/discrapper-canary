@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i,
     a = r(123146),
-    s = r(277985),
-    o = r(592125),
+    o = r(277985),
+    s = r(592125),
     l = r(403182),
     u = r(861990),
     c = r(981631);
@@ -21,7 +21,7 @@ class d {
         return c.ANM.MESSAGE_DELETE_UPLOAD(e);
     }
     getMaxFileSize(e) {
-        let n = o.Z.getBasicChannel(e);
+        let n = s.Z.getBasicChannel(e);
         return l.dg(null == n ? void 0 : n.guild_id);
     }
     getMaxAttachmentsCount() {
@@ -37,7 +37,7 @@ class d {
 function f(e) {
     switch (e) {
         case 1:
-            return new s.Z();
+            return new o.Z();
         case 2:
             return new a.Z();
         default:

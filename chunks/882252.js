@@ -3,10 +3,10 @@ r.d(n, {
         return f;
     },
     Uw: function () {
-        return p;
+        return _;
     },
     nC: function () {
-        return _;
+        return p;
     },
     nU: function () {
         return m;
@@ -17,8 +17,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(683860),
-    s = r(592125),
-    o = r(430824),
+    o = r(592125),
+    s = r(430824),
     l = r(306680),
     u = r(710352),
     c = r(176505),
@@ -30,8 +30,8 @@ function f(e, n) {
         hasUnreads: !e.isArchivedThread() && r.isForumPostUnread(e.id)
     };
 }
-function _(e) {
-    let [n, r, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Z, o.Z, l.ZP],
+function p(e) {
+    let [n, r, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.Z, s.Z, l.ZP],
         a = n.getChannel(e);
     if (null == a) return null;
     let u = r.getGuild(a.guild_id);
@@ -43,17 +43,17 @@ let h = () => ({
     days: d.t.U4I0s7,
     month: d.intl.string(d.t['nBNJ/P'])
 });
-function p(e, n) {
+function _(e, n) {
     if (n === u.R6.POSTED_DURATION_AGO && e === a.z.CREATION_DATE) return h;
 }
 function m(e, n) {
     let [r] = n,
         i = r.hasTrackedUnread(e),
         a = r.hasOpenedThread(e),
-        s = null != r.getTrackedAckMessageId(e);
-    return i && a && s;
+        o = null != r.getTrackedAckMessageId(e);
+    return i && a && o;
 }
 function g(e) {
     var n;
-    return (null === (n = s.Z.getChannel(e)) || void 0 === n ? void 0 : n.hasFlag(c.zZ.PINNED)) === !0;
+    return (null === (n = o.Z.getChannel(e)) || void 0 === n ? void 0 : n.hasFlag(c.zZ.PINNED)) === !0;
 }

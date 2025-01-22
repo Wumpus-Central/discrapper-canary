@@ -1,9 +1,9 @@
-n.d(e, {
+e.d(n, {
     JE: function () {
-        return u;
+        return o;
     },
     ab: function () {
-        return o;
+        return u;
     },
     iG: function () {
         return a;
@@ -15,14 +15,14 @@ n.d(e, {
         return s;
     }
 });
-var i = n(293810),
-    r = n(474936),
-    l = n(388032);
-function o(t) {
+var i = e(293810),
+    r = e(474936),
+    l = e(388032);
+function u(t) {
     return 'roles' in t ? 'emoji-'.concat(t.id) : ''.concat(t.ref_type, '-').concat(t.emoji_id, '-').concat(t.name, '-').concat(t.ref_id);
 }
-function u(t) {
-    let { interval: e, interval_count: n } = t;
+function o(t) {
+    let { interval: n, interval_count: e } = t;
     return l.intl.format(
         (function (t) {
             switch (t) {
@@ -33,20 +33,20 @@ function u(t) {
                 case r.rV.YEAR:
                     return l.t.cuSp8f;
             }
-        })(e),
-        { count: n }
+        })(n),
+        { count: e }
     );
 }
 function a(t) {
-    let { interval: e, interval_count: n } = t;
-    switch (e) {
+    let { interval: n, interval_count: e } = t;
+    switch (n) {
         case r.rV.DAY:
-            if (n > 0 && n % 7 == 0) return l.intl.formatToPlainString(l.t.iVZYys, { weeks: n / 7 });
-            return l.intl.formatToPlainString(l.t.jzH70d, { days: n });
+            if (e > 0 && e % 7 == 0) return l.intl.formatToPlainString(l.t.iVZYys, { weeks: e / 7 });
+            return l.intl.formatToPlainString(l.t.jzH70d, { days: e });
         case r.rV.MONTH:
-            return l.intl.formatToPlainString(l.t.erUSmJ, { months: n });
+            return l.intl.formatToPlainString(l.t.erUSmJ, { months: e });
         case r.rV.YEAR:
-            return l.intl.formatToPlainString(l.t.IfYQVF, { years: n });
+            return l.intl.formatToPlainString(l.t.IfYQVF, { years: e });
     }
 }
 function s(t) {

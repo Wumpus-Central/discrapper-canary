@@ -9,11 +9,11 @@ function n(e) {
             literal: ['__debug__', 'Ellipsis', 'False', 'None', 'NotImplemented', 'True'],
             type: ['Any', 'Callable', 'Coroutine', 'Dict', 'List', 'Literal', 'Generic', 'Optional', 'Sequence', 'Set', 'Tuple', 'Type', 'Union']
         },
-        s = {
+        o = {
             className: 'meta',
             begin: /^(>>>|\.\.\.) /
         },
-        o = {
+        s = {
             className: 'subst',
             begin: /\{/,
             end: /\}/,
@@ -31,24 +31,24 @@ function n(e) {
                 {
                     begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, s],
+                    contains: [e.BACKSLASH_ESCAPE, o],
                     relevance: 10
                 },
                 {
                     begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, s],
+                    contains: [e.BACKSLASH_ESCAPE, o],
                     relevance: 10
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, s, l, o]
+                    contains: [e.BACKSLASH_ESCAPE, o, l, s]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, s, l, o]
+                    contains: [e.BACKSLASH_ESCAPE, o, l, s]
                 },
                 {
                     begin: /([uU]|[rR])'/,
@@ -71,12 +71,12 @@ function n(e) {
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])'/,
                     end: /'/,
-                    contains: [e.BACKSLASH_ESCAPE, l, o]
+                    contains: [e.BACKSLASH_ESCAPE, l, s]
                 },
                 {
                     begin: /([fF][rR]|[rR][fF]|[fF])"/,
                     end: /"/,
-                    contains: [e.BACKSLASH_ESCAPE, l, o]
+                    contains: [e.BACKSLASH_ESCAPE, l, s]
                 },
                 e.APOS_STRING_MODE,
                 e.QUOTE_STRING_MODE
@@ -85,7 +85,7 @@ function n(e) {
         c = '[0-9](_?[0-9])*',
         d = `(\\b(${c}))?\\.(${c})|\\b(${c})\\.`,
         f = `\\b|${i.join('|')}`,
-        _ = {
+        p = {
             className: 'number',
             relevance: 0,
             variants: [{ begin: `(\\b(${c})|(${d}))[eE][+-]?(${c})[jJ]?(?=${f})` }, { begin: `(${d})[jJ]?` }, { begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${f})` }, { begin: `\\b0[bB](_?[01])+[lL]?(?=${f})` }, { begin: `\\b0[oO](_?[0-7])+[lL]?(?=${f})` }, { begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${f})` }, { begin: `\\b(${c})[jJ](?=${f})` }]
@@ -104,7 +104,7 @@ function n(e) {
                 }
             ]
         },
-        p = {
+        _ = {
             className: 'params',
             variants: [
                 {
@@ -118,12 +118,12 @@ function n(e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     keywords: a,
-                    contains: ['self', s, _, u, e.HASH_COMMENT_MODE]
+                    contains: ['self', o, p, u, e.HASH_COMMENT_MODE]
                 }
             ]
         };
     return (
-        (o.contains = [u, _, s]),
+        (s.contains = [u, p, o]),
         {
             name: 'Python',
             aliases: ['py', 'gyp', 'ipython'],
@@ -131,8 +131,8 @@ function n(e) {
             keywords: a,
             illegal: /(<\/|\?)|=>/,
             contains: [
-                s,
-                _,
+                o,
+                p,
                 {
                     scope: 'variable.language',
                     match: /\bself\b/
@@ -154,7 +154,7 @@ function n(e) {
                         1: 'keyword',
                         3: 'title.function'
                     },
-                    contains: [p]
+                    contains: [_]
                 },
                 {
                     variants: [
@@ -175,7 +175,7 @@ function n(e) {
                     className: 'meta',
                     begin: /^[\t ]*@/,
                     end: /(?=#)|$/,
-                    contains: [_, p, u]
+                    contains: [p, _, u]
                 }
             ]
         }

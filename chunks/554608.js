@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(442837),
-    o = r(570140);
+    o = r(442837),
+    s = r(570140);
 function l(e, n, r) {
     return (
         n in e
@@ -33,13 +33,13 @@ function d() {
 function f() {
     u = 3;
 }
-class _ extends (a = s.ZP.Store) {
+class p extends (a = o.ZP.Store) {
     getMigrationStatus() {
         return u;
     }
 }
-l(_, 'displayName', 'DomainMigrationStore'),
-    (n.Z = new _(o.Z, {
+l(p, 'displayName', 'DomainMigrationStore'),
+    (n.Z = new p(s.Z, {
         DOMAIN_MIGRATION_START: c,
         DOMAIN_MIGRATION_FAILURE: d,
         DOMAIN_MIGRATION_SKIP: f

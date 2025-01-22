@@ -12,10 +12,10 @@ n.Z = (e) => {
         i,
         o,
         { guildFeature: f, guild: u, className: p, hideTooltip: x = !1, tooltipPosition: m = 'left', onClick: g } = e,
-        b = u.hasFeature(f),
-        h = (0, r._p)(f);
-    return (b
-        ? (null != h && (o = c.intl.string(c.t.hUgjyM)),
+        h = u.hasFeature(f),
+        C = (0, r._p)(f);
+    return (h
+        ? (null != C && (o = c.intl.string(c.t.hUgjyM)),
           (n = (0, t.jsxs)(t.Fragment, {
               children: [
                   (0, t.jsx)(s.Z, { className: d.unlockedIcon }),
@@ -26,14 +26,14 @@ n.Z = (e) => {
                   })
               ]
           })))
-        : (null != h && (o = c.intl.string(c.t.L2wYYm)),
+        : (null != C && (o = c.intl.string(c.t.L2wYYm)),
           (n = (0, t.jsxs)(t.Fragment, {
               children: [
                   (0, t.jsx)(s.Z, { className: d.icon }),
                   (0, t.jsx)(l.Heading, {
                       variant: 'eyebrow',
                       className: d.description,
-                      children: null != h && (0, r.e9)(h)
+                      children: null != C && (0, r.e9)(C)
                   })
               ]
           }))),
@@ -53,7 +53,7 @@ n.Z = (e) => {
                           children: n
                       })
               })),
-    null == g || b)
+    null == g || h)
         ? i
         : (0, t.jsx)(l.Clickable, {
               onClick: g,

@@ -1,5 +1,5 @@
-var i, a, s;
-function o(e, n, r) {
+var i, a, o;
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -23,12 +23,12 @@ r.d(n, {
         return a;
     },
     xQ: function () {
-        return s;
+        return o;
     }
 });
 class l {
     constructor(e) {
-        o(this, 'id', void 0), o(this, 'text', void 0), (this.id = e), (this.text = e);
+        s(this, 'id', void 0), s(this, 'text', void 0), (this.id = e), (this.text = e);
     }
 }
 !(function (e) {
@@ -39,4 +39,4 @@ class l {
     })(a || (a = {})),
     !(function (e) {
         (e.USER = '@'), (e.TEXT_CHANNEL = '#'), (e.VOICE_CHANNEL = '!'), (e.GUILD = '*'), (e.APPLICATION = '$');
-    })(s || (s = {}));
+    })(o || (o = {}));

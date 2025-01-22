@@ -28,8 +28,8 @@ var i = n(200651),
     E = n(88101),
     b = n(576954),
     Z = n(765104),
-    S = n(122707),
-    N = n(779836),
+    N = n(122707),
+    S = n(779836),
     T = n(23750),
     j = n(496675),
     A = n(306680),
@@ -124,8 +124,8 @@ function et(e) {
         eb = p.isForumPost() && !ef ? (0, i.jsx)(f.Z, { postId: p.id }) : null,
         eZ = (0, C.Z)(p.id);
     (0, K.Z)();
-    let eS = null,
-        eN = [],
+    let eN = null,
+        eS = [],
         eT = el.map((e, t) => {
             if (e.type === X.ys_.DIVIDER) {
                 var n, l;
@@ -133,7 +133,7 @@ function et(e) {
                 return null != eo
                     ? null
                     : e.isSummaryDivider
-                      ? (0, i.jsx)(N.Z, {
+                      ? (0, i.jsx)(S.Z, {
                             index: t,
                             item: e,
                             channel: p,
@@ -181,8 +181,8 @@ function et(e) {
             if (null != eo && eo > e.content.timestamp.getTime() * R.Z.Millis.SECOND) return;
             let r = j.Z.can(X.Plq.CREATE_INSTANT_INVITE, p);
             if ((0, O.Z)(e.content, r)) return;
-            e.type === X.ys_.MESSAGE && null == eS && (eS = e);
-            let a = e.groupId === (null == eS ? void 0 : eS.groupId) ? eS.content.id : e.groupId,
+            e.type === X.ys_.MESSAGE && null == eN && (eN = e);
+            let a = e.groupId === (null == eN ? void 0 : eN.groupId) ? eN.content.id : e.groupId,
                 s = e.type === X.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
             return (0, i.jsx)(
                 s,
@@ -199,7 +199,7 @@ function et(e) {
                 e.content.id
             );
         });
-    eN.push(...eT);
+    eS.push(...eT);
     let ej = el[el.length - 1];
     if (
         (null != eh &&
@@ -214,7 +214,7 @@ function et(e) {
                             author: eh
                         })
                     );
-                eN.push(
+                eS.push(
                     (0, i.jsx)(
                         ee,
                         {
@@ -231,7 +231,7 @@ function et(e) {
         U.hasMoreBefore && null == eo)
     ) {
         U.length > 0 &&
-            eN.unshift(
+            eS.unshift(
                 (0, i.jsx)(
                     'div',
                     {
@@ -245,7 +245,7 @@ function et(e) {
             );
         let { useReducedMotion: e } = c.Z;
         ((e && ep()) || !e) &&
-            eN.unshift(
+            eS.unshift(
                 (0, i.jsx)(
                     z.ZP,
                     {
@@ -258,7 +258,7 @@ function et(e) {
     }
     if (
         ((!U.hasMoreBefore || null != eo) &&
-            eN.unshift(
+            eS.unshift(
                 (0, i.jsx)(
                     m.Z,
                     {
@@ -269,7 +269,7 @@ function et(e) {
                 )
             ),
         U.hasMoreAfter &&
-            eN.push(
+            eS.push(
                 (0, i.jsx)(
                     z.ZP,
                     {
@@ -279,7 +279,7 @@ function et(e) {
                     'has-more-after'
                 )
             ),
-        !ec && em && ep() && eN.push((0, i.jsx)(W.Z, { channel: p })),
+        !ec && em && ep() && eS.push((0, i.jsx)(W.Z, { channel: p })),
         et > 0 && en && ep())
     ) {
         let e, t;
@@ -288,7 +288,7 @@ function et(e) {
             a = (0, M.KC)(new Date(), new Date(r));
         if ((A.ZP.isEstimated(p.id) ? ((e = a ? Q.t.wvtbbG : Q.t.tHqbtr), (t = Q.t.vaPWFR)) : ((e = a ? Q.t.BctFHx : Q.t['3wXb9P']), (t = Q.t['4H8ldH'])), eg && (0, o.tW)(p) && eI.includes(Y.E.SUMMARIES))) {
             let n = A.ZP.ackMessageId(p.id),
-                a = (0, S.q)(p.id, A.ZP.getOldestUnreadMessageId(p.id));
+                a = (0, N.q)(p.id, A.ZP.getOldestUnreadMessageId(p.id));
             if (
                 ((0, d.yw)(X.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
                     num_unread_summaries: a,
@@ -444,7 +444,7 @@ function et(e) {
                     });
     }
     return {
-        channelStreamMarkup: eN,
+        channelStreamMarkup: eS,
         newMessagesBar: l,
         jumpToPresentBar: s,
         forumPostActionBar: eb,

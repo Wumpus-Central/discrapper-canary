@@ -1,79 +1,79 @@
-var e = n(67867),
-    o = n(668530),
-    i = n(938988),
-    u = n(821819),
-    s = n(948634),
-    c = n(730427),
-    f = n(13780),
-    a = n(735471),
-    p = n(982665),
-    v = n(250765),
-    l = n(414847),
-    y = n(349446).f,
-    h = n(804104).forEach,
-    x = n(447631),
-    d = n(29461),
-    g = d.set,
-    b = d.getterFor;
-t.exports = function (t, r, n) {
-    var d,
-        m = -1 !== t.indexOf('Map'),
-        S = -1 !== t.indexOf('Weak'),
-        w = m ? 'set' : 'add',
-        O = o[t],
-        j = O && O.prototype,
-        A = {};
+var i = r(67867),
+    a = r(668530),
+    o = r(938988),
+    s = r(821819),
+    l = r(948634),
+    u = r(730427),
+    c = r(13780),
+    d = r(735471),
+    f = r(982665),
+    p = r(250765),
+    h = r(414847),
+    _ = r(349446).f,
+    m = r(804104).forEach,
+    g = r(447631),
+    E = r(29461),
+    v = E.set,
+    y = E.getterFor;
+e.exports = function (e, n, r) {
+    var E,
+        b = -1 !== e.indexOf('Map'),
+        I = -1 !== e.indexOf('Weak'),
+        T = b ? 'set' : 'add',
+        S = a[e],
+        A = S && S.prototype,
+        C = {};
     if (
-        x &&
-        a(O) &&
-        (S ||
-            (j.forEach &&
-                !u(function () {
-                    new O().entries().next();
+        g &&
+        d(S) &&
+        (I ||
+            (A.forEach &&
+                !s(function () {
+                    new S().entries().next();
                 })))
     ) {
-        var E = (d = r(function (r, n) {
-                g(f(r, E), {
-                    type: t,
-                    collection: new O()
+        var N = (E = n(function (n, r) {
+                v(c(n, N), {
+                    type: e,
+                    collection: new S()
                 }),
-                    !v(n) &&
-                        c(n, r[w], {
-                            that: r,
-                            AS_ENTRIES: m
+                    !p(r) &&
+                        u(r, n[T], {
+                            that: n,
+                            AS_ENTRIES: b
                         });
             })).prototype,
-            P = b(t);
-        h(['add', 'clear', 'delete', 'forEach', 'get', 'has', 'set', 'keys', 'values', 'entries'], function (t) {
-            var r = 'add' === t || 'set' === t;
-            t in j &&
-                !(S && 'clear' === t) &&
-                s(E, t, function (n, e) {
-                    var o = P(this).collection;
-                    if (!r && S && !p(n)) return 'get' === t && void 0;
-                    var i = o[t](0 === n ? 0 : n, e);
-                    return r ? this : i;
+            R = y(e);
+        m(['add', 'clear', 'delete', 'forEach', 'get', 'has', 'set', 'keys', 'values', 'entries'], function (e) {
+            var n = 'add' === e || 'set' === e;
+            e in A &&
+                !(I && 'clear' === e) &&
+                l(N, e, function (r, i) {
+                    var a = R(this).collection;
+                    if (!n && I && !f(r)) return 'get' === e && void 0;
+                    var o = a[e](0 === r ? 0 : r, i);
+                    return n ? this : o;
                 });
         }),
-            S ||
-                y(E, 'size', {
+            I ||
+                _(N, 'size', {
                     configurable: !0,
                     get: function () {
-                        return P(this).collection.size;
+                        return R(this).collection.size;
                     }
                 });
-    } else (d = n.getConstructor(r, t, m, w)), i.enable();
+    } else (E = r.getConstructor(n, e, b, T)), o.enable();
     return (
-        l(d, t, !1, !0),
-        (A[t] = d),
-        e(
+        h(E, e, !1, !0),
+        (C[e] = E),
+        i(
             {
                 global: !0,
                 forced: !0
             },
-            A
+            C
         ),
-        !S && n.setStrong(d, t, m),
-        d
+        !I && r.setStrong(E, e, b),
+        E
     );
 };

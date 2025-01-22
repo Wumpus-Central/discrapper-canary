@@ -1,6 +1,6 @@
 r.d(n, {
     F: function () {
-        return N;
+        return C;
     },
     X: function () {
         return S;
@@ -8,22 +8,22 @@ r.d(n, {
 });
 var i,
     a,
-    s,
-    o = r(47120);
+    o,
+    s = r(47120);
 var l = r(200651),
     u = r(192379),
     c = r(120356),
     d = r.n(c),
     f = r(512722),
-    _ = r.n(f),
+    p = r.n(f),
     h = r(866442),
-    p = r(692547),
+    _ = r(692547),
     m = r(84735),
     g = r(481060),
     E = r(540059),
     v = r(981631),
-    I = r(592901);
-function T(e, n, r) {
+    y = r(592901);
+function b(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -42,39 +42,39 @@ function T(e, n, r) {
     !(function (e) {
         (e.TOP = 'top'), (e.CENTER = 'center');
     })(a || (a = {}));
-let b = {
-        BOX: I.box,
-        ROUND: I.round,
-        SMALL_BOX: I.smallBox
+let I = {
+        BOX: y.box,
+        ROUND: y.round,
+        SMALL_BOX: y.smallBox
     },
-    y = {
-        top: I.alignTop,
-        center: I.alignCenter
+    T = {
+        top: y.alignTop,
+        center: y.alignCenter
     };
-class S extends (s = u.PureComponent) {
+class S extends (o = u.PureComponent) {
     render() {
-        let { disabled: e, readOnly: n, value: r, align: i = 'center', className: a, innerClassName: s, children: o, size: u, reverse: c, displayOnly: f, type: _, onClick: h } = this.props,
-            p =
-                null != o
+        let { disabled: e, readOnly: n, value: r, align: i = 'center', className: a, innerClassName: o, children: s, size: u, reverse: c, displayOnly: f, type: p, onClick: h } = this.props,
+            _ =
+                null != s
                     ? (0, l.jsx)('div', {
-                          className: d()(I.label, e ? I.labelDisabled : I.labelClickable, c ? I.labelReversed : I.labelForward),
+                          className: d()(y.label, e ? y.labelDisabled : y.labelClickable, c ? y.labelReversed : y.labelForward),
                           style: { lineHeight: ''.concat(u, 'px') },
-                          children: o
+                          children: s
                       })
                     : null,
             g = f ? 'span' : 'label',
-            E = this.props.disabled ? I.inputDisabled : this.props.readOnly ? I.inputReadonly : I.inputDefault;
+            E = this.props.disabled ? y.inputDisabled : this.props.readOnly ? y.inputReadonly : y.inputDefault;
         return (0, l.jsxs)(g, {
-            className: d()(e ? I.checkboxWrapperDisabled : I.checkboxWrapper, y[i], a, {
-                [I.row]: 'row' === _,
-                [I.checked]: r
+            className: d()(e ? y.checkboxWrapperDisabled : y.checkboxWrapper, T[i], a, {
+                [y.row]: 'row' === p,
+                [y.checked]: r
             }),
             children: [
-                c ? p : null,
+                c ? _ : null,
                 !f &&
                     (0, l.jsx)(m.t, {
                         children: (0, l.jsx)('input', {
-                            className: d()(s, E),
+                            className: d()(o, E),
                             type: 'checkbox',
                             onClick: h,
                             onChange: e || n ? v.dG4 : this.handleChange,
@@ -85,14 +85,14 @@ class S extends (s = u.PureComponent) {
                             }
                         })
                     }),
-                (0, l.jsx)(N, { ...this.props }),
-                c ? null : p
+                (0, l.jsx)(C, { ...this.props }),
+                c ? null : _
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            T(this, 'handleChange', (e) => {
+            b(this, 'handleChange', (e) => {
                 let { onChange: n } = this.props;
                 null == n || n(e, e.currentTarget.checked);
             });
@@ -100,56 +100,56 @@ class S extends (s = u.PureComponent) {
 }
 function A(e, n) {
     var r;
-    let { value: i, type: a, color: s } = e,
-        o = null !== (r = e.style) && void 0 !== r ? r : {};
-    if (!1 === i) return o;
-    if (((o = { ...o }), null == s)) {
+    let { value: i, type: a, color: o } = e,
+        s = null !== (r = e.style) && void 0 !== r ? r : {};
+    if (!1 === i) return s;
+    if (((s = { ...s }), null == o)) {
         if (!n)
             switch (a) {
                 case 'default':
-                    o.borderColor = 'var(--control-brand-foreground)';
+                    s.borderColor = 'var(--control-brand-foreground)';
                     break;
                 case 'ghost':
-                    (o.borderColor = 'var(--brand-15a)'), (o.backgroundColor = 'var(--brand-15a)');
+                    (s.borderColor = 'var(--brand-15a)'), (s.backgroundColor = 'var(--brand-15a)');
                     break;
                 case 'row':
                 case 'inverted':
-                    (o.borderColor = 'var(--brand-400)'), (o.backgroundColor = 'var(--brand-500)');
+                    (s.borderColor = 'var(--brand-400)'), (s.backgroundColor = 'var(--brand-500)');
             }
     } else
         switch (a) {
             case 'default':
-                o.borderColor = s;
+                s.borderColor = o;
                 break;
             case 'ghost':
-                if (s.startsWith('var(--')) {
-                    let e = ''.concat(s.slice(0, -1), '-hsl)');
-                    (o.borderColor = 'rgba('.concat(e, ', 0.15)')), (o.backgroundColor = 'rgba('.concat(e, ', 0.15)'));
-                } else _()((0, h.FX)(s), 'Checkbox: '.concat(s, ' is not a valid hex color')), (o.borderColor = (0, h.wK)(s, 0.15)), (o.backgroundColor = (0, h.wK)(s, 0.15));
+                if (o.startsWith('var(--')) {
+                    let e = ''.concat(o.slice(0, -1), '-hsl)');
+                    (s.borderColor = 'rgba('.concat(e, ', 0.15)')), (s.backgroundColor = 'rgba('.concat(e, ', 0.15)'));
+                } else p()((0, h.FX)(o), 'Checkbox: '.concat(o, ' is not a valid hex color')), (s.borderColor = (0, h.wK)(o, 0.15)), (s.backgroundColor = (0, h.wK)(o, 0.15));
                 break;
             case 'row':
             case 'inverted':
-                (o.backgroundColor = s), (o.borderColor = s);
+                (s.backgroundColor = o), (s.borderColor = o);
         }
-    return o;
+    return s;
 }
-function N(e) {
+function C(e) {
     let n = (0, E.Q3)('Checkbox'),
-        { indicatorClassName: r, value: i, size: a, shape: s, checkboxColor: o, type: c, color: f, disabled: _ } = e,
+        { indicatorClassName: r, value: i, size: a, shape: o, checkboxColor: s, type: c, color: f, disabled: p } = e,
         h = A(e, n),
-        m = u.useMemo(() => (i ? (n ? p.Z.colors.WHITE.css : 'inverted' === c || 'row' === c ? p.Z.colors.WHITE.css : null != f ? f : p.Z.unsafe_rawColors.BRAND_500.css) : p.Z.unsafe_rawColors.TRANSPARENT.css), [i, c, f, n]);
+        m = u.useMemo(() => (i ? (n ? _.Z.colors.WHITE.css : 'inverted' === c || 'row' === c ? _.Z.colors.WHITE.css : null != f ? f : _.Z.unsafe_rawColors.BRAND_500.css) : _.Z.unsafe_rawColors.TRANSPARENT.css), [i, c, f, n]);
     return (0, l.jsx)('div', {
-        className: d()(I.checkbox, s, r, {
-            [I.checked]: i,
-            [I.checkboxDisabled]: _
+        className: d()(y.checkbox, o, r, {
+            [y.checked]: i,
+            [y.checkboxDisabled]: p
         }),
         style: {
             width: a,
             height: a,
-            borderColor: o,
+            borderColor: s,
             ...h
         },
-        children: (0, l.jsx)(C, {
+        children: (0, l.jsx)(N, {
             isVisualRefreshEnabled: n,
             size: 'sm',
             color: m,
@@ -157,21 +157,21 @@ function N(e) {
         })
     });
 }
-function C(e) {
+function N(e) {
     let { isVisualRefreshEnabled: n, ...r } = e;
     return n ? (0, l.jsx)(g.CheckmarkSmallBoldIcon, { ...r }) : (0, l.jsx)(g.CheckmarkLargeIcon, { ...r });
 }
-T(S, 'Types', i),
-    T(S, 'Shapes', b),
-    T(S, 'Aligns', a),
-    T(S, 'defaultProps', {
+b(S, 'Types', i),
+    b(S, 'Shapes', I),
+    b(S, 'Aligns', a),
+    b(S, 'defaultProps', {
         size: 24,
         disabled: !1,
         readOnly: !1,
         displayOnly: !1,
         value: !1,
         type: 'default',
-        shape: b.BOX,
+        shape: I.BOX,
         align: 'center',
         onChange: v.dG4,
         reverse: !1

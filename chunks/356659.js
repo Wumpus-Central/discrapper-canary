@@ -6,13 +6,13 @@ r.d(n, {
         return h;
     },
     D5: function () {
-        return o;
+        return s;
     },
     D_: function () {
         return c;
     },
     EF: function () {
-        return _;
+        return p;
     },
     G$: function () {
         return d;
@@ -24,31 +24,31 @@ r.d(n, {
         return E;
     },
     JO: function () {
-        return N;
+        return C;
     },
     Kw: function () {
         return R;
     },
     MG: function () {
-        return T;
+        return b;
     },
     OT: function () {
         return i;
     },
     Qr: function () {
-        return y;
+        return T;
     },
     Ut: function () {
-        return b;
+        return I;
     },
     WM: function () {
-        return p;
+        return _;
     },
     X9: function () {
-        return s;
+        return o;
     },
     XH: function () {
-        return I;
+        return y;
     },
     _U: function () {
         return w;
@@ -60,7 +60,7 @@ r.d(n, {
         return S;
     },
     i$: function () {
-        return L;
+        return x;
     },
     jF: function () {
         return f;
@@ -84,16 +84,16 @@ r.d(n, {
         return P;
     },
     xx: function () {
-        return x;
+        return L;
     },
     yl: function () {
-        return C;
+        return N;
     }
 });
 var i,
     a,
-    s,
     o,
+    s,
     l = r(710845),
     u = r(70956);
 !(function (e) {
@@ -104,33 +104,33 @@ var i,
     })(a || (a = {})),
     !(function (e) {
         (e.DECOUPLED = 'decoupled'), (e.VIEWER = 'viewer'), (e.STREAMER = 'streamer');
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         (e[(e.Error = 0)] = 'Error'), (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled');
-    })(o || (o = {}));
+    })(s || (s = {}));
 let c = 'alt+c',
     d = 6 * u.Z.Millis.SECOND,
     f = new l.Z('Clips'),
-    _ = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
+    p = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
     h = 3,
-    p = 1,
+    _ = 1,
     m = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
     g = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
     E = 0.1,
     v = 25,
-    I = 0,
-    T = 200,
-    b = 'clips-edit',
-    y = 'clips-gallery',
+    y = 0,
+    b = 200,
+    I = 'clips-edit',
+    T = 'clips-gallery',
     S = 640,
     A = 360,
-    N = 100,
-    C = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
+    C = 100,
+    N = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
     R = 15,
     O = 30000,
     D = 30,
-    L = 10,
-    x = 14 * u.Z.Millis.DAY,
+    x = 10,
+    L = 14 * u.Z.Millis.DAY,
     w = 5,
     P = 5,
     M = 1;

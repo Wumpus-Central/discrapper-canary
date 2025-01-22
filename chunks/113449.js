@@ -1,6 +1,6 @@
 r.d(n, {
     Q4: function () {
-        return o;
+        return s;
     },
     YF: function () {
         return l;
@@ -11,11 +11,11 @@ r.d(n, {
 });
 var i = r(630388),
     a = r(526761);
-function s(e) {
+function o(e) {
     return i.M1(e, a.vc.UNREADS_ALL_MESSAGES, a.vc.UNREADS_ONLY_MENTIONS);
 }
-function o(e, n) {
-    return i.pj(s(e), n);
+function s(e, n) {
+    return i.pj(o(e), n);
 }
 let l = (e) => i.M1(e, a.ic.UNREADS_ALL_MESSAGES, a.ic.UNREADS_ONLY_MENTIONS);
 function u(e, n) {

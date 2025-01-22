@@ -5,32 +5,32 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(481060),
     c = r(665175);
 function d(e) {
     return '' === e || '-' === e;
 }
 let f = (e) => {
-    let { value: n, onChange: r, className: i, minValue: o, maxValue: f } = e,
-        [_, h] = s.useState(n),
-        p = d(_) || (null != o && _ <= o),
-        m = d(_) || (null != f && _ >= f),
+    let { value: n, onChange: r, className: i, minValue: s, maxValue: f } = e,
+        [p, h] = o.useState(n),
+        _ = d(p) || (null != s && p <= s),
+        m = d(p) || (null != f && p >= f),
         g = (e) => {
-            r(d(e) ? (null != o ? o : 0) : e), h(e);
+            r(d(e) ? (null != s ? s : 0) : e), h(e);
         },
         E = (e) => {
-            if ((e.stopPropagation(), !p)) g(_ - 1);
+            if ((e.stopPropagation(), !_)) g(p - 1);
         },
         v = (e) => {
-            if ((e.stopPropagation(), !m)) g(_ + 1);
+            if ((e.stopPropagation(), !m)) g(p + 1);
         },
-        I = (e) => {
+        y = (e) => {
             if (d(e)) return g(e);
             let n = parseInt(e);
-            return isNaN(n) ? void 0 : null != f && n >= f ? g(f) : null != o && n <= o ? g(o) : g(n);
+            return isNaN(n) ? void 0 : null != f && n >= f ? g(f) : null != s && n <= s ? g(s) : g(n);
         };
     return (0, a.jsx)(u.FocusRing, {
         within: !0,
@@ -40,16 +40,16 @@ let f = (e) => {
                 (0, a.jsx)(u.Clickable, {
                     onClick: E,
                     tabIndex: -1,
-                    className: l()(c.iconWrapper, c.__invalid_subtract, { [c.disabled]: p }),
+                    className: l()(c.iconWrapper, c.__invalid_subtract, { [c.disabled]: _ }),
                     children: (0, a.jsx)(u.MinusIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: l()(c.icon, { [c.disabled]: p })
+                        className: l()(c.icon, { [c.disabled]: _ })
                     })
                 }),
                 (0, a.jsx)(u.TextInput, {
-                    value: ''.concat(_),
-                    onChange: I,
+                    value: ''.concat(p),
+                    onChange: y,
                     inputClassName: c.value
                 }),
                 (0, a.jsx)(u.Clickable, {

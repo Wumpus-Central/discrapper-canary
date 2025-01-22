@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(733860);
 var a = r(653041);
-var s = r(411104);
-var o = r(47120);
+var o = r(411104);
+var s = r(47120);
 var l = r(512722),
     u = r.n(l),
     c = r(392711),
     d = r.n(c),
     f = r(626135),
-    _ = r(70956),
+    p = r(70956),
     h = r(996106),
-    p = r(863141),
+    _ = r(863141),
     m = r(34954),
     g = r(186901),
     E = r(981631);
@@ -31,13 +31,13 @@ function v(e, n, r) {
         e
     );
 }
-let I = 'RPC_STORE_WAIT',
-    T = [];
-function b(e, n) {
+let y = 'RPC_STORE_WAIT',
+    b = [];
+function I(e, n) {
     return d().isEqual(e, d().pick(n, Object.keys(e)));
 }
-function y(e) {
-    return !!T.includes(e) || (T.unshift(e), T.splice(50), !1);
+function T(e) {
+    return !!b.includes(e) || (b.unshift(e), b.splice(50), !1);
 }
 class S {
     registerTransport(e) {
@@ -59,7 +59,7 @@ class S {
                 e.close(E.$VG.CLOSE_NORMAL, 'User logged out');
                 return;
             }
-            n.user = (0, p.Z)(r);
+            n.user = (0, _.Z)(r);
         }
         this.dispatch(e, null, E.Etm.DISPATCH, E.zMe.READY, n);
     }
@@ -181,10 +181,10 @@ class S {
         d().remove(this.subscriptions, (n) => n.socket === e);
     }
     dispatchToSubscriptions(e, n, r, i) {
-        !(null != i && '' !== i && y(i)) &&
+        !(null != i && '' !== i && T(i)) &&
             this.subscriptions.forEach((i) => {
                 var a;
-                if (i.evt === e && ('function' != typeof n || !!n(i)) && ('object' != typeof n || !!b(n, null !== (a = i.args) && void 0 !== a ? a : {}))) this.dispatch(i.socket, null, E.Etm.DISPATCH, i.evt, r);
+                if (i.evt === e && ('function' != typeof n || !!n(i)) && ('object' != typeof n || !!I(n, null !== (a = i.args) && void 0 !== a ? a : {}))) this.dispatch(i.socket, null, E.Etm.DISPATCH, i.evt, r);
             });
     }
     updateSubscriptions() {
@@ -196,16 +196,16 @@ class S {
         let i = n();
         if (i || 0 === r) return Promise.resolve(i);
         let a = d().uniqueId(),
-            s = () => this.removeSubscription(e, I, { uniqueId: a });
-        return new Promise((i, o) => {
+            o = () => this.removeSubscription(e, y, { uniqueId: a });
+        return new Promise((i, s) => {
             let l = setTimeout(() => {
-                s(), o(Error('timeout'));
-            }, r * _.Z.Millis.SECOND);
-            this.addSubscription(e, I, { uniqueId: a }, () => {
+                o(), s(Error('timeout'));
+            }, r * p.Z.Millis.SECOND);
+            this.addSubscription(e, y, { uniqueId: a }, () => {
                 let e = n();
                 e && (clearTimeout(l), i(e));
             });
-        }).then((e) => (s(), e));
+        }).then((e) => (o(), e));
     }
     constructor(e) {
         v(this, 'getCurrentUser', () => null), v(this, 'onConnect', () => {}), v(this, 'onDisconnect', () => {}), v(this, 'getJoi', void 0), v(this, 'events', {}), v(this, 'commands', {}), v(this, 'sockets', new Set()), v(this, 'subscriptions', []), v(this, 'abortControllers', new Map()), (this.getJoi = e);

@@ -28,9 +28,9 @@ var i = n(200651),
     O = n(937579),
     R = n(471309),
     P = n(91802),
-    y = n(104494),
-    B = n(639119),
-    D = n(2359),
+    D = n(104494),
+    y = n(639119),
+    B = n(2359),
     Z = n(132547),
     L = n(474936),
     M = n(981631),
@@ -43,8 +43,8 @@ t.Z = function (e) {
         F = (0, l.e7)([N.ZP], () => N.ZP.hasFetchedSubscriptions()),
         U = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
         V = null == U ? void 0 : U.id,
-        G = (0, B.N)(),
-        H = (0, y.Ng)(),
+        G = (0, y.N)(),
+        H = (0, D.Ng)(),
         Y = (0, _.V)(),
         [W, z] = r.useState(!0),
         K = r.useRef(0),
@@ -91,7 +91,7 @@ t.Z = function (e) {
     return F && Y && !W
         ? (0, i.jsx)(x.Gt, {
               value: w,
-              children: (0, i.jsx)(D.Z, { entrypoint: t })
+              children: (0, i.jsx)(B.Z, { entrypoint: t })
           })
         : (0, i.jsx)('div', {
               className: a()(k.container, k.loading),

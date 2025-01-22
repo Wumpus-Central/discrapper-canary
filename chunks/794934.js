@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(87290),
     a = r(685816),
-    s = r(565669);
-function o(e, n, r) {
+    o = r(565669);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -24,6 +24,6 @@ class l {
         return new l(e);
     }
     constructor(e) {
-        o(this, 'subblocks', void 0), (this.type = a.z.FEATURED), (this.subblocks = e.subblocks.map((e) => (e.type === i.O.CATEGORY ? s.H.fromServer(e) : e)));
+        s(this, 'subblocks', void 0), (this.type = a.z.FEATURED), (this.subblocks = e.subblocks.map((e) => (e.type === i.O.CATEGORY ? o.H.fromServer(e) : e)));
     }
 }

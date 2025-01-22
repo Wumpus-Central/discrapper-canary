@@ -3,13 +3,13 @@ r.d(n, {
         return u;
     },
     H: function () {
-        return o;
+        return s;
     }
 });
 var i = r(724458);
 var a = r(192379),
-    s = r(392711);
-let o = (e) =>
+    o = r(392711);
+let s = (e) =>
         e.sort((e, n) => {
             var r, i;
             return (null !== (r = e.zIndex) && void 0 !== r ? r : 0) - (null !== (i = n.zIndex) && void 0 !== i ? i : 0);
@@ -18,7 +18,7 @@ let o = (e) =>
     u = (e) =>
         a.useMemo(() => {
             if (null == e) return e;
-            let n = (0, s.cloneDeep)(e),
+            let n = (0, o.cloneDeep)(e),
                 r = l(
                     0,
                     n.effects.reduce((e, n) => {

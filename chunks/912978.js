@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(411104);
-var s = r(47120);
-var o = r(836560);
+var o = r(47120);
+var s = r(836560);
 var l = r(264344),
     u = r.n(l),
     c = r(649318);
@@ -23,7 +23,7 @@ function d(e, n, r) {
         e
     );
 }
-class f extends o.EventEmitter {
+class f extends s.EventEmitter {
     addStream(e, n, r) {
         let i = !1;
         !this.streams.some((e) => e.ssrc === n) &&
@@ -83,10 +83,10 @@ class f extends o.EventEmitter {
     getSSRCs(e) {
         let n = this.streams.map((e, n) => {
             let { cname: r, ssrc: i, type: a } = e,
-                s = this.activeAudioSSRCs[r],
-                o = this.activeVideoSSRCs[r],
+                o = this.activeAudioSSRCs[r],
+                s = this.activeVideoSSRCs[r],
                 l = ''.concat(a, '_inbound_').concat(n);
-            return [i, r, a, s === i || o === i ? this.direction : c.Ns.INACTIVE, l];
+            return [i, r, a, o === i || s === i ? this.direction : c.Ns.INACTIVE, l];
         });
         if ('Firefox' !== u().name) return this.connected ? n : [];
         let r = this.outboundStreams.map((e, n) => [0, 'outbound', e.type, (0, c.Mg)(e.direction), ''.concat(e.type, '_outbound_').concat(n)]);
@@ -98,7 +98,7 @@ class f extends o.EventEmitter {
                 .concat(n)
                 .slice(0, r.length)
                 .map((e, n) => {
-                    let [r, i, a, s, o] = e;
+                    let [r, i, a, o, s] = e;
                     return [r, i, a, (0, c.Mg)(this.outboundStreams[n].direction), this.outboundStreams[n].mid];
                 });
         }
@@ -108,21 +108,21 @@ class f extends o.EventEmitter {
             r = this.audioPayloadType,
             i = this.videoCodec,
             a = this.videoPayloadType,
-            s = this.rtxPayloadType,
-            o = this.sdp;
-        if (null == n || null == r || null == i || null == a || null == s || null == o || null == this.direction)
+            o = this.rtxPayloadType,
+            s = this.sdp;
+        if (null == n || null == r || null == i || null == a || null == o || null == s || null == this.direction)
             throw Error(
                 'Invalid payload: audioCodec: '
                     .concat(n, ', audioPayloadType: ')
                     .concat(null == r ? 'null' : r, ', videoCodec: ')
                     .concat(i, ', videoCodecPayloadType: ')
                     .concat(null == a ? 'null' : a, ', rtxPayloadType: ')
-                    .concat(null == s ? 'null' : s, ', sdp: ')
-                    .concat(o)
+                    .concat(null == o ? 'null' : o, ', sdp: ')
+                    .concat(s)
             );
         let l = (0, c.MP)({
             type: e,
-            baseSDP: o,
+            baseSDP: s,
             direction: this.direction,
             audioCodec: n,
             audioPayloadType: r,
@@ -130,7 +130,7 @@ class f extends o.EventEmitter {
             videoCodec: i,
             videoPayloadType: a,
             videoBitRate: 2500,
-            rtxPayloadType: s,
+            rtxPayloadType: o,
             ssrcs: this.getSSRCs(e),
             extensions: this.extensions
         });

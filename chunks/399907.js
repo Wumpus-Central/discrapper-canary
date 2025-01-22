@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(956067),
-    s = r(147913),
-    o = r(70956),
+    o = r(147913),
+    s = r(70956),
     l = r(640795),
     u = r(139674);
 function c(e, n, r) {
@@ -17,10 +17,10 @@ function c(e, n, r) {
         e
     );
 }
-let d = 4 * o.Z.Millis.HOUR;
-class f extends s.Z {
+let d = 4 * s.Z.Millis.HOUR;
+class f extends o.Z {
     _initialize() {
-        setTimeout(() => a.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => u.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, l.q)(), 10 * o.Z.Millis.SECOND), (this.intervalID = setInterval(l.q, d));
+        setTimeout(() => a.Z.timeAsync('\uD83D\uDCBE', 'getBlockedDomainList', () => u.Z.getBlockedDomainList()), 1000), setTimeout(() => (0, l.q)(), 10 * s.Z.Millis.SECOND), (this.intervalID = setInterval(l.q, d));
     }
     _terminate() {
         clearInterval(this.intervalID);

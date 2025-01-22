@@ -19,8 +19,8 @@ var i =
             return r && e(n.prototype, r), i && e(n, i), n;
         };
     })(),
-    s = r(192379),
-    o = d(s),
+    o = r(192379),
+    s = d(o),
     l = d(r(889678)),
     u = c(r(999385));
 function c(e) {
@@ -35,7 +35,7 @@ function d(e) {
 function f(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function _(e, n) {
+function p(e, n) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
 }
@@ -51,11 +51,11 @@ function h(e, n) {
     })),
         n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
 }
-var p = (n.ColorWrap = function (e) {
+var _ = (n.ColorWrap = function (e) {
     var n = (function (n) {
         function r(e) {
             f(this, r);
-            var n = _(this, (r.__proto__ || Object.getPrototypeOf(r)).call(this));
+            var n = p(this, (r.__proto__ || Object.getPrototypeOf(r)).call(this));
             return (
                 (n.handleChange = function (e, r) {
                     if (u.simpleCheckForValidColor(e)) {
@@ -85,7 +85,7 @@ var p = (n.ColorWrap = function (e) {
                         key: 'render',
                         value: function () {
                             var n = {};
-                            return this.props.onSwatchHover && (n.onSwatchHover = this.handleSwatchHover), o.default.createElement(e, i({}, this.props, this.state, { onChange: this.handleChange }, n));
+                            return this.props.onSwatchHover && (n.onSwatchHover = this.handleSwatchHover), s.default.createElement(e, i({}, this.props, this.state, { onChange: this.handleChange }, n));
                         }
                     }
                 ],
@@ -100,7 +100,7 @@ var p = (n.ColorWrap = function (e) {
             ),
             r
         );
-    })(s.PureComponent || s.Component);
+    })(o.PureComponent || o.Component);
     return (
         (n.propTypes = i({}, e.propTypes)),
         (n.defaultProps = i({}, e.defaultProps, {
@@ -114,4 +114,4 @@ var p = (n.ColorWrap = function (e) {
         n
     );
 });
-n.default = p;
+n.default = _;

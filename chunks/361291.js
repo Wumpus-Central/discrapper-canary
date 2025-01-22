@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(37113),
+    o = r(570140),
+    s = r(37113),
     l = r(65154);
 function u(e, n, r) {
     return (
@@ -16,10 +16,10 @@ function u(e, n, r) {
         e
     );
 }
-let c = o.tI.PRESET_VIDEO,
-    d = o.LY.RESOLUTION_720,
-    f = o.ws.FPS_30,
-    _ = !0;
+let c = s.tI.PRESET_VIDEO,
+    d = s.LY.RESOLUTION_720,
+    f = s.ws.FPS_30,
+    p = !0;
 function h(e) {
     let { settings: n } = e;
     if ((null == n ? void 0 : n.context) === l.Yn.STREAM) {
@@ -27,16 +27,16 @@ function h(e) {
         (d = n.qualityOptions.resolution), (f = n.qualityOptions.frameRate);
     }
 }
-function p(e) {
+function _(e) {
     let { preset: n, resolution: r, frameRate: i, soundshareEnabled: a } = e,
-        s = !1;
-    return null != n && ((c = n), (s = !0)), null != r && ((d = r), (s = !0)), null != i && ((f = i), (s = !0)), null != a && ((_ = a), (s = !0)), s;
+        o = !1;
+    return null != n && ((c = n), (o = !0)), null != r && ((d = r), (o = !0)), null != i && ((f = i), (o = !0)), null != a && ((p = a), (o = !0)), o;
 }
 class m extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var n, r;
-            (c = null !== (n = e.preset) && void 0 !== n ? n : o.tI.PRESET_VIDEO), (d = e.resolution), (f = e.fps), (_ = null === (r = e.soundshareEnabled) || void 0 === r || r);
+            (c = null !== (n = e.preset) && void 0 !== n ? n : s.tI.PRESET_VIDEO), (d = e.resolution), (f = e.fps), (p = null === (r = e.soundshareEnabled) || void 0 === r || r);
         }
     }
     getState() {
@@ -44,13 +44,13 @@ class m extends (i = a.ZP.PersistedStore) {
             preset: c,
             resolution: d,
             fps: f,
-            soundshareEnabled: _
+            soundshareEnabled: p
         };
     }
 }
 u(m, 'displayName', 'ApplicationStreamingSettingsStore'),
     u(m, 'persistKey', 'ApplicationStreamingSettingStore'),
-    (n.Z = new m(s.Z, {
+    (n.Z = new m(o.Z, {
         MEDIA_ENGINE_SET_GO_LIVE_SOURCE: h,
-        STREAM_UPDATE_SETTINGS: p
+        STREAM_UPDATE_SETTINGS: _
     }));

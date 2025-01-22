@@ -32,9 +32,9 @@ var i = n(399606),
     O = n(405991),
     R = n(24615),
     P = n(193943),
-    y = n(334347),
-    B = n(943734),
-    D = n(603076),
+    D = n(334347),
+    y = n(943734),
+    B = n(603076),
     Z = n(472656),
     L = n(912429),
     M = n(772969),
@@ -77,7 +77,7 @@ let w = (e, t, n) => ((0, r.wj)(e) ? t : n),
             emoji: {
                 title: g.intl.string(g.t['R2IV/f']),
                 description: g.intl.string(g.t.R5Xag4),
-                imageSource: y,
+                imageSource: D,
                 imageClassName: t.emojiImage
             },
             guildProfile: {
@@ -97,7 +97,7 @@ let w = (e, t, n) => ((0, r.wj)(e) ? t : n),
             longerMessages: {
                 title: g.intl.string(g.t.BUSciY),
                 description: g.intl.string(g.t.vN6Xpa),
-                imageSource: w(n, B, D),
+                imageSource: w(n, y, B),
                 imageClassName: t.longerMessagesImage
             },
             moreGuilds: {

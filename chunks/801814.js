@@ -1,5 +1,5 @@
 var i, a;
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -12,7 +12,7 @@ function s(e, n, r) {
         e
     );
 }
-function o() {
+function s() {
     return {
         num_failed: 0,
         num_delta_installed: 0,
@@ -75,9 +75,9 @@ class u {
         let r = n.foreground ? 'foreground' : 'background',
             i = ''.concat(r, '_download_ms_').concat(e.name),
             a = ''.concat(r, '_bytes_').concat(e.name),
-            s = Number((BigInt(e.now) - n.startTime + BigInt(999999)) / BigInt(1000000)),
-            o = !1 === e.receivedBytes ? 0 : e.receivedBytes;
-        n.foreground ? ((this._report.foreground_download_ms_total += s), (this._report.foreground_bytes_total += o)) : ((this._report.background_download_ms_total += s), (this._report.background_bytes_total += o)), this.incrementReportField(i, s), this.incrementReportField(a, o), delete this._downloadingModules[e.name];
+            o = Number((BigInt(e.now) - n.startTime + BigInt(999999)) / BigInt(1000000)),
+            s = !1 === e.receivedBytes ? 0 : e.receivedBytes;
+        n.foreground ? ((this._report.foreground_download_ms_total += o), (this._report.foreground_bytes_total += s)) : ((this._report.background_download_ms_total += o), (this._report.background_bytes_total += s)), this.incrementReportField(i, o), this.incrementReportField(a, s), delete this._downloadingModules[e.name];
     }
     handleInstallingModule(e) {
         if (!l(e.name)) {
@@ -100,9 +100,9 @@ class u {
         let r = n.foreground ? 'foreground' : 'background',
             i = ''.concat(r, '_install_ms_').concat(e.name),
             a = 'min_version_'.concat(e.name),
-            s = 'max_version_'.concat(e.name),
-            o = Number((BigInt(e.now) - n.startTime + BigInt(999999)) / BigInt(1000000));
-        n.foreground ? (this._report.foreground_install_ms_total += o) : (this._report.background_install_ms_total += o), this.incrementReportField(i, o), this.setReportFieldMinimum(a, n.oldVersion), e.succeeded ? (!0 === e.delta ? this._report.num_delta_installed++ : this._report.num_full_installed++, this.setReportFieldMaximum(s, n.newVersion)) : this._report.num_failed++, delete this._installingModules[e.name];
+            o = 'max_version_'.concat(e.name),
+            s = Number((BigInt(e.now) - n.startTime + BigInt(999999)) / BigInt(1000000));
+        n.foreground ? (this._report.foreground_install_ms_total += s) : (this._report.background_install_ms_total += s), this.incrementReportField(i, s), this.setReportFieldMinimum(a, n.oldVersion), e.succeeded ? (!0 === e.delta ? this._report.num_delta_installed++ : this._report.num_full_installed++, this.setReportFieldMaximum(o, n.newVersion)) : this._report.num_failed++, delete this._installingModules[e.name];
     }
     trackEvent(e) {
         switch (e.type) {
@@ -123,12 +123,12 @@ class u {
         return this._report;
     }
     reset() {
-        this._report = o();
+        this._report = s();
     }
     submissionReady() {
         return this._report.num_full_installed + this._report.num_failed + this._report.num_delta_installed + this._report.foreground_bytes_total + this._report.background_bytes_total !== 0 && !(Object.keys(this._installingModules).length > 0) && !(Object.keys(this._downloadingModules).length > 0) && !0;
     }
     constructor() {
-        s(this, '_installingModules', {}), s(this, '_downloadingModules', {}), s(this, '_report', void 0), (this._report = o());
+        o(this, '_installingModules', {}), o(this, '_downloadingModules', {}), o(this, '_report', void 0), (this._report = s());
     }
 }

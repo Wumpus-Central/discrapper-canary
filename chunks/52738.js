@@ -12,11 +12,11 @@ var i = (function () {
 function a(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function s(e, n) {
+function o(e, n) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
 }
-function o(e, n) {
+function s(e, n) {
     if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
     (e.prototype = Object.create(n && n.prototype, {
         constructor: {
@@ -36,7 +36,7 @@ var l = r(420633),
     f = (function (e) {
         function n(e) {
             a(this, n);
-            var r = s(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this)),
+            var r = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this)),
                 i = e || {
                     x: 0,
                     y: 0
@@ -44,7 +44,7 @@ var l = r(420633),
             return 'number' == typeof i.x && 'number' == typeof i.y ? ((r.x = new l(i.x)), (r.y = new l(i.y))) : (c(i.x instanceof l && i.y instanceof l, 'AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.'), (r.x = i.x), (r.y = i.y)), (r._listeners = {}), r;
         }
         return (
-            o(n, e),
+            s(n, e),
             i(n, [
                 {
                     key: 'setValue',

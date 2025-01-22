@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(653041);
-var s = r(412788),
-    o = r(594174),
+var o = r(412788),
+    s = r(594174),
     l = r(131681),
     u = r(932941),
     c = r(363072),
@@ -19,19 +19,19 @@ function f(e, n, r) {
         e
     );
 }
-let _ = null;
+let p = null;
 function h() {
     let e = (0, l.U)() ? [...u.pF, ...u.wq, ...u.$u] : [],
-        n = o.default.getCurrentUser();
+        n = s.default.getCurrentUser();
     if (null == n ? void 0 : n.isStaff()) {
         let n = r(932941).Bk;
         e.push(...n);
     }
-    (_ = new c.B()).addWords(e);
+    (p = new c.B()).addWords(e);
 }
-function p() {
+function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    null == _ && (_ = new c.B()), _.addWords(e);
+    null == p && (p = new c.B()), p.addWords(e);
 }
 function m() {
     h();
@@ -42,25 +42,25 @@ function g() {
 function E(e) {
     let { local: n, settings: r } = e;
     if (!n || r.type !== d.yP.PRELOADED_USER_SETTINGS) return !1;
-    null != _ && _.clear(), h();
+    null != p && p.clear(), h();
 }
-class v extends s.Z {
+class v extends o.Z {
     loadCache() {
         let e = this.readSnapshot(v.LATEST_SNAPSHOT_VERSION);
-        null != e && (_ = null != e.keywordTrie ? c.B.fromSnapshot(e.keywordTrie) : null);
+        null != e && (p = null != e.keywordTrie ? c.B.fromSnapshot(e.keywordTrie) : null);
     }
     takeSnapshot() {
         return {
             version: v.LATEST_SNAPSHOT_VERSION,
-            data: { keywordTrie: _ }
+            data: { keywordTrie: p }
         };
     }
     getKeywordTrie() {
-        return _;
+        return p;
     }
     initializeForKeywordTests() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        p(e);
+        _(e);
     }
     constructor() {
         super({

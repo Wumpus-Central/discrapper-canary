@@ -11,20 +11,20 @@ function r(e) {
 i = { value: !0 };
 var i,
     a,
-    s = 'https://js.stripe.com/v3',
-    o = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
+    o = 'https://js.stripe.com/v3',
+    s = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
     l = 'loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used',
     u = function () {
-        for (var e = document.querySelectorAll('script[src^="'.concat(s, '"]')), n = 0; n < e.length; n++) {
+        for (var e = document.querySelectorAll('script[src^="'.concat(o, '"]')), n = 0; n < e.length; n++) {
             var r = e[n];
-            if (!!o.test(r.src)) return r;
+            if (!!s.test(r.src)) return r;
         }
         return null;
     },
     c = function (e) {
         var n = e && !e.advancedFraudSignals ? '?advancedFraudSignals=false' : '',
             r = document.createElement('script');
-        r.src = ''.concat(s).concat(n);
+        r.src = ''.concat(o).concat(n);
         var i = document.head || document.body;
         if (!i) throw Error('Expected document.body not to be null. Stripe.js requires a <body> element.');
         return i.appendChild(r), r;
@@ -38,9 +38,9 @@ var i,
             });
     },
     f = null,
-    _ = null,
+    p = null,
     h = null,
-    p = function (e) {
+    _ = function (e) {
         return function () {
             e(Error('Failed to load Stripe.js'));
         };
@@ -65,7 +65,7 @@ var i,
                   try {
                       var i,
                           a = u();
-                      a && e ? console.warn(l) : a ? a && null !== h && null !== _ && (a.removeEventListener('load', h), a.removeEventListener('error', _), null === (i = a.parentNode) || void 0 === i || i.removeChild(a), (a = c(e))) : (a = c(e)), (h = m(n, r)), (_ = p(r)), a.addEventListener('load', h), a.addEventListener('error', _);
+                      a && e ? console.warn(l) : a ? a && null !== h && null !== p && (a.removeEventListener('load', h), a.removeEventListener('error', p), null === (i = a.parentNode) || void 0 === i || i.removeChild(a), (a = c(e))) : (a = c(e)), (h = m(n, r)), (p = _(r)), a.addEventListener('load', h), a.addEventListener('error', p);
                   } catch (e) {
                       r(e);
                       return;
@@ -85,19 +85,19 @@ var i,
         if (1 === Object.keys(e).length && 'boolean' == typeof e.advancedFraudSignals) return e;
         throw Error(n);
     },
-    I = !1,
-    T = function () {
+    y = !1,
+    b = function () {
         for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-        I = !0;
+        y = !0;
         var i = Date.now();
         return g(a).then(function (e) {
             return E(e, n, i);
         });
     };
-(T.setLoadParameters = function (e) {
+(b.setLoadParameters = function (e) {
     if (
         !(
-            I &&
+            y &&
             a &&
             Object.keys(v(e)).reduce(function (n, r) {
                 var i;
@@ -105,8 +105,8 @@ var i,
             }, !0)
         )
     ) {
-        if (I) throw Error('You cannot change load parameters after calling loadStripe');
+        if (y) throw Error('You cannot change load parameters after calling loadStripe');
         a = v(e);
     }
 }),
-    (n.loadStripe = T);
+    (n.loadStripe = b);

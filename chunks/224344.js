@@ -46,29 +46,29 @@ function n(e) {
             },
             e.COMMENT('%', '$', { relevance: 0 })
         ],
-        s = {
+        o = {
             begin: /\{/,
             end: /\}/,
             relevance: 0,
             contains: ['self', ...a]
         },
-        o = e.inherit(s, {
+        s = e.inherit(o, {
             relevance: 0,
             endsParent: !0,
-            contains: [s, ...a]
+            contains: [o, ...a]
         }),
         l = {
             begin: /\s+/,
             relevance: 0
         },
-        u = [o],
+        u = [s],
         c = [
             {
                 begin: /\[/,
                 end: /\]/,
                 endsParent: !0,
                 relevance: 0,
-                contains: [s, ...a]
+                contains: [o, ...a]
             }
         ],
         d = function (e, n) {
@@ -93,7 +93,7 @@ function n(e) {
                 starts: n
             };
         },
-        _ = function (n, r) {
+        p = function (n, r) {
             return e.inherit(
                 {
                     begin: '\\\\begin(?=[ \t]*(\\r?\\n[ \t]*)?\\{' + n + '\\})',
@@ -115,7 +115,7 @@ function n(e) {
                 excludeEnd: !0,
                 endsParent: !0
             }),
-        p = function (e) {
+        _ = function (e) {
             return {
                 className: 'string',
                 end: '(?=\\\\end\\{' + e + '\\})'
@@ -160,8 +160,8 @@ function n(e) {
             }),
             f('hyperref', { contains: [m('link')] }),
             f('href', d(c, { contains: [m('link')] })),
-            ...[].concat(...['', '\\*'].map((e) => [_('verbatim' + e, p('verbatim' + e)), _('filecontents' + e, d(u, p('filecontents' + e))), ...['', 'B', 'L'].map((n) => _(n + 'Verbatim' + e, d(c, p(n + 'Verbatim' + e))))])),
-            _('minted', d(c, d(u, p('minted')))),
+            ...[].concat(...['', '\\*'].map((e) => [p('verbatim' + e, _('verbatim' + e)), p('filecontents' + e, d(u, _('filecontents' + e))), ...['', 'B', 'L'].map((n) => p(n + 'Verbatim' + e, d(c, _(n + 'Verbatim' + e))))])),
+            p('minted', d(c, d(u, _('minted')))),
             ...a
         ]
     };

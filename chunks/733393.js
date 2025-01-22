@@ -5,19 +5,19 @@ r.d(n, {
 });
 var i = r(518263);
 var a = r(970173);
-var s = r(520712);
-var o = r(268111);
+var o = r(520712);
+var s = r(268111);
 var l = r(941497);
 var u = r(32026);
 var c = r(480839);
 var d = r(744285);
 var f = r(492257);
-var _ = r(873817);
+var p = r(873817);
 var h = r(710845),
-    p = r(358085),
+    _ = r(358085),
     m = r(998502);
 function g() {
-    if (p.isPlatformEmbedded) {
+    if (_.isPlatformEmbedded) {
         let e;
         try {
             e = m.ZP.requireModule('discord_erlpack');

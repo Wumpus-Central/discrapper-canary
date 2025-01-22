@@ -1,15 +1,15 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(829307),
     u = r(877837),
     c = r(492253),
     d = r(974727),
     f = r(278860),
-    _ = r(48254),
+    p = r(48254),
     h = r(849818),
-    p = (function () {
+    _ = (function () {
         function e(e, n) {
             for (var r = 0; r < n.length; r++) {
                 var i = n[r];
@@ -47,7 +47,7 @@ var v = (function (e) {
     }
     return (
         E(n, e),
-        p(n, [
+        _(n, [
             {
                 key: 'render',
                 value: function () {
@@ -55,8 +55,8 @@ var v = (function (e) {
                         n = e.styles,
                         r = void 0 === n ? {} : n,
                         a = e.className,
-                        s = void 0 === a ? '' : a,
-                        p = (0, o.default)(
+                        o = void 0 === a ? '' : a,
+                        _ = (0, s.default)(
                             (0, l.Z)(
                                 {
                                     default: {
@@ -116,19 +116,19 @@ var v = (function (e) {
                     return i.createElement(
                         'div',
                         {
-                            style: p.picker,
-                            className: 'photoshop-picker ' + s
+                            style: _.picker,
+                            className: 'photoshop-picker ' + o
                         },
-                        i.createElement('div', { style: p.head }, this.props.header),
+                        i.createElement('div', { style: _.head }, this.props.header),
                         i.createElement(
                             'div',
                             {
-                                style: p.body,
+                                style: _.body,
                                 className: 'flexbox-fix'
                             },
                             i.createElement(
                                 'div',
-                                { style: p.saturation },
+                                { style: _.saturation },
                                 i.createElement(u.OQ, {
                                     hsl: this.props.hsl,
                                     hsv: this.props.hsv,
@@ -138,7 +138,7 @@ var v = (function (e) {
                             ),
                             i.createElement(
                                 'div',
-                                { style: p.hue },
+                                { style: _.hue },
                                 i.createElement(u.PS, {
                                     direction: 'vertical',
                                     hsl: this.props.hsl,
@@ -148,16 +148,16 @@ var v = (function (e) {
                             ),
                             i.createElement(
                                 'div',
-                                { style: p.controls },
+                                { style: _.controls },
                                 i.createElement(
                                     'div',
                                     {
-                                        style: p.top,
+                                        style: _.top,
                                         className: 'flexbox-fix'
                                     },
                                     i.createElement(
                                         'div',
-                                        { style: p.previews },
+                                        { style: _.previews },
                                         i.createElement(h.Z, {
                                             rgb: this.props.rgb,
                                             currentColor: this.state.currentColor
@@ -165,13 +165,13 @@ var v = (function (e) {
                                     ),
                                     i.createElement(
                                         'div',
-                                        { style: p.actions },
-                                        i.createElement(_.C, {
+                                        { style: _.actions },
+                                        i.createElement(p.C, {
                                             label: 'OK',
                                             onClick: this.props.onAccept,
                                             active: !0
                                         }),
-                                        i.createElement(_.C, {
+                                        i.createElement(p.C, {
                                             label: 'Cancel',
                                             onClick: this.props.onCancel
                                         }),
@@ -193,8 +193,8 @@ var v = (function (e) {
     );
 })(i.Component);
 (v.propTypes = {
-    header: s().string,
-    styles: s().object
+    header: o().string,
+    styles: o().object
 }),
     (v.defaultProps = {
         header: 'Color Picker',

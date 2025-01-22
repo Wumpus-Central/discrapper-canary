@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(642128),
-    o = r(481060),
+    o = r(642128),
+    s = r(481060),
     l = r(345332),
     u = r(417153),
     c = r(561466),
@@ -16,7 +16,7 @@ let f = {
         friction: 24,
         tension: 280
     },
-    _ = {
+    p = {
         [c.az.TOP]: {
             styles: d.containerTop,
             transition: {
@@ -72,18 +72,18 @@ function h() {
     var e, n, r, d;
     let f = (0, u.Es)((e) => e.currentToast),
         h = a.useRef(null !== (r = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== r ? r : c.si.position),
-        p = a.useRef(null !== (d = null == f ? void 0 : null === (n = f.options) || void 0 === n ? void 0 : n.duration) && void 0 !== d ? d : c.si.duration);
+        _ = a.useRef(null !== (d = null == f ? void 0 : null === (n = f.options) || void 0 === n ? void 0 : n.duration) && void 0 !== d ? d : c.si.duration);
     a.useEffect(() => {
         if (null != f) {
             var e, n, r, i;
-            (h.current = null !== (r = null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== r ? r : c.si.position), (p.current = null !== (i = null === (n = f.options) || void 0 === n ? void 0 : n.duration) && void 0 !== i ? i : c.si.duration);
+            (h.current = null !== (r = null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== r ? r : c.si.position), (_.current = null !== (i = null === (n = f.options) || void 0 === n ? void 0 : n.duration) && void 0 !== i ? i : c.si.duration);
         }
     }, [f]);
     let m = a.useMemo(() => {
             var e, n;
-            return _[null !== (n = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : h.current];
+            return p[null !== (n = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : h.current];
         }, [f]),
-        g = (0, o.useTransition)(f, {
+        g = (0, s.useTransition)(f, {
             keys: (e) => {
                 var n;
                 return null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : '';
@@ -95,7 +95,7 @@ function h() {
             null != f &&
                 setTimeout(() => {
                     (0, u.z5)();
-                }, p.current);
+                }, _.current);
         }, [f]),
         (0, i.jsx)('div', {
             className: m.styles,
@@ -103,7 +103,7 @@ function h() {
                 null === n
                     ? null
                     : (0, i.jsx)(
-                          s.animated.div,
+                          o.animated.div,
                           {
                               style: e,
                               children: (0, i.jsx)(l.F, { ...n })

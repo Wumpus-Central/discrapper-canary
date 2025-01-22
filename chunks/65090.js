@@ -1,34 +1,34 @@
 var i = r(200651),
     a = r(192379),
-    s = r(588468),
-    o = r(271383),
+    o = r(588468),
+    s = r(271383),
     l = r(483360),
     u = r(51144),
     c = r(877565),
     d = r(590921),
     f = r(665692),
-    _ = r(388032);
+    p = r(388032);
 let h = {
     sentinel: f.ME,
-    stores: [o.ZP],
+    stores: [s.ZP],
     matches: (e, n, r, i, a) => (a.mentions.user !== d.h3.DENY || a.mentions.role !== d.Fw.DENY || a.mentions.global !== d.VV.DENY) && !0,
     queryResults(e, n, r, i, a) {
-        let s = i.mentions.global === d.VV.ALLOW_EVERYONE || i.mentions.global === d.VV.ALLOW_EVERYONE_OR_HERE,
-            o = i.mentions.global === d.VV.ALLOW_EVERYONE_OR_HERE,
+        let o = i.mentions.global === d.VV.ALLOW_EVERYONE || i.mentions.global === d.VV.ALLOW_EVERYONE_OR_HERE,
+            s = i.mentions.global === d.VV.ALLOW_EVERYONE_OR_HERE,
             u = i.mentions.user !== d.h3.DENY,
             c = i.mentions.role !== d.Fw.DENY,
             f = i.mentions.user === d.h3.ALLOW_GUILD,
-            _ = i.mentions.role === d.Fw.ALLOW_ALL;
+            p = i.mentions.role === d.Fw.ALLOW_ALL;
         return {
             results: l.ZP.queryMentionResults({
                 query: r,
                 channel: e,
-                canMentionEveryone: s,
-                canMentionHere: o,
+                canMentionEveryone: o,
+                canMentionHere: s,
                 canMentionUsers: u,
                 canMentionRoles: c,
                 includeAllGuildUsers: f,
-                includeNonMentionableRoles: _,
+                includeNonMentionableRoles: p,
                 request: a
             })
         };
@@ -37,19 +37,19 @@ let h = {
         let n,
             r,
             {
-                results: { users: o, globals: l, roles: u },
+                results: { users: s, globals: l, roles: u },
                 selectedIndex: h,
-                channel: p,
+                channel: _,
                 query: m,
                 options: g,
                 onHover: E,
                 onClick: v
             } = e,
-            I = o.map((e, n) =>
+            y = s.map((e, n) =>
                 (0, i.jsx)(
-                    s.ZP.User,
+                    o.ZP.User,
                     {
-                        guildId: p.guild_id,
+                        guildId: _.guild_id,
                         onClick: v,
                         onHover: E,
                         selected: h === n,
@@ -62,14 +62,14 @@ let h = {
                     e.user.id
                 )
             ),
-            T = l.map((e, n) =>
+            b = l.map((e, n) =>
                 (0, i.jsx)(
-                    s.ZP.Generic,
+                    o.ZP.Generic,
                     {
                         onClick: v,
                         onHover: E,
-                        selected: h === n + o.length,
-                        index: o.length + n,
+                        selected: h === n + s.length,
+                        index: s.length + n,
                         text: e.text,
                         description: g.hideMentionDescription ? null : e.description,
                         'aria-label': e.text
@@ -77,14 +77,14 @@ let h = {
                     e.text
                 )
             ),
-            b = u.map((e, n) =>
+            I = u.map((e, n) =>
                 (0, i.jsx)(
-                    s.ZP.Role,
+                    o.ZP.Role,
                     {
                         onClick: v,
                         onHover: E,
-                        selected: h === n + o.length + l.length,
-                        index: o.length + l.length + n,
+                        selected: h === n + s.length + l.length,
+                        index: s.length + l.length + n,
                         role: e,
                         hideDescription: g.hideMentionDescription
                     },
@@ -92,7 +92,7 @@ let h = {
                 )
             );
         return (
-            g.mentions.user === d.h3.DENY ? ((n = _.t.MLiD1d), (r = _.intl.string(_.t.LPJmLy))) : ((n = _.t.rPNimp), (r = _.intl.string(_.t['9Oq93t']))),
+            g.mentions.user === d.h3.DENY ? ((n = p.t.MLiD1d), (r = p.intl.string(p.t.LPJmLy))) : ((n = p.t.rPNimp), (r = p.intl.string(p.t['9Oq93t']))),
             (0, i.jsxs)(
                 a.Fragment,
                 {
@@ -103,11 +103,11 @@ let h = {
                             query: m,
                             getQuery: (e) => ''.concat(f.ME).concat(e)
                         }),
-                        I,
-                        o.length > 0 && l.length > 0 ? (0, i.jsx)(s.ZP.Divider, {}) : null,
-                        T,
-                        (o.length > 0 && u.length > 0) || (l.length > 0 && u.length > 0) ? (0, i.jsx)(s.ZP.Divider, {}) : null,
-                        b
+                        y,
+                        s.length > 0 && l.length > 0 ? (0, i.jsx)(o.ZP.Divider, {}) : null,
+                        b,
+                        (s.length > 0 && u.length > 0) || (l.length > 0 && u.length > 0) ? (0, i.jsx)(o.ZP.Divider, {}) : null,
+                        I
                     ]
                 },
                 'mentions'
@@ -118,16 +118,16 @@ let h = {
         let {
                 results: { users: n, globals: r, roles: i },
                 index: a,
-                options: s,
-                channel: o
+                options: o,
+                channel: s
             } = e,
             l = n[a],
             u = r[a - n.length],
             c = i[a - n.length - r.length];
-        return null != l ? s.insertText(p(l.user, o, s.hidePersonalInformation), m(l.user)) : null != u ? s.insertText(g(u)) : null != c && s.insertText(E(c), v(c)), { type: d.z2.MENTION };
+        return null != l ? o.insertText(_(l.user, s, o.hidePersonalInformation), m(l.user)) : null != u ? o.insertText(g(u)) : null != c && o.insertText(E(c), v(c)), { type: d.z2.MENTION };
     }
 };
-function p(e, n, r) {
+function _(e, n, r) {
     return l.ZP.hasSameRoleAsUsername(n, e) ? ''.concat(f.ME).concat(e.tag) : ''.concat(f.ME).concat(u.ZP.getUserTag(e, { identifiable: r ? 'never' : 'always' }));
 }
 function m(e) {

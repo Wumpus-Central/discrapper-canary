@@ -7,14 +7,14 @@ var i = r(708644);
 function a(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function s(e, n) {
+function o(e, n) {
     for (var r = 0; r < n.length; r++) {
         var i = n[r];
         (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-function o(e, n, r) {
-    return n && s(e.prototype, n), r && s(e, r), e;
+function s(e, n, r) {
+    return n && o(e.prototype, n), r && o(e, r), e;
 }
 function l(e, n, r) {
     return (
@@ -34,7 +34,7 @@ var u = (function () {
         a(this, e), l(this, 'entered', []), l(this, 'isNodeInDocument', void 0), (this.isNodeInDocument = n);
     }
     return (
-        o(e, [
+        s(e, [
             {
                 key: 'enter',
                 value: function (e) {

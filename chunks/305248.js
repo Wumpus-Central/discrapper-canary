@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(442837),
     s = n(570140),
     c = n(45114),
-    d = n(404616),
-    u = n(470623),
+    u = n(404616),
+    d = n(470623),
     m = n(344185),
     h = n(488131),
     f = n(592125),
@@ -58,10 +58,10 @@ function C(e) {
             className: E.container,
             children: C.map((e) =>
                 (0, i.jsx)(
-                    u.oL,
+                    d.oL,
                     {
                         channel: n,
-                        children: (0, i.jsx)(d.ZP, {
+                        children: (0, i.jsx)(u.ZP, {
                             className: E.forumPost,
                             threadId: e.id,
                             goToThread: I

@@ -1,26 +1,26 @@
 let i, a;
-var s,
-    o = r(653041);
+var o,
+    s = r(653041);
 var l = r(512722),
     u = r.n(l),
     c = r(392711),
     d = r.n(c),
     f = r(442837),
-    _ = r(46973),
+    p = r(46973),
     h = r(570140),
-    p = r(594190),
+    _ = r(594190),
     m = r(444852),
     g = r(569545),
     E = r(687516),
     v = r(139656),
-    I = r(358085),
-    T = r(199902),
-    b = r(314897),
-    y = r(131951),
+    y = r(358085),
+    b = r(199902),
+    I = r(314897),
+    T = r(131951),
     S = r(158776),
     A = r(19780),
-    N = r(981631),
-    C = r(65154);
+    C = r(981631),
+    N = r(65154);
 function R(e, n, r) {
     return (
         n in e
@@ -36,9 +36,9 @@ function R(e, n, r) {
 }
 let O = {},
     D = {},
-    L = {},
     x = {},
-    w = N.hVg.THEATRE,
+    L = {},
+    w = C.hVg.THEATRE,
     P = {},
     M = [],
     k = 30;
@@ -68,7 +68,7 @@ function G(e) {
         e
             .filter((e) => {
                 let { connection: n } = e;
-                return n.context === C.Yn.STREAM;
+                return n.context === N.Yn.STREAM;
             })
             .forEach((e) => {
                 let { stats: n } = e;
@@ -78,19 +78,19 @@ function G(e) {
                 });
             });
 }
-function F(e) {
+function Z(e) {
     (i = e.sessionId), (a = null), B();
 }
-function Z() {
+function F() {
     (i = null), (a = null), B();
 }
 function V(e) {
-    let { streamType: n, guildId: r, channelId: i, appContext: a, pid: s, sourceId: o } = e,
+    let { streamType: n, guildId: r, channelId: i, appContext: a, pid: o, sourceId: s } = e,
         l = (0, g.V9)({
             streamType: n,
             guildId: r,
             channelId: i,
-            ownerId: b.default.getId()
+            ownerId: I.default.getId()
         });
     if (
         ((O[l] = a),
@@ -98,11 +98,11 @@ function V(e) {
             let { analyticsContext: n } = e;
             n.setActionContext(a);
         }),
-        (x[l] = o),
         (L[l] = s),
-        null != s)
+        (x[l] = o),
+        null != o)
     ) {
-        let e = p.ZP.getGameForPID(s);
+        let e = _.ZP.getGameForPID(o);
         null != e &&
             (D[l] = {
                 name: e.name,
@@ -119,27 +119,27 @@ function j(e) {
             let { analyticsContext: r } = e;
             r.setActionContext(n);
         }),
-        (x[r] = null),
-        (L[r] = null);
+        (L[r] = null),
+        (x[r] = null);
 }
 function H(e) {
-    let { streamKey: n, rtcServerId: r, region: i, viewerIds: s } = e;
+    let { streamKey: n, rtcServerId: r, region: i, viewerIds: o } = e;
     a = n;
-    let o = P[n];
-    if (null == o && null != r) {
-        null == L[n] && (D[n] = null);
+    let s = P[n];
+    if (null == s && null != r) {
+        null == x[n] && (D[n] = null);
         let e = (0, g.my)(n);
-        null == D[n] && null == x[n] && (D[n] = (0, E.L2)(e, S.Z));
+        null == D[n] && null == L[n] && (D[n] = (0, E.L2)(e, S.Z));
         let a = new m.A({
             streamRegion: i,
             streamApplication: D[n],
-            streamSourceType: en(x[n]),
+            streamSourceType: en(L[n]),
             actionContext: O[n],
-            numViewers: null != s ? s.length : 0
+            numViewers: null != o ? o.length : 0
         });
-        (o = U(n, r, a)), (P[n] = o);
+        (s = U(n, r, a)), (P[n] = s);
     }
-    (M = []), y.Z.getMediaEngine().on(_.aB.ConnectionStats, G);
+    (M = []), T.Z.getMediaEngine().on(p.aB.ConnectionStats, G);
 }
 function Y(e) {
     let n = P[e.streamKey];
@@ -161,7 +161,7 @@ function z(e) {
     let { streamKey: n } = e,
         r = P[n];
     if (null == r) return !1;
-    n === a && ((a = null), y.Z.getMediaEngine().off(_.aB.ConnectionStats, G)), r.destroy('stream-end'), delete P[n];
+    n === a && ((a = null), T.Z.getMediaEngine().off(p.aB.ConnectionStats, G)), r.destroy('stream-end'), delete P[n];
 }
 function q(e) {
     let { layout: n } = e;
@@ -186,21 +186,21 @@ function $(e) {
     });
 }
 function ee(e) {
-    var n, r, i, a, s;
-    let o = e.find((e) => 'video' === e.type);
-    return null != o && 'video' === o.type
+    var n, r, i, a, o;
+    let s = e.find((e) => 'video' === e.type);
+    return null != s && 'video' === s.type
         ? {
               type: 'streamer',
-              packetsSentOrReceived: null !== (r = o.packetsSent) && void 0 !== r ? r : 0,
-              packetsLost: null !== (i = o.packetsLost) && void 0 !== i ? i : 0,
-              frameRate: null !== (a = o.frameRateEncode) && void 0 !== a ? a : 0,
-              resolution: null !== (s = null === (n = o.resolution) || void 0 === n ? void 0 : n.height) && void 0 !== s ? s : 0,
+              packetsSentOrReceived: null !== (r = s.packetsSent) && void 0 !== r ? r : 0,
+              packetsLost: null !== (i = s.packetsLost) && void 0 !== i ? i : 0,
+              frameRate: null !== (a = s.frameRateEncode) && void 0 !== a ? a : 0,
+              resolution: null !== (o = null === (n = s.resolution) || void 0 === n ? void 0 : n.height) && void 0 !== o ? o : 0,
               bitrate: 0
           }
         : null;
 }
 function et(e) {
-    var n, r, i, a, s, o;
+    var n, r, i, a, o, s;
     if (null == e) return null;
     let l = e.find((e) => 'video' === e.type);
     return null != l && 'video' === l.type
@@ -209,15 +209,15 @@ function et(e) {
               packetsSentOrReceived: null !== (r = l.packetsReceived) && void 0 !== r ? r : 0,
               packetsLost: null !== (i = l.packetsLost) && void 0 !== i ? i : 0,
               frameRate: null !== (a = l.frameRateDecode) && void 0 !== a ? a : 0,
-              bitrate: null !== (s = l.bitrate) && void 0 !== s ? s : 0,
-              resolution: null !== (o = null === (n = l.resolution) || void 0 === n ? void 0 : n.height) && void 0 !== o ? o : 0
+              bitrate: null !== (o = l.bitrate) && void 0 !== o ? o : 0,
+              resolution: null !== (s = null === (n = l.resolution) || void 0 === n ? void 0 : n.height) && void 0 !== s ? s : 0
           }
         : null;
 }
 function en(e) {
     var n, r, i;
     if (null == e) return 'unknown';
-    if (I.isPlatformEmbedded || (null === (n = platform) || void 0 === n ? void 0 : n.name) === 'Chrome') {
+    if (y.isPlatformEmbedded || (null === (n = platform) || void 0 === n ? void 0 : n.name) === 'Chrome') {
         if (e.startsWith('web-contents-media-stream:')) return 'tab';
         if (e.startsWith('window:')) return 'window';
         else if (e.startsWith('screen:')) return 'screen';
@@ -225,9 +225,9 @@ function en(e) {
     else if ((null === (i = platform) || void 0 === i ? void 0 : i.name) === 'Safari') return 'window';
     return 'unknown';
 }
-class er extends (s = f.ZP.Store) {
+class er extends (o = f.ZP.Store) {
     getActiveStreamKey() {
-        return (0, v.Z)(y.Z) ? a : null;
+        return (0, v.Z)(T.Z) ? a : null;
     }
     getRTCConnections() {
         return P;
@@ -239,18 +239,18 @@ class er extends (s = f.ZP.Store) {
         return P[e];
     }
     getStatsHistory(e, n, r) {
-        if (!(0, v.Z)(y.Z) || null == n) return null;
+        if (!(0, v.Z)(T.Z) || null == n) return null;
         if (r) {
-            let r = T.Z.getActiveStreamForUser(n, e);
-            if (null == r || 0 === T.Z.getViewerIds(r).length) return null;
+            let r = b.Z.getActiveStreamForUser(n, e);
+            if (null == r || 0 === b.Z.getViewerIds(r).length) return null;
         }
         return M.map((e) => (r ? ee(e.rtp.outbound) : et(e.rtp.inbound[n])));
     }
     getQuality() {
-        if (!(0, v.Z)(y.Z)) return N.IE4.UNKNOWN;
+        if (!(0, v.Z)(T.Z)) return C.IE4.UNKNOWN;
         let e = this.getActiveStreamKey(),
             n = null != e ? P[e] : null;
-        return null != n ? n.quality : N.IE4.UNKNOWN;
+        return null != n ? n.quality : C.IE4.UNKNOWN;
     }
     getMediaSessionId(e) {
         if (null == e) return null;
@@ -283,7 +283,7 @@ class er extends (s = f.ZP.Store) {
         return null != n ? n.getMaxViewers() : null;
     }
     getStreamSourceId(e) {
-        return x[e];
+        return L[e];
     }
     getUserIds(e) {
         let n = P[e];
@@ -306,11 +306,11 @@ class er extends (s = f.ZP.Store) {
 R(er, 'displayName', 'StreamRTCConnectionStore'),
     (n.Z = new er(
         h.Z,
-        !y.Z.isSupported() || __OVERLAY__
+        !T.Z.isSupported() || __OVERLAY__
             ? {}
             : {
-                  CONNECTION_OPEN: F,
-                  CONNECTION_CLOSED: Z,
+                  CONNECTION_OPEN: Z,
+                  CONNECTION_CLOSED: F,
                   RTC_CONNECTION_STATE: Q,
                   RTC_CONNECTION_PING: Q,
                   RTC_CONNECTION_LOSS_RATE: Q,

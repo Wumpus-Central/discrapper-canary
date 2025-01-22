@@ -3,7 +3,7 @@ r.d(n, {
         return u;
     },
     pj: function () {
-        return o;
+        return s;
     },
     pr: function () {
         return l;
@@ -11,15 +11,15 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(570140),
-    s = r(981631);
-function o(e) {
+    o = r(981631);
+function s(e) {
     a.Z.dispatch({
         type: 'TOP_EMOJIS_FETCH',
         guildId: e
     }),
         i.tn
             .get({
-                url: s.ANM.TOP_EMOJIS_FOR_GUILD(e),
+                url: o.ANM.TOP_EMOJIS_FOR_GUILD(e),
                 oldFormErrors: !0,
                 rejectWithError: !0
             })

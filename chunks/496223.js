@@ -1,13 +1,13 @@
 r.d(n, {
     j: function () {
-        return _;
+        return p;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(331595),
-    s = r(249849);
-let o = ['#be0351', '#ff2c52'],
+    o = r(249849);
+let s = ['#be0351', '#ff2c52'],
     l = ['#ffb84b', '#ffe361'],
     u = [0.12, 0.25],
     c = [
@@ -31,11 +31,11 @@ let o = ['#be0351', '#ff2c52'],
             tint: 1
         }
     ],
-    _ = (e) => {
-        let { width: n = 24, height: r = 24, primaryTintColor: _, secondaryTintColor: h, ...p } = e,
-            { primaryColorsTransformed: m, secondaryColorsTransformed: g } = (0, s.s)({
-                primaryBaseColors: o,
-                primaryTintColor: _,
+    p = (e) => {
+        let { width: n = 24, height: r = 24, primaryTintColor: p, secondaryTintColor: h, ..._ } = e,
+            { primaryColorsTransformed: m, secondaryColorsTransformed: g } = (0, o.s)({
+                primaryBaseColors: s,
+                primaryTintColor: p,
                 primaryTintLuminances: u,
                 primaryLuminanceWeights: c,
                 secondaryBaseColors: l,
@@ -44,7 +44,7 @@ let o = ['#be0351', '#ff2c52'],
                 secondaryLuminanceWeights: f
             });
         return (0, i.jsxs)('svg', {
-            ...(0, a.Z)(p),
+            ...(0, a.Z)(_),
             width: n,
             height: r,
             viewBox: '0 0 16 16',

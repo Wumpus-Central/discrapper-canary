@@ -8,8 +8,8 @@ function n(e) {
         r = '(0|[1-9][\\d_]*)',
         i = '(0|[1-9][\\d_]*|\\d[\\d_]*|[\\d_]+?\\d)',
         a = '([\\da-fA-F][\\da-fA-F_]*|_[\\da-fA-F][\\da-fA-F_]*)',
-        s = '([eE][+-]?' + i + ')',
-        o = '(' + i + '(\\.\\d*|' + s + ')|\\d+\\.' + i + '|\\.' + r + s + '?)',
+        o = '([eE][+-]?' + i + ')',
+        s = '(' + i + '(\\.\\d*|' + o + ')|\\d+\\.' + i + '|\\.' + r + o + '?)',
         l = '(' + r + '|0[bB][01_]+|' + ('0[xX]' + a) + ')',
         u = '\\\\([\'"\\?\\\\abfnrtv]|u[\\dA-Fa-f]{4}|[0-7]{1,3}|x[\\dA-Fa-f]{2}|U[\\dA-Fa-f]{8})|&[a-zA-Z\\d]{2,};',
         c = {
@@ -19,7 +19,7 @@ function n(e) {
         },
         d = {
             className: 'number',
-            begin: '\\b(' + ('(' + ('(0[xX](' + a + '\\.' + a + '|\\.?' + a + ')[pP][+-]?' + i + ')') + '|' + o + ')') + '([fF]|L|i|[fF]i|Li)?|' + l + '(i|[fF]i|Li))',
+            begin: '\\b(' + ('(' + ('(0[xX](' + a + '\\.' + a + '|\\.?' + a + ')[pP][+-]?' + i + ')') + '|' + s + ')') + '([fF]|L|i|[fF]i|Li)?|' + l + '(i|[fF]i|Li))',
             relevance: 0
         },
         f = {
@@ -28,7 +28,7 @@ function n(e) {
             end: "'",
             illegal: '.'
         },
-        _ = {
+        p = {
             className: 'string',
             begin: '"',
             contains: [
@@ -45,7 +45,7 @@ function n(e) {
             end: '"[cwd]?',
             relevance: 5
         },
-        p = {
+        _ = {
             className: 'string',
             begin: '`',
             end: '`[cwd]?'
@@ -72,18 +72,18 @@ function n(e) {
             end: '$',
             relevance: 5
         },
-        I = {
+        y = {
             className: 'keyword',
             begin: '@[a-zA-Z_][a-zA-Z_\\d]*'
         },
-        T = e.COMMENT('\\/\\+', '\\+\\/', {
+        b = e.COMMENT('\\/\\+', '\\+\\/', {
             contains: ['self'],
             relevance: 10
         });
     return {
         name: 'D',
         keywords: n,
-        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, T, m, _, h, p, g, d, c, f, E, v, I]
+        contains: [e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, b, m, p, h, _, g, d, c, f, E, v, y]
     };
 }
 e.exports = n;

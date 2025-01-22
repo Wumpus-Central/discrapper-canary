@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(388032);
@@ -17,7 +17,7 @@ function a(e, n, r) {
         e
     );
 }
-class s {
+class o {
     announce(e, n, r) {
         this.announcer.announce(e, n, r);
     }

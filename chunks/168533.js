@@ -1,7 +1,7 @@
 let i = r(40231),
     a = r(889658),
-    s = r(393808),
-    o = (e, n) => {
+    o = r(393808),
+    s = (e, n) => {
         e = new a(e, n);
         let r = new i('0.0.0');
         if (e.test(r)) return r;
@@ -9,7 +9,7 @@ let i = r(40231),
         r = null;
         for (let n = 0; n < e.set.length; ++n) {
             let a = e.set[n],
-                o = null;
+                s = null;
             a.forEach((e) => {
                 let n = new i(e.semver.version);
                 switch (e.operator) {
@@ -17,7 +17,7 @@ let i = r(40231),
                         0 === n.prerelease.length ? n.patch++ : n.prerelease.push(0), (n.raw = n.format());
                     case '':
                     case '>=':
-                        (!o || s(n, o)) && (o = n);
+                        (!s || o(n, s)) && (s = n);
                         break;
                     case '<':
                     case '<=':
@@ -26,8 +26,8 @@ let i = r(40231),
                         throw Error(`Unexpected operation: ${e.operator}`);
                 }
             }),
-                o && (!r || s(r, o)) && (r = o);
+                s && (!r || o(r, s)) && (r = s);
         }
         return r && e.test(r) ? r : null;
     };
-e.exports = o;
+e.exports = s;

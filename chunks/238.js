@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(47120);
-var o = r(442837),
+    o = r(47120);
+var s = r(442837),
     l = r(570140),
     u = r(331065),
     c = r(55563),
@@ -24,18 +24,18 @@ function f(e, n, r) {
         e
     );
 }
-let _ = new Map(),
+let p = new Map(),
     h = new Map();
 !(function (e) {
     (e[(e.NONE = 0)] = 'NONE'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.FAILED = 3)] = 'FAILED');
 })(i || (i = {}));
-let p = new u.Z({
+let _ = new u.Z({
     subscriptions: [],
     otps: []
 });
 function m(e) {
     let { applicationId: n, layout: r } = e;
-    _.set(n, u.Z.createFromServer(r)), h.delete(n);
+    p.set(n, u.Z.createFromServer(r)), h.delete(n);
 }
 function g(e) {
     let { applicationId: n } = e;
@@ -45,20 +45,20 @@ function E(e) {
     let { applicationId: n } = e;
     h.set(n, 1);
 }
-class v extends (a = o.ZP.Store) {
+class v extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, d.Z);
     }
     hasStorefront(e) {
-        return _.has(e);
+        return p.has(e);
     }
     getStoreLayout(e) {
         var n;
-        return null !== (n = _.get(e)) && void 0 !== n ? n : p;
+        return null !== (n = p.get(e)) && void 0 !== n ? n : _;
     }
     getFetchStatus(e) {
         var n;
-        return _.has(e) ? 2 : null !== (n = h.get(e)) && void 0 !== n ? n : 0;
+        return p.has(e) ? 2 : null !== (n = h.get(e)) && void 0 !== n ? n : 0;
     }
 }
 f(v, 'displayName', 'ApplicationStoreDirectoryStore'),

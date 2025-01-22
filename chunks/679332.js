@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(100527),
-    o = r(906732),
+    o = r(100527),
+    s = r(906732),
     l = r(299206),
     u = r(785717),
     c = r(475413),
@@ -15,7 +15,7 @@ var a = r(481060),
 function f(e) {
     let { user: n, viewProfileItem: r } = e,
         { trackUserProfileAction: f } = (0, u.KZ)(),
-        { analyticsLocations: _ } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
+        { analyticsLocations: p } = (0, s.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
         h = [
             [r],
             [
@@ -25,7 +25,7 @@ function f(e) {
                     onSuccess: () =>
                         f({
                             action: 'COPY_USER_ID',
-                            analyticsLocations: _
+                            analyticsLocations: p
                         })
                 })
             ]

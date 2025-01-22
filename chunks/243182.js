@@ -1,7 +1,7 @@
 var i = r(975269),
     a = r(457965),
-    s = r(98958),
-    o = a
+    o = r(98958),
+    s = a
         ? function (e, n) {
               return a(e, 'toString', {
                   configurable: !0,
@@ -10,5 +10,5 @@ var i = r(975269),
                   writable: !0
               });
           }
-        : s;
-e.exports = o;
+        : o;
+e.exports = s;

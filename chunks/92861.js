@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(573654),
     a = r(778010),
-    s = r(112457),
-    o = r(603565);
+    o = r(112457),
+    s = r(603565);
 function l(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
@@ -32,14 +32,14 @@ var d = (function () {
                         r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { handlerIds: void 0 },
                         a = r.handlerIds;
                     (0, i.k)('function' == typeof e, 'listener must be a function.'), (0, i.k)(void 0 === a || Array.isArray(a), 'handlerIds, when specified, must be an array of strings.');
-                    var s = this.store.getState().stateId,
+                    var o = this.store.getState().stateId,
                         l = function () {
                             var r = n.store.getState(),
                                 i = r.stateId;
                             try {
-                                !(i === s || (i === s + 1 && !(0, o.co)(r.dirtyHandlerIds, a))) && e();
+                                !(i === o || (i === o + 1 && !(0, s.co)(r.dirtyHandlerIds, a))) && e();
                             } finally {
-                                s = i;
+                                o = i;
                             }
                         };
                     return this.store.subscribe(l);
@@ -73,8 +73,8 @@ var d = (function () {
                     var n = this.registry.getTarget(e);
                     if (((0, i.k)(n, 'Expected to find a valid target. targetId='.concat(e)), !this.isDragging() || this.didDrop())) return !1;
                     var r = this.registry.getTargetType(e),
-                        s = this.getItemType();
-                    return (0, a.s)(r, s) && n.canDrop(this, e);
+                        o = this.getItemType();
+                    return (0, a.s)(r, o) && n.canDrop(this, e);
                 }
             },
             {
@@ -99,12 +99,12 @@ var d = (function () {
                     var r = n.shallow;
                     if (!this.isDragging()) return !1;
                     var i = this.registry.getTargetType(e),
-                        s = this.getItemType();
-                    if (s && !(0, a.s)(i, s)) return !1;
-                    var o = this.getTargetIds();
-                    if (!o.length) return !1;
-                    var l = o.indexOf(e);
-                    return r ? l === o.length - 1 : l > -1;
+                        o = this.getItemType();
+                    if (o && !(0, a.s)(i, o)) return !1;
+                    var s = this.getTargetIds();
+                    if (!s.length) return !1;
+                    var l = s.indexOf(e);
+                    return r ? l === s.length - 1 : l > -1;
                 }
             },
             {
@@ -170,13 +170,13 @@ var d = (function () {
             {
                 key: 'getSourceClientOffset',
                 value: function () {
-                    return (0, s.YY)(this.store.getState().dragOffset);
+                    return (0, o.YY)(this.store.getState().dragOffset);
                 }
             },
             {
                 key: 'getDifferenceFromInitialOffset',
                 value: function () {
-                    return (0, s.ar)(this.store.getState().dragOffset);
+                    return (0, o.ar)(this.store.getState().dragOffset);
                 }
             }
         ]),

@@ -13,8 +13,8 @@ var i = n(200651),
     o = n(568611),
     s = n(442837),
     c = n(481060),
-    d = n(668781),
-    u = n(846027),
+    u = n(668781),
+    d = n(846027),
     m = n(893776),
     h = n(117266),
     f = n(37234),
@@ -67,8 +67,8 @@ var i = n(200651),
     eo = n(933429),
     es = n(626135),
     ec = n(63063),
-    ed = n(72924),
-    eu = n(69499),
+    eu = n(72924),
+    ed = n(69499),
     em = n(912193),
     eh = n(981631),
     ef = n(474936),
@@ -348,7 +348,7 @@ let ev =
                                   noticeType: eh.kVF.UNVERIFIED_ACCOUNT,
                                   onClick: () => {
                                       m.Z.verifyResend(),
-                                          d.Z.show({
+                                          u.Z.show({
                                               title: eg.intl.string(eg.t.LykQYm),
                                               body: eg.intl.format(eg.t.azKEPz, { email: null == p ? void 0 : p.email }),
                                               secondaryConfirmText: eg.intl.string(eg.t.oP5zGB),
@@ -392,7 +392,7 @@ let ev =
                               }),
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      u.Z.setEnableHardwareMuteNotice(!1), eN();
+                                      d.Z.setEnableHardwareMuteNotice(!1), eN();
                                   }
                               }),
                               (0, i.jsx)(c.NoticeButtonAnchor, {
@@ -463,7 +463,7 @@ let ev =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: eh.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
                                   onClick: () =>
-                                      (0, ed.S)({
+                                      (0, eu.S)({
                                           applicationId: ew.id,
                                           skuId: eB.id,
                                           openPremiumPaymentModal: () => {
@@ -676,12 +676,12 @@ let ev =
                               align: R.Z.Align.CENTER,
                               children: [
                                   (0, i.jsx)('div', { children: eg.intl.format(eg.t.Fv5HrK, { applicationName: em.metadata.applicationName }) }),
-                                  (0, i.jsx)(eu.Z, {
-                                      dropdownSize: eu.E.DropdownSizes.SMALL,
+                                  (0, i.jsx)(ed.Z, {
+                                      dropdownSize: ed.E.DropdownSizes.SMALL,
                                       className: eE.testModeSKUSelector,
-                                      color: eu.E.Colors.WHITE,
-                                      look: eu.E.Looks.OUTLINED,
-                                      size: eu.E.Sizes.MIN,
+                                      color: ed.E.Colors.WHITE,
+                                      look: ed.E.Looks.OUTLINED,
+                                      size: ed.E.Sizes.MIN,
                                       onSKUSelect: (e) =>
                                           C.yt(e.id, {
                                               analyticsSource: {

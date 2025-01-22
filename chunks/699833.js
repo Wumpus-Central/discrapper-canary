@@ -11,8 +11,8 @@ var r = n(913527),
     o = n(481060),
     s = n(800530),
     c = n(388032),
-    d = n(88840);
-let u = (e) => l()().diff(l().unix(e), 'days');
+    u = n(88840);
+let d = (e) => l()().diff(l().unix(e), 'days');
 function m(e) {
     var t, r, l, m, h;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
@@ -36,16 +36,16 @@ function m(e) {
                           });
                   });
               },
-              className: d.safetyPolicyNoticeContainer,
+              className: u.safetyPolicyNoticeContainer,
               children: [
                   (0, i.jsxs)('div', {
-                      className: d.noticeContent,
+                      className: u.noticeContent,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: d.headerRow,
+                              className: u.headerRow,
                               children: [
                                   (0, i.jsx)(o.WarningIcon, {
-                                      className: d.warningIcon,
+                                      className: u.warningIcon,
                                       color: a.Z.colors.STATUS_DANGER
                                   }),
                                   (0, i.jsx)(o.Text, {
@@ -55,14 +55,14 @@ function m(e) {
                               ]
                           }),
                           (0, i.jsx)('div', {
-                              className: d.incidentTiming,
+                              className: u.incidentTiming,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
-                                  children: c.intl.format(c.t.eevFb2, { daysAgo: u(E) })
+                                  children: c.intl.format(c.t.eevFb2, { daysAgo: d(E) })
                               })
                           }),
                           (0, i.jsx)('div', {
-                              className: d.noticeBody,
+                              className: u.noticeBody,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
@@ -72,10 +72,10 @@ function m(e) {
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: d.footerContainer,
+                      className: u.footerContainer,
                       children: (0, i.jsx)(o.Button, {
                           look: o.Button.Looks.BLANK,
-                          className: d.detailsButton,
+                          className: u.detailsButton,
                           color: o.Button.Colors.WHITE,
                           children: c.intl.string(c.t.zKnzws)
                       })

@@ -1,6 +1,6 @@
 r.d(n, {
     $T: function () {
-        return o;
+        return s;
     },
     Bs: function () {
         return u;
@@ -9,7 +9,7 @@ r.d(n, {
         return i;
     },
     js: function () {
-        return s;
+        return o;
     },
     qu: function () {
         return a;
@@ -20,7 +20,7 @@ r.d(n, {
 });
 var i = 'dnd-core/INIT_COORDS',
     a = 'dnd-core/BEGIN_DRAG',
-    s = 'dnd-core/PUBLISH_DRAG_SOURCE',
-    o = 'dnd-core/HOVER',
+    o = 'dnd-core/PUBLISH_DRAG_SOURCE',
+    s = 'dnd-core/HOVER',
     l = 'dnd-core/DROP',
     u = 'dnd-core/END_DRAG';

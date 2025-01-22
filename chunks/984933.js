@@ -8,28 +8,28 @@ r.d(n, {
 });
 var i,
     a = r(653041);
-var s = r(47120);
-var o = r(724458);
+var o = r(47120);
+var s = r(724458);
 var l = r(392711),
     u = r.n(l),
     c = r(149765),
     d = r(442837),
     f = r(570140),
-    _ = r(430198),
+    p = r(430198),
     h = r(933557),
-    p = r(853856),
+    _ = r(853856),
     m = r(846787),
     g = r(131704),
     E = r(700785),
     v = r(314897),
-    I = r(592125),
-    T = r(271383),
-    b = r(430824),
-    y = r(496675),
+    y = r(592125),
+    b = r(271383),
+    I = r(430824),
+    T = r(496675),
     S = r(699516),
     A = r(594174),
-    N = r(981631);
-function C(e, n, r) {
+    C = r(981631);
+function N(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -45,33 +45,33 @@ function C(e, n, r) {
 let R = 'SELECTABLE',
     O = 'VOCAL',
     D = null,
-    L = {},
     x = {},
+    L = {},
     w = {},
     P = null,
     M = {},
     k = {
         comparator: -1,
         channel: (0, g.kt)({
-            id: N.Sc2,
-            type: N.d4z.GUILD_CATEGORY,
+            id: C.Sc2,
+            type: C.d4z.GUILD_CATEGORY,
             name: 'Uncategorized'
         })
     },
-    U = F(N.kod),
+    U = Z(C.kod),
     B = [],
     G = {};
-function F(e) {
+function Z(e) {
     return {
         id: e,
         [R]: [],
         [O]: [],
-        [N.d4z.GUILD_CATEGORY]: [k],
+        [C.d4z.GUILD_CATEGORY]: [k],
         count: 0
     };
 }
-function Z(e) {
-    let n = L[e];
+function F(e) {
+    let n = x[e];
     return null == n && (n = q(e)), n;
 }
 function V(e, n) {
@@ -80,30 +80,30 @@ function V(e, n) {
     return r - i;
 }
 function j(e) {
-    e[R].sort(V), e[O].sort(V), e[N.d4z.GUILD_CATEGORY].sort(V);
+    e[R].sort(V), e[O].sort(V), e[C.d4z.GUILD_CATEGORY].sort(V);
 }
 function H(e) {
     return (0, g.r8)(e) ? R : (0, g.bw)(e) ? O : e;
 }
 function Y() {
     let e = {},
-        n = p.Z.getFavoriteChannels();
+        n = _.Z.getFavoriteChannels();
     for (let r in n) {
-        let i = I.Z.getChannel(r);
+        let i = y.Z.getChannel(r);
         if (null == i) continue;
         let a = n[r],
-            s = (0, m.r)(n, a, i);
+            o = (0, m.r)(n, a, i);
         e[r] = {
-            channel: s,
-            comparator: s.position
+            channel: o,
+            comparator: o.position
         };
     }
     return e;
 }
 function W(e) {
-    if (e === N.I_8) return Y();
+    if (e === C.I_8) return Y();
     let n = {},
-        r = I.Z.getMutableGuildChannelsForGuild(e);
+        r = y.Z.getMutableGuildChannelsForGuild(e);
     for (let e in r)
         n[e] = {
             channel: r[e],
@@ -117,28 +117,28 @@ function K(e) {
     return (
         u().forEach(r, (r) => {
             let i = r.channel;
-            if (((e.count += 1), g.zS.has(i.type) && !y.Z.can(N.Plq.VIEW_CHANNEL, i) && !_.Z.isChannelGated(i.guild_id, i.id) && i.id !== P)) return;
+            if (((e.count += 1), g.zS.has(i.type) && !T.Z.can(C.Plq.VIEW_CHANNEL, i) && !p.Z.isChannelGated(i.guild_id, i.id) && i.id !== P)) return;
             let a = H(i.type);
-            i.type === N.d4z.GUILD_DIRECTORY && (null == M[n] && (M[n] = []), M[n].push(r)), null != e[a] && e[a].push(r);
+            i.type === C.d4z.GUILD_DIRECTORY && (null == M[n] && (M[n] = []), M[n].push(r)), null != e[a] && e[a].push(r);
         }),
         e
     );
 }
 function z() {
-    (L = {}), (M = {}), (x = {}), (w = {}), null != D && q(D);
+    (x = {}), (M = {}), (L = {}), (w = {}), null != D && q(D);
 }
 function q(e) {
-    let n = F(e);
-    return (L[e] = n), (M[e] = []), K(n), j(n), Q(n), es(e), n;
+    let n = Z(e);
+    return (x[e] = n), (M[e] = []), K(n), j(n), Q(n), eo(e), n;
 }
 function Q(e) {
-    let n = (x[e.id] = {}),
+    let n = (L[e.id] = {}),
         r = {};
     e[R].forEach((e) => {
         let { channel: i } = e,
             a = (0, h.F6)(i, A.default, S.Z),
-            s = Object.prototype.hasOwnProperty.call(r, a) ? r[a] : null;
-        null == s ? (r[a] = 1) : ((r[a] = s + 1), (a += '~'.concat(s))),
+            o = Object.prototype.hasOwnProperty.call(r, a) ? r[a] : null;
+        null == o ? (r[a] = 1) : ((r[a] = o + 1), (a += '~'.concat(o))),
             (n[i.id] = {
                 id: i.id,
                 name: a
@@ -150,21 +150,21 @@ function X(e) {
         guild: { id: n }
     } = e;
     if (null == n) return !1;
-    (L[n] = void 0), D === n && q(n);
+    (x[n] = void 0), D === n && q(n);
 }
 function J(e) {
     let {
         guild: { id: n }
     } = e;
-    return delete L[n], delete x[n], delete w[n], delete M[n], !0;
+    return delete x[n], delete L[n], delete w[n], delete M[n], !0;
 }
 function $(e) {
     let { guildId: n, user: r } = e;
     if (v.default.getId() !== r.id) return !1;
-    (L[n] = void 0), n === D && q(n);
+    (x[n] = void 0), n === D && q(n);
 }
 function ee(e) {
-    let n = I.Z.getBasicChannel(e.id);
+    let n = y.Z.getBasicChannel(e.id);
     null != n && null != n.guild_id && q(n.guild_id);
 }
 function et(e) {
@@ -172,20 +172,20 @@ function et(e) {
         channel: { guild_id: n }
     } = e;
     if (null == n) return !1;
-    (L[n] = void 0), n === D && q(n);
+    (x[n] = void 0), n === D && q(n);
 }
 function en(e) {
     let { channels: n } = e,
         r = !1;
     for (let e of n) {
         let { guild_id: n } = e;
-        if (null != n) (L[n] = void 0), (r = !0), D === n && q(n);
+        if (null != n) (x[n] = void 0), (r = !0), D === n && q(n);
     }
     return r;
 }
 function er(e) {
     let { guildId: n } = e;
-    (L[n] = void 0), n === D && q(n);
+    (x[n] = void 0), n === D && q(n);
 }
 function ei(e, n) {
     return c.Db(
@@ -194,57 +194,57 @@ function ei(e, n) {
             context: n,
             checkElevated: !1
         }),
-        N.TC2
+        C.TC2
     );
 }
 function ea(e, n) {
-    let r = b.Z.getGuild(n);
+    let r = I.Z.getGuild(n);
     if (null != r && ei(e, r)) return !0;
-    let i = L[n];
+    let i = x[n];
     null == i && (i = q(n));
-    let { [R]: a, [O]: s } = i;
+    let { [R]: a, [O]: o } = i;
     for (let { channel: n } of a) if (ei(e, n)) return !0;
-    for (let { channel: n } of s) if (ei(e, n)) return !0;
+    for (let { channel: n } of o) if (ei(e, n)) return !0;
     return !1;
 }
-function es(e) {
+function eo(e) {
     ea(A.default.getCurrentUser(), e) ? (w[e] = !0) : delete w[e];
 }
-function eo(e, n) {
+function es(e, n) {
     var r;
     P = n;
     let i = null !== (r = null == e ? void 0 : e.getGuildId()) && void 0 !== r ? r : null;
     if (null == i) return !1;
-    (L[i] = void 0), i === D && q(i);
+    (x[i] = void 0), i === D && q(i);
 }
 function el(e) {
     let { channelId: n } = e;
-    return null == n && null != P ? eo(I.Z.getChannel(P), null) : eo(I.Z.getChannel(n), n);
+    return null == n && null != P ? es(y.Z.getChannel(P), null) : es(y.Z.getChannel(n), n);
 }
 function eu(e) {
     let { voiceStates: n } = e;
     return n.reduce((e, n) => {
         let { channelId: r, sessionId: i } = n;
-        return v.default.getSessionId() !== i ? e : eo(I.Z.getChannel(r), r) || e;
+        return v.default.getSessionId() !== i ? e : es(y.Z.getChannel(r), r) || e;
     }, !1);
 }
 function ec(e) {
     let { guildId: n } = e;
-    if (((D = null != n ? n : null), null == n || null != L[n])) return !1;
+    if (((D = null != n ? n : null), null == n || null != x[n])) return !1;
     q(n);
 }
 function ed() {
-    q(N.I_8);
+    q(C.I_8);
 }
 class ef extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(b.Z, T.ZP, I.Z, y.Z, v.default, _.Z, p.Z), this.syncWith([p.Z], ed);
+        this.waitFor(I.Z, b.ZP, y.Z, T.Z, v.default, p.Z, _.Z), this.syncWith([_.Z], ed);
     }
     getAllGuilds() {
-        return L;
+        return x;
     }
     getChannels(e) {
-        return null != e ? Z(e) : U;
+        return null != e ? F(e) : U;
     }
     getFirstChannelOfType(e, n, r) {
         let i = this.getChannels(e)[r].find(n);
@@ -257,13 +257,13 @@ class ef extends (i = d.ZP.Store) {
     }
     getDefaultChannel(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : N.Plq.VIEW_CHANNEL;
-        return this.getFirstChannel(e, (e) => y.Z.can(r, e.channel), n);
+            r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : C.Plq.VIEW_CHANNEL;
+        return this.getFirstChannel(e, (e) => T.Z.can(r, e.channel), n);
     }
     getSFWDefaultChannel(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : N.Plq.VIEW_CHANNEL;
-        return this.getFirstChannel(e, (e) => y.Z.can(r, e.channel) && !e.channel.nsfw, n);
+            r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : C.Plq.VIEW_CHANNEL;
+        return this.getFirstChannel(e, (e) => T.Z.can(r, e.channel) && !e.channel.nsfw, n);
     }
     getSelectableChannelIds(e) {
         return this.getChannels(e)[R].map((e) => {
@@ -303,14 +303,14 @@ class ef extends (i = d.ZP.Store) {
         return this.getChannels(e).count > 0;
     }
     hasCategories(e) {
-        return this.getChannels(e)[N.d4z.GUILD_CATEGORY].length > 1;
+        return this.getChannels(e)[C.d4z.GUILD_CATEGORY].length > 1;
     }
     getTextChannelNameDisambiguations(e) {
         var n;
-        return null != e && null !== (n = x[e]) && void 0 !== n ? n : G;
+        return null != e && null !== (n = L[e]) && void 0 !== n ? n : G;
     }
 }
-C(ef, 'displayName', 'GuildChannelStore'),
+N(ef, 'displayName', 'GuildChannelStore'),
     (n.ZP = new ef(f.Z, {
         BACKGROUND_SYNC: z,
         CHANNEL_SELECT: ec,

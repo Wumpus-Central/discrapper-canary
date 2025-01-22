@@ -7,7 +7,7 @@ var i = r(239700);
 function a(e = {}) {
     let { isReadOnly: n } = e,
         [r, a] = (0, i.zk)(e.isSelected, e.defaultSelected || !1, e.onChange);
-    function s() {
+    function o() {
         !n && a(!r);
     }
     return {
@@ -15,6 +15,6 @@ function a(e = {}) {
         setSelected: function e(e) {
             !n && a(e);
         },
-        toggle: s
+        toggle: o
     };
 }

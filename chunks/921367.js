@@ -3,12 +3,12 @@ r.d(n, {
         return m;
     },
     O: function () {
-        return s;
+        return o;
     }
 });
 var i = r(259630),
     a = r(90143);
-function s(e) {
+function o(e) {
     if (0 === e.length) throw Error('Number skeleton cannot be empty');
     for (
         var n = e.split(a.r).filter(function (e) {
@@ -16,13 +16,13 @@ function s(e) {
             }),
             r = [],
             i = 0,
-            s = n;
-        i < s.length;
+            o = n;
+        i < o.length;
         i++
     ) {
-        var o = s[i].split('/');
-        if (0 === o.length) throw Error('Invalid number skeleton');
-        for (var l = o[0], u = o.slice(1), c = 0, d = u; c < d.length; c++) if (0 === d[c].length) throw Error('Invalid number skeleton');
+        var s = o[i].split('/');
+        if (0 === s.length) throw Error('Invalid number skeleton');
+        for (var l = s[0], u = s.slice(1), c = 0, d = u; c < d.length; c++) if (0 === d[c].length) throw Error('Invalid number skeleton');
         r.push({
             stem: l,
             options: u
@@ -30,7 +30,7 @@ function s(e) {
     }
     return r;
 }
-function o(e) {
+function s(e) {
     return e.replace(/^(.*?)-/, '');
 }
 var l = /^\.(?:(0+)(\*)?|(#+)|(0+)(#+))$/g,
@@ -47,7 +47,7 @@ function f(e) {
         n
     );
 }
-function _(e) {
+function p(e) {
     switch (e) {
         case 'sign-auto':
             return { signDisplay: 'auto' };
@@ -86,15 +86,15 @@ function h(e) {
     }
     return n;
 }
-function p(e) {
+function _(e) {
     var n = {},
-        r = _(e);
+        r = p(e);
     return r ? r : n;
 }
 function m(e) {
     for (var n = {}, r = 0, a = e; r < a.length; r++) {
-        var s = a[r];
-        switch (s.stem) {
+        var o = a[r];
+        switch (o.stem) {
             case 'percent':
             case '%':
                 n.style = 'percent';
@@ -103,7 +103,7 @@ function m(e) {
                 (n.style = 'percent'), (n.scale = 100);
                 continue;
             case 'currency':
-                (n.style = 'currency'), (n.currency = s.options[0]);
+                (n.style = 'currency'), (n.currency = o.options[0]);
                 continue;
             case 'group-off':
             case ',_':
@@ -115,7 +115,7 @@ function m(e) {
                 continue;
             case 'measure-unit':
             case 'unit':
-                (n.style = 'unit'), (n.unit = o(s.options[0]));
+                (n.style = 'unit'), (n.unit = s(o.options[0]));
                 continue;
             case 'compact-short':
             case 'K':
@@ -128,16 +128,16 @@ function m(e) {
             case 'scientific':
                 n = (0, i.pi)(
                     (0, i.pi)((0, i.pi)({}, n), { notation: 'scientific' }),
-                    s.options.reduce(function (e, n) {
-                        return (0, i.pi)((0, i.pi)({}, e), p(n));
+                    o.options.reduce(function (e, n) {
+                        return (0, i.pi)((0, i.pi)({}, e), _(n));
                     }, {})
                 );
                 continue;
             case 'engineering':
                 n = (0, i.pi)(
                     (0, i.pi)((0, i.pi)({}, n), { notation: 'engineering' }),
-                    s.options.reduce(function (e, n) {
-                        return (0, i.pi)((0, i.pi)({}, e), p(n));
+                    o.options.reduce(function (e, n) {
+                        return (0, i.pi)((0, i.pi)({}, e), _(n));
                     }, {})
                 );
                 continue;
@@ -157,7 +157,7 @@ function m(e) {
                 n.currencyDisplay = 'symbol';
                 continue;
             case 'scale':
-                n.scale = parseFloat(s.options[0]);
+                n.scale = parseFloat(o.options[0]);
                 continue;
             case 'rounding-mode-floor':
                 n.roundingMode = 'floor';
@@ -181,35 +181,35 @@ function m(e) {
                 n.roundingMode = 'halfExpand';
                 continue;
             case 'integer-width':
-                if (s.options.length > 1) throw RangeError('integer-width stems only accept a single optional option');
-                s.options[0].replace(c, function (e, r, i, a, s, o) {
+                if (o.options.length > 1) throw RangeError('integer-width stems only accept a single optional option');
+                o.options[0].replace(c, function (e, r, i, a, o, s) {
                     if (r) n.minimumIntegerDigits = i.length;
-                    else if (a && s) throw Error('We currently do not support maximum integer digits');
-                    else if (o) throw Error('We currently do not support exact integer digits');
+                    else if (a && o) throw Error('We currently do not support maximum integer digits');
+                    else if (s) throw Error('We currently do not support exact integer digits');
                     return '';
                 });
                 continue;
         }
-        if (d.test(s.stem)) {
-            n.minimumIntegerDigits = s.stem.length;
+        if (d.test(o.stem)) {
+            n.minimumIntegerDigits = o.stem.length;
             continue;
         }
-        if (l.test(s.stem)) {
-            if (s.options.length > 1) throw RangeError('Fraction-precision stems only accept a single optional option');
-            s.stem.replace(l, function (e, r, i, a, s, o) {
-                return '*' === i ? (n.minimumFractionDigits = r.length) : a && '#' === a[0] ? (n.maximumFractionDigits = a.length) : s && o ? ((n.minimumFractionDigits = s.length), (n.maximumFractionDigits = s.length + o.length)) : ((n.minimumFractionDigits = r.length), (n.maximumFractionDigits = r.length)), '';
+        if (l.test(o.stem)) {
+            if (o.options.length > 1) throw RangeError('Fraction-precision stems only accept a single optional option');
+            o.stem.replace(l, function (e, r, i, a, o, s) {
+                return '*' === i ? (n.minimumFractionDigits = r.length) : a && '#' === a[0] ? (n.maximumFractionDigits = a.length) : o && s ? ((n.minimumFractionDigits = o.length), (n.maximumFractionDigits = o.length + s.length)) : ((n.minimumFractionDigits = r.length), (n.maximumFractionDigits = r.length)), '';
             });
-            var m = s.options[0];
+            var m = o.options[0];
             'w' === m ? (n = (0, i.pi)((0, i.pi)({}, n), { trailingZeroDisplay: 'stripIfInteger' })) : m && (n = (0, i.pi)((0, i.pi)({}, n), f(m)));
             continue;
         }
-        if (u.test(s.stem)) {
-            n = (0, i.pi)((0, i.pi)({}, n), f(s.stem));
+        if (u.test(o.stem)) {
+            n = (0, i.pi)((0, i.pi)({}, n), f(o.stem));
             continue;
         }
-        var g = _(s.stem);
+        var g = p(o.stem);
         g && (n = (0, i.pi)((0, i.pi)({}, n), g));
-        var E = h(s.stem);
+        var E = h(o.stem);
         E && (n = (0, i.pi)((0, i.pi)({}, n), E));
     }
     return n;

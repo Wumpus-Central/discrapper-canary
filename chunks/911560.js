@@ -1,19 +1,19 @@
 var i = r(512969),
     a = r(544891),
-    s = r(570140),
-    o = r(38618),
+    o = r(570140),
+    s = r(38618),
     l = r(893607),
     u = r(131704),
     c = r(592125),
     d = r(944486),
     f = r(981631),
-    _ = r(176505);
+    p = r(176505);
 let h = {},
-    p = !1;
+    _ = !1;
 function m() {
-    !p &&
-        ((p = !0),
-        s.Z.subscribe('CONNECTION_OPEN', () => {
+    !_ &&
+        ((_ = !0),
+        o.Z.subscribe('CONNECTION_OPEN', () => {
             h = {};
             let e = d.Z.getChannelId(),
                 n = c.Z.getChannel(e);
@@ -21,8 +21,8 @@ function m() {
         }));
 }
 function g(e) {
-    if (null == e || e === _.V || (0, _.AB)(e) || null != c.Z.getChannel(e)) return Promise.resolve();
-    if ((m(), !o.Z.isConnected())) return Promise.resolve();
+    if (null == e || e === p.V || (0, p.AB)(e) || null != c.Z.getChannel(e)) return Promise.resolve();
+    if ((m(), !s.Z.isConnected())) return Promise.resolve();
     let n = h[e];
     if (null != n) return 'LOADING' === n.type ? n.promise : Promise.resolve();
     let r = (0, i.LX)(location.pathname, {
@@ -38,7 +38,7 @@ function g(e) {
                 let { body: i } = n;
                 if (((h[e] = { type: 'LOADED' }), u.Ec.has(i.type))) {
                     var a;
-                    s.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'THREAD_CREATE',
                         channel: (0, u.q_)(i),
                         messageId: null == r ? void 0 : null === (a = r.params) || void 0 === a ? void 0 : a.messageId
@@ -48,7 +48,7 @@ function g(e) {
             .catch(() => {
                 var n;
                 (h[e] = { type: 'NOT_FOUND' }),
-                    s.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'CHANNEL_DELETE',
                         channel: {
                             id: e,

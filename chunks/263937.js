@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(433517),
+var o = r(442837),
+    s = r(433517),
     l = r(570140),
     u = r(581883);
 function c(e, n, r) {
@@ -19,19 +19,19 @@ function c(e, n, r) {
 }
 let d = {},
     f = {};
-function _() {
-    var e, n, r, i, a, s;
-    let o = u.Z.settings;
+function p() {
+    var e, n, r, i, a, o;
+    let s = u.Z.settings;
     return {
-        gifAutoPlay: null === (n = o.textAndImages) || void 0 === n ? void 0 : null === (e = n.gifAutoPlay) || void 0 === e ? void 0 : e.value,
-        animateEmoji: null === (i = o.textAndImages) || void 0 === i ? void 0 : null === (r = i.animateEmoji) || void 0 === r ? void 0 : r.value,
-        animateStickers: null === (s = o.textAndImages) || void 0 === s ? void 0 : null === (a = s.animateStickers) || void 0 === a ? void 0 : a.value
+        gifAutoPlay: null === (n = s.textAndImages) || void 0 === n ? void 0 : null === (e = n.gifAutoPlay) || void 0 === e ? void 0 : e.value,
+        animateEmoji: null === (i = s.textAndImages) || void 0 === i ? void 0 : null === (r = i.animateEmoji) || void 0 === r ? void 0 : r.value,
+        animateStickers: null === (o = s.textAndImages) || void 0 === o ? void 0 : null === (a = o.animateStickers) || void 0 === a ? void 0 : a.value
     };
 }
 function h() {
-    return (f = _()), !1;
+    return (f = p()), !1;
 }
-function p() {
+function _() {
     d = {};
 }
 function m() {
@@ -49,7 +49,7 @@ function E(e) {
     for (let e of n) delete d[e];
 }
 function v() {
-    let e = _(),
+    let e = p(),
         n = !1;
     for (let r in e) {
         let i = r;
@@ -57,7 +57,7 @@ function v() {
     }
     return n;
 }
-class I extends (i = s.ZP.PersistedStore) {
+class y extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         (d = null != e ? e : {}), this.syncWith([u.Z], h);
     }
@@ -72,19 +72,19 @@ class I extends (i = s.ZP.PersistedStore) {
         return d[e];
     }
 }
-c(I, 'displayName', 'UserSettingsOverridesStore'),
-    c(I, 'persistKey', 'UserSettingsOverridesStore'),
-    c(I, 'migrations', [
+c(y, 'displayName', 'UserSettingsOverridesStore'),
+    c(y, 'persistKey', 'UserSettingsOverridesStore'),
+    c(y, 'migrations', [
         () => {
             var e;
-            let n = null !== (e = o.K.get('UserSettingsStoreOverrides')) && void 0 !== e ? e : {};
-            return o.K.remove('UserSettingsStoreOverrides'), n;
+            let n = null !== (e = s.K.get('UserSettingsStoreOverrides')) && void 0 !== e ? e : {};
+            return s.K.remove('UserSettingsStoreOverrides'), n;
         }
     ]),
-    (n.Z = new I(l.Z, {
+    (n.Z = new y(l.Z, {
         USER_SETTINGS_PROTO_UPDATE: v,
         USER_SETTINGS_OVERRIDE_APPLY: g,
         USER_SETTINGS_OVERRIDE_CLEAR: E,
-        LOGOUT: p,
+        LOGOUT: _,
         LOGIN_SUCCESS: m
     }));

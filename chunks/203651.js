@@ -2,7 +2,7 @@ let i;
 function a(e, n) {
     var r = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
     if (!r) {
-        if (Array.isArray(e) || (r = s(e)) || (n && e && 'number' == typeof e.length)) {
+        if (Array.isArray(e) || (r = o(e)) || (n && e && 'number' == typeof e.length)) {
             r && (e = r);
             var i = 0,
                 a = function () {};
@@ -24,7 +24,7 @@ function a(e, n) {
         }
         throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
     }
-    var o,
+    var s,
         l = !0,
         u = !1;
     return {
@@ -36,26 +36,26 @@ function a(e, n) {
             return (l = e.done), e;
         },
         e: function (e) {
-            (u = !0), (o = e);
+            (u = !0), (s = e);
         },
         f: function () {
             try {
                 !l && null != r.return && r.return();
             } finally {
-                if (u) throw o;
+                if (u) throw s;
             }
         }
     };
 }
-function s(e, n) {
+function o(e, n) {
     if (e) {
-        if ('string' == typeof e) return o(e, n);
+        if ('string' == typeof e) return s(e, n);
         var r = Object.prototype.toString.call(e).slice(8, -1);
         if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
-        if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return o(e, n);
+        if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return s(e, n);
     }
 }
-function o(e, n) {
+function s(e, n) {
     (null == n || n > e.length) && (n = e.length);
     for (var r = 0, i = Array(n); r < n; r++) i[r] = e[r];
     return i;
@@ -66,9 +66,9 @@ let l = r(606419),
     c = r(339768),
     d = r(615252),
     f = r(517024),
-    _ = f.isObject,
+    p = f.isObject,
     h = f.mixin,
-    p = f.hasOwn,
+    _ = f.hasOwn,
     m = r(509337),
     g = r(675246);
 function E() {}
@@ -76,19 +76,19 @@ e.exports = function (e, r) {
     return 'function' == typeof r ? new n.Request('GET', e).end(r) : 1 == arguments.length ? new n.Request('GET', e) : new n.Request(e, r);
 };
 let v = (n = e.exports);
-(n.Request = C),
+(n.Request = N),
     (v.getXHR = () => {
         if (i.XMLHttpRequest) return new i.XMLHttpRequest();
         throw Error('Browser-only version of superagent could not find XHR');
     });
-let I = ''.trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, '');
-function T(e) {
-    if (!_(e)) return e;
+let y = ''.trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, '');
+function b(e) {
+    if (!p(e)) return e;
     let n = [];
-    for (let r in e) p(e, r) && b(n, r, e[r]);
+    for (let r in e) _(e, r) && I(n, r, e[r]);
     return n.join('&');
 }
-function b(e, n, r) {
+function I(e, n, r) {
     if (void 0 !== r) {
         if (null === r) {
             e.push(encodeURI(n));
@@ -96,46 +96,46 @@ function b(e, n, r) {
         }
         if (Array.isArray(r)) {
             var i,
-                s = a(r);
+                o = a(r);
             try {
-                for (s.s(); !(i = s.n()).done; ) {
+                for (o.s(); !(i = o.n()).done; ) {
                     let r = i.value;
-                    b(e, n, r);
+                    I(e, n, r);
                 }
             } catch (e) {
-                s.e(e);
+                o.e(e);
             } finally {
-                s.f();
+                o.f();
             }
-        } else if (_(r)) for (let i in r) p(r, i) && b(e, `${n}[${i}]`, r[i]);
+        } else if (p(r)) for (let i in r) _(r, i) && I(e, `${n}[${i}]`, r[i]);
         else e.push(encodeURI(n) + '=' + encodeURIComponent(r));
     }
 }
-function y(e) {
+function T(e) {
     let n, r;
     let i = {},
         a = e.split('&');
-    for (let e = 0, s = a.length; e < s; ++e) -1 === (r = (n = a[e]).indexOf('=')) ? (i[decodeURIComponent(n)] = '') : (i[decodeURIComponent(n.slice(0, r))] = decodeURIComponent(n.slice(r + 1)));
+    for (let e = 0, o = a.length; e < o; ++e) -1 === (r = (n = a[e]).indexOf('=')) ? (i[decodeURIComponent(n)] = '') : (i[decodeURIComponent(n.slice(0, r))] = decodeURIComponent(n.slice(r + 1)));
     return i;
 }
 function S(e) {
     let n, r, i, a;
-    let s = e.split(/\r?\n/),
-        o = {};
-    for (let e = 0, l = s.length; e < l; ++e) {
-        if (-1 !== (n = (r = s[e]).indexOf(':'))) (i = r.slice(0, n).toLowerCase()), (a = I(r.slice(n + 1))), (o[i] = a);
+    let o = e.split(/\r?\n/),
+        s = {};
+    for (let e = 0, l = o.length; e < l; ++e) {
+        if (-1 !== (n = (r = o[e]).indexOf(':'))) (i = r.slice(0, n).toLowerCase()), (a = y(r.slice(n + 1))), (s[i] = a);
     }
-    return o;
+    return s;
 }
 function A(e) {
     return /[/+]json($|[^-\w])/i.test(e);
 }
-function N(e) {
+function C(e) {
     (this.req = e), (this.xhr = this.req.xhr), (this.text = ('HEAD' !== this.req.method && ('' === this.xhr.responseType || 'text' === this.xhr.responseType)) || void 0 === this.xhr.responseType ? this.xhr.responseText : null), (this.statusText = this.req.xhr.statusText);
     let n = this.xhr.status;
     1223 === n && (n = 204), this._setStatusProperties(n), (this.headers = S(this.xhr.getAllResponseHeaders())), (this.header = this.headers), (this.header['content-type'] = this.xhr.getResponseHeader('content-type')), this._setHeaderProperties(this.header), null === this.text && e._responseType ? (this.body = this.xhr.response) : (this.body = 'HEAD' === this.req.method ? null : this._parseBody(this.text ? this.text : this.xhr.response));
 }
-function C(e, n) {
+function N(e, n) {
     let r = this;
     (this._query = this._query || []),
         (this.method = e),
@@ -147,7 +147,7 @@ function C(e, n) {
                 n = null,
                 i = null;
             try {
-                i = new N(r);
+                i = new C(r);
             } catch (e) {
                 return ((n = Error('Parser is unable to parse the response')).parse = !0), (n.original = e), r.xhr ? ((n.rawResponse = void 0 === r.xhr.responseType ? r.xhr.responseText : r.xhr.response), (n.status = r.xhr.status ? r.xhr.status : null), (n.statusCode = n.status)) : ((n.rawResponse = null), (n.status = null)), r.callback(n);
             }
@@ -160,8 +160,8 @@ function C(e, n) {
             e ? ((e.original = n), (e.response = i), (e.status = e.status || i.status), r.callback(e, i)) : r.callback(null, i);
         });
 }
-(v.serializeObject = T),
-    (v.parseString = y),
+(v.serializeObject = b),
+    (v.parseString = T),
     (v.types = {
         html: 'text/html',
         json: 'application/json',
@@ -175,31 +175,31 @@ function C(e, n) {
         'application/json': u
     }),
     (v.parse = {
-        'application/x-www-form-urlencoded': y,
+        'application/x-www-form-urlencoded': T,
         'application/json': JSON.parse
     }),
-    h(N.prototype, m.prototype),
-    (N.prototype._parseBody = function (e) {
+    h(C.prototype, m.prototype),
+    (C.prototype._parseBody = function (e) {
         let n = v.parse[this.type];
         return this.req._parser ? this.req._parser(this, e) : (!n && A(this.type) && (n = v.parse['application/json']), n && e && (e.length > 0 || e instanceof Object) ? n(e) : null);
     }),
-    (N.prototype.toError = function () {
+    (C.prototype.toError = function () {
         let e = this.req,
             n = e.method,
             r = e.url,
             i = Error(`cannot ${n} ${r} (${this.status})`);
         return (i.status = this.status), (i.method = n), (i.url = r), i;
     }),
-    (v.Response = N),
-    l(C.prototype),
-    h(C.prototype, d.prototype),
-    (C.prototype.type = function (e) {
+    (v.Response = C),
+    l(N.prototype),
+    h(N.prototype, d.prototype),
+    (N.prototype.type = function (e) {
         return this.set('Content-Type', v.types[e] || e), this;
     }),
-    (C.prototype.accept = function (e) {
+    (N.prototype.accept = function (e) {
         return this.set('Accept', v.types[e] || e), this;
     }),
-    (C.prototype.auth = function (e, n, r) {
+    (N.prototype.auth = function (e, n, r) {
         1 == arguments.length && (n = ''), 'object' == typeof n && null !== n && ((r = n), (n = '')), !r && (r = { type: 'function' == typeof btoa ? 'basic' : 'auto' });
         let i = r.encoder
             ? r.encoder
@@ -209,44 +209,44 @@ function C(e, n) {
               };
         return this._auth(e, n, r, i);
     }),
-    (C.prototype.query = function (e) {
-        return 'string' != typeof e && (e = T(e)), e && this._query.push(e), this;
+    (N.prototype.query = function (e) {
+        return 'string' != typeof e && (e = b(e)), e && this._query.push(e), this;
     }),
-    (C.prototype.attach = function (e, n, r) {
+    (N.prototype.attach = function (e, n, r) {
         if (n) {
             if (this._data) throw Error("superagent can't mix .send() and .attach()");
             this._getFormData().append(e, n, r || n.name);
         }
         return this;
     }),
-    (C.prototype._getFormData = function () {
+    (N.prototype._getFormData = function () {
         return !this._formData && (this._formData = new i.FormData()), this._formData;
     }),
-    (C.prototype.callback = function (e, n) {
+    (N.prototype.callback = function (e, n) {
         if (this._shouldRetry(e, n)) return this._retry();
         let r = this._callback;
         this.clearTimeout(), e && (this._maxRetries && (e.retries = this._retries - 1), this.emit('error', e)), r(e, n);
     }),
-    (C.prototype.crossDomainError = function () {
+    (N.prototype.crossDomainError = function () {
         let e = Error('Request has been terminated\nPossible causes: the network is offline, Origin is not allowed by Access-Control-Allow-Origin, the page is being unloaded, etc.');
         (e.crossDomain = !0), (e.status = this.status), (e.method = this.method), (e.url = this.url), this.callback(e);
     }),
-    (C.prototype.agent = function () {
+    (N.prototype.agent = function () {
         return console.warn('This is not supported in browser version of superagent'), this;
     }),
-    (C.prototype.ca = C.prototype.agent),
-    (C.prototype.buffer = C.prototype.ca),
-    (C.prototype.write = () => {
+    (N.prototype.ca = N.prototype.agent),
+    (N.prototype.buffer = N.prototype.ca),
+    (N.prototype.write = () => {
         throw Error('Streaming is not supported in browser version of superagent');
     }),
-    (C.prototype.pipe = C.prototype.write),
-    (C.prototype._isHost = function (e) {
+    (N.prototype.pipe = N.prototype.write),
+    (N.prototype._isHost = function (e) {
         return e && 'object' == typeof e && !Array.isArray(e) && '[object Object]' !== Object.prototype.toString.call(e);
     }),
-    (C.prototype.end = function (e) {
+    (N.prototype.end = function (e) {
         this._endCalled && console.warn('Warning: .end() was called twice. This is not supported in superagent'), (this._endCalled = !0), (this._callback = e || E), this._finalizeQueryString(), this._end();
     }),
-    (C.prototype._setUploadTimeout = function () {
+    (N.prototype._setUploadTimeout = function () {
         let e = this;
         this._uploadTimeout &&
             !this._uploadTimeoutTimer &&
@@ -254,7 +254,7 @@ function C(e, n) {
                 e._timeoutError('Upload timeout of ', e._uploadTimeout, 'ETIMEDOUT');
             }, this._uploadTimeout));
     }),
-    (C.prototype._end = function () {
+    (N.prototype._end = function () {
         if (this._aborted) return this.callback(Error('The request has been aborted even before .end() was called'));
         let e = this;
         this.xhr = v.getXHR();
@@ -295,7 +295,7 @@ function C(e, n) {
                 n = this._serializer || v.serialize[e ? e.split(';')[0] : ''];
             !n && A(e) && (n = v.serialize['application/json']), n && (r = n(r));
         }
-        for (let e in this.header) null !== this.header[e] && p(this.header, e) && n.setRequestHeader(e, this.header[e]);
+        for (let e in this.header) null !== this.header[e] && _(this.header, e) && n.setRequestHeader(e, this.header[e]);
         this._responseType && (n.responseType = this._responseType), this.emit('request', this), n.send(void 0 === r ? null : r);
     }),
     (v.agent = () => new g());

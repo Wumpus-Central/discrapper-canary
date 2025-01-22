@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(820611),
-    o = r(877837),
+    o = r(820611),
+    s = r(877837),
     l = function (e) {
         var n = e.onChange,
             r = e.rgb,
@@ -47,7 +47,7 @@ var i = r(192379),
             ),
             f = function (e, i) {
                 e.hex
-                    ? s.FX(e.hex) &&
+                    ? o.FX(e.hex) &&
                       n(
                           {
                               hex: e.hex,
@@ -89,7 +89,7 @@ var i = r(192379),
             i.createElement(
                 'div',
                 { style: d.double },
-                i.createElement(o.Vm, {
+                i.createElement(s.Vm, {
                     style: {
                         input: d.input,
                         label: d.label
@@ -102,7 +102,7 @@ var i = r(192379),
             i.createElement(
                 'div',
                 { style: d.single },
-                i.createElement(o.Vm, {
+                i.createElement(s.Vm, {
                     style: {
                         input: d.input,
                         label: d.label
@@ -117,7 +117,7 @@ var i = r(192379),
             i.createElement(
                 'div',
                 { style: d.single },
-                i.createElement(o.Vm, {
+                i.createElement(s.Vm, {
                     style: {
                         input: d.input,
                         label: d.label
@@ -132,7 +132,7 @@ var i = r(192379),
             i.createElement(
                 'div',
                 { style: d.single },
-                i.createElement(o.Vm, {
+                i.createElement(s.Vm, {
                     style: {
                         input: d.input,
                         label: d.label
@@ -147,7 +147,7 @@ var i = r(192379),
             i.createElement(
                 'div',
                 { style: d.alpha },
-                i.createElement(o.Vm, {
+                i.createElement(s.Vm, {
                     style: {
                         input: d.input,
                         label: d.label

@@ -10,8 +10,8 @@ var i = n(933557),
     o = n(496675),
     s = n(699516),
     c = n(594174),
-    d = n(768581),
-    u = n(55935),
+    u = n(768581),
+    d = n(55935),
     m = n(631184),
     h = n(346610);
 n(978003);
@@ -32,7 +32,7 @@ function p(e, t, n) {
 function _(e, t) {
     return {
         originLabel: e.name,
-        originIconUrl: d.ZP.getGuildIconURL({
+        originIconUrl: u.ZP.getGuildIconURL({
             id: e.id,
             size: 16,
             icon: e.icon,
@@ -47,7 +47,7 @@ function _(e, t) {
 }
 class g {
     getForwardInfo() {
-        var e, t, n, d;
+        var e, t, n, u;
         let p = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z,
             g = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
             E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
@@ -62,7 +62,7 @@ class g {
                 snapshotIndex: N,
                 useOldIcon: S
             };
-        let b = (0, u.Xf)(T.message.timestamp),
+        let b = (0, d.Xf)(T.message.timestamp),
             j = p.getChannel(this.parentMessage.channel_id);
         if (null != j && j.guild_id === (null === (e = v.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
             let e = p.getChannel(null === (n = v.messageReference) || void 0 === n ? void 0 : n.channel_id);
@@ -104,7 +104,7 @@ class g {
                 snapshotIndex: N,
                 useOldIcon: S
             };
-        let Z = null !== (d = I.getGuild(R)) && void 0 !== d ? d : x.getGuild(R);
+        let Z = null !== (u = I.getGuild(R)) && void 0 !== u ? u : x.getGuild(R);
         return null == Z
             ? {
                   snapshotIndex: N,

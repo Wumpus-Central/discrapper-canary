@@ -1,7 +1,7 @@
 var i, a;
 r.d(n, {
     $$: function () {
-        return o;
+        return s;
     },
     Al: function () {
         return a;
@@ -13,11 +13,11 @@ r.d(n, {
         return l;
     },
     k0: function () {
-        return s;
+        return o;
     }
 });
-let s = 2 * r(70956).Z.Millis.HOUR,
-    o = 'new-user-age-gate-modal',
+let o = 2 * r(70956).Z.Millis.HOUR,
+    s = 'new-user-age-gate-modal',
     l = 'existing-user-age-gate-modal';
 !(function (e) {
     (e.AUTH = 'Register Age Gate'), (e.NEW_USER_FLOW = 'NUF'), (e.CLAIM_ACCOUNT = 'Claim Age Gate'), (e.NSFW_CHANNEL = 'NSFW Channel'), (e.NSFW_SERVER = 'NSFW Server'), (e.NSFW_SERVER_INVITE = 'NSFW Server Invite'), (e.NSFW_SERVER_INVITE_EMBED = 'NSFW Server Invite Embed'), (e.NSFW_VOICE_CHANNEL = 'NSFW Voice Channel'), (e.FAMILY_CENTER = 'Family Center'), (e.REGISTER = 'Register'), (e.DEEP_LINK_PROMPT = 'Deep Link Prompt'), (e.UNSPECIFIED = 'Unspecified');

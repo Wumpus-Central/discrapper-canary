@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(375954);
+    o = r(570140),
+    s = r(375954);
 function l(e, n, r) {
     return (
         n in e
@@ -19,16 +19,16 @@ let u = {},
     c = {},
     d = {};
 function f(e) {
-    let { channel: n, message: r, shouldMention: i = !0, showMentionToggle: a = !0, source: s } = e;
+    let { channel: n, message: r, shouldMention: i = !0, showMentionToggle: a = !0, source: o } = e;
     (u[n.id] = {
         channel: n,
         message: r,
         shouldMention: i,
         showMentionToggle: a
     }),
-        (d[n.id] = s);
+        (d[n.id] = o);
 }
-function _(e) {
+function p(e) {
     let { channel: n, messageId: r, shouldMention: i = !0, showMentionToggle: a = !0 } = e;
     c[n.id] = {
         channel: n,
@@ -50,24 +50,24 @@ function h(e) {
                 shouldMention: r
             });
 }
-function p(e) {
+function _(e) {
     let { channelId: n } = e;
     delete u[n], delete c[n];
 }
 function m(e) {
     var n, r, i;
-    let { id: a, channelId: s } = e;
-    if ((null === (r = u[s]) || void 0 === r ? void 0 : null === (n = r.message) || void 0 === n ? void 0 : n.id) === a) delete u[s], delete d[s];
+    let { id: a, channelId: o } = e;
+    if ((null === (r = u[o]) || void 0 === r ? void 0 : null === (n = r.message) || void 0 === n ? void 0 : n.id) === a) delete u[o], delete d[o];
     else {
-        if ((null === (i = c[s]) || void 0 === i ? void 0 : i.messageId) !== a) return !1;
-        delete c[s], delete d[s];
+        if ((null === (i = c[o]) || void 0 === i ? void 0 : i.messageId) !== a) return !1;
+        delete c[o], delete d[o];
     }
 }
 function g(e) {
     if (null == e) return !1;
     let n = c[e];
     if (null == n) return !1;
-    let r = o.Z.getMessage(e, n.messageId);
+    let r = s.Z.getMessage(e, n.messageId);
     if (null == r) return !1;
     (u[e] = {
         channel: n.channel,
@@ -85,12 +85,12 @@ function v(e) {
     let { channelId: n } = e;
     g(n);
 }
-function I() {
+function y() {
     (u = {}), (c = {}), (d = {});
 }
-class T extends (i = a.ZP.Store) {
+class b extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z);
+        this.waitFor(s.Z);
     }
     getPendingReply(e) {
         return u[e];
@@ -99,14 +99,14 @@ class T extends (i = a.ZP.Store) {
         return d[e];
     }
 }
-l(T, 'displayName', 'PendingReplyStore'),
-    (n.Z = new T(s.Z, {
+l(b, 'displayName', 'PendingReplyStore'),
+    (n.Z = new b(o.Z, {
         CREATE_PENDING_REPLY: f,
-        CREATE_SHALLOW_PENDING_REPLY: _,
+        CREATE_SHALLOW_PENDING_REPLY: p,
         SET_PENDING_REPLY_SHOULD_MENTION: h,
-        DELETE_PENDING_REPLY: p,
-        CONNECTION_OPEN: I,
-        LOGOUT: I,
+        DELETE_PENDING_REPLY: _,
+        CONNECTION_OPEN: y,
+        LOGOUT: y,
         MESSAGE_DELETE: m,
         CHANNEL_SELECT: E,
         LOAD_MESSAGES_SUCCESS: v

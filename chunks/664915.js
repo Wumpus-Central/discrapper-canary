@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(581883);
 function u(e, n, r) {
     return (
@@ -28,7 +28,7 @@ function f(e) {
     let { folderId: n } = e;
     (c = new Set(c)).has(n) ? c.delete(n) : c.add(n);
 }
-function _(e) {
+function p(e) {
     let { folderId: n, expanded: r } = e;
     (c = new Set(c)), r ? c.add(n) : c.has(n) && c.delete(n);
 }
@@ -36,7 +36,7 @@ function h() {
     if (0 === c.size) return !1;
     c = new Set();
 }
-class p extends (i = s.ZP.PersistedStore) {
+class _ extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         null != e && (c = new Set(e.expandedFolders)), this.waitFor(l.Z);
     }
@@ -50,11 +50,11 @@ class p extends (i = s.ZP.PersistedStore) {
         return c.has(e);
     }
 }
-u(p, 'displayName', 'ExpandedGuildFolderStore'),
-    u(p, 'persistKey', 'ExpandedGuildFolderStore'),
-    (n.Z = new p(o.Z, {
+u(_, 'displayName', 'ExpandedGuildFolderStore'),
+    u(_, 'persistKey', 'ExpandedGuildFolderStore'),
+    (n.Z = new _(s.Z, {
         TOGGLE_GUILD_FOLDER_EXPAND: f,
-        SET_GUILD_FOLDER_EXPANDED: _,
+        SET_GUILD_FOLDER_EXPANDED: p,
         USER_SETTINGS_PROTO_UPDATE: d,
         GUILD_FOLDER_COLLAPSE: h
     }));

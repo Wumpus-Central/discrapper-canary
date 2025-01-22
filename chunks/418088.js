@@ -1,12 +1,12 @@
 r.d(n, {
     b: function () {
-        return o;
+        return s;
     }
 });
 var i,
     a,
-    s = r(47120);
-function o(e, n) {
+    o = r(47120);
+function s(e, n) {
     return {
         id: e.id,
         topic: e.topic,

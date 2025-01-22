@@ -12,22 +12,22 @@ r.d(n, {
         return f;
     },
     Oq: function () {
-        return N;
+        return C;
     },
     RF: function () {
-        return I;
+        return y;
     },
     Un: function () {
-        return s;
+        return o;
     },
     X: function () {
         return E;
     },
     YW: function () {
-        return _;
+        return p;
     },
     ae: function () {
-        return T;
+        return b;
     },
     b3: function () {
         return m;
@@ -36,7 +36,7 @@ r.d(n, {
         return A;
     },
     dr: function () {
-        return y;
+        return T;
     },
     fY: function () {
         return v;
@@ -51,35 +51,35 @@ r.d(n, {
         return g;
     },
     qm: function () {
-        return p;
+        return _;
     },
     yZ: function () {
-        return b;
+        return I;
     }
 });
 var i,
     a,
-    s,
-    o = r(348327),
-    l = r.n(o),
+    o,
+    s = r(348327),
+    l = r.n(s),
     u = r(388032);
 let c = 100,
     d = 50,
     f = 100,
-    _ = 15,
+    p = 15,
     h = 12,
-    p = 50,
+    _ = 50,
     m = 4,
     g = 7,
     E = 5,
     v = 13;
-function I(e) {
+function y(e) {
     if (e.options.length > 0) return !1;
-    let { id: n, ...r } = T(),
+    let { id: n, ...r } = b(),
         { id: i, ...a } = e;
     return l()(r, a);
 }
-function T() {
+function b() {
     return {
         id: String(Date.now()),
         title: u.intl.string(u.t.vY91Cw),
@@ -90,7 +90,7 @@ function T() {
         type: 0
     };
 }
-function b(e) {
+function I(e) {
     return {
         id: String(Date.now()),
         title: '',
@@ -101,7 +101,7 @@ function b(e) {
         type: 0
     };
 }
-function y(e) {
+function T(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -161,7 +161,7 @@ function A(e) {
         belowRequirements: e.below_requirements
     };
 }
-function N(e) {
+function C(e) {
     return null == e || (null == e.id && null == e.name);
 }
 !(function (e) {
@@ -172,4 +172,4 @@ function N(e) {
     })(a || (a = {})),
     !(function (e) {
         (e[(e.ONBOARDING_DEFAULT = 0)] = 'ONBOARDING_DEFAULT'), (e[(e.ONBOARDING_ADVANCED = 1)] = 'ONBOARDING_ADVANCED');
-    })(s || (s = {}));
+    })(o || (o = {}));

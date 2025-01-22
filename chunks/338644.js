@@ -10,12 +10,12 @@ function n(e) {
             relevance: 0,
             begin: /=/
         },
-        s = {
+        o = {
             className: 'punctuation',
             relevance: 0,
             begin: /,/
         },
-        o = {
+        s = {
             className: 'number',
             variants: [{ begin: /[su]?0[xX][KMLHR]?[a-fA-F0-9]+/ }, { begin: /[-+]?\d+(?:[.]\d+)?(?:[eE][-+]?\d+(?:[.]\d+)?)?/ }],
             relevance: 0
@@ -55,11 +55,11 @@ function n(e) {
                 ]
             },
             c,
-            s,
+            o,
             a,
             u,
             l,
-            o
+            s
         ]
     };
 }

@@ -1,8 +1,8 @@
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(388032);
-let o = (e, n) => {
+    o = r(388032);
+let s = (e, n) => {
     let r = {
         display: 'flex',
         gap: '4px',
@@ -29,6 +29,6 @@ let o = (e, n) => {
     );
 };
 function l() {
-    return s.intl.format(s.t.zlXUVV, { warningHook: o });
+    return o.intl.format(o.t.zlXUVV, { warningHook: s });
 }
 n.Z = { getForumChannelPermissionText: l };

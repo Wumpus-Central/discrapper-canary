@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(924102),
-    s = r(820611),
-    o =
+    o = r(820611),
+    s =
         Object.assign ||
         function (e) {
             for (var n = 1; n < arguments.length; n++) {
@@ -47,18 +47,18 @@ var f = function (e) {
             var n = c(this, (r.__proto__ || Object.getPrototypeOf(r)).call(this));
             return (
                 (n.handleChange = function (e, r) {
-                    if (s.LX(e)) {
-                        var i = s.jH(e, e.h || n.state.oldHue);
+                    if (o.LX(e)) {
+                        var i = o.jH(e, e.h || n.state.oldHue);
                         n.setState(i), n.props.onChangeComplete && n.debounce(n.props.onChangeComplete, i, r), n.props.onChange && n.props.onChange(i, r);
                     }
                 }),
                 (n.handleSwatchHover = function (e, r) {
-                    if (s.LX(e)) {
-                        var i = s.jH(e, e.h || n.state.oldHue);
+                    if (o.LX(e)) {
+                        var i = o.jH(e, e.h || n.state.oldHue);
                         n.props.onSwatchHover && n.props.onSwatchHover(i, r);
                     }
                 }),
-                (n.state = o({}, s.jH(e.color, 0))),
+                (n.state = s({}, o.jH(e.color, 0))),
                 (n.debounce = (0, a.Z)(function (e, n, r) {
                     e(n, r);
                 }, 100)),
@@ -74,7 +74,7 @@ var f = function (e) {
                         key: 'render',
                         value: function () {
                             var n = {};
-                            return this.props.onSwatchHover && (n.onSwatchHover = this.handleSwatchHover), i.createElement(e, o({}, this.props, this.state, { onChange: this.handleChange }, n));
+                            return this.props.onSwatchHover && (n.onSwatchHover = this.handleSwatchHover), i.createElement(e, s({}, this.props, this.state, { onChange: this.handleChange }, n));
                         }
                     }
                 ],
@@ -82,7 +82,7 @@ var f = function (e) {
                     {
                         key: 'getDerivedStateFromProps',
                         value: function (e, n) {
-                            return o({}, s.jH(e.color, n.oldHue));
+                            return s({}, o.jH(e.color, n.oldHue));
                         }
                     }
                 ]
@@ -91,8 +91,8 @@ var f = function (e) {
         );
     })(i.PureComponent || i.Component);
     return (
-        (n.propTypes = o({}, e.propTypes)),
-        (n.defaultProps = o({}, e.defaultProps, {
+        (n.propTypes = s({}, e.propTypes)),
+        (n.defaultProps = s({}, e.defaultProps, {
             color: {
                 h: 250,
                 s: 0.5,

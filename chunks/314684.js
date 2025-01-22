@@ -18,13 +18,13 @@ n.d(t, {
         return F;
     },
     Vp: function () {
-        return B;
+        return y;
     },
     bq: function () {
         return R;
     },
     rM: function () {
-        return D;
+        return B;
     },
     yQ: function () {
         return O;
@@ -64,9 +64,9 @@ function O() {
             let n = (0, a.cj)([I.Z], () => I.Z.getState());
             if (null != n) return null !== (t = null !== (e = n.userTenureRewardStatusByRewardId[A.Ft.FREE_AVATAR_DECO_1_MONTH]) && void 0 !== e ? e : n.userTenureRewardStatusByRewardId[A.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== t ? t : n.userTenureRewardStatusByRewardId[A.Ft.FREE_GUILD_BOOST_3_MONTHS];
         })(),
-        r = B(),
+        r = y(),
         l = (function () {
-            return y([A.Ft.FREE_AVATAR_DECO_1_MONTH]);
+            return D([A.Ft.FREE_AVATAR_DECO_1_MONTH]);
         })(),
         o = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
         c = (0, a.e7)([f.Z], () => f.Z.boostSlots),
@@ -163,7 +163,7 @@ function R(e) {
     };
 }
 let P = new Set();
-function y(e) {
+function D(e) {
     let t = (0, a.e7)(
             [_.Z],
             () => {
@@ -179,10 +179,10 @@ function y(e) {
         });
     if (null != (0, N.kG)(t) || !!n) return (0, N.MR)(e, t);
 }
-function B() {
-    return y([A.Ft.FREE_GUILD_BOOST_1_MONTH, A.Ft.FREE_GUILD_BOOST_3_MONTHS]);
+function y() {
+    return D([A.Ft.FREE_GUILD_BOOST_1_MONTH, A.Ft.FREE_GUILD_BOOST_3_MONTHS]);
 }
-let D = (e) => {
+let B = (e) => {
         if (null == e || (null == e ? void 0 : e.showNotification) === !1) return [];
         switch (e.nitroTenureStatus) {
             case A.EB.PENDING:
@@ -195,10 +195,10 @@ let D = (e) => {
     },
     Z = () => {
         let e = O(),
-            [t, n] = i.useState(D(e)),
+            [t, n] = i.useState(B(e)),
             r = (0, S.cG)({ location: 'Home' });
         i.useEffect(() => {
-            if (!1 !== r) n(D(e));
+            if (!1 !== r) n(B(e));
         }, [e, r]);
         let [s] = (0, p.US)(r ? t : []);
         return r ? (null != e && !0 === e.showNotification && (s === l.z.TENURE_REWARD_REDEEMABLE || s === l.z.TENURE_REWARD_PENDING) ? (0, N.Wb)(e.nitroTenureStatus) : null) : null;
@@ -212,7 +212,7 @@ let D = (e) => {
     },
     M = () => {
         let e = O(),
-            t = i.useMemo(() => D(e), [e]),
+            t = i.useMemo(() => B(e), [e]),
             [n] = (0, h.cv)(t),
             r = i.useRef(!1);
         return i.useCallback(() => {

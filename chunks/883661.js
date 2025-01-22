@@ -1,35 +1,35 @@
 var i = r(200651),
     a = r(192379),
-    s = r(481060),
-    o = r(149203);
+    o = r(481060),
+    s = r(149203);
 let l = (e) => {
         switch (e) {
-            case o.UX.RECENT:
-                return s.ClockIcon;
-            case o.UX.FAVORITES:
-                return s.StarIcon;
-            case o.UX.TOP_GUILD_EMOJI:
-                return s.TrophyIcon;
-            case o.UX.PEOPLE:
-                return s.ReactionIcon;
-            case o.UX.NATURE:
-                return s.NatureIcon;
-            case o.UX.FOOD:
-                return s.FoodIcon;
-            case o.UX.ACTIVITY:
-                return s.GameControllerIcon;
-            case o.UX.TRAVEL:
-                return s.BicycleIcon;
-            case o.UX.OBJECTS:
-                return s.ObjectIcon;
-            case o.UX.SYMBOLS:
-                return s.HeartIcon;
-            case o.UX.FLAGS:
-                return s.FlagIcon;
-            case o.UX.PREMIUM_UPSELL:
-                return s.NitroWheelIcon;
-            case o.UX.SOUNDMOJI:
-                return s.SoundboardIcon;
+            case s.UX.RECENT:
+                return o.ClockIcon;
+            case s.UX.FAVORITES:
+                return o.StarIcon;
+            case s.UX.TOP_GUILD_EMOJI:
+                return o.TrophyIcon;
+            case s.UX.PEOPLE:
+                return o.ReactionIcon;
+            case s.UX.NATURE:
+                return o.NatureIcon;
+            case s.UX.FOOD:
+                return o.FoodIcon;
+            case s.UX.ACTIVITY:
+                return o.GameControllerIcon;
+            case s.UX.TRAVEL:
+                return o.BicycleIcon;
+            case s.UX.OBJECTS:
+                return o.ObjectIcon;
+            case s.UX.SYMBOLS:
+                return o.HeartIcon;
+            case s.UX.FLAGS:
+                return o.FlagIcon;
+            case s.UX.PREMIUM_UPSELL:
+                return o.NitroWheelIcon;
+            case s.UX.SOUNDMOJI:
+                return o.SoundboardIcon;
             default:
                 return;
         }

@@ -10,13 +10,13 @@ var r = n(352736),
     a = n(834129),
     o = n(388032);
 function s(e) {
-    let { message: t, usernameHook: s, compact: c, guildId: d } = e,
-        u = (0, l.ZP)(t),
-        m = s(u),
-        h = r.Z.getWelcomeMessageKind(d),
+    let { message: t, usernameHook: s, compact: c, guildId: u } = e,
+        d = (0, l.ZP)(t),
+        m = s(d),
+        h = r.Z.getWelcomeMessageKind(u),
         f = r.Z.getSystemMessageUserJoin(t.id, h),
         p = o.intl.format(f, {
-            username: u.nick,
+            username: d.nick,
             usernameHook: m
         });
     return (0, i.jsx)(a.Z, {

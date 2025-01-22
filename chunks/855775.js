@@ -4,8 +4,8 @@ r.d(n, {
         return f;
     }
 });
-var s,
-    o = r(47120);
+var o,
+    s = r(47120);
 var l = r(442837),
     u = r(570140),
     c = r(981631);
@@ -23,36 +23,36 @@ function d(e, n, r) {
     );
 }
 let f = 'no_payment_source',
-    _ = null,
-    h = null,
     p = null,
+    h = null,
+    _ = null,
     m = null,
     g = null,
     E = {},
     v = null,
-    I = !1,
-    T = null,
-    b = !1,
     y = !1,
+    b = null,
+    I = !1,
+    T = !1,
     S = !1,
     A = !1,
-    N = null,
-    C = new Set();
+    C = null,
+    N = new Set();
 function R(e) {
     null != i && null != v ? i(v) : null != a && a(e), (i = null), (a = null);
 }
 function O(e) {
-    R(), (_ = e.skuId), (p = e.applicationId), (y = e.isIAP), (m = e.analyticsLocation), (N = e.context), (A = e.isGift), (S = !0), (b = !1), (i = e.resolve), (a = e.reject), (T = null), (v = null), (g = e.promotionId);
+    R(), (p = e.skuId), (_ = e.applicationId), (T = e.isIAP), (m = e.analyticsLocation), (C = e.context), (A = e.isGift), (S = !0), (I = !1), (i = e.resolve), (a = e.reject), (b = null), (v = null), (g = e.promotionId);
 }
 function D(e) {
     let { error: n } = e;
-    (S = !1), (N = null), R(n);
-}
-function L(e) {
-    let { skuId: n } = e;
-    C.add(n);
+    (S = !1), (C = null), R(n);
 }
 function x(e) {
+    let { skuId: n } = e;
+    N.add(n);
+}
+function L(e) {
     let { skuId: n, paymentSourceId: r, price: i } = e;
     (E = {
         ...E,
@@ -61,64 +61,64 @@ function x(e) {
             [null != r ? r : f]: i
         }
     }),
-        C.delete(n);
+        N.delete(n);
 }
 function w(e) {
     let { skuId: n } = e;
-    C.delete(n);
+    N.delete(n);
 }
 function P() {
-    I = !0;
+    y = !0;
 }
 function M(e) {
     let { entitlements: n, giftCode: r } = e;
-    (I = !1), (v = n), (h = r);
+    (y = !1), (v = n), (h = r);
 }
 function k(e) {
     let { giftCode: n } = e;
-    if (0 !== n.uses || n.sku_id !== _) return !1;
+    if (0 !== n.uses || n.sku_id !== p) return !1;
     h = n.code;
 }
 function U(e) {
     let { error: n } = e;
-    (I = !1), (T = n);
+    (y = !1), (b = n);
 }
 function B() {
-    b = !0;
+    I = !0;
 }
 function G() {
-    T = null;
-}
-function F(e) {
-    A = e.isGift;
+    b = null;
 }
 function Z(e) {
-    let { locked: n } = e;
-    if (!n || null == N) return !1;
-    (S = !1), (N = null), R();
+    A = e.isGift;
 }
-class V extends (s = l.ZP.Store) {
+function F(e) {
+    let { locked: n } = e;
+    if (!n || null == C) return !1;
+    (S = !1), (C = null), R();
+}
+class V extends (o = l.ZP.Store) {
     getPricesForSku(e) {
         return E[e];
     }
     isOpen() {
         let e = __OVERLAY__ ? c.IlC.OVERLAY : c.IlC.APP;
-        return N === e && S;
+        return C === e && S;
     }
     get isPurchasingSKU() {
-        return I;
+        return y;
     }
     get forceConfirmationStepOnMount() {
-        return b;
+        return I;
     }
     get error() {
-        return T;
+        return b;
     }
     get skuId() {
-        return _;
+        return p;
     }
     get applicationId() {
-        return p;
+        return _;
     }
     get analyticsLocation() {
         return m;
@@ -127,7 +127,7 @@ class V extends (s = l.ZP.Store) {
         return g;
     }
     get isIAP() {
-        return y;
+        return T;
     }
     get giftCode() {
         return h;
@@ -136,22 +136,22 @@ class V extends (s = l.ZP.Store) {
         return A;
     }
     isFetchingSKU(e) {
-        return C.has(e);
+        return N.has(e);
     }
 }
 d(V, 'displayName', 'SKUPaymentModalStore'),
     (n.Z = new V(u.Z, {
         SKU_PURCHASE_MODAL_OPEN: O,
         SKU_PURCHASE_MODAL_CLOSE: D,
-        SKU_PURCHASE_PREVIEW_FETCH: L,
-        SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: x,
+        SKU_PURCHASE_PREVIEW_FETCH: x,
+        SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: L,
         SKU_PURCHASE_PREVIEW_FETCH_FAILURE: w,
         SKU_PURCHASE_START: P,
         SKU_PURCHASE_SUCCESS: M,
         SKU_PURCHASE_FAIL: U,
         SKU_PURCHASE_SHOW_CONFIRMATION_STEP: B,
         SKU_PURCHASE_CLEAR_ERROR: G,
-        SKU_PURCHASE_UPDATE_IS_GIFT: F,
-        OVERLAY_SET_INPUT_LOCKED: Z,
+        SKU_PURCHASE_UPDATE_IS_GIFT: Z,
+        OVERLAY_SET_INPUT_LOCKED: F,
         GIFT_CODE_CREATE: k
     }));

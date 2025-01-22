@@ -7,8 +7,8 @@ function n(e) {
             built_in: n,
             literal: i
         },
-        s = e.inherit(e.TITLE_MODE, { begin: '[a-zA-Z](\\.?\\w)*' }),
-        o = {
+        o = e.inherit(e.TITLE_MODE, { begin: '[a-zA-Z](\\.?\\w)*' }),
+        s = {
             className: 'number',
             variants: [{ begin: "\\b(0b[01']+)" }, { begin: "(-?)\\b([\\d']+(\\.[\\d']*)?|\\.[\\d']+)(u|U|l|L|ul|UL|f|F|b|B)" }, { begin: "(-?)(\\b0[xX][a-fA-F0-9']+|(\\b[\\d']+(\\.[\\d']*)?|\\.[\\d']+)([eE][-+]?[\\d']+)?)" }],
             relevance: 0
@@ -32,7 +32,7 @@ function n(e) {
             keywords: a
         },
         f = e.inherit(d, { illegal: /\n/ }),
-        _ = {
+        p = {
             className: 'string',
             begin: /\$"/,
             end: '"',
@@ -45,18 +45,18 @@ function n(e) {
             end: '"',
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, d]
         },
-        p = e.inherit(h, {
+        _ = e.inherit(h, {
             illegal: /\n/,
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, f]
         });
-    (d.contains = [h, _, u, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.C_BLOCK_COMMENT_MODE]), (f.contains = [p, _, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]);
+    (d.contains = [h, p, u, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, s, e.C_BLOCK_COMMENT_MODE]), (f.contains = [_, p, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, s, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]);
     let m = {
-            variants: [l, h, _, u, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
+            variants: [l, h, p, u, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
         },
         g = {
             begin: '<',
             end: '>',
-            contains: [{ beginKeywords: 'in out' }, s]
+            contains: [{ beginKeywords: 'in out' }, o]
         },
         E = e.IDENT_RE + '(<' + e.IDENT_RE + '(\\s*,\\s*' + e.IDENT_RE + ')*>)?(\\[\\])?',
         v = {
@@ -97,27 +97,27 @@ function n(e) {
                 keywords: { keyword: 'if else elif endif define undef warning error line region endregion pragma checksum' }
             },
             m,
-            o,
+            s,
             {
                 beginKeywords: 'class interface',
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:,]/,
-                contains: [{ beginKeywords: 'where class' }, s, g, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [{ beginKeywords: 'where class' }, o, g, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 beginKeywords: 'namespace',
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [s, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 beginKeywords: 'record',
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [s, g, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [o, g, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 className: 'meta',
@@ -164,7 +164,7 @@ function n(e) {
                         excludeEnd: !0,
                         keywords: a,
                         relevance: 0,
-                        contains: [m, o, e.C_BLOCK_COMMENT_MODE]
+                        contains: [m, s, e.C_BLOCK_COMMENT_MODE]
                     },
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE

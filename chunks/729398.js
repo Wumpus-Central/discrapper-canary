@@ -9,10 +9,10 @@ function n(e) {
             variants: [e.COMMENT('!', '$', { relevance: 0 }), e.COMMENT('^C[ ]', '$', { relevance: 0 }), e.COMMENT('^C$', '$', { relevance: 0 })]
         },
         a = /(_[a-z_\d]+)?/,
-        s = /([de][+-]?\d+)?/,
-        o = {
+        o = /([de][+-]?\d+)?/,
+        s = {
             className: 'number',
-            variants: [{ begin: n.concat(/\b\d+/, /\.(\d*)/, s, a) }, { begin: n.concat(/\b\d+/, s, a) }, { begin: n.concat(/\.\d+/, s, a) }],
+            variants: [{ begin: n.concat(/\b\d+/, /\.(\d*)/, o, a) }, { begin: n.concat(/\b\d+/, o, a) }, { begin: n.concat(/\.\d+/, o, a) }],
             relevance: 0
         },
         l = {
@@ -45,7 +45,7 @@ function n(e) {
                 relevance: 0
             },
             i,
-            o
+            s
         ]
     };
 }

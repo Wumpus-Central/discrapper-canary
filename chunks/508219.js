@@ -1,7 +1,7 @@
 var i,
     a,
-    s = r(957578).Buffer,
-    o = r(180756),
+    o = r(957578).Buffer,
+    s = r(180756),
     l = r(138031),
     u = r(275227),
     c = r(871230),
@@ -17,20 +17,20 @@ var i,
         'sha-512': 'SHA-512',
         sha512: 'SHA-512'
     },
-    _ = [];
+    p = [];
 function h(e) {
     if ((r.g.process && !r.g.process.browser) || !d || !d.importKey || !d.deriveBits) return Promise.resolve(!1);
-    if (void 0 !== _[e]) return _[e];
-    var n = m((i = i || s.alloc(8)), i, 10, 128, e)
+    if (void 0 !== p[e]) return p[e];
+    var n = m((i = i || o.alloc(8)), i, 10, 128, e)
         .then(function () {
             return !0;
         })
         .catch(function () {
             return !1;
         });
-    return (_[e] = n), n;
+    return (p[e] = n), n;
 }
-function p() {
+function _() {
     return a ? a : (a = r.g.process && r.g.process.nextTick ? r.g.process.nextTick : r.g.queueMicrotask ? r.g.queueMicrotask : r.g.setImmediate ? r.g.setImmediate : r.g.setTimeout);
 }
 function m(e, n, r, i, a) {
@@ -49,31 +49,31 @@ function m(e, n, r, i, a) {
             );
         })
         .then(function (e) {
-            return s.from(e);
+            return o.from(e);
         });
 }
 function g(e, n) {
     e.then(
         function (e) {
-            p()(function () {
+            _()(function () {
                 n(null, e);
             });
         },
         function (e) {
-            p()(function () {
+            _()(function () {
                 n(e);
             });
         }
     );
 }
-e.exports = function (e, n, i, a, s, d) {
-    'function' == typeof s && ((d = s), (s = void 0));
-    var _ = f[(s = s || 'sha1').toLowerCase()];
-    if (!_ || 'function' != typeof r.g.Promise) {
-        p()(function () {
+e.exports = function (e, n, i, a, o, d) {
+    'function' == typeof o && ((d = o), (o = void 0));
+    var p = f[(o = o || 'sha1').toLowerCase()];
+    if (!p || 'function' != typeof r.g.Promise) {
+        _()(function () {
             var r;
             try {
-                r = u(e, n, i, a, s);
+                r = u(e, n, i, a, o);
             } catch (e) {
                 return d(e);
             }
@@ -81,10 +81,10 @@ e.exports = function (e, n, i, a, s, d) {
         });
         return;
     }
-    if ((o(i, a), (e = c(e, l, 'Password')), (n = c(n, l, 'Salt')), 'function' != typeof d)) throw Error('No callback provided to pbkdf2');
+    if ((s(i, a), (e = c(e, l, 'Password')), (n = c(n, l, 'Salt')), 'function' != typeof d)) throw Error('No callback provided to pbkdf2');
     g(
-        h(_).then(function (r) {
-            return r ? m(e, n, i, a, _) : u(e, n, i, a, s);
+        h(p).then(function (r) {
+            return r ? m(e, n, i, a, p) : u(e, n, i, a, o);
         }),
         d
     );

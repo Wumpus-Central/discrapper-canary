@@ -34,9 +34,9 @@ var i = n(200651),
     O = n(292959),
     R = n(9156),
     P = n(912101),
-    y = n(358085),
-    B = n(709054),
-    D = n(557177),
+    D = n(358085),
+    y = n(709054),
+    B = n(557177),
     Z = n(695346),
     L = n(675478),
     M = n(33656),
@@ -94,7 +94,7 @@ function W(e) {
         l = r.useRef(),
         o = (0, T.p)(),
         c = r.useCallback((e, t) => {
-            t.stopPropagation(), t.preventDefault(), null != l.current && l.current.stop(), (l.current = D.GN(e));
+            t.stopPropagation(), t.preventDefault(), null != l.current && l.current.stop(), (l.current = B.GN(e));
         }, []),
         d = r.useCallback(
             (e, n) => {
@@ -252,7 +252,7 @@ function W(e) {
 function z() {
     let e = (0, c.e7)([_.Z], () => _.Z.getGuildAlertSettings()),
         [t, n] = r.useState(null),
-        s = B.default.keys(e).map((t) => {
+        s = y.default.keys(e).map((t) => {
             let n = e[t];
             return {
                 label: n.guildName,
@@ -360,7 +360,7 @@ class K extends r.PureComponent {
     }
     render() {
         let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: r, disabledSounds: s, disableAllSounds: l, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
-            m = y.isPlatformEmbedded && (0, y.isWindows)(),
+            m = D.isPlatformEmbedded && (0, D.isWindows)(),
             g = o()
                 .range(1, 11)
                 .map((e) => ({

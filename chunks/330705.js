@@ -18,10 +18,10 @@ var i =
             return r && e(n.prototype, r), i && e(n, i), n;
         };
     })();
-function s(e, n) {
+function o(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, n) {
+function s(e, n) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
 }
@@ -41,10 +41,10 @@ var u = r(129629),
     c = r(22672),
     d = r(211645),
     f = r(108012),
-    _ = (function (e) {
+    p = (function (e) {
         function n(e) {
-            s(this, n);
-            var r = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+            o(this, n);
+            var r = s(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
             return (e = f.current(e) || {}).transform && !(e.transform instanceof u) && (e = i({}, e, { transform: new d(e.transform) })), (r._style = e), r;
         }
         return (
@@ -94,4 +94,4 @@ var u = r(129629),
             n
         );
     })(c);
-e.exports = _;
+e.exports = p;

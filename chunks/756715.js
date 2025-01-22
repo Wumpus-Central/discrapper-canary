@@ -1,48 +1,48 @@
 r.r(n),
     r.d(n, {
         Anchor: function () {
-            return p;
+            return _;
         }
     });
 var i = r(411104);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(532712),
     c = r(1561),
     d = r(84735),
     f = r(335854),
-    _ = r(645499),
+    p = r(645499),
     h = r(287330);
-function p(e) {
-    let { href: n, onClick: r, className: i, children: o, rel: p, target: m, useDefaultUnderlineStyles: g = !0, title: E, style: v, focusProps: I, ...T } = e;
+function _(e) {
+    let { href: n, onClick: r, className: i, children: s, rel: _, target: m, useDefaultUnderlineStyles: g = !0, title: E, style: v, focusProps: y, ...b } = e;
     null != n && null == r && (r = f.X.getDefaultLinkInterceptor(n));
-    let b = s.useContext(u.g),
-        y = {
+    let I = o.useContext(u.g),
+        T = {
             className: l()(h.anchor, { [h.anchorUnderlineOnHover]: g }, i),
             href: n,
             onClick: r,
-            rel: null != p ? p : void 0,
+            rel: null != _ ? _ : void 0,
             target: null != m ? m : void 0,
             title: null != E ? E : void 0,
             style: null != v ? v : void 0
         };
-    return (null != n && !(0, _.B)(n) && ((y.rel = 'noreferrer noopener'), (y.target = '_blank')), b && delete y.href, null != r)
+    return (null != n && !(0, p.B)(n) && ((T.rel = 'noreferrer noopener'), (T.target = '_blank')), I && delete T.href, null != r)
         ? (0, a.jsx)(c.P, {
               tag: 'a',
+              ...b,
               ...T,
-              ...y,
               onClick: r,
-              focusProps: I,
-              children: o
+              focusProps: y,
+              children: s
           })
         : (0, a.jsx)(d.t, {
-              ...I,
+              ...y,
               children: (0, a.jsx)('a', {
+                  ...b,
                   ...T,
-                  ...y,
-                  children: o
+                  children: s
               })
           });
 }

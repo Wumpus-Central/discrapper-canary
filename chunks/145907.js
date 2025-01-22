@@ -1,7 +1,7 @@
 var i = r(338362),
     a = r(887913),
-    s = r(965537),
-    o = a.Z
+    o = r(965537),
+    s = a.Z
         ? function (e, n) {
               return (0, a.Z)(e, 'toString', {
                   configurable: !0,
@@ -10,5 +10,5 @@ var i = r(338362),
                   writable: !0
               });
           }
-        : s.Z;
-n.Z = o;
+        : o.Z;
+n.Z = s;

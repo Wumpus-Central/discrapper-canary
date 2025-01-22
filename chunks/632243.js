@@ -1,7 +1,7 @@
 var i = r(411104);
 var a = r(710845),
-    s = r(358085),
-    o = r(579806);
+    o = r(358085),
+    s = r(579806);
 function l(e, n, r) {
     return (
         n in e
@@ -18,15 +18,15 @@ function l(e, n, r) {
 let u = new a.Z('ProgressBarManager');
 class c {
     setProgress(e, n) {
-        if (!(0, s.isDesktop)()) throw Error('cannot set progress from non-native');
+        if (!(0, o.isDesktop)()) throw Error('cannot set progress from non-native');
         if (null != this.taskID && this.taskID !== e) {
             u.warn(''.concat(this.taskID, ' is already running. cannot set ').concat(e));
             return;
         }
-        (this.taskID = e), o.Z.window.setProgressBar(n);
+        (this.taskID = e), s.Z.window.setProgressBar(n);
     }
     clearProgress(e) {
-        if (!(0, s.isDesktop)()) throw Error('cannot clear progress from non-native');
+        if (!(0, o.isDesktop)()) throw Error('cannot clear progress from non-native');
         if (null == this.taskID) {
             u.warn('cannot clear progress. No current progress running.');
             return;
@@ -35,7 +35,7 @@ class c {
             u.warn('cannot clear progress of '.concat(e, ' when ').concat(this.taskID, ' is running'));
             return;
         }
-        (this.taskID = null), o.Z.window.setProgressBar(-1);
+        (this.taskID = null), s.Z.window.setProgressBar(-1);
     }
     constructor() {
         l(this, 'taskID', void 0);

@@ -5,21 +5,21 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(135869),
-    o = r(22382),
+    o = r(135869),
+    s = r(22382),
     l = r(747071),
     u = r(695346),
     c = r(626135),
     d = r(981631);
 function f(e, n) {
-    let { currentPreviewRef: r } = a.useContext(s.Z),
+    let { currentPreviewRef: r } = a.useContext(o.Z),
         [i, f] = a.useState(!1);
     return {
         playing: i,
         playSound: a.useCallback(() => {
             var i;
             if (null == e) return !1;
-            let a = new Audio((0, o.Z)(e.soundId));
+            let a = new Audio((0, s.Z)(e.soundId));
             return (
                 null != r.current && r.current.pause(),
                 (r.current = a),

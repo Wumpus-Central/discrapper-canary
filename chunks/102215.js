@@ -1,14 +1,14 @@
-var e = n(668530),
-    o = Object.defineProperty;
-t.exports = function (t, r) {
+var i = r(668530),
+    a = Object.defineProperty;
+e.exports = function (e, n) {
     try {
-        o(e, t, {
-            value: r,
+        a(i, e, {
+            value: n,
             configurable: !0,
             writable: !0
         });
-    } catch (n) {
-        e[t] = r;
+    } catch (r) {
+        i[e] = n;
     }
-    return r;
+    return n;
 };

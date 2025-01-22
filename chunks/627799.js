@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(653041);
 var a = r(200651);
 r(192379);
-var s = r(243814),
-    o = r(993365),
+var o = r(243814),
+    s = r(993365),
     l = r(481060),
     u = r(981631),
     c = r(388032),
@@ -16,7 +16,7 @@ function f(e) {
     let n,
         { accountScopes: r } = e,
         i = [];
-    return (r.includes(s.x.SDK_SOCIAL_LAYER) &&
+    return (r.includes(o.x.SDK_SOCIAL_LAYER) &&
         ((n = c.intl.string(c.t.ex4sMT)),
         i.push(
             {
@@ -51,7 +51,7 @@ function f(e) {
                   i.map((e, n) => {
                       let { icon: r, text: i } = e;
                       return (0, a.jsx)(
-                          _,
+                          p,
                           {
                               icon: r,
                               text: i
@@ -62,7 +62,7 @@ function f(e) {
               ]
           });
 }
-function _(e) {
+function p(e) {
     let { icon: n, text: r } = e;
     return (0, a.jsxs)('div', {
         className: d.entry,
@@ -71,7 +71,7 @@ function _(e) {
                 className: d.entryIcon,
                 color: 'currentColor'
             }),
-            (0, a.jsx)(o.x, {
+            (0, a.jsx)(s.x, {
                 variant: 'text-md/normal',
                 className: d.entryText,
                 children: r

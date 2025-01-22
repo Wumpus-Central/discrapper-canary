@@ -1,6 +1,6 @@
 r.d(n, {
     p: function () {
-        return _;
+        return p;
     },
     t: function () {
         return h;
@@ -8,10 +8,10 @@ r.d(n, {
 });
 var i = r(468343),
     a = r(559972),
-    s = r(789741),
-    o = 0,
+    o = r(789741),
+    s = 0,
     l = function () {
-        return !!o;
+        return !!s;
     },
     u = 12,
     c = {
@@ -22,7 +22,7 @@ var i = r(468343),
     },
     d = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
     f = !1,
-    _ = new ((function () {
+    p = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -35,7 +35,7 @@ var i = r(468343),
                 var n = this;
                 if (!f)
                     (f = !0),
-                        (0, s.p)(function () {
+                        (0, o.p)(function () {
                             var r = !1;
                             try {
                                 r = (0, i.N)();
@@ -78,5 +78,5 @@ var i = r(468343),
         );
     })())(),
     h = function (e) {
-        !o && e > 0 && _.start(), (o += e) || _.stop();
+        !s && e > 0 && p.start(), (s += e) || p.stop();
     };

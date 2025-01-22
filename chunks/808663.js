@@ -12,7 +12,7 @@ function a(e, n, r) {
         e
     );
 }
-class s {
+class o {
     enqueue(e) {
         this.queue.push(e);
     }
@@ -26,4 +26,4 @@ class s {
         a(this, 'queue', []);
     }
 }
-n.Z = new s();
+n.Z = new o();

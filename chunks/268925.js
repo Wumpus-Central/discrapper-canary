@@ -1,6 +1,6 @@
 var i = r(293881),
     a = r(113374);
-function s(e, n) {
+function o(e, n) {
     return null != e && (0, a.Z)(e, n, i.Z);
 }
-n.Z = s;
+n.Z = o;

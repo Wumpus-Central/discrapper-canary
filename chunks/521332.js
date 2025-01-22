@@ -1,29 +1,29 @@
 r.d(n, {
     Z: function () {
-        return I;
+        return y;
     }
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(442837),
+    o = r(192379),
+    s = r(442837),
     l = r(481060),
     u = r(230711),
     c = r(493773),
     d = r(367907),
     f = r(138201),
-    _ = r(592125),
+    p = r(592125),
     h = r(155647),
-    p = r(185625),
+    _ = r(185625),
     m = r(981631),
     g = r(388032),
     E = r(442031);
 function v(e) {
-    let { title: n, description: r, onButtonClick: i, trackSettingsUpsellsAction: o } = e,
-        [l, u] = s.useState(!1);
+    let { title: n, description: r, onButtonClick: i, trackSettingsUpsellsAction: s } = e,
+        [l, u] = o.useState(!1);
     return (
         (0, c.Z)(() => {
-            o(p.M4.SETTINGS_UPSELLS_VIEWED);
+            s(_.M4.SETTINGS_UPSELLS_VIEWED);
         }),
         (0, a.jsx)(f.ZP, {
             title: n,
@@ -31,17 +31,17 @@ function v(e) {
             buttonText: l ? g.intl.string(g.t['h+WsPT']) : g.intl.string(g.t.A8t4NT),
             buttonDisabled: l,
             onButtonPress: () => {
-                i(), u(!0), o(p.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
+                i(), u(!0), s(_.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
             }
         })
     );
 }
-function I(e) {
-    let { settingsUpsells: n, channelId: r, onModalClose: i, reportId: s, reportType: c, reportSubType: f } = e,
-        I = (0, o.e7)([_.Z], () => _.Z.getChannel(r)),
-        T = (0, h.jc)(n, null == I ? void 0 : I.type),
-        b = (0, p.i_)(c, f, s);
-    return 0 === T.length
+function y(e) {
+    let { settingsUpsells: n, channelId: r, onModalClose: i, reportId: o, reportType: c, reportSubType: f } = e,
+        y = (0, s.e7)([p.Z], () => p.Z.getChannel(r)),
+        b = (0, h.jc)(n, null == y ? void 0 : y.type),
+        I = (0, _.i_)(c, f, o);
+    return 0 === b.length
         ? null
         : (0, a.jsxs)('div', {
               className: E.container,
@@ -53,15 +53,15 @@ function I(e) {
                   }),
                   (0, a.jsx)('div', {
                       className: E.upsellsContainer,
-                      children: T.map((e, r) => {
-                          let { getTitle: i, getDescription: s, onApply: o } = e;
+                      children: b.map((e, r) => {
+                          let { getTitle: i, getDescription: o, onApply: s } = e;
                           return (0, a.jsx)(
                               v,
                               {
                                   title: i(),
-                                  description: s(),
-                                  onButtonClick: o,
-                                  trackSettingsUpsellsAction: b(n[r])
+                                  description: o(),
+                                  onButtonClick: s,
+                                  trackSettingsUpsellsAction: I(n[r])
                               },
                               r
                           );
@@ -73,10 +73,10 @@ function I(e) {
                           u.Z.open(m.oAB.CONTENT_AND_SOCIAL),
                               i(),
                               d.ZP.trackWithMetadata(m.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
-                                  report_id: s,
+                                  report_id: o,
                                   report_type: c.name,
                                   report_subtype: f,
-                                  action: p.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED
+                                  action: _.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED
                               });
                       },
                       look: l.Button.Looks.LINK,

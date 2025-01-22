@@ -5,10 +5,10 @@ r.r(n),
             return i;
         },
         getNativePlatform: function () {
-            return I;
+            return y;
         },
         getOS: function () {
-            return T;
+            return b;
         },
         getPlatform: function () {
             return E;
@@ -20,7 +20,7 @@ r.r(n),
             return m;
         },
         isAndroidChrome: function () {
-            return _;
+            return p;
         },
         isAndroidWeb: function () {
             return h;
@@ -38,10 +38,10 @@ r.r(n),
             return u;
         },
         isMacWeb: function () {
-            return p;
+            return _;
         },
         isPlatformEmbedded: function () {
-            return s;
+            return o;
         },
         isWeb: function () {
             return f;
@@ -54,16 +54,16 @@ r.r(n),
         (e.WINDOWS = 'WINDOWS'), (e.OSX = 'OSX'), (e.LINUX = 'LINUX'), (e.WEB = 'WEB');
     })(i || (i = {}));
 let a = window.DiscordNative,
-    s = null != a,
-    o = null != a ? a.process.platform : '';
+    o = null != a,
+    s = null != a ? a.process.platform : '';
 function l() {
-    return /^win/.test(o);
+    return /^win/.test(s);
 }
 function u() {
-    return 'darwin' === o;
+    return 'darwin' === s;
 }
 function c() {
-    return 'linux' === o;
+    return 'linux' === s;
 }
 function d() {
     return l() || u() || c();
@@ -71,39 +71,39 @@ function d() {
 function f() {
     return 'WEB' === E();
 }
-function _() {
+function p() {
     return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
 }
 function h() {
     var e;
     return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null;
 }
-function p() {
+function _() {
     var e;
     return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/Macintosh/i)) != null;
 }
 function m() {
-    return 'android' === o;
+    return 'android' === s;
 }
 function g() {
-    return 'ios' === o;
+    return 'ios' === s;
 }
 function E() {
     return l() ? 'WINDOWS' : u() ? 'OSX' : c() ? 'LINUX' : 'WEB';
 }
 function v() {
-    return o;
+    return s;
 }
-function I() {
-    switch (o) {
+function y() {
+    switch (s) {
         case 'ios':
         case 'android':
-            return o;
+            return s;
         default:
             return 'web';
     }
 }
-function T() {
+function b() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? 'windows mobile' : 'windows';
     if (/(iPhone|iPad|iPod)/.test(e)) return 'ios';

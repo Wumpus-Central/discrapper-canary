@@ -1,13 +1,13 @@
-var r = n(67867),
-    o = n(821819),
-    a = n(777628).f;
-r(
+var i = r(67867),
+    a = r(821819),
+    o = r(777628).f;
+i(
     {
         target: 'Object',
         stat: !0,
-        forced: o(function () {
+        forced: a(function () {
             return !Object.getOwnPropertyNames(1);
         })
     },
-    { getOwnPropertyNames: a }
+    { getOwnPropertyNames: o }
 );

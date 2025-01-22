@@ -1,19 +1,19 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(200651),
     a = r(81063),
-    s = r(388032);
-function o(e) {
+    o = r(388032);
+function s(e) {
     let { leaderboard: n, className: r } = e,
-        o = (0, a.getAssetImage)(n.settings.application_id, n.settings.winner_asset_id);
-    return null == o
+        s = (0, a.getAssetImage)(n.settings.application_id, n.settings.winner_asset_id);
+    return null == s
         ? null
         : (0, i.jsx)('img', {
               className: r,
-              src: o,
-              alt: s.intl.string(s.t.QyRmzc)
+              src: s,
+              alt: o.intl.string(o.t.QyRmzc)
           });
 }

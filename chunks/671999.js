@@ -3,7 +3,7 @@ r.d(n, {
         return a;
     },
     J: function () {
-        return s;
+        return o;
     }
 });
 var i = r(411104);
@@ -17,7 +17,7 @@ function a(e, n, r) {
         view: window
     });
 }
-function s(e, n, r) {
+function o(e, n, r) {
     let i = document.elementFromPoint(n, r);
     if (null == i) throw Error();
     i.dispatchEvent(e);

@@ -18,16 +18,16 @@ r.d(n, {
         return d;
     },
     iG: function () {
-        return _;
+        return p;
     },
     ut: function () {
-        return o;
+        return s;
     }
 });
 var i = r(446108),
     a = r(901461),
-    s = r(981631);
-function o(e) {
+    o = r(981631);
+function s(e) {
     return 'message-content-'.concat(e.id);
 }
 function l(e) {
@@ -46,36 +46,36 @@ function d(e) {
 function f(e) {
     return 'message-accessories-'.concat(e.id);
 }
-function _(e, n, r) {
-    let d = e.type === s.uaV.REPLY && null != e.messageReference,
-        _ = e.embeds.length > 0,
+function p(e, n, r) {
+    let d = e.type === o.uaV.REPLY && null != e.messageReference,
+        p = e.embeds.length > 0,
         h = e.attachments.length > 0,
-        p = e.stickerItems.length > 0,
+        _ = e.stickerItems.length > 0,
         m = e.codedLinks.length > 0,
-        g = e.hasFlag(s.iLy.HAS_THREAD),
-        E = _ || h || p || m || g || e.type === s.uaV.THREAD_CREATED,
-        v = _ && e.content === e.embeds[0].url && e.embeds[0].type === s.hBH.GIFV,
-        I = e.type !== s.uaV.DEFAULT || (!v && '' !== e.content),
-        T = (0, a.Z)(e),
-        b = !T && (null == r ? void 0 : r.hasTimestamp) !== !1,
-        y = !T,
+        g = e.hasFlag(o.iLy.HAS_THREAD),
+        E = p || h || _ || m || g || e.type === o.uaV.THREAD_CREATED,
+        v = p && e.content === e.embeds[0].url && e.embeds[0].type === o.hBH.GIFV,
+        y = e.type !== o.uaV.DEFAULT || (!v && '' !== e.content),
+        b = (0, a.Z)(e),
+        I = !b && (null == r ? void 0 : r.hasTimestamp) !== !1,
+        T = !b,
         S = u(e, n),
         A = l(e),
-        N = d ? A : S,
-        C = y ? ''.concat(N, ' ').concat(i.Z0) : '';
-    if (I) {
-        let n = o(e);
-        C += ' '.concat(n);
+        C = d ? A : S,
+        N = T ? ''.concat(C, ' ').concat(i.Z0) : '';
+    if (y) {
+        let n = s(e);
+        N += ' '.concat(n);
     }
     if (E) {
         let n = f(e);
-        C += ' '.concat(n);
+        N += ' '.concat(n);
     }
-    if (b) {
+    if (I) {
         let n = c(e);
-        C += ' '.concat(i.fy, ' ').concat(n);
+        N += ' '.concat(i.fy, ' ').concat(n);
     }
-    return C.trim();
+    return N.trim();
 }
 function h(e) {
     if (0 === e.reactions.length) return;

@@ -1,22 +1,22 @@
 r.d(n, {
     v: function () {
-        return o;
+        return s;
     }
 });
 var i = r(625306),
     a = r(570140);
-function s() {
+function o() {
     return {
         ...(null != a.Z._currentDispatchActionType ? { currentAction: a.Z._currentDispatchActionType } : {}),
         lastFewActions: (0, i.qC)()
     };
 }
-function o(e) {
+function s(e) {
     return {
         ...e,
         extra: {
             ...(null == e ? void 0 : e.extra),
-            ...s()
+            ...o()
         }
     };
 }

@@ -1,6 +1,6 @@
 r.d(n, {
     MS: function () {
-        return _;
+        return p;
     },
     TC: function () {
         return f;
@@ -23,8 +23,8 @@ r.d(n, {
 });
 var i = r(570140),
     a = r(579806),
-    s = r(569550),
-    o = r(226961);
+    o = r(569550),
+    s = r(226961);
 function l(e) {
     i.Z.dispatch({
         type: 'RTC_DEBUG_MODAL_OPEN',
@@ -45,13 +45,13 @@ function d(e) {
     });
 }
 function f(e) {
-    (0, s.Z)('connection_replay_log_enabled', e, o.ZP.shouldRecordNextConnection()),
+    (0, o.Z)('connection_replay_log_enabled', e, s.ZP.shouldRecordNextConnection()),
         i.Z.dispatch({
             type: 'RTC_DEBUG_SET_RECORDING_FLAG',
             value: e
         });
 }
-function _(e, n, r) {
+function p(e, n, r) {
     i.Z.dispatch({
         type: 'RTC_DEBUG_SET_SIMULCAST_OVERRIDE',
         userId: e,

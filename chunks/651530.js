@@ -1,6 +1,6 @@
 r.d(n, {
     Kh: function () {
-        return o;
+        return s;
     },
     yh: function () {
         return l;
@@ -20,7 +20,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    s = (0, i.B)({
+    o = (0, i.B)({
         kind: 'user',
         id: '2023-08_explicit_media_redaction_teen',
         label: 'Explicit Media Redaction for Teens',
@@ -33,13 +33,13 @@ let a = (0, i.B)({
             }
         ]
     });
-function o() {
+function s() {
     let { enabled: e } = a.getCurrentConfig({ location: '686da2_1' }, { autoTrackExposure: !0 }),
-        { enabled: n } = s.getCurrentConfig({ location: '686da2_1' }, { autoTrackExposure: !0 });
+        { enabled: n } = o.getCurrentConfig({ location: '686da2_1' }, { autoTrackExposure: !0 });
     return e || n;
 }
 function l() {
     let { enabled: e } = a.useExperiment({ location: '686da2_2' }, { autoTrackExposure: !0 }),
-        { enabled: n } = s.useExperiment({ location: '686da2_2' }, { autoTrackExposure: !0 });
+        { enabled: n } = o.useExperiment({ location: '686da2_2' }, { autoTrackExposure: !0 });
     return e || n;
 }

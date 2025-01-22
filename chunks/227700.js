@@ -1,6 +1,6 @@
 r.d(n, {
     u: function () {
-        return s;
+        return o;
     }
 });
 var i = {
@@ -12,6 +12,6 @@ var i = {
         }
     },
     a = 'trunc';
-function s(e) {
+function o(e) {
     return e ? i[e] : i[a];
 }

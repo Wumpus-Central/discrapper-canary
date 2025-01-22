@@ -5,42 +5,42 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(924826),
-    s = r(536895),
-    o = r(40851),
+    o = r(536895),
+    s = r(40851),
     l = r(590921);
 function u(e) {
     var n, r, u;
-    let { navId: c, scrollerRef: d, state: f, onFocus: _ } = e,
-        { renderWindow: h } = i.useContext(o.ZP),
-        p = (e, n) => {
+    let { navId: c, scrollerRef: d, state: f, onFocus: p } = e,
+        { renderWindow: h } = i.useContext(s.ZP),
+        _ = (e, n) => {
             let r = h.document.querySelector(e);
             if (null != r) {
                 var i;
                 null === (i = d.current) || void 0 === i || i.scrollIntoViewNode({ node: r });
             }
-            null == _ || _(+n);
+            null == p || p(+n);
         },
         m = (e, n) => {
             var r;
             if ((null === (r = d.current) || void 0 === r || r.scrollToTop(), e && null != f.query)) {
                 let e = f.query.typeInfo.focusMode,
                     r = !(e === l.QZ.MANUAL || (e === l.QZ.AUTO_WHEN_FILTERED && 0 === f.query.queryText.length));
-                f.isVisible && (!0 !== n || !1 !== r) ? (E.setFocus('0'), null == _ || _(0)) : (E.setFocus(null), null == _ || _(null));
+                f.isVisible && (!0 !== n || !1 !== r) ? (E.setFocus('0'), null == p || p(0)) : (E.setFocus(null), null == p || p(null));
             }
         },
         g = (e) => {
             var n;
             if ((null === (n = d.current) || void 0 === n || n.scrollToBottom(), e && null != f.query && f.query.resultCount > 0)) {
                 let e = f.query.resultCount - 1;
-                E.setFocus(e.toString()), null == _ || _(e);
+                E.setFocus(e.toString()), null == p || p(e);
             }
         },
         E = (0, a.ZP)({
             id: c,
             isEnabled: f.isVisible,
-            orientation: s.hy.VERTICAL,
+            orientation: o.hy.VERTICAL,
             useVirtualFocus: !0,
-            setFocus: p,
+            setFocus: _,
             onNavigateNextAtEnd: () => m(!0),
             onNavigatePreviousAtStart: () => g(!0),
             scrollToStart: () => (m(!1, !1), Promise.resolve()),

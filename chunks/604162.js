@@ -14,11 +14,11 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(918701),
-    o = r(388032);
+    o = r(918701),
+    s = r(388032);
 let l = (e) => {
-        let n = (0, s.si)(e);
-        return e.percentComplete > 0 ? o.intl.formatToPlainString(o.t['c59/Tk'], { remainTime: ''.concat(String(n.minutes).padStart(2, '0'), ':').concat(String(n.seconds).padStart(2, '0')) }) : o.intl.formatToPlainString(o.t.GNsKiY, { remainTime: ''.concat(String(n.minutes).padStart(2, '0'), ':').concat(String(n.seconds).padStart(2, '0')) });
+        let n = (0, o.si)(e);
+        return e.percentComplete > 0 ? s.intl.formatToPlainString(s.t['c59/Tk'], { remainTime: ''.concat(String(n.minutes).padStart(2, '0'), ':').concat(String(n.seconds).padStart(2, '0')) }) : s.intl.formatToPlainString(s.t.GNsKiY, { remainTime: ''.concat(String(n.minutes).padStart(2, '0'), ':').concat(String(n.seconds).padStart(2, '0')) });
     },
     u = (e) => null != e.text;
 function c(e) {
@@ -28,19 +28,19 @@ function c(e) {
 }
 function d(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2000,
-        [i, s] = (0, a.useState)(e),
-        o = (0, a.useRef)(null),
+        [i, o] = (0, a.useState)(e),
+        s = (0, a.useRef)(null),
         l = () => {
-            s(n),
-                null != o.current && clearTimeout(o.current),
-                (o.current = setTimeout(() => {
-                    s(e);
+            o(n),
+                null != s.current && clearTimeout(s.current),
+                (s.current = setTimeout(() => {
+                    o(e);
                 }, r));
         };
     return (
         (0, a.useEffect)(
             () => () => {
-                null != o.current && clearTimeout(o.current);
+                null != s.current && clearTimeout(s.current);
             },
             [e]
         ),

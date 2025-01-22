@@ -1,12 +1,12 @@
 r.d(n, {
     FL: function () {
-        return s;
+        return o;
     },
     a8: function () {
         return a;
     },
     rS: function () {
-        return o;
+        return s;
     }
 });
 var i = r(570140);
@@ -18,7 +18,7 @@ function a(e, n, r) {
         timestampMillis: r
     });
 }
-function s(e, n, r) {
+function o(e, n, r) {
     i.Z.dispatch({
         type: 'ANALYTICS_FEED_ITEM_UNSEEN',
         id: e,
@@ -26,7 +26,7 @@ function s(e, n, r) {
         timestampMillis: r
     });
 }
-function o(e, n) {
+function s(e, n) {
     i.Z.dispatch({
         type: 'ANALYTICS_FEED_FLUSH',
         id: e,

@@ -1,16 +1,16 @@
-var e = n(273511),
-    o = n(349446).f,
-    i = n(948634),
-    u = n(141603),
-    s = n(867028),
-    c = n(360518)('toStringTag');
-t.exports = function (t, r, n, f) {
-    var a = n ? t : t && t.prototype;
-    a &&
-        (!u(a, c) &&
-            o(a, c, {
+var i = r(273511),
+    a = r(349446).f,
+    o = r(948634),
+    s = r(141603),
+    l = r(867028),
+    u = r(360518)('toStringTag');
+e.exports = function (e, n, r, c) {
+    var d = r ? e : e && e.prototype;
+    d &&
+        (!s(d, u) &&
+            a(d, u, {
                 configurable: !0,
-                value: r
+                value: n
             }),
-        f && !e && i(a, 'toString', s));
+        c && !i && o(d, 'toString', l));
 };

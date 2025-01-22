@@ -5,13 +5,13 @@ var i,
     o = n(442837),
     s = n(570140);
 let c = [];
-class d extends (a = o.ZP.Store) {
+class u extends (a = o.ZP.Store) {
     getEligibleGuildsForNagActivate() {
         return c;
     }
 }
 (l = 'CreatorMonetizationMarketingStore'),
-    (r = 'displayName') in (i = d)
+    (r = 'displayName') in (i = u)
         ? Object.defineProperty(i, r, {
               value: l,
               enumerable: !0,
@@ -19,7 +19,7 @@ class d extends (a = o.ZP.Store) {
               writable: !0
           })
         : (i[r] = l),
-    (t.Z = new d(s.Z, {
+    (t.Z = new u(s.Z, {
         CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: function (e) {
             let { eligibleGuilds: t } = e;
             c = t;

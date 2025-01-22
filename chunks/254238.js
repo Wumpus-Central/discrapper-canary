@@ -3,7 +3,7 @@ r.d(n, {
         return O;
     },
     On: function () {
-        return N;
+        return C;
     },
     Vv: function () {
         return S;
@@ -15,10 +15,10 @@ r.d(n, {
         return D;
     },
     ef: function () {
-        return y;
+        return T;
     },
     s6: function () {
-        return b;
+        return I;
     },
     sh: function () {
         return w;
@@ -26,44 +26,44 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(47120);
-var s = r(434179),
-    o = r(771649),
+var o = r(434179),
+    s = r(771649),
     l = r(544891),
     u = r(570140),
     c = r(668781),
     d = r(340332),
     f = r(19780),
-    _ = r(797258),
+    p = r(797258),
     h = r(626135),
-    p = r(960048),
+    _ = r(960048),
     m = r(607214),
     g = r(258609),
     E = r(893387),
     v = r(981631),
-    I = r(388032);
-function T(e, n) {
+    y = r(388032);
+function b(e, n) {
     var r, i;
     h.default.track(v.rMx.REMOTE_COMMAND_SENT, {
         command_type: e,
-        remote_platform: null === (i = _.Z.getSessionById(n)) || void 0 === i ? void 0 : null === (r = i.clientInfo) || void 0 === r ? void 0 : r.os
+        remote_platform: null === (i = p.Z.getSessionById(n)) || void 0 === i ? void 0 : null === (r = i.clientInfo) || void 0 === r ? void 0 : r.os
     });
 }
-async function b() {
+async function I() {
     let e = g.Z.getAwaitingRemoteSessionInfo(),
         n = null == e ? void 0 : e.nonce;
     u.Z.dispatch({ type: 'REMOTE_SESSION_DISCONNECT' });
     let r = [];
-    ((null == e ? void 0 : e.type) === v.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === v.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && r.push(x(e.type, e.deviceId, e.commandId)), null != n && r.push(R(n));
+    ((null == e ? void 0 : e.type) === v.ABu.PLAYSTATION || (null == e ? void 0 : e.type) === v.ABu.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && r.push(L(e.type, e.deviceId, e.commandId)), null != n && r.push(R(n));
     try {
         await Promise.all(r);
     } catch (e) {
         c.Z.show({
-            title: I.intl.string(I.t.LNhXcH),
-            body: I.intl.string(I.t.QnKxtL)
+            title: y.intl.string(y.t.LNhXcH),
+            body: y.intl.string(y.t.QnKxtL)
         });
     }
 }
-function y(e) {
+function T(e) {
     u.Z.dispatch({
         type: 'REMOTE_SESSION_CONNECT',
         sessionId: e
@@ -80,7 +80,7 @@ function S(e, n) {
             self_deaf: i
         }
     }),
-        T('VOICE_STATE_UPDATE', e);
+        b('VOICE_STATE_UPDATE', e);
 }
 function A(e) {
     u.Z.dispatch({
@@ -88,10 +88,10 @@ function A(e) {
         sessionId: e,
         payload: { type: 'DISCONNECT' }
     }),
-        T('DISCONNECT', e),
-        b();
+        b('DISCONNECT', e),
+        I();
 }
-function N(e, n, r, i) {
+function C(e, n, r, i) {
     let a = (0, d.z)(r);
     null != a &&
         (u.Z.dispatch({
@@ -104,12 +104,12 @@ function N(e, n, r, i) {
                 ...i
             }
         }),
-        T('AUDIO_SETTINGS_UPDATE', e));
+        b('AUDIO_SETTINGS_UPDATE', e));
 }
-async function C() {
+async function N() {
     let e;
     try {
-        let n = null != f.Z.getRTCConnectionId() ? o.o.TRANSFER_EXISTING_CALL : o.o.CREATE_NEW_CALL;
+        let n = null != f.Z.getRTCConnectionId() ? s.o.TRANSFER_EXISTING_CALL : s.o.CREATE_NEW_CALL;
         e = (
             await l.tn.post({
                 url: v.ANM.CONNECT_REQUEST_CREATE,
@@ -118,7 +118,7 @@ async function C() {
             })
         ).body.nonce;
     } catch (e) {
-        p.Z.captureException(e);
+        _.Z.captureException(e);
     }
     return e;
 }
@@ -166,7 +166,7 @@ function D(e, n) {
         deviceId: n
     });
 }
-async function L(e, n, r, i) {
+async function x(e, n, r, i) {
     let a;
     u.Z.dispatch({
         type: 'GAME_CONSOLE_DEVICE_SEND_COMMAND_START',
@@ -176,7 +176,7 @@ async function L(e, n, r, i) {
         a = await l.tn.post({
             url: v.ANM.CONSOLES_DEVICES_COMMANDS(e, n),
             body: {
-                command: s.n.CONNECT_VOICE,
+                command: o.n.CONNECT_VOICE,
                 channel_id: r.id,
                 guild_id: r.guild_id,
                 nonce: i
@@ -193,7 +193,7 @@ async function L(e, n, r, i) {
             n)
         );
     }
-    let o = a.body.id;
+    let s = a.body.id;
     return (
         u.Z.dispatch({
             type: 'WAIT_FOR_REMOTE_SESSION',
@@ -201,12 +201,12 @@ async function L(e, n, r, i) {
             nonce: i,
             channelId: r.id,
             deviceId: n,
-            commandId: o
+            commandId: s
         }),
-        o
+        s
     );
 }
-async function x(e, n, r) {
+async function L(e, n, r) {
     u.Z.dispatch({
         type: 'GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START',
         platform: e,
@@ -238,7 +238,7 @@ async function x(e, n, r) {
     });
 }
 async function w(e, n, r) {
-    await m.Z.maybeShowPTTAlert(e), await b();
-    let i = await C();
-    await L(e, n, r, i), (0, E.Z)(r.id, e);
+    await m.Z.maybeShowPTTAlert(e), await I();
+    let i = await N();
+    await x(e, n, r, i), (0, E.Z)(r.id, e);
 }

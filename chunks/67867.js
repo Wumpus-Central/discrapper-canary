@@ -1,46 +1,46 @@
-var e = n(668530),
-    o = n(156741),
-    i = n(43740),
-    u = n(735471),
-    s = n(65007).f,
-    c = n(902538),
-    f = n(974802),
-    a = n(476508),
-    p = n(948634),
-    v = n(141603),
-    l = function (t) {
-        var r = function (n, e, i) {
-            if (this instanceof r) {
+var i = r(668530),
+    a = r(156741),
+    o = r(43740),
+    s = r(735471),
+    l = r(65007).f,
+    u = r(902538),
+    c = r(974802),
+    d = r(476508),
+    f = r(948634),
+    p = r(141603),
+    h = function (e) {
+        var n = function (r, i, o) {
+            if (this instanceof n) {
                 switch (arguments.length) {
                     case 0:
-                        return new t();
+                        return new e();
                     case 1:
-                        return new t(n);
+                        return new e(r);
                     case 2:
-                        return new t(n, e);
+                        return new e(r, i);
                 }
-                return new t(n, e, i);
+                return new e(r, i, o);
             }
-            return o(t, this, arguments);
+            return a(e, this, arguments);
         };
-        return (r.prototype = t.prototype), r;
+        return (n.prototype = e.prototype), n;
     };
-t.exports = function (t, r) {
-    var n,
-        o,
-        y,
-        h,
-        x,
-        d,
-        g,
-        b,
+e.exports = function (e, n) {
+    var r,
+        a,
+        _,
         m,
-        S = t.target,
-        w = t.global,
-        O = t.stat,
-        j = t.proto,
-        A = w ? e : O ? e[S] : (e[S] || {}).prototype,
-        E = w ? f : f[S] || p(f, S, {})[S],
-        P = E.prototype;
-    for (h in r) (o = !(n = c(w ? h : S + (O ? '.' : '#') + h, t.forced)) && A && v(A, h)), (d = E[h]), o && (g = t.dontCallGetSet ? (m = s(A, h)) && m.value : A[h]), (x = o && g ? g : r[h]), (!o || typeof d != typeof x) && ((b = t.bind && o ? a(x, e) : t.wrap && o ? l(x) : j && u(x) ? i(x) : x), (t.sham || (x && x.sham) || (d && d.sham)) && p(b, 'sham', !0), p(E, h, b), j && (!v(f, (y = S + 'Prototype')) && p(f, y, {}), p(f[y], h, x), t.real && P && (n || !P[h]) && p(P, h, x)));
+        g,
+        E,
+        v,
+        y,
+        b,
+        I = e.target,
+        T = e.global,
+        S = e.stat,
+        A = e.proto,
+        C = T ? i : S ? i[I] : (i[I] || {}).prototype,
+        N = T ? c : c[I] || f(c, I, {})[I],
+        R = N.prototype;
+    for (m in n) (a = !(r = u(T ? m : I + (S ? '.' : '#') + m, e.forced)) && C && p(C, m)), (E = N[m]), a && (v = e.dontCallGetSet ? (b = l(C, m)) && b.value : C[m]), (g = a && v ? v : n[m]), (!a || typeof E != typeof g) && ((y = e.bind && a ? d(g, i) : e.wrap && a ? h(g) : A && s(g) ? o(g) : g), (e.sham || (g && g.sham) || (E && E.sham)) && f(y, 'sham', !0), f(N, m, y), A && (!p(c, (_ = I + 'Prototype')) && f(c, _, {}), f(c[_], m, g), e.real && R && (r || !R[m]) && f(R, m, g)));
 };

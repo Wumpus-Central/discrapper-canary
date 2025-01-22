@@ -1,6 +1,6 @@
 r.d(n, {
     i: function () {
-        return _;
+        return p;
     },
     l: function () {
         return h;
@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(232713),
-    s = r(65400),
-    o = r(5907),
+    o = r(65400),
+    s = r(5907),
     l = r(731965),
     u = r(433517),
     c = r(590433);
@@ -17,7 +17,7 @@ function d() {
     var e;
     return new Set(null !== (e = u.K.get(c.hL)) && void 0 !== e ? e : []);
 }
-let f = (0, o.M)((e, n) => ({
+let f = (0, s.M)((e, n) => ({
     notificationDismissedInGuilds: d(),
     dismissNotification: (r) => {
         let i = n().notificationDismissedInGuilds;
@@ -28,8 +28,8 @@ let f = (0, o.M)((e, n) => ({
         i.has(r) && (i.delete(r), u.K.set(c.hL, i), (0, l.j)(() => e({ notificationDismissedInGuilds: i })));
     }
 }));
-function _(e) {
-    let [n, r] = (0, s.s)(f, (e) => [e.notificationDismissedInGuilds, e.dismissNotification], a.X);
+function p(e) {
+    let [n, r] = (0, o.s)(f, (e) => [e.notificationDismissedInGuilds, e.dismissNotification], a.X);
     return [!n.has(e), r];
 }
 function h(e) {

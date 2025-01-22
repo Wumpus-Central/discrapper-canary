@@ -2,10 +2,10 @@ let n = '[A-Za-z$_][0-9A-Za-z$_]*',
     r = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'function', 'do', 'return', 'void', 'else', 'break', 'catch', 'instanceof', 'with', 'throw', 'case', 'default', 'try', 'switch', 'continue', 'typeof', 'delete', 'let', 'yield', 'const', 'class', 'debugger', 'async', 'await', 'static', 'import', 'from', 'export', 'extends', 'using'],
     i = ['true', 'false', 'null', 'undefined', 'NaN', 'Infinity'],
     a = ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'],
-    s = ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError'],
-    o = ['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'],
+    o = ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError'],
+    s = ['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'],
     l = ['arguments', 'this', 'super', 'console', 'window', 'document', 'localStorage', 'sessionStorage', 'module', 'global'],
-    u = [].concat(o, a, s);
+    u = [].concat(s, a, o);
 function c(e) {
     let c = e.regex,
         d = (e, { after: n }) => {
@@ -13,9 +13,9 @@ function c(e) {
             return -1 !== e.input.indexOf(r, n);
         },
         f = n,
-        _ = '<>',
+        p = '<>',
         h = '</>',
-        p = /<[A-Za-z0-9\\._:-]+\s*\/>/,
+        _ = /<[A-Za-z0-9\\._:-]+\s*\/>/,
         m = /<[A-Za-z0-9\\._:-]+/,
         g = /\/[A-Za-z0-9\\._:-]+>|\/>/,
         E = (e, n) => {
@@ -27,8 +27,8 @@ function c(e) {
                 return;
             }
             '>' === a && !d(e, { after: i }) && n.ignoreMatch();
-            let s = e.input.substring(i);
-            if ((r = s.match(/^\s*=/)) || ((r = s.match(/^\s+extends\s+/)) && 0 === r.index)) {
+            let o = e.input.substring(i);
+            if ((r = o.match(/^\s*=/)) || ((r = o.match(/^\s+extends\s+/)) && 0 === r.index)) {
                 n.ignoreMatch();
                 return;
             }
@@ -40,12 +40,12 @@ function c(e) {
             built_in: u,
             'variable.language': l
         },
-        I = '[0-9](_?[0-9])*',
-        T = `\\.(${I})`,
-        b = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
-        y = {
+        y = '[0-9](_?[0-9])*',
+        b = `\\.(${y})`,
+        I = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
+        T = {
             className: 'number',
-            variants: [{ begin: `(\\b(${b})((${T})|\\.)?|(${T}))[eE][+-]?(${I})\\b` }, { begin: `\\b(${b})\\b((${T})\\b|\\.)?|(${T})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
+            variants: [{ begin: `(\\b(${I})((${b})|\\.)?|(${b}))[eE][+-]?(${y})\\b` }, { begin: `\\b(${I})\\b((${b})\\b|\\.)?|(${b})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
             relevance: 0
         },
         S = {
@@ -65,7 +65,7 @@ function c(e) {
                 subLanguage: 'xml'
             }
         },
-        N = {
+        C = {
             begin: '.?css`',
             end: '',
             starts: {
@@ -75,7 +75,7 @@ function c(e) {
                 subLanguage: 'css'
             }
         },
-        C = {
+        N = {
             begin: '.?gql`',
             end: '',
             starts: {
@@ -131,20 +131,20 @@ function c(e) {
                 e.C_LINE_COMMENT_MODE
             ]
         },
-        D = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, A, N, C, R, { match: /\$\d+/ }, y];
+        D = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, A, C, N, R, { match: /\$\d+/ }, T];
     S.contains = D.concat({
         begin: /\{/,
         end: /\}/,
         keywords: v,
         contains: ['self'].concat(D)
     });
-    let L = [].concat(O, S.contains),
-        x = L.concat([
+    let x = [].concat(O, S.contains),
+        L = x.concat([
             {
                 begin: /(\s*)\(/,
                 end: /\)/,
                 keywords: v,
-                contains: ['self'].concat(L)
+                contains: ['self'].concat(x)
             }
         ]),
         w = {
@@ -154,7 +154,7 @@ function c(e) {
             excludeBegin: !0,
             excludeEnd: !0,
             keywords: v,
-            contains: x
+            contains: L
         },
         P = {
             variants: [
@@ -181,7 +181,7 @@ function c(e) {
             match: c.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
             className: 'title.class',
             keywords: {
-                _: [...a, ...s]
+                _: [...a, ...o]
             }
         },
         k = {
@@ -215,12 +215,12 @@ function c(e) {
     function G(e) {
         return c.concat('(?!', e.join('|'), ')');
     }
-    let F = {
-            match: c.concat(/\b/, G([...o, 'super', 'import'].map((e) => `${e}\\s*\\(`)), f, c.lookahead(/\s*\(/)),
+    let Z = {
+            match: c.concat(/\b/, G([...s, 'super', 'import'].map((e) => `${e}\\s*\\(`)), f, c.lookahead(/\s*\(/)),
             className: 'title.function',
             relevance: 0
         },
-        Z = {
+        F = {
             begin: c.concat(/\./, c.lookahead(c.concat(f, /(?![0-9A-Za-z$_(])/))),
             end: f,
             excludeBegin: !0,
@@ -251,7 +251,7 @@ function c(e) {
         aliases: ['js', 'jsx', 'mjs', 'cjs'],
         keywords: v,
         exports: {
-            PARAMS_CONTAINS: x,
+            PARAMS_CONTAINS: L,
             CLASS_REFERENCE: M
         },
         illegal: /#(?![$_A-z])/,
@@ -265,12 +265,12 @@ function c(e) {
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             A,
-            N,
             C,
+            N,
             R,
             O,
             { match: /\$\d+/ },
-            y,
+            T,
             M,
             {
                 scope: 'attr',
@@ -309,7 +309,7 @@ function c(e) {
                                         excludeBegin: !0,
                                         excludeEnd: !0,
                                         keywords: v,
-                                        contains: x
+                                        contains: L
                                     }
                                 ]
                             }
@@ -326,10 +326,10 @@ function c(e) {
                     {
                         variants: [
                             {
-                                begin: _,
+                                begin: p,
                                 end: h
                             },
-                            { match: p },
+                            { match: _ },
                             {
                                 begin: m,
                                 'on:begin': E,
@@ -366,7 +366,7 @@ function c(e) {
                 match: /\.\.\./,
                 relevance: 0
             },
-            Z,
+            F,
             {
                 match: '\\$' + f,
                 relevance: 0
@@ -376,7 +376,7 @@ function c(e) {
                 className: { 1: 'title.function' },
                 contains: [w]
             },
-            F,
+            Z,
             B,
             P,
             V,

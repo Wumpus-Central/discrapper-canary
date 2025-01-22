@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(259443),
     a = r(46973),
-    s = r(65154);
-function o(e, n, r) {
+    o = r(65154);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -31,8 +31,8 @@ class u {
                 return;
             }
             this.framerateReductionTimeout = setTimeout(() => {
-                if (!this.connection.destroyed) l.info('BaseConnection.userSpeakingChange: Reduced framerate after '.concat(s.u$, ' ms.')), (this.framerateReductionTimeout = void 0), (this.sinkWants.isMuted = !0), this.updateRemoteWantsFramerate();
-            }, s.u$);
+                if (!this.connection.destroyed) l.info('BaseConnection.userSpeakingChange: Reduced framerate after '.concat(o.u$, ' ms.')), (this.framerateReductionTimeout = void 0), (this.sinkWants.isMuted = !0), this.updateRemoteWantsFramerate();
+            }, o.u$);
         }
     }
     destroyFramerateScaleFactorTimers() {
@@ -45,15 +45,15 @@ class u {
         this.destroyFramerateScaleFactorTimers();
     }
     constructor(e, n) {
-        o(this, 'connection', void 0),
-            o(this, 'sinkWants', void 0),
-            o(this, 'framerateReductionTimeout', void 0),
-            o(this, 'handleSpeaking', void 0),
-            o(this, 'handleSelfMute', void 0),
+        s(this, 'connection', void 0),
+            s(this, 'sinkWants', void 0),
+            s(this, 'framerateReductionTimeout', void 0),
+            s(this, 'handleSpeaking', void 0),
+            s(this, 'handleSelfMute', void 0),
             (this.connection = e),
             (this.sinkWants = n),
             (this.handleSpeaking = (e, n) => {
-                e === this.connection.userId && this.userSpeakingChange(n === s.Dg.NONE);
+                e === this.connection.userId && this.userSpeakingChange(n === o.Dg.NONE);
             }),
             (this.handleSelfMute = (e) => {
                 if (!this.connection.hasDesktopSource()) this.destroyFramerateScaleFactorTimers(), (this.sinkWants.isMuted = e), this.updateRemoteWantsFramerate();

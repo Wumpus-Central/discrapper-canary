@@ -5,19 +5,19 @@ r.d(n, {
 });
 var i = r(661763),
     a = r(239700),
-    s = r(523603),
-    o = r(649859);
+    o = r(523603),
+    s = r(649859);
 function l(e) {
     let { value: n = 0, minValue: r = 0, maxValue: l = 100, valueLabel: u, isIndeterminate: c, formatOptions: d = { style: 'percent' } } = e,
         f = (0, i.zL)(e, { labelable: !0 }),
-        { labelProps: _, fieldProps: h } = (0, s.N)({
+        { labelProps: p, fieldProps: h } = (0, o.N)({
             ...e,
             labelElementType: 'span'
         }),
-        p = ((n = (0, a.uZ)(n, r, l)) - r) / (l - r),
-        m = (0, o.Ux)(d);
+        _ = ((n = (0, a.uZ)(n, r, l)) - r) / (l - r),
+        m = (0, s.Ux)(d);
     if (!c && !u) {
-        let e = 'percent' === d.style ? p : n;
+        let e = 'percent' === d.style ? _ : n;
         u = m.format(e);
     }
     return {
@@ -29,6 +29,6 @@ function l(e) {
             'aria-valuetext': c ? void 0 : u,
             role: 'progressbar'
         }),
-        labelProps: _
+        labelProps: p
     };
 }

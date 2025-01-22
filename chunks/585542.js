@@ -3,8 +3,8 @@ function n(e) {
         r = e.COMMENT('//', '$', { contains: [{ begin: /\\\n/ }] }),
         i = 'decltype\\(auto\\)',
         a = '[a-zA-Z_]\\w*::',
-        s = '<[^<>]+>',
-        o = '(' + i + '|' + n.optional(a) + '[a-zA-Z_]\\w*' + n.optional(s) + ')',
+        o = '<[^<>]+>',
+        s = '(' + i + '|' + n.optional(a) + '[a-zA-Z_]\\w*' + n.optional(o) + ')',
         l = {
             className: 'type',
             variants: [{ begin: '\\b[a-z\\d_]*_t\\b' }, { match: /\batomic_[a-z]{3,6}\b/ }]
@@ -54,13 +54,13 @@ function n(e) {
                 e.C_BLOCK_COMMENT_MODE
             ]
         },
-        _ = {
+        p = {
             className: 'title',
             begin: n.optional(a) + e.IDENT_RE,
             relevance: 0
         },
         h = n.optional(a) + e.IDENT_RE + '\\s*\\(',
-        p = {
+        _ = {
             keyword: ['asm', 'auto', 'break', 'case', 'continue', 'default', 'do', 'else', 'enum', 'extern', 'for', 'fortran', 'goto', 'if', 'inline', 'register', 'restrict', 'return', 'sizeof', 'typeof', 'typeof_unqual', 'struct', 'switch', 'typedef', 'union', 'volatile', 'while', '_Alignas', '_Alignof', '_Atomic', '_Generic', '_Noreturn', '_Static_assert', '_Thread_local', 'alignas', 'alignof', 'noreturn', 'static_assert', 'thread_local', '_Pragma'],
             type: ['float', 'double', 'signed', 'unsigned', 'int', 'short', 'long', 'char', 'void', '_Bool', '_BitInt', '_Complex', '_Imaginary', '_Decimal32', '_Decimal64', '_Decimal96', '_Decimal128', '_Decimal64x', '_Decimal128x', '_Float16', '_Float32', '_Float64', '_Float128', '_Float32x', '_Float64x', '_Float128x', 'const', 'static', 'constexpr', 'complex', 'bool', 'imaginary'],
             literal: 'true false NULL',
@@ -82,12 +82,12 @@ function n(e) {
                     end: /;/
                 }
             ],
-            keywords: p,
+            keywords: _,
             contains: m.concat([
                 {
                     begin: /\(/,
                     end: /\)/,
-                    keywords: p,
+                    keywords: _,
                     contains: m.concat(['self']),
                     relevance: 0
                 }
@@ -95,22 +95,22 @@ function n(e) {
             relevance: 0
         },
         E = {
-            begin: '(' + o + '[\\*&\\s]+)+' + h,
+            begin: '(' + s + '[\\*&\\s]+)+' + h,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: p,
+            keywords: _,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
                 {
                     begin: i,
-                    keywords: p,
+                    keywords: _,
                     relevance: 0
                 },
                 {
                     begin: h,
                     returnBegin: !0,
-                    contains: [e.inherit(_, { className: 'title.function' })],
+                    contains: [e.inherit(p, { className: 'title.function' })],
                     relevance: 0
                 },
                 {
@@ -121,7 +121,7 @@ function n(e) {
                     className: 'params',
                     begin: /\(/,
                     end: /\)/,
-                    keywords: p,
+                    keywords: _,
                     relevance: 0,
                     contains: [
                         r,
@@ -132,7 +132,7 @@ function n(e) {
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: p,
+                            keywords: _,
                             relevance: 0,
                             contains: ['self', r, e.C_BLOCK_COMMENT_MODE, c, d, l]
                         }
@@ -147,14 +147,14 @@ function n(e) {
     return {
         name: 'C',
         aliases: ['h'],
-        keywords: p,
+        keywords: _,
         disableAutodetect: !0,
         illegal: '</',
         contains: [].concat(g, E, m, [
             f,
             {
                 begin: e.IDENT_RE + '::',
-                keywords: p
+                keywords: _
             },
             {
                 className: 'class',
@@ -166,7 +166,7 @@ function n(e) {
         exports: {
             preprocessor: f,
             strings: c,
-            keywords: p
+            keywords: _
         }
     };
 }

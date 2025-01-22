@@ -1,6 +1,6 @@
 r.d(n, {
     Bg: function () {
-        return p;
+        return _;
     },
     ZP: function () {
         return h;
@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(81825),
-    s = r(768581),
-    o = r(709054),
+    o = r(768581),
+    s = r(709054),
     l = r(624138),
     u = r(981631),
     c = r(185923),
@@ -27,7 +27,7 @@ function f(e, n, r) {
         e
     );
 }
-let _ = 200;
+let p = 200;
 class h extends a.Z {
     merge(e) {
         let { features: n } = e;
@@ -52,7 +52,7 @@ class h extends a.Z {
     getIconURL(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return s.ZP.getGuildIconURL({
+        return o.ZP.getGuildIconURL({
             id: this.id,
             size: e,
             icon: this.icon,
@@ -62,8 +62,8 @@ class h extends a.Z {
     }
     getIconSource(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return s.ZP.getAnimatableSourceWithFallback(n, (n) =>
-            s.ZP.getGuildIconSource({
+        return o.ZP.getAnimatableSourceWithFallback(n, (n) =>
+            o.ZP.getGuildIconSource({
                 id: this.id,
                 size: e,
                 icon: this.icon,
@@ -90,7 +90,7 @@ class h extends a.Z {
     }
     isNew() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 7,
-            n = o.default.extractTimestamp(this.id);
+            n = s.default.extractTimestamp(this.id);
         return Date.now() - n < 86400000 * e;
     }
     isLurker() {
@@ -100,10 +100,10 @@ class h extends a.Z {
         return this.features.has(e);
     }
     getEveryoneRoleId() {
-        return o.default.castGuildIdAsEveryoneGuildRoleId(this.id);
+        return s.default.castGuildIdAsEveryoneGuildRoleId(this.id);
     }
     getMaxEmojiSlots() {
-        return Math.max(this.hasFeature(u.oNc.MORE_EMOJI) ? _ : c.jZ, d.HO[this.premiumTier].limits.emoji);
+        return Math.max(this.hasFeature(u.oNc.MORE_EMOJI) ? p : c.jZ, d.HO[this.premiumTier].limits.emoji);
     }
     getMaxRoleSubscriptionEmojiSlots() {
         return 25;
@@ -133,7 +133,7 @@ class h extends a.Z {
         (this.id = e.id), (this.name = e.name || ''), (this.description = e.description || null), (this.ownerId = e.ownerId || null), (this.icon = e.icon || null), (this.splash = e.splash || null), (this.banner = e.banner || null), (this.homeHeader = e.homeHeader || null), (this.features = a), (this.preferredLocale = e.preferredLocale || 'en-US'), (this.afkChannelId = e.afkChannelId || null), (this.afkTimeout = e.afkTimeout), (this.systemChannelId = e.systemChannelId || null), (this.verificationLevel = e.verificationLevel || u.sFg.NONE), (this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt)), (this.defaultMessageNotifications = e.defaultMessageNotifications || u.bL.ALL_MESSAGES), (this.mfaLevel = e.mfaLevel || u.BpS.NONE), (this.application_id = e.application_id || null), (this.explicitContentFilter = e.explicitContentFilter || u.lxg.DISABLED), (this.vanityURLCode = e.vanityURLCode || void 0), (this.premiumTier = e.premiumTier || u.Eu4.NONE), (this.premiumSubscriberCount = e.premiumSubscriberCount || 0), (this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1), (this.systemChannelFlags = e.systemChannelFlags), (this.discoverySplash = e.discoverySplash || null), (this.rulesChannelId = e.rulesChannelId || null), (this.safetyAlertsChannelId = e.safetyAlertsChannelId || null), (this.publicUpdatesChannelId = e.publicUpdatesChannelId || null), (this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1), (this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1), (this.maxMembers = e.maxMembers || -1), (this.nsfwLevel = null !== (n = e.nsfwLevel) && void 0 !== n ? n : u.V_K.DEFAULT), (this.hubType = e.hubType), (this.latestOnboardingQuestionId = null !== (r = e.latestOnboardingQuestionId) && void 0 !== r ? r : null), (this.profile = null !== (i = e.profile) && void 0 !== i ? i : null);
     }
 }
-class p extends h {
+class _ extends h {
     constructor(e) {
         var n;
         super(e),

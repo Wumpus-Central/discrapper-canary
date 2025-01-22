@@ -1,15 +1,15 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(331595);
-function s(e) {
-    let { width: n = 24, height: r = 24, ...s } = e;
+function o(e) {
+    let { width: n = 24, height: r = 24, ...o } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, a.Z)(s),
+        ...(0, a.Z)(o),
         height: r,
         width: n,
         viewBox: '0 0 24 24',

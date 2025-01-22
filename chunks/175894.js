@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(192379),
     a = r(570140);
-function s(e) {
+function o(e) {
     let { userActivity: n } = e,
         r = null == n ? void 0 : n.applicationId;
     i.useEffect(() => {

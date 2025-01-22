@@ -7,47 +7,47 @@
         return !0;
     }
     function r(e, r, i, a) {
-        var s = e + ' ';
+        var o = e + ' ';
         switch (i) {
             case 's':
                 return r || a ? 'nokkrar sekúndur' : 'nokkrum sekúndum';
             case 'ss':
-                if (n(e)) return s + (r || a ? 'sekúndur' : 'sekúndum');
-                return s + 'sekúnda';
+                if (n(e)) return o + (r || a ? 'sekúndur' : 'sekúndum');
+                return o + 'sekúnda';
             case 'm':
                 return r ? 'mínúta' : 'mínútu';
             case 'mm':
-                if (n(e)) return s + (r || a ? 'mínútur' : 'mínútum');
-                if (r) return s + 'mínúta';
-                return s + 'mínútu';
+                if (n(e)) return o + (r || a ? 'mínútur' : 'mínútum');
+                if (r) return o + 'mínúta';
+                return o + 'mínútu';
             case 'hh':
-                if (n(e)) return s + (r || a ? 'klukkustundir' : 'klukkustundum');
-                return s + 'klukkustund';
+                if (n(e)) return o + (r || a ? 'klukkustundir' : 'klukkustundum');
+                return o + 'klukkustund';
             case 'd':
                 if (r) return 'dagur';
                 return a ? 'dag' : 'degi';
             case 'dd':
                 if (n(e)) {
-                    if (r) return s + 'dagar';
-                    return s + (a ? 'daga' : 'dögum');
+                    if (r) return o + 'dagar';
+                    return o + (a ? 'daga' : 'dögum');
                 }
-                if (r) return s + 'dagur';
-                return s + (a ? 'dag' : 'degi');
+                if (r) return o + 'dagur';
+                return o + (a ? 'dag' : 'degi');
             case 'M':
                 if (r) return 'mánuður';
                 return a ? 'mánuð' : 'mánuði';
             case 'MM':
                 if (n(e)) {
-                    if (r) return s + 'mánuðir';
-                    return s + (a ? 'mánuði' : 'mánuðum');
+                    if (r) return o + 'mánuðir';
+                    return o + (a ? 'mánuði' : 'mánuðum');
                 }
-                if (r) return s + 'mánuður';
-                return s + (a ? 'mánuð' : 'mánuði');
+                if (r) return o + 'mánuður';
+                return o + (a ? 'mánuð' : 'mánuði');
             case 'y':
                 return r || a ? 'ár' : 'ári';
             case 'yy':
-                if (n(e)) return s + (r || a ? 'ár' : 'árum');
-                return s + (r || a ? 'ár' : 'ári');
+                if (n(e)) return o + (r || a ? 'ár' : 'árum');
+                return o + (r || a ? 'ár' : 'ári');
         }
     }
     return e.defineLocale('is', {

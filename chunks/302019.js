@@ -11,8 +11,8 @@ var i = (function () {
         };
     })(),
     a = r(192379),
-    s = c(a),
-    o = c(r(723184)),
+    o = c(a),
+    s = c(r(723184)),
     l = u(r(14666));
 function u(e) {
     if (e && e.__esModule) return e;
@@ -30,7 +30,7 @@ function f(e, n) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
 }
-function _(e, n) {
+function p(e, n) {
     if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
     (e.prototype = Object.create(n && n.prototype, {
         constructor: {
@@ -45,9 +45,9 @@ function _(e, n) {
 var h = (n.Hue = (function (e) {
     function n() {
         d(this, n);
-        for (var e, r, i, a = arguments.length, s = Array(a), o = 0; o < a; o++) s[o] = arguments[o];
+        for (var e, r, i, a = arguments.length, o = Array(a), s = 0; s < a; s++) o[s] = arguments[s];
         return (
-            (r = i = f(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(s)))),
+            (r = i = f(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(o)))),
             (i.handleChange = function (e) {
                 var n = l.calculateChange(e, i.props.direction, i.props.hsl, i.container);
                 n && 'function' == typeof i.props.onChange && i.props.onChange(n, e);
@@ -62,7 +62,7 @@ var h = (n.Hue = (function (e) {
         );
     }
     return (
-        _(n, e),
+        p(n, e),
         i(n, [
             {
                 key: 'componentWillUnmount',
@@ -82,7 +82,7 @@ var h = (n.Hue = (function (e) {
                     var e = this,
                         n = this.props.direction,
                         r = void 0 === n ? 'horizontal' : n,
-                        i = (0, o.default)(
+                        i = (0, s.default)(
                             {
                                 default: {
                                     hue: {
@@ -119,10 +119,10 @@ var h = (n.Hue = (function (e) {
                             },
                             { vertical: 'vertical' === r }
                         );
-                    return s.default.createElement(
+                    return o.default.createElement(
                         'div',
                         { style: i.hue },
-                        s.default.createElement(
+                        o.default.createElement(
                             'div',
                             {
                                 className: 'hue-' + r,
@@ -134,8 +134,8 @@ var h = (n.Hue = (function (e) {
                                 onTouchMove: this.handleChange,
                                 onTouchStart: this.handleChange
                             },
-                            s.default.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '),
-                            s.default.createElement('div', { style: i.pointer }, this.props.pointer ? s.default.createElement(this.props.pointer, this.props) : s.default.createElement('div', { style: i.slider }))
+                            o.default.createElement('style', null, '\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          '),
+                            o.default.createElement('div', { style: i.pointer }, this.props.pointer ? o.default.createElement(this.props.pointer, this.props) : o.default.createElement('div', { style: i.slider }))
                         )
                     );
                 }

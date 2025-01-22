@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(47120);
-var o = r(442837),
+    o = r(47120);
+var s = r(442837),
     l = r(846519),
     u = r(570140),
     c = r(70956),
     d = r(592125),
     f = r(496675),
-    _ = r(981631);
+    p = r(981631);
 function h(e, n, r) {
     return (
         n in e
@@ -26,7 +26,7 @@ function h(e, n, r) {
         e
     );
 }
-let p = 100;
+let _ = 100;
 !(function (e) {
     (e[(e.SendMessage = 0)] = 'SendMessage'), (e[(e.CreateThread = 1)] = 'CreateThread');
 })(i || (i = {}));
@@ -35,7 +35,7 @@ let m = {
     1: {}
 };
 function g(e, n, r) {
-    if ((E(e, n), I(e, n) || r <= 0)) return;
+    if ((E(e, n), y(e, n) || r <= 0)) return;
     let i = r + Date.now();
     (m[n][e.id] = {
         rateLimitPerUser: e.rateLimitPerUser,
@@ -62,21 +62,21 @@ function E(e, n) {
 function v(e, n) {
     let r = d.Z.getChannel(e);
     if (null == r) return !1;
-    g(r, n, 0 === r.rateLimitPerUser ? 0 : r.rateLimitPerUser * c.Z.Millis.SECOND + p);
+    g(r, n, 0 === r.rateLimitPerUser ? 0 : r.rateLimitPerUser * c.Z.Millis.SECOND + _);
 }
-function I(e, n) {
-    return 0 === n ? f.Z.can(_.Plq.MANAGE_CHANNELS, e) || f.Z.can(_.Plq.MANAGE_MESSAGES, e) : f.Z.can(_.Plq.MANAGE_THREADS, e);
+function y(e, n) {
+    return 0 === n ? f.Z.can(p.Plq.MANAGE_CHANNELS, e) || f.Z.can(p.Plq.MANAGE_MESSAGES, e) : f.Z.can(p.Plq.MANAGE_THREADS, e);
 }
-function T(e) {
+function b(e) {
     let { channelId: n } = e;
     return v(n, 0);
 }
-function b(e) {
+function I(e) {
     let { file: n } = e,
         r = d.Z.getChannel(n.channelId);
     return null != r && g(r, 0, 0);
 }
-function y(e) {
+function T(e) {
     let { channelId: n, slowmodeType: r } = e;
     return v(n, r);
 }
@@ -84,7 +84,7 @@ function S(e) {
     let { channelId: n, slowmodeType: r, cooldownMs: i } = e,
         a = d.Z.getChannel(n);
     if (null == a) return !1;
-    g(a, r, 0 === i ? 0 : i + p);
+    g(a, r, 0 === i ? 0 : i + _);
 }
 function A(e) {
     let { channels: n } = e;
@@ -97,12 +97,12 @@ function A(e) {
         }
     });
 }
-function N() {
+function C() {
     [0, 1].forEach((e) => {
         Object.keys(m[e]).forEach((n) => m[e][n].timer.stop()), (m[e] = {});
     });
 }
-class C extends (a = o.ZP.Store) {
+class N extends (a = s.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
@@ -114,13 +114,13 @@ class C extends (a = o.ZP.Store) {
         return this.getSlowmodeCooldownGuess(e.id, n) > 0 && e.rateLimitPerUser > 0;
     }
 }
-h(C, 'displayName', 'SlowmodeStore'),
-    (n.Z = new C(u.Z, {
-        SLOWMODE_RESET_COOLDOWN: y,
+h(N, 'displayName', 'SlowmodeStore'),
+    (n.Z = new N(u.Z, {
+        SLOWMODE_RESET_COOLDOWN: T,
         SLOWMODE_SET_COOLDOWN: S,
-        UPLOAD_START: T,
-        UPLOAD_FAIL: b,
-        UPLOAD_CANCEL_REQUEST: b,
+        UPLOAD_START: b,
+        UPLOAD_FAIL: I,
+        UPLOAD_CANCEL_REQUEST: I,
         CHANNEL_UPDATES: A,
-        LOGOUT: N
+        LOGOUT: C
     }));

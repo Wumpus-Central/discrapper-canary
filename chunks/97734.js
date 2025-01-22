@@ -1,14 +1,14 @@
 var i = r(47120);
 var a = r(477660),
-    s = r.n(a),
-    o = r(339085),
+    o = r.n(a),
+    s = r(339085),
     l = r(633302),
     u = r(176354),
     c = r(594199);
 let d = {
     s: {
         requiredFirstCharacters: ['~'],
-        match: s().inlineRegex(/^~~([\s\S]+?)~~(?!_)/)
+        match: o().inlineRegex(/^~~([\s\S]+?)~~(?!_)/)
     },
     highlight: {
         order: c.ZP.order,
@@ -37,19 +37,19 @@ let d = {
         }
     },
     customEmoji: {
-        order: s().defaultRules.codeBlock.order,
+        order: o().defaultRules.codeBlock.order,
         requiredFirstCharacters: ['<'],
         match: (e) => /^<(a)?:(\w+):(\d+)>/.exec(e),
         parse(e, n, r) {
-            let [i, a, s, l] = e,
+            let [i, a, o, l] = e,
                 { guildId: u } = r,
-                c = o.ZP.getDisambiguatedEmojiContext(u).getById(l),
+                c = s.ZP.getDisambiguatedEmojiContext(u).getById(l),
                 d = null == c || c.require_colons;
             return (
-                null != c && (s = c.name),
+                null != c && (o = c.name),
                 {
                     emojiId: l,
-                    name: d ? ':'.concat(s, ':') : s,
+                    name: d ? ':'.concat(o, ':') : o,
                     animated: 'a' === a
                 }
             );
@@ -94,8 +94,8 @@ let d = {
         }
     },
     looseEm: {
-        ...s().defaultRules.em,
-        match: s().inlineRegex(RegExp('^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?) {1,2}\\*(?!\\*)')),
+        ...o().defaultRules.em,
+        match: o().inlineRegex(RegExp('^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?) {1,2}\\*(?!\\*)')),
         parse: (e, n, r) => ({
             type: 'em',
             content: n(e[1], r),

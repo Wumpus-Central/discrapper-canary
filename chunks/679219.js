@@ -1,13 +1,13 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(331595);
-function s(e) {
-    let { width: n = 12, height: r = 12, color: s = 'currentColor', foreground: o, ...l } = e;
+function o(e) {
+    let { width: n = 12, height: r = 12, color: o = 'currentColor', foreground: s, ...l } = e;
     return (0, i.jsx)('svg', {
         ...(0, a.Z)(l),
         width: n,
@@ -19,8 +19,8 @@ function s(e) {
             x: '1.5',
             y: '1.5',
             fill: 'none',
-            stroke: s,
-            className: o
+            stroke: o,
+            className: s
         })
     });
 }

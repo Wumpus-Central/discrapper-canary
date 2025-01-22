@@ -1,19 +1,19 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(331595);
-function s(e) {
-    let { width: n = 10, height: r = 10, color: s = 'currentColor', ...o } = e;
+function o(e) {
+    let { width: n = 10, height: r = 10, color: o = 'currentColor', ...s } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, a.Z)(o),
+        ...(0, a.Z)(s),
         width: n,
         height: r,
         viewBox: '0 0 17 22',
-        fill: s,
+        fill: o,
         xmlns: 'http://www.w3.org/2000/svg',
         children: [
             (0, i.jsxs)('g', {

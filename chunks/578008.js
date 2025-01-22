@@ -14,14 +14,14 @@ function a(e, i) {
     function a(e, n, r) {
         return (e - n) / (r - n);
     }
-    function s(e, n, r) {
+    function o(e, n, r) {
         return n + e * (r - n);
     }
-    function o(e, n, r) {
+    function s(e, n, r) {
         return e * r + (1 - e) * n;
     }
     function l(e, n, r) {
-        return o(2 * e - e * e, n, r);
+        return s(2 * e - e * e, n, r);
     }
     function u(e) {
         return 0.0007 * Math.pow(e, 3) - 0.031 * Math.pow(e, 2) + 0.64 * e + 1.28;
@@ -35,13 +35,13 @@ function a(e, i) {
     function f(e) {
         return e <= 18 ? u(e) : e > 18 && e <= 44 ? c(e) : d(e);
     }
-    var _ = a(e / 1.7, 0, 20);
-    _ = s(_, 0, 0.8);
-    var h = s(a(i / 1.7, 0, 20), 0.5, 200),
-        p = l(_, f(h), 0.01);
+    var p = a(e / 1.7, 0, 20);
+    p = o(p, 0, 0.8);
+    var h = o(a(i / 1.7, 0, 20), 0.5, 200),
+        _ = l(p, f(h), 0.01);
     return {
         tension: n(h),
-        friction: r(p)
+        friction: r(_)
     };
 }
 e.exports = {

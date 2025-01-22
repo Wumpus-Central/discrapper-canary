@@ -9,19 +9,19 @@ r.d(n, {
 var i = r(47120);
 var a = r(200651);
 r(192379);
-var s = r(442837),
-    o = r(481060),
+var o = r(442837),
+    s = r(481060),
     l = r(144144),
     u = r(592125),
     c = r(496675),
     d = r(944486),
     f = r(585483),
-    _ = r(51144),
+    p = r(51144),
     h = r(981631),
-    p = r(388032);
+    _ = r(388032);
 function m(e, n) {
     let { id: r } = e,
-        i = '@'.concat(_.ZP.getUserTag(e, { decoration: 'never' })),
+        i = '@'.concat(p.ZP.getUserTag(e, { decoration: 'never' })),
         a = '<@'.concat(r, '>');
     f.S.dispatchToLastSubscribed(h.CkL.INSERT_TEXT, {
         plainText: i,
@@ -30,7 +30,7 @@ function m(e, n) {
         null != n && l.Z.startTyping(n);
 }
 function g(e, n, r) {
-    let [i, l] = (0, s.Wu)(
+    let [i, l] = (0, o.Wu)(
             [d.Z, u.Z, c.Z],
             () => {
                 let e = d.Z.getChannelId(n),
@@ -41,12 +41,12 @@ function g(e, n, r) {
         ),
         f = r === h.IlC.POPOUT;
     if (!l || f) return null;
-    function _() {
+    function p() {
         m(e, i);
     }
-    return (0, a.jsx)(o.MenuItem, {
+    return (0, a.jsx)(s.MenuItem, {
         id: 'mention',
-        label: p.intl.string(p.t.P8tvKC),
-        action: _
+        label: _.intl.string(_.t.P8tvKC),
+        action: p
     });
 }

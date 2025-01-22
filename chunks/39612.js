@@ -4,12 +4,12 @@ function i(e) {
 function a(e) {
     return ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST, '/').concat(e);
 }
-function s() {
+function o() {
     return ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/channels/@me');
 }
 r.d(n, {
     Gk: function () {
-        return s;
+        return o;
     },
     Oh: function () {
         return a;

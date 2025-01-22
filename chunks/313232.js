@@ -1,11 +1,11 @@
 r.d(n, {
     r: function () {
-        return o;
+        return s;
     }
 });
 var i,
     a = r(47120);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,7 +18,7 @@ function s(e, n, r) {
         e
     );
 }
-class o {
+class s {
     update(e) {
         for (let n in e.rtp.inbound)
             for (let r of e.rtp.inbound[n])
@@ -36,23 +36,23 @@ class o {
     }
     static getCalculatorOrCreate(e, n, r, i) {
         let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-            s = e[n.ssrc];
-        return null == s && ((s = new u(r, i, a)), (e[n.ssrc] = s)), s;
+            o = e[n.ssrc];
+        return null == o && ((o = new u(r, i, a)), (e[n.ssrc] = o)), o;
     }
     getInboundBytesRecevierCalculator(e) {
-        return o.getCalculatorOrCreate(this.inboundVideoBitrate, e, 'bytesReceived', 'timestamp', 3);
+        return s.getCalculatorOrCreate(this.inboundVideoBitrate, e, 'bytesReceived', 'timestamp', 3);
     }
     getInboundFrameDecodeRateCalculator(e) {
-        return o.getCalculatorOrCreate(this.inboundDecodeFps, e, 'framesDecoded', 'timestamp', 5);
+        return s.getCalculatorOrCreate(this.inboundDecodeFps, e, 'framesDecoded', 'timestamp', 5);
     }
     getOutboundBytesSentCalculator(e) {
-        return o.getCalculatorOrCreate(this.outboundVideoBitrate, e, 'bytesSent', 'timestamp', 3);
+        return s.getCalculatorOrCreate(this.outboundVideoBitrate, e, 'bytesSent', 'timestamp', 3);
     }
     getOutboundEncodeRateCalculator(e) {
-        return o.getCalculatorOrCreate(this.outboundEncodeFps, e, 'framesEncoded', 'timestamp', 5);
+        return s.getCalculatorOrCreate(this.outboundEncodeFps, e, 'framesEncoded', 'timestamp', 5);
     }
     constructor() {
-        s(this, 'inboundVideoBitrate', {}), s(this, 'inboundDecodeFps', {}), s(this, 'outboundVideoBitrate', {}), s(this, 'outboundEncodeFps', {});
+        o(this, 'inboundVideoBitrate', {}), o(this, 'inboundDecodeFps', {}), o(this, 'outboundVideoBitrate', {}), o(this, 'outboundEncodeFps', {});
     }
 }
 !(function (e) {
@@ -79,17 +79,17 @@ class u {
         let i = n[this.accumulativeMetricKey],
             a = e[this.accumulativeMetricKey];
         if ('number' != typeof i || 'number' != typeof a) return;
-        let s = n[this.samplesMetricKey],
-            o = e[this.samplesMetricKey];
-        if ('number' != typeof s || 'number' != typeof o) return;
-        let l = ((a - i) / (o - s)) * this.multiplier;
+        let o = n[this.samplesMetricKey],
+            s = e[this.samplesMetricKey];
+        if ('number' != typeof o || 'number' != typeof s) return;
+        let l = ((a - i) / (s - o)) * this.multiplier;
         return this.round ? Math.round(l) : l;
     }
     constructor(e, n, r = 0) {
-        for (let u in (s(this, 'accumulativeMetricKey', void 0), s(this, 'samplesMetricKey', void 0), s(this, 'previous', void 0), s(this, 'multiplier', void 0), s(this, 'round', void 0), (this.accumulativeMetricKey = e), (this.samplesMetricKey = n), (this.multiplier = 1), (this.round = !1), i)) {
-            var a, o;
+        for (let u in (o(this, 'accumulativeMetricKey', void 0), o(this, 'samplesMetricKey', void 0), o(this, 'previous', void 0), o(this, 'multiplier', void 0), o(this, 'round', void 0), (this.accumulativeMetricKey = e), (this.samplesMetricKey = n), (this.multiplier = 1), (this.round = !1), i)) {
+            var a, s;
             let e = Number(u);
-            if (!isNaN(e) && (r & e) != 0 && u in l) this.multiplier *= null !== (o = null === (a = l[u]) || void 0 === a ? void 0 : a.multiplier) && void 0 !== o ? o : 1;
+            if (!isNaN(e) && (r & e) != 0 && u in l) this.multiplier *= null !== (s = null === (a = l[u]) || void 0 === a ? void 0 : a.multiplier) && void 0 !== s ? s : 1;
         }
         this.round = (4 & r) != 0;
     }

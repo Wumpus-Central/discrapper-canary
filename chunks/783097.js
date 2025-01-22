@@ -1,6 +1,6 @@
 r.d(n, {
     $d: function () {
-        return N;
+        return C;
     },
     BQ: function () {
         return A;
@@ -12,7 +12,7 @@ r.d(n, {
         return M;
     },
     L1: function () {
-        return F;
+        return Z;
     },
     Ow: function () {
         return G;
@@ -21,19 +21,19 @@ r.d(n, {
         return S;
     },
     X: function () {
-        return Z;
+        return F;
     },
     XZ: function () {
         return U;
     },
     Y$: function () {
-        return x;
+        return L;
     },
     Yn: function () {
         return k;
     },
     jD: function () {
-        return C;
+        return N;
     },
     lf: function () {
         return D;
@@ -48,7 +48,7 @@ r.d(n, {
         return O;
     },
     yJ: function () {
-        return L;
+        return x;
     },
     ye: function () {
         return R;
@@ -56,62 +56,62 @@ r.d(n, {
 });
 var i = r(789020);
 var a = r(627494);
-var s = r(757143);
-var o = r(653041);
+var o = r(757143);
+var s = r(653041);
 var l = r(47120);
 var u = r(912370),
     c = r(668781),
     d = r(904245),
     f = r(895924),
-    _ = r(667204),
+    p = r(667204),
     h = r(957730),
-    p = r(973616),
+    _ = r(973616),
     m = r(768581),
     g = r(585483),
     E = r(630388),
     v = r(541099),
-    I = r(827498),
-    T = r(981631),
-    b = r(689079),
-    y = r(388032);
-let S = { id: b.bi.BUILT_IN };
+    y = r(827498),
+    b = r(981631),
+    I = r(689079),
+    T = r(388032);
+let S = { id: I.bi.BUILT_IN };
 function A(e) {
-    return e.id !== b.bi.BUILT_IN;
-}
-function N(e) {
-    return A(e) ? e.name : y.intl.string(y.t.UB2gGx);
+    return e.id !== I.bi.BUILT_IN;
 }
 function C(e) {
-    return A(e) ? e.description : y.intl.string(y.t.X9fusr);
+    return A(e) ? e.name : T.intl.string(T.t.UB2gGx);
+}
+function N(e) {
+    return A(e) ? e.description : T.intl.string(T.t.X9fusr);
 }
 function R(e) {
     var n;
-    return A(e) && (0, E.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, T.udG.EMBEDDED);
+    return A(e) && (0, E.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, b.udG.EMBEDDED);
 }
 function O(e) {
     var n;
-    return A(e) && (0, E.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, T.udG.PARTNER);
+    return A(e) && (0, E.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, b.udG.PARTNER);
 }
 function D(e) {
     var n;
-    return A(e) && (0, E.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, T.udG.PROMOTED);
-}
-function L(e) {
-    return A(e) && R(e) ? (e instanceof p.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return A(e) && (0, E.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, b.udG.PROMOTED);
 }
 function x(e) {
-    let { command: n, optionValues: r, context: i, commandTargetId: a, maxSizeCallback: s, sectionName: o, commandOrigin: l = f.bB.APPLICATION_LAUNCHER } = e,
+    return A(e) && R(e) ? (e instanceof _.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+}
+function L(e) {
+    let { command: n, optionValues: r, context: i, commandTargetId: a, maxSizeCallback: o, sectionName: s, commandOrigin: l = f.bB.APPLICATION_LAUNCHER } = e,
         { channel: u } = i,
-        p = async () => {
+        _ = async () => {
             try {
-                let c = await (0, _.Z)({
+                let c = await (0, p.Z)({
                     command: n,
                     optionValues: r,
                     context: i,
                     commandTargetId: a,
-                    maxSizeCallback: s,
+                    maxSizeCallback: o,
                     commandOrigin: l,
-                    sectionName: o,
+                    sectionName: s,
                     source: v.Z.entrypoint()
                 });
                 if (n.inputType === f.iw.BUILT_IN_TEXT && null != c) {
@@ -122,16 +122,16 @@ function x(e) {
             } catch (e) {
                 throw (
                     (c.Z.show({
-                        title: y.intl.string(y.t['aHO//v']),
-                        body: y.intl.string(y.t.kuzKHB),
-                        confirmText: y.intl.string(y.t['5911LS']),
-                        onConfirm: () => p()
+                        title: T.intl.string(T.t['aHO//v']),
+                        body: T.intl.string(T.t.kuzKHB),
+                        confirmText: T.intl.string(T.t['5911LS']),
+                        onConfirm: () => _()
                     }),
                     e)
                 );
             }
         };
-    return p();
+    return _();
 }
 function w(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -148,19 +148,19 @@ function w(e) {
           }
         : {
               iconURL: null != r ? r : null,
-              name: y.intl.string(y.t.UB2gGx),
-              description: y.intl.string(y.t.X9fusr)
+              name: T.intl.string(T.t.UB2gGx),
+              description: T.intl.string(T.t.X9fusr)
           };
 }
 function P(e) {
-    return !!A(e) && (e instanceof p.ZP ? e.isMonetized : e.is_monetized);
+    return !!A(e) && (e instanceof _.ZP ? e.isMonetized : e.is_monetized);
 }
 function M(e) {
-    let n = L(e);
+    let n = x(e);
     return null != n && n.displays_advertisements;
 }
 function k(e) {
-    return e === I._b.TEXT;
+    return e === y._b.TEXT;
 }
 function U(e) {
     return null == e ? '' : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll('_', ' ');
@@ -185,8 +185,8 @@ function G(e) {
         integrationTypesConfig: e.integrationTypesConfig
     };
 }
-function F(e) {
-    return e instanceof p.ZP
+function Z(e) {
+    return e instanceof _.ZP
         ? {
               applicationId: e.id,
               customInstallUrl: e.customInstallUrl,
@@ -200,6 +200,6 @@ function F(e) {
               integrationTypesConfig: e.integration_types_config
           };
 }
-function Z(e) {
-    g.S.dispatchToLastSubscribed(T.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
+function F(e) {
+    g.S.dispatchToLastSubscribed(b.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }

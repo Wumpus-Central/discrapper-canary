@@ -6,18 +6,18 @@ r.d(n, {
         return l;
     },
     P1: function () {
-        return o;
+        return s;
     }
 });
 var i = r(825829),
     a = r(594174),
-    s = r(981631);
-function o(e) {
-    return void 0 !== e && e.type !== s.d4z.DM;
+    o = r(981631);
+function s(e) {
+    return void 0 !== e && e.type !== o.d4z.DM;
 }
 function l(e) {
     var n, r;
-    return null !== (r = null === (n = a.default.getUser(e)) || void 0 === n ? void 0 : n.hasFlag(s.xW$.SPAMMER)) && void 0 !== r && r;
+    return null !== (r = null === (n = a.default.getUser(e)) || void 0 === n ? void 0 : n.hasFlag(o.xW$.SPAMMER)) && void 0 !== r && r;
 }
 function u(e) {
     return l(e.author.id) && !(0, i.nY)(e);

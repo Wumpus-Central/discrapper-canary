@@ -17,13 +17,13 @@ function n(e) {
             begin: /\[/,
             end: /\]/
         },
-        s = {
+        o = {
             className: 'comment',
             begin: /%/,
             end: /$/,
             contains: [e.PHRASAL_WORDS_MODE]
         },
-        o = {
+        s = {
             className: 'string',
             begin: /`/,
             end: /`/,
@@ -37,7 +37,7 @@ function n(e) {
             className: 'string',
             begin: /0'\\s/
         },
-        c = [n, r, i, { begin: /:-/ }, a, s, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, o, l, u, e.C_NUMBER_MODE];
+        c = [n, r, i, { begin: /:-/ }, a, o, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, s, l, u, e.C_NUMBER_MODE];
     return (
         (i.contains = c),
         (a.contains = c),

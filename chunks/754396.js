@@ -1,14 +1,14 @@
 r.d(n, {
     Y: function () {
-        return p;
+        return _;
     }
 });
 var i = r(961742),
     a = r(27273),
-    s = r(262068);
-let o = {};
+    o = r(262068);
+let s = {};
 async function l(e) {
-    let n = o[e];
+    let n = s[e];
     if (null != n) return n;
     let r = await fetch(e);
     return (
@@ -16,7 +16,7 @@ async function l(e) {
             url: e,
             cssText: await r.text()
         }),
-        (o[e] = n),
+        (s[e] = n),
         n
     );
 }
@@ -24,9 +24,9 @@ async function u(e, n) {
     let r = e.cssText,
         i = /url\(["']?([^"')]+)["']?\)/g;
     return Promise.all(
-        (r.match(/url\([^)]+\)/g) || []).map(async (s) => {
-            let o = s.replace(i, '$1');
-            return !o.startsWith('https://') && (o = new URL(o, e.url).href), (0, a.cd)(o, n.fetchRequestInit, ({ result: e }) => ((r = r.replace(s, `url(${e})`)), [s, e]));
+        (r.match(/url\([^)]+\)/g) || []).map(async (o) => {
+            let s = o.replace(i, '$1');
+            return !s.startsWith('https://') && (s = new URL(s, e.url).href), (0, a.cd)(s, n.fetchRequestInit, ({ result: e }) => ((r = r.replace(o, `url(${e})`)), [o, e]));
         })
     ).then(() => r);
 }
@@ -42,14 +42,14 @@ function c(e) {
         n.push(e[0]);
     }
     i = i.replace(a, '');
-    let s = /@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi,
-        o = RegExp('((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})', 'gi');
+    let o = /@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi,
+        s = RegExp('((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})', 'gi');
     for (;;) {
-        let e = s.exec(i);
+        let e = o.exec(i);
         if (null === e) {
-            if (null === (e = o.exec(i))) break;
-            s.lastIndex = o.lastIndex;
-        } else o.lastIndex = s.lastIndex;
+            if (null === (e = s.exec(i))) break;
+            o.lastIndex = s.lastIndex;
+        } else s.lastIndex = o.lastIndex;
         n.push(e[0]);
     }
     return n;
@@ -63,14 +63,14 @@ async function d(e, n) {
                 try {
                     (0, i.qo)(r.cssRules || []).forEach((e, i) => {
                         if (e.type === CSSRule.IMPORT_RULE) {
-                            let s = i + 1,
-                                o = e.href,
-                                d = l(o)
+                            let o = i + 1,
+                                s = e.href,
+                                d = l(s)
                                     .then((e) => u(e, n))
                                     .then((e) =>
                                         c(e).forEach((e) => {
                                             try {
-                                                r.insertRule(e, e.startsWith('@import') ? (s += 1) : r.cssRules.length);
+                                                r.insertRule(e, e.startsWith('@import') ? (o += 1) : r.cssRules.length);
                                             } catch (n) {
                                                 console.error('Error inserting rule from remote css', {
                                                     rule: e,
@@ -85,7 +85,7 @@ async function d(e, n) {
                             a.push(d);
                         }
                     });
-                } catch (s) {
+                } catch (o) {
                     let i = e.find((e) => null == e.href) || document.styleSheets[0];
                     null != r.href &&
                         a.push(
@@ -100,7 +100,7 @@ async function d(e, n) {
                                     console.error('Error loading remote stylesheet', e);
                                 })
                         ),
-                        console.error('Error inlining remote css file', s);
+                        console.error('Error inlining remote css file', o);
                 }
         }),
         Promise.all(a).then(
@@ -121,25 +121,25 @@ async function d(e, n) {
     );
 }
 function f(e) {
-    return e.filter((e) => e.type === CSSRule.FONT_FACE_RULE).filter((e) => (0, s.w7)(e.style.getPropertyValue('src')));
+    return e.filter((e) => e.type === CSSRule.FONT_FACE_RULE).filter((e) => (0, o.w7)(e.style.getPropertyValue('src')));
 }
-async function _(e, n) {
+async function p(e, n) {
     if (null == e.ownerDocument) throw Error('Provided element is not within a Document');
     let r = (0, i.qo)(e.ownerDocument.styleSheets);
     return f(await d(r, n));
 }
 async function h(e, n) {
-    let r = await _(e, n);
+    let r = await p(e, n);
     return (
         await Promise.all(
             r.map((e) => {
                 let r = e.parentStyleSheet ? e.parentStyleSheet.href : null;
-                return (0, s.vg)(e.cssText, r, n);
+                return (0, o.vg)(e.cssText, r, n);
             })
         )
     ).join('\n');
 }
-async function p(e, n) {
+async function _(e, n) {
     let r = null != n.fontEmbedCSS ? n.fontEmbedCSS : n.skipFonts ? null : await h(e, n);
     if (r) {
         let n = document.createElement('style'),

@@ -1,9 +1,9 @@
 r.d(n, {
     Om: function () {
-        return o;
+        return s;
     },
     Qf: function () {
-        return s;
+        return o;
     }
 });
 var i = r(100527);
@@ -20,31 +20,31 @@ let a = (0, r(818083).B)({
             }
         ]
     }),
-    s = function (e) {
-        let { autoTrackExposure: n = !1, disable: r = !1, location: s = i.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { enabled: o } = a.getCurrentConfig(
+    o = function (e) {
+        let { autoTrackExposure: n = !1, disable: r = !1, location: o = i.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            { enabled: s } = a.getCurrentConfig(
                 {
                     guildId: e,
-                    location: s
+                    location: o
                 },
                 {
                     autoTrackExposure: n,
                     disable: r
                 }
             );
-        return o;
+        return s;
     },
-    o = function (e) {
-        let { autoTrackExposure: n = !1, disable: r = !1, location: s = i.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { enabled: o } = a.useExperiment(
+    s = function (e) {
+        let { autoTrackExposure: n = !1, disable: r = !1, location: o = i.Z.GUILD_MEMBER_MOD_VIEW } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            { enabled: s } = a.useExperiment(
                 {
                     guildId: null != e ? e : void 0,
-                    location: s
+                    location: o
                 },
                 {
                     autoTrackExposure: n,
                     disable: r
                 }
             );
-        return o;
+        return s;
     };

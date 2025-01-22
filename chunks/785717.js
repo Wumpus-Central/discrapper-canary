@@ -11,13 +11,13 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(772848),
-    o = r(906732),
+    o = r(772848),
+    s = r(906732),
     l = r(221292);
 let u = a.createContext(null),
     c = (e) => {
-        let { value: n, children: r, shouldTrackViewOnMount: s = !0 } = e,
-            { analyticsLocations: c } = (0, o.ZP)(),
+        let { value: n, children: r, shouldTrackViewOnMount: o = !0 } = e,
+            { analyticsLocations: c } = (0, s.ZP)(),
             d = {
                 analyticsLocations: c,
                 value: n
@@ -28,14 +28,14 @@ let u = a.createContext(null),
                 f.current = d;
             }),
             a.useEffect(() => {
-                if (!s) return;
+                if (!o) return;
                 let { analyticsLocations: e, value: n } = f.current;
                 (0, l.pQ)({
                     action: 'VIEW',
                     analyticsLocations: e,
                     ...n
                 });
-            }, [s]),
+            }, [o]),
             (0, i.jsx)(u.Provider, {
                 value: n,
                 children: r
@@ -44,26 +44,26 @@ let u = a.createContext(null),
     },
     d = (e) => {
         var n;
-        let { layout: r, userId: i, guildId: o, channelId: l, messageId: c, roleId: d, sourceSessionId: f, showGuildProfile: _ = !0 } = e,
+        let { layout: r, userId: i, guildId: s, channelId: l, messageId: c, roleId: d, sourceSessionId: f, showGuildProfile: p = !0 } = e,
             h = null === (n = a.useContext(u)) || void 0 === n ? void 0 : n.sessionId;
         return a.useMemo(
             () => ({
-                sessionId: (0, s.Z)(),
+                sessionId: (0, o.Z)(),
                 sourceSessionId: null != f ? f : h,
                 layout: r,
                 userId: i,
-                guildId: o,
+                guildId: s,
                 channelId: l,
                 messageId: c,
                 roleId: d,
-                showGuildProfile: _
+                showGuildProfile: p
             }),
-            [h, r, i, o, l, c, d, f, _]
+            [h, r, i, s, l, c, d, f, p]
         );
     },
     f = () => {
         let e = a.useContext(u),
-            { analyticsLocations: n } = (0, o.ZP)();
+            { analyticsLocations: n } = (0, s.ZP)();
         return {
             context: e,
             trackUserProfileAction: a.useCallback(

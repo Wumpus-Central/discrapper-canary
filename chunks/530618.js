@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(119617),
+    o = r(192379),
+    s = r(119617),
     l = r(675654);
 let u = 50,
     c = 10,
@@ -40,13 +40,13 @@ function f(e, n) {
         }
     );
 }
-function _(e) {
-    let { confettiTarget: n, confettiCanvas: r, confettiVelocityMultiplier: i, sprites: _, colors: h } = e,
-        [p, m] = s.useState(null),
-        g = (0, o.uR)(r, p),
-        [E, v] = s.useState(!1);
+function p(e) {
+    let { confettiTarget: n, confettiCanvas: r, confettiVelocityMultiplier: i, sprites: p, colors: h } = e,
+        [_, m] = o.useState(null),
+        g = (0, s.uR)(r, _),
+        [E, v] = o.useState(!1);
     return (
-        s.useEffect(() => {
+        o.useEffect(() => {
             let e = Array(c).fill(0);
             return (
                 null != n &&
@@ -62,13 +62,13 @@ function _(e) {
                 }
             );
         }, [g, n, E, i]),
-        (0, a.jsx)(o.Ji, {
+        (0, a.jsx)(s.Ji, {
             ref: m,
-            sprites: null != _ ? _ : l.CA,
+            sprites: null != p ? p : l.CA,
             colors: null != h ? h : l.Br,
             spriteWidth: l.Ko,
             spriteHeight: l.Ko
         })
     );
 }
-n.Z = _;
+n.Z = p;

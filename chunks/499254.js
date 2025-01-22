@@ -3,13 +3,13 @@ r.d(n, {
         return l;
     },
     Tv: function () {
-        return o;
+        return s;
     },
     __: function () {
         return a;
     },
     yT: function () {
-        return s;
+        return o;
     }
 });
 var i = r(570140);
@@ -21,13 +21,13 @@ function a(e, n, r) {
         initialState: r
     });
 }
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'APP_LAUNCHER_DISMISS',
         closeReason: e
     });
 }
-function o(e) {
+function s(e) {
     i.Z.dispatch({
         type: 'APP_LAUNCHER_ADD_FAILED_APP_DM_LOAD',
         channelId: e

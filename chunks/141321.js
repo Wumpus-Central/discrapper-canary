@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(540059),
     s = n(317632),
     c = n(602478),
-    d = n(665149),
-    u = n(388035),
+    u = n(665149),
+    d = n(388035),
     m = n(306680),
     h = n(594174),
     f = n(178088),
@@ -43,9 +43,9 @@ function C(e) {
                             inboxIconRef: N,
                             recentsPopoutShown: t
                         }),
-                    (0, i.jsx)(u.U, {
+                    (0, i.jsx)(d.U, {
                         location: 'inbox-button',
-                        children: (0, i.jsx)(d.JO, {
+                        children: (0, i.jsx)(u.JO, {
                             ...n,
                             className: C,
                             onClick: e,

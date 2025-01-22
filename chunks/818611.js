@@ -1,66 +1,66 @@
 var i = r(627341);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(278074),
     c = r(831209),
     d = r(399606),
     f = r(481060),
-    _ = r(727637),
+    p = r(727637),
     h = r(597688),
-    p = r(884697),
+    _ = r(884697),
     m = r(74538),
     g = r(864106),
     E = r(439959),
     v = r(125988),
-    I = r(388032),
-    T = r(274495);
-let b = 3,
-    y = 80,
+    y = r(388032),
+    b = r(274495);
+let I = 3,
+    T = 80,
     S = 12,
     A = 16,
-    N = () => y,
-    C = (e) => {
-        let { children: n, className: r, onSelect: i, isSelected: s = !1, ...o } = e;
+    C = () => T,
+    N = (e) => {
+        let { children: n, className: r, onSelect: i, isSelected: o = !1, ...s } = e;
         return (0, a.jsx)(f.Clickable, {
-            className: l()(T.decorationGridItem, s ? T.selected : void 0, r),
-            ...o,
+            className: l()(b.decorationGridItem, o ? b.selected : void 0, r),
+            ...s,
             onClick: i,
             children: n
         });
     },
     R = (e) => {
-        let { user: n, avatarDecoration: r, innerRef: i, section: o, isSelected: l = !1, ...u } = e,
+        let { user: n, avatarDecoration: r, innerRef: i, section: s, isSelected: l = !1, ...u } = e,
             g = (0, d.e7)([h.Z], () => {
                 let e = h.Z.getProduct(r.skuId);
-                return (0, p.G1)(e);
+                return (0, _.G1)(e);
             }),
-            b = (0, p.Yq)(r.skuId),
+            I = (0, _.Yq)(r.skuId),
             S = m.ZP.canUseCollectibles(n),
-            A = o === E.$0.PREMIUM_PURCHASE && !S,
-            N = s.useRef(null),
-            R = (0, _.Z)(null != i ? i : N),
+            A = s === E.$0.PREMIUM_PURCHASE && !S,
+            C = o.useRef(null),
+            R = (0, p.Z)(null != i ? i : C),
             { avatarDecorationSrc: O } = (0, v.Z)({
                 user: n,
                 avatarDecorationOverride: r,
-                size: y,
+                size: T,
                 onlyAnimateOnHover: !R
             }),
             D = () =>
-                o === E.$0.PURCHASE || (o === E.$0.PREMIUM_PURCHASE && S)
+                s === E.$0.PURCHASE || (s === E.$0.PREMIUM_PURCHASE && S)
                     ? null
-                    : b
+                    : I
                       ? (0, a.jsx)(f.PremiumBadge, {
-                            className: T.newBadge,
+                            className: b.newBadge,
                             text: (0, a.jsxs)('div', {
-                                className: T.newBadgeText,
+                                className: b.newBadgeText,
                                 children: [
                                     (0, a.jsx)(f.LockIcon, {
                                         size: 'xxs',
                                         color: 'currentColor'
                                     }),
-                                    I.intl.string(I.t.y2b7CA)
+                                    y.intl.string(y.t.y2b7CA)
                                 ]
                             })
                         })
@@ -79,16 +79,16 @@ let b = 3,
                                           color: 'currentColor'
                                       }),
                             color: c.Z.BACKGROUND_ACCENT,
-                            className: T.iconBadge
+                            className: b.iconBadge
                         });
-        return (0, a.jsxs)(C, {
-            className: A ? T.decorationGridItemChurned : void 0,
-            innerRef: null != i ? i : N,
+        return (0, a.jsxs)(N, {
+            className: A ? b.decorationGridItemChurned : void 0,
+            innerRef: null != i ? i : C,
             isSelected: l,
             ...u,
             children: [
                 (0, a.jsx)('img', {
-                    className: T.presetDecorationImg,
+                    className: b.presetDecorationImg,
                     src: O,
                     alt: r.label
                 }),
@@ -97,17 +97,17 @@ let b = 3,
         });
     },
     O = (e) => {
-        let { user: n, guild: r, pendingAvatarDecoration: i, selectedAvatarDecorationRef: o, onSelect: l, onOpenShop: c } = e,
+        let { user: n, guild: r, pendingAvatarDecoration: i, selectedAvatarDecorationRef: s, onSelect: l, onOpenShop: c } = e,
             d = (0, E.ZP)(),
-            _ = s.useCallback(() => {
+            p = o.useCallback(() => {
                 c(void 0);
             }, [c]),
-            h = (e, s, c, h) => {
-                let { section: p, items: m } = d[e];
-                return (0, u.EQ)(m[s])
+            h = (e, o, c, h) => {
+                let { section: _, items: m } = d[e];
+                return (0, u.EQ)(m[o])
                     .with(E.Tm, () =>
                         (0, a.jsxs)(
-                            C,
+                            N,
                             {
                                 style: { ...c },
                                 isSelected: null === i,
@@ -116,12 +116,12 @@ let b = 3,
                                     (0, a.jsx)(f.DenyIcon, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: T.notAllowedIcon
+                                        className: b.notAllowedIcon
                                     }),
                                     (0, a.jsx)(f.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-primary',
-                                        children: (0, g.ad)(n, r) ? I.intl.string(I.t['GsW4/v']) : I.intl.string(I.t.PoWNfX)
+                                        children: (0, g.ad)(n, r) ? y.intl.string(y.t['GsW4/v']) : y.intl.string(y.t.PoWNfX)
                                     })
                                 ]
                             },
@@ -130,22 +130,22 @@ let b = 3,
                     )
                     .with(E.oT, () =>
                         (0, a.jsxs)(
-                            C,
+                            N,
                             {
                                 style: c,
-                                onSelect: _,
+                                onSelect: p,
                                 children: [
                                     (0, a.jsx)(f.ShopIcon, {
                                         size: 'custom',
                                         width: 23,
                                         height: 23,
                                         color: 'currentColor',
-                                        className: T.shopIcon
+                                        className: b.shopIcon
                                     }),
                                     (0, a.jsx)(f.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-primary',
-                                        children: I.intl.string(I.t.pWG4zc)
+                                        children: y.intl.string(y.t.pWG4zc)
                                     })
                                 ]
                             },
@@ -160,8 +160,8 @@ let b = 3,
                                 style: { ...c },
                                 user: n,
                                 avatarDecoration: e,
-                                section: p,
-                                innerRef: r ? o : void 0,
+                                section: _,
+                                innerRef: r ? s : void 0,
                                 isSelected: r,
                                 onSelect: () => l(e)
                             },
@@ -169,10 +169,10 @@ let b = 3,
                         );
                     });
             },
-            p = (e, n) => {
+            _ = (e, n) => {
                 let { header: r } = d[e];
                 return (0, a.jsx)('div', {
-                    className: T.headings,
+                    className: b.headings,
                     style: {
                         ...n,
                         position: 'absolute'
@@ -189,8 +189,8 @@ let b = 3,
             };
         return (0, a.jsx)(f.MasonryList, {
             fade: !0,
-            className: T.list,
-            columns: b,
+            className: b.list,
+            columns: I,
             sections: d.map((e) => {
                 let { items: n } = e;
                 return n.length;
@@ -201,10 +201,10 @@ let b = 3,
             paddingVertical: 0,
             removeEdgeItemGutters: !0,
             renderItem: h,
-            renderSection: p,
+            renderSection: _,
             getSectionHeight: (e) => d[e].height,
             getItemKey: (e, n) => d[e].items[n].id,
-            getItemHeight: N
+            getItemHeight: C
         });
     };
 n.Z = O;

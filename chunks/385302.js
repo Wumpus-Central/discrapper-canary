@@ -13,7 +13,7 @@ var l = t(442837),
     u = t(665906),
     d = t(496675),
     c = t(981631),
-    m = t(388032);
+    f = t(388032);
 function g(e, n) {
     let t = (0, u.$R)(n),
         g = (0, l.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
@@ -21,15 +21,15 @@ function g(e, n) {
         ? null
         : (0, i.jsx)(r.MenuItem, {
               id: 'remove-reactions',
-              label: m.intl.string(m.t.ZbtGBg),
+              label: f.intl.string(f.t.ZbtGBg),
               action: function (t) {
                   t.shiftKey
                       ? (0, s.wX)(n.id, e.id)
                       : a.Z.show({
-                            title: m.intl.string(m.t.iz3vYW),
-                            body: m.intl.string(m.t.VpjOCg),
-                            confirmText: m.intl.string(m.t.p89ACg),
-                            cancelText: m.intl.string(m.t.gm1Ven),
+                            title: f.intl.string(f.t.iz3vYW),
+                            body: f.intl.string(f.t.VpjOCg),
+                            confirmText: f.intl.string(f.t.p89ACg),
+                            cancelText: f.intl.string(f.t.gm1Ven),
                             onConfirm: () => {
                                 (0, s.wX)(n.id, e.id);
                             }

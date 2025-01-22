@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(237617),
     a = r(493773);
-function s(e) {
+function o(e) {
     let n = (0, i.Z)(e);
     (0, a.Z)(() => {
         function e() {

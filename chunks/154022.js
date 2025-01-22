@@ -33,9 +33,9 @@ var i = n(200651),
     O = n(263937),
     R = n(996073),
     P = n(526761),
-    y = n(726985),
-    B = n(981631),
-    D = n(611480),
+    D = n(726985),
+    y = n(981631),
+    B = n(611480),
     Z = n(653477),
     L = n(388032),
     M = n(871751),
@@ -60,46 +60,46 @@ function Y(e) {
                 children: (0, i.jsx)(W, {})
             }),
             (0, i.jsxs)(b.F, {
-                setting: y.s6.ACCESSIBILITY_SATURATION,
+                setting: D.s6.ACCESSIBILITY_SATURATION,
                 children: [(0, i.jsx)(z, {}), (0, i.jsx)(d.FormDivider, {})]
             }),
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_LINK_DECORATIONS,
+                setting: D.s6.ACCESSIBILITY_LINK_DECORATIONS,
                 children: (0, i.jsx)(K, {})
             }),
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_ROLE_STYLE,
+                setting: D.s6.ACCESSIBILITY_ROLE_STYLE,
                 children: (0, i.jsx)(q, {})
             }),
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_TAGS,
+                setting: D.s6.ACCESSIBILITY_TAGS,
                 children: (0, i.jsx)(Q, {})
             }),
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_PROFILE_COLORS,
+                setting: D.s6.ACCESSIBILITY_PROFILE_COLORS,
                 children: (0, i.jsx)(X, {})
             }),
             (0, p.b)()
                 ? (0, i.jsxs)(b.F, {
-                      setting: y.s6.ACCESSIBILITY_CONTRAST,
+                      setting: D.s6.ACCESSIBILITY_CONTRAST,
                       children: [(0, i.jsx)(J, {}), ' ']
                   })
                 : null,
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_REDUCED_MOTION,
+                setting: D.s6.ACCESSIBILITY_REDUCED_MOTION,
                 children: (0, i.jsx)($, {})
             }),
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_STICKERS,
+                setting: D.s6.ACCESSIBILITY_STICKERS,
                 children: (0, i.jsx)(ee, {})
             }),
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_MESSAGES,
+                setting: D.s6.ACCESSIBILITY_MESSAGES,
                 children: (0, i.jsx)(et, {})
             }),
             (0, i.jsx)(en, {}),
             (0, i.jsxs)(b.F, {
-                setting: y.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
+                setting: D.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
                 children: [
                     (0, i.jsx)(d.FormDivider, { className: k.marginTop20 }),
                     (0, i.jsx)(d.Text, {
@@ -107,7 +107,7 @@ function Y(e) {
                         variant: 'text-md/normal',
                         children: L.intl.format(L.t.DHpTjY, {
                             onAppearanceClick() {
-                                u.Z.open(B.oAB.APPEARANCE);
+                                u.Z.open(y.oAB.APPEARANCE);
                             }
                         })
                     })
@@ -124,7 +124,7 @@ function W() {
                     channelId: '1337',
                     content: L.intl.formatToPlainString(L.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
                 }),
-                state: B.yb.SENT,
+                state: y.yb.SENT,
                 id: ''.concat(0)
             });
             return (e.colorString = 'green'), e;
@@ -144,7 +144,7 @@ function W() {
                         }),
                         (0, i.jsx)('div', {
                             className: M.previewAvatars,
-                            children: [B.Skl.ONLINE, B.Skl.DND, B.Skl.IDLE].map((e) =>
+                            children: [y.Skl.ONLINE, y.Skl.DND, y.Skl.IDLE].map((e) =>
                                 (0, i.jsx)(
                                     d.AnimatedAvatar,
                                     {
@@ -196,7 +196,7 @@ function z() {
             (0, i.jsx)(d.Slider, {
                 'aria-labelledby': F,
                 'aria-describedby': U,
-                markers: B.yqN.SATURATION_INCREMENTS,
+                markers: y.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,
                 stickToMarkers: !0,
                 maxValue: 1,
@@ -206,7 +206,7 @@ function z() {
                 onMarkerRender: (e) => ((100 * e) % 2 == 0 ? ''.concat(100 * e, '%') : void 0)
             }),
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR,
+                setting: D.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR,
                 children: (0, i.jsx)(d.FormSwitch, {
                     hideBorder: !0,
                     className: a()(k.marginTop20, k.marginBottom20),
@@ -278,7 +278,7 @@ function Q() {
         title: L.intl.string(L.t.UQt6dX),
         className: k.marginTop20,
         children: (0, i.jsx)(b.F, {
-            setting: y.s6.ACCESSIBILITY_TAGS_NAMES,
+            setting: D.s6.ACCESSIBILITY_TAGS_NAMES,
             children: (0, i.jsx)(d.FormSwitch, {
                 value: !e,
                 onChange: () => (0, g.Nv)(!e),
@@ -297,11 +297,11 @@ function X() {
             title: L.intl.string(L.t.BT8Bmp),
             className: a()(k.marginTop20, M.syncProfileThemeWithUserTheme),
             children: (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
+                setting: D.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
                 children: (0, i.jsx)(d.FormSwitch, {
                     note: L.intl.format(L.t.u6UjrK, {
                         onThemeClick() {
-                            u.Z.open(B.oAB.APPEARANCE);
+                            u.Z.open(y.oAB.APPEARANCE);
                         }
                     }),
                     className: k.marginTop20,
@@ -323,12 +323,12 @@ function J() {
     r.useEffect(() => {
         null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, g.qz)(t), 150));
     }, [t, e]);
-    let a = L.intl.format(L.t.GwEVEx, { learnMoreLink: A.Z.getArticleURL(B.BhN.FORCED_COLORS) });
+    let a = L.intl.format(L.t.GwEVEx, { learnMoreLink: A.Z.getArticleURL(y.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.FormItem, {
         title: L.intl.string(L.t.TYyfOz),
         className: k.marginTop20,
         children: (0, i.jsx)(b.F, {
-            setting: y.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
+            setting: D.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
             children: (0, i.jsx)(d.FormSwitch, {
                 value: t,
                 note: a,
@@ -373,7 +373,7 @@ function $() {
             (0, i.jsx)(d.FormText, {
                 type: d.FormText.Types.DESCRIPTION,
                 className: k.marginBottom8,
-                children: L.intl.format(L.t['2l9U2t'], { helpdeskArticle: A.Z.getArticleURL(B.BhN.REDUCED_MOTION) })
+                children: L.intl.format(L.t['2l9U2t'], { helpdeskArticle: A.Z.getArticleURL(y.BhN.REDUCED_MOTION) })
             }),
             (0, i.jsx)(d.Checkbox, {
                 className: a()(k.marginTop20, k.marginBottom20),
@@ -387,7 +387,7 @@ function $() {
                 })
             }),
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,
+                setting: D.s6.ACCESSIBILITY_REDUCED_MOTION_ENABLE,
                 children: (0, i.jsx)(d.FormSwitch, {
                     value: n,
                     onChange: x,
@@ -395,7 +395,7 @@ function $() {
                 })
             }),
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS,
+                setting: D.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: k.marginBottom20,
                     value: e,
@@ -405,7 +405,7 @@ function $() {
                 })
             }),
             (0, i.jsx)(b.F, {
-                setting: y.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI,
+                setting: D.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI,
                 children: (0, i.jsx)(d.FormSwitch, {
                     className: k.marginBottom20,
                     value: t,
@@ -436,16 +436,16 @@ function ee() {
                 options: [
                     {
                         name: L.intl.string(L.t['Xp+X2d']),
-                        value: D.yr.ALWAYS_ANIMATE
+                        value: B.yr.ALWAYS_ANIMATE
                     },
                     {
                         name: L.intl.string(L.t.IlLT7e),
                         desc: L.intl.string(L.t.bIW9Tk),
-                        value: D.yr.ANIMATE_ON_INTERACTION
+                        value: B.yr.ANIMATE_ON_INTERACTION
                     },
                     {
                         name: L.intl.string(L.t.IGu8x8),
-                        value: D.yr.NEVER_ANIMATE
+                        value: B.yr.NEVER_ANIMATE
                     }
                 ],
                 onChange: n,
@@ -469,7 +469,7 @@ function et() {
                     children: L.intl.string(L.t.onqU6u)
                 }),
                 (0, i.jsx)(b.F, {
-                    setting: y.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
+                    setting: D.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
                     children: (0, i.jsx)(d.FormSwitch, {
                         className: k.marginTop20,
                         value: e,
@@ -478,15 +478,15 @@ function et() {
                     })
                 }),
                 (0, i.jsx)(b.F, {
-                    setting: y.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT,
+                    setting: D.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT,
                     children: (0, i.jsx)(d.FormSwitch, {
                         className: k.marginTop8,
                         value: t,
                         note: L.intl.string(L.t.Q7wgHR),
                         onChange: (e) => {
-                            v.default.track(B.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                            v.default.track(y.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: e,
-                                location: { section: B.jXE.SETTINGS_ACCESSIBILITY }
+                                location: { section: y.jXE.SETTINGS_ACCESSIBILITY }
                             }),
                                 j.dN.updateSetting(e);
                         },
@@ -505,7 +505,7 @@ function en() {
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(b.F, {
-                      setting: y.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
+                      setting: D.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
                       children: (0, i.jsxs)(d.FormItem, {
                           className: k.marginTop20,
                           children: [
@@ -514,7 +514,7 @@ function en() {
                                   children: L.intl.string(L.t.VpSKeH)
                               }),
                               (0, i.jsx)(b.F, {
-                                  setting: y.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
+                                  setting: D.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
                                   children: (0, i.jsx)(d.FormSwitch, {
                                       className: k.marginTop20,
                                       value: e,
@@ -526,7 +526,7 @@ function en() {
                       })
                   }),
                   (0, i.jsx)(b.F, {
-                      setting: y.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE,
+                      setting: D.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE,
                       children: (0, i.jsxs)(d.FormItem, {
                           className: k.marginTop20,
                           children: [

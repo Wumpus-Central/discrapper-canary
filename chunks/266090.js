@@ -8,7 +8,7 @@ var i,
 !(function (e) {
     (e[(e.None = 0)] = 'None'), (e[(e.DefaultOn = 1)] = 'DefaultOn'), (e[(e.DefaultOff = 2)] = 'DefaultOff'), (e[(e.ComingSoon = 3)] = 'ComingSoon'), (e[(e.ClydeProfiles = 4)] = 'ClydeProfiles');
 })(i || (i = {}));
-let s = (0, a.B)({
+let o = (0, a.B)({
     kind: 'guild',
     id: '2023-03_clyde_ai',
     label: 'ClydeAI',
@@ -36,4 +36,4 @@ let s = (0, a.B)({
         }
     ]
 });
-n.Z = s;
+n.Z = o;

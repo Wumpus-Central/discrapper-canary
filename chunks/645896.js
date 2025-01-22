@@ -3,7 +3,7 @@ r.d(n, {
         return h;
     },
     E8: function () {
-        return p;
+        return _;
     },
     L_: function () {
         return m;
@@ -11,8 +11,8 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(232713),
-    s = r(65400),
-    o = r(731965),
+    o = r(65400),
+    s = r(731965),
     l = r(881052),
     u = r(931240);
 let c = {},
@@ -22,7 +22,7 @@ function f(e) {
     let r = Date.now();
     return r - (null !== (n = c[e]) && void 0 !== n ? n : 0) > d;
 }
-let _ = (0, s.F)((e, n) => ({
+let p = (0, o.F)((e, n) => ({
     clans: {},
     isFetchingGuild: (e) => null != n().fetchPromises[e],
     error: null,
@@ -40,24 +40,24 @@ let _ = (0, s.F)((e, n) => ({
                 let i = (async () => {
                     let i = await (0, u.WJ)(r),
                         a = n().clans,
-                        s = n().fetchPromises;
-                    return null == s[r]
+                        o = n().fetchPromises;
+                    return null == o[r]
                         ? i
-                        : (delete s[r],
-                          (0, o.j)(() => {
+                        : (delete o[r],
+                          (0, s.j)(() => {
                               e({
                                   clans: {
                                       ...a,
                                       [r]: i
                                   },
                                   error: null,
-                                  fetchPromises: s
+                                  fetchPromises: o
                               });
                           }),
                           i);
                 })();
                 return (
-                    (0, o.j)(() => {
+                    (0, s.j)(() => {
                         e({
                             fetchPromises: {
                                 ...n().fetchPromises,
@@ -68,11 +68,11 @@ let _ = (0, s.F)((e, n) => ({
                     await i
                 );
             }
-        } catch (s) {
-            let i = new l.Hx(s),
+        } catch (o) {
+            let i = new l.Hx(o),
                 a = n().fetchPromises;
             null != a[r] && delete a[r],
-                (0, o.j)(() => {
+                (0, s.j)(() => {
                     e({
                         error: i,
                         fetchPromises: a
@@ -83,14 +83,14 @@ let _ = (0, s.F)((e, n) => ({
     }
 }));
 function h(e) {
-    return _((n) => (null != e ? n.clans[e] : null));
+    return p((n) => (null != e ? n.clans[e] : null));
 }
-function p(e) {
-    return _((n) => null != e && n.isFetchingGuild(e));
+function _(e) {
+    return p((n) => null != e && n.isFetchingGuild(e));
 }
 function m(e) {
-    let n = _((e) => e.fetchClanInfo, a.X),
-        r = p(e);
+    let n = p((e) => e.fetchClanInfo, a.X),
+        r = _(e);
     return [
         r,
         i.useCallback(async () => {

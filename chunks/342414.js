@@ -66,7 +66,7 @@ let P = (e) => {
             })
         });
     },
-    y = (e) => {
+    D = (e) => {
         let { location: t } = e,
             { subscriberHomeVariant: n } = f.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
             r = n === f.p.VARIANT_2,
@@ -108,7 +108,7 @@ let P = (e) => {
             ]
         });
     },
-    B = () => {
+    y = () => {
         let { headingText: e } = Z();
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -138,7 +138,7 @@ let P = (e) => {
             ]
         });
     },
-    [D, Z] = (0, h.Z)();
+    [B, Z] = (0, h.Z)();
 t.Z = (e) => {
     let { className: t, location: n } = e,
         { analyticsLocations: r } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
@@ -152,7 +152,7 @@ t.Z = (e) => {
         R = !1,
         { fractionalState: Z, endsAt: L } = (0, u.Z)(),
         M = (0, d.Z)(L, d.a.ENDS_IN);
-    l ? ((O = A.intl.string(A.t.ifwQZW)), (I = (0, i.jsx)(B, {}))) : (C || S) && ((f = A.intl.string(A.t.qYKftb)), (O = A.intl.string(A.t.ifwQZW)), (I = (0, i.jsx)(y, { location: n })));
+    l ? ((O = A.intl.string(A.t.ifwQZW)), (I = (0, i.jsx)(y, {}))) : (C || S) && ((f = A.intl.string(A.t.qYKftb)), (O = A.intl.string(A.t.ifwQZW)), (I = (0, i.jsx)(D, { location: n })));
     let k = null;
     if (Z !== N.a$.NONE) {
         (h = !0), (f = A.intl.string(A.t.vaqFvb)), (R = !0);
@@ -186,7 +186,7 @@ t.Z = (e) => {
             : (0, i.jsx)(T.Cy, { ...w });
     return (0, i.jsx)(c.Gt, {
         value: r,
-        children: (0, i.jsx)(D.Provider, {
+        children: (0, i.jsx)(B.Provider, {
             value: {
                 headingText: O,
                 headingTop: F,

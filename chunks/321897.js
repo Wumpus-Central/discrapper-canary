@@ -1,6 +1,6 @@
 r.d(n, {
     ZP: function () {
-        return o;
+        return s;
     }
 });
 let i = Object.freeze({
@@ -11,10 +11,10 @@ let i = Object.freeze({
         overflowX: 'scroll',
         overflowY: 'hidden'
     }),
-    s = Object.freeze({ overflow: 'auto' });
-function o(e) {
+    o = Object.freeze({ overflow: 'auto' });
+function s(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',
-        r = 'vertical' === n ? i : 'horizontal' === n ? a : s;
+        r = 'vertical' === n ? i : 'horizontal' === n ? a : o;
     return null != e
         ? {
               ...r,

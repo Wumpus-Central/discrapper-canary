@@ -11,7 +11,7 @@ try {
 try {
     delete window.sessionStorage;
 } catch (e) {}
-function s() {
+function o() {
     let e = 'test';
     try {
         return i.setItem(e, e), i.removeItem(e), !0;
@@ -19,7 +19,7 @@ function s() {
         return !1;
     }
 }
-class o {
+class s {
     get(e, n) {
         let r = i.getItem(e);
         if (null != r)
@@ -41,4 +41,4 @@ class o {
         i.clear();
     }
 }
-let l = s() ? new o() : new a.R();
+let l = o() ? new s() : new a.R();

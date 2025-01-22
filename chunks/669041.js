@@ -1,7 +1,7 @@
 r.r(n),
     r.d(n, {
         QuestsRewardModalUnverified: function () {
-            return p;
+            return _;
         },
         openRewardModalUnverified: function () {
             return m;
@@ -9,23 +9,23 @@ r.r(n),
     });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(442837),
+    o = r(192379),
+    s = r(442837),
     l = r(481060),
     u = r(893776),
     c = r(594174),
     d = r(918701),
     f = r(388032),
-    _ = r(162023),
+    p = r(162023),
     h = r(800010);
-function p(e) {
+function _(e) {
     let { transitionState: n, onClose: r } = e,
-        i = (0, o.e7)([c.default], () => {
+        i = (0, s.e7)([c.default], () => {
             var e;
             return null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
         }),
-        [p, m] = s.useState({ status: 'unknown' });
-    s.useEffect(() => {
+        [_, m] = o.useState({ status: 'unknown' });
+    o.useEffect(() => {
         m({ status: 'loading' }),
             u.Z.verifyResend().then(
                 () => m({ status: 'success' }),
@@ -36,7 +36,7 @@ function p(e) {
     }, []);
     let g = () =>
         (0, a.jsx)(l.ModalFooter, {
-            className: _.modalFooter,
+            className: p.modalFooter,
             children: (0, a.jsx)(l.Button, {
                 color: l.Button.Colors.BRAND,
                 size: l.Button.Sizes.MEDIUM,
@@ -50,34 +50,34 @@ function p(e) {
         children: [
             (0, a.jsx)('img', {
                 alt: '',
-                className: _.headerImage,
+                className: p.headerImage,
                 src: h
             }),
             (0, a.jsxs)(l.ModalHeader, {
                 separator: !1,
-                className: _.header,
+                className: p.header,
                 children: [
                     (0, a.jsx)(l.Heading, {
-                        className: _.title,
+                        className: p.title,
                         variant: 'heading-xl/bold',
                         children: f.intl.string(f.t.c8eASE)
                     }),
                     (0, a.jsx)(l.ModalCloseButton, {
                         onClick: r,
-                        className: _.modalCloseButton
+                        className: p.modalCloseButton
                     })
                 ]
             }),
-            'loading' === p.status &&
+            'loading' === _.status &&
                 (0, a.jsx)(l.ModalContent, {
-                    className: _.content,
+                    className: p.content,
                     children: (0, a.jsx)(l.Spinner, {})
                 }),
-            'error' === p.status &&
+            'error' === _.status &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(l.ModalContent, {
-                            className: _.content,
+                            className: p.content,
                             children: (0, a.jsx)(l.Text, {
                                 variant: 'text-md/normal',
                                 children: f.intl.string(f.t.vjyinp)
@@ -86,11 +86,11 @@ function p(e) {
                         g()
                     ]
                 }),
-            'success' === p.status &&
+            'success' === _.status &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(l.ModalContent, {
-                            className: _.content,
+                            className: p.content,
                             children: (0, a.jsx)(l.Text, {
                                 variant: 'text-md/normal',
                                 children: f.intl.format(f.t.qP5xYW, {
@@ -100,17 +100,17 @@ function p(e) {
                             })
                         }),
                         (0, a.jsx)(l.ModalContent, {
-                            className: _.content,
+                            className: p.content,
                             children: (0, a.jsxs)('div', {
-                                className: _.tooltip,
+                                className: p.tooltip,
                                 children: [
                                     (0, a.jsx)(l.CircleInformationIcon, {
                                         size: 'xs',
                                         color: 'currentColor',
-                                        className: _.infoFilledIcon
+                                        className: p.infoFilledIcon
                                     }),
                                     (0, a.jsx)(l.Text, {
-                                        className: _.tooltipText,
+                                        className: p.tooltipText,
                                         variant: 'text-sm/normal',
                                         children: f.intl.string(f.t.yb7itb)
                                     })

@@ -1,56 +1,56 @@
-var a = n(200651),
-    r = n(192379),
-    l = n(442837),
-    s = n(481060),
-    i = n(219929),
-    o = n(975060),
-    c = n(559725),
-    u = n(439041),
-    d = n(388032),
-    p = n(771195);
-class m extends r.PureComponent {
+var i = r(200651),
+    a = r(192379),
+    o = r(442837),
+    s = r(481060),
+    l = r(219929),
+    u = r(975060),
+    c = r(559725),
+    d = r(439041),
+    f = r(388032),
+    p = r(771195);
+class h extends a.PureComponent {
     componentDidMount() {
         null == this.props.adyenPaymentData && null != this.props.cashAppPayComponent && c.cp();
     }
     render() {
-        var e, t;
-        let { className: n, cashAppPayComponent: r } = this.props,
-            l = this.props.adyenPaymentData,
-            o = null !== (t = null == l ? void 0 : null === (e = l.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== t ? t : '',
-            c = null != l && '' !== o;
-        return (0, a.jsxs)('div', {
-            className: n,
+        var e, n;
+        let { className: r, cashAppPayComponent: a } = this.props,
+            o = this.props.adyenPaymentData,
+            u = null !== (n = null == o ? void 0 : null === (e = o.paymentMethod) || void 0 === e ? void 0 : e.cashtag) && void 0 !== n ? n : '',
+            c = null != o && '' !== u;
+        return (0, i.jsxs)('div', {
+            className: r,
             children: [
-                (0, a.jsx)(i.ZP, {
-                    type: i.ZP.Types.CASH_APP,
-                    size: i.Uy.MEDIUM,
+                (0, i.jsx)(l.ZP, {
+                    type: l.ZP.Types.CASH_APP,
+                    size: l.Uy.MEDIUM,
                     className: p.icon
                 }),
                 c
-                    ? (0, a.jsxs)(a.Fragment, {
+                    ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, a.jsx)(s.Heading, {
-                                  variant: o.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
+                              (0, i.jsx)(s.Heading, {
+                                  variant: u.length < 25 ? 'heading-xl/bold' : 'heading-lg/bold',
                                   className: p.connectionInstructions,
-                                  children: d.intl.format(d.t['ze/1yM'], { cashtag: o })
+                                  children: f.intl.format(f.t['ze/1yM'], { cashtag: u })
                               }),
-                              (0, a.jsx)(s.Text, {
+                              (0, i.jsx)(s.Text, {
                                   variant: 'text-md/medium',
                                   className: p.connectionInstructions,
-                                  children: d.intl.string(d.t.VPOx7O)
+                                  children: f.intl.string(f.t.VPOx7O)
                               })
                           ]
                       })
-                    : (0, a.jsx)(s.Text, {
+                    : (0, i.jsx)(s.Text, {
                           variant: 'text-md/medium',
                           className: p.connectionInstructions,
-                          children: null == r ? d.intl.string(d.t['CgVe//']) : d.intl.string(d.t['1MqcjI'])
+                          children: null == a ? f.intl.string(f.t['CgVe//']) : f.intl.string(f.t['1MqcjI'])
                       })
             ]
         });
     }
 }
-t.Z = l.ZP.connectStores([u.Z, o.Z], () => ({
-    cashAppPayComponent: u.Z.cashAppPayComponent,
-    adyenPaymentData: o.Z.adyenPaymentData
-}))(m);
+n.Z = o.ZP.connectStores([d.Z, u.Z], () => ({
+    cashAppPayComponent: d.Z.cashAppPayComponent,
+    adyenPaymentData: u.Z.adyenPaymentData
+}))(h);

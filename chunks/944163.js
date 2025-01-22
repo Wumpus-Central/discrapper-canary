@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a = r(392711),
-    s = r.n(a),
-    o = r(442837),
+    o = r.n(a),
+    s = r(442837),
     l = r(570140),
     u = r(246364);
 function c(e, n, r) {
@@ -28,7 +28,7 @@ let d = {
         formFields: []
     },
     f = {};
-function _(e) {
+function p(e) {
     let { form: n, guildId: r } = e;
     if (null == n) f[r] = d;
     else {
@@ -45,7 +45,7 @@ function h(e) {
     let { guildId: r } = e;
     f[r] = null !== (n = f[r]) && void 0 !== n ? n : d;
 }
-function p(e) {
+function _(e) {
     let { invite: n } = e,
         { member_verification_form: r } = n,
         { guild: i } = n;
@@ -67,19 +67,19 @@ function m(e) {
     let { guild: n } = e;
     delete f[null == n ? void 0 : n.id];
 }
-class g extends (i = o.ZP.Store) {
+class g extends (i = s.ZP.Store) {
     get(e) {
         if (null != e) return f[e];
     }
     getRulesPrompt(e) {
         var n;
-        return s().find(null === (n = f[e]) || void 0 === n ? void 0 : n.formFields, u.J);
+        return o().find(null === (n = f[e]) || void 0 === n ? void 0 : n.formFields, u.J);
     }
 }
 c(g, 'displayName', 'MemberVerificationFormStore'),
     (n.Z = new g(l.Z, {
-        INVITE_ACCEPT_SUCCESS: p,
-        MEMBER_VERIFICATION_FORM_UPDATE: _,
+        INVITE_ACCEPT_SUCCESS: _,
+        MEMBER_VERIFICATION_FORM_UPDATE: p,
         MEMBER_VERIFICATION_FORM_FETCH_FAIL: h,
         GUILD_DELETE: m
     }));

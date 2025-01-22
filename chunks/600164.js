@@ -1,7 +1,7 @@
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(189180),
     u = r(652849);
 let c = {
@@ -23,22 +23,22 @@ let c = {
         STRETCH: u.alignStretch,
         BASELINE: u.alignBaseline
     },
-    _ = {
+    p = {
         NO_WRAP: u.noWrap,
         WRAP: u.wrap,
         WRAP_REVERSE: u.wrapReverse
     },
     h = (e) => {
-        let { children: n, className: r, shrink: s = 1, grow: u = 1, basis: c = 'auto', style: d, wrap: f = !1, ..._ } = e,
+        let { children: n, className: r, shrink: o = 1, grow: u = 1, basis: c = 'auto', style: d, wrap: f = !1, ...p } = e,
             h = {
                 className: (r = null != r ? r : l.flexChild),
                 style: {
                     flexGrow: u,
-                    flexShrink: s,
+                    flexShrink: o,
                     flexBasis: c,
                     ...d
                 },
-                ..._
+                ...p
             };
         if (!f && 'string' != typeof n && 1 === a.Children.count(n)) {
             let e = a.Children.only(n);
@@ -47,7 +47,7 @@ let c = {
                     ...h.style,
                     ...e.props.style
                 }),
-                (h.className = o()(e.props.className, r)),
+                (h.className = s()(e.props.className, r)),
                 a.cloneElement(e, h)
             );
         }
@@ -56,18 +56,18 @@ let c = {
             children: n
         });
     },
-    p = (e) => {
-        let { children: n, className: r, direction: a = c.HORIZONTAL, justify: s = d.START, align: u = f.STRETCH, wrap: h = _.NO_WRAP, shrink: p = 1, grow: m = 1, basis: g = 'auto', style: E, ...v } = e;
+    _ = (e) => {
+        let { children: n, className: r, direction: a = c.HORIZONTAL, justify: o = d.START, align: u = f.STRETCH, wrap: h = p.NO_WRAP, shrink: _ = 1, grow: m = 1, basis: g = 'auto', style: E, ...v } = e;
         return (0, i.jsx)('div', {
             style: {
-                flexShrink: p,
+                flexShrink: _,
                 flexGrow: m,
                 flexBasis: g,
                 ...E
             },
-            className: o()(l.flex, a, s, u, h, r),
+            className: s()(l.flex, a, o, u, h, r),
             ...v,
             children: n
         });
     };
-(p.Child = h), (p.Direction = c), (p.Align = f), (p.Justify = d), (p.Wrap = _), (n.Z = p);
+(_.Child = h), (_.Direction = c), (_.Align = f), (_.Justify = d), (_.Wrap = p), (n.Z = _);

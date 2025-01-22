@@ -3,10 +3,10 @@ r.d(n, {
         return c;
     },
     bA: function () {
-        return s;
+        return o;
     },
     hP: function () {
-        return o;
+        return s;
     },
     hY: function () {
         return u;
@@ -22,7 +22,7 @@ let a = {
     location: !1,
     directories: !1
 };
-function s(e, n, r) {
+function o(e, n, r) {
     return i.Z.dispatch({
         type: 'POPOUT_WINDOW_OPEN',
         key: e,
@@ -33,7 +33,7 @@ function s(e, n, r) {
         render: n
     });
 }
-function o(e) {
+function s(e) {
     return i.Z.dispatch({
         type: 'CHANNEL_CALL_POPOUT_WINDOW_OPEN',
         channel: e

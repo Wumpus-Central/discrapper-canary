@@ -12,7 +12,7 @@ r.d(n, {
         return g;
     },
     n_: function () {
-        return _;
+        return p;
     },
     oh: function () {
         return i;
@@ -21,7 +21,7 @@ r.d(n, {
         return m;
     },
     y0: function () {
-        return s;
+        return o;
     },
     yM: function () {
         return d;
@@ -29,20 +29,20 @@ r.d(n, {
 });
 var i,
     a,
-    s,
     o,
+    s,
     l,
     u,
     c,
     d,
     f,
-    _,
+    p,
     h,
-    p = r(981631);
+    _ = r(981631);
 let m = 300;
 function g(e) {
     let { API_ENDPOINT: n, CDN_HOST: r } = window.GLOBAL_ENV;
-    return null != r ? ''.concat(location.protocol, '//').concat(r, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(n).concat(p.ANM.BADGE_ICON(e));
+    return null != r ? ''.concat(location.protocol, '//').concat(r, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(n).concat(_.ANM.BADGE_ICON(e));
 }
 !(function (e) {
     (e.USER_INFO = 'USER_INFO'), (e.BOT_INFO = 'BOT_INFO'), (e.ACTIVITY = 'ACTIVITY'), (e.MUTUAL_GUILDS = 'MUTUAL_GUILDS'), (e.MUTUAL_FRIENDS = 'MUTUAL_FRIENDS'), (e.BOT_DATA_ACCESS = 'BOT_DATA_ACCESS');
@@ -52,10 +52,10 @@ function g(e) {
     })(a || (a = {})),
     !(function (e) {
         (e.BITE_SIZE = 'BITE_SIZE'), (e.FULL_SIZE = 'FULL_SIZE'), (e.PANEL = 'PANEL');
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         (e.LIVE = 'live'), (e.RECENT = 'recent');
-    })(o || (o = {})),
+    })(s || (s = {})),
     !(function (e) {
         (e.BITE_SIZE_POPOUT = 'BITE_SIZE_POPOUT'), (e.SIMPLIFIED_MODAL = 'SIMPLIFIED_MODAL'), (e.SIMPLIFIED_DM_PANEL = 'SIMPLIFIED_DM_PANEL'), (e.ACCOUNT_POPOUT = 'ACCOUNT_POPOUT'), (e.ACTION_SHEET = 'ACTION_SHEET'), (e.SIMPLIFIED_ACTION_SHEET = 'SIMPLIFIED_ACTION_SHEET'), (e.YOU_SCREEN = 'YOU_SCREEN'), (e.SIMPLIFIED_ACCOUNT_POPOUT = 'SIMPLIFIED_ACCOUNT_POPOUT'), (e.BLOCKED_PROFILE_POPOUT = 'BLOCKED_PROFILE_POPOUT'), (e.IGNORED_PROFILE_POPOUT = 'IGNORED_PROFILE_POPOUT'), (e.BLOCKED_ACTION_SHEET = 'BLOCKED_ACTION_SHEET'), (e.IGNORED_ACTION_SHEET = 'IGNORED_ACTION_SHEET'), (e.BLOCKED_PROFILE_PANEL = 'BLOCKED_PROFILE_PANEL'), (e.IGNORED_PROFILE_PANEL = 'IGNORED_PROFILE_PANEL'), (e.BLOCKED_PROFILE_MODAL = 'BLOCKED_PROFILE_MODAL'), (e.IGNORED_PROFILE_MODAL = 'IGNORED_PROFILE_MODAL'), (e.SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE = 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE'), (e.BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE = 'BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE'), (e.SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE = 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE');
     })(l || (l = {})),
@@ -73,7 +73,7 @@ function g(e) {
     })(f || (f = {})),
     !(function (e) {
         (e.ACTIVITY = 'ACTIVITY'), (e.AVATAR = 'AVATAR'), (e.STATUS = 'STATUS');
-    })(_ || (_ = {})),
+    })(p || (p = {})),
     !(function (e) {
         (e.REPLY = 'REPLY'), (e.REACT = 'REACT');
     })(h || (h = {}));

@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(442837),
-    o = r(570140);
+    o = r(442837),
+    s = r(570140);
 function l(e, n, r) {
     return (
         n in e
@@ -43,7 +43,7 @@ function f(e) {
     } else c.userTenureRewardStatusByRewardId = u.userTenureRewardStatusByRewardId;
     (c.lastFetchTimeMs = Date.now()), (c.fetchState = 2);
 }
-function _() {
+function p() {
     c.userTenureRewardStatusByRewardId = u.userTenureRewardStatusByRewardId;
 }
 function h(e) {
@@ -52,10 +52,10 @@ function h(e) {
         delete c.userTenureRewardStatusByRewardId[e];
     });
 }
-function p() {
+function _() {
     c = u;
 }
-class m extends (a = s.ZP.PersistedStore) {
+class m extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         c = {
             ...c,
@@ -74,10 +74,10 @@ class m extends (a = s.ZP.PersistedStore) {
 }
 l(m, 'displayName', 'TenureRewardStore'),
     l(m, 'persistKey', 'TenureRewardStore'),
-    (n.Z = new m(o.Z, {
+    (n.Z = new m(s.Z, {
         USER_TENURE_REWARD_SYNC_START: d,
         USER_TENURE_REWARD_SYNC_SUCCESS: f,
-        USER_TENURE_REWARD_STATUS_RESET: _,
+        USER_TENURE_REWARD_STATUS_RESET: p,
         USER_TENURE_REWARD_STATUS_DELETE: h,
-        LOGOUT: p
+        LOGOUT: _
     }));

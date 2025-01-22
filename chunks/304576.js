@@ -38,9 +38,9 @@ t.Z = (e) => {
     var t, n;
     let { isFullscreen: r, className: v, buttonClassName: A, subscriptionTier: j, entrypoint: O, isDarkMode: R } = e,
         { analyticsLocations: P } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
-        y = (0, m._O)(),
-        B = (0, h.Ng)(),
-        D = (0, h.Wp)(B, S.Si.TIER_2) ? S.Si.TIER_2 : void 0,
+        D = (0, m._O)(),
+        y = (0, h.Ng)(),
+        B = (0, h.Wp)(y, S.Si.TIER_2) ? S.Si.TIER_2 : void 0,
         Z = (0, p.N)(),
         L = (0, u.Nx)(),
         M = (0, f.Vi)(),
@@ -60,7 +60,7 @@ t.Z = (e) => {
                     L &&
                         (0, i.jsx)(N, {
                             trialOffer: Z,
-                            discountOffer: B
+                            discountOffer: y
                         }),
                     (0, i.jsx)(l.Heading, {
                         className: I.marketingPageV2Heading,
@@ -82,7 +82,7 @@ t.Z = (e) => {
                                   isMarketingPageV2Enabled: !0
                               })
                           }),
-                    M || y
+                    M || D
                         ? (0, i.jsx)('div', {
                               className: s()(I.buttonContainer, I.marketingPageV2CTAContainer, { [I.marketingPageV2CTAMargin]: !(V || U) }),
                               children: (0, i.jsx)(C.Z, {
@@ -91,7 +91,7 @@ t.Z = (e) => {
                               })
                           })
                         : (0, i.jsx)(T.PK, {
-                              subscriptionTier: null !== (n = null != j ? j : null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : D,
+                              subscriptionTier: null !== (n = null != j ? j : null == Z ? void 0 : null === (t = Z.subscription_trial) || void 0 === t ? void 0 : t.sku_id) && void 0 !== n ? n : B,
                               inOfferExperience: L,
                               containerClassName: s()(I.marketingPageV2CTAContainer, { [I.marketingPageV2CTAMargin]: !(V || U) }),
                               buttonClassName: A,

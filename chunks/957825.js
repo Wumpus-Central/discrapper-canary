@@ -1,10 +1,10 @@
 var i, a;
 r.d(n, {
     CT: function () {
-        return s;
+        return o;
     },
     Om: function () {
-        return o;
+        return s;
     },
     X1: function () {
         return i;
@@ -16,8 +16,8 @@ r.d(n, {
     !(function (e) {
         (e.EMOJI = 'emoji'), (e.GIF = 'gif'), (e.STICKER = 'sticker'), (e.SOUNDBOARD = 'soundboard');
     })(i || (i = {}));
-let s = 'expression-picker-chat-input-button',
-    o = 498;
+let o = 'expression-picker-chat-input-button',
+    s = 498;
 !(function (e) {
     (e.MIN = 'min'), (e.MAX = 'max');
 })(a || (a = {}));

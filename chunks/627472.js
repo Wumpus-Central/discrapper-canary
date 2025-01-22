@@ -5,38 +5,38 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(200651),
-    s = r(192379),
-    o = r(803997),
-    l = r.n(o),
+    o = r(192379),
+    s = r(803997),
+    l = r.n(s),
     u = r(489948),
     c = r(780900);
 function d(e, n) {
     let r = (0, c.G6)(e);
-    return s.forwardRef(function (i, o) {
-        let { children: d, className: f, dir: _ = 'ltr', orientation: h = 'vertical', paddingFix: p = !0, fade: m = !1, onScroll: g, style: E, ...v } = i,
-            I = s.useRef(null),
-            T = (0, c.tT)({
-                paddingFix: p,
+    return o.forwardRef(function (i, s) {
+        let { children: d, className: f, dir: p = 'ltr', orientation: h = 'vertical', paddingFix: _ = !0, fade: m = !1, onScroll: g, style: E, ...v } = i,
+            y = o.useRef(null),
+            b = (0, c.tT)({
+                paddingFix: _,
                 orientation: h,
-                dir: _,
+                dir: p,
                 className: f,
-                scrollerRef: I,
+                scrollerRef: y,
                 specs: r
             });
         return (0, a.jsx)('div', {
             ref: (e) => {
-                'function' == typeof o ? o(e) : null != o && (o.current = e), (I.current = e);
+                'function' == typeof s ? s(e) : null != s && (s.current = e), (y.current = e);
             },
             className: l()(f, {
                 [e]: !0,
                 [n]: m
             }),
             style: (0, c.uT)(E, h),
-            dir: _,
+            dir: p,
             ...v,
             children: (0, a.jsxs)(u.Jc, {
-                containerRef: I,
-                children: [d, T]
+                containerRef: y,
+                children: [d, b]
             })
         });
     });

@@ -14,15 +14,15 @@ function a(e, n, r) {
 }
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 }),
     !(function (e) {
         (e[(e.PRIMARY_APP_COMMAND_NOT_FOUND = 0)] = 'PRIMARY_APP_COMMAND_NOT_FOUND'), (e[(e.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED = 1)] = 'LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED'), (e[(e.INVALID_CHANNEL = 2)] = 'INVALID_CHANNEL');
     })(i || (i = {}));
-class s {
+class o {
     constructor(e) {
         a(this, 'reason', void 0), (this.reason = e);
     }
 }
-a(s, 'Reasons', i);
+a(o, 'Reasons', i);

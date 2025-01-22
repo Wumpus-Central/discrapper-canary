@@ -13,14 +13,14 @@ var i = n(200651),
     o = n(942951),
     s = n(834129),
     c = n(184301),
-    d = n(347475),
-    u = n(768581),
+    u = n(347475),
+    d = n(768581),
     m = n(693912),
     h = n(981631);
 function f(e, t) {
     return r.useCallback(
         (n) => (r, a) => {
-            let o = u.ZP.getApplicationIconURL({
+            let o = d.ZP.getApplicationIconURL({
                     id: n.id,
                     icon: n.icon,
                     bot: n.bot,
@@ -39,7 +39,7 @@ function f(e, t) {
                                   channelId: e.id
                               }),
                           renderPopout: (n) =>
-                              (0, i.jsx)(d.Z, {
+                              (0, i.jsx)(u.Z, {
                                   ...n,
                                   userId: s.id,
                                   guildId: e.guild_id,
@@ -61,8 +61,8 @@ function f(e, t) {
 function p(e) {
     let { message: t, channel: r, compact: l } = e,
         c = (0, a.ZP)(t),
-        d = t.application,
-        u = (0, o.l)({
+        u = t.application,
+        d = (0, o.l)({
             user: t.author,
             channelId: r.id,
             guildId: r.guild_id,
@@ -74,18 +74,18 @@ function p(e) {
         timestamp: t.timestamp,
         compact: l,
         children: (0, m.DS)({
-            application: d,
+            application: u,
             username: c.nick,
-            usernameHook: u(c),
-            applicationNameHook: null != d ? p(d) : h.dG4
+            usernameHook: d(c),
+            applicationNameHook: null != u ? p(u) : h.dG4
         })
     });
 }
 function _(e) {
     let { message: t, channel: r, compact: l } = e,
         c = (0, a.ZP)(t),
-        d = t.application,
-        u = (0, o.l)({
+        u = t.application,
+        d = (0, o.l)({
             user: t.author,
             channelId: r.id,
             guildId: r.guild_id,
@@ -97,10 +97,10 @@ function _(e) {
         timestamp: t.timestamp,
         compact: l,
         children: (0, m.nh)({
-            application: d,
+            application: u,
             username: c.nick,
-            usernameHook: u(c),
-            applicationNameHook: null != d ? p(d) : h.dG4
+            usernameHook: d(c),
+            applicationNameHook: null != u ? p(u) : h.dG4
         })
     });
 }

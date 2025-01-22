@@ -1,6 +1,6 @@
 r.d(n, {
     IF: function () {
-        return p;
+        return _;
     },
     LU: function () {
         return d;
@@ -17,8 +17,8 @@ r.d(n, {
 });
 var i,
     a = r(724458);
-var s = r(653041);
-var o = r(47120);
+var o = r(653041);
+var s = r(47120);
 var l = r(271383),
     u = r(588215);
 function c(e, n, r) {
@@ -36,9 +36,9 @@ function c(e, n, r) {
 }
 let d = [12, 25, 50, 100],
     f = 7,
-    _ = 5,
+    p = 5,
     h = 250;
-function p() {
+function _() {
     return {
         pageSize: d[0],
         currentPage: 1,
@@ -48,14 +48,14 @@ function p() {
     };
 }
 function m(e) {
-    return Math.max(e.pageSize * _, h);
+    return Math.max(e.pageSize * p, h);
 }
 !(function (e) {
     (e[(e.FORWARD = 1)] = 'FORWARD'), (e[(e.BACKWARD = -1)] = 'BACKWARD');
 })(i || (i = {}));
 class g {
     reset() {
-        (this._paginationState = p()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
+        (this._paginationState = _()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1);
     }
     isMemberOnCurrentPage(e) {
         var n;
@@ -145,7 +145,7 @@ class g {
                 return null == e[i] && (e[i] = []), e[i].push(n), e;
             }),
             (this.guildId = e),
-            (this._paginationState = p()),
+            (this._paginationState = _()),
             (this._version = 0);
         let [r, i] = this._initPaginationFromRawMembers(n);
         (this._sortedMemberIds = r), (this._cachedPaginationChunks = i), (this._version += 1);

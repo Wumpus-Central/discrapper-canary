@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(878604);
-function o(e) {
+var o = r(878604);
+function s(e) {
     return {
         id: e.payloadType,
         name: e.mimeType.split('/').slice(1)[0]
@@ -19,7 +19,7 @@ function u(e, n, r, i, a) {
     var u, c;
     let d = {},
         f = {},
-        _ = [],
+        p = [],
         h = [];
     for (let n of e.values())
         switch (n.type) {
@@ -30,13 +30,13 @@ function u(e, n, r, i, a) {
                 f[n.id] = n;
                 break;
             case 'inbound-rtp':
-                _.push(n);
+                p.push(n);
                 break;
             case 'outbound-rtp':
                 h.push(n);
         }
-    let p = Object.values(d).find((e) => 'succeeded' === e.state);
-    if (void 0 === p) return null;
+    let _ = Object.values(d).find((e) => 'succeeded' === e.state);
+    if (void 0 === _) return null;
     let m = [];
     for (let e of h) {
         let n = f[e.codecId];
@@ -45,9 +45,9 @@ function u(e, n, r, i, a) {
             type: e.kind,
             ssrc: e.ssrc,
             timestamp: e.timestamp,
-            sinkWant: (0, s.f)(r, e.ssrc, 'video' === e.kind),
-            sinkWantAsInt: (0, s.F)(r, e.ssrc),
-            codec: o(n),
+            sinkWant: (0, o.f)(r, e.ssrc, 'video' === e.kind),
+            sinkWantAsInt: (0, o.F)(r, e.ssrc),
+            codec: s(n),
             bytesSent: e.bytesSent,
             packetsSent: e.packetsSent
         };
@@ -82,7 +82,7 @@ function u(e, n, r, i, a) {
         }
     }
     let g = {};
-    for (let e of _) {
+    for (let e of p) {
         let a = f[e.codecId];
         if (null == a) continue;
         let l = n(e.ssrc);
@@ -91,11 +91,11 @@ function u(e, n, r, i, a) {
             type: e.kind,
             ssrc: e.ssrc,
             timestamp: e.timestamp,
-            sinkWant: (0, s.f)(r, e.ssrc, 'video' === e.kind),
-            sinkWantAsInt: (0, s.F)(r, e.ssrc),
-            sinkWantLocal: (0, s.f)(i, e.ssrc, 'video' === e.kind),
-            sinkWantLocalAsInt: (0, s.F)(i, e.ssrc),
-            codec: o(a),
+            sinkWant: (0, o.f)(r, e.ssrc, 'video' === e.kind),
+            sinkWantAsInt: (0, o.F)(r, e.ssrc),
+            sinkWantLocal: (0, o.f)(i, e.ssrc, 'video' === e.kind),
+            sinkWantLocalAsInt: (0, o.F)(i, e.ssrc),
+            codec: s(a),
             bytesReceived: e.bytesReceived,
             packetsReceived: e.packetsReceived,
             packetsLost: e.packetsLost
@@ -139,12 +139,12 @@ function u(e, n, r, i, a) {
             });
         }
     }
-    let E = (null !== (u = p.currentRoundTripTime) && void 0 !== u ? u : 0) * 1000;
+    let E = (null !== (u = _.currentRoundTripTime) && void 0 !== u ? u : 0) * 1000;
     return {
         transport: {
-            availableOutgoingBitrate: null !== (c = p.availableOutgoingBitrate) && void 0 !== c ? c : 0,
-            bytesReceived: p.bytesReceived,
-            bytesSent: p.bytesSent,
+            availableOutgoingBitrate: null !== (c = _.availableOutgoingBitrate) && void 0 !== c ? c : 0,
+            bytesReceived: _.bytesReceived,
+            bytesSent: _.bytesSent,
             ping: E
         },
         rtp: {

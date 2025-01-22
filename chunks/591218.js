@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(47120);
-var s = r(836560);
-var o = r(740197),
+var o = r(836560);
+var s = r(740197),
     l = r(106617),
     u = r(376398),
     c = r(65154),
@@ -24,27 +24,27 @@ function f(e, n, r) {
         e
     );
 }
-let _ = new l.Z();
-class h extends s.EventEmitter {
+let p = new l.Z();
+class h extends o.EventEmitter {
     destroy() {
-        null != this.stream && (_.release(this.stream), (this.stream = null)), null != this.streamId && (0, u.jC)(this.streamId), (this.destroyed = !0);
+        null != this.stream && (p.release(this.stream), (this.stream = null)), null != this.streamId && (0, u.jC)(this.streamId), (this.destroyed = !0);
     }
     getStreamId() {
         return this.streamId;
     }
     async setSource(e) {
         if (this.sourceId === e) return this.stream;
-        (this.sourceId = e), null != this.stream && (_.release(this.stream), (this.stream = null));
-        let n = await (0, o.l0)();
+        (this.sourceId = e), null != this.stream && (p.release(this.stream), (this.stream = null));
+        let n = await (0, s.l0)();
         if (this.sourceId === c.Av) return this.setStream(new MediaStream());
         let r = { width: 1280 };
         n.some((e) => e.id === this.sourceId) && (r.deviceId = this.sourceId);
         try {
-            let e = await _.acquire({
+            let e = await p.acquire({
                 audio: !1,
                 video: r
             });
-            if (this.destroyed) throw (_.release(e), Error('VideoInput: Already destroyed'));
+            if (this.destroyed) throw (p.release(e), Error('VideoInput: Already destroyed'));
             return this.emit('permission', !0), this.setStream(e);
         } catch (e) {
             if ('string' != typeof e)

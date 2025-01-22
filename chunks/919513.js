@@ -1,12 +1,12 @@
 r.d(n, {
     JP: function () {
-        return o;
+        return s;
     },
     sM: function () {
         return l;
     },
     up: function () {
-        return s;
+        return o;
     }
 });
 var i = r(573654);
@@ -20,10 +20,10 @@ function a(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function s(e) {
+function o(e) {
     (0, i.k)('function' == typeof e.canDrag, 'Expected canDrag to be a function.'), (0, i.k)('function' == typeof e.beginDrag, 'Expected beginDrag to be a function.'), (0, i.k)('function' == typeof e.endDrag, 'Expected endDrag to be a function.');
 }
-function o(e) {
+function s(e) {
     (0, i.k)('function' == typeof e.canDrop, 'Expected canDrop to be a function.'), (0, i.k)('function' == typeof e.hover, 'Expected hover to be a function.'), (0, i.k)('function' == typeof e.drop, 'Expected beginDrag to be a function.');
 }
 function l(e, n) {

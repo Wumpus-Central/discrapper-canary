@@ -1,46 +1,46 @@
 n(47120), n(733860);
-var r,
-    i = n(442837),
+var i,
+    r = n(442837),
     l = n(570140),
     a = n(592125),
-    u = n(271383),
+    s = n(271383),
     o = n(430824);
-function s(t, e, n) {
+function c(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
-let c = [],
-    d = new Set();
-class f extends (r = i.ZP.PersistedStore) {
-    initialize(t) {
-        var e;
-        this.waitFor(u.ZP, o.Z, a.Z), (d = new Set([...(c = null !== (e = null == t ? void 0 : t.channelHistory) && void 0 !== e ? e : [])]));
+let d = [],
+    u = new Set();
+class h extends (i = r.ZP.PersistedStore) {
+    initialize(e) {
+        var t;
+        this.waitFor(s.ZP, o.Z, a.Z), (u = new Set([...(d = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : [])]));
     }
     getState() {
-        return { channelHistory: c };
+        return { channelHistory: d };
     }
     getChannelHistory() {
-        return c;
+        return d;
     }
 }
-s(f, 'displayName', 'RecentVoiceChannelStore'), s(f, 'persistKey', 'RecentVoiceChannelStore');
-let h = new f(l.Z, {
+c(h, 'displayName', 'RecentVoiceChannelStore'), c(h, 'persistKey', 'RecentVoiceChannelStore');
+let m = new h(l.Z, {
     POST_CONNECTION_OPEN: function () {
-        d = new Set([...c]);
+        u = new Set([...d]);
     },
-    VOICE_CHANNEL_SELECT: function (t) {
-        var e, n;
-        let { channelId: r } = t;
-        return !(null == r || !(null !== (n = null === (e = a.Z.getChannel(r)) || void 0 === e ? void 0 : e.isVocal()) && void 0 !== n && n) || d.has(r)) && (c.unshift(r), d.add(r), c.length > 10 && ((c.length = 10), (d = new Set([...c]))), !0);
+    VOICE_CHANNEL_SELECT: function (e) {
+        var t, n;
+        let { channelId: i } = e;
+        return !(null == i || !(null !== (n = null === (t = a.Z.getChannel(i)) || void 0 === t ? void 0 : t.isVocal()) && void 0 !== n && n) || u.has(i)) && (d.unshift(i), u.add(i), d.length > 10 && ((d.length = 10), (u = new Set([...d]))), !0);
     }
 });
-e.Z = h;
+t.Z = m;

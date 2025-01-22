@@ -6,16 +6,16 @@ r.d(n, {
         return g;
     },
     F2: function () {
-        return s;
+        return o;
     },
     I: function () {
         return a;
     },
     Pj: function () {
-        return _;
+        return p;
     },
     YP: function () {
-        return p;
+        return _;
     },
     bw: function () {
         return m;
@@ -30,7 +30,7 @@ r.d(n, {
         return u;
     },
     t$: function () {
-        return o;
+        return s;
     },
     ut: function () {
         return d;
@@ -47,16 +47,16 @@ r.d(n, {
 });
 var i = 'top',
     a = 'bottom',
-    s = 'right',
-    o = 'left',
+    o = 'right',
+    s = 'left',
     l = 'auto',
-    u = [i, a, s, o],
+    u = [i, a, o, s],
     c = 'start',
     d = 'end',
     f = 'clippingParents',
-    _ = 'viewport',
+    p = 'viewport',
     h = 'popper',
-    p = 'reference',
+    _ = 'reference',
     m = u.reduce(function (e, n) {
         return e.concat([n + '-' + c, n + '-' + d]);
     }, []),

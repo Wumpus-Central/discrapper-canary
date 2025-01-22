@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(442837),
-    s = r(544891),
-    o = r(570140),
+    o = r(544891),
+    s = r(570140),
     l = r(722086),
     u = r(981631);
 function c(e) {
@@ -24,23 +24,23 @@ function c(e) {
     );
 }
 async function d(e) {
-    o.Z.dispatch({
+    s.Z.dispatch({
         type: 'USER_NOTE_LOAD_START',
         userId: e
     });
     try {
-        let { body: n } = await s.tn.get({
+        let { body: n } = await o.tn.get({
             url: u.ANM.NOTE(e),
             oldFormErrors: !0,
             rejectWithError: !0
         });
-        o.Z.dispatch({
+        s.Z.dispatch({
             type: 'USER_NOTE_LOADED',
             userId: e,
             note: n
         });
     } catch (n) {
-        o.Z.dispatch({
+        s.Z.dispatch({
             type: 'USER_NOTE_LOADED',
             userId: e
         });

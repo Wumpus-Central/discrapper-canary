@@ -1,13 +1,13 @@
 var i = r(147018),
     a = r(992051),
-    s = r(955903),
-    o = r(936940),
+    o = r(955903),
+    s = r(936940),
     l = r(545576),
     u = r(354848),
     c = r(344135),
     d = r(457110),
     f = r(859209),
-    _ = s && s.prototype;
+    p = o && o.prototype;
 if (
     (i(
         {
@@ -15,9 +15,9 @@ if (
             proto: !0,
             real: !0,
             forced:
-                !!s &&
-                o(function () {
-                    _.finally.call(
+                !!o &&
+                s(function () {
+                    p.finally.call(
                         {
                             then: function () {}
                         },
@@ -48,8 +48,8 @@ if (
             }
         }
     ),
-    !a && u(s))
+    !a && u(o))
 ) {
     var h = l('Promise').prototype.finally;
-    _.finally !== h && f(_, 'finally', h, { unsafe: !0 });
+    p.finally !== h && f(p, 'finally', h, { unsafe: !0 });
 }

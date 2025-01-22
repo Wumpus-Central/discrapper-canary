@@ -5,9 +5,9 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(177593);
-var s = r(733860);
-var o = r(427786),
-    l = r.n(o);
+var o = r(733860);
+var s = r(427786),
+    l = r.n(s);
 function u(e, n, r) {
     return (
         n in e
@@ -48,8 +48,8 @@ class d {
                         this.logger.error('', e);
                     }
                 } else {
-                    var s;
-                    let r = null !== (s = n.retryAfter) && void 0 !== s ? s : this.defaultRetryAfter;
+                    var o;
+                    let r = null !== (o = n.retryAfter) && void 0 !== o ? o : this.defaultRetryAfter;
                     this.logger.info('Rate limited. Delaying draining of queue for '.concat(r, ' ms. LogId:').concat(i, ' QueueLength: ').concat(this.queue.length)),
                         (this.timeout = setTimeout(() => {
                             this.queue.unshift(e), (this.timeout = null), this._drainIfNecessary();

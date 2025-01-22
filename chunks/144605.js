@@ -1,55 +1,55 @@
-var r = n(67867),
-    o = n(294377),
-    a = n(156741),
-    i = n(420926),
-    s = n(831496),
-    c = n(28886),
-    l = n(982665),
-    u = n(224106),
-    d = n(821819),
-    p = o('Reflect', 'construct'),
+var i = r(67867),
+    a = r(294377),
+    o = r(156741),
+    s = r(420926),
+    l = r(831496),
+    u = r(28886),
+    c = r(982665),
+    d = r(224106),
+    f = r(821819),
+    p = a('Reflect', 'construct'),
     h = Object.prototype,
-    f = [].push,
-    m = d(function () {
+    _ = [].push,
+    m = f(function () {
         function e() {}
         return !(p(function () {}, [], e) instanceof e);
     }),
-    y = !d(function () {
+    g = !f(function () {
         p(function () {});
     }),
-    v = m || y;
-r(
+    E = m || g;
+i(
     {
         target: 'Reflect',
         stat: !0,
-        forced: v,
-        sham: v
+        forced: E,
+        sham: E
     },
     {
-        construct: function (e, t) {
-            s(e), c(t);
-            var n = arguments.length < 3 ? e : s(arguments[2]);
-            if (y && !m) return p(e, t, n);
-            if (e === n) {
-                switch (t.length) {
+        construct: function (e, n) {
+            l(e), u(n);
+            var r = arguments.length < 3 ? e : l(arguments[2]);
+            if (g && !m) return p(e, n, r);
+            if (e === r) {
+                switch (n.length) {
                     case 0:
                         return new e();
                     case 1:
-                        return new e(t[0]);
+                        return new e(n[0]);
                     case 2:
-                        return new e(t[0], t[1]);
+                        return new e(n[0], n[1]);
                     case 3:
-                        return new e(t[0], t[1], t[2]);
+                        return new e(n[0], n[1], n[2]);
                     case 4:
-                        return new e(t[0], t[1], t[2], t[3]);
+                        return new e(n[0], n[1], n[2], n[3]);
                 }
-                var r = [null];
-                return a(f, r, t), new (a(i, e, r))();
+                var i = [null];
+                return o(_, i, n), new (o(s, e, i))();
             }
-            var o = n.prototype,
-                d = u(l(o) ? o : h),
-                v = a(e, d, t);
-            return l(v) ? v : d;
+            var a = r.prototype,
+                f = d(c(a) ? a : h),
+                E = o(e, f, n);
+            return c(E) ? E : f;
         }
     }
 );

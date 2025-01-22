@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(757143);
 var a = r(47120);
-var s = r(623279),
-    o = r(392711),
-    l = r.n(o),
+var o = r(623279),
+    s = r(392711),
+    l = r.n(s),
     u = r(513431),
     c = r(579806),
     d = r(710845),
     f = r(706454),
-    _ = r(823379),
+    p = r(823379),
     h = r(598105),
-    p = r(643413);
+    _ = r(643413);
 function m(e, n, r) {
     return (
         n in e
@@ -31,10 +31,10 @@ function m(e, n, r) {
 let g = 250,
     E = new d.Z('Spellchecker'),
     v = null === c.Z || void 0 === c.Z ? void 0 : c.Z.spellCheck;
-function I(e) {
+function y(e) {
     var n;
-    e = null !== (n = p.Z[e]) && void 0 !== n ? n : e;
-    let r = (0, s.parse)(e.replace(/[_-]/g, '-'));
+    e = null !== (n = _.Z[e]) && void 0 !== n ? n : e;
+    let r = (0, o.parse)(e.replace(/[_-]/g, '-'));
     if (null == r || null == r.langtag.language || null == r.langtag.region) {
         E.error(''.concat(e, ' is not a valid locale.'));
         return;
@@ -42,7 +42,7 @@ function I(e) {
     let { language: i, region: a } = r.langtag;
     return ''.concat(i.language.toLowerCase(), '-').concat(a.toUpperCase());
 }
-class T {
+class b {
     get enabled() {
         return this._enabled;
     }
@@ -95,8 +95,8 @@ class T {
             let a = ''.concat(r, '-').concat(this.regionPreference);
             if (-1 !== e.indexOf(a)) this.setLocale(a);
             else {
-                var s;
-                let e = null !== (s = i[r]) && void 0 !== s ? s : p.Z[n];
+                var o;
+                let e = null !== (o = i[r]) && void 0 !== o ? o : _.Z[n];
                 null != e && this.setLocale(e);
             }
         })),
@@ -105,18 +105,18 @@ class T {
             });
     }
 }
-let b = l().debounce((e, n) => {
+let I = l().debounce((e, n) => {
     let r = S(n);
     null != r && e.detectLanguage(r);
 }, g);
-function y(e) {
-    null != document.body && document.body.addEventListener('beforeinput', (n) => b(e, n.target), !0);
+function T(e) {
+    null != document.body && document.body.addEventListener('beforeinput', (n) => I(e, n.target), !0);
 }
 function S(e) {
     return null == e ? null : (0, u.k)(e, HTMLInputElement) || (0, u.k)(e, HTMLTextAreaElement) ? e.value : (0, u.k)(e) && e.hasAttribute('contenteditable') ? e.textContent : void 0;
 }
 async function A() {
     var e;
-    let n = new T((null !== (e = await v.getAvailableDictionaries()) && void 0 !== e ? e : []).map(I).filter(_.lm));
-    return y(n), n;
+    let n = new b((null !== (e = await v.getAvailableDictionaries()) && void 0 !== e ? e : []).map(y).filter(p.lm));
+    return T(n), n;
 }

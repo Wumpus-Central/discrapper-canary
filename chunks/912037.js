@@ -18,17 +18,17 @@ var i =
             return r && e(n.prototype, r), i && e(n, i), n;
         };
     })();
-function s(e, n) {
+function o(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-var o = r(161796),
+var s = r(161796),
     l = r(512722),
     u = function (e) {
         return e;
     },
     c = (function () {
         function e() {
-            s(this, e);
+            o(this, e);
         }
         return (
             a(e, null, [
@@ -43,13 +43,13 @@ var o = r(161796),
                         var i = e.easing || u,
                             a = 'extend';
                         void 0 !== e.extrapolateLeft ? (a = e.extrapolateLeft) : void 0 !== e.extrapolate && (a = e.extrapolate);
-                        var s = 'extend';
+                        var o = 'extend';
                         return (
-                            void 0 !== e.extrapolateRight ? (s = e.extrapolateRight) : void 0 !== e.extrapolate && (s = e.extrapolate),
+                            void 0 !== e.extrapolateRight ? (o = e.extrapolateRight) : void 0 !== e.extrapolate && (o = e.extrapolate),
                             function (e) {
                                 l('number' == typeof e, 'Cannot interpolation an input which is not a number');
-                                var o = m(e, r);
-                                return d(e, r[o], r[o + 1], n[o], n[o + 1], i, a, s);
+                                var s = m(e, r);
+                                return d(e, r[s], r[s + 1], n[s], n[s + 1], i, a, o);
                             }
                         );
                     }
@@ -58,11 +58,11 @@ var o = r(161796),
             e
         );
     })();
-function d(e, n, r, i, a, s, o, l) {
+function d(e, n, r, i, a, o, s, l) {
     var u = e;
     if (u < n) {
-        if ('identity' === o) return u;
-        'clamp' === o ? (u = n) : o;
+        if ('identity' === s) return u;
+        'clamp' === s ? (u = n) : s;
     }
     if (u > r) {
         if ('identity' === l) return u;
@@ -70,38 +70,38 @@ function d(e, n, r, i, a, s, o, l) {
     }
     if (i === a) return i;
     if (n === r) return e <= n ? i : a;
-    return n === -1 / 0 ? (u = -u) : r === 1 / 0 ? (u -= n) : (u = (u - n) / (r - n)), (u = s(u)), i === -1 / 0 ? (u = -u) : a === 1 / 0 ? (u += i) : (u = u * (a - i) + i), u;
+    return n === -1 / 0 ? (u = -u) : r === 1 / 0 ? (u -= n) : (u = (u - n) / (r - n)), (u = o(u)), i === -1 / 0 ? (u = -u) : a === 1 / 0 ? (u += i) : (u = u * (a - i) + i), u;
 }
 function f(e) {
-    var n = o(e);
+    var n = s(e);
     return null === n ? e : 'rgba(' + ((4278190080 & (n = n || 0)) >>> 24) + ', ' + ((16711680 & n) >>> 16) + ', ' + ((65280 & n) >>> 8) + ', ' + (255 & n) / 255 + ')';
 }
-var _ = /[0-9\.-]+/g;
+var p = /[0-9\.-]+/g;
 function h(e) {
     var n = e.outputRange;
-    l(n.length >= 2, 'Bad output range'), p((n = n.map(f)));
-    var r = n[0].match(_).map(function () {
+    l(n.length >= 2, 'Bad output range'), _((n = n.map(f)));
+    var r = n[0].match(p).map(function () {
         return [];
     });
     n.forEach(function (e) {
-        e.match(_).forEach(function (e, n) {
+        e.match(p).forEach(function (e, n) {
             r[n].push(+e);
         });
     });
-    var a = n[0].match(_).map(function (n, a) {
+    var a = n[0].match(p).map(function (n, a) {
             return c.create(i({}, e, { outputRange: r[a] }));
         }),
-        s = /^rgb/.test(n[0]);
+        o = /^rgb/.test(n[0]);
     return function (e) {
         var r = 0;
-        return n[0].replace(_, function () {
+        return n[0].replace(p, function () {
             var n = a[r++](e);
-            return String(s && r < 4 ? Math.round(n) : n);
+            return String(o && r < 4 ? Math.round(n) : n);
         });
     };
 }
-function p(e) {
-    for (var n = e[0].replace(_, ''), r = 1; r < e.length; ++r) l(n === e[r].replace(_, ''), 'invalid pattern ' + e[0] + ' and ' + e[r]);
+function _(e) {
+    for (var n = e[0].replace(p, ''), r = 1; r < e.length; ++r) l(n === e[r].replace(p, ''), 'invalid pattern ' + e[0] + ' and ' + e[r]);
 }
 function m(e, n) {
     for (var r = 1; r < n.length - 1 && !(n[r] >= e); ++r);

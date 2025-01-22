@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     noticeWithoutRightPadding: 'noticeWithoutRightPadding_f97380 notice_f97380',
     noticeWithRightPadding: 'noticeWithRightPadding_f97380 notice_f97380',
     noticeLeft: 'noticeLeft_f97380',

@@ -1,13 +1,13 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(353926),
     u = r(581883),
     c = r(430824),
     d = r(496675),
     f = r(709054),
-    _ = r(533244);
+    p = r(533244);
 function h(e, n, r) {
     return (
         n in e
@@ -21,7 +21,7 @@ function h(e, n, r) {
         e
     );
 }
-let p = {},
+let _ = {},
     m = {};
 function g() {
     var e;
@@ -46,49 +46,49 @@ function E(e) {
         : null;
 }
 function v(e) {
-    for (let r of ((p = {}), e.guilds)) {
+    for (let r of ((_ = {}), e.guilds)) {
         var n;
         let e = E(null === (n = r.properties) || void 0 === n ? void 0 : n.incidents_data);
-        null != e && ((0, _.i9)(e) || (0, _.ur)(e)) && (p[r.id] = e);
+        null != e && ((0, p.i9)(e) || (0, p.ur)(e)) && (_[r.id] = e);
     }
 }
-function I(e) {
+function y(e) {
     var n;
     let { guild: r } = e,
         i = E(null === (n = r.properties) || void 0 === n ? void 0 : n.incidents_data);
-    null != i && ((0, _.i9)(i) || (0, _.ur)(i)) && (p[r.id] = i);
-}
-function T(e) {
-    let { guild: n } = e,
-        r = E(n.incidents_data);
-    null != r && ((0, _.i9)(r) || (0, _.ur)(r)) ? (p[n.id] = r) : delete p[n.id];
+    null != i && ((0, p.i9)(i) || (0, p.ur)(i)) && (_[r.id] = i);
 }
 function b(e) {
+    let { guild: n } = e,
+        r = E(n.incidents_data);
+    null != r && ((0, p.i9)(r) || (0, p.ur)(r)) ? (_[n.id] = r) : delete _[n.id];
+}
+function I(e) {
     let { guild: n } = e;
-    delete p[n.id];
+    delete _[n.id];
 }
-function y(e) {
-    p = {};
+function T(e) {
+    _ = {};
 }
-class S extends (i = s.ZP.Store) {
+class S extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z, c.Z, d.Z, l.Z), this.syncWith([u.Z, c.Z, d.Z, l.Z], g);
     }
     getGuildIncident(e) {
-        return p[e];
+        return _[e];
     }
     getIncidentsByGuild() {
-        return p;
+        return _;
     }
     getGuildAlertSettings() {
         return m;
     }
 }
 h(S, 'displayName', 'GuildIncidentsStore'),
-    (n.Z = new S(o.Z, {
+    (n.Z = new S(s.Z, {
         CONNECTION_OPEN: v,
-        GUILD_CREATE: I,
-        GUILD_UPDATE: T,
-        GUILD_DELETE: b,
-        LOGOUT: y
+        GUILD_CREATE: y,
+        GUILD_UPDATE: b,
+        GUILD_DELETE: I,
+        LOGOUT: T
     }));

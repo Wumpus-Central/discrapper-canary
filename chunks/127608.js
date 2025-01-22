@@ -1,13 +1,13 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(388032);
-function o() {
+    o = r(388032);
+function s() {
     function e() {
         (0, a.openModalLazy)(async () => {
             let { default: e } = await r.e('82935').then(r.bind(r, 431583));
@@ -23,9 +23,9 @@ function o() {
         return (r) =>
             (0, i.jsx)(n, {
                 ...r,
-                header: s.intl.string(s.t.GFr0GR),
-                body: s.intl.string(s.t.QSk6Ex),
-                confirmText: s.intl.string(s.t.BK8LKy),
+                header: o.intl.string(o.t.GFr0GR),
+                body: o.intl.string(o.t.QSk6Ex),
+                confirmText: o.intl.string(o.t.BK8LKy),
                 onConfirm: e
             });
     });

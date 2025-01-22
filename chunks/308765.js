@@ -241,7 +241,7 @@ let a = {
     },
     UrgentSystemDMManagerBase: {
         actions: ['POST_CONNECTION_OPEN', 'MESSAGE_CREATE', 'CHANNEL_SELECT'],
-        inlineRequire: () => r(559523).Z,
+        inlineRequire: () => r(449195).Z,
         neverLoadBeforeConnectionOpen: !0
     },
     UserGuildSettingsManager: {

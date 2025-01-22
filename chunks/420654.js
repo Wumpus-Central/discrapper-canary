@@ -1,59 +1,59 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(481060),
     c = r(906732),
     d = r(785717),
     f = r(280885),
-    _ = r(171368),
+    p = r(171368),
     h = r(981631),
-    p = r(388032),
+    _ = r(388032),
     m = r(813238);
 let g = 57.75;
-n.Z = s.memo(function (e) {
-    let { user: n, onClose: r, bio: i, hidePersonalInformation: o, viewFullBioDisabled: E = !1 } = e,
+n.Z = o.memo(function (e) {
+    let { user: n, onClose: r, bio: i, hidePersonalInformation: s, viewFullBioDisabled: E = !1 } = e,
         { context: v } = (0, d.KZ)(),
-        { analyticsLocations: I } = (0, c.ZP)(),
-        [T, b] = s.useState(!1),
-        [y, S] = s.useState(!1),
+        { analyticsLocations: y } = (0, c.ZP)(),
+        [b, I] = o.useState(!1),
+        [T, S] = o.useState(!1),
         A = (e) => {
-            null != e && (b(!y && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > g && S(!0));
+            null != e && (I(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > g && S(!0));
         },
-        N = () => {
+        C = () => {
             null == r || r(),
-                (0, _.openUserProfileModal)({
+                (0, p.openUserProfileModal)({
                     ...v,
                     userId: n.id,
-                    sourceAnalyticsLocations: I,
+                    sourceAnalyticsLocations: y,
                     analyticsLocation: { section: h.jXE.BITE_SIZE_PROFILE_POPOUT }
                 });
         };
-    return o || null == i || '' === i
+    return s || null == i || '' === i
         ? null
         : (0, a.jsxs)('div', {
               children: [
                   (0, a.jsx)('div', {
                       ref: A,
-                      className: l()(m.descriptionClamp, y && m.maxBioHeight),
+                      className: l()(m.descriptionClamp, T && m.maxBioHeight),
                       children: (0, a.jsx)(f.Z, {
                           userBio: i,
                           setLineClamp: !1,
                           textColor: 'header-primary'
                       })
                   }),
-                  (T || y) &&
+                  (b || T) &&
                       (0, a.jsx)(u.Button, {
                           look: u.Button.Looks.BLANK,
                           size: u.Button.Sizes.NONE,
                           className: m.viewFullBio,
                           color: l()(m.viewFullBioColor, E && m.viewFullBioDisabled),
-                          onClick: N,
+                          onClick: C,
                           children: (0, a.jsx)(u.Text, {
                               variant: 'text-xs/normal',
                               color: 'none',
-                              children: p.intl.string(p.t.YDiPq6)
+                              children: _.intl.string(_.t.YDiPq6)
                           })
                       })
               ]

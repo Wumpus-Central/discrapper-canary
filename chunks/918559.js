@@ -4,7 +4,7 @@ r.d(n, {
         return i;
     },
     I0: function () {
-        return s;
+        return o;
     },
     MI: function () {
         return a;
@@ -16,4 +16,4 @@ r.d(n, {
 !(function (e) {
     (e[(e.NO_CHAT = 0)] = 'NO_CHAT'), (e[(e.RESIZABLE = 1)] = 'RESIZABLE');
 })(a || (a = {}));
-let s = 16 / 9;
+let o = 16 / 9;

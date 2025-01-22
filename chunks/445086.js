@@ -1,13 +1,13 @@
 var i = r(134533)(),
     a = r(690244),
-    s = i && a('%Object.defineProperty%', !0);
-if (s)
+    o = i && a('%Object.defineProperty%', !0);
+if (o)
     try {
-        s({}, 'a', { value: 1 });
+        o({}, 'a', { value: 1 });
     } catch (e) {
-        s = !1;
+        o = !1;
     }
-var o = a('%SyntaxError%'),
+var s = a('%SyntaxError%'),
     l = a('%TypeError%'),
     u = r(49662);
 e.exports = function (e, n, r) {
@@ -22,13 +22,13 @@ e.exports = function (e, n, r) {
         c = arguments.length > 5 ? arguments[5] : null,
         d = arguments.length > 6 && arguments[6],
         f = !!u && u(e, n);
-    if (s)
-        s(e, n, {
+    if (o)
+        o(e, n, {
             configurable: null === c && f ? f.configurable : !c,
             enumerable: null === i && f ? f.enumerable : !i,
             value: r,
             writable: null === a && f ? f.writable : !a
         });
-    else if (!d && (i || a || c)) throw new o('This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.');
+    else if (!d && (i || a || c)) throw new s('This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.');
     else e[n] = r;
 };

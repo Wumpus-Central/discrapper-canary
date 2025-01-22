@@ -7,10 +7,10 @@ function i(e) {
 function a(e, n, r, i, a) {
     (this.id = e), (this.useOrdinal = n), (this.offset = r), (this.options = i), (this.pluralFn = a);
 }
-function s(e, n, r, i) {
+function o(e, n, r, i) {
     (this.id = e), (this.offset = n), (this.numberFormat = r), (this.string = i);
 }
-function o(e, n) {
+function s(e, n) {
     (this.id = e), (this.options = n);
 }
 (n.default = r),
@@ -23,34 +23,34 @@ function o(e, n) {
             r,
             i,
             a = e.elements,
-            s = [];
+            o = [];
         for (n = 0, r = a.length; n < r; n += 1)
             switch ((i = a[n]).type) {
                 case 'messageTextElement':
-                    s.push(this.compileMessageText(i));
+                    o.push(this.compileMessageText(i));
                     break;
                 case 'argumentElement':
-                    s.push(this.compileArgument(i));
+                    o.push(this.compileArgument(i));
                     break;
                 default:
                     throw Error('Message element does not have a valid type');
             }
-        return s;
+        return o;
     }),
     (r.prototype.compileMessageText = function (e) {
-        return this.currentPlural && /(^|[^\\])#/g.test(e.value) ? (!this.pluralNumberFormat && (this.pluralNumberFormat = new Intl.NumberFormat(this.locales)), new s(this.currentPlural.id, this.currentPlural.format.offset, this.pluralNumberFormat, e.value)) : e.value.replace(/\\#/g, '#');
+        return this.currentPlural && /(^|[^\\])#/g.test(e.value) ? (!this.pluralNumberFormat && (this.pluralNumberFormat = new Intl.NumberFormat(this.locales)), new o(this.currentPlural.id, this.currentPlural.format.offset, this.pluralNumberFormat, e.value)) : e.value.replace(/\\#/g, '#');
     }),
     (r.prototype.compileArgument = function (e) {
         var n = e.format;
         if (!n) return new i(e.id);
         var r,
-            s = this.formats,
+            o = this.formats,
             l = this.locales,
             u = this.pluralFn;
         switch (n.type) {
             case 'numberFormat':
                 return (
-                    (r = s.number[n.style]),
+                    (r = o.number[n.style]),
                     {
                         id: e.id,
                         format: new Intl.NumberFormat(l, r).format
@@ -58,7 +58,7 @@ function o(e, n) {
                 );
             case 'dateFormat':
                 return (
-                    (r = s.date[n.style]),
+                    (r = o.date[n.style]),
                     {
                         id: e.id,
                         format: new Intl.DateTimeFormat(l, r).format
@@ -66,7 +66,7 @@ function o(e, n) {
                 );
             case 'timeFormat':
                 return (
-                    (r = s.time[n.style]),
+                    (r = o.time[n.style]),
                     {
                         id: e.id,
                         format: new Intl.DateTimeFormat(l, r).format
@@ -75,7 +75,7 @@ function o(e, n) {
             case 'pluralFormat':
                 return (r = this.compileOptions(e)), new a(e.id, n.ordinal, n.offset, r, u);
             case 'selectFormat':
-                return (r = this.compileOptions(e)), new o(e.id, r);
+                return (r = this.compileOptions(e)), new s(e.id, r);
             default:
                 throw Error('Message element does not have a valid format type');
         }
@@ -85,10 +85,10 @@ function o(e, n) {
             r,
             i,
             a = e.format,
-            s = a.options,
-            o = {};
-        for (this.pluralStack.push(this.currentPlural), this.currentPlural = 'pluralFormat' === a.type ? e : null, n = 0, r = s.length; n < r; n += 1) o[(i = s[n]).selector] = this.compileMessage(i.value);
-        return (this.currentPlural = this.pluralStack.pop()), o;
+            o = a.options,
+            s = {};
+        for (this.pluralStack.push(this.currentPlural), this.currentPlural = 'pluralFormat' === a.type ? e : null, n = 0, r = o.length; n < r; n += 1) s[(i = o[n]).selector] = this.compileMessage(i.value);
+        return (this.currentPlural = this.pluralStack.pop()), s;
     }),
     (i.prototype.format = function (e) {
         return e ? ('string' == typeof e ? e : String(e)) : '';
@@ -97,11 +97,11 @@ function o(e, n) {
         var n = this.options;
         return n['=' + e] || n[this.pluralFn(e - this.offset, this.useOrdinal)] || n.other;
     }),
-    (s.prototype.format = function (e) {
+    (o.prototype.format = function (e) {
         var n = this.numberFormat.format(e - this.offset);
         return this.string.replace(/(^|[^\\])#/g, '$1' + n).replace(/\\#/g, '#');
     }),
-    (o.prototype.getOption = function (e) {
+    (s.prototype.getOption = function (e) {
         var n = this.options;
         return n[e] || n.other;
     });

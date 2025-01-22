@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(379357),
-    o = r(442550),
+    o = r(379357),
+    s = r(442550),
     l = r(297781),
     u = r(443487),
     c = r(830677);
 let d = [l.OV, l.EE, l.Af, l.U9, l.wO, l.f, l.n8, l.v1, l.pQ],
     f = (e) => {
         var n;
-        let { entry: r, channel: a, selected: f, hovered: _ } = e,
-            { largeImage: h } = (0, s.rv)({
+        let { entry: r, channel: a, selected: f, hovered: p } = e,
+            { largeImage: h } = (0, o.rv)({
                 entry: r,
                 showCoverImage: !1
             });
@@ -36,7 +36,7 @@ let d = [l.OV, l.EE, l.Af, l.U9, l.wO, l.f, l.n8, l.v1, l.pQ],
                                     e,
                                     {
                                         entry: r,
-                                        hovered: _
+                                        hovered: p
                                     },
                                     n
                                 )
@@ -44,7 +44,7 @@ let d = [l.OV, l.EE, l.Af, l.U9, l.wO, l.f, l.n8, l.v1, l.pQ],
                         })
                     ]
                 }),
-                (0, i.jsx)(o.f, {
+                (0, i.jsx)(s.f, {
                     alt: null !== (n = null == h ? void 0 : h.text) && void 0 !== n ? n : null == h ? void 0 : h.alt,
                     src: null == h ? void 0 : h.src,
                     size: 48,

@@ -12,7 +12,7 @@ function n(e) {
             match: /(i32|i64|f32|f64)(?!\.)/,
             className: 'type'
         },
-        s = {
+        o = {
             className: 'keyword',
             match: /\b(f32|f64|i32|i64)(?:\.(?:abs|add|and|ceil|clz|const|convert_[su]\/i(?:32|64)|copysign|ctz|demote\/f64|div(?:_[su])?|eqz?|extend_[su]\/i32|floor|ge(?:_[su])?|gt(?:_[su])?|le(?:_[su])?|load(?:(?:8|16|32)_[su])?|lt(?:_[su])?|max|min|mul|nearest|neg?|or|popcnt|promote\/f32|reinterpret\/[fi](?:32|64)|rem_[su]|rot[lr]|shl|shr_[su]|store(?:8|16|32)?|sqrt|sub|trunc(?:_[su]\/f(?:32|64))?|wrap\/i64|xor))\b/
         };
@@ -50,7 +50,7 @@ function n(e) {
             },
             e.QUOTE_STRING_MODE,
             a,
-            s,
+            o,
             i
         ]
     };

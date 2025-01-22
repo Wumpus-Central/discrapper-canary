@@ -1,10 +1,10 @@
-var r = n(67867),
-    o = n(420926);
-r(
+var i = r(67867),
+    a = r(420926);
+i(
     {
         target: 'Function',
         proto: !0,
-        forced: Function.bind !== o
+        forced: Function.bind !== a
     },
-    { bind: o }
+    { bind: a }
 );

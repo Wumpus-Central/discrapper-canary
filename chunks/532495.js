@@ -33,7 +33,7 @@ var r = n(512722),
     O = n(388032),
     R = n(91768);
 function P() {
-    var e, t, n, r, P, y, B, D;
+    var e, t, n, r, P, D, y, B;
     let Z = (0, a.e7)([A.default], () => {
             let e = A.default.getCurrentUser();
             return s()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
@@ -72,7 +72,7 @@ function P() {
     let Q = (0, N.ZP)(Z.id),
         X = null == Q ? void 0 : Q.getLegacyUsername(),
         J = (null !== (n = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? H.global_name : null !== (r = null == Y ? void 0 : Y.nick) && void 0 !== r ? r : [],
-        $ = (null !== (P = null === (t = H.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? H.bio : null !== (y = null == Y ? void 0 : Y.bio) && void 0 !== y ? y : [],
+        $ = (null !== (P = null === (t = H.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? H.bio : null !== (D = null == Y ? void 0 : Y.bio) && void 0 !== D ? D : [],
         ee = (0, c.V)();
     return (0, i.jsxs)('div', {
         className: R.sectionsContainer,
@@ -91,7 +91,7 @@ function P() {
                     errors: H.pronouns,
                     onPronounsChange: b.ID,
                     pendingPronouns: U,
-                    currentPronouns: null !== (B = null == L ? void 0 : L.pronouns) && void 0 !== B ? B : ''
+                    currentPronouns: null !== (y = null == L ? void 0 : L.pronouns) && void 0 !== y ? y : ''
                 },
                 'pronouns'
             ),
@@ -161,7 +161,7 @@ function P() {
                     errors: $,
                     onBioChange: (e) => (0, m.xQ)(e, null == L ? void 0 : L.bio),
                     pendingBio: F,
-                    currentBio: null !== (D = null == L ? void 0 : L.bio) && void 0 !== D ? D : ''
+                    currentBio: null !== (B = null == L ? void 0 : L.bio) && void 0 !== B ? B : ''
                 },
                 'bio'
             ),

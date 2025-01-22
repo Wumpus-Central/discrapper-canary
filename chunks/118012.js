@@ -1,23 +1,23 @@
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(210313),
+    o = r.n(a),
+    s = r(210313),
     l = r(430229);
 let u = Object.freeze({
-        STANDARD: o.colorStandard,
-        MUTED: o.colorMuted,
-        ERROR: o.colorError,
-        BRAND: o.colorBrand,
-        LINK: o.colorLink,
-        HEADER_PRIMARY: o.colorHeaderPrimary,
-        HEADER_SECONDARY: o.colorHeaderSecondary,
-        STATUS_YELLOW: o.colorStatusYellow,
-        STATUS_GREEN: o.colorStatusGreen,
-        STATUS_RED: o.colorStatusRed,
-        INTERACTIVE_ACTIVE: o.colorInteractiveActive,
-        INTERACTIVE_NORMAL: o.colorInteractiveNormal,
-        ALWAYS_WHITE: o.colorWhite,
+        STANDARD: s.colorStandard,
+        MUTED: s.colorMuted,
+        ERROR: s.colorError,
+        BRAND: s.colorBrand,
+        LINK: s.colorLink,
+        HEADER_PRIMARY: s.colorHeaderPrimary,
+        HEADER_SECONDARY: s.colorHeaderSecondary,
+        STATUS_YELLOW: s.colorStatusYellow,
+        STATUS_GREEN: s.colorStatusGreen,
+        STATUS_RED: s.colorStatusRed,
+        INTERACTIVE_ACTIVE: s.colorInteractiveActive,
+        INTERACTIVE_NORMAL: s.colorInteractiveNormal,
+        ALWAYS_WHITE: s.colorWhite,
         CUSTOM: null
     }),
     c = Object.freeze({
@@ -30,16 +30,16 @@ let u = Object.freeze({
         SIZE_32: l.size32
     }),
     d = (e) => {
-        let { className: n, color: r = u.STANDARD, size: a = c.SIZE_14, tag: l = 'div', selectable: d = !1, strong: f = !1, children: _, style: h, 'aria-label': p, ...m } = e;
+        let { className: n, color: r = u.STANDARD, size: a = c.SIZE_14, tag: l = 'div', selectable: d = !1, strong: f = !1, children: p, style: h, 'aria-label': _, ...m } = e;
         return (0, i.jsx)(l, {
-            'aria-label': p,
-            className: s()(r, a, n, {
-                [o.selectable]: d,
-                [o.strong]: f
+            'aria-label': _,
+            className: o()(r, a, n, {
+                [s.selectable]: d,
+                [s.strong]: f
             }),
             style: h,
             ...m,
-            children: _
+            children: p
         });
     };
 (d.Colors = u), (d.Sizes = c), (n.Z = d);

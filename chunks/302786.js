@@ -3,7 +3,7 @@ function n(e) {
         r = '[eE][-+]?' + n,
         i = n + '(\\.' + n + ')?(' + r + ')?',
         a = '\\w+',
-        s = '\\b(' + (n + '#' + a + '(\\.' + a + ')?#(' + r + ')?') + '|' + i + ')';
+        o = '\\b(' + (n + '#' + a + '(\\.' + a + ')?#(' + r + ')?') + '|' + i + ')';
     return {
         name: 'VHDL',
         case_insensitive: !0,
@@ -19,7 +19,7 @@ function n(e) {
             e.QUOTE_STRING_MODE,
             {
                 className: 'number',
-                begin: s,
+                begin: o,
                 relevance: 0
             },
             {

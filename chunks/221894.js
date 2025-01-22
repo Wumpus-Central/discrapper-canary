@@ -18,7 +18,7 @@ function n(e) {
                 }
             ]
         },
-        s = {
+        o = {
             className: 'string',
             relevance: 0,
             begin: /'/,
@@ -31,7 +31,7 @@ function n(e) {
                 }
             ]
         },
-        o = {
+        s = {
             className: 'string',
             relevance: 0,
             variants: [
@@ -43,7 +43,7 @@ function n(e) {
             ],
             contains: [e.BACKSLASH_ESCAPE, a]
         },
-        l = e.inherit(o, {
+        l = e.inherit(s, {
             variants: [
                 {
                     begin: /'/,
@@ -87,7 +87,7 @@ function n(e) {
             illegal: '\\n',
             relevance: 0
         },
-        _ = [
+        p = [
             i,
             {
                 className: 'meta',
@@ -148,10 +148,10 @@ function n(e) {
             },
             d,
             f,
-            s,
-            o
+            o,
+            s
         ],
-        h = [..._];
+        h = [...p];
     return (
         h.pop(),
         h.push(l),
@@ -160,7 +160,7 @@ function n(e) {
             name: 'YAML',
             case_insensitive: !0,
             aliases: ['yml'],
-            contains: _
+            contains: p
         }
     );
 }

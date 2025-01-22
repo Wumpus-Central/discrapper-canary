@@ -18,7 +18,7 @@ r.d(n, {
         return u;
     },
     _U: function () {
-        return T;
+        return b;
     },
     fL: function () {
         return l;
@@ -30,10 +30,10 @@ r.d(n, {
         return c;
     },
     j8: function () {
-        return o;
+        return s;
     },
     nz: function () {
-        return I;
+        return y;
     },
     p: function () {
         return h;
@@ -42,19 +42,19 @@ r.d(n, {
         return i;
     },
     pg: function () {
-        return b;
+        return I;
     },
     rC: function () {
-        return y;
+        return T;
     },
     sy: function () {
-        return s;
+        return o;
     },
     wm: function () {
-        return p;
+        return _;
     },
     zV: function () {
-        return N;
+        return C;
     },
     zw: function () {
         return g;
@@ -62,16 +62,16 @@ r.d(n, {
 });
 var i,
     a,
-    s,
     o,
+    s,
     l,
     u,
     c,
     d = r(47120);
 var f = r(70956),
-    _ = r(981631);
+    p = r(981631);
 let h = 100,
-    p = 1000,
+    _ = 1000,
     m = 100,
     g = 'Guild Events Modal',
     E = '-1';
@@ -84,23 +84,23 @@ let v = new Set([3, 4]);
 })(a || (a = {})),
     !(function (e) {
         e[(e.EVENT_START = 1)] = 'EVENT_START';
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         (e[(e.PUBLIC = 1)] = 'PUBLIC'), (e[(e.GUILD_ONLY = 2)] = 'GUILD_ONLY');
-    })(o || (o = {}));
-let I = {
-        1: _.d4z.GUILD_STAGE_VOICE,
-        2: _.d4z.GUILD_VOICE
+    })(s || (s = {}));
+let y = {
+        1: p.d4z.GUILD_STAGE_VOICE,
+        2: p.d4z.GUILD_VOICE
     },
-    T = new Set([3]),
-    b = new Set([1, 2]);
+    b = new Set([3]),
+    I = new Set([1, 2]);
 !(function (e) {
     (e[(e.EVENT_INFO = 0)] = 'EVENT_INFO'), (e[(e.RSVP_LIST = 1)] = 'RSVP_LIST');
 })(l || (l = {}));
-let y = 100,
+let T = 100,
     S = 2 * f.Z.Millis.DAY,
     A = 12 * f.Z.Millis.HOUR,
-    N = 4;
+    C = 4;
 !(function (e) {
     (e.NEW_EVENT = 'Upcoming Event Notice'), (e.EVENT_STARTING_SOON = 'Event Starting Soon Notice');
 })(u || (u = {})),

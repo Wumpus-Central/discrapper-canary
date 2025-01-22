@@ -3,7 +3,7 @@ r.d(n, {
         return a;
     },
     fw: function () {
-        return s;
+        return o;
     }
 });
 var i = r(570140);
@@ -13,6 +13,6 @@ function a(e) {
         stripePaymentMethod: e
     });
 }
-function s() {
+function o() {
     i.Z.wait(() => i.Z.dispatch({ type: 'NEW_PAYMENT_SOURCE_CLEAR_ERROR' }));
 }

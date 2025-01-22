@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(837411),
-    s = r(705556),
-    o = r(955418),
+    o = r(705556),
+    s = r(955418),
     l = r(591156);
 function u(e) {
     let { user: n, guildId: r, channelId: u, onClose: c } = e,
@@ -16,14 +16,14 @@ function u(e) {
         className: l.footer,
         children: [
             d &&
-                (0, i.jsx)(o.Z, {
+                (0, i.jsx)(s.Z, {
                     user: n,
                     guildId: r,
                     channelId: u,
                     onClose: c
                 }),
             !d &&
-                (0, i.jsx)(s.Z, {
+                (0, i.jsx)(o.Z, {
                     user: n,
                     guildId: r,
                     onClose: c,

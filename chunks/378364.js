@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a = r(306968),
-    s = r(871465),
-    o = r(388032),
+    o = r(871465),
+    s = r(388032),
     l = r(586393),
     u = r(464912);
 !(function (e) {
@@ -17,8 +17,8 @@ let c = {
     startTimeMs: 1734631200000,
     endTimeMs: 1735952400000,
     isDesktopOnly: !0,
-    soundpack: s.YC.WINTER_HOLIDAY,
-    soundpackLabel: o.t.Z5OQNj,
+    soundpack: o.YC.WINTER_HOLIDAY,
+    soundpackLabel: s.t.Z5OQNj,
     appSpinnerSources: {
         webmDark: l,
         webmLight: u

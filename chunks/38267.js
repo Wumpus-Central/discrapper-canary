@@ -13,8 +13,8 @@ function a(e) {
 function o(e, t) {
     let [n, o] = i.useState(t),
         [s, c] = i.useState(a(n)),
-        d = i.useRef(s),
-        u = i.useRef(null),
+        u = i.useRef(s),
+        d = i.useRef(null),
         m = i.useCallback((e) => {
             o((t) => {
                 let n = {
@@ -22,7 +22,7 @@ function o(e, t) {
                         ...e
                     },
                     i = a(n);
-                return i !== d.current && ((d.current = i), null != u.current && (cancelAnimationFrame(u.current), (u.current = null)), i ? c(!0) : (u.current = requestAnimationFrame(() => c(!1)))), n;
+                return i !== u.current && ((u.current = i), null != d.current && (cancelAnimationFrame(d.current), (d.current = null)), i ? c(!0) : (d.current = requestAnimationFrame(() => c(!1)))), n;
             });
         }, []);
     return (

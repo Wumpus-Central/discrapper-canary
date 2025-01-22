@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(2818),
-    o = r(192720),
+    o = r(2818),
+    s = r(192720),
     l = r(742989);
 function u(e, n, r) {
     return (
@@ -17,7 +17,7 @@ function u(e, n, r) {
     );
 }
 function c() {
-    if (!!(s.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || l.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders)) (0, o.sE)();
+    if (!!(o.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || l.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders)) (0, s.sE)();
 }
 class d extends a.Z {
     constructor(...e) {

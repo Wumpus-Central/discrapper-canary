@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(748780),
     s = n(873546),
     c = n(846519),
-    d = n(215569),
-    u = n(481060),
+    u = n(215569),
+    d = n(481060),
     m = n(679056),
     h = n(70097),
     f = n(273581);
@@ -51,10 +51,10 @@ class _ extends r.Component {
                   style: this.getImageStyle(),
                   children: [
                       l
-                          ? (0, i.jsx)(u.Spinner, {
+                          ? (0, i.jsx)(d.Spinner, {
                                 className: f.spinner,
                                 itemClassName: f.spinnerItem,
-                                type: u.Spinner.Type.PULSING_ELLIPSIS,
+                                type: d.Spinner.Type.PULSING_ELLIPSIS,
                                 animated: !0
                             })
                           : null,
@@ -134,7 +134,7 @@ class g extends r.Component {
                   interval: 2000,
                   className: f.slideshowWrapper,
                   disable: !e,
-                  children: (0, i.jsx)(d.W, { children: this.renderSlideItem(t) })
+                  children: (0, i.jsx)(u.W, { children: this.renderSlideItem(t) })
               });
     }
     render() {
@@ -171,7 +171,7 @@ class g extends r.Component {
             p(this, 'renderTypeVideo', () => {
                 let { videoLoaded: e } = this.state,
                     { video: t, image: n, title: l, playing: o, muted: c, splashClassName: m, splashPlaceholderClassName: p, renderMediaOverlay: g } = this.props,
-                    E = c ? u.VoiceXIcon : u.VoiceNormalIcon;
+                    E = c ? d.VoiceXIcon : d.VoiceNormalIcon;
                 return (0, i.jsxs)(r.Fragment, {
                     children: [
                         s.tq
@@ -189,7 +189,7 @@ class g extends r.Component {
                                       type: 'video/mp4'
                                   })
                               }),
-                        (0, i.jsx)(d.W, {
+                        (0, i.jsx)(u.W, {
                             children:
                                 o && e
                                     ? null
@@ -203,7 +203,7 @@ class g extends r.Component {
                                           0
                                       )
                         }),
-                        (0, i.jsx)(u.Clickable, {
+                        (0, i.jsx)(d.Clickable, {
                             className: a()(f.muteContainer, {
                                 [f.muteContainerPlaying]: o && e,
                                 [f.muteContainerMediaOverlay]: null != g

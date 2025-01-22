@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,9 +11,9 @@ var r = n(481060),
     o = n(686807),
     s = n(113318),
     c = n(868202);
-function d(e) {
-    let { benefit: t, guildId: n, onClick: d } = e,
-        u = (0, s.Z)(n, t.ref_id),
+function u(e) {
+    let { benefit: t, guildId: n, onClick: u } = e,
+        d = (0, s.Z)(n, t.ref_id),
         m = (0, i.jsx)(a.Z, {
             guildId: n,
             emojiId: t.emoji_id,
@@ -22,9 +22,9 @@ function d(e) {
     return (0, i.jsxs)(r.Clickable, {
         className: c.container,
         onClick: () => {
-            null == u || u.navigateToChannel(), d();
+            null == d || d.navigateToChannel(), u();
         },
-        'aria-label': null == u ? void 0 : u.ariaLabel,
+        'aria-label': null == d ? void 0 : d.ariaLabel,
         role: 'link',
         children: [
             (0, i.jsx)('div', {

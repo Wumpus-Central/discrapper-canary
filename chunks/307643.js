@@ -17,12 +17,12 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(570140),
-    s = r(479531),
-    o = r(981631);
+    o = r(479531),
+    s = r(981631);
 let l = async (e, n) =>
         (
             await i.tn.get({
-                url: o.ANM.APPLICATION_SUBSCRIPTION_GROUP_LISTING(e, n),
+                url: s.ANM.APPLICATION_SUBSCRIPTION_GROUP_LISTING(e, n),
                 rejectWithError: !1
             })
         ).body,
@@ -30,7 +30,7 @@ let l = async (e, n) =>
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return (
             await i.tn.get({
-                url: o.ANM.GUILD_ENTITLEMENTS(e),
+                url: s.ANM.GUILD_ENTITLEMENTS(e),
                 query: {
                     with_sku: !0,
                     with_application: !0,
@@ -43,7 +43,7 @@ let l = async (e, n) =>
     c = async (e) =>
         (
             await i.tn.get({
-                url: o.ANM.SUBSCRIPTION_PLAN_GROUP_LISTING(e),
+                url: s.ANM.SUBSCRIPTION_PLAN_GROUP_LISTING(e),
                 rejectWithError: !1
             })
         ).body;
@@ -55,7 +55,7 @@ function d(e, n) {
         }),
         i.tn
             .get({
-                url: o.ANM.APPLICATION_PUBLIC(e),
+                url: s.ANM.APPLICATION_PUBLIC(e),
                 signal: n,
                 rejectWithError: !1
             })
@@ -74,7 +74,7 @@ function d(e, n) {
                         type: 'APPLICATION_FETCH_FAIL',
                         applicationId: e
                     }),
-                    Promise.reject(new s.Z(n))
+                    Promise.reject(new o.Z(n))
                 )
             )
     );
@@ -82,7 +82,7 @@ function d(e, n) {
 async function f(e, n) {
     return (
         await i.tn.get({
-            url: o.ANM.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
+            url: s.ANM.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
             query: {
                 application_id: e,
                 sku_id: n

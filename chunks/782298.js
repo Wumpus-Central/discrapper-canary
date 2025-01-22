@@ -10,15 +10,15 @@ function n(e) {
             begin: "0'.\\|0[box][0-9a-fA-F]*"
         },
         a = e.inherit(e.APOS_STRING_MODE, { relevance: 0 }),
-        s = e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 }),
-        o = {
+        o = e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 }),
+        s = {
             className: 'subst',
             begin: '\\\\[abfnrtv]\\|\\\\x[0-9a-fA-F]*\\\\\\|%[-+# *.0-9]*[dioxXucsfeEgGp]',
             relevance: 0
         };
     return (
-        (s.contains = s.contains.slice()),
-        s.contains.push(o),
+        (o.contains = o.contains.slice()),
+        o.contains.push(s),
         {
             name: 'Mercury',
             aliases: ['m', 'moo'],
@@ -55,7 +55,7 @@ function n(e) {
                 i,
                 e.NUMBER_MODE,
                 a,
-                s,
+                o,
                 { begin: /:-/ },
                 { begin: /\.$/ }
             ]

@@ -1,14 +1,14 @@
 r.d(n, {
     W: function () {
-        return o;
+        return s;
     },
     l: function () {
-        return s;
+        return o;
     }
 });
 var i = r(430824),
     a = r(388032);
-let s = (e) => {
+let o = (e) => {
         switch (e) {
             case 'home':
             case 'guide':
@@ -22,14 +22,14 @@ let s = (e) => {
         }
         return null;
     },
-    o = (e, n, r) => {
+    s = (e, n, r) => {
         switch (e) {
             case 'linked-roles':
                 var a;
                 if (null == r) break;
-                let s = i.Z.getRole(r, n);
-                if (null == s || (null === (a = s.tags) || void 0 === a ? void 0 : a.guild_connections) !== null) break;
-                return s.name;
+                let o = i.Z.getRole(r, n);
+                if (null == o || (null === (a = o.tags) || void 0 === a ? void 0 : a.guild_connections) !== null) break;
+                return o.name;
         }
         return null;
     };

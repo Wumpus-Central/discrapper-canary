@@ -1,6 +1,6 @@
 n.d(t, {
     TZ: function () {
-        return d;
+        return u;
     },
     y6: function () {
         return c;
@@ -18,7 +18,7 @@ let c = (e) => {
             i = ((null != n ? a.default.extractTimestamp(n) : 0) + a.default.extractTimestamp(e)) % o.m.length;
         return o.m[i];
     },
-    d = (e, t, n) => {
+    u = (e, t, n) => {
         var a;
         i.Z.sendGreetMessage(
             e.id,

@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(616922),
     a = r(388032);
-function s(e, n) {
+function o(e, n) {
     switch (n) {
         case i.kG.USER_ACTIVITY_PLAY:
             return e.hasSpotifyAccount ? a.intl.formatToPlainString(a.t.LEgD7u, { platform: i.ai }) : a.intl.formatToPlainString(a.t.XWSHTU, { platform: i.ai });

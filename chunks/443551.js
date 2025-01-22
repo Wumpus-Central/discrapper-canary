@@ -15,7 +15,7 @@ function a(e) {
         var r = null != arguments[n] ? arguments[n] : {};
         n % 2
             ? i(Object(r), !0).forEach(function (n) {
-                  s(e, n, r[n]);
+                  o(e, n, r[n]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -25,7 +25,7 @@ function a(e) {
     }
     return e;
 }
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         (n = c(n)) in e
             ? Object.defineProperty(e, n, {
@@ -38,7 +38,7 @@ function s(e, n, r) {
         e
     );
 }
-function o(e, n) {
+function s(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
 function l(e, n) {
@@ -65,14 +65,14 @@ function d(e, n) {
     return ('string' === n ? String : Number)(e);
 }
 var f = r(413135).Buffer,
-    _ = r(252602).inspect,
-    h = (_ && _.custom) || 'inspect';
-function p(e, n, r) {
+    p = r(252602).inspect,
+    h = (p && p.custom) || 'inspect';
+function _(e, n, r) {
     f.prototype.copy.call(e, n, r);
 }
 e.exports = (function () {
     function e() {
-        o(this, e), (this.head = null), (this.tail = null), (this.length = 0);
+        s(this, e), (this.head = null), (this.tail = null), (this.length = 0);
     }
     return (
         u(e, [
@@ -123,7 +123,7 @@ e.exports = (function () {
                 key: 'concat',
                 value: function (e) {
                     if (0 === this.length) return f.alloc(0);
-                    for (var n = f.allocUnsafe(e >>> 0), r = this.head, i = 0; r; ) p(r.data, n, i), (i += r.data.length), (r = r.next);
+                    for (var n = f.allocUnsafe(e >>> 0), r = this.head, i = 0; r; ) _(r.data, n, i), (i += r.data.length), (r = r.next);
                     return n;
                 }
             },
@@ -148,9 +148,9 @@ e.exports = (function () {
                         i = n.data;
                     for (e -= i.length; (n = n.next); ) {
                         var a = n.data,
-                            s = e > a.length ? a.length : e;
-                        if ((s === a.length ? (i += a) : (i += a.slice(0, e)), 0 == (e -= s))) {
-                            s === a.length ? (++r, n.next ? (this.head = n.next) : (this.head = this.tail = null)) : ((this.head = n), (n.data = a.slice(s)));
+                            o = e > a.length ? a.length : e;
+                        if ((o === a.length ? (i += a) : (i += a.slice(0, e)), 0 == (e -= o))) {
+                            o === a.length ? (++r, n.next ? (this.head = n.next) : (this.head = this.tail = null)) : ((this.head = n), (n.data = a.slice(o)));
                             break;
                         }
                         ++r;
@@ -166,9 +166,9 @@ e.exports = (function () {
                         i = 1;
                     for (r.data.copy(n), e -= r.data.length; (r = r.next); ) {
                         var a = r.data,
-                            s = e > a.length ? a.length : e;
-                        if ((a.copy(n, n.length - e, 0, s), 0 == (e -= s))) {
-                            s === a.length ? (++i, r.next ? (this.head = r.next) : (this.head = this.tail = null)) : ((this.head = r), (r.data = a.slice(s)));
+                            o = e > a.length ? a.length : e;
+                        if ((a.copy(n, n.length - e, 0, o), 0 == (e -= o))) {
+                            o === a.length ? (++i, r.next ? (this.head = r.next) : (this.head = this.tail = null)) : ((this.head = r), (r.data = a.slice(o)));
                             break;
                         }
                         ++i;
@@ -179,7 +179,7 @@ e.exports = (function () {
             {
                 key: h,
                 value: function (e, n) {
-                    return _(
+                    return p(
                         this,
                         a(
                             a({}, n),

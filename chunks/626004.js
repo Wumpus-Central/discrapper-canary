@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     a = n(192379),
     r = n(120356),
-    o = n.n(r),
-    l = n(481060),
+    l = n.n(r),
+    o = n(481060),
     s = n(860719),
     c = n(63063),
     d = n(49012),
@@ -31,7 +31,7 @@ function f(e) {
                 className: m.intentTextContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        children: (0, i.jsx)(l.Heading, {
+                        children: (0, i.jsx)(o.Heading, {
                             variant: 'eyebrow',
                             color: 'header-secondary',
                             children: n
@@ -39,7 +39,7 @@ function f(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: m.intentBody,
-                        children: (0, i.jsx)(l.Text, {
+                        children: (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             children: a
@@ -61,7 +61,7 @@ function g(e) {
             u &&
                 (0, i.jsx)('div', {
                     className: m.intentsListHeading,
-                    children: (0, i.jsx)(l.Text, {
+                    children: (0, i.jsx)(o.Text, {
                         variant: 'text-md/normal',
                         children: p.intl.string(p.t.U6KH5e)
                     })
@@ -75,34 +75,34 @@ function g(e) {
                             children: [
                                 n &&
                                     (0, i.jsx)(f, {
-                                        icon: l.ChatIcon,
+                                        icon: o.ChatIcon,
                                         heading: p.intl.string(p.t.gJpBOz),
                                         body: p.intl.string(p.t['L+QVbm'])
                                     }),
                                 r &&
                                     (0, i.jsx)(f, {
-                                        icon: l.UserCircleStatusIcon,
+                                        icon: o.UserCircleStatusIcon,
                                         heading: p.intl.string(p.t.jo0oj4),
                                         body: p.intl.string(p.t.Dm0jq6)
                                     }),
                                 c &&
                                     (0, i.jsx)(f, {
-                                        icon: l.GroupIcon,
+                                        icon: o.GroupIcon,
                                         heading: p.intl.string(p.t.QZql7O),
                                         body: p.intl.string(p.t['ez/N/f'])
                                     })
                             ]
                         }),
                     (0, i.jsxs)('div', {
-                        className: o()({ [m.hasSeparator]: u }),
+                        className: l()({ [m.hasSeparator]: u }),
                         children: [
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
                                 children: p.intl.format(p.t.b6nqk5, { helpCenterUrl: _ })
                             }),
                             (null == t ? void 0 : t.privacy_policy_url) != null &&
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
                                     className: m.privacyPolicy,

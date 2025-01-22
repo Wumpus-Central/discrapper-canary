@@ -1,7 +1,7 @@
 let i = r(52878),
     a = r(172959),
-    s = r(393808),
-    o = r(725616),
+    o = r(393808),
+    s = r(725616),
     l = r(690217),
     u = r(689478),
     c = (e, n, r, c) => {
@@ -17,9 +17,9 @@ let i = r(52878),
             case '!=':
                 return a(e, r, c);
             case '>':
-                return s(e, r, c);
-            case '>=':
                 return o(e, r, c);
+            case '>=':
+                return s(e, r, c);
             case '<':
                 return l(e, r, c);
             case '<=':

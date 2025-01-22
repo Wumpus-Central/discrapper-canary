@@ -33,9 +33,9 @@ var i = n(200651),
     O = n(74538),
     R = n(413182),
     P = n(695346),
-    y = n(265159),
-    B = n(532495),
-    D = n(981631),
+    D = n(265159),
+    y = n(532495),
+    B = n(981631),
     Z = n(388032),
     L = n(676258);
 function M() {
@@ -76,11 +76,11 @@ function M() {
                       profilePreview: (0, i.jsx)(S.Z, {
                           user: e,
                           canUsePremiumCustomization: w,
-                          onUpsellClick: y.Z,
+                          onUpsellClick: D.Z,
                           pendingBio: k,
                           ...s
                       }),
-                      children: (0, i.jsx)(B.Z, {})
+                      children: (0, i.jsx)(y.Z, {})
                   }),
                   H && (0, i.jsx)(b.Z, {}),
                   (0, i.jsx)(o.$, {
@@ -108,7 +108,7 @@ function M() {
                               innerClassName: L.floatingNitroButtonInner,
                               onClick: () => {
                                   var e;
-                                  j.default.track(D.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == W || null === (e = W.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
+                                  j.default.track(B.rMx.TRY_IT_OUT_PRESET_CLICKED, { cta_variant: 'floating_action_button' }), null == W || null === (e = W.current) || void 0 === e || e.scrollIntoView({ behavior: 'smooth' });
                               },
                               color: c.Button.Colors.GREEN,
                               size: c.ButtonSizes.MEDIUM,

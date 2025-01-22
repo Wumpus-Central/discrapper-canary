@@ -25,8 +25,8 @@ function C(e) {
         E = (0, l.e7)([a.Z], () => ((null == _ ? void 0 : _.type) === f.fO.ACTIVITY ? a.Z.getApplication(_.id) : void 0)),
         b = (0, c.Z)(t),
         Z = (0, u.Z)(),
-        S = (0, d.Z)(t),
-        N = (0, m.Z)(t),
+        N = (0, d.Z)(t),
+        S = (0, m.Z)(t),
         T = (0, h.Z)(E, t),
         j = (0, s.Z)({
             id: null == E ? void 0 : E.id,
@@ -37,6 +37,6 @@ function C(e) {
         onClose: n,
         'aria-label': g.intl.string(g.t.pkYeAw),
         onSelect: v,
-        children: [b, Z, S, N, (0, p.Z)(I, C, x), T, (0, i.jsx)(r.MenuGroup, { children: j })]
+        children: [b, Z, N, S, (0, p.Z)(I, C, x), T, (0, i.jsx)(r.MenuGroup, { children: j })]
     });
 }

@@ -1,18 +1,18 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(192379),
     a = r(931609);
-function s(e) {
+function o(e) {
     let { delay: n, disable: r = !1 } = e,
-        s = (0, a.Z)();
+        o = (0, a.Z)();
     i.useEffect(() => {
         if (n <= 0 || r) return;
         let e = setTimeout(() => {
-            s();
+            o();
         }, n);
         return () => clearTimeout(e);
-    }, [n, r, s]);
+    }, [n, r, o]);
 }

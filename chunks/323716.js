@@ -1,53 +1,53 @@
 var i = r(610138);
 var a = r(216116);
-var s = r(78328);
-var o = r(815648);
+var o = r(78328);
+var s = r(815648);
 var l = r(47120);
 var u = r(724458);
 var c = r(653041);
 var d = r(315314);
 var f = r(203651);
-var _ = r(544891),
+var p = r(544891),
     h = r(569611),
-    p = r(547010),
+    _ = r(547010),
     m = r(580189),
     g = r(397550),
     E = r(931619);
 r(358085);
 var v = r(960048),
-    I = r(591759),
-    T = r(303850),
-    b = r(981631);
-let y = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
-    S = new T.R();
+    y = r(591759),
+    b = r(303850),
+    I = r(981631);
+let T = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
+    S = new b.R();
 function A(e) {
     let n = new URLSearchParams();
     n.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), n.append('showAllSpans', 'true');
-    let r = I.Z.toURLSafe('traces?'.concat(n.toString()), 'https://datadog.discord.tools/apm/');
+    let r = y.Z.toURLSafe('traces?'.concat(n.toString()), 'https://datadog.discord.tools/apm/');
     return null == r ? null : r.toString();
 }
-function N() {
+function C() {
     if (null == Intl.DateTimeFormat) return null;
     let e = Intl.DateTimeFormat();
     return null == e.resolvedOptions ? null : e.resolvedOptions().timeZone;
 }
-let C = /\/api(\/v\d+)?\/science/;
+let N = /\/api(\/v\d+)?\/science/;
 function R(e) {
     let n = 10;
     return e.reduce((e, r) => (10 === n ? e.push(r) : e.push(''.concat(r, ';q=0.').concat(n)), (n = Math.max(n - 1, 1)), e), []).join(',');
 }
-(0, _.lg)({
+(0, p.lg)({
     prepareRequest(e) {
         let { default: n } = r(314897),
             { default: i } = r(857192),
             { default: a } = r(706454),
-            { default: s } = r(594174),
-            { default: o } = r(626135),
+            { default: o } = r(594174),
+            { default: s } = r(626135),
             { isPlatformEmbedded: l } = r(358085);
         if ('/' === e.url[0]) {
             var u, c;
-            (e.url = (0, _.K0)() + e.url), !('Authorization' in e.header) && !('authorization' in e.header) && e.set('Authorization', n.getToken());
-            let r = o.getSuperPropertiesBase64();
+            (e.url = (0, p.K0)() + e.url), !('Authorization' in e.header) && !('authorization' in e.header) && e.set('Authorization', n.getToken());
+            let r = s.getSuperPropertiesBase64();
             null != r && e.set('X-Super-Properties', r);
             let d = n.getFingerprint();
             if ((null != d && '' !== d && e.set('X-Fingerprint', d), l)) {
@@ -57,16 +57,16 @@ function R(e) {
                 e.set('Accept-Language', r);
             }
             e.set('X-Discord-Locale', a.locale);
-            let f = N();
+            let f = C();
             null != f && e.set('X-Discord-Timezone', f);
             let h = i.getDebugOptionsHeaderValue();
             if ((null != h && '' !== h && e.set('X-Debug-Options', h), i.isTracingRequests)) {
-                let n = s.getCurrentUser(),
+                let n = o.getCurrentUser(),
                     r = S.generate(null !== (c = null == n ? void 0 : n.id) && void 0 !== c ? c : '0');
                 e.set('x-client-trace-id', r);
                 try {
                     let n = new URL(e.url).pathname;
-                    if (!C.test(n)) {
+                    if (!N.test(n)) {
                         let i = A(r);
                         null !== i && console.debug('%c[tracing]%c %s %s\n%s', 'font-weight: bold', '', e.method, n, i);
                     }
@@ -101,7 +101,7 @@ function R(e) {
                     null != n && 'parse' in n && n.parse)
                 ) {
                     let r = '[FILTERED]';
-                    if (y.includes(e.url)) {
+                    if (T.includes(e.url)) {
                         var i, a;
                         r = null === (a = e.xhr) || void 0 === a ? void 0 : null === (i = a.responseText) || void 0 === i ? void 0 : i.slice(0, 1000);
                     }
@@ -119,7 +119,7 @@ function R(e) {
             });
     },
     interceptResponse(e, n, i) {
-        var a, s, o, l, u;
+        var a, o, s, l, u;
         return 400 === e.statusCode && (null === (a = e.body) || void 0 === a ? void 0 : a.captcha_key)
             ? (Promise.all([r.e('36514').then(r.bind(r, 475271)), r.e('31177').then(r.bind(r, 353250))])
                   .then((n) => {
@@ -133,7 +133,7 @@ function R(e) {
                   })
                   .catch(i),
               !0)
-            : 401 === e.statusCode && (null === (s = e.body) || void 0 === s ? void 0 : s.code) === b.evJ.MFA_REQUIRED && (null === (o = e.body) || void 0 === o ? void 0 : o.mfa)
+            : 401 === e.statusCode && (null === (o = e.body) || void 0 === o ? void 0 : o.code) === I.evJ.MFA_REQUIRED && (null === (s = e.body) || void 0 === s ? void 0 : s.mfa)
               ? (Promise.all([r.e('52030'), r.e('85665')])
                     .then(r.bind(r, 24031))
                     .then((r) => {
@@ -150,7 +150,7 @@ function R(e) {
                           n();
                       }),
                   !1)
-                : (0, p.b)(e.statusCode, null === (u = e.body) || void 0 === u ? void 0 : u.code)
+                : (0, _.b)(e.statusCode, null === (u = e.body) || void 0 === u ? void 0 : u.code)
                   ? (r
                         .e('76731')
                         .then(r.bind(r, 626892))
@@ -171,6 +171,6 @@ function R(e) {
                     !1);
     }
 }),
-    (0, _.Jt)(async (e) => {
+    (0, p.Jt)(async (e) => {
         if ((h.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), !E.Z.isOnline())) await E.Z.awaitOnline(), h.Hj('Network', 'Network detected online, retrying '.concat(e));
     });

@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i,
     a = r(411104);
-var s = r(81825),
-    o = r(981631);
+var o = r(81825),
+    s = r(981631);
 function l(e, n, r) {
     return (
         n in e
@@ -26,27 +26,27 @@ function l(e, n, r) {
 !(function (e) {
     (e.SHOP = 'SHOP'), (e.NITRO_HOME = 'NITRO_HOME'), (e.QUEST_HOME = 'QUEST_HOME'), (e.APPS_HOME = 'APPS_HOME');
 })(i || (i = {}));
-class u extends s.Z {
+class u extends o.Z {
     static fromType(e) {
         switch (e) {
             case 'SHOP':
                 return new u({
-                    path: o.Z5c.COLLECTIBLES_SHOP,
+                    path: s.Z5c.COLLECTIBLES_SHOP,
                     type: 'SHOP'
                 });
             case 'NITRO_HOME':
                 return new u({
-                    path: o.Z5c.NITRO_HOME,
+                    path: s.Z5c.NITRO_HOME,
                     type: 'NITRO_HOME'
                 });
             case 'QUEST_HOME':
                 return new u({
-                    path: o.Z5c.QUEST_HOME,
+                    path: s.Z5c.QUEST_HOME,
                     type: 'QUEST_HOME'
                 });
             case 'APPS_HOME':
                 return new u({
-                    path: o.Z5c.APPLICATION_DIRECTORY,
+                    path: s.Z5c.APPLICATION_DIRECTORY,
                     type: 'APPS_HOME'
                 });
             default:

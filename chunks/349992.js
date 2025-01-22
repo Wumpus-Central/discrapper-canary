@@ -1,11 +1,11 @@
 r.d(n, {
     t: function () {
-        return s;
+        return o;
     }
 });
 var i = r(436759),
     a = r(240773);
-function s(e) {
+function o(e) {
     let n = {};
     for (let r of (Object.defineProperty(n, a.C, {
         enumerable: !1,

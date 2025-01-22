@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(442837),
-    s = r(348326),
-    o = r(570140),
+    o = r(348326),
+    s = r(570140),
     l = r(710845),
     u = r(314897),
     c = r(115522);
@@ -19,7 +19,7 @@ function d(e, n, r) {
     );
 }
 let f = new l.Z('DatabaseManager'),
-    _ = !1;
+    p = !1;
 class h extends a.ZP.Store {
     initialize() {
         this.waitFor(u.default), this.carefullySpeculativelyOpen(c.n()), this.handleAuthenticationStoreChanged(), u.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
@@ -60,7 +60,7 @@ class h extends a.ZP.Store {
         let e = u.default.getId(),
             n = this.databases.get(e),
             r = null == n ? void 0 : n.state();
-        null == n && r !== s.hi.Open && this.remove(e), this.carefullyOpenDatabase(e);
+        null == n && r !== o.hi.Open && this.remove(e), this.carefullyOpenDatabase(e);
     }
     handleAuthenticationStoreChanged() {
         let e = u.default.getId(),
@@ -82,21 +82,21 @@ class h extends a.ZP.Store {
     }
     constructor() {
         super(
-            o.Z,
+            s.Z,
             {
                 CLEAR_CACHES: (e) => this.handleClearCaches(e),
                 CONNECTION_CLOSED: () => this.handleAuthenticationStoreChanged(),
                 CONNECTION_OPEN: () => this.handleConnectionOpen(),
                 LOGOUT: () => this.handleAuthenticationStoreChanged()
             },
-            o.c.Early
+            s.c.Early
         ),
             d(this, 'databases', new Map()),
             d(this, 'activeUserId', null),
             d(this, 'preventWritingCachesAgainThisSession', !1);
     }
 }
-function p(e, n) {
+function _(e, n) {
     for (let r = 0; r < e; r++)
         try {
             return n();
@@ -109,19 +109,19 @@ function m(e) {
     return '@account.'.concat(e);
 }
 function g(e) {
-    if (_) {
+    if (p) {
         let n = 50,
             r = m(e);
-        return f.verbose('synchronously opening '.concat(r)), p(n, () => s.vo.openSyncUnsafe(r, { invalidateDisabledHandles: !0 }));
+        return f.verbose('synchronously opening '.concat(r)), _(n, () => o.vo.openSyncUnsafe(r, { invalidateDisabledHandles: !0 }));
     }
     return null;
 }
 async function E(e) {
-    if (_) {
+    if (p) {
         let n = m(e);
         f.verbose('speculatively opening '.concat(n));
         try {
-            return await s.vo.open(n);
+            return await o.vo.open(n);
         } catch (e) {
             f.warn("couldn't speculatively open database.", e);
         }

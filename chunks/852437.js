@@ -1,6 +1,6 @@
 var i = r(147018),
     a = r(82246).findLast,
-    s = r(345374);
+    o = r(345374);
 i(
     {
         target: 'Array',
@@ -12,4 +12,4 @@ i(
         }
     }
 ),
-    s('findLast');
+    o('findLast');

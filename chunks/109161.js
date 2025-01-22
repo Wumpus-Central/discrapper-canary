@@ -9,15 +9,15 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(981729),
+    o = r.n(a),
+    s = r(981729),
     l = r(783733);
 function u(e) {
     let { color: n, className: r, background: a = !0 } = e;
     return null == n
         ? null
         : (0, i.jsxs)('svg', {
-              className: s()(l.svg, r),
+              className: o()(l.svg, r),
               viewBox: '0 0 20 20',
               fill: 'none',
               children: [
@@ -54,7 +54,7 @@ function c(e) {
     return null == n
         ? null
         : a
-          ? (0, i.jsx)(o.u, {
+          ? (0, i.jsx)(s.u, {
                 text: r,
                 children: (n) =>
                     (0, i.jsx)('span', {
@@ -70,7 +70,7 @@ function d(e) {
     return null == n
         ? null
         : (0, i.jsx)('span', {
-              className: s()(l.roleCircle, r),
+              className: o()(l.roleCircle, r),
               style: { backgroundColor: n }
           });
 }

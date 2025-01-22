@@ -1,9 +1,9 @@
 r.d(n, {
     Eq: function () {
-        return o;
+        return s;
     },
     Uj: function () {
-        return s;
+        return o;
     },
     gx: function () {
         return u;
@@ -14,26 +14,26 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(981631);
-function s(e, n, r, s) {
+function o(e, n, r, o) {
     return i.tn.post({
         url: a.ANM.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
         body: {
             channel_id: e,
             message_id: n,
             attachment_ids: r,
-            embed_ids: s
+            embed_ids: o
         },
         rejectWithError: !1
     });
 }
-function o(e, n, r, s) {
+function s(e, n, r, o) {
     return i.tn.post({
         url: a.ANM.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
         body: {
             channel_id: e,
             message_id: n,
             attachment_ids: r,
-            filenames: s
+            filenames: o
         },
         rejectWithError: !1
     });

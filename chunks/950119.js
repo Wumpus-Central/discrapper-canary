@@ -22,16 +22,16 @@ r.r(n),
             return a.HR;
         },
         PART_TYPE: function () {
-            return s.du;
+            return o.du;
         },
         formatToParts: function () {
-            return s.FK;
+            return o.FK;
         },
         isFormatXMLElementFn: function () {
-            return s.Gt;
+            return o.Gt;
         }
     });
 var i = r(19929),
     a = r(968735),
-    s = r(650117);
+    o = r(650117);
 n.default = i.C;

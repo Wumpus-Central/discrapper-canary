@@ -1,7 +1,7 @@
 var i = r(53919),
     a = r(533206),
-    s = '[object Map]';
-function o(e) {
-    return a(e) && i(e) == s;
+    o = '[object Map]';
+function s(e) {
+    return a(e) && i(e) == o;
 }
-e.exports = o;
+e.exports = s;

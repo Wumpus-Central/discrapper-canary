@@ -5,8 +5,8 @@ var i = n(544891),
     o = n(981631);
 let s = Object.freeze({});
 async function c(e) {
-    let { code: t, options: n = s, onRedeemed: c, onError: d } = e,
-        { channelId: u = null, paymentSource: m = null } = n;
+    let { code: t, options: n = s, onRedeemed: c, onError: u } = e,
+        { channelId: d = null, paymentSource: m = null } = n;
     r.Z.dispatch({
         type: 'GIFT_CODE_REDEEM',
         code: t
@@ -15,7 +15,7 @@ async function c(e) {
         let e = await i.tn.post({
             url: o.ANM.GIFT_CODE_REDEEM(t),
             body: {
-                channel_id: u,
+                channel_id: d,
                 payment_source_id: null == m ? void 0 : m.id,
                 gateway_checkout_context: await (0, a.cn)(m)
             },
@@ -42,7 +42,7 @@ async function c(e) {
                 code: t,
                 error: e
             }),
-            null == d || d(e),
+            null == u || u(e),
             e)
         );
     }

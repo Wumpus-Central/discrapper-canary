@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(789020);
-var s = r(913527),
-    o = r.n(s),
+var o = r(913527),
+    s = r.n(o),
     l = r(81825),
     u = r(630388),
     c = r(973616),
@@ -24,10 +24,10 @@ function f(e, n, r) {
         e
     );
 }
-let _ = ['500428425362931713', '451550535720501248', '471376328319303681', '466696214818193408'];
+let p = ['500428425362931713', '451550535720501248', '471376328319303681', '466696214818193408'];
 class h extends l.Z {
     static createFromServer(e) {
-        var n, r, i, a, s, l;
+        var n, r, i, a, o, l;
         let { price: u } = e;
         return new h({
             id: e.id,
@@ -36,8 +36,8 @@ class h extends l.Z {
             application: null != e.application ? c.ZP.createFromServer(e.application) : null,
             productLine: e.product_line,
             name: null !== (n = e.name) && void 0 !== n ? n : '',
-            releaseDate: null != e.release_date ? o()(e.release_date) : null,
-            preorderReleaseAt: null != e.preorder_release_at ? o()(e.preorder_release_at) : null,
+            releaseDate: null != e.release_date ? s()(e.release_date) : null,
+            preorderReleaseAt: null != e.preorder_release_at ? s()(e.preorder_release_at) : null,
             preorderApproximateReleaseDate: e.preorder_approximate_release_date,
             summary: e.summary,
             features: new Set(e.features),
@@ -68,7 +68,7 @@ class h extends l.Z {
             locales: null !== (a = e.locales) && void 0 !== a ? a : ['en-US'],
             flags: e.flags,
             externalPurchaseUrl: e.external_purchase_url,
-            deleted: null !== (s = e.deleted) && void 0 !== s && s,
+            deleted: null !== (o = e.deleted) && void 0 !== o && o,
             bundledSkuIds: null !== (l = e.bundled_sku_ids) && void 0 !== l ? l : []
         });
     }
@@ -115,7 +115,7 @@ class h extends l.Z {
         return !this.premium && null != e && e.amount > 0;
     }
     get isTheGameAwardsWinner() {
-        return _.includes(this.id);
+        return p.includes(this.id);
     }
     get available() {
         return (0, u.yE)(this.flags, d.l4R.AVAILABLE) || null != this.externalPurchaseUrl;

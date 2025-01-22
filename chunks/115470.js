@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(178635);
+    o = r(570140),
+    s = r(178635);
 function l(e, n, r) {
     return (
         n in e
@@ -19,7 +19,7 @@ let u = {};
 function c(e) {
     let { feedbackType: n, cooldown: r, chance: i } = e;
     u[n] = {
-        ...o.R[n],
+        ...s.R[n],
         cooldown: r,
         chance: i
     };
@@ -36,7 +36,7 @@ class f extends (i = a.ZP.Store) {
 }
 l(f, 'displayName', 'FeedbackOverrideStore'),
     l(f, 'persistKey', 'feedbackOverrides'),
-    (n.Z = new f(s.Z, {
+    (n.Z = new f(o.Z, {
         FEEDBACK_OVERRIDE_SET: c,
         FEEDBACK_OVERRIDE_CLEAR: d
     }));

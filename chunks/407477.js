@@ -3,10 +3,10 @@ r.d(n, {
         return l;
     },
     Xb: function () {
-        return s;
+        return o;
     },
     p3: function () {
-        return o;
+        return s;
     }
 });
 var i = r(818083);
@@ -54,14 +54,14 @@ let a = (0, i.B)({
     ]
 });
 n.ZP = a;
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2024-10_retrigger_reaction_frecency_algorithms',
     label: '(Retrigger) Reaction Frecency Algorithms',
     defaultConfig: null,
     treatments: []
 });
-function o(e) {
+function s(e) {
     let { location: n, autoTrackExposure: r } = e,
         { frecencyAlgorithm: i } = a.useExperiment({ location: n }, { autoTrackExposure: r });
     return 'original' !== i;

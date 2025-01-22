@@ -33,9 +33,9 @@ var i = n(200651),
     O = n(433411),
     R = n(532432),
     P = n(504983),
-    y = n(134795),
-    B = n(513901),
-    D = n(451392),
+    D = n(134795),
+    y = n(513901),
+    B = n(451392),
     Z = n(490220),
     L = n(981631),
     M = n(474936),
@@ -145,7 +145,7 @@ function U(e) {
                                           })
                                       ]
                                   }),
-                                  (0, i.jsx)(D.Z, {
+                                  (0, i.jsx)(B.Z, {
                                       className: F.customizationSection,
                                       user: U,
                                       pendingAvatar: null != K ? K : Y,
@@ -154,7 +154,7 @@ function U(e) {
                                       showPremiumIcon: !1,
                                       preventDisabled: !0
                                   }),
-                                  (0, i.jsx)(y.Z, {
+                                  (0, i.jsx)(D.Z, {
                                       className: F.customizationSection,
                                       isTryItOutFlow: !0,
                                       showRemoveBannerButton: null != q,
@@ -180,7 +180,7 @@ function U(e) {
                                       'decoration'
                                   ),
                                   (0, i.jsx)(
-                                      B.Z,
+                                      y.Z,
                                       {
                                           className: F.customizationSection,
                                           isTryItOutFlow: !0,

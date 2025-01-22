@@ -1,12 +1,12 @@
 r.d(n, {
     d: function () {
-        return T;
+        return b;
     }
 });
 var i = r(717029),
     a = r(25487),
-    s = r(846042),
-    o = r(794914),
+    o = r(846042),
+    s = r(794914),
     l = r(780603);
 function u(e) {
     return (u =
@@ -30,7 +30,7 @@ function d(e, n) {
 function f(e, n, r) {
     return n && d(e.prototype, n), r && d(e, r), e;
 }
-function _(e, n) {
+function p(e, n) {
     if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function');
     (e.prototype = Object.create(n && n.prototype, {
         constructor: {
@@ -48,7 +48,7 @@ function h(e, n) {
             return (e.__proto__ = n), e;
         })(e, n);
 }
-function p(e) {
+function _(e) {
     var n = E();
     return function () {
         var r,
@@ -79,7 +79,7 @@ function v(e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function I(e, n, r) {
+function y(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -92,14 +92,14 @@ function I(e, n, r) {
         e
     );
 }
-var T = (function (e) {
-    _(r, e);
-    var n = p(r);
+var b = (function (e) {
+    p(r, e);
+    var n = _(r);
     function r() {
         var e;
         c(this, r);
-        for (var i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
-        return I(g((e = n.call.apply(n, [this].concat(a)))), 'priority', 100), I(g(e), 'incompatibleTokens', ['y', 'R', 'u', 'q', 'Q', 'M', 'L', 'I', 'd', 'D', 'i', 't', 'T']), e;
+        for (var i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
+        return y(g((e = n.call.apply(n, [this].concat(a)))), 'priority', 100), y(g(e), 'incompatibleTokens', ['y', 'R', 'u', 'q', 'Q', 'M', 'L', 'I', 'd', 'D', 'i', 't', 'T']), e;
     }
     return (
         f(r, [
@@ -108,11 +108,11 @@ var T = (function (e) {
                 value: function (e, n, r) {
                     switch (n) {
                         case 'w':
-                            return (0, s.ie)(a.z.week, e);
+                            return (0, o.ie)(a.z.week, e);
                         case 'wo':
                             return r.ordinalNumber(e, { unit: 'week' });
                         default:
-                            return (0, s.ZL)(n.length, e);
+                            return (0, o.ZL)(n.length, e);
                     }
                 }
             },
@@ -125,7 +125,7 @@ var T = (function (e) {
             {
                 key: 'set',
                 value: function (e, n, r, i) {
-                    return (0, l.Z)((0, o.Z)(e, r, i), i);
+                    return (0, l.Z)((0, s.Z)(e, r, i), i);
                 }
             }
         ]),

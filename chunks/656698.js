@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(81825);
@@ -17,10 +17,10 @@ function a(e, n, r) {
         e
     );
 }
-class s extends i.Z {
+class o extends i.Z {
     static fromServer(e) {
         let { sku_id: n, ...r } = e;
-        return new s({
+        return new o({
             ...r,
             skuId: n
         });

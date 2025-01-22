@@ -5,7 +5,7 @@ r.d(n, {
 });
 let i = 'application/font-woff',
     a = 'image/jpeg',
-    s = {
+    o = {
         woff: i,
         woff2: i,
         ttf: 'application/font-truetype',
@@ -18,10 +18,10 @@ let i = 'application/font-woff',
         svg: 'image/svg+xml',
         webp: 'image/webp'
     };
-function o(e) {
+function s(e) {
     let n = /\.([^./]*?)$/g.exec(e);
     return n ? n[1] : '';
 }
 function l(e) {
-    return s[o(e).toLowerCase()] || '';
+    return o[s(e).toLowerCase()] || '';
 }

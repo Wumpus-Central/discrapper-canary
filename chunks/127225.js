@@ -5,11 +5,11 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(468204),
-    o = r(348288),
+    o = r(468204),
+    s = r(348288),
     l = ['children'];
 function u(e, n) {
-    return h(e) || _(e, n) || d(e, n) || c();
+    return h(e) || p(e, n) || d(e, n) || c();
 }
 function c() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
@@ -27,40 +27,40 @@ function f(e, n) {
     for (var r = 0, i = Array(n); r < n; r++) i[r] = e[r];
     return i;
 }
-function _(e, n) {
+function p(e, n) {
     var r,
         i,
         a = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
     if (null != a) {
-        var s = [],
-            o = !0,
+        var o = [],
+            s = !0,
             l = !1;
         try {
-            for (a = a.call(e); !(o = (r = a.next()).done) && (s.push(r.value), !n || s.length !== n); o = !0);
+            for (a = a.call(e); !(s = (r = a.next()).done) && (o.push(r.value), !n || o.length !== n); s = !0);
         } catch (e) {
             (l = !0), (i = e);
         } finally {
             try {
-                !o && null != a.return && a.return();
+                !s && null != a.return && a.return();
             } finally {
                 if (l) throw i;
             }
         }
-        return s;
+        return o;
     }
 }
 function h(e) {
     if (Array.isArray(e)) return e;
 }
-function p(e, n) {
+function _(e, n) {
     if (null == e) return {};
     var r,
         i,
         a = m(e, n);
     if (Object.getOwnPropertySymbols) {
-        var s = Object.getOwnPropertySymbols(e);
-        for (i = 0; i < s.length; i++) {
-            if (((r = s[i]), !(n.indexOf(r) >= 0))) Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (i = 0; i < o.length; i++) {
+            if (((r = o[i]), !(n.indexOf(r) >= 0))) Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
         }
     }
     return a;
@@ -70,21 +70,21 @@ function m(e, n) {
     var r,
         i,
         a = {},
-        s = Object.keys(e);
-    for (i = 0; i < s.length; i++) (r = s[i]), !(n.indexOf(r) >= 0) && (a[r] = e[r]);
+        o = Object.keys(e);
+    for (i = 0; i < o.length; i++) (r = o[i]), !(n.indexOf(r) >= 0) && (a[r] = e[r]);
     return a;
 }
 var g = 0,
     E = Symbol.for('__REACT_DND_CONTEXT_INSTANCE__'),
     v = (0, a.memo)(function (e) {
         var n = e.children,
-            r = u(I(p(e, l)), 2),
-            s = r[0],
+            r = u(y(_(e, l)), 2),
+            o = r[0],
             c = r[1];
         return (
             (0, a.useEffect)(function () {
                 if (c) {
-                    var e = b();
+                    var e = I();
                     return (
                         ++g,
                         function () {
@@ -93,19 +93,19 @@ var g = 0,
                     );
                 }
             }, []),
-            (0, i.jsx)(o.L.Provider, Object.assign({ value: s }, { children: n }), void 0)
+            (0, i.jsx)(s.L.Provider, Object.assign({ value: o }, { children: n }), void 0)
         );
     });
-function I(e) {
-    return 'manager' in e ? [{ dragDropManager: e.manager }, !1] : [T(e.backend, e.context, e.options, e.debugMode), !e.context];
+function y(e) {
+    return 'manager' in e ? [{ dragDropManager: e.manager }, !1] : [b(e.backend, e.context, e.options, e.debugMode), !e.context];
 }
-function T(e) {
-    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b(),
+function b(e) {
+    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
         r = arguments.length > 2 ? arguments[2] : void 0,
         i = arguments.length > 3 ? arguments[3] : void 0,
         a = n;
-    return !a[E] && (a[E] = { dragDropManager: (0, s.i)(e, n, r, i) }), a[E];
+    return !a[E] && (a[E] = { dragDropManager: (0, o.i)(e, n, r, i) }), a[E];
 }
-function b() {
+function I() {
     return void 0 !== r.g ? r.g : window;
 }

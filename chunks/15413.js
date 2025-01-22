@@ -24,7 +24,7 @@ function n(e) {
                 begin: /\*[^\s]([^\n]+\n)+([^\n]+)\*/
             }
         ],
-        s = [
+        o = [
             {
                 className: 'emphasis',
                 begin: /_{2}([^\n]+?)_{2}/
@@ -55,7 +55,7 @@ function n(e) {
                 relevance: 0
             }
         ],
-        o = {
+        s = {
             className: 'symbol',
             begin: '^(NOTE|TIP|IMPORTANT|WARNING|CAUTION):\\s+',
             relevance: 10
@@ -122,10 +122,10 @@ function n(e) {
                 relevance: 10
             },
             l,
-            o,
+            s,
             ...i,
             ...a,
-            ...s,
+            ...o,
             {
                 className: 'string',
                 variants: [{ begin: "``.+?''" }, { begin: "`.+?'" }]

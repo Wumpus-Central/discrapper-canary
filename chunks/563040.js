@@ -1,6 +1,6 @@
 r.d(n, {
     rK: function () {
-        return y;
+        return T;
     },
     tR: function () {
         return A;
@@ -11,8 +11,8 @@ r.d(n, {
 });
 var i = r(757143);
 var a = r(653041);
-var s = r(47120);
-var o = r(411104);
+var o = r(47120);
+var s = r(411104);
 var l = r(913527),
     u = r.n(l),
     c = r(55935);
@@ -30,12 +30,12 @@ function d(e, n, r) {
     );
 }
 let f = /^[0]+/,
-    _ = /:00/,
+    p = /:00/,
     h = /(AM|ΠΜ|सुबह)/i,
-    p = /(PM|ΜΜ|शाम)/i,
+    _ = /(PM|ΜΜ|शाम)/i,
     m = /\s+/,
-    g = (e) => e.replace(f, '').replace(_, '').replace(h, '').replace(m, ''),
-    E = (e) => e.replace(f, '').replace(p, '').replace(m, ''),
+    g = (e) => e.replace(f, '').replace(p, '').replace(h, '').replace(m, ''),
+    E = (e) => e.replace(f, '').replace(_, '').replace(m, ''),
     v = (e, n) => {
         let r = n.toUpperCase().trim();
         if (r.length > 0) {
@@ -43,15 +43,15 @@ let f = /^[0]+/,
             if (g(n.format('LT')) === g(r)) return n;
         }
     },
-    I = u()('2021-04-12T00:00:00'),
-    T = 15,
-    b = 'LT',
-    y = (e, n) => e.clone().hours(n.hour()).minutes(n.minutes()).seconds(0),
+    y = u()('2021-04-12T00:00:00'),
+    b = 15,
+    I = 'LT',
+    T = (e, n) => e.clone().hours(n.hour()).minutes(n.minutes()).seconds(0),
     S = (e, n) => e.value.unix() - n.value.unix();
 class A {
     lookupByValue(e) {
         if (null == e) return;
-        let n = y(I, e);
+        let n = T(y, e);
         return this._index[n.unix()];
     }
     _createLabel(e) {
@@ -59,7 +59,7 @@ class A {
     }
     _generateTimeOptions() {
         (this.options = []), (this._index = {});
-        let e = u()(I),
+        let e = u()(y),
             n = u()(e).add(1, 'day'),
             r = u()(e);
         for (; r < n; ) {
@@ -68,14 +68,14 @@ class A {
         }
     }
     _createNewOption(e) {
-        let n = y(I, e);
+        let n = T(y, e);
         return {
             label: this._createLabel(n),
             value: n
         };
     }
     _addNewOption(e) {
-        let n = y(I, e),
+        let n = T(y, e),
             r = this._createLabel(n);
         return (
             (this._index[n.unix()] = n),
@@ -90,11 +90,11 @@ class A {
     _guessOptions(e) {
         let n = [];
         if (/[:\\.]/.test(e)) {
-            let r = v(I, e);
+            let r = v(y, e);
             if (null != r) {
                 n.push(r.clone());
                 let i = r.add({ hours: 12 });
-                i.isBefore(I.clone().add({ hours: 24 })) && E(i.format('LT')) === E(e) && n.push(i);
+                i.isBefore(y.clone().add({ hours: 24 })) && E(i.format('LT')) === E(e) && n.push(i);
             }
         }
         return n;
@@ -117,7 +117,7 @@ class A {
         let n = this.lookupByValue(e);
         return null == n ? this._addNewOption(e) : n;
     }
-    constructor({ intervalInMinutes: e = T, labelFormat: n = b } = {}) {
+    constructor({ intervalInMinutes: e = b, labelFormat: n = I } = {}) {
         if ((d(this, 'intervalInMinutes', void 0), d(this, 'labelFormat', void 0), d(this, 'options', []), d(this, '_index', {}), e <= 0)) throw Error('intervalInMinutes should be positive number, got '.concat(e));
         (this.intervalInMinutes = e), (this.labelFormat = n), this._generateTimeOptions();
     }

@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -30,7 +30,7 @@ function d() {
 function f() {
     u = !0;
 }
-class _ extends (i = a.ZP.Store) {
+class p extends (i = a.ZP.Store) {
     getLastProgress() {
         return l;
     }
@@ -38,8 +38,8 @@ class _ extends (i = a.ZP.Store) {
         return u;
     }
 }
-o(_, 'displayName', 'DispatchApplicationLaunchSetupStore'),
-    (n.Z = new _(s.Z, {
+s(p, 'displayName', 'DispatchApplicationLaunchSetupStore'),
+    (n.Z = new p(o.Z, {
         DISPATCH_APPLICATION_LAUNCH_SETUP_START: f,
         DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: c,
         DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: d

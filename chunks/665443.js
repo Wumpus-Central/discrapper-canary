@@ -4,14 +4,14 @@
         for (var e = [], i = 0; i < arguments.length; i++) {
             var a = arguments[i];
             if (a) {
-                var s = typeof a;
-                if ('string' === s || 'number' === s) e.push(a);
+                var o = typeof a;
+                if ('string' === o || 'number' === o) e.push(a);
                 else if (Array.isArray(a)) {
                     if (a.length) {
-                        var o = r.apply(null, a);
-                        o && e.push(o);
+                        var s = r.apply(null, a);
+                        s && e.push(s);
                     }
-                } else if ('object' === s) {
+                } else if ('object' === o) {
                     if (a.toString === Object.prototype.toString) for (var l in a) n.call(a, l) && a[l] && e.push(l);
                     else e.push(a.toString());
                 }

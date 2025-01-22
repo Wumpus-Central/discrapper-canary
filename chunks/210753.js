@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(47120);
-var s = r(192379),
-    o = r(392711),
-    l = r.n(o),
+var o = r(192379),
+    s = r(392711),
+    l = r.n(s),
     u = r(442837),
     c = r(846519),
     d = r(224706),
     f = r(669764);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -26,7 +26,7 @@ function _(e, n, r) {
     );
 }
 let h = 20;
-class p {
+class _ {
     request(e) {
         !(this._pending.has(e) || this._fetched.has(e)) && (this._pending.add(e), this._flushHandler.delay(!1));
     }
@@ -42,15 +42,15 @@ class p {
                 });
     }
     constructor() {
-        _(this, '_fetched', new Set()), _(this, '_pending', new Set()), _(this, '_flushHandler', new c.sW(0, () => this._flush()));
+        p(this, '_fetched', new Set()), p(this, '_pending', new Set()), p(this, '_flushHandler', new c.sW(0, () => this._flush()));
     }
 }
-let m = new p();
+let m = new _();
 function g(e, n) {
-    s.useEffect(() => {
+    o.useEffect(() => {
         null != e && m.request(e);
     }, [e]);
-    let r = s.useMemo(
+    let r = o.useMemo(
         () =>
             null != n
                 ? {

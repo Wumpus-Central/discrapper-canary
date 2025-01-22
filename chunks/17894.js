@@ -1,48 +1,48 @@
-n.d(t, {
+t.d(e, {
     Z: function () {
-        return _;
+        return g;
     }
 });
-var i = n(525654),
-    r = n.n(i),
-    o = n(39612),
-    a = n(271579),
-    l = n(756647),
-    c = n(232567),
-    s = n(703656),
-    d = n(314897),
-    u = n(896797),
-    f = n(626135),
-    p = n(954824),
-    m = n(981631);
-async function b(e) {
-    var t, n;
-    let i = null === (t = r().os) || void 0 === t ? void 0 : t.family;
+var i = t(525654),
+    l = t.n(i),
+    r = t(39612),
+    a = t(271579),
+    o = t(756647),
+    s = t(232567),
+    u = t(703656),
+    c = t(314897),
+    d = t(896797),
+    m = t(626135),
+    f = t(954824),
+    h = t(981631);
+async function p(n) {
+    var e, t;
+    let i = null === (e = l().os) || void 0 === e ? void 0 : e.family;
     if ('Android' === i || 'iOS' === i) {
-        let t = null !== (n = d.default.getFingerprint()) && void 0 !== n ? n : d.default.getId(),
+        let e = null !== (t = c.default.getFingerprint()) && void 0 !== t ? t : c.default.getId(),
             i = (0, a.WS)();
-        if (null == t && d.default.isAuthenticated())
+        if (null == e && c.default.isAuthenticated())
             try {
-                await (0, c.k)(), (t = d.default.getId());
+                await (0, s.k)(), (e = c.default.getId());
             } catch {}
-        return (0, a.ZP)((0, o.Gk)(), {
-            utmSource: e,
-            fingerprint: t,
+        return (0, a.ZP)((0, r.Gk)(), {
+            utmSource: n,
+            fingerprint: e,
             attemptId: i
         });
     }
     return 'discord://';
 }
-async function _(e) {
-    let t = await b(e),
-        n = (0, a.zS)(t);
-    null != n &&
-        f.default.track(m.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, l.K)(n.fingerprint),
-            attempt_id: n.attemptId,
-            source: n.utmSource
+async function g(n) {
+    let e = await p(n),
+        t = (0, a.zS)(e);
+    null != t &&
+        m.default.track(h.rMx.DEEP_LINK_CLICKED, {
+            fingerprint: (0, o.K)(t.fingerprint),
+            attempt_id: t.attemptId,
+            source: t.utmSource
         }),
-        p.Z.launch(t, (e) => {
-            !e && (0, s.dL)(u.Z.fallbackRoute);
+        f.Z.launch(e, (n) => {
+            !n && (0, u.dL)(d.Z.fallbackRoute);
         });
 }

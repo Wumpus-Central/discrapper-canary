@@ -1,8 +1,8 @@
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(481060),
+    o = r.n(a),
+    s = r(481060),
     l = r(972623),
     u = r(430229);
 let c = Object.freeze({
@@ -15,13 +15,13 @@ let c = Object.freeze({
         SIZE_32: u.size32
     }),
     d = (e) => {
-        let { id: n, muted: r = !1, className: a = l.wrapper, size: u = c.SIZE_14, selectable: d = !1, children: f, color: _, onClick: h, onContextMenu: p, style: m, title: g, uppercase: E } = e;
-        return (0, i.jsx)(o.H, {
+        let { id: n, muted: r = !1, className: a = l.wrapper, size: u = c.SIZE_14, selectable: d = !1, children: f, color: p, onClick: h, onContextMenu: _, style: m, title: g, uppercase: E } = e;
+        return (0, i.jsx)(s.H, {
             role: null != h ? 'button' : void 0,
             onClick: h,
-            onContextMenu: p,
+            onContextMenu: _,
             id: n,
-            className: s()(a, {
+            className: o()(a, {
                 [l.base]: !0,
                 [u]: !0,
                 [l.selectable]: d,
@@ -30,10 +30,10 @@ let c = Object.freeze({
             }),
             title: g,
             style:
-                null != _
+                null != p
                     ? {
                           ...m,
-                          color: _
+                          color: p
                       }
                     : m,
             children: f

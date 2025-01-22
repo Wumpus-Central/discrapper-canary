@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(512722),
     s = n.n(o),
     c = n(772848),
-    d = n(831209),
-    u = n(399606),
+    u = n(831209),
+    d = n(399606),
     m = n(481060),
     h = n(607070),
     f = n(100527),
@@ -49,8 +49,8 @@ function U(e) {
         H = (0, Z.n)(),
         [z, W] = r.useState(!1),
         [K, Y] = r.useState((null == w ? void 0 : w.coverImage) == null),
-        X = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
-        Q = (0, u.e7)(
+        X = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
+        Q = (0, d.e7)(
             [A.ZP, b.default],
             () => {
                 var e;
@@ -58,7 +58,7 @@ function U(e) {
             },
             [w]
         ),
-        q = (0, u.e7)([A.ZP], () => ((null == w ? void 0 : w.authorId) != null ? A.ZP.getMember(w.guildId, w.authorId) : null)),
+        q = (0, d.e7)([A.ZP], () => ((null == w ? void 0 : w.authorId) != null ? A.ZP.getMember(w.guildId, w.authorId) : null)),
         J = (0, _.Z)((null == q ? void 0 : q.avatarDecoration) != null ? (null == q ? void 0 : q.avatarDecoration) : null == w ? void 0 : null === (t = w.user) || void 0 === t ? void 0 : t.avatarDecoration),
         [$, ee] = r.useMemo(() => {
             var e;
@@ -110,8 +110,8 @@ function U(e) {
             size: (0, g.y9)(m.AvatarSizes.SIZE_40),
             canAnimate: en
         }),
-        ed = null === (n = w.user) || void 0 === n ? void 0 : n.getAvatarURL(w.guildId, 40, en),
-        eu = () => {
+        eu = null === (n = w.user) || void 0 === n ? void 0 : n.getAvatarURL(w.guildId, 40, en),
+        ed = () => {
             if (!et.enabled) ei((e) => !e);
         },
         em = w.coverImage,
@@ -151,7 +151,7 @@ function U(e) {
                                 children: (0, i.jsxs)('div', {
                                     className: D.thumbnailOverlayCta,
                                     children: [
-                                        (0, i.jsx)(P.Z, { color: d.Z.WHITE }),
+                                        (0, i.jsx)(P.Z, { color: u.Z.WHITE }),
                                         (0, i.jsx)(m.Text, {
                                             variant: 'text-sm/semibold',
                                             color: 'always-white',
@@ -186,7 +186,7 @@ function U(e) {
                     (0, i.jsxs)('div', {
                         className: D.descriptionFooter,
                         children: [
-                            null != ed &&
+                            null != eu &&
                                 (0, i.jsx)(m.Popout, {
                                     renderPopout: (e) => es(e, [f.Z.AVATAR]),
                                     position: 'right',
@@ -194,12 +194,12 @@ function U(e) {
                                     preload: null == w.authorId ? void 0 : eo,
                                     children: (e) =>
                                         (0, i.jsx)('div', {
-                                            onMouseEnter: eu,
-                                            onMouseLeave: eu,
+                                            onMouseEnter: ed,
+                                            onMouseLeave: ed,
                                             children: (0, i.jsx)(m.Avatar, {
                                                 ...e,
                                                 size: m.AvatarSizes.SIZE_40,
-                                                src: ed,
+                                                src: eu,
                                                 'aria-label': M.intl.string(M.t.KXz3XF),
                                                 avatarDecoration: ec
                                             })

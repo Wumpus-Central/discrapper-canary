@@ -1,25 +1,25 @@
 r.r(n),
     r.d(n, {
         WebAudioAPISound: function () {
-            return y;
+            return T;
         },
         WebAudioSound: function () {
-            return b;
+            return I;
         },
         playGiftSound: function () {
-            return I;
+            return y;
         }
     });
 var i,
     a = r(47120);
-var s = r(411104);
-var o = r(392711),
-    l = r.n(o),
+var o = r(411104);
+var s = r(392711),
+    l = r.n(s),
     u = r(304809),
     c = r(22382),
     d = r(747071),
     f = r(131951),
-    _ = r(358085);
+    p = r(358085);
 function h(e, n, r) {
     return (
         n in e
@@ -33,8 +33,8 @@ function h(e, n, r) {
         e
     );
 }
-let p = 'default',
-    m = p;
+let _ = 'default',
+    m = _;
 !(function (e) {
     (e.Stopped = 'stopped'), (e.Playing = 'playing'), (e.Looping = 'looping'), (e.Paused = 'paused');
 })(i || (i = {}));
@@ -47,11 +47,11 @@ async function v(e) {
     let n = g.get(e);
     return null == n && ((n = E(e)), g.set(e, n)), await n;
 }
-function I(e, n) {
+function y(e, n) {
     let r = new Audio((0, c.Z)(e));
     (r.volume = (0, d.Z)(n)), r.play();
 }
-function T() {
+function b() {
     if (null != window.navigator.mediaDevices)
         window.navigator.mediaDevices
             .enumerateDevices()
@@ -62,15 +62,15 @@ function T() {
                         .findIndex((e) => e.id === f.Z.getOutputDeviceId()),
                     i = n[f.Z.getOutputDeviceId()],
                     a = e.filter((e) => 'audiooutput' === e.kind && 'communications' !== e.deviceId),
-                    s = a[r];
-                null != i && (null == s || s.label !== i.name) && (s = a.find((e) => e.label === i.name)), (m = null != s ? s.deviceId : p);
+                    o = a[r];
+                null != i && (null == o || o.label !== i.name) && (o = a.find((e) => e.label === i.name)), (m = null != o ? o.deviceId : _);
             })
             .catch(() => {
-                m = p;
+                m = _;
             });
 }
-_.isPlatformEmbedded && (f.Z.addChangeListener(T), T());
-class b {
+p.isPlatformEmbedded && (f.Z.addChangeListener(b), b());
+class I {
     get volume() {
         return this._volume;
     }
@@ -121,7 +121,7 @@ class b {
                           let i = new Audio();
                           (i.src = r(451343)('./'.concat(this.name, '.mp3'))),
                               (i.onloadeddata = () => {
-                                  (i.volume = Math.min((f.Z.getOutputVolume() / 100) * this._volume, 1)), _.isPlatformEmbedded && i.setSinkId(m), e(i);
+                                  (i.volume = Math.min((f.Z.getOutputVolume() / 100) * this._volume, 1)), p.isPlatformEmbedded && i.setSinkId(m), e(i);
                               }),
                               (i.onerror = () => n(Error('could not play audio'))),
                               (i.onended = () => this._destroyAudio()),
@@ -134,7 +134,7 @@ class b {
         h(this, 'name', void 0), h(this, '_volume', void 0), h(this, '_audio', void 0), (this.name = e), (this._volume = r);
     }
 }
-class y {
+class T {
     get volume() {
         return this._volume;
     }
@@ -189,7 +189,7 @@ class y {
                         : ((this._audioContext = (0, u.N)()),
                           (this._gain = new GainNode(this._audioContext)),
                           (this._gain.gain.value = e),
-                          _.isPlatformEmbedded && this._audioContext.setSinkId(m),
+                          p.isPlatformEmbedded && this._audioContext.setSinkId(m),
                           (this._buffer = n),
                           (this._source = this._audioContext.createBufferSource()),
                           (this._source.buffer = n),

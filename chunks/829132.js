@@ -27,7 +27,7 @@ function r(e) {
             if (0 === a) return (r._cursor = n), r;
             r._ancestors.push(n), (n = n.get_child(a > 0));
         }
-        for (var s = r._ancestors.length - 1; s >= 0; --s) if (0 > i(e, (n = r._ancestors[s]).data)) return (r._cursor = n), (r._ancestors.length = s), r;
+        for (var o = r._ancestors.length - 1; o >= 0; --o) if (0 > i(e, (n = r._ancestors[o]).data)) return (r._cursor = n), (r._ancestors.length = o), r;
         return (r._ancestors.length = 0), r;
     }),
     (n.prototype.upperBound = function (e) {

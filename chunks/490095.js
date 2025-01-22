@@ -1,11 +1,11 @@
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(275608);
-let o = (e) => {
+    o = r(275608);
+let s = (e) => {
     let { size: n } = e;
     return (0, i.jsx)('div', {
-        className: s.unownedStickerLockContainer,
+        className: o.unownedStickerLockContainer,
         style: {
             width: n,
             height: n
@@ -13,8 +13,8 @@ let o = (e) => {
         children: (0, i.jsx)(a.LockIcon, {
             size: 'xxs',
             color: 'currentColor',
-            className: s.unownedStickerLockIcon
+            className: o.unownedStickerLockIcon
         })
     });
 };
-n.Z = o;
+n.Z = s;

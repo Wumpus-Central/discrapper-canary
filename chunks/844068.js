@@ -1,31 +1,31 @@
-t.d(n, {
+r.d(n, {
     Z: function () {
-        return o;
+        return c;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(120356),
-    r = t.n(l),
-    s = t(481060),
-    a = t(563132),
-    c = t(738068);
-function o(e) {
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    o = r.n(a),
+    s = r(481060),
+    l = r(563132),
+    u = r(738068);
+function c(e) {
     let { notificationBlockRef: n } = e,
-        { selectedPlanNotification: t } = (0, a.usePaymentContext)();
-    return null == t
+        { selectedPlanNotification: r } = (0, l.usePaymentContext)();
+    return null == r
         ? null
         : (0, i.jsxs)('div', {
-              className: r()(c.notification),
+              className: o()(u.notification),
               ref: n,
               children: [
                   (0, i.jsx)(s.CircleCheckIcon, {
-                      className: r()(c.icon),
+                      className: o()(u.icon),
                       color: 'currentColor'
                   }),
                   (0, i.jsx)('div', {
-                      className: c.text,
-                      children: t
+                      className: u.text,
+                      children: r
                   })
               ]
           });

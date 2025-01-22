@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 }),
     n(390547),
@@ -13,9 +13,9 @@ var r = n(392711),
     o = n(289481),
     s = n(809780),
     c = n(388032),
-    d = n(4817);
-function u(e, t, n) {
-    let { markChannelRead: r, markGuildRead: u, deleteChannel: m, toggle: h, getNumUnreadChannels: f } = t,
+    u = n(4817);
+function d(e, t, n) {
+    let { markChannelRead: r, markGuildRead: d, deleteChannel: m, toggle: h, getNumUnreadChannels: f } = t,
         p = null;
     return l().flatMap(e, (e) => {
         let t = e.sortOrder !== p;
@@ -28,8 +28,8 @@ function u(e, t, n) {
                           (0, i.jsx)(
                               a.Z,
                               {
-                                  className: d.divider,
-                                  contentClassName: d.dividerContent,
+                                  className: u.divider,
+                                  contentClassName: u.dividerContent,
                                   children: c.intl.string(c.t.roBMzs)
                               },
                               'old-divider'
@@ -41,8 +41,8 @@ function u(e, t, n) {
                           (0, i.jsx)(
                               a.Z,
                               {
-                                  className: d.divider,
-                                  contentClassName: d.dividerContent,
+                                  className: u.divider,
+                                  contentClassName: u.dividerContent,
                                   children: c.intl.string(c.t['2Ys7np'])
                               },
                               'disabled-divider'
@@ -54,7 +54,7 @@ function u(e, t, n) {
                     {
                         channel: e,
                         markChannelRead: r,
-                        markGuildRead: u,
+                        markGuildRead: d,
                         toggle: h,
                         deleteChannel: m,
                         onJump: n,

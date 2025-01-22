@@ -5,12 +5,12 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(887003),
-    s = r(497505);
-function o(e) {
+    o = r(497505);
+function s(e) {
     let n = {};
     for (let r of Object.keys(e)) {
         let i = parseInt(r);
-        s.xw.has(i) && (n[i] = e[r]);
+        o.xw.has(i) && (n[i] = e[r]);
     }
     return n;
 }
@@ -25,7 +25,7 @@ let l = (e) => {
                 return {
                     type: a.w.REWARD_CODE,
                     messages: {
-                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
@@ -36,7 +36,7 @@ let l = (e) => {
                 return {
                     type: a.w.COLLECTIBLE,
                     messages: {
-                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
@@ -50,7 +50,7 @@ let l = (e) => {
                     type: a.w.FRACTIONAL_PREMIUM,
                     quantity: e.quantity,
                     messages: {
-                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
@@ -60,7 +60,7 @@ let l = (e) => {
                 return {
                     type: a.w.IN_GAME,
                     messages: {
-                        redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },

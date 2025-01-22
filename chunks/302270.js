@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(390322),
     b = n(616286),
     Z = n(961048),
-    S = n(975146),
-    N = n(430824),
+    N = n(975146),
+    S = n(430824),
     T = n(496675),
     j = n(626135),
     A = n(431328),
@@ -53,7 +53,7 @@ function H(e) {
             [n.id]
         ),
         v = (0, P.B)(n.id),
-        N = (0, A.Rk)(n.id, y.pV.REQUESTED_TO_SPEAK_ONLY),
+        S = (0, A.Rk)(n.id, y.pV.REQUESTED_TO_SPEAK_ONLY),
         { preventIdle: T, allowIdle: j } = (0, I.Y)('popup'),
         { hasParticipantsPanel: M } = (0, p.Z)({ location: 'StageChannelCallHeader' }),
         R = M && x;
@@ -106,14 +106,14 @@ function H(e) {
                               C && d.Z.updateChatOpen(n.id, !1), x && d.Z.toggleParticipantsList(n.id, !1), r();
                           },
                           showRequestToSpeakSidebar: o,
-                          numRequestToSpeak: N
+                          numRequestToSpeak: S
                       })
                   })
                 : null,
             !x &&
                 M &&
                 (0, i.jsx)(
-                    S.Z,
+                    N.Z,
                     {
                         className: a()(U.button, { [U.sidebarOpen]: C }),
                         onClick: () => {
@@ -142,22 +142,22 @@ function G(e) {
         f = (0, s.e7)([R.Z], () => R.Z.getStageInstanceByChannel(r.id)),
         g = (0, A.Io)(r.id),
         _ = (0, A.Rk)(r.id, y.pV.AUDIENCE),
-        I = (0, s.e7)([N.Z], () => N.Z.getGuild(r.guild_id), [r.guild_id]),
+        I = (0, s.e7)([S.Z], () => S.Z.getGuild(r.guild_id), [r.guild_id]),
         E = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         b = (null == I ? void 0 : I.isCommunity()) ? E < D.TU7 : (null == I ? void 0 : I.premiumTier) !== D.Eu4.TIER_3 && E <= D.eez,
         Z = (0, O.Z)(r),
-        S = (0, s.e7)([T.Z], () => T.Z.can(M.yP, r)),
+        N = (0, s.e7)([T.Z], () => T.Z.can(M.yP, r)),
         P = () => {
             d.Z.updateStageVideoLimitBoostUpsellDismissed(r.id, !0),
                 j.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: r.guild_id,
                     type: w.cd.VIDEO_STAGE_LIMIT,
-                    is_moderator: S,
+                    is_moderator: N,
                     action: w.T7.DISMISS
                 });
         },
         L = {
-            canModerate: S,
+            canModerate: N,
             audienceCount: _,
             channel: r,
             speakerCount: g
@@ -277,7 +277,7 @@ function G(e) {
                                                         j.default.track(D.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: r.guild_id,
                                                             type: w.cd.VIDEO_STAGE_LIMIT,
-                                                            is_moderator: S,
+                                                            is_moderator: N,
                                                             action: w.T7.BOOST
                                                         });
                                                 },

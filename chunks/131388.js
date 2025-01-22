@@ -1,13 +1,13 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(40851);
-function o(e) {
-    let { renderWindow: n } = (0, a.useContext)(s.ZP),
+    o = r(40851);
+function s(e) {
+    let { renderWindow: n } = (0, a.useContext)(o.ZP),
         [r, i] = (0, a.useState)(() => n.matchMedia(e).matches);
     return (
         (0, a.useEffect)(() => {

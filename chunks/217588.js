@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(749210),
-    d = n(493773),
-    u = n(367907),
+    u = n(493773),
+    d = n(367907),
     m = n(600164),
     h = n(111028),
     f = n(231053),
@@ -73,7 +73,7 @@ function k(e) {
 }
 let U = (e) => {
         let { closePopout: t, sticker: n, channel: l, refreshPositionKey: a } = e,
-            [c, d, m] = (0, o.Wu)([S.Z], () => [S.Z.getStickerPack(n.pack_id), !S.Z.hasLoadedStickerPacks, S.Z.isPremiumPack(n.pack_id)], [n]),
+            [c, u, m] = (0, o.Wu)([S.Z], () => [S.Z.getStickerPack(n.pack_id), !S.Z.hasLoadedStickerPacks, S.Z.isPremiumPack(n.pack_id)], [n]),
             h = M({
                 sticker: n,
                 stickerPack: c
@@ -91,17 +91,17 @@ let U = (e) => {
         r.useEffect(() => {
             let { refreshPositionKey: e } = _.current;
             e();
-        }, [d]),
+        }, [u]),
         r.useEffect(() => {
             let { channel: e } = _.current;
             N.default.track(R.rMx.OPEN_POPOUT, {
                 type: R.jXE.STICKER_POPOUT,
                 guild_id: e.getGuildId(),
                 sticker_pack_id: n.pack_id,
-                ...(0, u.v_)(e)
+                ...(0, d.v_)(e)
             });
         }, [n.pack_id]),
-        d || null == c)
+        u || null == c)
             ? (0, i.jsx)(g.SE, { className: L.popoutLoader })
             : (0, i.jsxs)(g.W_, {
                   className: L.popoutContent,
@@ -172,7 +172,7 @@ let U = (e) => {
             ),
             { current: z } = r.useRef({
                 guild_id: l.getGuildId(),
-                ...(0, u.v_)(l)
+                ...(0, d.v_)(l)
             }),
             W = {
                 stickerSourceGuild: U,
@@ -209,7 +209,7 @@ let U = (e) => {
             let { refreshPositionKey: e } = K.current;
             e();
         }, [A, T]),
-        (0, d.Z)(() => {
+        (0, u.Z)(() => {
             N.default.track(R.rMx.OPEN_POPOUT, {
                 type: q,
                 ...z

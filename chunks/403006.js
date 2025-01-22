@@ -6,7 +6,7 @@ var n,
         return !1;
     });
 var a = r ? Map.prototype.has : null,
-    s = i ? Set.prototype.has : null;
+    o = i ? Set.prototype.has : null;
 !n &&
     !a &&
     (n = function (e) {
@@ -17,9 +17,9 @@ var a = r ? Map.prototype.has : null,
         function (e) {
             if (!e || 'object' != typeof e) return !1;
             try {
-                if ((a.call(e), s))
+                if ((a.call(e), o))
                     try {
-                        s.call(e);
+                        o.call(e);
                     } catch (e) {
                         return !0;
                     }

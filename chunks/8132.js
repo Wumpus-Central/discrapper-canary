@@ -3,11 +3,11 @@ function n(e) {
         r = /^[a-zA-Z][a-zA-Z0-9-]*/,
         i = ['ALPHA', 'BIT', 'CHAR', 'CR', 'CRLF', 'CTL', 'DIGIT', 'DQUOTE', 'HEXDIG', 'HTAB', 'LF', 'LWSP', 'OCTET', 'SP', 'VCHAR', 'WSP'],
         a = e.COMMENT(/;/, /$/),
-        s = {
+        o = {
             scope: 'symbol',
             match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/
         },
-        o = {
+        s = {
             scope: 'symbol',
             match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/
         },
@@ -34,8 +34,8 @@ function n(e) {
             },
             c,
             a,
-            s,
             o,
+            s,
             l,
             u,
             e.QUOTE_STRING_MODE,

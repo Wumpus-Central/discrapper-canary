@@ -9,7 +9,7 @@ var i,
             }
             return e;
         },
-    s = (function () {
+    o = (function () {
         function e(e, n) {
             for (var r = 0; r < n.length; r++) {
                 var i = n[r];
@@ -20,19 +20,19 @@ var i,
             return r && e(n.prototype, r), i && e(n, i), n;
         };
     })(),
-    o = r(192379),
-    l = _(o),
-    u = _(r(476400)),
-    c = _(r(995295)),
-    d = _(r(726351)),
-    f = _(r(512722));
-function _(e) {
+    s = r(192379),
+    l = p(s),
+    u = p(r(476400)),
+    c = p(r(995295)),
+    d = p(r(726351)),
+    f = p(r(512722));
+function p(e) {
     return e && e.__esModule ? e : { default: e };
 }
 function h(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function p(e, n) {
+function _(e, n) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
 }
@@ -51,12 +51,12 @@ function m(e, n) {
 var g = (function (e) {
     function n() {
         h(this, n);
-        var e = p(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+        var e = _(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
         return (e.state = { initiated: !1 }), (e.onResize = e.onResize.bind(e)), e;
     }
     return (
         m(n, e),
-        s(n, null, [
+        o(n, null, [
             {
                 key: 'getDomNodeDimensions',
                 value: function (e) {
@@ -72,7 +72,7 @@ var g = (function (e) {
                 }
             }
         ]),
-        s(n, [
+        o(n, [
             {
                 key: 'componentDidMount',
                 value: function () {
@@ -105,15 +105,15 @@ var g = (function (e) {
                     if (((0, f.default)(this.props.children, 'Expected children to be one of function or React.Element'), !this.state.initiated)) return l.default.createElement('div', null);
                     if ('function' == typeof this.props.children) {
                         var e = this.props.children(this.state);
-                        return e && o.Children.only(e);
+                        return e && s.Children.only(e);
                     }
-                    return o.Children.only(l.default.cloneElement(this.props.children, this.state));
+                    return s.Children.only(l.default.cloneElement(this.props.children, this.state));
                 }
             }
         ]),
         n
     );
-})(o.Component);
+})(s.Component);
 (g.propTypes = {
     children: u.default.oneOfType([u.default.element, u.default.func]).isRequired
 }),

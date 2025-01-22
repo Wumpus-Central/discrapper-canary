@@ -1,6 +1,6 @@
 r.d(n, {
     DM: function () {
-        return _;
+        return p;
     },
     Ey: function () {
         return h;
@@ -12,7 +12,7 @@ r.d(n, {
         return v;
     },
     qX: function () {
-        return I;
+        return y;
     },
     u3: function () {
         return E;
@@ -21,14 +21,14 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(873546),
+    o = r.n(a),
+    s = r(873546),
     l = r(481060),
     u = r(626135),
     c = r(981631),
     d = r(388032),
     f = r(532623);
-let _ = Object.freeze({
+let p = Object.freeze({
     DEFAULT: f.colorDefault,
     NEUTRAL: f.colorNeutral,
     BRAND: f.colorBrand,
@@ -44,16 +44,16 @@ let _ = Object.freeze({
     PREMIUM_TIER_2: f.colorPremiumTier2
 });
 function h(e) {
-    let { children: n, className: r, minor: a = !1, ...o } = e;
+    let { children: n, className: r, minor: a = !1, ...s } = e;
     return (0, i.jsx)(l.FocusRing, {
         children: (0, i.jsx)('button', {
-            className: s()(f.button, r, { [f.buttonMinor]: a }),
-            ...o,
+            className: o()(f.button, r, { [f.buttonMinor]: a }),
+            ...s,
             children: n
         })
     });
 }
-function p(e, n) {
+function _(e, n) {
     null != e &&
         u.default.track(c.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
             notice_type: e,
@@ -64,11 +64,11 @@ function m(e) {
     null != e && u.default.track(c.rMx.APP_NOTICE_CLOSED, { notice_type: e });
 }
 function g(e) {
-    let { children: n, noticeType: r, additionalTrackingProps: a, ...s } = e;
+    let { children: n, noticeType: r, additionalTrackingProps: a, ...o } = e;
     return (0, i.jsx)(h, {
-        ...s,
+        ...o,
         onClick: (e) => {
-            null != s.onClick && s.onClick(e), p(r, a);
+            null != o.onClick && o.onClick(e), _(r, a);
         },
         children: n
     });
@@ -98,10 +98,10 @@ function v(e) {
         })
     });
 }
-function I(e) {
-    let { color: n = _.DEFAULT, className: r, style: a, children: l } = e;
+function y(e) {
+    let { color: n = p.DEFAULT, className: r, style: a, children: l } = e;
     return (0, i.jsx)('div', {
-        className: s()(f.notice, { [f.isMobile]: o.tq }, r, n),
+        className: o()(f.notice, { [f.isMobile]: s.tq }, r, n),
         style: null != a ? a : void 0,
         children: l
     });

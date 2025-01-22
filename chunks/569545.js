@@ -1,6 +1,6 @@
 r.d(n, {
     DB: function () {
-        return o;
+        return s;
     },
     V9: function () {
         return u;
@@ -11,15 +11,15 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(411104);
-var s = r(70722);
-function o(e) {
-    return null != e && (e.startsWith(s.lo.GUILD) || e.startsWith(s.lo.CALL));
+var o = r(70722);
+function s(e) {
+    return null != e && (e.startsWith(o.lo.GUILD) || e.startsWith(o.lo.CALL));
 }
 function l(e) {
     let n = e.split(':'),
         r = n[0];
     switch (r) {
-        case s.lo.GUILD: {
+        case o.lo.GUILD: {
             let [e, r, i, a] = n;
             return {
                 streamType: e,
@@ -28,7 +28,7 @@ function l(e) {
                 ownerId: a
             };
         }
-        case s.lo.CALL: {
+        case o.lo.CALL: {
             let [e, r, i] = n;
             return {
                 streamType: e,
@@ -43,9 +43,9 @@ function l(e) {
 function u(e) {
     let { streamType: n, guildId: r, channelId: i, ownerId: a } = e;
     switch (n) {
-        case s.lo.GUILD:
+        case o.lo.GUILD:
             return [n, r, i, a].join(':');
-        case s.lo.CALL:
+        case o.lo.CALL:
             return [n, i, a].join(':');
         default:
             throw Error('Unknown stream type '.concat(n));

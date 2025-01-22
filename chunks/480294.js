@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -27,14 +27,14 @@ function f(e) {
         }),
         (u = !0));
 }
-function _(e) {
+function p(e) {
     let { consents: n } = e;
     (c = { ...n }), (l = !0);
 }
 function h(e) {
     d = e.consentRequired;
 }
-function p() {
+function _() {
     d = null;
 }
 class m extends (i = a.ZP.Store) {
@@ -51,10 +51,10 @@ class m extends (i = a.ZP.Store) {
         return d;
     }
 }
-o(m, 'displayName', 'ConsentStore'),
-    (n.Z = new m(s.Z, {
+s(m, 'displayName', 'ConsentStore'),
+    (n.Z = new m(o.Z, {
         CONNECTION_OPEN: f,
-        UPDATE_CONSENTS: _,
+        UPDATE_CONSENTS: p,
         SET_CONSENT_REQUIRED: h,
-        LOGOUT: p
+        LOGOUT: _
     }));

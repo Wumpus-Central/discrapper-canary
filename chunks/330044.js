@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(913527),
     a = r.n(i);
-function s(e) {
+function o(e) {
     return {
         ...e,
         expiry: a()(e.expiry)

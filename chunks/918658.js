@@ -14,8 +14,8 @@ var r = n(120356),
     o = n(692547),
     s = n(481060),
     c = n(549817),
-    d = n(819553),
-    u = n(17181),
+    u = n(819553),
+    d = n(17181),
     m = n(303737),
     h = n(434404),
     f = n(703656),
@@ -83,7 +83,7 @@ function P() {
         y = t === T.oC.GUILD_ONBOARDING,
         O = (t) => {
             let { backToSettings: n } = t;
-            null != e && (x.Z.isFullServerPreview(e) && (0, f.uL)(v.Z5c.CHANNEL(e)), d.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, u.discardOnboardingPromise)(e)), (0, I.mL)(e), n && h.Z.open(e, r), r === v.pNK.ROLE_SUBSCRIPTIONS && (0, m.GN)(e));
+            null != e && (x.Z.isFullServerPreview(e) && (0, f.uL)(v.Z5c.CHANNEL(e)), u.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, I.mL)(e), n && h.Z.open(e, r), r === v.pNK.ROLE_SUBSCRIPTIONS && (0, m.GN)(e));
         };
     return (0, i.jsxs)(s.Notice, {
         color: s.NoticeColors.BRAND,

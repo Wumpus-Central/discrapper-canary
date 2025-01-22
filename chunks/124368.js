@@ -12,7 +12,7 @@ r.d(n, {
         return a;
     },
     dg: function () {
-        return _;
+        return p;
     },
     fZ: function () {
         return g;
@@ -30,26 +30,26 @@ r.d(n, {
         return f;
     },
     zb: function () {
-        return p;
+        return _;
     }
 });
 var i,
     a,
-    s = r(47120);
-var o = r(981631),
+    o = r(47120);
+var s = r(981631),
     l = r(388032);
 let u = 4320,
     c = 50,
     d = 100000,
     f = 50,
-    _ = 25,
+    p = 25,
     h = {
         HAS_INTERACTED: 1,
         ALL_MESSAGES: 2,
         ONLY_MENTIONS: 4,
         NO_MESSAGES: 8
     };
-function p() {
+function _() {
     return [
         {
             setting: h.ALL_MESSAGES,
@@ -71,5 +71,5 @@ function p() {
     !(function (e) {
         (e.LATEST_ACTIVITY = 'Last Message'), (e.CREATION_DATE = 'Creation');
     })(a || (a = {}));
-let m = new Set([o.evJ.TOO_MANY_ATTACHMENTS, o.evJ.EXPLICIT_CONTENT, o.evJ.ENTITY_TOO_LARGE, o.evJ.EXPLICIT_CONTENT]),
-    g = new Set([o.evJ.AUTOMOD_MESSAGE_BLOCKED, o.evJ.AUTOMOD_TITLE_BLOCKED]);
+let m = new Set([s.evJ.TOO_MANY_ATTACHMENTS, s.evJ.EXPLICIT_CONTENT, s.evJ.ENTITY_TOO_LARGE, s.evJ.EXPLICIT_CONTENT]),
+    g = new Set([s.evJ.AUTOMOD_MESSAGE_BLOCKED, s.evJ.AUTOMOD_TITLE_BLOCKED]);

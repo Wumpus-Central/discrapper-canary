@@ -3,42 +3,42 @@ r.d(n, {
         return h;
     },
     Hg: function () {
-        return _;
+        return p;
     },
     PW: function () {
         return m;
     },
     S5: function () {
-        return o;
+        return s;
     },
     ZA: function () {
         return l;
     },
     l0: function () {
-        return p;
+        return _;
     }
 });
 var i = r(177593);
 var a = r(653041);
-var s = r(65154);
-let o = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
-    l = o && 'setSinkId' in HTMLAudioElement.prototype;
+var o = r(65154);
+let s = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
+    l = s && 'setSinkId' in HTMLAudioElement.prototype;
 function u(e) {
     return {
-        id: s.w5,
+        id: o.w5,
         type: e,
         index: 0,
         name: 'Default'
     };
 }
 function c() {
-    return [u(s.h7.AUDIO_INPUT), u(s.h7.AUDIO_OUTPUT), u(s.h7.VIDEO_INPUT)];
+    return [u(o.h7.AUDIO_INPUT), u(o.h7.AUDIO_OUTPUT), u(o.h7.VIDEO_INPUT)];
 }
 function d(e, n) {
     return e.filter((e) => e.type === n);
 }
 function f() {
-    return o
+    return s
         ? navigator.mediaDevices
               .enumerateDevices()
               .then((e) => {
@@ -48,9 +48,9 @@ function f() {
                   return e
                       .filter((e) => {
                           switch (e.kind) {
-                              case s.h7.AUDIO_INPUT:
-                              case s.h7.AUDIO_OUTPUT:
-                              case s.h7.VIDEO_INPUT:
+                              case o.h7.AUDIO_INPUT:
+                              case o.h7.AUDIO_OUTPUT:
+                              case o.h7.VIDEO_INPUT:
                                   return !0;
                               default:
                                   return !1;
@@ -59,13 +59,13 @@ function f() {
                       .map((e) => {
                           let a;
                           switch (e.kind) {
-                              case s.h7.AUDIO_INPUT:
+                              case o.h7.AUDIO_INPUT:
                                   a = n++;
                                   break;
-                              case s.h7.AUDIO_OUTPUT:
+                              case o.h7.AUDIO_OUTPUT:
                                   a = r++;
                                   break;
-                              case s.h7.VIDEO_INPUT:
+                              case o.h7.VIDEO_INPUT:
                               default:
                                   a = i++;
                           }
@@ -77,22 +77,22 @@ function f() {
                           };
                       });
               })
-              .then((e) => (!l && (e = e.filter((e) => e.type !== s.h7.AUDIO_OUTPUT)).push(u(s.h7.AUDIO_OUTPUT)), e))
+              .then((e) => (!l && (e = e.filter((e) => e.type !== o.h7.AUDIO_OUTPUT)).push(u(o.h7.AUDIO_OUTPUT)), e))
               .catch(c)
         : new Promise((e) => {
               setImmediate(() => e(c()));
           });
 }
-async function _() {
-    return d(await f(), s.h7.AUDIO_INPUT);
+async function p() {
+    return d(await f(), o.h7.AUDIO_INPUT);
 }
 async function h() {
-    return d(await f(), s.h7.AUDIO_OUTPUT);
+    return d(await f(), o.h7.AUDIO_OUTPUT);
 }
-async function p() {
-    return d(await f(), s.h7.VIDEO_INPUT);
+async function _() {
+    return d(await f(), o.h7.VIDEO_INPUT);
 }
 async function m() {
     let e = await f();
-    return [d(e, s.h7.AUDIO_INPUT), d(e, s.h7.AUDIO_OUTPUT), d(e, s.h7.VIDEO_INPUT)];
+    return [d(e, o.h7.AUDIO_INPUT), d(e, o.h7.AUDIO_OUTPUT), d(e, o.h7.VIDEO_INPUT)];
 }

@@ -6,12 +6,12 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(477660),
-    s = r.n(a),
-    o = r(481060);
+    o = r.n(a),
+    s = r(481060);
 let l = {
-    ...s().defaultRules.link,
+    ...o().defaultRules.link,
     react: function (e, n, r) {
-        return (0, i.jsx)(o.Anchor, {
+        return (0, i.jsx)(s.Anchor, {
             href: e.target,
             target: '_blank',
             children: n(e.content, r)

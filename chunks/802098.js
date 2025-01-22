@@ -1,13 +1,13 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(433517),
+var o = r(442837),
+    s = r(433517),
     l = r(570140),
     u = r(706454),
     c = r(695346),
     d = r(581883),
     f = r(596401);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -21,29 +21,29 @@ function _(e, n, r) {
     );
 }
 let h = {},
-    p = {},
+    _ = {},
     m = null,
     g = null,
     E = null,
     v = 'lastChangeLogDate',
-    I = null,
-    T = null,
-    b = new Set();
-function y(e) {
+    y = null,
+    b = null,
+    I = new Set();
+function T(e) {
     let { key: n } = e;
-    if (b.has(n)) return !1;
-    (b = new Set(b)).add(n);
+    if (I.has(n)) return !1;
+    (I = new Set(I)).add(n);
 }
 function S(e) {
     let { key: n } = e;
-    if (!b.has(n)) return !1;
-    (b = new Set(b)).delete(n);
+    if (!I.has(n)) return !1;
+    (I = new Set(I)).delete(n);
 }
 function A(e) {
     let { config: n, latestChangelogId: r } = e;
     (m = r), (E = n);
 }
-function N(e) {
+function C(e) {
     let { id: n, changelog: r } = e;
     null == h[n] && (h[n] = {}),
         (h[n][r.locale] = {
@@ -54,13 +54,13 @@ function N(e) {
             locale: r.locale,
             [r.asset_type === f.h3.YOUTUBE_VIDEO_ID ? 'youtube_video_id' : 'image']: r.asset
         }),
-        null == p[n] && (p[n] = {}),
-        (p[n][r.locale] = f.LU.LOADED_SUCCESS);
+        null == _[n] && (_[n] = {}),
+        (_[n][r.locale] = f.LU.LOADED_SUCCESS);
 }
-function C(e) {
+function N(e) {
     let { id: n, locale: r } = e;
     if (null != h[n] && null != h[n][r]) return !1;
-    null == p[n] && (p[n] = {}), (p[n][r] = f.LU.LOADED_FAILURE);
+    null == _[n] && (_[n] = {}), (_[n][r] = f.LU.LOADED_FAILURE);
 }
 function R(e) {
     let { id: n } = e;
@@ -68,20 +68,20 @@ function R(e) {
 }
 function O(e) {
     let { changelogDate: n } = e;
-    (T = new Date(n)), o.K.set(v, n);
+    (b = new Date(n)), s.K.set(v, n);
 }
 function D() {
-    I = c.l4.getSetting();
+    y = c.l4.getSetting();
 }
-class L extends (i = s.ZP.Store) {
+class x extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(u.default, d.Z), this.syncWith([u.default], () => !0), this.syncWith([d.Z], D);
-        let e = o.K.get(v);
+        let e = s.K.get(v);
         if (null != e)
             try {
-                T = new Date(e);
+                b = new Date(e);
             } catch {
-                o.K.remove(v);
+                s.K.remove(v);
             }
     }
     getChangelog(e, n) {
@@ -93,7 +93,7 @@ class L extends (i = s.ZP.Store) {
     }
     getChangelogLoadStatus(e, n) {
         var r, i;
-        return null !== (i = null === (r = p[e]) || void 0 === r ? void 0 : r[n]) && void 0 !== i ? i : f.LU.NOT_LOADED;
+        return null !== (i = null === (r = _[e]) || void 0 === r ? void 0 : r[n]) && void 0 !== i ? i : f.LU.NOT_LOADED;
     }
     hasLoadedConfig() {
         return null != E;
@@ -105,30 +105,30 @@ class L extends (i = s.ZP.Store) {
         return g;
     }
     lastSeenChangelogId() {
-        return I;
+        return y;
     }
     lastSeenChangelogDate() {
-        return T;
+        return b;
     }
     getStateForDebugging() {
         return {
             changelogConfig: E,
-            loadedChangelogs: p,
-            lastSeenChangelogId: I,
-            lastSeenChangelogDate: T
+            loadedChangelogs: _,
+            lastSeenChangelogId: y,
+            lastSeenChangelogDate: b
         };
     }
     isLocked() {
-        return b.size > 0;
+        return I.size > 0;
     }
 }
-_(L, 'displayName', 'ChangelogStore'),
-    (n.Z = new L(l.Z, {
-        CHANGE_LOG_LOCK: y,
+p(x, 'displayName', 'ChangelogStore'),
+    (n.Z = new x(l.Z, {
+        CHANGE_LOG_LOCK: T,
         CHANGE_LOG_UNLOCK: S,
         CHANGE_LOG_SET_CONFIG: A,
-        CHANGE_LOG_FETCH_SUCCESS: N,
-        CHANGE_LOG_FETCH_FAILED: C,
+        CHANGE_LOG_FETCH_SUCCESS: C,
+        CHANGE_LOG_FETCH_FAILED: N,
         CHANGE_LOG_SET_OVERRIDE: R,
         CHANGE_LOG_MARK_SEEN: O
     }));

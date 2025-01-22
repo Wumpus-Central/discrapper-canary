@@ -1,22 +1,22 @@
-var r = n(67867),
-    o = n(821819),
-    a = n(729605),
-    i = n(65007).f,
-    s = n(447631);
-r(
+var i = r(67867),
+    a = r(821819),
+    o = r(729605),
+    s = r(65007).f,
+    l = r(447631);
+i(
     {
         target: 'Object',
         stat: !0,
         forced:
-            !s ||
-            o(function () {
-                i(1);
+            !l ||
+            a(function () {
+                s(1);
             }),
-        sham: !s
+        sham: !l
     },
     {
-        getOwnPropertyDescriptor: function (e, t) {
-            return i(a(e), t);
+        getOwnPropertyDescriptor: function (e, n) {
+            return s(o(e), n);
         }
     }
 );

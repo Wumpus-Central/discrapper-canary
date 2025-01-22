@@ -3,13 +3,13 @@ r.d(n, {
         return c;
     },
     Qe: function () {
-        return o;
+        return s;
     },
     W3: function () {
         return d;
     },
     ZW: function () {
-        return s;
+        return o;
     },
     ak: function () {
         return l;
@@ -20,9 +20,9 @@ r.d(n, {
 });
 var i = r(243814),
     a = r(388032);
-let s = [() => a.intl.string(a.t['6xfSCg']), () => a.intl.string(a.t.ymSk0t), () => a.intl.string(a.t.EnN7c3), () => a.intl.string(a.t['4wMpBg']), () => a.intl.string(a.t.CncpnJ), () => a.intl.string(a.t.X9pGvL), () => a.intl.string(a.t.sGOSGx), () => a.intl.string(a.t.JfibUl)],
-    o = [i.x.BOT, i.x.OPENID, i.x.IDENTIFY, i.x.EMAIL, i.x.CONNECTIONS, i.x.MESSAGES_READ, i.x.GUILDS, i.x.GUILDS_JOIN, i.x.GUILDS_MEMBERS_READ, i.x.GUILDS_CHANNELS_READ, i.x.GDM_JOIN, i.x.RPC, i.x.RPC_NOTIFICATIONS_READ, i.x.RPC_VOICE_READ, i.x.RPC_VOICE_WRITE, i.x.RPC_VIDEO_READ, i.x.RPC_VIDEO_WRITE, i.x.RPC_SCREENSHARE_READ, i.x.RPC_SCREENSHARE_WRITE, i.x.RPC_ACTIVITIES_WRITE, i.x.APPLICATIONS_BUILDS_UPLOAD, i.x.APPLICATIONS_BUILDS_READ, i.x.APPLICATIONS_COMMANDS, i.x.APPLICATIONS_COMMANDS_UPDATE, i.x.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE, i.x.APPLICATIONS_STORE_UPDATE, i.x.APPLICATIONS_ENTITLEMENTS, i.x.ACTIVITIES_INVITES_WRITE, i.x.ACTIVITIES_READ, i.x.ACTIVITIES_WRITE, i.x.RELATIONSHIPS_READ, i.x.RELATIONSHIPS_WRITE, i.x.VOICE, i.x.DM_CHANNELS_READ, i.x.DM_CHANNELS_MESSAGES_READ, i.x.DM_CHANNELS_MESSAGES_WRITE, i.x.ROLE_CONNECTIONS_WRITE, i.x.PRESENCES_READ, i.x.PRESENCES_WRITE, i.x.GATEWAY_CONNECT, i.x.PAYMENT_SOURCES_COUNTRY_CODE, i.x.SDK_SOCIAL_LAYER],
-    l = o.concat([i.x.WEBHOOK_INCOMING, i.x.BOT]),
+let o = [() => a.intl.string(a.t['6xfSCg']), () => a.intl.string(a.t.ymSk0t), () => a.intl.string(a.t.EnN7c3), () => a.intl.string(a.t['4wMpBg']), () => a.intl.string(a.t.CncpnJ), () => a.intl.string(a.t.X9pGvL), () => a.intl.string(a.t.sGOSGx), () => a.intl.string(a.t.JfibUl)],
+    s = [i.x.BOT, i.x.OPENID, i.x.IDENTIFY, i.x.EMAIL, i.x.CONNECTIONS, i.x.MESSAGES_READ, i.x.GUILDS, i.x.GUILDS_JOIN, i.x.GUILDS_MEMBERS_READ, i.x.GUILDS_CHANNELS_READ, i.x.GDM_JOIN, i.x.RPC, i.x.RPC_NOTIFICATIONS_READ, i.x.RPC_VOICE_READ, i.x.RPC_VOICE_WRITE, i.x.RPC_VIDEO_READ, i.x.RPC_VIDEO_WRITE, i.x.RPC_SCREENSHARE_READ, i.x.RPC_SCREENSHARE_WRITE, i.x.RPC_ACTIVITIES_WRITE, i.x.APPLICATIONS_BUILDS_UPLOAD, i.x.APPLICATIONS_BUILDS_READ, i.x.APPLICATIONS_COMMANDS, i.x.APPLICATIONS_COMMANDS_UPDATE, i.x.APPLICATIONS_COMMANDS_PERMISSIONS_UPDATE, i.x.APPLICATIONS_STORE_UPDATE, i.x.APPLICATIONS_ENTITLEMENTS, i.x.ACTIVITIES_INVITES_WRITE, i.x.ACTIVITIES_READ, i.x.ACTIVITIES_WRITE, i.x.RELATIONSHIPS_READ, i.x.RELATIONSHIPS_WRITE, i.x.VOICE, i.x.DM_CHANNELS_READ, i.x.DM_CHANNELS_MESSAGES_READ, i.x.DM_CHANNELS_MESSAGES_WRITE, i.x.ROLE_CONNECTIONS_WRITE, i.x.PRESENCES_READ, i.x.PRESENCES_WRITE, i.x.GATEWAY_CONNECT, i.x.PAYMENT_SOURCES_COUNTRY_CODE, i.x.SDK_SOCIAL_LAYER],
+    l = s.concat([i.x.WEBHOOK_INCOMING, i.x.BOT]),
     u = ['rpc.api'];
 function c(e, n) {
     switch (e) {

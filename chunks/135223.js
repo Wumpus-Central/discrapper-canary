@@ -5,44 +5,44 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(341702),
-    o = r(887490);
+var o = r(341702),
+    s = r(887490);
 let l = new Set(['line', 'blockQuote']),
     u = [];
 function c(e, n, r) {
-    if (o.bN.areStylesDisabled(e)) return [];
+    if (s.bN.areStylesDisabled(e)) return [];
     let [i, a] = n;
-    if (1 !== a.length || !o.aj.isInTypes(i, l)) return u;
-    let { entries: c, serializedChildren: d } = o.q.markdown(i, r, !0),
+    if (1 !== a.length || !s.aj.isInTypes(i, l)) return u;
+    let { entries: c, serializedChildren: d } = s.q.markdown(i, r, !0),
         f = [];
     for (let n = 0; n < c.length; n++) {
         let r = c[n];
         if (r.attributes.length > 0 && r.text.length > 0) {
             let i = c[n - 1],
                 l = c[n + 1],
-                u = (0, s.t)(e, a, d, r.start),
-                _ = {
+                u = (0, o.t)(e, a, d, r.start),
+                p = {
                     anchor: u,
-                    focus: (0, s.t)(e, a, d, r.start + r.text.length)
+                    focus: (0, o.t)(e, a, d, r.start + r.text.length)
                 },
-                h = o.bN.nodes(e, {
-                    at: _,
+                h = s.bN.nodes(e, {
+                    at: p,
                     mode: 'lowest',
                     voids: !1
                 }),
-                p = {};
+                _ = {};
             for (let e of r.attributes)
-                if (((p[e] = !0), 'syntaxBefore' === e && null != l)) for (let e of l.attributes) p['before_'.concat(e)] = !0;
-                else if ('syntaxAfter' === e && null != i) for (let e of i.attributes) p['after_'.concat(e)] = !0;
+                if (((_[e] = !0), 'syntaxBefore' === e && null != l)) for (let e of l.attributes) _['before_'.concat(e)] = !0;
+                else if ('syntaxAfter' === e && null != i) for (let e of i.attributes) _['after_'.concat(e)] = !0;
             for (let [n, r] of h) {
                 let n = {
-                    anchor: o.bN.start(e, r),
-                    focus: o.bN.end(e, r)
+                    anchor: s.bN.start(e, r),
+                    focus: s.bN.end(e, r)
                 };
-                o.Jz.isBefore(n.anchor, _.anchor) && (n.anchor = _.anchor),
-                    o.Jz.isAfter(n.focus, _.focus) && (n.focus = _.focus),
+                s.Jz.isBefore(n.anchor, p.anchor) && (n.anchor = p.anchor),
+                    s.Jz.isAfter(n.focus, p.focus) && (n.focus = p.focus),
                     f.push({
-                        ...p,
+                        ..._,
                         ...n
                     });
             }

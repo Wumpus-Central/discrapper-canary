@@ -4,12 +4,12 @@ r.d(n, {
         return f;
     },
     J: function () {
-        return o;
+        return s;
     }
 });
 let a = Symbol.for('react-aria.i18n.locale'),
-    s = Symbol.for('react-aria.i18n.strings');
-class o {
+    o = Symbol.for('react-aria.i18n.strings');
+class s {
     getStringForLocale(e, n) {
         let r = this.getStringsForLocale(n)[e];
         if (!r) throw Error(`Could not find intl message ${e} in ${n} locale`);
@@ -23,9 +23,9 @@ class o {
         if ('undefined' == typeof window) return null;
         let n = window[a];
         if (void 0 === i) {
-            let e = window[s];
+            let e = window[o];
             if (!e) return null;
-            for (let r in ((i = {}), e)) i[r] = new o({ [n]: e[r] }, n);
+            for (let r in ((i = {}), e)) i[r] = new s({ [n]: e[r] }, n);
         }
         let r = null == i ? void 0 : i[e];
         if (!r) throw Error(`Strings for package "${e}" were not included by LocalizedStringProvider. Please add it to the list passed to createLocalizedStringDictionary.`);
@@ -56,8 +56,8 @@ class f {
         let i = n['=' + e];
         if (i) return 'function' == typeof i ? i() : i;
         let a = this.locale + ':' + r,
-            s = c.get(a);
-        return !s && ((s = new Intl.PluralRules(this.locale, { type: r })), c.set(a, s)), 'function' == typeof (i = n[s.select(e)] || n.other) ? i() : i;
+            o = c.get(a);
+        return !o && ((o = new Intl.PluralRules(this.locale, { type: r })), c.set(a, o)), 'function' == typeof (i = n[o.select(e)] || n.other) ? i() : i;
     }
     number(e) {
         let n = d.get(this.locale);

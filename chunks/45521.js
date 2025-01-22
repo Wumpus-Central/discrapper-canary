@@ -8,9 +8,9 @@ r.d(n, {
 });
 var i = r(15729),
     a = r(731965);
-let s = Object.freeze({ showPremiumUpsell: !1 }),
-    o = (0, i.U)((e) => s),
+let o = Object.freeze({ showPremiumUpsell: !1 }),
+    s = (0, i.U)((e) => o),
     l = (e) => {
-        (0, a.j)(() => o.setState({ showPremiumUpsell: e }));
+        (0, a.j)(() => s.setState({ showPremiumUpsell: e }));
     },
-    u = o;
+    u = s;

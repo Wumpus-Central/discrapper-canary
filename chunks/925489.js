@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i = function (e, n, r, i) {
     var a = i.clientWidth,
-        s = i.clientHeight,
-        o = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
+        o = i.clientHeight,
+        s = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
         l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-        u = o - (i.getBoundingClientRect().left + window.pageXOffset),
+        u = s - (i.getBoundingClientRect().left + window.pageXOffset),
         c = l - (i.getBoundingClientRect().top + window.pageYOffset);
     if ('vertical' === n) {
         var d = void 0;
-        if (((d = c < 0 ? 359 : c > s ? 0 : (360 * (-((100 * c) / s) + 100)) / 100), r.h !== d))
+        if (((d = c < 0 ? 359 : c > o ? 0 : (360 * (-((100 * c) / o) + 100)) / 100), r.h !== d))
             return {
                 h: d,
                 s: r.s,

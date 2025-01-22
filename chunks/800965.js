@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(481060),
+    o = r.n(a),
+    s = r(481060),
     l = r(871499),
     u = r(388032),
     c = r(558352);
@@ -17,8 +17,8 @@ function d(e) {
     return (0, i.jsx)(l.Z, {
         label: f,
         onClick: n ? r : a,
-        iconComponent: o.WindowLaunchIcon,
-        iconClassName: s()({ [c.popIn]: n }),
+        iconComponent: s.WindowLaunchIcon,
+        iconClassName: o()({ [c.popIn]: n }),
         ...d
     });
 }

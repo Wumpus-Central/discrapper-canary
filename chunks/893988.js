@@ -1,10 +1,10 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(757143);
 let a = /\\/g;
-function s(e) {
+function o(e) {
     return e.replace(a, '/');
 }

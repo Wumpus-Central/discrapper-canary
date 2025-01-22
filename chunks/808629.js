@@ -3,13 +3,13 @@ r.d(n, {
         return i;
     },
     Z: function () {
-        return I;
+        return y;
     }
 });
 var i,
     a = r(653041);
-var s = r(47120);
-var o = r(411104);
+var o = r(47120);
+var s = r(411104);
 var l = r(536895);
 function u(e, n) {
     return e.findIndex((e) => n === e.key);
@@ -31,17 +31,17 @@ function f(e, n) {
         i = [];
     for (let e = 0; e < n.length && null != r; e++) {
         let a = n[e],
-            s = u(r, a);
-        if (s < 0 || s >= r.length) {
+            o = u(r, a);
+        if (o < 0 || o >= r.length) {
             let e = r[0];
             null != e && i.push(e.key);
             break;
         }
-        i.push(a), (r = r[s].children);
+        i.push(a), (r = r[o].children);
     }
     return i;
 }
-function _(e, n) {
+function p(e, n) {
     let { items: r } = n,
         i = {
             ...e,
@@ -64,19 +64,19 @@ function h(e, n) {
         focusIndex: v(i)
     };
 }
-function p(e, n) {
+function _(e, n) {
     let r = c(e),
         i = d(e);
     if (null == i) return e;
     let a = (u(i, r) - 1) % i.length;
     if ((a < 0 && (a = i.length - 1), null == i[a])) return e;
-    let s = {
+    let o = {
         ...e,
         focusPath: [...e.focusPath.slice(0, -1), i[a].key]
     };
     return {
-        ...s,
-        focusIndex: v(s)
+        ...o,
+        focusIndex: v(o)
     };
 }
 function m(e, n) {
@@ -85,13 +85,13 @@ function m(e, n) {
     if (null == i) return e;
     let a = (u(i, r) + 1) % i.length;
     if (null == i[a]) return e;
-    let s = {
+    let o = {
         ...e,
         focusPath: [...e.focusPath.slice(0, -1), i[a].key]
     };
     return {
-        ...s,
-        focusIndex: v(s)
+        ...o,
+        focusIndex: v(o)
     };
 }
 function g(e, n) {
@@ -99,12 +99,12 @@ function g(e, n) {
     let i = c(e),
         a = d(e);
     if (null == a) return e;
-    let s = a[u(a, i)],
-        o = null == s ? void 0 : null === (r = s.children) || void 0 === r ? void 0 : r[0];
-    if (null == o) return e;
+    let o = a[u(a, i)],
+        s = null == o ? void 0 : null === (r = o.children) || void 0 === r ? void 0 : r[0];
+    if (null == s) return e;
     let l = {
         ...e,
-        focusPath: [...e.focusPath, o.key]
+        focusPath: [...e.focusPath, s.key]
     };
     return {
         ...l,
@@ -127,10 +127,10 @@ function v(e) {
         r = d(e);
     return null == r ? -1 : u(r, n);
 }
-function I(e, n) {
+function y(e, n) {
     switch (n.type) {
         case l.Us.NAVIGATE_UP:
-            return p(e, n);
+            return _(e, n);
         case l.Us.NAVIGATE_DOWN:
             return m(e, n);
         case l.Us.NAVIGATE_IN:
@@ -138,7 +138,7 @@ function I(e, n) {
         case l.Us.NAVIGATE_OUT:
             return E(e, n);
         case 'UPDATE_ITEMS':
-            return _(e, n);
+            return p(e, n);
         case 'SET_FOCUS_PATH':
             return h(e, n);
         case l.Us.SELECT_FOCUSED_ITEM:

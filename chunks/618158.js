@@ -1,6 +1,6 @@
 r.d(n, {
     Y: function () {
-        return o;
+        return s;
     },
     Z: function () {
         return l;
@@ -8,14 +8,14 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(937995);
-function o(e) {
-    let { onPreventIdle: n, onAllowIdle: r, onActive: i } = a.useContext(s.nM),
-        o = a.useCallback(() => {
+    o = r(937995);
+function s(e) {
+    let { onPreventIdle: n, onAllowIdle: r, onActive: i } = a.useContext(o.nM),
+        s = a.useCallback(() => {
             n(e);
         }, [e, n]);
     return {
-        preventIdle: o,
+        preventIdle: s,
         allowIdle: a.useCallback(() => {
             r(e);
         }, [e, r]),
@@ -24,8 +24,8 @@ function o(e) {
 }
 function l(e) {
     let { children: n, className: r } = e,
-        { onForceIdle: l, onActive: u } = a.useContext(s.nM),
-        { preventIdle: c, allowIdle: d } = o('interact');
+        { onForceIdle: l, onActive: u } = a.useContext(o.nM),
+        { preventIdle: c, allowIdle: d } = s('interact');
     a.useEffect(() => () => d(), [d]);
     let f = a.useCallback(
         (e) => {

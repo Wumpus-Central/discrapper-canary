@@ -1,9 +1,9 @@
 r.d(n, {
     Qh: function () {
-        return s;
+        return o;
     },
     SO: function () {
-        return o;
+        return s;
     },
     Zw: function () {
         return l;
@@ -11,14 +11,14 @@ r.d(n, {
 });
 var i = r(570140),
     a = r(19759);
-function s(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'DEV_TOOLS_SETTINGS_UPDATE',
         settings: e
     });
 }
-function o() {
-    s({ displayTools: !a.Z.displayTools });
+function s() {
+    o({ displayTools: !a.Z.displayTools });
 }
 function l() {
     i.Z.dispatch({ type: 'ANALYTICS_LOG_CLEAR' });

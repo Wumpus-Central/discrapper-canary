@@ -1,13 +1,13 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(358085),
     a = r(998502),
-    s = r(522474);
-function o(e) {
+    o = r(522474);
+function s(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        r = s.Z.getWindow(e);
+        r = o.Z.getWindow(e);
     if (null != r && !r.closed) i.isPlatformEmbedded ? a.ZP.focus(e, n) : r.focus();
 }

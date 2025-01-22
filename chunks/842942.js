@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(423650),
     a = r.n(i),
-    s = r(754700),
-    o = r(628665),
+    o = r(754700),
+    s = r(628665),
     l = r(388032);
 let u = '1290718710658629658';
 function c(e) {
@@ -38,7 +38,7 @@ function c(e) {
         title: l.intl.string(l.t.ugbhDQ),
         subtitle: l.intl.string(l.t.FIYcpK),
         choices: a()(r.slice(0, 4)).concat(r[4]),
-        taskType: s.X.WATCH_VIDEO,
-        experiment: o.Y
+        taskType: o.X.WATCH_VIDEO,
+        experiment: s.Y
     };
 }

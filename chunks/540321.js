@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(740078);
@@ -28,7 +28,7 @@ function a(e) {
         i
     );
 }
-function s(e) {
+function o(e) {
     var n = a(e);
     return i.xs.reduce(function (e, r) {
         return e.concat(

@@ -1,7 +1,7 @@
 let i;
 var a,
-    s = r(442837),
-    o = r(570140);
+    o = r(442837),
+    s = r(570140);
 function l(e, n, r) {
     return (
         n in e
@@ -22,13 +22,13 @@ let u = [],
         var n, r;
         (c = null !== (n = e.analyticsLocations) && void 0 !== n ? n : u), (d = null !== (r = e.analyticsSource) && void 0 !== r ? r : null), (i = e.initialProductSkuId);
     },
-    _ = (e) => {
+    p = (e) => {
         (c = u), (d = null);
     },
     h = (e) => {
         e.item.skuId === i && (i = void 0);
     };
-class p extends (a = s.ZP.Store) {
+class _ extends (a = o.ZP.Store) {
     get analyticsLocations() {
         return c;
     }
@@ -45,10 +45,10 @@ class p extends (a = s.ZP.Store) {
         };
     }
 }
-l(p, 'displayName', 'CollectiblesShopStore'),
-    (n.Z = new p(o.Z, {
+l(_, 'displayName', 'CollectiblesShopStore'),
+    (n.Z = new _(s.Z, {
         COLLECTIBLES_SHOP_OPEN: f,
-        COLLECTIBLES_SHOP_CLOSE: _,
+        COLLECTIBLES_SHOP_CLOSE: p,
         COLLECTIBLES_PRODUCT_DETAILS_OPEN: h,
-        LOGOUT: _
+        LOGOUT: p
     }));

@@ -1,6 +1,6 @@
 var i = r(47120);
 var a = r(633302);
-let s = (e) => {
+let o = (e) => {
     let n = new Map();
     for (let i of e) {
         var r;
@@ -13,4 +13,4 @@ let s = (e) => {
     }
     return n;
 };
-n.Z = s;
+n.Z = o;

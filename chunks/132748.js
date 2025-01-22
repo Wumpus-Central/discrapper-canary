@@ -1,7 +1,7 @@
 var i,
     a,
-    s = r(47120);
-var o = r(192379),
+    o = r(47120);
+var s = r(192379),
     l = r(112724);
 function u(e, n, r) {
     return (
@@ -20,11 +20,11 @@ function c(e, n, r) {
     return Math.min(Math.max(Math.floor(e / n), 1), r);
 }
 n.Z = (0, l.Z)(
-    ((a = class extends (i = o.Component) {
+    ((a = class extends (i = s.Component) {
         static getDerivedStateFromProps(e, n) {
             let { width: r, desiredItemWidth: i, maxColumns: a } = e,
-                s = c(r, i, a);
-            return s !== n.columns ? { columns: s } : null;
+                o = c(r, i, a);
+            return o !== n.columns ? { columns: o } : null;
         }
         render() {
             let { width: e, height: n, children: r } = this.props,

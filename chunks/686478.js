@@ -6,15 +6,15 @@ r.d(n, {
         return i;
     },
     jk: function () {
-        return o;
+        return s;
     },
     vL: function () {
-        return s;
+        return o;
     }
 });
 var i,
     a = r(786761);
-function s(e) {
+function o(e) {
     return {
         channelId: e.channel_id,
         messageId: e.message_id,
@@ -28,10 +28,10 @@ function s(e) {
         dueAt: null != e.due_at ? new Date(e.due_at) : void 0
     };
 }
-function o(e) {
+function s(e) {
     return {
         message: null != e.message ? (0, a.e5)(e.message) : null,
-        saveData: s(e.save_data)
+        saveData: o(e.save_data)
     };
 }
 function l(e) {

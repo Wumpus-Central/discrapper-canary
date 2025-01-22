@@ -7,13 +7,13 @@ r.r(n),
             return i.r;
         },
         Reference: function () {
-            return s.s;
+            return o.s;
         },
         usePopper: function () {
-            return o.D;
+            return s.D;
         }
     });
 var i = r(636074),
     a = r(298503),
-    s = r(837215),
-    o = r(283209);
+    o = r(837215),
+    s = r(283209);

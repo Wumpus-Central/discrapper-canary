@@ -1,24 +1,24 @@
 var i = r(733860);
 var a = r(200651),
-    s = r(192379),
-    o = r(780384),
+    o = r(192379),
+    s = r(780384),
     l = r(481060),
     u = r(197344),
     c = r(526167),
     d = r(70097),
     f = r(981631),
-    _ = r(73117),
+    p = r(73117),
     h = r(988868),
-    p = r(554355),
+    _ = r(554355),
     m = r(991989),
     g = r(787462),
     E = r(635507),
     v = r(470794),
-    I = r(886777);
-function T(e) {
-    let { movDark: n = _, movLight: r = g, mp4Dark: i = h, mp4Light: s = E, pngDark: o = p, pngLight: l = v, webmDark: u = m, webmLight: d = I } = e,
-        T = (0, c.vu)(),
-        b = [
+    y = r(886777);
+function b(e) {
+    let { movDark: n = p, movLight: r = g, mp4Dark: i = h, mp4Light: o = E, pngDark: s = _, pngLight: l = v, webmDark: u = m, webmLight: d = y } = e,
+        b = (0, c.vu)(),
+        I = [
             (0, a.jsx)(
                 'source',
                 {
@@ -31,16 +31,16 @@ function T(e) {
                 'img',
                 {
                     alt: '',
-                    src: o
+                    src: s
                 },
                 'png'
             )
         ],
-        y = [
+        T = [
             (0, a.jsx)(
                 'source',
                 {
-                    src: s,
+                    src: o,
                     type: 'video/mp4'
                 },
                 'mp4'
@@ -55,8 +55,8 @@ function T(e) {
             )
         ];
     return (
-        (T > 52 || -1 === T) &&
-            (b.unshift(
+        (b > 52 || -1 === b) &&
+            (I.unshift(
                 (0, a.jsx)(
                     'source',
                     {
@@ -66,7 +66,7 @@ function T(e) {
                     'webm'
                 )
             ),
-            y.unshift(
+            T.unshift(
                 (0, a.jsx)(
                     'source',
                     {
@@ -77,7 +77,7 @@ function T(e) {
                 )
             )),
         (0, c.rO)() &&
-            (b.unshift(
+            (I.unshift(
                 (0, a.jsx)(
                     'source',
                     {
@@ -87,7 +87,7 @@ function T(e) {
                     'hevc'
                 )
             ),
-            y.unshift(
+            T.unshift(
                 (0, a.jsx)(
                     'source',
                     {
@@ -98,30 +98,30 @@ function T(e) {
                 )
             )),
         {
-            [f.BRd.DARK]: b,
-            [f.BRd.LIGHT]: y
+            [f.BRd.DARK]: I,
+            [f.BRd.LIGHT]: T
         }
     );
 }
-let b = u.Z.getAppSpinnerSources(),
-    y = null != b ? T(b) : null,
-    S = T({}),
+let I = u.Z.getAppSpinnerSources(),
+    T = null != I ? b(I) : null,
+    S = b({}),
     A = (e) => {
         var n;
-        let { loop: r = !0, autoPlay: i = !0, setRef: u, className: c, onReady: _ } = e,
+        let { loop: r = !0, autoPlay: i = !0, setRef: u, className: c, onReady: p } = e,
             { theme: h } = (0, l.useThemeContext)(),
-            { reducedMotion: p } = s.useContext(l.AccessibilityPreferencesContext),
+            { reducedMotion: _ } = o.useContext(l.AccessibilityPreferencesContext),
             m = S;
-        null != y && (m = y);
-        let g = null !== (n = m[(0, o.wj)(h) ? f.BRd.DARK : f.BRd.LIGHT]) && void 0 !== n ? n : m[f.BRd.DARK];
+        null != T && (m = T);
+        let g = null !== (n = m[(0, s.wj)(h) ? f.BRd.DARK : f.BRd.LIGHT]) && void 0 !== n ? n : m[f.BRd.DARK];
         return (0, a.jsx)(
             d.Z,
             {
                 ref: u,
-                onLoadedData: _,
+                onLoadedData: p,
                 className: c,
-                loop: !p.enabled && r,
-                autoPlay: !p.enabled && i,
+                loop: !_.enabled && r,
+                autoPlay: !_.enabled && i,
                 playsInline: !0,
                 'data-testid': 'app-spinner',
                 children: g

@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(51350);
 var a = r(149765);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,7 +18,7 @@ function s(e, n, r) {
         e
     );
 }
-class o {
+class s {
     static has(e, n) {
         return (e & n) != 0;
     }
@@ -30,4 +30,4 @@ class o {
         return !Object.hasOwn(this.cache, e) && (this.cache[e] = a.vB(e)), this.cache[e];
     }
 }
-s(o, 'cache', {});
+o(s, 'cache', {});

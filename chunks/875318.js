@@ -1,12 +1,12 @@
-var e = n(67867),
-    o = n(447631),
-    i = n(349446).f;
-e(
+var i = r(67867),
+    a = r(447631),
+    o = r(349446).f;
+i(
     {
         target: 'Object',
         stat: !0,
-        forced: Object.defineProperty !== i,
-        sham: !o
+        forced: Object.defineProperty !== o,
+        sham: !a
     },
-    { defineProperty: i }
+    { defineProperty: o }
 );

@@ -1,7 +1,7 @@
 var i = r(177593);
 var a = r(47120);
-var s = r(147913),
-    o = r(695346);
+var o = r(147913),
+    s = r(695346);
 function l(e, n, r) {
     return (
         n in e
@@ -16,7 +16,7 @@ function l(e, n, r) {
     );
 }
 let u = !1;
-class c extends s.Z {
+class c extends o.Z {
     maybeShowChangeLanguageToast() {}
     setVerifyTimezone() {
         u = !0;
@@ -25,7 +25,7 @@ class c extends s.Z {
         if (!u) return;
         u = !1;
         let e = new Date().getTimezoneOffset();
-        o.rN.getSetting() !== e && setImmediate(() => o.rN.updateSetting(e));
+        s.rN.getSetting() !== e && setImmediate(() => s.rN.updateSetting(e));
     }
     constructor(...e) {
         super(...e),

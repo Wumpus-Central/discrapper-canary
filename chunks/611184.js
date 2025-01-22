@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(594190),
-    o = r(77498),
+    o = r(594190),
+    s = r(77498),
     l = r(454293);
 function u(e, n, r) {
     return (
@@ -19,8 +19,8 @@ function u(e, n, r) {
 function c(e) {
     var n, r;
     let { game: i } = e,
-        a = s.ZP.isDetectionEnabled(i),
-        u = null !== (r = i.id) && void 0 !== r ? r : null === (n = o.Z.getGameByName(i.name)) || void 0 === n ? void 0 : n.id;
+        a = o.ZP.isDetectionEnabled(i),
+        u = null !== (r = i.id) && void 0 !== r ? r : null === (n = s.Z.getGameByName(i.name)) || void 0 === n ? void 0 : n.id;
     null != u && (0, l.M)(u, a);
 }
 class d extends a.Z {

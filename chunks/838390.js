@@ -1,9 +1,9 @@
 r.d(n, {
     P2: function () {
-        return o;
+        return s;
     },
     jl: function () {
-        return s;
+        return o;
     }
 });
 let i = {
@@ -13,9 +13,9 @@ let i = {
         prettySpaces: 0
     },
     a = { ignoreUnknownFields: !1 };
-function s(e) {
+function o(e) {
     return e ? Object.assign(Object.assign({}, a), e) : a;
 }
-function o(e) {
+function s(e) {
     return e ? Object.assign(Object.assign({}, i), e) : i;
 }

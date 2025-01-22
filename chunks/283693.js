@@ -4,12 +4,12 @@ function i(e) {
 function a(e, n) {
     return e.hasOwnProperty(n);
 }
-function s(e, n) {
+function o(e, n) {
     return Object.setPrototypeOf(e, n.prototype);
 }
 r.d(n, {
     gh: function () {
-        return s;
+        return o;
     },
     iG: function () {
         return i;

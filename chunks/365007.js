@@ -3,10 +3,10 @@ r.d(n, {
         return h;
     },
     Sr: function () {
-        return p;
+        return _;
     },
     WQ: function () {
-        return _;
+        return p;
     },
     cT: function () {
         return f;
@@ -23,8 +23,8 @@ r.d(n, {
 });
 var i = r(525769),
     a = r(544891),
-    s = r(570140),
-    o = r(573261),
+    o = r(570140),
+    s = r(573261),
     l = r(981631);
 async function u() {
     return (
@@ -53,7 +53,7 @@ function d() {
             rejectWithError: !0
         })
         .then((e) => {
-            s.Z.dispatch({
+            o.Z.dispatch({
                 type: 'MFA_WEBAUTHN_CREDENTIALS_LOADED',
                 credentials: e.body
             });
@@ -66,19 +66,19 @@ function f(e) {
             rejectWithError: !0
         })
         .then(() => {
-            s.Z.dispatch({
+            o.Z.dispatch({
                 type: 'AUTHENTICATOR_DELETE',
                 credential: e
             });
         });
 }
-async function _(e, n) {
+async function p(e, n) {
     let r = await a.tn.patch({
         url: l.ANM.MFA_WEBAUTHN_CREDENTIAL(e),
         body: { name: n },
         rejectWithError: !1
     });
-    s.Z.dispatch({
+    o.Z.dispatch({
         type: 'AUTHENTICATOR_UPDATE',
         credential: r.body
     });
@@ -96,8 +96,8 @@ async function h() {
         challenge: n
     };
 }
-async function p(e, n, r) {
-    let a = await o.Z.post({
+async function _(e, n, r) {
+    let a = await s.Z.post({
         url: l.ANM.MFA_WEBAUTHN_CREDENTIALS,
         body: {
             name: e,
@@ -107,11 +107,11 @@ async function p(e, n, r) {
         trackedActionData: { event: i.a.WEBAUTHN_REGISTER },
         rejectWithError: !1
     });
-    s.Z.dispatch({
+    o.Z.dispatch({
         type: 'AUTHENTICATOR_CREATE',
         credential: a.body
     }),
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'MFA_ENABLE_SUCCESS',
             codes: a.body.backup_codes
         });

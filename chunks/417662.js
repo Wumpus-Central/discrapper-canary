@@ -1,6 +1,6 @@
 r.d(n, {
     E: function () {
-        return p;
+        return _;
     },
     Z: function () {
         return m;
@@ -8,59 +8,59 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(653603),
-    s = r.n(a),
-    o = r(512722),
-    l = r.n(o),
+    o = r.n(a),
+    s = r(512722),
+    l = r.n(s),
     u = r(53529),
     c = r(50659),
     d = r(436660),
     f = r(887490),
-    _ = r(981631);
+    p = r(981631);
 let h = '  ';
-function p(e, n) {
-    let { cmd: r = !1, ctrl: i = !1, alt: a = !1, shift: s = !1 } = n;
-    return (null == r || e.metaKey === r) && (null == i || e.ctrlKey === i) && (null == a || e.altKey === a) && (null == s || e.shiftKey === s);
+function _(e, n) {
+    let { cmd: r = !1, ctrl: i = !1, alt: a = !1, shift: o = !1 } = n;
+    return (null == r || e.metaKey === r) && (null == i || e.ctrlKey === i) && (null == a || e.altKey === a) && (null == o || e.shiftKey === o);
 }
 function m(e) {
     return (
         (e.onKeyDown = (n) => {
-            var r, i, a, o;
+            var r, i, a, s;
             let m = e.isMac;
             switch (n.which) {
-                case _.yXg.B:
+                case p.yXg.B:
                     if (
                         !f.bN.isEditorEmpty(e) &&
-                        p(n, {
+                        _(n, {
                             ctrl: !m,
                             cmd: m
                         })
                     )
                         return (0, c.py)(e, 'bold'), !0;
                     break;
-                case _.yXg.I:
+                case p.yXg.I:
                     if (
                         !f.bN.isEditorEmpty(e) &&
-                        p(n, {
+                        _(n, {
                             ctrl: !m,
                             cmd: m
                         })
                     )
                         return (0, c.py)(e, 'italics'), !0;
                     break;
-                case _.yXg.U:
+                case p.yXg.U:
                     if (
                         !f.bN.isEditorEmpty(e) &&
-                        p(n, {
+                        _(n, {
                             ctrl: !m,
                             cmd: m
                         })
                     )
                         return (0, c.py)(e, 'underline'), !0;
                     break;
-                case _.yXg.S:
+                case p.yXg.S:
                     if (
                         !f.bN.isEditorEmpty(e) &&
-                        p(n, {
+                        _(n, {
                             ctrl: !m,
                             cmd: m,
                             shift: !0
@@ -68,44 +68,44 @@ function m(e) {
                     )
                         return (0, c.py)(e, 'strikethrough'), !0;
                     break;
-                case _.yXg.TAB:
-                    if (null != e.selection && p(n, { shift: null })) {
+                case p.yXg.TAB:
+                    if (null != e.selection && _(n, { shift: null })) {
                         let [i, a] = f.M8.edges(e.selection),
-                            s = f.bN.blocks(e).slice(i.path[0], a.path[0] + 1),
-                            o = !0;
-                        for (let [e] of s)
+                            o = f.bN.blocks(e).slice(i.path[0], a.path[0] + 1),
+                            s = !0;
+                        for (let [e] of o)
                             if ('line' !== e.type || !(null === (r = e.codeBlockState) || void 0 === r ? void 0 : r.isInCodeBlock)) {
-                                o = !1;
+                                s = !1;
                                 break;
                             }
-                        if (o) {
+                        if (s) {
                             if (!n.shiftKey && f.M8.isCollapsed(e.selection)) return d.Q.insertText(e, h), !0;
                             let r = !n.shiftKey;
                             return (
                                 u.T.withSingleEntry(e, () => {
-                                    var n, i, a, o;
+                                    var n, i, a, s;
                                     let l = null !== (a = null === (n = e.selection) || void 0 === n ? void 0 : n.anchor) && void 0 !== a ? a : f.bN.start(e, []),
-                                        u = null !== (o = null === (i = e.selection) || void 0 === i ? void 0 : i.focus) && void 0 !== o ? o : f.bN.end(e, []);
-                                    for (let [n, i] of s) {
+                                        u = null !== (s = null === (i = e.selection) || void 0 === i ? void 0 : i.focus) && void 0 !== s ? s : f.bN.end(e, []);
+                                    for (let [n, i] of o) {
                                         let a = n.children[0];
                                         if (!f.LC.isText(n.children[0])) continue;
-                                        let s = f.C0.child(i, 0),
-                                            o = {
-                                                path: s,
+                                        let o = f.C0.child(i, 0),
+                                            s = {
+                                                path: o,
                                                 offset: 0
                                             };
                                         if (r)
-                                            d.Q.insertText(e, h, { at: o }),
-                                                f.C0.equals(l.path, s) &&
+                                            d.Q.insertText(e, h, { at: s }),
+                                                f.C0.equals(l.path, o) &&
                                                     0 !== l.offset &&
                                                     (l = {
-                                                        path: s,
+                                                        path: o,
                                                         offset: l.offset + h.length
                                                     }),
-                                                f.C0.equals(u.path, s) &&
+                                                f.C0.equals(u.path, o) &&
                                                     0 !== u.offset &&
                                                     (u = {
-                                                        path: s,
+                                                        path: o,
                                                         offset: u.offset + h.length
                                                     });
                                         else if (a.text.startsWith(h)) {
@@ -115,18 +115,18 @@ function m(e) {
                                             };
                                             d.Q.delete(e, {
                                                 at: {
-                                                    anchor: o,
+                                                    anchor: s,
                                                     focus: n
                                                 }
                                             }),
-                                                f.C0.equals(l.path, s) &&
+                                                f.C0.equals(l.path, o) &&
                                                     (l = {
-                                                        path: s,
+                                                        path: o,
                                                         offset: Math.max(0, l.offset - h.length)
                                                     }),
-                                                f.C0.equals(u.path, s) &&
+                                                f.C0.equals(u.path, o) &&
                                                     (u = {
-                                                        path: s,
+                                                        path: o,
                                                         offset: Math.max(0, u.offset - h.length)
                                                     });
                                         }
@@ -141,12 +141,12 @@ function m(e) {
                         }
                     }
                     break;
-                case _.yXg.ARROW_LEFT:
-                case _.yXg.ARROW_RIGHT: {
+                case p.yXg.ARROW_LEFT:
+                case p.yXg.ARROW_RIGHT: {
                     let r, l;
-                    if (p(n, { shift: null })) r = 'character';
+                    if (_(n, { shift: null })) r = 'character';
                     else if (
-                        p(n, {
+                        _(n, {
                             ctrl: !m,
                             alt: m,
                             shift: null
@@ -155,7 +155,7 @@ function m(e) {
                         r = 'word';
                     else if (
                         m &&
-                        p(n, {
+                        _(n, {
                             cmd: !0,
                             shift: null
                         })
@@ -163,9 +163,9 @@ function m(e) {
                         return !1;
                     else return !1;
                     n.shiftKey && (l = 'focus');
-                    let u = e.children[null !== (o = null === (a = e.selection) || void 0 === a ? void 0 : null === (i = a.focus) || void 0 === i ? void 0 : i.path[0]) && void 0 !== o ? o : 0],
-                        c = 'rtl' === s()(f.aj.string(u)),
-                        h = (n.which === _.yXg.ARROW_LEFT) == !c;
+                    let u = e.children[null !== (s = null === (a = e.selection) || void 0 === a ? void 0 : null === (i = a.focus) || void 0 === i ? void 0 : i.path[0]) && void 0 !== s ? s : 0],
+                        c = 'rtl' === o()(f.aj.string(u)),
+                        h = (n.which === p.yXg.ARROW_LEFT) == !c;
                     return (
                         d.Q.keyboardMove(e, {
                             reverse: h,
@@ -175,8 +175,8 @@ function m(e) {
                         !0
                     );
                 }
-                case _.yXg.A:
-                    if (m && p(n, { ctrl: !0 })) {
+                case p.yXg.A:
+                    if (m && _(n, { ctrl: !0 })) {
                         let n = f.bN.getCurrentBlock(e);
                         if (null != n) {
                             let [, r] = n,
@@ -194,40 +194,40 @@ function m(e) {
                         }
                     }
                     break;
-                case _.yXg.E:
-                    if (m && p(n, { ctrl: !0 })) {
+                case p.yXg.E:
+                    if (m && _(n, { ctrl: !0 })) {
                         let n = f.bN.getCurrentBlock(e);
                         if (null != n) {
                             let [r, i] = n,
                                 a = f.C0.child(i, r.children.length - 1),
-                                [s] = f.bN.node(e, a),
-                                o = {
+                                [o] = f.bN.node(e, a),
+                                s = {
                                     path: a,
-                                    offset: s.text.length
+                                    offset: o.text.length
                                 };
                             return (
                                 d.Q.select(e, {
-                                    anchor: o,
-                                    focus: o
+                                    anchor: s,
+                                    focus: s
                                 }),
                                 !0
                             );
                         }
                     }
                     break;
-                case _.yXg.BACKSPACE:
-                case _.yXg.DELETE:
-                case _.yXg.K:
-                    let g = n.which === _.yXg.BACKSPACE;
+                case p.yXg.BACKSPACE:
+                case p.yXg.DELETE:
+                case p.yXg.K:
+                    let g = n.which === p.yXg.BACKSPACE;
                     if (
                         ((!m &&
-                            n.which !== _.yXg.K &&
-                            p(n, {
+                            n.which !== p.yXg.K &&
+                            _(n, {
                                 ctrl: !0,
                                 shift: !0
                             })) ||
-                            (m && n.which !== _.yXg.K && p(n, { cmd: !0 })) ||
-                            (m && n.which === _.yXg.K && p(n, { ctrl: !0 }))) &&
+                            (m && n.which !== p.yXg.K && _(n, { cmd: !0 })) ||
+                            (m && n.which === p.yXg.K && _(n, { ctrl: !0 }))) &&
                         null != e.selection
                     ) {
                         let [n, r] = f.M8.edges(e.selection),

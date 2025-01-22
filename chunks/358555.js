@@ -1,35 +1,35 @@
 n.d(i, {
     Z: function () {
-        return b;
+        return E;
     }
 });
 var t = n(200651);
 n(192379);
 var o = n(120356),
     r = n.n(o),
-    l = n(442837),
-    a = n(481060),
-    c = n(540059),
-    s = n(666188),
-    d = n(372769),
+    a = n(442837),
+    l = n(481060),
+    d = n(540059),
+    c = n(666188),
+    s = n(372769),
     u = n(523751),
     g = n(623624),
-    f = n(290034),
-    p = n(271383),
+    b = n(290034),
+    h = n(271383),
     _ = n(594174),
-    h = n(267642),
-    N = n(981631),
-    T = n(388032),
-    m = n(70172);
-function x(e) {
+    T = n(267642),
+    m = n(981631),
+    f = n(388032),
+    N = n(70172);
+function B(e) {
     let { guild: i, isBannerVisible: n, disableBoostClick: o } = e,
-        r = (0, l.e7)([_.default, p.ZP], () => {
+        r = (0, a.e7)([_.default, h.ZP], () => {
             let e = _.default.getCurrentUser();
-            return p.ZP.isMember(i.id, null == e ? void 0 : e.id);
+            return h.ZP.isMember(i.id, null == e ? void 0 : e.id);
         }),
-        { premiumTier: c, premiumSubscriberCount: s } = i;
-    if (0 === s && c === N.Eu4.NONE) return null;
-    let d = (e) => {
+        { premiumTier: d, premiumSubscriberCount: c } = i;
+    if (0 === c && d === m.Eu4.NONE) return null;
+    let s = (e) => {
             e.stopPropagation(),
                 e.preventDefault(),
                 r &&
@@ -37,80 +37,80 @@ function x(e) {
                     (0, g.f)({
                         guildId: i.id,
                         location: {
-                            section: N.jXE.GUILD_HEADER,
-                            object: N.qAy.BOOST_GEM_ICON
+                            section: m.jXE.GUILD_HEADER,
+                            object: m.qAy.BOOST_GEM_ICON
                         }
                     });
         },
-        u = c === N.Eu4.NONE ? T.intl.string(T.t.c2wsn5) : h.nW(c),
-        x = (0, t.jsxs)(t.Fragment, {
+        u = d === m.Eu4.NONE ? f.intl.string(f.t.c2wsn5) : T.nW(d),
+        B = (0, t.jsxs)(t.Fragment, {
             children: [
                 (0, t.jsx)('div', {
-                    className: m.tierTooltipTitle,
+                    className: N.tierTooltipTitle,
                     children: u
                 }),
-                (0, t.jsx)('div', { children: T.intl.format(T.t.If4iTU, { subscriberCount: s }) })
+                (0, t.jsx)('div', { children: f.intl.format(f.t.If4iTU, { subscriberCount: c }) })
             ]
         });
     return (0, t.jsx)('div', {
-        className: m.guildIconContainer,
-        children: (0, t.jsx)(a.Tooltip, {
-            text: x,
+        className: N.guildIconContainer,
+        children: (0, t.jsx)(l.Tooltip, {
+            text: B,
             position: 'bottom',
             'aria-label': null != u ? u : '',
             children: (e) =>
-                (0, t.jsx)(a.Clickable, {
+                (0, t.jsx)(l.Clickable, {
                     ...e,
-                    className: m.__invalid_premiumGuildIcon,
-                    onClick: d,
-                    children: (0, t.jsx)(f.Z, {
-                        premiumTier: c,
-                        iconBackgroundClassName: n ? m.boostedGuildTierIconBackgroundWithVisibleBanner : m.guildBadgeIcon,
-                        iconClassName: n && c !== N.Eu4.TIER_3 ? m.boostedGuildTierMutedIconWithVisibleBanner : null
+                    className: N.__invalid_premiumGuildIcon,
+                    onClick: s,
+                    children: (0, t.jsx)(b.Z, {
+                        premiumTier: d,
+                        iconBackgroundClassName: n ? N.boostedGuildTierIconBackgroundWithVisibleBanner : N.guildBadgeIcon,
+                        iconClassName: n && d !== m.Eu4.TIER_3 ? N.boostedGuildTierMutedIconWithVisibleBanner : null
                     })
                 })
         })
     });
 }
-function E(e) {
+function p(e) {
     let { guild: i, disableColor: n, disableBoostClick: o } = e;
-    return (0, s.Z)(i)
+    return (0, c.Z)(i)
         ? (0, t.jsx)('div', {
-              className: m.guildIconV2Container,
+              className: N.guildIconV2Container,
               children: (0, t.jsx)(u.Z, {
                   guild: i,
                   tooltipPosition: 'bottom',
-                  tooltipColor: a.Tooltip.Colors.PRIMARY,
-                  className: r()(m.guildBadge, { [m.disableColor]: n }),
+                  tooltipColor: l.Tooltip.Colors.PRIMARY,
+                  className: r()(N.guildBadge, { [N.disableColor]: n }),
                   disableBoostClick: o
               })
           })
         : (0, t.jsx)('div', {
-              className: m.guildIconContainer,
-              children: (0, t.jsx)(d.Z, {
+              className: N.guildIconContainer,
+              children: (0, t.jsx)(s.Z, {
                   guild: i,
                   size: 20,
                   tooltipPosition: 'bottom',
-                  tooltipColor: a.Tooltip.Colors.PRIMARY,
-                  className: r()(m.guildBadge, { [m.disableColor]: n })
+                  tooltipColor: l.Tooltip.Colors.PRIMARY,
+                  className: r()(N.guildBadge, { [N.disableColor]: n })
               })
           });
 }
-function b(e) {
+function E(e) {
     let { guild: i, disableBoostClick: n, ...o } = e,
-        r = !(0, c.Q3)('GuildHeaderGuildBadge') && o.isBannerVisible;
-    return (0, s.Z)(i)
-        ? (0, t.jsx)(E, {
+        r = !(0, d.Q3)('GuildHeaderGuildBadge') && o.isBannerVisible;
+    return (0, c.Z)(i)
+        ? (0, t.jsx)(p, {
               guild: i,
               disableColor: !1,
               disableBoostClick: n
           })
-        : i.hasFeature(N.oNc.VERIFIED) || i.hasFeature(N.oNc.PARTNERED)
-          ? (0, t.jsx)(E, {
+        : i.hasFeature(m.oNc.VERIFIED) || i.hasFeature(m.oNc.PARTNERED)
+          ? (0, t.jsx)(p, {
                 guild: i,
                 disableColor: !r
             })
-          : (0, t.jsx)(x, {
+          : (0, t.jsx)(B, {
                 guild: i,
                 isBannerVisible: r,
                 disableBoostClick: n

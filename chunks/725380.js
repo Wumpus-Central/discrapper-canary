@@ -11,18 +11,18 @@ r.d(n, {
 });
 var i = r(47120);
 let a = {};
-function s(e, n) {
+function o(e, n) {
     return ''.concat(e, ':').concat(n);
 }
-function o(e) {
+function s(e) {
     let [n, r] = e.split(':');
     return [n, r];
 }
 function l(e, n) {
-    return a[s(e, n)];
+    return a[o(e, n)];
 }
 function u(e, n, r) {
-    let i = s(e, n);
+    let i = o(e, n);
     a[i] = {
         ...a[i],
         ...r
@@ -30,7 +30,7 @@ function u(e, n, r) {
 }
 function c(e) {
     for (let n in a) {
-        let [r, i] = o(n);
+        let [r, i] = s(n);
         e(r, i, a[n]);
     }
     a = {};

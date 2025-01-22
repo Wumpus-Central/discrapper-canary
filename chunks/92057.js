@@ -1,15 +1,15 @@
 e.exports = d;
 var i = r(531478).codes,
     a = i.ERR_METHOD_NOT_IMPLEMENTED,
-    s = i.ERR_MULTIPLE_CALLBACK,
-    o = i.ERR_TRANSFORM_ALREADY_TRANSFORMING,
+    o = i.ERR_MULTIPLE_CALLBACK,
+    s = i.ERR_TRANSFORM_ALREADY_TRANSFORMING,
     l = i.ERR_TRANSFORM_WITH_LENGTH_0,
     u = r(827664);
 function c(e, n) {
     var r = this._transformState;
     r.transforming = !1;
     var i = r.writecb;
-    if (null === i) return this.emit('error', new s());
+    if (null === i) return this.emit('error', new o());
     (r.writechunk = null), (r.writecb = null), null != n && this.push(n), i(e);
     var a = this._readableState;
     (a.reading = !1), (a.needReadable || a.length < a.highWaterMark) && this._read(a.highWaterMark);
@@ -33,15 +33,15 @@ function d(e) {
 function f() {
     var e = this;
     'function' != typeof this._flush || this._readableState.destroyed
-        ? _(this, null, null)
+        ? p(this, null, null)
         : this._flush(function (n, r) {
-              _(e, n, r);
+              p(e, n, r);
           });
 }
-function _(e, n, r) {
+function p(e, n, r) {
     if (n) return e.emit('error', n);
     if ((null != r && e.push(r), e._writableState.length)) throw new l();
-    if (e._transformState.transforming) throw new o();
+    if (e._transformState.transforming) throw new s();
     return e.push(null);
 }
 r(689118)(d, u),

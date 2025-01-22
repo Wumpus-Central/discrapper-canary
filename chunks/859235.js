@@ -5,58 +5,58 @@ r.d(n, {
 });
 var i,
     a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(91192),
     c = r(481060),
     d = r(166459),
     f = r(951394),
-    _ = r(585483),
+    p = r(585483),
     h = r(43085),
-    p = r(981631),
+    _ = r(981631),
     m = r(388032),
     g = r(728094);
 function E(e) {
     e.stopPropagation();
 }
 function v(e, n) {
-    let { id: r, channelId: i, className: s, children: o, actions: v, handleEditModal: I, keyboardModeEnabled: T, onKeyDown: b, draftType: y, size: S = 1 } = e,
-        { onFocus: A, ...N } = (0, u.JA)(r),
-        { handleFocus: C, handleBlur: R } = (0, h.b)(A),
+    let { id: r, channelId: i, className: o, children: s, actions: v, handleEditModal: y, keyboardModeEnabled: b, onKeyDown: I, draftType: T, size: S = 1 } = e,
+        { onFocus: A, ...C } = (0, u.JA)(r),
+        { handleFocus: N, handleBlur: R } = (0, h.b)(A),
         O = 0 === S,
         D = null != v,
-        L = (e) => {
-            if (!!T) {
+        x = (e) => {
+            if (!!b) {
                 switch (e.which) {
-                    case p.yXg.D:
-                        e.preventDefault(), d.Z.remove(i, r, y);
+                    case _.yXg.D:
+                        e.preventDefault(), d.Z.remove(i, r, T);
                         return;
-                    case p.yXg.E:
-                        null != I && (e.preventDefault(), I(e));
+                    case _.yXg.E:
+                        null != y && (e.preventDefault(), y(e));
                         return;
-                    case p.yXg.BACKSPACE:
-                        e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(i, y)) : (e.preventDefault(), d.Z.remove(i, r, y));
+                    case _.yXg.BACKSPACE:
+                        e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(i, T)) : (e.preventDefault(), d.Z.remove(i, r, T));
                         return;
-                    case p.yXg.ARROW_UP:
+                    case _.yXg.ARROW_UP:
                         if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
-                        e.preventDefault(), _.S.dispatchToLastSubscribed(p.CkL.FOCUS_MESSAGES, { atEnd: !0 });
+                        e.preventDefault(), p.S.dispatchToLastSubscribed(_.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                 }
-                null == b || b(e);
+                null == I || I(e);
             }
         };
     return (0, a.jsx)(c.FocusRing, {
         children: (0, a.jsx)('li', {
-            ...N,
-            onFocus: C,
+            ...C,
+            onFocus: N,
             onBlur: R,
-            onKeyDown: L,
-            className: l()(g.upload, s, { [g.sizeClip]: 2 === S }),
+            onKeyDown: x,
+            className: l()(g.upload, o, { [g.sizeClip]: 2 === S }),
             ref: n,
             children: (0, a.jsxs)('div', {
                 className: g.uploadContainer,
                 children: [
-                    o,
+                    s,
                     D
                         ? (0, a.jsx)('div', {
                               className: g.actionBarContainer,
@@ -79,4 +79,4 @@ function v(e, n) {
 !(function (e) {
     (e[(e.SMALL = 0)] = 'SMALL'), (e[(e.MEDIUM = 1)] = 'MEDIUM'), (e[(e.CLIP = 2)] = 'CLIP');
 })(i || (i = {})),
-    (n.Z = s.forwardRef(v));
+    (n.Z = o.forwardRef(v));

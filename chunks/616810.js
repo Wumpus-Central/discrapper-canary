@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(928801),
     a = r(549895),
-    s = r(885110);
-function o(e, n, r) {
+    o = r(885110);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -21,10 +21,10 @@ function o(e, n, r) {
 }
 class l extends i.Z {
     getInitialState() {
-        return s.Z.getLocalPresence();
+        return o.Z.getLocalPresence();
     }
     getNextState() {
-        return s.Z.getLocalPresence();
+        return o.Z.getLocalPresence();
     }
     shouldCommit() {
         return this.socket.isSessionEstablished();
@@ -41,6 +41,6 @@ class l extends i.Z {
         (this.switchingAccounts = !0), this.reset(), this.emitPresenceUpdate(this.getState());
     }
     constructor(e) {
-        super(!1), o(this, 'socket', void 0), o(this, 'switchingAccounts', void 0), o(this, 'didCommit', void 0), (this.socket = e), (this.switchingAccounts = !1), (this.didCommit = (0, a.Z)(5, 20000, this.emitPresenceUpdate.bind(this)));
+        super(!1), s(this, 'socket', void 0), s(this, 'switchingAccounts', void 0), s(this, 'didCommit', void 0), (this.socket = e), (this.switchingAccounts = !1), (this.didCommit = (0, a.Z)(5, 20000, this.emitPresenceUpdate.bind(this)));
     }
 }

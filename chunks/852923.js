@@ -11,8 +11,8 @@ var r = n(120356),
     o = n(922611),
     s = n(592125),
     c = n(944486),
-    d = n(471253),
-    u = n(623633),
+    u = n(471253),
+    d = n(623633),
     m = n(930180),
     h = n(388032),
     f = n(360686);
@@ -20,14 +20,14 @@ function p(e) {
     let t = c.Z.getVoiceChannelId();
     if (null == t) return;
     let n = s.Z.getChannel(t);
-    if (null != n) (0, d.RK)(n, e);
+    if (null != n) (0, u.RK)(n, e);
 }
 function _(e) {
     var t, n;
     let { channelId: r } = e,
         s = null !== (t = (0, m._d)(r)) && void 0 !== t ? t : 0,
         c = null !== (n = (0, m.K3)(r)) && void 0 !== n ? n : 0,
-        d = (0, o.Do)({ location: 'invited_to_speak_header' });
+        u = (0, o.Do)({ location: 'invited_to_speak_header' });
     return s > 0 && c > 0
         ? (0, i.jsx)('div', {
               className: f.blocked,
@@ -36,7 +36,7 @@ function _(e) {
                   children: h.intl.string(h.t.xlJRfn)
               })
           })
-        : d && s > 0
+        : u && s > 0
           ? (0, i.jsx)('div', {
                 className: f.blocked,
                 children: (0, i.jsx)('div', {
@@ -48,7 +48,7 @@ function _(e) {
             ? (0, i.jsxs)('div', {
                   className: f.blocked,
                   children: [
-                      d
+                      u
                           ? null
                           : (0, i.jsx)(a.DenyIcon, {
                                 size: 'xxs',
@@ -56,7 +56,7 @@ function _(e) {
                                 className: f.blockedIcon
                             }),
                       (0, i.jsx)('div', {
-                          className: l()(f.blockedText, { [f.noIcon]: d }),
+                          className: l()(f.blockedText, { [f.noIcon]: u }),
                           children: h.intl.format(h.t.ATpigY, { number: s })
                       })
                   ]
@@ -72,7 +72,7 @@ function _(e) {
               : null;
 }
 function g() {
-    let e = (0, u.Z)();
+    let e = (0, d.Z)();
     return null == e
         ? null
         : (0, i.jsxs)(a.Notice, {

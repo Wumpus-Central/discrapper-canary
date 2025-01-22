@@ -3,13 +3,13 @@ r.d(n, {
         return l.S;
     },
     Z: function () {
-        return _;
+        return p;
     }
 });
 var i = r(47120);
 var a = r(117806),
-    s = r.n(a),
-    o = r(47770),
+    o = r.n(a),
+    s = r(47770),
     l = r(445686),
     u = r(701597),
     c = r(65154);
@@ -27,7 +27,7 @@ function d(e, n, r) {
     );
 }
 let f = 0;
-class _ extends o.Z {
+class p extends s.Z {
     destroy() {
         (this.destroyed = !0), this.framerateReducer.destroy(), this.setConnectionState(c.$j.DISCONNECTED), this.emit(l.S.Destroy, this), this.removeAllListeners();
     }
@@ -47,10 +47,10 @@ class _ extends o.Z {
     setHasActiveVideoOutputSink(e, n, r) {
         var i;
         let a = this.getHasActiveVideoOutputSink(e),
-            s = null !== (i = this.activeOutputSinks.get(e)) && void 0 !== i ? i : new Set();
-        n ? s.add(r) : s.delete(r), this.activeOutputSinks.set(e, s);
-        let o = this.getHasActiveVideoOutputSink(e);
-        (this.isActiveOutputSinksEnabled = !0), a !== o && this.emit(l.S.ActiveSinksChange, e, o);
+            o = null !== (i = this.activeOutputSinks.get(e)) && void 0 !== i ? i : new Set();
+        n ? o.add(r) : o.delete(r), this.activeOutputSinks.set(e, o);
+        let s = this.getHasActiveVideoOutputSink(e);
+        (this.isActiveOutputSinksEnabled = !0), a !== s && this.emit(l.S.ActiveSinksChange, e, s);
     }
     getActiveOutputSinkTrackingEnabled() {
         return this.isActiveOutputSinksEnabled;
@@ -65,7 +65,7 @@ class _ extends o.Z {
     setQualityDecoupling(e) {}
     presentDesktopSourcePicker(e) {}
     getStreamParameters() {
-        return s()(this.videoStreamParameters);
+        return o()(this.videoStreamParameters);
     }
     setExperimentFlag(e, n) {
         n ? this.experimentFlags.add(e) : this.experimentFlags.delete(e);
@@ -77,22 +77,22 @@ class _ extends o.Z {
         var n, r;
         let i = this.videoStreamParameters.findIndex((e) => 100 === e.quality);
         -1 === i && (i = 0);
-        let { quality: a, constraints: o } = this.applyQualityConstraints({}, this.videoStreamParameters[i].ssrc),
-            l = s()(this.videoStreamParameters);
+        let { quality: a, constraints: s } = this.applyQualityConstraints({}, this.videoStreamParameters[i].ssrc),
+            l = o()(this.videoStreamParameters);
         null != a && ((l[i].maxBitrate = a.bitrateMax), (l[i].minBitrate = a.bitrateMin), (l[i].targetBitrate = null !== (n = a.bitrateTarget) && void 0 !== n ? n : 0), null != a.encode && ((l[i].maxPixelCount = a.encode.pixelCount), (l[i].maxFrameRate = a.encode.framerate))), (this.videoStreamParameters = l);
         for (let e = 0; e < this.videoStreamParameters.length; e++) {
             if (e === i) continue;
-            let { quality: n, constraints: s } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
-            null != n && ((this.videoStreamParameters[e].maxBitrate = n.bitrateMax), (this.videoStreamParameters[e].minBitrate = n.bitrateMin), (this.videoStreamParameters[e].targetBitrate = null !== (r = n.bitrateTarget) && void 0 !== r ? r : 0), null != n.encode && ((this.videoStreamParameters[e].maxPixelCount = n.encode.pixelCount), (this.videoStreamParameters[e].maxFrameRate = n.encode.framerate))), 100 === this.videoStreamParameters[e].quality && ((o = s), (a = n));
+            let { quality: n, constraints: o } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
+            null != n && ((this.videoStreamParameters[e].maxBitrate = n.bitrateMax), (this.videoStreamParameters[e].minBitrate = n.bitrateMin), (this.videoStreamParameters[e].targetBitrate = null !== (r = n.bitrateTarget) && void 0 !== r ? r : 0), null != n.encode && ((this.videoStreamParameters[e].maxPixelCount = n.encode.pixelCount), (this.videoStreamParameters[e].maxFrameRate = n.encode.framerate))), 100 === this.videoStreamParameters[e].quality && ((s = o), (a = n));
         }
-        (o.streamParameters = s()(this.videoStreamParameters)),
-            (o.remoteSinkWantsPixelCount = Math.max(
+        (s.streamParameters = o()(this.videoStreamParameters)),
+            (s.remoteSinkWantsPixelCount = Math.max(
                 ...this.videoStreamParameters.map((e) => {
                     var n;
                     return null !== (n = e.maxPixelCount) && void 0 !== n ? n : 0;
                 })
             ));
-        let u = this.pickProperties(o, e);
+        let u = this.pickProperties(s, e);
         this.logger.info('updateVideoQuality: '.concat(JSON.stringify(u, void 0, 4))), this.updateVideoQualityCore(u, a);
     }
     applyVideoQualityMode(e) {
@@ -122,7 +122,7 @@ class _ extends o.Z {
             .filter((e) => (e.type === c.Tr.VIDEO || e.type === c.Tr.SCREEN) && 'string' == typeof e.rid)
             .map((e) => {
                 var n, r, i, a;
-                let s = this.videoQualityManager.getQuality(e.ssrc);
+                let o = this.videoQualityManager.getQuality(e.ssrc);
                 return {
                     type: e.type,
                     active: e.active,
@@ -130,12 +130,12 @@ class _ extends o.Z {
                     ssrc: e.ssrc,
                     rtxSsrc: e.rtxSsrc,
                     quality: e.quality,
-                    maxBitrate: (null !== (a = e.quality) && void 0 !== a ? a : 100) < 100 ? s.bitrateMax / 4 : s.bitrateMax,
-                    maxFrameRate: null === (n = s.capture) || void 0 === n ? void 0 : n.framerate,
+                    maxBitrate: (null !== (a = e.quality) && void 0 !== a ? a : 100) < 100 ? o.bitrateMax / 4 : o.bitrateMax,
+                    maxFrameRate: null === (n = o.capture) || void 0 === n ? void 0 : n.framerate,
                     maxResolution: {
                         type: c.uA.FIXED,
-                        width: null === (r = s.capture) || void 0 === r ? void 0 : r.width,
-                        height: null === (i = s.capture) || void 0 === i ? void 0 : i.height
+                        width: null === (r = o.capture) || void 0 === r ? void 0 : r.width,
+                        height: null === (i = o.capture) || void 0 === i ? void 0 : i.height
                     }
                 };
             });
@@ -144,10 +144,10 @@ class _ extends o.Z {
         var n, r;
         let i = this.videoStreamParameters.some((n) => n.ssrc === e && n.quality === c.y7) || void 0 === e,
             a = this.context === c.Yn.DEFAULT || i,
-            s = this.remoteVideoSinkWants[null !== (r = null != e ? e : null === (n = this.videoStreamParameters[0]) || void 0 === n ? void 0 : n.ssrc) && void 0 !== r ? r : 0];
-        if (null != s && s > 0) return s;
-        let o = this.remoteVideoSinkWants.any;
-        return null != o && o > 0 && a ? o : a ? 100 : 0;
+            o = this.remoteVideoSinkWants[null !== (r = null != e ? e : null === (n = this.videoStreamParameters[0]) || void 0 === n ? void 0 : n.ssrc) && void 0 !== r ? r : 0];
+        if (null != o && o > 0) return o;
+        let s = this.remoteVideoSinkWants.any;
+        return null != s && s > 0 && a ? s : a ? 100 : 0;
     }
     getRemoteVideoSinkWants(e) {
         return this.remoteVideoSinkWants[e];

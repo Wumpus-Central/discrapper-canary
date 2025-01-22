@@ -11,12 +11,12 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(348327),
-    l = r.n(o),
+    o = r(192379),
+    s = r(348327),
+    l = r.n(s),
     u = r(392711),
     c = r.n(u);
-let d = s.createContext([]);
+let d = o.createContext([]);
 function f(e) {
     let { children: n, value: r } = e;
     return (0, a.jsx)(d.Provider, {
@@ -24,18 +24,18 @@ function f(e) {
         children: n
     });
 }
-function _(e, n) {
+function p(e, n) {
     return 0 === n.length ? e : [...e, ...c().flatten(n)];
 }
 function h() {
     for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-    let [a, o] = s.useState(r),
-        u = s.useContext(d),
-        c = s.useMemo(() => _(u, a), [a, u]),
-        f = s.useMemo(() => _(u, a.slice(0, a.length - 1)), [a, u]);
+    let [a, s] = o.useState(r),
+        u = o.useContext(d),
+        c = o.useMemo(() => p(u, a), [a, u]),
+        f = o.useMemo(() => p(u, a.slice(0, a.length - 1)), [a, u]);
     return (
-        s.useEffect(() => {
-            !l()(r, a) && o(r);
+        o.useEffect(() => {
+            !l()(r, a) && s(r);
         }, [r, a]),
         {
             analyticsLocations: c,

@@ -1,9 +1,9 @@
 r.r(n);
 var i = r(540379);
 var a = {};
-for (var s in i)
-    'default' !== s &&
-        (a[s] = function (e) {
+for (var o in i)
+    'default' !== o &&
+        (a[o] = function (e) {
             return i[e];
-        }.bind(0, s));
+        }.bind(0, o));
 r.d(n, a);

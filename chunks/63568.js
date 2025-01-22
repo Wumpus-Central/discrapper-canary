@@ -1,6 +1,6 @@
 r.d(n, {
     K2: function () {
-        return s;
+        return o;
     },
     jS: function () {
         return a;
@@ -31,7 +31,7 @@ function a(e, n) {
         { autoTrackExposure: !0 }
     ).enabled;
 }
-function s(e, n) {
+function o(e, n) {
     return i.getCurrentConfig(
         {
             guildId: e,

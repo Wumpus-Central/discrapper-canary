@@ -1,13 +1,13 @@
 var i,
     a = r(47120);
-var s = r(653041);
-var o = r(404097),
+var o = r(653041);
+var s = r(404097),
     l = r(544891),
     u = r(358085),
     c = r(747268),
     d = r(20186),
     f = r(981631);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -21,7 +21,7 @@ function _(e, n, r) {
     );
 }
 let h = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
-function p() {
+function _() {
     if ((0, u.isWeb)()) return 'web';
     {
         let e = (0, u.getPlatformName)();
@@ -30,7 +30,7 @@ function p() {
 }
 function m() {
     let e = c.Z;
-    return null != e && o.e.ALL.has(e) ? e : null;
+    return null != e && s.e.ALL.has(e) ? e : null;
 }
 !(function (e) {
     (e.COUNT = 'count'), (e.DISTRIBUTION = 'distribution');
@@ -49,10 +49,10 @@ class v {
             i.forEach((e) => {
                 a.tags.push(e);
             });
-        let s = p();
-        null != s && a.tags.push('platform:'.concat(s));
-        let o = m();
-        return null != o && a.tags.push('release_channel:'.concat(o)), a;
+        let o = _();
+        null != o && a.tags.push('platform:'.concat(o));
+        let s = m();
+        return null != s && a.tags.push('release_channel:'.concat(s)), a;
     }
     increment(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -76,8 +76,8 @@ class v {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1737504295484',
-                            build_number: '361005'
+                            built_at: '1737511052808',
+                            build_number: '361090'
                         }
                     },
                     retries: 1,
@@ -90,8 +90,8 @@ class v {
         this._metrics = [];
     }
     constructor() {
-        _(this, '_metrics', void 0),
-            _(this, '_intervalId', void 0),
+        p(this, '_metrics', void 0),
+            p(this, '_intervalId', void 0),
             (this._metrics = []),
             (this._intervalId = setInterval(() => {
                 this._flush();

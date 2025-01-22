@@ -1,13 +1,13 @@
 r.d(n, {
     M: function () {
-        return o;
+        return s;
     }
 });
 var i = r(200651),
     a = r(481060),
-    s = r(388032);
-function o(e) {
-    let { applicationId: n, viewId: o, showOutdatedInfoOption: l = !0 } = e;
+    o = r(388032);
+function s(e) {
+    let { applicationId: n, viewId: s, showOutdatedInfoOption: l = !0 } = e;
     if (null == n) return null;
     let u = () =>
         (0, a.openModalLazy)(async () => {
@@ -16,13 +16,13 @@ function o(e) {
                 (0, i.jsx)(e, {
                     showOutdatedInfoOption: l,
                     applicationId: n,
-                    viewId: o,
+                    viewId: s,
                     ...r
                 });
         });
     return (0, i.jsx)(a.MenuItem, {
         id: 'game-profile-something-wrong',
-        label: s.intl.string(s.t.qP2cXV),
+        label: o.intl.string(o.t.qP2cXV),
         action: u
     });
 }

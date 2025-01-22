@@ -1,15 +1,15 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(481060),
     c = r(686546),
     d = r(226713);
 let f = (e) => {
-    let { className: n, guild: r, isSelected: i = !0, width: o = 32, height: f = 32, shouldAnimate: _ = !0, isLocked: h = !1 } = e,
-        [p, m] = s.useState(!1),
-        g = r.getIconURL(32, _ && i),
+    let { className: n, guild: r, isSelected: i = !0, width: s = 32, height: f = 32, shouldAnimate: p = !0, isLocked: h = !1 } = e,
+        [_, m] = o.useState(!1),
+        g = r.getIconURL(32, p && i),
         E = () => m(!0),
         v = () => m(!1);
     return (0, a.jsxs)('div', {
@@ -20,8 +20,8 @@ let f = (e) => {
         children: [
             (0, a.jsx)(c.ZP, {
                 className: l()(d.mask, n),
-                mask: i || p ? c.QS.SQUIRCLE : c.QS.AVATAR_DEFAULT,
-                width: o,
+                mask: i || _ ? c.QS.SQUIRCLE : c.QS.AVATAR_DEFAULT,
+                width: s,
                 height: f,
                 children:
                     null == g

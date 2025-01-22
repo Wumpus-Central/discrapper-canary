@@ -1,7 +1,7 @@
-var r = n(875604),
-    o = n(865488),
-    a = String.prototype;
+var i = r(875604),
+    a = r(865488),
+    o = String.prototype;
 e.exports = function (e) {
-    var t = e.trimStart;
-    return 'string' == typeof e || e === a || (r(a, e) && t === a.trimStart) ? o : t;
+    var n = e.trimStart;
+    return 'string' == typeof e || e === o || (i(o, e) && n === o.trimStart) ? a : n;
 };

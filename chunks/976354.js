@@ -6,7 +6,7 @@ function n(e) {
             className: 'literal',
             begin: '\\b(t{1}|nil)\\b'
         },
-        s = {
+        o = {
             className: 'number',
             variants: [
                 {
@@ -22,7 +22,7 @@ function n(e) {
                 }
             ]
         },
-        o = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        s = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
         l = e.COMMENT(';', '$', { relevance: 0 }),
         u = {
             begin: '\\*',
@@ -37,13 +37,13 @@ function n(e) {
             relevance: 0
         },
         f = { begin: r },
-        _ = {
+        p = {
             begin: '\\(',
             end: '\\)',
-            contains: ['self', a, o, s, d]
+            contains: ['self', a, s, o, d]
         },
         h = {
-            contains: [s, o, u, c, _, d],
+            contains: [o, s, u, c, p, d],
             variants: [
                 {
                     begin: "['`]\\(",
@@ -57,7 +57,7 @@ function n(e) {
                 { begin: "'" + r }
             ]
         },
-        p = {
+        _ = {
             variants: [{ begin: "'" + n }, { begin: "#'" + n + '(::' + n + ')*' }]
         },
         m = {
@@ -82,11 +82,11 @@ function n(e) {
             },
             g
         ]),
-        (g.contains = [h, p, m, a, s, o, l, u, c, f, d]),
+        (g.contains = [h, _, m, a, o, s, l, u, c, f, d]),
         {
             name: 'Lisp',
             illegal: /\S/,
-            contains: [s, e.SHEBANG(), a, o, l, h, p, m, d]
+            contains: [o, e.SHEBANG(), a, s, l, h, _, m, d]
         }
     );
 }

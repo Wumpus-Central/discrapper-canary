@@ -34,9 +34,9 @@ var i = n(200651),
     O = n(981631),
     R = n(420212),
     P = n(388032),
-    y = n(877615),
-    B = n(684309),
-    D = n(232186);
+    D = n(877615),
+    y = n(684309),
+    B = n(232186);
 function Z(e, t, n) {
     return (
         t in e
@@ -65,20 +65,20 @@ class w extends r.PureComponent {
             t = v.BB(e.shortcut);
         return f.Z.hasBind(t)
             ? (0, i.jsx)(u.FormText, {
-                  className: y.keybindMessage,
+                  className: D.keybindMessage,
                   type: u.FormTextTypes.DESCRIPTION,
                   style: { color: d.Z.unsafe_rawColors.RED_400.css },
                   children: P.intl.string(P.t['7lQlw8'])
               })
             : R.Sp.has(t)
               ? (0, i.jsx)(u.FormText, {
-                    className: y.keybindMessage,
+                    className: D.keybindMessage,
                     type: u.FormTextTypes.DESCRIPTION,
                     style: { color: d.Z.unsafe_rawColors.RED_400.css },
                     children: P.intl.format(P.t.MOIaNT, { keyboardNavArticle: I.Z.getArticleURL(O.BhN.KEYBOARD_NAVIGATION) })
                 })
               : (0, i.jsx)(u.FormText, {
-                    className: y.keybindMessage,
+                    className: D.keybindMessage,
                     type: u.FormTextTypes.DESCRIPTION,
                     children: this.props.keybindDescriptions[e.action]
                 });
@@ -87,23 +87,23 @@ class w extends r.PureComponent {
         let { managed: e, enabled: t } = this.props.keybind;
         return (0, i.jsxs)(E.Z, {
             direction: E.Z.Direction.VERTICAL,
-            className: a()(y.keybindGroup, B.card),
+            className: a()(D.keybindGroup, y.card),
             children: [
                 !e &&
                     (0, i.jsx)(g.Z, {
                         'aria-label': P.intl.string(P.t.qEHmmJ),
-                        className: y.removeKeybind,
+                        className: D.removeKeybind,
                         onClick: this.handleDeleteKeybind,
                         look: g.Z.Looks.FILLED
                     }),
                 (0, i.jsxs)(E.Z, {
-                    className: D.marginBottom8,
+                    className: B.marginBottom8,
                     children: [
                         (0, i.jsx)(E.Z.Child, {
                             basis: '45%',
                             children: (0, i.jsx)(u.FormItem, {
                                 title: P.intl.string(P.t.UUpADw),
-                                className: y.item,
+                                className: D.item,
                                 children: (0, i.jsx)(u.SingleSelect, {
                                     value: this.props.keybind.action,
                                     options: this.props.keybindActionTypes,
@@ -116,7 +116,7 @@ class w extends r.PureComponent {
                             basis: '45%',
                             children: (0, i.jsx)(u.FormItem, {
                                 title: P.intl.string(P.t['1La4tL']),
-                                className: y.item,
+                                className: D.item,
                                 children: (0, i.jsx)(h.Z, {
                                     defaultValue: this.props.keybind.shortcut,
                                     onChange: this.handleShortcutChange
@@ -127,7 +127,7 @@ class w extends r.PureComponent {
                             grow: 0,
                             shrink: 0,
                             children: (0, i.jsx)(u.FormItem, {
-                                className: y.switch,
+                                className: D.switch,
                                 children: (0, i.jsx)(u.Tooltip, {
                                     text: P.intl.string(P.t.uCD7qK),
                                     children: (e) =>
@@ -298,7 +298,7 @@ class F extends r.PureComponent {
             (0, i.jsx)(
                 'div',
                 {
-                    className: y.row,
+                    className: D.row,
                     children: (0, i.jsx)(
                         w,
                         {
@@ -316,7 +316,7 @@ class F extends r.PureComponent {
     renderEmpty(e) {
         if (0 === e.length)
             return (0, i.jsx)(k, {
-                className: D.marginTop60,
+                className: B.marginTop60,
                 children: (0, i.jsx)(u.EmptyStateImage, {
                     darkSrc: n(572279),
                     lightSrc: n(871803),
@@ -344,7 +344,7 @@ class F extends r.PureComponent {
                               children: [
                                   (0, i.jsxs)(E.Z, {
                                       justify: E.Z.Justify.BETWEEN,
-                                      className: D.marginBottom20,
+                                      className: B.marginBottom20,
                                       children: [
                                           (0, i.jsx)(E.Z.Child, {
                                               grow: 0,
@@ -373,7 +373,7 @@ class F extends r.PureComponent {
                         : (0, i.jsx)(u.HelpMessage, {
                               messageType: u.HelpMessageTypes.INFO,
                               textVariant: 'text-lg/medium',
-                              className: y.browserNotice,
+                              className: D.browserNotice,
                               children: P.intl.format(P.t.mPi3Fx, { downloadLink: O.EYA.DOWNLOAD })
                           })
                 }),
@@ -381,20 +381,20 @@ class F extends r.PureComponent {
                 (0, i.jsxs)(u.FormSection, {
                     tag: u.FormTitleTags.H1,
                     title: P.intl.string(P.t.Lz5KHB),
-                    className: D.marginTop60,
+                    className: B.marginTop60,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: y.defaultKeybind,
+                            className: D.defaultKeybind,
                             children: [
                                 (0, i.jsx)(u.Text, {
                                     variant: 'text-md/normal',
                                     children: P.intl.string(P.t.sMWLBg)
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: y.defaultKeybindShortcutGroup,
+                                    className: D.defaultKeybindShortcutGroup,
                                     children: (0, i.jsx)(u.KeyCombo, {
                                         shortcut: p._.binds['0'],
-                                        className: y.__invalid_defaultKeybindShortcut
+                                        className: D.__invalid_defaultKeybindShortcut
                                     })
                                 })
                             ]
@@ -410,17 +410,17 @@ class F extends r.PureComponent {
                                         return (0, i.jsxs)(
                                             'div',
                                             {
-                                                className: y.defaultKeybindGroup,
+                                                className: D.defaultKeybindGroup,
                                                 children: [
                                                     (0, i.jsx)(u.Heading, {
                                                         variant: 'heading-deprecated-12/semibold',
-                                                        className: a()(y.defaultKeybindGroupHeader, { [y.defaultKeybindGroupWithDescription]: null != s }),
+                                                        className: a()(D.defaultKeybindGroupHeader, { [D.defaultKeybindGroupWithDescription]: null != s }),
                                                         children: n
                                                     }),
                                                     null != s &&
                                                         (0, i.jsx)(u.Text, {
                                                             color: 'header-secondary',
-                                                            className: y.defaultKeybindGroupDescription,
+                                                            className: D.defaultKeybindGroupDescription,
                                                             variant: 'text-sm/normal',
                                                             children: s
                                                         }),
@@ -431,14 +431,14 @@ class F extends r.PureComponent {
                                                             {
                                                                 children: [
                                                                     (0, i.jsxs)('div', {
-                                                                        className: y.defaultKeybind,
+                                                                        className: D.defaultKeybind,
                                                                         children: [
                                                                             (0, i.jsx)(u.Text, {
                                                                                 variant: 'text-md/normal',
                                                                                 children: e.description
                                                                             }),
                                                                             (0, i.jsx)('div', {
-                                                                                className: y.defaultKeybindShortcutGroup,
+                                                                                className: D.defaultKeybindShortcutGroup,
                                                                                 children: e.binds.map((e) => (0, i.jsx)(u.KeyCombo, { shortcut: e }, e))
                                                                             })
                                                                         ]

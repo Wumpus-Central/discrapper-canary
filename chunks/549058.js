@@ -6,10 +6,10 @@ r.d(n, {
         return l;
     },
     qm: function () {
-        return s;
+        return o;
     },
     t7: function () {
-        return o;
+        return s;
     },
     xv: function () {
         return u;
@@ -17,8 +17,8 @@ r.d(n, {
 });
 var i,
     a = r(70956);
-let s = 4,
-    o = 5,
+let o = 4,
+    s = 5,
     l = 350,
     u = a.Z.Millis.MINUTE,
     c = 2 * a.Z.Millis.MINUTE;

@@ -4,96 +4,96 @@ r.r(n),
             return S;
         },
         openQuestSurveyModal: function () {
-            return N;
+            return C;
         }
     });
 var i,
     a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(120356),
     u = r.n(l),
     c = r(642128),
     d = r(481060),
     f = r(493773),
-    _ = r(600164),
+    p = r(600164),
     h = r(626135),
-    p = r(617136),
+    _ = r(617136),
     m = r(113434),
     g = r(569984),
     E = r(981631),
     v = r(388032),
-    I = r(7302),
-    T = r(677486);
-let b = 2500,
-    y = 467;
+    y = r(7302),
+    b = r(677486);
+let I = 2500,
+    T = 467;
 function S(e) {
     let { questId: n, survey: r, transitionState: i, onClose: a, onSubmit: l } = e,
         u = (0, m.B4)(n),
-        [p, g] = o.useState(0),
-        [S, N] = (0, d.useSpring)(() => ({
+        [_, g] = s.useState(0),
+        [S, C] = (0, d.useSpring)(() => ({
             from: { width: '0%' },
-            config: { duration: b }
+            config: { duration: I }
         })),
         R = (e) => {
             l(),
                 g(1),
                 null != u &&
                     h.default.track(E.rMx.QUEST_SURVEY_SUBMITTED, {
-                        ...C(u, r),
+                        ...N(u, r),
                         choice: e.text,
                         choice_id: e.key
                     });
         },
         O = async (e) => {
-            1 === e && (await N({ width: '100%' }), a());
+            1 === e && (await C({ width: '100%' }), a());
         };
     return (
         (0, f.Z)(() => {
-            null != u && h.default.track(E.rMx.QUEST_SURVEY_DISPLAYED, C(u, r));
+            null != u && h.default.track(E.rMx.QUEST_SURVEY_DISPLAYED, N(u, r));
         }),
         null == u && a(),
-        (0, s.jsx)(d.ModalRoot, {
+        (0, o.jsx)(d.ModalRoot, {
             transitionState: i,
             size: d.ModalSize.DYNAMIC,
-            className: I.modalRoot,
-            children: (0, s.jsxs)(d.Slides, {
-                activeSlide: p,
-                width: y,
+            className: y.modalRoot,
+            children: (0, o.jsxs)(d.Slides, {
+                activeSlide: _,
+                width: T,
                 onSlideReady: O,
                 children: [
-                    (0, s.jsxs)(d.Slide, {
+                    (0, o.jsxs)(d.Slide, {
                         id: 0,
                         children: [
-                            (0, s.jsxs)(d.ModalHeader, {
-                                direction: _.Z.Direction.VERTICAL,
+                            (0, o.jsxs)(d.ModalHeader, {
+                                direction: p.Z.Direction.VERTICAL,
                                 separator: !1,
-                                className: I.modalHeader,
+                                className: y.modalHeader,
                                 children: [
-                                    (0, s.jsx)(d.ModalCloseButton, {
-                                        className: I.closeBtn,
+                                    (0, o.jsx)(d.ModalCloseButton, {
+                                        className: y.closeBtn,
                                         onClick: a
                                     }),
-                                    (0, s.jsx)('img', {
-                                        src: T,
+                                    (0, o.jsx)('img', {
+                                        src: b,
                                         alt: '',
-                                        className: I.asset
+                                        className: y.asset
                                     }),
-                                    (0, s.jsx)(d.Heading, {
+                                    (0, o.jsx)(d.Heading, {
                                         variant: 'heading-lg/semibold',
                                         children: r.title
                                     }),
-                                    (0, s.jsx)(d.Text, {
+                                    (0, o.jsx)(d.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
                                         children: r.subtitle
                                     })
                                 ]
                             }),
-                            (0, s.jsx)(d.ModalContent, {
-                                className: I.modalContent,
+                            (0, o.jsx)(d.ModalContent, {
+                                className: y.modalContent,
                                 children: r.choices.map((e) =>
-                                    (0, s.jsx)(
+                                    (0, o.jsx)(
                                         A,
                                         {
                                             choice: e,
@@ -105,38 +105,38 @@ function S(e) {
                             })
                         ]
                     }),
-                    (0, s.jsxs)(d.Slide, {
+                    (0, o.jsxs)(d.Slide, {
                         id: 1,
                         children: [
-                            (0, s.jsxs)(d.ModalContent, {
-                                className: I.completedModalContent,
+                            (0, o.jsxs)(d.ModalContent, {
+                                className: y.completedModalContent,
                                 children: [
-                                    (0, s.jsx)('img', {
-                                        src: T,
+                                    (0, o.jsx)('img', {
+                                        src: b,
                                         alt: '',
-                                        className: I.asset
+                                        className: y.asset
                                     }),
-                                    (0, s.jsx)(d.Heading, {
+                                    (0, o.jsx)(d.Heading, {
                                         variant: 'heading-lg/semibold',
                                         children: v.intl.string(v.t.KTjjrK)
                                     }),
-                                    (0, s.jsx)(d.Text, {
+                                    (0, o.jsx)(d.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
                                         children: v.intl.string(v.t.AvbrEB)
                                     })
                                 ]
                             }),
-                            (0, s.jsx)(d.ModalFooter, {
-                                children: (0, s.jsxs)('div', {
-                                    className: I.closeButtonContainer,
+                            (0, o.jsx)(d.ModalFooter, {
+                                children: (0, o.jsxs)('div', {
+                                    className: y.closeButtonContainer,
                                     children: [
-                                        (0, s.jsx)(d.Button, {
+                                        (0, o.jsx)(d.Button, {
                                             onClick: a,
                                             children: v.intl.string(v.t.cpT0Cg)
                                         }),
-                                        (0, s.jsx)(c.animated.div, {
-                                            className: I.progressOverlay,
+                                        (0, o.jsx)(c.animated.div, {
+                                            className: y.progressOverlay,
                                             style: S
                                         })
                                     ]
@@ -151,25 +151,25 @@ function S(e) {
 }
 function A(e) {
     let { className: n, choice: r, onClick: i } = e;
-    return (0, s.jsxs)(d.Clickable, {
-        className: u()(I.choiceContainer, n),
+    return (0, o.jsxs)(d.Clickable, {
+        className: u()(y.choiceContainer, n),
         onClick: () => i(r),
         children: [
-            (0, s.jsx)(d.Text, {
+            (0, o.jsx)(d.Text, {
                 variant: 'text-sm/semibold',
                 children: r.text
             }),
-            (0, s.jsx)(d.ChevronSmallRightIcon, {})
+            (0, o.jsx)(d.ChevronSmallRightIcon, {})
         ]
     });
 }
-function N(e) {
+function C(e) {
     let n = !1;
     (0, d.openModalLazy)(
         async () => {
             let { default: i } = await Promise.resolve().then(r.bind(r, 61115));
             return (r) =>
-                (0, s.jsx)(i, {
+                (0, o.jsx)(i, {
                     ...r,
                     ...e,
                     onSubmit: () => {
@@ -182,17 +182,17 @@ function N(e) {
                 let r = g.Z.getQuest(e.questId);
                 null != r &&
                     h.default.track(E.rMx.QUEST_SURVEY_DISMISSED, {
-                        ...C(r, e.survey),
+                        ...N(r, e.survey),
                         submitted: n
                     });
             }
         }
     );
 }
-function C(e, n) {
+function N(e, n) {
     return {
         quest_id: e.id,
-        quest_status: (0, p.uk)(e),
+        quest_status: (0, _.uk)(e),
         survey_id: n.id,
         survey_title: n.title,
         survey_subtitle: n.subtitle,

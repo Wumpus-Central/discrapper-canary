@@ -1,11 +1,11 @@
 r.d(n, {
     A: function () {
-        return s;
+        return o;
     }
 });
 var i = r(198584),
     a = r(350167);
-class s {
+class o {
     static open(e, n) {
         return a.r.executeAsync('database_open', (r) => {
             var a;

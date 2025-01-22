@@ -22,7 +22,7 @@ function o(e) {
     (0, i.Lb)(n.channel_id, n.id, o),
         (0, r.openModalLazy)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([t.e('6380'), t.e('19566')]).then(t.bind(t, 930864));
+                let { ForwardModal: e } = await Promise.all([t.e('6380'), t.e('88054')]).then(t.bind(t, 930864));
                 return (t) =>
                     (0, a.jsx)(e, {
                         ...t,

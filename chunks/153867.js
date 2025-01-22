@@ -8,14 +8,14 @@ r.d(n, {
 });
 var i = r(524437),
     a = r(381499),
-    s = r(570140),
-    o = r(514361),
+    o = r(570140),
+    s = r(514361),
     l = r(238514),
     u = r(210887),
     c = r(695346),
     d = r(675478),
     f = r(981631),
-    _ = r(874893);
+    p = r(874893);
 function h(e) {
     return d.hW.updateAsync(
         'guildFolders',
@@ -28,7 +28,7 @@ function h(e) {
         d.fy.FREQUENT_USER_ACTION
     );
 }
-function p(e) {
+function _(e) {
     switch (e) {
         case f.BRd.DARK:
             return i.Q2.DARK;
@@ -48,14 +48,14 @@ function m(e) {
 function g(e) {
     let { backgroundGradientPresetId: n, theme: r, useSystemTheme: i } = e,
         a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.fy.INFREQUENT_USER_ACTION,
-        o = 'system' === r ? _.K.ON : _.K.OFF,
-        u = null != i ? i : o;
+        s = 'system' === r ? p.K.ON : p.K.OFF,
+        u = null != i ? i : s;
     if (
-        (s.Z.dispatch({
+        (o.Z.dispatch({
             type: 'UNSYNCED_USER_SETTINGS_UPDATE',
             settings: { useSystemTheme: u }
         }),
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: {
                 appearance: {
@@ -71,26 +71,26 @@ function g(e) {
         return d.hW.updateAsync(
             'appearance',
             (e) => {
-                (e.theme = p(r)), (e.clientThemeSettings = m({ backgroundGradientPresetId: n }));
+                (e.theme = _(r)), (e.clientThemeSettings = m({ backgroundGradientPresetId: n }));
             },
             a
         );
 }
 n.ZP = {
     overrideLocale(e) {
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_SETTINGS_LOCALE_OVERRIDE',
             locale: e
         });
     },
     updatedUnsyncedSettings(e) {
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'UNSYNCED_USER_SETTINGS_UPDATE',
             settings: e
         });
     },
     setShouldSyncTextSettings(e) {
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: {
                 text: {
@@ -112,7 +112,7 @@ n.ZP = {
     },
     setShouldSyncAppearanceSettings(e) {
         var n;
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: {
                 appearance: {
@@ -121,7 +121,7 @@ n.ZP = {
                         ? {}
                         : {
                               theme: u.Z.theme,
-                              clientThemeSettings: { backgroundGradientPresetId: null === (n = o.Z.gradientPreset) || void 0 === n ? void 0 : n.id },
+                              clientThemeSettings: { backgroundGradientPresetId: null === (n = s.Z.gradientPreset) || void 0 === n ? void 0 : n.id },
                               developerMode: c.Sb.getSetting()
                           }
                 }
@@ -129,14 +129,14 @@ n.ZP = {
         });
     },
     applySettingsOverride(e) {
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_SETTINGS_OVERRIDE_APPLY',
             settings: e
         });
     },
     clearSettingsOverride() {
         for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_SETTINGS_OVERRIDE_CLEAR',
             settings: n
         });
@@ -150,7 +150,7 @@ n.ZP = {
             d.fy.INFREQUENT_USER_ACTION
         ),
     updateTheme(e) {
-        s.Z.dispatch({
+        o.Z.dispatch({
             type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
             changes: { appearance: { settings: { theme: e } } }
         }),
@@ -158,7 +158,7 @@ n.ZP = {
                 d.hW.updateAsync(
                     'appearance',
                     (n) => {
-                        n.theme = p(e);
+                        n.theme = _(e);
                     },
                     d.fy.INFREQUENT_USER_ACTION
                 );

@@ -5,53 +5,53 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(481060),
     c = r(454585),
     d = r(572004),
     f = r(388032),
-    _ = r(417336);
+    p = r(417336);
 function h(e) {
     let {
             element: {
-                data: { title: n, body: r, sms: i, is_localized: o }
+                data: { title: n, body: r, sms: i, is_localized: s }
             }
         } = e,
-        [h, p] = s.useState(!1),
-        m = s.useRef(c.Z.reactParserFor(c.Z.defaultRules));
-    if (!o) return null;
+        [h, _] = o.useState(!1),
+        m = o.useRef(c.Z.reactParserFor(c.Z.defaultRules));
+    if (!s) return null;
     let g = () => {
-        (0, d.JG)(i) && p(!0);
+        (0, d.JG)(i) && _(!0);
     };
     return (0, a.jsxs)('div', {
-        className: _.container,
+        className: p.container,
         children: [
             (0, a.jsx)(u.Heading, {
                 variant: 'heading-sm/semibold',
                 color: 'header-secondary',
-                className: _.header,
+                className: p.header,
                 children: n
             }),
             (0, a.jsx)(u.Text, {
                 variant: 'text-sm/normal',
-                className: _.bodyText,
+                className: p.bodyText,
                 children: m.current(r)
             }),
             (0, a.jsx)('div', {
                 children: (0, a.jsxs)('div', {
-                    className: l()(_.smsNumberContainer, { [_.copied]: h }),
+                    className: l()(p.smsNumberContainer, { [p.copied]: h }),
                     children: [
                         (0, a.jsx)(u.Text, {
                             variant: 'text-md/normal',
                             selectable: !0,
-                            className: _.smsNumberText,
+                            className: p.smsNumberText,
                             children: i
                         }),
                         (0, a.jsx)(u.Button, {
                             size: u.Button.Sizes.SMALL,
-                            className: _.__invalid_trailingButton,
+                            className: p.__invalid_trailingButton,
                             onClick: g,
                             color: u.Button.Colors.PRIMARY,
                             children: h ? f.intl.string(f.t['t5VZ8/']) : f.intl.string(f.t.OpuAlJ)

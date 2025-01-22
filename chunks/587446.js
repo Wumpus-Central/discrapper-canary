@@ -6,21 +6,21 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(481060),
+    o = r.n(a),
+    s = r(481060),
     l = r(388032),
     u = r(750014);
 function c(e) {
     let { text: n = l.intl.string(l.t['5AFxuL']), className: r } = e;
-    return (0, i.jsx)(o.Tooltip, {
+    return (0, i.jsx)(s.Tooltip, {
         text: n,
         children: (e) =>
-            (0, i.jsx)(o.Clickable, {
+            (0, i.jsx)(s.Clickable, {
                 ...e,
-                children: (0, i.jsx)(o.NitroWheelIcon, {
+                children: (0, i.jsx)(s.NitroWheelIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: s()(u.nitroWheel, r)
+                    className: o()(u.nitroWheel, r)
                 })
             })
     });

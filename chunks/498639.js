@@ -54,20 +54,20 @@ t.Z = function () {
     let [e, t] = r.useState(O.Si.TIER_2),
         [n, f] = r.useState(null),
         [_] = (0, a.Wu)([v.Z], () => [v.Z.getGuilds()]),
-        [y] = (0, a.Wu)([A.ZP], () => [A.ZP.getPremiumSubscription()]);
+        [D] = (0, a.Wu)([A.ZP], () => [A.ZP.getPremiumSubscription()]);
     (0, b.t)();
-    let B = Object.values(_).map((e) => ({
+    let y = Object.values(_).map((e) => ({
             value: e,
             label: e.name
         })),
-        [D, Z] = r.useState(B.length > 0 ? B[0].value : null),
+        [B, Z] = r.useState(y.length > 0 ? y[0].value : null),
         [L, M] = r.useState(''),
         [k, w] = r.useState({
             plan_id: O.Xh.PREMIUM_MONTH_TIER_2,
             gift: 'true'
         }),
-        F = 'true' !== k.gift && null != y,
-        [U, V] = r.useState(B.length > 0 ? B[0].value : null),
+        F = 'true' !== k.gift && null != D,
+        [U, V] = r.useState(y.length > 0 ? y[0].value : null),
         { analyticsLocations: G } = (0, m.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
         [H, Y] = r.useState(''),
         [W, z] = r.useState(j.lds),
@@ -160,13 +160,13 @@ t.Z = function () {
                     className: R.formItem,
                     children: [
                         (0, i.jsx)(l.SingleSelect, {
-                            value: D,
-                            options: B,
+                            value: B,
+                            options: y,
                             onChange: (e) => Z(e)
                         }),
-                        null != D
+                        null != B
                             ? (0, i.jsx)(p.Z, {
-                                  guild: D,
+                                  guild: B,
                                   analyticsLocation: {}
                               })
                             : (0, i.jsx)('div', { children: 'No Guild to boost' })
@@ -341,7 +341,7 @@ t.Z = function () {
                         }),
                         (0, i.jsx)(l.SingleSelect, {
                             value: U,
-                            options: B,
+                            options: y,
                             onChange: (e) => V(e)
                         })
                     ]

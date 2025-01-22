@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(331595),
-    s = r(249849);
-let o = ['#4282d8', '#0abbff', '#ffffff'],
+    o = r(249849);
+let s = ['#4282d8', '#0abbff', '#ffffff'],
     l = [0.1, 0.32, 1],
     u = [
         {
@@ -25,8 +25,8 @@ let o = ['#4282d8', '#0abbff', '#ffffff'],
     ],
     c = (e) => {
         let { width: n = 24, height: r = 24, primaryTintColor: c, ...d } = e,
-            { primaryColorsTransformed: f } = (0, s.s)({
-                primaryBaseColors: o,
+            { primaryColorsTransformed: f } = (0, o.s)({
+                primaryBaseColors: s,
                 primaryTintColor: c,
                 primaryTintLuminances: l,
                 primaryLuminanceWeights: u

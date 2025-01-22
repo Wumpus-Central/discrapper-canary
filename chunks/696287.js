@@ -1,13 +1,13 @@
 var i = r(47120);
 var a = r(846519),
-    s = r(147913),
-    o = r(77498),
+    o = r(147913),
+    s = r(77498),
     l = r(19780),
     u = r(626135),
     c = r(70956),
     d = r(581567),
     f = r(594190),
-    _ = r(981631);
+    p = r(981631);
 function h(e, n, r) {
     return (
         n in e
@@ -21,13 +21,13 @@ function h(e, n, r) {
         e
     );
 }
-let p = 5 * c.Z.Millis.MINUTE;
-class m extends s.Z {
+let _ = 5 * c.Z.Millis.MINUTE;
+class m extends o.Z {
     _terminate() {
         this.stopHeartbeat();
     }
     maybeStartHeartbeat() {
-        !this.heartbeatInterval.isStarted() && (this.logRunningGameHeartbeats(), this.heartbeatInterval.start(p, this.logRunningGameHeartbeats));
+        !this.heartbeatInterval.isStarted() && (this.logRunningGameHeartbeats(), this.heartbeatInterval.start(_, this.logRunningGameHeartbeats));
     }
     stopHeartbeat() {
         this.heartbeatInterval.stop(), this.runningGameKeys.clear();
@@ -62,10 +62,10 @@ class m extends s.Z {
                     r = new Set();
                 e.forEach((e) => {
                     var i, a;
-                    let s = (0, f.rH)(e),
-                        l = !this.runningGameKeys.has(s),
-                        c = null !== (a = e.id) && void 0 !== a ? a : null === (i = o.Z.getGameByName(e.name)) || void 0 === i ? void 0 : i.id;
-                    u.default.track(_.rMx.RUNNING_GAME_HEARTBEAT, {
+                    let o = (0, f.rH)(e),
+                        l = !this.runningGameKeys.has(o),
+                        c = null !== (a = e.id) && void 0 !== a ? a : null === (i = s.Z.getGameByName(e.name)) || void 0 === i ? void 0 : i.id;
+                    u.default.track(p.rMx.RUNNING_GAME_HEARTBEAT, {
                         game_id: c,
                         game_name: e.name,
                         game_distributor: e.distributor,

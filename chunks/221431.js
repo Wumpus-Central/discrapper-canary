@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(190031),
-    s = r(476400),
-    o = r.n(s),
+    o = r(476400),
+    s = r.n(o),
     l = 1073741823,
     u = 'undefined' != typeof globalThis ? globalThis : 'undefined' != typeof window ? window : void 0 !== r.g ? r.g : {};
 function c() {
@@ -33,12 +33,12 @@ function f(e) {
         }
     };
 }
-function _(e) {
+function p(e) {
     return Array.isArray(e) ? e[0] : e;
 }
 function h(e, n) {
     var r,
-        s,
+        o,
         u = '__create-react-context-' + c() + '__',
         h = (function (e) {
             function r() {
@@ -70,8 +70,8 @@ function h(e, n) {
                 r
             );
         })(i.Component);
-    h.childContextTypes = (((r = {})[u] = o().object.isRequired), r);
-    var p = (function (n) {
+    h.childContextTypes = (((r = {})[u] = s().object.isRequired), r);
+    var _ = (function (n) {
         function r() {
             var e;
             return (
@@ -102,18 +102,18 @@ function h(e, n) {
                 return this.context[u] ? this.context[u].get() : e;
             }),
             (i.render = function () {
-                return _(this.props.children)(this.state.value);
+                return p(this.props.children)(this.state.value);
             }),
             r
         );
     })(i.Component);
     return (
-        (p.contextTypes = (((s = {})[u] = o().object), s)),
+        (_.contextTypes = (((o = {})[u] = s().object), o)),
         {
             Provider: h,
-            Consumer: p
+            Consumer: _
         }
     );
 }
-var p = i.createContext || h;
-n.Z = p;
+var _ = i.createContext || h;
+n.Z = _;

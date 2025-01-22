@@ -1,6 +1,6 @@
 n.d(t, {
     e: function () {
-        return d;
+        return u;
     }
 }),
     n(47120);
@@ -77,6 +77,6 @@ let c = new (class e {
         s(this, 'loadId', (0, i.Z)()), s(this, 'appUIViewed', !1);
     }
 })();
-function d(e) {
+function u(e) {
     c.trackAppUIViewed(e);
 }

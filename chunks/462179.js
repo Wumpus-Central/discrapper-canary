@@ -126,7 +126,7 @@ function T(n) {
                     return;
                 }
                 (0, r.openModalLazy)(async () => {
-                    let { default: n } = await Promise.all([t.e('7654'), t.e('16941')]).then(t.bind(t, 560114));
+                    let { default: n } = await Promise.all([t.e('7654'), t.e('65746')]).then(t.bind(t, 560114));
                     return (t) =>
                         (0, i.jsx)(n, {
                             ...t,

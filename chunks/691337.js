@@ -1,13 +1,13 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(481060),
     c = r(600164),
     d = r(259580),
     f = r(540642);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -20,7 +20,7 @@ function _(e, n, r) {
         e
     );
 }
-class h extends s.PureComponent {
+class h extends o.PureComponent {
     handleClick(e) {
         let { onBreadcrumbClick: n } = this.props;
         null != n && n(e);
@@ -36,17 +36,17 @@ class h extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'renderBreadcrumb', (e, n) => {
-                let { activeId: r, onBreadcrumbClick: i, breadcrumbs: s, renderCustomBreadcrumb: o, separatorClassName: c } = this.props,
-                    _ = e.id === r,
+            p(this, 'renderBreadcrumb', (e, n) => {
+                let { activeId: r, onBreadcrumbClick: i, breadcrumbs: o, renderCustomBreadcrumb: s, separatorClassName: c } = this.props,
+                    p = e.id === r,
                     h = () => this.handleClick(e),
-                    p = n === s.length - 1,
+                    _ = n === o.length - 1,
                     m =
-                        null != o
-                            ? o(e, _)
+                        null != s
+                            ? s(e, p)
                             : (0, a.jsx)('span', {
                                   className: l()(f.breadcrumb, {
-                                      [f.activeBreadcrumb]: _,
+                                      [f.activeBreadcrumb]: p,
                                       [f.interactiveBreadcrumb]: null != i
                                   }),
                                   children: e.label
@@ -54,7 +54,7 @@ class h extends s.PureComponent {
                 return (0, a.jsxs)(
                     'div',
                     {
-                        className: l()(f.breadcrumbWrapper, { [f.breadcrumbFinalWrapper]: p }),
+                        className: l()(f.breadcrumbWrapper, { [f.breadcrumbFinalWrapper]: _ }),
                         children: [
                             null != i
                                 ? (0, a.jsx)(u.Clickable, {
@@ -64,7 +64,7 @@ class h extends s.PureComponent {
                                       children: m
                                   })
                                 : m,
-                            p
+                            _
                                 ? null
                                 : (0, a.jsx)(d.Z, {
                                       className: l()(f.breadcrumbArrow, c),

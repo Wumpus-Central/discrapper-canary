@@ -36,13 +36,13 @@ function n(e) {
                 }
             ]
         },
-        s = {
+        o = {
             className: 'bullet',
             begin: '^[ \t]*([*+-]|(\\d+\\.))(?=\\s+)',
             end: '\\s+',
             excludeEnd: !0
         },
-        o = {
+        s = {
             begin: /^\[[^\n]+\]:/,
             returnBegin: !0,
             contains: [
@@ -144,13 +144,13 @@ function n(e) {
             ]
         },
         f = e.inherit(c, { contains: [] }),
-        _ = e.inherit(d, { contains: [] });
-    c.contains.push(_), d.contains.push(f);
+        p = e.inherit(d, { contains: [] });
+    c.contains.push(p), d.contains.push(f);
     let h = [r, u];
-    [c, d, f, _].forEach((e) => {
+    [c, d, f, p].forEach((e) => {
         e.contains = e.contains.concat(h);
     });
-    let p = {
+    let _ = {
         className: 'section',
         variants: [
             {
@@ -175,9 +175,9 @@ function n(e) {
         name: 'Markdown',
         aliases: ['md', 'mkdown', 'mkd'],
         contains: [
-            p,
+            _,
             r,
-            s,
+            o,
             c,
             d,
             {
@@ -189,7 +189,7 @@ function n(e) {
             a,
             i,
             u,
-            o,
+            s,
             {
                 scope: 'literal',
                 match: /&([a-zA-Z0-9]+|#[0-9]{1,7}|#[Xx][0-9a-fA-F]{1,6});/

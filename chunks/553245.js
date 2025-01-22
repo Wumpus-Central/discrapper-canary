@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(689320),
-    s = r(143806);
-function o(e, n, r) {
+    o = r(143806);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -77,6 +77,6 @@ class l {
         return a.t(this.extended.values(), this.primary.values());
     }
     constructor(e, n) {
-        o(this, 'primary', void 0), o(this, 'extended', void 0), (this.primary = new s.S(e)), (this.extended = new s.S(n));
+        s(this, 'primary', void 0), s(this, 'extended', void 0), (this.primary = new o.S(e)), (this.extended = new o.S(n));
     }
 }

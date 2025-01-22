@@ -1,15 +1,15 @@
 var i = r(47120);
 var a = r(846519),
-    s = r(147913),
-    o = r(603113),
+    o = r(147913),
+    s = r(603113),
     l = r(594190),
     u = r(131951),
     c = r(19780),
     d = r(885110),
     f = r(606304),
-    _ = r(938475),
+    p = r(938475),
     h = r(70956),
-    p = r(367907),
+    _ = r(367907),
     m = r(981631);
 function g(e, n, r) {
     return (
@@ -25,7 +25,7 @@ function g(e, n, r) {
     );
 }
 let E = 1 * h.Z.Millis.MINUTE;
-class v extends s.Z {
+class v extends o.Z {
     _initialize() {
         __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(f.Z, () => this._handleSpeakingStoreChanged()).set(c.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
     }
@@ -36,7 +36,7 @@ class v extends s.Z {
         if (this._currentUserSpeaking) {
             let e = c.Z.getChannelId(),
                 n = c.Z.getGuildId();
-            (0, p.yw)(m.rMx.START_SPEAKING, {
+            (0, _.yw)(m.rMx.START_SPEAKING, {
                 mode: u.Z.getMode(),
                 priority: f.Z.isCurrentUserPrioritySpeaking(),
                 channel: e,
@@ -45,7 +45,7 @@ class v extends s.Z {
                 guild_id: n,
                 rtc_connection_id: c.Z.getRTCConnectionId(),
                 media_session_id: c.Z.getMediaSessionId(),
-                voice_state_count: _.ZP.countVoiceStatesForChannel(this._voiceChannelId),
+                voice_state_count: p.ZP.countVoiceStatesForChannel(this._voiceChannelId),
                 ...this.getGameMetadata(),
                 ...c.Z.getPacketStats()
             });
@@ -55,7 +55,7 @@ class v extends s.Z {
         if (u.Z.isDeaf() || !this._anyoneElseSpeaking) return;
         let e = c.Z.getChannelId(),
             n = c.Z.getGuildId();
-        (0, p.yw)(m.rMx.START_LISTENING, {
+        (0, _.yw)(m.rMx.START_LISTENING, {
             mute: u.Z.isMute(),
             anyone_priority: f.Z.isAnyonePrioritySpeaking(),
             channel: e,
@@ -64,7 +64,7 @@ class v extends s.Z {
             guild_id: n,
             rtc_connection_id: c.Z.getRTCConnectionId(),
             media_session_id: c.Z.getMediaSessionId(),
-            voice_state_count: _.ZP.countVoiceStatesForChannel(this._voiceChannelId),
+            voice_state_count: p.ZP.countVoiceStatesForChannel(this._voiceChannelId),
             ...this.getGameMetadata()
         });
     }
@@ -75,7 +75,7 @@ class v extends s.Z {
         let e = d.Z.findActivity((e) => e.type === m.IIU.PLAYING),
             n = l.ZP.getCurrentGameForAnalytics();
         return {
-            game_platform: (0, o.Z)(e),
+            game_platform: (0, s.Z)(e),
             game_name: null != e ? e.name : null,
             game_exe_name: null != n ? n.exeName : null,
             game_id: null != e ? e.application_id : null

@@ -5,19 +5,19 @@ r.d(n, {
 });
 var i = r(887490);
 function a(e, n, r, a) {
-    var s, o;
+    var o, s;
     let l = 0;
-    for (let s = 0; s < r.length; s++) {
-        let o = r[s];
-        if (null == o) continue;
-        let u = l + o.length;
+    for (let o = 0; o < r.length; o++) {
+        let s = r[o];
+        if (null == s) continue;
+        let u = l + s.length;
         if (a <= u) {
-            let r = i.C0.child(n, s),
-                o = i.bN.node(e, r)[0];
-            if (i.LC.isText(o))
+            let r = i.C0.child(n, o),
+                s = i.bN.node(e, r)[0];
+            if (i.LC.isText(s))
                 return {
                     path: r,
-                    offset: Math.min(Math.max(a - l, 0), o.text.length)
+                    offset: Math.min(Math.max(a - l, 0), s.text.length)
                 };
         }
         l = u;
@@ -25,6 +25,6 @@ function a(e, n, r, a) {
     let u = r.length - 1;
     return {
         path: i.C0.child(n, u),
-        offset: null !== (o = null === (s = r[u]) || void 0 === s ? void 0 : s.length) && void 0 !== o ? o : 0
+        offset: null !== (s = null === (o = r[u]) || void 0 === o ? void 0 : o.length) && void 0 !== s ? s : 0
     };
 }

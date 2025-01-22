@@ -3,7 +3,7 @@ r.d(n, {
         return a;
     },
     LI: function () {
-        return s;
+        return o;
     },
     Ok: function () {
         return c.O;
@@ -20,8 +20,8 @@ r.d(n, {
 });
 var i,
     a,
-    s,
-    o = r(47120);
+    o,
+    s = r(47120);
 var l = r(687522),
     u = r(636977),
     c = r(59809);
@@ -34,4 +34,4 @@ let d = new Set(Object.values(l.y).filter((e) => 'number' == typeof e));
 })(a || (a = {})),
     !(function (e) {
         (e.DESKTOP = 'desktop'), (e.CONSOLE = 'console'), (e.SELECT = 'select');
-    })(s || (s = {}));
+    })(o || (o = {}));

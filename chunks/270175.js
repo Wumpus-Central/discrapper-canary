@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(829307),
     u = r(877837),
     c = r(376670),
@@ -15,22 +15,22 @@ var i = r(192379),
             }
             return e;
         },
-    _ = function (e) {
+    p = function (e) {
         var n = e.width,
             r = e.rgb,
             a = e.hex,
-            s = e.hsv,
-            _ = e.hsl,
+            o = e.hsv,
+            p = e.hsl,
             h = e.onChange,
-            p = e.onSwatchHover,
+            _ = e.onSwatchHover,
             m = e.disableAlpha,
             g = e.presetColors,
             E = e.renderers,
             v = e.styles,
-            I = void 0 === v ? {} : v,
-            T = e.className,
-            b = void 0 === T ? '' : T,
-            y = (0, o.default)(
+            y = void 0 === v ? {} : v,
+            b = e.className,
+            I = void 0 === b ? '' : b,
+            T = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: f(
@@ -92,7 +92,7 @@ var i = r(192379),
                                     shadow: 'inset 0 0 0 1px rgba(0,0,0,.15), inset 0 0 4px rgba(0,0,0,.25)'
                                 }
                             },
-                            I
+                            y
                         ),
                         disableAlpha: {
                             color: { height: '10px' },
@@ -100,61 +100,61 @@ var i = r(192379),
                             alpha: { display: 'none' }
                         }
                     },
-                    I
+                    y
                 ),
                 { disableAlpha: m }
             );
         return i.createElement(
             'div',
             {
-                style: y.picker,
-                className: 'sketch-picker ' + b
+                style: T.picker,
+                className: 'sketch-picker ' + I
             },
             i.createElement(
                 'div',
-                { style: y.saturation },
+                { style: T.saturation },
                 i.createElement(u.OQ, {
-                    style: y.Saturation,
-                    hsl: _,
-                    hsv: s,
+                    style: T.Saturation,
+                    hsl: p,
+                    hsv: o,
                     onChange: h
                 })
             ),
             i.createElement(
                 'div',
                 {
-                    style: y.controls,
+                    style: T.controls,
                     className: 'flexbox-fix'
                 },
                 i.createElement(
                     'div',
-                    { style: y.sliders },
+                    { style: T.sliders },
                     i.createElement(
                         'div',
-                        { style: y.hue },
+                        { style: T.hue },
                         i.createElement(u.PS, {
-                            style: y.Hue,
-                            hsl: _,
+                            style: T.Hue,
+                            hsl: p,
                             onChange: h
                         })
                     ),
                     i.createElement(
                         'div',
-                        { style: y.alpha },
+                        { style: T.alpha },
                         i.createElement(u.xV, {
-                            style: y.Alpha,
+                            style: T.Alpha,
                             rgb: r,
-                            hsl: _,
+                            hsl: p,
                             renderers: E,
                             onChange: h
                         })
                     )
                 ),
-                i.createElement('div', { style: y.color }, i.createElement(u.QN, null), i.createElement('div', { style: y.activeColor }))
+                i.createElement('div', { style: T.color }, i.createElement(u.QN, null), i.createElement('div', { style: T.activeColor }))
             ),
             i.createElement(c.Z, {
                 rgb: r,
-                hsl: _,
+                hsl: p,
                 hex: a,
                 onChange: h,
                 disableAlpha: m
@@ -162,19 +162,19 @@ var i = r(192379),
             i.createElement(d.Z, {
                 colors: g,
                 onClick: h,
-                onSwatchHover: p
+                onSwatchHover: _
             })
         );
     };
-(_.propTypes = {
-    disableAlpha: s().bool,
-    width: s().oneOfType([s().string, s().number]),
-    styles: s().object
+(p.propTypes = {
+    disableAlpha: o().bool,
+    width: o().oneOfType([o().string, o().number]),
+    styles: o().object
 }),
-    (_.defaultProps = {
+    (p.defaultProps = {
         disableAlpha: !1,
         width: 200,
         styles: {},
         presetColors: ['#D0021B', '#F5A623', '#F8E71C', '#8B572A', '#7ED321', '#417505', '#BD10E0', '#9013FE', '#4A90E2', '#50E3C2', '#B8E986', '#000000', '#4A4A4A', '#9B9B9B', '#FFFFFF']
     }),
-    (0, u.t1)(_);
+    (0, u.t1)(p);

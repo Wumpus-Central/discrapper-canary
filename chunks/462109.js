@@ -5,21 +5,21 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(611144),
-    s = r(2052),
-    o = r(691251),
+    o = r(2052),
+    s = r(691251),
     l = r(98528);
 let u = (e) => {
-    let { columnCounts: n, stickersGrid: r, stickersListRef: u, store: c, gridNavigatorId: d, setInspectedStickerPosition: f, onGridItemSelect: _ } = e,
-        h = (0, s.O)(),
-        p = i.useCallback(
+    let { columnCounts: n, stickersGrid: r, stickersListRef: u, store: c, gridNavigatorId: d, setInspectedStickerPosition: f, onGridItemSelect: p } = e,
+        h = (0, o.O)(),
+        _ = i.useCallback(
             (e) => {
-                _(e, h);
+                p(e, h);
             },
-            [_, h]
+            [p, h]
         ),
         m = i.useCallback(
             (e, n) => {
-                f(e, n, o.u.GRID_NAVIGATOR_EVENT);
+                f(e, n, s.u.GRID_NAVIGATOR_EVENT);
             },
             [f]
         ),
@@ -27,15 +27,15 @@ let u = (e) => {
             gridDispatch: g,
             getItemProps: E,
             getRowProps: v,
-            gridContainerProps: I,
-            handleGridContainerKeyDown: T,
-            isUsingKeyboardNavigation: b
+            gridContainerProps: y,
+            handleGridContainerKeyDown: b,
+            isUsingKeyboardNavigation: I
         } = (0, l.VO)({
             columnCounts: n,
             gridNavigatorId: d,
             itemGrid: r,
             itemList: u,
-            onGridNavigatorItemSelect: p,
+            onGridNavigatorItemSelect: _,
             onGridNavigatorPositionChange: m
         });
     return (
@@ -46,7 +46,7 @@ let u = (e) => {
                     (e) => {
                         if (null == e) return;
                         let { columnIndex: n, rowIndex: r, source: i } = e;
-                        i !== o.u.GRID_NAVIGATOR_EVENT &&
+                        i !== s.u.GRID_NAVIGATOR_EVENT &&
                             g({
                                 type: a.s.SET_FOCUSED_POSITION,
                                 x: n,
@@ -59,9 +59,9 @@ let u = (e) => {
         {
             getItemProps: E,
             getRowProps: v,
-            gridContainerProps: I,
-            handleGridContainerKeyDown: T,
-            isUsingKeyboardNavigation: b
+            gridContainerProps: y,
+            handleGridContainerKeyDown: b,
+            isUsingKeyboardNavigation: I
         }
     );
 };

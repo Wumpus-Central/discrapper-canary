@@ -16,22 +16,22 @@ r.d(n, {
         return f;
     }
 });
-var s = r(411104);
-function o() {
+var o = r(411104);
+function s() {
     if (null == i) throw Error('Native dependencies have not been injected.');
 }
 function l(e) {
     i = e;
 }
 function u() {
-    return o(), i.supported();
+    return s(), i.supported();
 }
 function c(e) {
-    return o(), i.supportsFeature(e);
+    return s(), i.supportsFeature(e);
 }
 function d(e) {
-    o(), i.setProcessPriority(e);
+    s(), i.setProcessPriority(e);
 }
 function f() {
-    return o(), null != a ? a : (a = i.getVoiceEngine());
+    return s(), null != a ? a : (a = i.getVoiceEngine());
 }

@@ -5,31 +5,31 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(512722),
-    o = r.n(s),
+    o = r(512722),
+    s = r.n(o),
     l = r(873546),
     u = r(442837),
     c = r(481060),
     d = r(239091),
     f = r(100527),
-    _ = r(906732),
+    p = r(906732),
     h = r(927723),
-    p = r(645727),
+    _ = r(645727),
     m = r(124072),
     g = r(184301),
     E = r(347475),
     v = r(592125),
-    I = r(271383),
-    T = r(430824),
-    b = r(699516),
-    y = r(594174),
+    y = r(271383),
+    b = r(430824),
+    I = r(699516),
+    T = r(594174),
     S = r(5192),
     A = r(51144),
-    N = r(377668);
-function C(e) {
-    let { userId: n, className: s, children: o } = e,
+    C = r(377668);
+function N(e) {
+    let { userId: n, className: o, children: s } = e,
         l = a.useCallback(() => {
-            (0, p.k)({ kind: 'user' });
+            (0, _.k)({ kind: 'user' });
         }, []),
         u = a.useCallback(
             (e) => {
@@ -46,20 +46,20 @@ function C(e) {
             [n]
         );
     return (0, i.jsx)(m.Z, {
-        className: s,
+        className: o,
         onClick: l,
         onContextMenu: u,
-        children: o
+        children: s
     });
 }
 function R(e) {
-    let { className: n, userId: a, channelId: s, parsedUserId: p, content: R, inlinePreview: O = !1, viewingChannelId: D } = e,
-        { analyticsLocations: L } = (0, _.ZP)(f.Z.USER_MENTION),
-        x = (0, u.e7)([y.default], () => y.default.getUser(a)),
-        w = (0, u.e7)([v.Z], () => v.Z.getChannel(s)),
+    let { className: n, userId: a, channelId: o, parsedUserId: _, content: R, inlinePreview: O = !1, viewingChannelId: D } = e,
+        { analyticsLocations: x } = (0, p.ZP)(f.Z.USER_MENTION),
+        L = (0, u.e7)([T.default], () => T.default.getUser(a)),
+        w = (0, u.e7)([v.Z], () => v.Z.getChannel(o)),
         P = null != w ? w.getGuildId() : null,
         M =
-            O || null == x || null == P || null == s
+            O || null == L || null == P || null == o
                 ? void 0
                 : (e) => {
                       null != w &&
@@ -69,23 +69,23 @@ function R(e) {
                                   (0, i.jsx)(e, {
                                       ...n,
                                       viewingChannelId: D,
-                                      user: x,
+                                      user: L,
                                       channel: w,
                                       guildId: P
                                   });
                           });
                   },
-        k = A.ZP.useName(x),
-        U = (0, u.e7)([v.Z, I.ZP, b.Z], () => S.ZP.getNickname(P, s, x)),
-        B = T.Z.getGuild(P),
-        G = (0, h.Ib)(B, w) && a === N.fL ? N.jM : null;
-    if (null == x)
-        return (0, i.jsx)(C, {
-            userId: p,
+        k = A.ZP.useName(L),
+        U = (0, u.e7)([v.Z, y.ZP, I.Z], () => S.ZP.getNickname(P, o, L)),
+        B = b.Z.getGuild(P),
+        G = (0, h.Ib)(B, w) && a === C.fL ? C.jM : null;
+    if (null == L)
+        return (0, i.jsx)(N, {
+            userId: _,
             className: n,
             children: R
         });
-    let F = (e) =>
+    let Z = (e) =>
         (0, i.jsx)(m.Z, {
             className: n,
             onContextMenu: M,
@@ -94,32 +94,32 @@ function R(e) {
             children: '@'.concat(null != U ? U : k)
         });
     return O
-        ? (0, i.jsx)(_.Gt, {
-              value: L,
-              children: F()
+        ? (0, i.jsx)(p.Gt, {
+              value: x,
+              children: Z()
           })
-        : (0, i.jsx)(_.Gt, {
-              value: L,
+        : (0, i.jsx)(p.Gt, {
+              value: x,
               children: (0, i.jsx)(c.Popout, {
                   preload:
-                      null == x
+                      null == L
                           ? void 0
                           : () =>
-                                (0, g.Z)(x.id, x.getAvatarURL(P, 80), {
+                                (0, g.Z)(L.id, L.getAvatarURL(P, 80), {
                                     guildId: null != P ? P : void 0,
-                                    channelId: null != s ? s : void 0
+                                    channelId: null != o ? o : void 0
                                 }),
                   renderPopout: (e) => (
-                      o()(null != x, 'Unexpected missing user'),
+                      s()(null != L, 'Unexpected missing user'),
                       (0, i.jsx)(E.Z, {
-                          userId: x.id,
+                          userId: L.id,
                           guildId: null != P ? P : void 0,
-                          channelId: s,
+                          channelId: o,
                           ...e
                       })
                   ),
                   position: l.tq ? 'top' : 'right',
-                  children: (e) => F(e)
+                  children: (e) => Z(e)
               })
           });
 }

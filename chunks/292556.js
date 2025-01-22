@@ -48,7 +48,7 @@ n.default = {
         });
     },
     showNotification(e, n, r, a) {
-        let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+        let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         i.Z.dispatch({
             type: 'NOTIFICATION_CREATE',
             icon: e,
@@ -56,10 +56,10 @@ n.default = {
             body: r,
             trackingProps: a,
             options: {
-                ...s,
+                ...o,
                 onClick() {
                     var e;
-                    null === (e = s.onClick) || void 0 === e || e.call(s), i.Z.dispatch({ type: 'NOTIFICATION_CLICK' });
+                    null === (e = o.onClick) || void 0 === e || e.call(o), i.Z.dispatch({ type: 'NOTIFICATION_CLICK' });
                 }
             }
         });

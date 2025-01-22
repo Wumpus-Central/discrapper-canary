@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(902704),
-    o = r(570140);
+    o = r(902704),
+    s = r(570140);
 function l(e, n, r) {
     return (
         n in e
@@ -25,11 +25,11 @@ function f(e) {
         scrollTo: null
     };
 }
-function _(e) {
+function p(e) {
     let { channelId: n, scrollTop: r, scrollHeight: i, offsetHeight: a } = e,
-        o = u[n];
+        s = u[n];
     if (null == r || null == i || null == a) {
-        if (null == o) return !1;
+        if (null == s) return !1;
         delete u[n];
     } else {
         let e = {
@@ -38,7 +38,7 @@ function _(e) {
             scrollHeight: i,
             offsetHeight: a
         };
-        if (null != o && (0, s.Z)(o, e)) return !1;
+        if (null != s && (0, o.Z)(s, e)) return !1;
         u[n] = e;
     }
 }
@@ -46,7 +46,7 @@ function h(e) {
     let { scrollTop: n } = e;
     d.scrollTop = n;
 }
-function p(e) {
+function _(e) {
     let { channelId: n } = e;
     m(n) && delete u[n];
 }
@@ -84,9 +84,9 @@ class E extends (i = a.ZP.Store) {
     }
 }
 l(E, 'displayName', 'DimensionStore'),
-    (n.Z = new E(o.Z, {
-        UPDATE_CHANNEL_DIMENSIONS: _,
+    (n.Z = new E(s.Z, {
+        UPDATE_CHANNEL_DIMENSIONS: p,
         UPDATE_CHANNEL_LIST_DIMENSIONS: g,
         UPDATE_GUILD_LIST_DIMENSIONS: h,
-        CALL_CREATE: p
+        CALL_CREATE: _
     }));

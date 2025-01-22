@@ -5,12 +5,12 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(399606),
-    s = r(745510),
-    o = r(351780);
+    o = r(745510),
+    s = r(351780);
 let l = 7;
 function u() {
-    let { createMultipleConfettiAt: e } = i.useContext(s.h),
-        n = (0, a.e7)([o.Z], () => o.Z.getState()),
+    let { createMultipleConfettiAt: e } = i.useContext(o.h),
+        n = (0, a.e7)([s.Z], () => s.Z.getState()),
         r = i.useCallback(
             (e) => ({
                 size: {
@@ -23,16 +23,16 @@ function u() {
         );
     return i.useMemo(
         () => ({
-            fire: (i, a, s) => {
-                var o, l;
+            fire: (i, a, o) => {
+                var s, l;
                 let u =
-                    (null == s ? void 0 : s.settings) != null
+                    (null == o ? void 0 : o.settings) != null
                         ? {
                               ...n,
-                              ...s.settings
+                              ...o.settings
                           }
                         : n;
-                e(i, a, r(u), (null !== (o = null == s ? void 0 : s.count) && void 0 !== o ? o : u.confettiCount) * (null !== (l = null == s ? void 0 : s.countMultiplier) && void 0 !== l ? l : 1), { sprite: null == s ? void 0 : s.sprite });
+                e(i, a, r(u), (null !== (s = null == o ? void 0 : o.count) && void 0 !== s ? s : u.confettiCount) * (null !== (l = null == o ? void 0 : o.countMultiplier) && void 0 !== l ? l : 1), { sprite: null == o ? void 0 : o.sprite });
             }
         }),
         [e, r, n]

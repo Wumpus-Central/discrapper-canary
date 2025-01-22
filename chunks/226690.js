@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(47120);
-var o = r(200651),
+    o = r(47120);
+var s = r(200651),
     l = r(192379),
     u = r(846519);
 function c(e, n, r) {
@@ -39,7 +39,7 @@ class d extends (a = l.Component) {
         if (null != this.animation) this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? (this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play()) : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0));
     }
     render() {
-        return (0, o.jsx)('div', {
+        return (0, s.jsx)('div', {
             className: this.props.className,
             ref: this.animationRef
         });
@@ -50,17 +50,17 @@ class d extends (a = l.Component) {
             c(this, 'animation', void 0),
             c(this, 'delayTimeout', new u.V7()),
             c(this, 'loadAnimation', async () => {
-                let { importData: e, loop: n, autoplay: i, delay: a, renderer: s, rendererSettings: o, shouldAnimate: l } = this.props;
+                let { importData: e, loop: n, autoplay: i, delay: a, renderer: o, rendererSettings: s, shouldAnimate: l } = this.props;
                 null != this.animation && this.animation.destroy();
                 let [u, { default: c }] = await Promise.all([e(), Promise.resolve().then(r.t.bind(r, 500923, 23))]);
                 if (null == this.animationRef.current) return;
                 let d = 'object' == typeof u && 'default' in u && 'string' == typeof u.default ? { path: u.default } : { animationData: u };
                 (this.animation = c.loadAnimation({
                     container: this.animationRef.current,
-                    renderer: s,
+                    renderer: o,
                     loop: n,
                     autoplay: i && null == a && l,
-                    rendererSettings: o,
+                    rendererSettings: s,
                     ...d
                 })),
                     null != a

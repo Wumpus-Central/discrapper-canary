@@ -33,7 +33,7 @@ function C(e) {
             paymentSourceId: t.paymentSourceId
         }),
         P = (0, m.T4)(R.amount, R.currency),
-        y = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
+        D = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
         (r.useEffect(() => {
             null != v.current && null != O && j(!0);
@@ -41,12 +41,12 @@ function C(e) {
         null == b || null == O)
     )
         return null;
-    let B = x.intl.format(x.t.gPzMHR, {
+    let y = x.intl.format(x.t.gPzMHR, {
             numMonths: b.discount.user_usage_limit,
             discountedPrice: O,
             regularPrice: P
         }),
-        D = (0, i.jsx)('div', {
+        B = (0, i.jsx)('div', {
             className: f.whatYouLoseButtonContainer,
             children: (0, i.jsx)(l.Button, {
                 color: l.Button.Colors.BRAND,
@@ -85,15 +85,15 @@ function C(e) {
                                       }),
                                       (0, i.jsx)('div', {
                                           className: f.bodyString,
-                                          children: B
+                                          children: y
                                       }),
-                                      D
+                                      B
                                   ]
                               })
                             : (0, i.jsx)(l.Spinner, {})
                 })
             }),
-            !y &&
+            !D &&
                 A &&
                 (0, i.jsx)(d.Z, {
                     confettiTarget: v.current,

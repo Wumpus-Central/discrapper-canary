@@ -3,7 +3,7 @@ r.d(n, {
         return v;
     },
     Ye: function () {
-        return I;
+        return y;
     },
     bp: function () {
         return E;
@@ -15,30 +15,30 @@ r.d(n, {
         return h;
     },
     tR: function () {
-        return _;
+        return p;
     }
 });
 var i = r(430824),
     a = r(19780),
-    s = r(594174),
-    o = r(626135),
+    o = r(594174),
+    s = r(626135),
     l = r(981631),
     u = r(37113),
     c = r(474936),
     d = r(65154),
     f = r(388032);
-function _(e) {
+function p(e) {
     if (null == e) return;
     let n = e.maxResolution.type === d.uA.SOURCE ? u.LY.RESOLUTION_SOURCE : e.maxResolution.height,
         r = (0, u.aW)(n);
-    return (0, u.L9)(e.maxFrameRate) !== u.ws.FPS_5 && null == u.ND.find((e) => e.resolution === r && e.fps !== u.ws.FPS_5 && !p(e));
+    return (0, u.L9)(e.maxFrameRate) !== u.ws.FPS_5 && null == u.ND.find((e) => e.resolution === r && e.fps !== u.ws.FPS_5 && !_(e));
 }
 function h(e) {
     if (null == e) return;
     let n = (0, u.L9)(e.maxFrameRate);
-    return null == u.ND.find((e) => e.fps === n && !p(e));
+    return null == u.ND.find((e) => e.fps === n && !_(e));
 }
-function p(e) {
+function _(e) {
     return null != e.quality || null != e.guildPremiumTier;
 }
 function m(e, n, r) {
@@ -58,14 +58,14 @@ function v(e) {
               maxResolution: e.maxResolution
           };
 }
-function I(e, n, r) {
+function y(e, n, r) {
     let u = m(e, n, r),
-        d = s.default.getCurrentUser(),
+        d = o.default.getCurrentUser(),
         f = a.Z.getGuildId(),
-        _ = null != f ? i.Z.getGuild(f) : null;
-    o.default.track(l.rMx.STREAM_SETTINGS_UPDATE, {
+        p = null != f ? i.Z.getGuild(f) : null;
+    s.default.track(l.rMx.STREAM_SETTINGS_UPDATE, {
         user_premium_tier: null == d ? void 0 : d.premiumType,
-        guild_premium_tier: null == _ ? void 0 : _.premiumTier,
+        guild_premium_tier: null == p ? void 0 : p.premiumTier,
         stream_quality_user_premium_tier: (null == u ? void 0 : u.quality) != null ? c.bg[u.quality] : null,
         stream_quality_guild_premium_tier: null == u ? void 0 : u.guildPremiumTier,
         stream_quality_preset: e,

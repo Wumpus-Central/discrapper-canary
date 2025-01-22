@@ -9,7 +9,7 @@ r.d(n, {
         return c;
     },
     Rw: function () {
-        return s;
+        return o;
     },
     X9: function () {
         return d;
@@ -21,7 +21,7 @@ r.d(n, {
         return u;
     },
     wI: function () {
-        return o;
+        return s;
     }
 });
 var i,
@@ -29,53 +29,53 @@ var i,
 !(function (e) {
     (e.FORMAT_ERROR = 'FORMAT_ERROR'), (e.UNSUPPORTED_FORMATTER = 'UNSUPPORTED_FORMATTER'), (e.INVALID_CONFIG = 'INVALID_CONFIG'), (e.MISSING_DATA = 'MISSING_DATA'), (e.MISSING_TRANSLATION = 'MISSING_TRANSLATION');
 })(i || (i = {}));
-var s = (function (e) {
+var o = (function (e) {
         function n(r, i, a) {
-            var s = this,
-                o = a ? (a instanceof Error ? a : Error(String(a))) : void 0;
+            var o = this,
+                s = a ? (a instanceof Error ? a : Error(String(a))) : void 0;
             return (
-                ((s =
+                ((o =
                     e.call(
                         this,
                         '[@formatjs/intl Error '
                             .concat(r, '] ')
                             .concat(i, '\n')
-                            .concat(o ? '\n'.concat(o.message, '\n').concat(o.stack) : '')
+                            .concat(s ? '\n'.concat(s.message, '\n').concat(s.stack) : '')
                     ) || this).code = r),
-                'function' == typeof Error.captureStackTrace && Error.captureStackTrace(s, n),
-                s
+                'function' == typeof Error.captureStackTrace && Error.captureStackTrace(o, n),
+                o
             );
         }
         return (0, a.ZT)(n, e), n;
     })(Error),
-    o = (function (e) {
+    s = (function (e) {
         function n(n, r) {
             return e.call(this, i.UNSUPPORTED_FORMATTER, n, r) || this;
         }
         return (0, a.ZT)(n, e), n;
-    })(s),
+    })(o),
     l = (function (e) {
         function n(n, r) {
             return e.call(this, i.INVALID_CONFIG, n, r) || this;
         }
         return (0, a.ZT)(n, e), n;
-    })(s),
+    })(o),
     u = (function (e) {
         function n(n, r) {
             return e.call(this, i.MISSING_DATA, n, r) || this;
         }
         return (0, a.ZT)(n, e), n;
-    })(s),
+    })(o),
     c = (function (e) {
         function n(n, r, a) {
-            var s = e.call(this, i.FORMAT_ERROR, ''.concat(n, '\nLocale: ').concat(r, '\n'), a) || this;
-            return (s.locale = r), s;
+            var o = e.call(this, i.FORMAT_ERROR, ''.concat(n, '\nLocale: ').concat(r, '\n'), a) || this;
+            return (o.locale = r), o;
         }
         return (0, a.ZT)(n, e), n;
-    })(s),
+    })(o),
     d = (function (e) {
         function n(n, r, i, a) {
-            var s =
+            var o =
                 e.call(
                     this,
                     ''
@@ -86,7 +86,7 @@ var s = (function (e) {
                     r,
                     a
                 ) || this;
-            return (s.descriptor = i), (s.locale = r), s;
+            return (o.descriptor = i), (o.locale = r), o;
         }
         return (0, a.ZT)(n, e), n;
     })(c),
@@ -119,4 +119,4 @@ var s = (function (e) {
             return (a.descriptor = n), a;
         }
         return (0, a.ZT)(n, e), n;
-    })(s);
+    })(o);

@@ -11,7 +11,7 @@ function n(e) {
             keywords: n,
             relevance: 10
         },
-        s = [
+        o = [
             {
                 className: 'string',
                 begin: '"""',
@@ -36,7 +36,7 @@ function n(e) {
             }
         ];
     return (
-        (a.contains = s),
+        (a.contains = o),
         {
             name: 'Ceylon',
             keywords: {
@@ -51,7 +51,7 @@ function n(e) {
                     className: 'meta',
                     begin: '@[a-z]\\w*(?::"[^"]*")?'
                 }
-            ].concat(s)
+            ].concat(o)
         }
     );
 }

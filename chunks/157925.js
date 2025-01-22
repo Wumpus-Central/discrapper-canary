@@ -10,20 +10,20 @@ r.d(n, {
         return l;
     },
     gD: function () {
-        return o;
+        return s;
     },
     lv: function () {
         return a;
     },
     xA: function () {
-        return s;
+        return o;
     }
 }),
     r(63063),
     r(981631),
     r(388032);
-let s = 240,
-    o = '834488117758001152',
+let o = 240,
+    s = '834488117758001152',
     l = 'stage-invite',
     u = 'stage-channel-audience-notice-shown';
 !(function (e) {

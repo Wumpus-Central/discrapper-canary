@@ -3,12 +3,12 @@ r.d(n, {
         return l;
     },
     s: function () {
-        return o;
+        return s;
     }
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2024-11_activities_contextless',
     label: 'Contextless Activities Experiment',
@@ -22,9 +22,9 @@ let s = (0, i.B)({
         }
     ]
 });
-function o() {
-    return s.getCurrentConfig({ location: 'getIsContextlessActivitiesExperimentEnabled' }).enabled;
+function s() {
+    return o.getCurrentConfig({ location: 'getIsContextlessActivitiesExperimentEnabled' }).enabled;
 }
 function l() {
-    return s.useExperiment({ location: 'useIsContextlessActivitiesExperimentEnabled' }).enabled;
+    return o.useExperiment({ location: 'useIsContextlessActivitiesExperimentEnabled' }).enabled;
 }

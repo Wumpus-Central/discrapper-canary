@@ -1,13 +1,13 @@
 var i,
     a = r(724458);
-var s = r(442837),
-    o = r(46973),
+var o = r(442837),
+    s = r(46973),
     l = r(570140),
     u = r(581883),
     c = r(131951),
     d = r(944486),
     f = r(594174),
-    _ = r(647177);
+    p = r(647177);
 function h(e, n, r) {
     return (
         n in e
@@ -21,7 +21,7 @@ function h(e, n, r) {
         e
     );
 }
-let p = !1,
+let _ = !1,
     m = null,
     g = !1,
     E = {};
@@ -35,36 +35,36 @@ function v(e) {
         {}
     );
 }
-function I(e) {
+function y(e) {
     let { videoFilterAsset: n } = e;
     E = {
         ...E,
         [n.id]: n
     };
 }
-function T(e) {
+function b(e) {
     let { videoFilterAsset: n } = e;
     (E = { ...E }), delete E[n.id];
 }
-function b(e) {
+function I(e) {
     var n;
     let r = f.default.getCurrentUser();
     if (null == r) return !1;
-    let i = null != e ? e : (0, _.Gx)(null === (n = u.Z.settings.voiceAndVideo) || void 0 === n ? void 0 : n.videoBackgroundFilterDesktop, r.id);
+    let i = null != e ? e : (0, p.Gx)(null === (n = u.Z.settings.voiceAndVideo) || void 0 === n ? void 0 : n.videoBackgroundFilterDesktop, r.id);
     return null != d.Z.getVoiceChannelId() && c.Z.isVideoEnabled() && null != i;
 }
-function y(e) {
+function T(e) {
     let { backgroundOption: n } = e;
-    b(n) && (g = !0);
+    I(n) && (g = !0);
 }
 function S(e) {
     let { settings: n } = e;
-    o.TO.CAMERA_BACKGROUND_LIVE in n && (p = !0);
+    s.TO.CAMERA_BACKGROUND_LIVE in n && (_ = !0);
 }
 function A() {
-    m !== d.Z.getVoiceChannelId() && (g = !1), b() && (g = !0), (m = d.Z.getVoiceChannelId());
+    m !== d.Z.getVoiceChannelId() && (g = !1), I() && (g = !0), (m = d.Z.getVoiceChannelId());
 }
-class N extends (i = s.ZP.Store) {
+class C extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z, d.Z, c.Z), this.syncWith([d.Z, c.Z], A);
     }
@@ -72,17 +72,17 @@ class N extends (i = s.ZP.Store) {
         return E;
     }
     get hasBeenApplied() {
-        return p;
+        return _;
     }
     get hasUsedBackgroundInCall() {
         return g;
     }
 }
-h(N, 'displayName', 'VideoBackgroundStore'),
-    (n.Z = new N(l.Z, {
+h(C, 'displayName', 'VideoBackgroundStore'),
+    (n.Z = new C(l.Z, {
         VIDEO_FILTER_ASSETS_FETCH_SUCCESS: v,
-        VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: I,
-        VIDEO_FILTER_ASSET_DELETE_SUCCESS: T,
-        VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: y,
+        VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: y,
+        VIDEO_FILTER_ASSET_DELETE_SUCCESS: b,
+        VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: T,
         MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: S
     }));

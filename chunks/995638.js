@@ -6,11 +6,11 @@ r.r(n),
     });
 var i = r(424421),
     a = r(767629),
-    s = r(951516),
-    o = 86400000;
+    o = r(951516),
+    s = 86400000;
 function l(e, n) {
-    (0, s.Z)(2, arguments);
+    (0, o.Z)(2, arguments);
     var r = (0, a.default)(e),
         l = (0, a.default)(n);
-    return Math.round((r.getTime() - (0, i.Z)(r) - (l.getTime() - (0, i.Z)(l))) / o);
+    return Math.round((r.getTime() - (0, i.Z)(r) - (l.getTime() - (0, i.Z)(l))) / s);
 }

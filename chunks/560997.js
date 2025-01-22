@@ -6,7 +6,7 @@ r.d(n, {
         return f;
     },
     TG: function () {
-        return _;
+        return p;
     },
     Zc: function () {
         return c;
@@ -14,20 +14,20 @@ r.d(n, {
 });
 var i = r(442837),
     a = r(570140),
-    s = r(238514),
-    o = r(675478),
+    o = r(238514),
+    s = r(675478),
     l = r(581883),
     u = r(526761);
 function c(e, n, r, a) {
-    let s = () => {
+    let o = () => {
             var i;
             return r(null === (i = l.Z.settings[e]) || void 0 === i ? void 0 : i[n]);
         },
-        c = () => (0, i.e7)([l.Z], s);
+        c = () => (0, i.e7)([l.Z], o);
     return {
-        getSetting: s,
-        updateSetting: h(s, (r) =>
-            o.hW.updateAsync(
+        getSetting: o,
+        updateSetting: h(o, (r) =>
+            s.hW.updateAsync(
                 e,
                 (e) => {
                     e[n] = a(r, e[n]);
@@ -39,23 +39,23 @@ function c(e, n, r, a) {
     };
 }
 function d(e, n, r) {
-    let o = () => {
+    let s = () => {
         var i;
-        let a = s.Z.getState()[n];
+        let a = o.Z.getState()[n];
         return null !== (i = null == a ? void 0 : a.settings[r]) && void 0 !== i ? i : e.getSetting();
     };
     return {
-        getSetting: o,
+        getSetting: s,
         useSetting: () => {
             let a = e.useSetting(),
-                o = (0, i.e7)([s.Z], () => {
-                    let e = s.Z.getState()[n];
+                s = (0, i.e7)([o.Z], () => {
+                    let e = o.Z.getState()[n];
                     return null == e ? void 0 : e.settings[r];
                 });
-            return null != o ? o : a;
+            return null != s ? s : a;
         },
-        updateSetting: h(o, (i) =>
-            s.Z.shouldSync(n)
+        updateSetting: h(s, (i) =>
+            o.Z.shouldSync(n)
                 ? e.updateSetting(i)
                 : (a.Z.dispatch({
                       type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
@@ -66,19 +66,19 @@ function d(e, n, r) {
     };
 }
 function f(e, n, r, i) {
-    let s = () => {
+    let o = () => {
         var n;
         return null !== (n = r()) && void 0 !== n ? n : e.getSetting();
     };
     return {
-        getSetting: s,
+        getSetting: o,
         useSetting: () => {
             let n = e.useSetting(),
                 r = i();
             return null != r ? r : n;
         },
         updateSetting: h(
-            s,
+            o,
             (r) => (
                 a.Z.dispatch({
                     type: 'USER_SETTINGS_OVERRIDE_CLEAR',
@@ -89,17 +89,17 @@ function f(e, n, r, i) {
         )
     };
 }
-function _(e) {
-    let { baseSetting: n, isEligible: r, useIsEligible: i, eligibleDefault: a, ineligibleDefault: s } = e;
+function p(e) {
+    let { baseSetting: n, isEligible: r, useIsEligible: i, eligibleDefault: a, ineligibleDefault: o } = e;
     return {
         getSetting: () => {
             let e = n.getSetting();
-            return null != e ? e : r() ? a() : s;
+            return null != e ? e : r() ? a() : o;
         },
         useSetting: () => {
             let e = n.useSetting(),
                 r = i();
-            return null != e ? e : r ? a() : s;
+            return null != e ? e : r ? a() : o;
         },
         updateSetting: (e) => n.updateSetting(e)
     };

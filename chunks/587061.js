@@ -1,49 +1,49 @@
 var i = r(192379),
     a = r(442837),
-    s = r(952265),
-    o = r(481060),
+    o = r(952265),
+    s = r(481060),
     l = r(714338),
     u = r(857595),
     c = r(607070),
     d = r(627845),
     f = r(556296),
-    _ = r(5967),
+    p = r(5967),
     h = r(13140),
-    p = r(981631),
+    _ = r(981631),
     m = r(420212);
 function g(e) {
     let n = e.ctrlKey || e.altKey || e.metaKey;
-    e.key === m.mR.Tab && !n && !__OVERLAY__ && !(0, s.$s)() && d.Z.maybeShowKeyboardNavigationExplainerModal();
+    e.key === m.mR.Tab && !n && !__OVERLAY__ && !(0, o.$s)() && d.Z.maybeShowKeyboardNavigationExplainerModal();
 }
 function E(e) {
     let n = h.C$('shift'),
         r = h.C$('tab');
     if (e.key === m.mR.Tab && e.shiftKey && null != n && null != r)
         return [
-            [p.MoX.KEYBOARD_KEY, n],
-            [p.MoX.KEYBOARD_KEY, r]
+            [_.MoX.KEYBOARD_KEY, n],
+            [_.MoX.KEYBOARD_KEY, r]
         ];
     let i = m.el.get(e.key);
     if (null != i) {
         let e = h.C$(i);
-        if (null != e) return [[p.MoX.KEYBOARD_KEY, e]];
+        if (null != e) return [[_.MoX.KEYBOARD_KEY, e]];
     }
     return null;
 }
 function v(e, n) {
     var r, i;
-    let a = (0, _.VG)(null === (r = (0, _.uB)(e)) || void 0 === r ? void 0 : r.activeElement);
+    let a = (0, p.VG)(null === (r = (0, p.uB)(e)) || void 0 === r ? void 0 : r.activeElement);
     if ((a && e.key !== m.mR.Tab) || e.ctrlKey || e.altKey || e.metaKey || (e.key !== m.mR.Tab && e.shiftKey)) return;
-    let s = E(e);
-    null != s && !f.Z.hasExactKeybind(s) && !l.Z.hasBind(null !== (i = h.H9(s[0])) && void 0 !== i ? i : '') && ((0, u.Qj)(), a && !n && e.preventDefault());
+    let o = E(e);
+    null != o && !f.Z.hasExactKeybind(o) && !l.Z.hasBind(null !== (i = h.H9(o[0])) && void 0 !== i ? i : '') && ((0, u.Qj)(), a && !n && e.preventDefault());
 }
-function I() {
+function y() {
     (0, u.rf)();
 }
-function T(e, n) {
+function b(e, n) {
     let r = (0, a.e7)([c.Z], () => c.Z.keyboardModeEnabled);
-    (0, o.useFocusJumpSectionManager)(r);
-    let s = (0, i.useCallback)(
+    (0, s.useFocusJumpSectionManager)(r);
+    let o = (0, i.useCallback)(
         (e) => {
             v(e, n);
         },
@@ -52,14 +52,14 @@ function T(e, n) {
     return (
         (0, i.useLayoutEffect)(
             () => (
-                r ? (e.addEventListener('mousedown', I), e.addEventListener('keydown', g)) : e.addEventListener('keydown', s),
+                r ? (e.addEventListener('mousedown', y), e.addEventListener('keydown', g)) : e.addEventListener('keydown', o),
                 () => {
-                    r ? (e.removeEventListener('mousedown', I), e.removeEventListener('keydown', g)) : e.removeEventListener('keydown', s);
+                    r ? (e.removeEventListener('mousedown', y), e.removeEventListener('keydown', g)) : e.removeEventListener('keydown', o);
                 }
             ),
-            [e, s, r]
+            [e, o, r]
         ),
         r
     );
 }
-n.Z = T;
+n.Z = b;

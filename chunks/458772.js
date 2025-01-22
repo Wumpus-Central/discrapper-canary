@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(442837),
-    s = r(570140),
-    o = r(710845),
+    o = r(570140),
+    s = r(710845),
     l = r(93093);
 function u(e, n, r) {
     return (
@@ -16,7 +16,7 @@ function u(e, n, r) {
         e
     );
 }
-let c = new o.Z('BasicChannelCacheStore'),
+let c = new s.Z('BasicChannelCacheStore'),
     d = !1;
 class f extends a.ZP.Store {
     hasChannel(e) {
@@ -61,7 +61,7 @@ class f extends a.ZP.Store {
         this.guilds.delete(e);
     }
     constructor() {
-        super(s.Z, {
+        super(o.Z, {
             CACHE_LOADED_LAZY_NO_CACHE: (e) => this.handleCacheLoadedLazyNoCache(e),
             CACHE_LOADED_LAZY: (e) => this.handleCacheLoadedLazy(e),
             CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),

@@ -1,9 +1,9 @@
 r.d(n, {
     Qi: function () {
-        return _;
+        return p;
     },
     R9: function () {
-        return p;
+        return _;
     },
     l_: function () {
         return f;
@@ -15,48 +15,48 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(780384),
+    o = r.n(a),
+    s = r(780384),
     l = r(410030),
     u = r(331595),
     c = r(474936),
     d = r(756232);
 let f = 'premium_new_tier_2_gradient',
-    _ = 'premium_old_tier_2_gradient';
+    p = 'premium_old_tier_2_gradient';
 function h(e) {
     let { tier: n = c.p9.TIER_2 } = e,
         r = (0, l.ZP)(),
-        a = (0, o.ap)(r);
+        a = (0, s.ap)(r);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !a &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)('div', {
-                            className: s()(d.rimGlowVertical, {
+                            className: o()(d.rimGlowVertical, {
                                 [d.rimGlowVerticalTier0]: n === c.p9.TIER_0,
                                 [d.rimGlowVerticalTier2]: n === c.p9.TIER_2
                             })
                         }),
-                        (0, i.jsx)(p, { foreground: d.buttonSparkleStar1 })
+                        (0, i.jsx)(_, { foreground: d.buttonSparkleStar1 })
                     ]
                 }),
-            (0, i.jsx)(p, { foreground: d.buttonSparkleStar2 }),
-            (0, i.jsx)(p, { foreground: d.buttonSparkleStar3 }),
-            (0, i.jsx)(p, { foreground: d.buttonSparkleStar4 }),
-            (0, i.jsx)(p, { foreground: d.buttonSparkleStar5 })
+            (0, i.jsx)(_, { foreground: d.buttonSparkleStar2 }),
+            (0, i.jsx)(_, { foreground: d.buttonSparkleStar3 }),
+            (0, i.jsx)(_, { foreground: d.buttonSparkleStar4 }),
+            (0, i.jsx)(_, { foreground: d.buttonSparkleStar5 })
         ]
     });
 }
-function p(e) {
-    let { width: n = 14, height: r = 13, color: a = 'white', foreground: s, ...o } = e;
+function _(e) {
+    let { width: n = 14, height: r = 13, color: a = 'white', foreground: o, ...s } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, u.Z)({ ...o }),
+        ...(0, u.Z)({ ...s }),
         preserveAspectRatio: 'none',
         width: n,
         height: r,
         viewBox: '0 0 14 13',
-        className: s,
+        className: o,
         xmlns: 'http://www.w3.org/2000/svg',
         children: [
             (0, i.jsxs)('defs', {
@@ -83,7 +83,7 @@ function p(e) {
                         ]
                     }),
                     (0, i.jsxs)('linearGradient', {
-                        id: _,
+                        id: p,
                         x1: '0%',
                         y1: '0%',
                         x2: '100%',

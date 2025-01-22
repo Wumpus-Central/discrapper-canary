@@ -1,23 +1,23 @@
 var i = r(312089),
     a = r(190031),
-    s = r(476400);
-var o = r(192379),
+    o = r(476400);
+var s = r(192379),
     l = r(995295),
     u = r(677166),
     c = r(57435),
     d = 'unmounted',
     f = 'exited',
-    _ = 'entering',
+    p = 'entering',
     h = 'entered',
-    p = 'exiting',
+    _ = 'exiting',
     m = (function (e) {
         function n(n, r) {
             i = e.call(this, n, r) || this;
             var i,
                 a,
-                s = r,
-                o = s && !s.isMounting ? n.enter : n.appear;
-            return (i.appearStatus = null), n.in ? (o ? ((a = f), (i.appearStatus = _)) : (a = h)) : (a = n.unmountOnExit || n.mountOnEnter ? d : f), (i.state = { status: a }), (i.nextCallback = null), i;
+                o = r,
+                s = o && !o.isMounting ? n.enter : n.appear;
+            return (i.appearStatus = null), n.in ? (s ? ((a = f), (i.appearStatus = p)) : (a = h)) : (a = n.unmountOnExit || n.mountOnEnter ? d : f), (i.state = { status: a }), (i.nextCallback = null), i;
         }
         (0, a.Z)(n, e),
             (n.getDerivedStateFromProps = function (e, n) {
@@ -32,7 +32,7 @@ var o = r(192379),
                 var n = null;
                 if (e !== this.props) {
                     var r = this.state.status;
-                    this.props.in ? r !== _ && r !== h && (n = _) : (r === _ || r === h) && (n = p);
+                    this.props.in ? r !== p && r !== h && (n = p) : (r === p || r === h) && (n = _);
                 }
                 this.updateStatus(!1, n);
             }),
@@ -58,15 +58,15 @@ var o = r(192379),
                 if ((void 0 === e && (e = !1), null !== n)) {
                     this.cancelNextCallback();
                     var r = l.findDOMNode(this);
-                    n === _ ? this.performEnter(r, e) : this.performExit(r);
+                    n === p ? this.performEnter(r, e) : this.performExit(r);
                 } else this.props.unmountOnExit && this.state.status === f && this.setState({ status: d });
             }),
             (r.performEnter = function (e, n) {
                 var r = this,
                     i = this.props.enter,
                     a = this.context ? this.context.isMounting : n,
-                    s = this.getTimeouts(),
-                    o = a ? s.appear : s.enter;
+                    o = this.getTimeouts(),
+                    s = a ? o.appear : o.enter;
                 if ((!n && !i) || u.Z.disabled) {
                     this.safeSetState({ status: h }, function () {
                         r.props.onEntered(e);
@@ -74,9 +74,9 @@ var o = r(192379),
                     return;
                 }
                 this.props.onEnter(e, a),
-                    this.safeSetState({ status: _ }, function () {
+                    this.safeSetState({ status: p }, function () {
                         r.props.onEntering(e, a),
-                            r.onTransitionEnd(e, o, function () {
+                            r.onTransitionEnd(e, s, function () {
                                 r.safeSetState({ status: h }, function () {
                                     r.props.onEntered(e, a);
                                 });
@@ -94,7 +94,7 @@ var o = r(192379),
                     return;
                 }
                 this.props.onExit(e),
-                    this.safeSetState({ status: p }, function () {
+                    this.safeSetState({ status: _ }, function () {
                         n.props.onExiting(e),
                             n.onTransitionEnd(e, i.exit, function () {
                                 n.safeSetState({ status: f }, function () {
@@ -137,13 +137,13 @@ var o = r(192379),
                 var n = this.props,
                     r = n.children,
                     a = (0, i.Z)(n, ['children']);
-                if ((delete a.in, delete a.mountOnEnter, delete a.unmountOnExit, delete a.appear, delete a.enter, delete a.exit, delete a.timeout, delete a.addEndListener, delete a.onEnter, delete a.onEntering, delete a.onEntered, delete a.onExit, delete a.onExiting, delete a.onExited, 'function' == typeof r)) return o.createElement(c.Z.Provider, { value: null }, r(e, a));
-                var s = o.Children.only(r);
-                return o.createElement(c.Z.Provider, { value: null }, o.cloneElement(s, a));
+                if ((delete a.in, delete a.mountOnEnter, delete a.unmountOnExit, delete a.appear, delete a.enter, delete a.exit, delete a.timeout, delete a.addEndListener, delete a.onEnter, delete a.onEntering, delete a.onEntered, delete a.onExit, delete a.onExiting, delete a.onExited, 'function' == typeof r)) return s.createElement(c.Z.Provider, { value: null }, r(e, a));
+                var o = s.Children.only(r);
+                return s.createElement(c.Z.Provider, { value: null }, s.cloneElement(o, a));
             }),
             n
         );
-    })(o.Component);
+    })(s.Component);
 function g() {}
 (m.contextType = c.Z),
     (m.propTypes = {}),

@@ -1,36 +1,36 @@
-var r = n(67867),
-    o = n(875604),
-    a = n(646948),
-    i = n(600385),
-    s = n(221446),
-    c = n(224106),
-    l = n(948634),
-    u = n(241777),
-    d = n(353991),
-    p = n(972554),
-    h = n(730427),
-    f = n(104210),
-    m = n(360518)('toStringTag'),
-    y = Error,
-    v = [].push,
-    g = function (e, t) {
-        var n,
-            r = o(b, this);
-        i ? (n = i(new y(), r ? a(this) : b)) : l((n = r ? this : c(b)), m, 'Error'), void 0 !== t && l(n, 'message', f(t)), p(n, g, n.stack, 1), arguments.length > 2 && d(n, arguments[2]);
-        var s = [];
-        return h(e, v, { that: s }), l(n, 'errors', s), n;
+var i = r(67867),
+    a = r(875604),
+    o = r(646948),
+    s = r(600385),
+    l = r(221446),
+    u = r(224106),
+    c = r(948634),
+    d = r(241777),
+    f = r(353991),
+    p = r(972554),
+    h = r(730427),
+    _ = r(104210),
+    m = r(360518)('toStringTag'),
+    g = Error,
+    E = [].push,
+    v = function (e, n) {
+        var r,
+            i = a(y, this);
+        s ? (r = s(new g(), i ? o(this) : y)) : c((r = i ? this : u(y)), m, 'Error'), void 0 !== n && c(r, 'message', _(n)), p(r, v, r.stack, 1), arguments.length > 2 && f(r, arguments[2]);
+        var l = [];
+        return h(e, E, { that: l }), c(r, 'errors', l), r;
     };
-i ? i(g, y) : s(g, y, { name: !0 });
-var b = (g.prototype = c(y.prototype, {
-    constructor: u(1, g),
-    message: u(1, ''),
-    name: u(1, 'AggregateError')
+s ? s(v, g) : l(v, g, { name: !0 });
+var y = (v.prototype = u(g.prototype, {
+    constructor: d(1, v),
+    message: d(1, ''),
+    name: d(1, 'AggregateError')
 }));
-r(
+i(
     {
         global: !0,
         constructor: !0,
         arity: 2
     },
-    { AggregateError: g }
+    { AggregateError: v }
 );

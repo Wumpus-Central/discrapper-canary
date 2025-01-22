@@ -1,34 +1,34 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(622535),
+    o = r(192379),
+    s = r(622535),
     l = r(481060),
     u = r(425493),
     c = r(211266),
     d = r(906732),
     f = r(626135),
-    _ = r(724884),
+    p = r(724884),
     h = r(355045),
-    p = r(290799),
+    _ = r(290799),
     m = r(394769),
     g = r(555932),
     E = r(808189),
     v = r(362948),
-    I = r(245004),
-    T = r(383881),
-    b = r(981631),
-    y = r(388032),
+    y = r(245004),
+    b = r(383881),
+    I = r(981631),
+    T = r(388032),
     S = r(483843);
 function A(e) {
     let { analyticsLocation: n, guild: r, onClose: i } = e,
-        [A, N] = s.useState(!0),
-        C = s.useRef(!1),
+        [A, C] = o.useState(!0),
+        N = o.useRef(!1),
         R = (0, c.Z)(() => Date.now()),
         { analyticsLocations: O } = (0, d.ZP)(),
-        D = s.useCallback(() => {
+        D = o.useCallback(() => {
             i(),
-                f.default.track(b.rMx.MODAL_DISMISSED, {
-                    type: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+                f.default.track(I.rMx.MODAL_DISMISSED, {
+                    type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_stack: O,
                     location_section: n.section,
                     location_object: n.object,
@@ -36,32 +36,32 @@ function A(e) {
                     duration_open_ms: Date.now() - R
                 });
         }, [i, n, O, R, r.id]),
-        L = s.useCallback(
+        x = o.useCallback(
             (e) => {
                 e &&
-                    !C.current &&
-                    (f.default.track(b.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                        type: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+                    !N.current &&
+                    (f.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                        type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_stack: O,
                         location_section: n.section,
                         location_object: n.object,
                         guild_id: r.id
                     }),
-                    (C.current = !0));
+                    (N.current = !0));
             },
             [n, O, r.id]
         );
     return (
-        s.useEffect(() => {
-            f.default.track(b.rMx.OPEN_MODAL, {
-                type: b.ZY5.PREMIUM_GUILD_USER_MODAL,
+        o.useEffect(() => {
+            f.default.track(I.rMx.OPEN_MODAL, {
+                type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                 location_stack: O,
                 location_section: n.section,
                 location_object: n.object,
                 guild_id: r.id
             });
         }, [r.id, n, O]),
-        s.useEffect(() => {
+        o.useEffect(() => {
             function e(e) {
                 'Escape' === e.key && D();
             }
@@ -96,23 +96,23 @@ function A(e) {
                                             className: S.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
-                                            children: y.intl.string(y.t.N4sqzM)
+                                            children: T.intl.string(T.t.N4sqzM)
                                         }),
                                         (0, a.jsx)(h.Z, {
                                             guild: r,
                                             closeLayer: D,
-                                            onCtaVisibilityChange: N
+                                            onCtaVisibilityChange: C
                                         }),
                                         (0, a.jsx)(g.Z, { guild: r }),
                                         (0, a.jsx)(E.Z, { guild: r })
                                     ]
                                 }),
-                                (0, a.jsx)(T.O, {})
+                                (0, a.jsx)(b.O, {})
                             ]
                         }),
                         (0, a.jsx)('div', {
                             className: S.middleBodyContentWrapper,
-                            children: (0, a.jsx)(I.Z, {})
+                            children: (0, a.jsx)(y.Z, {})
                         }),
                         (0, a.jsxs)('div', {
                             className: S.lowerBody,
@@ -124,16 +124,16 @@ function A(e) {
                                             className: S.tierComparisonTable,
                                             guild: r
                                         }),
-                                        (0, a.jsx)(_.Z, {}),
-                                        (0, a.jsx)(p.Z, {})
+                                        (0, a.jsx)(p.Z, {}),
+                                        (0, a.jsx)(_.Z, {})
                                     ]
                                 }),
-                                (0, a.jsx)(T.A, {}),
+                                (0, a.jsx)(b.A, {}),
                                 (0, a.jsx)('div', { className: S.lowerBodyBackgroundImage })
                             ]
                         }),
-                        (0, a.jsx)(o.$, {
-                            onChange: L,
+                        (0, a.jsx)(s.$, {
+                            onChange: x,
                             children: (0, a.jsx)('div', { className: S.persistentCtaSpacer })
                         })
                     ]

@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(47120);
 var a = r(251625);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,7 +18,7 @@ function s(e, n, r) {
         e
     );
 }
-class o {
+class s {
     keys() {
         return this.cachedKeys(this.version);
     }
@@ -45,6 +45,6 @@ class o {
         0 !== this.data.size && (this.data.clear(), this.version++);
     }
     constructor() {
-        s(this, 'version', 0), s(this, 'data', new Map()), s(this, 'cachedValues', void 0), s(this, 'cachedKeys', void 0), s(this, 'cachedEntries', void 0), (this.cachedValues = (0, a.oH)((e) => Array.from(this.data.values()))), (this.cachedKeys = (0, a.oH)((e) => Array.from(this.data.keys()))), (this.cachedEntries = (0, a.oH)((e) => Array.from(this.data.entries())));
+        o(this, 'version', 0), o(this, 'data', new Map()), o(this, 'cachedValues', void 0), o(this, 'cachedKeys', void 0), o(this, 'cachedEntries', void 0), (this.cachedValues = (0, a.oH)((e) => Array.from(this.data.values()))), (this.cachedKeys = (0, a.oH)((e) => Array.from(this.data.keys()))), (this.cachedEntries = (0, a.oH)((e) => Array.from(this.data.entries())));
     }
 }

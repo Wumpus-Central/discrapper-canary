@@ -6,7 +6,7 @@ function n(e) {
             className: 'symbol',
             begin: /&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;/
         },
-        s = {
+        o = {
             begin: /\s/,
             contains: [
                 {
@@ -16,7 +16,7 @@ function n(e) {
                 }
             ]
         },
-        o = e.inherit(s, {
+        s = e.inherit(o, {
             begin: /\(/,
             end: /\)/
         }),
@@ -69,10 +69,10 @@ function n(e) {
                 end: />/,
                 relevance: 10,
                 contains: [
-                    s,
+                    o,
                     u,
                     l,
-                    o,
+                    s,
                     {
                         begin: /\[/,
                         end: /\]/,
@@ -81,7 +81,7 @@ function n(e) {
                                 className: 'meta',
                                 begin: /<![a-z]/,
                                 end: />/,
-                                contains: [s, o, u, l]
+                                contains: [o, s, u, l]
                             }
                         ]
                     }

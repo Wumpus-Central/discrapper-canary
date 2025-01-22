@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(442837),
-    o = r(570140);
+    o = r(442837),
+    s = r(570140);
 function l(e, n, r) {
     return (
         n in e
@@ -27,14 +27,14 @@ let u = 0,
     c = null,
     d = null,
     f = null;
-function _(e) {
+function p(e) {
     (u = 1), (c = e.loadId);
 }
 function h(e) {
     var n, r;
     if (c === e.loadId) (d = null !== (n = e.skuId) && void 0 !== n ? n : null), (f = null !== (r = e.skuSubscriptionPlanId) && void 0 !== r ? r : null), (u = 2);
 }
-class p extends (a = s.ZP.Store) {
+class _ extends (a = o.ZP.Store) {
     get browserCheckoutState() {
         return u;
     }
@@ -48,8 +48,8 @@ class p extends (a = s.ZP.Store) {
         return f;
     }
 }
-l(p, 'displayName', 'BrowserCheckoutStateStore'),
-    (n.Z = new p(o.Z, {
-        USER_PAYMENT_BROWSER_CHECKOUT_STARTED: _,
+l(_, 'displayName', 'BrowserCheckoutStateStore'),
+    (n.Z = new _(s.Z, {
+        USER_PAYMENT_BROWSER_CHECKOUT_STARTED: p,
         USER_PAYMENT_BROWSER_CHECKOUT_DONE: h
     }));

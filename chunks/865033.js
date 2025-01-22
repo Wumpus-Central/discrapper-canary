@@ -1,12 +1,12 @@
 var i = r(570140),
     a = r(317770),
-    s = r(358085),
-    o = r(374023),
+    o = r(358085),
+    s = r(374023),
     l = r(761274),
     u = r(981631);
 class c extends a.Z {
     isEnabled() {
-        return (0, s.isDesktop)() && (0, s.isMac)() && !o.s.isDiscordTestSet();
+        return (0, o.isDesktop)() && (0, o.isMac)() && !s.s.isDiscordTestSet();
     }
     _initialize() {
         this.isEnabled() && i.Z.subscribe('AUDIO_SET_MODE', this.handleAudioSetMode);

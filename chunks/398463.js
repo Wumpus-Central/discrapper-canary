@@ -22,30 +22,30 @@ r.d(n, {
         return u;
     },
     Lj: function () {
-        return _;
+        return p;
     },
     Ls: function () {
         return f;
     },
     Lu: function () {
-        return s;
+        return o;
     },
     OT: function () {
         return d;
     },
     TC: function () {
-        return o;
+        return s;
     }
 });
 let a = 1000 / 60,
-    s = (1000 / 60) * 3,
     o = (1000 / 60) * 3,
+    s = (1000 / 60) * 3,
     l = 1000 / 60 / 8,
     u = 12 * a,
     c = 1000,
     d = 2,
     f = 50;
-class _ {
+class p {
     timeRemaining() {
         let e = performance.now() - this._startMs;
         return Math.max(0, this._deadlineMs - e);

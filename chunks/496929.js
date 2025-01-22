@@ -11,8 +11,8 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(570140),
-    s = r(73346),
-    o = r(981631);
+    o = r(73346),
+    s = r(981631);
 function l(e) {
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return (
@@ -24,7 +24,7 @@ function l(e) {
         }),
         i.tn
             .get({
-                url: o.ANM.ENTITLEMENTS_FOR_APPLICATION(e),
+                url: s.ANM.ENTITLEMENTS_FOR_APPLICATION(e),
                 oldFormErrors: !0,
                 query: { exclude_consumed: n },
                 rejectWithError: !0
@@ -48,15 +48,15 @@ function l(e) {
     );
 }
 async function u(e) {
-    let { withSku: n = !1, withApplication: r = !1, entitlementType: s } = e;
+    let { withSku: n = !1, withApplication: r = !1, entitlementType: o } = e;
     a.Z.dispatch({ type: 'ENTITLEMENTS_FETCH_FOR_USER_START' });
     try {
         let e = await i.tn.get({
-            url: o.ANM.ENTITLEMENTS_FOR_USER,
+            url: s.ANM.ENTITLEMENTS_FOR_USER,
             query: {
                 with_sku: n,
                 with_application: r,
-                entitlement_type: s
+                entitlement_type: o
             },
             rejectWithError: !0
         });
@@ -71,8 +71,8 @@ async function u(e) {
 async function c() {
     a.Z.dispatch({ type: 'ENTITLEMENTS_GIFTABLE_FETCH' });
     try {
-        let e = await (0, s.Kb)({
-            url: o.ANM.ENTITLEMENTS_GIFTABLE,
+        let e = await (0, o.Kb)({
+            url: s.ANM.ENTITLEMENTS_GIFTABLE,
             rejectWithError: !0
         });
         a.Z.dispatch({

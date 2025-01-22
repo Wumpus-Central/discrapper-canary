@@ -56,9 +56,9 @@ function E(e) {
         { channelId: n, className: r, showingClassName: s, onClick: u, inPopout: h, showRequestToSpeakSidebar: p, toggleRequestToSpeakSidebar: g, ...E } = e,
         { disabled: b } = E,
         Z = l.useRef(null),
-        S = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+        N = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
-            isShowing: N,
+            isShowing: S,
             unreadCount: T,
             mentionCount: j
         } = (function (e) {
@@ -82,8 +82,8 @@ function E(e) {
             );
         })(n),
         A = l.useCallback(() => {
-            null == u || u(), !S && p && (null == g || g()), c.Z.updateChatOpen(n, !S);
-        }, [n, S, u, p, g]),
+            null == u || u(), !N && p && (null == g || g()), c.Z.updateChatOpen(n, !N);
+        }, [n, N, u, p, g]),
         y = l.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -122,7 +122,7 @@ function E(e) {
                 }
             );
         }, [M]);
-    let k = [(t = h && b ? v.intl.string(v.t.DPgc5u) : S ? v.intl.string(v.t.nthdxM) : v.intl.string(v.t['5KxXrK']))];
+    let k = [(t = h && b ? v.intl.string(v.t.DPgc5u) : N ? v.intl.string(v.t.nthdxM) : v.intl.string(v.t['5KxXrK']))];
     return (
         j > 0 && k.push(v.intl.formatToPlainString(v.t['3l1GOz'], { mentionCount: j })),
         T > 0 && k.push(v.intl.string(v.t.x5zAGR)),
@@ -133,7 +133,7 @@ function E(e) {
             'aria-label': k.join(', '),
             iconComponent: y,
             tooltipPosition: 'bottom',
-            wrapperClassName: a()(r, null != s && { [s]: N }),
+            wrapperClassName: a()(r, null != s && { [s]: S }),
             forceTooltipOpen: M,
             ...E
         })

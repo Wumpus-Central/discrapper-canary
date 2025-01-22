@@ -1,6 +1,6 @@
 r.d(n, {
     S5: function () {
-        return s;
+        return o;
     },
     Yz: function () {
         return i;
@@ -9,7 +9,7 @@ r.d(n, {
         return l;
     },
     pt: function () {
-        return o;
+        return s;
     },
     ve: function () {
         return a;
@@ -17,6 +17,6 @@ r.d(n, {
 });
 let i = 'guild-product-edit-modal',
     a = 1073741824,
-    s = 1073741824,
-    o = 10,
+    o = 1073741824,
+    s = 10,
     l = 30;

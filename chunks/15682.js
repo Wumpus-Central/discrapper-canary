@@ -1,24 +1,24 @@
 var i = r(47120);
 var a = r(200651);
 r(192379);
-var s = r(481060),
-    o = r(753801);
+var o = r(481060),
+    s = r(753801);
 let l = (e) => {
         let { onChange: n, label: r, subtitle: i, selected: l } = e;
         return (0, a.jsx)('div', {
-            className: o.checkboxRow,
-            children: (0, a.jsxs)(s.Checkbox, {
-                type: s.Checkbox.Types.INVERTED,
+            className: s.checkboxRow,
+            children: (0, a.jsxs)(o.Checkbox, {
+                type: o.Checkbox.Types.INVERTED,
                 onChange: () => n(),
                 value: l,
                 children: [
-                    (0, a.jsx)(s.Text, {
+                    (0, a.jsx)(o.Text, {
                         color: 'interactive-active',
                         variant: 'text-md/semibold',
                         children: r
                     }),
                     null != i
-                        ? (0, a.jsx)(s.Text, {
+                        ? (0, a.jsx)(o.Text, {
                               color: 'interactive-active',
                               variant: 'text-sm/normal',
                               children: i
@@ -31,16 +31,16 @@ let l = (e) => {
     u = (e) => {
         let { element: n, state: r, onChange: i } = e;
         if ((null == n ? void 0 : n.type) !== 'checkbox') return null;
-        let { data: s } = n;
+        let { data: o } = n;
         return (0, a.jsx)('div', {
-            children: s.map((e, n) => {
-                let [s, o, u] = e;
+            children: o.map((e, n) => {
+                let [o, s, u] = e;
                 return (0, a.jsx)(
                     l,
                     {
-                        onChange: () => i(s, o),
-                        selected: s in r,
-                        label: o,
+                        onChange: () => i(o, s),
+                        selected: o in r,
+                        label: s,
                         subtitle: u
                     },
                     ''.concat(n, '+button')

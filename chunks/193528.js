@@ -29,13 +29,13 @@ function f(e) {
         O = (0, m.Lq)(v ? h.Ilk.WHITE_500 : h.Ilk.PRIMARY_530),
         R = (0, u.Z)(C),
         P = (0, u.Z)(T),
-        [y, B] = r.useState((0, l.Z)());
+        [D, y] = r.useState((0, l.Z)());
     return (
         r.useEffect(() => {
-            (R !== C || P !== T) && B((0, l.Z)());
+            (R !== C || P !== T) && y((0, l.Z)());
         }, [T, C, P, R]),
         (0, i.jsx)(d.Popout, {
-            positionKey: y,
+            positionKey: D,
             renderPopout: (e) =>
                 (0, i.jsx)(d.CustomColorPicker, {
                     ...e,

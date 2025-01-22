@@ -11,8 +11,8 @@ var i = (function () {
         };
     })(),
     a = r(192379),
-    s = l(a),
-    o = l(r(723184));
+    o = l(a),
+    s = l(r(723184));
 function l(e) {
     return e && e.__esModule ? e : { default: e };
 }
@@ -48,11 +48,11 @@ function f(e, n) {
     })),
         n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
 }
-var _ = 1,
+var p = 1,
     h = 38,
-    p = [38, 40],
+    _ = [38, 40],
     m = function (e) {
-        return p.indexOf(e) > -1;
+        return _.indexOf(e) > -1;
     },
     g = function (e) {
         return Number(String(e).replace(/%/g, ''));
@@ -135,7 +135,7 @@ var _ = 1,
                 {
                     key: 'getArrowOffset',
                     value: function () {
-                        return this.props.arrowOffset || _;
+                        return this.props.arrowOffset || p;
                     }
                 },
                 {
@@ -149,7 +149,7 @@ var _ = 1,
                     key: 'render',
                     value: function () {
                         var e = this,
-                            n = (0, o.default)(
+                            n = (0, s.default)(
                                 {
                                     default: { wrap: { position: 'relative' } },
                                     'user-override': {
@@ -162,10 +162,10 @@ var _ = 1,
                                 { 'user-override': !0 },
                                 this.props
                             );
-                        return s.default.createElement(
+                        return o.default.createElement(
                             'div',
                             { style: n.wrap },
-                            s.default.createElement('input', {
+                            o.default.createElement('input', {
                                 id: this.inputId,
                                 style: n.input,
                                 ref: function (n) {
@@ -179,7 +179,7 @@ var _ = 1,
                                 spellCheck: 'false'
                             }),
                             this.props.label && !this.props.hideLabel
-                                ? s.default.createElement(
+                                ? o.default.createElement(
                                       'label',
                                       {
                                           htmlFor: this.inputId,

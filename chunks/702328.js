@@ -28,9 +28,9 @@ var i = n(200651),
     O = n(8647),
     R = n(568126),
     P = n(605289),
-    y = n(346497),
-    B = n(218390),
-    D = n(823188),
+    D = n(346497),
+    y = n(218390),
+    B = n(823188),
     Z = n(241158),
     L = n(135785),
     M = n(498765),
@@ -139,12 +139,12 @@ t.Z = (e) => {
         eO = null != ej ? b.ZP.getSkuIdForPlan(ej.planId) : null,
         eR = null !== eO && eO !== X.Si.TIER_2 ? X.Si.TIER_2 : null,
         eP = (0, A.n)(),
-        ey = null != eP,
-        [eB, eD] = r.useState(!1),
+        eD = null != eP,
+        [ey, eB] = r.useState(!1),
         eZ = (0, j.N)(),
         eL = null == eZ ? void 0 : null === (t = eZ.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
         eM = (0, I.Nx)(),
-        ek = (0, y.Vi)(),
+        ek = (0, D.Vi)(),
         ew = null === (n = (0, v.Z)()) || void 0 === n ? void 0 : n.billingSettingsMarketingBanner,
         { analyticsLocations: eF } = (0, p.ZP)(h.Z.PREMIUM_MARKETING),
         eU = 'PremiumMarketingHome';
@@ -168,8 +168,8 @@ t.Z = (e) => {
                 onChange: (e) => eT(e),
                 threshold: 0.1,
                 active: !0,
-                children: (0, i.jsx)(D.ZP, {
-                    variant: ep ? D.NN.MARKETING_PAGE_V2 : D.NN.DEFAULT,
+                children: (0, i.jsx)(B.ZP, {
+                    variant: ep ? B.NN.MARKETING_PAGE_V2 : B.NN.DEFAULT,
                     showWumpus: !ep,
                     tier0CTAButton: ep
                         ? (0, i.jsx)(z.Z, {
@@ -236,7 +236,7 @@ t.Z = (e) => {
                         isFullscreen: s,
                         inOfferExperience: eM
                     }),
-                !s && ey
+                !s && eD
                     ? (0, i.jsx)(P.Z, {
                           localizedPricingPromo: eP,
                           smallGap: !0
@@ -292,19 +292,19 @@ t.Z = (e) => {
                       }),
                 (0, i.jsxs)('div', {
                     className: et.promoBannerContainer,
-                    children: [(0, i.jsx)(O.Z, { isFullScreen: s }), s && ey && (0, i.jsx)(R.Z, { localizedPricingPromo: eP })]
+                    children: [(0, i.jsx)(O.Z, { isFullScreen: s }), s && eD && (0, i.jsx)(R.Z, { localizedPricingPromo: eP })]
                 }),
                 !ep && eV,
                 Z === X.EZ.UserSettings &&
                     null != ew &&
-                    (0, i.jsx)(B.C, {
+                    (0, i.jsx)(y.C, {
                         className: et.giftPromoCard,
                         config: ew
                     }),
                 (0, i.jsx)(eu, {
                     isFullscreen: s,
                     inOfferExperience: eM,
-                    setIsAllPerksVisible: eD,
+                    setIsAllPerksVisible: eB,
                     hasRenderedOnce: eN,
                     isMarketingPageV2Enabled: ep,
                     isReducedMotion: U
@@ -386,8 +386,8 @@ t.Z = (e) => {
                   }),
                   (0, i.jsx)(q.Z, {
                       previousComponent: K.MQ.MARKETING,
-                      isAllPerksVisible: eB,
-                      setIsAllPerksVisible: eD,
+                      isAllPerksVisible: ey,
+                      setIsAllPerksVisible: eB,
                       isFullScreen: s
                   })
               ]

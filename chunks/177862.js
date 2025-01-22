@@ -1,10 +1,10 @@
-var i, a, s, o;
+var i, a, o, s;
 r.d(n, {
     $l: function () {
-        return s;
+        return o;
     },
     C2: function () {
-        return o;
+        return s;
     },
     J$: function () {
         return l;
@@ -28,7 +28,7 @@ function l(e) {
 })(a || (a = {})),
     !(function (e) {
         (e.LEGITIMATE_ACTIVITY = 'LEGITIMATE_ACTIVITY'), (e.LEGITIMATE_ACCOUNTS = 'LEGITIMATE_ACCOUNTS'), (e.LEGITIMATE_DMS = 'LEGITIMATE_DMS'), (e.DM_SPAM = 'DM_SPAM'), (e.JOIN_RAID = 'JOIN_RAID'), (e.OTHER = 'OTHER');
-    })(s || (s = {})),
+    })(o || (o = {})),
     !(function (e) {
         (e.DM_SPAM = 'DM_SPAM'), (e.MENTION_SPAM = 'MENTION_SPAM'), (e.CHANNEL_SPAM = 'CHANNEL_SPAM'), (e.SUS_NEW_MEMBERS = 'SUS_NEW_MEMBERS'), (e.CHANGING_SETTINGS = 'CHANGING_SETTINGS'), (e.OTHER = 'OTHER');
-    })(o || (o = {}));
+    })(s || (s = {}));

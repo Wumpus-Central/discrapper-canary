@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(329022),
     u = r(829307),
     c = r(877837),
@@ -10,13 +10,13 @@ var i = r(192379),
         var n = e.width,
             r = e.colors,
             a = e.onChange,
-            s = e.onSwatchHover,
+            o = e.onSwatchHover,
             c = e.triangle,
             f = e.styles,
-            _ = void 0 === f ? {} : f,
+            p = void 0 === f ? {} : f,
             h = e.className,
-            p = void 0 === h ? '' : h,
-            m = (0, o.default)(
+            _ = void 0 === h ? '' : h,
+            m = (0, s.default)(
                 (0, u.Z)(
                     {
                         default: {
@@ -91,7 +91,7 @@ var i = r(192379),
                             }
                         }
                     },
-                    _
+                    p
                 ),
                 {
                     'hide-triangle': 'hide' === c,
@@ -114,7 +114,7 @@ var i = r(192379),
             'div',
             {
                 style: m.card,
-                className: 'github-picker ' + p
+                className: 'github-picker ' + _
             },
             i.createElement('div', { style: m.triangleShadow }),
             i.createElement('div', { style: m.triangle }),
@@ -123,16 +123,16 @@ var i = r(192379),
                     color: e,
                     key: e,
                     onClick: g,
-                    onSwatchHover: s
+                    onSwatchHover: o
                 });
             })
         );
     };
 (f.propTypes = {
-    width: s().oneOfType([s().string, s().number]),
-    colors: s().arrayOf(s().string),
-    triangle: s().oneOf(['hide', 'top-left', 'top-right', 'bottom-left', 'bottom-right']),
-    styles: s().object
+    width: o().oneOfType([o().string, o().number]),
+    colors: o().arrayOf(o().string),
+    triangle: o().oneOf(['hide', 'top-left', 'top-right', 'bottom-left', 'bottom-right']),
+    styles: o().object
 }),
     (f.defaultProps = {
         width: 200,

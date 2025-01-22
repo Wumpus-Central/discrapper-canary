@@ -5,7 +5,7 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(998502);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,7 +18,7 @@ function s(e, n, r) {
         e
     );
 }
-let o = 256;
+let s = 256;
 function l(e, n) {
     return a.ZP.ensureModule('discord_spellcheck').then(() => {
         let { cld: r } = a.ZP.requireModule('discord_spellcheck');
@@ -54,7 +54,7 @@ class u {
                     this._processEnd();
                     return;
                 }
-                e.length > o && (e = e.slice(0, o)),
+                e.length > s && (e = e.slice(0, s)),
                     l(e, this._languageHint).then(
                         (e) => {
                             (this.language = e), this._processEnd(n.didTimeout);
@@ -70,6 +70,6 @@ class u {
         (this._processing = !1), e && this._minimumTimeRemaining++;
     }
     constructor(e, n) {
-        s(this, '_language', void 0), s(this, '_onChange', void 0), s(this, '_languageHint', void 0), s(this, '_shouldProcess', !1), s(this, '_processing', !1), s(this, '_minimumTimeRemaining', 5), (this._language = e), (this._languageHint = e), (this._onChange = n), n(e);
+        o(this, '_language', void 0), o(this, '_onChange', void 0), o(this, '_languageHint', void 0), o(this, '_shouldProcess', !1), o(this, '_processing', !1), o(this, '_minimumTimeRemaining', 5), (this._language = e), (this._languageHint = e), (this._onChange = n), n(e);
     }
 }

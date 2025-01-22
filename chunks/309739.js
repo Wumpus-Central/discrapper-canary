@@ -119,7 +119,7 @@ function P() {
         })
     });
 }
-function y() {
+function D() {
     let e = I.cP.useSetting(),
         t = I.Ou.useSetting();
     return (0, i.jsx)(x.F, {
@@ -148,7 +148,7 @@ function y() {
         })
     });
 }
-function B() {
+function y() {
     return (0, i.jsx)(x.F, {
         setting: N.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, i.jsx)(m.FormSection, {
@@ -163,7 +163,7 @@ function B() {
         })
     });
 }
-let D = (e) => {
+let B = (e) => {
     switch (e.type) {
         case v.ABu.SPOTIFY:
             return A.intl.format(A.t['5sYPnp'], { name: e.name });
@@ -207,7 +207,7 @@ function Z(e) {
                                 (0, i.jsxs)(m.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-muted',
-                                    children: ['"', D(l), '"']
+                                    children: ['"', B(l), '"']
                                 })
                             ]
                         })
@@ -256,6 +256,6 @@ function M(e) {
         className: t,
         tag: m.FormTitleTags.H1,
         title: n ? A.intl.string(A.t.Cq98yM) : null,
-        children: [(0, i.jsx)(P, {}), (0, i.jsx)(y, {}), (0, i.jsx)(B, {}), r && (0, i.jsx)(L, {})]
+        children: [(0, i.jsx)(P, {}), (0, i.jsx)(D, {}), (0, i.jsx)(y, {}), r && (0, i.jsx)(L, {})]
     });
 }

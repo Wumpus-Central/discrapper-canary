@@ -13,8 +13,8 @@ var i = n(200651),
     o = n(512722),
     s = n.n(o),
     c = n(442837),
-    d = n(477690),
-    u = n(481060),
+    u = n(477690),
+    d = n(481060),
     m = n(447543),
     h = n(434650),
     f = n(317381),
@@ -40,9 +40,9 @@ var i = n(200651),
     O = n(245335),
     M = n(388032),
     D = n(823578);
-let k = (0, P.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-    U = (0, P.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-    B = (0, P.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+let k = (0, P.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+    U = (0, P.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+    B = (0, P.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function w(e) {
     let { members: t, membersOnline: n, isLarge: r, isStacked: l } = e,
         o = [];
@@ -56,7 +56,7 @@ function w(e) {
                         className: D.statusWrapper,
                         children: [
                             (0, i.jsx)('i', { className: D.statusOnline }),
-                            (0, i.jsx)(u.Text, {
+                            (0, i.jsx)(d.Text, {
                                 variant: 'text-xs/normal',
                                 className: D.count,
                                 children: M.intl.format(M.t['LC+S+v'], { membersOnline: n })
@@ -74,7 +74,7 @@ function w(e) {
                         className: D.statusWrapper,
                         children: [
                             (0, i.jsx)('i', { className: D.statusOffline }),
-                            (0, i.jsx)(u.Text, {
+                            (0, i.jsx)(d.Text, {
                                 variant: 'text-xs/normal',
                                 className: D.count,
                                 children: M.intl.format(M.t.zRl6XV, { count: t })
@@ -111,7 +111,7 @@ function F(e) {
                       })
                     : null,
                 (0, i.jsx)(N.Z, {
-                    children: (0, i.jsx)(u.Text, {
+                    children: (0, i.jsx)(d.Text, {
                         variant: 'text-xs/normal',
                         children: M.intl.format(M.t['dc+LW1'], {
                             channelName: t.name,
@@ -129,7 +129,7 @@ function F(e) {
                   [D.ended]: l
               }),
               children: (0, i.jsx)(N.Z, {
-                  children: (0, i.jsx)(u.Text, {
+                  children: (0, i.jsx)(d.Text, {
                       variant: 'text-xs/normal',
                       children: M.intl.format(M.t.u0vaDA, { guildName: n.name })
                   })
@@ -140,7 +140,7 @@ function F(e) {
 function G(e) {
     var t, n, l;
     let o,
-        d,
+        u,
         { invite: x, getAcceptInviteContext: N } = e,
         { approximate_member_count: P, approximate_presence_count: G, target_type: V, target_application: H } = x;
     s()(V === O.Iq.EMBEDDED_APPLICATION && null != H, 'invalid application invite');
@@ -214,13 +214,13 @@ function G(e) {
             [er, H.id]
         ),
         ec = (0, c.Wu)([R.default], () => es.map((e) => R.default.getUser(e)), [es]),
-        ed = x.state === y.r2o.ACCEPTING,
-        eu = null != ee;
+        eu = x.state === y.r2o.ACCEPTING,
+        ed = null != ee;
     if (null == ee) {
         if (null == x.guild) return (0, i.jsx)(L.Z, {});
         ee = new S.ZP(x.guild);
     }
-    let em = (eu && !el) || (eu && en),
+    let em = (ed && !el) || (ed && en),
         eh = () => {
             m.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: x.code,
@@ -228,7 +228,7 @@ function G(e) {
                 analyticsLocations: ea
             });
         };
-    return (eu && en && (o = M.intl.string(M.t.wJNK8P)), !el && (o = M.intl.string(M.t.hHGrW1)), (d = en ? M.intl.string(M.t.KC26NT) : ei || !eu ? M.intl.string(M.t.VJlc0d) : M.intl.string(M.t.I0v0Qk)), null == x.code || '' === x.code)
+    return (ed && en && (o = M.intl.string(M.t.wJNK8P)), !el && (o = M.intl.string(M.t.hHGrW1)), (u = en ? M.intl.string(M.t.KC26NT) : ei || !ed ? M.intl.string(M.t.VJlc0d) : M.intl.string(M.t.I0v0Qk)), null == x.code || '' === x.code)
         ? null
         : (0, i.jsxs)('div', {
               className: D.container,
@@ -261,8 +261,8 @@ function G(e) {
                           (0, i.jsxs)('div', {
                               className: D.info,
                               children: [
-                                  (0, i.jsx)(u.FormTitle, { children: eu ? M.intl.string(M.t['1ckx+P']) : M.intl.string(M.t.BoQUFR) }),
-                                  (0, i.jsx)(u.Heading, {
+                                  (0, i.jsx)(d.FormTitle, { children: ed ? M.intl.string(M.t['1ckx+P']) : M.intl.string(M.t.BoQUFR) }),
+                                  (0, i.jsx)(d.Heading, {
                                       className: D.heading,
                                       variant: 'heading-xl/semibold',
                                       children: null == et ? void 0 : et.name
@@ -281,22 +281,22 @@ function G(e) {
                                   [D.split]: !ei && Y
                               }),
                               children: [
-                                  !ei && eu
+                                  !ei && ed
                                       ? (0, i.jsxs)('div', {
                                             className: a()(D.endedNote, { [D.large]: W }),
                                             children: [
-                                                (0, i.jsx)(u.Text, {
+                                                (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/medium',
                                                     children: M.intl.string(M.t.JBnc7O)
                                                 }),
-                                                (0, i.jsx)(u.Text, {
+                                                (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/medium',
                                                     children: M.intl.string(M.t.lEvDDQ)
                                                 })
                                             ]
                                         })
                                       : null,
-                                  eu
+                                  ed
                                       ? null
                                       : (0, i.jsx)(w, {
                                             members: P,
@@ -317,21 +317,21 @@ function G(e) {
                                                     })
                                                 })
                                               : null,
-                                          (0, i.jsx)(u.Tooltip, {
+                                          (0, i.jsx)(d.Tooltip, {
                                               text: o,
                                               children: (e) => {
                                                   let { onClick: t, ...n } = e;
-                                                  return (0, i.jsx)(u.Button, {
+                                                  return (0, i.jsx)(d.Button, {
                                                       className: D.actionButton,
                                                       onClick: () => {
                                                           eh(), null == t || t();
                                                       },
                                                       wrapperClassName: D.tooltipButtonWrapper,
                                                       ...n,
-                                                      submitting: ed,
+                                                      submitting: eu,
                                                       disabled: em,
-                                                      color: u.ButtonColors.GREEN,
-                                                      children: d
+                                                      color: d.ButtonColors.GREEN,
+                                                      children: u
                                                   });
                                               }
                                           })

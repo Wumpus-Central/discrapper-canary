@@ -5,16 +5,16 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(442837),
+    o = r(192379),
+    s = r(442837),
     l = r(481060),
     u = r(607070);
 function c(e) {
     let { animationData: n, className: r } = e,
-        [i, c] = (0, s.useState)(0),
-        d = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
+        [i, c] = (0, o.useState)(0),
+        d = (0, s.e7)([u.Z], () => u.Z.useReducedMotion);
     return (
-        (0, s.useEffect)(() => {
+        (0, o.useEffect)(() => {
             let e = i + 1;
             e < n.length && n[e]();
         }, [i, n]),

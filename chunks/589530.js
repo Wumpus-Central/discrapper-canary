@@ -1,12 +1,12 @@
 r.d(n, {
     FC: function () {
-        return s;
+        return o;
     },
     Zj: function () {
         return u;
     },
     jA: function () {
-        return o;
+        return s;
     },
     rs: function () {
         return l;
@@ -14,12 +14,12 @@ r.d(n, {
 });
 var i = r(433517);
 let a = 'MediaPlayerVolume';
-function s() {
+function o() {
     var e;
     let { volume: n } = null !== (e = i.K.get(a)) && void 0 !== e ? e : {};
     return 'number' != typeof n && (n = 1), (n = Math.min(1, Math.max(0, n)));
 }
-function o(e) {
+function s(e) {
     i.K.set(a, {
         volume: e,
         muted: l()
@@ -32,7 +32,7 @@ function l() {
 }
 function u(e) {
     i.K.set(a, {
-        volume: s(),
+        volume: o(),
         muted: e
     });
 }

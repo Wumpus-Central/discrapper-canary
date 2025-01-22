@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(627494);
 var a = r(757143);
-var s = r(503461),
-    o = r(190313);
+var o = r(503461),
+    s = r(190313);
 function l(e, n, r) {
     return (
         n in e
@@ -49,11 +49,11 @@ class u {
         return this.table.getParentId([null, e]);
     }
     put(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Sn.Replace;
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.Sn.Replace;
         return this.transaction((r) => r.put(e, n), ''.concat(this.prefix, ' put'));
     }
     putAll(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Sn.Replace;
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.Sn.Replace;
         return this.transaction((r) => r.putAll(e, n), ''.concat(this.prefix, ' putAll'));
     }
     replaceAll(e) {
@@ -82,19 +82,19 @@ class u {
         };
     }
     constructor(e, n, r, i = !0) {
-        l(this, 'originalPrefix', void 0), l(this, 'table', void 0), (this.originalPrefix = e), (this.table = new o.i([e], n, r, i));
+        l(this, 'originalPrefix', void 0), l(this, 'table', void 0), (this.originalPrefix = e), (this.table = new s.i([e], n, r, i));
     }
 }
 class c {
     static fromDatabaseTransaction(e, n, r) {
-        return new c(new o.E(e, n, r));
+        return new c(new s.E(e, n, r));
     }
     put(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Sn.Replace;
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.Sn.Replace;
         return this.transaction.put(u.cell(e, null), n);
     }
     putAll(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Sn.Replace;
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.Sn.Replace;
         return this.transaction.putAll(
             e.map((e) => u.cell(e, null)),
             n

@@ -7,13 +7,13 @@ function n(e) {
             keyword: ['after', 'alias', 'and', 'case', 'catch', 'cond', 'defstruct', 'defguard', 'do', 'else', 'end', 'fn', 'for', 'if', 'import', 'in', 'not', 'or', 'quote', 'raise', 'receive', 'require', 'reraise', 'rescue', 'try', 'unless', 'unquote', 'unquote_splicing', 'use', 'when', 'with|0'],
             literal: ['false', 'nil', 'true']
         },
-        s = {
+        o = {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
             keywords: a
         },
-        o = {
+        s = {
             className: 'number',
             begin: '(\\b0o[0-7_]+)|(\\b0b[01_]+)|(\\b0x[0-9a-fA-F_]+)|(-?\\b[0-9][0-9_]*(\\.[0-9_]+([eE][-+]?[0-9]+)?)?)',
             relevance: 0
@@ -68,11 +68,11 @@ function n(e) {
             begin: '~[a-z](?=' + u + ')',
             contains: c.map((n) =>
                 e.inherit(n, {
-                    contains: [d(n.end), l, s]
+                    contains: [d(n.end), l, o]
                 })
             )
         },
-        _ = {
+        p = {
             className: 'string',
             begin: '~[A-Z](?=' + u + ')',
             contains: c.map((n) => e.inherit(n, { contains: [d(n.end)] }))
@@ -85,7 +85,7 @@ function n(e) {
                     contains: c.map((r) =>
                         e.inherit(r, {
                             end: n.concat(r.end, /[uismxfU]{0,7}/),
-                            contains: [d(r.end), l, s]
+                            contains: [d(r.end), l, o]
                         })
                     )
                 },
@@ -100,9 +100,9 @@ function n(e) {
                 }
             ]
         },
-        p = {
+        _ = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, s],
+            contains: [e.BACKSLASH_ESCAPE, o],
             variants: [
                 {
                     begin: /"""/,
@@ -159,9 +159,9 @@ function n(e) {
             end: /\bdo\b|$|;/
         }),
         E = [
-            p,
-            h,
             _,
+            h,
+            p,
             f,
             e.HASH_COMMENT_MODE,
             g,
@@ -170,7 +170,7 @@ function n(e) {
             {
                 className: 'symbol',
                 begin: ':(?![\\s:])',
-                contains: [p, { begin: i }],
+                contains: [_, { begin: i }],
                 relevance: 0
             },
             {
@@ -183,14 +183,14 @@ function n(e) {
                 begin: /(\b[A-Z][a-zA-Z0-9_]+)/,
                 relevance: 0
             },
-            o,
+            s,
             {
                 className: 'variable',
                 begin: '(\\$\\W)|((\\$|@@?)(\\w+))'
             }
         ];
     return (
-        (s.contains = E),
+        (o.contains = E),
         {
             name: 'Elixir',
             aliases: ['ex', 'exs'],

@@ -1,12 +1,12 @@
 let i, a;
-var s,
-    o = r(724458);
+var o,
+    s = r(724458);
 var l = r(442837),
     u = r(433517),
     c = r(570140),
     d = r(592125),
     f = r(430824);
-function _(e, n, r) {
+function p(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -20,24 +20,24 @@ function _(e, n, r) {
     );
 }
 let h = 'hideSuppressWarning',
-    p = !1,
+    _ = !1,
     m = !0,
     g = !1;
 function E(e) {
-    (i = e.sessionId), (p = !1);
+    (i = e.sessionId), (_ = !1);
 }
 function v() {
     (i = null), (a = null), (m = !0);
 }
-function I(e) {
+function y(e) {
     let { voiceStates: n } = e;
-    return n.reduce((e, n) => (i !== n.sessionId ? e : (p !== n.suppress && (m = !(p = n.suppress)), a !== n.channelId && ((a = n.channelId), (m = !p)), (g || null == n.channelId) && (m = !0), !0)), !1);
+    return n.reduce((e, n) => (i !== n.sessionId ? e : (_ !== n.suppress && (m = !(_ = n.suppress)), a !== n.channelId && ((a = n.channelId), (m = !_)), (g || null == n.channelId) && (m = !0), !0)), !1);
 }
-function T(e) {
+function b(e) {
     let { forever: n } = e;
     (m = !0), n && ((g = !0), u.K.set(h, g));
 }
-class b extends (s = l.ZP.Store) {
+class I extends (o = l.ZP.Store) {
     initialize() {
         g = u.K.get(h) || g;
     }
@@ -52,10 +52,10 @@ class b extends (s = l.ZP.Store) {
         return !(null === (e = d.Z.getChannel(a)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !m;
     }
 }
-_(b, 'displayName', 'PermissionSpeakStore'),
-    (n.Z = new b(c.Z, {
+p(I, 'displayName', 'PermissionSpeakStore'),
+    (n.Z = new I(c.Z, {
         CONNECTION_OPEN: E,
         CONNECTION_CLOSED: v,
-        VOICE_STATE_UPDATES: I,
-        PERMISSION_CLEAR_SUPPRESS_WARNING: T
+        VOICE_STATE_UPDATES: y,
+        PERMISSION_CLEAR_SUPPRESS_WARNING: b
     }));

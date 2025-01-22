@@ -1,23 +1,23 @@
 var i,
     a,
-    s = r(47120);
-var o = r(411104);
+    o = r(47120);
+var s = r(411104);
 var l = r(177593);
 var u = r(392711),
     c = r.n(u),
     d = r(442837),
     f = r(570140),
-    _ = r(579806),
+    p = r(579806),
     h = r(632243),
-    p = r(314897),
+    _ = r(314897),
     m = r(283595),
     g = r(129542),
     E = r(70956),
     v = r(780570),
-    I = r(358085),
-    T = r(804739),
-    b = r(941128),
-    y = r(391690),
+    y = r(358085),
+    b = r(804739),
+    I = r(941128),
+    T = r(391690),
     S = r(981631);
 function A(e, n, r) {
     return (
@@ -32,16 +32,16 @@ function A(e, n, r) {
         e
     );
 }
-let N = 200,
-    C = 200,
+let C = 200,
+    N = 200,
     R = 1 * E.Z.Millis.MINUTE;
 !(function (e) {
     e.DISPATCH_APPLICATION_PROGRESS = 'dispatch_application_progress';
 })(i || (i = {}));
 let O = {},
     D = 'content',
-    L = 'file://',
-    x = !1,
+    x = 'file://',
+    L = !1,
     w = 0,
     P = 0,
     M = 0,
@@ -49,42 +49,42 @@ let O = {},
     U = [],
     B = [],
     G = !1;
-function F() {
-    x = !1;
+function Z() {
+    L = !1;
 }
-function Z(e, n) {
+function F(e, n) {
     return n.some((n) => n.platforms.includes(e));
 }
 function V(e) {
-    let { build_id: n, target_build_id: r, manifest_ids: i, target_manifest_ids: a, application_id: s, branch_id: o, launch_commands: l, launch_options: u, storage: d, install_path: f, installed_size: h, repairing: p } = e,
+    let { build_id: n, target_build_id: r, manifest_ids: i, target_manifest_ids: a, application_id: o, branch_id: s, launch_commands: l, launch_options: u, storage: d, install_path: f, installed_size: h, repairing: _ } = e,
         { should_patch: m } = e;
     switch ((null == m && (m = !0), e.state.type)) {
         case S.DJE.COMPLETE: {
             let e;
             let E = {},
                 v = null;
-            if (p) e = S.vxO.REPAIRING;
+            if (_) e = S.vxO.REPAIRING;
             else if (null == n) e = S.vxO.INSTALL_REQUIRED;
             else if (m && (n !== r || (null != i && 0 !== c().difference(i, a).length))) e = S.vxO.UPDATE_REQUIRED;
             else if (((e = S.vxO.UP_TO_DATE), null != f)) {
-                let e = _.Z.fileManager.join(f, D),
+                let e = p.Z.fileManager.join(f, D),
                     n = (0, g.D)();
                 if (null != u && 0 !== u.length) {
-                    for (let r of (n === S.QR$.WIN64 && !Z(n, u) && (n = S.QR$.WIN32), u))
+                    for (let r of (n === S.QR$.WIN64 && !F(n, u) && (n = S.QR$.WIN32), u))
                         if (r.platforms.includes(n)) {
                             let n;
-                            let { executable: i, name: a, working_dir: s } = r,
-                                o = a,
-                                l = _.Z.fileManager.join(e, i);
-                            (0, I.isMac)() && !l.startsWith(L) && (l = ''.concat(L).concat(l)),
-                                (n = null != s ? _.Z.fileManager.join(e, s) : _.Z.fileManager.dirname(l)),
-                                (E[o] = {
+                            let { executable: i, name: a, working_dir: o } = r,
+                                s = a,
+                                l = p.Z.fileManager.join(e, i);
+                            (0, y.isMac)() && !l.startsWith(x) && (l = ''.concat(x).concat(l)),
+                                (n = null != o ? p.Z.fileManager.join(e, o) : p.Z.fileManager.dirname(l)),
+                                (E[s] = {
                                     ...r,
-                                    id: o,
+                                    id: s,
                                     fullExecutablePath: l,
                                     fullWorkingDir: n
                                 }),
-                                null == v && (v = o);
+                                null == v && (v = s);
                         }
                 } else if (null != l) {
                     n === S.QR$.WIN64 && null == l[n] && (n = S.QR$.WIN32);
@@ -92,23 +92,23 @@ function V(e) {
                     if (null != r) {
                         let { executable: i } = r,
                             a = 'Default',
-                            s = a;
-                        (E[s] = {
+                            o = a;
+                        (E[o] = {
                             ...r,
                             name: a,
-                            id: s,
-                            fullExecutablePath: _.Z.fileManager.join(e, i),
+                            id: o,
+                            fullExecutablePath: p.Z.fileManager.join(e, i),
                             fullWorkingDir: e,
                             platforms: [n]
                         }),
-                            (v = s);
+                            (v = o);
                     }
                 }
             }
             return {
                 type: e,
-                applicationId: s,
-                branchId: o,
+                applicationId: o,
+                branchId: s,
                 buildId: n,
                 manifestIds: i,
                 targetBuildId: r,
@@ -123,13 +123,13 @@ function V(e) {
         }
         case S.DJE.TRANSITION: {
             let l;
-            let { stage: u, disk_progress: c, network_progress: d, reader_progress: _, progress: g, total: E, paused: v } = e.state,
-                I = u.type;
+            let { stage: u, disk_progress: c, network_progress: d, reader_progress: p, progress: g, total: E, paused: v } = e.state,
+                y = u.type;
             return {
-                type: (l = I === S.f07.UNINSTALLING ? S.vxO.UNINSTALLING : p ? S.vxO.REPAIRING : null == n ? S.vxO.INSTALLING : S.vxO.UPDATING),
-                stage: I,
-                applicationId: s,
-                branchId: o,
+                type: (l = y === S.f07.UNINSTALLING ? S.vxO.UNINSTALLING : _ ? S.vxO.REPAIRING : null == n ? S.vxO.INSTALLING : S.vxO.UPDATING),
+                stage: y,
+                applicationId: o,
+                branchId: s,
                 buildId: n,
                 manifestIds: i,
                 targetBuildId: r,
@@ -138,7 +138,7 @@ function V(e) {
                 installedSize: h,
                 diskProgress: c,
                 networkProgress: d,
-                readerProgress: _,
+                readerProgress: p,
                 progress: g,
                 total: E,
                 paused: v,
@@ -164,7 +164,7 @@ function W(e) {
             timestamp: Date.now()
         },
         ...U
-    ]).slice(0, C);
+    ]).slice(0, N);
 }
 function K(e) {
     let n = Date.now(),
@@ -176,7 +176,7 @@ function K(e) {
         },
         ...k
     ])
-        .slice(0, C)
+        .slice(0, N)
         .filter((e) => {
             let { timestamp: n } = e;
             return n >= r;
@@ -189,11 +189,11 @@ function z(e) {
             timestamp: Date.now()
         },
         ...B
-    ]).slice(0, C);
+    ]).slice(0, N);
 }
-let q = c().throttle(W, N),
-    Q = c().throttle(K, N),
-    X = c().throttle(z, N);
+let q = c().throttle(W, C),
+    Q = c().throttle(K, C),
+    X = c().throttle(z, C);
 function J(e, n, r) {
     let i = r(O[n]),
         a = r(e[n]);
@@ -201,22 +201,22 @@ function J(e, n, r) {
 }
 function $(e) {
     let { state: n } = e;
-    x = !0;
+    L = !0;
     let r = {},
         i = n.applications,
         a = null != n.currentTask ? n.currentTask.branchId : null,
-        s = !1;
+        o = !1;
     for (let e in i)
         for (let n in i[e]) {
-            let o = (0, v.Tu)(e, n);
-            if (((r[o] = V(i[e][n])), null != O[o])) {
-                let e = J(r, o, j);
+            let s = (0, v.Tu)(e, n);
+            if (((r[s] = V(i[e][n])), null != O[s])) {
+                let e = J(r, s, j);
                 e > 0 && q((w += e));
-                let i = J(r, o, H);
+                let i = J(r, s, H);
                 i > 0 && X((P += i));
-                let l = J(r, o, Y);
+                let l = J(r, s, Y);
                 if ((l > 0 && Q((M += l)), a === n)) {
-                    let e = r[o];
+                    let e = r[s];
                     if (!0 !== e.paused && (e.type === S.vxO.UNINSTALLING || e.type === S.vxO.INSTALLING || e.type === S.vxO.UPDATING))
                         switch (e.stage) {
                             case S.f07.PATCHING:
@@ -224,13 +224,13 @@ function $(e) {
                             case S.f07.VERIFYING:
                             case S.f07.REPAIRING:
                             case S.f07.POST_INSTALL_SCRIPTS:
-                                h.Z.setProgress('dispatch_application_progress', (0, v.xI)(e.progress, e.total) / 100), (s = !0);
+                                h.Z.setProgress('dispatch_application_progress', (0, v.xI)(e.progress, e.total) / 100), (o = !0);
                         }
                 }
             }
             if (!G) {
-                let i = _.Z.fileManager.dirname(r[o].installPath);
-                y.Z.getInstallationPath(e, n) !== i &&
+                let i = p.Z.fileManager.dirname(r[s].installPath);
+                T.Z.getInstallationPath(e, n) !== i &&
                     f.Z.wait(() => {
                         f.Z.dispatch({
                             type: 'DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS',
@@ -239,10 +239,10 @@ function $(e) {
                             installationPath: i
                         });
                     }),
-                    -1 === b.Z.getQueuePosition(e, n) &&
-                        (r[o].type === S.vxO.INSTALLING || r[o].type === S.vxO.UPDATING) &&
+                    -1 === I.Z.getQueuePosition(e, n) &&
+                        (r[s].type === S.vxO.INSTALLING || r[s].type === S.vxO.UPDATING) &&
                         m.Z.hasApplication(e, n) &&
-                        y.Z.shouldBeInstalled(e, n) &&
+                        T.Z.shouldBeInstalled(e, n) &&
                         f.Z.wait(() => {
                             f.Z.dispatch({
                                 type: 'DISPATCH_APPLICATION_UPDATE',
@@ -253,11 +253,11 @@ function $(e) {
                         });
             }
         }
-    !s && 'dispatch_application_progress' === h.Z.taskID && h.Z.clearProgress('dispatch_application_progress'), (O = r), (G = !0);
+    !o && 'dispatch_application_progress' === h.Z.taskID && h.Z.clearProgress('dispatch_application_progress'), (O = r), (G = !0);
 }
 class ee extends (a = d.ZP.Store) {
     initialize() {
-        this.waitFor(p.default);
+        this.waitFor(_.default);
     }
     getState(e, n) {
         return O[(0, v.Tu)(e, n)];
@@ -272,7 +272,7 @@ class ee extends (a = d.ZP.Store) {
     }
     isInstalled(e, n) {
         let r = O[(0, v.Tu)(e, n)];
-        return null != r ? r.type !== S.vxO.UNINSTALLING : y.Z.shouldBeInstalled(e, n);
+        return null != r ? r.type !== S.vxO.UNINSTALLING : T.Z.shouldBeInstalled(e, n);
     }
     supportsCloudSync(e, n) {
         null == n && (n = e);
@@ -280,7 +280,7 @@ class ee extends (a = d.ZP.Store) {
         return null != r && null != r.storage && !!r.storage.sync;
     }
     isLaunchable(e, n) {
-        if (!(0, T.Q)()) return !1;
+        if (!(0, b.Q)()) return !1;
         let r = O[(0, v.Tu)(e, n)];
         return null != r && r.type === S.vxO.UP_TO_DATE && null != r.launchOptions && 0 !== r.launchOptions.length;
     }
@@ -305,12 +305,12 @@ class ee extends (a = d.ZP.Store) {
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
-            if (x) return setImmediate(e), !1;
+            if (L) return setImmediate(e), !1;
         });
     }
 }
 A(ee, 'displayName', 'DispatchApplicationStore'),
     (n.Z = new ee(f.Z, {
-        CONNECTION_OPEN: F,
+        CONNECTION_OPEN: Z,
         DISPATCH_APPLICATION_STATE_UPDATE: $
     }));

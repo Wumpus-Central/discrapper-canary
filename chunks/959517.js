@@ -1,12 +1,12 @@
 r.d(n, {
     D4: function () {
-        return _;
+        return p;
     },
     Eo: function () {
         return h;
     },
     R4: function () {
-        return p;
+        return _;
     },
     Y1: function () {
         return E;
@@ -41,8 +41,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(261470),
-    o = r(70956);
+    o = r(261470),
+    s = r(70956);
 r(981631);
 let l = [0, 4, 8, 16, 24],
     u = 16,
@@ -61,9 +61,9 @@ let l = [0, 4, 8, 16, 24],
         contextMenu: !1
     }),
     f = 16,
-    _ = 16,
+    p = 16,
     h = 32,
-    p = 64,
+    _ = 64,
     m = '---new-messages-bar',
     g = 'SPOILER_';
 !(function (e) {
@@ -74,7 +74,7 @@ let l = [0, 4, 8, 16, 24],
     })(a || (a = {}));
 let E = 209715200,
     v = {
-        timeout: 60 * o.Z.Millis.SECOND,
+        timeout: 60 * s.Z.Millis.SECOND,
         retries: 3,
-        backoff: new s.Z()
+        backoff: new o.Z()
     };

@@ -1,16 +1,16 @@
 r.d(n, {
     d: function () {
-        return s;
+        return o;
     }
 });
 var i = r(192379),
     a = r(239700);
-function s(e) {
+function o(e) {
     let [n, r] = (0, a.zk)(e.isOpen, e.defaultOpen || !1, e.onOpenChange),
-        s = (0, i.useCallback)(() => {
+        o = (0, i.useCallback)(() => {
             r(!0);
         }, [r]),
-        o = (0, i.useCallback)(() => {
+        s = (0, i.useCallback)(() => {
             r(!1);
         }, [r]),
         l = (0, i.useCallback)(() => {
@@ -19,8 +19,8 @@ function s(e) {
     return {
         isOpen: n,
         setOpen: r,
-        open: s,
-        close: o,
+        open: o,
+        close: s,
         toggle: l
     };
 }

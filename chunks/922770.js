@@ -1,6 +1,6 @@
 r.d(n, {
     $: function () {
-        return _;
+        return p;
     },
     R: function () {
         return i;
@@ -8,9 +8,9 @@ r.d(n, {
 });
 var i,
     a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(186325),
     c = r(388032),
     d = r(595252);
@@ -23,15 +23,15 @@ function f(e) {
             return e;
     }
 }
-function _(e) {
-    let { type: n = 'wanderingCubes', animated: r = !0, className: i, itemClassName: o, 'aria-label': _, ...h } = e,
-        { reducedMotion: p } = s.useContext(u.S),
-        m = p.enabled ? f(n) : n;
-    if (((_ = null != _ ? _ : c.intl.string(c.t.ZTNur6)), 'spinningCircle' === m || 'spinningCircleSimple' === m))
+function p(e) {
+    let { type: n = 'wanderingCubes', animated: r = !0, className: i, itemClassName: s, 'aria-label': p, ...h } = e,
+        { reducedMotion: _ } = o.useContext(u.S),
+        m = _.enabled ? f(n) : n;
+    if (((p = null != p ? p : c.intl.string(c.t.ZTNur6)), 'spinningCircle' === m || 'spinningCircleSimple' === m))
         return (0, a.jsx)('div', {
             className: l()(d.spinner, d[m], i, { [d.stopAnimation]: !r }),
             role: 'img',
-            'aria-label': _,
+            'aria-label': p,
             ...h,
             children: (0, a.jsx)('div', {
                 className: d.spinningCircleInner,
@@ -43,13 +43,13 @@ function _(e) {
                             (0, a.jsxs)(a.Fragment, {
                                 children: [
                                     (0, a.jsx)('circle', {
-                                        className: l()(d.path, d.path3, o),
+                                        className: l()(d.path, d.path3, s),
                                         cx: '50',
                                         cy: '50',
                                         r: '20'
                                     }),
                                     (0, a.jsx)('circle', {
-                                        className: l()(d.path, d.path2, o),
+                                        className: l()(d.path, d.path2, s),
                                         cx: '50',
                                         cy: '50',
                                         r: '20'
@@ -57,7 +57,7 @@ function _(e) {
                                 ]
                             }),
                         (0, a.jsx)('circle', {
-                            className: l()(d.path, o),
+                            className: l()(d.path, s),
                             cx: '50',
                             cy: '50',
                             r: '20'
@@ -66,11 +66,11 @@ function _(e) {
                 })
             })
         });
-    let g = l()(d.item, o);
+    let g = l()(d.item, s);
     return (0, a.jsx)('span', {
         className: l()(d.spinner, i, { [d.stopAnimation]: !r }),
         role: 'img',
-        'aria-label': _,
+        'aria-label': p,
         ...h,
         children: (0, a.jsxs)('span', {
             className: l()(d.inner, d[m]),
@@ -81,4 +81,4 @@ function _(e) {
 !(function (e) {
     (e.WANDERING_CUBES = 'wanderingCubes'), (e.CHASING_DOTS = 'chasingDots'), (e.PULSING_ELLIPSIS = 'pulsingEllipsis'), (e.SPINNING_CIRCLE = 'spinningCircle'), (e.SPINNING_CIRCLE_SIMPLE = 'spinningCircleSimple'), (e.LOW_MOTION = 'lowMotion');
 })(i || (i = {})),
-    (_.Type = i);
+    (p.Type = i);

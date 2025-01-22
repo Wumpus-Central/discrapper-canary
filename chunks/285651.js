@@ -11,17 +11,17 @@ r.d(n, {
 });
 var i,
     a = r(700785),
-    s = r(74538),
-    o = r(378233),
+    o = r(74538),
+    s = r(378233),
     l = r(981631);
 !(function (e) {
     (e[(e.SENDABLE = 0)] = 'SENDABLE'), (e[(e.SENDABLE_WITH_PREMIUM = 1)] = 'SENDABLE_WITH_PREMIUM'), (e[(e.NONSENDABLE = 2)] = 'NONSENDABLE'), (e[(e.SENDABLE_WITH_BOOSTED_GUILD = 3)] = 'SENDABLE_WITH_BOOSTED_GUILD');
 })(i || (i = {}));
 let u = (e, n, r) => {
         if (null == n) return 2;
-        let i = s.ZP.canUseCustomStickersEverywhere(n);
-        if ((0, o.jl)(e)) return 0;
-        if ((0, o.J8)(e) && null != r)
+        let i = o.ZP.canUseCustomStickersEverywhere(n);
+        if ((0, s.jl)(e)) return 0;
+        if ((0, s.J8)(e) && null != r)
             return e.available
                 ? null != r.guild_id && '' !== r.guild_id && r.guild_id === e.guild_id
                     ? 0

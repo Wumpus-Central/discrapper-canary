@@ -1,21 +1,21 @@
 var i,
     a = r(47120);
-var s = r(411104);
-var o = r(653041);
+var o = r(411104);
+var s = r(653041);
 var l = r(998459);
 var u = r(348327),
     c = r.n(u),
     d = r(442837),
     f = r(544891),
-    _ = r(570140),
+    p = r(570140),
     h = r(457330),
-    p = r(726542),
+    _ = r(726542),
     m = r(81063),
     g = r(70956),
     E = r(553795),
     v = r(246946),
-    I = r(981631);
-function T(e, n, r) {
+    y = r(981631);
+function b(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -28,28 +28,28 @@ function T(e, n, r) {
         e
     );
 }
-let b = '33kozedd0zs6fbauka98psnc7zwom2s',
-    y = 1 * g.Z.Millis.MINUTE,
+let I = '33kozedd0zs6fbauka98psnc7zwom2s',
+    T = 1 * g.Z.Millis.MINUTE,
     S = (e) => 'https://youtube.com/watch?v='.concat(e),
     A = 5 * g.Z.Millis.MINUTE,
-    N = 'https://api.twitch.tv/helix',
-    C = /live_user_(.*)-\{width\}/,
+    C = 'https://api.twitch.tv/helix',
+    N = /live_user_(.*)-\{width\}/,
     R = 128,
     O = null,
     D = 0,
-    L = null,
-    x = new Set(),
+    x = null,
+    L = new Set(),
     w = {};
 function P(e) {
     var n;
-    return null === (n = C.exec(e)) || void 0 === n ? void 0 : n[1];
+    return null === (n = N.exec(e)) || void 0 === n ? void 0 : n[1];
 }
 function M(e, n, r) {
     return f.tn.get({
-        url: ''.concat(N).concat(e),
+        url: ''.concat(C).concat(e),
         query: n,
         headers: {
-            'Client-ID': b,
+            'Client-ID': I,
             Authorization: 'Bearer '.concat(r)
         },
         rejectWithError: !1
@@ -62,8 +62,8 @@ async function k(e, n) {
     let {
             body: { data: a }
         } = await M('/games', { id: e }, n),
-        s = null === (r = a[0]) || void 0 === r ? void 0 : r.name;
-    return (w[e] = s), s;
+        o = null === (r = a[0]) || void 0 === r ? void 0 : r.name;
+    return (w[e] = o), o;
 }
 class U {
     start() {
@@ -71,10 +71,10 @@ class U {
     }
     stop() {
         (this._started = !1),
-            (L = null),
+            (x = null),
             (D = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
-            _.Z.dispatch({
+            p.Z.dispatch({
                 type: 'STREAMING_UPDATE',
                 stream: null
             });
@@ -85,7 +85,7 @@ class U {
         try {
             var r, i, a;
             let {
-                    body: { data: s }
+                    body: { data: o }
                 } = await M(
                     '/streams',
                     {
@@ -94,24 +94,24 @@ class U {
                     },
                     n
                 ),
-                o = s[0];
-            if (null == o || 'live' !== o.type) throw Error('no stream');
-            let { thumbnail_url: l, game_id: u, title: c } = o,
-                d = { large_image: null != l && null !== (i = (0, m.getAssetFromImageURL)(I.ABu.TWITCH, l)) && void 0 !== i ? i : void 0 },
+                s = o[0];
+            if (null == s || 'live' !== s.type) throw Error('no stream');
+            let { thumbnail_url: l, game_id: u, title: c } = s,
+                d = { large_image: null != l && null !== (i = (0, m.getAssetFromImageURL)(y.ABu.TWITCH, l)) && void 0 !== i ? i : void 0 },
                 f = await k(u, n),
-                _ = p.Z.get(I.ABu.TWITCH),
+                p = _.Z.get(y.ABu.TWITCH),
                 h = null !== (a = P(l)) && void 0 !== a ? a : e.name,
                 g = null != c && '' !== c ? c.slice(0, R) : void 0,
                 E = null != f && '' !== f ? f.slice(0, R) : void 0;
             return {
                 url:
-                    null === (r = _.getPlatformUserUrl) || void 0 === r
+                    null === (r = p.getPlatformUserUrl) || void 0 === r
                         ? void 0
-                        : r.call(_, {
+                        : r.call(p, {
                               id: e.id,
                               name: h
                           }),
-                name: _.name,
+                name: p.name,
                 assets: d,
                 details: g,
                 state: E
@@ -126,7 +126,7 @@ class U {
     }
     async _checkYouTube(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (((L = null), e.revoked || x.has(e.id))) return null;
+        if (((x = null), e.revoked || L.has(e.id))) return null;
         try {
             var r;
             let {
@@ -145,13 +145,13 @@ class U {
             if (i.length < 1) throw Error('no stream');
             let {
                     id: a,
-                    snippet: { title: s, thumbnails: o }
+                    snippet: { title: o, thumbnails: s }
                 } = i[0],
-                l = { large_image: null !== (r = (0, m.getAssetFromImageURL)(I.ABu.YOUTUBE, o.high.url)) && void 0 !== r ? r : void 0 },
-                u = null != s && '' !== s ? s.slice(0, R) : void 0;
-            return (L = {
+                l = { large_image: null !== (r = (0, m.getAssetFromImageURL)(y.ABu.YOUTUBE, s.high.url)) && void 0 !== r ? r : void 0 },
+                u = null != o && '' !== o ? o.slice(0, R) : void 0;
+            return (x = {
                 url: S(a),
-                name: p.Z.get(I.ABu.YOUTUBE).name,
+                name: _.Z.get(y.ABu.YOUTUBE).name,
                 details: u,
                 assets: l
             });
@@ -160,7 +160,7 @@ class U {
                 return h.Z.refreshAccessToken(e.type, e.id)
                     .then((n) => this._checkYouTube(e, n))
                     .catch(() => null);
-            return 403 === r.status && x.add(e.id), null;
+            return 403 === r.status && L.add(e.id), null;
         }
     }
     _check() {
@@ -168,15 +168,15 @@ class U {
         let e = E.Z.getAccounts();
         if (null == e) return;
         null != this._nextCheck && clearTimeout(this._nextCheck);
-        let n = [I.ABu.TWITCH],
+        let n = [y.ABu.TWITCH],
             r = Date.now();
-        D <= r && (n.push(I.ABu.YOUTUBE), (D = r + A)),
-            Promise.allSettled(e.filter((e) => n.includes(e.type)).map((e) => (e.type === I.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e)))).then((e) => {
+        D <= r && (n.push(y.ABu.YOUTUBE), (D = r + A)),
+            Promise.allSettled(e.filter((e) => n.includes(e.type)).map((e) => (e.type === y.ABu.TWITCH ? this._checkTwitch(e) : this._checkYouTube(e)))).then((e) => {
                 if (this._started) {
                     var n;
                     let r = null === (n = e.find((e) => 'fulfilled' === e.status && null != e.value)) || void 0 === n ? void 0 : n.value;
-                    null == r && null != L && (r = L),
-                        _.Z.dispatch({
+                    null == r && null != x && (r = x),
+                        p.Z.dispatch({
                             type: 'STREAMING_UPDATE',
                             stream: r
                         });
@@ -185,22 +185,22 @@ class U {
             });
     }
     _scheduleCheck() {
-        this._started && (this._nextCheck = setTimeout(() => this._check(), y));
+        this._started && (this._nextCheck = setTimeout(() => this._check(), T));
     }
     constructor() {
-        T(this, '_nextCheck', void 0), T(this, '_started', void 0), (this._started = !1);
+        b(this, '_nextCheck', void 0), b(this, '_started', void 0), (this._started = !1);
     }
 }
 let B = new U();
 function G() {
     v.Z.enabled ? B.start() : B.stop();
 }
-function F(e) {
+function Z(e) {
     var n;
     if (c()(e.stream, O)) return !1;
     O = null !== (n = e.stream) && void 0 !== n ? n : null;
 }
-class Z extends (i = d.ZP.Store) {
+class F extends (i = d.ZP.Store) {
     initialize() {
         G(), this.waitFor(E.Z), this.syncWith([v.Z], G);
     }
@@ -208,8 +208,8 @@ class Z extends (i = d.ZP.Store) {
         return O;
     }
 }
-T(Z, 'displayName', 'ExternalStreamingStore'),
-    (n.Z = new Z(_.Z, {
-        STREAMING_UPDATE: F,
+b(F, 'displayName', 'ExternalStreamingStore'),
+    (n.Z = new F(p.Z, {
+        STREAMING_UPDATE: Z,
         USER_CONNECTIONS_UPDATE: () => B._check()
     }));

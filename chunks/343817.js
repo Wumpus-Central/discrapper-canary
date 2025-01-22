@@ -1,6 +1,6 @@
 r.d(n, {
     Hx: function () {
-        return _;
+        return p;
     },
     f$: function () {
         return l;
@@ -11,8 +11,8 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(411104);
-function o(e, n, r) {
+var o = r(411104);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -77,7 +77,7 @@ function f(e, n) {
 !(function (e) {
     (e.HCAPTCHA = 'hcaptcha'), (e.RECAPTCHA = 'recaptcha'), (e.RECAPTCHA_ENTERPRISE = 'recaptcha_enterprise');
 })(i || (i = {}));
-class _ extends Error {
+class p extends Error {
     hasFieldErrors() {
         return null != this.errors && Object.keys(this.errors).length > 0;
     }
@@ -129,7 +129,7 @@ class _ extends Error {
         return null;
     }
     constructor(e, n, r = 'An unexpected error occurred.') {
-        let { message: i, code: a, retryAfter: s, errors: l, status: u, captchaFields: c } = f(e, n);
-        super(null != i ? i : r), o(this, 'code', void 0), o(this, 'retryAfter', void 0), o(this, 'errors', void 0), o(this, 'status', void 0), o(this, 'captchaFields', void 0), (this.code = null != a ? a : -1), (this.retryAfter = s), (this.errors = l), (this.status = u), (this.captchaFields = null != c ? c : {}), (this.cause = e);
+        let { message: i, code: a, retryAfter: o, errors: l, status: u, captchaFields: c } = f(e, n);
+        super(null != i ? i : r), s(this, 'code', void 0), s(this, 'retryAfter', void 0), s(this, 'errors', void 0), s(this, 'status', void 0), s(this, 'captchaFields', void 0), (this.code = null != a ? a : -1), (this.retryAfter = o), (this.errors = l), (this.status = u), (this.captchaFields = null != c ? c : {}), (this.cause = e);
     }
 }

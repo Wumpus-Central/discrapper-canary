@@ -11,8 +11,8 @@ var r = n(399606),
     o = n(739566),
     s = n(942951),
     c = n(834129),
-    d = n(703656),
-    u = n(331372),
+    u = n(703656),
+    d = n(331372),
     m = n(981631),
     h = n(388032),
     f = n(505460);
@@ -20,7 +20,7 @@ function p(e) {
     let { guildId: t, user: n, username: o } = e,
         s = (0, r.e7)([a.Z], () => !a.Z.useReducedMotion),
         c = n.getAvatarURL(t, 56, s),
-        d = (0, i.jsx)('img', {
+        u = (0, i.jsx)('img', {
             src: c,
             className: f.userAvatar,
             alt: ''
@@ -30,7 +30,7 @@ function p(e) {
         role: 'img',
         'aria-label': h.intl.formatToPlainString(h.t['utf8+f'], { username: o }),
         children: [
-            (0, i.jsx)(u.Z, { avatar: d }),
+            (0, i.jsx)(d.Z, { avatar: u }),
             (0, i.jsx)(l.Text, {
                 className: f.thankYouText,
                 tag: 'p',
@@ -57,35 +57,35 @@ function p(e) {
 }
 function _(e) {
     var t, r, l;
-    let { channel: a, message: u, compact: f } = e,
-        _ = (0, o.ZP)(u),
+    let { channel: a, message: d, compact: f } = e,
+        _ = (0, o.ZP)(d),
         g = (0, s.l)({
-            user: u.author,
+            user: d.author,
             channelId: a.id,
             guildId: a.guild_id,
-            messageId: u.id
+            messageId: d.id
         })(_),
         E = h.intl.format(h.t.TQs67u, {
             username: _.nick,
             usernameHook: g,
-            productName: null !== (l = null === (r = u.purchaseNotification) || void 0 === r ? void 0 : null === (t = r.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== l ? l : '',
+            productName: null !== (l = null === (r = d.purchaseNotification) || void 0 === r ? void 0 : null === (t = r.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== l ? l : '',
             handleProductListingClick: () => {
                 var e, t, n;
-                (0, d.uL)(m.Z5c.GUILD_PRODUCT(a.guild_id, null !== (n = null === (t = u.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ''));
+                (0, u.uL)(m.Z5c.GUILD_PRODUCT(a.guild_id, null !== (n = null === (t = d.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ''));
             }
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(c.Z, {
                 icon: n(570111),
-                timestamp: u.timestamp,
+                timestamp: d.timestamp,
                 compact: f,
                 children: E
             }),
             (0, i.jsx)(p, {
                 username: _.nick,
                 guildId: a.guild_id,
-                user: u.author
+                user: d.author
             })
         ]
     });

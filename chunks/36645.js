@@ -3,7 +3,7 @@ r.d(n, {
         return i;
     },
     WL: function () {
-        return s;
+        return o;
     },
     at: function () {
         return a;
@@ -11,7 +11,7 @@ r.d(n, {
 });
 let i = 450,
     a = 360,
-    s = (e) => {
+    o = (e) => {
         let { maxWidth: n, minWidth: r } = e;
         return n <= r;
     };

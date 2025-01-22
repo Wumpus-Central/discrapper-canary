@@ -1,10 +1,10 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(592125),
     a = r(596401);
-function s(e) {
+function o(e) {
     return null != e && e === i.Z.getDMFromUserId(a.sP);
 }

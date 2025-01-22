@@ -1,26 +1,26 @@
-var r = n(476508),
-    o = n(570596),
-    a = n(548828),
-    i = n(831496),
-    s = n(250765),
-    c = n(730427),
-    l = [].push;
+var i = r(476508),
+    a = r(570596),
+    o = r(548828),
+    s = r(831496),
+    l = r(250765),
+    u = r(730427),
+    c = [].push;
 e.exports = function (e) {
-    var t,
-        n,
-        u,
+    var n,
+        r,
         d,
+        f,
         p = arguments.length,
         h = p > 1 ? arguments[1] : void 0;
-    return (i(this), (t = void 0 !== h) && a(h), s(e))
+    return (s(this), (n = void 0 !== h) && o(h), l(e))
         ? new this()
-        : ((n = []),
-          t
-              ? ((u = 0),
-                (d = r(h, p > 2 ? arguments[2] : void 0)),
-                c(e, function (e) {
-                    o(l, n, d(e, u++));
+        : ((r = []),
+          n
+              ? ((d = 0),
+                (f = i(h, p > 2 ? arguments[2] : void 0)),
+                u(e, function (e) {
+                    a(c, r, f(e, d++));
                 }))
-              : c(e, l, { that: n }),
-          new this(n));
+              : u(e, c, { that: r }),
+          new this(r));
 };

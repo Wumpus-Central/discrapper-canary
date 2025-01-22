@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(699516);
 function u(e, n, r) {
     return (
@@ -23,14 +23,14 @@ let c = 86400000,
         affinityUserIds: new Set(),
         lastFetched: 0
     }),
-    _ = Object.freeze({
+    p = Object.freeze({
         userAffinitiesMap: new Map(),
         affinityUserIds: new Set()
     }),
     h = { ...f },
-    p = { ..._ };
+    _ = { ...p };
 function m() {
-    (h = { ...f }), (p = { ..._ });
+    (h = { ...f }), (_ = { ...p });
 }
 function g() {
     d = !1;
@@ -41,9 +41,9 @@ function E() {
 function v(e) {
     var n;
     let { affinities: r } = e;
-    (h.userAffinities = null !== (n = r.user_affinities) && void 0 !== n ? n : []), (h.lastFetched = Date.now()), I(), (d = !1);
+    (h.userAffinities = null !== (n = r.user_affinities) && void 0 !== n ? n : []), (h.lastFetched = Date.now()), y(), (d = !1);
 }
-function I() {
+function y() {
     let e = new Map(
             h.userAffinities
                 .filter((e) => {
@@ -53,14 +53,14 @@ function I() {
                 .map((e) => [e.user_id, e])
         ),
         n = new Set(e.keys());
-    p = {
+    _ = {
         userAffinitiesMap: e,
         affinityUserIds: n
     };
 }
-class T extends (i = s.ZP.PersistedStore) {
+class b extends (i = o.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(l.Z), null != e && ((h.userAffinities = e.userAffinities), (h.lastFetched = e.lastFetched), I()), this.syncWith([l.Z], I);
+        this.waitFor(l.Z), null != e && ((h.userAffinities = e.userAffinities), (h.lastFetched = e.lastFetched), y()), this.syncWith([l.Z], y);
     }
     needsRefresh() {
         return !d && Date.now() - h.lastFetched > c;
@@ -75,19 +75,19 @@ class T extends (i = s.ZP.PersistedStore) {
         return h.userAffinities;
     }
     getUserAffinitiesMap() {
-        return p.userAffinitiesMap;
+        return _.userAffinitiesMap;
     }
     getUserAffinity(e) {
-        return p.userAffinitiesMap.get(e);
+        return _.userAffinitiesMap.get(e);
     }
     getUserAffinitiesUserIds() {
-        return p.affinityUserIds;
+        return _.affinityUserIds;
     }
 }
-u(T, 'displayName', 'UserAffinitiesStore'),
-    u(T, 'persistKey', 'UserAffinitiesStore'),
-    u(T, 'migrations', [(e) => null]),
-    (n.Z = new T(o.Z, {
+u(b, 'displayName', 'UserAffinitiesStore'),
+    u(b, 'persistKey', 'UserAffinitiesStore'),
+    u(b, 'migrations', [(e) => null]),
+    (n.Z = new b(s.Z, {
         LOAD_USER_AFFINITIES_SUCCESS: v,
         LOAD_USER_AFFINITIES: E,
         LOAD_USER_AFFINITIES_FAILURE: g,

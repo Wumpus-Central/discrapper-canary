@@ -1,21 +1,21 @@
 r.d(n, {
     LU: function () {
-        return I;
+        return y;
     }
 });
 var i,
     a = r(47120);
-var s = r(653041);
-var o = r(392711),
-    l = r.n(o),
+var o = r(653041);
+var s = r(392711),
+    l = r.n(s),
     u = r(442837),
     c = r(570140),
     d = r(911969),
     f = r(704907),
-    _ = r(581883);
+    p = r(581883);
 r(689079);
 var h = r(674563),
-    p = r(526761);
+    _ = r(526761);
 function m(e, n, r) {
     return (
         n in e
@@ -38,7 +38,7 @@ let g = [d.yU.CHAT, d.yU.PRIMARY_ENTRY_POINT],
         afterCompute: () => {},
         numFrequentlyItems: h.yP
     });
-function I(e, n) {
+function y(e, n) {
     return e
         .filter((e) => {
             if (e.includes(':')) return (null == n ? void 0 : n.guild) != null && n.guild.id === e.split(':')[1];
@@ -46,21 +46,21 @@ function I(e, n) {
         })
         .map((e) => e.split(':')[0]);
 }
-function T(e, n) {
+function b(e, n) {
     return 0 > Number(n.id) ? n.id : (null == e ? void 0 : e.guild) != null && null != n.guildId ? ''.concat(n.id, ':').concat(e.guild.id) : n.id;
 }
-function b(e) {
+function I(e) {
     let {
         settings: { type: n },
         wasSaved: r
     } = e;
-    if (n !== p.yP.FRECENCY_AND_FAVORITES_SETTINGS || !r) return !1;
+    if (n !== _.yP.FRECENCY_AND_FAVORITES_SETTINGS || !r) return !1;
     E.pendingUsages = [];
 }
-function y(e) {
+function T(e) {
     let { command: n, context: r } = e;
     if (!g.includes(n.type)) return !1;
-    let i = T(r, n);
+    let i = b(r, n);
     E.pendingUsages.push({
         key: i,
         timestamp: Date.now()
@@ -70,7 +70,7 @@ function y(e) {
 }
 function S() {
     var e, n;
-    let r = null !== (n = null === (e = _.Z.frecencyWithoutFetchingLatest.applicationCommandFrecency) || void 0 === e ? void 0 : e.applicationCommands) && void 0 !== n ? n : {};
+    let r = null !== (n = null === (e = p.Z.frecencyWithoutFetchingLatest.applicationCommandFrecency) || void 0 === e ? void 0 : e.applicationCommands) && void 0 !== n ? n : {};
     v.overwriteHistory(
         l().mapValues(r, (e) => ({
             ...e,
@@ -81,7 +81,7 @@ function S() {
 }
 class A extends (i = u.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (E = e), this.syncWith([_.Z], S);
+        null != e && (E = e), this.syncWith([p.Z], S);
     }
     getState() {
         return E;
@@ -94,7 +94,7 @@ class A extends (i = u.ZP.PersistedStore) {
     }
     getScoreWithoutLoadingLatest(e, n) {
         var r;
-        return null !== (r = v.getScore(T(e, n))) && void 0 !== r ? r : 0;
+        return null !== (r = v.getScore(b(e, n))) && void 0 !== r ? r : 0;
     }
     getTopCommandsWithoutLoadingLatest() {
         return v.frequently;
@@ -103,6 +103,6 @@ class A extends (i = u.ZP.PersistedStore) {
 m(A, 'displayName', 'ApplicationCommandFrecencyStore'),
     m(A, 'persistKey', 'ApplicationCommandFrecencyV2'),
     (n.ZP = new A(c.Z, {
-        APPLICATION_COMMAND_USED: y,
-        USER_SETTINGS_PROTO_UPDATE: b
+        APPLICATION_COMMAND_USED: T,
+        USER_SETTINGS_PROTO_UPDATE: I
     }));

@@ -5,42 +5,42 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(642128),
+    o = r(192379),
+    s = r(642128),
     l = r(442837),
     u = r(481060),
     c = r(727637),
     d = r(616780),
     f = r(100527),
-    _ = r(906732),
+    p = r(906732),
     h = r(680295),
-    p = r(271383),
+    _ = r(271383),
     m = r(430824),
     g = r(785717),
     E = r(221292),
     v = r(687158),
-    I = r(326094),
-    T = r(510659),
-    b = r(113557),
-    y = r(867176),
+    y = r(326094),
+    b = r(510659),
+    I = r(113557),
+    T = r(867176),
     S = r(451834),
     A = r(502762),
-    N = r(544989),
-    C = r(481932),
+    C = r(544989),
+    N = r(481932),
     R = r(195387),
     O = r(272510),
     D = r(4517),
-    L = r(171368),
-    x = r(978395),
+    x = r(171368),
+    L = r(978395),
     w = r(161572),
     P = r(228168),
     M = r(981631),
     k = r(388032),
     U = r(591156);
 function B(e) {
-    let { user: n, currentUser: r, guildId: i, channelId: B, messageId: G, roleId: F, closePopout: Z, setPopoutRef: V, disableUserProfileLink: j = __OVERLAY__, newAnalyticsLocations: H = [] } = e,
-        { analyticsLocations: Y } = (0, _.ZP)([...H, f.Z.BITE_SIZE_PROFILE_POPOUT]),
-        W = (0, I.Z)({
+    let { user: n, currentUser: r, guildId: i, channelId: B, messageId: G, roleId: Z, closePopout: F, setPopoutRef: V, disableUserProfileLink: j = __OVERLAY__, newAnalyticsLocations: H = [] } = e,
+        { analyticsLocations: Y } = (0, p.ZP)([...H, f.Z.BITE_SIZE_PROFILE_POPOUT]),
+        W = (0, y.Z)({
             user: n,
             currentUser: r,
             location: M.Sbl.BITE_SIZE_POPOUT
@@ -51,26 +51,26 @@ function B(e) {
             guildId: i,
             channelId: B,
             messageId: G,
-            roleId: F
+            roleId: Z
         }),
         z = (0, l.e7)([m.Z], () => (null != i ? m.Z.getGuild(i) : null)),
-        q = (0, l.e7)([p.ZP], () => (null != i ? p.ZP.getMember(i, n.id) : null)),
-        Q = s.useMemo(() => (null != i ? { [i]: [n.id] } : {}), [i, n.id]);
+        q = (0, l.e7)([_.ZP], () => (null != i ? _.ZP.getMember(i, n.id) : null)),
+        Q = o.useMemo(() => (null != i ? { [i]: [n.id] } : {}), [i, n.id]);
     (0, d.$)(Q);
-    let X = s.useRef(null),
+    let X = o.useRef(null),
         J = (0, v.ZP)(n.id, i),
         $ = (0, c.Z)(X),
-        ee = (0, T.$m)(),
+        ee = (0, b.$m)(),
         et = (0, u.useSpring)({
             opacity: null != ee.interactionType ? 1 : 0,
             config: { duration: 150 }
         });
-    s.useEffect(() => {
+    o.useEffect(() => {
         null == V || V(null == X ? void 0 : X.current);
     }, [X, V]);
     let en = (e) => {
-            null == Z || Z(),
-                (0, L.openUserProfileModal)({
+            null == F || F(),
+                (0, x.openUserProfileModal)({
                     sourceAnalyticsLocations: Y,
                     ...K,
                     ...e
@@ -91,12 +91,12 @@ function B(e) {
                               });
                       }
                   });
-    return (0, a.jsx)(_.Gt, {
+    return (0, a.jsx)(p.Gt, {
         value: Y,
         children: (0, a.jsx)(g.Mt, {
             value: K,
             shouldTrackViewOnMount: null == q || null != q.fullProfileLoadedTimestamp,
-            children: (0, a.jsx)(T.NJ, {
+            children: (0, a.jsx)(b.NJ, {
                 value: ee,
                 children: (0, a.jsxs)(u.Dialog, {
                     ref: X,
@@ -108,11 +108,11 @@ function B(e) {
                             profileType: P.y0.BITE_SIZE,
                             children: [
                                 null != ee.interactionType &&
-                                    (0, a.jsx)(o.animated.div, {
+                                    (0, a.jsx)(s.animated.div, {
                                         style: et,
                                         className: U.backdrop
                                     }),
-                                (0, a.jsxs)(N.Z, {
+                                (0, a.jsxs)(C.Z, {
                                     profileType: P.y0.BITE_SIZE,
                                     children: [
                                         (0, a.jsx)(R.Z, {
@@ -120,9 +120,9 @@ function B(e) {
                                             user: n,
                                             guildId: i,
                                             channelId: B,
-                                            onClose: Z
+                                            onClose: F
                                         }),
-                                        (0, a.jsx)(C.Z, {
+                                        (0, a.jsx)(N.Z, {
                                             shouldShowTooltip: null === ee.interactionType,
                                             profileType: P.y0.BITE_SIZE,
                                             user: n
@@ -138,7 +138,7 @@ function B(e) {
                                 (0, a.jsxs)('header', {
                                     className: U.header,
                                     children: [
-                                        (0, a.jsx)(y.Z, {
+                                        (0, a.jsx)(T.Z, {
                                             user: n,
                                             displayProfile: J,
                                             guildId: i,
@@ -147,9 +147,9 @@ function B(e) {
                                         (0, a.jsx)(S.Z, {
                                             userId: n.id,
                                             className: U.toast,
-                                            onClose: Z
+                                            onClose: F
                                         }),
-                                        (0, a.jsx)(b.Z, {
+                                        (0, a.jsx)(I.Z, {
                                             location: 'UserProfilePopout',
                                             user: n,
                                             displayProfile: J,
@@ -164,11 +164,11 @@ function B(e) {
                                             guildId: i,
                                             channelId: B,
                                             profileType: P.y0.BITE_SIZE,
-                                            onCloseProfile: Z
+                                            onCloseProfile: F
                                         })
                                     ]
                                 }),
-                                (0, a.jsx)(x.Z, {
+                                (0, a.jsx)(L.Z, {
                                     user: n,
                                     currentUser: r,
                                     displayProfile: J,
@@ -176,13 +176,13 @@ function B(e) {
                                     isHovering: null == ee.interactionType && $,
                                     onOpenProfile: j ? void 0 : en,
                                     channelId: B,
-                                    onClose: Z
+                                    onClose: F
                                 }),
                                 (0, a.jsx)(w.Z, {
                                     user: n,
                                     guildId: i,
                                     channelId: B,
-                                    onClose: Z
+                                    onClose: F
                                 })
                             ]
                         }),

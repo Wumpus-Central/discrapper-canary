@@ -1,8 +1,8 @@
 function n(e, n) {
-    for (var r = -1, i = null == e ? 0 : e.length, a = 0, s = []; ++r < i; ) {
-        var o = e[r];
-        n(o, r, e) && (s[a++] = o);
+    for (var r = -1, i = null == e ? 0 : e.length, a = 0, o = []; ++r < i; ) {
+        var s = e[r];
+        n(s, r, e) && (o[a++] = s);
     }
-    return s;
+    return o;
 }
 e.exports = n;

@@ -1,13 +1,13 @@
 n.d(t, {
     M: function () {
-        return r;
+        return i;
     },
     o: function () {
-        return s;
+        return a;
     }
 });
 var l = n(212819);
-let r = Array.from([l.h8.USER, l.h8.TEXT_CHANNEL, l.h8.VOICE_CHANNEL, l.h8.GROUP_DM]);
-function s(e) {
-    return r.includes(e.type);
+let i = Array.from([l.h8.USER, l.h8.TEXT_CHANNEL, l.h8.VOICE_CHANNEL, l.h8.GROUP_DM]);
+function a(e) {
+    return i.includes(e.type);
 }

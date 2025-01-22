@@ -1,7 +1,7 @@
 var i = r(65064),
     a = r(389109),
-    s = '[object Set]';
-function o(e) {
-    return a(e) && i(e) == s;
+    o = '[object Set]';
+function s(e) {
+    return a(e) && i(e) == o;
 }
-e.exports = o;
+e.exports = s;

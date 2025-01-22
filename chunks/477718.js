@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(981631),
     b = n(388032),
     Z = n(872278),
-    S = n(389401),
-    N = n(758570);
+    N = n(389401),
+    S = n(758570);
 function T(e) {
     var t;
     let { log: n, member: r, guild: s } = e,
@@ -34,7 +34,7 @@ function T(e) {
         f = g.nm(n),
         v = g.QM(n),
         I = null === (t = g.V$(E.zUn.REASON, n)) || void 0 === t ? void 0 : t.newValue,
-        N = g.J5(n),
+        S = g.J5(n),
         T = (0, p.LJ)(n.id),
         j = (0, c.e7)([x.ZP], () => (null != n.userId ? x.ZP.getMember(r.guildId, n.userId) : null), [r.guildId, n.userId]),
         A = l.useCallback(
@@ -75,7 +75,7 @@ function T(e) {
             [A, n.user, r.guildId, j]
         )();
     return (0, i.jsxs)('div', {
-        className: a()(S.modInfoItem, Z.auditLogItem),
+        className: a()(N.modInfoItem, Z.auditLogItem),
         children: [
             (0, i.jsxs)('div', {
                 className: Z.auditLogItemTitleContainer,
@@ -124,7 +124,7 @@ function T(e) {
                     })
                 }),
             null == I &&
-                null != N &&
+                null != S &&
                 (0, i.jsx)('div', {
                     className: Z.auditLogSecondaryContainer,
                     children: (0, i.jsxs)('div', {
@@ -135,13 +135,13 @@ function T(e) {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 tag: 'span',
-                                children: N
+                                children: S
                             })
                         ]
                     })
                 }),
             null == I &&
-                null == N &&
+                null == S &&
                 (0, i.jsx)('div', {
                     className: Z.auditLogSecondaryContainer,
                     children: (0, i.jsx)('div', {
@@ -182,7 +182,7 @@ function j(e) {
         ? null
         : (0, i.jsx)(d.FormItem, {
               title: b.intl.string(b.t.flCxLi),
-              titleClassName: N.infoTitle,
+              titleClassName: S.infoTitle,
               children:
                   r.length > 0
                       ? (0, i.jsx)(I.WM, {

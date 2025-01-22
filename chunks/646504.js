@@ -8,17 +8,17 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(367907),
-    o = r(981631);
+    o = r(367907),
+    s = r(981631);
 function l() {
-    s.ZP.trackWithMetadata(o.rMx.NOTIFICATION_CTA_CLICKED, {
+    o.ZP.trackWithMetadata(s.rMx.NOTIFICATION_CTA_CLICKED, {
         notification_type: 'Reminder Notification',
         action: 'Guild Invite',
         dismissed: !1
     });
 }
 function u() {
-    s.ZP.trackWithMetadata(o.rMx.NOTIFICATION_CTA_CLICKED, {
+    o.ZP.trackWithMetadata(s.rMx.NOTIFICATION_CTA_CLICKED, {
         notification_type: 'Reminder Notification',
         action: 'Guild Invite',
         dismissed: !0

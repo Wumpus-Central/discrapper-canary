@@ -1,12 +1,12 @@
-var e = n(668530),
-    o = n(293303),
-    i = n(141603),
-    u = n(348343),
-    s = n(828596),
-    c = n(756234),
-    f = e.Symbol,
-    a = o('wks'),
-    p = c ? f.for || f : (f && f.withoutSetter) || u;
-t.exports = function (t) {
-    return !i(a, t) && (a[t] = s && i(f, t) ? f[t] : p('Symbol.' + t)), a[t];
+var i = r(668530),
+    a = r(293303),
+    o = r(141603),
+    s = r(348343),
+    l = r(828596),
+    u = r(756234),
+    c = i.Symbol,
+    d = a('wks'),
+    f = u ? c.for || c : (c && c.withoutSetter) || s;
+e.exports = function (e) {
+    return !o(d, e) && (d[e] = l && o(c, e) ? c[e] : f('Symbol.' + e)), d[e];
 };

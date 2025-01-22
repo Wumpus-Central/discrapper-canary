@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(379649),
     a = r(846519),
-    s = r(361291),
-    o = r(981631);
+    o = r(361291),
+    s = r(981631);
 function l(e, n, r) {
     return (
         n in e
@@ -27,7 +27,7 @@ function c(e) {
 }
 class d {
     start() {
-        let { resolution: e, fps: n } = s.Z.getState();
+        let { resolution: e, fps: n } = o.Z.getState();
         (this._targetResolution = e), (this._targetFPS = n), this._statInterval.start(u, this._sampleStats), (this._lastLayoutChanged = (0, i.zO)());
     }
     stop() {
@@ -44,13 +44,13 @@ class d {
     getStats() {
         let e = {
             num_layout_changes: this._layoutChanges,
-            duration_layout_fullscreen: c(this._layoutBuckets[o.hVg.FULL_SCREEN]),
-            duration_layout_theatre: c(this._layoutBuckets[o.hVg.THEATRE]),
-            duration_layout_pip: c(this._layoutBuckets[o.hVg.PIP]),
-            duration_layout_popout: c(this._layoutBuckets[o.hVg.POPOUT]),
-            duration_layout_portrait: c(this._layoutBuckets[o.hVg.PORTRAIT]),
-            duration_layout_landscape: c(this._layoutBuckets[o.hVg.LANDSCAPE]),
-            duration_layout_minimized: c(this._layoutBuckets[o.hVg.MINIMIZED])
+            duration_layout_fullscreen: c(this._layoutBuckets[s.hVg.FULL_SCREEN]),
+            duration_layout_theatre: c(this._layoutBuckets[s.hVg.THEATRE]),
+            duration_layout_pip: c(this._layoutBuckets[s.hVg.PIP]),
+            duration_layout_popout: c(this._layoutBuckets[s.hVg.POPOUT]),
+            duration_layout_portrait: c(this._layoutBuckets[s.hVg.PORTRAIT]),
+            duration_layout_landscape: c(this._layoutBuckets[s.hVg.LANDSCAPE]),
+            duration_layout_minimized: c(this._layoutBuckets[s.hVg.MINIMIZED])
         };
         return this._isSender
             ? {
@@ -76,7 +76,7 @@ class d {
                 null == this._layoutBuckets[e] && (this._layoutBuckets[e] = 0), (this._layoutBuckets[e] += n);
             }),
             l(this, '_sampleStats', () => {
-                let { resolution: e, fps: n } = s.Z.getState();
+                let { resolution: e, fps: n } = o.Z.getState();
                 this._streamSettingsChanged = e !== this._targetResolution || n !== this._targetFPS;
             }),
             (this._isSender = n),

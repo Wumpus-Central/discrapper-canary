@@ -1,7 +1,7 @@
 var i = r(682404),
     a = r(657006),
-    s = r(665771),
-    o = r(217764),
+    o = r(665771),
+    s = r(217764),
     l = r(193603),
     u = r(119352),
     c = r(80383),
@@ -37,15 +37,15 @@ var i = r(682404),
         },
         Y: function (e, n, r, i) {
             var a = (0, l.Z)(e, i),
-                s = a > 0 ? a : 1 - a;
+                o = a > 0 ? a : 1 - a;
             if ('YY' === n) {
-                var o = s % 100;
-                return (0, u.Z)(o, 2);
+                var s = o % 100;
+                return (0, u.Z)(s, 2);
             }
-            return 'Yo' === n ? r.ordinalNumber(s, { unit: 'year' }) : (0, u.Z)(s, n.length);
+            return 'Yo' === n ? r.ordinalNumber(o, { unit: 'year' }) : (0, u.Z)(o, n.length);
         },
         R: function (e, n) {
-            var r = (0, s.Z)(e);
+            var r = (0, o.Z)(e);
             return (0, u.Z)(r, n.length);
         },
         u: function (e, n) {
@@ -156,7 +156,7 @@ var i = r(682404),
             }
         },
         w: function (e, n, r, i) {
-            var a = (0, o.Z)(e, i);
+            var a = (0, s.Z)(e, i);
             return 'wo' === n ? r.ordinalNumber(a, { unit: 'week' }) : (0, u.Z)(a, n.length);
         },
         I: function (e, n, r) {
@@ -199,14 +199,14 @@ var i = r(682404),
         },
         e: function (e, n, r, i) {
             var a = e.getUTCDay(),
-                s = (a - i.weekStartsOn + 8) % 7 || 7;
+                o = (a - i.weekStartsOn + 8) % 7 || 7;
             switch (n) {
                 case 'e':
-                    return String(s);
+                    return String(o);
                 case 'ee':
-                    return (0, u.Z)(s, 2);
+                    return (0, u.Z)(o, 2);
                 case 'eo':
-                    return r.ordinalNumber(s, { unit: 'day' });
+                    return r.ordinalNumber(o, { unit: 'day' });
                 case 'eee':
                     return r.day(a, {
                         width: 'abbreviated',
@@ -231,14 +231,14 @@ var i = r(682404),
         },
         c: function (e, n, r, i) {
             var a = e.getUTCDay(),
-                s = (a - i.weekStartsOn + 8) % 7 || 7;
+                o = (a - i.weekStartsOn + 8) % 7 || 7;
             switch (n) {
                 case 'c':
-                    return String(s);
+                    return String(o);
                 case 'cc':
-                    return (0, u.Z)(s, n.length);
+                    return (0, u.Z)(o, n.length);
                 case 'co':
-                    return r.ordinalNumber(s, { unit: 'day' });
+                    return r.ordinalNumber(o, { unit: 'day' });
                 case 'ccc':
                     return r.day(a, {
                         width: 'abbreviated',
@@ -408,9 +408,9 @@ var i = r(682404),
                     return h(a);
                 case 'XXXX':
                 case 'XX':
-                    return p(a);
+                    return _(a);
                 default:
-                    return p(a, ':');
+                    return _(a, ':');
             }
         },
         x: function (e, n, r, i) {
@@ -420,9 +420,9 @@ var i = r(682404),
                     return h(a);
                 case 'xxxx':
                 case 'xx':
-                    return p(a);
+                    return _(a);
                 default:
-                    return p(a, ':');
+                    return _(a, ':');
             }
         },
         O: function (e, n, r, i) {
@@ -431,9 +431,9 @@ var i = r(682404),
                 case 'O':
                 case 'OO':
                 case 'OOO':
-                    return 'GMT' + _(a, ':');
-                default:
                     return 'GMT' + p(a, ':');
+                default:
+                    return 'GMT' + _(a, ':');
             }
         },
         z: function (e, n, r, i) {
@@ -442,9 +442,9 @@ var i = r(682404),
                 case 'z':
                 case 'zz':
                 case 'zzz':
-                    return 'GMT' + _(a, ':');
-                default:
                     return 'GMT' + p(a, ':');
+                default:
+                    return 'GMT' + _(a, ':');
             }
         },
         t: function (e, n, r, i) {
@@ -456,19 +456,19 @@ var i = r(682404),
             return (0, u.Z)(a, n.length);
         }
     };
-function _(e, n) {
+function p(e, n) {
     var r = e > 0 ? '-' : '+',
         i = Math.abs(e),
         a = Math.floor(i / 60),
-        s = i % 60;
-    if (0 === s) return r + String(a);
-    var o = n || '';
-    return r + String(a) + o + (0, u.Z)(s, 2);
+        o = i % 60;
+    if (0 === o) return r + String(a);
+    var s = n || '';
+    return r + String(a) + s + (0, u.Z)(o, 2);
 }
 function h(e, n) {
-    return e % 60 == 0 ? (e > 0 ? '-' : '+') + (0, u.Z)(Math.abs(e) / 60, 2) : p(e, n);
+    return e % 60 == 0 ? (e > 0 ? '-' : '+') + (0, u.Z)(Math.abs(e) / 60, 2) : _(e, n);
 }
-function p(e, n) {
+function _(e, n) {
     var r = n || '',
         i = e > 0 ? '-' : '+',
         a = Math.abs(e);

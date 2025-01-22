@@ -3,7 +3,7 @@ function n(e) {
         r = /[a-zA-Z_$][a-zA-Z0-9_$]*/,
         i = n.concat(r, n.concat('(\\.', r, ')*')),
         a = /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/,
-        s = {
+        o = {
             className: 'rest_arg',
             begin: /[.]{3}/,
             end: r,
@@ -53,7 +53,7 @@ function n(e) {
                         className: 'params',
                         begin: /\(/,
                         end: /\)/,
-                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, s]
+                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, o]
                     },
                     { begin: n.concat(/:\s*/, a) }
                 ]

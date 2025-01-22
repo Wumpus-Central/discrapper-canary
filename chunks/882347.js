@@ -1,20 +1,20 @@
 r.d(n, {
     p: function () {
-        return T;
+        return b;
     }
 });
 var i = r(789020);
 var a = r(570140),
-    s = r(881052),
-    o = r(592125),
+    o = r(881052),
+    s = r(592125),
     l = r(630388),
     u = r(317381),
     c = r(424291),
     d = r(966434),
     f = r(649591),
-    _ = r(16609),
+    p = r(16609),
     h = r(224189),
-    p = r(574952),
+    _ = r(574952),
     m = r(981631);
 async function g(e, n) {
     try {
@@ -25,7 +25,7 @@ async function g(e, n) {
             nonce: '',
             applicationId: e,
             channelId: null != n ? n : null,
-            error: new s.Hx(r)
+            error: new o.Hx(r)
         });
     }
 }
@@ -36,8 +36,8 @@ async function E(e) {
             null == n ||
             (await new Promise((e) => {
                 let r = u.ZP.getSelfEmbeddedActivities().get(n.id),
-                    i = (0, _.p)(null == r ? void 0 : r.location),
-                    a = o.Z.getChannel(i);
+                    i = (0, p.p)(null == r ? void 0 : r.location),
+                    a = s.Z.getChannel(i);
                 if (null == r || null == a) {
                     e(!0);
                     return;
@@ -46,7 +46,7 @@ async function E(e) {
                     n,
                     a,
                     () => {
-                        (0, p.Z)().leaveActivity({
+                        (0, _.Z)().leaveActivity({
                             location: r.location,
                             applicationId: n.id
                         }),
@@ -61,13 +61,13 @@ async function E(e) {
 async function v(e) {
     let { application: n, applicationId: r, channel: i, user: a } = e;
     if (null == a.nsfwAllowed) {
-        var s, o;
+        var o, s;
         let e = null != n ? n : await g(r, null == i ? void 0 : i.id);
         if (
             null == e ||
-            (null !== (o = null === (s = e.embeddedActivityConfig) || void 0 === s ? void 0 : s.requires_age_gate) &&
-                void 0 !== o &&
-                o &&
+            (null !== (s = null === (o = e.embeddedActivityConfig) || void 0 === o ? void 0 : o.requires_age_gate) &&
+                void 0 !== s &&
+                s &&
                 !(await new Promise((n) => {
                     (0, c.V)({
                         application: e,
@@ -81,7 +81,7 @@ async function v(e) {
     }
     return !0;
 }
-async function I(e) {
+async function y(e) {
     let { application: n, applicationId: r, channel: i } = e,
         a = null != n ? n : await g(r, null == i ? void 0 : i.id);
     return (
@@ -96,6 +96,6 @@ async function I(e) {
             }))
     );
 }
-async function T(e) {
-    return !!((await E({ currentEmbeddedApplication: e.currentEmbeddedApplication })) && (await v(e)) && (await I(e))) || !1;
+async function b(e) {
+    return !!((await E({ currentEmbeddedApplication: e.currentEmbeddedApplication })) && (await v(e)) && (await y(e))) || !1;
 }

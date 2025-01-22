@@ -7,30 +7,30 @@ var t = n(200651);
 n(192379);
 var o = n(120356),
     r = n.n(o),
-    l = n(297700),
-    a = n(471885),
-    c = n(981631),
-    s = n(201950);
-let d = {
-        [c.Eu4.NONE]: s.iconBackgroundTierNone,
-        [c.Eu4.TIER_1]: s.iconBackgroundTierOne,
-        [c.Eu4.TIER_2]: s.iconBackgroundTierTwo,
-        [c.Eu4.TIER_3]: s.iconBackgroundTierThree
+    a = n(297700),
+    l = n(471885),
+    d = n(981631),
+    c = n(201950);
+let s = {
+        [d.Eu4.NONE]: c.iconBackgroundTierNone,
+        [d.Eu4.TIER_1]: c.iconBackgroundTierOne,
+        [d.Eu4.TIER_2]: c.iconBackgroundTierTwo,
+        [d.Eu4.TIER_3]: c.iconBackgroundTierThree
     },
     u = {
-        [c.Eu4.NONE]: s.iconTierNone,
-        [c.Eu4.TIER_1]: s.iconTierOne,
-        [c.Eu4.TIER_2]: s.iconTierTwo,
-        [c.Eu4.TIER_3]: s.iconTierThree
+        [d.Eu4.NONE]: c.iconTierNone,
+        [d.Eu4.TIER_1]: c.iconTierOne,
+        [d.Eu4.TIER_2]: c.iconTierTwo,
+        [d.Eu4.TIER_3]: c.iconTierThree
     };
 function g(e) {
-    let { premiumTier: i, iconBackgroundClassName: n, iconClassName: o, size: c } = e;
-    return (0, t.jsx)(l.Z, {
-        className: r()(n, d[i]),
-        size: c,
-        children: (0, t.jsx)(a.Z, {
+    let { premiumTier: i, iconBackgroundClassName: n, iconClassName: o, size: d } = e;
+    return (0, t.jsx)(a.Z, {
+        className: r()(n, s[i]),
+        size: d,
+        children: (0, t.jsx)(l.Z, {
             tier: i,
-            className: r()(o, s.boostedGuildIconGem, u[i])
+            className: r()(o, c.boostedGuildIconGem, u[i])
         })
     });
 }

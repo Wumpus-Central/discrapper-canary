@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(626135),
-    s = r(823967),
-    o = r(281058),
+    o = r(823967),
+    s = r(281058),
     l = r(761274),
     u = r(981631),
     c = r(388032);
@@ -28,8 +28,8 @@ class f {
         if ('function' != typeof n) throw Error('requestAuthorization: Was provided with not a function for '.concat(e, '.'));
         a.default.track(u.rMx.PERMISSIONS_REQUESTED, { type: e });
         let i = (await n()) === l.NZ.AUTHORIZED,
-            o = i ? l.PQ.ACCEPTED : l.PQ.DENIED;
-        return s.Z.setPermission(e, o), !i && r.showAuthorizationError && this.showAlert(e), i;
+            s = i ? l.PQ.ACCEPTED : l.PQ.DENIED;
+        return o.Z.setPermission(e, s), !i && r.showAuthorizationError && this.showAlert(e), i;
     }
     requestPermission(e, n) {
         let r = f.defaultNativePermissionsRequestOptions(n);
@@ -66,6 +66,6 @@ class f {
               };
     }
     constructor() {
-        d(this, 'storage', new o.Z());
+        d(this, 'storage', new s.Z());
     }
 }

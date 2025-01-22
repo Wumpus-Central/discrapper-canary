@@ -28,8 +28,8 @@ var i = n(200651),
     E = n(475413),
     b = n(228168),
     Z = n(388032),
-    S = n(562296),
-    N = n(321975);
+    N = n(562296),
+    S = n(321975);
 function T(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
         a = (0, C.ZP)(t.id),
@@ -53,16 +53,16 @@ function T(e) {
                 themeOverride: o,
                 children: (0, i.jsx)(s.u2, {
                     children: (0, i.jsxs)('div', {
-                        className: S.container,
+                        className: N.container,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: N,
-                                className: S.previewForCollected,
+                                src: S,
+                                className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
-                                className: S.body,
+                                className: N.body,
                                 children: [
                                     (0, i.jsx)(x.Z, {
                                         user: t,
@@ -70,7 +70,7 @@ function T(e) {
                                     }),
                                     (0, i.jsx)(c.Heading, {
                                         variant: 'heading-lg/bold',
-                                        className: S.header,
+                                        className: N.header,
                                         children: Z.intl.string(Z.t.VNJ7UF)
                                     }),
                                     (0, i.jsx)(c.Text, {
@@ -82,7 +82,7 @@ function T(e) {
                                         children: Z.intl.string(Z.t['20WzZ2'])
                                     }),
                                     (0, i.jsx)(E.tG, {
-                                        className: S.centeredButton,
+                                        className: N.centeredButton,
                                         action: 'VIEW_BLOCKED_PROFILE',
                                         text: Z.intl.string(Z.t.iXAna2),
                                         autoFocus: !0,
@@ -129,19 +129,19 @@ function j(e) {
                 themeOverride: T,
                 children: (0, i.jsx)(s.u2, {
                     children: (0, i.jsxs)('div', {
-                        className: S.container,
+                        className: N.container,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: N,
-                                className: S.previewForCollected,
+                                src: S,
+                                className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
-                                className: a()(S.body, S.bodySpacing),
+                                className: a()(N.body, N.bodySpacing),
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: S.headerContainer,
+                                        className: N.headerContainer,
                                         children: [
                                             (0, i.jsx)(x.i, { user: t }),
                                             (0, i.jsx)(c.Heading, {

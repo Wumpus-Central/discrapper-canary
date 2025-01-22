@@ -1,19 +1,19 @@
 r.r(n),
     r.d(n, {
         contextMenuCallbackNative: function () {
-            return o;
+            return s;
         },
         contextMenuCallbackWeb: function () {
             return l;
         },
         getSelectionText: function () {
-            return s;
+            return o;
         }
     });
 var i = r(200651);
 r(192379);
 var a = r(239091);
-function s() {
+function o() {
     let e;
     if (null != window.getSelection) {
         var n;
@@ -21,11 +21,11 @@ function s() {
     } else null != document.selection && 'Control' !== document.selection.type && (e = document.selection.createRange().text);
     return null != e ? e : '';
 }
-function o(e) {
-    let n = s(),
-        o = e.target;
-    if ((null == o ? void 0 : o.tagName) === 'TEXTAREA' || (null == o ? void 0 : o.tagName) === 'INPUT') {
-        if ((null == o ? void 0 : o.type) !== 'checkbox')
+function s(e) {
+    let n = o(),
+        s = e.target;
+    if ((null == s ? void 0 : s.tagName) === 'TEXTAREA' || (null == s ? void 0 : s.tagName) === 'INPUT') {
+        if ((null == s ? void 0 : s.type) !== 'checkbox')
             return (0, a.jW)(
                 e,
                 async () => {
@@ -38,31 +38,31 @@ function o(e) {
                 },
                 { enableSpellCheck: !0 }
             );
-    } else if ('none' === window.getComputedStyle(o).getPropertyValue('-webkit-user-select')) {
+    } else if ('none' === window.getComputedStyle(s).getPropertyValue('-webkit-user-select')) {
         e.preventDefault();
         return;
     } else {
-        let s,
-            o,
+        let o,
+            s,
             l,
             u = e.target;
-        for (; null != u; ) 'src' in u && null != u.src && (o = u.src), 'href' in u && null != u.href && ((s = u.href), (l = u.textContent)), (u = null == u ? void 0 : u.parentNode);
-        if (null != o)
+        for (; null != u; ) 'src' in u && null != u.src && (s = u.src), 'href' in u && null != u.href && ((o = u.href), (l = u.textContent)), (u = null == u ? void 0 : u.parentNode);
+        if (null != s)
             return (0, a.jW)(e, async () => {
                 let { default: e } = await r.e('12241').then(r.bind(r, 115512));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
-                        src: null != o ? o : ''
+                        src: null != s ? s : ''
                     });
             });
-        if (null != s)
+        if (null != o)
             return (0, a.jW)(e, async () => {
                 let { default: e } = await r.e('96473').then(r.bind(r, 805362));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
-                        href: s,
+                        href: o,
                         textContent: l
                     });
             });
@@ -83,7 +83,7 @@ function l(e) {
         r = e.target;
     if ((null == r ? void 0 : r.tagName) === 'INPUT' || (null == r ? void 0 : r.tagName) === 'TEXTAREA') n = !0;
     else if ((null == r ? void 0 : r.closest) != null && (null == r ? void 0 : r.closest('[contenteditable=true]')) != null) n = !0;
-    else if (null != s() && '' !== s()) n = !0;
+    else if (null != o() && '' !== o()) n = !0;
     else {
         let r,
             i,

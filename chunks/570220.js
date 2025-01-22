@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(192379),
-    s = r(836560);
-class o extends s.EventEmitter {
+    o = r(836560);
+class s extends o.EventEmitter {
     on() {
         return this;
     }
@@ -23,6 +23,6 @@ class o extends s.EventEmitter {
         return !1;
     }
 }
-let l = a.createContext(new o()),
+let l = a.createContext(new s()),
     { Provider: u, Consumer: c } = l;
 n.ZP = l;

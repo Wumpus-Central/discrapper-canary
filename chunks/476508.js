@@ -1,16 +1,16 @@
-var e = n(43740),
-    o = n(548828),
-    i = n(809235),
-    u = e(e.bind);
-t.exports = function (t, r) {
+var i = r(43740),
+    a = r(548828),
+    o = r(809235),
+    s = i(i.bind);
+e.exports = function (e, n) {
     return (
-        o(t),
-        void 0 === r
-            ? t
-            : i
-              ? u(t, r)
+        a(e),
+        void 0 === n
+            ? e
+            : o
+              ? s(e, n)
               : function () {
-                    return t.apply(r, arguments);
+                    return e.apply(n, arguments);
                 }
     );
 };

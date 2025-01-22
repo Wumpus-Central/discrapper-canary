@@ -1,9 +1,9 @@
-var e = n(223944),
-    o = n(474883),
-    i = n(256110),
-    u = Array,
-    s = Math.max;
-t.exports = function (t, r, n) {
-    for (var c = o(t), f = e(r, c), a = e(void 0 === n ? c : n, c), p = u(s(a - f, 0)), v = 0; f < a; f++, v++) i(p, v, t[f]);
-    return (p.length = v), p;
+var i = r(223944),
+    a = r(474883),
+    o = r(256110),
+    s = Array,
+    l = Math.max;
+e.exports = function (e, n, r) {
+    for (var u = a(e), c = i(n, u), d = i(void 0 === r ? u : r, u), f = s(l(d - c, 0)), p = 0; c < d; c++, p++) o(f, p, e[c]);
+    return (f.length = p), f;
 };

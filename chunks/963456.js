@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(544891),
     a = r(570140),
-    s = r(626135),
-    o = r(70956),
+    o = r(626135),
+    s = r(70956),
     l = r(981631);
 let u = 5000,
     c = 3;
@@ -30,9 +30,9 @@ async function d(e, n) {
         case 'application':
             r = l.ANM.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId);
     }
-    let _ = async (n) =>
+    let p = async (n) =>
             f >= c
-                ? (p(!0),
+                ? (_(!0),
                   a.Z.dispatch({
                       type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
                       target: e
@@ -50,8 +50,8 @@ async function d(e, n) {
                 .then(
                     (n) =>
                         202 === n.status
-                            ? _(u)
-                            : (p(!1),
+                            ? p(u)
+                            : (_(!1),
                               a.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_SUCCESS',
                                   target: e,
@@ -59,21 +59,21 @@ async function d(e, n) {
                               })),
                     (r) => {
                         if (n.signal.aborted) {
-                            p(!0);
+                            _(!0);
                             return;
                         }
                         return 429 === r.status
-                            ? _(r.body.retry_after * o.Z.Millis.SECOND)
-                            : (p(!0),
+                            ? p(r.body.retry_after * s.Z.Millis.SECOND)
+                            : (_(!0),
                               a.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
                                   target: e
                               }));
                     }
                 ),
-        p = (e) => {
+        _ = (e) => {
             let r = performance.now() - d;
-            s.default.track(l.rMx.APPLICATION_COMMAND_PERFORMANCE, {
+            o.default.track(l.rMx.APPLICATION_COMMAND_PERFORMANCE, {
                 duration_ms: r,
                 error: e,
                 aborted: n.signal.aborted,

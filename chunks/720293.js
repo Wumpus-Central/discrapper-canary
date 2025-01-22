@@ -8,9 +8,9 @@ r.d(n, {
 });
 var i,
     a = r(475595),
-    s = r(46140);
-function o(e, n) {
-    var r, i, a, s, o, l, u, c;
+    o = r(46140);
+function s(e, n) {
+    var r, i, a, o, s, l, u, c;
     switch (e) {
         case 'video_player_video':
             return null === (r = n.config.videoMetadata) || void 0 === r ? void 0 : r.assets.videoPlayerVideo;
@@ -19,9 +19,9 @@ function o(e, n) {
         case 'video_player_thumbnail':
             return null === (a = n.config.videoMetadata) || void 0 === a ? void 0 : a.assets.videoPlayerThumbnail;
         case 'video_player_caption':
-            return null === (s = n.config.videoMetadata) || void 0 === s ? void 0 : s.assets.videoPlayerCaption;
+            return null === (o = n.config.videoMetadata) || void 0 === o ? void 0 : o.assets.videoPlayerCaption;
         case 'video_player_transcript':
-            return null === (o = n.config.videoMetadata) || void 0 === o ? void 0 : o.assets.videoPlayerTranscript;
+            return null === (s = n.config.videoMetadata) || void 0 === s ? void 0 : s.assets.videoPlayerTranscript;
         case 'quest_bar_preview_video':
             return null === (l = n.config.videoMetadata) || void 0 === l ? void 0 : l.assets.questBarPreviewVideo;
         case 'quest_bar_preview_thumbnail':
@@ -33,9 +33,9 @@ function o(e, n) {
     }
 }
 function l(e, n) {
-    let r = o(e, n);
+    let r = s(e, n);
     if (null == r) return null;
-    let i = n.config.features.includes(s.S7.QUESTS_CDN),
+    let i = n.config.features.includes(o.S7.QUESTS_CDN),
         l = (0, a.Dm)(r);
     if (null == l) return null;
     let u = (0, a.Q2)(n.id, r, { newCdn: i }),

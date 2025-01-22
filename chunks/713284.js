@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(653041);
-var o = r(442837),
+    o = r(653041);
+var s = r(442837),
     l = r(570140);
 function u(e, n, r) {
     return (
@@ -29,7 +29,7 @@ let c = !0,
     f = () => {
         d = [];
     },
-    _ = (e) => {
+    p = (e) => {
         let { eventType: n, dismissibleContent: r } = e;
         if (!c)
             d.push({
@@ -39,26 +39,26 @@ let c = !0,
     },
     h = (e) => {
         let { eventType: n, dismissibleContent: r } = e;
-        _({
+        p({
             eventType: n,
             dismissibleContent: r
         });
     },
-    p = (e) => {
+    _ = (e) => {
         let { dismissibleContent: n } = e;
-        _({
+        p({
             eventType: 2,
             dismissibleContent: n
         });
     },
     m = (e) => {
         let { dismissibleContent: n } = e;
-        _({
+        p({
             eventType: 0,
             dismissibleContent: n
         });
     };
-class g extends (a = o.ZP.Store) {
+class g extends (a = s.ZP.Store) {
     getDCFEvents() {
         return d;
     }
@@ -67,6 +67,6 @@ u(g, 'displayName', 'DCFEventStore'),
     (n.Z = new g(l.Z, {
         LOGOUT: f,
         DCF_EVENT_LOGGED: h,
-        DCF_HANDLE_DC_DISMISSED: p,
+        DCF_HANDLE_DC_DISMISSED: _,
         DCF_HANDLE_DC_SHOWN: m
     }));

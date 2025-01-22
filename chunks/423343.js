@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(653041);
 var a = r(392711),
-    s = r.n(a),
-    o = r(379649),
+    o = r.n(a),
+    s = r(379649),
     l = r(126168),
     u = r(981631);
 function c(e, n, r) {
@@ -31,13 +31,13 @@ class d {
             ((this.current = e),
             this.history.push({
                 state: e,
-                startTime: (0, o.zO)()
+                startTime: (0, s.zO)()
             }));
     }
     getVoiceConnectionSuccessStats() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, o.zO)(),
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.zO)(),
             n = this.getStateDurations(e),
-            r = (e) => s().sumBy(n, (n) => (n.state === e ? n.durationMs : 0));
+            r = (e) => o().sumBy(n, (n) => (n.state === e ? n.durationMs : 0));
         return {
             state_awaiting_endpoint_ms: r(u.hes.AWAITING_ENDPOINT),
             state_authenticating_ms: r(u.hes.AUTHENTICATING),
@@ -56,7 +56,7 @@ class d {
                 durationMs: n.startTime - e.startTime
             })),
             r = () => {
-                let n = s().last(this.history);
+                let n = o().last(this.history);
                 return {
                     state: n.state,
                     durationMs: e - n.startTime

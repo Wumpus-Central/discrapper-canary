@@ -1,6 +1,6 @@
 r.d(n, {
     e: function () {
-        return s;
+        return o;
     },
     s: function () {
         return c;
@@ -8,25 +8,25 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(823379);
-function s(e, n) {
+function o(e, n) {
     let r = e.find((e) => e.processId === n);
     return null == r ? null : c(e, r);
 }
-let o = '356869127241072640',
+let s = '356869127241072640',
     l = 'league of legends.exe';
 function u(e, n) {
     let r = n.processPath.length > 1 ? n.processPath[n.processPath.length - 2] : 0,
-        i = e.filter((e) => e.applicationId === o && e.processPath.includes(r)),
+        i = e.filter((e) => e.applicationId === s && e.processPath.includes(r)),
         a = i.find((e) => e.executableName === l);
     return void 0 !== a ? a : i.length > 0 ? i[0] : null;
 }
 function c(e, n) {
     var r;
     if (null == n) return null;
-    if (n.applicationId === o) return u(e, n);
+    if (n.applicationId === s) return u(e, n);
     let i = new Map(e.map((e) => [e.processId, e])),
-        s = n.processPath.map((e) => i.get(e)).find((e) => null != e);
-    if (null == s) return null;
+        o = n.processPath.map((e) => i.get(e)).find((e) => null != e);
+    if (null == o) return null;
     let l = e
         .map((e) => {
             let n = e.processPath.findIndex((e) => i.has(e));
@@ -38,7 +38,7 @@ function c(e, n) {
                   };
         })
         .filter(a.lm)
-        .filter((e) => e.rootedPath[0] === s.processId);
+        .filter((e) => e.rootedPath[0] === o.processId);
     l.sort((e, n) => {
         let r = e.rootedPath.map((e) => i.get(e)).filter((e) => null != e && null != e.windowHandle),
             a = d(

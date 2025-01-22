@@ -1,7 +1,7 @@
 Object.defineProperty(n, '__esModule', { value: !0 }), (n.mergeClasses = void 0);
-var i = o(r(320403)),
-    a = o(r(117806)),
-    s =
+var i = s(r(320403)),
+    a = s(r(117806)),
+    o =
         Object.assign ||
         function (e) {
             for (var n = 1; n < arguments.length; n++) {
@@ -10,7 +10,7 @@ var i = o(r(320403)),
             }
             return e;
         };
-function o(e) {
+function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
 var l = (n.mergeClasses = function (e) {
@@ -22,7 +22,7 @@ var l = (n.mergeClasses = function (e) {
             return (
                 a &&
                     (0, i.default)(a, function (e, n) {
-                        !r[n] && (r[n] = {}), (r[n] = s({}, r[n], a[n]));
+                        !r[n] && (r[n] = {}), (r[n] = o({}, r[n], a[n]));
                     }),
                 n
             );

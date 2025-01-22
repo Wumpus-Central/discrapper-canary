@@ -1,7 +1,7 @@
-var e = n(804104).forEach,
-    o = n(54659)('forEach');
-t.exports = o
+var i = r(804104).forEach,
+    a = r(54659)('forEach');
+e.exports = a
     ? [].forEach
-    : function (t) {
-          return e(this, t, arguments.length > 1 ? arguments[1] : void 0);
+    : function (e) {
+          return i(this, e, arguments.length > 1 ? arguments[1] : void 0);
       };

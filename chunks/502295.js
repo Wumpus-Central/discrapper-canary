@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(192379);
@@ -13,19 +13,19 @@ let a = Object.freeze({
     offsetWidth: 0,
     dirty: 0
 });
-function s() {
+function o() {
     let e = (0, i.useRef)(null),
         n = (0, i.useCallback)(() => {
             let { current: n } = e;
             if (null != n) {
-                let { scrollTop: e, scrollLeft: r, scrollHeight: i, scrollWidth: a, offsetHeight: s, offsetWidth: o } = n;
+                let { scrollTop: e, scrollLeft: r, scrollHeight: i, scrollWidth: a, offsetHeight: o, offsetWidth: s } = n;
                 return {
                     scrollTop: e,
                     scrollLeft: r,
                     scrollHeight: i,
                     scrollWidth: a,
-                    offsetHeight: s,
-                    offsetWidth: o,
+                    offsetHeight: o,
+                    offsetWidth: s,
                     dirty: 0
                 };
             }

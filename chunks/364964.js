@@ -1,27 +1,27 @@
 r.r(n);
 var i = r(47120);
 var a = r(757143);
-var s = r(147519),
-    o = r(392711),
-    l = r.n(o),
+var o = r(147519),
+    s = r(392711),
+    l = r.n(s),
     u = r(462176);
-s.Z.registerLanguage('ansi', u.Z);
+o.Z.registerLanguage('ansi', u.Z);
 let c = /<[^>]*>[^>]*(html\\`)/g,
     d = new Set(['html', 'xml']);
 n.default = {
     highlight(e, n, r) {
-        if (!_(n, e)) return null;
+        if (!p(n, e)) return null;
         let i = Date.now(),
-            a = s.Z.highlight(n, {
+            a = o.Z.highlight(n, {
                 ignoreIllegals: r,
                 language: e
             });
         return Date.now(), a;
     },
-    hasLanguage: (e) => null != s.Z.getLanguage(e)
+    hasLanguage: (e) => null != o.Z.getLanguage(e)
 };
 let f = l().repeat('/', 15);
-function _(e, n) {
+function p(e, n) {
     if (e.indexOf(f) >= 0) return !1;
     let r = 0;
     for (let n of e.split('\n')) {

@@ -1,12 +1,12 @@
 r.d(n, {
     X: function () {
-        return o;
+        return s;
     }
 });
 var i = r(829105),
     a = r(150076),
-    s = r(695170);
-function o(e, n, r, o, l, u) {
+    o = r(695170);
+function s(e, n, r, s, l, u) {
     var c = {},
         d = e.accept;
     function f(e, n) {
@@ -29,21 +29,21 @@ function o(e, n, r, o, l, u) {
                 var n = Number(e);
                 return !!c[n] || ((c[n] = !0), d.call(this, e));
             }));
-    for (var _ = 0; _ < o.length; _++) {
-        var h = new i.M(o[_], u).rezonedDate();
+    for (var p = 0; p < s.length; p++) {
+        var h = new i.M(s[p], u).rezonedDate();
         if (!e.accept(new Date(h.getTime()))) break;
     }
     n.forEach(function (n) {
         (0, a.h)(e, n.options);
     });
-    var p = e._result;
-    switch (((0, s.DY)(p), e.method)) {
+    var _ = e._result;
+    switch (((0, o.DY)(_), e.method)) {
         case 'all':
         case 'between':
-            return p;
+            return _;
         case 'before':
-            return (p.length && p[p.length - 1]) || null;
+            return (_.length && _[_.length - 1]) || null;
         default:
-            return (p.length && p[0]) || null;
+            return (_.length && _[0]) || null;
     }
 }

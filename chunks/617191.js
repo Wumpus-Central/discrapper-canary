@@ -1,17 +1,17 @@
 var i = r(524437),
     a = r(247206),
-    s = r(82554),
-    o = r(388032);
+    o = r(82554),
+    s = r(388032);
 function l() {
     let { explicitContentGuilds: e, explicitContentFriendDm: n, explicitContentNonFriendDm: r } = (0, a.l4)(),
-        s = {};
-    return e === i.Q4.SHOW && (s.explicitContentGuilds = i.Q4.BLUR), n === i.Q4.SHOW && (s.explicitContentFriendDm = i.Q4.BLUR), r === i.Q4.SHOW && (s.explicitContentNonFriendDm = i.Q4.BLUR), s;
+        o = {};
+    return e === i.Q4.SHOW && (o.explicitContentGuilds = i.Q4.BLUR), n === i.Q4.SHOW && (o.explicitContentFriendDm = i.Q4.BLUR), r === i.Q4.SHOW && (o.explicitContentNonFriendDm = i.Q4.BLUR), o;
 }
 let u = {
-    getTitle: () => o.intl.string(o.t['5Qu1IS']),
-    getDisabledTitle: () => o.intl.string(o.t.YdZZtL),
-    getDescription: () => o.intl.string(o.t.Vzp5BA),
-    eligibleReportSubtypes: [s.i5.SUB_CSAM, s.i5.SUB_LOLI, s.i5.SUB_NCP, s.i5.SUB_SEXUALLY_DEGRADING_CONTENT, s.i5.SUB_UNSOLICITED_PORN],
+    getTitle: () => s.intl.string(s.t['5Qu1IS']),
+    getDisabledTitle: () => s.intl.string(s.t.YdZZtL),
+    getDescription: () => s.intl.string(s.t.Vzp5BA),
+    eligibleReportSubtypes: [o.i5.SUB_CSAM, o.i5.SUB_LOLI, o.i5.SUB_NCP, o.i5.SUB_SEXUALLY_DEGRADING_CONTENT, o.i5.SUB_UNSOLICITED_PORN],
     onApply: () => (0, a.zj)(l()),
     predicate: () => {
         let { explicitContentGuilds: e, explicitContentFriendDm: n, explicitContentNonFriendDm: r } = (0, a.l4)();

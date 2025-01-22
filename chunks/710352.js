@@ -1,7 +1,7 @@
 var i, a;
 r.d(n, {
     Cn: function () {
-        return o;
+        return s;
     },
     R6: function () {
         return a;
@@ -16,11 +16,11 @@ r.d(n, {
         return i;
     },
     pC: function () {
-        return s;
+        return o;
     }
 });
-let s = 20,
-    o = 5,
+let o = 20,
+    s = 5,
     l = 256;
 !(function (e) {
     (e.PERMISSIONS = 'Permissions'), (e.GUIDELINES = 'Guidelines'), (e.TAGS = 'Tags'), (e.DEFAULT_REACTION = 'Default Reaction'), (e.CREATE_POST = 'Create Post');

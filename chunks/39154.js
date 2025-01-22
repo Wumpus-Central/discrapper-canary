@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(789020);
 var a = r(978003);
-function s(e, n) {
+function o(e, n) {
     return null == (n = null != n ? n : (0, a.Z)(e) ? e.messageSnapshots[0] : void 0)
         ? e
         : e.merge({

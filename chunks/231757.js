@@ -1,34 +1,34 @@
 r.d(n, {
     Z: function () {
-        return _;
+        return p;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(726542),
-    o = r(842146),
+    o = r(726542),
+    s = r(842146),
     l = r(293177),
     u = r(349407),
     c = r(49012),
     d = r(202120),
     f = r(981631);
-function _(e) {
+function p(e) {
     var n;
-    let { platformType: _, location: h, overrideUrl: p, successRedirect: m } = e;
-    if ((_ === f.ABu.LEAGUE_OF_LEGENDS && (_ = f.ABu.RIOT_GAMES), _ === f.ABu.CRUNCHYROLL)) {
-        o.K([null != h ? h : 'unknown']);
+    let { platformType: p, location: h, overrideUrl: _, successRedirect: m } = e;
+    if ((p === f.ABu.LEAGUE_OF_LEGENDS && (p = f.ABu.RIOT_GAMES), p === f.ABu.CRUNCHYROLL)) {
+        s.K([null != h ? h : 'unknown']);
         return;
     }
-    if (_ === f.ABu.XBOX) {
+    if (p === f.ABu.XBOX) {
         u.K([null != h ? h : 'unknown']);
         return;
     }
-    if (_ === f.ABu.PLAYSTATION || _ === f.ABu.PLAYSTATION_STAGING) {
-        l.K([null != h ? h : 'unknown'], _);
+    if (p === f.ABu.PLAYSTATION || p === f.ABu.PLAYSTATION_STAGING) {
+        l.K([null != h ? h : 'unknown'], p);
         return;
     }
-    if (_ === f.ABu.DOMAIN) {
+    if (p === f.ABu.DOMAIN) {
         (0, a.openModalLazy)(async () => {
             let { default: e } = await r.e('64941').then(r.bind(r, 907053));
             return (n) =>
@@ -39,12 +39,12 @@ function _(e) {
         });
         return;
     }
-    if ((null === (n = s.Z.get(_)) || void 0 === n ? void 0 : n.isFederated) === !0) {
+    if ((null === (n = o.Z.get(p)) || void 0 === n ? void 0 : n.isFederated) === !0) {
         (0, a.openModalLazy)(async () => {
             let { default: e } = await r.e('54934').then(r.bind(r, 701460));
             return (n) =>
                 (0, i.jsx)(e, {
-                    platformType: _,
+                    platformType: p,
                     location: h,
                     successRedirect: m,
                     ...n
@@ -52,24 +52,24 @@ function _(e) {
         });
         return;
     }
-    if (null != p) {
+    if (null != _) {
         (0, c.q)({
             shouldConfirm: !0,
-            href: p,
+            href: _,
             onConfirm: () => {
                 (0, d.H)(
-                    _,
+                    p,
                     {
                         location: h,
                         successRedirect: m
                     },
-                    p
+                    _
                 );
             }
         });
         return;
     }
-    (0, d.H)(_, {
+    (0, d.H)(p, {
         location: h,
         successRedirect: m
     });

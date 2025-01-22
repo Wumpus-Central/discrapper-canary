@@ -1,12 +1,12 @@
 r.d(n, {
     NR: function () {
-        return s;
+        return o;
     },
     Ob: function () {
         return u;
     },
     ZI: function () {
-        return o;
+        return s;
     },
     m1: function () {
         return c;
@@ -17,7 +17,7 @@ r.d(n, {
 });
 var i = r(987170),
     a = r(987338);
-let s = (0, i.Z)({
+let o = (0, i.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_vanilla',
         label: 'CTP open user settings - A/A test - Vanilla',
@@ -31,7 +31,7 @@ let s = (0, i.Z)({
             }
         ]
     }),
-    o = (0, i.Z)({
+    s = (0, i.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_filters',
         label: 'CTP open user settings - A/A test - Filters',

@@ -3,7 +3,7 @@ r.d(n, {
         return P;
     },
     WW: function () {
-        return L;
+        return x;
     },
     XO: function () {
         return O;
@@ -15,7 +15,7 @@ r.d(n, {
         return w;
     },
     o9: function () {
-        return x;
+        return L;
     },
     zC: function () {
         return D;
@@ -23,8 +23,8 @@ r.d(n, {
 });
 var i = r(692547),
     a = r(481060),
-    s = r(15385),
-    o = r(709586),
+    o = r(15385),
+    s = r(709586),
     l = r(123245),
     u = r(981631);
 r(474936);
@@ -42,7 +42,7 @@ let d = () => ({
             description: c.intl.string(c.t['94l3Ul'])
         };
     },
-    _ = () => ({
+    p = () => ({
         color: i.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
         icon: a.ImagesIcon,
         description: c.intl.string(c.t['n/HqCg'])
@@ -52,7 +52,7 @@ let d = () => ({
         icon: a.GifIcon,
         description: c.intl.string(c.t.AU0zcX)
     }),
-    p = () => ({
+    _ = () => ({
         color: i.Z.unsafe_rawColors.PREMIUM_PERK_ORANGE.css,
         icon: a.ShieldUserIcon,
         description: c.intl.string(c.t.zZe94u)
@@ -76,23 +76,23 @@ let d = () => ({
     E = function (e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
             r = 0,
-            s = 0;
+            o = 0;
         switch (e) {
             case u.Eu4.TIER_1:
-                (r = 15), (s = 100);
+                (r = 15), (o = 100);
                 break;
             case u.Eu4.TIER_2:
-                (r = 30), (s = 150);
+                (r = 30), (o = 150);
                 break;
             case u.Eu4.TIER_3:
-                (r = 60), (s = 250);
+                (r = 60), (o = 250);
         }
         return {
             color: n,
             icon: a.StickerIcon,
             description: c.intl.formatToPlainString(c.t['12vFYG'], {
                 numStickers: r,
-                numEmojis: s
+                numEmojis: o
             })
         };
     },
@@ -101,21 +101,21 @@ let d = () => ({
         icon: a.StarIcon,
         description: c.intl.string(c.t['ThRK/v'])
     }),
-    I = () => ({
-        icon: s.Z,
+    y = () => ({
+        icon: o.Z,
         description: c.intl.string(c.t.a7LWeH)
     }),
-    T = () => ({
-        icon: o.Z,
+    b = () => ({
+        icon: s.Z,
         color: i.Z.unsafe_rawColors.PREMIUM_PERK_PINK.css,
         description: c.intl.string(c.t.QouJkp)
     }),
-    b = () => ({
+    I = () => ({
         icon: a.ShieldUserIcon,
         color: i.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
         description: c.intl.string(c.t['3MpIx8'])
     }),
-    y = () => ({
+    T = () => ({
         color: i.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
         icon: a.ReactionIcon,
         description: c.intl.string(c.t.gAeHJS)
@@ -133,12 +133,12 @@ let d = () => ({
         icon: l.Z,
         description: c.intl.string(c.t.Tm40TU)
     }),
-    N = () => ({
+    C = () => ({
         color: tokens.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
         icon: ScreenArrowIcon,
         description: intl.string(t.AQWug4)
     }),
-    C = function () {
+    N = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : i.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css;
         return {
             color: e,
@@ -147,23 +147,23 @@ let d = () => ({
         };
     };
 function R() {
-    return [p(), _(), m(), S()];
+    return [_(), p(), m(), S()];
 }
 function O() {
-    return [p(), E(u.Eu4.TIER_2), C(), S()];
+    return [_(), E(u.Eu4.TIER_2), N(), S()];
 }
 function D() {
     return [E(u.Eu4.TIER_3, i.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), A(), v(), S()];
 }
-function L() {
+function x() {
     return [v(), h(), E(u.Eu4.TIER_3), S()];
 }
-function x() {
+function L() {
     return [d(), m(), f(), S()];
 }
 function w() {
     return [m(), S()];
 }
 function P() {
-    return [T(), b(), I(), y()];
+    return [b(), I(), y(), T()];
 }

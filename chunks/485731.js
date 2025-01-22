@@ -1,7 +1,7 @@
 let i;
 var a,
-    s = r(442837),
-    o = r(570140),
+    o = r(442837),
+    s = r(570140),
     l = r(314897),
     u = r(979651),
     c = r(1163);
@@ -19,7 +19,7 @@ function d(e, n, r) {
     );
 }
 let f = 5,
-    _ = {
+    p = {
         hqStreamingFrameAnimationPlayed: !1,
         hqStreamingPopoutDismissed: !1,
         hqStreamingOptInPopoutDismissedCount: 0,
@@ -28,11 +28,11 @@ let f = 5,
         hqStreamingDidEnable: !1
     },
     h = !1,
-    p = _;
+    _ = p;
 function m(e) {
-    p = {
-        ...p,
-        ...(null == e ? void 0 : e(p))
+    _ = {
+        ..._,
+        ...(null == e ? void 0 : e(_))
     };
 }
 function g() {
@@ -42,28 +42,28 @@ function E() {
     m(() => ({ hqStreamingPopoutDismissed: !0 }));
 }
 function v() {
-    !p.hqStreamingOptInPopoutDismissed &&
+    !_.hqStreamingOptInPopoutDismissed &&
         m((e) => ({
             hqStreamingOptInPopoutDismissedCount: e.hqStreamingOptInPopoutDismissedCount + 1,
             hqStreamingOptInPopoutDismissed: !0
         }));
 }
-function I(e) {
+function y(e) {
     let { shouldShow: n } = e,
         r = null != i && i.extendedOptInDuration ? f : 1;
-    h = n && p.hqStreamingOptInPopoutDismissedCount < r;
+    h = n && _.hqStreamingOptInPopoutDismissedCount < r;
 }
-function T(e) {
+function b(e) {
     let { enabled: n } = e;
     m((e) => ({
         hqStreamingIsEnabled: n,
         hqStreamingDidEnable: n || e.hqStreamingDidEnable
     }));
 }
-function b() {
-    m(() => _);
+function I() {
+    m(() => p);
 }
-function y() {
+function T() {
     if (null == u.Z.getVoiceStateForUser(l.default.getId()))
         m(() => ({
             hqStreamingOptInPopoutDismissed: !1,
@@ -73,29 +73,29 @@ function y() {
 function S() {
     i = c.Z.getCurrentConfig({ location: 'handleExperimentFetch' }, { autoTrackExposure: !1 });
 }
-class A extends (a = s.ZP.PersistedStore) {
+class A extends (a = o.ZP.PersistedStore) {
     getState() {
-        return p;
+        return _;
     }
     shouldShowOptInPopout() {
         return h;
     }
     initialize(e) {
-        null != e && (p = e);
+        null != e && (_ = e);
     }
 }
 d(A, 'displayName', 'PerksDemosUIState'),
     d(A, 'persistKey', 'PerksDemosUIState'),
-    (n.Z = new A(o.Z, {
+    (n.Z = new A(s.Z, {
         PERMIUM_PERKS_DEMO_FRAME_ANIMATION_PLAYED: g,
         PREMIUM_PERKS_DEMO_POPOUT_DISMISSED: E,
         PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_DISMISSED: v,
-        PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_SHOULD_SHOW: I,
-        PREMIUM_PERKS_DEMO_ENABLED: T,
-        PREMIUM_PERKS_DEMO_UI_RESET: b,
-        VOICE_STATE_UPDATES: y,
+        PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_SHOULD_SHOW: y,
+        PREMIUM_PERKS_DEMO_ENABLED: b,
+        PREMIUM_PERKS_DEMO_UI_RESET: I,
+        VOICE_STATE_UPDATES: T,
         CONNECTION_OPEN: S,
         EXPERIMENTS_FETCH_SUCCESS: S,
         EXPERIMENT_OVERRIDE_BUCKET: S,
-        LOGOUT: b
+        LOGOUT: I
     }));

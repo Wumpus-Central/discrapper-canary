@@ -1,13 +1,13 @@
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(565138),
-    o = r(430824),
+    o = r(565138),
+    s = r(430824),
     l = r(388032),
     u = r(273652);
 let c = (e) => {
     let { stageInstance: n } = e,
-        r = o.Z.getGuild(n.guild_id);
+        r = s.Z.getGuild(n.guild_id);
     return null == r
         ? null
         : (0, i.jsxs)('div', {
@@ -24,9 +24,9 @@ let c = (e) => {
                           (0, i.jsxs)('div', {
                               className: u.guildInfo,
                               children: [
-                                  (0, i.jsx)(s.Z, {
+                                  (0, i.jsx)(o.Z, {
                                       guild: r,
-                                      size: s.Z.Sizes.MINI,
+                                      size: o.Z.Sizes.MINI,
                                       className: u.guildIcon
                                   }),
                                   (0, i.jsx)(a.Text, {

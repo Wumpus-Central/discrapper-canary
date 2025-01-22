@@ -1,21 +1,21 @@
 r.d(n, {
     Z: function () {
-        return _;
+        return p;
     }
 });
 var i = r(200651),
     a = r(192379),
-    s = r(481060),
-    o = r(318766),
+    o = r(481060),
+    s = r(318766),
     l = r(907040),
     u = r(28546),
     c = r(872635),
     d = r(185923),
     f = r(692466);
-function _(e) {
+function p(e) {
     var n;
-    let { editorRef: r, options: _, channel: h } = e,
-        p = null === (n = r.current) || void 0 === n ? void 0 : n.getSlateEditor(),
+    let { editorRef: r, options: p, channel: h } = e,
+        _ = null === (n = r.current) || void 0 === n ? void 0 : n.getSlateEditor(),
         m = a.useCallback(
             (e, n) => {
                 let i = r.current;
@@ -35,7 +35,7 @@ function _(e) {
                 pickerIntention: d.Hz.COMMUNITY_CONTENT
             });
         };
-    return null == p
+    return null == _
         ? null
         : (0, i.jsxs)('div', {
               id: 'slate-toolbar',
@@ -45,19 +45,19 @@ function _(e) {
                       className: f.staticButtons,
                       children: (0, i.jsx)(c.I, {
                           editorRef: r,
-                          options: _,
+                          options: p,
                           iconClassName: f.staticIcon,
                           dividerClassName: f.staticDivider
                       })
                   }),
-                  (0, i.jsx)(s.Popout, {
+                  (0, i.jsx)(o.Popout, {
                       renderPopout: g,
                       position: 'bottom',
-                      animation: s.Popout.Animation.NONE,
+                      animation: o.Popout.Animation.NONE,
                       align: 'left',
                       children: (e, n) => {
                           let { isShown: r } = n;
-                          return (0, i.jsx)(o.Z, {
+                          return (0, i.jsx)(s.Z, {
                               ...e,
                               active: r,
                               className: f.emojiButton,

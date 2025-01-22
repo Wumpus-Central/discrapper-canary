@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(47120);
@@ -17,7 +17,7 @@ function a(e, n, r) {
         e
     );
 }
-class s {
+class o {
     initialize() {
         for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
         if (!this.isInitialized) {

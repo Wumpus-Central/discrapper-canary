@@ -1,20 +1,20 @@
 var i,
     a,
-    s = r(47120);
-var o = r(724458);
+    o = r(47120);
+var s = r(724458);
 var l = r(392711),
     u = r.n(l),
     c = r(442837),
     d = r(570140),
     f = r(592125),
-    _ = r(271383),
+    p = r(271383),
     h = r(430824),
-    p = r(594174),
+    _ = r(594174),
     m = r(979651),
     g = r(700785),
     E = r(146085),
     v = r(590415);
-function I(e, n, r) {
+function y(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -30,12 +30,12 @@ function I(e, n, r) {
 !(function (e) {
     (e.SPEAKER = 'speaker'), (e.MODERATOR = 'moderator');
 })(i || (i = {}));
-let T = {},
-    b = {
+let b = {},
+    I = {
         speaker: !1,
         moderator: !1
     };
-function y(e, n) {
+function T(e, n) {
     let r = m.Z.getVoiceStateForChannel(n, e);
     return (0, v.gf)(r) === v.xO.ON_STAGE;
 }
@@ -52,57 +52,57 @@ function A(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = f.Z.getChannel(n),
         a = null == i ? void 0 : i.getGuildId(),
-        s = h.Z.getGuild(a);
-    return null != s && null != i && i.isGuildStageVoice()
+        o = h.Z.getGuild(a);
+    return null != o && null != i && i.isGuildStageVoice()
         ? {
-              speaker: y(e, n),
-              moderator: r ? S(e, s, i) : null
+              speaker: T(e, n),
+              moderator: r ? S(e, o, i) : null
           }
-        : b;
-}
-function N(e, n) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    null == T[n] && (T[n] = {});
-    let i = A(e, n, r);
-    return (T[n][e] = i), i;
+        : I;
 }
 function C(e, n) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    null == b[n] && (b[n] = {});
+    let i = A(e, n, r);
+    return (b[n][e] = i), i;
+}
+function N(e, n) {
     var r;
     if (null == n) return !1;
     let i = f.Z.getChannel(n);
-    return !!(null != i && i.isGuildStageVoice()) && (null === (r = T[n]) || void 0 === r || delete r[e], !0);
+    return !!(null != i && i.isGuildStageVoice()) && (null === (r = b[n]) || void 0 === r || delete r[e], !0);
 }
 function R(e, n) {
-    for (let r in T) {
+    for (let r in b) {
         let i = f.Z.getBasicChannel(r);
-        if (null != i && i.guild_id === n) delete T[r][e];
+        if (null != i && i.guild_id === n) delete b[r][e];
     }
     return !0;
 }
 function O(e) {
     let n = Object.values(f.Z.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());
-    for (let e of n) delete T[e.id];
+    for (let e of n) delete b[e.id];
     return n.length > 0;
 }
 function D(e) {
     let { channels: n } = e;
-    for (let e of n) delete T[e.id];
+    for (let e of n) delete b[e.id];
 }
-function L(e) {
+function x(e) {
     let { guildId: n } = e;
     O(n);
 }
-function x(e) {
+function L(e) {
     let { guildId: n, user: r } = e;
     return null != r && null != n && R(r.id, n);
 }
 function w(e) {
     let { voiceStates: n } = e;
     return (
-        !u().isEmpty(T) &&
+        !u().isEmpty(b) &&
         n.reduce((e, n) => {
             let { userId: r, channelId: i } = n;
-            return C(r, i) || e;
+            return N(r, i) || e;
         }, !1)
     );
 }
@@ -110,18 +110,18 @@ function P(e) {
     return O(e.guildId);
 }
 function M() {
-    T = {};
+    b = {};
 }
 function k(e) {
     let { guild: n } = e;
-    for (let e in T) {
+    for (let e in b) {
         let r = f.Z.getBasicChannel(e);
-        (null == r || r.guild_id === n.id) && delete T[e];
+        (null == r || r.guild_id === n.id) && delete b[e];
     }
 }
 class U extends (a = c.ZP.Store) {
     initialize() {
-        this.waitFor(_.ZP, f.Z, h.Z, p.default, m.Z);
+        this.waitFor(p.ZP, f.Z, h.Z, _.default, m.Z);
     }
     isSpeaker(e, n) {
         return this.getPermissionsForUser(e, n).speaker;
@@ -137,19 +137,19 @@ class U extends (a = c.ZP.Store) {
     getPermissionsForUser(e, n) {
         var r;
         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (null == e || null == n) return b;
-        let a = null === (r = T[n]) || void 0 === r ? void 0 : r[e];
-        if (null != a) return i && null == a.moderator ? N(e, n, !0) : a;
-        return N(e, n, i);
+        if (null == e || null == n) return I;
+        let a = null === (r = b[n]) || void 0 === r ? void 0 : r[e];
+        if (null != a) return i && null == a.moderator ? C(e, n, !0) : a;
+        return C(e, n, i);
     }
 }
-I(U, 'displayName', 'StageChannelRoleStore'),
+y(U, 'displayName', 'StageChannelRoleStore'),
     (n.ZP = new U(d.Z, {
         CHANNEL_UPDATES: D,
         CONNECTION_OPEN: M,
-        GUILD_MEMBER_REMOVE: x,
-        GUILD_MEMBER_UPDATE: x,
-        GUILD_ROLE_UPDATE: L,
+        GUILD_MEMBER_REMOVE: L,
+        GUILD_MEMBER_UPDATE: L,
+        GUILD_ROLE_UPDATE: x,
         PASSIVE_UPDATE_V2: P,
         VOICE_STATE_UPDATES: w,
         GUILD_CREATE: k,

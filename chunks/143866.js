@@ -1,7 +1,7 @@
 var i = r(466293),
     a = i ? i.prototype : void 0,
-    s = a ? a.valueOf : void 0;
-function o(e) {
-    return s ? Object(s.call(e)) : {};
+    o = a ? a.valueOf : void 0;
+function s(e) {
+    return o ? Object(o.call(e)) : {};
 }
-e.exports = o;
+e.exports = s;

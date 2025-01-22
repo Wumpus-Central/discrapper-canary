@@ -12,7 +12,7 @@ r.d(n, {
         return f;
     },
     SD: function () {
-        return _;
+        return p;
     },
     ai: function () {
         return d;
@@ -29,12 +29,12 @@ r.d(n, {
 });
 var i,
     a,
-    s = r(726542),
-    o = r(358085),
+    o = r(726542),
+    s = r(358085),
     l = r(981631);
 let u = 'spotify',
     c = 'spotify:',
-    d = s.Z.get(l.ABu.SPOTIFY).name;
+    d = o.Z.get(l.ABu.SPOTIFY).name;
 function f(e) {
     return null != e && e.startsWith(c);
 }
@@ -44,9 +44,9 @@ function f(e) {
     !(function (e) {
         (e.USER_ACTIVITY_PLAY = 'user_activity_play'), (e.USER_ACTIVITY_SYNC = 'user_activity_sync'), (e.EMBED_SYNC = 'embed_sync');
     })(a || (a = {}));
-let _ = ['open.spotify.com', 'www.spotify.com'],
+let p = ['open.spotify.com', 'www.spotify.com'],
     h = 'https://api.spotify.com/v1',
-    p = (e) => '?utm_source=discord&utm_medium='.concat(e),
+    _ = (e) => '?utm_source=discord&utm_medium='.concat(e),
     m = Object.freeze({
         PROFILE: ''.concat(h, '/me'),
         NOTIFICATIONS_PLAYER: ''.concat(h, '/me/notifications/player'),
@@ -57,11 +57,11 @@ let _ = ['open.spotify.com', 'www.spotify.com'],
         PLAYER_REPEAT: ''.concat(h, '/me/player/repeat'),
         WEB_OPEN: function (e, n) {
             let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'desktop';
-            return 'https://open.spotify.com/'.concat(encodeURIComponent(e), '/').concat(encodeURIComponent(n)).concat(p(r));
+            return 'https://open.spotify.com/'.concat(encodeURIComponent(e), '/').concat(encodeURIComponent(n)).concat(_(r));
         },
         EMBED: function (e) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'desktop';
-            return 'https://open.spotify.com/embed'.concat(e).concat(p(n));
+            return 'https://open.spotify.com/embed'.concat(e).concat(_(n));
         },
         PLAYER_OPEN: function (e, n) {
             let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -70,11 +70,11 @@ let _ = ['open.spotify.com', 'www.spotify.com'],
                 .concat(u, ':')
                 .concat(encodeURIComponent(e), ':')
                 .concat(encodeURIComponent(n))
-                .concat(r ? p(i) : '');
+                .concat(r ? _(i) : '');
         },
-        PREMIUM_SITE: 'https://www.spotify.com/premium/'.concat(p('desktop')),
+        PREMIUM_SITE: 'https://www.spotify.com/premium/'.concat(_('desktop')),
         INSTALL_ATTRIBUTION: (e) => 'https://app.adjust.com/bdyga9?campaign='.concat(e),
-        APP_STORE: (0, o.isAndroid)() ? 'https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US' : 'https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8',
+        APP_STORE: (0, s.isAndroid)() ? 'https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US' : 'https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8',
         IOS_APP_STORE: 'https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8'
     });
 function g(e) {

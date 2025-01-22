@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(476400),
-    s = r.n(a),
-    o = r(723184),
+    o = r.n(a),
+    s = r(723184),
     l = r(829307),
     u = r(820611),
     c = r(877837),
@@ -10,11 +10,11 @@ var i = r(192379),
         var n = e.onChange,
             r = e.onSwatchHover,
             a = e.hex,
-            s = e.colors,
+            o = e.colors,
             f = e.width,
-            _ = e.triangle,
+            p = e.triangle,
             h = e.styles,
-            p = void 0 === h ? {} : h,
+            _ = void 0 === h ? {} : h,
             m = e.className,
             g = void 0 === m ? '' : m,
             E = 'transparent' === a,
@@ -28,7 +28,7 @@ var i = r(192379),
                         r
                     );
             },
-            I = (0, o.default)(
+            y = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -80,28 +80,28 @@ var i = r(192379),
                         },
                         'hide-triangle': { triangle: { display: 'none' } }
                     },
-                    p
+                    _
                 ),
-                { 'hide-triangle': 'hide' === _ }
+                { 'hide-triangle': 'hide' === p }
             );
         return i.createElement(
             'div',
             {
-                style: I.card,
+                style: y.card,
                 className: 'block-picker ' + g
             },
-            i.createElement('div', { style: I.triangle }),
-            i.createElement('div', { style: I.head }, E && i.createElement(c.QN, { borderRadius: '6px 6px 0 0' }), i.createElement('div', { style: I.label }, a)),
+            i.createElement('div', { style: y.triangle }),
+            i.createElement('div', { style: y.head }, E && i.createElement(c.QN, { borderRadius: '6px 6px 0 0' }), i.createElement('div', { style: y.label }, a)),
             i.createElement(
                 'div',
-                { style: I.body },
+                { style: y.body },
                 i.createElement(d.Z, {
-                    colors: s,
+                    colors: o,
                     onClick: v,
                     onSwatchHover: r
                 }),
                 i.createElement(c.Vm, {
-                    style: { input: I.input },
+                    style: { input: y.input },
                     value: a,
                     onChange: v
                 })
@@ -109,10 +109,10 @@ var i = r(192379),
         );
     };
 (f.propTypes = {
-    width: s().oneOfType([s().string, s().number]),
-    colors: s().arrayOf(s().string),
-    triangle: s().oneOf(['top', 'hide']),
-    styles: s().object
+    width: o().oneOfType([o().string, o().number]),
+    colors: o().arrayOf(o().string),
+    triangle: o().oneOf(['top', 'hide']),
+    styles: o().object
 }),
     (f.defaultProps = {
         width: 170,

@@ -6,13 +6,13 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(531826);
-let o = 'activity-age-gate';
+    o = r(531826);
+let s = 'activity-age-gate';
 function l(e) {
     let { application: n, channelId: l, onAgree: u, onDisagree: c } = e,
         d =
             null !=
-            (0, s.ZP)({
+            (0, o.ZP)({
                 application: n,
                 channelId: l
             })
@@ -31,7 +31,7 @@ function l(e) {
                     });
             },
             {
-                modalKey: o,
+                modalKey: s,
                 contextKey: d
             }
         ),

@@ -1,29 +1,29 @@
-var i = n(200651);
+var l = n(200651);
 n(192379);
-var s = n(442837),
+var i = n(442837),
     a = n(481060),
     r = n(289823),
-    l = n(594174);
-e.Z = function (t) {
-    let { recipients: e, size: n, status: o, isTyping: d, className: c, ...u } = t,
-        _ = a.AvatarSizeSpecs[n],
-        A = (0, s.Wu)(
-            [l.default],
+    s = n(594174);
+t.Z = function (e) {
+    let { recipients: t, size: n, status: o, isTyping: c, className: u, ...d } = e,
+        h = a.AvatarSizeSpecs[n],
+        f = (0, i.Wu)(
+            [s.default],
             () =>
-                e.slice(0, 2).map((t) => {
-                    let e = l.default.getUser(t);
-                    if (null != e) return e.getAvatarURL(void 0, _.size, !1);
+                t.slice(0, 2).map((e) => {
+                    let t = s.default.getUser(e);
+                    if (null != t) return t.getAvatarURL(void 0, h.size, !1);
                 }),
-            [e, _.size]
+            [t, h.size]
         );
-    return (0, i.jsx)(r.Z, {
-        'aria-label': u['aria-label'],
-        'aria-hidden': u['aria-hidden'],
-        backSrc: A[0],
-        frontSrc: A[1],
+    return (0, l.jsx)(r.Z, {
+        'aria-label': d['aria-label'],
+        'aria-hidden': d['aria-hidden'],
+        backSrc: f[0],
+        frontSrc: f[1],
         size: n,
         status: o,
-        isTyping: null != d && d,
-        className: c
+        isTyping: null != c && c,
+        className: u
     });
 };

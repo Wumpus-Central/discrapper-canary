@@ -10,14 +10,14 @@ e.exports = function e(n, r) {
         if (n.constructor === RegExp) return n.source === r.source && n.flags === r.flags;
         if (n.valueOf !== Object.prototype.valueOf) return n.valueOf() === r.valueOf();
         if (n.toString !== Object.prototype.toString) return n.toString() === r.toString();
-        if ((i = (s = Object.keys(n)).length) !== Object.keys(r).length) return !1;
-        for (a = i; 0 != a--; ) if (!Object.prototype.hasOwnProperty.call(r, s[a])) return !1;
+        if ((i = (o = Object.keys(n)).length) !== Object.keys(r).length) return !1;
+        for (a = i; 0 != a--; ) if (!Object.prototype.hasOwnProperty.call(r, o[a])) return !1;
         for (a = i; 0 != a--; ) {
             var i,
                 a,
-                s,
-                o = s[a];
-            if (!e(n[o], r[o])) return !1;
+                o,
+                s = o[a];
+            if (!e(n[s], r[s])) return !1;
         }
         return !0;
     }

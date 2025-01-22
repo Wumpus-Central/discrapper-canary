@@ -17,13 +17,13 @@ function a(e, n, r) {
         e
     );
 }
-let s = 500,
-    o = 150;
+let o = 500,
+    s = 150;
 class l {
     getCurrentValue() {
         if (null == this.animationDetails) return this.value;
         let e = performance.now() - this.animationDetails.animationStart,
-            n = this.value < this.animationDetails.lastValue ? o : s;
+            n = this.value < this.animationDetails.lastValue ? s : o;
         return e > n ? ((this.animationDetails = null), this.value) : this.value < this.animationDetails.lastValue ? i.easeOutQuint(e, this.animationDetails.lastValue, this.value, n) : i.easeOutBack(e, this.animationDetails.lastValue, this.value, n, 4);
     }
     animateTo(e) {

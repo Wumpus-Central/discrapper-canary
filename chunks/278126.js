@@ -1,13 +1,13 @@
 r.d(n, {
     _: function () {
-        return _;
+        return p;
     }
 });
 var i,
     a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(74927);
 function c(e, n, r) {
     return (
@@ -28,12 +28,12 @@ let d = Object.freeze({
         LARGE: 4
     }),
     f = 20;
-class _ extends (i = s.Component) {
+class p extends (i = o.Component) {
     renderCircle() {
         let { strokeSize: e, percent: n, colorOverride: r, background: i } = this.props,
-            s = Math.min(Math.max(n, 0), 100),
-            o = (f - e) / 2,
-            c = o * Math.PI * 2;
+            o = Math.min(Math.max(n, 0), 100),
+            s = (f - e) / 2,
+            c = s * Math.PI * 2;
         return (0, a.jsxs)('svg', {
             viewBox: '0 0 '.concat(f, ' ').concat(f),
             className: u.circle,
@@ -54,14 +54,14 @@ class _ extends (i = s.Component) {
                     className: u.circleProgress,
                     cx: f / 2,
                     cy: f / 2,
-                    r: o,
+                    r: s,
                     strokeWidth: ''.concat(e, 'px'),
                     strokeLinecap: 'round',
                     transform: 'rotate(-90 '.concat(f / 2, ' ').concat(f / 2, ')'),
                     stroke: null != r ? r : 'currentColor',
                     style: {
                         strokeDasharray: c,
-                        strokeDashoffset: (1 - s / 100) * c
+                        strokeDashoffset: (1 - o / 100) * c
                     }
                 })
             ]
@@ -83,4 +83,4 @@ class _ extends (i = s.Component) {
         });
     }
 }
-c(_, 'StrokeSizes', d), c(_, 'defaultProps', { strokeSize: d.MEDIUM });
+c(p, 'StrokeSizes', d), c(p, 'defaultProps', { strokeSize: d.MEDIUM });

@@ -1,83 +1,83 @@
-t.d(n, {
+r.d(n, {
     Z: function () {
-        return y;
+        return S;
     }
-}),
-    t(627341);
-var i = t(200651);
-t(192379);
-var l = t(278074),
-    r = t(979554),
-    s = t(481060),
-    a = t(1585),
-    c = t(125988),
-    o = t(583434),
-    u = t(479446),
-    d = t(981632),
-    m = t(731896),
-    p = t(680295),
-    x = t(998502),
-    h = t(987209),
-    f = t(388032),
-    v = t(975765),
-    g = t(241822);
-let S = x.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
-function E(e) {
+});
+var i = r(627341);
+var a = r(200651);
+r(192379);
+var o = r(278074),
+    s = r(979554),
+    l = r(481060),
+    u = r(1585),
+    c = r(125988),
+    d = r(583434),
+    f = r(479446),
+    p = r(981632),
+    h = r(731896),
+    _ = r(680295),
+    m = r(998502),
+    g = r(987209),
+    E = r(388032),
+    v = r(975765),
+    y = r(241822);
+let b = m.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+function I(e) {
     let { avatarDecoration: n } = e,
         {
-            avatarDecorationSrc: t,
-            eventHandlers: l,
-            avatarPlaceholderSrc: r
+            avatarDecorationSrc: r,
+            eventHandlers: i,
+            avatarPlaceholderSrc: o
         } = (0, c.Z)({
             avatarDecorationOverride: n,
-            size: (0, a.y9)(s.AvatarSizes.SIZE_152)
+            size: (0, u.y9)(l.AvatarSizes.SIZE_152)
         });
-    return (0, i.jsx)('div', {
+    return (0, a.jsx)('div', {
         className: v.giftMainAnimationWrapper,
-        children: (0, i.jsx)(S, {
-            ...l,
-            avatarDecoration: t,
-            src: r,
+        children: (0, a.jsx)(b, {
+            ...i,
+            avatarDecoration: r,
+            src: o,
             className: v.avatar,
-            size: s.AvatarSizes.SIZE_152,
-            'aria-label': f.intl.string(f.t.lqaIxM)
+            size: l.AvatarSizes.SIZE_152,
+            'aria-label': E.intl.string(E.t.lqaIxM)
         })
     });
 }
-function j(e) {
+function T(e) {
     var n;
-    let { id: t } = e,
-        l = null === (n = (0, m.V)(t)) || void 0 === n ? void 0 : n.config;
-    return (0, i.jsxs)('div', {
+    let { id: r } = e,
+        i = null === (n = (0, h.V)(r)) || void 0 === n ? void 0 : n.config;
+    return (0, a.jsxs)('div', {
         className: v.profileEffectContainer,
         children: [
-            (0, i.jsx)('img', {
-                src: g,
-                alt: null == l ? void 0 : l.accessibilityLabel,
+            (0, a.jsx)('img', {
+                src: y,
+                alt: null == i ? void 0 : i.accessibilityLabel,
                 className: v.profileEffectBackground
             }),
-            (0, i.jsx)(p.Z, { profileEffectId: t })
+            (0, a.jsx)(_.Z, { profileEffectId: r })
         ]
     });
 }
-function y(e) {
+function S(e) {
     let { sku: n } = e,
-        { selectedGiftStyle: t } = (0, h.wD)(),
-        { product: s } = (0, o.T)(null == n ? void 0 : n.id),
-        a = null == s ? void 0 : s.items[0],
-        c = (0, l.EQ)(a)
-            .with({ type: r.Z.AVATAR_DECORATION }, (e) => (0, i.jsx)(E, { avatarDecoration: e }))
-            .with({ type: r.Z.PROFILE_EFFECT }, (e) => (0, i.jsx)(j, { id: e.id }))
+        { selectedGiftStyle: r } = (0, g.wD)(),
+        { product: i } = (0, d.T)(null == n ? void 0 : n.id),
+        l = null == i ? void 0 : i.items[0],
+        u = (0, o.EQ)(l)
+            .with({ type: s.Z.AVATAR_DECORATION }, (e) => (0, a.jsx)(I, { avatarDecoration: e }))
+            .with({ type: s.Z.PROFILE_EFFECT }, (e) => (0, a.jsx)(T, { id: e.id }))
             .otherwise(() => null);
-    return null != t && null == c
-        ? (0, i.jsx)('div', {
+    return null != r && null == u
+        ? (0, a.jsx)('div', {
               className: v.giftMainAnimationWrapper,
-              children: (0, i.jsx)(d.Z, {
-                  defaultAnimationState: u.SR.LOOP,
-                  giftStyle: t,
+              children: (0, a.jsx)(p.Z, {
+                  defaultAnimationState: f.SR.LOOP,
+                  giftStyle: r,
                   shouldAnimate: !0,
                   className: v.__invalid_giftMainAnimation
               })
           })
-        : c;
+        : u;
 }

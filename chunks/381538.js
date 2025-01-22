@@ -5,7 +5,7 @@ function a(e) {
     if (null == e) throw TypeError('Object.assign cannot be called with null or undefined');
     return Object(e);
 }
-function s() {
+function o() {
     try {
         if (!Object.assign) return !1;
         var e = new String('abc');
@@ -28,14 +28,14 @@ function s() {
         return !1;
     }
 }
-e.exports = s()
+e.exports = o()
     ? Object.assign
-    : function (e, s) {
-          for (var o, l, u = a(e), c = 1; c < arguments.length; c++) {
-              for (var d in ((o = Object(arguments[c])), o)) r.call(o, d) && (u[d] = o[d]);
+    : function (e, o) {
+          for (var s, l, u = a(e), c = 1; c < arguments.length; c++) {
+              for (var d in ((s = Object(arguments[c])), s)) r.call(s, d) && (u[d] = s[d]);
               if (n) {
-                  l = n(o);
-                  for (var f = 0; f < l.length; f++) i.call(o, l[f]) && (u[l[f]] = o[l[f]]);
+                  l = n(s);
+                  for (var f = 0; f < l.length; f++) i.call(s, l[f]) && (u[l[f]] = s[l[f]]);
               }
           }
           return u;

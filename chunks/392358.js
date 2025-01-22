@@ -5,20 +5,20 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(192379),
-    s = r(40851),
-    o = r(981631);
+    o = r(40851),
+    s = r(981631);
 let l = ['Shift', 'Alt', 'Meta', 'Control'];
 function u(e, n) {
     let [r, i] = a.useState(0),
-        u = (0, s.Aq)();
+        u = (0, o.Aq)();
     a.useEffect(() => {
         let e = () => i((e) => e + 1),
             n = () => i((e) => Math.max(0, e - 1));
         return (
-            u.subscribe(o.CkL.POPOUT_SHOW, e),
-            u.subscribe(o.CkL.POPOUT_HIDE, n),
+            u.subscribe(s.CkL.POPOUT_SHOW, e),
+            u.subscribe(s.CkL.POPOUT_HIDE, n),
             () => {
-                u.unsubscribe(o.CkL.POPOUT_SHOW, e), u.unsubscribe(o.CkL.POPOUT_HIDE, n);
+                u.unsubscribe(s.CkL.POPOUT_SHOW, e), u.unsubscribe(s.CkL.POPOUT_HIDE, n);
             }
         );
     }, [u]);

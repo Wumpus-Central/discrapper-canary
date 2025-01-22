@@ -7,11 +7,11 @@ r.d(n, {
         return a;
     },
     si: function () {
-        return s;
+        return o;
     }
 });
 let a = 2 * r(70956).Z.Millis.DAY;
-function s(e) {
+function o(e) {
     let { joinedAt: n, userId: r } = e;
     return null == n
         ? null

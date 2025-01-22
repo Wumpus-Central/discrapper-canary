@@ -1,3 +1,3 @@
-n(826959);
-var e = n(387992);
-t.exports = e('Array', 'slice');
+r(826959);
+var i = r(387992);
+e.exports = i('Array', 'slice');

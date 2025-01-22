@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(846519),
-    o = r(570140),
+    o = r(846519),
+    s = r(570140),
     l = r(981631);
 function u(e, n, r) {
     return (
@@ -19,7 +19,7 @@ function u(e, n, r) {
 let c = {},
     d = {},
     f = 120000;
-function _(e) {
+function p(e) {
     let { applicationId: n, activityType: r } = e,
         i = c[n];
     if (null == i || i[r] !== l.OcF.FAILED) return !1;
@@ -31,9 +31,9 @@ function h(e, n, r) {
         u = null !== (i = c[a]) && void 0 !== i ? i : {};
     if (((u[n] = e), (c[a] = u), !__OVERLAY__ && e === l.OcF.FAILED)) {
         null != d[a] && d[a].stop();
-        let e = new s.V7();
+        let e = new o.V7();
         e.start(f, () =>
-            o.Z.dispatch({
+            s.Z.dispatch({
                 type: 'ACTIVITY_LAUNCH_FAIL',
                 applicationId: a,
                 activityType: n
@@ -42,7 +42,7 @@ function h(e, n, r) {
             (d[a] = e);
     }
 }
-function p(e) {
+function _(e) {
     let { activityLauncherStates: n } = e;
     c = { ...n };
 }
@@ -59,11 +59,11 @@ class g extends (i = a.ZP.Store) {
     }
 }
 u(g, 'displayName', 'ActivityLauncherStore'),
-    (n.Z = new g(o.Z, {
-        OVERLAY_INITIALIZE: p,
+    (n.Z = new g(s.Z, {
+        OVERLAY_INITIALIZE: _,
         ACTIVITY_JOIN_LOADING: (e) => h(l.OcF.LOADING, l.mFx.JOIN, e),
         ACTIVITY_JOIN_FAILED: (e) => h(l.OcF.FAILED, l.mFx.JOIN, e),
         ACTIVITY_JOIN: m,
         EMBEDDED_ACTIVITY_CLOSE: m,
-        ACTIVITY_LAUNCH_FAIL: _
+        ACTIVITY_LAUNCH_FAIL: p
     }));

@@ -7,8 +7,8 @@ function n(e) {
         if ((!(r >= '0') || !(r <= '9')) && '_' !== r) n.ignoreMatch();
     }
     let a = /[+-]?((\.\d+)|(\d+)(\.\d*)?)/,
-        s = /[GM]\s*\d+(\.\d+)?/,
-        o = /T\s*\d+/,
+        o = /[GM]\s*\d+(\.\d+)?/,
+        s = /T\s*\d+/,
         l = /O\s*\d+/,
         u = /O<.+>/,
         c = /[ABCUVWXYZ]\s*/,
@@ -32,14 +32,14 @@ function n(e) {
             {
                 scope: 'title.function',
                 variants: [
-                    { match: n.concat(r, s) },
-                    {
-                        begin: s,
-                        'on:begin': i
-                    },
                     { match: n.concat(r, o) },
                     {
                         begin: o,
+                        'on:begin': i
+                    },
+                    { match: n.concat(r, s) },
+                    {
+                        begin: s,
                         'on:begin': i
                     }
                 ]

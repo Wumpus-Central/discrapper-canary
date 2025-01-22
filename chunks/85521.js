@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(789020);
 var a = r(913527),
-    s = r.n(a),
-    o = r(81825),
+    o = r.n(a),
+    s = r(81825),
     l = r(812206),
     u = r(630388),
     c = r(959546),
@@ -24,8 +24,8 @@ function f(e, n, r) {
         e
     );
 }
-let _ = 'master';
-class h extends o.Z {
+let p = 'master';
+class h extends s.Z {
     static createFromServer(e) {
         return new h({
             id: e.application.id,
@@ -38,7 +38,7 @@ class h extends o.Z {
                 id: e.sku.id,
                 type: e.sku.type,
                 premium: e.sku.premium,
-                preorderReleaseAt: null != e.sku.preorder_release_at ? s()(e.sku.preorder_release_at) : null,
+                preorderReleaseAt: null != e.sku.preorder_release_at ? o()(e.sku.preorder_release_at) : null,
                 preorderApproximateReleaseDate: null != e.sku.preorder_approximate_release_date ? e.sku.preorder_approximate_release_date : null
             }
         });
@@ -87,7 +87,7 @@ class h extends o.Z {
         return d.GQo.DISCORD;
     }
     getBranchName() {
-        return null != this.branch ? this.branch.name : _;
+        return null != this.branch ? this.branch.name : p;
     }
     getBranchedName(e) {
         return this.isMasterBranch() || null == this.branch ? e.name : ''.concat(e.name, ' (').concat(this.branch.name, ')');

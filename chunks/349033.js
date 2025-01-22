@@ -1,6 +1,6 @@
 r.d(n, {
     WU: function () {
-        return _;
+        return p;
     },
     Xe: function () {
         return u;
@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(789020);
-var s = r(653041);
-function o(e, n, r) {
+var o = r(653041);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -28,13 +28,13 @@ function c(e, n, r) {
     if (null == n) return null;
     for (let i = 0; i < n.length; i++) {
         let a;
-        let s = n[i],
-            o = d(e.match(s.regex), r);
-        if (null != o) {
-            let { cache: e } = s;
-            if ((null != e && null != (a = e.get(o[0])) && ((a = new _(a)).start = o.index), null == a)) {
-                if (((a = new _(o, s.type)), null != s.validator && !s.validator(a))) continue;
-                null != e && !(null == e ? void 0 : e.has(o[0])) && e.set(o[0], a);
+        let o = n[i],
+            s = d(e.match(o.regex), r);
+        if (null != s) {
+            let { cache: e } = o;
+            if ((null != e && null != (a = e.get(s[0])) && ((a = new p(a)).start = s.index), null == a)) {
+                if (((a = new p(s, o.type)), null != o.validator && !o.validator(a))) continue;
+                null != e && !(null == e ? void 0 : e.has(s[0])) && e.set(s[0], a);
             }
             return a;
         }
@@ -53,10 +53,10 @@ class f {
     addRule(e) {
         let n;
         let { type: r, follows: i, validator: a } = e,
-            { regex: s } = e;
-        if (('^' !== s.source.charAt(0) && (s = new RegExp('^'.concat(s.source), s.flags)), null != a && (n = new Map()), null == i)) {
+            { regex: o } = e;
+        if (('^' !== o.source.charAt(0) && (o = new RegExp('^'.concat(o.source), o.flags)), null != a && (n = new Map()), null == i)) {
             this._rules.push({
-                regex: s,
+                regex: o,
                 type: r,
                 validator: a,
                 cache: n
@@ -66,7 +66,7 @@ class f {
         i.forEach((e) => {
             null == this._followers[e] && (this._followers[e] = []),
                 this._followers[e].push({
-                    regex: s,
+                    regex: o,
                     type: r,
                     validator: a,
                     cache: n
@@ -78,12 +78,12 @@ class f {
             r = e,
             i = '',
             a = 0,
-            s = [];
+            o = [];
         for (; r.length > 0; ) {
             let e = this._getMatch(r, n, a + i.length);
-            null != e ? (null != i && '' !== i && s.push(new _(d(i.match(l), a), this._nonTokenType)), (n = e), s.push(e), (a += n.length + i.length), (r = r.substring(n.length)), (i = '')) : ((i += r[0]), (r = r.substring(1)));
+            null != e ? (null != i && '' !== i && o.push(new p(d(i.match(l), a), this._nonTokenType)), (n = e), o.push(e), (a += n.length + i.length), (r = r.substring(n.length)), (i = '')) : ((i += r[0]), (r = r.substring(1)));
         }
-        return null != i && '' !== i && s.push(new _(d(i.match(l), a), this._nonTokenType)), s;
+        return null != i && '' !== i && o.push(new p(d(i.match(l), a), this._nonTokenType)), o;
     }
     clearCache() {
         for (let e in (this._rules.forEach((e) => {
@@ -102,11 +102,11 @@ class f {
         return (null == n ? void 0 : n.end) === r && (i = c(e, this._followers[String(a)], r)), null == i && (i = c(e, this._rules, r)), i;
     }
     constructor(e = [], n) {
-        o(this, '_rules', []), o(this, '_followers', {}), o(this, '_nonTokenType', u), this.reset(n), e.forEach((e) => this.addRule(e));
+        s(this, '_rules', []), s(this, '_followers', {}), s(this, '_nonTokenType', u), this.reset(n), e.forEach((e) => this.addRule(e));
     }
 }
-o(f, 'NON_TOKEN_TYPE', void 0), o(f, 'Token', void 0);
-class _ {
+s(f, 'NON_TOKEN_TYPE', void 0), s(f, 'Token', void 0);
+class p {
     get end() {
         return this.start + this.length;
     }
@@ -130,11 +130,11 @@ class _ {
         if (null != this._data) return this._data.get(e);
     }
     constructor(e, n) {
-        if ((o(this, 'match', void 0), o(this, 'start', void 0), o(this, 'type', void 0), o(this, '_data', void 0), e instanceof _)) (this.match = [...e.match]), (this.start = e.start), (this.type = e.type), null != e._data && (this._data = e._data);
+        if ((s(this, 'match', void 0), s(this, 'start', void 0), s(this, 'type', void 0), s(this, '_data', void 0), e instanceof p)) (this.match = [...e.match]), (this.start = e.start), (this.type = e.type), null != e._data && (this._data = e._data);
         else if (null != e) {
             var r;
             (this.match = [...e]), (this.start = 'string' == typeof e ? 0 : null !== (r = e.index) && void 0 !== r ? r : 0), (this.type = n);
         } else (this.match = []), (this.start = 0), (this.type = n);
     }
 }
-(f.NON_TOKEN_TYPE = u), (f.Token = _), (n.ZP = f);
+(f.NON_TOKEN_TYPE = u), (f.Token = p), (n.ZP = f);

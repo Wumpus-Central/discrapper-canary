@@ -1,5 +1,5 @@
-n.r(t),
-    n.d(t, {
+n.r(e),
+    n.d(e, {
         default: function () {
             return f;
         }
@@ -8,22 +8,22 @@ var c = n(200651),
     i = n(192379),
     l = n(481060),
     a = n(561716),
-    r = n(721383),
-    o = n(313201),
+    o = n(721383),
+    r = n(313201),
     s = n(63063),
     u = n(857595),
     d = n(981631),
     _ = n(388032),
     h = n(549164);
-function f(e) {
-    let { transitionState: t, onClose: n } = e,
-        f = (0, o.Dt)();
+function f(t) {
+    let { transitionState: e, onClose: n } = t,
+        f = (0, r.Dt)();
     return (
         i.useEffect(() => {
             u.r_();
         }, []),
         (0, c.jsxs)(l.ModalRoot, {
-            transitionState: t,
+            transitionState: e,
             role: 'alertdialog',
             'aria-labelledby': f,
             children: [
@@ -35,14 +35,14 @@ function f(e) {
                             id: f,
                             className: h.header,
                             children: _.intl.format(_.t.V4fxrq, {
-                                tab: (e, t) =>
+                                tab: (t, e) =>
                                     (0, c.jsx)(
                                         l.KeyCombo,
                                         {
                                             shortcut: 'tab',
                                             className: h.headerShortcut
                                         },
-                                        t
+                                        e
                                     )
                             })
                         }),
@@ -55,7 +55,7 @@ function f(e) {
                             children: [
                                 (0, c.jsxs)('li', {
                                     children: [
-                                        (0, c.jsx)(l.KeyCombo, { shortcut: r._.binds['0'] }),
+                                        (0, c.jsx)(l.KeyCombo, { shortcut: o._.binds['0'] }),
                                         (0, c.jsx)(l.Text, {
                                             variant: 'text-md/normal',
                                             children: _.intl.string(_.t['43Qn2t'])

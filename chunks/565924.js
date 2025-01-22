@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(592125),
     a = r(981631);
-function s(e) {
+function o(e) {
     if (null == e.parent_id) return e.type === a.d4z.GUILD_CATEGORY ? (e.position + 1) * 1000 : e.position;
     {
         var n, r;
@@ -13,13 +13,13 @@ function s(e) {
         return e.isGuildVocal() ? a + e.position + 500 : a + e.position;
     }
 }
-function o(e, n) {
-    var r, i, a, o, l, u;
+function s(e, n) {
+    var r, i, a, s, l, u;
     if (e.score !== n.score) return n.score - e.score;
-    let c = s(e.record),
-        d = s(n.record);
+    let c = o(e.record),
+        d = o(n.record);
     if (c !== d) return c - d;
-    let f = null !== (o = null !== (a = e.sortable) && void 0 !== a ? a : null === (r = e.comparator) || void 0 === r ? void 0 : r.toLocaleLowerCase()) && void 0 !== o ? o : '',
-        _ = null !== (u = null !== (l = e.sortable) && void 0 !== l ? l : null === (i = n.comparator) || void 0 === i ? void 0 : i.toLocaleLowerCase()) && void 0 !== u ? u : '';
-    return f < _ ? -1 : f > _ ? 1 : 0;
+    let f = null !== (s = null !== (a = e.sortable) && void 0 !== a ? a : null === (r = e.comparator) || void 0 === r ? void 0 : r.toLocaleLowerCase()) && void 0 !== s ? s : '',
+        p = null !== (u = null !== (l = e.sortable) && void 0 !== l ? l : null === (i = n.comparator) || void 0 === i ? void 0 : i.toLocaleLowerCase()) && void 0 !== u ? u : '';
+    return f < p ? -1 : f > p ? 1 : 0;
 }

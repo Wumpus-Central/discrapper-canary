@@ -1,30 +1,30 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(812206),
     a = r(981631);
-function s(e) {
+function o(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        s = i.Z.getApplication(e.applicationId),
-        o = e.getPrice(),
+        o = i.Z.getApplication(e.applicationId),
+        s = e.getPrice(),
         l = e.getPrice(null, !1),
         u = {
             sku_id: e.id,
             sku_type: e.type,
             application_id: e.applicationId,
-            application_name: null != s ? s.name : null,
+            application_name: null != o ? o.name : null,
             store_title: e.name,
             distribution_type: e.premium ? 'premium' : 'distribution'
         },
         c = null;
     r &&
         (c = {
-            price: null != o ? o.amount : null,
+            price: null != s ? s.amount : null,
             regular_price: null != l ? l.amount : null,
-            currency: null != o ? o.currency : null
+            currency: null != s ? s.currency : null
         });
     let d = null;
     return (

@@ -11,11 +11,11 @@ function n(e) {
             end: '\\}',
             keywords: i
         },
-        s = {
+        o = {
             begin: /->\{/,
             end: /\}/
         },
-        o = {
+        s = {
             scope: 'attr',
             match: /\s+:\s*\w+(\s*\(.*?\))?/
         },
@@ -29,7 +29,7 @@ function n(e) {
                     relevance: 0
                 }
             ],
-            contains: [o]
+            contains: [s]
         },
         u = {
             className: 'number',
@@ -39,15 +39,15 @@ function n(e) {
         c = [e.BACKSLASH_ESCAPE, a, l],
         d = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
         f = (e, i, a = '\\1') => {
-            let s = '\\1' === a ? a : n.concat(a, i);
-            return n.concat(n.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, s, /(?:\\.|[^\\\/])*?/, a, r);
+            let o = '\\1' === a ? a : n.concat(a, i);
+            return n.concat(n.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, o, /(?:\\.|[^\\\/])*?/, a, r);
         },
-        _ = (e, i, a) => n.concat(n.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, a, r),
+        p = (e, i, a) => n.concat(n.concat('(?:', e, ')'), i, /(?:\\.|[^\\\/])*?/, a, r),
         h = [
             l,
             e.HASH_COMMENT_MODE,
             e.COMMENT(/^=\w/, /=cut/, { endsWithParent: !0 }),
-            s,
+            o,
             {
                 className: 'string',
                 contains: c,
@@ -125,11 +125,11 @@ function n(e) {
                                 begin: /(m|qr)\/\//,
                                 relevance: 0
                             },
-                            { begin: _('(?:m|qr)?', /\//, /\//) },
-                            { begin: _('m|qr', n.either(...d, { capture: !0 }), /\1/) },
-                            { begin: _('m|qr', /\(/, /\)/) },
-                            { begin: _('m|qr', /\[/, /\]/) },
-                            { begin: _('m|qr', /\{/, /\}/) }
+                            { begin: p('(?:m|qr)?', /\//, /\//) },
+                            { begin: p('m|qr', n.either(...d, { capture: !0 }), /\1/) },
+                            { begin: p('m|qr', /\(/, /\)/) },
+                            { begin: p('m|qr', /\[/, /\]/) },
+                            { begin: p('m|qr', /\{/, /\}/) }
                         ]
                     }
                 ]
@@ -140,7 +140,7 @@ function n(e) {
                 end: '(\\s*\\(.*?\\))?[;{]',
                 excludeEnd: !0,
                 relevance: 5,
-                contains: [e.TITLE_MODE, o]
+                contains: [e.TITLE_MODE, s]
             },
             {
                 className: 'class',
@@ -148,7 +148,7 @@ function n(e) {
                 end: '[;{]',
                 excludeEnd: !0,
                 relevance: 5,
-                contains: [e.TITLE_MODE, o, u]
+                contains: [e.TITLE_MODE, s, u]
             },
             {
                 begin: '-\\w\\b',
@@ -169,7 +169,7 @@ function n(e) {
         ];
     return (
         (a.contains = h),
-        (s.contains = h),
+        (o.contains = h),
         {
             name: 'Perl',
             aliases: ['pl', 'pm'],

@@ -1,6 +1,6 @@
 r.d(n, {
     V: function () {
-        return s;
+        return o;
     }
 });
 var i = r(239189);
@@ -8,18 +8,18 @@ r(444675);
 var a = function (e) {
         return (0, i.requestAnimationFrame)(e);
     },
-    s = (function () {
+    o = (function () {
         return function e(e) {
             void 0 === e && (e = a);
             var n = !0,
                 r = !1,
-                s = 0,
+                o = 0,
                 l = [],
                 u = 0,
                 c = new Set(),
                 d = new Set(),
                 f = new Set(),
-                _ = function (e) {
+                p = function (e) {
                     var n = l.indexOf(e);
                     n < 0 &&
                         ((n = l.findIndex(function (n) {
@@ -35,8 +35,8 @@ var a = function (e) {
                             console.error(e);
                         }
                 },
-                p = function () {
-                    n && ((n = !1), 0 == s && ((s = i.now()), e(h)));
+                _ = function () {
+                    n && ((n = !1), 0 == o && ((o = i.now()), e(h)));
                 },
                 m = [];
             this.setTimeout = function (e, n) {
@@ -47,7 +47,7 @@ var a = function (e) {
                         });
                         e >= 0 && m.splice(e, 1);
                     },
-                    s = o(m, function (e) {
+                    o = s(m, function (e) {
                         return e.time > r;
                     }),
                     l = {
@@ -55,25 +55,25 @@ var a = function (e) {
                         handler: e,
                         cancel: a
                     };
-                return m.splice(s, 0, l), p(), l;
+                return m.splice(o, 0, l), _(), l;
             };
             var g = (this.advance = function () {
                 var e = i.now();
                 if (
-                    (c.size && (c.forEach(_), c.clear()),
+                    (c.size && (c.forEach(p), c.clear()),
                     m.length &&
                         i.batchedUpdates(function () {
-                            var n = o(m, function (n) {
+                            var n = s(m, function (n) {
                                 return n.time > e;
                             });
                             m.splice(0, n).forEach(function (e) {
                                 return e.handler();
                             });
                         }),
-                    e > s)
+                    e > o)
                 ) {
-                    var n = Math.min(64, e - s);
-                    (s = e),
+                    var n = Math.min(64, e - o);
+                    (o = e),
                         i.batchedUpdates(function () {
                             l.length &&
                                 (i.willAdvance(l),
@@ -97,17 +97,17 @@ var a = function (e) {
                 }
             });
             (this.start = function (e) {
-                u > e.priority ? c.add(e) : (_(e), p());
+                u > e.priority ? c.add(e) : (p(e), _());
             }),
                 (this.onFrame = function (e) {
-                    d.add(e), p();
+                    d.add(e), _();
                 }),
                 (this.onWrite = function (e) {
-                    r ? e(s) : f.add(e);
+                    r ? e(o) : f.add(e);
                 });
         };
     })();
-function o(e, n) {
+function s(e, n) {
     var r = e.findIndex(n);
     return r < 0 ? e.length : r;
 }

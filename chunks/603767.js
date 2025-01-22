@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(47120);
 var a = r(642128);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,28 +18,28 @@ function s(e, n, r) {
         e
     );
 }
-class o extends a.FrameLoop {
+class s extends a.FrameLoop {
     setRAF(e, n) {
         0 !== this.id && (this._cancelAnimationFrame(this.id), (this.id = 0)), (this._requestAnimationFrame = e), (this._cancelAnimationFrame = n), this.loop();
     }
     constructor(...e) {
         super(...e),
-            s(this, '_requestAnimationFrame', (e) => requestAnimationFrame(e)),
-            s(this, '_cancelAnimationFrame', (e) => cancelAnimationFrame(e)),
-            s(this, 'writing', !1),
-            s(this, 'id', 0),
-            s(this, 'lastTime', 0),
-            s(this, 'animations', []),
-            s(this, 'priority', 0),
-            s(this, 'startQueue', new Set()),
-            s(this, 'frameQueue', new Set()),
-            s(this, 'writeQueue', new Set()),
-            s(this, 'timeoutQueue', []),
-            s(this, 'addAnimation', (e) => {
+            o(this, '_requestAnimationFrame', (e) => requestAnimationFrame(e)),
+            o(this, '_cancelAnimationFrame', (e) => cancelAnimationFrame(e)),
+            o(this, 'writing', !1),
+            o(this, 'id', 0),
+            o(this, 'lastTime', 0),
+            o(this, 'animations', []),
+            o(this, 'priority', 0),
+            o(this, 'startQueue', new Set()),
+            o(this, 'frameQueue', new Set()),
+            o(this, 'writeQueue', new Set()),
+            o(this, 'timeoutQueue', []),
+            o(this, 'addAnimation', (e) => {
                 let n = this.animations.indexOf(e);
                 n < 0 && ((n = this.animations.findIndex((n) => n.priority > e.priority)), this.animations.splice(0 != ~n ? n : this.animations.length, 0, e));
             }),
-            s(this, 'loop', () => {
+            o(this, 'loop', () => {
                 if (0 !== this.lastTime)
                     try {
                         this.advance();
@@ -49,10 +49,10 @@ class o extends a.FrameLoop {
                         this.animations.length > 0 || this.startQueue.size > 0 || this.frameQueue.size > 0 || this.writeQueue.size > 0 || this.timeoutQueue.length > 0 ? (this.id = this._requestAnimationFrame(this.loop)) : ((this.lastTime = 0), (this.id = 0));
                     }
             }),
-            s(this, 'startLoop', () => {
+            o(this, 'startLoop', () => {
                 if (!(this.lastTime > 0)) (this.lastTime = a.Globals.now()), (this.id = this._requestAnimationFrame(this.loop));
             }),
-            s(this, 'advance', () => {
+            o(this, 'advance', () => {
                 let e = a.Globals.now();
                 if (
                     (this.startQueue.size > 0 && (this.startQueue.forEach(this.addAnimation), this.startQueue.clear()),
@@ -70,27 +70,27 @@ class o extends a.FrameLoop {
                         });
                 }
             }),
-            s(this, 'start', (e) => {
+            o(this, 'start', (e) => {
                 this.priority > e.priority ? this.startQueue.add(e) : (this.addAnimation(e), this.startLoop());
             }),
-            s(this, 'setTimeout', (e, n) => {
+            o(this, 'setTimeout', (e, n) => {
                 let r = a.Globals.now() + n,
                     i = () => {
                         let e = this.timeoutQueue.findIndex((e) => e.cancel === i);
                         e >= 0 && this.timeoutQueue.splice(e, 1);
                     },
-                    s = l(this.timeoutQueue, (e) => e.time > r),
-                    o = {
+                    o = l(this.timeoutQueue, (e) => e.time > r),
+                    s = {
                         time: r,
                         handler: e,
                         cancel: i
                     };
-                return this.timeoutQueue.splice(s, 0, o), this.startLoop(), o;
+                return this.timeoutQueue.splice(o, 0, s), this.startLoop(), s;
             }),
-            s(this, 'onFrame', (e) => {
+            o(this, 'onFrame', (e) => {
                 this.frameQueue.add(e), this.startLoop();
             }),
-            s(this, 'onWrite', (e) => {
+            o(this, 'onWrite', (e) => {
                 this.writing ? e(this.lastTime) : this.writeQueue.add(e);
             });
     }

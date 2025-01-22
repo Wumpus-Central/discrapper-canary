@@ -33,8 +33,8 @@ function E(e) {
             channelId: E,
             guildId: b
         } = e,
-        [Z, S] = i.useState(!1),
-        { requestId: N, entries: T, impressionCappedEntryIds: j, hasLeaderboardEntry: A } = (0, f.Z)(E),
+        [Z, N] = i.useState(!1),
+        { requestId: S, entries: T, impressionCappedEntryIds: j, hasLeaderboardEntry: A } = (0, f.Z)(E),
         y = (0, l.e7)([h.Z], () => h.Z.hidden),
         P = (0, l.e7)([c.Z], () => c.Z.isFocused()),
         M = (0, l.e7)([s.Z], () => s.Z.getChannel(E)),
@@ -43,7 +43,7 @@ function E(e) {
         k = null != L && L && (null == M ? void 0 : M.isForumChannel()) === !1,
         [O, D, w, B] = i.useMemo(() => {
             let e;
-            if (null == T || 0 === T.length || null == N || !k) return [t, n, I];
+            if (null == T || 0 === T.length || null == S || !k) return [t, n, I];
             let i = Z ? T.length : A ? 4 : 3,
                 l = T.slice(0, i);
             e = y
@@ -51,7 +51,7 @@ function E(e) {
                 : l.map((e) => ({
                       type: a.so.CONTENT_INVENTORY,
                       entry: e,
-                      requestId: N
+                      requestId: S
                   }));
             let r = {
                 id: x.G,
@@ -61,7 +61,7 @@ function E(e) {
                 index: n.length,
                 title: _.intl.string(_.t['6gwSFR']),
                 onToggleExpand: () => {
-                    S((e) => {
+                    N((e) => {
                         let t = !e;
                         return (
                             d.default.track(v.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
@@ -78,7 +78,7 @@ function E(e) {
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[r, ...t], [...n, r, ...e], Math.random(), e];
-        }, [E, T, Z, t, b, N, n, I, y, k, A]),
+        }, [E, T, Z, t, b, S, n, I, y, k, A]),
         U = i.useRef(0),
         H = i.useRef(T),
         G = i.useRef(),
@@ -105,12 +105,12 @@ function E(e) {
                 (G.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == N || null == G.current || Date.now() - G.current < 3000) return;
+                    if (null == S || null == G.current || Date.now() - G.current < 3000) return;
                     let n = null !== (t = null === (e = H.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
                         i = n.slice(0, U.current);
                     if (!y && !!P && !!k)
                         (0, m.e)(v.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
-                            request_id: N,
+                            request_id: S,
                             first_shown_at: G.current,
                             item_ids: i,
                             surface_type: C.Kd.GUILD_MEMBER_LIST,
@@ -126,7 +126,7 @@ function E(e) {
                                 });
                 }
             ),
-            [N, E, b, y, P, k]
+            [S, E, b, y, P, k]
         ),
         {
             groups: O,

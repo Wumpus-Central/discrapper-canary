@@ -1,12 +1,12 @@
 r.d(n, {
     U: function () {
-        return o;
+        return s;
     }
 });
 var i = r(570140),
     a = r(709054),
-    s = r(981631);
-function o(e, n, r) {
+    o = r(981631);
+function s(e, n, r) {
     i.Z.dispatch({
         type: 'MESSAGE_CREATE',
         channelId: e,
@@ -24,8 +24,8 @@ function l(e) {
     let { channelId: n, requesterUser: r, requestToSpeakTimestamp: i } = e;
     return {
         id: a.default.fromTimestamp(Date.parse(i)),
-        type: s.uaV.STAGE_RAISE_HAND,
-        flags: s.iLy.EPHEMERAL,
+        type: o.uaV.STAGE_RAISE_HAND,
+        flags: o.iLy.EPHEMERAL,
         content: '',
         channel_id: n,
         author: r,
@@ -37,7 +37,7 @@ function l(e) {
         mention_roles: [],
         mention_everyone: !1,
         timestamp: i,
-        state: s.yb.SENT,
+        state: o.yb.SENT,
         tts: !1
     };
 }

@@ -1,23 +1,23 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return a;
+        return o;
     }
 });
-var i = n(200651);
-n(192379);
-var l = n(331595);
-function a(e) {
-    let { width: t = 143, height: n = 41, color: a = 'currentColor', foreground: r, ...o } = e;
+var i = r(200651);
+r(192379);
+var a = r(331595);
+function o(e) {
+    let { width: n = 143, height: r = 41, color: o = 'currentColor', foreground: s, ...l } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, l.Z)(o),
-        width: t,
-        height: n,
+        ...(0, a.Z)(l),
+        width: n,
+        height: r,
         viewBox: '0 0 143 41',
         children: [
             (0, i.jsx)('title', { children: 'Nitro Classic' }),
             (0, i.jsx)('g', {
-                fill: a,
-                className: r,
+                fill: o,
+                className: s,
                 fillRule: 'evenodd',
                 'aria-hidden': !0,
                 children: (0, i.jsx)('path', {

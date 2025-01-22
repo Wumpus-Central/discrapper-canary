@@ -3,7 +3,7 @@ r.d(n, {
         return u;
     },
     LX: function () {
-        return o;
+        return s;
     },
     Qg: function () {
         return c;
@@ -17,8 +17,8 @@ r.d(n, {
 });
 var i = r(845389),
     a = r(979590),
-    s = r.n(a),
-    o = function (e) {
+    o = r.n(a),
+    s = function (e) {
         var n = ['r', 'g', 'b', 'a', 'h', 's', 'l', 'v'],
             r = 0,
             a = 0;
@@ -30,17 +30,17 @@ var i = r(845389),
         );
     },
     l = function (e, n) {
-        var r = e.hex ? s()(e.hex) : s()(e),
+        var r = e.hex ? o()(e.hex) : o()(e),
             i = r.toHsl(),
             a = r.toHsv(),
-            o = r.toRgb(),
+            s = r.toRgb(),
             l = r.toHex();
         return (
             0 === i.s && ((i.h = n || 0), (a.h = n || 0)),
             {
                 hsl: i,
-                hex: '000000' === l && 0 === o.a ? 'transparent' : '#' + l,
-                rgb: o,
+                hex: '000000' === l && 0 === s.a ? 'transparent' : '#' + l,
+                rgb: s,
                 hsv: a,
                 oldHue: e.h || n || i.h,
                 source: e.source
@@ -50,7 +50,7 @@ var i = r(845389),
     u = function (e) {
         if ('transparent' === e) return !0;
         var n = '#' === String(e).charAt(0) ? 1 : 0;
-        return e.length !== 4 + n && e.length < 7 + n && s()(e).isValid();
+        return e.length !== 4 + n && e.length < 7 + n && o()(e).isValid();
     },
     c = function (e) {
         if (!e) return '#fff';
@@ -59,5 +59,5 @@ var i = r(845389),
     },
     d = function (e, n) {
         var r = e.replace('\xB0', '');
-        return s()(n + ' (' + r + ')')._ok;
+        return o()(n + ' (' + r + ')')._ok;
     };

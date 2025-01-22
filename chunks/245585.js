@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(627494);
 var a = r(757143);
-var s = r(503461),
-    o = r(190313);
+var o = r(503461),
+    s = r(190313);
 function l(e, n, r) {
     return (
         n in e
@@ -32,7 +32,7 @@ class u {
     }
     getLatest(e, n, r) {
         return this.table.getMany([e, n], {
-            ordering: s.Sk.Descending,
+            ordering: o.Sk.Descending,
             limit: r
         });
     }
@@ -43,11 +43,11 @@ class u {
         return this.table.messages.getLatest(e);
     }
     put(e, n, r) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Sn.Replace;
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Sn.Replace;
         return this.table.put(d(e, n, r), i);
     }
     putAll(e, n, r) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Sn.Replace,
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Sn.Replace,
             a = r.map((r) => d(e, n, r));
         return this.table.putAll(a, i);
     }
@@ -70,7 +70,7 @@ class u {
         return new c(this.table.upgradeTransaction(e));
     }
     constructor(e, n, r, i = !0) {
-        l(this, 'originalPrefix', void 0), l(this, 'table', void 0), (this.originalPrefix = e), (this.table = new o.i([e], n, r, i));
+        l(this, 'originalPrefix', void 0), l(this, 'table', void 0), (this.originalPrefix = e), (this.table = new s.i([e], n, r, i));
     }
 }
 class c {
@@ -78,14 +78,14 @@ class c {
         return new c(e);
     }
     static fromDatabaseTransaction(e, n, r) {
-        return new c(new o.E(e, n, r));
+        return new c(new s.E(e, n, r));
     }
     put(e, n, r) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Sn.Replace;
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Sn.Replace;
         this.transaction.put(d(e, n, r), i);
     }
     putAll(e, n, r) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Sn.Replace,
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Sn.Replace,
             a = r.map((r) => d(e, n, r));
         this.transaction.putAll(a, i);
     }

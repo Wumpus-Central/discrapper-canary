@@ -1,12 +1,12 @@
 r.d(n, {
     S: function () {
-        return _;
+        return p;
     }
 });
 var i = r(146150),
     a = r(812975),
-    s = r(531171),
-    o = r(695170),
+    o = r(531171),
+    s = r(695170),
     l = r(686942),
     u = r(200734),
     c = {
@@ -21,34 +21,34 @@ function d(e, n) {
     var r = [],
         i = [],
         a = [],
-        s = [],
-        o = (0, u.o)(e),
-        l = o.dtstart,
-        c = o.tzid;
+        o = [],
+        s = (0, u.o)(e),
+        l = s.dtstart,
+        c = s.tzid;
     return (
         E(e, n.unfold).forEach(function (e) {
             if (e) {
                 var n,
-                    o = g(e),
-                    l = o.name,
-                    d = o.parms,
-                    f = o.value;
+                    s = g(e),
+                    l = s.name,
+                    d = s.parms,
+                    f = s.value;
                 switch (l.toUpperCase()) {
                     case 'RRULE':
                         if (d.length) throw Error('unsupported RRULE parm: '.concat(d.join(',')));
                         r.push((0, u.B)(e));
                         break;
                     case 'RDATE':
-                        var _ = null !== (n = /RDATE(?:;TZID=([^:=]+))?/i.exec(e)) && void 0 !== n ? n : [],
-                            h = _[1];
-                        h && !c && (c = h), (i = i.concat(I(f, d)));
+                        var p = null !== (n = /RDATE(?:;TZID=([^:=]+))?/i.exec(e)) && void 0 !== n ? n : [],
+                            h = p[1];
+                        h && !c && (c = h), (i = i.concat(y(f, d)));
                         break;
                     case 'EXRULE':
                         if (d.length) throw Error('unsupported EXRULE parm: '.concat(d.join(',')));
                         a.push((0, u.B)(f));
                         break;
                     case 'EXDATE':
-                        s = s.concat(I(f, d));
+                        o = o.concat(y(f, d));
                         break;
                     case 'DTSTART':
                         break;
@@ -63,45 +63,45 @@ function d(e, n) {
             rrulevals: r,
             rdatevals: i,
             exrulevals: a,
-            exdatevals: s
+            exdatevals: o
         }
     );
 }
 function f(e, n) {
     var r = d(e, n),
         i = r.rrulevals,
-        o = r.rdatevals,
+        s = r.rdatevals,
         l = r.exrulevals,
         u = r.exdatevals,
         c = r.dtstart,
         f = r.tzid,
-        _ = !1 === n.cache;
-    if ((n.compatible && ((n.forceset = !0), (n.unfold = !0)), n.forceset || i.length > 1 || o.length || l.length || u.length)) {
-        var p = new s.p(_);
+        p = !1 === n.cache;
+    if ((n.compatible && ((n.forceset = !0), (n.unfold = !0)), n.forceset || i.length > 1 || s.length || l.length || u.length)) {
+        var _ = new o.p(p);
         return (
-            p.dtstart(c),
-            p.tzid(f || void 0),
+            _.dtstart(c),
+            _.tzid(f || void 0),
             i.forEach(function (e) {
-                p.rrule(new a.Ci(h(e, c, f), _));
+                _.rrule(new a.Ci(h(e, c, f), p));
             }),
-            o.forEach(function (e) {
-                p.rdate(e);
+            s.forEach(function (e) {
+                _.rdate(e);
             }),
             l.forEach(function (e) {
-                p.exrule(new a.Ci(h(e, c, f), _));
+                _.exrule(new a.Ci(h(e, c, f), p));
             }),
             u.forEach(function (e) {
-                p.exdate(e);
+                _.exdate(e);
             }),
-            n.compatible && n.dtstart && p.rdate(c),
-            p
+            n.compatible && n.dtstart && _.rdate(c),
+            _
         );
     }
     var m = i[0] || {};
-    return new a.Ci(h(m, m.dtstart || n.dtstart || c, m.tzid || n.tzid || f), _);
+    return new a.Ci(h(m, m.dtstart || n.dtstart || c, m.tzid || n.tzid || f), p);
 }
-function _(e, n) {
-    return void 0 === n && (n = {}), f(e, p(n));
+function p(e, n) {
+    return void 0 === n && (n = {}), f(e, _(n));
 }
 function h(e, n, r) {
     return (0, i.pi)((0, i.pi)({}, e), {
@@ -109,7 +109,7 @@ function h(e, n, r) {
         tzid: r
     });
 }
-function p(e) {
+function _(e) {
     var n = [],
         r = Object.keys(e),
         a = Object.keys(c);
@@ -160,11 +160,11 @@ function v(e) {
         if (!/(VALUE=DATE(-TIME)?)|(TZID=)/.test(e)) throw Error('unsupported RDATE/EXDATE parm: ' + e);
     });
 }
-function I(e, n) {
+function y(e, n) {
     return (
         v(n),
         e.split(',').map(function (e) {
-            return (0, o.gE)(e);
+            return (0, s.gE)(e);
         })
     );
 }

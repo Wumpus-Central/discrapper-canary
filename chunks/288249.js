@@ -1,5 +1,5 @@
-n(137489);
-var r = n(974802).Object;
+r(137489);
+var i = r(974802).Object;
 e.exports = function (e) {
-    return r.getOwnPropertyNames(e);
+    return i.getOwnPropertyNames(e);
 };

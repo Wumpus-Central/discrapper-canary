@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -23,4 +23,4 @@ class c extends (i = a.ZP.Store) {
         return l;
     }
 }
-o(c, 'displayName', 'BitRateStore'), (n.Z = new c(s.Z, { SET_CHANNEL_BITRATE: u }));
+s(c, 'displayName', 'BitRateStore'), (n.Z = new c(o.Z, { SET_CHANNEL_BITRATE: u }));

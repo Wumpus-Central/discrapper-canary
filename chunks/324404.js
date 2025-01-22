@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(995295),
-    s = r(513431);
-function o(e, n, r) {
+    o = r(513431);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -33,7 +33,7 @@ class u {
         if (null == n) return;
         this.unobserve(e);
         let r = (0, a.findDOMNode)(e);
-        (0, s.k)(r, HTMLElement) && (this._nodes.set(r, e), this._components.set(e, r), n.observe(r));
+        (0, o.k)(r, HTMLElement) && (this._nodes.set(r, e), this._components.set(e, r), n.observe(r));
     }
     unobserve(e) {
         let n = this._observer;
@@ -42,12 +42,12 @@ class u {
         null != r && (this._nodes.delete(r), this._components.delete(e), this._visibleComponents.delete(e), n.unobserve(r));
     }
     constructor(e = l) {
-        o(this, '_observer', void 0),
-            o(this, '_options', void 0),
-            o(this, '_nodes', new WeakMap()),
-            o(this, '_components', new WeakMap()),
-            o(this, '_visibleComponents', new WeakSet()),
-            o(this, '_handleEntries', (e) => {
+        s(this, '_observer', void 0),
+            s(this, '_options', void 0),
+            s(this, '_nodes', new WeakMap()),
+            s(this, '_components', new WeakMap()),
+            s(this, '_visibleComponents', new WeakSet()),
+            s(this, '_handleEntries', (e) => {
                 e.forEach((e) => {
                     let n;
                     if (null != e.isIntersecting) n = e.isIntersecting;

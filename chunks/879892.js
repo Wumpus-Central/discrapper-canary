@@ -1,28 +1,28 @@
 r.d(n, {
     u: function () {
-        return I;
+        return y;
     }
 });
 var i = r(653041);
 var a = r(998459);
-var s = r(47120);
-var o = r(200651);
+var o = r(47120);
+var s = r(200651);
 r(192379);
 var l = r(481060),
     u = r(355467),
     c = r(179360),
     d = r(821849),
     f = r(594174),
-    _ = r(314884),
+    p = r(314884),
     h = r(509545),
-    p = r(626135),
+    _ = r(626135),
     m = r(267642),
     g = r(852679),
     E = r(981631);
 let v = 'apply-guild-boost-modal';
-async function I(e) {
-    let { analyticsLocations: n, analyticsLocation: i, analyticsSourceLocation: a, numberOfBoostsToAdd: s, onClose: I, closeLayer: T, onSubscriptionConfirmation: b, guild: y, handleSubscribeModalClose: S, disablePremiumUpsell: A, inPopout: N, applicationId: C } = e,
-        R = N ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT,
+async function y(e) {
+    let { analyticsLocations: n, analyticsLocation: i, analyticsSourceLocation: a, numberOfBoostsToAdd: o, onClose: y, closeLayer: b, onSubscriptionConfirmation: I, guild: T, handleSubscribeModalClose: S, disablePremiumUpsell: A, inPopout: C, applicationId: N } = e,
+        R = C ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT,
         O = f.default.getCurrentUser();
     if (null == O) return;
     if (!O.verified) {
@@ -31,7 +31,7 @@ async function I(e) {
                 let { default: e } = await r.e('20102').then(r.bind(r, 444688));
                 return (n) => {
                     let { onClose: r, ...i } = n;
-                    return (0, o.jsx)(e, {
+                    return (0, s.jsx)(e, {
                         ...i,
                         onClose: r
                     });
@@ -42,34 +42,34 @@ async function I(e) {
         return;
     }
     let D = [];
-    !h.Z.isLoadedForPremiumSKUs() && D.push((0, d.Y2)()), !_.Z.hasFetched && (D.push(u.jg()), D.push((0, c.X8)())), D.length > 0 && (await Promise.allSettled(D));
-    let L = (0, m.vx)(_.Z.boostSlots),
-        x = L.length,
+    !h.Z.isLoadedForPremiumSKUs() && D.push((0, d.Y2)()), !p.Z.hasFetched && (D.push(u.jg()), D.push((0, c.X8)())), D.length > 0 && (await Promise.allSettled(D));
+    let x = (0, m.vx)(p.Z.boostSlots),
+        L = x.length,
         w = (e) => {
-            null == I || I(), null == S || S(e);
+            null == y || y(), null == S || S(e);
         },
         P = () => {
-            null == I || I(),
-                null == T || T(),
-                p.default.track(E.rMx.MODAL_DISMISSED, {
+            null == y || y(),
+                null == b || b(),
+                _.default.track(E.rMx.MODAL_DISMISSED, {
                     type: E.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_section: i.section
                 });
         };
-    if (x > 0 && (null == s || x >= s)) {
+    if (L > 0 && (null == o || L >= o)) {
         let e;
-        1 === x ? (e = L.slice(0, 1)) : null != s && (e = L.slice(0, s)),
+        1 === L ? (e = x.slice(0, 1)) : null != o && (e = x.slice(0, o)),
             await (0, l.openModalLazy)(
                 async () => {
-                    let { default: n } = await Promise.all([r.e('12013'), r.e('52249'), r.e('8016'), r.e('22646'), r.e('30419'), r.e('63155')]).then(r.bind(r, 760558));
+                    let { default: n } = await Promise.all([r.e('8016'), r.e('22646'), r.e('30419'), r.e('24539')]).then(r.bind(r, 760558));
                     return (r) => {
                         let { onClose: i, ...a } = r;
-                        return (0, o.jsx)(n, {
+                        return (0, s.jsx)(n, {
                             ...a,
                             onClose: (e) => {
                                 i(), w(e);
                             },
-                            selectedGuild: y,
+                            selectedGuild: T,
                             locationSection: E.ZY5.PREMIUM_GUILD_USER_MODAL,
                             guildBoostSlots: e
                         });
@@ -88,13 +88,13 @@ async function I(e) {
             analyticsLocations: n,
             analyticsLocation: i,
             analyticsSourceLocation: a,
-            guildId: y.id,
+            guildId: T.id,
             closeLayer: P,
-            totalNumberOfSlotsToAssign: null != s ? s : 1,
+            totalNumberOfSlotsToAssign: null != o ? o : 1,
             onCloseModal: w,
             disablePremiumUpsell: A,
-            onSubscriptionConfirmation: b,
-            inPopout: N,
-            applicationId: C
+            onSubscriptionConfirmation: I,
+            inPopout: C,
+            applicationId: N
         });
 }

@@ -1,19 +1,19 @@
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(442837),
+    o = r(192379),
+    s = r(442837),
     l = r(481060),
     u = r(661824),
     c = r(913663),
     d = r(268350),
     f = r(419922),
-    _ = r(388032),
+    p = r(388032),
     h = r(573101);
-function p(e) {
+function _(e) {
     var n;
     let { channelId: r, chatInputType: i } = e,
-        [p, m] = s.useState(null),
-        g = (0, o.e7)([c.Z], () => c.Z.getStickerPreview(r, i.drafts.type));
+        [_, m] = o.useState(null),
+        g = (0, s.e7)([c.Z], () => c.Z.getStickerPreview(r, i.drafts.type));
     return (null === (n = i.stickers) || void 0 === n ? void 0 : n.allowSending) && null != g && 0 !== g.length
         ? (0, a.jsxs)(a.Fragment, {
               children: [
@@ -29,7 +29,7 @@ function p(e) {
                                           onFocus: () => m(e.id),
                                           onBlur: () => m(null),
                                           className: h.closeButton,
-                                          'aria-label': _.intl.formatToPlainString(_.t.BGAQRU, { name: e.name }),
+                                          'aria-label': p.intl.formatToPlainString(p.t.BGAQRU, { name: e.name }),
                                           onClick: () => (0, d.qB)(r, i.drafts.type),
                                           children: (0, a.jsx)('div', {
                                               className: h.closeIconContainer,
@@ -41,7 +41,7 @@ function p(e) {
                                           })
                                       }),
                                       (0, a.jsx)(f.ZP, {
-                                          isInteracting: p === e.id,
+                                          isInteracting: _ === e.id,
                                           className: h.stickerPreview,
                                           size: 48,
                                           sticker: e
@@ -57,4 +57,4 @@ function p(e) {
           })
         : null;
 }
-n.Z = s.memo(p);
+n.Z = o.memo(_);

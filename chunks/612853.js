@@ -1,28 +1,28 @@
-i.d(e, {
+r.d(n, {
     Z: function () {
         return d;
     }
 });
-var t = i(200651);
-i(192379);
-var r = i(120356),
-    l = i.n(r),
-    a = i(481060),
-    s = i(388032),
-    o = i(221309),
-    c = i(652849);
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    o = r.n(a),
+    s = r(481060),
+    l = r(388032),
+    u = r(221309),
+    c = r(652849);
 function d() {
-    return (0, t.jsxs)('div', {
-        className: l()(o.paymentModalLockIcon, c.flex, c.alignCenter),
+    return (0, i.jsxs)('div', {
+        className: o()(u.paymentModalLockIcon, c.flex, c.alignCenter),
         children: [
-            (0, t.jsx)(a.LockIcon, {
+            (0, i.jsx)(s.LockIcon, {
                 size: 'sm',
                 color: 'currentColor',
-                className: o.lockIcon
+                className: u.lockIcon
             }),
-            (0, t.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-sm/medium',
-                children: s.intl.string(s.t.Kv6Z4O)
+                children: l.intl.string(l.t.Kv6Z4O)
             })
         ]
     });

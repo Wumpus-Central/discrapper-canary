@@ -1,7 +1,7 @@
 var i,
     a = r(392711),
-    s = r.n(a),
-    o = r(442837),
+    o = r.n(a),
+    s = r(442837),
     l = r(570140),
     u = r(594174),
     c = r(981631);
@@ -19,32 +19,32 @@ function d(e, n, r) {
     );
 }
 let f = c.QZA.CLOSED,
-    _ = null,
+    p = null,
     h = null,
-    p = {},
+    _ = {},
     m = {},
     g = {},
     E = null,
     v = null,
-    I = !1,
-    T = !1,
-    b = null,
-    y = null,
+    y = !1,
+    b = !1,
+    I = null,
+    T = null,
     S = [],
     A = null,
-    N = null;
-function C(e) {
-    (I = !0), R(e);
+    C = null;
+function N(e) {
+    (y = !0), R(e);
 }
 function R(e) {
-    var n, r, i, a, s, o;
+    var n, r, i, a, o, s;
     let l = u.default.getCurrentUser();
     if (null == l) return O();
     (h = null !== (n = e.section) && void 0 !== n ? n : h),
         (A = null !== (r = e.section) && void 0 !== r ? r : h),
-        null != e.subsection && null != h && (p[h] = e.subsection),
+        null != e.subsection && null != h && (_[h] = e.subsection),
         null != e.scrollPosition && null != h && (m[h] = e.scrollPosition),
-        (T = !!e.openWithoutBackstack),
+        (b = !!e.openWithoutBackstack),
         (f = c.QZA.OPEN),
         (g = {}),
         (v = {
@@ -61,23 +61,23 @@ function R(e) {
                 }
             })
         }),
-        (b = null !== (i = e.onClose) && void 0 !== i ? i : null),
-        (y = null !== (a = e.analyticsLocation) && void 0 !== a ? a : null),
-        (S = null !== (s = e.analyticsLocations) && void 0 !== s ? s : []),
-        (N = null !== (o = e.impressionSource) && void 0 !== o ? o : null);
+        (I = null !== (i = e.onClose) && void 0 !== i ? i : null),
+        (T = null !== (a = e.analyticsLocation) && void 0 !== a ? a : null),
+        (S = null !== (o = e.analyticsLocations) && void 0 !== o ? o : []),
+        (C = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
 function O() {
-    (f = c.QZA.CLOSED), (I = !1), (E = null), (A = null), (v = null), (_ = null), (h = null), (p = {}), (m = {}), (b = null), (y = null), (S = []), (N = null);
+    (f = c.QZA.CLOSED), (y = !1), (E = null), (A = null), (v = null), (p = null), (h = null), (_ = {}), (m = {}), (I = null), (T = null), (S = []), (C = null);
 }
 function D(e) {
     var n;
-    (_ = h), (h = e.section), (y = null), (S = null !== (n = e.analyticsLocations) && void 0 !== n ? n : []), null != e.subsection && (p[h] = e.subsection);
-}
-function L(e) {
-    let { forSection: n } = e;
-    null != n ? delete p[n] : null != h && delete p[h];
+    (p = h), (h = e.section), (T = null), (S = null !== (n = e.analyticsLocations) && void 0 !== n ? n : []), null != e.subsection && (_[h] = e.subsection);
 }
 function x(e) {
+    let { forSection: n } = e;
+    null != n ? delete _[n] : null != h && delete _[h];
+}
+function L(e) {
     let { forSection: n } = e;
     null != n ? delete m[n] : null != h && delete m[h];
 }
@@ -120,62 +120,62 @@ function U(e) {
     if (f !== c.QZA.SUBMITTING) return !1;
     (f = c.QZA.OPEN), (h = c.oAB.ACCOUNT), (g = null !== (n = e.errors) && void 0 !== n ? n : {});
 }
-class B extends (i = o.ZP.Store) {
+class B extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
     hasChanges() {
-        return null != v && null != E && !!this.isOpen() && !s().isEqual(v, E);
+        return null != v && null != E && !!this.isOpen() && !o().isEqual(v, E);
     }
     isOpen() {
-        return I;
+        return y;
     }
     getPreviousSection() {
-        return _;
+        return p;
     }
     getSection() {
         return h;
     }
     getSubsection() {
-        return null != h ? p[h] : null;
+        return null != h ? _[h] : null;
     }
     getScrollPosition() {
         return null != h ? m[h] : null;
     }
     shouldOpenWithoutBackstack() {
-        return T;
+        return b;
     }
     getProps() {
         return {
             submitting: f === c.QZA.SUBMITTING,
             section: h,
-            subsection: null != h ? p[h] : null,
+            subsection: null != h ? _[h] : null,
             scrollPosition: null != h ? m[h] : null,
             settings: v,
             errors: g,
             hasChanges: this.hasChanges(),
-            openWithoutBackstack: T,
-            analyticsLocation: y,
+            openWithoutBackstack: b,
+            analyticsLocation: T,
             analyticsLocations: S,
             initialSection: A,
-            impressionSource: N
+            impressionSource: C
         };
     }
     get onClose() {
-        return b;
+        return I;
     }
 }
 d(B, 'displayName', 'UserSettingsModalStore'),
     (n.Z = new B(l.Z, {
-        USER_SETTINGS_MODAL_OPEN: C,
+        USER_SETTINGS_MODAL_OPEN: N,
         USER_SETTINGS_MODAL_INIT: R,
         USER_SETTINGS_MODAL_CLOSE: O,
         LOGOUT: O,
         USER_SETTINGS_MODAL_SUBMIT: P,
         USER_SETTINGS_MODAL_SUBMIT_FAILURE: U,
         USER_SETTINGS_MODAL_SET_SECTION: D,
-        USER_SETTINGS_MODAL_CLEAR_SUBSECTION: L,
-        USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: x,
+        USER_SETTINGS_MODAL_CLEAR_SUBSECTION: x,
+        USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: L,
         USER_SETTINGS_MODAL_UPDATE_ACCOUNT: w,
         USER_SETTINGS_MODAL_SUBMIT_COMPLETE: k,
         USER_SETTINGS_MODAL_RESET: M

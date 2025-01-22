@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(100527),
     s = n(367907),
     c = n(906732),
-    d = n(524444),
-    u = n(624138),
+    u = n(524444),
+    d = n(624138),
     m = n(453070),
     h = n(373228),
     f = n(419922),
@@ -15,7 +15,7 @@ var i = n(200651),
     _ = n(981631),
     g = n(474936),
     E = n(540093);
-let C = (0, u.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     I = (e) => {
         if (null != e)
             s.ZP.trackWithMetadata(_.rMx.EXPRESSION_TOOLTIP_VIEWED, {
@@ -28,7 +28,7 @@ let C = (0, u.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     };
 t.Z = (e) => {
     let { renderableSticker: t, channel: n, isInteracting: l } = e,
-        [s, u] = r.useState(!0),
+        [s, d] = r.useState(!0),
         [h, _] = r.useState(String(Date.now())),
         [g] = (0, m.XW)(t, l),
         { analyticsLocations: x } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
@@ -50,7 +50,7 @@ t.Z = (e) => {
             animation: a.Popout.Animation.TRANSLATE,
             positionKey: h,
             onRequestClose: () => {
-                u(!0);
+                d(!0);
             },
             renderPopout: (e) =>
                 (0, i.jsx)(p.Z, {
@@ -62,9 +62,9 @@ t.Z = (e) => {
             children: (e) => {
                 let { onClick: n } = e;
                 return (0, i.jsx)(a.Tooltip, {
-                    ...d.b_,
+                    ...u.b_,
                     shouldShow: s,
-                    text: (0, d.Y)(N),
+                    text: (0, u.Y)(N),
                     'aria-label': !1,
                     onTooltipShow: () => {
                         I(g);
@@ -74,7 +74,7 @@ t.Z = (e) => {
                             ...e,
                             className: E.clickableSticker,
                             onClick: (e) => {
-                                u(!s), n(e);
+                                d(!s), n(e);
                             },
                             tag: 'span',
                             children: (0, i.jsx)(f.ZP, {

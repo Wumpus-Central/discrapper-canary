@@ -1,16 +1,16 @@
 r.r(n);
 var i,
     a = r(789020);
-var s = r(261470),
-    o = r(213919),
+var o = r(261470),
+    s = r(213919),
     l = r(442837),
     u = r(544891),
     c = r(433517),
     d = r(570140),
     f = r(179658),
-    _ = r(70956),
+    p = r(70956),
     h = r(960048),
-    p = r(981631);
+    _ = r(981631);
 function m(e, n, r) {
     return (
         n in e
@@ -27,18 +27,18 @@ function m(e, n, r) {
 let g = (() => {
         let e = ''.concat(location.protocol, '//').concat(location.host, '/__development/source_maps'),
             n = null,
-            r = new s.Z(5 * _.Z.Millis.SECOND, 1 * _.Z.Millis.MINUTE, !0),
+            r = new o.Z(5 * p.Z.Millis.SECOND, 1 * p.Z.Millis.MINUTE, !0),
             i = () => {
                 u.tn
                     .put({
                         url: e,
-                        headers: { Authorization: o.getToken() },
+                        headers: { Authorization: s.getToken() },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
                     .then(
                         (e) => {
-                            401 === e.status || 403 === e.status ? ((n = null), (0, f.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (n = setTimeout(i, r.fail())) : (r.succeed(), (n = setTimeout(i, e.body.sourceMapCookieTTLSeconds * _.Z.Millis.SECOND * 0.75)));
+                            401 === e.status || 403 === e.status ? ((n = null), (0, f.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (n = setTimeout(i, r.fail())) : (r.succeed(), (n = setTimeout(i, e.body.sourceMapCookieTTLSeconds * p.Z.Millis.SECOND * 0.75)));
                         },
                         () => {
                             n = setTimeout(i, r.fail());
@@ -54,7 +54,7 @@ let g = (() => {
                           (n = null),
                           u.tn.del({
                               url: e,
-                              headers: { Authorization: o.getToken() },
+                              headers: { Authorization: s.getToken() },
                               oldFormErrors: !0,
                               rejectWithError: !0
                           }));
@@ -80,98 +80,98 @@ let g = (() => {
         isStreamInfoOverlayEnabled: !1,
         preventPopoutClose: !1
     },
-    I = { ...v };
-function T(e) {
-    (I = {
+    y = { ...v };
+function b(e) {
+    (y = {
         ...v,
-        ...I,
+        ...y,
         ...e
     }),
-        g.set(I.sourceMapsEnabled),
-        c.K.set(E, I);
+        g.set(y.sourceMapsEnabled),
+        c.K.set(E, y);
 }
-function b(e) {
+function I(e) {
     let { settings: n } = e;
-    T(n);
+    b(n);
 }
-function y(e) {
-    T(v);
+function T(e) {
+    b(v);
 }
 function S(e) {
     var n;
-    let r = ((null !== (n = e.user.flags) && void 0 !== n ? n : 0) & p.xW$.STAFF) === p.xW$.STAFF,
+    let r = ((null !== (n = e.user.flags) && void 0 !== n ? n : 0) & _.xW$.STAFF) === _.xW$.STAFF,
         i = r || null != e.user.personal_connection_id;
-    r && g.set(I.sourceMapsEnabled), h.Z.setTags({ isStaff: i.toString() });
+    r && g.set(y.sourceMapsEnabled), h.Z.setTags({ isStaff: i.toString() });
 }
 class A extends (i = l.ZP.Store) {
     initialize() {
         let e = c.K.get(E);
         null != e &&
-            (I = {
+            (y = {
                 ...v,
                 ...e
             });
     }
     get isTracingRequests() {
-        return I.trace;
+        return y.trace;
     }
     get isForcedCanary() {
-        return I.canary;
+        return y.canary;
     }
     get isLoggingGatewayEvents() {
-        return I.logGatewayEvents;
+        return y.logGatewayEvents;
     }
     get isLoggingOverlayEvents() {
-        return I.logOverlayEvents;
+        return y.logOverlayEvents;
     }
     get isLoggingAnalyticsEvents() {
-        return I.logAnalyticsEvents;
+        return y.logAnalyticsEvents;
     }
     get isAxeEnabled() {
-        return I.axeEnabled;
+        return y.axeEnabled;
     }
     get cssDebuggingEnabled() {
-        return I.cssDebuggingEnabled;
+        return y.cssDebuggingEnabled;
     }
     get layoutDebuggingEnabled() {
-        return I.layoutDebuggingEnabled;
+        return y.layoutDebuggingEnabled;
     }
     get sourceMapsEnabled() {
-        return I.sourceMapsEnabled;
+        return y.sourceMapsEnabled;
     }
     get isAnalyticsDebuggerEnabled() {
-        return I.analyticsDebuggerEnabled;
+        return y.analyticsDebuggerEnabled;
     }
     get isBugReporterEnabled() {
-        return I.bugReporterEnabled;
+        return y.bugReporterEnabled;
     }
     get isIdleStatusIndicatorEnabled() {
-        return I.idleStatusIndicatorEnabled;
+        return y.idleStatusIndicatorEnabled;
     }
     get onlyShowPreviewAppCollections() {
-        return I.onlyShowPreviewAppCollections;
+        return y.onlyShowPreviewAppCollections;
     }
     get disableAppCollectionsCache() {
-        return I.disableAppCollectionsCache;
+        return y.disableAppCollectionsCache;
     }
     get isStreamInfoOverlayEnabled() {
-        return I.isStreamInfoOverlayEnabled;
+        return y.isStreamInfoOverlayEnabled;
     }
     get preventPopoutClose() {
-        return I.preventPopoutClose;
+        return y.preventPopoutClose;
     }
     getDebugOptionsHeaderValue() {
         return (
-            Object.keys(I).map((e) => I[e]),
-            Object.keys(I)
-                .filter((e) => I[e])
+            Object.keys(y).map((e) => y[e]),
+            Object.keys(y)
+                .filter((e) => y[e])
                 .join(',')
         );
     }
 }
 m(A, 'displayName', 'DeveloperOptionsStore'),
     (n.default = new A(d.Z, {
-        LOGOUT: y,
+        LOGOUT: T,
         CONNECTION_OPEN: S,
-        DEVELOPER_OPTIONS_UPDATE_SETTINGS: b
+        DEVELOPER_OPTIONS_UPDATE_SETTINGS: I
     }));

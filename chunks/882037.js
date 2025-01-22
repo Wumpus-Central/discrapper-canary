@@ -1,6 +1,6 @@
 r.d(n, {
     K4: function () {
-        return o;
+        return s;
     },
     MD: function () {
         return u;
@@ -11,15 +11,15 @@ r.d(n, {
 });
 var i = r(15729),
     a = r(731965);
-let s = (0, i.U)(() => ({
+let o = (0, i.U)(() => ({
         required: !1,
         checked: !1,
         preChecked: !1
     })),
-    o = (e) => {
-        (0, a.j)(() => s.setState(e));
+    s = (e) => {
+        (0, a.j)(() => o.setState(e));
     },
     l = (e) => {
-        (0, a.j)(() => s.setState({ checked: e }));
+        (0, a.j)(() => o.setState({ checked: e }));
     },
-    u = s;
+    u = o;

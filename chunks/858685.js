@@ -21,7 +21,7 @@
         var r = n || {};
         if ('function' != typeof e) throw Error('callback must be a function');
         if (r.root && 1 != r.root.nodeType) throw Error('root must be an Element');
-        (this._checkForIntersections = o(this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT)),
+        (this._checkForIntersections = s(this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT)),
             (this._callback = e),
             (this._observationTargets = []),
             (this._queuedEntries = []),
@@ -34,10 +34,10 @@
                 })
                 .join(' '));
     }
-    function s() {
+    function o() {
         return e.performance && performance.now && performance.now();
     }
-    function o(e, n) {
+    function s(e, n) {
         var r = null;
         return function () {
             !r &&
@@ -56,17 +56,17 @@
         var r = Math.max(e.top, n.top),
             i = Math.min(e.bottom, n.bottom),
             a = Math.max(e.left, n.left),
-            s = Math.min(e.right, n.right),
-            o = s - a,
+            o = Math.min(e.right, n.right),
+            s = o - a,
             l = i - r;
         return (
-            o >= 0 &&
+            s >= 0 &&
             l >= 0 && {
                 top: r,
                 bottom: i,
                 left: a,
-                right: s,
-                width: o,
+                right: o,
+                width: s,
                 height: l
             }
         );
@@ -99,7 +99,7 @@
             height: 0
         };
     }
-    function _(e, n) {
+    function p(e, n) {
         for (var r = n; r; ) {
             if (r == e) return !0;
             r = h(r);
@@ -188,14 +188,14 @@
                 n = e ? this._getRootRect() : f();
             this._observationTargets.forEach(function (r) {
                 var a = r.element,
-                    o = d(a),
+                    s = d(a),
                     l = this._rootContainsTarget(a),
                     u = r.entry,
                     c = e && l && this._computeTargetAndRootIntersection(a, n),
                     f = (r.entry = new i({
-                        time: s(),
+                        time: o(),
                         target: a,
-                        boundingClientRect: o,
+                        boundingClientRect: s,
                         rootBounds: n,
                         intersectionRect: c
                     }));
@@ -205,14 +205,14 @@
         }),
         (a.prototype._computeTargetAndRootIntersection = function (r, i) {
             if ('none' != e.getComputedStyle(r).display) {
-                for (var a = d(r), s = a, o = h(r), l = !1; !l; ) {
+                for (var a = d(r), o = a, s = h(r), l = !1; !l; ) {
                     var u = null,
-                        f = 1 == o.nodeType ? e.getComputedStyle(o) : {};
+                        f = 1 == s.nodeType ? e.getComputedStyle(s) : {};
                     if ('none' == f.display) return;
-                    if ((o == this.root || o == n ? ((l = !0), (u = i)) : o != n.body && o != n.documentElement && 'visible' != f.overflow && (u = d(o)), u && !(s = c(u, s)))) break;
-                    o = h(o);
+                    if ((s == this.root || s == n ? ((l = !0), (u = i)) : s != n.body && s != n.documentElement && 'visible' != f.overflow && (u = d(s)), u && !(o = c(u, o)))) break;
+                    s = h(s);
                 }
-                return s;
+                return o;
             }
         }),
         (a.prototype._getRootRect = function () {
@@ -249,15 +249,15 @@
                 i = n.isIntersecting ? n.intersectionRatio || 0 : -1;
             if (r !== i)
                 for (var a = 0; a < this.thresholds.length; a++) {
-                    var s = this.thresholds[a];
-                    if (s == r || s == i || s < r != s < i) return !0;
+                    var o = this.thresholds[a];
+                    if (o == r || o == i || o < r != o < i) return !0;
                 }
         }),
         (a.prototype._rootIsInDom = function () {
-            return !this.root || _(n, this.root);
+            return !this.root || p(n, this.root);
         }),
         (a.prototype._rootContainsTarget = function (e) {
-            return _(this.root || n, e);
+            return p(this.root || n, e);
         }),
         (a.prototype._registerInstance = function () {
             0 > r.indexOf(this) && r.push(this);

@@ -3,23 +3,23 @@ var i = r(444675);
     if (!e.setImmediate) {
         var r,
             a = 1,
-            s = {},
-            o = !1,
+            o = {},
+            s = !1,
             l = e.document;
         var u = Object.getPrototypeOf && Object.getPrototypeOf(e);
-        (u = u && u.setTimeout ? u : e), '[object process]' === {}.toString.call(e.process) ? h() : p() ? m() : e.MessageChannel ? g() : l && 'onreadystatechange' in l.createElement('script') ? E() : v(), (u.setImmediate = c), (u.clearImmediate = d);
+        (u = u && u.setTimeout ? u : e), '[object process]' === {}.toString.call(e.process) ? h() : _() ? m() : e.MessageChannel ? g() : l && 'onreadystatechange' in l.createElement('script') ? E() : v(), (u.setImmediate = c), (u.clearImmediate = d);
     }
     function c(e) {
         'function' != typeof e && (e = Function('' + e));
         for (var n = Array(arguments.length - 1), i = 0; i < n.length; i++) n[i] = arguments[i + 1];
-        var o = {
+        var s = {
             callback: e,
             args: n
         };
-        return (s[a] = o), r(a), a++;
+        return (o[a] = s), r(a), a++;
     }
     function d(e) {
-        delete s[e];
+        delete o[e];
     }
     function f(e) {
         var r = e.callback,
@@ -41,16 +41,16 @@ var i = r(444675);
                 r.apply(n, i);
         }
     }
-    function _(e) {
-        if (o) setTimeout(_, 0, e);
+    function p(e) {
+        if (s) setTimeout(p, 0, e);
         else {
-            var n = s[e];
+            var n = o[e];
             if (n) {
-                o = !0;
+                s = !0;
                 try {
                     f(n);
                 } finally {
-                    d(e), (o = !1);
+                    d(e), (s = !1);
                 }
             }
         }
@@ -58,11 +58,11 @@ var i = r(444675);
     function h() {
         r = function (e) {
             i.nextTick(function () {
-                _(e);
+                p(e);
             });
         };
     }
-    function p() {
+    function _() {
         if (e.postMessage && !e.importScripts) {
             var n = !0,
                 r = e.onmessage;
@@ -79,7 +79,7 @@ var i = r(444675);
     function m() {
         var n = 'setImmediate$' + Math.random() + '$',
             i = function (r) {
-                r.source === e && 'string' == typeof r.data && 0 === r.data.indexOf(n) && _(+r.data.slice(n.length));
+                r.source === e && 'string' == typeof r.data && 0 === r.data.indexOf(n) && p(+r.data.slice(n.length));
             };
         e.addEventListener ? e.addEventListener('message', i, !1) : e.attachEvent('onmessage', i),
             (r = function (r) {
@@ -89,7 +89,7 @@ var i = r(444675);
     function g() {
         var e = new MessageChannel();
         (e.port1.onmessage = function (e) {
-            _(e.data);
+            p(e.data);
         }),
             (r = function (n) {
                 e.port2.postMessage(n);
@@ -100,14 +100,14 @@ var i = r(444675);
         r = function (n) {
             var r = l.createElement('script');
             (r.onreadystatechange = function () {
-                _(n), (r.onreadystatechange = null), e.removeChild(r), (r = null);
+                p(n), (r.onreadystatechange = null), e.removeChild(r), (r = null);
             }),
                 e.appendChild(r);
         };
     }
     function v() {
         r = function (e) {
-            setTimeout(_, 0, e);
+            setTimeout(p, 0, e);
         };
     }
 })('undefined' == typeof self ? (void 0 === r.g ? this : r.g) : self);

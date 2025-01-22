@@ -1,36 +1,36 @@
-l.d(e, {
+i.d(n, {
     Z: function () {
         return c;
     }
 }),
-    l(47120);
-var t = l(200651),
-    i = l(192379),
-    o = l(557533),
-    r = l.n(o),
-    s = l(349361),
-    a = l(366481);
-function c(n) {
-    let { children: e, gradientClassName: l, ...o } = n,
-        c = i.useRef(null),
-        [d, u] = i.useState(!0),
-        m = () => {
-            var n;
-            (null === (n = c.current) || void 0 === n ? void 0 : n.isScrolledToBottom()) === !0 ? u(!1) : u(!0);
+    i(47120);
+var e = i(200651),
+    r = i(192379),
+    a = i(557533),
+    o = i.n(a),
+    s = i(349361),
+    l = i(366481);
+function c(t) {
+    let { children: n, gradientClassName: i, ...a } = t,
+        c = r.useRef(null),
+        [d, u] = r.useState(!0),
+        p = () => {
+            var t;
+            (null === (t = c.current) || void 0 === t ? void 0 : t.isScrolledToBottom()) === !0 ? u(!1) : u(!0);
         };
-    return (0, t.jsxs)(t.Fragment, {
+    return (0, e.jsxs)(e.Fragment, {
         children: [
-            (0, t.jsx)(s.h2, {
+            (0, e.jsx)(s.h2, {
                 fade: !0,
-                ...o,
-                ref: (n) => {
-                    null != n && ((c.current = n), m());
+                ...a,
+                ref: (t) => {
+                    null != t && ((c.current = t), p());
                 },
-                onScroll: m,
-                children: e
+                onScroll: p,
+                children: n
             }),
-            (0, t.jsx)('div', {
-                className: r()(a.containerScrollGradient, l),
+            (0, e.jsx)('div', {
+                className: o()(l.containerScrollGradient, i),
                 'data-shown': d
             })
         ]

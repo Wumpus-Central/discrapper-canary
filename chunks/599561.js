@@ -7237,8 +7237,8 @@ function r(e) {
     let r = e.regex,
         i = /([2-9]|[1-2]\d|[3][0-5])\^\^/,
         a = /(\w*\.\w+|\w+\.\w*|\w+)/,
-        s = /(\d*\.\d+|\d+\.\d*|\d+)/,
-        o = r.either(r.concat(i, a), s),
+        o = /(\d*\.\d+|\d+\.\d*|\d+)/,
+        s = r.either(r.concat(i, a), o),
         l = /``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/,
         u = /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/,
         c = r.either(l, u),
@@ -7246,15 +7246,15 @@ function r(e) {
         f = {
             className: 'number',
             relevance: 0,
-            begin: r.concat(o, r.optional(c), r.optional(d))
+            begin: r.concat(s, r.optional(c), r.optional(d))
         },
-        _ = /[a-zA-Z$][a-zA-Z0-9$]*/,
+        p = /[a-zA-Z$][a-zA-Z0-9$]*/,
         h = new Set(n),
-        p = {
+        _ = {
             variants: [
                 {
                     className: 'builtin-symbol',
-                    begin: _,
+                    begin: p,
                     'on:begin': (e, n) => {
                         !h.has(e[0]) && n.ignoreMatch();
                     }
@@ -7262,7 +7262,7 @@ function r(e) {
                 {
                     className: 'symbol',
                     relevance: 0,
-                    begin: _
+                    begin: p
                 }
             ]
         },
@@ -7285,15 +7285,15 @@ function r(e) {
             relevance: 0,
             begin: /#[a-zA-Z$][a-zA-Z0-9$]*|#+[0-9]?/
         },
-        I = {
+        y = {
             className: 'brace',
             relevance: 0,
             begin: /[[\](){}]/
         },
-        T = {
+        b = {
             className: 'message-name',
             relevance: 0,
-            begin: r.concat('::', _)
+            begin: r.concat('::', p)
         };
     return {
         name: 'Mathematica',
@@ -7307,7 +7307,7 @@ function r(e) {
             'builtin-symbol': 'built_in',
             'message-name': 'string'
         },
-        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }), E, v, T, p, m, e.QUOTE_STRING_MODE, f, g, I]
+        contains: [e.COMMENT(/\(\*/, /\*\)/, { contains: ['self'] }), E, v, b, _, m, e.QUOTE_STRING_MODE, f, g, y]
     };
 }
 e.exports = r;

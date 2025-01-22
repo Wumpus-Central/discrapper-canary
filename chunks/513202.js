@@ -1,16 +1,16 @@
 var i = r(47120);
 var a = r(200651);
 r(192379);
-var s = r(481060),
-    o = r(570140),
+var o = r(481060),
+    s = r(570140),
     l = r(468026),
     u = r(522474),
     c = r(788983),
     d = r(636449),
     f = r(566620),
-    _ = r(287545),
+    p = r(287545),
     h = r(317381),
-    p = r(318891),
+    _ = r(318891),
     m = r(719296),
     g = r(981631),
     E = r(388032);
@@ -27,8 +27,8 @@ function v(e, n, r) {
         e
     );
 }
-let I = !1;
-class T extends _.Z {
+let y = !1;
+class b extends p.Z {
     _initialize() {
         super._initialize(), u.Z.addChangeListener(this.handlePopoutWindowUpdate);
     }
@@ -37,7 +37,7 @@ class T extends _.Z {
     }
     showErrorModal(e) {
         let { code: n, message: r } = e;
-        (0, s.openModalLazy)(
+        (0, o.openModalLazy)(
             async () => (e) =>
                 (0, a.jsx)(l.default, {
                     title: E.intl.formatToPlainString(E.t.hbiAOz, { code: n }),
@@ -47,7 +47,7 @@ class T extends _.Z {
         );
     }
     showLaunchErrorModal(e) {
-        (0, s.openModalLazy)(
+        (0, o.openModalLazy)(
             async () => (n) =>
                 (0, a.jsx)(l.default, {
                     title: E.intl.string(E.t.PtobXV),
@@ -58,7 +58,7 @@ class T extends _.Z {
     }
     leaveActivity(e) {
         let { location: n, applicationId: r, showFeedback: i } = e;
-        o.Z.wait(() => {
+        s.Z.wait(() => {
             (0, f.mW)({
                 location: n,
                 applicationId: r,
@@ -70,7 +70,7 @@ class T extends _.Z {
     hidePIPEmbed(e) {
         let { location: n, applicationId: r } = e,
             i = (0, m.Z)(n.id, r);
-        (0, p.RI)(i);
+        (0, _.RI)(i);
     }
     releaseWebView() {}
     constructor(...e) {
@@ -83,7 +83,7 @@ class T extends _.Z {
                 });
             }),
             v(this, 'handlePopoutWindowUpdate', () => {
-                let e = I,
+                let e = y,
                     n = u.Z.getWindowOpen(g.KJ3.ACTIVITY_POPOUT);
                 if (e && !n) {
                     let e = h.ZP.getCurrentEmbeddedActivity();
@@ -93,8 +93,8 @@ class T extends _.Z {
                             applicationId: e.applicationId
                         });
                 }
-                I = n;
+                y = n;
             });
     }
 }
-n.Z = new T();
+n.Z = new b();

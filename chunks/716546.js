@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(668781),
-    s = r(998502),
-    o = r(58406),
+    o = r(998502),
+    s = r(58406),
     l = r(761274);
 function u(e, n, r) {
     return (
@@ -16,7 +16,7 @@ function u(e, n, r) {
         e
     );
 }
-class c extends o.g {
+class c extends s.g {
     requestPermissionCore(e, n) {
         var r;
         return this.asyncify(null === (r = this.nativeUtils) || void 0 === r ? void 0 : r.nativePermssionRequestAuthorization, e, n);
@@ -41,24 +41,24 @@ class c extends o.g {
         return this.storage.hasPermission(e);
     }
     openAlertModal(e) {
-        let { title: n, body: r, onConfirm: i, cancelText: s, confirmText: o } = e;
+        let { title: n, body: r, onConfirm: i, cancelText: o, confirmText: s } = e;
         a.Z.show({
             title: n,
             body: r,
             onConfirm: i,
-            cancelText: s,
-            confirmText: o
+            cancelText: o,
+            confirmText: s
         });
     }
     constructor(...e) {
-        super(...e), u(this, 'nativeUtils', s.ZP.getDiscordUtils());
+        super(...e), u(this, 'nativeUtils', o.ZP.getDiscordUtils());
     }
 }
 u(c, 'requestTypeLookup', {
-    [l.Eu.CAMERA]: s.jK.Camera,
-    [l.Eu.AUDIO]: s.jK.Microphone,
-    [l.Eu.PHOTOS]: s.jK.Photo,
-    [l.Eu.INPUT_MONITORING]: s.jK.InputMonitoring,
-    [l.Eu.SCREEN_RECORDING]: s.jK.ScreenRecording
+    [l.Eu.CAMERA]: o.jK.Camera,
+    [l.Eu.AUDIO]: o.jK.Microphone,
+    [l.Eu.PHOTOS]: o.jK.Photo,
+    [l.Eu.INPUT_MONITORING]: o.jK.InputMonitoring,
+    [l.Eu.SCREEN_RECORDING]: o.jK.ScreenRecording
 }),
     (n.Z = new c());

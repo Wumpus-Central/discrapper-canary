@@ -12,10 +12,10 @@ r.d(n, {
         return a;
     },
     dE: function () {
-        return s;
+        return o;
     },
     is: function () {
-        return o;
+        return s;
     },
     qo: function () {
         return d;
@@ -26,14 +26,14 @@ r.d(n, {
 });
 var i = r(239189),
     a = function () {},
-    s = function (e, n, r) {
+    o = function (e, n, r) {
         return Object.defineProperty(e, n, {
             value: r,
             writable: !0,
             configurable: !0
         });
     },
-    o = {
+    s = {
         arr: Array.isArray,
         obj: function (e) {
             return !!e && 'Object' === e.constructor.name;
@@ -52,25 +52,25 @@ var i = r(239189),
         }
     };
 function l(e, n) {
-    if (o.arr(e)) {
-        if (!o.arr(n) || e.length !== n.length) return !1;
+    if (s.arr(e)) {
+        if (!s.arr(n) || e.length !== n.length) return !1;
         for (var r = 0; r < e.length; r++) if (e[r] !== n[r]) return !1;
         return !0;
     }
     return e === n;
 }
 var u = function (e) {
-        return o.str(e) && ('#' == e[0] || /\d/.test(e) || !!(i.colorNames && i.colorNames[e]));
+        return s.str(e) && ('#' == e[0] || /\d/.test(e) || !!(i.colorNames && i.colorNames[e]));
     },
     c = function (e, n, r) {
-        o.fun(e.forEach)
+        s.fun(e.forEach)
             ? e.forEach(n, r)
             : Object.keys(e).forEach(function (i) {
                   return n.call(r, e[i], i);
               });
     },
     d = function (e) {
-        return o.und(e) ? [] : o.arr(e) ? e : [e];
+        return s.und(e) ? [] : s.arr(e) ? e : [e];
     };
 function f(e, n) {
     if (e.size) {

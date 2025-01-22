@@ -1,30 +1,30 @@
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(38068),
     u = r(388032),
     c = r(980456);
 n.Z = a.forwardRef(function (e, n) {
-    let { className: r, contentClassName: a, isUnread: s, children: d, id: f, role: _, 'aria-label': h } = e;
+    let { className: r, contentClassName: a, isUnread: o, children: d, id: f, role: p, 'aria-label': h } = e;
     return (0, i.jsxs)('div', {
-        className: o()(r, {
+        className: s()(r, {
             [c.divider]: !0,
-            [c.isUnread]: s,
+            [c.isUnread]: o,
             [c.hasContent]: null != d
         }),
         ref: n,
         id: f,
-        role: _,
+        role: p,
         'aria-label': h,
         children: [
             null != d
                 ? (0, i.jsx)('span', {
-                      className: o()(c.content, a),
+                      className: s()(c.content, a),
                       children: d
                   })
                 : null,
-            s
+            o
                 ? (0, i.jsxs)('span', {
                       className: c.unreadPill,
                       children: [

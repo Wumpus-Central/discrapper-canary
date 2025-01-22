@@ -6,10 +6,10 @@ r.d(n, {
         return a;
     },
     fR: function () {
-        return o;
+        return s;
     },
     sg: function () {
-        return s;
+        return o;
     }
 });
 var i = r(818083);
@@ -26,7 +26,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    s = (0, i.B)({
+    o = (0, i.B)({
         kind: 'user',
         id: '2024-02_nitro_tenure_rewards',
         label: 'Nitro Tenure Reward Experiment',
@@ -39,7 +39,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    s = (0, i.B)({
         kind: 'user',
         id: '2024-08_nitro_tenure_rewards_backfill',
         label: 'Nitro Tenure Reward Backfill',

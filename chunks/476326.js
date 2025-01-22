@@ -6,14 +6,14 @@ r.d(n, {
         return i;
     },
     rG: function () {
-        return _;
+        return p;
     }
 });
 var i,
     a,
-    s = r(836560);
-var o = r(392711),
-    l = r.n(o),
+    o = r(836560);
+var s = r(392711),
+    l = r.n(s),
     u = r(772848),
     c = r(403182),
     d = r(861990);
@@ -30,7 +30,7 @@ function f(e, n, r) {
         e
     );
 }
-function _(e) {
+function p(e) {
     return void 0 !== e.isVideo && void 0 !== e.isImage;
 }
 !(function (e) {
@@ -39,7 +39,7 @@ function _(e) {
     !(function (e) {
         (e[(e.FILE_ATTACHMENT = 0)] = 'FILE_ATTACHMENT'), (e[(e.IMAGE_PICKER = 1)] = 'IMAGE_PICKER');
     })(a || (a = {}));
-class h extends s.EventEmitter {
+class h extends o.EventEmitter {
     cancel() {}
     resetState() {
         return this;

@@ -6,7 +6,7 @@ r.d(n, {
         return S;
     },
     H4: function () {
-        return y;
+        return T;
     },
     Ow: function () {
         return D;
@@ -15,10 +15,10 @@ r.d(n, {
         return A;
     },
     un: function () {
-        return T;
+        return b;
     },
     wE: function () {
-        return b;
+        return I;
     },
     wH: function () {
         return O;
@@ -26,32 +26,32 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(442837),
-    s = r(704215),
-    o = r(570140),
+    o = r(704215),
+    s = r(570140),
     l = r(675478),
     u = r(581883),
     c = r(626135),
     d = r(915486),
     f = r(713284),
-    _ = r(261376),
+    p = r(261376),
     h = r(883904),
-    p = r(68985),
+    _ = r(68985),
     m = r(211644),
     g = r(57207),
     E = r(644916),
     v = r(921944),
-    I = r(981631);
-function T(e) {
+    y = r(981631);
+function b(e) {
     var n;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (!r && (0, g.B)(e)) return !0;
     let i = null === (n = u.Z.settings.userContent) || void 0 === n ? void 0 : n.dismissedContents;
     return null != i && (0, d.jl)(i, e);
 }
-function b(e) {
-    return (0, a.e7)([u.Z], () => T(e));
+function I(e) {
+    return (0, a.e7)([u.Z], () => b(e));
 }
-function y(e) {
+function T(e) {
     var n, r;
     if ((0, g.B)(e))
         return {
@@ -73,27 +73,27 @@ function S(e, n) {
             lastDismissedAtMs: null
         };
     let a = null === (i = u.Z.settings.userContent) || void 0 === i ? void 0 : null === (r = i.recurringDismissibleContentStates[e]) || void 0 === r ? void 0 : r.lastDismissedAtMs,
-        s = null != a && '0' !== a ? (Number.isNaN(Number(a)) ? void 0 : Number(a)) : void 0;
-    if (void 0 === s)
+        o = null != a && '0' !== a ? (Number.isNaN(Number(a)) ? void 0 : Number(a)) : void 0;
+    if (void 0 === o)
         return {
             isDismissed: !1,
             lastDismissedAtMs: void 0
         };
-    let o = !0;
+    let s = !0;
     if (null != n) {
-        let e = s + n.cooldownDurationMs,
+        let e = o + n.cooldownDurationMs,
             r = Date.now(),
-            i = null == n.showAfterTimestamp || (r >= n.showAfterTimestamp && s <= n.showAfterTimestamp);
-        o = r < e || !i;
+            i = null == n.showAfterTimestamp || (r >= n.showAfterTimestamp && o <= n.showAfterTimestamp);
+        s = r < e || !i;
     }
     return {
-        isDismissed: o,
-        lastDismissedAtMs: s
+        isDismissed: s,
+        lastDismissedAtMs: o
     };
 }
 function A(e, n, r) {
-    if (!((0, m.cI)(e) || p.Z.hasUserHitDCCap(e)) && !r)
-        o.Z.dispatch({
+    if (!((0, m.cI)(e) || _.Z.hasUserHitDCCap(e)) && !r)
+        s.Z.dispatch({
             type: 'DCF_EVENT_LOGGED',
             eventType: f.D.DC_SHOW_REQUEST,
             dismissibleContent: e
@@ -105,12 +105,12 @@ function A(e, n, r) {
                     var r;
                     let [i, a] = (0, m.Aq)();
                     (0, h.cm)(e),
-                        c.default.track(I.rMx.DISMISSIBLE_CONTENT_SHOWN, {
-                            type: s.z[e],
+                        c.default.track(y.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                            type: o.z[e],
                             content_count: i,
                             fatigable_content_count: a,
                             group_name: null == n ? void 0 : n.groupName,
-                            bypass_fatigue: _.O.has(e),
+                            bypass_fatigue: p.O.has(e),
                             guild_id: null == n ? void 0 : n.guildId,
                             version: null == n ? void 0 : n.version
                         }),
@@ -118,13 +118,13 @@ function A(e, n, r) {
                 }
             });
 }
-function N(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    ((0, m.cI)(e) || n.forceTrack) && L(e, n), (0, h.Vr)(e);
-}
 function C(e) {
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    ((0, m.cI)(e) || n.forceTrack) && x(e, n), (0, h.Vr)(e);
+}
+function N(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        r = !p.Z.hasUserHitDCCap();
+        r = !_.Z.hasUserHitDCCap();
     (0, m.gE)(
         {
             content: e,
@@ -135,28 +135,28 @@ function C(e) {
 }
 async function R(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    if (!T(e, !0)) N(e, n), await (0, l.nm)(e), C(e, n);
+    if (!b(e, !0)) C(e, n), await (0, l.nm)(e), N(e, n);
 }
 async function O(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    N(e, r), await (0, l.Bn)(e, n), C(e, r);
+    C(e, r), await (0, l.Bn)(e, n), N(e, r);
 }
 async function D(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    N(e, n), await (0, l.z2)(e), C(e, n);
+    C(e, n), await (0, l.z2)(e), N(e, n);
 }
-function L(e, n) {
+function x(e, n) {
     var r;
     let [i] = (0, m.Aq)(),
-        a = p.Z.getRenderedAtTimestamp(e),
-        o = new Date(),
-        l = null == a ? null : o.getTime() - a;
-    c.default.track(I.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
-        type: s.z[e],
+        a = _.Z.getRenderedAtTimestamp(e),
+        s = new Date(),
+        l = null == a ? null : s.getTime() - a;
+    c.default.track(y.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
+        type: o.z[e],
         action: null !== (r = null == n ? void 0 : n.dismissAction) && void 0 !== r ? r : v.L.UNKNOWN,
         content_count: i,
         group_name: null == n ? void 0 : n.groupName,
-        bypass_fatigue: _.O.has(e),
+        bypass_fatigue: p.O.has(e),
         guild_id: null == n ? void 0 : n.guildId,
         shown_duration: l,
         version: null == n ? void 0 : n.version

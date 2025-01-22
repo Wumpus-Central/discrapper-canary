@@ -5,13 +5,13 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(743236),
     u = r(939350),
     c = r(450793);
 function d(e) {
-    let { color: n = 'default', label: r, control: s, disabled: d, isFocused: f, showDefaultFocus: _ = !1, menuItemProps: h, onClose: p } = e,
+    let { color: n = 'default', label: r, control: o, disabled: d, isFocused: f, showDefaultFocus: p = !1, menuItemProps: h, onClose: _ } = e,
         m = a.useRef(null),
         g = a.useRef(null);
     a.useLayoutEffect(() => {
@@ -20,11 +20,11 @@ function d(e) {
     }, [f]);
     let E = a.useCallback(() => {
             var e, n;
-            (null === (n = g.current) || void 0 === n ? void 0 : null === (e = n.activate) || void 0 === e ? void 0 : e.call(n)) && p();
-        }, [p]),
-        v = s(
+            (null === (n = g.current) || void 0 === n ? void 0 : null === (e = n.activate) || void 0 === e ? void 0 : e.call(n)) && _();
+        }, [_]),
+        v = o(
             {
-                onClose: p,
+                onClose: _,
                 disabled: d,
                 isFocused: f
             },
@@ -32,10 +32,10 @@ function d(e) {
         );
     return (0, i.jsxs)('div', {
         onClick: E,
-        className: o()(c.item, u._[n], {
+        className: s()(c.item, u._[n], {
             [c.disabled]: d,
-            [c.focused]: _ && f,
-            [c.hideInteraction]: !_
+            [c.focused]: p && f,
+            [c.hideInteraction]: !p
         }),
         'aria-disabled': d,
         ...h,

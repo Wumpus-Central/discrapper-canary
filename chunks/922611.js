@@ -3,15 +3,15 @@ r.d(n, {
         return l;
     },
     JX: function () {
-        return o;
+        return s;
     },
     S2: function () {
-        return s;
+        return o;
     }
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2024-10_stealth_remediation',
     label: 'A new user remediation tool',
@@ -25,11 +25,11 @@ let s = (0, i.B)({
         }
     ]
 });
-function o(e) {
+function s(e) {
     let { location: n } = e;
-    return s.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
+    return o.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
 }
 function l(e) {
     let { location: n } = e;
-    return s.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
+    return o.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
 }

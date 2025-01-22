@@ -3,14 +3,14 @@ r.d(n, {
         return f;
     },
     Z: function () {
-        return _;
+        return p;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(481060),
+    o = r.n(a),
+    s = r(481060),
     l = r(331595),
     u = r(645652),
     c = r(388032),
@@ -29,14 +29,14 @@ function f(e) {
         })
     });
 }
-function _(e) {
+function p(e) {
     let { className: n, forceUseColorForSparkles: r = !1, shouldInheritTextColor: a = !1, shouldInheritBackgroundColor: l = !1 } = e;
     return (0, i.jsx)(u.Z, {
         className: n,
         forceUseColor: r,
-        children: (0, i.jsx)(o.TextBadge, {
+        children: (0, i.jsx)(s.TextBadge, {
             disableColor: !0,
-            className: s()(d.tag, {
+            className: o()(d.tag, {
                 [d.inheritTextColor]: a,
                 [d.inheritBackgroundColor]: l
             }),

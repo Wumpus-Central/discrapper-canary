@@ -1,14 +1,14 @@
 r.d(n, {
     I: function () {
-        return o;
+        return s;
     },
     g: function () {
-        return s;
+        return o;
     }
 });
 var i = r(818083),
     a = r(987338);
-let s = (0, i.B)({
+let o = (0, i.B)({
     kind: 'user',
     id: '2024-10_rapidash_discovery_plus',
     label: 'Rapidash Discovery Plus',
@@ -28,6 +28,6 @@ let s = (0, i.B)({
         }
     ]
 });
-function o() {
-    return s.useExperiment({ location: 'RapidashDiscoveryPlusExperiment' }, { autoTrackExposure: !1 });
+function s() {
+    return o.useExperiment({ location: 'RapidashDiscoveryPlusExperiment' }, { autoTrackExposure: !1 });
 }

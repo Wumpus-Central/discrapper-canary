@@ -28,9 +28,9 @@ var i = n(200651),
     O = n(663389),
     R = n(594174),
     P = n(626135),
-    y = n(709054),
-    B = n(706454),
-    D = n(210887),
+    D = n(709054),
+    y = n(706454),
+    B = n(210887),
     Z = n(418632),
     L = n(10298),
     M = n(526156),
@@ -332,7 +332,7 @@ class K extends r.PureComponent {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             { currentUser: t } = this.props,
             n = v.Z.getGuilds();
-        if (y.default.keys(n).filter((e) => n[e].ownerId === t.id).length > 0) {
+        if (D.default.keys(n).filter((e) => n[e].ownerId === t.id).length > 0) {
             this.setState({ shouldRenderOwnedGuildsModal: !0 });
             return;
         }
@@ -365,10 +365,10 @@ t.Z = () => {
         }),
         t = (0, c.e7)([A.Z], () => A.Z.getBackupCodes()),
         n = (0, c.e7)([j.Z], () => j.Z.hidePersonalInformation),
-        r = (0, c.e7)([D.Z], () => D.Z.theme),
+        r = (0, c.e7)([B.Z], () => B.Z.theme),
         s = (0, T.b)(),
         a = (0, C.CC)(),
-        l = (0, c.e7)([B.default], () => B.default.locale),
+        l = (0, c.e7)([y.default], () => y.default.locale),
         d = (0, c.e7)([O.Z], () => O.Z.getSubsection());
     return (0, i.jsx)(K, {
         theme: r,

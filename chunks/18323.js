@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -24,4 +24,4 @@ class c extends (i = a.ZP.Store) {
         return l;
     }
 }
-o(c, 'displayName', 'SpotifyProtocolStore'), (n.Z = new c(s.Z, { SPOTIFY_SET_PROTOCOL_REGISTERED: u }));
+s(c, 'displayName', 'SpotifyProtocolStore'), (n.Z = new c(o.Z, { SPOTIFY_SET_PROTOCOL_REGISTERED: u }));

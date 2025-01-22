@@ -28,9 +28,9 @@ var i = n(200651),
     O = n(246946),
     R = n(626135),
     P = n(63063),
-    y = n(706454),
-    B = n(349728),
-    D = n(494620),
+    D = n(706454),
+    y = n(349728),
+    B = n(494620),
     Z = n(205266),
     L = n(216153),
     M = n(981631),
@@ -119,7 +119,7 @@ function H(e) {
         [b, I] = r.useState(h.friendSync),
         [v, A] = r.useState(h.visibility),
         [j, O] = r.useState(h.metadataVisibility),
-        [R, y] = r.useState(h.showActivity),
+        [R, D] = r.useState(h.showActivity),
         [w, V] = r.useState(null),
         [H, Y] = r.useState(null),
         [W, z] = r.useState(!1),
@@ -127,7 +127,7 @@ function H(e) {
         Q = (0, E.rR)(h.type),
         X = _.Z.get(Q);
     r.useEffect(() => {
-        I(h.friendSync), A(h.visibility), O(h.metadataVisibility), y(h.showActivity);
+        I(h.friendSync), A(h.visibility), O(h.metadataVisibility), D(h.showActivity);
     }, [h]);
     let J = {
             inProgressVisibility: w,
@@ -151,11 +151,11 @@ function H(e) {
     function et() {
         let e = _.Z.get(h.type),
             t = F.intl.string(F.t.apVJu7);
-        (0, B.Z)(h) &&
+        (0, y.Z)(h) &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     t,
-                    (0, i.jsx)(D.Z, {
+                    (0, i.jsx)(B.Z, {
                         className: U.infoBox,
                         children: F.intl.format(F.t.COW3Xl, { platformName: e.name })
                     })
@@ -202,7 +202,7 @@ function H(e) {
         I(e), g.Z.setFriendSync(h.type, h.id, e);
     }
     function es(e) {
-        y(e), g.Z.setShowActivity(h.type, h.id, e);
+        D(e), g.Z.setShowActivity(h.type, h.id, e);
     }
     return (0, i.jsxs)('div', {
         className: U.connection,
@@ -623,7 +623,7 @@ t.Z = () => {
         n = (0, l.e7)([v.Z], () => v.Z.getAccounts()),
         s = (0, f.ZP)();
     (0, l.e7)([j.ZP], () => j.ZP.getFlattenedGuildIds());
-    let a = (0, l.e7)([y.default], () => y.default.locale);
+    let a = (0, l.e7)([D.default], () => D.default.locale);
     return (r.useEffect(() => {
         g.Z.fetch();
     }, []),

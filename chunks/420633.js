@@ -12,11 +12,11 @@ var i = (function () {
 function a(e, n) {
     if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
 }
-function s(e, n) {
+function o(e, n) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
 }
-function o(e, n) {
+function s(e, n) {
     if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
     (e.prototype = Object.create(n && n.prototype, {
         constructor: {
@@ -34,9 +34,9 @@ var l = r(22672),
     d = r(912037);
 r(328794);
 var f = r(16686),
-    _ = r.g.Set || r(344460);
+    p = r.g.Set || r(344460);
 function h(e) {
-    var n = new _();
+    var n = new p();
     function r(e) {
         'function' == typeof e.update ? n.add(e) : e.__getChildren().forEach(r);
     }
@@ -45,14 +45,14 @@ function h(e) {
             return e.update();
         });
 }
-var p = (function (e) {
+var _ = (function (e) {
     function n(e) {
         a(this, n);
-        var r = s(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
+        var r = o(this, (n.__proto__ || Object.getPrototypeOf(n)).call(this));
         return (r._value = e), (r._offset = 0), (r._animation = null), (r._listeners = {}), r;
     }
     return (
-        o(n, e),
+        s(n, e),
         i(n, [
             {
                 key: '__detach',
@@ -158,4 +158,4 @@ var p = (function (e) {
         n
     );
 })(l);
-e.exports = p;
+e.exports = _;

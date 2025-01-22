@@ -28,9 +28,9 @@ var i = n(200651),
     O = n(371651),
     R = n(388627),
     P = n(921801),
-    y = n(857192),
-    B = n(558724),
-    D = n(808506),
+    D = n(857192),
+    y = n(558724),
+    B = n(808506),
     Z = n(998502),
     L = n(210887),
     M = n(601948),
@@ -874,7 +874,7 @@ function ee() {
         o = e || t === E.R5.OUT_OF_PROCESS_V2 || t === E.R5.OUT_OF_PROCESS_V3;
     return (r.useEffect(() => {
         (async () => {
-            l(await (0, D.Y)());
+            l(await (0, B.Y)());
         })();
     }, []),
     n)
@@ -1000,21 +1000,21 @@ function ee() {
               ]
           });
 }
-let et = d.ZP.connectStores([y.default], () => ({
-    isTracingRequests: y.default.isTracingRequests,
-    isForcedCanary: y.default.isForcedCanary,
-    isLoggingGatewayEvents: y.default.isLoggingGatewayEvents,
-    isLoggingOverlayEvents: y.default.isLoggingOverlayEvents,
-    isLoggingAnalyticsEvents: y.default.isLoggingAnalyticsEvents,
-    isAxeEnabled: y.default.isAxeEnabled,
-    cssDebuggingEnabled: y.default.cssDebuggingEnabled,
-    layoutDebuggingEnabled: y.default.layoutDebuggingEnabled,
-    isSourceMapsEnabled: y.default.sourceMapsEnabled,
-    isAnalyticsDebuggerEnabled: y.default.isAnalyticsDebuggerEnabled,
-    isIdleStatusIndicatorEnabled: y.default.isIdleStatusIndicatorEnabled,
-    onlyShowPreviewAppCollections: y.default.onlyShowPreviewAppCollections,
-    disableAppCollectionsCache: y.default.disableAppCollectionsCache,
-    preventPopoutClose: y.default.preventPopoutClose
+let et = d.ZP.connectStores([D.default], () => ({
+    isTracingRequests: D.default.isTracingRequests,
+    isForcedCanary: D.default.isForcedCanary,
+    isLoggingGatewayEvents: D.default.isLoggingGatewayEvents,
+    isLoggingOverlayEvents: D.default.isLoggingOverlayEvents,
+    isLoggingAnalyticsEvents: D.default.isLoggingAnalyticsEvents,
+    isAxeEnabled: D.default.isAxeEnabled,
+    cssDebuggingEnabled: D.default.cssDebuggingEnabled,
+    layoutDebuggingEnabled: D.default.layoutDebuggingEnabled,
+    isSourceMapsEnabled: D.default.sourceMapsEnabled,
+    isAnalyticsDebuggerEnabled: D.default.isAnalyticsDebuggerEnabled,
+    isIdleStatusIndicatorEnabled: D.default.isIdleStatusIndicatorEnabled,
+    onlyShowPreviewAppCollections: D.default.onlyShowPreviewAppCollections,
+    disableAppCollectionsCache: D.default.disableAppCollectionsCache,
+    preventPopoutClose: D.default.preventPopoutClose
 }))((e) => {
     let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: r, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: a, isAxeEnabled: l, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: g, onlyShowPreviewAppCollections: h, disableAppCollectionsCache: x, preventPopoutClose: f } = e;
     return (0, i.jsxs)(i.Fragment, {
@@ -1154,7 +1154,7 @@ let et = d.ZP.connectStores([y.default], () => ({
     });
 });
 function en() {
-    let e = (0, d.e7)([B.Z], () => B.Z.getSurveyOverride()),
+    let e = (0, d.e7)([y.Z], () => y.Z.getSurveyOverride()),
         [t, n] = r.useState(null != e ? e : '');
     return (0, i.jsx)(P.F, {
         setting: k.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,

@@ -5,13 +5,13 @@ r.d(n, {
 });
 var i = r(192379),
     a = r(820282),
-    s = r.n(a),
-    o = r(298503),
+    o = r.n(a),
+    s = r(298503),
     l = r(632590);
 function u(e) {
     var n = e.children,
         r = e.innerRef,
-        a = i.useContext(o.mq),
+        a = i.useContext(s.mq),
         u = i.useCallback(
             function (e) {
                 (0, l.k$)(r, e), (0, l.DL)(a, e);
@@ -26,7 +26,7 @@ function u(e) {
         }, []),
         i.useEffect(
             function () {
-                s()(!!a, '`Reference` should not be used outside of a `Manager` component.');
+                o()(!!a, '`Reference` should not be used outside of a `Manager` component.');
             },
             [a]
         ),

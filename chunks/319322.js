@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(309749);
-var s = r(328865),
-    o = r(2831);
+var o = r(328865),
+    s = r(2831);
 var l = r(264344),
     u = r.n(l);
 function c(e, n, r) {
@@ -18,7 +18,7 @@ function c(e, n, r) {
     );
 }
 (window.platform = u()),
-    null == window.ResizeObserver && (window.ResizeObserver = s.d),
+    null == window.ResizeObserver && (window.ResizeObserver = o.d),
     'object' != typeof globalThis && (window.globalThis = window),
     (Map.prototype.toJSON = function () {
         return Array.from(this);

@@ -6,13 +6,13 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(481060),
-    s = r(946273),
-    o = r(441110),
+    o = r(946273),
+    s = r(441110),
     l = r(388032),
     u = r(673094);
 function c(e) {
     let { guild: n, message: r } = e;
-    return (0, s.vV)(n.id, r.author.id)
+    return (0, o.vV)(n.id, r.author.id)
         ? (0, i.jsx)(a.Popout, {
               animation: a.Popout.Animation.TRANSLATE,
               align: 'center',
@@ -21,7 +21,7 @@ function c(e) {
               position: 'right',
               renderPopout: (e) => {
                   let { closePopout: a } = e;
-                  return (0, i.jsx)(o.Z, {
+                  return (0, i.jsx)(s.Z, {
                       guild: n,
                       message: r,
                       onClose: a

@@ -5,56 +5,56 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(442837),
     u = r(686546),
     c = r(451478),
     d = r(768581),
     f = r(624138),
-    _ = r(978859);
+    p = r(978859);
 function h(e) {
-    let { guildId: n, guildName: r, guildIcon: a, iconSize: s, className: h, animate: p } = e,
+    let { guildId: n, guildName: r, guildIcon: a, iconSize: o, className: h, animate: _ } = e,
         m = (0, l.e7)([c.Z], () => c.Z.isFocused()),
         g = d.ZP.getGuildIconURL({
             id: n,
             icon: a,
-            size: s,
-            canAnimate: p && m
+            size: o,
+            canAnimate: _ && m
         });
     if (null == g) {
         let e = (0, f.Zg)(r);
         return (0, i.jsx)(u.ZP, {
             mask: u.ZP.Masks.CLAN_ICON,
-            width: s,
-            height: s,
+            width: o,
+            height: o,
             className: h,
             children: (0, i.jsx)('div', {
-                className: o()(_.guildIconImage, _.acronym),
+                className: s()(p.guildIconImage, p.acronym),
                 children: e
             })
         });
     }
     return (0, i.jsx)(u.ZP, {
         mask: u.ZP.Masks.CLAN_ICON,
-        width: s,
-        height: s,
+        width: o,
+        height: o,
         className: h,
         children: (0, i.jsx)('img', {
             src: g,
             alt: r,
-            className: _.guildIconImage
+            className: p.guildIconImage
         })
     });
 }
 n.Z = a.memo(function (e) {
-    let { guild: n, iconSize: r, className: a, animate: s } = e;
+    let { guild: n, iconSize: r, className: a, animate: o } = e;
     return (0, i.jsx)(h, {
         guildName: n.name,
         guildId: n.id,
         guildIcon: n.icon,
         iconSize: r,
         className: a,
-        animate: s
+        animate: o
     });
 });

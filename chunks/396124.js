@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(627494);
 var a = r(757143);
-var s = r(503461),
-    o = r(190313);
+var o = r(503461),
+    s = r(190313);
 function l(e, n, r) {
     return (
         n in e
@@ -52,11 +52,11 @@ class u {
         return this.table.getParentId([null, e]);
     }
     put(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Sn.Replace;
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Sn.Replace;
         return this.transaction((i) => i.put(e, n, r), ''.concat(this.prefix, ' put'));
     }
     putAll(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Sn.Replace;
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Sn.Replace;
         return this.transaction((i) => i.putAll(e, n, r), ''.concat(this.prefix, ' putAll'));
     }
     replaceAll(e, n) {
@@ -88,23 +88,23 @@ class u {
         };
     }
     constructor(e, n, r, i = !0) {
-        l(this, 'originalPrefix', void 0), l(this, 'table', void 0), (this.originalPrefix = e), (this.table = new o.i([e], n, r, i));
+        l(this, 'originalPrefix', void 0), l(this, 'table', void 0), (this.originalPrefix = e), (this.table = new s.i([e], n, r, i));
     }
 }
 class c {
     static fromDatabaseTransaction(e, n, r) {
-        return new c(new o.E(e, n, r));
+        return new c(new s.E(e, n, r));
     }
     put(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Sn.Replace;
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Sn.Replace;
         return this.putWithGeneration(e, n, null, r);
     }
     putWithGeneration(e, n, r) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.Sn.Replace;
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Sn.Replace;
         return this.transaction.put(u.cell(e, n, r), i);
     }
     putAll(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Sn.Replace;
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Sn.Replace;
         return this.transaction.putAll(
             n.map((n) => u.cell(e, n, null)),
             r

@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(981631);
+    o = r(570140),
+    s = r(981631);
 function l(e, n, r) {
     return (
         n in e
@@ -34,7 +34,7 @@ function f(e) {
     (u[n][r] = {
         loading: !1,
         results: i.map((e) => ({
-            type: o.nkL[n].type,
+            type: s.nkL[n].type,
             meta: e
         }))
     }),
@@ -43,7 +43,7 @@ function f(e) {
             integration: n
         });
 }
-function _(e) {
+function p(e) {
     let { integration: n, query: r } = e;
     delete u[n][r];
 }
@@ -58,8 +58,8 @@ class h extends (i = a.ZP.Store) {
     }
 }
 l(h, 'displayName', 'IntegrationQueryStore'),
-    (n.Z = new h(s.Z, {
+    (n.Z = new h(o.Z, {
         INTEGRATION_QUERY: d,
         INTEGRATION_QUERY_SUCCESS: f,
-        INTEGRATION_QUERY_FAILURE: _
+        INTEGRATION_QUERY_FAILURE: p
     }));

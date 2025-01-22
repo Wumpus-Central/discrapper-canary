@@ -8,10 +8,10 @@ function a(e) {
     let n = Promise.resolve(null),
         r = [],
         i = !1,
-        { onContention: a, onContentionResolved: s, onTimeout: o, timeoutMs: l } = e,
+        { onContention: a, onContentionResolved: o, onTimeout: s, timeoutMs: l } = e,
         u = function (e, u) {
-            r.length > 0 ? (a(u, r), (i = !0)) : i && (s(), (i = !1)), r.push(u);
-            let c = null == l || null == o ? null : setTimeout(() => o(u, r), l);
+            r.length > 0 ? (a(u, r), (i = !0)) : i && (o(), (i = !1)), r.push(u);
+            let c = null == l || null == s ? null : setTimeout(() => s(u, r), l);
             return new Promise((i, a) => {
                 (n = n
                     .then(e)

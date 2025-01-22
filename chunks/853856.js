@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(524437),
-    o = r(570140),
+    o = r(524437),
+    s = r(570140),
     l = r(581883),
     u = r(131704),
     c = r(981631);
@@ -19,7 +19,7 @@ function d(e, n, r) {
     );
 }
 let f = {},
-    _ = !1;
+    p = !1;
 function h(e) {
     var n;
     return (0, u.kt)({
@@ -30,9 +30,9 @@ function h(e) {
         guild_id: c.I_8
     });
 }
-function p() {
+function _() {
     var e, n, r;
-    (_ = null !== (r = null === (e = l.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== r && r), (f = {});
+    (p = null !== (r = null === (e = l.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== r && r), (f = {});
     let i = null === (n = l.Z.settings.favorites) || void 0 === n ? void 0 : n.favoriteChannels;
     if (null == i) return !1;
     for (let e in i) {
@@ -48,13 +48,13 @@ function p() {
 }
 class m extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z), p(), this.syncWith([l.Z], p);
+        this.waitFor(l.Z), _(), this.syncWith([l.Z], _);
     }
     getFavoriteChannels() {
         return f;
     }
     get favoriteServerMuted() {
-        return _;
+        return p;
     }
     isFavorite(e) {
         return null != e && null != f[e];
@@ -63,7 +63,7 @@ class m extends (i = a.ZP.Store) {
         if (null != e) return f[e];
     }
     getCategoryRecord(e) {
-        return e in f && f[e].type === s.Dd.CATEGORY ? h(f[e]) : null;
+        return e in f && f[e].type === o.Dd.CATEGORY ? h(f[e]) : null;
     }
     getNickname(e) {
         var n;
@@ -71,4 +71,4 @@ class m extends (i = a.ZP.Store) {
         return null !== (n = null == r ? void 0 : r.nickname) && void 0 !== n ? n : void 0;
     }
 }
-d(m, 'displayName', 'FavoriteStore'), (n.Z = new m(o.Z, {}));
+d(m, 'displayName', 'FavoriteStore'), (n.Z = new m(s.Z, {}));

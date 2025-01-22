@@ -1,11 +1,11 @@
 var i = r(575270).RBTree;
 function a(e, n, r) {
-    (this.discrete = !1 === e), (this.delta = e || 0.01), (this.K = void 0 === n ? 25 : n), (this.CX = void 0 === r ? 1.1 : r), (this.centroids = new i(s)), (this.nreset = 0), this.reset();
-}
-function s(e, n) {
-    return e.mean > n.mean ? 1 : e.mean < n.mean ? -1 : 0;
+    (this.discrete = !1 === e), (this.delta = e || 0.01), (this.K = void 0 === n ? 25 : n), (this.CX = void 0 === r ? 1.1 : r), (this.centroids = new i(o)), (this.nreset = 0), this.reset();
 }
 function o(e, n) {
+    return e.mean > n.mean ? 1 : e.mean < n.mean ? -1 : 0;
+}
+function s(e, n) {
     return e.mean_cumn - n.mean_cumn;
 }
 function l(e) {
@@ -86,8 +86,8 @@ function u(e) {
         else if (a === i) this._new_centroid(e, n, this.n);
         else if (this.discrete) this._new_centroid(e, n, a.cumn);
         else {
-            var s = a.mean_cumn / this.n;
-            Math.floor(4 * this.n * this.delta * s * (1 - s)) - a.n >= n ? this._addweight(a, e, n) : this._new_centroid(e, n, a.cumn);
+            var o = a.mean_cumn / this.n;
+            Math.floor(4 * this.n * this.delta * o * (1 - o)) - a.n >= n ? this._addweight(a, e, n) : this._new_centroid(e, n, a.cumn);
         }
         this._cumulate(!1), !this.discrete && this.K && this.size() > this.K / this.delta && this.compress();
     }),
@@ -115,9 +115,9 @@ function u(e) {
         }
     }),
     (a.prototype.bound_mean_cumn = function (e) {
-        this.centroids._comparator = o;
-        var n = this.centroids.upperBound({ mean_cumn: e });
         this.centroids._comparator = s;
+        var n = this.centroids.upperBound({ mean_cumn: e });
+        this.centroids._comparator = o;
         var r = n.prev(),
             i = r && r.mean_cumn === e ? r : n.next();
         return [r, i];

@@ -1,4 +1,4 @@
-t.r(e);
+t.r(n);
 var l = t(200651);
 t(192379);
 var i = t(481060),
@@ -28,24 +28,24 @@ var i = t(481060),
     L = t(442754),
     N = t(981631),
     O = t(388032);
-function S(n) {
-    let { channel: e, onSelect: t } = n,
-        u = (0, I.Z)(e),
-        r = (0, m.Z)(e),
-        d = (0, h.l)(e),
-        s = (0, h.P)(e),
-        x = (0, p.Z)(e),
-        g = (0, Z.Z)(e),
-        E = (0, f.Z)(e),
-        M = (0, G.ZP)(e),
-        j = (0, P.Z)(e),
-        L = (0, _.Z)(e),
+function S(e) {
+    let { channel: n, onSelect: t } = e,
+        u = (0, I.Z)(n),
+        r = (0, m.Z)(n),
+        d = (0, h.l)(n),
+        s = (0, h.P)(n),
+        x = (0, p.Z)(n),
+        g = (0, Z.Z)(n),
+        E = (0, f.Z)(n),
+        M = (0, G.ZP)(n),
+        j = (0, P.Z)(n),
+        L = (0, _.Z)(n),
         N = (0, c.Z)({
-            id: e.id,
+            id: n.id,
             label: O.intl.string(O.t.gFHI3t)
         }),
-        S = (0, o.Z)(e),
-        b = (0, T.ZP)(e),
+        S = (0, o.Z)(n),
+        b = (0, T.ZP)(n),
         v = (0, C.Mn)('ChannelContextFavoritesMenu');
     return (0, l.jsxs)(i.Menu, {
         navId: 'channel-context',
@@ -68,27 +68,27 @@ function S(n) {
         ]
     });
 }
-function b(n) {
-    let { channel: e, guild: t, onSelect: u } = n,
-        r = (0, I.Z)(e),
-        d = (0, m.Z)(e),
-        s = (0, h.l)(e),
-        p = (0, h.P)(e),
-        Z = (0, L.Z)(e),
-        f = (0, G.ZP)(e),
-        N = (0, _.Z)(e),
-        S = (0, M.Z)(e, t),
-        b = (0, x.Z)(e, t),
-        v = (0, g.Z)(e, t),
-        U = (0, E.Z)(e),
+function b(e) {
+    let { channel: n, guild: t, onSelect: u } = e,
+        r = (0, I.Z)(n),
+        d = (0, m.Z)(n),
+        s = (0, h.l)(n),
+        p = (0, h.P)(n),
+        Z = (0, L.Z)(n),
+        f = (0, G.ZP)(n),
+        N = (0, _.Z)(n),
+        S = (0, M.Z)(n, t),
+        b = (0, x.Z)(n, t),
+        v = (0, g.Z)(n, t),
+        U = (0, E.Z)(n),
         A = (0, c.Z)({
-            id: e.id,
+            id: n.id,
             label: O.intl.string(O.t.gFHI3t)
         }),
-        y = (0, o.Z)(e),
-        V = (0, j.Z)(e, 'list_text_channel_context_menu'),
-        H = (0, P.Z)(e),
-        w = (0, T.ZP)(e),
+        y = (0, o.Z)(n),
+        V = (0, j.Z)(n, 'list_text_channel_context_menu'),
+        H = (0, P.Z)(n),
+        w = (0, T.ZP)(n),
         k = (0, C.Mn)('ChannelContextMenuNormal');
     return (0, l.jsxs)(i.Menu, {
         navId: 'channel-context',
@@ -130,10 +130,10 @@ function b(n) {
         ]
     });
 }
-e.default = (0, r.Z)(
+n.default = (0, r.Z)(
     (0, u.Z)(
-        function (n) {
-            return (0, s.Z)() ? (0, l.jsx)(S, { ...n }) : (0, l.jsx)(b, { ...n });
+        function (e) {
+            return (0, s.Z)() ? (0, l.jsx)(S, { ...e }) : (0, l.jsx)(b, { ...e });
         },
         { object: N.qAy.CONTEXT_MENU }
     ),

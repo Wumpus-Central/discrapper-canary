@@ -34,12 +34,12 @@ t.Z = (e) => {
         [N, v] = r.useState(!1),
         [A, j] = r.useState(!1),
         [O, R] = r.useState(!1),
-        [P, y] = r.useState([]),
-        [B, D] = r.useState(t.name);
+        [P, D] = r.useState([]),
+        [y, B] = r.useState(t.name);
     r.useEffect(() => {
         let e = t.config.effects;
         e.length > 0 &&
-            y(
+            D(
                 [...e].map((e) => {
                     let t = C(e.base64),
                         n = URL.createObjectURL(t);
@@ -59,10 +59,10 @@ t.Z = (e) => {
         let { effect: e, upsertConfig: t } = L.current;
         t({
             id: e.id,
-            name: B,
+            name: y,
             config: { effects: P }
         });
-    }, [P, B]),
+    }, [P, y]),
     null == T)
         ? (0, i.jsx)('div', {})
         : (0, i.jsxs)('div', {
@@ -113,10 +113,10 @@ t.Z = (e) => {
                                           }),
                                           (0, i.jsx)('input', {
                                               type: 'text',
-                                              value: B,
+                                              value: y,
                                               className: f.input,
                                               onChange: (e) => {
-                                                  D(e.target.value);
+                                                  B(e.target.value);
                                               }
                                           })
                                       ]
@@ -197,7 +197,7 @@ t.Z = (e) => {
                                                           (i.onload = async (e) => {
                                                               if (null == e.target || 'string' != typeof e.target.result) return;
                                                               let t = await (0, p.Xv)(URL.createObjectURL(n), e.target.result, n, P.length);
-                                                              y((e) => [...e, t]);
+                                                              D((e) => [...e, t]);
                                                           }),
                                                               i.readAsDataURL(n);
                                                       },
@@ -218,7 +218,7 @@ t.Z = (e) => {
                                               color: c.ButtonColors.RED,
                                               look: c.ButtonLooks.LINK,
                                               onClick: () => {
-                                                  y([]);
+                                                  D([]);
                                               },
                                               children: 'Clear Assets'
                                           }),
@@ -351,7 +351,7 @@ t.Z = (e) => {
                                                                   value: e.start,
                                                                   className: f.input,
                                                                   onChange: (e) => {
-                                                                      y((n) => {
+                                                                      D((n) => {
                                                                           let i = [...n],
                                                                               r = n[t];
                                                                           return (r.start = +e.target.value), (i[t] = r), i;
@@ -373,7 +373,7 @@ t.Z = (e) => {
                                                                   value: e.duration,
                                                                   className: f.input,
                                                                   onChange: (e) => {
-                                                                      y((n) => {
+                                                                      D((n) => {
                                                                           let i = [...n],
                                                                               r = n[t];
                                                                           return (r.duration = +e.target.value), (i[t] = r), i;
@@ -400,7 +400,7 @@ t.Z = (e) => {
                                                                   checked: e.loop,
                                                                   className: f.checkBox,
                                                                   onChange: (e) => {
-                                                                      y((n) => {
+                                                                      D((n) => {
                                                                           let i = [...n],
                                                                               r = n[t];
                                                                           return (r.loop = e.target.checked), (i[t] = r), i;
@@ -424,7 +424,7 @@ t.Z = (e) => {
                                                                           value: e.loopDelay,
                                                                           className: f.input,
                                                                           onChange: (e) => {
-                                                                              y((n) => {
+                                                                              D((n) => {
                                                                                   let i = [...n],
                                                                                       r = n[t];
                                                                                   return (r.loopDelay = +e.target.value), (i[t] = r), i;
@@ -456,7 +456,7 @@ t.Z = (e) => {
                                                                       let i = n[0],
                                                                           r = new FileReader();
                                                                       (r.onload = (e) => {
-                                                                          y((n) => {
+                                                                          D((n) => {
                                                                               if (null == e.target || 'string' != typeof e.target.result) return n;
                                                                               let i = [...n];
                                                                               return null == n[t].randomizedSources && (n[t].randomizedSources = []), n[t].randomizedSources.push({ src: e.target.result }), i;
@@ -472,7 +472,7 @@ t.Z = (e) => {
                                                           color: c.ButtonColors.RED,
                                                           look: c.ButtonLooks.LINK,
                                                           onClick: () => {
-                                                              y((t) => t.filter((t) => t !== e));
+                                                              D((t) => t.filter((t) => t !== e));
                                                           },
                                                           children: 'Remove Layer'
                                                       })

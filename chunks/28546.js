@@ -6,10 +6,10 @@ r.d(n, {
         return f;
     },
     RO: function () {
-        return p;
+        return _;
     },
     _Q: function () {
-        return _;
+        return p;
     },
     hr: function () {
         return m;
@@ -23,8 +23,8 @@ r.d(n, {
 });
 var i = r(97613),
     a = r.n(i),
-    s = r(877124),
-    o = r(65400),
+    o = r(877124),
+    s = r(65400),
     l = r(731965),
     u = r(957825);
 let c = Object.freeze({
@@ -38,8 +38,8 @@ let c = Object.freeze({
             return a()(e);
         })()
     }),
-    d = (0, o.F)()(
-        (0, s.tJ)((e, n) => c, {
+    d = (0, s.F)()(
+        (0, o.tJ)((e, n) => c, {
             name: 'expression-picker-last-active-view',
             partialize: (e) => ({ lastActiveView: e.lastActiveView })
         })
@@ -53,7 +53,7 @@ let c = Object.freeze({
             })
         );
     },
-    _ = (e) => {
+    p = (e) => {
         let n = d.getState();
         if ((void 0 === e || e === n.activeViewType) && null !== n.activeView)
             (0, l.j)(() =>
@@ -69,10 +69,10 @@ let c = Object.freeze({
         if (null == n.activeView) {
             var r;
             f(null !== (r = n.lastActiveView) && void 0 !== r ? r : u.X1.EMOJI, e);
-        } else _();
+        } else p();
     },
-    p = (e, n) => {
-        d.getState().activeView === e ? _() : f(e, n);
+    _ = (e, n) => {
+        d.getState().activeView === e ? p() : f(e, n);
     },
     m = (e) => {
         (0, l.j)(() =>

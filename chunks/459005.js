@@ -3,10 +3,10 @@ r.d(n, {
         return a;
     },
     aA: function () {
-        return s;
+        return o;
     },
     mA: function () {
-        return p;
+        return _;
     },
     ug: function () {
         return i;
@@ -14,8 +14,8 @@ r.d(n, {
 });
 var i,
     a,
-    s,
-    o = r(47120);
+    o,
+    s = r(47120);
 var l = r(724458);
 var u = r(392711);
 function c(e, n, r) {
@@ -39,7 +39,7 @@ function c(e, n, r) {
     })(a || (a = {})),
     !(function (e) {
         (e.COUNT_DISPATCHES_LEFT_AFTER_YIELD = 'count_dispatches_left_after_yield'), (e.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = 'count_flush_before_queue_empty'), (e.COUNT_INITIAL_DISPATCHS_LENGTH = 'count_initial_dispatches_length');
-    })(s || (s = {}));
+    })(o || (o = {}));
 let d = Object.freeze({
         time_to_fire_idle_callback: null,
         time_to_flush_all_work: null,
@@ -52,7 +52,7 @@ let d = Object.freeze({
         time_over_deadline: [0, 0],
         initial_time_of_deadline: [0, 0]
     }),
-    _ = Object.freeze({
+    p = Object.freeze({
         count_flush_before_queue_empty: [0, 0],
         count_dispatches_left_after_yield: [0, 0],
         count_initial_dispatches_length: [0, 0]
@@ -63,9 +63,9 @@ let d = Object.freeze({
         fired_due_to_max_timeout: 0,
         skip_idle_callback_due_to_backgrounded: 0
     });
-class p {
+class _ {
     reset() {
-        (this._timeTracking = (0, u.cloneDeep)(d)), (this._timingStats = (0, u.cloneDeep)(f)), (this._measurements = (0, u.cloneDeep)(_)), (this._eventCounts = (0, u.cloneDeep)(h));
+        (this._timeTracking = (0, u.cloneDeep)(d)), (this._timingStats = (0, u.cloneDeep)(f)), (this._measurements = (0, u.cloneDeep)(p)), (this._eventCounts = (0, u.cloneDeep)(h));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -120,6 +120,6 @@ class p {
         };
     }
     constructor() {
-        c(this, '_timeTracking', (0, u.cloneDeep)(d)), c(this, '_timingStats', (0, u.cloneDeep)(f)), c(this, '_measurements', (0, u.cloneDeep)(_)), c(this, '_eventCounts', (0, u.cloneDeep)(h)), c(this, '_enabled', !1);
+        c(this, '_timeTracking', (0, u.cloneDeep)(d)), c(this, '_timingStats', (0, u.cloneDeep)(f)), c(this, '_measurements', (0, u.cloneDeep)(p)), c(this, '_eventCounts', (0, u.cloneDeep)(h)), c(this, '_enabled', !1);
     }
 }

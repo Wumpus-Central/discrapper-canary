@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(820611),
-    o = r(877837),
+    o = r(820611),
+    s = r(877837),
     l = function (e) {
         var n = e.color,
             r = e.onClick,
@@ -23,7 +23,7 @@ var i = r(192379),
                         },
                         dot: {
                             absolute: '5px 5px 5px 5px',
-                            background: s.Qg(n),
+                            background: o.Qg(n),
                             borderRadius: '50%',
                             opacity: '0'
                         }
@@ -42,7 +42,7 @@ var i = r(192379),
                 }
             );
         return i.createElement(
-            o.m4,
+            s.m4,
             {
                 style: d.color,
                 color: n,

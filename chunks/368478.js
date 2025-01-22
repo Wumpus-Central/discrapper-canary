@@ -32,12 +32,12 @@ function x(e) {
         E = i.useMemo(() => (null != n ? (0, h.XZ)(n.displayName) : C.intl.string(C.t['3xjX0d'])), [n]),
         b = void 0 !== s.flags && (0, f.yE)(s.flags, g.udG.EMBEDDED),
         Z = null != v && v.applicationId === s.id && (_ || (0, o.p)(v.location) === t.id),
-        { analyticsLocations: S } = (0, u.ZP)(d.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
-        N = null != t.recipients ? t.recipients[0] : void 0,
+        { analyticsLocations: N } = (0, u.ZP)(d.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
+        S = null != t.recipients ? t.recipients[0] : void 0,
         T = (0, m.ms)({
             channel: t,
             applicationId: s.id,
-            botUserId: N
+            botUserId: S
         });
     return {
         isExecutingLaunchInteraction: p,
@@ -45,9 +45,9 @@ function x(e) {
         hasActiveMatchingEmbeddedActivity: Z,
         isEmbeddedApp: b,
         currentEmbeddedActivity: v,
-        channelRecipientUserId: N,
+        channelRecipientUserId: S,
         setIsExecutingLaunchInteraction: x,
-        analyticsLocations: S
+        analyticsLocations: N
     };
 }
 function v(e) {

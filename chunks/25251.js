@@ -1,6 +1,6 @@
 let i, a;
-var s,
-    o = r(392711);
+var o,
+    s = r(392711);
 var l = r(442837),
     u = r(570140);
 function c(e, n, r) {
@@ -18,49 +18,49 @@ function c(e, n, r) {
 }
 let d = [],
     f = [],
-    _ = !1;
+    p = !1;
 let h = d,
-    p = {},
+    _ = {},
     m = null;
 let g = 0,
     E = 300000,
     v = 60000,
-    I = 3600000,
-    T = (e) => {
-        h = (0, o.cloneDeep)(e);
+    y = 3600000,
+    b = (e) => {
+        h = (0, s.cloneDeep)(e);
         let n = {};
         h.forEach((e) => {
             if (((n[e.id] = e), f.length > 0)) {
                 var r;
-                n[e.id].config.effects = null !== (r = (0, o.sample)(f)) && void 0 !== r ? r : [];
+                n[e.id].config.effects = null !== (r = (0, s.sample)(f)) && void 0 !== r ? r : [];
             }
         }),
-            (p = n);
+            (_ = n);
     },
-    b = () => {
-        _ = !0;
+    I = () => {
+        p = !0;
     },
-    y = (e) => {
+    T = (e) => {
         let { profileEffects: n } = e;
-        (i = void 0), (a = Date.now() + E), (g = 0), T(0 === n.length ? d : n), (_ = !1);
+        (i = void 0), (a = Date.now() + E), (g = 0), b(0 === n.length ? d : n), (p = !1);
     },
     S = (e) => {
         let { error: n } = e;
-        (i = n), (a = Date.now() + Math.min(v * 2 ** g, I)), ++g, T(d), (_ = !1);
+        (i = n), (a = Date.now() + Math.min(v * 2 ** g, y)), ++g, b(d), (p = !1);
     },
     A = (e) => {
         let { id: n } = e;
         m = n;
     },
-    N = () => {
-        T(d), (m = null), (a = void 0), (_ = !1);
+    C = () => {
+        b(d), (m = null), (a = void 0), (p = !1);
     },
-    C = (e) => {
-        N();
+    N = (e) => {
+        C();
     };
-class R extends (s = l.ZP.Store) {
+class R extends (o = l.ZP.Store) {
     get isFetching() {
-        return _;
+        return p;
     }
     get fetchError() {
         return i;
@@ -78,14 +78,14 @@ class R extends (s = l.ZP.Store) {
         return null != a && null == i;
     }
     getProfileEffectById(e) {
-        return null != e ? p[e] : void 0;
+        return null != e ? _[e] : void 0;
     }
 }
 c(R, 'displayName', 'ProfileEffectStore'),
     (n.Z = new R(u.Z, {
-        USER_PROFILE_EFFECTS_FETCH: b,
-        USER_PROFILE_EFFECTS_FETCH_SUCCESS: y,
+        USER_PROFILE_EFFECTS_FETCH: I,
+        USER_PROFILE_EFFECTS_FETCH_SUCCESS: T,
         USER_PROFILE_EFFECTS_FETCH_FAILURE: S,
         PROFILE_EFFECTS_SET_TRY_IT_OUT: A,
-        LOGOUT: C
+        LOGOUT: N
     }));

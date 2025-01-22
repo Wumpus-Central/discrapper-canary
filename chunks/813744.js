@@ -1,60 +1,60 @@
 r.d(n, {
     Z: function () {
-        return p;
+        return _;
     }
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(200651);
+var o = r(200651);
 r(192379);
-var o = r(442837),
+var s = r(442837),
     l = r(481060),
     u = r(314910),
     c = r(857192),
     d = r(517100),
     f = r(594174),
-    _ = r(231338),
+    p = r(231338),
     h = r(717855);
-function p() {
+function _() {
     var e;
-    let n = (0, o.e7)([c.default], () => c.default.isIdleStatusIndicatorEnabled),
-        r = (0, o.e7)([f.default], () => {
+    let n = (0, s.e7)([c.default], () => c.default.isIdleStatusIndicatorEnabled),
+        r = (0, s.e7)([f.default], () => {
             var e, n;
             return null !== (n = null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== n && n;
         }),
-        [i, a] = (0, o.Wu)([d.Z], () => [d.Z.isIdle(), d.Z.isAFK()]),
-        p = [];
+        [i, a] = (0, s.Wu)([d.Z], () => [d.Z.isIdle(), d.Z.isAFK()]),
+        _ = [];
     return (
-        !i && !a && p.push('ACTIVE'),
-        i && p.push('IDLE'),
-        a && p.push('AFK'),
+        !i && !a && _.push('ACTIVE'),
+        i && _.push('IDLE'),
+        a && _.push('AFK'),
         r && n
-            ? (0, s.jsx)(u.ZP, {
-                  children: (0, s.jsxs)('div', {
+            ? (0, o.jsx)(u.ZP, {
+                  children: (0, o.jsxs)('div', {
                       className: h.container,
                       children: [
-                          (0, s.jsxs)('div', {
+                          (0, o.jsxs)('div', {
                               className: h.status,
                               children: [
-                                  (0, s.jsx)(l.Status, {
-                                      status: p.includes('ACTIVE') ? _.Sk.ONLINE : _.Sk.IDLE,
+                                  (0, o.jsx)(l.Status, {
+                                      status: _.includes('ACTIVE') ? p.Sk.ONLINE : p.Sk.IDLE,
                                       className: h.statusIndicator
                                   }),
-                                  (0, s.jsx)(l.Text, {
+                                  (0, o.jsx)(l.Text, {
                                       variant: 'text-md/normal',
                                       children: 'IDLE STATUS:'
                                   }),
-                                  (0, s.jsx)('div', {
+                                  (0, o.jsx)('div', {
                                       className: h.statusText,
-                                      children: (0, s.jsx)(l.Text, {
+                                      children: (0, o.jsx)(l.Text, {
                                           variant: 'text-md/bold',
-                                          children: p.join(' + ')
+                                          children: _.join(' + ')
                                       })
                                   })
                               ]
                           }),
                           i &&
-                              (0, s.jsxs)(l.Text, {
+                              (0, o.jsxs)(l.Text, {
                                   variant: 'text-md/normal',
                                   children: [
                                       'Idle since:',

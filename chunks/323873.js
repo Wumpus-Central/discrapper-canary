@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140),
-    o = r(752305),
+    o = r(570140),
+    s = r(752305),
     l = r(957730),
     u = r(695346),
     c = r(375954);
@@ -19,20 +19,20 @@ function d(e, n, r) {
     );
 }
 let f = {},
-    _ = {};
+    p = {};
 function h(e) {
     let { channelId: n, messageId: r, content: i, source: a } = e,
-        s = u.dN.getSetting(),
+        o = u.dN.getSetting(),
         c = l.ZP.unparse(i, n);
     (f[n] = {
         channelId: n,
         messageId: r,
         textValue: c,
-        richValue: (0, o.JM)(s ? c : i)
+        richValue: (0, s.JM)(o ? c : i)
     }),
-        (_[n] = a);
+        (p[n] = a);
 }
-function p(e) {
+function _(e) {
     let { channelId: n, textValue: r, richValue: i } = e,
         a = f[n];
     if (null == a) return !1;
@@ -45,7 +45,7 @@ function p(e) {
 function m(e) {
     let { channelId: n } = e;
     if (null == n || null == f[n]) return !1;
-    delete f[n], delete _[n];
+    delete f[n], delete p[n];
 }
 class g extends (i = a.ZP.Store) {
     isEditing(e, n) {
@@ -72,12 +72,12 @@ class g extends (i = a.ZP.Store) {
         return null != n && null != n.messageId ? c.Z.getMessage(e, n.messageId) : null;
     }
     getEditActionSource(e) {
-        return _[e];
+        return p[e];
     }
 }
 d(g, 'displayName', 'EditMessageStore'),
-    (n.Z = new g(s.Z, {
+    (n.Z = new g(o.Z, {
         MESSAGE_START_EDIT: h,
-        MESSAGE_UPDATE_EDIT: p,
+        MESSAGE_UPDATE_EDIT: _,
         MESSAGE_END_EDIT: m
     }));

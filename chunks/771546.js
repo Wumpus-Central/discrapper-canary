@@ -3,16 +3,16 @@ function n(e) {
         r = '(_?f(32|64))?',
         i = '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|[=!]~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~|]|//|//=|&[-+*]=?|&\\*\\*|\\[\\][=?]?',
         a = '[A-Za-z_]\\w*(::\\w+)*(\\?|!)?',
-        s = {
+        o = {
             $pattern: '[a-zA-Z_]\\w*[!?=]?',
             keyword: 'abstract alias annotation as as? asm begin break case class def do else elsif end ensure enum extend for fun if include instance_sizeof is_a? lib macro module next nil? of out pointerof private protected rescue responds_to? return require select self sizeof struct super then type typeof union uninitialized unless until verbatim when while with yield __DIR__ __END_LINE__ __FILE__ __LINE__',
             literal: 'false nil true'
         },
-        o = {
+        s = {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
-            keywords: s
+            keywords: o
         },
         l = {
             className: 'variable',
@@ -30,7 +30,7 @@ function n(e) {
                     end: '%\\}'
                 }
             ],
-            keywords: s
+            keywords: o
         };
     function c(e, n) {
         let r = [
@@ -43,7 +43,7 @@ function n(e) {
     }
     let d = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, o],
+            contains: [e.BACKSLASH_ESCAPE, s],
             variants: [
                 {
                     begin: /'/,
@@ -122,13 +122,13 @@ function n(e) {
             ],
             relevance: 0
         },
-        _ = {
+        p = {
             begin: '(?!%\\})(' + e.RE_STARTERS_RE + '|\\n|\\b(case|if|select|unless|until|when|while)\\b)\\s*',
             keywords: 'case if select unless until when while',
             contains: [
                 {
                     className: 'regexp',
-                    contains: [e.BACKSLASH_ESCAPE, o],
+                    contains: [e.BACKSLASH_ESCAPE, s],
                     variants: [
                         {
                             begin: '//[a-z]*',
@@ -145,7 +145,7 @@ function n(e) {
         },
         h = {
             className: 'regexp',
-            contains: [e.BACKSLASH_ESCAPE, o],
+            contains: [e.BACKSLASH_ESCAPE, s],
             variants: [
                 {
                     begin: '%r\\(',
@@ -174,12 +174,12 @@ function n(e) {
             ],
             relevance: 0
         },
-        p = [
+        _ = [
             u,
             d,
             f,
             h,
-            _,
+            p,
             {
                 className: 'meta',
                 begin: '@\\[',
@@ -250,13 +250,13 @@ function n(e) {
             }
         ];
     return (
-        (o.contains = p),
-        (u.contains = p.slice(1)),
+        (s.contains = _),
+        (u.contains = _.slice(1)),
         {
             name: 'Crystal',
             aliases: ['cr'],
-            keywords: s,
-            contains: p
+            keywords: o,
+            contains: _
         }
     );
 }

@@ -1,6 +1,6 @@
 r.d(n, {
     Jw: function () {
-        return o;
+        return s;
     },
     bC: function () {
         return u;
@@ -8,9 +8,9 @@ r.d(n, {
 });
 var i = r(442837),
     a = r(808506),
-    s = r(358085);
-function o() {
-    return s.isPlatformEmbedded;
+    o = r(358085);
+function s() {
+    return o.isPlatformEmbedded;
 }
 function l(e) {
     return e || !1;

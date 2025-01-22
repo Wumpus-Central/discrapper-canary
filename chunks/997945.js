@@ -1,4 +1,4 @@
-var i, a, s;
+var i, a, o;
 r.d(n, {
     Ru: function () {
         return a;
@@ -15,4 +15,4 @@ r.d(n, {
     })(a || (a = {})),
     !(function (e) {
         (e.DRIP = 'DripIcon'), (e.SLIMY = 'SlimyIcon'), (e.ZOMBIE = 'ZombieIcon'), (e.CLYDE_STEIN = 'ClydeSteinIcon');
-    })(s || (s = {}));
+    })(o || (o = {}));

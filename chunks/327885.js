@@ -63,7 +63,7 @@ function O(e) {
             displayUserMode: O,
             notificationPositionMode: R,
             textChatNotificationMode: P,
-            shouldShowKeybindIndicators: y
+            shouldShowKeybindIndicators: D
         } = (0, o.cj)([C.Z], () => ({
             avatarSizeMode: C.Z.getAvatarSizeMode(),
             displayNameMode: C.Z.getDisplayNameMode(),
@@ -72,8 +72,8 @@ function O(e) {
             textChatNotificationMode: C.Z.getTextChatNotificationMode(),
             shouldShowKeybindIndicators: C.Z.showKeybindIndicators
         })),
-        B = (0, o.e7)([_.Z], () => _.Z.getOverlayKeybind()),
-        D = (0, x.Z)({ location: 'overlay_user_settings' }),
+        y = (0, o.e7)([_.Z], () => _.Z.getOverlayKeybind()),
+        B = (0, x.Z)({ location: 'overlay_user_settings' }),
         Z = (0, g.$1)(),
         L = (0, p.XE)('overlay_user_settings');
     function M(e) {
@@ -147,11 +147,11 @@ function O(e) {
                                     className: N.enableOverlayItem,
                                     children: (0, i.jsx)(m.Z, {
                                         disabled: !r,
-                                        defaultValue: null != B ? B.shortcut : [],
+                                        defaultValue: null != y ? y.shortcut : [],
                                         onChange: function (e) {
-                                            s()(null != B, 'Keybind should never be undefined'),
+                                            s()(null != y, 'Keybind should never be undefined'),
                                                 d.Z.setKeybind({
-                                                    ...B,
+                                                    ...y,
                                                     shortcut: e
                                                 });
                                         }
@@ -223,10 +223,10 @@ function O(e) {
                                 value: O
                             })
                         }),
-                        D &&
+                        B &&
                             (0, i.jsx)(j, {
                                 children: (0, i.jsx)(c.FormSwitch, {
-                                    value: y,
+                                    value: D,
                                     onChange: (e) => u.Z.setShowKeybindIndicators(e),
                                     hideBorder: !0,
                                     children: I.intl.string(I.t.XZTl9v)

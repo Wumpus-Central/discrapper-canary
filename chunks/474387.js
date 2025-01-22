@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(344185),
-    o = r(314897),
+    o = r(344185),
+    s = r(314897),
     l = r(592125),
     u = r(709054),
     c = r(882252);
@@ -22,7 +22,7 @@ class f extends a.Z {
     handleThreadCreate(e) {
         let { channel: n } = e;
         if (n.isForumPost()) {
-            let e = n.ownerId === o.default.getId();
+            let e = n.ownerId === s.default.getId();
             this.readStateSnapshots[n.id] = {
                 isNew: !e,
                 hasUnreads: !e
@@ -43,7 +43,7 @@ class f extends a.Z {
                 null != r && r.isForumLikeChannel() && ((this.readStateSnapshots = {}), this.processForumChannel(r.guild_id, n));
             }),
             d(this, 'processForumChannel', (e, n) => {
-                let r = s.Z.getThreadsForParent(e, n);
+                let r = o.Z.getThreadsForParent(e, n);
                 u.default.keys(r).forEach((e) => {
                     let n = (0, c.nC)(e);
                     null != n && (this.readStateSnapshots[e] = n);

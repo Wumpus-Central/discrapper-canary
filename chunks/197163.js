@@ -18,19 +18,19 @@
         return n ? 'kelios sekundės' : i ? 'kelių sekundžių' : 'kelias sekundes';
     }
     function i(e, n, r, i) {
-        return n ? s(r)[0] : i ? s(r)[1] : s(r)[2];
+        return n ? o(r)[0] : i ? o(r)[1] : o(r)[2];
     }
     function a(e) {
         return e % 10 == 0 || (e > 10 && e < 20);
     }
-    function s(e) {
+    function o(e) {
         return n[e].split('_');
     }
-    function o(e, n, r, o) {
+    function s(e, n, r, s) {
         var l = e + ' ';
-        if (1 === e) return l + i(e, n, r[0], o);
-        if (n) return l + (a(e) ? s(r)[1] : s(r)[0]);
-        return o ? l + s(r)[1] : l + (a(e) ? s(r)[1] : s(r)[2]);
+        if (1 === e) return l + i(e, n, r[0], s);
+        if (n) return l + (a(e) ? o(r)[1] : o(r)[0]);
+        return s ? l + o(r)[1] : l + (a(e) ? o(r)[1] : o(r)[2]);
     }
     return e.defineLocale('lt', {
         months: {
@@ -71,17 +71,17 @@
             future: 'po %s',
             past: 'prieš %s',
             s: r,
-            ss: o,
+            ss: s,
             m: i,
-            mm: o,
+            mm: s,
             h: i,
-            hh: o,
+            hh: s,
             d: i,
-            dd: o,
+            dd: s,
             M: i,
-            MM: o,
+            MM: s,
             y: i,
-            yy: o
+            yy: s
         },
         dayOfMonthOrdinalParse: /\d{1,2}-oji/,
         ordinal: function (e) {

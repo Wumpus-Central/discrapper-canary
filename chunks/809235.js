@@ -1,5 +1,5 @@
-var e = n(821819);
-t.exports = !e(function () {
-    var t = function () {}.bind();
-    return 'function' != typeof t || t.hasOwnProperty('prototype');
+var i = r(821819);
+e.exports = !i(function () {
+    var e = function () {}.bind();
+    return 'function' != typeof e || e.hasOwnProperty('prototype');
 });

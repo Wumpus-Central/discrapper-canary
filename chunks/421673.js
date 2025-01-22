@@ -8,39 +8,39 @@ r.d(n, {
 });
 var i = r(724458);
 var a = r(653041);
-var s = r(47120);
-var o = r(658722),
-    l = r.n(o),
+var o = r(47120);
+var s = r(658722),
+    l = r.n(s),
     u = r(954955),
     c = r.n(u),
     d = r(339085),
     f = r(633302),
-    _ = r(626135),
+    p = r(626135),
     h = r(697426),
-    p = r(242291),
+    _ = r(242291),
     m = r(981631);
 let g = 100,
     E = 8,
     v = 7,
-    I = 6,
-    T = 5,
-    b = 4,
-    y = 3,
+    y = 6,
+    b = 5,
+    I = 4,
+    T = 3,
     S = 2,
     A = 1,
-    N = [],
-    C = 350,
-    R = c()(D, C),
-    O = c()(L, C);
+    C = [],
+    N = 350,
+    R = c()(D, N),
+    O = c()(x, N);
 function D(e, n) {
-    _.default.track(m.rMx.SEARCH_STARTED, {
+    p.default.track(m.rMx.SEARCH_STARTED, {
         channel_id: n,
         search_type: m.aib.SOUNDBOARD,
         location_stack: e
     });
 }
-function L(e, n, r, i) {
-    _.default.track(m.rMx.SEARCH_RESULT_VIEWED, {
+function x(e, n, r, i) {
+    p.default.track(m.rMx.SEARCH_RESULT_VIEWED, {
         search_type: m.aib.SOUNDBOARD,
         channel_id: r,
         query: i,
@@ -48,24 +48,24 @@ function L(e, n, r, i) {
         location_stack: n
     });
 }
-function x(e, n, r, i) {
+function L(e, n, r, i) {
     var a;
-    let s = 0,
-        o = n.name.toLocaleLowerCase(),
+    let o = 0,
+        s = n.name.toLocaleLowerCase(),
         u = null != n.emojiId ? d.ZP.getCustomEmojiById(n.emojiId) : null,
         c = null != n.emojiName ? f.ZP.convertSurrogateToName(n.emojiName, !1) : null,
-        _ = null != c ? f.ZP.getByName(c) : null,
-        h = null != u ? [u.name] : null !== (a = null == _ ? void 0 : _.names) && void 0 !== a ? a : [];
-    return e === o && (s += E), h.includes(e) && (s += v), o.startsWith(e) && (s += I), h.some((n) => n.startsWith(e)) && (s += T), o.endsWith(e) && (s += b), h.some((n) => n.endsWith(e)) && (s += y), l()(e, n.name.toLocaleLowerCase()) && (s += S), h.some((n) => l()(e, n)) && (s += A), s > 0 && (0, p.Nq)(r, n, i) && (s += g), s;
+        p = null != c ? f.ZP.getByName(c) : null,
+        h = null != u ? [u.name] : null !== (a = null == p ? void 0 : p.names) && void 0 !== a ? a : [];
+    return e === s && (o += E), h.includes(e) && (o += v), s.startsWith(e) && (o += y), h.some((n) => n.startsWith(e)) && (o += b), s.endsWith(e) && (o += I), h.some((n) => n.endsWith(e)) && (o += T), l()(e, n.name.toLocaleLowerCase()) && (o += S), h.some((n) => l()(e, n)) && (o += A), o > 0 && (0, _.Nq)(r, n, i) && (o += g), o;
 }
 function w(e, n, r, i, a) {
-    let s = n.reduce((n, s) => (R(a, null == i ? void 0 : i.id), (n[s.soundId] = x(e.toLocaleLowerCase(), s, r, i)), n), {}),
-        o = n.filter((e) => s[e.soundId] > 0).sort((e, n) => s[n.soundId] - s[e.soundId]);
-    return O(o, a, null == i ? void 0 : i.id, e), o;
+    let o = n.reduce((n, o) => (R(a, null == i ? void 0 : i.id), (n[o.soundId] = L(e.toLocaleLowerCase(), o, r, i)), n), {}),
+        s = n.filter((e) => o[e.soundId] > 0).sort((e, n) => o[n.soundId] - o[e.soundId]);
+    return O(s, a, null == i ? void 0 : i.id, e), s;
 }
 function P(e, n, r, i, a) {
     return 0 === e.length
-        ? N
+        ? C
         : w(
               e,
               n.reduce((e, n) => {

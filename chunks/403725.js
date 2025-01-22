@@ -1,13 +1,13 @@
 Object.defineProperty(n, '__esModule', { value: !0 }), (n.FormatBuilder = void 0), (n.bindFormatValuesWithBuilder = u), (n.bindFormatValues = c);
 let i = r(927882),
     a = r(485340),
-    s = r(950119);
-function o(e) {
+    o = r(950119);
+function s(e) {
     return '$' === e[0];
 }
 class l {}
-function u(e, n, r, l, d, f = {}, _, h) {
-    var p;
+function u(e, n, r, l, d, f = {}, p, h) {
+    var _;
     if (1 === n.length && 'string' == typeof n[0]) {
         e.pushLiteralText(n[0]);
         return;
@@ -19,14 +19,14 @@ function u(e, n, r, l, d, f = {}, _, h) {
         }
         let n = m[0];
         if (n === a.FormatJsNodeType.Pound) {
-            if ('number' == typeof _) {
-                let n = l.getNumberFormat(r).format(_);
+            if ('number' == typeof p) {
+                let n = l.getNumberFormat(r).format(p);
                 e.pushLiteralText(n);
             }
             continue;
         }
         let g = m[1];
-        if (!(g in f) && !o(g)) throw new s.MissingValueError(g, h);
+        if (!(g in f) && !s(g)) throw new o.MissingValueError(g, h);
         let E = f[g];
         switch (n) {
             case a.FormatJsNodeType.Argument:
@@ -47,16 +47,16 @@ function u(e, n, r, l, d, f = {}, _, h) {
             case a.FormatJsNodeType.Number: {
                 let n = m[2],
                     a = n in d.number ? d.number[n] : null != n ? (0, i.parseNumberSkeleton)((0, i.parseNumberSkeletonFromString)(n)) : void 0,
-                    s = 'number' != typeof E ? E : E * (null !== (p = null == a ? void 0 : a.scale) && void 0 !== p ? p : 1);
-                e.pushLiteralText(l.getNumberFormat(r, a).format(s));
+                    o = 'number' != typeof E ? E : E * (null !== (_ = null == a ? void 0 : a.scale) && void 0 !== _ ? _ : 1);
+                e.pushLiteralText(l.getNumberFormat(r, a).format(o));
                 break;
             }
             case a.FormatJsNodeType.Tag: {
                 let n = m[2],
                     i = m[3],
-                    a = c(e.constructor, n, r, l, d, f, _),
-                    s = null != i ? c(e.constructor, i, r, l, d, f, _) : [];
-                if (o(g)) e.pushRichTextTag(g, a, s);
+                    a = c(e.constructor, n, r, l, d, f, p),
+                    o = null != i ? c(e.constructor, i, r, l, d, f, p) : [];
+                if (s(g)) e.pushRichTextTag(g, a, o);
                 else {
                     if ('function' != typeof E) throw `expected a function type for a Tag formatting value, ${g}. got ${typeof E}: ${E}`;
                     let n = E(a);
@@ -76,19 +76,19 @@ function u(e, n, r, l, d, f = {}, _, h) {
                 let n = m[2],
                     i = m[3],
                     a = m[4],
-                    s = (() => {
+                    o = (() => {
                         var e;
-                        let s = `=${E}`;
-                        return s in n ? n[s] : null !== (e = n[l.getPluralRules(r, { type: a }).select(E - (null != i ? i : 0))]) && void 0 !== e ? e : n.other;
+                        let o = `=${E}`;
+                        return o in n ? n[o] : null !== (e = n[l.getPluralRules(r, { type: a }).select(E - (null != i ? i : 0))]) && void 0 !== e ? e : n.other;
                     })();
-                if (null == s) throw `${E} is not a known option for plural value ${g}. Valid options are ${Object.keys(n).join(', ')}`;
-                u(e, s, r, l, d, f, E - (null != i ? i : 0));
+                if (null == o) throw `${E} is not a known option for plural value ${g}. Valid options are ${Object.keys(n).join(', ')}`;
+                u(e, o, r, l, d, f, E - (null != i ? i : 0));
             }
         }
     }
 }
-function c(e, n, r, i, a, s = {}, o) {
+function c(e, n, r, i, a, o = {}, s) {
     let l = new e();
-    return 'string' == typeof n ? (l.pushLiteralText(n), l.finish()) : (u(l, n, r, i, a, s, o), l.finish());
+    return 'string' == typeof n ? (l.pushLiteralText(n), l.finish()) : (u(l, n, r, i, a, o, s), l.finish());
 }
 n.FormatBuilder = l;

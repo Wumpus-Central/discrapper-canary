@@ -3,75 +3,75 @@ r.d(n, {
         return S;
     },
     KH: function () {
-        return T;
+        return b;
     },
     ZP: function () {
-        return I;
+        return y;
     }
 });
 var i = r(47120);
 var a = r(653041);
-var s = r(512722),
-    o = r.n(s),
+var o = r(512722),
+    s = r.n(o),
     l = r(911969),
     u = r(998698),
     c = r(465343),
     d = r(53529),
     f = r(341702),
-    _ = r(925994),
+    p = r(925994),
     h = r(436660),
-    p = r(887490);
+    _ = r(887490);
 let m = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
     g = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
     E = new Set(['line', 'blockQuote']),
     v = new Set(['applicationCommandOption']);
-function I(e, n, r) {
-    let { isInline: i, isVoid: a, onChange: s } = e;
+function y(e, n, r) {
+    let { isInline: i, isVoid: a, onChange: o } = e;
     (e.isVoid = (e) => !!g.has(e.type) || a(e)), (e.isInline = (e) => !!g.has(e.type) || i(e));
-    let o = null,
+    let s = null,
         l = !0;
     return (
         (e.onChange = () => {
-            let i = p.bN.richValue(e);
-            (i !== o || e.previewMarkdown !== l) &&
+            let i = _.bN.richValue(e);
+            (i !== s || e.previewMarkdown !== l) &&
                 (d.T.withMergedEntry(e, () => {
-                    p.bN.withoutNormalizing(e, () => T(e, n, r));
+                    _.bN.withoutNormalizing(e, () => b(e, n, r));
                 }),
-                (o = i),
+                (s = i),
                 (l = e.previewMarkdown)),
-                s();
+                o();
         }),
         e
     );
 }
-function T(e, n, r) {
-    let i = p.bN.areStylesDisabled(e);
-    for (let a of p.bN.blocks(e))
-        if (E.has(a[0].type)) i ? y(e, a, !0, null) : b(e, a, n, r);
+function b(e, n, r) {
+    let i = _.bN.areStylesDisabled(e);
+    for (let a of _.bN.blocks(e))
+        if (E.has(a[0].type)) i ? T(e, a, !0, null) : I(e, a, n, r);
         else {
-            let [s, o] = a;
-            for (let a = s.children.length - 1; a >= 0; a--) {
-                let l = s.children[a];
+            let [o, s] = a;
+            for (let a = o.children.length - 1; a >= 0; a--) {
+                let l = o.children[a];
                 if (v.has(l.type)) {
-                    let s = [l, p.C0.child(o, a)];
-                    i ? y(e, s, !0, null) : b(e, s, n, r);
+                    let o = [l, _.C0.child(s, a)];
+                    i ? T(e, o, !0, null) : I(e, o, n, r);
                 }
             }
         }
 }
-function b(e, n, r, i) {
+function I(e, n, r, i) {
     var a;
-    let s = 'line' === n[0].type && (null === (a = n[0].codeBlockState) || void 0 === a ? void 0 : a.isInCodeBlock) === !0,
-        o = p.q.markdown(n[0], r);
-    y(e, n, s, o) && ((n = p.q.updateElement(e, n)), (o = p.q.markdown(n[0], r))), !s && (S(e, n, i, o) && ((n = p.q.updateElement(e, n)), (o = p.q.markdown(n[0], r))), A(e, n, r, i, o));
+    let o = 'line' === n[0].type && (null === (a = n[0].codeBlockState) || void 0 === a ? void 0 : a.isInCodeBlock) === !0,
+        s = _.q.markdown(n[0], r);
+    T(e, n, o, s) && ((n = _.q.updateElement(e, n)), (s = _.q.markdown(n[0], r))), !o && (S(e, n, i, s) && ((n = _.q.updateElement(e, n)), (s = _.q.markdown(n[0], r))), A(e, n, r, i, s));
 }
-function y(e, n, r, i) {
-    let [a, s] = n,
-        o = !1;
+function T(e, n, r, i) {
+    let [a, o] = n,
+        s = !1;
     for (let n = a.children.length - 1; n >= 0; n--) {
         let l = a.children[n],
             u = n < a.children.length - 1 ? a.children[n + 1] : null;
-        if (p.LC.isText(l) && !r) {
+        if (_.LC.isText(l) && !r) {
             if (null == u || !e.isVoid(u)) continue;
             let r = !1,
                 i = 0;
@@ -85,45 +85,45 @@ function y(e, n, r, i) {
                 i = e + 2;
             }
             if (r) {
-                let r = p.C0.child(s, n + 1);
+                let r = _.C0.child(o, n + 1);
                 h.Q.voidToText(
                     e,
-                    (0, _.sg)(u, {
+                    (0, p.sg)(u, {
                         mode: 'plain',
                         preventEmojiSurrogates: !0
                     }),
                     r
                 ),
-                    (o = !0);
+                    (s = !0);
             }
         } else if (e.isVoid(l)) {
-            let a = p.C0.child(s, n),
+            let a = _.C0.child(o, n),
                 u = {
-                    path: p.C0.child(a, 0),
+                    path: _.C0.child(a, 0),
                     offset: 0
                 };
-            (r || (null != i && C(e, s, u, i))) &&
+            (r || (null != i && N(e, o, u, i))) &&
                 (h.Q.voidToText(
                     e,
-                    (0, _.sg)(l, {
+                    (0, p.sg)(l, {
                         mode: 'plain',
                         preventEmojiSurrogates: !0
                     }),
                     a
                 ),
-                (o = !0));
+                (s = !0));
         }
     }
-    return o;
+    return s;
 }
 function S(e, n, r, i) {
     let a = n[1],
-        s = !1,
-        o = [...i.entries].reverse();
-    for (let l = 0; l < o.length; l++) {
+        o = !1,
+        s = [...i.entries].reverse();
+    for (let l = 0; l < s.length; l++) {
         let u;
-        let c = o[l],
-            d = o[l + 1];
+        let c = s[l],
+            d = s[l + 1];
         if (null != d && d.text.endsWith('\\') && c.start === d.start + d.text.length) continue;
         switch (c.attributes[0]) {
             case 'emoji':
@@ -205,24 +205,24 @@ function S(e, n, r, i) {
                 continue;
         }
         if (!R(r, n[0], u)) continue;
-        let _ = (0, f.t)(e, a, i.serializedChildren, c.start),
-            p = (0, f.t)(e, a, i.serializedChildren, c.start + c.text.length);
+        let p = (0, f.t)(e, a, i.serializedChildren, c.start),
+            _ = (0, f.t)(e, a, i.serializedChildren, c.start + c.text.length);
         h.Q.textToVoid(e, u, {
-            anchor: _,
-            focus: p
+            anchor: p,
+            focus: _
         }),
-            (s = !0);
+            (o = !0);
     }
-    return s;
+    return o;
 }
 function A(e, n, r, i, a) {
-    let [s, o] = n,
+    let [o, s] = n,
         l = !1;
-    for (let u = s.children.length - 1; u >= 0; u--) {
+    for (let u = o.children.length - 1; u >= 0; u--) {
         let d;
-        let f = s.children[u];
-        if (!p.LC.isText(f)) continue;
-        let _ = p.C0.child(o, u),
+        let f = o.children[u];
+        if (!_.LC.isText(f)) continue;
+        let p = _.C0.child(s, u),
             h = [];
         for (m.lastIndex = 0; null != (d = m.exec(f.text)); ) {
             if (0 !== d.index && null == f.text.charAt(d.index - 1).match(/(\t|\s)/)) {
@@ -230,32 +230,32 @@ function A(e, n, r, i, a) {
                 continue;
             }
             if (
-                C(
+                N(
                     e,
-                    o,
+                    s,
                     {
-                        path: _,
+                        path: p,
                         offset: d.index
                     },
                     a
                 )
             )
                 continue;
-            let s = (0, c.i)(d[0], r, i);
-            null != s && R(i, n[0], s)
+            let o = (0, c.i)(d[0], r, i);
+            null != o && R(i, n[0], o)
                 ? h.push({
                       index: d.index,
                       length: d[0].length,
-                      node: s
+                      node: o
                   })
                 : (m.lastIndex = d.index + 1);
         }
-        for (let n of h.reverse()) N(e, [f, p.C0.child(o, u)], n.index, n.length, n.node), (l = !0);
+        for (let n of h.reverse()) C(e, [f, _.C0.child(s, u)], n.index, n.length, n.node), (l = !0);
     }
     return l;
 }
-function N(e, n, r, i, a) {
-    let [s, l] = n,
+function C(e, n, r, i, a) {
+    let [o, l] = n,
         u = {
             path: l,
             offset: r
@@ -264,23 +264,23 @@ function N(e, n, r, i, a) {
             path: l,
             offset: r + i
         };
-    o()(u.offset >= 0 && u.offset <= s.text.length, 'Failed to find valid start position for raw mention replace'),
-        o()(c.offset >= 0 && c.offset <= s.text.length, 'Failed to find valid end position for raw mention replace'),
+    s()(u.offset >= 0 && u.offset <= o.text.length, 'Failed to find valid start position for raw mention replace'),
+        s()(c.offset >= 0 && c.offset <= o.text.length, 'Failed to find valid end position for raw mention replace'),
         h.Q.textToVoid(e, a, {
             anchor: u,
             focus: c
         });
 }
-function C(e, n, r, i) {
+function N(e, n, r, i) {
     let a = 0;
-    for (let [i, s] of p.bN.nodes(e, {
+    for (let [i, o] of _.bN.nodes(e, {
         at: {
-            anchor: p.bN.start(e, n),
+            anchor: _.bN.start(e, n),
             focus: r
         },
         mode: 'lowest'
     }))
-        p.LC.isText(i) ? (p.C0.equals(s, r.path) ? (a += r.offset) : (a += i.text.length)) : (a += 1);
+        _.LC.isText(i) ? (_.C0.equals(o, r.path) ? (a += r.offset) : (a += i.text.length)) : (a += 1);
     for (let e of i.entries) {
         if (!e.attributes.includes('codeBlockText') && !e.attributes.includes('inlineCode')) continue;
         let n = e.start,

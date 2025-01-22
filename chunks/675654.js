@@ -1,9 +1,9 @@
 r.d(n, {
     Br: function () {
-        return s;
+        return o;
     },
     CA: function () {
-        return o;
+        return s;
     },
     Ko: function () {
         return l;
@@ -20,8 +20,8 @@ r.d(n, {
 });
 var i = r(119617);
 let a = r(177351),
-    s = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
-    o = [
+    o = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
+    s = [
         r(294521),
         a,
         r(817812),

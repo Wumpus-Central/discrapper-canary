@@ -5,7 +5,7 @@ e.exports = function (e) {
         return void 0 === i ? [] : n[i] || [];
     }
     function i(e, n) {
-        for (var i = r(e), a = 0, s = i.length; a < s; ++a)
+        for (var i = r(e), a = 0, o = i.length; a < o; ++a)
             if (i[a] === n) {
                 i.splice(a, 1);
                 break;

@@ -5,14 +5,14 @@ r.d(n, {
 });
 var i,
     a = r(47120);
-var s = r(200651),
-    o = r(192379),
+var o = r(200651),
+    s = r(192379),
     l = r(120356),
     u = r.n(l),
     c = r(846519),
     d = r(186325),
     f = r(549915);
-let _ = 200;
+let p = 200;
 !(function (e) {
     (e[(e.TRANSLATE = 1)] = 'TRANSLATE'), (e[(e.SCALE = 2)] = 'SCALE'), (e[(e.FADE = 3)] = 'FADE');
 })(i || (i = {}));
@@ -21,7 +21,7 @@ let h = Object.freeze({
         2: f.scale,
         3: f.fade
     }),
-    p = Object.freeze({
+    _ = Object.freeze({
         top: f.animatorTop,
         bottom: f.animatorBottom,
         left: f.animatorLeft,
@@ -31,31 +31,31 @@ let h = Object.freeze({
     });
 function m(e) {
     let { position: n, type: r, children: i } = e,
-        { reducedMotion: a } = o.useContext(d.S),
+        { reducedMotion: a } = s.useContext(d.S),
         l = a.enabled ? 3 : r,
-        [m, g] = o.useState(null != n),
-        [E] = o.useState(() => new c.V7()),
-        [v, I] = o.useState(!0),
-        T = o.useRef(null);
+        [m, g] = s.useState(null != n),
+        [E] = s.useState(() => new c.V7()),
+        [v, y] = s.useState(!0),
+        b = s.useRef(null);
     return (
-        o.useLayoutEffect(() => {
+        s.useLayoutEffect(() => {
             var e;
-            null === (e = T.current) ||
+            null === (e = b.current) ||
                 void 0 === e ||
                 e.addEventListener('transitionend', () => {
-                    I(!1);
+                    y(!1);
                 }),
                 setTimeout(() => {
-                    I(!1);
-                }, _);
+                    y(!1);
+                }, p);
         }, []),
-        o.useEffect(() => () => E.stop(), [E]),
-        o.useEffect(() => {
+        s.useEffect(() => () => E.stop(), [E]),
+        s.useEffect(() => {
             null != n && E.start(10, () => g(!0));
         }, [n, E]),
-        (0, s.jsx)('div', {
+        (0, o.jsx)('div', {
             'data-popout-animating': v,
-            className: u()(null != n ? p[n] : null, {
+            className: u()(null != n ? _[n] : null, {
                 [h[l]]: null != n,
                 [f.didRender]: m
             }),

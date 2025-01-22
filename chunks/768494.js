@@ -9,7 +9,7 @@ r.d(n, {
         return m;
     },
     VY: function () {
-        return _;
+        return p;
     },
     y_: function () {
         return g;
@@ -20,8 +20,8 @@ r.d(n, {
 });
 var i,
     a = r(789020);
-var s = r(911969),
-    o = r(406432),
+var o = r(911969),
+    s = r(406432),
     l = r(630388),
     u = r(591759),
     c = r(981631);
@@ -46,7 +46,7 @@ function f(e) {
         srcIsAnimated: (0, l.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, c.J0y.IS_ANIMATED)
     };
 }
-function _(e) {
+function p(e) {
     var n, r;
     let i = 0;
     return (
@@ -59,7 +59,7 @@ function _(e) {
             contentType: e.content_type,
             placeholder: e.placeholder,
             placeholderVersion: e.placeholder_version,
-            loadingState: s.f.LOADED_SUCCESS,
+            loadingState: o.f.LOADED_SUCCESS,
             contentScanMetadata:
                 null == e.content_scan_version
                     ? void 0
@@ -72,15 +72,15 @@ function _(e) {
     );
 }
 function h(e) {
-    return (0, o.tw)(e.contentType) ? 'IMAGE' : (0, o.X2)(e.contentType) && null != e.proxyUrl && null != u.Z.toURLSafe(e.proxyUrl) ? 'VIDEO' : 'INVALID';
+    return (0, s.tw)(e.contentType) ? 'IMAGE' : (0, s.X2)(e.contentType) && null != e.proxyUrl && null != u.Z.toURLSafe(e.proxyUrl) ? 'VIDEO' : 'INVALID';
 }
-function p(e) {
-    return (0, o.CO)(e.filename) ? 'IMAGE' : (0, o.NU)(e.filename) ? 'VIDEO' : 'INVALID';
+function _(e) {
+    return (0, s.CO)(e.filename) ? 'IMAGE' : (0, s.NU)(e.filename) ? 'VIDEO' : 'INVALID';
 }
 function m(e, n) {
     return {
-        ..._(e),
-        type: p(e),
+        ...p(e),
+        type: _(e),
         alt: e.description,
         sourceMetadata: {
             message: n,

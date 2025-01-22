@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(434650),
-    d = n(778569),
-    u = n(182906),
+    u = n(778569),
+    d = n(182906),
     m = n(100527),
     h = n(367907),
     f = n(906732),
@@ -59,9 +59,9 @@ function U(e) {
 }
 function B(e) {
     var t;
-    let { application: n, embedUrl: d } = e,
-        u = null === (t = n.bot) || void 0 === t ? void 0 : t.id,
-        x = (0, _.ye)(n) && null != u,
+    let { application: n, embedUrl: u } = e,
+        d = null === (t = n.bot) || void 0 === t ? void 0 : t.id,
+        x = (0, _.ye)(n) && null != d,
         b = (0, o.e7)([A.Z], () => {
             var e;
             return null !== (e = A.Z.getGuildId()) && void 0 !== e ? e : void 0;
@@ -100,11 +100,11 @@ function B(e) {
         Q = (0, o.e7)([T.Z], () => (null == X ? void 0 : X.isPrivate()) || T.Z.can(y.Plq.SEND_MESSAGES, X)),
         { analyticsLocations: q } = (0, f.ZP)(m.Z.APP_OAUTH2_LINK_EMBED),
         J = async () => {
-            if (null != u)
+            if (null != d)
                 try {
                     await (0, g.W)({
                         appId: n.id,
-                        botId: u,
+                        botId: d,
                         analyticsLocations: q
                     });
                 } catch (e) {}
@@ -113,7 +113,7 @@ function B(e) {
     return $
         ? (0, i.jsx)(L.O, {
               app: n,
-              embedUrl: d
+              embedUrl: u
           })
         : (0, i.jsxs)('div', {
               ref: H,
@@ -207,7 +207,7 @@ function B(e) {
 }
 function w(e) {
     let { application: t, iconUrl: n } = e,
-        r = (0, d.Z)({
+        r = (0, u.Z)({
             applicationId: t.id,
             size: 280,
             names: ['embedded_cover']
@@ -217,7 +217,7 @@ function w(e) {
         o = null,
         s = {};
     if ((0, _.ye)(t))
-        o = (0, i.jsx)(u.Z, {
+        o = (0, i.jsx)(d.Z, {
             imageBackground: r,
             applicationName: t.name,
             imageClassName: M.bannerImage,

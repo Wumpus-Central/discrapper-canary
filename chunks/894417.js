@@ -3,7 +3,7 @@ r.d(n, {
         return i;
     },
     NM: function () {
-        return s;
+        return o;
     },
     VV: function () {
         return a;
@@ -11,4 +11,4 @@ r.d(n, {
 });
 var i = Math.max,
     a = Math.min,
-    s = Math.round;
+    o = Math.round;

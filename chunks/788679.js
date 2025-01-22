@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return m;
+            return f;
         }
     });
 var i = t(200651);
@@ -14,12 +14,12 @@ var l = t(481060),
     u = t(112554),
     d = t(160877),
     c = t(388032);
-function m(e) {
-    let { channelId: n, messageId: t, mediaItemUrl: m, embedId: g, transitionState: f, onClose: h } = e,
+function f(e) {
+    let { channelId: n, messageId: t, mediaItemUrl: f, embedId: g, transitionState: m, onClose: h } = e,
         E = (0, a.yh)(),
-        I = (0, u.K)(n, t, m),
+        I = (0, u.K)(n, t, f),
         v = (0, u.b)(n, t, g),
-        { reportFalsePositive: p, isReportFalsePositiveLoading: x } = (0, s.$)({
+        { reportFalsePositive: p, isReportFalsePositiveLoading: M } = (0, s.$)({
             onSuccess: () => (0, d.s)(h),
             onError: () => {
                 (0, l.showToast)((0, l.createToast)(c.intl.string(c.t.R0RpRU), l.ToastType.FAILURE));
@@ -38,12 +38,12 @@ function m(e) {
         (0, i.jsx)(d.$, {
             messageId: t,
             channelId: n,
-            isReportFalsePositiveLoading: x,
+            isReportFalsePositiveLoading: M,
             analyticsContext: o.UU.EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
             onConfirmPress: p,
             attachmentPreview: 1 === I.length && 0 === v.length ? I[0] : void 0,
             embedPreview: 1 === v.length && 0 === I.length ? v[0] : void 0,
-            transitionState: f,
+            transitionState: m,
             onClose: h
         })
     );

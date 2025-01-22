@@ -7,8 +7,8 @@ function n(e) {
             keyword: 'if else foreach return do while until elseif begin for trap data dynamicparam end break throw param continue finally in switch exit filter try process catch hidden static parameter',
             built_in: 'ac asnp cat cd CFS chdir clc clear clhy cli clp cls clv cnsn compare copy cp cpi cpp curl cvpa dbp del diff dir dnsn ebp echo|0 epal epcsv epsn erase etsn exsn fc fhx fl ft fw gal gbp gc gcb gci gcm gcs gdr gerr ghy gi gin gjb gl gm gmo gp gps gpv group gsn gsnp gsv gtz gu gv gwmi h history icm iex ihy ii ipal ipcsv ipmo ipsn irm ise iwmi iwr kill lp ls man md measure mi mount move mp mv nal ndr ni nmo npssc nsn nv ogv oh popd ps pushd pwd r rbp rcjb rcsn rd rdr ren ri rjb rm rmdir rmo rni rnp rp rsn rsnp rujb rv rvpa rwmi sajb sal saps sasv sbp sc scb select set shcm si sl sleep sls sort sp spjb spps spsv start stz sujb sv swmi tee trcm type wget where wjb write'
         },
-        s = /\w[\w\d]*((-)[\w\d]+)*/,
-        o = {
+        o = /\w[\w\d]*((-)[\w\d]+)*/,
+        s = {
             begin: '`[\\s\\S]',
             relevance: 0
         },
@@ -40,7 +40,7 @@ function n(e) {
                 }
             ],
             contains: [
-                o,
+                s,
                 l,
                 {
                     className: 'variable',
@@ -66,7 +66,7 @@ function n(e) {
             className: 'doctag',
             variants: [{ begin: /\.(synopsis|description|example|inputs|outputs|notes|link|component|role|functionality)/ }, { begin: /\.(parameter|forwardhelptargetname|forwardhelpcategory|remotehelprunspace|externalhelp)\s+\S+/ }]
         },
-        _ = e.inherit(e.COMMENT(null, null), {
+        p = e.inherit(e.COMMENT(null, null), {
             variants: [
                 {
                     begin: /#/,
@@ -83,7 +83,7 @@ function n(e) {
             className: 'built_in',
             variants: [{ begin: '('.concat(r, ')+(-)[\\w\\d]+') }]
         },
-        p = {
+        _ = {
             className: 'class',
             beginKeywords: 'class enum',
             end: /\s*[{]/,
@@ -106,7 +106,7 @@ function n(e) {
                 },
                 {
                     className: 'title',
-                    begin: s,
+                    begin: o,
                     relevance: 0
                 },
                 {
@@ -149,7 +149,7 @@ function n(e) {
             begin: /@\B/,
             relevance: 0
         },
-        I = {
+        y = {
             className: 'function',
             begin: /\[.*\]\s*[\w]+[ ]??\(/,
             end: /$/,
@@ -165,8 +165,8 @@ function n(e) {
                 e.inherit(e.TITLE_MODE, { endsParent: !0 })
             ]
         },
-        T = [I, _, o, e.NUMBER_MODE, c, d, h, l, u, v],
-        b = {
+        b = [y, p, s, e.NUMBER_MODE, c, d, h, l, u, v],
+        I = {
             begin: /\[/,
             end: /\]/,
             excludeBegin: !0,
@@ -174,7 +174,7 @@ function n(e) {
             relevance: 0,
             contains: [].concat(
                 'self',
-                T,
+                b,
                 {
                     begin: '(' + n.join('|') + ')',
                     className: 'built_in',
@@ -188,13 +188,13 @@ function n(e) {
             )
         };
     return (
-        I.contains.unshift(b),
+        y.contains.unshift(I),
         {
             name: 'PowerShell',
             aliases: ['pwsh', 'ps', 'ps1'],
             case_insensitive: !0,
             keywords: a,
-            contains: T.concat(p, m, g, E, b)
+            contains: b.concat(_, m, g, E, I)
         }
     );
 }

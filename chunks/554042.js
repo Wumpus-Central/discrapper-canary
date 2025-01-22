@@ -80,7 +80,7 @@ function S() {
         }),
         [j, O] = (0, m.R)('playground-overrideText', null),
         [R, P] = (0, m.R)('playground-defaultText', T[0].value),
-        y = r.useCallback(
+        D = r.useCallback(
             (e) => {
                 let t = T.find((t) => {
                     let { value: n } = t;
@@ -128,7 +128,7 @@ function S() {
                             children: (0, i.jsx)(o.SingleSelect, {
                                 className: C.select,
                                 options: T,
-                                onChange: (e) => y(e),
+                                onChange: (e) => D(e),
                                 value: R
                             })
                         }),
@@ -138,7 +138,7 @@ function S() {
                                 children: (0, i.jsx)(o.TextInput, {
                                     placeholder: 'Enter custom input...',
                                     value: null != j ? j : '',
-                                    onChange: y
+                                    onChange: D
                                 })
                             })
                         }),

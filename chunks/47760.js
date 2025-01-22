@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(44315),
-    s = r(469115),
-    o = r(231338);
+    o = r(469115),
+    s = r(231338);
 let l = 0.3;
 function u(e) {
     let { angle: n, colors: r } = e;
@@ -23,7 +23,7 @@ function u(e) {
         ')'
     );
 }
-let c = [...s.bV, ...s.Qf];
+let c = [...o.bV, ...o.Qf];
 function d(e, n) {
-    return e === n || (e === o.BR.DARK && n === o.BR.DARKER) || (e === o.BR.DARKER && n === o.BR.DARK) || !1;
+    return e === n || (e === s.BR.DARK && n === s.BR.DARKER) || (e === s.BR.DARKER && n === s.BR.DARK) || !1;
 }

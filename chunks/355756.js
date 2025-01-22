@@ -1,7 +1,7 @@
 var i = r(192379),
     a = r(723184),
-    s = r(829307),
-    o = r(820611),
+    o = r(829307),
+    s = r(820611),
     l = r(877837),
     u = function (e) {
         var n = e.onChange,
@@ -10,9 +10,9 @@ var i = r(192379),
             c = e.styles,
             d = void 0 === c ? {} : c,
             f = e.className,
-            _ = void 0 === f ? '' : f,
+            p = void 0 === f ? '' : f,
             h = (0, a.default)(
-                (0, s.Z)(
+                (0, o.Z)(
                     {
                         default: {
                             material: {
@@ -76,9 +76,9 @@ var i = r(192379),
                     d
                 )
             ),
-            p = function (e, r) {
+            _ = function (e, r) {
                 e.hex
-                    ? o.FX(e.hex) &&
+                    ? s.FX(e.hex) &&
                       n(
                           {
                               hex: e.hex,
@@ -104,7 +104,7 @@ var i = r(192379),
                 'div',
                 {
                     style: h.material,
-                    className: 'material-picker ' + _
+                    className: 'material-picker ' + p
                 },
                 i.createElement(l.Vm, {
                     style: {
@@ -114,7 +114,7 @@ var i = r(192379),
                     },
                     label: 'hex',
                     value: r,
-                    onChange: p
+                    onChange: _
                 }),
                 i.createElement(
                     'div',
@@ -133,7 +133,7 @@ var i = r(192379),
                             },
                             label: 'r',
                             value: u.r,
-                            onChange: p
+                            onChange: _
                         })
                     ),
                     i.createElement(
@@ -147,7 +147,7 @@ var i = r(192379),
                             },
                             label: 'g',
                             value: u.g,
-                            onChange: p
+                            onChange: _
                         })
                     ),
                     i.createElement(
@@ -161,7 +161,7 @@ var i = r(192379),
                             },
                             label: 'b',
                             value: u.b,
-                            onChange: p
+                            onChange: _
                         })
                     )
                 )

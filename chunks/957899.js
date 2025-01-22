@@ -1,7 +1,7 @@
 var i = r(47120);
 var a = r(147913),
-    s = r(604375),
-    o = r(268004);
+    o = r(604375),
+    s = r(268004);
 function l(e, n, r) {
     return (
         n in e
@@ -17,13 +17,13 @@ function l(e, n, r) {
 }
 class u extends a.Z {
     handleVoiceChannelSelect() {
-        o.M.trigger();
+        s.M.trigger();
     }
     handleCallCreate() {
-        o.M.trigger();
+        s.M.trigger();
     }
     handleUserSettingsModalOpen() {
-        s.X.trigger();
+        o.X.trigger();
     }
     constructor(...e) {
         super(...e),

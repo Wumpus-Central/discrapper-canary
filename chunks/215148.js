@@ -1,49 +1,49 @@
-t.d(n, {
+r.d(n, {
     C: function () {
-        return x;
+        return _;
     }
 });
-var i = t(200651),
-    l = t(120356),
-    r = t.n(l),
-    s = t(979554),
-    a = t(442837),
-    c = t(481060),
-    o = t(597688),
-    u = t(473608),
-    d = t(698700),
-    m = t(719953);
-let p = (e) => {
+var i = r(200651),
+    a = r(120356),
+    o = r.n(a),
+    s = r(979554),
+    l = r(442837),
+    u = r(481060),
+    c = r(597688),
+    d = r(473608),
+    f = r(698700),
+    p = r(719953);
+let h = (e) => {
         let { sku: n } = e,
-            t = (0, a.e7)([o.Z], () => o.Z.getProduct(n.id));
+            r = (0, l.e7)([c.Z], () => c.Z.getProduct(n.id));
         return (0, i.jsxs)('div', {
-            className: d.collectiblePreview,
+            className: f.collectiblePreview,
             children: [
-                null != t && t.type !== s.Z.BUNDLE
-                    ? (0, i.jsx)(u.O, {
+                null != r && r.type !== s.Z.BUNDLE
+                    ? (0, i.jsx)(d.O, {
                           sku: n,
                           fallbackLabel: null
                       })
                     : null,
-                (0, i.jsx)(c.Text, {
+                (0, i.jsx)(u.Text, {
                     variant: 'text-md/medium',
                     children: n.name
                 })
             ]
         });
     },
-    x = (e) => {
-        let { sku: n, value: t, className: l } = e;
+    _ = (e) => {
+        let { sku: n, value: r, className: a } = e;
         return (0, i.jsxs)('div', {
-            className: r()(m.row, l),
+            className: o()(p.row, a),
             children: [
                 (0, i.jsx)('div', {
-                    className: m.rowLabel,
-                    children: (0, i.jsx)(p, { sku: n })
+                    className: p.rowLabel,
+                    children: (0, i.jsx)(h, { sku: n })
                 }),
                 (0, i.jsx)('div', {
-                    className: m.rowAmount,
-                    children: t
+                    className: p.rowAmount,
+                    children: r
                 })
             ]
         });

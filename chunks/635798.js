@@ -5,98 +5,98 @@ r.d(n, {
 });
 var i = r(239700),
     a = r(192379);
-let s = 0,
-    o = 100,
+let o = 0,
+    s = 100,
     l = 1;
 function u(e) {
     var n;
-    let { isDisabled: r = !1, minValue: u = s, maxValue: _ = o, numberFormatter: h, step: p = l, orientation: m = 'horizontal' } = e,
+    let { isDisabled: r = !1, minValue: u = o, maxValue: p = s, numberFormatter: h, step: _ = l, orientation: m = 'horizontal' } = e,
         g = (0, a.useMemo)(() => {
-            let e = (_ - u) / 10;
-            return Math.max((e = (0, i.N4)(e, 0, e + p, p)), p);
-        }, [p, _, u]),
+            let e = (p - u) / 10;
+            return Math.max((e = (0, i.N4)(e, 0, e + _, _)), _);
+        }, [_, p, u]),
         E = (0, a.useMemo)(() => d(e.value), [e.value]),
         v = (0, a.useMemo)(() => (null !== (n = d(e.defaultValue)) && void 0 !== n ? n : [u]), [e.defaultValue, u]),
-        I = f(e.value, e.defaultValue, e.onChange),
-        T = f(e.value, e.defaultValue, e.onChangeEnd),
-        [b, y] = (0, i.zk)(E, v, I),
-        [S, A] = (0, a.useState)(Array(b.length).fill(!1)),
-        N = (0, a.useRef)(Array(b.length).fill(!0)),
-        [C, R] = (0, a.useState)(void 0),
-        O = (0, a.useRef)(b),
+        y = f(e.value, e.defaultValue, e.onChange),
+        b = f(e.value, e.defaultValue, e.onChangeEnd),
+        [I, T] = (0, i.zk)(E, v, y),
+        [S, A] = (0, a.useState)(Array(I.length).fill(!1)),
+        C = (0, a.useRef)(Array(I.length).fill(!0)),
+        [N, R] = (0, a.useState)(void 0),
+        O = (0, a.useRef)(I),
         D = (0, a.useRef)(S),
-        L = (e) => {
-            (O.current = e), y(e);
-        },
         x = (e) => {
+            (O.current = e), T(e);
+        },
+        L = (e) => {
             (D.current = e), A(e);
         };
     function w(e) {
-        return (e - u) / (_ - u);
+        return (e - u) / (p - u);
     }
     function P(e) {
-        return 0 === e ? u : b[e - 1];
+        return 0 === e ? u : I[e - 1];
     }
     function M(e) {
-        return e === b.length - 1 ? _ : b[e + 1];
+        return e === I.length - 1 ? p : I[e + 1];
     }
     function k(e) {
-        return N.current[e];
+        return C.current[e];
     }
     function U(e, n) {
         if (r || !k(e)) return;
         let a = P(e),
-            s = M(e);
-        (n = (0, i.N4)(n, a, s, p)), L(c(O.current, e, n));
+            o = M(e);
+        (n = (0, i.N4)(n, a, o, _)), x(c(O.current, e, n));
     }
     function B(e) {
         return h.format(e);
     }
     function G(e, n) {
-        U(e, Z(n));
-    }
-    function F(e) {
-        return Math.round((e - u) / p) * p + u;
+        U(e, F(n));
     }
     function Z(e) {
-        let n = e * (_ - u) + u;
-        return (0, i.uZ)(F(n), u, _);
+        return Math.round((e - u) / _) * _ + u;
+    }
+    function F(e) {
+        let n = e * (p - u) + u;
+        return (0, i.uZ)(Z(n), u, p);
     }
     function V(e, n = 1) {
-        let r = Math.max(n, p);
-        U(e, (0, i.N4)(b[e] + r, u, _, p));
+        let r = Math.max(n, _);
+        U(e, (0, i.N4)(I[e] + r, u, p, _));
     }
     function j(e, n = 1) {
-        let r = Math.max(n, p);
-        U(e, (0, i.N4)(b[e] - r, u, _, p));
+        let r = Math.max(n, _);
+        U(e, (0, i.N4)(I[e] - r, u, p, _));
     }
     return {
-        values: b,
-        getThumbValue: (e) => b[e],
+        values: I,
+        getThumbValue: (e) => I[e],
         setThumbValue: U,
         setThumbPercent: G,
         isThumbDragging: (e) => S[e],
         setThumbDragging: function e(e, n) {
             if (r || !k(e)) return;
             let i = D.current[e];
-            (D.current = c(D.current, e, n)), x(D.current), T && i && !D.current.some(Boolean) && T(O.current);
+            (D.current = c(D.current, e, n)), L(D.current), b && i && !D.current.some(Boolean) && b(O.current);
         },
-        focusedThumb: C,
+        focusedThumb: N,
         setFocusedThumb: R,
-        getThumbPercent: (e) => w(b[e]),
+        getThumbPercent: (e) => w(I[e]),
         getValuePercent: w,
-        getThumbValueLabel: (e) => B(b[e]),
+        getThumbValueLabel: (e) => B(I[e]),
         getFormattedValue: B,
         getThumbMinValue: P,
         getThumbMaxValue: M,
-        getPercentValue: Z,
+        getPercentValue: F,
         isThumbEditable: k,
         setThumbEditable: function e(e, n) {
-            N.current[e] = n;
+            C.current[e] = n;
         },
         incrementThumb: V,
         decrementThumb: j,
-        step: p,
+        step: _,
         pageSize: g,
         orientation: m,
         isDisabled: r

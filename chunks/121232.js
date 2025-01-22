@@ -1,8 +1,8 @@
-var r = n(67867),
-    o = n(476508),
-    a = n(228042),
-    i = n(292137);
-r(
+var i = r(67867),
+    a = r(476508),
+    o = r(228042),
+    s = r(292137);
+i(
     {
         target: 'Map',
         proto: !0,
@@ -11,14 +11,14 @@ r(
     },
     {
         every: function (e) {
-            var t = a(this),
-                n = o(e, arguments.length > 1 ? arguments[1] : void 0);
+            var n = o(this),
+                r = a(e, arguments.length > 1 ? arguments[1] : void 0);
             return (
                 !1 !==
-                i(
-                    t,
-                    function (e, r) {
-                        if (!n(e, r, t)) return !1;
+                s(
+                    n,
+                    function (e, i) {
+                        if (!r(e, i, n)) return !1;
                     },
                     !0
                 )

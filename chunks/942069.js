@@ -47,11 +47,11 @@ class i {
         (this.keyMap = new Map()), (this.keyMap = new Map()), (this.columnCount = null == e ? void 0 : e.columnCount), (this.rows = []);
         let r = (n) => {
                 let a,
-                    s = this.keyMap.get(n.key);
+                    o = this.keyMap.get(n.key);
                 e.visitNode && (n = e.visitNode(n)), this.keyMap.set(n.key, n);
-                let o = new Set();
-                for (let e of n.childNodes) 'cell' === e.type && null == e.parentKey && (e.parentKey = n.key), o.add(e.key), a ? ((a.nextKey = e.key), (e.prevKey = a.key)) : (e.prevKey = null), r(e), (a = e);
-                if ((a && (a.nextKey = null), s)) for (let e of s.childNodes) !o.has(e.key) && i(e);
+                let s = new Set();
+                for (let e of n.childNodes) 'cell' === e.type && null == e.parentKey && (e.parentKey = n.key), s.add(e.key), a ? ((a.nextKey = e.key), (e.prevKey = a.key)) : (e.prevKey = null), r(e), (a = e);
+                if ((a && (a.nextKey = null), o)) for (let e of o.childNodes) !s.has(e.key) && i(e);
             },
             i = (e) => {
                 for (let n of (this.keyMap.delete(e.key), e.childNodes)) this.keyMap.get(n.key) === n && i(n);

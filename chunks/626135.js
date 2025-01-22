@@ -4,7 +4,7 @@ r.r(n),
             return P;
         },
         AnalyticsContext: function () {
-            return T;
+            return b;
         },
         AnalyticsSchema: function () {
             return h;
@@ -19,7 +19,7 @@ r.r(n),
             return V;
         },
         expandEventProperties: function () {
-            return Z;
+            return F;
         },
         expandLocation: function () {
             return M;
@@ -31,7 +31,7 @@ r.r(n),
             return $;
         },
         setUTMContext: function () {
-            return F;
+            return Z;
         },
         startRecordingAnalyticsEvents: function () {
             return Y;
@@ -45,39 +45,39 @@ r.r(n),
     });
 var i = r(653041);
 var a = r(47120);
-var s = r(192379),
-    o = r(772848),
+var o = r(192379),
+    s = r(772848),
     l = r(990547),
     u = r(570140),
     c = r(565384),
     d = r(569611),
     f = r(97145),
-    _ = r(857192),
+    p = r(857192),
     h = r(747161),
-    p = r(848479),
+    _ = r(848479),
     m = r(960048),
     g = r(981631),
     E = r(94752),
     v = r(388032);
-let I = { location: {} },
-    T = s.createContext(I),
-    b = {},
-    y = 10000,
+let y = { location: {} },
+    b = o.createContext(y),
+    I = {},
+    T = 10000,
     S = 60000,
     A = 120000,
-    N = 300000,
-    C = 900000,
+    C = 300000,
+    N = 900000,
     R = 3600000,
     O = 86400000,
     D = 0.001,
-    L = performance.now(),
-    x = [];
+    x = performance.now(),
+    L = [];
 function w(e) {
-    x.push(e);
+    L.push(e);
 }
 let P = {
     [g.rMx.APP_OPENED]: {
-        throttlePeriod: N,
+        throttlePeriod: C,
         throttleKeys: () => []
     },
     [g.rMx.APP_BACKGROUND]: {
@@ -85,27 +85,27 @@ let P = {
         throttleKeys: () => []
     },
     [g.rMx.ACK_MESSAGES]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.guild_id, e.channel_id, e.location_section]
     },
     [g.rMx.GUILD_VIEWED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.guild_id, e.is_pending]
     },
     [g.rMx.FRIENDS_LIST_VIEWED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.tab_opened]
     },
     [g.rMx.NOW_PLAYING_CARD_HOVERED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.tab_opened]
     },
     [g.rMx.START_SPEAKING]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.server]
     },
     [g.rMx.START_LISTENING]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.server]
     },
     [g.rMx.ACTIVITY_UPDATED]: {
@@ -114,7 +114,7 @@ let P = {
         deduplicate: !0
     },
     [g.rMx.CHANNEL_OPENED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => (null != e.channel_static_route ? [e.guild_id, e.channel_static_route, e.channel_view] : [e.channel_id, e.channel_view])
     },
     [g.rMx.TEXT_IN_VOICE_OPENED]: {
@@ -122,19 +122,19 @@ let P = {
         throttleKeys: (e) => [e.channel_id]
     },
     [g.rMx.NOTIFICATION_VIEWED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.notif_type]
     },
     [g.rMx.MEMBER_LIST_VIEWED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.channel_id]
     },
     [g.rMx.DM_LIST_VIEWED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.channel_id]
     },
     [g.rMx.NAV_DRAWER_OPENED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: () => []
     },
     [g.rMx.KEYBOARD_SHORTCUT_USED]: {
@@ -145,11 +145,11 @@ let P = {
         }
     },
     [g.rMx.QUICKSWITCHER_OPENED]: {
-        throttlePeriod: y,
+        throttlePeriod: T,
         throttleKeys: () => []
     },
     [g.rMx.CHAT_INPUT_COMPONENT_VIEWED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.type]
     },
     [g.rMx.ROLE_PAGE_VIEWED]: {
@@ -157,19 +157,19 @@ let P = {
         throttleKeys: (e) => [e.role_id, e.tab_opened]
     },
     [g.rMx.VIDEO_INPUT_INITIALIZED]: {
-        throttlePeriod: N,
+        throttlePeriod: C,
         throttleKeys: () => []
     },
     [g.rMx.AUDIO_INPUT_INITIALIZED]: {
-        throttlePeriod: N,
+        throttlePeriod: C,
         throttleKeys: () => []
     },
     [g.rMx.HUB_ONBOARDING_CAROUSEL_SCROLLED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: () => []
     },
     [g.rMx.HUB_STUDENT_PROMPT_CLICKED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: () => []
     },
     [g.rMx.RPC_SERVER_ERROR_CAUGHT]: {
@@ -203,7 +203,7 @@ let P = {
         throttleKeys: (e) => [e.guild_id, e.channel_id]
     },
     [g.rMx.FORUM_CHANNEL_SCROLLED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.guild_id, e.channel_id]
     },
     [g.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
@@ -215,27 +215,27 @@ let P = {
         throttleKeys: () => []
     },
     [g.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
-        throttlePeriod: N,
+        throttlePeriod: C,
         throttleKeys: (e) => [e.channel_id]
     },
     [g.rMx.ACTIVITY_CARDS_VIEWED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.context, e.guild_id]
     },
     [g.rMx.GUILD_TOOLTIP_SHOWN]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.guild_id]
     },
     [g.rMx.ACK_COMMUNITY_MESSAGES]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.channel_id]
     },
     [g.rMx.REDESIGN_NAV_BAR_CLICKED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.tab]
     },
     [g.rMx.CHANNEL_LIST_END_REACHED]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.guild_id]
     },
     [g.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
@@ -247,28 +247,28 @@ let P = {
         throttleKeys: () => []
     },
     [g.rMx.KEYWORD_FILTER_MATCH]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.message_id]
     },
     [g.rMx.MEDIA_INPUT_VOLUME_CHANGED]: {
-        throttlePeriod: N,
+        throttlePeriod: C,
         throttleKeys: (e) => [e.location_stack]
     },
     [g.rMx.MEDIA_OUTPUT_VOLUME_CHANGED]: {
-        throttlePeriod: N,
+        throttlePeriod: C,
         throttleKeys: (e) => [e.location_stack]
     },
     [g.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: {
-        throttlePeriod: C,
+        throttlePeriod: N,
         throttleKeys: (e) => [e.channel_id]
     },
     [g.rMx.USER_VOICE_ACTIVITY_VIEWED]: {
-        throttlePeriod: N,
+        throttlePeriod: C,
         throttleKeys: (e) => [e.activity_user_id, e.surface],
         deduplicate: !0
     },
     [g.rMx.PARTY_VOICE_ACTIVITY_VIEWED]: {
-        throttlePeriod: N,
+        throttlePeriod: C,
         throttleKeys: (e) => [e.voice_channel_id],
         deduplicate: !0
     },
@@ -315,35 +315,35 @@ let G = (0, l.trackMaker)({
     dispatcher: u.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function F(e) {
-    return (b = e);
-}
 function Z(e) {
+    return (I = e);
+}
+function F(e) {
     var n, r, i, a;
-    let s = e;
-    if ((!s && (s = {}), null != s.location)) {
-        let { location: e, ...n } = s;
-        s = {
+    let o = e;
+    if ((!o && (o = {}), null != o.location)) {
+        let { location: e, ...n } = o;
+        o = {
             ...n,
             ...M(e)
         };
     }
-    if (null != s.source) {
-        let { source: e, ...n } = s;
-        s = {
+    if (null != o.source) {
+        let { source: e, ...n } = o;
+        o = {
             ...n,
             ...k(e)
         };
     }
-    (s.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()), (s.client_performance_memory = p.Z.getCurrentMemoryUsageKB()), (s.cpu_core_count = p.Z.getCPUCoreCount()), (s.accessibility_features = U()), (s.rendered_locale = v.intl.currentLocale), (s.uptime_app = Math.floor((performance.now() - L) / 1000));
-    let o = p.Z.getProcessUptime();
-    null != o && (s.uptime_process_renderer = Math.floor(o));
-    let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = b;
-    return (s.utm_source = null !== (n = s.utm_source) && void 0 !== n ? n : l), (s.utm_medium = null !== (r = s.utm_medium) && void 0 !== r ? r : u), (s.utm_campaign = null !== (i = s.utm_campaign) && void 0 !== i ? i : c), (s.utm_content = null !== (a = s.utm_content) && void 0 !== a ? a : d), x.forEach((e) => e(s)), s;
+    (o.client_performance_cpu = _.Z.getCurrentCPUUsagePercent()), (o.client_performance_memory = _.Z.getCurrentMemoryUsageKB()), (o.cpu_core_count = _.Z.getCPUCoreCount()), (o.accessibility_features = U()), (o.rendered_locale = v.intl.currentLocale), (o.uptime_app = Math.floor((performance.now() - x) / 1000));
+    let s = _.Z.getProcessUptime();
+    null != s && (o.uptime_process_renderer = Math.floor(s));
+    let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = I;
+    return (o.utm_source = null !== (n = o.utm_source) && void 0 !== n ? n : l), (o.utm_medium = null !== (r = o.utm_medium) && void 0 !== r ? r : u), (o.utm_campaign = null !== (i = o.utm_campaign) && void 0 !== i ? i : c), (o.utm_content = null !== (a = o.utm_content) && void 0 !== a ? a : d), L.forEach((e) => e(o)), o;
 }
 function V(e, n) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    _.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, n), r ? d.Hj('Analytics', e, n) : d.Hj('Analytics', e);
+    p.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, n), r ? d.Hj('Analytics', e, n) : d.Hj('Analytics', e);
 }
 let j = !1,
     H = {};
@@ -377,7 +377,7 @@ function Q(e, n) {
         null != r.throttlePercent && Math.random() > r.throttlePercent)
     )
         return Promise.resolve();
-    let a = Z(n);
+    let a = F(n);
     return (
         V(i, a, r.logEventProperties),
         G(e, a, {
@@ -392,7 +392,7 @@ let X = (0, l.trackMaker)({
     TRACK_ACTION_NAME: 'TRACK'
 });
 function J(e, n) {
-    let r = Z({
+    let r = F({
         location: (0, c.k$)(),
         ...n
     });
@@ -404,12 +404,12 @@ function J(e, n) {
         X(e, r);
 }
 function $() {
-    return (0, o.Z)();
+    return (0, s.Z)();
 }
 n.default = {
     ...l,
     getCampaignParams: l.getCampaignParams,
     setSystemAccessibilityFeatures: B,
-    expandEventProperties: Z,
+    expandEventProperties: F,
     track: Q
 };

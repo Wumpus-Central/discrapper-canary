@@ -1,42 +1,42 @@
-t.d(n, {
+r.d(n, {
     s: function () {
-        return d;
+        return f;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(120356),
-    r = t.n(l),
-    s = t(481060),
-    a = t(700582),
-    c = t(51144),
-    o = t(388032),
-    u = t(453476);
-let d = (e) => {
-    let { className: n, giftRecipient: t } = e;
-    return null == t
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    o = r.n(a),
+    s = r(481060),
+    l = r(700582),
+    u = r(51144),
+    c = r(388032),
+    d = r(453476);
+let f = (e) => {
+    let { className: n, giftRecipient: r } = e;
+    return null == r
         ? null
         : (0, i.jsxs)('div', {
-              className: r()(u.content, n),
+              className: o()(d.content, n),
               children: [
-                  (0, i.jsx)(s.FormTitle, { children: o.intl.string(o.t.xFn72t) }),
+                  (0, i.jsx)(s.FormTitle, { children: c.intl.string(c.t.xFn72t) }),
                   (0, i.jsxs)('div', {
-                      className: u.giftRecipientInfo,
+                      className: d.giftRecipientInfo,
                       children: [
-                          (0, i.jsx)(a.Z, {
-                              user: t,
-                              className: u.__invalid_giftRecipient,
+                          (0, i.jsx)(l.Z, {
+                              user: r,
+                              className: d.__invalid_giftRecipient,
                               size: s.AvatarSizes.SIZE_20
                           }),
                           (0, i.jsx)(s.Heading, {
-                              className: u.giftRecipientName,
+                              className: d.giftRecipientName,
                               variant: 'text-md/normal',
-                              children: c.ZP.getName(t)
+                              children: u.ZP.getName(r)
                           }),
                           (0, i.jsx)(s.Heading, {
-                              className: u.giftRecipientTag,
+                              className: d.giftRecipientTag,
                               variant: 'text-md/normal',
-                              children: c.ZP.getUserTag(t)
+                              children: u.ZP.getUserTag(r)
                           })
                       ]
                   })

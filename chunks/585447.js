@@ -1,23 +1,23 @@
 r.d(n, {
     S: function () {
-        return o;
+        return s;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(331595),
-    s = r(267843);
-let o = (e) => {
+    o = r(267843);
+let s = (e) => {
     var n, r;
-    let { size: o = 'md', width: l, height: u, color: c = '#000', colorClass: d = '', ...f } = e,
-        _ = (0, s.m)(o),
-        h = null !== (n = null == _ ? void 0 : _.width) && void 0 !== n ? n : l,
-        p = null !== (r = null == _ ? void 0 : _.height) && void 0 !== r ? r : u;
+    let { size: s = 'md', width: l, height: u, color: c = '#000', colorClass: d = '', ...f } = e,
+        p = (0, o.m)(s),
+        h = null !== (n = null == p ? void 0 : p.width) && void 0 !== n ? n : l,
+        _ = null !== (r = null == p ? void 0 : p.height) && void 0 !== r ? r : u;
     return (0, i.jsx)('svg', {
         ...(0, a.Z)(f),
         xmlns: 'http://www.w3.org/2000/svg',
         width: h,
-        height: p,
+        height: _,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: (0, i.jsx)('path', {

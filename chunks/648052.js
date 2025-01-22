@@ -6,8 +6,8 @@ r.d(n, {
 var i = r(200651);
 r(192379);
 var a = r(392711);
-var s = r(485341),
-    o = r(184325),
+var o = r(485341),
+    s = r(184325),
     l = r(228168);
 let u = {
     [l.y0.BITE_SIZE]: 12,
@@ -16,13 +16,13 @@ let u = {
 };
 function c(e) {
     let { displayProfile: n, profileType: r, onClose: l } = e,
-        c = (0, s.Z)(n);
+        c = (0, o.Z)(n);
     return 0 === c.length
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: (0, a.chunk)(c, u[r]).map((e) =>
                   (0, i.jsx)(
-                      o.Z,
+                      s.Z,
                       {
                           badges: e,
                           onClose: l

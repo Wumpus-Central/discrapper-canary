@@ -3,7 +3,7 @@ r.d(n, {
         return i;
     },
     aW: function () {
-        return s;
+        return o;
     }
 });
 let i = (0, r(818083).B)({
@@ -23,7 +23,7 @@ let i = (0, r(818083).B)({
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return i.useExperiment({ location: '489551_1' }, { autoTrackExposure: e });
     },
-    s = function () {
+    o = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return i.getCurrentConfig({ location: '489551_2' }, { autoTrackExposure: e });
     };

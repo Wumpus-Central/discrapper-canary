@@ -19,8 +19,8 @@ var i =
             return r && e(n.prototype, r), i && e(n, i), n;
         };
     })(),
-    s = o(r(192379));
-function o(e) {
+    o = s(r(192379));
+function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
 function l(e, n) {
@@ -45,11 +45,11 @@ function c(e, n) {
 n.handleFocus = function (e) {
     var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
     return (function (r) {
-        function o() {
-            l(this, o);
-            for (var e, n, r, i = arguments.length, a = Array(i), s = 0; s < i; s++) a[s] = arguments[s];
+        function s() {
+            l(this, s);
+            for (var e, n, r, i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
             return (
-                (n = r = u(this, (e = o.__proto__ || Object.getPrototypeOf(o)).call.apply(e, [this].concat(a)))),
+                (n = r = u(this, (e = s.__proto__ || Object.getPrototypeOf(s)).call.apply(e, [this].concat(a)))),
                 (r.state = { focus: !1 }),
                 (r.handleFocus = function () {
                     return r.setState({ focus: !0 });
@@ -61,23 +61,23 @@ n.handleFocus = function (e) {
             );
         }
         return (
-            c(o, r),
-            a(o, [
+            c(s, r),
+            a(s, [
                 {
                     key: 'render',
                     value: function () {
-                        return s.default.createElement(
+                        return o.default.createElement(
                             n,
                             {
                                 onFocus: this.handleFocus,
                                 onBlur: this.handleBlur
                             },
-                            s.default.createElement(e, i({}, this.props, this.state))
+                            o.default.createElement(e, i({}, this.props, this.state))
                         );
                     }
                 }
             ]),
-            o
+            s
         );
-    })(s.default.Component);
+    })(o.default.Component);
 };

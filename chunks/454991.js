@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i,
     a = r(433517),
-    s = r(987650);
-function o(e, n, r) {
+    o = r(987650);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -50,24 +50,24 @@ class l {
     static loadInternal() {
         let e = a.K.get('OverlayStore');
         if (null != e) {
-            let n = new l('boolean' == typeof e.enabled ? e.enabled : s.iP, !1, !1);
+            let n = new l('boolean' == typeof e.enabled ? e.enabled : o.iP, !1, !1);
             return n.save(), a.K.remove('OverlayStore'), n;
         }
         let n = a.K.get('overlayEnabled');
         if (null != n) {
-            let e = new l('boolean' == typeof n ? n : s.iP, !1, !1);
+            let e = new l('boolean' == typeof n ? n : o.iP, !1, !1);
             return e.save(), a.K.remove('overlayEnabled'), e;
         }
         let r = a.K.get('OverlayStore3');
         if (null != r) {
-            var i, o, u;
-            return new l(null !== (i = r.enabled) && void 0 !== i ? i : s.iP, null !== (o = r.legacyEnabled) && void 0 !== o && o, null !== (u = r.global) && void 0 !== u && u);
+            var i, s, u;
+            return new l(null !== (i = r.enabled) && void 0 !== i ? i : o.iP, null !== (s = r.legacyEnabled) && void 0 !== s && s, null !== (u = r.global) && void 0 !== u && u);
         }
-        let c = new l(s.iP, !1, !1);
+        let c = new l(o.iP, !1, !1);
         return c.save(), c;
     }
     constructor(e, n, r) {
-        o(this, 'enabled', void 0), o(this, 'legacyEnabled', void 0), o(this, 'global', void 0), (this.enabled = e), (this.legacyEnabled = n), (this.global = r);
+        s(this, 'enabled', void 0), s(this, 'legacyEnabled', void 0), s(this, 'global', void 0), (this.enabled = e), (this.legacyEnabled = n), (this.global = r);
     }
 }
-o(l, '_loaded', null);
+s(l, '_loaded', null);

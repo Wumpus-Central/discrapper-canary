@@ -1,12 +1,12 @@
 var i = r(317770),
     a = r(626135),
-    s = r(358085),
-    o = r(998502),
+    o = r(358085),
+    s = r(998502),
     l = r(981631);
 class u extends i.Z {
     _initialize() {
-        if (!!s.isPlatformEmbedded)
-            o.ZP.on('APP_PUSH_ANALYTICS', (e, n) => {
+        if (!!o.isPlatformEmbedded)
+            s.ZP.on('APP_PUSH_ANALYTICS', (e, n) => {
                 this._handleEventResponse(n);
             }),
                 this.processModuleEvents();
@@ -14,7 +14,7 @@ class u extends i.Z {
     _terminate() {}
     processModuleEvents() {
         try {
-            o.ZP.send('APP_GET_ANALYTICS_EVENTS');
+            s.ZP.send('APP_GET_ANALYTICS_EVENTS');
         } catch (e) {
             console.error('[analytics] failed to send analytics events query: '.concat(e));
         }

@@ -1,12 +1,12 @@
 r.d(n, {
     o: function () {
-        return _;
+        return p;
     }
 });
 var i = r(315314);
 var a = r(610138);
-var s = r(216116);
-var o = r(78328);
+var o = r(216116);
+var s = r(78328);
 var l = r(815648);
 var u = r(47120);
 var c = r(593473),
@@ -20,7 +20,7 @@ let f = (e) => {
             return null;
         }
     },
-    _ = (e) => {
+    p = (e) => {
         let n = (0, c.parse)(e);
         return {
             desktop: f(n.desktop_link),

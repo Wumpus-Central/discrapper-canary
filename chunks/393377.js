@@ -9,8 +9,8 @@ var i =
             return e;
         },
     a = u(r(192379)),
-    s = u(r(723184)),
-    o = r(425980),
+    o = u(r(723184)),
+    s = r(425980),
     l = u(r(122024));
 function u(e) {
     return e && e.__esModule ? e : { default: e };
@@ -19,17 +19,17 @@ var c = 13,
     d = (n.Swatch = function (e) {
         var n = e.color,
             r = e.style,
-            o = e.onClick,
-            u = void 0 === o ? function () {} : o,
+            s = e.onClick,
+            u = void 0 === s ? function () {} : s,
             d = e.onHover,
             f = e.title,
-            _ = void 0 === f ? n : f,
+            p = void 0 === f ? n : f,
             h = e.children,
-            p = e.focus,
+            _ = e.focus,
             m = e.focusStyle,
             g = void 0 === m ? {} : m,
             E = 'transparent' === n,
-            v = (0, s.default)({
+            v = (0, o.default)({
                 default: {
                     swatch: i(
                         {
@@ -41,33 +41,33 @@ var c = 13,
                             outline: 'none'
                         },
                         r,
-                        p ? g : {}
+                        _ ? g : {}
                     )
                 }
             }),
-            I = function (e) {
+            y = function (e) {
                 return u(n, e);
             },
-            T = function (e) {
+            b = function (e) {
                 return e.keyCode === c && u(n, e);
             },
-            b = function (e) {
+            I = function (e) {
                 return d(n, e);
             },
-            y = {};
+            T = {};
         return (
-            d && (y.onMouseOver = b),
+            d && (T.onMouseOver = I),
             a.default.createElement(
                 'div',
                 i(
                     {
                         style: v.swatch,
-                        onClick: I,
-                        title: _,
+                        onClick: y,
+                        title: p,
                         tabIndex: 0,
-                        onKeyDown: T
+                        onKeyDown: b
                     },
-                    y
+                    T
                 ),
                 h,
                 E &&
@@ -78,4 +78,4 @@ var c = 13,
             )
         );
     });
-n.default = (0, o.handleFocus)(d);
+n.default = (0, s.handleFocus)(d);

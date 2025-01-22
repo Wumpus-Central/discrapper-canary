@@ -4,7 +4,7 @@ r.d(n, {
         return u;
     },
     Nh: function () {
-        return s;
+        return o;
     },
     ZD: function () {
         return i;
@@ -16,7 +16,7 @@ r.d(n, {
         return a;
     },
     vY: function () {
-        return o;
+        return s;
     },
     yf: function () {
         return l;
@@ -79,8 +79,8 @@ let a = [
             secondary: '#cccccc'
         }
     ],
-    s = a[0].primary,
-    o = a[0].secondary;
+    o = a[0].primary,
+    s = a[0].secondary;
 function l() {
     return a[Math.floor(Math.random() * a.length)];
 }

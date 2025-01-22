@@ -3,76 +3,76 @@ r.d(n, {
         return v;
     },
     x3: function () {
-        return I;
+        return y;
     }
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(120356),
-    l = r.n(o),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
     u = r(442837),
     c = r(846519),
     d = r(481060),
     f = r(607070),
-    _ = r(706454),
+    p = r(706454),
     h = r(70956),
-    p = r(506071),
+    _ = r(506071),
     m = r(561308),
     g = r(687371);
 let E = (e) => {
-    let { entry: n, textColor: r, hovered: i = !1, bold: s = !1, scaleFontToUserSetting: o = !1 } = e,
+    let { entry: n, textColor: r, hovered: i = !1, bold: o = !1, scaleFontToUserSetting: s = !1 } = e,
         l = (0, m.Jg)(n),
-        c = (0, u.e7)([_.default], () => _.default.locale);
+        c = (0, u.e7)([p.default], () => p.default.locale);
     return l
-        ? (0, a.jsx)(I, {
+        ? (0, a.jsx)(y, {
               entry: n,
               textColor: r,
               hovered: i,
-              bold: s,
-              scaleFontToUserSetting: o
+              bold: o,
+              scaleFontToUserSetting: s
           })
         : (0, a.jsx)(d.Text, {
               variant: 'text-xs/normal',
               color: r,
               lineClamp: 1,
-              scaleFontToUserSetting: o,
+              scaleFontToUserSetting: s,
               children: (0, m.GL)(n, c)
           });
 };
 function v(e) {
-    let [n, r] = s.useState(Date.now()),
-        i = (0, p.n)(),
+    let [n, r] = o.useState(Date.now()),
+        i = (0, _.n)(),
         a = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-        o = !i || (a && !e);
+        s = !i || (a && !e);
     return (
-        s.useEffect(() => {
+        o.useEffect(() => {
             let e = new c.Xp();
             return (
-                e.start(o ? 15 * h.Z.Millis.SECOND : h.Z.Millis.SECOND, () => {
+                e.start(s ? 15 * h.Z.Millis.SECOND : h.Z.Millis.SECOND, () => {
                     r(Date.now());
                 }),
                 () => e.stop()
             );
-        }, [o]),
+        }, [s]),
         {
             now: n,
-            slowTickMode: o
+            slowTickMode: s
         }
     );
 }
-let I = (e) => {
-    let { entry: n, inline: r = !1, textColor: i, hovered: o = !1, bold: u = !1, scaleFontToUserSetting: c = !1 } = e,
-        { now: f } = v(o),
-        _ = s.useMemo(() => (0, m.T_)(n, f), [n, f]),
-        h = s.useRef(_),
-        p = s.useRef(_);
+let y = (e) => {
+    let { entry: n, inline: r = !1, textColor: i, hovered: s = !1, bold: u = !1, scaleFontToUserSetting: c = !1 } = e,
+        { now: f } = v(s),
+        p = o.useMemo(() => (0, m.T_)(n, f), [n, f]),
+        h = o.useRef(p),
+        _ = o.useRef(p);
     return (
-        s.useEffect(() => {
-            p.current = _;
+        o.useEffect(() => {
+            _.current = p;
         }),
-        s.useEffect(() => {
-            h.current = p.current;
+        o.useEffect(() => {
+            h.current = _.current;
         }, [n]),
         (0, a.jsx)(d.Text, {
             className: l()(g.timestamp, {
@@ -84,7 +84,7 @@ let I = (e) => {
             color: i,
             scaleFontToUserSetting: c,
             'aria-label': h.current,
-            children: _
+            children: p
         })
     );
 };

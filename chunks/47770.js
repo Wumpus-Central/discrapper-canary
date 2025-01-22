@@ -1,11 +1,11 @@
 r.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var i = r(47120);
 var a = r(836560);
-function s(e, n, r) {
+function o(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -18,7 +18,7 @@ function s(e, n, r) {
         e
     );
 }
-class o {
+class s {
     on(e, n) {
         this.emitter.on(e, n);
     }
@@ -49,6 +49,6 @@ class o {
         return this.emitter.listenerCount(e);
     }
     constructor() {
-        s(this, 'emitter', new a.EventEmitter());
+        o(this, 'emitter', new a.EventEmitter());
     }
 }

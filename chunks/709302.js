@@ -12,9 +12,9 @@ function a(e, n, r) {
         e
     );
 }
-class s extends i.Z {
+class o extends i.Z {
     static fromPath(e) {
-        return new s({
+        return new o({
             id: e,
             path: e
         });
@@ -23,4 +23,4 @@ class s extends i.Z {
         super(), a(this, 'id', void 0), a(this, 'path', void 0), (this.id = e.id), (this.path = e.path);
     }
 }
-n.Z = s;
+n.Z = o;

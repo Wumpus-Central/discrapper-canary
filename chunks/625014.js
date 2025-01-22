@@ -1,18 +1,18 @@
-var r = n(96403),
-    o = n(463374),
-    a = n(342545),
-    i = n(219479),
-    s = r(''.replace),
-    c = RegExp('^[' + i + ']+'),
-    l = RegExp('(^|[^' + i + '])[' + i + ']+$'),
-    u = function (e) {
-        return function (t) {
-            var n = a(o(t));
-            return 1 & e && (n = s(n, c, '')), 2 & e && (n = s(n, l, '$1')), n;
+var i = r(96403),
+    a = r(463374),
+    o = r(342545),
+    s = r(219479),
+    l = i(''.replace),
+    u = RegExp('^[' + s + ']+'),
+    c = RegExp('(^|[^' + s + '])[' + s + ']+$'),
+    d = function (e) {
+        return function (n) {
+            var r = o(a(n));
+            return 1 & e && (r = l(r, u, '')), 2 & e && (r = l(r, c, '$1')), r;
         };
     };
 e.exports = {
-    start: u(1),
-    end: u(2),
-    trim: u(3)
+    start: d(1),
+    end: d(2),
+    trim: d(3)
 };

@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return s;
+        return o;
     }
 });
 var i = r(192379);
@@ -13,7 +13,7 @@ let a = Object.freeze({
     offsetWidth: 0,
     dirty: 2
 });
-function s() {
+function o() {
     let e = (0, i.useRef)(null),
         n = (0, i.useRef)(a),
         r = (0, i.useCallback)(() => {
@@ -29,13 +29,13 @@ function s() {
                     dirty: 0
                 };
             } else {
-                let { scrollTop: e, scrollLeft: i, scrollHeight: a, scrollWidth: s, offsetHeight: o, offsetWidth: l } = r;
+                let { scrollTop: e, scrollLeft: i, scrollHeight: a, scrollWidth: o, offsetHeight: s, offsetWidth: l } = r;
                 n.current = {
                     scrollTop: e,
                     scrollLeft: i,
                     scrollHeight: a,
-                    scrollWidth: s,
-                    offsetHeight: o,
+                    scrollWidth: o,
+                    offsetHeight: s,
                     offsetWidth: l,
                     dirty: 0
                 };

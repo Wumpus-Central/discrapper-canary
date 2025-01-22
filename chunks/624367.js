@@ -12,8 +12,8 @@ var r = n(373793),
     o = n(481060),
     s = n(100527),
     c = n(906732),
-    d = n(783097),
-    u = n(606192),
+    u = n(783097),
+    d = n(606192),
     m = n(213459),
     h = n(132871),
     f = n(147890),
@@ -38,7 +38,7 @@ function A(e) {
             return null !== (e = E.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
         y = null == P ? void 0 : null === (t = P.bot) || void 0 === t ? void 0 : t.id,
-        O = null != P && (0, d.ye)(P),
+        O = null != P && (0, u.ye)(P),
         M = (0, x.ZP)(null !== (a = null == P ? void 0 : P.maxParticipants) && void 0 !== a ? a : 0),
         D = (0, N.Z)({
             applicationId: A,
@@ -51,7 +51,7 @@ function A(e) {
         w = async () => {
             if (null != y && (null == P ? void 0 : P.id) != null)
                 try {
-                    await (0, u.W)({
+                    await (0, d.W)({
                         appId: P.id,
                         botId: y,
                         analyticsLocations: Z,
@@ -126,7 +126,7 @@ function A(e) {
                                                             if (null == P) return;
                                                             let t = U || B;
                                                             r.Y.USER_INSTALL in (null !== (e = P.integrationTypesConfig) && void 0 !== e ? e : {}) || t
-                                                                ? (0, d.X)(P.id)
+                                                                ? (0, u.X)(P.id)
                                                                 : (0, f.goToAppDirectory)({
                                                                       guildId: L,
                                                                       view: h.ApplicationDirectoryViews.APPLICATION,

@@ -1,7 +1,7 @@
 var i,
     a = r(442837),
-    s = r(570140);
-function o(e, n, r) {
+    o = r(570140);
+function s(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -24,7 +24,7 @@ function f(e) {
     let { guildId: n } = e;
     c[n] = !0;
 }
-function _(e) {
+function p(e) {
     let { guildId: n, topEmojisMetadata: r } = e;
     (u.topEmojisByGuildId[n] = r.map((e) => e.emojiId)), (c[n] = !1);
 }
@@ -42,10 +42,10 @@ class h extends (i = a.ZP.PersistedStore) {
         return c[e];
     }
 }
-o(h, 'displayName', 'TopEmojiStore'),
-    o(h, 'persistKey', 'TopEmojiStore'),
-    (n.Z = new h(s.Z, {
+s(h, 'displayName', 'TopEmojiStore'),
+    s(h, 'persistKey', 'TopEmojiStore'),
+    (n.Z = new h(o.Z, {
         LOGOUT: d,
         TOP_EMOJIS_FETCH: f,
-        TOP_EMOJIS_FETCH_SUCCESS: _
+        TOP_EMOJIS_FETCH_SUCCESS: p
     }));

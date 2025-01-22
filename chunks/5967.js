@@ -8,15 +8,15 @@ r.d(n, {
 });
 var i = r(47120);
 let a = /input/i,
-    s = /textarea/i,
-    o = new Set(['text', 'password', 'number', 'date', 'datetime-local', 'time', 'week', 'month', 'email', 'search', 'tel', 'url']);
+    o = /textarea/i,
+    s = new Set(['text', 'password', 'number', 'date', 'datetime-local', 'time', 'week', 'month', 'email', 'search', 'tel', 'url']);
 function l(e) {
     if (null == e) return !1;
-    if ('true' === e.getAttribute('contenteditable') || s.test(e.tagName)) return !0;
+    if ('true' === e.getAttribute('contenteditable') || o.test(e.tagName)) return !0;
     if (a.test(e.tagName)) {
         var n;
         let r = null !== (n = e.getAttribute('type')) && void 0 !== n ? n : 'text';
-        if (o.has(r)) return !0;
+        if (s.has(r)) return !0;
     }
     return !1;
 }

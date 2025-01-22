@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(789020);
 var a = r(200651),
-    s = r(192379),
-    o = r(865427),
+    o = r(192379),
+    s = r(865427),
     l = r(853425),
     u = r(830121);
 let c = RegExp('^' + u.oO.source, u.oO.flags);
@@ -19,9 +19,9 @@ function d(e) {
         }),
         react: (e, n, r) => {
             let i = e.target[0];
-            return (0, o.mG)(i)
+            return (0, s.mG)(i)
                 ? (0, a.jsxs)(a.Fragment, {
-                      children: [(0, a.jsx)('span', { children: i }), (0, a.jsx)(s.Fragment, { children: (0, a.jsx)(l.Z, { url: i }, i) }, r.key)]
+                      children: [(0, a.jsx)('span', { children: i }), (0, a.jsx)(o.Fragment, { children: (0, a.jsx)(l.Z, { url: i }, i) }, r.key)]
                   })
                 : (0, a.jsx)('span', { children: i });
         },

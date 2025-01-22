@@ -1,7 +1,7 @@
 var i,
     a = r(47120);
-var s = r(442837),
-    o = r(570140),
+var o = r(442837),
+    s = r(570140),
     l = r(664674);
 function u(e, n, r) {
     return (
@@ -21,16 +21,16 @@ let c = !1,
 function f(e) {
     let { leaderboardResponse: n, intervalOffset: r } = e,
         { leaderboard: i } = n,
-        { guild_id: a, leaderboard_id: s } = i,
-        o = d.get(r);
-    null == o && ((o = new Map()), d.set(r, o));
-    let l = o.get(a);
-    null == l && ((l = new Map()), o.set(a, l)), l.set(s, n);
+        { guild_id: a, leaderboard_id: o } = i,
+        s = d.get(r);
+    null == s && ((s = new Map()), d.set(r, s));
+    let l = s.get(a);
+    null == l && ((l = new Map()), s.set(a, l)), l.set(o, n);
 }
-function _() {
+function p() {
     d = new Map();
 }
-class h extends (i = s.ZP.Store) {
+class h extends (i = o.ZP.Store) {
     getLeaderboards(e) {
         var n;
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
@@ -48,7 +48,7 @@ class h extends (i = s.ZP.Store) {
     }
 }
 u(h, 'displayName', 'GuildLeaderboardStore'),
-    (n.Z = new h(o.Z, {
-        CONNECTION_OPEN: _,
+    (n.Z = new h(s.Z, {
+        CONNECTION_OPEN: p,
         SET_GUILD_LEADERBOARD: f
     }));

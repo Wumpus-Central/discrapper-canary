@@ -1,20 +1,20 @@
 r.d(n, {
     p: function () {
-        return _;
+        return p;
     }
 });
 var i = r(200651);
 r(192379);
 var a = r(120356),
-    s = r.n(a),
-    o = r(642128),
+    o = r.n(a),
+    s = r(642128),
     l = r(481060),
     u = r(436774),
     c = r(197115),
     d = r(474936),
     f = r(998663);
-function _(e) {
-    let { showUpsell: n, text: r, textVariant: a, button: _, buttonAnalyticsObject: h, className: p, onSubscribeModalClose: m, showShadow: g = !0, position: E = 'floating' } = e,
+function p(e) {
+    let { showUpsell: n, text: r, textVariant: a, button: p, buttonAnalyticsObject: h, className: _, onSubscribeModalClose: m, showShadow: g = !0, position: E = 'floating' } = e,
         v = (0, l.useSpring)({
             transform: n ? 'translateY(0%)' : 'translateY(120%)',
             opacity: n ? 1 : 0,
@@ -23,16 +23,16 @@ function _(e) {
                 friction: 14
             }
         });
-    return (0, i.jsxs)(o.animated.div, {
+    return (0, i.jsxs)(s.animated.div, {
         style: { ...v },
-        className: s()(
+        className: o()(
             f.upsellContainer,
             {
                 [f.upsellContainerShadow]: g,
                 [f.upsellContainerFloating]: 'floating' === E,
                 [f.upsellContainerInline]: 'inline' === E
             },
-            p
+            _
         ),
         children: [
             (0, i.jsx)(l.NitroWheelIcon, {
@@ -45,17 +45,17 @@ function _(e) {
                 className: f.upsellText,
                 children: r
             }),
-            'string' == typeof _
+            'string' == typeof p
                 ? (0, i.jsx)(c.Z, {
                       className: f.upsellButton,
                       shinyButtonClassName: f.upsellButton,
                       subscriptionTier: d.Si.TIER_2,
-                      buttonText: _,
+                      buttonText: p,
                       premiumModalAnalyticsLocation: h,
                       tabIndex: n ? 0 : -1,
                       onSubscribeModalClose: m
                   })
-                : _
+                : p
         ]
     });
 }

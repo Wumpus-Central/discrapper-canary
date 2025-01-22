@@ -5,21 +5,21 @@ r.d(n, {
 });
 var i = r(47120);
 var a = r(200651),
-    s = r(192379),
-    o = r(373793),
+    o = r(192379),
+    s = r(373793),
     l = r(481060),
     u = r(783097),
     c = r(753972),
     d = r(520315),
     f = r(688465),
-    _ = r(388032),
+    p = r(388032),
     h = r(147750),
-    p = r(665162),
+    _ = r(665162),
     m = r(413097);
 let g = 84;
 function E(e) {
     let { application: n, onSelect: r, onClose: i } = e,
-        { iconURL: d } = s.useMemo(
+        { iconURL: d } = o.useMemo(
             () =>
                 (0, u.sl)(n, {
                     fakeAppIconURL: m,
@@ -27,21 +27,21 @@ function E(e) {
                 }),
             [n]
         ),
-        p = s.useMemo(
+        _ = o.useMemo(
             () =>
                 [
                     {
-                        type: o.Y.USER_INSTALL,
+                        type: s.Y.USER_INSTALL,
                         icon: l.UserPlusIcon,
-                        title: _.intl.string(_.t.aCg60N),
-                        subtitle: _.intl.string(_.t.YeiIUV),
+                        title: p.intl.string(p.t.aCg60N),
+                        subtitle: p.intl.string(p.t.YeiIUV),
                         beta: !1
                     },
                     {
-                        type: o.Y.GUILD_INSTALL,
+                        type: s.Y.GUILD_INSTALL,
                         icon: l.ServerIcon,
-                        title: _.intl.string(_.t.E64YCw),
-                        subtitle: _.intl.string(_.t.bbtoKi),
+                        title: p.intl.string(p.t.E64YCw),
+                        subtitle: p.intl.string(p.t.bbtoKi),
                         beta: !1
                     }
                 ].filter((e) => {
@@ -60,7 +60,7 @@ function E(e) {
                         ? (0, a.jsx)(l.Clickable, {
                               onClick: i,
                               className: h.closeButton,
-                              'aria-label': _.intl.string(_.t.cpT0Cg),
+                              'aria-label': p.intl.string(p.t.cpT0Cg),
                               children: (0, a.jsx)(l.XSmallIcon, {
                                   size: 'md',
                                   color: 'currentColor'
@@ -72,13 +72,13 @@ function E(e) {
                         className: h.appIcon,
                         rendersPlaceholder: !0
                     }),
-                    (0, a.jsx)(I, { application: n }),
+                    (0, a.jsx)(y, { application: n }),
                     (0, a.jsx)(v, { application: n })
                 ]
             }),
             (0, a.jsx)('ul', {
                 className: h.rows,
-                children: p.map((e) =>
+                children: _.map((e) =>
                     (0, a.jsxs)(
                         l.Clickable,
                         {
@@ -135,11 +135,11 @@ function v(e) {
               className: h.detailsContainer,
               children: (0, a.jsx)('div', {
                   className: h.overviewContainerNoVideo,
-                  children: null != r && r.length > 0 ? (0, a.jsx)(b, { description: r }) : null
+                  children: null != r && r.length > 0 ? (0, a.jsx)(I, { description: r }) : null
               })
           });
 }
-function I(e) {
+function y(e) {
     let { application: n } = e,
         r = n.name,
         i = (0, u.vJ)(n);
@@ -157,68 +157,68 @@ function I(e) {
                       children: (0, a.jsx)(l.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
-                          children: _.intl.string(_.t.LO4f0N)
+                          children: p.intl.string(p.t.LO4f0N)
                       })
                   })
                 : null
         ]
     });
 }
-let T = 3;
-function b(e) {
+let b = 3;
+function I(e) {
     let { description: n } = e,
-        [i, o] = s.useState(!0);
-    s.useLayoutEffect(() => o(!1), []);
-    let u = s.useMemo(() => {
+        [i, s] = o.useState(!0);
+    o.useLayoutEffect(() => s(!1), []);
+    let u = o.useMemo(() => {
             let { parseBioReact: e } = r(240991);
             return e(n);
         }, [n]),
-        { ref: c, lineHeight: f, lineCount: m } = y(),
-        g = s.useMemo(() => {
+        { ref: c, lineHeight: f, lineCount: m } = T(),
+        g = o.useMemo(() => {
             if (null == f || null == m) return { key: 0 };
             let e = f * m;
             return {
                 key: 1,
-                minHeightOverride: Math.min(e, T * f),
+                minHeightOverride: Math.min(e, b * f),
                 maxHeightOverride: e
             };
         }, [m, f]),
         {
             ref: E,
             isTransitioning: v,
-            onTransitionEnd: I
+            onTransitionEnd: y
         } = (0, d.Z)({
             isExpanded: i,
             ...g
         }),
-        b = i || v;
+        I = i || v;
     return (0, a.jsxs)('div', {
         className: h.descriptionContainer,
         children: [
             (0, a.jsx)('div', {
                 ref: E,
                 className: h.overflowHidden,
-                onTransitionEnd: I,
+                onTransitionEnd: y,
                 children: (0, a.jsx)(l.Text, {
                     ref: c,
-                    className: p.markup,
+                    className: _.markup,
                     variant: 'text-sm/medium',
-                    lineClamp: b ? void 0 : T,
-                    style: { maxHeight: b ? void 0 : g.minHeightOverride },
+                    lineClamp: I ? void 0 : b,
+                    style: { maxHeight: I ? void 0 : g.minHeightOverride },
                     children: u
                 })
             }),
-            null != m && m > T
+            null != m && m > b
                 ? (0, a.jsxs)(l.Clickable, {
                       className: h.expandableDescriptionClickable,
-                      onClick: () => o((e) => !e),
+                      onClick: () => s((e) => !e),
                       children: [
                           (0, a.jsx)(l.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: b ? _.intl.string(_.t.u4YJ8v) : _.intl.string(_.t['N/tajI'])
+                              children: I ? p.intl.string(p.t.u4YJ8v) : p.intl.string(p.t['N/tajI'])
                           }),
-                          b
+                          I
                               ? (0, a.jsx)(l.ChevronSmallUpIcon, {
                                     size: 'sm',
                                     color: l.tokens.colors.TEXT_BRAND
@@ -233,12 +233,12 @@ function b(e) {
         ]
     });
 }
-function y() {
-    let e = s.useRef(null),
-        [n, r] = s.useState(null),
-        [i, a] = s.useState(null);
+function T() {
+    let e = o.useRef(null),
+        [n, r] = o.useState(null),
+        [i, a] = o.useState(null);
     return (
-        s.useLayoutEffect(() => {
+        o.useLayoutEffect(() => {
             let n = e.current;
             if (null === n || 0 === n.clientHeight) return;
             let i = parseInt(getComputedStyle(n).lineHeight);

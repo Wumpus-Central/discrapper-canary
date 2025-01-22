@@ -9,8 +9,8 @@ var i,
             }
             return e;
         },
-    s = o(r(192379));
-function o(e) {
+    o = s(r(192379));
+function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
 function l(e, n) {
@@ -25,13 +25,13 @@ n.default = function (e) {
     var n = e.fill,
         r = void 0 === n ? 'currentColor' : n,
         i = e.width,
-        o = void 0 === i ? u : i,
+        s = void 0 === i ? u : i,
         c = e.height,
         d = void 0 === c ? u : c,
         f = e.style,
-        _ = void 0 === f ? {} : f,
+        p = void 0 === f ? {} : f,
         h = l(e, ['fill', 'width', 'height', 'style']);
-    return s.default.createElement(
+    return o.default.createElement(
         'svg',
         a(
             {
@@ -39,14 +39,14 @@ n.default = function (e) {
                 style: a(
                     {
                         fill: r,
-                        width: o,
+                        width: s,
                         height: d
                     },
-                    _
+                    p
                 )
             },
             h
         ),
-        s.default.createElement('path', { d: 'M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z' })
+        o.default.createElement('path', { d: 'M12,18.17L8.83,15L7.42,16.41L12,21L16.59,16.41L15.17,15M12,5.83L15.17,9L16.58,7.59L12,3L7.41,7.59L8.83,9L12,5.83Z' })
     );
 };

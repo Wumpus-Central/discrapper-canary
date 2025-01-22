@@ -12,21 +12,21 @@ var r = n(120356),
     o = n(910111),
     s = n(732559),
     c = n(723851),
-    d = n(981631),
-    u = n(388032),
+    u = n(981631),
+    d = n(388032),
     m = n(758528);
 let h = {
-    [d.TaA.WINDOWS]: {
+    [u.TaA.WINDOWS]: {
         icon: c.Z,
-        getLabel: () => u.intl.string(u.t['0/xHFB'])
+        getLabel: () => d.intl.string(d.t['0/xHFB'])
     },
-    [d.TaA.MACOS]: {
+    [u.TaA.MACOS]: {
         icon: s.Z,
-        getLabel: () => u.intl.string(u.t.E4u4n5)
+        getLabel: () => d.intl.string(d.t.E4u4n5)
     },
-    [d.TaA.LINUX]: {
+    [u.TaA.LINUX]: {
         icon: o.Z,
-        getLabel: () => u.intl.string(u.t.tcawo6)
+        getLabel: () => d.intl.string(d.t.tcawo6)
     }
 };
 function f(e) {

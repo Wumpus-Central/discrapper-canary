@@ -1,6 +1,6 @@
 r.d(n, {
     NM: function () {
-        return s;
+        return o;
     }
 });
 var i = r(162461);
@@ -17,16 +17,16 @@ let a = (0, r(818083).B)({
         }
     ]
 });
-function s(e) {
-    let { guildId: n, location: r, autoTrackExposure: s = !0 } = e,
-        { enabled: o } = i.DG.getCurrentConfig({ location: r }, { autoTrackExposure: !1 });
-    if (!o) return !1;
+function o(e) {
+    let { guildId: n, location: r, autoTrackExposure: o = !0 } = e,
+        { enabled: s } = i.DG.getCurrentConfig({ location: r }, { autoTrackExposure: !1 });
+    if (!s) return !1;
     let { enabled: l } = a.getCurrentConfig(
         {
             guildId: n,
             location: r
         },
-        { autoTrackExposure: s }
+        { autoTrackExposure: o }
     );
     return l;
 }

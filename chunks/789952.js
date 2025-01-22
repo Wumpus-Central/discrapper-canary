@@ -9,27 +9,27 @@ r.r(n),
     });
 var i = r(411104);
 var a = r(47120);
-var s = r(270445);
-let o = !1;
+var o = r(270445);
+let s = !1;
 {
-    s.F3.toSlateRange = (e, n, r) => {
+    o.F3.toSlateRange = (e, n, r) => {
         let i,
             a,
-            o,
+            s,
             l,
             u,
             { exactMatch: c, suppressThrow: d } = r;
-        if ((_(n) ? ((i = n.anchorNode), (a = n.anchorOffset), (o = n.focusNode), (l = n.focusOffset), (u = n.isCollapsed)) : ((i = n.startContainer), (a = n.startOffset), (o = n.endContainer), (l = n.endOffset), (u = n.collapsed)), null == i || null == o || null == a || null == l)) {
+        if ((p(n) ? ((i = n.anchorNode), (a = n.anchorOffset), (s = n.focusNode), (l = n.focusOffset), (u = n.isCollapsed)) : ((i = n.startContainer), (a = n.startOffset), (s = n.endContainer), (l = n.endOffset), (u = n.collapsed)), null == i || null == s || null == a || null == l)) {
             if (d) return null;
             throw Error('Cannot resolve a Slate range from DOM range');
         }
-        let f = s.F3.toSlatePoint(e, [i, a], {
+        let f = o.F3.toSlatePoint(e, [i, a], {
                 exactMatch: c,
                 suppressThrow: d
             }),
             h = u
                 ? f
-                : s.F3.toSlatePoint(e, [o, l], {
+                : o.F3.toSlatePoint(e, [s, l], {
                       exactMatch: c,
                       suppressThrow: d
                   });
@@ -40,21 +40,21 @@ let o = !1;
               }
             : null;
     };
-    let e = s.F3.toSlatePoint;
-    (s.F3.toSlatePoint = (n, r, i) => {
-        let { exactMatch: a, suppressThrow: s, direction: o = 'forward' } = i;
-        !a && (r = u(r, o));
+    let e = o.F3.toSlatePoint;
+    (o.F3.toSlatePoint = (n, r, i) => {
+        let { exactMatch: a, suppressThrow: o, direction: s = 'forward' } = i;
+        !a && (r = u(r, s));
         try {
             return e(n, r, {
                 exactMatch: !0,
-                suppressThrow: s
+                suppressThrow: o
             });
         } catch (e) {
-            if (s) return null;
+            if (o) return null;
             throw e;
         }
     }),
-        (o = !0);
+        (s = !0);
 }
 function l(e, n) {
     if (null == n) return !1;
@@ -72,25 +72,25 @@ function u(e, n) {
         let e = 'backward' === n ? i.childNodes.length - 1 : 0;
         i = c(i, e, n)[0];
     }
-    let s = 'backward' === n && null != i.textContent ? i.textContent.length : 0;
-    return [i, s];
+    let o = 'backward' === n && null != i.textContent ? i.textContent.length : 0;
+    return [i, o];
 }
 function c(e, n, r) {
     let { childNodes: i } = e,
         a = i[n],
-        s = n,
-        o = !1,
+        o = n,
+        s = !1,
         l = !1;
-    for (; (d(a) || (f(a) && 0 === a.childNodes.length) || (f(a) && 'false' === a.getAttribute('contenteditable'))) && (!o || !l); ) {
-        if (s >= i.length) {
-            (o = !0), (s = n - 1), (r = 'backward');
+    for (; (d(a) || (f(a) && 0 === a.childNodes.length) || (f(a) && 'false' === a.getAttribute('contenteditable'))) && (!s || !l); ) {
+        if (o >= i.length) {
+            (s = !0), (o = n - 1), (r = 'backward');
             continue;
         }
-        if (s < 0) {
-            (l = !0), (s = n + 1), (r = 'forward');
+        if (o < 0) {
+            (l = !0), (o = n + 1), (r = 'forward');
             continue;
         }
-        (a = i[s]), (n = s), (s += 'forward' === r ? 1 : -1);
+        (a = i[o]), (n = o), (o += 'forward' === r ? 1 : -1);
     }
     return [a, n];
 }
@@ -100,14 +100,14 @@ function d(e) {
 function f(e) {
     return h(e) && 1 === e.nodeType;
 }
-function _(e) {
-    let n = e && e.anchorNode && p(e.anchorNode);
+function p(e) {
+    let n = e && e.anchorNode && _(e.anchorNode);
     return null != n && e instanceof n.Selection;
 }
 function h(e) {
-    let n = p(e);
+    let n = _(e);
     return null != n && e instanceof n.Node;
 }
-function p(e) {
+function _(e) {
     return (e && e.ownerDocument && e.ownerDocument.defaultView) || null;
 }

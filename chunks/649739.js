@@ -3,7 +3,7 @@ r.d(n, {
         return a;
     },
     Ku: function () {
-        return s;
+        return o;
     }
 });
 let i = (0, r(818083).B)({
@@ -23,7 +23,7 @@ function a(e, n) {
     let { showGameIcon: r } = i.useExperiment({ location: e }, { autoTrackExposure: n });
     return r;
 }
-function s(e, n) {
+function o(e, n) {
     let { showGameIcon: r } = i.getCurrentConfig({ location: e }, { autoTrackExposure: n });
     return r;
 }

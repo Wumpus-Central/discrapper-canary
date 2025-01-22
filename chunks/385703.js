@@ -1,7 +1,7 @@
 var i = r(710659),
     a = r(812975),
-    s = r(686942),
-    o = function (e, n) {
+    o = r(686942),
+    s = function (e, n) {
         return -1 !== e.indexOf(n);
     },
     l = function (e) {
@@ -13,19 +13,19 @@ var i = r(710659),
     c = (function () {
         function e(e, n, r, a) {
             if ((void 0 === n && (n = l), void 0 === r && (r = i.Z), void 0 === a && (a = u), (this.text = []), (this.language = r || i.Z), (this.gettext = n), (this.dateFormatter = a), (this.rrule = e), (this.options = e.options), (this.origOptions = e.origOptions), this.origOptions.bymonthday)) {
-                var o = [].concat(this.options.bymonthday),
+                var s = [].concat(this.options.bymonthday),
                     c = [].concat(this.options.bynmonthday);
-                o.sort(function (e, n) {
+                s.sort(function (e, n) {
                     return e - n;
                 }),
                     c.sort(function (e, n) {
                         return n - e;
                     }),
-                    (this.bymonthday = o.concat(c)),
+                    (this.bymonthday = s.concat(c)),
                     !this.bymonthday.length && (this.bymonthday = null);
             }
-            if ((0, s.EN)(this.origOptions.byweekday)) {
-                var d = (0, s.kJ)(this.origOptions.byweekday) ? this.origOptions.byweekday : [this.origOptions.byweekday],
+            if ((0, o.EN)(this.origOptions.byweekday)) {
+                var d = (0, o.kJ)(this.origOptions.byweekday) ? this.origOptions.byweekday : [this.origOptions.byweekday],
                     f = String(d);
                 this.byweekday = {
                     allWeeks: d.filter(function (e) {
@@ -37,10 +37,10 @@ var i = r(710659),
                     isWeekdays: -1 !== f.indexOf('MO') && -1 !== f.indexOf('TU') && -1 !== f.indexOf('WE') && -1 !== f.indexOf('TH') && -1 !== f.indexOf('FR') && -1 === f.indexOf('SA') && -1 === f.indexOf('SU'),
                     isEveryDay: -1 !== f.indexOf('MO') && -1 !== f.indexOf('TU') && -1 !== f.indexOf('WE') && -1 !== f.indexOf('TH') && -1 !== f.indexOf('FR') && -1 !== f.indexOf('SA') && -1 !== f.indexOf('SU')
                 };
-                var _ = function (e, n) {
+                var p = function (e, n) {
                     return e.weekday - n.weekday;
                 };
-                this.byweekday.allWeeks.sort(_), this.byweekday.someWeeks.sort(_), !this.byweekday.allWeeks.length && (this.byweekday.allWeeks = null), !this.byweekday.someWeeks.length && (this.byweekday.someWeeks = null);
+                this.byweekday.allWeeks.sort(p), this.byweekday.someWeeks.sort(p), !this.byweekday.allWeeks.length && (this.byweekday.allWeeks = null), !this.byweekday.someWeeks.length && (this.byweekday.someWeeks = null);
             } else this.byweekday = null;
         }
         return (
@@ -48,8 +48,8 @@ var i = r(710659),
                 var r = !0;
                 if (!(n.options.freq in e.IMPLEMENTED) || (n.origOptions.until && n.origOptions.count)) return !1;
                 for (var i in n.origOptions) {
-                    if (o(['dtstart', 'wkst', 'freq'], i)) return !0;
-                    if (!o(e.IMPLEMENTED[n.options.freq], i)) return !1;
+                    if (s(['dtstart', 'wkst', 'freq'], i)) return !0;
+                    if (!s(e.IMPLEMENTED[n.options.freq], i)) return !1;
                 }
                 return r;
             }),
@@ -152,7 +152,7 @@ var i = r(710659),
                 return this.language.monthNames[e - 1];
             }),
             (e.prototype.weekdaytext = function (e) {
-                var n = (0, s.hj)(e) ? (e + 1) % 7 : e.getJsWeekday();
+                var n = (0, o.hj)(e) ? (e + 1) % 7 : e.getJsWeekday();
                 return (e.n ? this.nth(e.n) + ' ' : '') + this.language.dayNames[n];
             }),
             (e.prototype.plural = function (e) {
@@ -163,8 +163,8 @@ var i = r(710659),
             }),
             (e.prototype.list = function (e, n, r, i) {
                 var a = this;
-                void 0 === i && (i = ','), !(0, s.kJ)(e) && (e = [e]);
-                var o = function (e, n, r) {
+                void 0 === i && (i = ','), !(0, o.kJ)(e) && (e = [e]);
+                var s = function (e, n, r) {
                     for (var i = '', a = 0; a < e.length; a++) 0 !== a && (a === e.length - 1 ? (i += ' ' + r + ' ') : (i += n + ' ')), (i += e[a]);
                     return i;
                 };
@@ -176,7 +176,7 @@ var i = r(710659),
                 var l = function (e) {
                     return n && n.call(a, e);
                 };
-                return r ? o(e.map(l), i, r) : e.map(l).join(i + ' ');
+                return r ? s(e.map(l), i, r) : e.map(l).join(i + ' ');
             }),
             e
         );

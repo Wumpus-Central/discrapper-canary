@@ -1,11 +1,11 @@
-var r = n(360518)('match');
+var i = r(360518)('match');
 e.exports = function (e) {
-    var t = /./;
+    var n = /./;
     try {
-        '/./'[e](t);
-    } catch (n) {
+        '/./'[e](n);
+    } catch (r) {
         try {
-            return (t[r] = !1), '/./'[e](t);
+            return (n[i] = !1), '/./'[e](n);
         } catch (e) {}
     }
     return !1;

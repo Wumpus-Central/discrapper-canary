@@ -5,8 +5,8 @@ r.d(n, {
 });
 var i = r(411104);
 var a = r(512722),
-    s = r.n(a),
-    o = r(710845),
+    o = r.n(a),
+    s = r(710845),
     l = r(459005),
     u = r(398463);
 function c(e, n, r) {
@@ -22,7 +22,7 @@ function c(e, n, r) {
         e
     );
 }
-let d = new o.Z('DispatcherWorkScheduler');
+let d = new s.Z('DispatcherWorkScheduler');
 class f {
     _trackAppBackgrounded(e) {
         if (this._isBackgrounded === e) return;
@@ -74,7 +74,7 @@ class f {
                 return;
             }
             this._flushTimeoutHandler = setTimeout(() => {
-                if ((s()(null != this._workCallbackFn, 'Work callback should be set'), this._isBackgrounded)) return this.telemetry.track(l.ug.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
+                if ((o()(null != this._workCallbackFn, 'Work callback should be set'), this._isBackgrounded)) return this.telemetry.track(l.ug.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
                 this._queueIdleCallback();
             }, this._nextDispatchTimeout);
         }

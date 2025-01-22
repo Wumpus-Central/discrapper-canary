@@ -8,8 +8,8 @@ r.d(n, {
 });
 var i,
     a = r(411104);
-var s = r(774078),
-    o = r(55935),
+var o = r(774078),
+    s = r(55935),
     l = r(388032);
 let u = 60000;
 function c(e, n) {
@@ -46,8 +46,8 @@ function c(e, n) {
         default:
             throw Error('Unknown messageType ('.concat(n, ') when rendering time left'));
     }
-    let i = (0, s.Z)(e.toDate(), u);
-    return (0, o.QX)(i, r);
+    let i = (0, o.Z)(e.toDate(), u);
+    return (0, s.QX)(i, r);
 }
 !(function (e) {
     (e[(e.SHORT_TIME_LEFT = 0)] = 'SHORT_TIME_LEFT'), (e[(e.LONG_TIME_LEFT = 1)] = 'LONG_TIME_LEFT'), (e[(e.ENDS_IN = 2)] = 'ENDS_IN'), (e[(e.SHORT_TIME = 3)] = 'SHORT_TIME');

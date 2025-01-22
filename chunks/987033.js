@@ -1,4 +1,4 @@
-var i = t(818083);
+var i = r(818083);
 n.Z = (0, i.B)({
     kind: 'user',
     id: '2023-05_localized_pricing_turkey_notice',

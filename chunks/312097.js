@@ -5,18 +5,18 @@ r.d(n, {
 });
 var i = r(200651),
     a = r(481060),
-    s = r(982330),
-    o = r(592125),
+    o = r(982330),
+    s = r(592125),
     l = r(626135),
     u = r(254109),
     c = r(981631),
     d = r(701865);
 function f(e) {
-    var n, f, _;
-    let { location: h, contextKey: p, ...m } = e,
-        g = (0, s.Kc)(h),
-        E = null === (f = m.items[null !== (_ = m.startingIndex) && void 0 !== _ ? _ : 0]) || void 0 === f ? void 0 : null === (n = f.sourceMetadata) || void 0 === n ? void 0 : n.message,
-        v = o.Z.getChannel(null == E ? void 0 : E.channel_id);
+    var n, f, p;
+    let { location: h, contextKey: _, ...m } = e,
+        g = (0, o.Kc)(h),
+        E = null === (f = m.items[null !== (p = m.startingIndex) && void 0 !== p ? p : 0]) || void 0 === f ? void 0 : null === (n = f.sourceMetadata) || void 0 === n ? void 0 : n.message,
+        v = s.Z.getChannel(null == E ? void 0 : E.channel_id);
     (0, u.fS)({
         guildId: null == v ? void 0 : v.guild_id,
         channelId: null == v ? void 0 : v.id,
@@ -43,7 +43,7 @@ function f(e) {
             },
             {
                 modalKey: d.U,
-                contextKey: p,
+                contextKey: _,
                 onCloseCallback: u.VO,
                 backdropStyle: a.BackdropStyles.IMMERSIVE
             }

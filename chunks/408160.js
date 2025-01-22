@@ -1,10 +1,10 @@
 r.r(n),
     r.d(n, {
         announce: function () {
-            return s;
+            return o;
         },
         clearAnnouncer: function () {
-            return o;
+            return s;
         },
         destroyAnnouncer: function () {
             return l;
@@ -12,10 +12,10 @@ r.r(n),
     });
 let i = 7000,
     a = null;
-function s(e, n = 'assertive', r = i) {
+function o(e, n = 'assertive', r = i) {
     !a && (a = new u()), a.announce(e, n, r);
 }
-function o(e) {
+function s(e) {
     a && a.clear(e);
 }
 function l() {
