@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 }),
     n(47120);
@@ -72,19 +72,35 @@ function S(e) {
         }
     });
 }
-function L(e) {
-    let { hasActiveStream: t, participant: r, onEnablePin: o } = e,
-        s = (0, p.bp)(),
-        d = r.user,
-        h = (0, a.e7)(
+function L(e, t, r) {
+    return (o) => {
+        o.stopPropagation(),
+            null == r || r(),
+            (0, u.jW)(o, async () => {
+                let { default: r } = await n.e('5704').then(n.bind(n, 360429));
+                return (n) =>
+                    (0, i.jsx)(r, {
+                        ...n,
+                        stream: e.stream,
+                        exitFullscreen: () => {},
+                        appContext: t
+                    });
+            });
+    };
+}
+function A(e) {
+    let { hasActiveStream: t, participant: n, onEnablePin: r } = e,
+        o = (0, p.bp)(),
+        s = n.user,
+        d = (0, a.e7)(
             [E.default],
             () => {
                 var e;
-                return null !== (e = E.default.getUser(d.id)) && void 0 !== e ? e : d;
+                return null !== (e = E.default.getUser(s.id)) && void 0 !== e ? e : s;
             },
-            [d]
+            [s]
         ),
-        x = t ? y.intl.string(y.t.tLxK4u) : y.intl.string(y.t.E5RDnJ);
+        u = t ? y.intl.string(y.t.tLxK4u) : y.intl.string(y.t.E5RDnJ);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', { className: l()(T.controlBackground, { [T.controlsWithActiveStream]: t }) }),
@@ -92,7 +108,7 @@ function L(e) {
                 (0, i.jsx)('div', {
                     className: T.watchActionContainer,
                     children: (0, i.jsx)(c.Tooltip, {
-                        text: x,
+                        text: u,
                         children: (e) =>
                             (0, i.jsxs)(c.Clickable, {
                                 ...e,
@@ -100,11 +116,11 @@ function L(e) {
                                 onClick: () => {
                                     var t;
                                     null === (t = e.onClick) || void 0 === t || t.call(e),
-                                        (0, m.rn)(r.stream, {
+                                        (0, m.rn)(n.stream, {
                                             forceMultiple: !0,
                                             noFocus: !0
                                         }),
-                                        o();
+                                        r();
                                 },
                                 children: [
                                     (0, i.jsx)(c.Text, {
@@ -135,11 +151,11 @@ function L(e) {
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-md/medium',
                                     color: 'always-white',
-                                    children: k.ZP.getName(r.stream.guildId, r.stream.channelId, d)
+                                    children: k.ZP.getName(n.stream.guildId, n.stream.channelId, s)
                                 }),
                                 (0, i.jsx)(v.ZP, {
-                                    primaryGuild: h.primaryGuild,
-                                    userId: d.id
+                                    primaryGuild: d.primaryGuild,
+                                    userId: s.id
                                 })
                             ]
                         })
@@ -150,28 +166,15 @@ function L(e) {
                             t &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)(S, { participant: r }),
+                                    (0, i.jsx)(S, { participant: n }),
                                     (0, i.jsx)(c.Tooltip, {
                                         text: y.intl.string(y.t['3D5yo6']),
                                         children: (e) => {
-                                            let { onClick: t, ...o } = e;
+                                            let { onClick: t, ...r } = e;
                                             return (0, i.jsx)(c.Clickable, {
-                                                ...o,
+                                                ...r,
                                                 className: T.controlAction,
-                                                onClick: (e) => {
-                                                    e.stopPropagation(),
-                                                        null == t || t(),
-                                                        (0, u.jW)(e, async () => {
-                                                            let { default: e } = await n.e('5704').then(n.bind(n, 360429));
-                                                            return (t) =>
-                                                                (0, i.jsx)(e, {
-                                                                    ...t,
-                                                                    stream: r.stream,
-                                                                    exitFullscreen: () => {},
-                                                                    appContext: s
-                                                                });
-                                                        });
-                                                },
+                                                onClick: L(n, o, t),
                                                 children: (0, i.jsx)(c.MoreHorizontalIcon, {
                                                     size: 'sm',
                                                     color: 'currentColor'
@@ -187,35 +190,39 @@ function L(e) {
         ]
     });
 }
-let A = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
-    O = r.memo(function (e) {
+let O = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
+    P = r.memo(function (e) {
         let { participant: t, width: n, locked: r, widgetId: o, pinned: s } = e,
-            c = (0, a.e7)([b.Z], () => b.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
-            d = null != c && A.has(c.state),
-            u = null != c,
-            m = (0, N.yA)(t.stream),
-            p = (0, N.xN)(t.stream);
-        return (!u && r) || d
+            d = (0, a.e7)([b.Z], () => b.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
+            u = (0, p.bp)(),
+            m = null != d && O.has(d.state),
+            x = null != d,
+            v = (0, N.yA)(t.stream),
+            _ = (0, N.xN)(t.stream);
+        return (!x && r) || m
             ? null
             : (0, i.jsxs)('div', {
                   className: T.tile,
                   children: [
-                      u &&
+                      x &&
                           !r &&
                           (0, i.jsx)(f.ZP, {
                               size: f.ZP.Sizes.SMALL,
                               className: T.liveIndicator
                           }),
-                      u
+                      x
                           ? (0, i.jsx)('div', {
                                 className: T.streamTile,
-                                children: (0, i.jsx)('div', {
+                                children: (0, i.jsx)(c.ClickableContainer, {
+                                    'aria-label': y.intl.formatToPlainString(y.t.gHPz3d, { streamerName: t.user.username }),
+                                    onClick: () => {},
+                                    onContextMenu: L(t, u),
                                     className: T.streamTile,
-                                    style: { transform: 'scale('.concat(m, ')') },
+                                    style: { transform: 'scale('.concat(v, ')') },
                                     children: (0, i.jsx)(Z.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != p ? p : C.L.CONTAIN,
+                                        fit: null != _ ? _ : C.L.CONTAIN,
                                         inPopout: !0,
                                         focused: !r,
                                         paused: !1,
@@ -235,9 +242,9 @@ let A = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
                             }),
                       r
                           ? null
-                          : (0, i.jsx)(L, {
+                          : (0, i.jsx)(A, {
                                 participant: t,
-                                hasActiveStream: u,
+                                hasActiveStream: x,
                                 onEnablePin: () => {
                                     !s && (0, h.xh)(o);
                                 }
