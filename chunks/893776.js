@@ -342,35 +342,20 @@ function D() {
                 })
                 .catch(() => D(e));
         },
-        verify(e) {
-            null != e
-                ? I.Z.post({
-                      url: S.ANM.VERIFY,
-                      body: { token: e },
-                      oldFormErrors: !0,
-                      trackedActionData: { event: u.NetworkActionNames.USER_VERIFY },
-                      rejectWithError: !1
-                  }).then(
-                      (e) => {
-                          p.Z.dispatch({
-                              type: 'LOGIN_SUCCESS',
-                              token: e.body.token
-                          }),
-                              p.Z.dispatch({
-                                  type: 'VERIFY_SUCCESS',
-                                  verifyingUserId: e.body.user_id
-                              });
-                      },
-                      (e) =>
-                          p.Z.dispatch({
-                              type: 'VERIFY_FAILURE',
-                              errors: e.body
-                          })
-                  )
-                : p.Z.dispatch({
-                      type: 'VERIFY_FAILURE',
-                      errors: {}
-                  });
+        async verify(e) {
+            let n = await I.Z.post({
+                url: S.ANM.VERIFY,
+                body: { token: e },
+                trackedActionData: { event: u.NetworkActionNames.USER_VERIFY },
+                rejectWithError: !1
+            });
+            return (
+                p.Z.dispatch({
+                    type: 'LOGIN_SUCCESS',
+                    token: n.body.token
+                }),
+                n.body.user_id
+            );
         },
         async authorizePayment(e) {
             try {
