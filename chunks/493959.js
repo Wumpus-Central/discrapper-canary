@@ -1,8 +1,8 @@
 r.d(n, {
-    T: function () {
+    TZ: function () {
         return o;
     },
-    s: function () {
+    sf: function () {
         return s;
     }
 });
@@ -12,17 +12,31 @@ let s = (0, i.B)({
     id: '2025-01_valentines_gifting_2025',
     label: 'Valentines Gifting 2025',
     kind: 'user',
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enableGiftingFlow: !1,
+        enableCoachmark: !1
+    },
     commonTriggerPoint: a.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
-            label: 'Enable Valentines Gifting Promotion',
-            config: { enabled: !0 }
+            label: 'Show Valentines Coachmark and Gifting Flow',
+            config: {
+                enableGiftingFlow: !0,
+                enableCoachmark: !0
+            }
+        },
+        {
+            id: 2,
+            label: 'Show Valentines Gifting Flow only. No Coachmark.',
+            config: {
+                enableGiftingFlow: !0,
+                enableCoachmark: !1
+            }
         }
     ]
 });
 function o() {
-    let { enabled: e } = s.useExperiment({ location: 'useIsValentinesGiftingActive' }, { autoTrackExposure: !1 });
-    return e;
+    let { enableGiftingFlow: e, enableCoachmark: n } = s.useExperiment({ location: 'useIsValentinesGiftingActive' }, { autoTrackExposure: !1 });
+    return e || n;
 }

@@ -3085,7 +3085,8 @@ let _C = 128,
     (r2.GUILD_BOOSTING_USER_SETTINGS = 'Guild Boosting User Settings'),
     (r2.COLLECTIBLES_SHOP = 'Collectibles Shop'),
     (r2.NITRO_HOME = 'Nitro Home'),
-    (r2.TIERED_TENURE_BADGES_MODAL = 'Tiered Tenure Badges Modal');
+    (r2.TIERED_TENURE_BADGES_MODAL = 'Tiered Tenure Badges Modal'),
+    (r2.TIERED_TENURE_BADGES_ACTION_SHEET = 'Tiered Tenure Badges Action Sheet');
 let _Z = 'help_center_cta';
 ((r3 = eA || (eA = {})).HERO = 'Hero'),
     (r3.BODY = 'Body'),
