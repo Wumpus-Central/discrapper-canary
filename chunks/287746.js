@@ -497,15 +497,15 @@ class eX extends l.PureComponent {
     render() {
         var e;
         let t;
-        let { channel: n, guild: l, keyboardModeEnabled: r, hasModalOpen: s, pendingReply: o, chatInputType: c, placeholder: u, accessibilityLabel: p, showQuarantinedUserBanner: m, filterAfterTimestamp: f, communicationDisabledUntil: g, shakeIntensity: C, poggermodeEnabled: _, isSelectedResourceChannel: I, showAutomodUserProfileChatBlocker: E, showAppLauncherButton: b, showAppDMsUI: Z, isInitialLoading: N, isRefreshEnabled: S } = this.props,
-            { textAreaFocused: T, textAreaHighlighted: j } = this.state,
-            A = c === B.Ie.SIDEBAR;
-        t = A && n.type === eH.d4z.GUILD_VOICE ? eG.t.pnnyFR : A && n.type === eH.d4z.GUILD_STAGE_VOICE ? eG.t.YInSkp : d.T.THREADS.has(n.type) ? eG.t['OkzL+f'] : eG.t.UbNmGR;
-        let y = (0, i.jsx)('div', {
+        let { channel: n, guild: l, keyboardModeEnabled: r, hasModalOpen: s, pendingReply: o, chatInputType: c, placeholder: u, accessibilityLabel: p, showQuarantinedUserBanner: m, filterAfterTimestamp: f, communicationDisabledUntil: g, shakeIntensity: C, poggermodeEnabled: _, isSelectedResourceChannel: I, showAutomodUserProfileChatBlocker: E, showAppLauncherButton: b, showAppDMsUI: Z, isInitialLoading: N, isRefreshChatInputEnabled: S, isRefreshEnabled: T } = this.props,
+            { textAreaFocused: j, textAreaHighlighted: A } = this.state,
+            y = c === B.Ie.SIDEBAR;
+        t = y && n.type === eH.d4z.GUILD_VOICE ? eG.t.pnnyFR : y && n.type === eH.d4z.GUILD_STAGE_VOICE ? eG.t.YInSkp : d.T.THREADS.has(n.type) ? eG.t['OkzL+f'] : eG.t.UbNmGR;
+        let P = (0, i.jsx)('div', {
                 className: eF.channelBottomBarArea,
                 children: (0, i.jsx)(ew.Z, {})
             }),
-            P = (0, i.jsxs)('div', {
+            M = (0, i.jsxs)('div', {
                 className: eF.channelBottomBarArea,
                 children: [
                     (0, i.jsx)(em.Z, {
@@ -513,8 +513,8 @@ class eX extends l.PureComponent {
                         position: 'left',
                         offsetX: 75,
                         children: (0, i.jsx)(eq, {
-                            focused: T,
-                            highlighted: j,
+                            focused: j,
+                            highlighted: A,
                             channel: n,
                             guild: l,
                             keyboardModeEnabled: r,
@@ -533,13 +533,13 @@ class eX extends l.PureComponent {
                             renderAppCommandButton: this.renderAppCommandButton
                         })
                     }),
-                    S ? null : this.renderAppLauncherButton(),
+                    T ? null : this.renderAppLauncherButton(),
                     S ? null : this.renderAppCommandButton()
                 ]
             }),
-            M = Z && N,
-            R = M && N ? y : P,
-            L = a()({
+            R = Z && N,
+            L = R && N ? P : M,
+            k = a()({
                 [eV.barWithAppLauncherButton]: b,
                 [eV.barWithAppsDMsUI]: Z
             });
@@ -569,7 +569,7 @@ class eX extends l.PureComponent {
                                     handler: this.handleOpenAppLauncher
                                 }),
                                 (0, i.jsxs)(eY, {
-                                    isSidebar: A,
+                                    isSidebar: y,
                                     className: eF.chatContent,
                                     'aria-label': eG.intl.formatToPlainString(t, { channelName: n.name }),
                                     onMouseDown: this.handleChatInteract,
@@ -579,7 +579,7 @@ class eX extends l.PureComponent {
                                         (0, i.jsx)(eO.Z, {
                                             channel: n,
                                             guild: l,
-                                            narrow: A
+                                            narrow: y
                                         }),
                                         (0, i.jsxs)(h.HeadingLevel, {
                                             component: (0, i.jsx)(h.HiddenVisually, { children: (0, i.jsx)(h.H, { children: eG.intl.format(eG.t.eTzKk5, { channelName: n.name }) }) }),
@@ -589,7 +589,7 @@ class eX extends l.PureComponent {
                                                     forceCozy: I,
                                                     filterAfterTimestamp: f,
                                                     showingQuarantineBanner: m,
-                                                    jumpBarClassName: L
+                                                    jumpBarClassName: k
                                                 }),
                                                 I
                                                     ? null
@@ -605,17 +605,17 @@ class eX extends l.PureComponent {
                                                       : (0, i.jsxs)('form', {
                                                             ref: this.inputFormRef,
                                                             onSubmit: eW,
-                                                            className: a()(eF.form, { [eF.formWithLoadedChatInput]: !M }),
+                                                            className: a()(eF.form, { [eF.formWithLoadedChatInput]: !R }),
                                                             children: [
                                                                 _ && (0, i.jsx)(eo.Z, { channelId: n.id }),
                                                                 n.isPrivate()
                                                                     ? (0, i.jsx)(eB.Z, {
                                                                           channel: n,
-                                                                          children: R
+                                                                          children: L
                                                                       })
                                                                     : (0, i.jsx)(eU.Z, {
                                                                           channel: n,
-                                                                          children: R
+                                                                          children: L
                                                                       }),
                                                                 S
                                                                     ? null
@@ -623,7 +623,7 @@ class eX extends l.PureComponent {
                                                                           channel: n,
                                                                           poggermodeEnabled: _
                                                                       }),
-                                                                !A && (0, i.jsx)(z.Z, {})
+                                                                !y && (0, i.jsx)(z.Z, {})
                                                             ]
                                                         }),
                                                 (0, i.jsx)(et.kw, {})
@@ -770,7 +770,8 @@ t.Z = l.memo(function (e) {
     });
     let R = l.useRef(null),
         L = (0, u.e7)([T.Z], () => T.Z.appDMChannelsWithFailedLoads().has(t.id)),
-        k = (0, W.R6)('ChannelChat');
+        k = (0, W.R6)('ChannelChat'),
+        O = (0, W.Q3)('ChannelChat');
     return (0, i.jsx)(eX, {
         channel: t,
         isEditing: null != (0, u.e7)([ex.Z], () => ex.Z.getEditingMessageId(t.id)),
@@ -794,6 +795,7 @@ t.Z = l.memo(function (e) {
         showEntryPointAppCommandButton: null != b,
         entryPointCommandButtonRef: R,
         isFailedAppDMLoad: L,
-        isRefreshEnabled: k
+        isRefreshChatInputEnabled: k,
+        isRefreshEnabled: O
     });
 });

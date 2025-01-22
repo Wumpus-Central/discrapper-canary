@@ -121,31 +121,32 @@ t.Z = l.memo(function (e) {
             canLaunchActivities: eS,
             appContext: J
         }),
-        eA = (0, v.R6)('ChannelAttachButton');
+        eA = (0, v.Q3)('ChannelAttachButton'),
+        ey = (0, c.useToken)(c.tokens.modules.chat.INPUT_ICON_SIZE);
     if (0 === ej.length) return null;
-    let ey = $.some((e) => (0, m.Z)(e, B.xjy.SYNC)),
-        eP = $.some((e) => (0, m.Z)(e, B.xjy.JOIN) && !(0, m.Z)(e, B.xjy.EMBEDDED)) || ey;
+    let eP = $.some((e) => (0, m.Z)(e, B.xjy.SYNC)),
+        eM = $.some((e) => (0, m.Z)(e, B.xjy.JOIN) && !(0, m.Z)(e, B.xjy.EMBEDDED)) || eP;
     V = eN
         ? (0, i.jsx)(c.CirclePlusIcon, {
               size: eA ? 'refresh_sm' : void 0,
               color: 'currentColor',
               colorClass: F.attachButtonPlus
           })
-        : eP
+        : eM
           ? (0, i.jsx)(M.Z, {
                 className: F.__invalid_attachButtonIcon,
                 foreground: F.attachButtonPlay,
                 background: F.attachButtonPlus,
-                width: 24,
-                height: 24
+                width: ey,
+                height: ey
             })
           : eT > 0
             ? (0, i.jsx)(P.Z, {
                   className: F.__invalid_attachButtonIcon,
                   foreground: F.attachButtonClip,
                   background: F.attachButtonPlus,
-                  width: 24,
-                  height: 24
+                  width: ey,
+                  height: ey
               })
             : (0, i.jsx)(c.CirclePlusIcon, {
                   size: 'md',
@@ -153,7 +154,7 @@ t.Z = l.memo(function (e) {
                   className: F.__invalid_attachButtonIcon,
                   colorClass: F.attachButtonPlus
               });
-    let eM = (0, i.jsx)(c.Popout, {
+    let eR = (0, i.jsx)(c.Popout, {
         shouldShow: null != ed,
         animation: c.Popout.Animation.NONE,
         align: 'recentClips' === ed ? 'center' : 'left',
@@ -233,7 +234,7 @@ t.Z = l.memo(function (e) {
                     animationContainerClassName: F.buttonAnimation,
                     glowClassName: F.buttonAnimationGlow,
                     trinketsClassName: F.buttonAnimationTrinkets,
-                    children: eM
+                    children: eR
                 })
             })
         ]

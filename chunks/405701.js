@@ -21,14 +21,14 @@ var a = r(200651),
     v = r(200263);
 function y(e) {
     let n,
-        { isEnabled: r, rateLimitPerUser: i, isBypassSlowmode: s, slowmodeCooldownGuess: u, isRefreshChatInputEnabled: f } = e,
-        [p, h] = o.useState(!1);
+        { isEnabled: r, rateLimitPerUser: i, isBypassSlowmode: s, slowmodeCooldownGuess: u, isRefreshChatInputEnabled: f, isRefreshEnabled: p } = e,
+        [h, y] = o.useState(!1);
     if (
         (o.useEffect(() => {
             function e() {
-                h(!0),
+                y(!0),
                     setTimeout(() => {
-                        h(!1);
+                        y(!1);
                     }, 1000);
             }
             return (
@@ -41,7 +41,7 @@ function y(e) {
         !r)
     )
         return null;
-    let y = (0, d.k)(i);
+    let b = (0, d.k)(i);
     if (!s && u > 0) {
         let e = l().duration(u);
         if (u > m.Z.Millis.HOUR) {
@@ -54,7 +54,7 @@ function y(e) {
         }
     } else n = s ? (f ? E.intl.string(E.t['8+NidX']) : E.intl.string(E.t.SSzXvb)) : f ? '' : E.intl.string(E.t.Icu3bW);
     return (0, a.jsx)(c.Tooltip, {
-        text: y,
+        text: b,
         children: (e) =>
             (0, a.jsx)('div', {
                 className: v.cooldownWrapper,
@@ -62,7 +62,7 @@ function y(e) {
                 children: (0, a.jsxs)(c.Text, {
                     className: v.cooldownText,
                     variant: f ? 'text-xs/medium' : 'text-sm/medium',
-                    color: f ? (p ? 'text-danger' : 'text-muted') : 'interactive-normal',
+                    color: p ? (h ? 'text-danger' : 'text-muted') : 'interactive-normal',
                     tabularNumbers: !0,
                     children: [
                         n,
@@ -82,12 +82,14 @@ function b(e) {
         o = (0, u.e7)([p.Z], () => (r ? p.Z.can(g.Plq.MANAGE_THREADS, n) : p.Z.can(g.Plq.MANAGE_CHANNELS, n) || p.Z.can(g.Plq.MANAGE_MESSAGES, n))),
         { rateLimitPerUser: s } = n,
         l = s > 0,
-        c = (0, f.R6)('SlowmodeIndicator');
+        c = (0, f.R6)('SlowmodeIndicator'),
+        d = (0, f.Q3)('SlowmodeIndicator');
     return (0, a.jsx)(y, {
         isEnabled: l,
         rateLimitPerUser: s,
         isBypassSlowmode: o,
         slowmodeCooldownGuess: i,
-        isRefreshChatInputEnabled: c
+        isRefreshChatInputEnabled: c,
+        isRefreshEnabled: d
     });
 }

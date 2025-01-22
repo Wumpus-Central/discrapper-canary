@@ -81,7 +81,7 @@ function k(e) {
                 r = m.Z.getRecipientEligibility(X.id);
             return [K && n && r, r];
         }),
-        ee = (0, h.Q3)('ChannelTextAreaButtons'),
+        ee = (0, h.R6)('ChannelTextAreaButtons'),
         et = (0, _.V1)('ChannelTextAreaButtons') && (null === (n = C.confetti) || void 0 === n ? void 0 : n.button) != null;
     return (!l.tq &&
         (O.isDM() &&
@@ -166,6 +166,7 @@ function k(e) {
                 'emoji'
             )
         ),
+    !ee && null != Z && W.push(Z),
     (null === (i = C.submit) || void 0 === i ? void 0 : i.button) != null &&
         ((null === (a = C.submit) || void 0 === a ? void 0 : a.ignorePreference) || F) &&
         !ee &&
@@ -179,7 +180,7 @@ function k(e) {
                 'submit'
             )
         ),
-    null != Z && W.push(Z),
+    ee && null != Z && W.push(Z),
     0 === W.length)
         ? null
         : (0, o.jsx)('div', {

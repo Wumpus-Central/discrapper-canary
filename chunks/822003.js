@@ -1,5 +1,6 @@
 e.exports = {
     disabled: 'disabled_a06035',
+    container: 'container_a06035',
     separator: 'separator_a06035',
     buttonContainer: 'buttonContainer_a06035',
     sendIcon: 'sendIcon_a06035',

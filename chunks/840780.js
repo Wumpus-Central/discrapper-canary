@@ -18,45 +18,46 @@ var i = n(200651),
     x = n(566620),
     I = n(317381),
     _ = n(835473),
-    Z = n(933557),
-    b = n(194082),
-    S = n(436774),
-    N = n(594190),
-    E = n(925329),
-    y = n(102172),
-    j = n(74299),
-    T = n(914923),
-    A = n(165393),
-    P = n(989941),
-    w = n(690221),
-    M = n(231664),
-    L = n(759198),
-    R = n(131704),
-    D = n(199902),
-    G = n(314897),
-    k = n(592125),
-    B = n(984933),
-    U = n(430824),
-    O = n(131951),
-    V = n(496675),
-    H = n(158776),
-    F = n(699516),
-    W = n(944486),
-    z = n(594174),
-    q = n(449224),
-    Y = n(358085),
-    Q = n(345243),
-    J = n(115530),
-    K = n(339144),
-    X = n(441248),
-    $ = n(981631),
-    ee = n(918559),
-    et = n(395144);
-let en = (0, m.Z)(function (e) {
+    Z = n(413523),
+    b = n(933557),
+    S = n(194082),
+    N = n(436774),
+    E = n(594190),
+    y = n(925329),
+    j = n(102172),
+    T = n(74299),
+    A = n(914923),
+    P = n(165393),
+    w = n(989941),
+    M = n(690221),
+    L = n(231664),
+    R = n(759198),
+    D = n(131704),
+    G = n(199902),
+    k = n(314897),
+    B = n(592125),
+    U = n(984933),
+    O = n(430824),
+    V = n(131951),
+    H = n(496675),
+    F = n(158776),
+    W = n(699516),
+    z = n(944486),
+    q = n(594174),
+    Y = n(449224),
+    Q = n(358085),
+    J = n(345243),
+    K = n(115530),
+    X = n(339144),
+    $ = n(441248),
+    ee = n(981631),
+    et = n(918559),
+    en = n(395144);
+let ei = (0, m.Z)(function (e) {
     let { message: t } = e;
-    return (0, i.jsx)(Q.Z, { children: t });
+    return (0, i.jsx)(J.Z, { children: t });
 });
-class ei extends l.PureComponent {
+class el extends l.PureComponent {
     renderSparkles() {
         let { useReducedMotion: e } = this.props;
         async function t() {
@@ -64,20 +65,20 @@ class ei extends l.PureComponent {
             return e;
         }
         return (0, i.jsx)('div', {
-            className: et.sparkleContainer,
+            className: en.sparkleContainer,
             children: (0, i.jsx)(u.LottieAnimation, {
                 importData: t,
                 shouldAnimate: !e,
-                className: et.sparkles
+                className: en.sparkles
             })
         });
     }
     renderActions() {
-        return (0, i.jsx)(K.J, { ...this.props });
+        return (0, i.jsx)(X.J, { ...this.props });
     }
     renderGame() {
         let { isStreaming: e, application: t, runningGame: n } = this.props;
-        return (0, i.jsx)(X.k, {
+        return (0, i.jsx)($.k, {
             isStreaming: e,
             application: t,
             game: n
@@ -85,31 +86,31 @@ class ei extends l.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: l, sanitizedTitle: r } = (0, T.Z)(t);
+            { title: l, sanitizedTitle: r } = (0, A.Z)(t);
         return (0, i.jsxs)('div', {
-            className: et.gameWrapper,
+            className: en.gameWrapper,
             children: [
                 e
-                    ? (0, i.jsx)(A.Z, { title: r })
-                    : (0, i.jsx)(b.ZP, {
-                          look: b.ZP.Looks.GRAY,
-                          size: b.ZP.Sizes.SMALL,
-                          className: et.liveIndicator
+                    ? (0, i.jsx)(P.Z, { title: r })
+                    : (0, i.jsx)(S.ZP, {
+                          look: S.ZP.Looks.GRAY,
+                          size: S.ZP.Sizes.SMALL,
+                          className: en.liveIndicator
                       }),
                 (0, i.jsxs)('div', {
-                    className: et.info,
+                    className: en.info,
                     children: [
-                        (0, i.jsx)(J.Z, { children: l }),
+                        (0, i.jsx)(K.Z, { children: l }),
                         null != n &&
                             (0, i.jsxs)('div', {
-                                className: et.perksDemoContainer,
+                                className: en.perksDemoContainer,
                                 children: [
                                     (0, i.jsx)(u.NitroWheelIcon, {
                                         size: 'xxs',
-                                        color: S.JX.PREMIUM_TIER_2
+                                        color: N.JX.PREMIUM_TIER_2
                                     }),
-                                    (0, i.jsx)(L.Z, {
-                                        className: et.perksDemoText,
+                                    (0, i.jsx)(R.Z, {
+                                        className: en.perksDemoText,
                                         variant: 'text-xxs/semibold',
                                         children: n
                                     })
@@ -126,35 +127,35 @@ class ei extends l.PureComponent {
         if (null == n || null == l || null == t) return null;
         let o = { start: n.connectedSince },
             s = r;
-        null != a ? ((e = $.Z5c.CHANNEL(a.id, l.id)), (s = ''.concat(s, ' / ').concat(a.name))) : (e = $.Z5c.CHANNEL($.ME, l.id));
-        let c = (0, i.jsx)(w.Z, {
+        null != a ? ((e = ee.Z5c.CHANNEL(a.id, l.id)), (s = ''.concat(s, ' / ').concat(a.name))) : (e = ee.Z5c.CHANNEL(ee.ME, l.id));
+        let c = (0, i.jsx)(M.Z, {
             href: e,
             onClick: this.handleApplicationOrChannelLinkClick,
-            children: (0, i.jsx)(Q.Z, {
-                className: et.channel,
+            children: (0, i.jsx)(J.Z, {
+                className: en.channel,
                 children: s
             })
         });
         return (0, i.jsxs)('div', {
-            className: et.gameWrapper,
+            className: en.gameWrapper,
             children: [
-                (0, i.jsx)(E.Z, {
-                    className: et.gameIcon,
+                (0, i.jsx)(y.Z, {
+                    className: en.gameIcon,
                     game: t,
-                    size: E.Z.Sizes.SMALL
+                    size: y.Z.Sizes.SMALL
                 }),
                 (0, i.jsxs)('div', {
-                    className: et.info,
+                    className: en.info,
                     children: [
-                        (0, i.jsx)(w.Z, {
+                        (0, i.jsx)(M.Z, {
                             href: e,
                             onClick: this.handleApplicationOrChannelLinkClick,
-                            children: (0, i.jsx)(J.Z, {
-                                className: et.activityName,
+                            children: (0, i.jsx)(K.Z, {
+                                className: en.activityName,
                                 children: t.name
                             })
                         }),
-                        (0, R.Qm)(l.type) ? c : (0, i.jsx)(en, { timestamps: o })
+                        (0, D.Qm)(l.type) ? c : (0, i.jsx)(ei, { timestamps: o })
                     ]
                 })
             ]
@@ -162,11 +163,11 @@ class ei extends l.PureComponent {
     }
     render() {
         let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: o, activity: s, className: c } = this.props;
-        return l || (((0, K.y)(o, s, t) || e) && (null != n || null != t))
+        return l || (((0, X.y)(o, s, t) || e) && (null != n || null != t))
             ? (0, i.jsx)('div', {
-                  className: a()(et.panel, c),
+                  className: a()(en.panel, c),
                   children: (0, i.jsxs)('div', {
-                      className: et.body,
+                      className: en.body,
                       children: [(() => (null == n || (l && (null == r ? void 0 : r.pid) == null) ? (null != t ? this.renderEmbeddedActivity() : this.renderScreenshare()) : this.renderGame()))(), this.renderActions()]
                   })
               })
@@ -180,7 +181,7 @@ class ei extends l.PureComponent {
             (i = () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
-                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : $.ME, t.id), (0, v.R)() ? d.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }) : ((0, R.vd)(t.type) && h.Z.selectParticipant(t.id, n.applicationId), (0, R.Qm)(t.type) && (0, x.tg)(ee.Ez.PANEL));
+                s()(null != t, 'Channel is null during navigation click'), s()(null != n, 'Activity null during navigation click'), p.Z.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : ee.ME, t.id), (0, v.R)() ? d.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }) : ((0, D.vd)(t.type) && h.Z.selectParticipant(t.id, (0, Z.oW)(n.applicationId)), (0, D.Qm)(t.type) && (0, x.tg)(et.Ez.PANEL));
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -195,17 +196,17 @@ class ei extends l.PureComponent {
 t.Z = (0, f.Z)(function (e) {
     var t;
     let { guildId: n, ...l } = e,
-        r = (0, c.e7)([G.default], () => G.default.getId()),
-        a = (0, c.e7)([N.ZP, q.Z], () => (0, P.Z)(N.ZP, q.Z)),
-        o = (0, c.e7)([W.Z, k.Z], () => k.Z.getChannel(W.Z.getVoiceChannelId())),
+        r = (0, c.e7)([k.default], () => k.default.getId()),
+        a = (0, c.e7)([E.ZP, Y.Z], () => (0, w.Z)(E.ZP, Y.Z)),
+        o = (0, c.e7)([z.Z, B.Z], () => B.Z.getChannel(z.Z.getVoiceChannelId())),
         s = (0, c.e7)([I.ZP], () => I.ZP.getConnectedActivityChannelId()),
-        u = (0, c.e7)([k.Z], () => k.Z.getChannel(s)),
-        d = (0, c.e7)([U.Z], () => U.Z.getGuild(null == u ? void 0 : u.guild_id)),
-        [h, p] = (0, c.Wu)([D.Z], () => [D.Z.getCurrentUserActiveStream(), D.Z.getStreamerActiveStreamMetadata()]),
+        u = (0, c.e7)([B.Z], () => B.Z.getChannel(s)),
+        d = (0, c.e7)([O.Z], () => O.Z.getGuild(null == u ? void 0 : u.guild_id)),
+        [h, p] = (0, c.Wu)([G.Z], () => [G.Z.getCurrentUserActiveStream(), G.Z.getStreamerActiveStreamMetadata()]),
         m = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
         f = (0, c.e7)([I.ZP], () => (null != u ? I.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        x = (0, c.e7)([U.Z, V.Z, B.ZP], () => (null != o ? y.JL(o, U.Z, V.Z, !1) : null != n && y.h_(B.ZP.getChannels(n), U.Z, V.Z).length > 0)),
-        [b] = (0, _.Z)([
+        x = (0, c.e7)([O.Z, H.Z, U.ZP], () => (null != o ? j.JL(o, O.Z, H.Z, !1) : null != n && j.h_(U.ZP.getChannels(n), O.Z, H.Z).length > 0)),
+        [Z] = (0, _.Z)([
             null !==
                 (t = (function () {
                     if (null != p && null != p.id) return p.id;
@@ -216,28 +217,28 @@ t.Z = (0, f.Z)(function (e) {
                 : ''
         ]),
         S = (0, c.e7)([I.ZP], () => I.ZP.getCurrentEmbeddedActivity()),
-        E = (0, C.Z0)() && null != S && (0, v.R)(),
-        T = (0, c.e7)([O.Z], () => (0, j.Z)(O.Z) && (0, Y.isWindows)()),
-        A = (0, c.e7)([H.Z], () => (null != r ? H.Z.findActivity(r, (e) => e.type === $.IIU.PLAYING) : null)),
-        w = null != h && h.ownerId === r && h.state !== $.jm8.ENDED,
-        L = (0, c.e7)([z.default, F.Z], () => (null != u ? (0, Z.F6)(u, z.default, F.Z) : void 0)),
-        R = (0, M.Z)();
-    return (0, i.jsx)(ei, {
+        N = (0, C.Z0)() && null != S && (0, v.R)(),
+        y = (0, c.e7)([V.Z], () => (0, T.Z)(V.Z) && (0, Q.isWindows)()),
+        A = (0, c.e7)([F.Z], () => (null != r ? F.Z.findActivity(r, (e) => e.type === ee.IIU.PLAYING) : null)),
+        P = null != h && h.ownerId === r && h.state !== ee.jm8.ENDED,
+        M = (0, c.e7)([q.default, W.Z], () => (null != u ? (0, b.F6)(u, q.default, W.Z) : void 0)),
+        R = (0, L.Z)();
+    return (0, i.jsx)(el, {
         ...l,
         guildId: n,
-        canGoLive: T || E,
+        canGoLive: y || N,
         activity: A,
         embeddedActivity: f,
         userId: r,
         runningGame: a,
-        application: b,
+        application: Z,
         useReducedMotion: m,
-        isStreaming: w,
+        isStreaming: P,
         channel: u,
         canStream: x,
         stream: h,
         streamMetadata: p,
-        channelName: L,
+        channelName: M,
         guildForConnectedChannel: d,
         streamQualityIndicator: R
     });
