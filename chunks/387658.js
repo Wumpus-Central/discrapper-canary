@@ -19,8 +19,8 @@ var i = t(200651),
     f = t(10718),
     C = t(895924),
     v = t(583027),
-    x = t(585483),
-    _ = t(499254),
+    _ = t(585483),
+    x = t(499254),
     N = t(541099),
     I = t(827498),
     A = t(496158),
@@ -42,7 +42,7 @@ function O(e) {
     let { channel: a, command: o, section: s, sectionName: c } = e,
         u = l.useCallback(() => {
             let e = N.Z.entrypoint();
-            _.yT(I.ti.COMMAND),
+            x.yT(I.ti.COMMAND),
                 (0, v.Mo)({
                     command: o,
                     location: C.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -57,7 +57,7 @@ function O(e) {
                     source: e,
                     commandOrigin: C.bB.APPLICATION_LAUNCHER
                 }),
-                x.S.dispatch(y.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
+                _.S.dispatch(y.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: a.id });
         }, [a.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
         h = l.useMemo(() => (0, S.ae)(o.displayDescription, void 0), [o.displayDescription]),
@@ -175,7 +175,7 @@ function B(e) {
                             sectionName: a,
                             commandOrigin: C.bB.APP_LAUNCHER_APPLICATION_VIEW
                         }),
-                        _.yT(I.ti.COMMAND));
+                        x.yT(I.ti.COMMAND));
                 } finally {
                     c(!1);
                 }
@@ -266,8 +266,8 @@ function w(e) {
         {
             sortOrder: C,
             setSortOrder: v,
-            commands: x,
-            canSort: _
+            commands: _,
+            canSort: x
         } = (0, g.Z)({
             sectionId: a.id,
             commandsByActiveSection: d
@@ -277,13 +277,13 @@ function w(e) {
     }, [a.id, c]);
     let N = (0, E.Z)({
         channel: t,
-        commands: x,
+        commands: _,
         limit: 5
     });
     return (l.useEffect(() => {
-        s(x.length > 0);
-    }, [s, x]),
-    p.current || 0 !== x.length)
+        s(_.length > 0);
+    }, [s, _]),
+    p.current || 0 !== _.length)
         ? (0, i.jsxs)('ul', {
               className: M.contentContainer,
               children: [
@@ -297,11 +297,11 @@ function w(e) {
                   (0, i.jsx)(D, {
                       channel: t,
                       section: h,
-                      commands: p.current ? k : x,
+                      commands: p.current ? k : _,
                       headerName: L.intl.string(L.t.DUU9Ly),
                       sectionName: o,
                       children:
-                          _ &&
+                          x &&
                           (0, i.jsx)(j.Z, {
                               sortOrder: C,
                               onSortOptionClick: v

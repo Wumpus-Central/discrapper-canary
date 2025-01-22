@@ -19,8 +19,8 @@ var i = t(200651),
     f = t(499254),
     C = t(541099),
     v = t(827498),
-    x = t(392370),
-    _ = t(98880),
+    _ = t(392370),
+    x = t(98880),
     N = t(804307),
     I = t(520315),
     A = t(532309),
@@ -50,7 +50,7 @@ function k(e) {
             commandResults: h,
             hasCommandResults: f,
             applicationResults: C
-        } = (0, x.pe)({
+        } = (0, _.pe)({
             channel: n,
             query: t,
             searchesActivities: !0,
@@ -58,10 +58,10 @@ function k(e) {
             searchesBots: d
         }),
         {
-            fetchState: _,
+            fetchState: x,
             applicationResults: N,
             fetchNextPage: I
-        } = (0, x.Q2)({
+        } = (0, _.Q2)({
             query: t,
             channel: n,
             fetches: !0,
@@ -69,9 +69,9 @@ function k(e) {
             entrypoint: a
         });
     l.useEffect(() => {
-        s && _ === m.M.FETCHED && I();
-    }, [I, _, s]);
-    let A = null == _ || _ === m.M.FETCHING,
+        s && x === m.M.FETCHED && I();
+    }, [I, x, s]);
+    let A = null == x || x === m.M.FETCHING,
         g = l.useMemo(() => {
             let e = C.map((e) => ({
                     application: e,
@@ -129,12 +129,12 @@ function O(e) {
     var n, t;
     let { channel: a, commandResults: o, query: r } = e,
         m = o.length > 4,
-        x = l.useMemo(() => (m ? o.slice(0, 4) : o), [o, m]),
-        [_, N] = l.useState(!1),
-        A = null !== (n = (0, s.Z)(_)) && void 0 !== n ? n : _,
+        _ = l.useMemo(() => (m ? o.slice(0, 4) : o), [o, m]),
+        [x, N] = l.useState(!1),
+        A = null !== (n = (0, s.Z)(x)) && void 0 !== n ? n : x,
         E = l.useCallback(() => N((e) => !e), []),
         P = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
-        L = _ && !P;
+        L = x && !P;
     l.useLayoutEffect(() => N(!1), [P]);
     let {
         ref: R,
@@ -148,16 +148,16 @@ function O(e) {
     });
     l.useEffect(() => {
         !A &&
-            _ &&
+            x &&
             (0, c.yw)(j.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: v.L3.SEARCH,
                 source: C.Z.entrypoint(),
                 num: o.length
             });
-    }, [o.length, A, _]);
+    }, [o.length, A, x]);
     let k = L || M,
         O = L ? g.Z.buttonTypes.VIEW_LESS : g.Z.buttonTypes.VIEW_MORE,
-        U = k ? o : x;
+        U = k ? o : _;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(g.Z, {
@@ -217,7 +217,7 @@ function U(e) {
     return (0, i.jsx)('div', {
         className: T.searchOpenAppDetailAppCard,
         ref: (e) => (n.current = e),
-        children: (0, i.jsx)(_.kA, {
+        children: (0, i.jsx)(x.kA, {
             ...e,
             tracksImpression: !1,
             enableVideoBanner: !0
@@ -265,7 +265,7 @@ function B(e) {
                                   U,
                                   {
                                       application: t,
-                                      look: _.U4.LARGE_BANNER,
+                                      look: x.U4.LARGE_BANNER,
                                       location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
                                       sectionName: v.L3.SEARCH,
                                       resultsPosition: n,
@@ -275,14 +275,14 @@ function B(e) {
                                   t.id
                               );
                           }),
-                          t && M.map((e) => (0, i.jsx)(N.Z, { look: _.U4.LARGE_BANNER }, e))
+                          t && M.map((e) => (0, i.jsx)(N.Z, { look: x.U4.LARGE_BANNER }, e))
                       ]
                   })
               ]
           });
 }
 function D(e) {
-    let n = (0, _.cG)(e);
+    let n = (0, x.cG)(e);
     return (0, i.jsx)(b.Z, {
         application: e.application,
         onClick: n,

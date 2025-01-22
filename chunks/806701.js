@@ -14,8 +14,8 @@ var r = n(120356),
     d = n(981631),
     u = n(388032),
     h = n(114969),
-    f = n(232186);
-function g(e) {
+    g = n(232186);
+function f(e) {
     let { children: t } = e;
     return (0, i.jsx)('li', {
         className: h.listItem,
@@ -32,10 +32,10 @@ function m(e) {
         children: [
             (0, i.jsx)(o.Ee, {
                 src: n(26230),
-                className: s()(f.marginBottom20, f.marginTop8)
+                className: s()(g.marginBottom20, g.marginTop8)
             }),
             (0, i.jsx)(o.Dx, {
-                className: f.marginBottom8,
+                className: g.marginBottom8,
                 children: u.intl.string(u.t['8UcxIy'])
             }),
             (0, i.jsx)(l.Text, {
@@ -43,12 +43,12 @@ function m(e) {
                 children: u.intl.string(u.t.O37hMj)
             }),
             (0, i.jsxs)(o.gO, {
-                className: s()(f.marginBottom20, f.marginTop20),
+                className: s()(g.marginBottom20, g.marginTop20),
                 children: [
                     (0, i.jsx)(l.Text, { variant: 'text-sm/normal' }),
                     (0, i.jsxs)('ul', {
                         className: h.listContainer,
-                        children: [(0, i.jsx)(g, { children: u.intl.string(u.t.Gj1Zr6) }), (0, i.jsx)(a.Z, {}), (0, i.jsx)(g, { children: u.intl.string(u.t['8C6t3N']) }), (0, i.jsx)(a.Z, {}), (0, i.jsx)(g, { children: u.intl.string(u.t.mToZMD) }), (0, i.jsx)(a.Z, {}), (0, i.jsx)(g, { children: u.intl.string(u.t.TPEvkZ) }), (0, i.jsx)(a.Z, {}), (0, i.jsx)(g, { children: u.intl.string(u.t.H8Y1Li) })]
+                        children: [(0, i.jsx)(f, { children: u.intl.string(u.t.Gj1Zr6) }), (0, i.jsx)(a.Z, {}), (0, i.jsx)(f, { children: u.intl.string(u.t['8C6t3N']) }), (0, i.jsx)(a.Z, {}), (0, i.jsx)(f, { children: u.intl.string(u.t.mToZMD) }), (0, i.jsx)(a.Z, {}), (0, i.jsx)(f, { children: u.intl.string(u.t.TPEvkZ) }), (0, i.jsx)(a.Z, {}), (0, i.jsx)(f, { children: u.intl.string(u.t.H8Y1Li) })]
                     })
                 ]
             }),

@@ -28,7 +28,7 @@ var i = n(200651),
     Z = n(764948);
 function N(e) {
     let { userId: t, guildId: n, onClose: r, className: N, infoPanelClassName: S, style: T } = e,
-        j = (0, I.ms)(n),
+        j = (0, I.m)(n),
         A = (0, s.e7)([_.default], () => _.default.getUser(t), [t]),
         y = (0, s.e7)([v.ZP], () => v.ZP.getMember(n, t), [n, t]),
         [P, M] = l.useState(null == A || null == y),

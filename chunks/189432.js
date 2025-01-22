@@ -12,7 +12,7 @@ var i = r(100527),
 function c(e, n, r) {
     var c, d, f;
     let p = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: u.k.INFO };
-    if (!(0, l.By)(e)) return Promise.resolve();
+    if (!(0, l.Y)(e)) return Promise.resolve();
     let h = null !== (c = p.modViewPanel) && void 0 !== c ? c : u.k.INFO,
         _ = null !== (d = p.sourceLocation) && void 0 !== d ? d : i.Z.MEMBER_SAFETY_PAGE;
     return (

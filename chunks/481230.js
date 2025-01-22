@@ -16,8 +16,8 @@ var i = n(913527),
     d = n(626135),
     u = n(573261),
     h = n(959776),
-    f = n(981631),
-    g = n(723359);
+    g = n(981631),
+    f = n(723359);
 function m(e) {
     let { invite: t = null, giftCodeSKUId: n = null, ...i } = e;
     return p({
@@ -27,22 +27,22 @@ function m(e) {
     });
 }
 function p(e) {
-    let { email: t, phoneToken: n, username: i, globalName: m, consent: p, password: x, guildTemplateCode: _, birthday: E, invite: I = null, giftCodeSKUId: v = null, promoEmailConsent: N = null, usedUsernameSuggestion: C = null } = e;
+    let { email: t, phoneToken: n, username: i, globalName: m, consent: p, password: x, guildTemplateCode: _, birthday: E, invite: I = null, giftCodeSKUId: N = null, promoEmailConsent: v = null, usedUsernameSuggestion: C = null } = e;
     return (
         l.Z.dispatch({ type: 'REGISTER' }),
         null != E &&
-            ((0, h.Z)(E, f.jXE.REGISTER),
-            d.default.track(f.rMx.AGE_GATE_ACTION, {
-                source: g.L0.REGISTER,
-                action: g.Al.AGE_GATE_SUBMITTED
+            ((0, h.Z)(E, g.jXE.REGISTER),
+            d.default.track(g.rMx.AGE_GATE_ACTION, {
+                source: f.L0.REGISTER,
+                action: f.Al.AGE_GATE_SUBMITTED
             }),
             !(function (e) {
                 let t;
                 let n = r()().diff(e, 'years');
-                !(n < 13) && ((t = n >= 13 && n <= 17 ? '13-17' : n >= 18 && n <= 22 ? '18-22' : '23+'), d.default.track(f.rMx.USER_AGE_SUBMITTED, { age_bucket: t }));
+                !(n < 13) && ((t = n >= 13 && n <= 17 ? '13-17' : n >= 18 && n <= 22 ? '18-22' : '23+'), d.default.track(g.rMx.USER_AGE_SUBMITTED, { age_bucket: t }));
             })(E)),
         u.Z.post({
-            url: f.ANM.REGISTER,
+            url: g.ANM.REGISTER,
             body: {
                 fingerprint: c.default.getFingerprint(),
                 email: t,
@@ -53,17 +53,17 @@ function p(e) {
                 consent: p,
                 phone_token: n,
                 date_of_birth: null == E ? void 0 : E.format('YYYY-MM-DD'),
-                gift_code_sku_id: v,
+                gift_code_sku_id: N,
                 guild_template_code: _,
-                promotional_email_opt_in: null == N ? void 0 : N.checked
+                promotional_email_opt_in: null == v ? void 0 : v.checked
             },
             trackedActionData: {
                 event: s.NetworkActionNames.USER_REGISTER,
                 properties: {
                     invite_code: I,
                     used_username_suggestion: C,
-                    promotional_email_opt_in: null == N ? void 0 : N.checked,
-                    promotional_email_pre_checked: null == N ? void 0 : N.preChecked,
+                    promotional_email_opt_in: null == v ? void 0 : v.checked,
+                    promotional_email_pre_checked: null == v ? void 0 : v.preChecked,
                     was_unique_username: !0
                 }
             },
@@ -74,9 +74,9 @@ function p(e) {
                     type: 'REGISTER_SUCCESS',
                     token: e.body.token
                 }),
-                    d.default.track(f.rMx.AGE_GATE_ACTION, {
-                        source: g.L0.REGISTER,
-                        action: g.Al.AGE_GATE_SUCCESS
+                    d.default.track(g.rMx.AGE_GATE_ACTION, {
+                        source: f.L0.REGISTER,
+                        action: f.Al.AGE_GATE_SUCCESS
                     });
             },
             (e) => {
@@ -86,8 +86,8 @@ function p(e) {
                         type: 'REGISTER_FAILURE',
                         error: t
                     }),
-                    null != t.getFieldErrors('date_of_birth') && a.wE(g.L0.REGISTER),
-                    d.default.track(f.rMx.REGISTER_SUBMIT_ERRORED, {
+                    null != t.getFieldErrors('date_of_birth') && a.wE(f.L0.REGISTER),
+                    d.default.track(g.rMx.REGISTER_SUBMIT_ERRORED, {
                         is_unique_username_registration: !0,
                         email_error_reason: t.getFirstFieldErrorMessage('email'),
                         phone_error_reason: t.getFirstFieldErrorMessage('phone'),

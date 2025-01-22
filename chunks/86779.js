@@ -9,23 +9,23 @@ var i,
     d = n(544891),
     u = n(433517),
     h = n(481060),
-    f = n(570140),
-    g = n(893776),
+    g = n(570140),
+    f = n(893776),
     m = n(314897),
     p = n(626135),
     x = n(70956),
     _ = n(970648),
     E = n(981631),
     I = n(388032),
-    v = n(924469);
-let N = 'mweb_handoff_nonce',
+    N = n(924469);
+let v = 'mweb_handoff_nonce',
     C = 'mweb_handoff_nonce_expiration',
     b = 1 * x.Z.Millis.MINUTE;
 ((r = i || (i = {})).NONCE_MISSING = 'nonce_missing'), (r.NONCE_EXPIRED = 'nonce_expired'), (r.NULL_HANDOFF_TOKEN = 'deep_link_failed'), (r.HANDOFF_EXCHANGE = 'handoff_exchange');
 let T = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
     Z = new Set(['deep_link_failed']),
     S = () => {
-        u.K.remove(N), u.K.remove(C);
+        u.K.remove(v), u.K.remove(C);
     };
 t.Z = () => {
     let e = (0, c.e7)([m.default], () => m.default.getFingerprint()),
@@ -35,7 +35,7 @@ t.Z = () => {
     l.useEffect(() => {
         null !== i &&
             e !== i &&
-            f.Z.dispatch({
+            g.Z.dispatch({
                 type: 'FINGERPRINT',
                 fingerprint: i
             });
@@ -55,7 +55,7 @@ t.Z = () => {
             },
             [A, r]
         ),
-        R = u.K.get(N);
+        R = u.K.get(v);
     if (
         ('null' === n && null === x && j('deep_link_failed'),
         null != n && 'null' !== n && null == R && null === x && j('nonce_missing'),
@@ -79,7 +79,7 @@ t.Z = () => {
                         },
                         rejectWithError: !0
                     })
-                    .then((e) => g.Z.loginToken(e.body.token, !1))
+                    .then((e) => f.Z.loginToken(e.body.token, !1))
                     .then(() => {
                         p.default.track(E.rMx.LOGIN_SUCCESSFUL, {
                             source: E.uRl.MOBILE_WEB_HANDOFF,
@@ -110,7 +110,7 @@ t.Z = () => {
     })();
     return null != x && Z.has(x)
         ? (0, s.jsx)('div', {
-              className: v.errorContainer,
+              className: N.errorContainer,
               children: (0, s.jsx)(h.Text, {
                   color: 'interactive-normal',
                   variant: 'text-sm/semibold',
@@ -118,7 +118,7 @@ t.Z = () => {
               })
           })
         : (0, s.jsxs)('div', {
-              className: v.container,
+              className: N.container,
               children: [
                   (0, s.jsx)(h.Text, {
                       variant: 'text-sm/semibold',
@@ -128,7 +128,7 @@ t.Z = () => {
                       color: h.Button.Colors.BRAND_INVERTED,
                       onClick: () => {
                           let e = _.Z.generateNonce();
-                          u.K.set(N, e), u.K.set(C, Date.now() + b);
+                          u.K.set(v, e), u.K.set(C, Date.now() + b);
                           let t = new URL(E.x0X),
                               n = new URLSearchParams(window.location.search);
                           n.delete('fingerprint'), n.delete('handoff_token');
@@ -152,7 +152,7 @@ t.Z = () => {
                               (window.location.href = t.toString());
                       },
                       children: (0, s.jsx)(h.Text, {
-                          className: v.buttonText,
+                          className: N.buttonText,
                           variant: 'text-sm/semibold',
                           children: I.intl.string(I.t['NcC75+'])
                       })

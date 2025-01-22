@@ -19,8 +19,8 @@ var i = t(200651),
     f = t(753972),
     C = t(387658),
     v = t(536650),
-    x = t(675993),
-    _ = t(689079),
+    _ = t(675993),
+    x = t(689079),
     N = t(388032),
     I = t(370913),
     A = t(413097);
@@ -28,8 +28,8 @@ function E(e) {
     var n;
     let { channel: t, application: s, sectionName: c } = e,
         E = (0, a.e7)([m.Z], () => m.Z.entrypoint()),
-        b = null !== (n = (0, u.q)(s.id === _.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        P = (0, h.ye)(b) ? g : x.Z,
+        b = null !== (n = (0, u.q)(s.id === x.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        P = (0, h.ye)(b) ? g : _.Z,
         S = l.useRef(null),
         [j, y] = l.useState(!1),
         { iconURL: T, name: L } = l.useMemo(
@@ -97,7 +97,7 @@ function g(e) {
         }),
         r = (0, h.yJ)(t),
         d = null != r && null != r.activity_preview_video_asset_id ? (0, s.Z)(t.id, r.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(x.Z, {
+    return (0, i.jsx)(_.Z, {
         channel: n,
         application: t,
         imageCoverUrl: o.url,

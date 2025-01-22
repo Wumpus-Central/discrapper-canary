@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(493773),
     u = n(743142),
     h = n(893607),
-    f = n(703656),
-    g = n(314897),
+    g = n(703656),
+    f = n(314897),
     m = n(781428),
     p = n(981631),
     x = n(176505);
@@ -30,20 +30,20 @@ function _(e) {
                         return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === x.oC.ROLE_SUBSCRIPTIONS || !1;
                     })(t)
                 )
-                    f.dL(t);
+                    g.dL(t);
                 else {
                     var n;
-                    (null !== (n = e.transitionTo) && void 0 !== n ? n : f.uL)(t);
+                    (null !== (n = e.transitionTo) && void 0 !== n ? n : g.uL)(t);
                 }
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: n, loginStatus: _ } = (0, o.cj)([g.default], () => ({
-            isAuthenticated: g.default.isAuthenticated(),
-            loginStatus: g.default.getLoginStatus()
+        { isAuthenticated: n, loginStatus: _ } = (0, o.cj)([f.default], () => ({
+            isAuthenticated: f.default.isAuthenticated(),
+            loginStatus: f.default.getLoginStatus()
         })),
         { location: E, redirectTo: I } = e,
-        [v, N] = r.useState(n);
+        [N, v] = r.useState(n);
     function C(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: i } = e;
         (0, c.Yz)({
@@ -51,14 +51,14 @@ function _(e) {
             handoffToken: n,
             handoffSource: i
         }),
-            N(!1);
+            v(!1);
     }
     return ((0, d.Z)(() => {
         if (null != E) {
             let { handoff_key: e, handoff_token: t } = (0, s.parse)(E.search);
             if (null != e && null != t) {
                 let n = null != I ? (0, u.L)(I) : void 0;
-                v
+                N
                     ? a.Z.logout(null).finally(() => {
                           C({
                               handoffKey: e,
@@ -74,7 +74,7 @@ function _(e) {
             }
         }
     }),
-    v || _ === p.u34.LOGGING_IN)
+    N || _ === p.u34.LOGGING_IN)
         ? (0, i.jsx)(m.q, {})
         : (0, i.jsx)(m.Z, {
               ...e,

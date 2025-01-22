@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(893776),
     u = n(533307),
     h = n(447543),
-    f = n(126399),
-    g = n(521379),
+    g = n(126399),
+    f = n(521379),
     m = n(765717),
     p = n(267394),
     x = n(761305),
     _ = n(698177),
     E = n(353926),
     I = n(409059),
-    v = n(962220),
-    N = n(637776),
+    N = n(962220),
+    v = n(637776),
     C = n(264229),
     b = n(677760),
     T = n(893607),
@@ -65,16 +65,16 @@ let en = (0, D.Z)(K.Z),
     ed = (0, D.Z)(B.Z),
     eu = (0, D.Z)(Q.Z),
     eh = (0, D.Z)(_.Z),
-    ef = (0, D.Z)(Y.Z),
-    eg = (0, D.Z)(G.Z),
+    eg = (0, D.Z)(Y.Z),
+    ef = (0, D.Z)(G.Z),
     em = (0, D.Z)(x.Z),
-    ep = (0, D.Z)(N.Z),
+    ep = (0, D.Z)(v.Z),
     ex = (0, D.Z)(M.Z),
     e_ = (0, D.Z)(W.Z),
     eE = (0, D.Z)(X.Z),
     eI = (0, D.Z)(J.Z),
-    ev = (0, D.Z)(g.Z);
-class eN extends r.PureComponent {
+    eN = (0, D.Z)(f.Z);
+class ev extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
         let { invite: i, location: r } = e,
@@ -114,14 +114,14 @@ class eN extends r.PureComponent {
             (t || ee.a) && this.resolveInvite(),
             this.resolveGiftCode(),
             this.resolveGuildTemplate(),
-            f.Z.initialize();
+            g.Z.initialize();
     }
     componentDidUpdate(e) {
         var t, n;
         !e.hasLoadedExperiments && this.props.hasLoadedExperiments && !ee.a && this.resolveInvite(), (null === (t = e.invite) || void 0 === t ? void 0 : t.state) !== (null === (n = this.props.invite) || void 0 === n ? void 0 : n.state) && this.maybeFetchApplicationSplash();
     }
     componentWillUnmount() {
-        f.Z.terminate();
+        g.Z.terminate();
     }
     maybeFetchApplicationSplash() {
         let { invite: e } = this.props;
@@ -151,8 +151,8 @@ class eN extends r.PureComponent {
                 },
                 { flush: !0 }
             ),
-                v.Z.resolveGuildTemplate(e),
-                v.Z.openNativeAppModal(e);
+                N.Z.resolveGuildTemplate(e),
+                N.Z.openNativeAppModal(e);
     }
     resolveGiftCode() {
         let { giftCode: e } = this.props;
@@ -275,7 +275,7 @@ class eN extends r.PureComponent {
                 }),
                 (0, i.jsx)(m.Z, {
                     path: $.Z5c.DISABLE_EMAIL_NOTIFICATIONS,
-                    render: (e) => (0, i.jsx)(eg, { ...e })
+                    render: (e) => (0, i.jsx)(ef, { ...e })
                 }),
                 (0, i.jsx)(m.Z, {
                     path: $.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
@@ -288,7 +288,7 @@ class eN extends r.PureComponent {
                 (0, i.jsx)(m.Z, {
                     path: $.Z5c.REJECT_IP,
                     render: (e) =>
-                        (0, i.jsx)(ef, {
+                        (0, i.jsx)(eg, {
                             source: $.Z5c.REJECT_IP,
                             ...e
                         })
@@ -296,7 +296,7 @@ class eN extends r.PureComponent {
                 (0, i.jsx)(m.Z, {
                     path: $.Z5c.REJECT_MFA,
                     render: (e) =>
-                        (0, i.jsx)(ef, {
+                        (0, i.jsx)(eg, {
                             source: $.Z5c.REJECT_MFA,
                             ...e
                         })
@@ -308,7 +308,7 @@ class eN extends r.PureComponent {
                 (0, i.jsx)(m.Z, {
                     path: $.Z5c.RESET,
                     render: (e) =>
-                        (0, i.jsx)(ef, {
+                        (0, i.jsx)(eg, {
                             source: $.Z5c.RESET,
                             ...e
                         })
@@ -331,7 +331,7 @@ class eN extends r.PureComponent {
                 }),
                 (0, i.jsx)(m.Z, {
                     path: $.Z5c.ACCOUNT_REVERT(':token'),
-                    render: (e) => (0, i.jsx)(ev, { ...e })
+                    render: (e) => (0, i.jsx)(eN, { ...e })
                 })
             ]
         });
@@ -373,4 +373,4 @@ t.default = a.ZP.connectStores([Z.default, A.Z, S.Z, E.Z, I.Z], (e) => {
         guildTemplate: null != d ? I.Z.getGuildTemplate(d) : null,
         hasLoadedExperiments: E.Z.hasLoadedExperiments
     };
-})(eN);
+})(ev);

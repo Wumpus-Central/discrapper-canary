@@ -21,7 +21,7 @@ function g(e) {
     let { user: n, guildId: r, channelId: g, onClose: E, shouldShowTooltip: v } = e,
         { newestAnalyticsLocation: y } = (0, s.ZP)(),
         b = (0, a.e7)([d.default], () => d.default.getId() === (null == n ? void 0 : n.id)),
-        I = (0, u.ms)(null != r ? r : null, !0),
+        I = (0, u.m)(null != r ? r : null),
         T = (0, a.e7)([f.Z], () => (null != g ? g : f.Z.getChannelId(r, !0)), [g, r]);
     return null == r || !I || b
         ? null

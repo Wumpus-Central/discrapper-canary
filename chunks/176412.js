@@ -24,8 +24,8 @@ var i = t(192379),
     f = t(428595),
     C = t(364458),
     v = t(499254),
-    x = t(541099),
-    _ = t(827498),
+    _ = t(541099),
+    x = t(827498),
     N = t(346683),
     I = t(981631),
     A = t(388032);
@@ -54,7 +54,7 @@ function P(e) {
             fetchesApplication: C
         }),
         b = (0, N.Q)(g),
-        P = (0, o.e7)([x.Z], () => x.Z.entrypoint()),
+        P = (0, o.e7)([_.Z], () => _.Z.entrypoint()),
         S = (0, d.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: u.Z,
@@ -62,7 +62,7 @@ function P(e) {
             locationObject: E.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e;
-                r && v.yT(_.ti.ACTIVITY),
+                r && v.yT(x.ti.ACTIVITY),
                     (0, m.yw)(I.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
@@ -90,7 +90,7 @@ function P(e) {
     );
 }
 function S(e, n) {
-    let t = x.Z.entrypoint(),
+    let t = _.Z.entrypoint(),
         a = i.useMemo(
             () =>
                 (0, l.debounce)(

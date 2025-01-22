@@ -19,8 +19,8 @@ var i = t(200651),
     f = t(594174),
     C = t(626135),
     v = t(572004),
-    x = t(630388),
-    _ = t(135431),
+    _ = t(630388),
+    x = t(135431),
     N = t(541099),
     I = t(783097),
     A = t(570949),
@@ -33,7 +33,7 @@ function S(e) {
     let { application: t, channel: l, className: S, sectionName: j } = e,
         y = (0, o.e7)([N.Z], () => N.Z.entrypoint()),
         T = (0, I.L1)(t),
-        L = (0, _.Eb)(T),
+        L = (0, x.Eb)(T),
         R = {
             location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: t.id,
@@ -47,7 +47,7 @@ function S(e) {
             label: b.intl.string(b.t['+NP/b2'])
         }),
         O = (0, A.P)({ application: t }),
-        U = (0, x.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, g.udG.EMBEDDED);
+        U = (0, _.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, g.udG.EMBEDDED);
     return (0, i.jsxs)('div', {
         className: P.container,
         children: [
@@ -94,7 +94,7 @@ function S(e) {
                                               label: b.intl.string(b.t.NgXl3N),
                                               action: () => {
                                                   null == T.customInstallUrl && (0, s.yw)(g.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, R),
-                                                      (0, _.LO)({
+                                                      (0, x.LO)({
                                                           ...T,
                                                           oauth2Callback: (e) => {
                                                               let { location: n } = e;

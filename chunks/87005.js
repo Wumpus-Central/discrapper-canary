@@ -26,14 +26,14 @@ let h = {
     };
 function C(e) {
     let { channel: n, onlyActivityApps: t, allowCommandFetch: r, includeAuthorizedAppsAndFetch: C } = e,
-        { sectionDescriptors: v, loading: x } = s.wi({
+        { sectionDescriptors: v, loading: _ } = s.wi({
             channel: n,
             filters: h,
             options: f,
             allowFetch: r
         });
     return {
-        loading: x,
+        loading: _,
         frecentApps: (function (e) {
             let { sectionDescriptors: n, channel: t, onlyActivityApps: r, includeAuthorizedAppsAndFetch: s } = e,
                 h = (0, a.e7)([u.Z], () => u.Z.getFetchState());

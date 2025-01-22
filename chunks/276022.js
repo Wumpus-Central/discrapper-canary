@@ -19,11 +19,11 @@ var i = t(200651),
     f = t(388032);
 function C(e) {
     var n;
-    let { user: C, application: v, guildId: x, context: _, onItemClick: N } = e,
+    let { user: C, application: v, guildId: _, context: x, onItemClick: N } = e,
         I = null !== (n = null == v ? void 0 : v.id) && void 0 !== n ? n : null == C ? void 0 : C.id,
-        A = m.Z.getGuild(x),
+        A = m.Z.getGuild(_),
         E = (0, a.e7)([p.Z], () => (null != A ? p.Z.can(h.Plq.MANAGE_GUILD, A) : null)),
-        g = (0, c.LD)(x, !0),
+        g = (0, c.LD)(_, !0),
         b = (0, c.PL)(!0, !0),
         { isUserApp: P, isGuildApp: S } = l.useMemo(() => {
             var e, n, t, i;
@@ -56,7 +56,7 @@ function C(e) {
             let e = '';
             null != v ? (e = v.name) : null != C && (e = C.username), '' !== e && u.J.setState({ searchQuery: e }), null == N || N();
         }, [v, N, C]);
-    if (_ === h.IlC.POPOUT) return null;
+    if (x === h.IlC.POPOUT) return null;
     let T = [];
     return (
         S &&

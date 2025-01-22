@@ -14,16 +14,16 @@ var i,
     d = n(447543),
     u = n(587444),
     h = n(393238),
-    f = n(388905),
-    g = n(108427),
+    g = n(388905),
+    f = n(108427),
     m = n(314897),
     p = n(701190),
     x = n(626135),
     _ = n(768581),
     E = n(823379),
     I = n(264229),
-    v = n(230224),
-    N = n(617730),
+    N = n(230224),
+    v = n(617730),
     C = n(258356),
     b = n(981631),
     T = n(388032),
@@ -74,8 +74,8 @@ function j(e) {
 function R(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: i, innerStyle: r, ...a } = e,
         { invite: d } = a,
-        [u, f] = l.useState(A(d)),
-        { ref: g, height: m } = (0, h.Z)(),
+        [u, g] = l.useState(A(d)),
+        { ref: f, height: m } = (0, h.Z)(),
         p = (0, c.useSpring)({
             height: null != m && 0 !== m ? ''.concat(m, 'px') : ''.concat(i, 'px'),
             config: o.config.stiff
@@ -83,7 +83,7 @@ function R(e) {
     return (
         l.useEffect(() => {
             let e = A(d);
-            e !== u && f(e);
+            e !== u && g(e);
         }, [d, u]),
         (0, s.jsxs)(o.animated.div, {
             className: Z.inviteCard,
@@ -93,7 +93,7 @@ function R(e) {
                     className: Z.inviteChildContainer,
                     style: p,
                     children: (0, s.jsx)('section', {
-                        ref: g,
+                        ref: f,
                         className: null == r ? void 0 : r(u),
                         children: t(u)
                     })
@@ -105,7 +105,7 @@ function R(e) {
 }
 function P(e) {
     let { invite: t } = e;
-    if (null == t || !(0, v.JI)(t)) return null;
+    if (null == t || !(0, N.JI)(t)) return null;
     let n = (e) => {
         if (null == t) return null;
         if (1 === e) return (0, s.jsx)(C.X, { invite: t });
@@ -124,7 +124,7 @@ function L(e) {
             if (null == t) return (0, s.jsx)(S, {});
             switch (n) {
                 case 1:
-                    return (0, s.jsx)(N.Z, {
+                    return (0, s.jsx)(v.Z, {
                         ...e,
                         invite: t
                     });
@@ -160,7 +160,7 @@ function O(e) {
         });
         null != e && ((r.backgroundImage = 'url('.concat(e, ')')), (r.backgroundSize = 'cover'));
     }
-    return (0, s.jsxs)(f.ZP, {
+    return (0, s.jsxs)(g.ZP, {
         theme: b.BRd.DARK,
         className: Z.splashBackground,
         style: r,
@@ -179,7 +179,7 @@ function y(e) {
         i = (0, a.e7)([p.Z], () => p.Z.getInvite(t));
     return (
         l.useEffect(() => {
-            (0, g.e)('invite_mobile');
+            (0, f.e)('invite_mobile');
         }, []),
         l.useEffect(() => {
             null != i &&

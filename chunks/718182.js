@@ -8,8 +8,8 @@ var i,
     d = n.n(c),
     u = n(442837),
     h = n(893776),
-    f = n(129293),
-    g = n(388905),
+    g = n(129293),
+    f = n(388905),
     m = n(108427),
     p = n(314897),
     x = n(981631),
@@ -18,30 +18,30 @@ var i,
 u.ZP.initialize();
 class I extends (l = a.PureComponent) {
     componentDidMount() {
-        let e = (0, f.Z)(this.props.location);
+        let e = (0, g.Z)(this.props.location);
         null != e && h.Z.authorizeIPAddress(e), (0, m.e)('authorize_ip');
     }
     renderLoginButton() {
         if ('Android' === d().os.family || 'iOS' === d().os.family) return null;
         let { transitionTo: e } = this.props;
-        return (0, o.jsx)(g.zx, {
+        return (0, o.jsx)(f.zx, {
             onClick: () => e(x.Z5c.LOGIN),
             children: _.intl.string(_.t.dKhVQE)
         });
     }
     renderFailed() {
-        return (0, o.jsxs)(g.ZP, {
+        return (0, o.jsxs)(f.ZP, {
             children: [
                 (0, o.jsx)('img', {
                     alt: '',
                     src: n(262467),
                     className: E.marginBottom20
                 }),
-                (0, o.jsx)(g.Dx, {
+                (0, o.jsx)(f.Dx, {
                     className: E.marginBottom8,
                     children: _.intl.string(_.t['f/54a2'])
                 }),
-                (0, o.jsx)(g.DK, {
+                (0, o.jsx)(f.DK, {
                     className: E.marginBottom40,
                     children: _.intl.string(_.t.i3ehMj)
                 }),
@@ -50,18 +50,18 @@ class I extends (l = a.PureComponent) {
         });
     }
     renderSucceeded() {
-        return (0, o.jsxs)(g.ZP, {
+        return (0, o.jsxs)(f.ZP, {
             children: [
                 (0, o.jsx)('img', {
                     alt: '',
                     src: n(640356),
                     className: E.marginBottom20
                 }),
-                (0, o.jsx)(g.Dx, {
+                (0, o.jsx)(f.Dx, {
                     className: E.marginBottom8,
                     children: _.intl.string(_.t.iG0SlJ)
                 }),
-                (0, o.jsx)(g.DK, {
+                (0, o.jsx)(f.DK, {
                     className: E.marginBottom40,
                     children: _.intl.string(_.t['Elv+qq'])
                 }),
@@ -70,8 +70,8 @@ class I extends (l = a.PureComponent) {
         });
     }
     renderDefault() {
-        return (0, o.jsxs)(g.ZP, {
-            children: [(0, o.jsx)(g.Hh, {}), (0, o.jsx)(g.Dx, { children: _.intl.string(_.t['9exy+f']) })]
+        return (0, o.jsxs)(f.ZP, {
+            children: [(0, o.jsx)(f.Hh, {}), (0, o.jsx)(f.Dx, { children: _.intl.string(_.t['9exy+f']) })]
         });
     }
     render() {

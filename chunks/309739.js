@@ -53,7 +53,7 @@ function R(e) {
 function P() {
     let e = I.G6.useSetting(),
         t = I.Wz.useSetting(),
-        n = S.l.useExperiment({ location: 'activity privacy tab' }, { autoTrackExposure: !1 }),
+        n = (0, S.Yd)('activity privacy tab'),
         r = C.isPlatformEmbedded ? A.intl.string(A.t.MznbeH) : A.intl.string(A.t.oKqC4u),
         s = (e) => {
             I.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), R(e);
@@ -90,7 +90,7 @@ function P() {
                     note: r,
                     children: A.intl.string(A.t['4q/Ewc'])
                 }),
-                n.enabled
+                n
                     ? (0, i.jsxs)(m.FormItem, {
                           tag: m.FormTitleTags.H3,
                           title: A.intl.string(A.t.ffGYGx),

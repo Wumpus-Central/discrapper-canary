@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(388905),
     u = n(353926),
     h = n(82554),
-    f = n(726521),
-    g = n(185625),
+    g = n(726521),
+    f = n(185625),
     m = n(314897),
     p = n(63063),
     x = n(981631),
@@ -18,7 +18,7 @@ var i = n(200651),
     E = n(57717),
     I = n(232186);
 l.ZP.initialize();
-let v = (e) => {
+let N = (e) => {
     let { title: t, menuType: r } = e,
         l = () => {
             (0, o.openModalLazy)(async () => {
@@ -36,12 +36,12 @@ let v = (e) => {
         },
         a = (e) => {
             let t = async () => {
-                    await (0, g.yL)(r, e);
+                    await (0, f.yL)(r, e);
                 },
-                l = async (t) => await (0, g.RV)(r, e, t),
+                l = async (t) => await (0, f.RV)(r, e, t),
                 a = (e) => {
                     let t = null == e ? void 0 : e.token;
-                    r === h.BM.MESSAGE ? (0, f.eE)(t) : r === h.BM.USER && (0, f.JM)(t);
+                    r === h.BM.MESSAGE ? (0, g.eE)(t) : r === h.BM.USER && (0, g.JM)(t);
                 };
             t(),
                 (0, o.openModalLazy)(async () => {
@@ -73,10 +73,10 @@ let v = (e) => {
 t.Z = () => {
     let [e, t] = r.useState(!0),
         [n, s] = r.useState(!1),
-        f = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
-        N = (0, l.e7)([u.Z], () => u.Z.hasLoadedExperiments),
+        g = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
+        v = (0, l.e7)([u.Z], () => u.Z.hasLoadedExperiments),
         C = () => {
-            (0, g.qJ)()
+            (0, f.qJ)()
                 .then(() => {
                     t(!1), s(!0);
                 })
@@ -86,20 +86,20 @@ t.Z = () => {
         };
     return (
         r.useEffect(() => {
-            f
+            g
                 ? (t(!0),
                   c
                       .k({ withAnalyticsToken: !0 })
                       .then(() => C())
                       .catch(() => t(!1)))
                 : C();
-        }, [f]),
+        }, [g]),
         r.useEffect(() => {
             (async () => {
-                !N && (await a.Z.getLocationMetadata(), a.Z.getExperiments());
+                !v && (await a.Z.getLocationMetadata(), a.Z.getExperiments());
             })();
-        }, [N]),
-        e || !N
+        }, [v]),
+        e || !v
             ? (0, i.jsx)(d.ZP, { children: (0, i.jsx)(o.Spinner, {}) })
             : n &&
               (0, i.jsxs)(d.ZP, {
@@ -115,11 +115,11 @@ t.Z = () => {
                       (0, i.jsxs)('div', {
                           className: E.container,
                           children: [
-                              (0, i.jsx)(v, {
+                              (0, i.jsx)(N, {
                                   title: _.intl.string(_.t.fuqnBA),
                                   menuType: h.BM.MESSAGE
                               }),
-                              (0, i.jsx)(v, {
+                              (0, i.jsx)(N, {
                                   title: _.intl.string(_.t.F4jrRU),
                                   menuType: h.BM.USER
                               })

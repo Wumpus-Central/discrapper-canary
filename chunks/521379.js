@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
 }),
     n(757143);
@@ -15,7 +15,7 @@ var i,
     u = n(108427),
     h = n(559786);
 c.ZP.initialize();
-class f extends (i = a.PureComponent) {
+class g extends (i = a.PureComponent) {
     componentDidMount() {
         (0, u.e)('account_revert');
     }
@@ -31,7 +31,7 @@ class f extends (i = a.PureComponent) {
         });
     }
 }
-(r = f),
+(r = g),
     (s = 'defaultProps'),
     (l = {
         transitionTo: (e) => n.g.location.assign(e),

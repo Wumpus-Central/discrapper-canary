@@ -14,16 +14,16 @@ var i = n(200651),
     d = n(388905),
     u = n(362762),
     h = n(409059),
-    f = n(659900),
-    g = n(962220),
+    g = n(659900),
+    f = n(962220),
     m = n(473855),
     p = n(306453),
     x = n(929809),
     _ = n(108427),
     E = n(390885),
     I = n(314897),
-    v = n(896797),
-    N = n(954824),
+    N = n(896797),
+    v = n(954824),
     C = n(781428),
     b = n(163671),
     T = n(423527),
@@ -38,10 +38,10 @@ var i = n(200651),
 c.ZP.initialize();
 class y extends r.PureComponent {
     componentDidMount() {
-        (0, _.e)('guildTemplate'), !R.KO && N.Z.launch('discord://' + Z.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, _.e)('guildTemplate'), !R.KO && v.Z.launch('discord://' + Z.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
-        this.props.code !== e.code && g.Z.resolveGuildTemplate(this.props.code);
+        this.props.code !== e.code && f.Z.resolveGuildTemplate(this.props.code);
     }
     renderButton(e, t) {
         return R.KO
@@ -154,7 +154,7 @@ function D(e) {
         guildTemplate: (0, c.e7)([h.Z], () => h.Z.getGuildTemplate(e.code)),
         nativeAppState: (0, c.e7)([u.Z], () => u.Z.getState(e.code)),
         authenticated: (0, c.e7)([I.default], () => I.default.isAuthenticated()),
-        defaultRoute: (0, c.e7)([v.Z], () => v.Z.defaultRoute)
+        defaultRoute: (0, c.e7)([N.Z], () => N.Z.defaultRoute)
     };
     return (0, i.jsx)(y, {
         ...e,
@@ -163,7 +163,7 @@ function D(e) {
 }
 function k(e) {
     let { guildTemplate: t } = e,
-        { form: n, handleSubmit: r } = (0, f.Z)(t, !1);
+        { form: n, handleSubmit: r } = (0, g.Z)(t, !1);
     E.Z.flowStep(j.MK.ORGANIC_GUILD_TEMPLATES, j.X2.GUILD_CREATE);
     let s = (0, i.jsxs)(i.Fragment, {
         children: [

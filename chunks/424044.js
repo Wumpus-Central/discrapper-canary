@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(388905),
     u = n(353926),
     h = n(185625),
-    f = n(551549),
-    g = n(108427),
+    g = n(551549),
+    f = n(108427),
     m = n(314897),
     p = n(981631),
     x = n(388032),
@@ -20,8 +20,8 @@ t.Z = (e) => {
     let { location: t } = e,
         n = (0, s.e7)([m.default], () => m.default.isAuthenticated()),
         E = (0, s.e7)([u.Z], () => u.Z.hasLoadedExperiments),
-        I = (0, f.oK)('RSL - Landing Page'),
-        [v, N] = r.useState(!1),
+        I = (0, g.oK)('RSL - Landing Page'),
+        [N, v] = r.useState(!1),
         [C, b] = r.useState(x.intl.string(x.t['9exy+f'])),
         [T, Z] = r.useState(!0),
         S = (e) => {
@@ -65,10 +65,10 @@ t.Z = (e) => {
                 } catch (e) {
                     S(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
-                    N(!1);
+                    v(!1);
                 }
             };
-            N(!0), e((0, c.Z)(t)), (0, g.e)('report_second_look');
+            v(!0), e((0, c.Z)(t)), (0, f.e)('report_second_look');
         }, [t]),
         I &&
             !T &&
@@ -78,7 +78,7 @@ t.Z = (e) => {
                         className: _.marginBottom8,
                         children: C
                     }),
-                    v && (0, i.jsx)(l.Spinner, {})
+                    N && (0, i.jsx)(l.Spinner, {})
                 ]
             })
     );

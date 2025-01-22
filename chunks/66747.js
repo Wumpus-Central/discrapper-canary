@@ -309,7 +309,7 @@ let W = o.memo(function (e) {
             { selectedUserIds: x, addUsers: b, removeUser: f } = (0, k.Z)(t.guildId),
             g = (0, T.xC)(t.guildId),
             p = (0, T.hB)(t.guildId, g, t.userId),
-            j = (0, H.ms)(t.guildId),
+            j = (0, H.m)(t.guildId),
             v = (0, C.e7)(
                 [E.Z],
                 () => {

@@ -17,8 +17,8 @@ var i = t(200651),
     h = t(413097);
 function f(e) {
     var n;
-    let { command: t, application: f, onClick: C, query: v, searchResultsPosition: x } = e,
-        _ = l.useCallback(
+    let { command: t, application: f, onClick: C, query: v, searchResultsPosition: _ } = e,
+        x = l.useCallback(
             (e) => {
                 if ((0, s.BQ)(f)) {
                     let n = f instanceof r.ZP ? f : r.ZP.createFromServer(f);
@@ -42,13 +42,13 @@ function f(e) {
             applicationId: f.id,
             commandId: null == t ? void 0 : t.id,
             query: v,
-            searchResultsPosition: x
+            searchResultsPosition: _
         });
     return (0, i.jsx)(a.Clickable, {
         className: p.clickable,
         innerRef: (e) => (g.current = e),
         onClick: C,
-        onContextMenu: _,
+        onContextMenu: x,
         children: (0, i.jsxs)(a.FocusBlock, {
             className: p.focusBlock,
             children: [

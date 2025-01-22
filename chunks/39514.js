@@ -9,16 +9,16 @@ var i,
     d = n(570140),
     u = n(893776),
     h = n(533307),
-    f = n(978085),
-    g = n(232567),
+    g = n(978085),
+    f = n(232567),
     m = n(388905),
     p = n(362762),
     x = n(108427),
     _ = n(314897),
     E = n(896797),
     I = n(82142),
-    v = n(283595),
-    N = n(55563),
+    N = n(283595),
+    v = n(55563),
     C = n(669079),
     b = n(63063),
     T = n(51144),
@@ -58,7 +58,7 @@ class O extends l.PureComponent {
     }
     handleAuthenticated() {
         let { currentUser: e } = this.state;
-        f.b8(), null == e && this.refreshUser();
+        g.b8(), null == e && this.refreshUser();
     }
     get requiresVerification() {
         let { currentUser: e } = this.state;
@@ -220,7 +220,7 @@ class O extends l.PureComponent {
             }),
             L(this, 'refreshUser', () => {
                 this.setState({ fetchingUser: !0 }),
-                    g
+                    f
                         .k({ withAnalyticsToken: !0 })
                         .then((e) =>
                             this.setState({
@@ -256,19 +256,19 @@ class O extends l.PureComponent {
             });
     }
 }
-t.Z = c.ZP.connectStores([I.Z, v.Z, _.default, N.Z, E.Z, p.Z], (e) => {
+t.Z = c.ZP.connectStores([I.Z, N.Z, _.default, v.Z, E.Z, p.Z], (e) => {
     let t = e.match.params.giftCode,
         n = I.Z.get(t),
-        i = null != n ? N.Z.get(n.skuId) : null;
+        i = null != n ? v.Z.get(n.skuId) : null;
     return {
         giftCode: n,
         sku: i,
-        libraryApplication: null != i && (null == n ? void 0 : n.entitlementBranches) != null ? C.z2(n.entitlementBranches, i, v.Z) : null,
+        libraryApplication: null != i && (null == n ? void 0 : n.entitlementBranches) != null ? C.z2(n.entitlementBranches, i, N.Z) : null,
         authenticated: _.default.isAuthenticated(),
         defaultRoute: E.Z.defaultRoute,
         isResolved: I.Z.getIsResolved(t),
         isAccepting: I.Z.getIsAccepting(t),
-        libraryApplicationsFetched: v.Z.fetched,
+        libraryApplicationsFetched: N.Z.fetched,
         nativeAppState: p.Z.getState(t)
     };
 })(O);

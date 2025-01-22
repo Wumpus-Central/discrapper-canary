@@ -29,8 +29,8 @@ var i,
     f = t(317381),
     C = t(361213),
     v = t(542094),
-    x = t(778569),
-    _ = t(182906),
+    _ = t(778569),
+    x = t(182906),
     N = t(367907),
     I = t(220082),
     A = t(70097),
@@ -99,8 +99,8 @@ function H(e) {
             },
             [n]
         ),
-        { name: v, description: x } = o.useMemo(() => (0, j.sl)(n, { fakeAppIconURL: B }), [n]),
-        { trackItemImpressionRef: _ } = (0, L.Z)({
+        { name: v, description: _ } = o.useMemo(() => (0, j.sl)(n, { fakeAppIconURL: B }), [n]),
+        { trackItemImpressionRef: x } = (0, L.Z)({
             applicationId: n.id,
             sectionName: l,
             sectionPosition: r,
@@ -120,18 +120,18 @@ function H(e) {
         }, [h, p, f]);
     return p
         ? (0, a.jsx)('div', {
-              ref: m ? _ : void 0,
+              ref: m ? x : void 0,
               className: N,
               children: i
           })
         : (0, a.jsx)(d.Clickable, {
-              innerRef: m ? _ : void 0,
+              innerRef: m ? x : void 0,
               className: N,
               onClick: t,
               onContextMenu: C,
               'aria-label': O.intl.formatToPlainString(O.t['zLhr9/'], {
                   applicationName: v,
-                  applicationDescription: x
+                  applicationDescription: _
               }),
               children: (0, a.jsx)(d.FocusBlock, { children: i })
           });
@@ -163,8 +163,8 @@ function V(e) {
 function W(e) {
     let { application: n, look: t, imageStyle: i, enableVideoBanner: l, disableBannerFadeIn: r, children: u, overrideImageUrl: m, showsPromoted: p } = e,
         { iconURL: f, name: C, description: v } = o.useMemo(() => (0, j.sl)(n, { fakeAppIconURL: B }), [n]),
-        x = o.useMemo(() => (null == v ? null : (0, T.ae)(v)), [v]),
-        _ = (0, I.ZP)(f, ''),
+        _ = o.useMemo(() => (null == v ? null : (0, T.ae)(v)), [v]),
+        x = (0, I.ZP)(f, ''),
         [N, A] = o.useState(!1),
         E = o.useCallback(() => {
             !0 === l && A(!0);
@@ -190,7 +190,7 @@ function W(e) {
                               className: i,
                               children: (0, a.jsx)(z, {
                                   application: n,
-                                  fallbackColor: _,
+                                  fallbackColor: x,
                                   showVideo: N,
                                   disableFadeIn: r,
                                   overrideImageUrl: m
@@ -258,7 +258,7 @@ function W(e) {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
                                 lineClamp: 1,
-                                children: x
+                                children: _
                             })
                         ]
                     }),
@@ -326,7 +326,7 @@ function z(e) {
 }
 function Y(e) {
     let { application: n, showVideo: t, disableFadeIn: i } = e,
-        l = (0, x.Z)({
+        l = (0, _.Z)({
             applicationId: n.id,
             size: 600,
             names: ['embedded_cover']
@@ -358,7 +358,7 @@ function Y(e) {
                       })
                   })
                 : null,
-            (0, a.jsx)(_.Z, {
+            (0, a.jsx)(x.Z, {
                 imageBackground: l,
                 applicationName: n.name,
                 imageClassName: u,
@@ -432,8 +432,8 @@ function K(e) {
         [p, h] = (0, c.Wu)([f.ZP], () => [f.ZP.isLaunchingActivity(), f.ZP.getLaunchState(t.id, n.id)]),
         C = null != h && h.isLaunching && h.componentId === m,
         {
-            onActivityItemSelected: x,
-            activityAction: _,
+            onActivityItemSelected: _,
+            activityAction: x,
             buttonColor: N,
             buttonText: I
         } = (0, T.P7)({
@@ -444,13 +444,13 @@ function K(e) {
             launchingComponentId: m,
             fetchesApplication: s
         });
-    if (_ === v.JS.START || _ === v.JS.JOIN)
+    if (x === v.JS.START || x === v.JS.JOIN)
         return r
             ? (0, a.jsx)(w, {
                   ...u,
                   sectionName: l,
                   application: t,
-                  onClick: x,
+                  onClick: _,
                   disabled: p,
                   enableVideoBanner: !C,
                   children: C
@@ -484,7 +484,7 @@ function K(e) {
                 size: d.Button.Sizes.LARGE,
                 color: N,
                 disabled: p,
-                onClick: x,
+                onClick: _,
                 'aria-label': O.intl.formatToPlainString(O.t['XjP/R0'], {
                     buttonText: I,
                     applicationName: t.name

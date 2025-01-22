@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(720196);
 function u(e) {
     let { transitionTo: t, token: n, width: u } = e,
-        [h, f] = r.useState(d.n.START),
-        [g, m] = r.useState(null),
+        [h, g] = r.useState(d.n.START),
+        [f, m] = r.useState(null),
         [p, x] = r.useState(''),
         _ = { impression_group: s.ImpressionGroups.ACCOUNT_REVERT_FLOW };
     return (0, i.jsx)('div', {
@@ -30,7 +30,7 @@ function u(e) {
                     impressionProperties: _,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_EXPLAINER,
                     children: (0, i.jsx)(a.Z, {
-                        setSlide: f,
+                        setSlide: g,
                         transitionTo: t
                     })
                 }),
@@ -40,9 +40,9 @@ function u(e) {
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_CHANGE_PASSWORD,
                     children: (0, i.jsx)(o.Z, {
                         setOriginalEmail: x,
-                        setSlide: f,
+                        setSlide: g,
                         transitionTo: t,
-                        ready: g === d.n.PASSWORD,
+                        ready: f === d.n.PASSWORD,
                         token: n
                     })
                 }),

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return _;
     }
 }),
     t(47120);
@@ -29,15 +29,15 @@ function v(e) {
         n
     );
 }
-function x(e) {
-    let { application: n, channel: t, name: C, iconURL: x, scrollerRef: _, sectionName: N } = e,
+function _(e) {
+    let { application: n, channel: t, name: C, iconURL: _, scrollerRef: x, sectionName: N } = e,
         I = (0, o.ap)((0, s.ZP)()),
         A = l.useRef(null),
         E = l.useRef(null),
         g = l.useRef(null),
         b = l.useRef(null),
         P = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        S = (0, c.ZP)('number' == typeof x ? '' : x, null != P ? P : ''),
+        S = (0, c.ZP)('number' == typeof _ ? '' : _, null != P ? P : ''),
         j = l.useMemo(() => {
             var e, n;
             let t = (0, a.compact)([d.Z.parseHexString(S), d.Z.parseHexString(I ? '#000000' : '#ffffff')]);
@@ -58,7 +58,7 @@ function x(e) {
         T = v(E),
         L = l.useCallback(() => {
             var e, n, t, i, l, o, r, s, c, d;
-            let u = _.current,
+            let u = x.current,
                 m = A.current,
                 p = g.current,
                 h = null == b ? void 0 : b.current,
@@ -68,9 +68,9 @@ function x(e) {
                 let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
                     n = 0 !== u.scrollHeight ? u.scrollHeight : C + 20,
                     v = 0 !== u.clientHeight ? u.clientHeight : C + 20,
-                    x = C - f,
-                    _ = (0, a.clamp)(n - v, x + 1, C + 20);
-                let N = ((i = e), (l = x) === (o = _) ? 1 : (0, a.clamp)((i - l) / (o - l), 0, 1));
+                    _ = C - f,
+                    x = (0, a.clamp)(n - v, _ + 1, C + 20);
+                let N = ((i = e), (l = _) === (o = x) ? 1 : (0, a.clamp)((i - l) / (o - l), 0, 1));
                 if (
                     ((m.style.filter = 'brightness('.concat(1 + ((I ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'
@@ -84,13 +84,13 @@ function x(e) {
                     h.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [j, S, null == T ? void 0 : T.height, I, _, null == y ? void 0 : y.height]);
+        }, [j, S, null == T ? void 0 : T.height, I, x, null == y ? void 0 : y.height]);
     return (
         l.useEffect(() => {
             L();
         }, [L, I]),
         l.useEffect(() => {
-            let e = _.current,
+            let e = x.current,
                 n = () => {
                     L();
                 };
@@ -100,7 +100,7 @@ function x(e) {
                     null == e || e.removeEventListener('scroll', n);
                 }
             );
-        }, [_, L]),
+        }, [x, L]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {

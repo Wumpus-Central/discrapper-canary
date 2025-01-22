@@ -20,8 +20,8 @@ var i = t(200651),
 function v(e) {
     let { showImage: n = !0, padding: t = !1 } = e,
         v = (0, r.ZP)(),
-        x = (0, a.ap)(v) ? C : f,
-        _ = l.useCallback(() => {
+        _ = (0, a.ap)(v) ? C : f,
+        x = l.useCallback(() => {
             (0, s.Z)(c.Z.getAppsSupportURL(m.BhN.APPS_LEARN_MORE));
         }, []),
         { trackSectionImpressionRef: N } = (0, u.Z)({
@@ -38,7 +38,7 @@ function v(e) {
                 n &&
                     (0, i.jsx)('img', {
                         className: h.image,
-                        src: x,
+                        src: _,
                         alt: '',
                         'aria-hidden': !0
                     }),
@@ -63,7 +63,7 @@ function v(e) {
                         sectionTitle: p.intl.string(p.t['kw8/ER']),
                         sectionBody: p.intl.string(p.t.GZoV1N)
                     }),
-                    onClick: _,
+                    onClick: x,
                     children: p.intl.string(p.t.Ye51oa)
                 })
             ]

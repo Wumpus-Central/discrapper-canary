@@ -16,8 +16,8 @@ var i = t(200651),
     p = t(388032),
     h = t(661630);
 function f(e) {
-    let { channel: n, entrypoint: t, title: a, look: f, items: C, sectionName: v, sectionOverallPosition: x } = e,
-        _ = (0, d.s)('AppLauncherApplicationListViewScreen'),
+    let { channel: n, entrypoint: t, title: a, look: f, items: C, sectionName: v, sectionOverallPosition: _ } = e,
+        x = (0, d.s)('AppLauncherApplicationListViewScreen'),
         N = l.useMemo(() => (t === c._b.TEXT ? u.kA : u.qR), [t]);
     return (0, i.jsxs)('section', {
         className: h.container,
@@ -52,8 +52,8 @@ function f(e) {
                                 resultsPosition: t,
                                 location: s.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
                                 installOnDemand: a,
-                                isOneClickCTA: _,
-                                sectionOverallPosition: x,
+                                isOneClickCTA: x,
+                                sectionOverallPosition: _,
                                 showsPromoted: o
                             },
                             l.id

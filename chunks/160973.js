@@ -19,27 +19,27 @@ function h(e) {
         { channelId: t, application: h, activityAction: f } = e,
         C = (0, i.e7)([c.Z], () => c.Z.getChannel(t)),
         v = (0, i.e7)([d.Z], () => d.Z.can(m.Pl.USE_EMBEDDED_ACTIVITIES, C)),
-        x = (0, a.KF)(null == C ? void 0 : C.id),
-        _ = !1;
+        _ = (0, a.KF)(null == C ? void 0 : C.id),
+        x = !1;
     switch (f) {
         case r.JS.LEAVE:
-            _ = !1;
+            x = !1;
             break;
         case r.JS.START:
-            (null == C ? void 0 : C.isGuildVoice()) ? x !== a.jy.CAN_LAUNCH && (_ = !0) : !(0, l.WS)(C) && (_ = !0);
+            (null == C ? void 0 : C.isGuildVoice()) ? _ !== a.jy.CAN_LAUNCH && (x = !0) : !(0, l.WS)(C) && (x = !0);
             break;
         case r.JS.JOIN:
-            (null == C ? void 0 : C.isGuildVoice()) ? (_ = !v) : !(0, l.WS)(C) && (_ = !0);
+            (null == C ? void 0 : C.isGuildVoice()) ? (x = !v) : !(0, l.WS)(C) && (x = !0);
     }
     if (f !== r.JS.LEAVE) {
         let e = h instanceof s.ZP ? h.embeddedActivityConfig : h.embedded_activity_config,
             t = (0, o.Z)((0, u.getOS)());
-        null == e || e.supported_platforms.includes(t) ? (null == C ? void 0 : C.isThread()) && ((_ = !0), (n = p.intl.string(p.t.ddSR3t))) : ((_ = !1), (n = p.intl.string(p.t.z2YTgI)));
+        null == e || e.supported_platforms.includes(t) ? (null == C ? void 0 : C.isThread()) && ((x = !0), (n = p.intl.string(p.t.ddSR3t))) : ((x = !1), (n = p.intl.string(p.t.z2YTgI)));
     }
     return (
-        _ && null == n && (n = p.intl.string(p.t.f41E1t)),
+        x && null == n && (n = p.intl.string(p.t.f41E1t)),
         {
-            disabled: _,
+            disabled: x,
             reason: n
         }
     );

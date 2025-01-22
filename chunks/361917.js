@@ -21,8 +21,8 @@ var i = t(200651),
     f = t(481060),
     C = t(911969),
     v = t(115130),
-    x = t(566620),
-    _ = t(127255),
+    _ = t(566620),
+    x = t(127255),
     N = t(880308),
     I = t(427996),
     A = t(367907),
@@ -78,7 +78,7 @@ function en(e) {
         u = (0, U.Yn)(t),
         m = !(0, U.Yn)(t),
         p = t === M._b.TEXT,
-        [C, _] = ec(!0),
+        [C, x] = ec(!0),
         [N, I] = ec(d),
         [A, E] = ec(u),
         [g, b] = ec(m),
@@ -86,13 +86,13 @@ function en(e) {
         S = (u || d) && !P,
         j = m && c;
     l.useEffect(() => {
-        (0, x.w1)({
+        (0, _.w1)({
             guildId: n.guild_id,
             force: !0
         });
     }, [n.guild_id]),
         l.useEffect(() => {
-            t === M._b.VOICE && x.ux();
+            t === M._b.VOICE && _.ux();
         }, [t]);
     let y = a.length > 0;
     return (0, i.jsxs)('div', {
@@ -120,7 +120,7 @@ function en(e) {
                               (0, i.jsx)(el, {
                                   channel: n,
                                   entrypoint: t,
-                                  onEmptyState: _
+                                  onEmptyState: x
                               }),
                               d &&
                                   (0, i.jsx)(eo, {
@@ -340,7 +340,7 @@ function el(e) {
 function ea(e) {
     let { channel: n, onEmptyState: t } = e;
     (0, N.g)();
-    let a = (0, _.Z)({ guildId: n.getGuildId() }),
+    let a = (0, x.Z)({ guildId: n.getGuildId() }),
         o = D.U4.LARGE_BANNER,
         { trackSectionImpressionRef: r } = (0, H.Z)({
             sectionName: M.L3.ACTIVITIES,
@@ -491,7 +491,7 @@ function er(e) {
         p = (function (e) {
             let { channel: n, recommendationsSections: t } = e;
             (0, N.g)();
-            let i = (0, _.Z)({ guildId: n.getGuildId() });
+            let i = (0, x.Z)({ guildId: n.getGuildId() });
             return l.useMemo(() => {
                 if (!t.some((e) => (0, T.yE)(e.flags, c.b.APPENDS_REMAINING_ACTIVITIES))) return Q;
                 let e = new Set();
@@ -610,16 +610,16 @@ function es(e) {
             sectionName: f,
             sectionOverallPosition: s
         }),
-        { trackSectionImpressionRef: x } = (0, H.Z)({
+        { trackSectionImpressionRef: _ } = (0, H.Z)({
             sectionName: f,
             numItems: h.length,
             numVisibleItems: C.length
         }),
-        _ = a.type !== p.o.SMALL_BANNER_CARDS;
+        x = a.type !== p.o.SMALL_BANNER_CARDS;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)('div', {
-                ref: (e) => (x.current = e),
+                ref: (e) => (_.current = e),
                 children: (0, i.jsx)(W.Z, {
                     title: a.title,
                     buttonType: W.Z.buttonTypes.VIEW_MORE,
@@ -648,7 +648,7 @@ function es(e) {
                                 resultsPosition: t,
                                 location: g.Vh.APP_LAUNCHER_HOME,
                                 installOnDemand: c,
-                                enableVideoBanner: _,
+                                enableVideoBanner: x,
                                 sectionOverallPosition: s,
                                 overrideImageUrl: l,
                                 showsPromoted: d

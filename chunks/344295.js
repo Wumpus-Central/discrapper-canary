@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(298444),
     u = n(447543),
     h = n(881052),
-    f = n(899370),
-    g = n(267394),
+    g = n(899370),
+    f = n(267394),
     m = n(388905),
     p = n(639946),
     x = n(792766),
     _ = n(362762),
     E = n(978684),
     I = n(264229),
-    v = n(929809),
-    N = n(703656),
+    N = n(929809),
+    v = n(703656),
     C = n(108427),
     b = n(314897),
     T = n(896797),
@@ -58,7 +58,7 @@ let U = 'Accept Invite Page',
     };
 async function V(e) {
     let { invite: t } = await u.Z.resolveInvite(e, U);
-    if (null != t) (0, g.A)(t);
+    if (null != t) (0, f.A)(t);
 }
 class K extends r.PureComponent {
     componentDidMount() {
@@ -70,7 +70,7 @@ class K extends r.PureComponent {
         if (!t && e) {
             let e = this.getInviteKey(),
                 { baseCode: t } = (0, I.fU)(e);
-            (0, N.dL)(D.Z5c.INVITE_LOGIN(t));
+            (0, v.dL)(D.Z5c.INVITE_LOGIN(t));
         }
     }
     componentDidUpdate(e) {
@@ -93,7 +93,7 @@ class K extends r.PureComponent {
         }
         if ((n !== e.nativeAppState && n === D.kEZ.OPEN && this.track(D.rMx.INVITE_APP_INVOKED, !1), this.getMode() === z.REGISTER && i && !e.authenticated)) {
             let { channel: e } = t;
-            null != e && ((0, v.c)(w.M5.INVITE_UNCLAIMED), null != t.guild ? r(D.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : u.Z.transitionToInvite(t, r));
+            null != e && ((0, N.c)(w.M5.INVITE_UNCLAIMED), null != t.guild ? r(D.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : u.Z.transitionToInvite(t, r));
         }
     }
     getInviteKey() {
@@ -288,7 +288,7 @@ class K extends r.PureComponent {
                     context: this.getAcceptInviteContext(U),
                     skipOnboarding: !0,
                     callback: (t) => {
-                        (0, g.A)(t), null != t.channel && u.Z.openApp(e, t.channel.id);
+                        (0, f.A)(t), null != t.channel && u.Z.openApp(e, t.channel.id);
                     }
                 }).catch((e) => {
                     if (e instanceof h.yZ || e instanceof h.Hx) {
@@ -327,7 +327,7 @@ class K extends r.PureComponent {
             });
     }
 }
-t.Z = c.ZP.connectStores([Z.Z, T.Z, b.default, _.Z, f.Z], (e) => {
+t.Z = c.ZP.connectStores([Z.Z, T.Z, b.default, _.Z, g.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
@@ -335,6 +335,6 @@ t.Z = c.ZP.connectStores([Z.Z, T.Z, b.default, _.Z, f.Z], (e) => {
         nativeAppState: _.Z.getState(n),
         authenticated: b.default.isAuthenticated(),
         defaultRoute: T.Z.defaultRoute,
-        isUnderage: f.Z.isUnderageAnonymous()
+        isUnderage: g.Z.isUnderageAnonymous()
     };
 })(K);

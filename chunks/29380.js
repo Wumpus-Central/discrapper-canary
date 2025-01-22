@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return _;
     }
 }),
     t(47120);
@@ -19,8 +19,8 @@ var i = t(200651),
     f = t(981631),
     C = t(388032),
     v = t(129571);
-function x(e) {
-    let { channel: n, application: t, sectionName: x, primaryEntryPointCommand: _, buttonSize: N = a.ButtonSizes.MEDIUM } = e,
+function _(e) {
+    let { channel: n, application: t, sectionName: _, primaryEntryPointCommand: x, buttonSize: N = a.ButtonSizes.MEDIUM } = e,
         I = l.useId(),
         A = l.useCallback(() => {
             c.yT(d.ti.ACTIVITY);
@@ -36,7 +36,7 @@ function x(e) {
             applicationId: t.id,
             channelId: n.id
         }),
-        j = l.useMemo(() => (0, m.XZ)(_.displayName), [_.displayName]),
+        j = l.useMemo(() => (0, m.XZ)(x.displayName), [x.displayName]),
         {
             onActivityItemSelected: y,
             buttonColor: T,
@@ -45,7 +45,7 @@ function x(e) {
             channel: n,
             application: t,
             location: r.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: x,
+            sectionName: _,
             commandName: j,
             autoDismissOnClick: S === o.JS.LEAVE,
             launchingComponentId: I,

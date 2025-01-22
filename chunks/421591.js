@@ -17,8 +17,8 @@ let v = {
         width: h.Gy,
         height: h.lv
     },
-    x = { height: h.lv };
-function _(e) {
+    _ = { height: h.lv };
+function x(e) {
     let { initHistory: n, children: t } = e,
         [a, o] = l.useState(null != n ? n : [{ type: d.gc.HOME }]),
         [r, s] = l.useState({}),
@@ -90,13 +90,13 @@ function N(e) {
                 }
             );
         })(o),
-        { currentView: f, getMostRecentHistoryItemByType: v, setSlideReady: _ } = (0, d.hH)();
+        { currentView: f, getMostRecentHistoryItemByType: v, setSlideReady: x } = (0, d.hH)();
     l.useEffect(() => {
-        _(!1);
-    }, [null == f ? void 0 : f.type, _]);
+        x(!1);
+    }, [null == f ? void 0 : f.type, x]);
     let N = l.useCallback(() => {
-        _(!0);
-    }, [_]);
+        x(!0);
+    }, [x]);
     if (null == f) return null;
     let I = v(d.gc.LIST),
         A = v(d.gc.APPLICATION);
@@ -109,7 +109,7 @@ function N(e) {
                 id: d.gc.HOME,
                 children: (0, i.jsx)('div', {
                     className: C.slideContent,
-                    style: x,
+                    style: _,
                     children: (0, i.jsx)(m.Z, {
                         isScrollCloseToBottom: c,
                         setScroller: s,
@@ -124,7 +124,7 @@ function N(e) {
                 id: d.gc.LIST,
                 children: (0, i.jsx)('div', {
                     className: C.slideContent,
-                    style: x,
+                    style: _,
                     children:
                         null != I &&
                         (0, i.jsx)(p.Z, {
@@ -142,7 +142,7 @@ function N(e) {
                 id: d.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
                     className: C.slideContent,
-                    style: x,
+                    style: _,
                     children:
                         null != A &&
                         (0, i.jsx)(u.Z, {
@@ -184,7 +184,7 @@ n.Z = l.memo(
                     className: C.contentWrapper,
                     children: (0, i.jsx)(s.Gt, {
                         value: u,
-                        children: (0, i.jsx)(_, {
+                        children: (0, i.jsx)(x, {
                             initHistory: d,
                             children: (0, i.jsx)(N, {
                                 channel: t,

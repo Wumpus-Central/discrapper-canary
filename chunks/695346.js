@@ -864,8 +864,8 @@ let eb = (0, d.KM)(
             (e) => e,
             (e) => (null != e ? e : o.E5.OFF)
         ),
-        isEligible: () => u.l.getCurrentConfig({ location: 'user_settings' }, { autoTrackExposure: !1 }).enabled,
-        useIsEligible: () => u.l.useExperiment({ location: 'user_settings' }, { autoTrackExposure: !1 }).enabled,
+        isEligible: () => (0, u.o0)('user_settings'),
+        useIsEligible: () => (0, u.Yd)('user_settings'),
         ineligibleDefault: o.E5.OFF,
         eligibleDefault: () => o.E5.ON
     }),

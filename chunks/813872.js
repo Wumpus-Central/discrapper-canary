@@ -21,7 +21,7 @@ function E(e) {
         I = i.useContext(c.AnalyticsContext),
         h = (0, u.Aq)(),
         C = (0, a.e7)([s.Z], () => (null != E ? E : s.Z.getChannelId(n, !0)), [E, n]),
-        P = (0, d.ms)(n, !0);
+        P = (0, d.m)(n);
     return null != n && P
         ? (0, t.jsx)(r.MenuItem, {
               id: 'mod-view',

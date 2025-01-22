@@ -19,8 +19,8 @@ var i = t(200651),
     f = t(835473),
     C = t(70097),
     v = t(240991),
-    x = t(973616),
-    _ = t(783097),
+    _ = t(973616),
+    x = t(783097),
     N = t(695676),
     I = t(520315),
     A = t(29380),
@@ -32,12 +32,12 @@ function S(e) {
     let { channel: n, application: t, videoUrl: a, imageCoverUrl: s, sectionName: d, hasCommands: m } = e,
         p = l.useMemo(() => {
             var e;
-            return null !== (e = (0, _.jD)(t)) && void 0 !== e ? e : '';
+            return null !== (e = (0, x.jD)(t)) && void 0 !== e ? e : '';
         }, [t]),
         h = (0, r.e7)([c.Z], () => c.Z.inDevModeForApplication(t.id)),
         f = null != a,
         { isSlideReady: v } = (0, N.hH)(),
-        [x, I] = l.useState(!1);
+        [_, I] = l.useState(!1);
     return (
         l.useEffect(() => {
             v && I(!0);
@@ -51,7 +51,7 @@ function S(e) {
                             ? (0, i.jsxs)('div', {
                                   className: b.videoContainer,
                                   children: [
-                                      x
+                                      _
                                           ? (0, i.jsx)(C.Z, {
                                                 className: o()(b.videoCover, b.video),
                                                 loop: !0,
@@ -102,8 +102,8 @@ function S(e) {
 }
 function j(e) {
     let { application: n } = e,
-        t = (0, _.Cb)(n),
-        l = (0, _.Hu)(n);
+        t = (0, x.Cb)(n),
+        l = (0, x.Hu)(n);
     return t || l
         ? (0, i.jsxs)('div', {
               className: b.monetizationDisclosureContainerStyle,
@@ -147,8 +147,8 @@ function j(e) {
 function y(e) {
     var n;
     let { application: t } = e,
-        l = (0, _.BQ)(t) ? t.name : null !== (n = (0, _.$d)(t)) && void 0 !== n ? n : '',
-        a = (0, _.vJ)(t);
+        l = (0, x.BQ)(t) ? t.name : null !== (n = (0, x.$d)(t)) && void 0 !== n ? n : '',
+        a = (0, x.vJ)(t);
     return (0, i.jsxs)('div', {
         className: b.titleContainer,
         children: [
@@ -174,9 +174,9 @@ function T(e) {
     let { application: n } = e,
         t = l.useMemo(() => {
             var e;
-            return (0, _.BQ)(n) && null !== (e = null == n ? void 0 : n.tags) && void 0 !== e ? e : [];
+            return (0, x.BQ)(n) && null !== (e = null == n ? void 0 : n.tags) && void 0 !== e ? e : [];
         }, [n]);
-    return (0, _.ye)(n)
+    return (0, x.ye)(n)
         ? (0, i.jsxs)('div', {
               className: b.tagsContainer,
               children: [
@@ -202,8 +202,8 @@ function T(e) {
 function L(e) {
     var n;
     let { application: t } = e;
-    if (!(0, _.ye)(t)) return null;
-    let l = null !== (n = (0, _.BQ)(t) ? (t instanceof x.ZP ? t.maxParticipants : t.max_participants) : 0) && void 0 !== n ? n : 0;
+    if (!(0, x.ye)(t)) return null;
+    let l = null !== (n = (0, x.BQ)(t) ? (t instanceof _.ZP ? t.maxParticipants : t.max_participants) : 0) && void 0 !== n ? n : 0;
     return (0, i.jsxs)('div', {
         className: b.tagContainer,
         children: [
@@ -231,8 +231,8 @@ function R(e) {
             botUserId: u
         }),
         { analyticsLocations: v } = (0, m.ZP)();
-    if (!(0, _.BQ)(l) || !(0, _.ye)(l)) return null;
-    let x = s.ButtonSizes.MAX;
+    if (!(0, x.BQ)(l) || !(0, x.ye)(l)) return null;
+    let _ = s.ButtonSizes.MAX;
     return null != c && null != u
         ? (0, i.jsxs)('div', {
               className: b.entrypointContainer,
@@ -244,7 +244,7 @@ function R(e) {
                           application: l,
                           sectionName: a,
                           primaryEntryPointCommand: c,
-                          buttonSize: x
+                          buttonSize: _
                       })
                   }),
                   C && null != u
@@ -253,14 +253,14 @@ function R(e) {
                             children: (0, i.jsx)(E.Z, {
                                 botUserId: u,
                                 applicationId: l.id,
-                                buttonSize: x,
+                                buttonSize: _,
                                 analyticsLocations: v
                             })
                         })
                       : null
               ]
           })
-        : r && !o && (0, _.ye)(l)
+        : r && !o && (0, x.ye)(l)
           ? (0, i.jsx)(s.HelpMessage, {
                 className: b.primaryEntryPointWarningMessage,
                 messageType: s.HelpMessageTypes.WARNING,

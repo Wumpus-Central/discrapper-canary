@@ -24,8 +24,8 @@ var i = t(192379),
     f = t(674588),
     C = t(809547),
     v = t(822245),
-    x = t(631827),
-    _ = t(827498),
+    _ = t(631827),
+    x = t(827498),
     N = t(783097),
     I = t(689079),
     A = t(665692);
@@ -47,7 +47,7 @@ function P(e) {
     let {
             commands: C,
             commandSectionMap: v,
-            loading: _
+            loading: x
         } = (function (e) {
             var n, t;
             let { channel: l, includeBuiltIn: a = !0, allowFetch: o = !0 } = e,
@@ -121,7 +121,7 @@ function P(e) {
         j = i.useMemo(() => {
             var e;
             if (!r) return [];
-            return (0, x.N)(C, {
+            return (0, _.N)(C, {
                 limit: l,
                 filterPredicates: [
                     (function (e) {
@@ -245,7 +245,7 @@ function P(e) {
                         })
                     );
             } else s && (i = P);
-            return (0, x.N)(i, {
+            return (0, _.N)(i, {
                 limit: o,
                 filterPredicates: [
                     (function (e) {
@@ -305,13 +305,13 @@ function P(e) {
         applicationResults: T,
         hasApplicationResults: R,
         isEmptyState: !L && !R,
-        loading: _ && r
+        loading: x && r
     };
 }
 function S(e) {
     let { channel: n, query: t, fetches: l = !0, pageLimit: a = 1 / 0, entrypoint: c } = e;
     t.startsWith(''.concat(A.GI)) && (t = t.substring(1));
-    let d = c === _._b.VOICE,
+    let d = c === x._b.VOICE,
         [u, m] = i.useState(1),
         p = i.useRef(u);
     p.current = u;
@@ -354,7 +354,7 @@ function S(e) {
             },
             [n.guild_id, u, t, d]
         ),
-        x = i.useMemo(
+        _ = i.useMemo(
             () =>
                 Array.from({ length: h === C.M.FETCHED || h === C.M.ERROR ? u : u - 1 }, (e, i) => {
                     var l, a;
@@ -380,9 +380,9 @@ function S(e) {
             [h, n.guild_id, t, u, d]
         ),
         N = i.useCallback(() => {
-            let e = x.length;
-            h === C.M.FETCHED && e === p.current && e > 0 && e < v && e < a && x[e - 1].length > 0 && (p.current++, m((e) => e + 1));
-        }, [h, a, x, v]),
+            let e = _.length;
+            h === C.M.FETCHED && e === p.current && e > 0 && e < v && e < a && _[e - 1].length > 0 && (p.current++, m((e) => e + 1));
+        }, [h, a, _, v]),
         I = i.useCallback(
             (e) => {
                 let { query: n, page: t, guildId: i } = e;
@@ -416,7 +416,7 @@ function S(e) {
         }, [n.guild_id, t]),
         {
             fetchState: h,
-            applicationResults: x.flat(),
+            applicationResults: _.flat(),
             fetchNextPage: N
         }
     );

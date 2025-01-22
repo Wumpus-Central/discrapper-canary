@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(108427),
     u = n(844800),
     h = n(580497),
-    f = n(981631),
-    g = n(388032),
+    g = n(981631),
+    f = n(388032),
     m = n(841094);
 function p(e) {
     let { location: t } = e,
@@ -25,7 +25,7 @@ function p(e) {
         let e = (0, o.Z)(t);
         l.Z.verify(e), (0, d.e)('verify_hub_email');
     }, [t]);
-    let v = () => {
+    let N = () => {
         (0, h.Z)(I), x(!0);
     };
     return p
@@ -33,16 +33,16 @@ function p(e) {
               children: [
                   (0, i.jsx)(a.Dx, {
                       className: m.title,
-                      children: g.intl.string(g.t.csrAMD)
+                      children: f.intl.string(f.t.csrAMD)
                   }),
                   (0, i.jsx)(a.DK, {
                       className: m.subtitle,
-                      children: g.intl.string(g.t['m1+IBg'])
+                      children: f.intl.string(f.t['m1+IBg'])
                   }),
                   (0, i.jsx)(a.zx, {
                       className: m.spacedButton,
-                      onClick: () => (0, c.uL)(f.Z5c.CHANNEL(I)),
-                      children: g.intl.string(g.t.fIv16O)
+                      onClick: () => (0, c.uL)(g.Z5c.CHANNEL(I)),
+                      children: f.intl.string(f.t.fIv16O)
                   })
               ]
           })
@@ -55,11 +55,11 @@ function p(e) {
                     }),
                     (0, i.jsx)(a.Dx, {
                         className: m.title,
-                        children: g.intl.string(g.t.dAfGb2)
+                        children: f.intl.string(f.t.dAfGb2)
                     }),
                     (0, i.jsx)(a.zx, {
-                        onClick: v,
-                        children: g.intl.string(g.t.uJWIj4)
+                        onClick: N,
+                        children: f.intl.string(f.t.uJWIj4)
                     })
                 ]
             })
@@ -72,15 +72,15 @@ function p(e) {
                       }),
                       (0, i.jsx)(a.Dx, {
                           className: m.title,
-                          children: g.intl.string(g.t.PCgG39)
+                          children: f.intl.string(f.t.PCgG39)
                       }),
                       (0, i.jsx)(a.DK, {
                           className: m.subtitle,
-                          children: g.intl.string(g.t.tQpeAw)
+                          children: f.intl.string(f.t.tQpeAw)
                       }),
                       (0, i.jsx)(a.zx, {
-                          onClick: v,
-                          children: g.intl.string(g.t.uJWIj4)
+                          onClick: N,
+                          children: f.intl.string(f.t.uJWIj4)
                       })
                   ]
               })
@@ -92,11 +92,11 @@ function p(e) {
                       }),
                       (0, i.jsx)(a.Dx, {
                           className: m.title,
-                          children: g.intl.string(g.t['0c8+5u'])
+                          children: f.intl.string(f.t['0c8+5u'])
                       }),
                       (0, i.jsx)(a.DK, {
                           className: m.subtitle,
-                          children: g.intl.string(g.t.ULTCBA)
+                          children: f.intl.string(f.t.ULTCBA)
                       }),
                       (0, i.jsx)(a.zx, {
                           submitting: !0,
