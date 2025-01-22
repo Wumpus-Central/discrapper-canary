@@ -31,30 +31,36 @@ function f() {
         })
     });
 }
-function _() {
-    let e = (0, l.e7)([d.Z], () => d.Z.supports(h.AN.VIDEO)),
-        [t, n] = r.useState(!1);
-    return (0, i.jsxs)('div', {
-        children: [
-            (0, i.jsxs)(o.HeadingLevel, {
-                component: (0, i.jsx)(o.FormTitle, {
-                    tag: o.FormTitleTags.H1,
-                    className: x.marginBottom20,
-                    children: p.intl.string(p.t.LKzQSE)
+function _(e) {
+    let { refreshStyles: t = !1 } = e,
+        n = (0, l.e7)([d.Z], () => d.Z.supports(h.AN.VIDEO)),
+        [s, u] = r.useState(!1),
+        _ = (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsx)(c.F, {
+                    setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
+                    children: (0, i.jsx)(m.Z, {
+                        previewEnabled: s,
+                        onEnablePreview: () => u(!0),
+                        onCancelPreview: () => u(!1)
+                    })
                 }),
-                children: [
-                    (0, i.jsx)(c.F, {
-                        setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
-                        children: (0, i.jsx)(m.Z, {
-                            previewEnabled: t,
-                            onEnablePreview: () => n(!0),
-                            onCancelPreview: () => n(!1)
-                        })
-                    }),
-                    !e && (0, i.jsx)(f, {})
-                ]
-            }),
-            (0, i.jsx)(o.FormDivider, { className: a()(x.marginBottom40, x.marginTop40) })
-        ]
-    });
+                !n && (0, i.jsx)(f, {})
+            ]
+        });
+    return t
+        ? _
+        : (0, i.jsxs)(i.Fragment, {
+              children: [
+                  (0, i.jsx)(o.HeadingLevel, {
+                      component: (0, i.jsx)(o.FormTitle, {
+                          tag: o.FormTitleTags.H1,
+                          className: x.marginBottom20,
+                          children: p.intl.string(p.t.LKzQSE)
+                      }),
+                      children: _
+                  }),
+                  (0, i.jsx)(o.FormDivider, { className: a()(x.marginBottom40, x.marginTop40) })
+              ]
+          });
 }

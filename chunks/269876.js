@@ -94,41 +94,33 @@ function S() {
                 ]
             })),
         (0, i.jsxs)(u.FormItem, {
+            title: x.intl.string(x.t['sqUm+v']),
+            titleId: T,
             className: f.sensitivity,
             children: [
-                (0, i.jsx)(u.FormTitle, {
-                    id: T,
-                    tag: u.FormTitleTags.H5,
-                    className: C.marginBottom8,
-                    children: x.intl.string(x.t['sqUm+v'])
-                }),
-                (0, i.jsxs)('div', {
-                    children: [
-                        N &&
-                            (0, i.jsx)(g.FG, {
-                                children: (e) =>
-                                    (0, i.jsxs)('div', {
-                                        className: a()(E.horizontal, C.marginBottom4),
-                                        children: [
-                                            (0, i.jsx)(u.FormTitle, {
-                                                tag: u.FormTitleTags.H3,
-                                                className: C.marginReset,
-                                                children: (0, i.jsx)('label', {
-                                                    htmlFor: e,
-                                                    children: x.intl.string(x.t.I1Zuq6)
-                                                })
-                                            }),
-                                            (0, i.jsx)(u.Switch, {
-                                                id: e,
-                                                checked: b,
-                                                onChange: (e) => j(S, e)
-                                            })
-                                        ]
+                N &&
+                    (0, i.jsx)(g.FG, {
+                        children: (e) =>
+                            (0, i.jsxs)('div', {
+                                className: a()(E.horizontal, C.marginBottom4),
+                                children: [
+                                    (0, i.jsx)(u.FormTitle, {
+                                        tag: u.FormTitleTags.H3,
+                                        className: C.marginReset,
+                                        children: (0, i.jsx)('label', {
+                                            htmlFor: e,
+                                            children: x.intl.string(x.t.I1Zuq6)
+                                        })
+                                    }),
+                                    (0, i.jsx)(u.Switch, {
+                                        id: e,
+                                        checked: b,
+                                        onChange: (e) => j(S, e)
                                     })
-                            }),
-                        O
-                    ]
-                }),
+                                ]
+                            })
+                    }),
+                O,
                 !v &&
                     (0, i.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,

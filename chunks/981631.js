@@ -4679,6 +4679,7 @@ let oo = Object.freeze({
     (ah.VOICE_CODEC_DETECTED = 'voice_codec_detected'),
     (ah.VOICE_SETTINGS_CHANGED = 'voice_settings_changed'),
     (ah.SYSTEM_CAMERA_SETTINGS_OPENED = 'system_camera_settings_opened'),
+    (ah.VOICE_AND_VIDEO_SETTINGS_UPDATED = 'voice_and_video_settings_updated'),
     (ah.CLIP_SAVE_KEYBIND_PRESSED = 'clip_save_keybind_pressed'),
     (ah.CLIP_SAVED = 'clip_saved'),
     (ah.CLIP_SAVE_FAILURE = 'clip_save_failure'),

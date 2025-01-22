@@ -13,42 +13,30 @@ var r = n(120356),
     c = n(860069);
 let d = (0, l.hQ)();
 function u(e) {
-    let { volume: t, title: n, description: r, label: l, onVolumeChange: u } = e;
+    let { volume: t, title: n, description: r, label: l, onVolumeChange: u, refreshStyles: m = !1 } = e;
     return (0, i.jsxs)('div', {
-        className: s()(c.soundboardRow),
+        className: s()(c.soundboardRow, { [c.refresh]: m }),
         children: [
-            (0, i.jsxs)('div', {
-                className: s()(c.soundboardColumn, c.leftColumn),
-                children: [
-                    (0, i.jsx)(a.FormTitle, {
-                        tag: a.FormTitleTags.H5,
-                        className: c.soundboardTitle,
-                        children: n
-                    }),
-                    (0, i.jsx)(a.Text, {
-                        color: 'header-secondary',
-                        variant: 'text-sm/normal',
-                        children: r
-                    })
-                ]
+            (0, i.jsx)('div', {
+                className: c.soundboardColumn,
+                children: (0, i.jsx)(a.FormItem, {
+                    title: n,
+                    children: (0, i.jsx)(a.FormText, { children: r })
+                })
             }),
-            (0, i.jsxs)('div', {
-                className: s()(c.soundboardColumn, c.__invalid_rightColumn),
-                children: [
-                    (0, i.jsx)(a.FormTitle, {
-                        id: d,
-                        tag: a.FormTitleTags.H5,
-                        className: c.soundboardSubtitle,
-                        children: l
-                    }),
-                    (0, i.jsx)(a.Slider, {
+            (0, i.jsx)('div', {
+                className: c.soundboardColumn,
+                children: (0, i.jsx)(a.FormItem, {
+                    title: l,
+                    titleId: d,
+                    children: (0, i.jsx)(a.Slider, {
                         initialValue: (0, o.P)(t),
                         maxValue: 100,
                         onValueRender: (e) => ''.concat(e.toFixed(0), '%'),
                         onValueChange: u,
                         'aria-labelledby': d
                     })
-                ]
+                })
             })
         ]
     });

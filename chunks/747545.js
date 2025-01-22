@@ -1,146 +1,148 @@
-t.d(n, {
+n.d(t, {
     S: function () {
-        return T;
+        return A;
     },
     Z: function () {
-        return E;
+        return j;
     }
 }),
-    t(757143),
-    t(411104),
-    t(47120);
-var l = t(200651),
-    s = t(192379),
-    o = t(120356),
-    a = t.n(o),
-    i = t(209739),
-    r = t.n(i),
-    c = t(442837),
-    d = t(846519),
-    u = t(481060),
-    g = t(846027),
-    m = t(579806),
-    p = t(906732),
-    x = t(695346),
-    k = t(716161),
-    O = t(938117),
-    j = t(131951),
-    f = t(626135),
-    I = t(358085),
-    N = t(981631),
-    h = t(388032),
-    v = t(695140);
-let C = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
-function T() {
-    let [e, n] = s.useState(!1),
-        t = (0, c.e7)([j.Z], () => j.Z.isMediaFilterSettingLoading());
-    return (s.useEffect(() => {
+    n(757143),
+    n(411104),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    s = n(120356),
+    a = n.n(s),
+    l = n(209739),
+    o = n.n(l),
+    c = n(442837),
+    d = n(846519),
+    u = n(481060),
+    m = n(846027),
+    g = n(579806),
+    h = n(906732),
+    p = n(921801),
+    x = n(695346),
+    f = n(716161),
+    _ = n(938117),
+    E = n(131951),
+    C = n(626135),
+    T = n(358085),
+    S = n(981631),
+    b = n(726985),
+    I = n(388032),
+    N = n(695140);
+let v = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
+function A() {
+    let [e, t] = r.useState(!1),
+        n = (0, c.e7)([E.Z], () => E.Z.isMediaFilterSettingLoading());
+    return (r.useEffect(() => {
         let e = new d.V7();
         return (
-            t
+            n
                 ? e.start(150, () => {
-                      n(!0);
+                      t(!0);
                   })
-                : (e.stop(), n(!1)),
+                : (e.stop(), t(!1)),
             () => e.stop()
         );
-    }, [t]),
+    }, [n]),
     e)
-        ? (0, l.jsx)('div', {
-              className: v.filterLoadingIndicator,
-              children: (0, l.jsx)(u.Spinner, {})
+        ? (0, i.jsx)('div', {
+              className: N.filterLoadingIndicator,
+              children: (0, i.jsx)(u.Spinner, {})
           })
         : null;
 }
-function E(e) {
-    let { hideDeviceSelector: n = !1, hideDeviceHeader: t = !1, hideCameraSettingsLink: o = !1, onLearnMore: i, selectedBackgroundOption: d, onSelectBackgroundOption: T, renderCamera: E, hidePreviewToggle: _ = !1, showSmallBackgroundOptions: b = !1, onCancelPreview: S } = e,
-        { analyticsLocations: B } = (0, p.ZP)(),
-        D = (0, c.e7)([j.Z], () => j.Z.getVideoDeviceId()),
-        U = (0, c.Wu)([j.Z], () => Object.values(j.Z.getVideoDevices())),
-        y = x.qF.useSetting(),
-        M = U.map((e) => {
-            let { id: n, name: t } = e;
+function j(e) {
+    let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: s = !1, onLearnMore: l, selectedBackgroundOption: d, onSelectBackgroundOption: A, renderCamera: j, hidePreviewToggle: O = !1, showSmallBackgroundOptions: R = !1, onCancelPreview: P } = e,
+        { analyticsLocations: D } = (0, h.ZP)(),
+        y = (0, c.e7)([E.Z], () => E.Z.getVideoDeviceId()),
+        B = (0, c.Wu)([E.Z], () => Object.values(E.Z.getVideoDevices())),
+        Z = x.qF.useSetting(),
+        L = B.map((e) => {
+            let { id: t, name: n } = e;
             return {
-                value: n,
-                label: t
+                value: t,
+                label: n
             };
         });
     return (
-        s.useEffect(() => {
-            (0, k.XV)();
+        r.useEffect(() => {
+            (0, f.XV)();
         }, []),
-        (0, l.jsxs)(l.Fragment, {
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                E(D),
-                j.Z.isEnabled()
+                j(y),
+                E.Z.isEnabled()
                     ? null
-                    : (0, l.jsx)(u.Text, {
-                          className: v.permissionWarning,
+                    : (0, i.jsx)(u.Text, {
+                          className: N.permissionWarning,
                           color: 'interactive-normal',
                           variant: 'text-sm/normal',
-                          children: h.intl.format(h.t.stagfH, { onEnableClick: () => g.Z.enable(!0) })
+                          children: I.intl.format(I.t.stagfH, { onEnableClick: () => m.Z.enable(!0) })
                       }),
-                _
+                O
                     ? null
-                    : (0, l.jsx)(u.FormSwitch, {
-                          className: v.previewToggle,
-                          note: h.intl.string(h.t.WNbX4O),
+                    : (0, i.jsx)(u.FormSwitch, {
+                          className: N.previewToggle,
+                          note: I.intl.string(I.t.WNbX4O),
                           onChange: (e) => {
-                              x.qF.updateSetting(e), f.default.track(N.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                              x.qF.updateSetting(e), C.default.track(S.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
                           },
-                          value: y,
+                          value: Z,
                           hideBorder: !0,
-                          children: (0, l.jsx)('div', {
-                              className: v.cameraPreviewTitle,
-                              children: h.intl.string(h.t['3Ppr1t'])
+                          children: (0, i.jsx)('div', {
+                              className: N.cameraPreviewTitle,
+                              children: I.intl.string(I.t['3Ppr1t'])
                           })
                       }),
-                n
-                    ? null
-                    : (0, l.jsxs)(l.Fragment, {
-                          children: [
-                              t
-                                  ? null
-                                  : (0, l.jsx)(u.Heading, {
-                                        className: v.spacingTop24,
-                                        variant: 'eyebrow',
-                                        color: 'header-secondary',
-                                        children: h.intl.string(h.t.FsQ3OT)
-                                    }),
-                              (0, l.jsx)(u.SingleSelect, {
-                                  placeholder: h.intl.string(h.t['t9eQ/v']),
-                                  className: a()(v.selector, { [v.selectorNoHeader]: t }),
-                                  options: M,
-                                  value: D,
-                                  onChange: (e) => g.Z.setVideoDevice(e)
-                              }),
-                              !o &&
-                                  !!(0, I.isWindows)() &&
-                                  !!I.isPlatformEmbedded &&
-                                  r().satisfies(m.Z.os.release, '>=10.0.22000') &&
-                                  (0, l.jsx)(u.FormText, {
-                                      className: v.cameraDeeplink,
-                                      children: h.intl.format(h.t.aJYgRk, {
-                                          onCameraSettingsClick: () => {
-                                              null == S || S(),
-                                                  window.open(
-                                                      (function (e) {
-                                                          if ((0, I.getPlatform)() === I.PlatformTypes.WINDOWS) return 'ms-settings:camera' + (null != e ? '?cameraId='.concat(encodeURIComponent(e.replace(C, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '');
-                                                          return '';
-                                                      })(D)
-                                                  ),
-                                                  f.default.track(N.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: B });
-                                          }
-                                      })
-                                  })
-                          ]
-                      }),
-                (0, l.jsx)(O.Z, {
-                    onLearnMore: i,
-                    selectedBackgroundOption: d,
-                    onSelectBackgroundOption: T,
-                    currentDeviceId: D,
-                    smallerBackgroundOptions: b
+                !t &&
+                    (0, i.jsx)(p.F, {
+                        setting: b.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
+                        children: (0, i.jsxs)(u.FormItem, {
+                            title: n ? null : I.intl.string(I.t.FsQ3OT),
+                            children: [
+                                (0, i.jsx)(u.SingleSelect, {
+                                    placeholder: I.intl.string(I.t['t9eQ/v']),
+                                    className: a()(N.selector, { [N.selectorNoHeader]: n }),
+                                    options: L,
+                                    value: y,
+                                    onChange: (e) => m.Z.setVideoDevice(e),
+                                    'aria-label': I.intl.string(I.t['t9eQ/v'])
+                                }),
+                                !s &&
+                                    !!(0, T.isWindows)() &&
+                                    !!T.isPlatformEmbedded &&
+                                    o().satisfies(g.Z.os.release, '>=10.0.22000') &&
+                                    (0, i.jsx)(u.FormText, {
+                                        className: N.cameraDeeplink,
+                                        children: I.intl.format(I.t.aJYgRk, {
+                                            onCameraSettingsClick: () => {
+                                                null == P || P(),
+                                                    window.open(
+                                                        (function (e) {
+                                                            if ((0, T.getPlatform)() === T.PlatformTypes.WINDOWS) return 'ms-settings:camera' + (null != e ? '?cameraId='.concat(encodeURIComponent(e.replace(v, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '');
+                                                            return '';
+                                                        })(y)
+                                                    ),
+                                                    C.default.track(S.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: D });
+                                            }
+                                        })
+                                    })
+                            ]
+                        })
+                    }),
+                (0, i.jsx)(p.F, {
+                    setting: b.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
+                    children: (0, i.jsx)(_.Z, {
+                        className: N.spacingTop24,
+                        onLearnMore: l,
+                        selectedBackgroundOption: d,
+                        onSelectBackgroundOption: A,
+                        currentDeviceId: y,
+                        smallerBackgroundOptions: R
+                    })
                 })
             ]
         })

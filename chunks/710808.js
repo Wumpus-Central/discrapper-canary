@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return v;
     }
 }),
     n(47120);
@@ -19,55 +19,57 @@ var i = n(200651),
     p = n(131951),
     x = n(226961),
     f = n(12647),
-    _ = n(726985),
-    E = n(981631),
-    C = n(65154),
-    T = n(388032),
-    S = n(232186);
-async function b() {
+    _ = n(569550),
+    E = n(726985),
+    C = n(981631),
+    T = n(65154),
+    S = n(388032),
+    b = n(232186);
+async function I() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
 }
-function I(e) {
+function N(e) {
     (0, a.openModal)((t) =>
         (0, i.jsx)(a.ConfirmModal, {
-            header: T.intl.string(T.t['7UXEFx']),
-            confirmText: T.intl.string(T.t.BddRzc),
-            cancelText: T.intl.string(T.t['ETE/oK']),
+            header: S.intl.string(S.t['7UXEFx']),
+            confirmText: S.intl.string(S.t.BddRzc),
+            cancelText: S.intl.string(S.t['ETE/oK']),
             onCancel: t.onClose,
             onConfirm: () => l.Z.setDebugLogging(e),
             ...t,
             children: (0, i.jsx)(a.Text, {
                 variant: 'text-md/normal',
-                children: T.intl.string(T.t.IYPrRk)
+                children: S.intl.string(S.t.IYPrRk)
             })
         })
     );
 }
-function N() {
-    let [e, t] = r.useState(!1),
-        { debugLogging: n, aecDumpEnabled: d } = (0, s.cj)([p.Z], () => ({
+function v(e) {
+    let { refreshStyles: t = !1 } = e,
+        [n, d] = r.useState(!1),
+        { debugLogging: v, aecDumpEnabled: A } = (0, s.cj)([p.Z], () => ({
             aecDumpSupported: p.Z.isAecDumpSupported(),
             debugLogging: p.Z.getDebugLogging(),
             aecDumpEnabled: p.Z.getAecDump(),
-            supportsConnectionReplay: p.Z.supports(C.AN.CONNECTION_REPLAY)
+            supportsConnectionReplay: p.Z.supports(T.AN.CONNECTION_REPLAY)
         })),
-        N = (0, s.e7)([h.default], () => h.default.isStreamInfoOverlayEnabled),
-        v = (0, s.e7)([x.ZP], () => x.ZP.shouldRecordNextConnection());
-    async function A() {
-        t(!0);
+        j = (0, s.e7)([h.default], () => h.default.isStreamInfoOverlayEnabled),
+        O = (0, s.e7)([x.ZP], () => x.ZP.shouldRecordNextConnection());
+    async function R() {
+        d(!0);
         try {
             await p.Z.getMediaEngine().writeAudioDebugState(),
                 await f.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
-                await (0, m.E)(E.GU0.RTC),
+                await (0, m.E)(C.GU0.RTC),
                 !(function () {
-                    let e = T.intl.string(T.t['fKBB8/']),
-                        t = T.intl.string(T.t.BvyxEx);
+                    let e = S.intl.string(S.t['fKBB8/']),
+                        t = S.intl.string(S.t.BvyxEx);
                     (0, a.openModal)((n) =>
                         (0, i.jsx)(a.ConfirmModal, {
                             header: e,
                             confirmButtonColor: a.Button.Colors.BRAND,
-                            confirmText: T.intl.string(T.t.BddRzc),
+                            confirmText: S.intl.string(S.t.BddRzc),
                             ...n,
                             children: (0, i.jsx)(a.Text, {
                                 variant: 'text-md/normal',
@@ -78,13 +80,13 @@ function N() {
                 })();
         } catch (e) {
             !(function (e) {
-                let t = T.intl.string(T.t.QZg0Jy),
-                    n = null != e ? e : T.intl.string(T.t.VzHcSk);
+                let t = S.intl.string(S.t.QZg0Jy),
+                    n = null != e ? e : S.intl.string(S.t.VzHcSk);
                 (0, a.openModal)((e) =>
                     (0, i.jsx)(a.ConfirmModal, {
                         header: t,
                         confirmButtonColor: a.Button.Colors.BRAND,
-                        confirmText: T.intl.string(T.t.BddRzc),
+                        confirmText: S.intl.string(S.t.BddRzc),
                         ...e,
                         children: (0, i.jsx)(a.Text, {
                             variant: 'text-md/normal',
@@ -95,92 +97,103 @@ function N() {
             })(e.displayMessage);
         }
     }
-    return (0, i.jsxs)(a.FormSection, {
-        className: S.marginBottom40,
-        title: T.intl.string(T.t.OFpL3d),
+    let P = (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(g.F, {
-                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, i.jsx)(a.FormSwitch, {
-                    value: N,
-                    onChange: (e) => (0, o.y)({ isStreamInfoOverlayEnabled: e }),
-                    note: T.intl.string(T.t.kBXuW1),
-                    children: T.intl.string(T.t['0CEP6e'])
+                    value: j,
+                    onChange: (e) => {
+                        (0, _.Z)('stream_info_overlay_enabled', e, j), (0, o.y)({ isStreamInfoOverlayEnabled: e });
+                    },
+                    note: S.intl.string(S.t.kBXuW1),
+                    hideBorder: t,
+                    children: S.intl.string(S.t['0CEP6e'])
                 })
             }),
             (0, i.jsx)(g.F, {
-                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
                 children: (0, i.jsx)(a.FormSwitch, {
-                    value: d,
+                    value: A,
                     onChange: (e) => l.Z.setAecDump(e),
-                    note: T.intl.string(T.t['xl9+Iy']),
-                    children: T.intl.string(T.t['r6K+TE'])
+                    note: S.intl.string(S.t['xl9+Iy']),
+                    hideBorder: t,
+                    children: S.intl.string(S.t['r6K+TE'])
                 })
             }),
             (0, i.jsxs)(g.F, {
-                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
                     (0, i.jsx)(a.FormSwitch, {
                         hideBorder: !0,
-                        value: v,
+                        value: O,
                         onChange: (e) => c.TC(e),
-                        note: T.intl.string(T.t.Lm72RU),
-                        children: T.intl.string(T.t.U4FgFB)
+                        note: S.intl.string(S.t.Lm72RU),
+                        children: S.intl.string(S.t.U4FgFB)
                     }),
                     (0, i.jsx)(a.FormItem, {
                         children: (0, i.jsx)(u.Z, {
-                            className: S.marginBottom20,
+                            className: b.marginBottom20,
                             children: (0, i.jsx)(u.Z.Child, {
                                 grow: 0,
                                 shrink: 0,
                                 children: (0, i.jsx)(a.Button, {
                                     size: a.Button.Sizes.SMALL,
                                     onClick: () => c.z4(),
-                                    children: T.intl.string(T.t.nJnOHB)
+                                    children: S.intl.string(S.t.nJnOHB)
                                 })
                             })
                         })
                     }),
-                    (0, i.jsx)(a.FormDivider, { className: S.marginBottom20 })
+                    t ? null : (0, i.jsx)(a.FormDivider, { className: b.marginBottom20 })
                 ]
             }),
-            (0, i.jsxs)(g.F, {
-                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
-                children: [
-                    (0, i.jsx)(a.FormSwitch, {
-                        hideBorder: !0,
-                        value: n,
-                        onChange: I,
-                        note: T.intl.string(T.t['/7ak9f']),
-                        children: T.intl.string(T.t['726JHB'])
-                    }),
-                    (0, i.jsx)(a.FormItem, {
-                        children: (0, i.jsxs)(u.Z, {
-                            children: [
-                                (0, i.jsx)(u.Z.Child, {
-                                    grow: 0,
-                                    shrink: 0,
-                                    children: (0, i.jsx)(a.Button, {
-                                        disabled: e,
-                                        size: a.Button.Sizes.SMALL,
-                                        onClick: A,
-                                        children: T.intl.string(T.t['3UB9aW'])
+            (0, i.jsx)(g.F, {
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
+                children: (0, i.jsxs)('div', {
+                    children: [
+                        (0, i.jsx)(a.FormSwitch, {
+                            hideBorder: !0,
+                            value: v,
+                            onChange: N,
+                            note: S.intl.string(S.t['/7ak9f']),
+                            children: S.intl.string(S.t['726JHB'])
+                        }),
+                        (0, i.jsx)(a.FormItem, {
+                            children: (0, i.jsxs)(u.Z, {
+                                children: [
+                                    (0, i.jsx)(u.Z.Child, {
+                                        grow: 0,
+                                        shrink: 0,
+                                        children: (0, i.jsx)(a.Button, {
+                                            disabled: n,
+                                            size: a.Button.Sizes.SMALL,
+                                            onClick: R,
+                                            children: S.intl.string(S.t['3UB9aW'])
+                                        })
+                                    }),
+                                    (0, i.jsx)(u.Z.Child, {
+                                        grow: 0,
+                                        shrink: 0,
+                                        children: (0, i.jsx)(a.Button, {
+                                            size: a.Button.Sizes.SMALL,
+                                            onClick: I,
+                                            children: S.intl.string(S.t.nuPtYm)
+                                        })
                                     })
-                                }),
-                                (0, i.jsx)(u.Z.Child, {
-                                    grow: 0,
-                                    shrink: 0,
-                                    children: (0, i.jsx)(a.Button, {
-                                        size: a.Button.Sizes.SMALL,
-                                        onClick: b,
-                                        children: T.intl.string(T.t.nuPtYm)
-                                    })
-                                })
-                            ]
+                                ]
+                            })
                         })
-                    })
-                ]
+                    ]
+                })
             })
         ]
     });
+    return t
+        ? P
+        : (0, i.jsx)(a.FormSection, {
+              className: b.marginBottom40,
+              title: S.intl.string(S.t.OFpL3d),
+              children: P
+          });
 }

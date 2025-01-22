@@ -14,33 +14,34 @@ var i = r(200651),
     f = r(534542),
     _ = r(489222);
 function h(e) {
-    let { value: n, disabled: r = !1, hideBorder: s = !1, tooltipNote: h, onChange: p, className: m, style: g, note: E, children: v, disabledText: I } = e,
-        T = a.useRef(null),
+    let { value: n, disabled: r = !1, hideBorder: s = !1, tooltipNote: h, onChange: p, className: m, style: g, note: E, children: v, disabledText: I, containerRef: T } = e,
         b = a.useRef(null),
-        y = a.useId(),
-        S = (0, i.jsx)(u.r, {
-            id: y,
+        y = a.useRef(null),
+        S = a.useId(),
+        A = (0, i.jsx)(u.r, {
+            id: S,
             checked: n,
             onChange: p,
             disabled: r,
             focusProps: { enabled: !1 },
-            innerRef: T
+            innerRef: b
         });
     return (0, i.jsxs)('div', {
+        ref: T,
         style: g,
         className: o()(_.container, m, { [_.disabled]: r }),
         children: [
             (0, i.jsx)(l.t, {
                 within: !0,
                 offset: -4,
-                focusTarget: T,
-                ringTarget: b,
+                focusTarget: b,
+                ringTarget: y,
                 children: (0, i.jsxs)('div', {
                     className: _.labelRow,
-                    ref: b,
+                    ref: y,
                     children: [
                         (0, i.jsx)('label', {
-                            htmlFor: y,
+                            htmlFor: S,
                             className: _.title,
                             children: v
                         }),
@@ -50,9 +51,9 @@ function h(e) {
                                 null != h
                                     ? (0, i.jsx)(c.DY, {
                                           text: h,
-                                          children: S
+                                          children: A
                                       })
-                                    : S
+                                    : A
                         })
                     ]
                 })
