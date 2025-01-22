@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     Tr: function () {
-        return P;
+        return N;
     }
 }),
     n(47120);
@@ -34,13 +34,25 @@ function E(e, t, n) {
     );
 }
 let y = new o.Z('PaymentRequest'),
-    f = Object.values({
+    P = Object.values({
         applePay: 'applePay',
         googlePay: 'googlePay',
         link: 'link',
         browserCard: 'browserCard'
     });
-class N extends r.Component {
+class f extends r.Component {
+    componentDidMount() {
+        if (!(0, d.isDesktop)()) {
+            if (!this.isBrowserCompatible()) {
+                this.onPaymentRequestFailure();
+                return;
+            }
+            (this.disableWallets = P.filter((e) => e !== this.paymentRequestWallet).sort()),
+                (0, p.d2)().then((e) => {
+                    this.initPaymentRequest(e);
+                });
+        }
+    }
     validatePaymentRequest() {
         let { paymentRequest: e, canMakePaymentResult: t } = this.state;
         if (null == e) {
@@ -77,12 +89,6 @@ class N extends r.Component {
     }
     onValidPaymentRequest() {
         void 0 !== this.props.onValidPaymentRequest && this.props.onValidPaymentRequest();
-    }
-    componentDidMount() {
-        (this.disableWallets = f.filter((e) => e !== this.paymentRequestWallet).sort()),
-            (0, p.d2)().then((e) => {
-                this.initPaymentRequest(e);
-            });
     }
     renderLoadingState() {
         var e, t;
@@ -226,7 +232,7 @@ class N extends r.Component {
             });
     }
 }
-class P extends N {
+class N extends f {
     isBrowserCompatible() {
         return (0, u.vu)() >= 61;
     }
@@ -297,7 +303,7 @@ class P extends N {
         super(...e), E(this, 'state', { ...this.initialState }), E(this, 'paymentRequestWallet', 'googlePay');
     }
 }
-class _ extends N {
+class _ extends f {
     isBrowserCompatible() {
         return (0, u.G6)();
     }

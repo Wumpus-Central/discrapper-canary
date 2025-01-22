@@ -1,4 +1,4 @@
-n(47120), n(653041);
+n(47120), n(653041), n(724458);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
@@ -9,72 +9,102 @@ var a = n(200651),
     u = n(269128),
     d = n(987032),
     p = n(502109),
-    m = n(219929),
-    h = n(985754),
-    A = n(351402),
-    E = n(981631),
-    y = n(388032),
-    f = n(742415),
-    N = n(652849);
-let P = {
-        [E.HeQ.CARD]: m.ZP.Types.UNKNOWN,
-        [E.HeQ.PAYPAL]: m.ZP.Types.PAYPAL,
-        [E.HeQ.SOFORT]: m.ZP.Types.SOFORT,
-        [E.HeQ.GIROPAY]: m.ZP.Types.GIROPAY,
-        [E.HeQ.PRZELEWY24]: m.ZP.Types.PRZELEWY24,
-        [E.HeQ.PAYSAFE_CARD]: m.ZP.Types.PAYSAFECARD,
-        [E.HeQ.GCASH]: m.ZP.Types.GCASH,
-        [E.HeQ.GRABPAY_MY]: m.ZP.Types.GRABPAY,
-        [E.HeQ.MOMO_WALLET]: m.ZP.Types.MOMO_WALLET,
-        [E.HeQ.VENMO]: m.ZP.Types.VENMO,
-        [E.HeQ.KAKAOPAY]: m.ZP.Types.KAKAOPAY,
-        [E.HeQ.GOPAY_WALLET]: m.ZP.Types.GOPAY_WALLET,
-        [E.HeQ.BANCONTACT]: m.ZP.Types.BANCONTACT,
-        [E.HeQ.EPS]: m.ZP.Types.EPS,
-        [E.HeQ.IDEAL]: m.ZP.Types.IDEAL,
-        [E.HeQ.CASH_APP]: m.ZP.Types.CASH_APP
+    m = n(710845),
+    h = n(219929),
+    A = n(985754),
+    E = n(351402),
+    y = n(358085),
+    P = n(981631),
+    f = n(388032),
+    N = n(742415),
+    _ = n(652849);
+let b = new m.Z('ChoosePaymentSourceType'),
+    g = {
+        [P.HeQ.CARD]: h.ZP.Types.UNKNOWN,
+        [P.HeQ.PAYPAL]: h.ZP.Types.PAYPAL,
+        [P.HeQ.SOFORT]: h.ZP.Types.SOFORT,
+        [P.HeQ.GIROPAY]: h.ZP.Types.GIROPAY,
+        [P.HeQ.PRZELEWY24]: h.ZP.Types.PRZELEWY24,
+        [P.HeQ.PAYSAFE_CARD]: h.ZP.Types.PAYSAFECARD,
+        [P.HeQ.GCASH]: h.ZP.Types.GCASH,
+        [P.HeQ.GRABPAY_MY]: h.ZP.Types.GRABPAY,
+        [P.HeQ.MOMO_WALLET]: h.ZP.Types.MOMO_WALLET,
+        [P.HeQ.VENMO]: h.ZP.Types.VENMO,
+        [P.HeQ.KAKAOPAY]: h.ZP.Types.KAKAOPAY,
+        [P.HeQ.GOPAY_WALLET]: h.ZP.Types.GOPAY_WALLET,
+        [P.HeQ.BANCONTACT]: h.ZP.Types.BANCONTACT,
+        [P.HeQ.EPS]: h.ZP.Types.EPS,
+        [P.HeQ.IDEAL]: h.ZP.Types.IDEAL,
+        [P.HeQ.CASH_APP]: h.ZP.Types.CASH_APP
     },
-    _ = [E.HeQ.CARD, E.HeQ.PAYPAL],
-    b = new Set(['DE', 'BG', 'CZ', 'DK', 'HU', 'RO', 'SE', 'CH', 'SI', 'IE', 'LV', 'MT', 'FR', 'SK', 'FI', 'GR', 'PT', 'LU', 'LT', 'CY', 'NO', 'NL', 'ES', 'BE', 'AT', 'IT']),
-    g = new Map([
-        [E.HeQ.SOFORT, new Set([])],
-        [E.HeQ.PRZELEWY24, new Set(['ALL', 'PL'])],
-        [E.HeQ.GIROPAY, new Set(['ALL', 'DE'])],
-        [E.HeQ.PAYSAFE_CARD, new Set(['ALL', ...b])],
-        [E.HeQ.GCASH, new Set(['ALL', 'PH'])],
-        [E.HeQ.GRABPAY_MY, new Set(['ALL', 'MY'])],
-        [E.HeQ.MOMO_WALLET, new Set(['ALL', 'VN'])],
-        [E.HeQ.VENMO, new Set(['ALL', 'US'])],
-        [E.HeQ.KAKAOPAY, new Set(['ALL', 'KR'])],
-        [E.HeQ.GOPAY_WALLET, new Set(['ALL', 'ID'])],
-        [E.HeQ.BANCONTACT, new Set(['ALL', 'BE'])],
-        [E.HeQ.EPS, new Set(['ALL', 'AT'])],
-        [E.HeQ.IDEAL, new Set(['ALL', 'NL'])],
-        [E.HeQ.CASH_APP, new Set(['ALL', 'US'])]
+    C = [P.HeQ.CARD, P.HeQ.PAYPAL],
+    T = new Set(['DE', 'BG', 'CZ', 'DK', 'HU', 'RO', 'SE', 'CH', 'SI', 'IE', 'LV', 'MT', 'FR', 'SK', 'FI', 'GR', 'PT', 'LU', 'LT', 'CY', 'NO', 'NL', 'ES', 'BE', 'AT', 'IT']),
+    I = new Map([
+        [P.HeQ.SOFORT, new Set([])],
+        [P.HeQ.PRZELEWY24, new Set(['ALL', 'PL'])],
+        [P.HeQ.GIROPAY, new Set(['ALL', 'DE'])],
+        [P.HeQ.PAYSAFE_CARD, new Set(['ALL', ...T])],
+        [P.HeQ.GCASH, new Set(['ALL', 'PH'])],
+        [P.HeQ.GRABPAY_MY, new Set(['ALL', 'MY'])],
+        [P.HeQ.MOMO_WALLET, new Set(['ALL', 'VN'])],
+        [P.HeQ.VENMO, new Set(['ALL', 'US'])],
+        [P.HeQ.KAKAOPAY, new Set(['ALL', 'KR'])],
+        [P.HeQ.GOPAY_WALLET, new Set(['ALL', 'ID'])],
+        [P.HeQ.BANCONTACT, new Set(['ALL', 'BE'])],
+        [P.HeQ.EPS, new Set(['ALL', 'AT'])],
+        [P.HeQ.IDEAL, new Set(['ALL', 'NL'])],
+        [P.HeQ.CASH_APP, new Set(['ALL', 'US'])]
     ]),
-    C = new Map([[E.HeQ.PAYSAFE_CARD, new Set(['DE'])]]);
-function T(e) {
+    S = new Map([[P.HeQ.PAYSAFE_CARD, new Set(['DE'])]]);
+function v(e) {
     let { enabledPaymentTypes: t, forceCountryCode: n, validCountryCodes: a } = d.ZP.getCurrentConfig({ location: '40c266_1' }, { autoTrackExposure: !1 }),
         r = null != e ? e : 'ALL';
     a.length > 0 && null != n && null != e && (r = a.includes(e) ? e : n);
     let l = new Set(),
         s = [];
     return (
-        g.forEach((e, n) => {
+        I.forEach((e, n) => {
             t.includes(n) && (e.has(r) ? l.add(n) : s.push(n));
         }),
-        C.forEach((e, t) => {
+        S.forEach((e, t) => {
             e.has(r) && l.add(t);
         }),
         {
-            countryPaymentMethods: [..._, ...Array.from(l)],
+            countryPaymentMethods: [...C, ...Array.from(l)],
             remainingPaymentMethods: s
         }
     );
 }
-class I extends r.PureComponent {
+class R extends r.PureComponent {
     componentDidMount() {
-        (0, c.GE)();
+        var e;
+        (0, c.GE)(),
+            (null !== (e = this.props.paymentRequestWallets) && void 0 !== e ? e : []).length > 0 &&
+                setTimeout(() => {
+                    this.considerPaymentRequestWalletsLoaded();
+                }, 1000);
+    }
+    considerPaymentRequestWalletsLoaded() {
+        var e;
+        let t = null !== (e = this.props.paymentRequestWallets) && void 0 !== e ? e : [];
+        if (0 === t.length || !this.arePaymentRequestWalletsLoading()) return;
+        b.warn('Payment request wallets failed to load in time: '.concat(t.join(', '), '. Max time allowed: ').concat(1000, ' ms'));
+        let n = t.reduce(
+            (e, t) => ({
+                ...e,
+                [''.concat(t, 'Loaded')]: !0
+            }),
+            {}
+        );
+        this.setState(n);
+    }
+    arePaymentRequestWalletsLoading() {
+        var e;
+        if ((0, y.isDesktop)()) return !1;
+        let t = null !== (e = this.props.paymentRequestWallets) && void 0 !== e ? e : [];
+        if (0 === t.length) return !1;
+        for (let e of t) if (!this.state[''.concat(e, 'Loaded')]) return !0;
+        return !1;
     }
     toggleAllPayments() {
         let { showAllPaymentMethods: e } = this.state;
@@ -83,26 +113,26 @@ class I extends r.PureComponent {
     createPaymentButtons(e) {
         return e.map((e) => {
             var t;
-            let n = P[e],
-                r = h.Wo[e](),
+            let n = g[e],
+                r = A.Wo[e](),
                 l = null === (t = this.props.localizedPromo) || void 0 === t ? void 0 : t.paymentSourceTypes.includes(e);
             return (0, a.jsx)(
                 o.Button,
                 {
                     onClick: () => this.props.onChooseType(e),
-                    className: f.button,
+                    className: N.button,
                     children: (0, a.jsxs)('div', {
-                        className: s()(N.flex, N.alignCenter),
+                        className: s()(_.flex, _.alignCenter),
                         children: [
-                            (0, a.jsx)(m.ZP, {
-                                className: f.buttonIcon,
+                            (0, a.jsx)(h.ZP, {
+                                className: N.buttonIcon,
                                 type: n
                             }),
                             r,
                             l &&
                                 (0, a.jsx)(o.TextBadge, {
-                                    text: y.intl.string(y.t.y2b7CA),
-                                    className: f.newPaymentBadge,
+                                    text: f.intl.string(f.t.y2b7CA),
+                                    className: N.newPaymentBadge,
                                     disableColor: !0
                                 })
                         ]
@@ -118,68 +148,104 @@ class I extends r.PureComponent {
             { onChooseType: n, className: r, onStripePaymentMethodReceived: l, ipCountryCode: i, ipCountryCodeHasError: c, isEligibleForTrial: d = !1 } = this.props,
             m = null !== (e = this.props.paymentRequestWallets) && void 0 !== e ? e : [],
             h = {
-                className: f.button,
-                iconClassName: f.buttonIcon,
-                paymentLabel: y.intl.string(y.t.ZURqX1),
+                className: N.button,
+                iconClassName: N.buttonIcon,
+                paymentLabel: f.intl.string(f.t.ZURqX1),
                 onStripePaymentMethodReceived: l,
                 onChooseType: n
             },
             A = m.map((e, t) => {
-                let n = ''.concat(e, '-').concat(t);
-                return 'applePay' === e ? (0, a.jsx)(p.Ch, { ...h }, n) : (0, a.jsx)(p.Tr, { ...h }, n);
+                let n = () => this.setState({ [''.concat(e, 'Loaded')]: !0 }),
+                    r = {
+                        onValidPaymentRequest: n,
+                        onPaymentRequestFailure: n
+                    },
+                    l = ''.concat(e, '-').concat(t);
+                return 'applePay' === e
+                    ? (0, a.jsx)(
+                          p.Ch,
+                          {
+                              ...h,
+                              ...r
+                          },
+                          l
+                      )
+                    : (0, a.jsx)(
+                          p.Tr,
+                          {
+                              ...h,
+                              ...r
+                          },
+                          l
+                      );
             }),
             E = [],
-            P = [],
-            _ = void 0 === i;
-        if (c) E.push(...this.createPaymentButtons(T('ALL').countryPaymentMethods));
+            y = [],
+            P = void 0 === i || this.arePaymentRequestWalletsLoading();
+        if (c) E.push(...this.createPaymentButtons(v('ALL').countryPaymentMethods));
         else {
-            let { countryPaymentMethods: e, remainingPaymentMethods: t } = T(i);
-            E.push(...this.createPaymentButtons(e)), P.push(...this.createPaymentButtons(t));
+            let { countryPaymentMethods: e, remainingPaymentMethods: t } = v(i);
+            E.push(...this.createPaymentButtons(e)), y.push(...this.createPaymentButtons(t));
         }
         let b = (0, a.jsxs)('div', {
             children: [
                 (0, a.jsxs)('div', {
-                    className: s()(N.wrap, N.horizontal),
+                    className: s()(_.wrap, _.horizontal),
                     children: [E, A]
                 }),
                 (0, a.jsx)('div', {
-                    className: P.length > 0 ? N.flex : f.hidden,
+                    className: y.length > 0 ? _.flex : N.hidden,
                     children: (0, a.jsxs)(o.Clickable, {
                         onClick: () => this.toggleAllPayments(),
-                        className: s()(N.flex, f.allPaymentsToggleButton),
-                        children: [y.intl.string(y.t['4uiQm5']), (0, a.jsx)(u.Z, { open: t })]
+                        className: s()(_.flex, N.allPaymentsToggleButton),
+                        children: [f.intl.string(f.t['4uiQm5']), (0, a.jsx)(u.Z, { open: t })]
                     })
                 }),
                 (0, a.jsx)('div', {
-                    className: s()(N.wrap, N.horizontal, f.allPaymentsSection, {
-                        [f.hidden]: !t,
-                        [N.flex]: t
+                    className: s()(_.wrap, _.horizontal, N.allPaymentsSection, {
+                        [N.hidden]: !t,
+                        [_.flex]: t
                     }),
-                    children: P
+                    children: y
                 })
             ]
         });
         return (
-            _ && !c && (b = (0, a.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE })),
+            P &&
+                !c &&
+                (b = (0, a.jsxs)('div', {
+                    children: [
+                        (0, a.jsx)('div', {
+                            className: N.hidden,
+                            children: A
+                        }),
+                        (0, a.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE })
+                    ]
+                })),
             (0, a.jsxs)('div', {
                 children: [
-                    d && (0, a.jsx)('hr', { className: f.SeparatorUpper }),
+                    d && (0, a.jsx)('hr', { className: N.SeparatorUpper }),
                     (0, a.jsx)(o.FormSection, {
-                        title: d ? y.intl.string(y.t.tywMsb) : y.intl.string(y.t['8lqkf3']),
+                        title: d ? f.intl.string(f.t.tywMsb) : f.intl.string(f.t['8lqkf3']),
                         className: r,
                         children: b
                     }),
-                    d && (0, a.jsx)('hr', { className: f.SeparatorLower })
+                    d && (0, a.jsx)('hr', { className: N.SeparatorLower })
                 ]
             })
         );
     }
     constructor(e) {
-        super(e), (this.state = { showAllPaymentMethods: !1 });
+        super(e),
+            (this.state = {
+                showAllPaymentMethods: !1,
+                applePayLoaded: !1,
+                googlePayLoaded: !1
+            });
     }
 }
-t.Z = i.ZP.connectStores([A.Z], () => ({
-    ipCountryCode: A.Z.ipCountryCode,
-    ipCountryCodeHasError: A.Z.ipCountryCodeHasError,
-    localizedPromo: A.Z.localizedPricingPromo
-}))(I);
+t.ZP = i.ZP.connectStores([E.Z], () => ({
+    ipCountryCode: E.Z.ipCountryCode,
+    ipCountryCodeHasError: E.Z.ipCountryCodeHasError,
+    localizedPromo: E.Z.localizedPricingPromo
+}))(R);
