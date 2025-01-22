@@ -77,7 +77,11 @@ function S(e) {
                         tag: r.FormTitleTags.H4,
                         children: j.intl.string(j.t['r+SebW'])
                     }),
-                    (0, i.jsx)(r.ModalCloseButton, { onClick: n })
+                    (0, i.jsx)(r.ModalCloseButton, {
+                        className: m.close,
+                        innerClassName: m.closeInner,
+                        onClick: n
+                    })
                 ]
             }),
             (0, i.jsxs)(r.ModalContent, {

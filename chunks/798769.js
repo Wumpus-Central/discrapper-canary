@@ -36,16 +36,14 @@ function _(e) {
               className: h.modalHeaderCustomGift,
               separator: !1,
               children: [
-                  (0, i.jsx)('div', {
-                      className: h.giftNitroInfo,
-                      children: (0, i.jsx)(o.Heading, {
-                          variant: 'heading-lg/semibold',
-                          children: C()
-                      })
+                  (0, i.jsx)(o.Heading, {
+                      variant: 'heading-lg/semibold',
+                      children: C()
                   }),
                   (0, i.jsx)(o.ModalCloseButton, {
                       onClick: E,
-                      className: h.closeButton
+                      className: h.closeButton,
+                      innerClassName: h.closeButtonInner
                   })
               ]
           })
