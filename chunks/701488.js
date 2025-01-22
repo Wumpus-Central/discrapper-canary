@@ -1,78 +1,84 @@
 r.d(n, {
+    $Z: function () {
+        return F;
+    },
     AC: function () {
-        return ea;
+        return el;
+    },
+    AU: function () {
+        return es;
     },
     Cb: function () {
-        return U;
+        return G;
     },
     Cr: function () {
-        return ei;
+        return eo;
     },
     Ec: function () {
-        return x;
+        return w;
     },
     Es: function () {
-        return ee;
+        return en;
     },
     Ev: function () {
         return E;
     },
     Fu: function () {
-        return V;
+        return H;
     },
     GM: function () {
         return f;
     },
     GR: function () {
-        return N;
+        return O;
     },
     Gv: function () {
-        return k;
+        return B;
     },
     IF: function () {
-        return P;
+        return k;
     },
     In: function () {
-        return Z;
+        return V;
     },
     JT: function () {
-        return F;
+        return j;
     },
     K8: function () {
         return i;
     },
     MO: function () {
-        return T;
+        return A;
     },
     OF: function () {
-        return ed;
+        return eh;
     },
     P9: function () {
-        return er;
+        return ea;
     },
     PD: function () {
-        return R;
+        return D;
     },
     Pc: function () {
-        return eo;
+        return eu;
     },
     S4: function () {
         return o;
     },
     Si: function () {
-        return et;
+        return er;
     },
     Ws: function () {
         return a;
     },
     Zc: function () {
-        return M;
+        return U;
     },
     ag: function () {
         return u;
     },
     am: function () {
-        return D;
+        return L;
     },
     cE: function () {
         return d;
@@ -84,40 +90,37 @@ r.d(n, {
         return g;
     },
     eB: function () {
-        return en;
-    },
-    f9: function () {
-        return G;
+        return ei;
     },
     fE: function () {
-        return w;
+        return M;
     },
     jT: function () {
-        return O;
+        return x;
     },
     js: function () {
-        return S;
-    },
-    l4: function () {
-        return L;
-    },
-    mI: function () {
         return C;
     },
+    l4: function () {
+        return P;
+    },
+    mI: function () {
+        return R;
+    },
     qG: function () {
-        return B;
+        return Z;
     },
     qm: function () {
         return v;
     },
     um: function () {
-        return es;
-    },
-    wP: function () {
         return ec;
     },
+    wP: function () {
+        return ep;
+    },
     wT: function () {
-        return eu;
+        return ef;
     },
     xK: function () {
         return l;
@@ -142,45 +145,48 @@ let m = 160,
     y = '755600276941176913',
     b = '880218832743055411',
     I = '1050941315912835122',
-    T = '1070087967294631976',
-    S = '1007373802981822582',
-    A = '1067803140071620628',
-    C = '1039835161136746497',
-    N = '852509694341283871',
-    R = '903769130790969345',
-    O = '880218394199220334',
-    D = '1078728822972764312',
-    x = '947957217959759964',
-    L = '832013003968348200',
-    w = '832012774040141894',
-    P = '832025144389533716',
-    M = '755827207812677713',
-    k = '879863686565621790',
-    U = '902271654783242291',
-    B = '1037680572660727838',
-    G = '945737671223947305',
-    Z = '1011683823555199066',
-    F = '1234546995360694434',
-    V = '1214629548377768066',
-    j = '235088799074484224',
-    H = '1235205910863806484',
-    Y = '1227719606223765687',
-    W = '1194351737264406548',
-    K = '1245041113882955918',
-    z = '1245040907732910201',
-    q = '1245040436427489471',
-    Q = '1208090049871351890',
-    X = '1247266306231898122',
-    J = '1257458870390099989',
-    $ = '1276239071764680926',
-    ee = 'https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu',
-    et = {
+    T = '910224161476083792',
+    S = '945748195256979606',
+    A = '1070087967294631976',
+    C = '1007373802981822582',
+    N = '1067803140071620628',
+    R = '1039835161136746497',
+    O = '852509694341283871',
+    D = '903769130790969345',
+    x = '880218394199220334',
+    L = '1078728822972764312',
+    w = '947957217959759964',
+    P = '832013003968348200',
+    M = '832012774040141894',
+    k = '832025144389533716',
+    U = '755827207812677713',
+    B = '879863686565621790',
+    G = '902271654783242291',
+    Z = '1037680572660727838',
+    F = '945737671223947305',
+    V = '1011683823555199066',
+    j = '1234546995360694434',
+    H = '1214629548377768066',
+    Y = '235088799074484224',
+    W = '1235205910863806484',
+    K = '1227719606223765687',
+    z = '1194351737264406548',
+    q = '1245041113882955918',
+    Q = '1245040907732910201',
+    X = '1245040436427489471',
+    J = '1208090049871351890',
+    $ = '1247266306231898122',
+    ee = '1257458870390099989',
+    et = '1276239071764680926',
+    en = 'https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu',
+    er = {
         SMALL: 64,
         LARGE: 160
     },
-    en = ['in_development', 'activities_team', 'employee_release'],
-    er = [B, j, S, A, W, K, z, q, Q, H, Y],
-    ei = [X, J, $];
+    ei = ['in_development', 'activities_team', 'employee_release'],
+    ea = [Z, Y, C, N, z, q, Q, X, J, W, K],
+    eo = [$, ee, et],
+    es = [b, I, x, T, S, F];
 !(function (e) {
     (e.ADS = 'ADS'), (e.FAILED_LOAD = 'FAILED_LOAD'), (e.LAGGING = 'LAGGING'), (e.CONFUSING = 'CONFUSING'), (e.NOT_FUN = 'NOT_FUN'), (e.OTHER = 'OTHER');
 })(i || (i = {})),
@@ -199,21 +205,21 @@ let m = 160,
     !(function (e) {
         (e[(e.DIRECTORY = 0)] = 'DIRECTORY'), (e[(e.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (e[(e.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
     })(u || (u = {}));
-let ea = 'activity-shelf',
-    eo = new Set([y, b, I, O]),
-    es = new Set([b, I, O]);
+let el = 'activity-shelf',
+    eu = new Set([y, b, I, x]),
+    ec = new Set([b, I, x]);
 !(function (e) {
     (e[(e.PORTRAIT = 0)] = 'PORTRAIT'), (e[(e.LANDSCAPE = 1)] = 'LANDSCAPE');
 })(c || (c = {})),
     !(function (e) {
         (e[(e.FOCUSED = 0)] = 'FOCUSED'), (e[(e.PIP = 1)] = 'PIP'), (e[(e.GRID = 2)] = 'GRID');
     })(d || (d = {}));
-let el = {
+let ed = {
         label_type: h.ww.NONE,
         release_phase: '',
         label_until: null
     },
-    eu = {
+    ef = {
         application_id: '',
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
@@ -221,15 +227,15 @@ let el = {
         tablet_default_orientation_lock_state: 1,
         supported_platforms: [h.C3.WEB],
         client_platform_config: {
-            [h.C3.WEB]: el,
-            [h.C3.IOS]: el,
-            [h.C3.ANDROID]: el
+            [h.C3.WEB]: ed,
+            [h.C3.IOS]: ed,
+            [h.C3.ANDROID]: ed
         },
         has_csp_exception: !1,
         displays_advertisements: !1
     },
-    ec = [_.d4z.GUILD_TEXT, _.d4z.DM, _.d4z.GROUP_DM],
-    ed = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
+    ep = [_.d4z.GUILD_TEXT, _.d4z.DM, _.d4z.GROUP_DM],
+    eh = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
 !(function (e) {
     (e.NORMAL = 'normal'), (e.FULL_SCREEN = 'full-screen');
 })(f || (f = {}));
