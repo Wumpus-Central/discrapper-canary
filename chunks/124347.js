@@ -142,7 +142,7 @@ class L extends (a = l.Component) {
             U = this.getRatio(),
             B = (0, u.clamp)(Math.round(m * U), null != E ? E : 0, null != I ? I : 1 / 0),
             G = (0, u.clamp)(Math.round(g * U), null != v ? v : 0, null != T ? T : 1 / 0),
-            F = {
+            Z = {
                 alt: e,
                 readyState: w,
                 onContextMenu: null != a ? a : void 0,
@@ -179,18 +179,18 @@ class L extends (a = l.Component) {
                 onFocus: this.onFocus,
                 onBlur: this.onBlur
             };
-        if (1 === F.width && 1 === F.height) return null;
-        switch (((k || null != y) && (F.onClick = this.onClick), i && (F.original = null != l && '' !== l ? l : F.src), w)) {
+        if (1 === Z.width && 1 === Z.height) return null;
+        switch (((k || null != y) && (Z.onClick = this.onClick), i && (Z.original = null != l && '' !== l ? l : Z.src), w)) {
             case b.zo9.LOADING:
-                null != n && (F.src = n);
+                null != n && (Z.src = n);
                 break;
             case b.zo9.READY:
                 if (L.isAnimated(this.props)) {
-                    F.onMouseLeave = this.onMouseLeave;
+                    Z.onMouseLeave = this.onMouseLeave;
                     let e = (s || P || M) && (null == p || p) && L.visibilityObserver.isVisible(this);
-                    e ? ((F.src = this.getSrc(U)), (F.renderAccessory = S)) : ((F.src = this.getSrc(U, !h || !s)), (F.renderAccessory = this.renderAccessory)),
+                    e ? ((Z.src = this.getSrc(U)), (Z.renderAccessory = S)) : ((Z.src = this.getSrc(U, !h || !s)), (Z.renderAccessory = this.renderAccessory)),
                         null != _ &&
-                            (F.children = (n) => {
+                            (Z.children = (n) => {
                                 let { src: r, size: i, alt: a, mediaLayoutType: s } = n;
                                 return _({
                                     src: r,
@@ -200,20 +200,20 @@ class L extends (a = l.Component) {
                                     mediaLayoutType: s
                                 });
                             });
-                } else F.src = this.getSrc(U);
+                } else Z.src = this.getSrc(U);
         }
-        return (0, o.jsx)(f.E, { ...F });
+        return (0, o.jsx)(f.E, { ...Z });
     }
     async trackLoadingCompleted(e, n, r) {
-        var i;
+        var i, a, s, o, l;
         if ((e && m.Z.increment({ name: c.V.IMAGE_LOAD_ERROR }), !this.imageLoadAnalyticsEnabled)) return;
-        let a = await fetch(n.url).catch(() => void 0),
-            s = null == a ? void 0 : null === (i = a.headers) || void 0 === i ? void 0 : i.get('content-length'),
-            o = null != s ? Number(s) : null,
-            l = Date.now() - this.startLoadingTime,
-            { format: u, quality: d } = this.getFormatQuality();
+        let u = await fetch(n.url).catch(() => void 0),
+            d = null == u ? void 0 : null === (i = u.headers) || void 0 === i ? void 0 : i.get('content-length'),
+            f = null != d ? Number(d) : null,
+            _ = Date.now() - this.startLoadingTime,
+            { format: h, quality: p } = this.getFormatQuality();
         v.default.track(b.rMx.IMAGE_LOADING_COMPLETED, {
-            duration_ms: l,
+            duration_ms: _,
             requested_height: n.height,
             requested_width: n.width,
             height: this.props.height,
@@ -221,13 +221,15 @@ class L extends (a = l.Component) {
             original_url: this.props.original,
             url: this.props.src,
             requested_url: n.url,
-            format: u,
-            quality: d,
+            format: h,
+            quality: p,
             state: e ? b.zo9.ERROR : this.state.readyState,
             data_saving_mode: g.ZP.dataSavingMode,
             low_quality_image_mode: g.ZP.dataSavingMode,
             trigger: r,
-            size: o,
+            size: f,
+            message_id: null === (s = this.props.sourceMetadata) || void 0 === s ? void 0 : null === (a = s.message) || void 0 === a ? void 0 : a.id,
+            message_sent_timestamp: null === (l = this.props.sourceMetadata) || void 0 === l ? void 0 : null === (o = l.message) || void 0 === o ? void 0 : o.timestamp.getTime(),
             connection_type: E.Z.getType(),
             effective_connection_speed: E.Z.getEffectiveConnectionSpeed(),
             service_provider: E.Z.getServiceProvider()
