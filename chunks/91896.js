@@ -1,96 +1,108 @@
-n(653041), n(47120);
 var i,
-    r,
-    s,
-    a,
-    l = n(392711),
-    o = n.n(l),
-    c = n(442837),
-    d = n(759174),
-    u = n(570140),
-    m = n(981631);
-let g = (e, t) => ''.concat(t, '-').concat(e),
-    h = (e) => 'app-id-'.concat(e),
-    p = (e) => 'user-id-'.concat(e),
-    x = new d.h(
-        function (e) {
-            let t = [];
-            return t.push(h(e.applicationId)), t.push(p(e.id)), t;
-        },
-        (e) => ''.concat(e.since)
-    ),
-    f = 0,
-    _ = 0,
-    E = 0;
-function C() {
-    let { [m.OGo.PENDING_INCOMING]: e = 0, [m.OGo.PENDING_OUTGOING]: t = 0, [m.OGo.FRIEND]: n = 0 } = o().countBy(x.values(void 0, !0), (e) => e.type);
-    (f = e), (_ = t), (E = n);
+    a = r(653041);
+var o = r(47120);
+var s = r(392711),
+    l = r.n(s),
+    u = r(442837),
+    c = r(759174),
+    d = r(570140),
+    f = r(981631);
+function p(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
 }
-function T(e) {
-    x.set(g(e.id, e.applicationId), e);
+function h(e) {
+    return {
+        id: e.id,
+        applicationId: e.application_id,
+        type: e.type,
+        since: e.since,
+        dmAccessType: e.dm_access_type
+    };
 }
-class S extends (i = c.ZP.Store) {
-    isGameFriend(e, t) {
-        var n;
-        return null != e && null != t && (null === (n = x.get(g(e, t))) || void 0 === n ? void 0 : n.type) === m.OGo.FRIEND;
+let _ = (e, n) => ''.concat(n, '-').concat(e),
+    m = (e) => 'app-id-'.concat(e),
+    g = (e) => 'user-id-'.concat(e);
+function E(e) {
+    let n = [];
+    return n.push(m(e.applicationId)), n.push(g(e.id)), n;
+}
+let v = new c.h(E, (e) => ''.concat(e.since)),
+    y = 0,
+    b = 0,
+    I = 0;
+function T() {
+    let { [f.OGo.PENDING_INCOMING]: e = 0, [f.OGo.PENDING_OUTGOING]: n = 0, [f.OGo.FRIEND]: r = 0 } = l().countBy(v.values(void 0, !0), (e) => e.type);
+    (y = e), (b = n), (I = r);
+}
+function S(e) {
+    v.set(_(e.id, e.applicationId), e);
+}
+function A(e, n) {
+    v.delete(_(e, n));
+}
+function C(e) {
+    v.clear(),
+        e.gameRelationships.forEach((e) => {
+            S(h(e));
+        }),
+        T();
+}
+function N(e) {
+    S(e.gameRelationship), T();
+}
+function R(e) {
+    A(e.userId, e.applicationId), T();
+}
+class O extends (i = u.ZP.Store) {
+    isGameFriend(e, n) {
+        var r;
+        return null != e && null != n && (null === (r = v.get(_(e, n))) || void 0 === r ? void 0 : r.type) === f.OGo.FRIEND;
     }
     getPendingIncomingCount() {
-        return f;
+        return y;
     }
     getPendingOutgoingCount() {
-        return _;
+        return b;
     }
     getGameFriendCount(e) {
-        return null == e ? E : this.getGameFriendsForApplication(e).length;
+        return null == e ? I : this.getGameFriendsForApplication(e).length;
     }
     getGameFriendsForApplication(e) {
-        return null == e ? [] : x.values(h(e), !0).filter((e) => e.type === m.OGo.FRIEND);
+        return null == e ? [] : v.values(m(e), !0).filter((e) => e.type === f.OGo.FRIEND);
+    }
+    getGameRelationshipsForUser(e) {
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.OGo.FRIEND;
+        return null == e ? [] : v.values(g(e), !0).filter((e) => e.type === n);
     }
     getGameFriendsForUser(e) {
-        return null == e ? [] : x.values(p(e), !0).filter((e) => e.type === m.OGo.FRIEND);
+        return null == e ? [] : v.values(g(e), !0).filter((e) => e.type === f.OGo.FRIEND);
     }
     getGameRelationshipCount(e) {
-        return null == e ? x.size() : x.size(h(e));
+        return null == e ? v.size() : v.size(m(e));
     }
     getGameRelationships() {
-        return x;
+        return v;
     }
-    getGameRelationship(e, t) {
-        if (null != e && null != t) return x.get(g(e, t));
+    getGameRelationship(e, n) {
+        if (null != e && null != n) return v.get(_(e, n));
     }
     getGameRelationshipsVersion() {
-        return x.version;
+        return v.version;
     }
 }
-(a = 'GameRelationshipStore'),
-    (s = 'displayName') in (r = S)
-        ? Object.defineProperty(r, s, {
-              value: a,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[s] = a),
-    (t.Z = new S(u.Z, {
-        CONNECTION_OPEN: function (e) {
-            x.clear(),
-                e.gameRelationships.forEach((e) => {
-                    var t;
-                    T({
-                        id: (t = e).id,
-                        applicationId: t.application_id,
-                        type: t.type,
-                        since: t.since,
-                        dmAccessType: t.dm_access_type
-                    });
-                }),
-                C();
-        },
-        GAME_RELATIONSHIP_ADD: function (e) {
-            T(e.gameRelationship), C();
-        },
-        GAME_RELATIONSHIP_REMOVE: function (e) {
-            var t, n;
-            (t = e.userId), (n = e.applicationId), x.delete(g(t, n)), C();
-        }
+p(O, 'displayName', 'GameRelationshipStore'),
+    (n.Z = new O(d.Z, {
+        CONNECTION_OPEN: C,
+        GAME_RELATIONSHIP_ADD: N,
+        GAME_RELATIONSHIP_REMOVE: R
     }));
