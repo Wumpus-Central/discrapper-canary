@@ -255,6 +255,7 @@ function O(e) {
             className: v.clickZone,
             children: (0, n.jsx)(C, {
                 ...z,
+                title: 'function' == typeof z.title ? z.title(_) : z.title,
                 containerRef: L,
                 notificationId: t.id,
                 onNotificationShow: 0 === i ? S : void 0,

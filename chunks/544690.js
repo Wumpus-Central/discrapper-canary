@@ -4,6 +4,7 @@ n.r(
         topLeft: 'topLeft_efc087',
         topRight: 'topRight_efc087',
         bottomLeft: 'bottomLeft_efc087',
-        bottomRight: 'bottomRight_efc087'
+        bottomRight: 'bottomRight_efc087',
+        notificationGroup: 'notificationGroup_efc087'
     })
 );

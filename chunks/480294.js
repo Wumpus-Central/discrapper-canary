@@ -32,14 +32,21 @@ function p(e) {
     (c = { ...n }), (l = !0);
 }
 function h(e) {
+    let { consents: n } = e;
+    (c = { ...n }), (l = !0);
+}
+function _(e) {
     d = e.consentRequired;
 }
-function _() {
+function m() {
     d = null;
 }
-class m extends (i = a.ZP.Store) {
+class g extends (i = a.ZP.Store) {
     hasConsented(e) {
         return null != c[e] && c[e].consented;
+    }
+    get consents() {
+        return c;
     }
     get fetchedConsents() {
         return l;
@@ -51,10 +58,11 @@ class m extends (i = a.ZP.Store) {
         return d;
     }
 }
-s(m, 'displayName', 'ConsentStore'),
-    (n.Z = new m(o.Z, {
+s(g, 'displayName', 'ConsentStore'),
+    (n.Z = new g(o.Z, {
         CONNECTION_OPEN: f,
-        UPDATE_CONSENTS: p,
-        SET_CONSENT_REQUIRED: h,
-        LOGOUT: _
+        OVERLAY_INITIALIZE: p,
+        UPDATE_CONSENTS: h,
+        SET_CONSENT_REQUIRED: _,
+        LOGOUT: m
     }));

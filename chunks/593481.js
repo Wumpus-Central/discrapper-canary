@@ -12,11 +12,11 @@ n.d(t, {
 var i,
     s = n(200651),
     r = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     l = n(481060),
-    d = n(294033),
-    c = n(388032),
+    c = n(294033),
+    d = n(388032),
     u = n(521772),
     h = n(232186);
 function p(e, t, n) {
@@ -44,11 +44,11 @@ let f = (e) => e.stopPropagation(),
     v = (e, t, n) =>
         (0, s.jsx)('div', {
             className: u.keybindMessage,
-            children: c.intl.format(n, {
+            children: d.intl.format(n, {
                 keybind: t,
                 keybindHook: (e, n) =>
                     (0, s.jsx)(
-                        d.Z,
+                        c.Z,
                         {
                             keybind: t,
                             className: u.keybind
@@ -62,7 +62,7 @@ let f = (e) => e.stopPropagation(),
             className: u.hintSubtleText,
             children: t
         });
-class Z extends (i = r.PureComponent) {
+class S extends (i = r.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { expand: n } = e,
             { expanded: i } = t;
@@ -77,18 +77,20 @@ class Z extends (i = r.PureComponent) {
         null != t && null == e.onNotificationShow && t();
     }
     renderCloseButton() {
-        return (0, s.jsx)(l.Button, {
-            look: l.Button.Looks.BLANK,
-            size: l.Button.Sizes.NONE,
-            onClick: this.handleDismiss,
-            className: u.dismissButton,
-            'aria-label': c.intl.string(c.t.LnEgqa),
-            children: (0, s.jsx)(l.XSmallIcon, {
-                size: 'xs',
-                color: 'currentColor',
-                className: u.dismissIcon
-            })
-        });
+        return 'function' == typeof this.props.title
+            ? null
+            : (0, s.jsx)(l.Button, {
+                  look: l.Button.Looks.BLANK,
+                  size: l.Button.Sizes.NONE,
+                  onClick: this.handleDismiss,
+                  className: u.dismissButton,
+                  'aria-label': d.intl.string(d.t.LnEgqa),
+                  children: (0, s.jsx)(l.XSmallIcon, {
+                      size: 'xs',
+                      color: 'currentColor',
+                      className: u.dismissIcon
+                  })
+              });
     }
     renderHint() {
         let {
@@ -128,12 +130,12 @@ class Z extends (i = r.PureComponent) {
     }
     renderFooter() {
         let {
-            props: { cancelText: e, confirmText: t, onConfirmClick: n, onCancelClick: i, hint: a },
-            state: { expanded: o }
+            props: { cancelText: e, confirmText: t, onConfirmClick: n, onCancelClick: i, hint: o },
+            state: { expanded: a }
         } = this;
-        if (!o) return null != a ? this.renderHint() : null;
+        if (!a) return null != o ? this.renderHint() : null;
         if (null != this.props.renderFooter) {
-            let e = this.props.renderFooter(o);
+            let e = this.props.renderFooter(a);
             return null != e
                 ? (0, s.jsxs)(
                       r.Fragment,
@@ -145,9 +147,9 @@ class Z extends (i = r.PureComponent) {
                 : null;
         }
         if (null != n || null != i) {
-            let a = l.Button.Colors.GREEN,
-                o = l.Button.Colors.PRIMARY,
-                d = l.Button.Looks.FILLED;
+            let o = l.Button.Colors.GREEN,
+                a = l.Button.Colors.PRIMARY,
+                c = l.Button.Looks.FILLED;
             return (0, s.jsxs)(
                 r.Fragment,
                 {
@@ -160,22 +162,22 @@ class Z extends (i = r.PureComponent) {
                                     ? (0, s.jsx)(l.Button, {
                                           fullWidth: !0,
                                           size: l.Button.Sizes.SMALL,
-                                          color: a,
+                                          color: o,
                                           onClick: this.handleConfirmClick,
                                           className: u.button,
                                           innerClassName: u.innerText,
-                                          children: null != t ? t : c.intl.string(c.t.BddRzc)
+                                          children: null != t ? t : d.intl.string(d.t.BddRzc)
                                       })
                                     : null,
                                 null != i
                                     ? (0, s.jsx)(l.Button, {
                                           fullWidth: !0,
                                           size: l.Button.Sizes.SMALL,
-                                          look: d,
-                                          color: o,
+                                          look: c,
+                                          color: a,
                                           onClick: this.handleCancelClick,
                                           className: u.button,
-                                          children: null != e ? e : c.intl.string(c.t['ETE/oK'])
+                                          children: null != e ? e : d.intl.string(d.t['ETE/oK'])
                                       })
                                     : null
                             ]
@@ -214,11 +216,11 @@ class Z extends (i = r.PureComponent) {
                     children: [
                         (0, s.jsx)('div', {
                             className: u.title,
-                            children: t
+                            children: 'function' == typeof t ? t(this.handleDismiss) : t
                         }),
                         null != e
                             ? (0, s.jsx)('div', {
-                                  className: o()(u.body, h.marginTop4),
+                                  className: a()(u.body, h.marginTop4),
                                   style: {
                                       WebkitLineClamp: n,
                                       lineClamp: n
@@ -241,7 +243,7 @@ class Z extends (i = r.PureComponent) {
             onMouseOver: n ? null : this.handleMouseEnter,
             onFocus: n ? null : this.handleMouseEnter,
             onClick: e,
-            className: o()(u.container, {
+            className: a()(u.container, {
                 [u.themePrimary]: !0,
                 [u.clickable]: null != e && !t
             }),
@@ -272,9 +274,9 @@ class Z extends (i = r.PureComponent) {
         this.state = { expanded: t };
     }
 }
-p(Z, 'defaultProps', {
+p(S, 'defaultProps', {
     maxBodyLines: void 0,
     expand: !1,
     disabled: !1
 }),
-    (t.ZP = Z);
+    (t.ZP = S);

@@ -1,6 +1,7 @@
 e.exports = {
     avatarContainer: 'avatarContainer_f27de4',
     helpText: 'helpText_f27de4',
+    editButton: 'editButton_f27de4',
     userRow: 'userRow_f27de4',
     userInfo: 'userInfo_f27de4',
     usernameWrapper: 'usernameWrapper_f27de4',
@@ -8,5 +9,15 @@ e.exports = {
     inviteButtonWrapper: 'inviteButtonWrapper_f27de4',
     inviteButton: 'inviteButton_f27de4',
     header: 'header_f27de4',
-    gameInfo: 'gameInfo_f27de4'
+    headerLeft: 'headerLeft_f27de4',
+    headerRight: 'headerRight_f27de4',
+    muteButton: 'muteButton_f27de4',
+    muteIcon: 'muteIcon_f27de4',
+    dismissButton: 'dismissButton_f27de4',
+    dismissIcon: 'dismissIcon_f27de4',
+    gameInfo: 'gameInfo_f27de4',
+    editMessageContainer: 'editMessageContainer_f27de4',
+    editMessageButtons: 'editMessageButtons_f27de4',
+    cancelButton: 'cancelButton_f27de4',
+    charCount: 'charCount_f27de4'
 };

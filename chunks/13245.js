@@ -103,6 +103,19 @@ let m = {
             shouldShow: e
         });
     },
+    setShowGameInviteNotification(e) {
+        this.track(_.rMx.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: !e }),
+            s.Z.dispatch({
+                type: 'OVERLAY_SET_GAME_INVITE_NOTIFICATION',
+                shouldShow: e
+            });
+    },
+    setInviteMessage(e) {
+        s.Z.dispatch({
+            type: 'OVERLAY_SET_INVITE_MESSAGE',
+            message: e
+        });
+    },
     callPrivateChannel(e, n) {
         s.Z.dispatch({
             type: 'OVERLAY_CALL_PRIVATE_CHANNEL',
