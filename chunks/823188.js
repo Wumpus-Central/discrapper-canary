@@ -357,42 +357,45 @@ function en(e) {
         f = null == d ? void 0 : null === (n = d.subscription_trial) || void 0 === n ? void 0 : n.sku_id,
         h = (null == u ? void 0 : u.trialId) != null,
         p = null != f || h;
-    return (0, l.jsx)('div', {
+    return (0, l.jsxs)('div', {
         className: c()(Y.tier0, Y.card, Y.tier0V2Background, a, {
             [Y.withTier0Rim]: !s && p,
-            [Y.withCardHover]: !s && p
+            [Y.withCardHover]: !s && p,
+            [Y.cardPadding]: !s
         }),
-        children: (0, l.jsxs)('div', {
-            className: Y.cardContent,
-            children: [
-                (0, l.jsx)('img', {
-                    src: W,
-                    className: Y.v2starBackground,
-                    alt: ''
-                }),
-                (0, l.jsxs)('div', {
-                    children: [
-                        (0, l.jsxs)('div', {
-                            children: [
-                                (0, l.jsx)(C.Z, { className: c()(Y.title, Y.tier0V2Title) }),
-                                (0, l.jsx)(ee, {
-                                    isGift: s,
-                                    premiumTier: V.p9.TIER_0,
-                                    offerType: 0,
-                                    offerTierMatchesCard: f === V.Si.TIER_0,
-                                    showYearlyPrice: i,
-                                    priceOptions: o,
-                                    textVariant: 'heading-xl/normal',
-                                    isMarketingPageV2: !0
-                                })
-                            ]
-                        }),
-                        (0, l.jsx)('div', { children: (0, l.jsx)(et, { isMarketingPageV2: !0 }) })
-                    ]
-                }),
-                r
-            ]
-        })
+        children: [
+            (0, l.jsxs)('div', {
+                className: c()({ [Y.cardPadding]: s }),
+                children: [
+                    (0, l.jsx)('img', {
+                        src: W,
+                        className: Y.v2starBackground,
+                        alt: ''
+                    }),
+                    (0, l.jsxs)('div', {
+                        children: [
+                            (0, l.jsxs)('div', {
+                                children: [
+                                    (0, l.jsx)(C.Z, { className: c()(Y.title, Y.tier0V2Title) }),
+                                    (0, l.jsx)(ee, {
+                                        isGift: s,
+                                        premiumTier: V.p9.TIER_0,
+                                        offerType: 0,
+                                        offerTierMatchesCard: f === V.Si.TIER_0,
+                                        showYearlyPrice: i,
+                                        priceOptions: o,
+                                        textVariant: 'heading-xl/normal',
+                                        isMarketingPageV2: !0
+                                    })
+                                ]
+                            }),
+                            (0, l.jsx)('div', { children: (0, l.jsx)(et, { isMarketingPageV2: !0 }) })
+                        ]
+                    })
+                ]
+            }),
+            r
+        ]
     });
 }
 function er(e) {
@@ -405,85 +408,88 @@ function er(e) {
         g = (null == d ? void 0 : d.trialId) != null,
         E = (null == d ? void 0 : d.trialId) != null ? (null == f ? void 0 : f.premiumType) : null,
         v = null != p || g;
-    return (0, l.jsx)('div', {
+    return (0, l.jsxs)('div', {
         className: c()(Y.tier0, Y.card, s, {
             [Y.withTier0Rim]: !o && v,
-            [Y.withCardHover]: !o && v
+            [Y.withCardHover]: !o && v,
+            [Y.cardPadding]: !o
         }),
-        children: (0, l.jsxs)('div', {
-            className: Y.cardContent,
-            children: [
-                p === V.Si.TIER_0
-                    ? (0, l.jsxs)(l.Fragment, {
-                          children: [
-                              (0, l.jsx)(X, {
-                                  text: H.intl.string(H.t.IBYG5e),
-                                  className: Y.topRimPill,
-                                  colorOptions: 0
-                              }),
-                              (0, l.jsx)('div', { className: Y.rimGlowTier0 })
-                          ]
-                      })
-                    : null,
-                r
-                    ? (0, l.jsx)('div', {
-                          className: Y.wumpusImageContainer,
-                          children: (0, l.jsx)(m.Image, {
-                              src: K,
-                              mediaLayoutType: j.hV.RESPONSIVE,
-                              width: 270,
-                              height: 242,
-                              zoomable: !1,
-                              imageClassName: Y.wumpusImage
+        children: [
+            (0, l.jsxs)('div', {
+                className: c()({ [Y.cardPadding]: o }),
+                children: [
+                    p === V.Si.TIER_0
+                        ? (0, l.jsxs)(l.Fragment, {
+                              children: [
+                                  (0, l.jsx)(X, {
+                                      text: H.intl.string(H.t.IBYG5e),
+                                      className: Y.topRimPill,
+                                      colorOptions: 0
+                                  }),
+                                  (0, l.jsx)('div', { className: Y.rimGlowTier0 })
+                              ]
                           })
-                      })
-                    : null,
-                o || p !== V.Si.TIER_0
-                    ? null
-                    : (0, l.jsxs)(l.Fragment, {
-                          children: [
-                              (0, l.jsx)(X, {
-                                  text: H.intl.string(H.t.IBYG5e),
-                                  className: Y.topRimPill,
-                                  colorOptions: 0
-                              }),
-                              (0, l.jsx)('div', { className: Y.rimGlowTier0 })
-                          ]
-                      }),
-                o || E !== V.p9.TIER_0
-                    ? null
-                    : (0, l.jsxs)(l.Fragment, {
-                          children: [
-                              (0, l.jsx)(X, {
-                                  text: H.intl.string(H.t.qYKftb),
-                                  className: Y.topRimPill,
-                                  colorOptions: 0
-                              }),
-                              (0, l.jsx)('div', { className: Y.rimGlowTier0 })
-                          ]
-                      }),
-                (0, l.jsxs)('div', {
-                    children: [
-                        (0, l.jsxs)('div', {
-                            children: [
-                                (0, l.jsx)(N.Z, { className: c()(Y.title, Y.tier0Title) }),
-                                (0, l.jsx)(ee, {
-                                    isGift: o,
-                                    premiumTier: V.p9.TIER_0,
-                                    offerType: 0,
-                                    offerTierMatchesCard: p === V.Si.TIER_0,
-                                    showYearlyPrice: a,
-                                    priceOptions: u
-                                })
-                            ]
-                        }),
-                        (0, l.jsx)('div', { children: (0, l.jsx)(et, {}) })
-                    ]
-                }),
-                i,
-                o || p !== V.Si.TIER_0 ? null : (0, l.jsx)(F.t, { tier: V.p9.TIER_0 })
-            ]
-        })
+                        : null,
+                    r
+                        ? (0, l.jsx)('div', {
+                              className: Y.wumpusImageContainer,
+                              children: (0, l.jsx)(m.Image, {
+                                  src: K,
+                                  mediaLayoutType: j.hV.RESPONSIVE,
+                                  width: 270,
+                                  height: 242,
+                                  zoomable: !1,
+                                  imageClassName: Y.wumpusImage
+                              })
+                          })
+                        : null,
+                    o || p !== V.Si.TIER_0
+                        ? null
+                        : (0, l.jsxs)(l.Fragment, {
+                              children: [
+                                  (0, l.jsx)(X, {
+                                      text: H.intl.string(H.t.IBYG5e),
+                                      className: Y.topRimPill,
+                                      colorOptions: 0
+                                  }),
+                                  (0, l.jsx)('div', { className: Y.rimGlowTier0 })
+                              ]
+                          }),
+                    o || E !== V.p9.TIER_0
+                        ? null
+                        : (0, l.jsxs)(l.Fragment, {
+                              children: [
+                                  (0, l.jsx)(X, {
+                                      text: H.intl.string(H.t.qYKftb),
+                                      className: Y.topRimPill,
+                                      colorOptions: 0
+                                  }),
+                                  (0, l.jsx)('div', { className: Y.rimGlowTier0 })
+                              ]
+                          }),
+                    (0, l.jsxs)('div', {
+                        children: [
+                            (0, l.jsxs)('div', {
+                                children: [
+                                    (0, l.jsx)(N.Z, { className: c()(Y.title, Y.tier0Title) }),
+                                    (0, l.jsx)(ee, {
+                                        isGift: o,
+                                        premiumTier: V.p9.TIER_0,
+                                        offerType: 0,
+                                        offerTierMatchesCard: p === V.Si.TIER_0,
+                                        showYearlyPrice: a,
+                                        priceOptions: u
+                                    })
+                                ]
+                            }),
+                            (0, l.jsx)('div', { children: (0, l.jsx)(et, {}) })
+                        ]
+                    }),
+                    o || p !== V.Si.TIER_0 ? null : (0, l.jsx)(F.t, { tier: V.p9.TIER_0 })
+                ]
+            }),
+            i
+        ]
     });
 }
 function ei(e) {
@@ -694,7 +700,8 @@ function es(e) {
         className: c()(Y.card, Y.tier2, Y.tier2V2Background, u, {
             [Y.withTier2Rim]: b,
             [Y.withCardHover]: b,
-            [Y.withPromotionalGradientBanner]: h
+            [Y.withPromotionalGradientBanner]: h,
+            [Y.cardPadding]: !d
         }),
         children: [
             h &&
@@ -705,7 +712,7 @@ function es(e) {
                     src: S
                 }),
             (0, l.jsxs)('div', {
-                className: Y.cardContent,
+                className: c()({ [Y.cardPadding]: d }),
                 children: [
                     (0, l.jsx)('div', { className: Y.tier2SideGradient }),
                     (0, l.jsx)('img', {
@@ -748,10 +755,10 @@ function es(e) {
                                 })
                             })
                         ]
-                    }),
-                    a
+                    })
                 ]
             }),
+            a,
             h && (0, l.jsx)(P.K, {})
         ]
     });
@@ -783,7 +790,8 @@ function eo(e) {
         className: c()(Y.card, Y.tier2, d, {
             [Y.withTier2Rim]: Z,
             [Y.withCardHover]: Z,
-            [Y.withPromotionalGradientBanner]: v
+            [Y.withPromotionalGradientBanner]: v,
+            [Y.cardPadding]: !f
         }),
         children: [
             v &&
@@ -794,7 +802,7 @@ function eo(e) {
                     src: K
                 }),
             (0, l.jsxs)('div', {
-                className: Y.cardContent,
+                className: c()({ [Y.cardPadding]: f }),
                 children: [
                     !f && null != O && (0, M.Wp)(O, V.Si.TIER_2) && void 0 !== O.discount.amount
                         ? (0, l.jsxs)(l.Fragment, {
@@ -891,10 +899,10 @@ function eo(e) {
                             })
                         ]
                     }),
-                    s,
                     f || (N !== V.Si.TIER_2 && null == O) ? null : (0, l.jsx)(F.t, { tier: V.p9.TIER_2 })
                 ]
             }),
+            s,
             v && (0, l.jsx)(P.K, {})
         ]
     });
