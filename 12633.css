@@ -39889,6 +39889,10 @@ img.thumbnail_c64476 {
     opacity: .5
 }
 
+.gameIcon_ecc1b2 {
+    vertical-align: bottom
+}
+
 .container_effd71 {
     padding: var(--spacing-16);
     gap: var(--spacing-8);
