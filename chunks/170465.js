@@ -7,13 +7,12 @@ e.exports = {
     inviteDisabledRow: 'inviteDisabledRow_edb39d',
     inviteDisabledTip: 'inviteDisabledTip_edb39d',
     inviteDisabledContainer: 'inviteDisabledContainer_edb39d',
-    username: 'username_edb39d',
     countdownColumn: 'countdownColumn_edb39d',
     inviteCode: 'inviteCode_edb39d',
-    textAlignRight: 'textAlignRight_edb39d',
     uses: 'uses_edb39d',
     countdown: 'countdown_edb39d',
-    user: 'user_edb39d',
     discriminator: 'discriminator_edb39d',
-    avatar: 'avatar_edb39d'
+    avatar: 'avatar_edb39d',
+    bypass: 'bypass_edb39d',
+    infoIcon: 'infoIcon_edb39d'
 };

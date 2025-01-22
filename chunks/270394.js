@@ -1,8 +1,9 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return D;
     }
-});
+}),
+    n(789020);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -11,136 +12,157 @@ var i = n(200651),
     s = n.n(o),
     d = n(392711),
     c = n.n(d),
-    u = n(399606),
-    m = n(692547),
-    h = n(481060),
-    p = n(447543),
-    g = n(225433),
-    x = n(129861),
-    f = n(493544),
+    u = n(533800),
+    m = n(399606),
+    h = n(692547),
+    p = n(481060),
+    g = n(447543),
+    x = n(225433),
+    f = n(129861),
+    v = n(493544),
     b = n(700582),
-    v = n(410030),
-    C = n(933557),
+    C = n(410030),
+    I = n(933557),
     N = n(346486),
-    I = n(600164),
-    j = n(666657),
-    T = n(487419),
-    _ = n(664452),
-    Z = n(560114),
-    E = n(699516),
-    S = n(594174),
-    y = n(965638),
-    A = n(981631),
-    R = n(388032),
-    L = n(170465),
-    k = n(684309),
-    O = n(232186);
-let w = {
+    j = n(600164),
+    T = n(666657),
+    _ = n(487419),
+    Z = n(664452),
+    E = n(560114),
+    S = n(699516),
+    y = n(594174),
+    A = n(630388),
+    L = n(965638),
+    R = n(981631),
+    k = n(388032),
+    O = n(170465),
+    w = n(684309),
+    M = n(232186);
+let P = {
     INVITER: 3,
     INVITE_CODE: 3,
     USES: 1,
     EXPIRES: 2
 };
-function M(e) {
-    var t, n;
-    let { invite: l, showChannel: r = !1, inviteDisabled: o = !1, hide: s = !1 } = e,
-        d = l.uses;
+function B(e) {
+    var t;
+    let { invite: n, showChannel: l = !1, inviteDisabled: r = !1, hide: o = !1 } = e,
+        s = n.uses;
     return (
-        l.maxUses > 0 && (d = ''.concat(l.uses, '/').concat(l.maxUses)),
-        (0, i.jsxs)(I.Z, {
-            className: a()(L.inviteSettingsInviteRow, k.card, { [L.inviteDisabledRow]: o }),
+        n.maxUses > 0 && (s = ''.concat(n.uses, '/').concat(n.maxUses)),
+        (0, i.jsxs)(j.Z, {
+            className: a()(O.inviteSettingsInviteRow, w.card, { [O.inviteDisabledRow]: r }),
             children: [
-                (0, i.jsx)(I.Z, {
-                    grow: w.INVITER,
+                (0, i.jsxs)(j.Z, {
+                    grow: P.INVITER,
                     basis: 0,
-                    align: I.Z.Align.CENTER,
-                    className: a()(L.text),
-                    children: (0, i.jsxs)(I.Z.Child, {
+                    align: j.Z.Align.CENTER,
+                    className: a()(O.text),
+                    children: [
+                        null != n.inviter &&
+                            (0, i.jsx)(b.Z, {
+                                user: n.inviter,
+                                size: p.AvatarSizes.SIZE_24,
+                                className: O.avatar
+                            }),
+                        (0, i.jsxs)('div', {
+                            children: [
+                                null != n.inviter &&
+                                    (0, i.jsx)(f.Z, {
+                                        discriminatorClass: O.discriminator,
+                                        user: n.inviter
+                                    }),
+                                l &&
+                                    (0, i.jsx)(p.Text, {
+                                        variant: 'text-xs/normal',
+                                        color: 'header-secondary',
+                                        children: (0, I.F6)(n.channel, y.default, S.Z, !0)
+                                    })
+                            ]
+                        })
+                    ]
+                }),
+                (0, i.jsx)(j.Z, {
+                    grow: P.INVITE_CODE,
+                    shrink: 1,
+                    basis: 0,
+                    align: j.Z.Align.CENTER,
+                    className: O.text,
+                    children: (0, i.jsxs)('div', {
                         children: [
-                            null == (t = l.inviter)
-                                ? null
-                                : (0, i.jsxs)('div', {
-                                      className: L.user,
+                            (0, i.jsx)(p.Text, {
+                                className: O.inviteCode,
+                                variant: 'text-sm/normal',
+                                children: o ? '...' : n.code
+                            }),
+                            !o && (0, A.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, u.$.IS_APPLICATION_BYPASS)
+                                ? (0, i.jsxs)('div', {
+                                      className: O.bypass,
                                       children: [
-                                          (0, i.jsx)(b.Z, {
-                                              user: t,
-                                              size: h.AvatarSizes.SIZE_20,
-                                              className: L.avatar
+                                          (0, i.jsx)(p.Text, {
+                                              className: O.text,
+                                              variant: 'text-xs/normal',
+                                              color: 'text-muted',
+                                              children: k.intl.string(k.t['1i1bUl'])
                                           }),
-                                          (0, i.jsx)(x.Z, {
-                                              className: L.username,
-                                              discriminatorClass: L.discriminator,
-                                              user: t
+                                          (0, i.jsx)(p.Tooltip, {
+                                              text: k.intl.string(k.t['jvd/LC']),
+                                              children: (e) =>
+                                                  (0, i.jsx)(p.CircleInformationIcon, {
+                                                      size: 'xxs',
+                                                      color: 'currentColor',
+                                                      ...e,
+                                                      className: O.infoIcon
+                                                  })
                                           })
                                       ]
-                                  }),
-                            ((n = l.channel),
-                            r
-                                ? (0, i.jsx)(h.Text, {
-                                      variant: 'text-xs/normal',
-                                      color: 'header-secondary',
-                                      children: (0, C.F6)(n, S.default, E.Z, !0)
                                   })
-                                : null)
+                                : null
                         ]
                     })
                 }),
-                (0, i.jsx)(I.Z, {
-                    grow: w.INVITE_CODE,
-                    shrink: 1,
+                (0, i.jsx)(j.Z, {
+                    grow: P.USES,
                     basis: 0,
-                    align: I.Z.Align.CENTER,
-                    className: L.text,
-                    children: (0, i.jsx)(h.Text, {
-                        className: L.inviteCode,
+                    align: j.Z.Align.CENTER,
+                    className: a()(O.text),
+                    children: (0, i.jsx)(p.Text, {
+                        className: O.uses,
                         variant: 'text-sm/normal',
-                        children: s ? '...' : l.code
+                        children: s
                     })
                 }),
-                (0, i.jsx)(I.Z, {
-                    grow: w.USES,
+                (0, i.jsx)(j.Z, {
+                    grow: P.EXPIRES,
                     basis: 0,
-                    justify: I.Z.Justify.END,
-                    align: I.Z.Align.CENTER,
-                    className: a()(L.text),
-                    children: (0, i.jsx)(h.Text, {
-                        className: L.uses,
+                    align: j.Z.Align.CENTER,
+                    className: a()(O.text, O.countdownColumn),
+                    children: (0, i.jsx)(p.Text, {
+                        className: O.countdown,
                         variant: 'text-sm/normal',
-                        children: d
+                        children: (0, i.jsx)(N.Z, { deadline: n.getExpiresAt() })
                     })
                 }),
-                (0, i.jsx)(I.Z, {
-                    grow: w.EXPIRES,
-                    basis: 0,
-                    align: I.Z.Align.CENTER,
-                    justify: I.Z.Justify.END,
-                    className: a()(L.text, L.countdownColumn),
-                    children: (0, i.jsx)(h.Text, {
-                        className: L.countdown,
-                        variant: 'text-sm/normal',
-                        children: (0, i.jsx)(N.Z, { deadline: l.getExpiresAt() })
-                    })
-                }),
-                (0, i.jsx)(g.Z, {
-                    className: L.revokeInvite,
+                (0, i.jsx)(x.Z, {
+                    className: O.revokeInvite,
                     onClick: () => {
-                        p.Z.revokeInvite(l);
+                        g.Z.revokeInvite(n);
                     }
                 })
             ]
         })
     );
 }
-function P(e) {
-    let { invites: t, guild: r, hide: a, channel: o = null, showChannel: d = !1, loading: p = !1, canCreateInvites: g = !1 } = e;
+function D(e) {
+    let { invites: t, guild: r, hide: a, channel: o = null, showChannel: d = !1, loading: u = !1, canCreateInvites: g = !1 } = e;
     s()(null != r, 'guild is required');
-    let x = (0, y.M)(r),
-        b = (0, u.e7)([T.Z], () => T.Z.getGuildIncident(r.id)),
-        C = r.hasFeature(A.oNc.INVITES_DISABLED) || ((null == b ? void 0 : b.invitesDisabledUntil) != null && new Date(b.invitesDisabledUntil) > new Date()),
-        N = (0, v.ZP)(),
-        E = l.useMemo(
+    let x = (0, L.M)(r),
+        f = (0, m.e7)([_.Z], () => _.Z.getGuildIncident(r.id)),
+        b = r.hasFeature(R.oNc.INVITES_DISABLED) || ((null == f ? void 0 : f.invitesDisabledUntil) != null && new Date(f.invitesDisabledUntil) > new Date()),
+        I = (0, C.ZP)(),
+        N = l.useMemo(
             () =>
-                null == t || p
+                null == t || u
                     ? []
                     : c()(t)
                           .sortBy((e) => {
@@ -148,124 +170,122 @@ function P(e) {
                               return (null !== (n = null === (t = e.inviter) || void 0 === t ? void 0 : t.username) && void 0 !== n ? n : '').toLowerCase();
                           })
                           .value(),
-            [t, p]
+            [t, u]
         ),
         S = () => {
-            (0, h.openModalLazy)(
+            (0, p.openModalLazy)(
                 async () => (e) =>
-                    (0, i.jsx)(Z.default, {
+                    (0, i.jsx)(E.default, {
                         ...e,
                         channel: o,
                         guild: r,
-                        source: A.t4x.SETTINGS_INVITE
+                        source: R.t4x.SETTINGS_INVITE
                     })
             );
         },
-        k = () => {
-            let e = { source: j.Zu.GUILD_SETTINGS };
-            (0, h.openModalLazy)(
+        y = () => {
+            let e = { source: T.Zu.GUILD_SETTINGS };
+            (0, p.openModalLazy)(
                 async () => (t) =>
-                    (0, i.jsx)(_.default, {
+                    (0, i.jsx)(Z.default, {
                         ...t,
                         guildId: r.id,
                         analyticsData: e
                     })
             );
         };
-    return (0, i.jsx)(f.Xi, {
-        sections: [Math.max(1, E.length)],
+    return (0, i.jsx)(v.Xi, {
+        sections: [Math.max(1, N.length)],
         renderSection: () => {
             let e;
             return (
                 (e =
-                    0 !== E.length || p
-                        ? (0, i.jsxs)(I.Z, {
+                    0 !== N.length || u
+                        ? (0, i.jsxs)(j.Z, {
                               children: [
-                                  (0, i.jsx)(I.Z.Child, {
-                                      grow: w.INVITER,
+                                  (0, i.jsx)(j.Z.Child, {
+                                      grow: P.INVITER,
                                       basis: 0,
-                                      className: O.marginReset,
-                                      children: (0, i.jsx)(h.FormTitle, { children: R.intl.string(R.t.EgHyKy) })
+                                      className: M.marginReset,
+                                      children: (0, i.jsx)(p.FormTitle, { children: k.intl.string(k.t.EgHyKy) })
                                   }),
-                                  (0, i.jsx)(I.Z.Child, {
+                                  (0, i.jsx)(j.Z.Child, {
                                       basis: 0,
-                                      grow: w.INVITE_CODE,
-                                      className: O.marginReset,
-                                      children: (0, i.jsx)(h.FormTitle, { children: R.intl.string(R.t.LBlFEB) })
+                                      grow: P.INVITE_CODE,
+                                      className: M.marginReset,
+                                      children: (0, i.jsx)(p.FormTitle, { children: k.intl.string(k.t.LBlFEB) })
                                   }),
-                                  (0, i.jsx)(I.Z.Child, {
-                                      grow: w.USES,
+                                  (0, i.jsx)(j.Z.Child, {
+                                      grow: P.USES,
                                       basis: 0,
-                                      className: L.textAlignRight,
-                                      children: (0, i.jsx)(h.FormTitle, { children: R.intl.string(R.t.erWrmJ) })
+                                      children: (0, i.jsx)(p.FormTitle, { children: k.intl.string(k.t.erWrmJ) })
                                   }),
-                                  (0, i.jsx)(I.Z.Child, {
-                                      grow: w.EXPIRES,
+                                  (0, i.jsx)(j.Z.Child, {
+                                      grow: P.EXPIRES,
                                       basis: 0,
-                                      className: L.textAlignRight,
-                                      children: (0, i.jsx)(h.FormTitle, { children: R.intl.string(R.t['1aM27e']) })
+                                      children: (0, i.jsx)(p.FormTitle, { children: k.intl.string(k.t['1aM27e']) })
                                   })
                               ]
                           })
-                        : (0, i.jsxs)(h.EmptyState, {
-                              theme: N,
+                        : (0, i.jsxs)(p.EmptyState, {
+                              theme: I,
                               children: [
-                                  (0, i.jsx)(h.EmptyStateImage, {
+                                  (0, i.jsx)(p.EmptyStateImage, {
                                       darkSrc: n(914814),
                                       lightSrc: n(370392),
                                       width: 256,
                                       height: 130
                                   }),
-                                  (0, i.jsx)(h.EmptyStateText, {
-                                      note: R.intl.string(R.t.F53CAQ),
-                                      children: R.intl.string(R.t['+nLJkZ'])
+                                  (0, i.jsx)(p.EmptyStateText, {
+                                      note: k.intl.string(k.t.F53CAQ),
+                                      children: k.intl.string(k.t['+nLJkZ'])
                                   })
                               ]
                           })),
                 (0, i.jsx)(
-                    h.FormSection,
+                    p.FormSection,
                     {
-                        className: L.headerSection,
-                        children: (0, i.jsxs)(h.HeadingLevel, {
-                            component: (0, i.jsx)(h.FormTitle, {
-                                tag: h.FormTitleTags.H1,
-                                children: R.intl.string(R.t['9F90iY'])
+                        className: O.headerSection,
+                        children: (0, i.jsxs)(p.HeadingLevel, {
+                            component: (0, i.jsx)(p.FormTitle, {
+                                tag: p.FormTitleTags.H1,
+                                children: k.intl.string(k.t['9F90iY'])
                             }),
                             children: [
-                                (0, i.jsx)(h.FormText, {
-                                    className: O.marginBottom20,
-                                    type: h.FormTextTypes.DESCRIPTION,
-                                    children: g ? R.intl.format(R.t['97VdNj'], { onCreateInvite: S }) : R.intl.string(R.t.WDw38P)
+                                (0, i.jsx)(p.FormText, {
+                                    className: M.marginBottom20,
+                                    type: p.FormTextTypes.DESCRIPTION,
+                                    children: g ? k.intl.format(k.t['97VdNj'], { onCreateInvite: S }) : k.intl.string(k.t.WDw38P)
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: L.inviteDisabledContainer,
+                                    className: O.inviteDisabledContainer,
                                     children: [
-                                        (0, i.jsx)(h.Button, {
-                                            size: h.Button.Sizes.SMALL,
-                                            color: C ? h.Button.Colors.BRAND : h.Button.Colors.RED,
+                                        (0, i.jsx)(p.Button, {
+                                            size: p.Button.Sizes.SMALL,
+                                            color: b ? p.Button.Colors.BRAND : p.Button.Colors.RED,
                                             disabled: !x,
-                                            onClick: k,
-                                            children: C ? R.intl.string(R.t['/dbw3N']) : R.intl.string(R.t.Uwsjn5)
+                                            onClick: y,
+                                            children: b ? k.intl.string(k.t['/dbw3N']) : k.intl.string(k.t.Uwsjn5)
                                         }),
-                                        C &&
+                                        b &&
                                             (0, i.jsxs)('div', {
-                                                className: L.inviteDisabledTip,
+                                                className: O.inviteDisabledTip,
                                                 children: [
-                                                    (0, i.jsx)(h.CircleWarningIcon, {
+                                                    (0, i.jsx)(p.CircleWarningIcon, {
                                                         size: 'custom',
                                                         width: 20,
                                                         height: 20,
-                                                        color: m.Z.unsafe_rawColors.YELLOW_300.css
+                                                        color: h.Z.unsafe_rawColors.YELLOW_300.css
                                                     }),
-                                                    (0, i.jsx)(h.Text, {
+                                                    (0, i.jsx)(p.Text, {
                                                         variant: 'text-sm/normal',
-                                                        children: R.intl.string(R.t['2LLbj4'])
+                                                        children: k.intl.string(k.t['2LLbj4'])
                                                     })
                                                 ]
                                             })
                                     ]
                                 }),
-                                (0, i.jsx)(h.FormDivider, { className: L.headerDivider }),
+                                (0, i.jsx)(p.FormDivider, { className: O.headerDivider }),
                                 e
                             ]
                         })
@@ -276,31 +296,31 @@ function P(e) {
         },
         renderRow: (e) => {
             let { section: t, row: n } = e;
-            if (0 === E.length && 0 === n && p)
+            if (0 === N.length && 0 === n && u)
                 return (0, i.jsx)(
-                    h.Spinner,
+                    p.Spinner,
                     {
-                        className: O.marginTop20,
-                        type: h.Spinner.Type.SPINNING_CIRCLE
+                        className: M.marginTop20,
+                        type: p.Spinner.Type.SPINNING_CIRCLE
                     },
                     'spinner'
                 );
             if (t > 0) return null;
-            let l = E[n];
+            let l = N[n];
             return null == l
                 ? null
                 : (0, i.jsx)(
-                      M,
+                      B,
                       {
                           hide: a,
                           invite: l,
                           showChannel: d,
-                          inviteDisabled: C
+                          inviteDisabled: b
                       },
                       l.code
                   );
         },
-        rowHeight: (e, t) => (e > 0 ? 0 : 0 === E.length && 0 === t && p ? 62 : null != E[t] ? 62 : 0),
-        sectionHeight: () => (0 !== E.length || p ? 120 : 344)
+        rowHeight: (e, t) => (e > 0 ? 0 : 0 === N.length && 0 === t && u ? 62 : null != N[t] ? 62 : 0),
+        sectionHeight: () => (0 !== N.length || u ? 120 : 344)
     });
 }
