@@ -5,7 +5,6 @@ e.exports = {
     avatarWrapper: 'avatarWrapper_b2ca13',
     nameTag: 'nameTag_b2ca13',
     canCopy: 'canCopy_b2ca13',
-    hasBuildOverride: 'hasBuildOverride_b2ca13',
     buildOverrideButton: 'buildOverrideButton_b2ca13',
     panelTitleContainer: 'panelTitleContainer_b2ca13',
     panelSubtextContainer: 'panelSubtextContainer_b2ca13',

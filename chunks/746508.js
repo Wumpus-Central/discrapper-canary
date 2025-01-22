@@ -671,7 +671,10 @@ function ez(e) {
             },
             tooltipClassName: eD.noiseCancellationTooltip,
             tooltipText: n ? null : ej.intl.string(ej.t.vFiCS0),
-            icon: s
+            icon: (0, i.jsx)(s, {
+                size: 'refresh_sm',
+                color: f.tokens.colors.CHANNEL_ICON
+            })
         })
     );
 }
