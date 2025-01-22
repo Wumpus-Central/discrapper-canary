@@ -820,17 +820,15 @@ n.ZP = {
     querySoundmoji(e, n) {
         let r = Y.default.getCurrentUser();
         !A.Z.isFetching() && !A.Z.hasFetchedAllSounds() && (0, S.w)(), L.DZ.loadIfNecessary();
-        let i = A.Z.getSounds()
-            .values()
-            .reduce(
-                (e, r) => (
-                    r.forEach((r) => {
-                        (0, T.Z)(r, null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id) && e.push(r);
-                    }),
-                    e
-                ),
-                []
-            );
+        let i = Array.from(A.Z.getSounds().values()).reduce(
+            (e, r) => (
+                r.forEach((r) => {
+                    (0, T.Z)(r, null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id) && e.push(r);
+                }),
+                e
+            ),
+            []
+        );
         return (0, C.cK)(e, i, r, n);
     },
     matchSentinel: (e, n, r) => !eE.test(n) && e === r,
