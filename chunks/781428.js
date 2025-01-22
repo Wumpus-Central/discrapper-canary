@@ -741,7 +741,6 @@ t.Z = function (e) {
         user: O.Z.user,
         loginStatus: L.default.getLoginStatus(),
         mfaTicket: L.default.getMFATicket(),
-        mfaSMS: L.default.getMFASMS(),
         mfaMethods: L.default.getMFAMethods(),
         maskedPhone: L.default.getMaskedPhone(),
         errors: L.default.getErrors(),

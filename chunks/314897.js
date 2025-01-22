@@ -364,18 +364,6 @@ class e$ extends (o = p.ZP.Store) {
     getMFATicket() {
         return W;
     }
-    getMFASMS() {
-        return K;
-    }
-    getMFATotp() {
-        return q;
-    }
-    getMFABackup() {
-        return Q;
-    }
-    getMFAWebAuthn() {
-        return z;
-    }
     getMFAMethods() {
         let e = [];
         return (
@@ -397,12 +385,6 @@ class e$ extends (o = p.ZP.Store) {
     hasTOTPEnabled() {
         return Y.includes(g.Pi.TOTP);
     }
-    hasSMSEnabled() {
-        return Y.includes(g.Pi.SMS);
-    }
-    hasWebAuthnEnabled() {
-        return Y.includes(g.Pi.WEBAUTHN);
-    }
     getMaskedPhone() {
         return X;
     }
@@ -418,9 +400,6 @@ class e$ extends (o = p.ZP.Store) {
     }
     allowLogoutRedirect() {
         return !H;
-    }
-    getWebAuthnChallenge() {
-        return z;
     }
     getSuspendedUserToken() {
         return ei;

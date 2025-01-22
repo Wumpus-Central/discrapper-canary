@@ -16,8 +16,8 @@ var n,
     x = s(541692),
     C = s(952802),
     _ = s(210887),
-    A = s(314897),
-    b = s(896797),
+    b = s(314897),
+    A = s(896797),
     N = s(585483),
     T = s(981631),
     R = s(388032),
@@ -36,7 +36,7 @@ function I(e, t, s) {
         e
     );
 }
-class M extends (n = r.PureComponent) {
+class w extends (n = r.PureComponent) {
     componentDidMount() {
         window.addEventListener('keydown', this.handleTabOrEnter);
     }
@@ -146,7 +146,7 @@ class M extends (n = r.PureComponent) {
                             'data-theme': n,
                             'data-disable-adaptive-theme': !0,
                             className: a()(e, v.navRow),
-                            children: (0, o.jsx)(w, {
+                            children: (0, o.jsx)(M, {
                                 loginStatus: t,
                                 closeLogin: s,
                                 themeClass: e,
@@ -375,7 +375,7 @@ class M extends (n = r.PureComponent) {
             });
     }
 }
-function w(e) {
+function M(e) {
     let { loginStatus: t, closeLogin: s, themeClass: n, handleLogin: r } = e,
         i = (0, p.Q3)('MultiAccountLogin:ActionButtons');
     return (0, o.jsxs)(o.Fragment, {
@@ -401,24 +401,23 @@ function w(e) {
         ]
     });
 }
-I(M, 'defaultProps', {
+I(w, 'defaultProps', {
     transitionTo: (e) => s.g.location.assign(e),
     replaceWith: (e) => s.g.location.replace(e)
 });
 t.Z = function (e) {
-    let t = (0, l.cj)([b.Z, A.default, x.Z, _.Z], () => ({
-        authenticated: A.default.isAuthenticated(),
-        loginStatus: A.default.getLoginStatus(),
-        mfaTicket: A.default.getMFATicket(),
-        mfaSMS: A.default.getMFASMS(),
-        maskedPhone: A.default.getMaskedPhone(),
-        mfaMethods: A.default.getMFAMethods(),
-        errors: A.default.getErrors(),
-        defaultRoute: b.Z.defaultRoute,
+    let t = (0, l.cj)([A.Z, b.default, x.Z, _.Z], () => ({
+        authenticated: b.default.isAuthenticated(),
+        loginStatus: b.default.getLoginStatus(),
+        mfaTicket: b.default.getMFATicket(),
+        maskedPhone: b.default.getMaskedPhone(),
+        mfaMethods: b.default.getMFAMethods(),
+        errors: b.default.getErrors(),
+        defaultRoute: A.Z.defaultRoute,
         country: x.Z.getCountryCode(),
         theme: _.Z.theme
     }));
-    return (0, o.jsx)(M, {
+    return (0, o.jsx)(w, {
         ...e,
         ...t
     });
