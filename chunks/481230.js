@@ -27,12 +27,9 @@ function m(e) {
     });
 }
 function p(e) {
-    let { email: t, phoneToken: n, username: i, globalName: m, consent: p, password: x, guildTemplateCode: _, birthday: E, invite: I = null, giftCodeSKUId: v = null, multiStep: N = !1, promoEmailConsent: C = null, usedUsernameSuggestion: b = null } = e;
+    let { email: t, phoneToken: n, username: i, globalName: m, consent: p, password: x, guildTemplateCode: _, birthday: E, invite: I = null, giftCodeSKUId: v = null, promoEmailConsent: N = null, usedUsernameSuggestion: C = null } = e;
     return (
-        l.Z.dispatch({
-            type: 'REGISTER',
-            birthday: N ? E : null
-        }),
+        l.Z.dispatch({ type: 'REGISTER' }),
         null != E &&
             ((0, h.Z)(E, f.jXE.REGISTER),
             d.default.track(f.rMx.AGE_GATE_ACTION, {
@@ -58,15 +55,15 @@ function p(e) {
                 date_of_birth: null == E ? void 0 : E.format('YYYY-MM-DD'),
                 gift_code_sku_id: v,
                 guild_template_code: _,
-                promotional_email_opt_in: null == C ? void 0 : C.checked
+                promotional_email_opt_in: null == N ? void 0 : N.checked
             },
             trackedActionData: {
                 event: s.NetworkActionNames.USER_REGISTER,
                 properties: {
                     invite_code: I,
-                    used_username_suggestion: b,
-                    promotional_email_opt_in: null == C ? void 0 : C.checked,
-                    promotional_email_pre_checked: null == C ? void 0 : C.preChecked,
+                    used_username_suggestion: C,
+                    promotional_email_opt_in: null == N ? void 0 : N.checked,
+                    promotional_email_pre_checked: null == N ? void 0 : N.preChecked,
                     was_unique_username: !0
                 }
             },
