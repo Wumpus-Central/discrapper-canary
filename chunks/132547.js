@@ -1,4 +1,4 @@
-n(47120);
+n(47120), n(610138), n(216116), n(78328), n(815648);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -32,67 +32,72 @@ t.Z = () => {
         [j, O] = r.useState(!1);
     (0, p.FM)();
     let R = (0, h.b)(A),
-        P = (0, E.TW)(A);
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsx)(o.AdvancedScrollerAuto, {
-                className: N.mainPageScroller,
-                ref: e,
-                children: (0, i.jsx)('div', {
-                    className: N.container,
-                    children: (0, i.jsxs)(d.Gt, {
-                        value: s,
-                        children: [
-                            (0, i.jsx)(_.Z, {
-                                className: N.heroHeading,
-                                location: C.MQ.HOME
-                            }),
-                            (0, i.jsx)(x.Z, {
-                                variant: C.R0.WHATS_NEW,
-                                className: a()(N.whatsNew, { [N.whatsNewWithOriginalHeroHeading]: !(R || P) }),
-                                noBackground: !0,
-                                leftAlignHeaders: !0
-                            }),
-                            (0, i.jsx)(x.Z, {
-                                className: N.perksDiscoverability,
-                                noBackground: !0,
-                                leftAlignHeaders: !0,
-                                showAllPerksButton: (0, i.jsx)(S.Z, {
-                                    setIsAllPerksVisible: n,
-                                    previousComponent: C.MQ.HOME
+        P = (0, E.TW)(A),
+        D = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
+    return (
+        window.history.replaceState({}, '', window.location.pathname),
+        (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsx)(o.AdvancedScrollerAuto, {
+                    className: N.mainPageScroller,
+                    ref: e,
+                    children: (0, i.jsx)('div', {
+                        className: N.container,
+                        children: (0, i.jsxs)(d.Gt, {
+                            value: s,
+                            children: [
+                                (0, i.jsx)(_.Z, {
+                                    className: N.heroHeading,
+                                    location: C.MQ.HOME
+                                }),
+                                (0, i.jsx)(x.Z, {
+                                    variant: C.R0.WHATS_NEW,
+                                    className: a()(N.whatsNew, { [N.whatsNewWithOriginalHeroHeading]: !(R || P) }),
+                                    noBackground: !0,
+                                    leftAlignHeaders: !0,
+                                    shouldAutoScroll: D
+                                }),
+                                (0, i.jsx)(x.Z, {
+                                    className: N.perksDiscoverability,
+                                    noBackground: !0,
+                                    leftAlignHeaders: !0,
+                                    showAllPerksButton: (0, i.jsx)(S.Z, {
+                                        setIsAllPerksVisible: n,
+                                        previousComponent: C.MQ.HOME
+                                    })
+                                }),
+                                (0, i.jsx)(f.Z, {
+                                    className: N.giftNitro,
+                                    location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
+                                    analyticsLocation: {
+                                        page: b.ZY5.NITRO_HOME,
+                                        section: b.jXE.GIFT_BANNER
+                                    }
+                                }),
+                                (0, i.jsx)('div', { className: N.footerSpacing }),
+                                (0, i.jsx)(l.$, {
+                                    onChange: (e) => {
+                                        e && !j && (g.default.track(b.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), O(!0));
+                                    },
+                                    children: (0, i.jsx)('div', { className: N.bottomOfPageVisibilitySensor })
+                                }),
+                                (0, i.jsx)('img', {
+                                    src: v,
+                                    className: N.bottomIllustration,
+                                    width: 112,
+                                    height: 85,
+                                    alt: I.intl.string(I.t.X4IxWF)
                                 })
-                            }),
-                            (0, i.jsx)(f.Z, {
-                                className: N.giftNitro,
-                                location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
-                                analyticsLocation: {
-                                    page: b.ZY5.NITRO_HOME,
-                                    section: b.jXE.GIFT_BANNER
-                                }
-                            }),
-                            (0, i.jsx)('div', { className: N.footerSpacing }),
-                            (0, i.jsx)(l.$, {
-                                onChange: (e) => {
-                                    e && !j && (g.default.track(b.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), O(!0));
-                                },
-                                children: (0, i.jsx)('div', { className: N.bottomOfPageVisibilitySensor })
-                            }),
-                            (0, i.jsx)('img', {
-                                src: v,
-                                className: N.bottomIllustration,
-                                width: 112,
-                                height: 85,
-                                alt: I.intl.string(I.t.X4IxWF)
-                            })
-                        ]
+                            ]
+                        })
                     })
+                }),
+                (0, i.jsx)(T.Z, {
+                    isAllPerksVisible: t,
+                    setIsAllPerksVisible: n,
+                    previousComponent: C.MQ.HOME
                 })
-            }),
-            (0, i.jsx)(T.Z, {
-                isAllPerksVisible: t,
-                setIsAllPerksVisible: n,
-                previousComponent: C.MQ.HOME
-            })
-        ]
-    });
+            ]
+        })
+    );
 };
