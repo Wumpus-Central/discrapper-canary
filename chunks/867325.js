@@ -1,26 +1,31 @@
-var r,
-    o = n(668530),
-    a = n(156741),
-    i = n(735471),
-    s = n(262546),
-    c = n(204384),
-    l = n(780524),
-    u = n(274745),
-    d = o.Function;
-var p = /MSIE .\./.test(c) || (s && ((r = o.Bun.version.split('.')).length < 3 || ('0' === r[0] && (r[1] < 3 || ('3' === r[1] && '0' === r[2])))));
-e.exports = function (e, t) {
-    var n = t ? 2 : 1;
-    return p
-        ? function (r, o) {
-              var s = u(arguments.length, 1) > n,
-                  c = i(r) ? r : d(r),
-                  p = s ? l(arguments, n) : [],
-                  h = s
+var i = r(668530),
+    a = r(156741),
+    o = r(735471),
+    s = r(262546),
+    l = r(204384),
+    u = r(780524),
+    c = r(274745),
+    d = i.Function,
+    f =
+        /MSIE .\./.test(l) ||
+        (s &&
+            (function () {
+                var e = i.Bun.version.split('.');
+                return e.length < 3 || ('0' === e[0] && (e[1] < 3 || ('3' === e[1] && '0' === e[2])));
+            })());
+e.exports = function (e, n) {
+    var r = n ? 2 : 1;
+    return f
+        ? function (i, s) {
+              var l = c(arguments.length, 1) > r,
+                  f = o(i) ? i : d(i),
+                  p = l ? u(arguments, r) : [],
+                  h = l
                       ? function () {
-                            a(c, this, p);
+                            a(f, this, p);
                         }
-                      : c;
-              return t ? e(h, o) : e(h);
+                      : f;
+              return n ? e(h, s) : e(h);
           }
         : e;
 };

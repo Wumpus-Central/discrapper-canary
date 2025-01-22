@@ -1,62 +1,64 @@
-n.d(t, {
+r.d(n, {
     i: function () {
-        return o;
+        return i;
     }
 });
 var i,
-    o,
-    a = n(200651);
-n(192379);
-var r = n(442837),
-    c = n(780384),
-    d = n(481060),
-    s = n(410030),
-    l = n(594174),
-    f = n(388032),
-    u = n(259319),
-    p = n(982240),
-    _ = n(533854);
-((i = o || (o = {}))[(i.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (i[(i.GIFT_MODAL = 1)] = 'GIFT_MODAL');
-t.Z = (e) => {
-    let { onRetry: t, errorOrigin: n, errorMessage: i } = e,
-        o = (0, s.ZP)(),
-        b = (0, r.e7)([l.default], () => {
-            let e = l.default.getCurrentUser();
+    a = r(200651);
+r(192379);
+var o = r(442837),
+    s = r(780384),
+    l = r(481060),
+    u = r(410030),
+    c = r(594174),
+    d = r(388032),
+    f = r(259319),
+    p = r(982240),
+    h = r(533854);
+!(function (e) {
+    (e[(e.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (e[(e.GIFT_MODAL = 1)] = 'GIFT_MODAL');
+})(i || (i = {}));
+let _ = (e) => {
+    let { onRetry: n, errorOrigin: r, errorMessage: i } = e,
+        _ = (0, u.ZP)(),
+        m = (0, o.e7)([c.default], () => {
+            let e = c.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        x = 1 === n ? u.giftModalContainer : u.shopPageContainer,
-        g = 1 === n ? f.intl.string(f.t['+2QBZW']) : f.intl.string(f.t.LuhKs7);
+        g = 1 === r ? f.giftModalContainer : f.shopPageContainer,
+        E = 1 === r ? d.intl.string(d.t['+2QBZW']) : d.intl.string(d.t.LuhKs7);
     return (0, a.jsxs)('div', {
-        className: x,
+        className: g,
         children: [
             (0, a.jsx)('img', {
-                className: u.__invalid_loadIssueImg,
-                src: (0, c.wj)(o) ? p : _,
+                className: f.__invalid_loadIssueImg,
+                src: (0, s.wj)(_) ? p : h,
                 alt: ''
             }),
-            (0, a.jsx)(d.Heading, {
-                className: u.heading1,
+            (0, a.jsx)(l.Heading, {
+                className: f.heading1,
                 variant: 'heading-xl/semibold',
-                children: f.intl.string(f.t['i5SQ7+'])
+                children: d.intl.string(d.t['i5SQ7+'])
             }),
-            (0, a.jsx)(d.Text, {
-                className: u.description,
+            (0, a.jsx)(l.Text, {
+                className: f.description,
                 variant: 'text-md/normal',
-                children: g
+                children: E
             }),
-            b &&
+            m &&
                 null != i &&
-                (0, a.jsx)(d.Text, {
+                (0, a.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     children: 'staff-only debug: ' + i
                 }),
-            (0, a.jsx)(d.Button, {
-                className: u.reload,
-                size: d.Button.Sizes.MEDIUM,
-                color: d.Button.Colors.BRAND,
-                onClick: t,
-                children: f.intl.string(f.t['+hivLS'])
+            (0, a.jsx)(l.Button, {
+                className: f.reload,
+                size: l.Button.Sizes.MEDIUM,
+                color: l.Button.Colors.BRAND,
+                onClick: n,
+                children: d.intl.string(d.t['+hivLS'])
             })
         ]
     });
 };
+n.Z = _;

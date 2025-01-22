@@ -1,58 +1,60 @@
-var e,
+var i,
+    a,
     o,
-    i,
-    u = n(723455),
-    s = n(668530),
-    c = n(982665),
-    f = n(948634),
-    a = n(141603),
-    p = n(980277),
-    v = n(964653),
-    l = n(511364),
-    y = 'Object already initialized',
-    h = s.TypeError,
-    x = s.WeakMap;
-if (u || p.state) {
-    var d = p.state || (p.state = new x());
-    (d.get = d.get),
-        (d.has = d.has),
-        (d.set = d.set),
-        (e = function (t, r) {
-            if (d.has(t)) throw new h(y);
-            return (r.facade = t), d.set(t, r), r;
+    s = r(723455),
+    l = r(668530),
+    u = r(982665),
+    c = r(948634),
+    d = r(141603),
+    f = r(980277),
+    p = r(964653),
+    h = r(511364),
+    _ = 'Object already initialized',
+    m = l.TypeError,
+    g = l.WeakMap,
+    E = function (e) {
+        return o(e) ? a(e) : i(e, {});
+    },
+    v = function (e) {
+        return function (n) {
+            var r;
+            if (!u(n) || (r = a(n)).type !== e) throw new m('Incompatible receiver, ' + e + ' required');
+            return r;
+        };
+    };
+if (s || f.state) {
+    var y = f.state || (f.state = new g());
+    (y.get = y.get),
+        (y.has = y.has),
+        (y.set = y.set),
+        (i = function (e, n) {
+            if (y.has(e)) throw new m(_);
+            return (n.facade = e), y.set(e, n), n;
         }),
-        (o = function (t) {
-            return d.get(t) || {};
+        (a = function (e) {
+            return y.get(e) || {};
         }),
-        (i = function (t) {
-            return d.has(t);
+        (o = function (e) {
+            return y.has(e);
         });
 } else {
-    var g = v('state');
-    (l[g] = !0),
-        (e = function (t, r) {
-            if (a(t, g)) throw new h(y);
-            return (r.facade = t), f(t, g, r), r;
+    var b = p('state');
+    (h[b] = !0),
+        (i = function (e, n) {
+            if (d(e, b)) throw new m(_);
+            return (n.facade = e), c(e, b, n), n;
         }),
-        (o = function (t) {
-            return a(t, g) ? t[g] : {};
+        (a = function (e) {
+            return d(e, b) ? e[b] : {};
         }),
-        (i = function (t) {
-            return a(t, g);
+        (o = function (e) {
+            return d(e, b);
         });
 }
-t.exports = {
-    set: e,
-    get: o,
-    has: i,
-    enforce: function (t) {
-        return i(t) ? o(t) : e(t, {});
-    },
-    getterFor: function (t) {
-        return function (r) {
-            var n;
-            if (!c(r) || (n = o(r)).type !== t) throw new h('Incompatible receiver, ' + t + ' required');
-            return n;
-        };
-    }
+e.exports = {
+    set: i,
+    get: a,
+    has: o,
+    enforce: E,
+    getterFor: v
 };

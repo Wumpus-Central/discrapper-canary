@@ -1,41 +1,18 @@
-n.d(t, {
+r.d(n, {
     F: function () {
-        return u;
-    },
-    b: function () {
-        return d;
+        return l;
     }
 });
-var a = n(200651);
-n(192379);
-var r = n(512722),
-    l = n.n(r),
-    s = n(481060),
-    i = n(563132),
-    o = n(185139),
-    c = n(388032);
-let u = (e) => {
-    let { className: t } = e;
-    return (0, a.jsx)(s.FormSection, {
-        className: t,
-        children: (0, a.jsx)(s.FormTitle, { children: c.intl.string(c.t.eALkIS) })
+var i = r(200651);
+r(192379);
+var a = r(512722);
+var o = r(481060);
+r(563132), r(185139);
+var s = r(388032);
+let l = (e) => {
+    let { className: n } = e;
+    return (0, i.jsx)(o.FormSection, {
+        className: n,
+        children: (0, i.jsx)(o.FormTitle, { children: s.intl.string(s.t.eALkIS) })
     });
 };
-function d(e) {
-    let { steps: t, currentStep: n, paymentError: r, className: s } = e,
-        { steps: c, step: d, paymentError: p } = (0, i.usePaymentContext)();
-    return (
-        (t = null != t ? t : c),
-        null == n && null != d && (n = d),
-        l()(n, 'step should be set'),
-        l()(t, 'step should be set'),
-        (r = null != r ? r : p),
-        (0, a.jsx)(o.Z, {
-            steps: t,
-            currentStep: n,
-            paymentError: r,
-            body: (0, a.jsx)(u, { className: s }),
-            footer: null
-        })
-    );
-}

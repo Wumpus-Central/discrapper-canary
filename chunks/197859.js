@@ -1,2 +1,2 @@
-var r = n(668530);
-e.exports = r.Promise;
+var i = r(668530);
+e.exports = i.Promise;

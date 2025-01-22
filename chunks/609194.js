@@ -1,53 +1,56 @@
-var l,
-    o,
-    t,
-    s,
+var i,
     a,
-    c = n(200651),
-    i = n(192379),
-    d = n(120356),
-    u = n.n(d),
-    p = n(600164),
-    m = n(355787);
-function f(e, r, n) {
+    o,
+    s = r(200651),
+    l = r(192379),
+    u = r(120356),
+    c = r.n(u),
+    d = r(600164),
+    f = r(355787);
+function p(e, n, r) {
     return (
-        r in e
-            ? Object.defineProperty(e, r, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[r] = n),
+            : (e[n] = r),
         e
     );
 }
-((l = t || (t = {})).PRIMARY = 'primary'), (l.SECONDARY = 'secondary'), (l.WARNING = 'warning'), (l.ERROR = 'error'), ((o = s || (s = {})).SMALL = 'small'), (o.LARGE = 'large'), (o.NONE = 'none');
+!(function (e) {
+    (e.PRIMARY = 'primary'), (e.SECONDARY = 'secondary'), (e.WARNING = 'warning'), (e.ERROR = 'error');
+})(i || (i = {})),
+    !(function (e) {
+        (e.SMALL = 'small'), (e.LARGE = 'large'), (e.NONE = 'none');
+    })(a || (a = {}));
 let h = {
-        primary: m.colorPrimary,
-        secondary: m.colorSecondary,
-        warning: m.colorWarning,
-        error: m.colorError
+        primary: f.colorPrimary,
+        secondary: f.colorSecondary,
+        warning: f.colorWarning,
+        error: f.colorError
     },
     _ = {
-        small: m.small,
-        large: m.large,
+        small: f.small,
+        large: f.large,
         none: null
     };
-class x extends (a = i.PureComponent) {
+class m extends (o = l.PureComponent) {
     render() {
-        let { icon: e, color: r, children: n, iconSize: l, className: o, iconClassName: t } = this.props;
-        return (0, c.jsxs)(p.Z, {
-            className: u()(m.note, h[r], o),
-            align: p.Z.Align.CENTER,
+        let { icon: e, color: n, children: r, iconSize: i, className: a, iconClassName: o } = this.props;
+        return (0, s.jsxs)(d.Z, {
+            className: c()(f.note, h[n], a),
+            align: d.Z.Align.CENTER,
             children: [
-                (0, c.jsx)(e, {
-                    className: u()(m.icon, _[l], t),
+                (0, s.jsx)(e, {
+                    className: c()(f.icon, _[i], o),
                     color: 'currentColor'
                 }),
-                (0, c.jsx)('div', { children: n })
+                (0, s.jsx)('div', { children: r })
             ]
         });
     }
 }
-f(x, 'Colors', t), f(x, 'Sizes', s), (r.Z = x);
+p(m, 'Colors', i), p(m, 'Sizes', a), (n.Z = m);

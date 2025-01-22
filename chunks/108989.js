@@ -1,16 +1,17 @@
-n.d(t, {
+r.d(n, {
     Z: function () {
-        return c;
+        return p;
     }
-}),
-    n(47120);
-var i = n(200651),
-    l = n(192379),
-    a = n(119617);
-let r = [n(123353)],
-    o = ['#FFFFFF'],
-    u = 1000 / 60,
-    s = {
+});
+var i = r(47120);
+var a = r(200651),
+    o = r(192379),
+    s = r(119617);
+let l = [r(123353)],
+    u = ['#FFFFFF'],
+    c = 6,
+    d = 1000 / 60,
+    f = {
         velocity: {
             type: 'static-random',
             minValue: {
@@ -59,50 +60,50 @@ let r = [n(123353)],
             value: 0.3
         }
     };
-function c(e) {
-    let { className: t, firing: n = !0, wind: c = 2, sprites: d = r, spriteColors: f = o, confettiConfig: C } = e,
-        [_, m] = l.useState(null),
-        [L, S] = l.useState(null),
-        p = (0, a.uR)(L, _),
-        T = l.useMemo(() => new a.qA({ wind: c }), [c]),
-        E = l.useCallback(() => {
-            let e = null == L ? void 0 : L.getCanvas();
+function p(e) {
+    let { className: n, firing: r = !0, wind: i = 2, sprites: p = l, spriteColors: h = u, confettiConfig: _ } = e,
+        [m, g] = o.useState(null),
+        [E, v] = o.useState(null),
+        y = (0, s.uR)(E, m),
+        b = o.useMemo(() => new s.qA({ wind: i }), [i]),
+        I = o.useCallback(() => {
+            let e = null == E ? void 0 : E.getCanvas();
             if (null == e) return;
-            let t = e.getBoundingClientRect();
-            p.createConfetti({
-                ...s,
-                ...C,
+            let n = e.getBoundingClientRect();
+            y.createConfetti({
+                ...f,
+                ..._,
                 position: {
                     type: 'static-random',
                     minValue: {
-                        x: -t.width / 2,
-                        y: -6
+                        x: -n.width / 2,
+                        y: -c
                     },
                     maxValue: {
-                        x: t.width,
-                        y: -6
+                        x: n.width,
+                        y: -c
                     }
                 }
             });
-        }, [p, L, C]);
+        }, [y, E, _]);
     return (
-        l.useEffect(() => {
-            let e = n ? setInterval(E, u) : null;
+        o.useEffect(() => {
+            let e = r ? setInterval(I, d) : null;
             return () => clearInterval(e);
-        }, [n, E]),
-        (0, i.jsxs)(i.Fragment, {
+        }, [r, I]),
+        (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, i.jsx)(a.O_, {
-                    ref: S,
-                    className: t,
-                    environment: T
+                (0, a.jsx)(s.O_, {
+                    ref: v,
+                    className: n,
+                    environment: b
                 }),
-                (0, i.jsx)(a.Ji, {
-                    ref: m,
-                    colors: f,
-                    sprites: d,
-                    spriteWidth: 6,
-                    spriteHeight: 6
+                (0, a.jsx)(s.Ji, {
+                    ref: g,
+                    colors: h,
+                    sprites: p,
+                    spriteWidth: c,
+                    spriteHeight: c
                 })
             ]
         })

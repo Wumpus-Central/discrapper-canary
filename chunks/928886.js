@@ -1,82 +1,88 @@
-n.d(t, {
+r.d(n, {
     U: function () {
-        return g;
+        return A;
     }
 });
-var i = n(200651),
-    l = n(192379),
-    a = n(512722),
-    r = n.n(a),
-    o = n(481060),
-    u = n(479446),
-    s = n(646476),
-    c = n(104494),
-    d = n(639119),
-    f = n(981632),
-    C = n(798769),
-    _ = n(689011),
-    m = n(669079),
-    L = n(987209),
-    S = n(563132),
-    p = n(409813),
-    T = n(981631),
-    E = n(474936),
-    N = n(231338),
-    h = n(467474);
-function g(e) {
-    var t;
-    let { renderHeader: n, referralTrialOfferId: a, handleClose: g } = e,
-        { selectedSkuId: A, step: v, selectedPlan: R, purchaseState: P, purchaseType: x, selectedSku: I } = (0, S.usePaymentContext)(),
-        { isGift: M, selectedGiftStyle: b, giftRecipient: y } = (0, L.wD)(),
-        O = M && (0, m.pO)(y) && v === p.h8.CONFIRM && null != b && (null == I ? void 0 : I.productLine) !== T.POd.COLLECTIBLES,
-        Z = null != n && null != v,
-        D = [p.h8.SKU_SELECT, p.h8.SELECT_FREE_SKU],
-        w = null != v && !D.includes(v) && null != A,
-        k = (0, d.N)(a),
-        F = !M && null != k && null != A && E.nG[k.trial_id].skus.includes(A),
-        j = (0, c.Ng)(),
-        U = null == j ? void 0 : null === (t = j.discount) || void 0 === t ? void 0 : t.plan_ids.some((e) => E.GP[e].skuId === A),
-        H = !M && null != j && null != A && U,
-        { enabled: B } = s.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
-        Y = (0, s.rK)(),
-        V = B && Y;
-    return l.useMemo(() => {
-        if (null == v) return;
+var i = r(200651),
+    a = r(192379),
+    o = r(512722),
+    s = r.n(o),
+    l = r(481060),
+    u = r(479446),
+    c = r(646476),
+    d = r(104494),
+    f = r(639119),
+    p = r(981632),
+    h = r(798769),
+    _ = r(689011),
+    m = r(669079),
+    g = r(987209),
+    E = r(563132),
+    v = r(409813),
+    y = r(981631),
+    b = r(474936),
+    I = r(231338),
+    T = r(467474);
+function S(e, n) {
+    return e in n;
+}
+function A(e) {
+    var n;
+    let { renderHeader: r, referralTrialOfferId: o, handleClose: A } = e,
+        { selectedSkuId: C, step: N, selectedPlan: R, purchaseState: O, purchaseType: D, selectedSku: x } = (0, E.usePaymentContext)(),
+        { isGift: L, selectedGiftStyle: w, giftRecipient: P } = (0, g.wD)(),
+        M = L && (0, m.pO)(P) && N === v.h8.CONFIRM && null != w && (null == x ? void 0 : x.productLine) !== y.POd.COLLECTIBLES,
+        k = null != r && null != N,
+        U = [v.h8.SKU_SELECT, v.h8.SELECT_FREE_SKU],
+        B = null != N && !U.includes(N) && null != C,
+        G = (0, f.N)(o),
+        Z = !L && null != G && null != C && b.nG[G.trial_id].skus.includes(C),
+        F = (0, d.Ng)(),
+        V = null == F ? void 0 : null === (n = F.discount) || void 0 === n ? void 0 : n.plan_ids.some((e) => b.GP[e].skuId === C),
+        j = !L && null != F && null != C && V,
+        { enabled: H } = c.ZP.useExperiment({ location: 'PaymentModalHeader' }, { autoTrackExposure: !1 }),
+        Y = (0, c.rK)(),
+        W = H && Y;
+    return a.useMemo(() => {
+        if (null == N) return;
         let e = null;
-        if (O)
-            e = (0, i.jsxs)('div', {
-                className: h.container,
-                children: [
-                    (0, i.jsx)(f.Z, {
-                        defaultAnimationState: u.SR.LOOP,
-                        giftStyle: b,
-                        className: h.seasonalGiftBoxHeaderIcon
-                    }),
-                    (0, i.jsx)(o.ModalCloseButton, {
-                        onClick: g,
-                        className: h.closeButton
-                    })
-                ]
-            });
-        else if (Z) e = n(null != R ? R : null, g, v);
-        else if (x === N.GZ.ONE_TIME)
-            e = (0, i.jsx)(_.t, {
-                step: v,
-                onClose: g
-            });
-        else if (w)
-            r()(A in E.y7, 'invalid sku id: '.concat(A)),
-                (e = (0, i.jsx)(C.Z, {
-                    currentStep: null != v ? v : void 0,
-                    purchaseState: P,
-                    premiumType: E.y7[A],
-                    onClose: g,
-                    showTrialBadge: F,
-                    showDiscountBadge: H,
-                    isGift: M,
-                    giftRecipient: y,
-                    useWinterTheme: V
-                }));
-        return e;
-    }, [b, g, P, n, R, A, v, F, H, O, w, Z, x, M, y, V]);
+        return (
+            M
+                ? (e = (0, i.jsxs)('div', {
+                      className: T.container,
+                      children: [
+                          (0, i.jsx)(p.Z, {
+                              defaultAnimationState: u.SR.LOOP,
+                              giftStyle: w,
+                              className: T.seasonalGiftBoxHeaderIcon
+                          }),
+                          (0, i.jsx)(l.ModalCloseButton, {
+                              onClick: A,
+                              className: T.closeButton
+                          })
+                      ]
+                  }))
+                : k
+                  ? (e = r(null != R ? R : null, A, N))
+                  : D === I.GZ.ONE_TIME
+                    ? (e = (0, i.jsx)(_.t, {
+                          step: N,
+                          onClose: A
+                      }))
+                    : B &&
+                      (s()(S(C, b.y7), 'invalid sku id: '.concat(C)),
+                      (e = (0, i.jsx)(h.Z, {
+                          currentStep: null != N ? N : void 0,
+                          purchaseState: O,
+                          premiumType: b.y7[C],
+                          onClose: A,
+                          showTrialBadge: Z,
+                          showDiscountBadge: j,
+                          isGift: L,
+                          giftRecipient: P,
+                          useWinterTheme: W
+                      }))),
+            e
+        );
+    }, [w, A, O, r, R, C, N, Z, j, M, B, k, D, L, P, W]);
 }

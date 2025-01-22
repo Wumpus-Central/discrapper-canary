@@ -1,16 +1,18 @@
-var i = n(200651),
-    o = n(192379),
-    a = n(481060),
-    r = n(372900);
-t.Z = o.memo(function (e) {
-    var t, n, c, d;
-    let { user: s, size: l = a.AvatarSizes.SIZE_32, animate: f = !1, 'aria-hidden': u = !1, ...p } = e,
-        _ = o.useContext(r.Z);
-    return (0, i.jsx)(a.Avatar, {
-        src: ((t = s), (n = (0, a.getAvatarSize)(l)), (c = f), (d = _), t.getAvatarURL(d, n, c)),
-        size: l,
-        'aria-label': u ? void 0 : s.username,
-        'aria-hidden': u,
-        ...p
+var i = r(200651),
+    a = r(192379),
+    o = r(481060),
+    s = r(372900);
+function l(e, n, r, i) {
+    return e.getAvatarURL(i, n, r);
+}
+n.Z = a.memo(function (e) {
+    let { user: n, size: r = o.AvatarSizes.SIZE_32, animate: u = !1, 'aria-hidden': c = !1, ...d } = e,
+        f = a.useContext(s.Z);
+    return (0, i.jsx)(o.Avatar, {
+        src: l(n, (0, o.getAvatarSize)(r), u, f),
+        size: r,
+        'aria-label': c ? void 0 : n.username,
+        'aria-hidden': c,
+        ...d
     });
 });

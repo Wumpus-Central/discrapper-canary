@@ -1,85 +1,86 @@
-i.d(e, {
+r.d(n, {
     g: function () {
-        return r;
+        return i;
     }
 });
-var t,
-    r,
-    l = i(200651);
-i(192379);
-var a = i(481060),
-    s = i(600164),
-    o = i(612853),
-    c = i(388032),
-    d = i(659915);
-((t = r || (r = {}))[(t.CONTINUE = 0)] = 'CONTINUE'), (t[(t.UPGRADE = 1)] = 'UPGRADE'), (t[(t.PURCHASE = 2)] = 'PURCHASE');
-let u = (n) => {
-    let { onBack: e, backText: i, primaryIcon: t, primaryCTA: r, primaryType: u, primaryText: m, primaryTooltip: x, primaryDisabled: f, primarySubmitting: h, onPrimary: j, secondaryText: v, onSecondary: N } = n;
-    return (0, l.jsxs)(a.ModalFooter, {
+var i,
+    a = r(200651);
+r(192379);
+var o = r(481060),
+    s = r(600164),
+    l = r(612853),
+    u = r(388032),
+    c = r(659915);
+!(function (e) {
+    (e[(e.CONTINUE = 0)] = 'CONTINUE'), (e[(e.UPGRADE = 1)] = 'UPGRADE'), (e[(e.PURCHASE = 2)] = 'PURCHASE');
+})(i || (i = {}));
+let d = (e) => {
+    let { onBack: n, backText: r, primaryIcon: i, primaryCTA: d, primaryType: f, primaryText: p, primaryTooltip: h, primaryDisabled: _, primarySubmitting: m, onPrimary: g, secondaryText: E, onSecondary: v } = e,
+        y = () => {
+            if (null == d || null == p) return null;
+            let e = 2 === d ? o.ShinyButton : o.Button,
+                n = {
+                    innerClassName: c.button,
+                    type: f,
+                    disabled: _,
+                    submitting: m,
+                    color: 0 === d ? o.Button.Colors.BRAND : o.Button.Colors.GREEN,
+                    onClick: g
+                };
+            return null != h
+                ? (0, a.jsx)(o.Tooltip, {
+                      text: h,
+                      children: (r) =>
+                          (0, a.jsxs)(e, {
+                              ...r,
+                              ...n,
+                              children: [
+                                  null == i
+                                      ? null
+                                      : (0, a.jsx)(i, {
+                                            color: 'currentColor',
+                                            className: c.primaryIcon
+                                        }),
+                                  p
+                              ]
+                          })
+                  })
+                : (0, a.jsxs)(e, {
+                      ...n,
+                      children: [
+                          null == i
+                              ? null
+                              : (0, a.jsx)(i, {
+                                    color: 'currentColor',
+                                    className: c.primaryIcon
+                                }),
+                          p
+                      ]
+                  });
+        },
+        b = () =>
+            null == E
+                ? null
+                : (0, a.jsx)(o.Button, {
+                      color: o.Button.Colors.PRIMARY,
+                      look: o.Button.Looks.LINK,
+                      onClick: v,
+                      children: E
+                  }),
+        I = () =>
+            null == n
+                ? null
+                : (0, a.jsx)(o.Button, {
+                      className: c.back,
+                      color: o.Button.Colors.PRIMARY,
+                      look: o.Button.Looks.LINK,
+                      onClick: n,
+                      children: null != r ? r : u.intl.string(u.t['13/7kZ'])
+                  });
+    return (0, a.jsxs)(o.ModalFooter, {
         justify: s.Z.Justify.BETWEEN,
         align: s.Z.Align.CENTER,
-        children: [
-            (() => {
-                if (null == r || null == m) return null;
-                let n = 2 === r ? a.ShinyButton : a.Button,
-                    e = {
-                        innerClassName: d.button,
-                        type: u,
-                        disabled: f,
-                        submitting: h,
-                        color: 0 === r ? a.Button.Colors.BRAND : a.Button.Colors.GREEN,
-                        onClick: j
-                    };
-                return null != x
-                    ? (0, l.jsx)(a.Tooltip, {
-                          text: x,
-                          children: (i) =>
-                              (0, l.jsxs)(n, {
-                                  ...i,
-                                  ...e,
-                                  children: [
-                                      null == t
-                                          ? null
-                                          : (0, l.jsx)(t, {
-                                                color: 'currentColor',
-                                                className: d.primaryIcon
-                                            }),
-                                      m
-                                  ]
-                              })
-                      })
-                    : (0, l.jsxs)(n, {
-                          ...e,
-                          children: [
-                              null == t
-                                  ? null
-                                  : (0, l.jsx)(t, {
-                                        color: 'currentColor',
-                                        className: d.primaryIcon
-                                    }),
-                              m
-                          ]
-                      });
-            })(),
-            null == v
-                ? null
-                : (0, l.jsx)(a.Button, {
-                      color: a.Button.Colors.PRIMARY,
-                      look: a.Button.Looks.LINK,
-                      onClick: N,
-                      children: v
-                  }),
-            (0, l.jsx)(o.Z, {}),
-            null == e
-                ? null
-                : (0, l.jsx)(a.Button, {
-                      className: d.back,
-                      color: a.Button.Colors.PRIMARY,
-                      look: a.Button.Looks.LINK,
-                      onClick: e,
-                      children: null != i ? i : c.intl.string(c.t['13/7kZ'])
-                  })
-        ]
+        children: [y(), b(), (0, a.jsx)(l.Z, {}), I()]
     });
 };
-(u.CTAType = r), (e.Z = u);
+(d.CTAType = i), (n.Z = d);

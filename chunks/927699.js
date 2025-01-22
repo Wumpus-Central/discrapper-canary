@@ -1,79 +1,81 @@
-t.d(n, {
+r.d(n, {
     Z: function () {
-        return g;
+        return y;
     }
-}),
-    t(47120);
-var i = t(200651),
-    l = t(192379),
-    r = t(120356),
-    s = t.n(r),
-    a = t(481060),
-    c = t(541716),
-    o = t(752305),
-    u = t(893718),
-    d = t(993413),
-    m = t(131704),
-    p = t(474936),
-    x = t(981631),
-    h = t(388032),
-    f = t(635182);
-let v = (0, m.kt)({
-    id: '1',
-    type: x.d4z.DM
 });
-function g(e) {
-    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: m, placeholder: x, currentText: g, className: S, innerClassName: E, disabled: j = !1, disableThemedBackground: y = !1 } = e,
-        [P, I] = l.useState(null != m ? m : g),
-        [T, N] = l.useState((0, o.JM)(P)),
-        b = l.useRef(!1);
+var i = r(47120);
+var a = r(200651),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
+    u = r(481060),
+    c = r(541716),
+    d = r(752305),
+    f = r(893718),
+    p = r(993413),
+    h = r(131704),
+    _ = r(474936),
+    m = r(981631),
+    g = r(388032),
+    E = r(635182);
+let v = (0, h.kt)({
+    id: '1',
+    type: m.d4z.DM
+});
+function y(e) {
+    let { sectionTitle: n, errors: r, onTextChange: i, pendingText: s, placeholder: h, currentText: m, className: y, innerClassName: b, disabled: I = !1, disableThemedBackground: T = !1 } = e,
+        [S, A] = o.useState(null != s ? s : m),
+        [C, N] = o.useState((0, d.JM)(S)),
+        R = o.useRef(!1);
+    function O(e, n, r) {
+        n !== S && (A(n), N(r), i(n));
+    }
+    function D() {
+        return new Promise((e) => {
+            e({
+                shouldClear: !1,
+                shouldRefocus: !0
+            });
+        });
+    }
     return (
-        l.useEffect(() => {
-            b.current = !0;
+        o.useEffect(() => {
+            R.current = !0;
         }, []),
-        l.useEffect(() => {
-            if (void 0 === m) {
-                let e = (0, o.JM)(g);
-                I(g), N(e);
+        o.useEffect(() => {
+            if (void 0 === s) {
+                let e = (0, d.JM)(m);
+                A(m), N(e);
             }
-        }, [m, g]),
-        (0, i.jsx)('div', {
-            className: s()(f.body, S),
-            children: (0, i.jsxs)(d.Z, {
+        }, [s, m]),
+        (0, a.jsx)('div', {
+            className: l()(E.body, y),
+            children: (0, a.jsxs)(p.Z, {
                 title: n,
-                errors: t,
-                disabled: j,
+                errors: r,
+                disabled: I,
                 children: [
-                    (0, i.jsx)(u.Z, {
-                        innerClassName: s()(f.textArea, E),
-                        editorClassName: f.editorTextArea,
-                        maxCharacterCount: p.$n,
-                        onChange: function (e, n, t) {
-                            n !== P && (I(n), N(t), r(n));
-                        },
-                        placeholder: x,
+                    (0, a.jsx)(f.Z, {
+                        innerClassName: l()(E.textArea, b),
+                        editorClassName: E.editorTextArea,
+                        maxCharacterCount: _.$n,
+                        onChange: O,
+                        placeholder: h,
                         channel: v,
-                        textValue: P,
-                        richValue: T,
+                        textValue: S,
+                        richValue: C,
                         type: c.Ie.CUSTOM_GIFT,
                         onBlur: () => {
-                            b.current = !1;
+                            R.current = !1;
                         },
                         onFocus: () => {
-                            b.current = !0;
+                            R.current = !0;
                         },
-                        focused: b.current,
-                        onSubmit: function () {
-                            return new Promise((e) => {
-                                e({
-                                    shouldClear: !1,
-                                    shouldRefocus: !0
-                                });
-                            });
-                        },
-                        disableThemedBackground: y
+                        focused: R.current,
+                        onSubmit: D,
+                        disableThemedBackground: T
                     }),
-                    (0, i.jsx)(a.HiddenVisually, { children: h.intl.format(h.t['+DFxLS'], { maxLength: p.$n }) })
+                    (0, a.jsx)(u.HiddenVisually, { children: g.intl.format(g.t['+DFxLS'], { maxLength: _.$n }) })
                 ]
             })
         })

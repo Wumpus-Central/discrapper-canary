@@ -1,32 +1,37 @@
 var i = r(200651),
     a = r(192379),
-    s = r(120356),
-    o = r.n(s),
+    o = r(120356),
+    s = r.n(o),
     l = r(481060),
     u = r(540059),
-    c = r(443603),
-    d = r(957825),
-    f = r(388032),
-    _ = r(553796);
-function h(e, n) {
-    let { disabled: r } = e,
-        a = (0, u.Q3)('ChannelMessageConfettiButton');
+    c = r(328908),
+    d = r(443603),
+    f = r(957825),
+    p = r(388032),
+    h = r(553796);
+function _(e, n) {
+    let { disabled: r, channelId: o } = e,
+        _ = (0, u.Q3)('ChannelMessageConfettiButton'),
+        m = (0, c.LN)(o),
+        g = a.useCallback(() => {
+            (0, c.Rg)(o);
+        }, [o]);
     return r
         ? null
         : (0, i.jsx)('div', {
-              className: o()(d.CT, _.buttonContainer),
+              className: s()(f.CT, h.buttonContainer),
               ref: n,
-              children: (0, i.jsx)(c.Z, {
-                  innerClassName: o()(_.button, _.messageConfettiButton),
-                  onClick: () => {},
-                  isActive: !1,
-                  'aria-label': f.intl.string(f.t.yvN8bG),
+              children: (0, i.jsx)(d.Z, {
+                  innerClassName: s()(h.button, h.messageConfettiButton),
+                  onClick: g,
+                  isActive: m,
+                  'aria-label': p.intl.string(p.t.yvN8bG),
                   'aria-haspopup': 'false',
                   children: (0, i.jsx)(l.ExperimentalConfettiIcon, {
-                      size: a ? 'refresh_sm' : void 0,
+                      size: _ ? 'refresh_sm' : void 0,
                       color: 'currentColor'
                   })
               })
           });
 }
-n.Z = a.memo(a.forwardRef(h));
+n.Z = a.memo(a.forwardRef(_));

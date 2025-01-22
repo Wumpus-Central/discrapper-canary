@@ -1,50 +1,51 @@
-t.d(i, {
+r.d(n, {
     Z: function () {
-        return f;
+        return p;
     }
 });
-var n = t(200651);
-t(192379);
-var a = t(481060),
-    r = t(222062),
-    o = t(867176),
-    s = t(654904),
-    l = t(486324),
-    c = t(228168),
-    d = t(388032),
-    u = t(93428);
-function f(e) {
-    let { user: i, displayProfile: t, guildId: f, canUsePremiumCustomization: p, pendingBanner: _, isTryItOutFlow: b, disabledInputs: m, onUpsellClick: g } = e,
-        x = p || (null == t ? void 0 : t.canUsePremiumProfileCustomization) || !1,
-        h = x ? a.PencilIcon : a.NitroWheelIcon,
-        v = (0, r.M)(x);
-    return (0, n.jsx)(o.Z, {
-        user: i,
-        displayProfile: t,
-        guildId: f,
+var i = r(200651);
+r(192379);
+var a = r(481060),
+    o = r(222062),
+    s = r(867176),
+    l = r(654904),
+    u = r(486324),
+    c = r(228168),
+    d = r(388032),
+    f = r(93428);
+function p(e) {
+    let { user: n, displayProfile: r, guildId: p, canUsePremiumCustomization: h, pendingBanner: _, isTryItOutFlow: m, disabledInputs: g, onUpsellClick: E } = e,
+        v = h || (null == r ? void 0 : r.canUsePremiumProfileCustomization) || !1,
+        y = v ? a.PencilIcon : a.NitroWheelIcon,
+        b = (0, o.M)(v),
+        I = () => {
+            if (!v && !b) {
+                null == E || E();
+                return;
+            }
+            (0, l.$r)(u.pC.BANNER, p, m);
+        };
+    return (0, i.jsx)(s.Z, {
+        user: n,
+        displayProfile: r,
+        guildId: p,
         profileType: c.y0.BITE_SIZE,
         pendingBanner: _,
-        canUsePremiumProfileCustomization: p,
+        canUsePremiumProfileCustomization: h,
         children:
-            !m &&
-            (0, n.jsxs)(a.Clickable, {
-                onClick: () => {
-                    if (!x && !v) {
-                        null == g || g();
-                        return;
-                    }
-                    (0, s.$r)(l.pC.BANNER, f, b);
-                },
-                className: u.clickable,
+            !g &&
+            (0, i.jsxs)(a.Clickable, {
+                onClick: I,
+                className: f.clickable,
                 children: [
-                    (0, n.jsx)(h, {
+                    (0, i.jsx)(y, {
                         size: 'xs',
                         color: 'white'
                     }),
-                    (0, n.jsx)(a.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: x || v ? d.intl.string(d.t.N0bC3N) : d.intl.string(d.t.O1sT5u)
+                        children: v || b ? d.intl.string(d.t.N0bC3N) : d.intl.string(d.t.O1sT5u)
                     })
                 ]
             })

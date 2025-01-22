@@ -1,6 +1,4 @@
 e.exports = {
-    root: 'root_df35cb',
-    shaker: 'shaker_df35cb',
     stepBody: 'stepBody_df35cb',
     bodyText: 'bodyText_df35cb',
     invoice: 'invoice_df35cb',
@@ -9,8 +7,6 @@ e.exports = {
     currencyWrapper: 'currencyWrapper_df35cb',
     trialCheckbox: 'trialCheckbox_df35cb',
     trialCheckboxLabel: 'trialCheckboxLabel_df35cb',
-    loader: 'loader_df35cb',
-    contentWrapper: 'contentWrapper_df35cb',
     reviewWarningMessageContainer: 'reviewWarningMessageContainer_df35cb',
     reviewWarningMessage: 'reviewWarningMessage_df35cb',
     trialPriceLine: 'trialPriceLine_df35cb',

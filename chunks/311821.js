@@ -1,28 +1,29 @@
-n.d(t, {
+r.d(n, {
     y: function () {
         return c;
     }
 });
-var a = n(200651);
-n(192379);
-var r = n(120356),
-    l = n.n(r),
-    s = n(481060),
-    i = n(388032),
-    o = n(912626);
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    o = r.n(a),
+    s = r(481060),
+    l = r(388032),
+    u = r(912626);
 let c = (e) => {
-    let { className: t, onClick: n, children: r } = e;
-    return (0, a.jsx)(s.Anchor, {
-        onClick: n,
-        className: l()(o.link, t),
-        children: r
-    });
-};
-t.Z = (e) => {
-    let { className: t, onClick: n } = e;
-    return (0, a.jsx)(c, {
-        className: t,
-        onClick: n,
-        children: i.intl.string(i.t['13/7kZ'])
-    });
-};
+        let { className: n, onClick: r, children: a } = e;
+        return (0, i.jsx)(s.Anchor, {
+            onClick: r,
+            className: o()(u.link, n),
+            children: a
+        });
+    },
+    d = (e) => {
+        let { className: n, onClick: r } = e;
+        return (0, i.jsx)(c, {
+            className: n,
+            onClick: r,
+            children: l.intl.string(l.t['13/7kZ'])
+        });
+    };
+n.Z = d;

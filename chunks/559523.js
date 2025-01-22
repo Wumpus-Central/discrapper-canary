@@ -1,18 +1,1 @@
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    s = r(307876),
-    o = r(894257),
-    l = r(981631);
-n.Z = new s.Z(() =>
-    (0, a.openModalLazy)(
-        async () => {
-            let { default: e } = await r.e('96075').then(r.bind(r, 520615));
-            return (n) => (0, i.jsx)(e, { ...n });
-        },
-        {
-            modalKey: o._,
-            onCloseRequest: l.VqG
-        }
-    )
-);
+e.exports = { awaitingAuthenticationStep: 'awaitingAuthenticationStep_f10fc5' };

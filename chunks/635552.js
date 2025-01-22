@@ -1,46 +1,51 @@
-n.d(e, {
+r.d(n, {
     W: function () {
-        return d;
+        return p;
     }
-}),
-    n(47120);
-var r = n(192379),
-    a = n(979554),
-    i = n(809206),
-    o = n(350327),
-    s = n(884697),
-    l = n(328456),
-    c = n(388032);
-let d = (t) => {
-    let { product: e, onSuccess: d, onError: u } = t,
-        [f, g] = r.useState(!1),
-        { firstAvatarDecoration: p, firstProfileEffect: v } = (0, l.R)(e),
-        h = (0, s.x6)(e) ? c.intl.string(c.t.tf1ZZ2) : e.type === a.Z.AVATAR_DECORATION ? c.intl.string(c.t.zOA4a2) : c.intl.string(c.t.SWm2am);
-    return {
-        handleUseNow: r.useCallback(async () => {
-            g(!0);
-            try {
-                if ((null != p && (await (0, i.Mn)({ avatarDecoration: p })), null != v)) {
-                    let t = { profile_effect_id: v.id };
-                    await (0, o.Z)(t);
+});
+var i = r(47120);
+var a = r(192379),
+    o = r(979554),
+    s = r(809206),
+    l = r(350327),
+    u = r(884697),
+    c = r(328456),
+    d = r(388032);
+let f = 6000,
+    p = (e) => {
+        let { product: n, onSuccess: i, onError: p } = e,
+            [h, _] = a.useState(!1),
+            { firstAvatarDecoration: m, firstProfileEffect: g } = (0, c.R)(n),
+            E = (0, u.x6)(n) ? d.intl.string(d.t.tf1ZZ2) : n.type === o.Z.AVATAR_DECORATION ? d.intl.string(d.t.zOA4a2) : d.intl.string(d.t.SWm2am);
+        return {
+            handleUseNow: a.useCallback(async () => {
+                _(!0);
+                try {
+                    if (null != m) {
+                        let e = { avatarDecoration: m };
+                        await (0, s.Mn)(e);
+                    }
+                    if (null != g) {
+                        let e = { profile_effect_id: g.id };
+                        await (0, l.Z)(e);
+                    }
+                    {
+                        let { ToastPosition: e, ToastType: n, createToast: i, popToast: a, showToast: o } = await Promise.resolve().then(r.bind(r, 481060));
+                        a(),
+                            o(
+                                i(E, n.MESSAGE, {
+                                    duration: f,
+                                    position: e.TOP
+                                })
+                            );
+                    }
+                    null == i || i();
+                } catch (e) {
+                    null == p || p(e);
+                } finally {
+                    _(!1);
                 }
-                {
-                    let { ToastPosition: t, ToastType: e, createToast: r, popToast: a, showToast: i } = await Promise.resolve().then(n.bind(n, 481060));
-                    a(),
-                        i(
-                            r(h, e.MESSAGE, {
-                                duration: 6000,
-                                position: t.TOP
-                            })
-                        );
-                }
-                null == d || d();
-            } catch (t) {
-                null == u || u(t);
-            } finally {
-                g(!1);
-            }
-        }, [p, v, d, h, u]),
-        isApplying: f
+            }, [m, g, i, E, p]),
+            isApplying: h
+        };
     };
-};

@@ -1,42 +1,43 @@
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    s = t(481060),
-    a = t(700582),
-    r = t(987209),
-    o = t(699516),
-    d = t(594174),
-    c = t(51144),
-    u = t(388032);
-n.Z = (e) => {
-    let { selectedSkuId: n, validateSelectedGift: t, className: h } = e,
-        x = (0, l.Wu)([o.Z], () => o.Z.getFriendIDs()),
-        f = (0, l.Wu)([d.default], () => d.default.filter((e) => x.includes(e.id) && !e.bot), [x]),
-        { giftRecipient: C, setGiftRecipient: m } = (0, r.wD)();
-    return null == n
-        ? null
-        : (0, i.jsxs)('div', {
-              className: h,
-              children: [
-                  (0, i.jsx)(s.FormTitle, { children: u.intl.string(u.t.xFn72t) }),
-                  (0, i.jsx)(s.SearchableSelect, {
-                      placeholder: u.intl.string(u.t.R0vK0N),
-                      renderOptionPrefix: (e) =>
-                          (null == e ? void 0 : e.value) == null
-                              ? null
-                              : (0, i.jsx)(a.Z, {
-                                    user: e.value,
-                                    size: s.AvatarSizes.SIZE_20
-                                }),
-                      value: C,
-                      onChange: (e) => {
-                          t(e, n), m(e);
-                      },
-                      options: f.map((e) => ({
-                          value: e,
-                          label: ''.concat(c.ZP.getUserTag(e))
-                      }))
-                  })
-              ]
-          });
+var i = r(200651);
+r(192379);
+var a = r(442837),
+    o = r(481060),
+    s = r(700582),
+    l = r(987209),
+    u = r(699516),
+    c = r(594174),
+    d = r(51144),
+    f = r(388032);
+let p = (e) => {
+    let { selectedSkuId: n, validateSelectedGift: r, className: p } = e,
+        h = (0, a.Wu)([u.Z], () => u.Z.getFriendIDs()),
+        _ = (0, a.Wu)([c.default], () => c.default.filter((e) => h.includes(e.id) && !e.bot), [h]),
+        { giftRecipient: m, setGiftRecipient: g } = (0, l.wD)();
+    if (null == n) return null;
+    let E = (e) => {
+        r(e, n), g(e);
+    };
+    return (0, i.jsxs)('div', {
+        className: p,
+        children: [
+            (0, i.jsx)(o.FormTitle, { children: f.intl.string(f.t.xFn72t) }),
+            (0, i.jsx)(o.SearchableSelect, {
+                placeholder: f.intl.string(f.t.R0vK0N),
+                renderOptionPrefix: (e) =>
+                    (null == e ? void 0 : e.value) == null
+                        ? null
+                        : (0, i.jsx)(s.Z, {
+                              user: e.value,
+                              size: o.AvatarSizes.SIZE_20
+                          }),
+                value: m,
+                onChange: E,
+                options: _.map((e) => ({
+                    value: e,
+                    label: ''.concat(d.ZP.getUserTag(e))
+                }))
+            })
+        ]
+    });
 };
+n.Z = p;

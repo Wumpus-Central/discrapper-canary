@@ -1,10 +1,12 @@
-var r = n(96403),
-    o = Error,
-    a = r(''.replace),
-    i = String(new o('zxcasd').stack),
-    s = /\n\s*at [^:]*:[^\n]*/,
-    c = s.test(i);
-e.exports = function (e, t) {
-    if (c && 'string' == typeof e && !o.prepareStackTrace) for (; t--; ) e = a(e, s, '');
+var i = r(96403),
+    a = Error,
+    o = i(''.replace),
+    s = (function (e) {
+        return String(new a(e).stack);
+    })('zxcasd'),
+    l = /\n\s*at [^:]*:[^\n]*/,
+    u = l.test(s);
+e.exports = function (e, n) {
+    if (u && 'string' == typeof e && !a.prepareStackTrace) for (; n--; ) e = o(e, l, '');
     return e;
 };

@@ -1,121 +1,122 @@
-n.d(t, {
+r.d(n, {
     M: function () {
-        return C;
+        return w;
     },
     a: function () {
-        return T;
+        return P;
     }
-}),
-    n(315314),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
-var a = n(200651),
-    r = n(192379),
-    l = n(772848),
-    s = n(544891),
-    i = n(481060),
-    o = n(355467),
-    c = n(821849),
-    u = n(600164),
-    d = n(311821),
-    p = n(591759),
-    m = n(987209),
-    h = n(563132),
-    A = n(409813),
-    E = n(620824),
-    y = n(737143),
-    f = n(926841),
-    N = n(362755),
-    P = n(981631),
-    _ = n(474936),
-    b = n(388032),
-    g = n(13926);
-let C = (e) => {
-        let t,
-            n,
-            { step: u, onPurchaseComplete: d, onHandoffFailure: C } = e,
-            { selectedPlan: T, setSelectedPlanId: I, setSelectedSkuId: S, browserCheckoutState: v, browserCheckoutStateLoadId: R, browserCheckoutStateSkuId: x, browserCheckoutStatePlanId: L, contextMetadata: M } = (0, h.usePaymentContext)(),
-            { isGift: O } = (0, m.wD)(),
-            [D, w] = r.useState(!1);
-        switch (u) {
-            case A.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
-                (t = P.i$l.GOOGLE_PAY), (n = (0, f.a)());
+});
+var i = r(315314);
+var a = r(610138);
+var o = r(216116);
+var s = r(78328);
+var l = r(815648);
+var u = r(47120);
+var c = r(200651),
+    d = r(192379),
+    f = r(772848),
+    p = r(544891),
+    h = r(481060),
+    _ = r(355467),
+    m = r(821849),
+    g = r(600164),
+    E = r(311821),
+    v = r(591759),
+    y = r(987209),
+    b = r(563132),
+    I = r(409813),
+    T = r(620824),
+    S = r(737143),
+    A = r(926841),
+    C = r(362755),
+    N = r(981631),
+    R = r(474936),
+    O = r(388032),
+    D = r(13926);
+let x = 1000;
+function L(e, n, r, i, a) {
+    let o = N.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, n, r, a),
+        s = new URL(v.Z.makeUrl(N.Z5c.BILLING_LOGIN_HANDOFF)),
+        l = (0, f.Z)();
+    return (
+        s.searchParams.append('handoff_key', l),
+        s.searchParams.append('redirect_to', o),
+        p.tn
+            .post({
+                url: N.ANM.HANDOFF,
+                body: { key: l },
+                oldFormErrors: !0,
+                rejectWithError: !1
+            })
+            .then(
+                (e) => {
+                    s.searchParams.append('handoff_token', e.body.handoff_token), window.open(s.href);
+                },
+                () => {
+                    i();
+                }
+            )
+    );
+}
+let w = (e) => {
+        let n,
+            r,
+            { step: i, onPurchaseComplete: a, onHandoffFailure: o } = e,
+            { selectedPlan: s, setSelectedPlanId: l, setSelectedSkuId: u, browserCheckoutState: f, browserCheckoutStateLoadId: p, browserCheckoutStateSkuId: g, browserCheckoutStatePlanId: E, contextMetadata: v } = (0, b.usePaymentContext)(),
+            { isGift: w } = (0, y.wD)(),
+            [P, M] = d.useState(!1);
+        switch (i) {
+            case I.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
+                (n = N.i$l.GOOGLE_PAY), (r = (0, A.a)());
                 break;
-            case A.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
-                (t = P.i$l.APPLE_PAY), (n = (0, E.b)());
+            case I.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
+                (n = N.i$l.APPLE_PAY), (r = (0, T.b)());
                 break;
             default:
-                n = (0, y.q1)();
+                r = (0, S.q1)();
         }
         return (
-            r.useEffect(() => {
+            d.useEffect(() => {
                 let e = setTimeout(
                     () => {
                         var e;
-                        if (!D)
-                            w(!0),
-                                (0, o.r5)(M.loadId),
-                                !(function (e, t, n, a, r) {
-                                    let i = P.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),
-                                        o = new URL(p.Z.makeUrl(P.Z5c.BILLING_LOGIN_HANDOFF)),
-                                        c = (0, l.Z)();
-                                    o.searchParams.append('handoff_key', c),
-                                        o.searchParams.append('redirect_to', i),
-                                        s.tn
-                                            .post({
-                                                url: P.ANM.HANDOFF,
-                                                body: { key: c },
-                                                oldFormErrors: !0,
-                                                rejectWithError: !1
-                                            })
-                                            .then(
-                                                (e) => {
-                                                    o.searchParams.append('handoff_token', e.body.handoff_token), window.open(o.href);
-                                                },
-                                                () => {
-                                                    a();
-                                                }
-                                            );
-                                })(null !== (e = null == T ? void 0 : T.id) && void 0 !== e ? e : _.Xh.PREMIUM_MONTH_TIER_2, O, M.loadId, C, t);
+                        if (!P) M(!0), (0, _.r5)(v.loadId), L(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : R.Xh.PREMIUM_MONTH_TIER_2, w, v.loadId, o, n);
                     },
-                    n.delay ? 1000 : 0
+                    r.delay ? x : 0
                 );
                 return () => clearTimeout(e);
-            }, [T, O, M, C, w, D, t, n.delay]),
-            r.useEffect(() => {
-                null !== x && (_.YQ.includes(x) && ((0, c.GZ)(x), (0, o.jg)()), S(x)), null !== L && I(L), R === M.loadId && v === N.Y.DONE && d();
-            }, [S, I, v, R, x, L, M, d]),
-            (0, a.jsxs)('div', {
-                className: g.body,
+            }, [s, w, v, o, M, P, n, r.delay]),
+            d.useEffect(() => {
+                null !== g && (R.YQ.includes(g) && ((0, m.GZ)(g), (0, _.jg)()), u(g)), null !== E && l(E), p === v.loadId && f === C.Y.DONE && a();
+            }, [u, l, f, p, g, E, v, a]),
+            (0, c.jsxs)('div', {
+                className: D.body,
                 children: [
-                    (0, a.jsx)(i.Heading, {
+                    (0, c.jsx)(h.Heading, {
                         variant: 'heading-xl/bold',
-                        children: b.intl.string(b.t.C4HYf3)
+                        children: O.intl.string(O.t.C4HYf3)
                     }),
-                    (0, a.jsx)(i.Text, {
+                    (0, c.jsx)(h.Text, {
                         variant: 'text-md/normal',
-                        className: g.description,
-                        children: b.intl.string(b.t.xfG7Ji)
+                        className: D.description,
+                        children: O.intl.string(O.t.xfG7Ji)
                     })
                 ]
             })
         );
     },
-    T = (e) => {
-        let { onPrimaryClick: t, onBackClick: n } = e;
-        return (0, a.jsx)('div', {
-            children: (0, a.jsxs)(i.ModalFooter, {
-                justify: u.Z.Justify.BETWEEN,
-                align: u.Z.Align.CENTER,
+    P = (e) => {
+        let { onPrimaryClick: n, onBackClick: r } = e;
+        return (0, c.jsx)('div', {
+            children: (0, c.jsxs)(h.ModalFooter, {
+                justify: g.Z.Justify.BETWEEN,
+                align: g.Z.Align.CENTER,
                 children: [
-                    (0, a.jsx)(d.y, {
-                        onClick: t,
-                        children: b.intl.string(b.t['4Qvmmp'])
+                    (0, c.jsx)(E.y, {
+                        onClick: n,
+                        children: O.intl.string(O.t['4Qvmmp'])
                     }),
-                    (0, a.jsx)(d.Z, { onClick: n })
+                    (0, c.jsx)(E.Z, { onClick: r })
                 ]
             })
         });

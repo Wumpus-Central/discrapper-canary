@@ -1,2 +1,2 @@
-var r = n(204384);
-e.exports = /ipad|iphone|ipod/i.test(r) && 'undefined' != typeof Pebble;
+var i = r(204384);
+e.exports = /ipad|iphone|ipod/i.test(i) && 'undefined' != typeof Pebble;

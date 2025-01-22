@@ -1,109 +1,107 @@
-t.d(n, {
+r.d(n, {
     q: function () {
-        return E;
+        return I;
     }
-}),
-    t(47120);
-var i = t(200651),
-    l = t(192379),
-    r = t(120356),
-    s = t.n(r),
-    a = t(481060),
-    c = t(987209),
-    o = t(321051),
-    u = t(669079),
-    d = t(479446),
-    m = t(646476),
-    p = t(599659),
-    x = t(981632),
-    h = t(96848),
-    f = t(703926),
-    v = t(474936),
-    g = t(388032),
-    S = t(461405);
-let E = (e) => {
-    let { isShopGift: n, className: t, optionsContainerClassName: r } = e,
-        { giftRecipient: E, selectedGiftStyle: j, setSelectedGiftStyle: y, emojiConfetti: P, soundEffect: I, setEmojiConfetti: T, setSoundEffect: N } = (0, c.wD)(),
-        [b, C] = l.useState(!1),
-        _ = l.useRef(null),
-        Z = (0, a.useRadioGroup)({ orientation: 'horizontal' }),
-        O = (0, u.MY)(E, n),
-        A = O === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        R = O !== u.xr.DEFAULT,
-        w = (0, m.rK)(),
-        { enabled: M } = m.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: w }),
-        { enabled: L } = p.O.useExperiment({ location: 'gift card' }),
-        k = null;
-    return (
-        R && (k = w && M ? v.kJ : v.QI),
-        L && (k = v.RQ),
-        (0, i.jsxs)('div', {
-            children: [
-                R &&
-                    (0, i.jsxs)('div', {
-                        className: s()(S.giftMainAnimation, t),
-                        children: [
-                            null != j
-                                ? (0, i.jsx)(x.Z, {
-                                      giftStyle: j,
-                                      defaultAnimationState: d.SR.ACTION,
-                                      idleAnimationState: d.SR.LOOP,
-                                      shouldAnimate: !0,
-                                      className: S.animation
-                                  })
-                                : (0, i.jsx)(a.Spinner, { className: S.spinner }),
-                            A &&
-                                (0, i.jsxs)('div', {
-                                    className: S.soundEmojiContainer,
-                                    children: [
-                                        (0, i.jsx)('div', {
-                                            className: S.sound,
-                                            children: (0, i.jsx)(o.Z, {
-                                                sound: I,
-                                                onSelect: (e) => {
-                                                    null != N && N(null == e ? void 0 : e);
-                                                }
-                                            })
-                                        }),
-                                        (0, i.jsx)('div', {
-                                            className: S.emoji,
-                                            children: (0, i.jsx)(h.Z, {
-                                                setEmojiConfetti: T,
-                                                emojiConfetti: null == P ? void 0 : P
-                                            })
+});
+var i = r(47120);
+var a = r(200651),
+    o = r(192379),
+    s = r(120356),
+    l = r.n(s),
+    u = r(481060),
+    c = r(987209),
+    d = r(321051),
+    f = r(669079),
+    p = r(479446),
+    h = r(646476),
+    _ = r(599659),
+    m = r(981632),
+    g = r(96848),
+    E = r(703926),
+    v = r(474936),
+    y = r(388032),
+    b = r(461405);
+let I = (e) => {
+    let { isShopGift: n, className: r, optionsContainerClassName: i } = e,
+        { giftRecipient: s, selectedGiftStyle: I, setSelectedGiftStyle: T, emojiConfetti: S, soundEffect: A, setEmojiConfetti: C, setSoundEffect: N } = (0, c.wD)(),
+        [R, O] = o.useState(!1),
+        D = o.useRef(null),
+        x = (0, u.useRadioGroup)({ orientation: 'horizontal' }),
+        L = (0, f.MY)(s, n),
+        w = L === f.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        P = L !== f.xr.DEFAULT,
+        M = (0, h.rK)(),
+        { enabled: k } = h.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: M }),
+        { enabled: U } = _.O.useExperiment({ location: 'gift card' }),
+        B = null;
+    P && (B = M && k ? v.kJ : v.QI), U && (B = v.RQ);
+    let G = (e) => {
+        null != N && N(null == e ? void 0 : e);
+    };
+    return (0, a.jsxs)('div', {
+        children: [
+            P &&
+                (0, a.jsxs)('div', {
+                    className: l()(b.giftMainAnimation, r),
+                    children: [
+                        null != I
+                            ? (0, a.jsx)(m.Z, {
+                                  giftStyle: I,
+                                  defaultAnimationState: p.SR.ACTION,
+                                  idleAnimationState: p.SR.LOOP,
+                                  shouldAnimate: !0,
+                                  className: b.animation
+                              })
+                            : (0, a.jsx)(u.Spinner, { className: b.spinner }),
+                        w &&
+                            (0, a.jsxs)('div', {
+                                className: b.soundEmojiContainer,
+                                children: [
+                                    (0, a.jsx)('div', {
+                                        className: b.sound,
+                                        children: (0, a.jsx)(d.Z, {
+                                            sound: A,
+                                            onSelect: G
                                         })
-                                    ]
-                                })
-                        ]
-                    }),
-                (0, i.jsx)('div', {
-                    tabIndex: null != j || b ? void 0 : 0,
-                    onFocus: (e) => {
-                        var n;
-                        e.target === e.currentTarget && (null === (n = _.current) || void 0 === n || n.focus());
-                    },
-                    className: s()(S.giftBoxOptionContainer, r),
-                    'aria-label': g.intl.string(g.t.v54NrK),
-                    ...Z,
-                    children:
-                        null != k &&
-                        k.map((e, n) =>
-                            (0, i.jsx)(
-                                f.m,
-                                {
-                                    isSelected: j === e,
-                                    giftStyle: e,
-                                    setSelectedGiftStyle: y,
-                                    ref: 0 === n ? _ : null,
-                                    onFocus: () => C(!0),
-                                    onBlur: () => C(!1)
-                                },
-                                e
-                            )
-                        )
+                                    }),
+                                    (0, a.jsx)('div', {
+                                        className: b.emoji,
+                                        children: (0, a.jsx)(g.Z, {
+                                            setEmojiConfetti: C,
+                                            emojiConfetti: null == S ? void 0 : S
+                                        })
+                                    })
+                                ]
+                            })
+                    ]
                 }),
-                (0, i.jsx)('div', { className: S.__invalid_selectPlanDivider })
-            ]
-        })
-    );
+            (0, a.jsx)('div', {
+                tabIndex: null != I || R ? void 0 : 0,
+                onFocus: (e) => {
+                    var n;
+                    e.target === e.currentTarget && (null === (n = D.current) || void 0 === n || n.focus());
+                },
+                className: l()(b.giftBoxOptionContainer, i),
+                'aria-label': y.intl.string(y.t.v54NrK),
+                ...x,
+                children:
+                    null != B &&
+                    B.map((e, n) =>
+                        (0, a.jsx)(
+                            E.m,
+                            {
+                                isSelected: I === e,
+                                giftStyle: e,
+                                setSelectedGiftStyle: T,
+                                ref: 0 === n ? D : null,
+                                onFocus: () => O(!0),
+                                onBlur: () => O(!1)
+                            },
+                            e
+                        )
+                    )
+            }),
+            (0, a.jsx)('div', { className: b.__invalid_selectPlanDivider })
+        ]
+    });
 };

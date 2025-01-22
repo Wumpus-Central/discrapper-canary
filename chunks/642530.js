@@ -1,21 +1,22 @@
-var i = t(200651);
-t(192379);
-var l = t(987209),
-    r = t(563132),
-    s = t(346497),
-    a = t(196567),
-    c = t(474936),
-    o = t(388032),
-    u = t(927617);
-n.Z = () => {
+var i = r(200651);
+r(192379);
+var a = r(987209),
+    o = r(563132),
+    s = r(346497),
+    l = r(196567),
+    u = r(474936),
+    c = r(388032),
+    d = r(430597);
+let f = () => {
     let e = (0, s.Vi)(),
-        { selectedSkuId: n } = (0, r.usePaymentContext)(),
-        { isGift: t } = (0, l.wD)();
-    return t || n !== c.Si.TIER_2 || !e
+        { selectedSkuId: n } = (0, o.usePaymentContext)(),
+        { isGift: r } = (0, a.wD)();
+    return r || n !== u.Si.TIER_2 || !e
         ? null
-        : (0, i.jsx)(a.Z, {
-              copy: o.intl.string(o.t.xk8bIi),
-              bannerImage: u,
+        : (0, i.jsx)(l.Z, {
+              copy: c.intl.string(c.t.xk8bIi),
+              bannerImage: d,
               hideGiftIcon: !0
           });
 };
+n.Z = f;

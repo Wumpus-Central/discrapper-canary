@@ -1,53 +1,55 @@
-n.d(e, {
+r.d(n, {
     R: function () {
-        return o;
+        return d;
     },
     b: function () {
-        return i;
+        return c;
     }
-}),
-    n(724458),
-    n(653041),
-    n(47120);
-var r = n(192379),
-    a = n(979554);
-class i {
+});
+var i = r(724458);
+var a = r(653041);
+var o = r(47120);
+var s = r(192379),
+    l = r(979554);
+function u(e, n, r) {
+    return (
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: r,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[n] = r),
+        e
+    );
+}
+class c {
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(a.Z.AVATAR_DECORATION);
+        return this.getFirstItemByType(l.Z.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(a.Z.PROFILE_EFFECT);
+        return this.getFirstItemByType(l.Z.PROFILE_EFFECT);
     }
-    getFirstItemByType(t) {
-        var e;
-        let n = (null !== (e = this.itemsByTypes.get(t)) && void 0 !== e ? e : [])[0];
-        if (null != n) return n;
+    getFirstItemByType(e) {
+        var n;
+        let r = (null !== (n = this.itemsByTypes.get(e)) && void 0 !== n ? n : [])[0];
+        if (null != r) return r;
     }
-    sortByTypes(t) {
-        return t.reduce((t, e) => {
-            let n = t.get(e.type);
-            return null != n ? n.push(e) : t.set(e.type, [e]), t;
+    sortByTypes(e) {
+        return e.reduce((e, n) => {
+            let r = e.get(n.type);
+            return null != r ? r.push(n) : e.set(n.type, [n]), e;
         }, new Map());
     }
-    constructor(t) {
-        var e, n, r;
-        (e = this),
-            (r = void 0),
-            (n = 'itemsByTypes') in e
-                ? Object.defineProperty(e, n, {
-                      value: r,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (e[n] = r),
-            (this.itemsByTypes = this.sortByTypes(t));
+    constructor(e) {
+        u(this, 'itemsByTypes', void 0), (this.itemsByTypes = this.sortByTypes(e));
     }
 }
-let o = (t) => {
-    let { firstProfileEffect: e, firstAvatarDecoration: n } = r.useMemo(() => new i(t.items), [t]);
+let d = (e) => {
+    let { firstProfileEffect: n, firstAvatarDecoration: r } = s.useMemo(() => new c(e.items), [e]);
     return {
-        firstProfileEffect: e,
-        firstAvatarDecoration: n
+        firstProfileEffect: n,
+        firstAvatarDecoration: r
     };
 };

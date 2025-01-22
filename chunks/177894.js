@@ -1,18 +1,17 @@
-var r = n(67867),
-    o = n(707074).left,
-    a = n(54659),
-    i = n(882708),
-    s = n(42433);
-r(
+var i = r(67867),
+    a = r(707074).left,
+    o = r(54659),
+    s = r(882708);
+i(
     {
         target: 'Array',
         proto: !0,
-        forced: (!s && i > 79 && i < 83) || !a('reduce')
+        forced: (!r(42433) && s > 79 && s < 83) || !o('reduce')
     },
     {
         reduce: function (e) {
-            var t = arguments.length;
-            return o(this, e, t, t > 1 ? arguments[1] : void 0);
+            var n = arguments.length;
+            return a(this, e, n, n > 1 ? arguments[1] : void 0);
         }
     }
 );

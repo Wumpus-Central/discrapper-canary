@@ -1,107 +1,109 @@
-var i = n(200651);
-n(192379);
-var l = n(120356),
-    a = n.n(l),
-    r = n(442837),
-    o = n(481060),
-    u = n(607070),
-    s = n(600164),
-    c = n(483444),
-    d = n(599250),
-    f = n(926153),
-    C = n(27693),
-    _ = n(74538),
-    m = n(937615),
-    L = n(104494),
-    S = n(639119),
-    p = n(108989),
-    T = n(474936),
-    E = n(388032),
-    N = n(779655);
-let h = (e) => {
-    let { isTier0: t, discountAmount: n } = e,
-        l = (0, S.N)(),
-        r = null != l && l.trial_id === T.a7,
-        u = E.intl.string(E.t.IBYG5e);
+var i = r(200651);
+r(192379);
+var a = r(120356),
+    o = r.n(a),
+    s = r(442837),
+    l = r(481060),
+    u = r(607070),
+    c = r(600164),
+    d = r(483444),
+    f = r(599250),
+    p = r(926153),
+    h = r(27693),
+    _ = r(74538),
+    m = r(937615),
+    g = r(104494),
+    E = r(639119),
+    v = r(108989),
+    y = r(474936),
+    b = r(388032),
+    I = r(779655);
+function T(e, n) {
+    let r = _.ZP.getDefaultPrice(e),
+        { intervalType: i } = _.ZP.getInterval(e),
+        a = (0, m.T4)(r.amount, r.currency);
+    if (n) return a;
+    switch (i) {
+        case y.rV.MONTH:
+            return b.intl.formatToPlainString(b.t.AbOLNj, { price: a });
+        case y.rV.YEAR:
+            return b.intl.formatToPlainString(b.t.rS8FAw, { price: a });
+    }
+}
+let S = (e) => {
+    let { isTier0: n, discountAmount: r } = e,
+        a = (0, E.N)(),
+        s = null != a && a.trial_id === y.a7,
+        u = b.intl.string(b.t.IBYG5e);
     return (
-        void 0 !== n ? (u = E.intl.formatToPlainString(E.t.iiLbvr, { percent: n })) : r && (u = E.intl.string(E.t.gtNqJS)),
+        void 0 !== r ? (u = b.intl.formatToPlainString(b.t.iiLbvr, { percent: r })) : s && (u = b.intl.string(b.t.gtNqJS)),
         (0, i.jsx)('div', {
-            className: N.trialBadgeContainer,
-            children: (0, i.jsx)(o.Text, {
+            className: I.trialBadgeContainer,
+            children: (0, i.jsx)(l.Text, {
                 variant: 'text-xs/bold',
-                className: a()(N.trialOfferText, { [N.tier0TrialOffer]: t }),
+                className: o()(I.trialOfferText, { [I.tier0TrialOffer]: n }),
                 children: u
             })
         })
     );
 };
-t.Z = function (e) {
-    var t;
-    let n;
-    let { hideCloseButton: l = !1, hideCloseOnFullScreen: S, shouldShowPrice: g, plan: A, renderAnimation: v, onClose: R, isGift: P, upgradeToPremiumType: x, headerTheme: I = T.nL.DEFAULT, className: M, showTrialBadge: b = !1, showDiscountBadge: y = !1 } = e,
-        O = x === T.p9.TIER_2;
-    n = x === T.p9.TIER_0 ? d.Z : x === T.p9.TIER_1 ? f.Z : c.Z;
-    let Z = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
-        D = (0, L.Ng)(),
-        w = null == D ? void 0 : null === (t = D.discount) || void 0 === t ? void 0 : t.amount;
+function A(e) {
+    var n;
+    let r;
+    let { hideCloseButton: a = !1, hideCloseOnFullScreen: _, shouldShowPrice: m, plan: E, renderAnimation: b, onClose: A, isGift: C, upgradeToPremiumType: N, headerTheme: R = y.nL.DEFAULT, className: O, showTrialBadge: D = !1, showDiscountBadge: x = !1 } = e,
+        L = N === y.p9.TIER_2;
+    r = N === y.p9.TIER_0 ? f.Z : N === y.p9.TIER_1 ? p.Z : d.Z;
+    let w = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        P = (0, g.Ng)(),
+        M = null == P ? void 0 : null === (n = P.discount) || void 0 === n ? void 0 : n.amount;
     return (0, i.jsxs)('div', {
         'aria-hidden': !0,
-        className: a()(
+        className: o()(
             {
-                [N.headerBackground]: !O,
-                [N.tier2HeaderBackground]: O
+                [I.headerBackground]: !L,
+                [I.tier2HeaderBackground]: L
             },
-            M
+            O
         ),
         children: [
-            Z || I !== T.nL.WINTER
+            w || R !== y.nL.WINTER
                 ? null
-                : (0, i.jsx)(p.Z, {
-                      className: N.snow,
+                : (0, i.jsx)(v.Z, {
+                      className: I.snow,
                       wind: 5
                   }),
-            (b || y) && (0, i.jsx)(C.Z, { className: N.trialBadgeSparkles }),
-            v(),
-            (0, i.jsxs)(s.Z, {
-                align: s.Z.Align.START,
-                justify: s.Z.Justify.BETWEEN,
-                className: N.headerTop,
+            (D || x) && (0, i.jsx)(h.Z, { className: I.trialBadgeSparkles }),
+            b(),
+            (0, i.jsxs)(c.Z, {
+                align: c.Z.Align.START,
+                justify: c.Z.Justify.BETWEEN,
+                className: I.headerTop,
                 children: [
                     (0, i.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(n, { className: a()(N.headerIcon, { [N.nonTier2]: !O }) }),
-                            (b || y) &&
-                                (0, i.jsx)(h, {
-                                    isTier0: x === T.p9.TIER_0,
-                                    discountAmount: y ? w : void 0
+                            (0, i.jsx)(r, { className: o()(I.headerIcon, { [I.nonTier2]: !L }) }),
+                            (D || x) &&
+                                (0, i.jsx)(S, {
+                                    isTier0: N === y.p9.TIER_0,
+                                    discountAmount: x ? M : void 0
                                 })
                         ]
                     }),
-                    !l &&
-                        (0, i.jsx)(o.ModalCloseButton, {
-                            hideOnFullscreen: S,
-                            onClick: R,
-                            className: N.closeButton
+                    !a &&
+                        (0, i.jsx)(l.ModalCloseButton, {
+                            hideOnFullscreen: _,
+                            onClick: A,
+                            className: I.closeButton
                         })
                 ]
             }),
-            g && null != A
+            m && null != E
                 ? (0, i.jsx)('div', {
-                      className: N.price,
-                      children: (function (e, t) {
-                          let n = _.ZP.getDefaultPrice(e),
-                              { intervalType: i } = _.ZP.getInterval(e),
-                              l = (0, m.T4)(n.amount, n.currency);
-                          if (t) return l;
-                          switch (i) {
-                              case T.rV.MONTH:
-                                  return E.intl.formatToPlainString(E.t.AbOLNj, { price: l });
-                              case T.rV.YEAR:
-                                  return E.intl.formatToPlainString(E.t.rS8FAw, { price: l });
-                          }
-                      })(A, P)
+                      className: I.price,
+                      children: T(E, C)
                   })
                 : null
         ]
     });
-};
+}
+n.Z = A;

@@ -1,5 +1,6 @@
-var r = 'object' == typeof document && document.all;
-t.exports = {
-    all: r,
-    IS_HTMLDDA: void 0 === r && void 0 !== r
+var n = 'object' == typeof document && document.all,
+    r = void 0 === n && void 0 !== n;
+e.exports = {
+    all: n,
+    IS_HTMLDDA: r
 };
