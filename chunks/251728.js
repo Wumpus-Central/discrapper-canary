@@ -1,14 +1,13 @@
 r.d(n, {
     Y: function () {
-        return c;
+        return u;
     }
 });
-var i = r(411104);
-var a = r(685816),
-    s = r(549616),
+var i = r(685816),
+    a = r(549616),
     o = r(794934),
-    l = r(198647);
-function u(e, n, r) {
+    s = r(198647);
+function l(e, n, r) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -21,23 +20,25 @@ function u(e, n, r) {
         e
     );
 }
-class c {
+class u {
     static fromServer(e) {
-        return new c(e);
+        return new u(e);
     }
     constructor(e) {
-        u(this, 'shopBlocks', void 0),
-            u(this, 'categories', void 0),
-            (this.shopBlocks = e.shop_blocks.map((e) => {
-                switch (e.type) {
-                    case a.z.HERO:
-                        return l.s.fromServer(e);
-                    case a.z.FEATURED:
-                        return o.I.fromServer(e);
-                    default:
-                        throw Error('Unknown block type: '.concat(e.type));
-                }
-            })),
-            (this.categories = e.categories.map((e) => s.Z.fromServer(e)));
+        l(this, 'shopBlocks', void 0),
+            l(this, 'categories', void 0),
+            (this.shopBlocks = e.shop_blocks
+                .map((e) => {
+                    switch (e.type) {
+                        case i.z.HERO:
+                            return s.s.fromServer(e);
+                        case i.z.FEATURED:
+                            return o.I.fromServer(e);
+                        default:
+                            return;
+                    }
+                })
+                .filter((e) => void 0 !== e)),
+            (this.categories = e.categories.map((e) => a.Z.fromServer(e)));
     }
 }

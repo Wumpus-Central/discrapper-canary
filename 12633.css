@@ -12315,6 +12315,24 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     background-color: var(--background-code-deletion)
 }
 
+.emoji_f6e3aa {
+    flex: 0 0 auto
+}
+
+.icon_ea6c42 {
+    flex: 0 0 auto;
+    margin-left: 2px
+}
+
+.textRuler_ea6c42 {
+    position: absolute;
+    visibility: hidden
+}
+
+.questsIcon_ea6c42 {
+    margin-left: 4px
+}
+
 @keyframes placeholderPulse_dac468 {
     0% {
         opacity: .5
@@ -13024,24 +13042,6 @@ div.cardContainer_c22357 {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none
-}
-
-.icon_ad923e {
-    flex: 0 0 auto;
-    margin-left: 2px
-}
-
-.emoji_ad923e {
-    flex: 0 0 auto
-}
-
-.textRuler_ad923e {
-    position: absolute;
-    visibility: hidden
-}
-
-.questsIcon_ad923e {
-    margin-left: 4px
 }
 
 .container_d808b0 {
