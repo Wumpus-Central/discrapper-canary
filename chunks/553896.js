@@ -1,13 +1,13 @@
 t.d(a, {
     q: function () {
-        return i;
+        return r;
     }
 }),
     t(291175),
     t(848572);
 var s = t(474936),
     n = t(388032);
-let i = (e, a) => {
+let r = (e, a) => {
     switch (e) {
         case s.JN.PREMIUM_TENURE_1_MONTH:
         case s.JN.PREMIUM_TENURE_3_MONTH:
