@@ -1,9 +1,12 @@
-n.d(t, {
+r.d(n, {
     WR: function () {
+        return o;
+    },
+    gY: function () {
         return a;
     }
 });
-let i = (0, n(818083).B)({
+let i = (0, r(818083).B)({
     kind: 'user',
     id: '2025-01_advanced_server_join',
     label: 'Advanced Server Join Experiment',
@@ -17,6 +20,10 @@ let i = (0, n(818083).B)({
     ]
 });
 function a(e) {
-    let { location: t } = e;
-    return i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
+    let { location: n } = e;
+    return i.getCurrentConfig({ location: n }, { autoTrackExposure: !0 }).enabled;
+}
+function o(e) {
+    let { location: n } = e;
+    return i.getCurrentConfig({ location: n }, { autoTrackExposure: !0 }).enabled;
 }
