@@ -7,13 +7,13 @@ var i = n(200651),
     o = n(481060),
     c = n(493683),
     d = n(239091),
-    u = n(194359),
-    h = n(443589),
-    m = n(703656),
-    p = n(592125),
-    g = n(131951),
-    f = n(699516),
-    _ = n(51144),
+    u = n(443589),
+    h = n(703656),
+    m = n(592125),
+    p = n(131951),
+    g = n(699516),
+    f = n(51144),
+    _ = n(298213),
     E = n(321488),
     I = n(417183),
     C = n(825682),
@@ -36,53 +36,62 @@ function b(e, t, n) {
     );
 }
 function Z(e) {
-    let { user: t, onSelect: n } = e,
-        r = () => {
-            u.Z.removeFriend(t.id, { location: 'Friends' });
-        },
-        l = (0, s.e7)([g.Z], () => g.Z.supports(S.AN.VIDEO)),
-        a = t.isProvisional;
+    let { user: t, applicationId: n, isGameRelationship: l, onSelect: a } = e,
+        u = r.useCallback(() => {
+            c.Z.openPrivateChannel(t.id, !0);
+        }, [t.id]),
+        h = r.useCallback(() => {
+            c.Z.openPrivateChannel(t.id, !0, !0);
+        }, [t.id]),
+        m = r.useCallback(() => {
+            _.Z.removeFriend({
+                userId: t.id,
+                applicationId: l ? n : null,
+                location: 'Friends'
+            });
+        }, [n, l, t.id]),
+        g = r.useCallback(() => {
+            let e = l ? T.intl.string(T.t['RLcE6+']) : T.intl.string(T.t.cvSt1N);
+            (0, o.openModal)((n) =>
+                (0, i.jsx)(o.ConfirmModal, {
+                    header: T.intl.formatToPlainString(T.t.fPLvZW, { name: f.ZP.getName(t) }),
+                    confirmText: e,
+                    cancelText: T.intl.string(T.t['ETE/oK']),
+                    onConfirm: m,
+                    ...n,
+                    children: (0, i.jsx)(o.Text, {
+                        variant: 'text-md/normal',
+                        children: T.intl.format(T.t.l5FFq6, { name: f.ZP.getName(t) })
+                    })
+                })
+            );
+        }, [m, l, t]),
+        E = (0, s.e7)([p.Z], () => p.Z.supports(S.AN.VIDEO)),
+        I = t.isProvisional,
+        C = l ? T.intl.string(T.t['RLcE6+']) : T.intl.string(T.t.cvSt1N);
     return (0, i.jsxs)(o.Menu, {
         navId: 'friend-row',
         'aria-label': T.intl.string(T.t.liqwPD),
         onClose: d.Zy,
-        onSelect: n,
+        onSelect: a,
         children: [
-            !a && l
+            !I && E
                 ? (0, i.jsx)(o.MenuItem, {
                       id: 'start-video-call',
                       label: T.intl.string(T.t.oCqlGB),
-                      action: function () {
-                          c.Z.openPrivateChannel(t.id, !0, !0);
-                      }
+                      action: h
                   })
                 : null,
-            !a &&
+            !I &&
                 (0, i.jsx)(o.MenuItem, {
                     id: 'start-voice-call',
                     label: T.intl.string(T.t.focH1t),
-                    action: () => {
-                        c.Z.openPrivateChannel(t.id, !0);
-                    }
+                    action: u
                 }),
             (0, i.jsx)(o.MenuItem, {
                 id: 'remove-friend',
-                label: T.intl.string(T.t.cvSt1N),
-                action: () => {
-                    (0, o.openModal)((e) =>
-                        (0, i.jsx)(o.ConfirmModal, {
-                            header: T.intl.formatToPlainString(T.t.fPLvZW, { name: _.ZP.getName(t) }),
-                            confirmText: T.intl.string(T.t.cvSt1N),
-                            cancelText: T.intl.string(T.t['ETE/oK']),
-                            onConfirm: r,
-                            ...e,
-                            children: (0, i.jsx)(o.Text, {
-                                variant: 'text-md/normal',
-                                children: T.intl.format(T.t.l5FFq6, { name: _.ZP.getName(t) })
-                            })
-                        })
-                    );
-                },
+                label: C,
+                action: g,
                 color: 'danger'
             })
         ]
@@ -119,7 +128,7 @@ class x extends r.PureComponent {
                                 applicationStream: r,
                                 status: l,
                                 user: e,
-                                userIgnored: f.Z.isIgnored(e.id)
+                                userIgnored: g.Z.isIgnored(e.id)
                             }),
                             hovered: t,
                             showAccountIdentifier: !0
@@ -128,7 +137,7 @@ class x extends r.PureComponent {
                             className: A.actions,
                             children: [
                                 null != s &&
-                                    (0, i.jsx)(h.Z, {
+                                    (0, i.jsx)(u.Z, {
                                         recipientUser: e,
                                         giftIntentType: s,
                                         analyticsPage: v.ZY5.FRIENDS_LIST,
@@ -159,17 +168,19 @@ class x extends r.PureComponent {
             b(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
-                let n = a().find(p.Z.getMutablePrivateChannels(), (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id);
-                null != n ? (0, m.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : c.Z.openPrivateChannel(t.id);
+                let n = a().find(m.Z.getMutablePrivateChannels(), (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id);
+                null != n ? (0, h.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
             b(this, 'handleOpenActionsMenu', (e) => {
-                let { user: t } = this.props;
+                let { user: t, isGameRelationship: n, applicationId: r } = this.props;
                 (0, d.vq)(
                     e,
                     (e) =>
                         (0, i.jsx)(Z, {
                             ...e,
-                            user: t
+                            user: t,
+                            applicationId: r,
+                            isGameRelationship: n
                         }),
                     {
                         onClose: () => {

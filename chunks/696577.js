@@ -7,11 +7,11 @@ var i = n(200651),
     r = n(192379),
     l = n(692547),
     a = n(481060),
-    s = n(194359),
-    o = n(906732),
-    c = n(171368),
-    d = n(594174),
-    u = n(626135),
+    s = n(906732),
+    o = n(171368),
+    c = n(594174),
+    d = n(626135),
+    u = n(298213),
     h = n(321488),
     m = n(417183),
     p = n(170245),
@@ -19,29 +19,35 @@ var i = n(200651),
     f = n(388032),
     _ = n(55945);
 function E(e) {
-    let { user: t, type: n, status: E, isFocused: I } = e,
-        C = r.useContext(u.AnalyticsContext),
-        { analyticsLocations: N } = (0, o.ZP)(),
-        v = (e) => {
-            e.stopPropagation(), s.Z.cancelFriendRequest(t.id, { location: 'Friends' });
-        },
-        S = (e) => {
+    let { user: t, type: n, status: E, isFocused: I, applicationId: C, isGameRelationship: N } = e,
+        v = r.useContext(d.AnalyticsContext),
+        { analyticsLocations: S } = (0, s.ZP)(),
+        T = (e) => {
             e.stopPropagation(),
-                s.Z.addRelationship({
+                u.Z.cancelFriendRequest({
                     userId: t.id,
-                    context: { location: 'Friends' }
+                    applicationId: N ? C : null,
+                    location: 'Friends'
                 });
         },
-        T = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
-        A = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
+        A = (e) => {
+            e.stopPropagation(),
+                u.Z.acceptFriendRequest({
+                    userId: t.id,
+                    applicationId: N ? C : null,
+                    location: 'Friends'
+                });
+        },
+        b = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
+        Z = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
     return (0, i.jsx)(m.Z, {
         isFocused: I,
         user: t,
         onClick: () =>
-            (0, c.openUserProfileModal)({
+            (0, o.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: N,
-                analyticsLocation: C.location
+                sourceAnalyticsLocations: S,
+                analyticsLocation: v.location
             }),
         children: (e) => {
             var r;
@@ -49,7 +55,7 @@ function E(e) {
                 n === g.OGo.PENDING_INCOMING
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (null === (r = d.default.getCurrentUser()) || void 0 === r ? void 0 : r.isStaff()) &&
+                              (null === (r = c.default.getCurrentUser()) || void 0 === r ? void 0 : r.isStaff()) &&
                                   (null == t ? void 0 : t.isStaff()) &&
                                   (0, i.jsx)('div', {
                                       className: _.staffIndicator,
@@ -62,14 +68,14 @@ function E(e) {
                                   icon: a.CheckmarkLargeIcon,
                                   actionType: h.Z.ActionTypes.ACCEPT,
                                   tooltip: f.intl.string(f.t.ZcibdX),
-                                  onClick: S,
+                                  onClick: A,
                                   shouldHighlight: e
                               }),
                               (0, i.jsx)(h.Z, {
                                   icon: a.XSmallIcon,
                                   actionType: h.Z.ActionTypes.DENY,
                                   tooltip: f.intl.string(f.t.xuio0N),
-                                  onClick: v,
+                                  onClick: T,
                                   shouldHighlight: e
                               })
                           ]
@@ -78,7 +84,7 @@ function E(e) {
                           icon: a.XSmallIcon,
                           actionType: h.Z.ActionTypes.DENY,
                           tooltip: f.intl.string(f.t.eaq81d),
-                          onClick: v,
+                          onClick: T,
                           shouldHighlight: e
                       });
             return (0, i.jsxs)('div', {
@@ -88,8 +94,8 @@ function E(e) {
                         user: t,
                         hovered: e,
                         showAccountIdentifier: !0,
-                        status: T,
-                        subText: A
+                        status: b,
+                        subText: Z
                     }),
                     (0, i.jsx)('div', {
                         className: _.actions,
