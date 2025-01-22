@@ -19,28 +19,27 @@ var s,
     v = n(981631),
     N = n(388032),
     S = n(232186);
-function E(t, e, n) {
+function E(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
 u.ZP.initialize();
-class A extends (s = i.PureComponent) {
+class T extends (s = i.PureComponent) {
     componentDidMount() {
         (0, g.e)('reset_password');
     }
     renderPasswordReset() {
-        let { password: t, error: e, hasCancel: s } = this.state,
-            i = this.isSubmitting(),
-            l = null != e ? e : this.renderError('password');
+        let { password: e, error: t, hasCancel: s, working: i } = this.state,
+            l = null != t ? t : this.renderError('password');
         return (0, r.jsxs)(m.ZP, {
             onSubmit: this.handleSubmit,
             tag: 'form',
@@ -58,8 +57,8 @@ class A extends (s = i.PureComponent) {
                             label: N.intl.string(N.t['8dM4FB']),
                             className: S.marginBottom20,
                             name: 'password',
-                            value: t,
-                            onChange: (t) => this.setState({ password: t }),
+                            value: e,
+                            onChange: (e) => this.setState({ password: e }),
                             error: l,
                             type: 'password'
                         }),
@@ -83,18 +82,18 @@ class A extends (s = i.PureComponent) {
         });
     }
     renderMFA() {
-        let t = {
+        let e = {
             ticket: this.props.mfaTicket,
             methods: this.props.mfaMethods
         };
         return (0, r.jsx)(m.ZP, {
             style: { padding: 0 },
             children: (0, r.jsx)(f.Cd, {
-                mfaFinish: (t) => {
-                    let { mfaType: e, data: n } = t;
-                    return this.handleTokenSubmitMFAv2(e, n);
+                mfaFinish: (e) => {
+                    let { mfaType: t, data: n } = e;
+                    return this.handleTokenSubmitMFAv2(t, n);
                 },
-                mfaChallenge: t,
+                mfaChallenge: e,
                 onEarlyClose: () => {
                     d.Z.dispatch({ type: 'LOGIN_RESET' });
                 },
@@ -124,27 +123,27 @@ class A extends (s = i.PureComponent) {
     render() {
         return this.state.success ? this.renderSucceeded() : null != this.props.mfaTicket && '' !== this.props.mfaTicket ? this.renderMFA() : this.renderPasswordReset();
     }
-    constructor(t) {
-        var e;
-        super(t),
-            E(this, 'handleSubmit', async (t) => {
-                let { location: e, onLoginSuccess: n, source: s, resetToken: r } = this.props,
+    constructor(e) {
+        var t;
+        super(e),
+            E(this, 'handleSubmit', async (e) => {
+                let { location: t, onLoginSuccess: n, source: s, resetToken: r } = this.props,
                     { password: i, error: l } = this.state;
-                if ((null != t && t.preventDefault(), 0 === i.length)) {
+                if ((e.preventDefault(), 0 === i.length)) {
                     this.setState({ error: N.intl.string(N.t.R98xDw) }), j.S.dispatch(v.CkL.WAVE_EMPHASIZE);
                     return;
                 }
                 null != l && this.setState({ error: null });
                 let a = r;
-                if ((null != e && (a = (0, p.Z)(e)), null != a)) {
+                if ((null != t && (a = (0, p.Z)(t)), null != a)) {
                     this.setState({ working: !0 });
                     try {
-                        let { result: t, sms: e, webauthn: r, ticket: l, token: o, totp: c, backup: u } = await h.Z.resetPassword(a, i, s);
-                        t === h.c.MFA
+                        let { result: e, sms: t, webauthn: r, ticket: l, token: o, totp: c, backup: u } = await h.Z.resetPassword(a, i, s);
+                        e === h.c.MFA
                             ? d.Z.dispatch({
                                   type: 'LOGIN_MFA_STEP',
                                   ticket: l,
-                                  sms: e,
+                                  sms: t,
                                   webauthn: r,
                                   totp: c,
                                   backup: u
@@ -156,64 +155,64 @@ class A extends (s = i.PureComponent) {
                                     token: o
                                 }),
                                 this.handlePasswordChangeSuccess());
-                    } catch (t) {}
+                    } catch (e) {}
                     this.setState({ working: !1 });
                 }
             }),
-            E(this, 'handleTokenSubmitMFAv2', (t, e) => {
+            E(this, 'handleTokenSubmitMFAv2', async (e, t) => {
                 let { location: n, mfaTicket: s, onLoginSuccess: r, resetToken: i, source: l } = this.props,
                     { password: a } = this.state;
                 if (0 === a.length) return d.Z.dispatch({ type: 'LOGIN_RESET' }), Promise.reject();
                 let o = i;
-                return (null != n && (o = (0, p.Z)(n)), null == o)
-                    ? (d.Z.dispatch({ type: 'LOGIN_RESET' }), Promise.reject())
-                    : h.Z.resetPasswordMFAv2({
-                          method: t,
-                          code: e,
-                          ticket: s,
-                          password: a,
-                          token: o,
-                          source: l
-                      }).then((t) => {
-                          null != r
-                              ? r(t)
-                              : (d.Z.dispatch({
-                                    type: 'LOGIN_SUCCESS',
-                                    token: t
-                                }),
-                                this.handlePasswordChangeSuccess());
-                      });
+                if ((null != n && (o = (0, p.Z)(n)), null == o)) return d.Z.dispatch({ type: 'LOGIN_RESET' }), Promise.reject();
+                this.setState({ working: !0 });
+                try {
+                    let n = await h.Z.resetPasswordMFAv2({
+                        method: e,
+                        code: t,
+                        ticket: s,
+                        password: a,
+                        token: o,
+                        source: l
+                    });
+                    if (null != r) {
+                        r(n);
+                        return;
+                    }
+                    d.Z.dispatch({
+                        type: 'LOGIN_SUCCESS',
+                        token: n
+                    }),
+                        this.handlePasswordChangeSuccess();
+                } finally {
+                    this.setState({ working: !1 });
+                }
             }),
             E(this, 'handlePasswordChangeSuccess', () => {
-                let { replaceWith: t } = this.props;
+                let { replaceWith: e } = this.props;
                 if (c.Em || c.tq) {
                     this.setState({ success: !0 });
                     return;
                 }
-                t(v.Z5c.APP);
+                e(v.Z5c.APP);
             }),
             E(this, 'handleGoToLogin', () => {
-                let { transitionTo: t } = this.props;
-                h.Z.loginReset(), t(v.Z5c.LOGIN);
-            }),
-            E(this, 'isSubmitting', () => {
-                let { loginStatus: t } = this.props,
-                    { working: e } = this.state;
-                return e || t === v.u34.LOGGING_IN_MFA;
+                let { transitionTo: e } = this.props;
+                h.Z.loginReset(), e(v.Z5c.LOGIN);
             }),
             E(this, 'handleOpenApp', () => {
                 (0, x.Z)('password_reset');
             }),
-            E(this, 'hasError', (t) => null != this.props.errors[t] || null != this.state.error),
-            E(this, 'renderError', (t) => {
-                let { errors: e } = this.props;
-                if (this.hasError(t)) {
-                    let n = e[t];
+            E(this, 'hasError', (e) => null != this.props.errors[e] || null != this.state.error),
+            E(this, 'renderError', (e) => {
+                let { errors: t } = this.props;
+                if (this.hasError(e)) {
+                    let n = t[e];
                     return Array.isArray(n) ? n[0] : n;
                 }
                 return null;
             });
-        let n = (null === (e = this.props.location) || void 0 === e ? void 0 : e.search) != null && '' !== this.props.location.search ? (0, o.parse)(this.props.location.search) : null;
+        let n = (null === (t = this.props.location) || void 0 === t ? void 0 : t.search) != null && '' !== this.props.location.search ? (0, o.parse)(this.props.location.search) : null;
         this.state = {
             method: '',
             password: '',
@@ -225,19 +224,18 @@ class A extends (s = i.PureComponent) {
         };
     }
 }
-E(A, 'defaultProps', {
-    transitionTo: (t) => n.g.location.assign(t),
-    replaceWith: (t) => n.g.location.replace(t)
+E(T, 'defaultProps', {
+    transitionTo: (e) => n.g.location.assign(e),
+    replaceWith: (e) => n.g.location.replace(e)
 });
-e.Z = function (t) {
-    let e = (0, u.cj)([C.default], () => ({
-        loginStatus: C.default.getLoginStatus(),
+t.Z = function (e) {
+    let t = (0, u.cj)([C.default], () => ({
         mfaTicket: C.default.getMFATicket(),
         errors: C.default.getErrors(),
         mfaMethods: C.default.getMFAMethods()
     }));
-    return (0, r.jsx)(A, {
-        ...t,
-        ...e
+    return (0, r.jsx)(T, {
+        ...e,
+        ...t
     });
 };
