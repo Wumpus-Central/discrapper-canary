@@ -23,23 +23,25 @@ t.Z = function (e) {
         v = r.useMemo(
             () =>
                 t.map((e, t) =>
-                    N
-                        ? (0, i.jsxs)(
-                              'div',
-                              {
-                                  children: [m(t), e.map(n)]
-                              },
-                              t
-                          )
-                        : (0, i.jsxs)(
-                              o.W,
-                              {
-                                  transitionAppear: !1,
-                                  component: 'div',
-                                  children: [m(t), e.map(n)]
-                              },
-                              t
-                          )
+                    0 === e.length
+                        ? null
+                        : N
+                          ? (0, i.jsxs)(
+                                'div',
+                                {
+                                    children: [m(t), e.map(n)]
+                                },
+                                t
+                            )
+                          : (0, i.jsxs)(
+                                o.W,
+                                {
+                                    transitionAppear: !1,
+                                    component: 'div',
+                                    children: [m(t), e.map(n)]
+                                },
+                                t
+                            )
                 ),
             [n, m, t, N]
         );

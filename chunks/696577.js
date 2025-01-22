@@ -22,24 +22,29 @@ function E(e) {
     let { user: t, type: n, status: E, isFocused: I, applicationId: C, isGameRelationship: N } = e,
         v = r.useContext(d.AnalyticsContext),
         { analyticsLocations: S } = (0, s.ZP)(),
-        T = (e) => {
-            e.stopPropagation(),
-                u.Z.cancelFriendRequest({
-                    userId: t.id,
-                    applicationId: N ? C : null,
-                    location: 'Friends'
-                });
-        },
-        A = (e) => {
-            e.stopPropagation(),
-                u.Z.acceptFriendRequest({
-                    userId: t.id,
-                    applicationId: N ? C : null,
-                    location: 'Friends'
-                });
-        },
-        b = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E,
-        Z = n === g.OGo.PENDING_INCOMING ? f.intl.string(f.t.ZOFd1N) : f.intl.string(f.t.zz2i8v);
+        T = r.useCallback(
+            (e) => {
+                e.stopPropagation(),
+                    u.Z.cancelFriendRequest({
+                        userId: t.id,
+                        applicationId: N ? C : null,
+                        location: 'Friends'
+                    });
+            },
+            [C, N, t.id]
+        ),
+        A = r.useCallback(
+            (e) => {
+                e.stopPropagation(),
+                    u.Z.acceptFriendRequest({
+                        userId: t.id,
+                        applicationId: N ? C : null,
+                        location: 'Friends'
+                    });
+            },
+            [C, N, t.id]
+        ),
+        b = E === g.Skl.OFFLINE ? g.Skl.UNKNOWN : E;
     return (0, i.jsx)(m.Z, {
         isFocused: I,
         user: t,
@@ -90,12 +95,10 @@ function E(e) {
             return (0, i.jsxs)('div', {
                 className: _.listItemContents,
                 children: [
-                    (0, i.jsx)(p.Z, {
+                    (0, i.jsx)(p.n, {
                         user: t,
                         hovered: e,
-                        showAccountIdentifier: !0,
-                        status: b,
-                        subText: Z
+                        status: b
                     }),
                     (0, i.jsx)('div', {
                         className: _.actions,

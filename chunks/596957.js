@@ -1,4 +1,4 @@
-n(47120);
+n(411104), n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -115,10 +115,22 @@ t.Z = function (e) {
                 [c]: ''
             });
         }, [w, c]),
-        V = r.useMemo(() => c === x.pJs.PENDING && (l.filter(x.pJs.SPAM).length > 0 || l.filter(x.pJs.PENDING_IGNORED).length > 0), [l, c]),
-        H = r.useMemo(() => l.filter(c, w[c]), [l, w, c]),
-        F = r.useMemo(() => [H], [H]),
-        z = r.useMemo(() => H.filter((e) => e.type === x.OGo.PENDING_INCOMING).length, [H]),
+        H = r.useMemo(() => c === x.pJs.PENDING && (l.filter(x.pJs.SPAM).length > 0 || l.filter(x.pJs.PENDING_IGNORED).length > 0), [l, c]),
+        V = r.useMemo(() => l.filter(c, w[c]), [l, w, c]),
+        F = r.useMemo(() => {
+            if (c === x.pJs.PENDING) {
+                let e = [],
+                    t = [];
+                return (
+                    V.forEach((n) => {
+                        n.type === x.OGo.PENDING_INCOMING ? e.push(n) : n.type === x.OGo.PENDING_OUTGOING && t.push(n);
+                    }),
+                    [e, t]
+                );
+            }
+            return [V];
+        }, [V, c]),
+        z = r.useMemo(() => V.filter((e) => e.type === x.OGo.PENDING_INCOMING).length, [V]),
         W = c === x.pJs.PENDING && z > 0 && z >= Z.yf,
         Y = r.useCallback(
             (e) => {
@@ -133,7 +145,9 @@ t.Z = function (e) {
                         case x.pJs.ONLINE:
                             return L.intl.formatToPlainString(L.t.BagU2d, { online: t.toString() });
                         case x.pJs.PENDING:
-                            return L.intl.formatToPlainString(L.t.XIpar6, { count: t.toString() });
+                            if (0 === n) return L.intl.formatToPlainString(L.t['g+3FIS'], { count: t.toString() });
+                            if (1 === n) return L.intl.formatToPlainString(L.t.npJsRk, { count: t.toString() });
+                            else throw Error('Unexpected pending friend requests section index: '.concat(n));
                         case x.pJs.SUGGESTIONS:
                             return L.intl.formatToPlainString(L.t['DYMZ/v'], { count: t.toString() });
                         case x.pJs.BLOCKED:
@@ -141,34 +155,34 @@ t.Z = function (e) {
                         default:
                             return L.intl.formatToPlainString(L.t.rHRrhI, { count: t.toString() });
                     }
-                })(c, F[e].length, 0);
-                if (c === x.pJs.PENDING)
-                    return (0, i.jsxs)('div', {
-                        className: P.sectionTitle,
-                        children: [
-                            (0, i.jsx)(A.Z, {
-                                id: t,
-                                title: n
-                            }),
-                            W &&
-                                (0, i.jsx)(o.Button, {
-                                    look: o.ButtonLooks.LINK,
-                                    color: o.ButtonColors.LINK,
-                                    className: P.clearButton,
-                                    size: o.Button.Sizes.TINY,
-                                    onClick: Y,
-                                    'aria-label': L.intl.string(L.t.T3uOb2),
-                                    children: L.intl.string(L.t.T3uOb2)
-                                })
-                        ]
-                    });
-                return (0, i.jsx)('div', {
-                    className: P.sectionTitle,
-                    children: (0, i.jsx)(A.Z, {
-                        id: t,
-                        title: n
-                    })
-                });
+                })(c, F[e].length, e);
+                return c === x.pJs.PENDING && 0 === e
+                    ? (0, i.jsxs)('div', {
+                          className: P.sectionTitle,
+                          children: [
+                              (0, i.jsx)(A.Z, {
+                                  id: t,
+                                  title: n
+                              }),
+                              W &&
+                                  (0, i.jsx)(o.Button, {
+                                      look: o.ButtonLooks.LINK,
+                                      color: o.ButtonColors.LINK,
+                                      className: P.clearButton,
+                                      size: o.Button.Sizes.TINY,
+                                      onClick: Y,
+                                      'aria-label': L.intl.string(L.t.O8k7Oz),
+                                      children: L.intl.string(L.t.O8k7Oz)
+                                  })
+                          ]
+                      })
+                    : (0, i.jsx)('div', {
+                          className: P.sectionTitle,
+                          children: (0, i.jsx)(A.Z, {
+                              id: t,
+                              title: n
+                          })
+                      });
             },
             [F, c, t, W, Y]
         );
@@ -176,14 +190,14 @@ t.Z = function (e) {
         (r.useEffect(() => {
             c === x.pJs.ALL && (0, p.d$)();
         }, [c]),
-        0 === H.length && '' === w[c])
+        0 === V.length && '' === w[c])
     )
         return (0, i.jsx)(R, {
             section: c,
-            showSpamCta: V
+            showSpamCta: H
         });
     let q = '' !== w[c],
-        X = 0 === H.length && q;
+        X = 0 === V.length && q;
     return (0, i.jsx)(m.Gt, {
         value: n,
         children: (0, i.jsxs)(u.Z, {
@@ -205,7 +219,7 @@ t.Z = function (e) {
                     isVirtualizedList: j >= Z.nG,
                     hasSearchQuery: q,
                     footer:
-                        V && !X
+                        H && !X
                             ? (0, i.jsx)(o.Button, {
                                   look: o.Button.Looks.LINK,
                                   color: P.viewSpamButtonColor,

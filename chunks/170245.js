@@ -1,3 +1,8 @@
+n.d(t, {
+    n: function () {
+        return m;
+    }
+});
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -6,38 +11,48 @@ var r = n(120356),
     s = n(129861),
     o = n(700582),
     c = n(699516),
-    d = n(757338);
-t.Z = function (e) {
-    let { user: t, hovered: n, subText: r, showAccountIdentifier: u, status: h, isMobile: m, className: p } = e,
+    d = n(51144),
+    u = n(757338);
+function h(e) {
+    let { user: t, hovered: n, subText: r, showAccountIdentifier: d, status: h, isMobile: m, className: p } = e,
         g = (0, a.e7)([c.Z], () => c.Z.getNickname(t.id));
     return (0, i.jsxs)('div', {
-        className: l()(d.userInfo, p, { [d.hovered]: n }),
+        className: l()(u.userInfo, p, { [u.hovered]: n }),
         children: [
             (0, i.jsx)(o.Z, {
                 user: t,
-                className: d.avatar,
+                className: u.avatar,
                 animate: n,
                 status: h,
                 isMobile: m
             }),
             (0, i.jsxs)('div', {
-                className: d.text,
+                className: u.text,
                 children: [
                     (0, i.jsx)(s.Z, {
                         user: t,
                         nick: g,
-                        botClass: d.botTag,
-                        className: l()(d.discordTag, { [d.alignPomelo]: t.isPomelo() }),
-                        usernameClass: d.username,
-                        discriminatorClass: d.discriminator,
-                        showAccountIdentifier: u
+                        botClass: u.botTag,
+                        className: l()(u.discordTag, { [u.alignPomelo]: t.isPomelo() }),
+                        usernameClass: u.username,
+                        discriminatorClass: u.discriminator,
+                        showAccountIdentifier: d
                     }),
                     (0, i.jsx)('div', {
-                        className: d.subtext,
+                        className: u.subtext,
                         children: r
                     })
                 ]
             })
         ]
     });
-};
+}
+function m(e) {
+    let t = d.ZP.useUserTag(e.user);
+    return (0, i.jsx)(h, {
+        ...e,
+        showAccountIdentifier: !1,
+        subText: t
+    });
+}
+t.Z = h;
