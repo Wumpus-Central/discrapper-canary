@@ -10953,7 +10953,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 }
 
 .visual-refresh .topicsPillContainer_cf58b5 {
-    background: var(--background-surface-high);
+    background: var(--bg-overlay-2, var(--background-surface-high));
     box-shadow: var(--shadow-low);
     border-top: 0
 }
@@ -34743,7 +34743,8 @@ html:not(.visual-refresh) .root_b93e3f {
 }
 
 .visual-refresh.custom-theme-background .channelTextArea_bdf0de {
-    border-color: var(--app-border-frame)
+    border-color: var(--app-border-frame);
+    background: var(--bg-overlay-floating, var(--input-background))
 }
 
 :where(.visual-refresh-chat-input) .channelTextArea_bdf0de {
@@ -34824,6 +34825,10 @@ html:not(.visual-refresh) .root_b93e3f {
 .hasStackedBar_bdf0de {
     border-top-left-radius: 0;
     border-top-right-radius: 0
+}
+
+.visual-refresh .channelTextAreaDisabled_bdf0de .scrollableContainer_bdf0de {
+    opacity: 1
 }
 
 .visual-refresh .inlineContainer_bdf0de {
@@ -35164,11 +35169,11 @@ html:not(.visual-refresh) .root_b93e3f {
     border-radius: inherit
 }
 
-.visual-refresh-chat-input .stackedBars_bdf0de {
+.visual-refresh .stackedBars_bdf0de {
     background: var(--background-surface-higher)
 }
 
-.visual-refresh-chat-input .stackedBars_bdf0de>:not(:last-child) {
+.visual-refresh .stackedBars_bdf0de:not(:last-child) {
     border-bottom: 1px solid var(--border-subtle)
 }
 
@@ -36500,6 +36505,10 @@ html:not(.visual-refresh) .root_b93e3f {
     background: var(--bg-overlay-2, var(--background-secondary))
 }
 
+.visual-refresh .clipContainer_b11c5e {
+    margin-top: 0
+}
+
 .visual-refresh .replyBar_b11c5e,
 .visual-refresh .threadSuggestionBar_b11c5e {
     background-color: transparent;
@@ -36508,7 +36517,11 @@ html:not(.visual-refresh) .root_b93e3f {
 }
 
 .visual-refresh .text_b11c5e {
-    margin-left: var(--space-20)
+    margin-left: var(--space-16)
+}
+
+.visual-refresh .actions_b11c5e {
+    margin-right: var(--space-4)
 }
 
 .replyBar_b11c5e {
