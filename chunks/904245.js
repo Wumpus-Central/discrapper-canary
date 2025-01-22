@@ -241,6 +241,14 @@ let eL = {
         [ev.evJ.SLOWMODE_RATE_LIMITED]: {
             messageName: 'BOT_DM_SEND_MESSAGE_TEMPORARILY_DISABLED',
             messageGetter: () => eI.intl.string(eI.t.aRUbam)
+        },
+        [ev.evJ.INVALID_MESSAGE_SEND_GAME_FRIEND_DM]: {
+            messageName: 'BOT_DM_SEND_MESSAGE_INVALID_FOR_GAME_FRIEND',
+            messageGetter: () => eI.intl.string(eI.t['/meGhY'])
+        },
+        [ev.evJ.INVALID_MESSAGE_SEND_PROVISIONAL_ACCOUNT_OFFLINE]: {
+            messageName: 'BOT_DM_SEND_MESSAGE_INVALID_OFFLINE_PROVISIONAL_ACCOUNT',
+            messageGetter: () => eI.intl.string(eI.t.Oc1Zj4)
         }
     },
     ew = {
