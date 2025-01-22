@@ -64,20 +64,12 @@ function D() {
                 });
             });
         },
-        setLoginCredentials(e, n) {
-            p.Z.dispatch({
-                type: 'SET_LOGIN_CREDENTIALS',
-                login: e,
-                password: n
-            });
-        },
         login(e) {
             let { login: n, password: r, undelete: i, source: a, giftCodeSKUId: o, invite: s, isMultiAccount: l } = e;
             p.Z.dispatch({
                 type: 'LOGIN',
                 isPasswordAttempt: !0
             }),
-                this.setLoginCredentials(n, r),
                 I.Z.post({
                     url: S.ANM.LOGIN,
                     body: {
@@ -151,7 +143,13 @@ function D() {
                                     }
                                 })
                               : s === S.evJ.PHONE_VERIFICATION_REQUIRED
-                                ? p.Z.dispatch({ type: 'LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED' })
+                                ? p.Z.dispatch({
+                                      type: 'LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED',
+                                      credentials: {
+                                          login: n,
+                                          password: r
+                                      }
+                                  })
                                 : p.Z.dispatch({
                                       type: 'LOGIN_FAILURE',
                                       error: new h.yZ(e)
@@ -489,7 +487,7 @@ function D() {
             );
         },
         async forgotPassword(e) {
-            this.setLoginCredentials(e), p.Z.dispatch({ type: 'FORGOT_PASSWORD_REQUEST' });
+            p.Z.dispatch({ type: 'FORGOT_PASSWORD_REQUEST' });
             try {
                 await I.Z.post({
                     url: S.ANM.FORGOT_PASSWORD,
@@ -499,16 +497,19 @@ function D() {
                     rejectWithError: !1
                 }),
                     p.Z.dispatch({ type: 'FORGOT_PASSWORD_SENT' });
-            } catch (n) {
-                let e = new h.yZ(n);
+            } catch (r) {
+                let n = new h.yZ(r);
                 throw (
-                    (e.code === S.evJ.PHONE_VERIFICATION_REQUIRED
-                        ? p.Z.dispatch({ type: 'LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION' })
+                    (n.code === S.evJ.PHONE_VERIFICATION_REQUIRED
+                        ? p.Z.dispatch({
+                              type: 'LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION',
+                              credentials: { login: e }
+                          })
                         : p.Z.dispatch({
                               type: 'LOGIN_FAILURE',
-                              error: e
+                              error: n
                           }),
-                    n)
+                    r)
                 );
             }
         },
