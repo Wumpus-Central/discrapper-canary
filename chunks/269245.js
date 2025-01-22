@@ -1,35 +1,28 @@
-n.d(t, {
+r.d(n, {
     u: function () {
-        return l;
+        return o;
     }
 });
-var i = n(192379),
-    r = n(298213);
-function l(e) {
-    let { userId: t, applicationId: n, isGameRelationship: l, location: a } = e,
-        s = i.useCallback(
-            (e) => {
-                e.stopPropagation(),
-                    r.Z.cancelFriendRequest({
-                        userId: t,
-                        applicationId: l ? n : null,
-                        location: a
-                    });
-            },
-            [n, l, a, t]
-        );
+var i = r(192379),
+    a = r(298213);
+function o(e) {
+    let { userId: n, applicationId: r, isGameRelationship: o, location: s, friendToken: l } = e,
+        u = i.useCallback(() => {
+            a.Z.cancelFriendRequest({
+                userId: n,
+                applicationId: o ? r : null,
+                location: s
+            });
+        }, [r, o, s, n]);
     return {
-        handleAcceptFriendRequest: i.useCallback(
-            (e) => {
-                e.stopPropagation(),
-                    r.Z.acceptFriendRequest({
-                        userId: t,
-                        applicationId: l ? n : null,
-                        location: a
-                    });
-            },
-            [n, l, a, t]
-        ),
-        handleCancelFriendRequest: s
+        acceptFriendRequest: i.useCallback(() => {
+            a.Z.acceptFriendRequest({
+                userId: n,
+                applicationId: o ? r : null,
+                location: s,
+                friendToken: l
+            });
+        }, [r, l, o, s, n]),
+        cancelFriendRequest: u
     };
 }

@@ -25,17 +25,29 @@ var i = n(200651),
     v = n(55945);
 function S(e) {
     var t;
-    let { user: n, applicationId: r, isGameRelationship: l, active: o } = e,
-        c = (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
-        { handleAcceptFriendRequest: d, handleCancelFriendRequest: u } = (0, f.u)({
+    let { user: n, applicationId: l, isGameRelationship: o, active: c } = e,
+        d = (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
+        { acceptFriendRequest: u, cancelFriendRequest: h } = (0, f.u)({
             userId: n.id,
-            applicationId: r,
-            isGameRelationship: l,
+            applicationId: l,
+            isGameRelationship: o,
             location: 'Friends'
-        });
+        }),
+        p = r.useCallback(
+            (e) => {
+                e.stopPropagation(), u();
+            },
+            [u]
+        ),
+        g = r.useCallback(
+            (e) => {
+                e.stopPropagation(), h();
+            },
+            [h]
+        );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            c &&
+            d &&
                 (0, i.jsx)('div', {
                     className: v.staffIndicator,
                     children: (0, i.jsx)(s.TextBadge, {
@@ -47,33 +59,39 @@ function S(e) {
                 icon: s.CheckmarkLargeIcon,
                 actionType: _.Z.ActionTypes.ACCEPT,
                 tooltip: N.intl.string(N.t.ZcibdX),
-                onClick: d,
-                shouldHighlight: o
+                onClick: p,
+                shouldHighlight: c
             }),
             (0, i.jsx)(_.Z, {
                 icon: s.XSmallIcon,
                 actionType: _.Z.ActionTypes.DENY,
                 tooltip: N.intl.string(N.t.xuio0N),
-                onClick: u,
-                shouldHighlight: o
+                onClick: g,
+                shouldHighlight: c
             })
         ]
     });
 }
 function T(e) {
-    let { userId: t, applicationId: n, isGameRelationship: r, active: l } = e,
-        { handleCancelFriendRequest: a } = (0, f.u)({
+    let { userId: t, applicationId: n, isGameRelationship: l, active: a } = e,
+        { cancelFriendRequest: o } = (0, f.u)({
             userId: t,
             applicationId: n,
-            isGameRelationship: r,
+            isGameRelationship: l,
             location: 'Friends'
-        });
+        }),
+        c = r.useCallback(
+            (e) => {
+                e.stopPropagation(), o();
+            },
+            [o]
+        );
     return (0, i.jsx)(_.Z, {
         icon: s.XSmallIcon,
         actionType: _.Z.ActionTypes.DENY,
         tooltip: N.intl.string(N.t.eaq81d),
-        onClick: a,
-        shouldHighlight: l
+        onClick: c,
+        shouldHighlight: a
     });
 }
 function b(e) {

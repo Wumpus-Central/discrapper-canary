@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return E;
+        return g;
     }
 });
 var i = r(200651),
@@ -8,91 +8,78 @@ var i = r(200651),
     o = r(120356),
     s = r.n(o),
     l = r(481060),
-    u = r(194359),
-    c = r(906732),
-    d = r(835473),
-    f = r(925329),
-    p = r(855796),
-    h = r(5192),
-    _ = r(785717),
-    m = r(388032),
-    g = r(117191);
-function E(e) {
-    let { user: n, guildId: r, channelId: o, applicationId: E, friendToken: v, isGameRelationship: y = !1, className: b } = e,
-        I = h.ZP.getName(r, o, n),
-        { trackUserProfileAction: T } = (0, _.KZ)(),
-        { newestAnalyticsLocation: S } = (0, c.ZP)(),
-        A = a.useCallback(() => {
-            if (y) {
-                if (null == E) return;
-                p.Z.acceptGameFriendRequest({
-                    userId: n.id,
-                    applicationId: E
-                });
-            } else
-                u.Z.addRelationship({
-                    userId: n.id,
-                    friendToken: v,
-                    context: { location: S }
-                });
-            T({ action: y ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
-        }, [y, T, E, n.id, v, S]),
+    u = r(906732),
+    c = r(835473),
+    d = r(925329),
+    f = r(269245),
+    p = r(5192),
+    h = r(785717),
+    _ = r(388032),
+    m = r(117191);
+function g(e) {
+    let { user: n, guildId: r, channelId: o, applicationId: g, friendToken: E, isGameRelationship: v = !1, className: y } = e,
+        b = p.ZP.getName(r, o, n),
+        { trackUserProfileAction: I } = (0, h.KZ)(),
+        { newestAnalyticsLocation: T } = (0, u.ZP)(),
+        { acceptFriendRequest: S, cancelFriendRequest: A } = (0, f.u)({
+            userId: n.id,
+            applicationId: g,
+            isGameRelationship: v,
+            location: T,
+            friendToken: E
+        }),
         C = a.useCallback(() => {
-            if (y) {
-                if (null == E) return;
-                p.Z.cancelGameFriendRequest({
-                    userId: n.id,
-                    applicationId: E
-                });
-            } else u.Z.cancelFriendRequest(n.id, { location: S });
-            T({ action: y ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
-        }, [E, y, S, T, n.id]),
-        N = (0, d.q)(E);
-    return y && null == N
+            S(), I({ action: v ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
+        }, [S, v, I]),
+        N = a.useCallback(() => {
+            A(), I({ action: v ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
+        }, [A, v, I]),
+        R = (0, c.q)(g);
+    return v && null == R
         ? null
         : (0, i.jsxs)('div', {
-              className: s()(g.container, b),
+              className: s()(m.container, y),
               children: [
-                  y
+                  v
                       ? (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: m.intl.format(m.t.syHjLC, {
-                                username: I,
+                            children: _.intl.format(_.t.syHjLC, {
+                                username: b,
                                 applicationIcon: () =>
                                     (0, i.jsx)(
-                                        f.Z,
+                                        d.Z,
                                         {
-                                            className: g.gameIcon,
-                                            game: N,
-                                            size: f.Z.Sizes.XXSMALL
+                                            className: m.gameIcon,
+                                            game: R,
+                                            size: d.Z.Sizes.XXSMALL
                                         },
-                                        null == N ? void 0 : N.id
+                                        null == R ? void 0 : R.id
                                     ),
-                                applicationName: null == N ? void 0 : N.name
+                                applicationName: null == R ? void 0 : R.name
                             })
                         })
                       : (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: m.intl.format(m.t.uIomX1, { username: I })
+                            children: _.intl.format(_.t.uIomX1, { username: b })
                         }),
                   (0, i.jsxs)('div', {
-                      className: g.buttonContainer,
+                      className: m.buttonContainer,
                       children: [
                           (0, i.jsx)(l.Button, {
                               look: l.Button.Looks.FILLED,
-                              color: s()(l.Button.Colors.BRAND, g.color),
+                              color: s()(l.Button.Colors.BRAND, m.color),
                               size: l.Button.Sizes.SMALL,
-                              className: g.button,
-                              onClick: A,
-                              children: m.intl.string(m.t.ZcibdX)
+                              className: m.button,
+                              onClick: C,
+                              children: _.intl.string(_.t.ZcibdX)
                           }),
                           (0, i.jsx)(l.Button, {
                               look: l.Button.Looks.FILLED,
                               color: l.Button.Colors.PRIMARY,
                               size: l.Button.Sizes.SMALL,
-                              className: g.button,
-                              onClick: C,
-                              children: m.intl.string(m.t.xuio0N)
+                              className: m.button,
+                              onClick: N,
+                              children: _.intl.string(_.t.xuio0N)
                           })
                       ]
                   })
