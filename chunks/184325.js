@@ -83,8 +83,7 @@ function w(e) {
                         }
                         (0, g.uL)(R.Z5c.APPLICATION_STORE, {
                             source: d.Z.BADGE,
-                            sourceLocationStack: w,
-                            search: '?autoScroll=true'
+                            sourceLocationStack: w
                         }),
                             null == s || s();
                         return;
