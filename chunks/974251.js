@@ -122,31 +122,32 @@ t.Z = l.memo(function (e) {
             appContext: J
         }),
         eA = (0, v.Q3)('ChannelAttachButton'),
-        ey = (0, c.useToken)(c.tokens.modules.chat.INPUT_ICON_SIZE);
+        ey = (0, v.R6)('ChannelAttachButton'),
+        eP = (0, c.useToken)(c.tokens.modules.chat.INPUT_ICON_SIZE);
     if (0 === ej.length) return null;
-    let eP = $.some((e) => (0, m.Z)(e, B.xjy.SYNC)),
-        eM = $.some((e) => (0, m.Z)(e, B.xjy.JOIN) && !(0, m.Z)(e, B.xjy.EMBEDDED)) || eP;
+    let eM = $.some((e) => (0, m.Z)(e, B.xjy.SYNC)),
+        eR = $.some((e) => (0, m.Z)(e, B.xjy.JOIN) && !(0, m.Z)(e, B.xjy.EMBEDDED)) || eM;
     V = eN
         ? (0, i.jsx)(c.CirclePlusIcon, {
               size: eA ? 'refresh_sm' : void 0,
               color: 'currentColor',
               colorClass: F.attachButtonPlus
           })
-        : eM
+        : eR
           ? (0, i.jsx)(M.Z, {
                 className: F.__invalid_attachButtonIcon,
                 foreground: F.attachButtonPlay,
                 background: F.attachButtonPlus,
-                width: ey,
-                height: ey
+                width: eP,
+                height: eP
             })
           : eT > 0
             ? (0, i.jsx)(P.Z, {
                   className: F.__invalid_attachButtonIcon,
                   foreground: F.attachButtonClip,
                   background: F.attachButtonPlus,
-                  width: ey,
-                  height: ey
+                  width: eP,
+                  height: eP
               })
             : (0, i.jsx)(c.CirclePlusIcon, {
                   size: 'md',
@@ -154,62 +155,73 @@ t.Z = l.memo(function (e) {
                   className: F.__invalid_attachButtonIcon,
                   colorClass: F.attachButtonPlus
               });
-    let eR = (0, i.jsx)(c.Popout, {
-        shouldShow: null != ed,
-        animation: c.Popout.Animation.NONE,
-        align: 'recentClips' === ed ? 'center' : 'left',
-        position: 'top',
-        positionKey: null != ed ? ed : 'null',
-        onRequestOpen: () => {
-            ev && (0, _.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: H.L.TAKE_ACTION }), eu('attachMenu');
-        },
-        onRequestClose: () => {
-            !(0, c.hasAnyModalOpen)() && (ev && (0, _.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: H.L.TAKE_ACTION }), eu(null));
-        },
-        renderPopout: (e) => {
-            switch (ed) {
-                case 'recentClips':
-                    return (0, i.jsx)(x.Z, {
-                        ...e,
-                        onOpenClips: e_,
-                        lastClipsSession: et
-                    });
-                case 'attachMenu':
-                    return (0, i.jsx)(D.Z, {
-                        ...e,
-                        onClose: () => eu(null),
-                        options: ej,
-                        channel: W,
-                        onFileUpload: () => {
-                            var e;
-                            return null === (e = Q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
-                        },
-                        draftType: K,
-                        editorTextContent: Y,
-                        setValue: q,
-                        openClips: e_
-                    });
-                default:
-                    throw Error('Invalid popout type provided');
-            }
-        },
-        children: (e) =>
-            (0, i.jsx)(c.Button, {
-                look: c.Button.Looks.BLANK,
-                size: c.Button.Sizes.NONE,
-                className: a()(F.attachButton, z),
-                innerClassName: F.attachButtonInner,
-                'aria-label': eg,
-                onDoubleClick: em
-                    ? () => {
-                          var e;
-                          return null === (e = Q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
-                      }
-                    : void 0,
-                ...e,
-                children: V
-            })
-    });
+    let eL = eA
+            ? ey
+                ? {
+                      left: 8,
+                      right: 4,
+                      top: 4,
+                      bottom: 4
+                  }
+                : 8
+            : void 0,
+        ek = (0, i.jsx)(c.Popout, {
+            shouldShow: null != ed,
+            animation: c.Popout.Animation.NONE,
+            align: 'recentClips' === ed ? 'center' : 'left',
+            position: 'top',
+            positionKey: null != ed ? ed : 'null',
+            onRequestOpen: () => {
+                ev && (0, _.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: H.L.TAKE_ACTION }), eu('attachMenu');
+            },
+            onRequestClose: () => {
+                !(0, c.hasAnyModalOpen)() && (ev && (0, _.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: H.L.TAKE_ACTION }), eu(null));
+            },
+            renderPopout: (e) => {
+                switch (ed) {
+                    case 'recentClips':
+                        return (0, i.jsx)(x.Z, {
+                            ...e,
+                            onOpenClips: e_,
+                            lastClipsSession: et
+                        });
+                    case 'attachMenu':
+                        return (0, i.jsx)(D.Z, {
+                            ...e,
+                            onClose: () => eu(null),
+                            options: ej,
+                            channel: W,
+                            onFileUpload: () => {
+                                var e;
+                                return null === (e = Q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+                            },
+                            draftType: K,
+                            editorTextContent: Y,
+                            setValue: q,
+                            openClips: e_
+                        });
+                    default:
+                        throw Error('Invalid popout type provided');
+                }
+            },
+            children: (e) =>
+                (0, i.jsx)(c.Button, {
+                    look: c.Button.Looks.BLANK,
+                    size: c.Button.Sizes.NONE,
+                    className: a()(F.attachButton, z),
+                    innerClassName: F.attachButtonInner,
+                    'aria-label': eg,
+                    onDoubleClick: em
+                        ? () => {
+                              var e;
+                              return null === (e = Q.current) || void 0 === e ? void 0 : e.activateUploadDialogue();
+                          }
+                        : void 0,
+                    focusProps: { offset: eL },
+                    ...e,
+                    children: V
+                })
+        });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
@@ -234,7 +246,7 @@ t.Z = l.memo(function (e) {
                     animationContainerClassName: F.buttonAnimation,
                     glowClassName: F.buttonAnimationGlow,
                     trinketsClassName: F.buttonAnimationTrinkets,
-                    children: eR
+                    children: ek
                 })
             })
         ]

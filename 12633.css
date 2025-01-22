@@ -26529,7 +26529,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: var(--modal-vertical-padding);
     background-image: linear-gradient(var(--modal-background), var(--modal-background));
     background-size: 100%calc(100% - 20px);
     border-bottom: 1.5px solid var(--background-modifier-accent)
@@ -26539,12 +26539,17 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     background-image: none;
     background-size: auto auto;
     background-size: initial;
-    border-bottom: none
+    border-bottom: none;
+    padding-bottom: 0
 }
 
 .closeButton_a27f2f {
     margin-left: auto;
-    bottom: 25%
+    padding: 0
+}
+
+.closeButtonInner_a27f2f {
+    height: 24px
 }
 
 .header_a27f2f {
@@ -26570,13 +26575,9 @@ body .headerAnimation_a27f2f {
     border-top-right-radius: calc(-1px + var(--radius-md))
 }
 
-.giftNitroInfo_a27f2f {
-    margin-bottom: 10px
-}
-
 .paymentModalLockIcon_f6be15 {
     color: var(--primary-500);
-    padding: 0 10px
+    padding: 0 var(--modal-horizontal-padding)
 }
 
 .theme-dark .paymentModalLockIcon_f6be15 {
@@ -26634,7 +26635,7 @@ body .headerAnimation_a27f2f {
 }
 
 .visual-refresh .addPaymentSteps_bf926b {
-    padding: 0 var(--space-16)
+    padding: 0 var(--modal-horizontal-padding)
 }
 
 .visual-refresh .sliderBody_bf926b {
