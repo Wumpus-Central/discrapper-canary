@@ -157,6 +157,7 @@ t.ZP = (e) => {
                                         className: j.goalText,
                                         color: r ? 'none' : 'interactive-active',
                                         variant: r ? 'text-sm/medium' : 'text-xs/bold',
+                                        lineClamp: 1,
                                         children: H
                                     })
                                 }),
@@ -167,6 +168,7 @@ t.ZP = (e) => {
                                             color: r ? 'none' : 'interactive-normal',
                                             variant: r ? 'text-sm/medium' : 'text-xs/normal',
                                             className: j.progressText,
+                                            lineClamp: 1,
                                             children: F
                                         }),
                                         (0, i.jsx)(x.Z, {
