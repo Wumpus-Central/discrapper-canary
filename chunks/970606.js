@@ -6,13 +6,13 @@ r.d(n, {
         return p;
     },
     Gh: function () {
-        return T;
+        return y;
     },
     Pq: function () {
         return g;
     },
     Q2: function () {
-        return v;
+        return E;
     },
     Qh: function () {
         return _;
@@ -24,12 +24,6 @@ r.d(n, {
         return d;
     },
     _v: function () {
-        return S;
-    },
-    aC: function () {
-        return E;
-    },
-    bH: function () {
         return b;
     },
     hM: function () {
@@ -39,10 +33,7 @@ r.d(n, {
         return f;
     },
     r: function () {
-        return I;
-    },
-    r2: function () {
-        return y;
+        return v;
     },
     u0: function () {
         return c;
@@ -137,21 +128,6 @@ function g(e) {
     s.default.track(u.rMx.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id: e });
 }
 function E(e) {
-    var n;
-    let { guildId: r, messageId: i, channelId: l, joinRequestStatus: c, joinRequestUserId: d } = e,
-        f = a.default.getId(),
-        p = (null === (n = o.ZP.getMember(r, f)) || void 0 === n ? void 0 : n.joinedAt) != null;
-    s.default.track(u.rMx.CLAN_SEND_INTERVIEW_MESSAGE, {
-        guild_id: r,
-        channel_id: l,
-        message_id: i,
-        message_user_id: f,
-        is_member: p,
-        join_request_status: c,
-        join_request_user_id: d
-    });
-}
-function v(e) {
     let { guildId: n, source: r, tab: i } = e;
     s.default.track(u.rMx.CLAN_APPLICATION_NAVIGATION, {
         guild_id: n,
@@ -159,32 +135,14 @@ function v(e) {
         tab: i
     });
 }
-function y(e) {
-    let { guildId: n, actionType: r, applicationUserId: i } = e;
-    s.default.track(u.rMx.CLAN_APPLICATION_ACTION, {
-        guild_id: n,
-        action_type: r,
-        application_user_id: i,
-        viewing_user_id: a.default.getId()
-    });
-}
-function b(e) {
-    let { guildId: n, applicationUserId: r, applicationStatus: i } = e;
-    s.default.track(u.rMx.CLAN_APPLICATION_VIEWED, {
-        guild_id: n,
-        viewing_user_id: a.default.getId(),
-        application_user_id: r,
-        application_status: i
-    });
-}
-function I(e) {
+function v(e) {
     let { guildId: n, position: r } = e;
     s.default.track(u.rMx.GUILD_APPLICATION_INTENDS_TO_JOIN, {
         guild_id: n,
         position: r
     });
 }
-function T(e) {
+function y(e) {
     let { feature: n, guildId: r, position: i } = e;
     s.default.track(u.rMx.DISCOVERY_GUILD_CARD_INTERACTION, {
         guild_id: r,
@@ -192,7 +150,7 @@ function T(e) {
         position: i
     });
 }
-function S(e) {
+function b(e) {
     let { guildId: n, position: r } = e;
     s.default.track(u.rMx.GUILD_APPLICATION_ABANDONED, {
         guild_id: n,
