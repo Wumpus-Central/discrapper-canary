@@ -11,5 +11,6 @@ e.exports = {
     badgeTextV2: 'badgeTextV2_f418be',
     badgeName: 'badgeName_f418be',
     badgeList: 'badgeList_f418be',
-    subscribeButton: 'subscribeButton_f418be'
+    subscribeButton: 'subscribeButton_f418be',
+    earnedBadge: 'earnedBadge_f418be'
 };
