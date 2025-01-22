@@ -25,16 +25,13 @@ function p() {
         : (0, i.jsxs)('div', {
               className: c.promotionalFooterBanner,
               children: [
-                  (0, i.jsx)('div', {
-                      className: c.promotionalAvatars,
-                      children: (0, i.jsx)(u.Z, {
-                          claimableRewards: h,
-                          maxRewardImageSrc: x.getImageUrl(p, t),
-                          size: r.AvatarSizes.SIZE_32
-                      })
+                  (0, i.jsx)(u.Z, {
+                      claimableRewards: h,
+                      maxRewardImageSrc: x.getImageUrl(p, t),
+                      size: r.AvatarSizes.SIZE_32
                   }),
                   (0, i.jsx)(r.Text, {
-                      variant: 'text-md/normal',
+                      variant: 'text-md/medium',
                       className: c.bannerText,
                       children: x.desktopBannerText(h.length)
                   })

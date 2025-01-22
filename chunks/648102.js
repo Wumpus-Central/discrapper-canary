@@ -1,1 +1,1 @@
-o.exports = { promotionalFooter: 'promotionalFooter_aedfbb' };
+e.exports = { promotionalFooter: 'promotionalFooter_aedfbb' };

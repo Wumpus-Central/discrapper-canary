@@ -1,35 +1,37 @@
 r.d(n, {
     C$: function () {
-        return p;
+        return h;
     },
     Se: function () {
-        return h;
+        return _;
     }
 });
 var i = r(100527),
     a = r(717401),
-    o = r(981631),
-    s = r(388032),
-    l = r(36128),
-    u = r(501536),
-    c = r(210055),
-    d = r(142755);
-let f = [
+    o = r(474936),
+    s = r(981631),
+    l = r(388032),
+    u = r(36128),
+    c = r(501536),
+    d = r(210055),
+    f = r(142755);
+let p = [
         {
             skuId: '1326347611069874277',
             assetId: 'a_89b499793e86bf459a8dd4f02ad416f4'
         }
     ],
-    p = 2,
-    h = {
-        rewards: f,
-        rewardAssetIdMap: (0, a.YV)(f),
-        dismissibleContentVersion: p,
+    h = 2,
+    _ = {
+        rewards: p,
+        rewardAssetIdMap: (0, a.YV)(p),
+        dismissibleContentVersion: h,
+        eligiblePlanIds: [o.Xh.PREMIUM_YEAR_TIER_2, o.Xh.PREMIUM_MONTH_TIER_2],
         planSelection: {
-            heading: () => s.intl.string(s.t['o2XB4+']),
+            heading: () => l.intl.string(l.t['o2XB4+']),
             gradient: ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)'],
-            getImageUrl: () => l.Z,
-            getBackgroundImageUrl: () => c.Z
+            getImageUrl: () => u.Z,
+            getBackgroundImageUrl: () => d.Z
         },
         chatGiftIcon: {
             trinketsAnimation: {
@@ -38,24 +40,24 @@ let f = [
             }
         },
         firstTimeNotice: {
-            getImageUrl: (e, n) => (n ? l.Z : d.Z),
-            title: () => s.intl.string(s.t.hFzI4u),
-            description: () => s.intl.string(s.t.B7R16u),
-            cta: () => s.intl.string(s.t.RzWDqa),
+            getImageUrl: (e, n) => (n ? u.Z : f.Z),
+            title: () => l.intl.string(l.t.hFzI4u),
+            description: () => l.intl.string(l.t.B7R16u),
+            cta: () => l.intl.string(l.t.RzWDqa),
             analyticsLocation: i.Z.VALENTINES_GIFTING_COACHMARK,
-            analyticsPage: o.ZY5.PREMIUM_UPSELL_VALENTINES_GIFTING_CAMPAIGN
+            analyticsPage: s.ZY5.PREMIUM_UPSELL_VALENTINES_GIFTING_CAMPAIGN
         },
         planSelectionBanner: {
-            desktopBannerText: () => s.intl.string(s.t['wxgA+v']),
-            mobileBannerText: () => s.intl.string(s.t.d4uO8v),
+            desktopBannerText: () => l.intl.string(l.t['wxgA+v']),
+            mobileBannerText: () => l.intl.string(l.t.d4uO8v),
             getImageUrl: () => '',
             gradient: () => ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)']
         },
         billingSettingsMarketingBanner: {
-            getAnimatedImageUrl: () => d.Z,
-            getStaticImageUrl: () => l.Z,
-            getBackgroundImageUrl: () => u.Z,
-            title: () => s.intl.string(s.t.hFzI4u),
-            body: () => s.intl.string(s.t.rbWKaW)
+            getAnimatedImageUrl: () => f.Z,
+            getStaticImageUrl: () => u.Z,
+            getBackgroundImageUrl: () => c.Z,
+            title: () => l.intl.string(l.t.hFzI4u),
+            body: () => l.intl.string(l.t.rbWKaW)
         }
     };
