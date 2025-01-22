@@ -1,31 +1,34 @@
 var i = r(200651),
     a = r(192379),
     s = r(481060),
-    o = r(592125),
-    l = r(594174),
-    u = r(5192),
-    c = r(111810),
-    d = r(287941),
-    f = r(477931),
-    _ = r(235894),
-    h = r(388032),
-    p = r(814169);
-let m = (e) => {
+    o = r(782568),
+    l = r(592125),
+    u = r(594174),
+    c = r(63063),
+    d = r(5192),
+    f = r(111810),
+    _ = r(287941),
+    h = r(477931),
+    p = r(235894),
+    m = r(981631),
+    g = r(388032),
+    E = r(814169);
+let v = (e) => {
     var n;
     let { message: r } = e,
-        m = a.useRef(null),
-        g = (0, c.p7)('Message Header') && r.hasPotions(),
-        E = o.Z.getChannel(r.getChannelId()),
-        v = null === (n = r.potions) || void 0 === n ? void 0 : n[0],
-        I = a.useMemo(() => {
-            if (null == v) return null;
-            let e = l.default.getUser(v.used_by);
-            return (0, u.y)(null == E ? void 0 : E.getGuildId(), null == E ? void 0 : E.id, e);
-        }, [v, E]),
-        T = a.useCallback(() => {
-            if (null != m.current && (0, _.U)(r)) {
-                let { x: e, y: n, width: i, height: a } = m.current.getBoundingClientRect();
-                (0, d.Z)(
+        v = a.useRef(null),
+        I = (0, f.p7)('Message Header') && r.hasPotions(),
+        T = l.Z.getChannel(r.getChannelId()),
+        b = null === (n = r.potions) || void 0 === n ? void 0 : n[0],
+        y = a.useMemo(() => {
+            if (null == b) return null;
+            let e = u.default.getUser(b.used_by);
+            return (0, d.y)(null == T ? void 0 : T.getGuildId(), null == T ? void 0 : T.id, e);
+        }, [b, T]),
+        S = a.useCallback(() => {
+            if (null != v.current && (0, p.U)(r)) {
+                let { x: e, y: n, width: i, height: a } = v.current.getBoundingClientRect();
+                (0, _.Z)(
                     r,
                     {
                         x: e,
@@ -36,16 +39,21 @@ let m = (e) => {
                     !0
                 );
             }
-        }, [r]);
-    return g && null != I && (null == v ? void 0 : v.type) === f.B.CONFETTI
+        }, [r]),
+        A = a.useCallback(() => {
+            (0, o.Z)(c.Z.getArticleURL(m.BhN.CONFETTI_POTION));
+        }, []);
+    return I && null != y && (null == b ? void 0 : b.type) === h.B.CONFETTI
         ? (0, i.jsx)(s.Clickable, {
-              onFocus: T,
+              onFocus: S,
+              onClick: A,
+              'aria-label': g.intl.string(g.t.Mp5k6O),
               children: (0, i.jsx)(s.Tooltip, {
-                  text: h.intl.formatToPlainString(h.t['FE++aG'], { user: I }),
+                  text: g.intl.formatToPlainString(g.t['FE++aG'], { user: y }),
                   children: (e) =>
                       (0, i.jsxs)('div', {
-                          ref: m,
-                          className: p.potionBadge,
+                          ref: v,
+                          className: E.potionBadge,
                           ...e,
                           children: [
                               (0, i.jsx)(s.ExperimentalConfettiIcon, {
@@ -57,7 +65,7 @@ let m = (e) => {
                               (0, i.jsx)(s.Text, {
                                   variant: 'text-xs/bold',
                                   color: 'currentColor',
-                                  children: h.intl.string(h.t['8Rrro6'])
+                                  children: g.intl.string(g.t['8Rrro6'])
                               })
                           ]
                       })
@@ -65,4 +73,4 @@ let m = (e) => {
           })
         : null;
 };
-n.Z = m;
+n.Z = v;
