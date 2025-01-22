@@ -201,15 +201,15 @@ function C(e) {
     }
     var B = O(N()),
         G = [B.key];
-    function Z(e) {
+    function F(e) {
         return R + h(e);
     }
-    function F(e, i) {
+    function Z(e, i) {
         var a = 'PUSH',
             s = p(e, i, D(), X.location);
         L.confirmTransitionTo(s, a, m, function (e) {
             if (e) {
-                var i = Z(s),
+                var i = F(s),
                     o = s.key,
                     l = s.state;
                 if (r) {
@@ -244,7 +244,7 @@ function C(e) {
             s = p(e, i, D(), X.location);
         L.confirmTransitionTo(s, a, m, function (e) {
             if (e) {
-                var i = Z(s),
+                var i = F(s),
                     o = s.key,
                     l = s.state;
                 if (r) {
@@ -309,8 +309,8 @@ function C(e) {
         length: n.length,
         action: 'POP',
         location: B,
-        createHref: Z,
-        push: F,
+        createHref: F,
+        push: Z,
         replace: V,
         go: j,
         goBack: H,
@@ -407,9 +407,9 @@ function P(e) {
     }
     function U(e) {
         var n = $.location,
-            r = F.lastIndexOf(h(n));
+            r = Z.lastIndexOf(h(n));
         -1 === r && (r = 0);
-        var i = F.lastIndexOf(h(e));
+        var i = Z.lastIndexOf(h(e));
         -1 === i && (i = 0);
         var a = r - i;
         a && ((N = !0), Y(a));
@@ -417,8 +417,8 @@ function P(e) {
     var B = L(),
         G = I(B);
     B !== G && w(G);
-    var Z = y(),
-        F = [h(Z)];
+    var F = y(),
+        Z = [h(F)];
     function V(e) {
         var n = document.querySelector('base'),
             r = '';
@@ -434,10 +434,10 @@ function P(e) {
                     s = L() !== a;
                 if (s) {
                     (C = n), x(a);
-                    var o = F.lastIndexOf(h($.location)),
-                        l = F.slice(0, o + 1);
+                    var o = Z.lastIndexOf(h($.location)),
+                        l = Z.slice(0, o + 1);
                     l.push(n),
-                        (F = l),
+                        (Z = l),
                         A({
                             action: r,
                             location: i
@@ -455,8 +455,8 @@ function P(e) {
                     a = I(_ + n),
                     s = L() !== a;
                 s && ((C = n), w(a));
-                var o = F.indexOf(h($.location));
-                -1 !== o && (F[o] = n),
+                var o = Z.indexOf(h($.location));
+                -1 !== o && (Z[o] = n),
                     A({
                         action: r,
                         location: i
@@ -500,7 +500,7 @@ function P(e) {
     var $ = {
         length: n.length,
         action: 'POP',
-        location: Z,
+        location: F,
         createHref: V,
         push: j,
         replace: H,

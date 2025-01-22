@@ -21,8 +21,8 @@ var l = n(120356),
     E = n(606925),
     C = n(719216),
     y = n(429589),
-    Z = n(276149),
-    b = n(636245),
+    b = n(276149),
+    Z = n(636245),
     T = n(697761),
     N = n(611459),
     A = n(544671),
@@ -112,7 +112,7 @@ t.Z = (0, u.Z)((e) => {
                 return null == e
                     ? null
                     : (0, i.jsx)(
-                          b.Z,
+                          Z.Z,
                           {
                               guildId: e.guildId,
                               channelId: e.channelId,
@@ -137,7 +137,7 @@ t.Z = (0, u.Z)((e) => {
                   )
                 : H && null != Y
                   ? (0, i.jsx)(
-                        Z.Z,
+                        b.Z,
                         {
                             color: k,
                             look: D,

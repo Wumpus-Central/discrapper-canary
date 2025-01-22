@@ -137,7 +137,7 @@ function G(e) {
         })
     });
 }
-function Z(e) {
+function F(e) {
     let { subscriptionTier: n, onClose: r, analyticsLocationObject: i, trialOffer: s, discountOffer: o } = e;
     return (0, a.jsxs)('div', {
         className: P.footer,
@@ -160,7 +160,7 @@ function Z(e) {
         ]
     });
 }
-function F(e) {
+function Z(e) {
     let { onClose: n, analyticsLocationObject: r } = e,
         i = (0, R.N)();
     return (0, a.jsxs)('div', {
@@ -254,7 +254,7 @@ function j(e) {
                             })
                         ]
                     }),
-                    (0, a.jsx)(Z, {
+                    (0, a.jsx)(F, {
                         subscriptionTier: d,
                         onClose: o,
                         analyticsLocationObject: {
@@ -294,7 +294,7 @@ function j(e) {
                                 })
                             ]
                         }),
-                        (0, a.jsx)(Z, {
+                        (0, a.jsx)(F, {
                             subscriptionTier: d,
                             onClose: o,
                             analyticsLocationObject: {
@@ -335,7 +335,7 @@ function j(e) {
                             })
                         ]
                     }),
-                    (0, a.jsx)(Z, {
+                    (0, a.jsx)(F, {
                         subscriptionTier: d,
                         onClose: o,
                         analyticsLocationObject: {
@@ -492,7 +492,7 @@ function j(e) {
             });
         case L.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL:
         case L.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
-            return (0, a.jsx)(F, {});
+            return (0, a.jsx)(Z, {});
         case L.cd.GUILD_CAP_MODAL_UPSELL:
         case L.cd.PREMIUM_GUILD_IDENTITY_MODAL:
         case L.cd.CUSTOM_PROFILE_UPSELL:

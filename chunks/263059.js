@@ -36,9 +36,9 @@ var i = r(200651),
     P = r(249942);
 function M(e) {
     var n;
-    let { user: r, currentUser: s, activity: M, guild: k, channel: U, className: B, onClose: G, profileGuildId: Z } = e,
-        { profileType: F } = (0, y.z)(),
-        V = { [P.fullSize]: F === w.y0.FULL_SIZE },
+    let { user: r, currentUser: s, activity: M, guild: k, channel: U, className: B, onClose: G, profileGuildId: F } = e,
+        { profileType: Z } = (0, y.z)(),
+        V = { [P.fullSize]: Z === w.y0.FULL_SIZE },
         { interactionSource: j, interactionSourceId: H } = (0, I.Xo)(),
         Y = (0, h.Z)({
             activity: M,
@@ -123,7 +123,7 @@ function M(e) {
                           onAction: q
                       })
                   });
-    if (null === F) return null;
+    if (null === Z) return null;
     let et = null !== (n = M.application_id) && void 0 !== n ? n : M.name,
         en = j === w.n_.ACTIVITY && H === et;
     return (0, i.jsx)(d.Gt, {
@@ -133,8 +133,8 @@ function M(e) {
             user: r,
             children: (0, i.jsx)(T.Z, {
                 user: r,
-                guildId: Z,
-                profileType: F,
+                guildId: F,
+                profileType: Z,
                 sourceId: et,
                 sourceDetails: null == Y ? (0, v.Z)(M) : null,
                 entry: Y,
@@ -201,13 +201,13 @@ function M(e) {
                                                         J()
                                                     ]
                                                 }),
-                                                F === w.y0.FULL_SIZE && ee()
+                                                Z === w.y0.FULL_SIZE && ee()
                                             ]
                                         }),
                                         $()
                                     ]
                                 }),
-                                F !== w.y0.FULL_SIZE && ee()
+                                Z !== w.y0.FULL_SIZE && ee()
                             ]
                         })
                     })

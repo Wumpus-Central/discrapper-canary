@@ -31,23 +31,23 @@ function y(e) {
         k = o.useRef(),
         { triggerAnimation: U, untriggerAnimation: B } = o.useContext(_.Rm),
         G = m.Yk.useSetting(),
-        Z = b(),
-        F = null == O ? G : O,
+        F = b(),
+        Z = null == O ? G : O,
         V = T.kV[y],
         j = o.useRef(null),
         H = o.useMemo(() => {
             if (null != i) return i;
             if (null != c) {
-                let e = !0 === A && F;
+                let e = !0 === A && Z;
                 return E.ZP.getEmojiURL({
                     id: c,
-                    animated: Z && !0 === I && (e || x || !0 === S),
+                    animated: F && !0 === I && (e || x || !0 === S),
                     size: V
                 });
             }
             if (null != f) return v.ZP.getURL(f);
             throw Error('Unknown Src for Emoji');
-        }, [I, F, c, f, V, Z, x, S, A, i]),
+        }, [I, Z, c, f, V, F, x, S, A, i]),
         Y = o.useCallback(() => {
             null != H &&
                 (k.current = (0, h.po)(H, (e) => {
@@ -106,7 +106,7 @@ function y(e) {
                       channelId: p,
                       messageId: g,
                       emojiName: f,
-                      disable: !1 === F || !1 === G,
+                      disable: !1 === Z || !1 === G,
                       emojiRef: Q
                   }),
                   R

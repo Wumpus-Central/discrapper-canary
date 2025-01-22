@@ -40,9 +40,9 @@ var B = Array(M);
 f(B);
 var G = Array(g - m + 1);
 f(G);
-var Z = Array(E);
-f(Z);
-var F = Array(T);
+var F = Array(E);
+f(F);
+var Z = Array(T);
 function V(e, n, r, i, a) {
     (this.static_tree = e), (this.extra_bits = n), (this.extra_base = r), (this.elems = i), (this.max_length = a), (this.has_stree = e && e.length);
 }
@@ -118,9 +118,9 @@ function J() {
         o,
         l,
         u = Array(S + 1);
-    for (o = 0, r = 0; o < E - 1; o++) for (e = 0, Z[o] = r; e < 1 << L[o]; e++) G[r++] = o;
-    for (G[r - 1] = o, l = 0, o = 0; o < 16; o++) for (e = 0, F[o] = l; e < 1 << x[o]; e++) B[l++] = o;
-    for (l >>= 7; o < T; o++) for (e = 0, F[o] = l << 7; e < 1 << (x[o] - 7); e++) B[256 + l++] = o;
+    for (o = 0, r = 0; o < E - 1; o++) for (e = 0, F[o] = r; e < 1 << L[o]; e++) G[r++] = o;
+    for (G[r - 1] = o, l = 0, o = 0; o < 16; o++) for (e = 0, Z[o] = l; e < 1 << x[o]; e++) B[l++] = o;
+    for (l >>= 7; o < T; o++) for (e = 0, Z[o] = l << 7; e < 1 << (x[o] - 7); e++) B[256 + l++] = o;
     for (n = 0; n <= S; n++) u[n] = 0;
     for (e = 0; e <= 143; ) (k[2 * e + 1] = 8), e++, u[8]++;
     for (; e <= 255; ) (k[2 * e + 1] = 9), e++, u[9]++;
@@ -160,7 +160,7 @@ function ei(e, n, r) {
         o,
         l = 0;
     if (0 !== e.last_lit)
-        do (i = (e.pending_buf[e.d_buf + 2 * l] << 8) | e.pending_buf[e.d_buf + 2 * l + 1]), (a = e.pending_buf[e.l_buf + l]), l++, 0 === i ? K(e, a, n) : (K(e, (s = G[a]) + v + 1, n), 0 !== (o = L[s]) && W(e, (a -= Z[s]), o), K(e, (s = H(--i)), r), 0 !== (o = x[s]) && W(e, (i -= F[s]), o));
+        do (i = (e.pending_buf[e.d_buf + 2 * l] << 8) | e.pending_buf[e.d_buf + 2 * l + 1]), (a = e.pending_buf[e.l_buf + l]), l++, 0 === i ? K(e, a, n) : (K(e, (s = G[a]) + v + 1, n), 0 !== (o = L[s]) && W(e, (a -= F[s]), o), K(e, (s = H(--i)), r), 0 !== (o = x[s]) && W(e, (i -= Z[s]), o));
         while (l < e.last_lit);
     K(e, C, n);
 }
@@ -232,7 +232,7 @@ function ec(e) {
     for (n = 32; n < v; n++) if (0 !== e.dyn_ltree[2 * n]) return c;
     return u;
 }
-f(F);
+f(Z);
 var ed = !1;
 function ef(e) {
     !ed && (J(), (ed = !0)), (e.l_desc = new j(e.dyn_ltree, i)), (e.d_desc = new j(e.dyn_dtree, a)), (e.bl_desc = new j(e.bl_tree, s)), (e.bi_buf = 0), (e.bi_valid = 0), $(e);

@@ -53,14 +53,14 @@ function u(e) {
         return h.format(e);
     }
     function G(e, n) {
-        U(e, F(n));
-    }
-    function Z(e) {
-        return Math.round((e - u) / p) * p + u;
+        U(e, Z(n));
     }
     function F(e) {
+        return Math.round((e - u) / p) * p + u;
+    }
+    function Z(e) {
         let n = e * (_ - u) + u;
-        return (0, i.uZ)(Z(n), u, _);
+        return (0, i.uZ)(F(n), u, _);
     }
     function V(e, n = 1) {
         let r = Math.max(n, p);
@@ -89,7 +89,7 @@ function u(e) {
         getFormattedValue: B,
         getThumbMinValue: P,
         getThumbMaxValue: M,
-        getPercentValue: F,
+        getPercentValue: Z,
         isThumbEditable: k,
         setThumbEditable: function e(e, n) {
             N.current[e] = n;

@@ -115,7 +115,7 @@ function O(e) {
                     }),
                 L === y.y0.BITE_SIZE && (0, m.EW)(_.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        Z = () => {
+        F = () => {
             r === y.n_.AVATAR ? N({ action: 'PRESS_REPLY_AVATAR' }) : r === y.n_.STATUS ? N({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : N({ action: 'PRESS_REPLY_ACTIVITY' }),
                 null == x ||
                     x({
@@ -125,7 +125,7 @@ function O(e) {
                     }),
                 L === y.y0.BITE_SIZE && (0, m.EW)(_.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
-        F = (e) => {
+        Z = (e) => {
             e.animationName === (0, c.get)(A, 'fadeInAndOut') && B(!1);
         };
     return (0, s.jsxs)(p.ZP, {
@@ -137,7 +137,7 @@ function O(e) {
             [A.avatarPopover]: r === y.n_.AVATAR,
             [A.activityPopover]: r === y.n_.ACTIVITY
         }),
-        onAnimationEnd: U ? F : void 0,
+        onAnimationEnd: U ? Z : void 0,
         children: [
             (0, s.jsx)(h.TooltipContainer, {
                 text: S.intl.string(S.t.nhaI4e),
@@ -163,7 +163,7 @@ function O(e) {
                 delay: 0,
                 'aria-label': !1,
                 children: (0, s.jsx)(p.zx, {
-                    onClick: Z,
+                    onClick: F,
                     className: A.button,
                     'aria-label': R(y.P.REPLY, r),
                     'aria-haspopup': 'dialog',

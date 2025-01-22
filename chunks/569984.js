@@ -68,7 +68,7 @@ function G(e) {
         i = null === (n = r.items[0].tenantMetadata) || void 0 === n ? void 0 : n.questRewards.reward;
     return (null == i ? void 0 : i.tag) !== S.w.REWARD_CODE ? null : i.rewardCode;
 }
-function Z(e, n) {
+function F(e, n) {
     let r = new Map(p);
     r.set(e, n.items), (p = r);
     let i = s.get(e),
@@ -86,7 +86,7 @@ function Z(e, n) {
             });
     }
 }
-function F(e) {
+function Z(e) {
     null != m.get(e) && (m = new Map(m)).delete(e);
 }
 function V() {
@@ -114,7 +114,7 @@ function z() {
 }
 function q(e) {
     let { questId: n, streamKey: r, userStatus: i } = e;
-    _.add(n), k(n, { userStatus: i }), F(r);
+    _.add(n), k(n, { userStatus: i }), Z(r);
 }
 function Q(e) {
     let { questId: n, streamKey: r } = e;
@@ -127,7 +127,7 @@ function Q(e) {
 }
 function X(e) {
     let { streamKey: n } = e;
-    F(n);
+    Z(n);
 }
 function J(e) {
     let n = new Set(u);
@@ -169,7 +169,7 @@ function ea(e) {
 function es(e) {
     let { questId: n, entitlements: r } = e,
         i = new Set(c);
-    i.delete(n), (c = i), Z(n, r);
+    i.delete(n), (c = i), F(n, r);
 }
 function eo(e) {
     let { questId: n } = e,
@@ -195,7 +195,7 @@ function ed(e) {
 }
 function ef(e) {
     let { streamKey: n } = e;
-    F(n);
+    Z(n);
 }
 function e_(e) {
     let { user_status: n } = e,

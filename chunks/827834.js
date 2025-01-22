@@ -133,14 +133,14 @@ n.default = (function () {
                 value: '=',
                 description: '"="'
             },
-            Z = function (e, n) {
+            F = function (e, n) {
                 return {
                     type: 'optionalFormatPattern',
                     selector: e,
                     value: n
                 };
             },
-            F = 'offset:',
+            Z = 'offset:',
             V = {
                 type: 'literal',
                 value: 'offset:',
@@ -373,13 +373,13 @@ n.default = (function () {
         }
         function eG() {
             var e;
-            return (e = eZ()) === a && (e = eF()) === a && (e = eV()) === a && (e = ej()), e;
+            return (e = eF()) === a && (e = eZ()) === a && (e = eV()) === a && (e = ej()), e;
         }
-        function eZ() {
+        function eF() {
             var e, r, i, s, o, l;
             return (e = eb), n.substr(eb, 6) === b ? ((r = b), (eb += 6)) : ((r = a), 0 === eR && eD(y)), r === a && (n.substr(eb, 4) === S ? ((r = S), (eb += 4)) : ((r = a), 0 === eR && eD(A)), r === a && (n.substr(eb, 4) === N ? ((r = N), (eb += 4)) : ((r = a), 0 === eR && eD(C)))), r !== a && eq() !== a ? ((i = eb), 44 === n.charCodeAt(eb) ? ((s = g), eb++) : ((s = a), 0 === eR && eD(E)), s !== a && (o = eq()) !== a && (l = e0()) !== a ? (i = s = [s, o, l]) : ((eb = i), (i = u)), i === a && (i = m), i !== a ? ((ey = e), (e = r = R(r, i))) : ((eb = e), (e = u))) : ((eb = e), (e = u)), e;
         }
-        function eF() {
+        function eZ() {
             var e, r, i, s;
             return (e = eb), n.substr(eb, 6) === O ? ((r = O), (eb += 6)) : ((r = a), 0 === eR && eD(D)), r !== a && eq() !== a ? (44 === n.charCodeAt(eb) ? ((i = g), eb++) : ((i = a), 0 === eR && eD(E)), i !== a && eq() !== a && (s = eK()) !== a ? ((ey = e), (e = r = L(s))) : ((eb = e), (e = u))) : ((eb = e), (e = u)), e;
         }
@@ -408,11 +408,11 @@ n.default = (function () {
         }
         function eY() {
             var e, r, i, s, o, l;
-            return (e = eb), (r = eq()) !== a && (i = eH()) !== a && eq() !== a ? (123 === n.charCodeAt(eb) ? ((s = h), eb++) : ((s = a), 0 === eR && eD(p)), s !== a && eq() !== a && (o = ew()) !== a && eq() !== a ? (125 === n.charCodeAt(eb) ? ((l = v), eb++) : ((l = a), 0 === eR && eD(I)), l !== a ? ((ey = e), (e = r = Z(i, o))) : ((eb = e), (e = u))) : ((eb = e), (e = u))) : ((eb = e), (e = u)), e;
+            return (e = eb), (r = eq()) !== a && (i = eH()) !== a && eq() !== a ? (123 === n.charCodeAt(eb) ? ((s = h), eb++) : ((s = a), 0 === eR && eD(p)), s !== a && eq() !== a && (o = ew()) !== a && eq() !== a ? (125 === n.charCodeAt(eb) ? ((l = v), eb++) : ((l = a), 0 === eR && eD(I)), l !== a ? ((ey = e), (e = r = F(i, o))) : ((eb = e), (e = u))) : ((eb = e), (e = u))) : ((eb = e), (e = u)), e;
         }
         function eW() {
             var e, r, i;
-            return (e = eb), n.substr(eb, 7) === F ? ((r = F), (eb += 7)) : ((r = a), 0 === eR && eD(V)), r !== a && eq() !== a && (i = eJ()) !== a ? ((ey = e), (e = r = j(i))) : ((eb = e), (e = u)), e;
+            return (e = eb), n.substr(eb, 7) === Z ? ((r = Z), (eb += 7)) : ((r = a), 0 === eR && eD(V)), r !== a && eq() !== a && (i = eJ()) !== a ? ((ey = e), (e = r = j(i))) : ((eb = e), (e = u)), e;
         }
         function eK() {
             var e, n, r, i;

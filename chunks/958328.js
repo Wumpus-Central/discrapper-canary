@@ -3,10 +3,10 @@ n.d(t, {
         return j;
     }
 });
-var r = n(200651);
+var a = n(200651);
 n(192379);
-var a = n(120356),
-    l = n.n(a),
+var r = n(120356),
+    l = n.n(r),
     i = n(149765),
     o = n(442837),
     s = n(481060),
@@ -22,18 +22,18 @@ var a = n(120356),
     g = n(941469);
 function v(e) {
     let { title: t, can: n } = e,
-        a = n ? s.CheckmarkLargeIcon : s.XSmallIcon,
-        i = (0, r.jsx)('div', {
+        r = n ? s.CheckmarkLargeIcon : s.XSmallIcon,
+        i = (0, a.jsx)('div', {
             className: l()(b.iconOuter, n ? b.iconCheck : b.iconCross),
-            children: (0, r.jsx)(a, { className: b.icon })
+            children: (0, a.jsx)(r, { className: b.icon })
         });
-    return (0, r.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: b.scope,
         children: [
             i,
-            (0, r.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: b.scopeInner,
-                children: (0, r.jsx)(s.Text, {
+                children: (0, a.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     children: t
                 })
@@ -45,57 +45,57 @@ function j() {
     let e = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
         t = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
         n = (0, o.e7)([d.Z], () => d.Z.getChannel(e)),
-        a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
+        r = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
         j = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
-        T = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
+        _ = (0, o.e7)([h.Z], () => h.Z.computePermissions(r)),
         C = (0, c.ZP)(n, !0),
-        _ = null != n ? (0, p.IG)(n, !1, !0) : null,
-        S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
-        N = Object.values(null != _ ? _ : {}).map((e) => {
+        T = null != n ? (0, p.IG)(n, !1, !0) : null,
+        N = null != r ? f.Z.getGuildPermissionSpecMap(r) : null,
+        S = Object.values(null != T ? T : {}).map((e) => {
             let { title: t, flag: n } = e,
-                a = i.e$(j, n);
-            return (0, r.jsx)(
+                r = i.e$(j, n);
+            return (0, a.jsx)(
                 v,
                 {
                     title: t,
-                    can: a
+                    can: r
                 },
                 t
             );
         }),
-        y = Object.values(null != S ? S : {}).map((e) => {
+        y = Object.values(null != N ? N : {}).map((e) => {
             let { title: t, flag: n } = e,
-                a = i.e$(T, n);
-            return (0, r.jsx)(
+                r = i.e$(_, n);
+            return (0, a.jsx)(
                 v,
                 {
                     title: t,
-                    can: a
+                    can: r
                 },
                 t
             );
         });
-    return (0, r.jsx)('div', {
+    return (0, a.jsx)('div', {
         className: l()(g.panel, b.panel),
-        children: (0, r.jsxs)('div', {
+        children: (0, a.jsxs)('div', {
             className: b.panelInner,
             children: [
-                (0, r.jsxs)('section', {
+                (0, a.jsxs)('section', {
                     className: b.section,
                     children: [
-                        (0, r.jsx)(s.Heading, {
+                        (0, a.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
                             children: null != C ? 'Permissions in '.concat(C) : 'No channel selected'
                         }),
-                        N
+                        S
                     ]
                 }),
-                (0, r.jsxs)('section', {
+                (0, a.jsxs)('section', {
                     className: b.section,
                     children: [
-                        (0, r.jsx)(s.Heading, {
+                        (0, a.jsx)(s.Heading, {
                             variant: 'heading-md/semibold',
-                            children: null != a ? 'Permissions in '.concat(a.name) : 'No guild selected'
+                            children: null != r ? 'Permissions in '.concat(r.name) : 'No guild selected'
                         }),
                         y
                     ]

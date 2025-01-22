@@ -56,8 +56,8 @@ function M(e) {
 }
 function k(e) {
     var n, r, i, a, o, g, v, I, T;
-    let { type: N, disabled: R, channel: O, handleSubmit: k, isEmpty: B, showAllButtons: G, children: Z } = e,
-        F = (0, u.e7)([d.Z], () => d.Z.isSubmitButtonEnabled),
+    let { type: N, disabled: R, channel: O, handleSubmit: k, isEmpty: B, showAllButtons: G, children: F } = e,
+        Z = (0, u.e7)([d.Z], () => d.Z.isSubmitButtonEnabled),
         V = U(O.id, N, B),
         { activeCommand: j, activeCommandOption: H } = (0, u.cj)([f.Z], () => ({
             activeCommand: f.Z.getActiveCommand(O.id),
@@ -156,7 +156,7 @@ function k(e) {
             )
         ),
     (null === (i = N.submit) || void 0 === i ? void 0 : i.button) != null &&
-        ((null === (a = N.submit) || void 0 === a ? void 0 : a.ignorePreference) || F) &&
+        ((null === (a = N.submit) || void 0 === a ? void 0 : a.ignorePreference) || Z) &&
         !ee &&
         W.push(
             (0, s.jsx)(
@@ -168,7 +168,7 @@ function k(e) {
                 'submit'
             )
         ),
-    null != Z && W.push(Z),
+    null != F && W.push(F),
     0 === W.length)
         ? null
         : (0, s.jsx)('div', {

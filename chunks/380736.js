@@ -57,13 +57,13 @@ let C = l.memo(function (e) {
             },
             [u]
         ),
-        z = l.useCallback(
+        A = l.useCallback(
             (e) => {
                 e.stopPropagation(), null == d || d(e);
             },
             [d]
         ),
-        A = l.useCallback(
+        z = l.useCallback(
             (e) => {
                 e.stopPropagation(), null == h || h(e);
             },
@@ -146,7 +146,7 @@ let C = l.memo(function (e) {
                                                                         className: v.button,
                                                                         size: a.Button.Sizes.SMALL,
                                                                         color: a.Button.Colors.GREEN,
-                                                                        onClick: z,
+                                                                        onClick: A,
                                                                         children: null != S ? S : m.intl.string(m.t.BddRzc)
                                                                     })
                                                                   : null,
@@ -156,7 +156,7 @@ let C = l.memo(function (e) {
                                                                         size: a.Button.Sizes.SMALL,
                                                                         look: a.Button.Looks.OUTLINED,
                                                                         color: a.Button.Colors.PRIMARY,
-                                                                        onClick: A,
+                                                                        onClick: z,
                                                                         children: null != g ? g : m.intl.string(m.t['ETE/oK'])
                                                                     })
                                                                   : null
@@ -241,7 +241,7 @@ function O(e) {
         ),
         y = l.useCallback((e) => (null == g ? void 0 : g(e, a)), [g, a]),
         {
-            props: { onNotificationShow: x, onDismissClick: b, renderFooter: T, onNotificationClick: R, onConfirmClick: k, onCancelClick: z, ...A },
+            props: { onNotificationShow: x, onDismissClick: b, renderFooter: T, onNotificationClick: R, onConfirmClick: k, onCancelClick: A, ...z },
             status: M
         } = t,
         { ref: L, springs: w } = (0, p.X4)(t.id, s, r);
@@ -254,7 +254,7 @@ function O(e) {
             observe: 0 === i,
             className: v.clickZone,
             children: (0, n.jsx)(C, {
-                ...A,
+                ...z,
                 containerRef: L,
                 notificationId: t.id,
                 onNotificationShow: 0 === i ? S : void 0,

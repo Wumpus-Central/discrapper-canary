@@ -289,7 +289,7 @@ let O = (e) => {
         return (0, o.jsxs)('div', {
             className: T.remaining,
             children: [
-                (0, o.jsx)(d.StarShootingIcon, { className: T.shootingStar }),
+                (0, o.jsx)(d.ExperimentalConfettiIcon, { className: T.shootingStar }),
                 (0, o.jsx)(d.Text, {
                     variant: 'text-sm/semibold',
                     children: N.intl.formatToPlainString(t, { numPotions: n })

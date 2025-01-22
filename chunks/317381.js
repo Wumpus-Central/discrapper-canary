@@ -58,8 +58,8 @@ function B(e, n) {
     return ''.concat(e, ':').concat(n);
 }
 let G = new Map(),
-    Z = new Map(),
     F = new Map(),
+    Z = new Map(),
     V = new Map(),
     j = new Map(),
     H = new Map(),
@@ -89,8 +89,8 @@ function J(e) {
         D = h.some((e) => (0, b.J)(e)),
         x = P.get(c),
         w = G.get(B(null != m ? m : null, c)),
-        Z = null == w ? void 0 : w.launchParams,
-        F = {
+        F = null == w ? void 0 : w.launchParams,
+        Z = {
             applicationId: c,
             location: u,
             launchId: d,
@@ -98,14 +98,14 @@ function J(e) {
             url: p,
             userIds: new Set(A),
             participants: h,
-            referrerId: null !== (a = null == x ? void 0 : x.referrerId) && void 0 !== a ? a : null == Z ? void 0 : Z.referrerId,
-            customId: null !== (s = null == x ? void 0 : x.customId) && void 0 !== s ? s : null == Z ? void 0 : Z.customId
+            referrerId: null !== (a = null == x ? void 0 : x.referrerId) && void 0 !== a ? a : null == F ? void 0 : F.referrerId,
+            customId: null !== (s = null == x ? void 0 : x.customId) && void 0 !== s ? s : null == F ? void 0 : F.customId
         };
     C &&
         null != x &&
         P.set(x.applicationId, {
             ...x,
-            ...F
+            ...Z
         });
     let V = !D;
     null != x && u.id === x.location.id && c === (null == x ? void 0 : x.applicationId) && ((!C && Array.from(x.userIds).some((e) => e === N)) || V)
@@ -121,16 +121,16 @@ function J(e) {
               participants: h,
               isFirstActivityInChannel: v,
               isStart: null == S,
-              referrerId: F.referrerId,
-              customId: F.customId,
+              referrerId: Z.referrerId,
+              customId: Z.customId,
               inviterUserId: null == w ? void 0 : w.inviterUserId
           });
     let j = I.filter((e) => e.applicationId !== c);
-    if ((A.length > 0 && j.push(F), U.set(u.id, j), null != m)) {
+    if ((A.length > 0 && j.push(Z), U.set(u.id, j), null != m)) {
         let e = (null !== (o = k.get(m)) && void 0 !== o ? o : []).filter((e) => e.applicationId !== c),
             n = X((0, y.j)(u)),
             r = (null !== (l = M.get(n)) && void 0 !== l ? l : []).filter((e) => !(e.applicationId === c && e.location.id === u.id));
-        A.length > 0 && (e.push(F), r.push(F)), k.set(m, e), M.set(n, r);
+        A.length > 0 && (e.push(Z), r.push(Z)), k.set(m, e), M.set(n, r);
     }
 }
 function $(e) {
@@ -255,8 +255,8 @@ function el(e) {
 function eu(e) {
     let { guildId: n } = e,
         r = X(n),
-        i = F.get(r);
-    F.set(r, {
+        i = Z.get(r);
+    Z.set(r, {
         isFetching: !0,
         lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
     });
@@ -264,8 +264,8 @@ function eu(e) {
 function ec(e) {
     let { guildId: n } = e,
         r = X(n),
-        i = F.get(r);
-    F.set(r, {
+        i = Z.get(r);
+    Z.set(r, {
         isFetching: !1,
         lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
     });
@@ -291,13 +291,13 @@ function ed(e) {
 function ef(e) {
     let { guildId: n, activities: r } = e,
         i = X(n);
-    Z.set(i, r);
+    F.set(i, r);
     let a = Date.now();
     ed({
         activities: r,
         now: a
     }),
-        F.set(i, {
+        Z.set(i, {
             isFetching: !1,
             lastFetchTimestampMs: a
         });
@@ -412,16 +412,16 @@ class eA extends (a = u.ZP.PersistedStore) {
     getShelfActivities(e) {
         var n;
         let r = X(e);
-        return null !== (n = Z.get(r)) && void 0 !== n ? n : x;
+        return null !== (n = F.get(r)) && void 0 !== n ? n : x;
     }
     getShelfFetchStatus(e) {
         let n = X(e);
-        return F.get(n);
+        return Z.get(n);
     }
     shouldFetchShelf(e) {
         var n, r;
         let i = X(e),
-            a = null !== (n = F.get(i)) && void 0 !== n ? n : { isFetching: !1 },
+            a = null !== (n = Z.get(i)) && void 0 !== n ? n : { isFetching: !1 },
             s = Date.now() - (null !== (r = null == a ? void 0 : a.lastFetchTimestampMs) && void 0 !== r ? r : 0) > W;
         return !(null == a ? void 0 : a.isFetching) && s;
     }

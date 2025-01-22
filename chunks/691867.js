@@ -4,8 +4,8 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(200651),
-    a = n(192379),
+var a = n(200651),
+    r = n(192379),
     l = n(442837),
     i = n(481060),
     o = n(581612),
@@ -13,19 +13,19 @@ var r = n(200651),
     c = n(844426);
 function d() {
     let e = (0, l.e7)([s.Z], () => s.Z.allWithDescriptions(), [], l.pF),
-        t = a.useMemo(
+        t = r.useMemo(
             () =>
                 e.map((e) => {
-                    let [t, n, a] = e;
-                    return (0, r.jsx)(
+                    let [t, n, r] = e;
+                    return (0, a.jsx)(
                         i.FormItem,
                         {
-                            children: (0, r.jsx)(i.FormSwitch, {
+                            children: (0, a.jsx)(i.FormSwitch, {
                                 value: n,
                                 note: t,
                                 onChange: (e) => (0, o.Z)(t, e),
                                 hideBorder: !0,
-                                children: a
+                                children: r
                             })
                         },
                         t
@@ -33,16 +33,16 @@ function d() {
                 }),
             [e]
         );
-    return (0, r.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: c.container,
         children: [
-            (0, r.jsx)(i.Button, {
+            (0, a.jsx)(i.Button, {
                 onClick: o.q,
                 className: c.button,
                 fullWidth: !0,
                 children: 'Clear all'
             }),
-            (0, r.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: c.rowsContainer,
                 children: t
             })

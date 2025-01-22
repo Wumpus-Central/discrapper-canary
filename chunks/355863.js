@@ -370,7 +370,7 @@ function O(e) {
     return C(n, (e, n) => D(n, e.id));
 }
 function D(e, n) {
-    let r = Z(e);
+    let r = F(e);
     r.sort((e, n) => e.zIndex - n.zIndex);
     let i = r.findIndex((e) => e.id === n);
     if (i === r.length - 1) return !1;
@@ -471,7 +471,7 @@ function G(e) {
         [e.id]: e.set('pinned', !e.pinned)
     };
 }
-function Z(e) {
+function F(e) {
     let n = [];
     return (
         e.widgets.forEach((e) => {
@@ -481,7 +481,7 @@ function Z(e) {
         n
     );
 }
-function F(e) {
+function Z(e) {
     let n = {};
     return (
         _().forEach(e, (e, r) => {
@@ -505,7 +505,7 @@ function j(e) {
 }
 class H extends (o = p.ZP.PersistedStore) {
     initialize(e) {
-        null != e && null != e.layouts && null != e.widgets ? ((i = F(e.layouts)), (a = V(e.widgets))) : ((i = {}), (a = {}));
+        null != e && null != e.layouts && null != e.widgets ? ((i = Z(e.layouts)), (a = V(e.widgets))) : ((i = {}), (a = {}));
         let n = !1,
             r = [];
         _().forEach(S, (e, n) => {

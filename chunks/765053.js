@@ -284,7 +284,7 @@ var g = {
                 };
         }
     },
-    Z = function (e) {
+    F = function (e) {
         var n = e.baseTag,
             r = e.bodyAttributes,
             i = e.encode,
@@ -347,7 +347,7 @@ var g = {
             )
         };
     },
-    F = [],
+    Z = [],
     V = function (e, n) {
         var r = this;
         void 0 === n && (n = 'undefined' != typeof document),
@@ -358,21 +358,21 @@ var g = {
                 },
                 helmetInstances: {
                     get: function () {
-                        return r.canUseDOM ? F : r.instances;
+                        return r.canUseDOM ? Z : r.instances;
                     },
                     add: function (e) {
-                        (r.canUseDOM ? F : r.instances).push(e);
+                        (r.canUseDOM ? Z : r.instances).push(e);
                     },
                     remove: function (e) {
-                        var n = (r.canUseDOM ? F : r.instances).indexOf(e);
-                        (r.canUseDOM ? F : r.instances).splice(n, 1);
+                        var n = (r.canUseDOM ? Z : r.instances).indexOf(e);
+                        (r.canUseDOM ? Z : r.instances).splice(n, 1);
                     }
                 }
             }),
             (this.context = e),
             (this.canUseDOM = n),
             n ||
-                (e.helmet = Z({
+                (e.helmet = F({
                     baseTag: [],
                     bodyAttributes: {},
                     encodeSpecialCharacters: !0,
@@ -552,7 +552,7 @@ var K = function (e, n) {
                                 });
                             }))
                           : (q(n), (Q = null)))
-                    : Z && (a = Z(s)),
+                    : F && (a = F(s)),
                     i(a);
             }),
             (r.init = function () {

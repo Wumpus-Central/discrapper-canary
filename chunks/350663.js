@@ -1,68 +1,68 @@
 n.d(t, {
     z: function () {
-        return f;
+        return m;
     }
 });
 var i = n(200651),
-    l = n(192379),
+    r = n(192379),
     o = n(120356),
-    r = n.n(o),
+    l = n.n(o),
     a = n(642128),
     s = n(481060),
     c = n(110924),
-    u = n(752802),
-    d = n(340101),
+    d = n(752802),
+    u = n(340101),
     h = n(228680);
-let f = 8,
+let m = 8,
     p = (e) => {
-        let { participant: t, width: n, locked: l, widgetId: o, pinned: r } = e;
+        let { participant: t, width: n, locked: r, widgetId: o, pinned: l } = e;
         return (0, i.jsx)('div', {
             className: h.tileContainer,
             children: (0, i.jsx)(
-                u.Z,
+                d.Z,
                 {
                     participant: t,
                     width: n,
-                    locked: l,
+                    locked: r,
                     widgetId: o,
-                    pinned: r
+                    pinned: l
                 },
                 t.user.id
             )
         });
     },
-    m = {
+    x = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0
     };
-t.Z = l.memo(function (e) {
-    let { widgetId: t, tileWidth: n, layout: l, locked: o, streamParticipants: u, participantsVersion: v, pinned: x } = e,
+t.Z = r.memo(function (e) {
+    let { widgetId: t, tileWidth: n, layout: r, locked: o, streamParticipants: d, participantsVersion: f, pinned: v } = e,
         g = (9 / 16) * n,
-        C = u.map((e) => ({
+        C = d.map((e) => ({
             participant: e,
             key: e.user.id,
             width: n,
             locked: o,
             widgetId: t,
             height: g,
-            pinned: x
+            pinned: v
         })),
         Z = (0, c.Z)(n),
-        _ = l === d.C5.VERTICAL,
-        I = 0,
+        _ = r === u.C5.VERTICAL,
+        b = 0,
         j = 0,
-        E = (0, s.useTransition)(
+        I = (0, s.useTransition)(
             _
                 ? C.map((e, t) => ({
                       ...e,
-                      y: (I += e.height + (t > 0 ? f : 0)) - e.height,
+                      y: (b += e.height + (t > 0 ? m : 0)) - e.height,
                       x: 0
                   }))
                 : C.map((e, t) => ({
                       ...e,
-                      x: (j += e.width + (t > 0 ? f : 0)) - e.width,
+                      x: (j += e.width + (t > 0 ? m : 0)) - e.width,
                       y: 0
                   })),
             {
@@ -76,37 +76,37 @@ t.Z = l.memo(function (e) {
                     opacity: 0
                 },
                 enter: (e) => {
-                    let { x: t, y: n, width: i, height: l } = e;
+                    let { x: t, y: n, width: i, height: r } = e;
                     return {
                         x: t,
                         y: n,
                         width: i,
-                        height: l,
+                        height: r,
                         opacity: 1
                     };
                 },
                 update: (e) => {
-                    let { x: t, y: n, width: i, height: l } = e;
+                    let { x: t, y: n, width: i, height: r } = e;
                     return {
                         x: t,
                         y: n,
                         width: i,
-                        height: l
+                        height: r
                     };
                 },
-                config: m,
+                config: x,
                 trail: n !== Z ? 0 : 100
             },
             n !== Z ? 'animate-never' : 'respect-motion-settings'
         );
     return (0, i.jsx)('div', {
-        className: r()({
+        className: l()({
             [h.gridContainer]: !0,
             [h.vertical]: _,
             [h.horizontal]: !_
         }),
-        style: _ ? { height: I } : { width: j },
-        children: E((e, t, l, o) =>
+        style: _ ? { height: b } : { width: j },
+        children: I((e, t, r, o) =>
             (0, i.jsx)(a.animated.div, {
                 className: h.gridItem,
                 style: Object.assign({}, e, {

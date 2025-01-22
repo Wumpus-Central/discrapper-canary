@@ -24,8 +24,8 @@ var i = t(200651),
     g = t(11352),
     x = t(213931),
     M = t(767157),
-    _ = t(112440),
-    h = t(671105),
+    h = t(112440),
+    _ = t(671105),
     m = t(552958),
     p = t(981631),
     v = t(921944),
@@ -57,8 +57,8 @@ function N() {
 }
 function S(n, e, u, T) {
     var E, N;
-    let S = (0, h.OR)(n),
-        A = (0, h._c)(n, e),
+    let S = (0, _.OR)(n),
+        A = (0, _._c)(n, e),
         U = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         O = (0, l.e7)([s.ZP], () => s.ZP.isMuted(n), [n]),
         y = f.ZP.canUseCustomNotificationSounds(U),
@@ -80,7 +80,7 @@ function S(n, e, u, T) {
         return null;
     let w = (t) => {
             if ((D(t), L(v.L.TAKE_ACTION), !y && t !== j.YC.CLASSIC)) {
-                (0, M.Z)(t, 'contextMenu'), (0, _.Z)();
+                (0, M.Z)(t, 'contextMenu'), (0, h.Z)();
                 return;
             }
             null != e ? (0, x.M)(n, e, b, t, 'contextMenu') : (0, x.t)(n, b, t, 'contextMenu');

@@ -39,7 +39,7 @@ r.d(n, {
         return ef;
     },
     Ou: function () {
-        return F;
+        return Z;
     },
     Pe: function () {
         return G;
@@ -114,7 +114,7 @@ r.d(n, {
         return b;
     },
     cP: function () {
-        return Z;
+        return F;
     },
     co: function () {
         return ec;
@@ -399,7 +399,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    Z = (0, d.Zc)(
+    F = (0, d.Zc)(
         'privacy',
         'allowActivityPartyPrivacyFriends',
         (e) => {
@@ -408,7 +408,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    F = (0, d.Zc)(
+    Z = (0, d.Zc)(
         'privacy',
         'allowActivityPartyPrivacyVoiceChannel',
         (e) => {

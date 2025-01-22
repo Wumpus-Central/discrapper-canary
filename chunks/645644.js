@@ -490,7 +490,7 @@ function G(e) {
     }
     r.notificationAnalytics.increment(e.notificationType, e.action);
 }
-function Z(e) {
+function F(e) {
     var n;
     if ((L.verbose('OVERLAY_WIDGET_CHANGED', e), null == e.gameName && null == e.gameId)) return;
     let r = k.getByName(null !== (n = e.gameName) && void 0 !== n ? n : e.gameId);
@@ -501,7 +501,7 @@ function Z(e) {
     let i = r.widgetAnalytics.getByWidget(e.widgetType);
     if (null != i) !i.initialized && ((i.initialized = !0), (i.pinned = e.pinned)), i.pinned !== e.pinned && ++i.pinnedToggledCount, (i.pinned = e.pinned), i.visibleDuration.toggle(e.visible);
 }
-function F(e) {
+function Z(e) {
     if ((L.verbose('OVERLAY_FOCUSED', e), k.gameSetAllUnfocused(), null == e.pid || e.pid === b.Js)) return;
     let n = k.getByPid(e.pid);
     if (null == n) {
@@ -643,10 +643,10 @@ class J extends f.Z {
                           MESSAGE_CREATE: X.handleMessageCreate
                       }
                     : {
-                          OVERLAY_FOCUSED: F,
+                          OVERLAY_FOCUSED: Z,
                           OVERLAY_NOTIFICATION_EVENT: G,
                           OVERLAY_SET_INPUT_LOCKED: B,
-                          OVERLAY_WIDGET_CHANGED: Z,
+                          OVERLAY_WIDGET_CHANGED: F,
                           OVERLAY_MESSAGE_EVENT_ACTION: j,
                           RUNNING_GAMES_CHANGE: U,
                           SOUNDBOARD_SET_OVERLAY_ENABLED: V,

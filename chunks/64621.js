@@ -57,8 +57,8 @@ function D(e) {
     let {
             asset: B,
             assetClassName: G,
-            className: Z,
-            content: F,
+            className: F,
+            content: Z,
             header: V,
             spacing: j,
             dismissibleContentType: H
@@ -94,7 +94,7 @@ function D(e) {
             return (0, s.jsx)(d.Dialog, {
                 ref: i,
                 children: (0, s.jsx)(p.ZP, {
-                    className: Z,
+                    className: F,
                     asset: (0, s.jsx)('img', {
                         alt: '',
                         src: B,
@@ -110,7 +110,7 @@ function D(e) {
                     content: (0, s.jsx)(d.Text, {
                         variant: 'text-xs/normal',
                         color: 'always-white',
-                        children: F
+                        children: Z
                     }),
                     header: V,
                     headerClassName: S.tooltipHeader,

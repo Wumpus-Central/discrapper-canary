@@ -65,18 +65,18 @@ function G(e) {
                 null != D[e.getChannelId()] && (D[e.getChannelId()] = Math.max(0, D[e.getChannelId()] - 1));
             });
 }
-function Z(e) {
+function F(e) {
     let { guildId: n } = e;
     (x = !0), null == n && P.guildFilter === N.NgX.THIS_SERVER && Q({ guildFilter: N.NgX.ALL_SERVERS });
 }
-function F(e) {
+function Z(e) {
     if (e instanceof g.ZP) return e;
     let n = I.Z.getMessage(e.channel_id, e.id);
     return null != n ? n : (0, _.e5)(e);
 }
 function V(e) {
     let { hasMoreAfter: n, messages: r, isAfter: i } = e,
-        a = l().map(r, F);
+        a = l().map(r, Z);
     G({ addedMessages: a }),
         i ? (O = O.concat(a)) : ((O = a), (L = {})),
         l().forEach(a, (e) => {
@@ -98,7 +98,7 @@ function H(e) {
     if (null == r || r.type === N.d4z.DM || (P.guildFilter === N.NgX.THIS_SERVER && r.getGuildId() !== y.Z.getGuildId())) return null;
     let i = E.default.getId();
     if (b.Z.isBlockedOrIgnoredForMessage(e) || (0, m.Z)(e, i)) return null;
-    e = F(e);
+    e = Z(e);
     let a = !P.everyoneFilter,
         s = !P.roleFilter;
     return (0, h.ZP)({
@@ -264,7 +264,7 @@ class ea extends (i = u.ZP.Store) {
 }
 C(ea, 'displayName', 'RecentMentionsStore'),
     (n.Z = new ea(f.Z, {
-        LOAD_RECENT_MENTIONS: Z,
+        LOAD_RECENT_MENTIONS: F,
         LOAD_RECENT_MENTIONS_SUCCESS: V,
         LOAD_RECENT_MENTIONS_FAILURE: j,
         SET_RECENT_MENTIONS_FILTER: Q,

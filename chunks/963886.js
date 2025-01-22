@@ -3,14 +3,14 @@ n.d(t, {
         return l;
     }
 });
-var r = n(200651);
+var a = n(200651);
 n(192379);
-var a = n(481060);
+var r = n(481060);
 function l(e) {
-    (0, a.openModalLazy)(
+    (0, r.openModalLazy)(
         async () => {
             let { default: e } = await n.e('33811').then(n.bind(n, 986741));
-            return (t) => (0, r.jsx)(e, { ...t });
+            return (t) => (0, a.jsx)(e, { ...t });
         },
         { onCloseCallback: e }
     );

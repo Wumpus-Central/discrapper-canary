@@ -76,8 +76,8 @@ let N = {},
     U = 'null',
     B = new Set(),
     G = new Set(),
-    Z = {},
-    F = {};
+    F = {},
+    Z = {};
 function V(e, n) {
     var r;
     let i = N[e],
@@ -129,12 +129,12 @@ function H(e) {
     var n;
     if (null == e) return;
     let r = new Set(k[e]),
-        i = null !== (n = Z[e]) && void 0 !== n ? n : {};
+        i = null !== (n = F[e]) && void 0 !== n ? n : {};
     for (let e in i) {
         let n = i[e];
         m.yE(n.flags, S.ic.OPT_IN_ENABLED) ? r.add(e) : r.delete(e);
     }
-    Object.keys(i).length > 0 ? (F[e] = r) : delete F[e];
+    Object.keys(i).length > 0 ? (Z[e] = r) : delete Z[e];
 }
 function Y(e, n) {
     var r;
@@ -151,15 +151,15 @@ function W(e, n, r) {
 function K(e, n) {
     var r;
     let i = {},
-        a = null !== (r = null != e ? Z[e] : null) && void 0 !== r ? r : {};
+        a = null !== (r = null != e ? F[e] : null) && void 0 !== r ? r : {};
     g.default.keys(n).forEach((r) => {
         var s;
         let o = q(e, r, n[r]);
         (i[r] = o), (a[r] = { flags: null !== (s = o.flags) && void 0 !== s ? s : 0 });
     }),
         null != e &&
-            (Z[e] = {
-                ...Z[e],
+            (F[e] = {
+                ...F[e],
                 ...a
             }),
         z(e, i);
@@ -271,8 +271,8 @@ function eo(e) {
     let { guildId: n, channelId: r, settings: i } = e;
     null != n &&
         null != i.flags &&
-        (Z[n] = {
-            ...Z[n],
+        (F[n] = {
+            ...F[n],
             [r]: { flags: i.flags }
         }),
         W(n, r, i);
@@ -280,12 +280,12 @@ function eo(e) {
 function el(e) {
     let { guildId: n } = e;
     if (null == n) return !1;
-    delete Z[n], delete F[n];
+    delete F[n], delete Z[n];
 }
 function eu(e) {
     let { guildId: n, updates: r } = e;
     if (null == n) return !1;
-    let i = Z[n];
+    let i = F[n];
     if (null == i) return !1;
     for (let e in r) l().isEqual(r[e], i[e]) && delete i[e];
 }
@@ -466,7 +466,7 @@ class ep extends (i = u.ZP.PersistedStore) {
         let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (null == e) return !1;
         if (f.Z.isFullServerPreview(e)) return f.Z.isChannelOptedIn(e, n);
-        if (a && null != F[e]) return F[e].has(n);
+        if (a && null != Z[e]) return Z[e].has(n);
         let s = null !== (i = null === (r = this.getChannelOverrides(e)[n]) || void 0 === r ? void 0 : r.flags) && void 0 !== i ? i : 0;
         return m.yE(s, S.ic.OPT_IN_ENABLED);
     }
@@ -475,10 +475,10 @@ class ep extends (i = u.ZP.PersistedStore) {
         return f.Z.isFullServerPreview(e) ? (null !== (n = f.Z.getViewingChannels(e)) && void 0 !== n ? n : G) : null !== (r = k[e]) && void 0 !== r ? r : G;
     }
     getOptedInChannelsWithPendingUpdates(e) {
-        return F[e];
+        return Z[e];
     }
     getPendingChannelUpdates(e) {
-        return Z[e];
+        return F[e];
     }
     getGuildFavorites(e) {
         if (f.Z.isFullServerPreview(e)) return null;

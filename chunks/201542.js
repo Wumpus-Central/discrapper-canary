@@ -67,7 +67,7 @@ n.Z = s.memo(function (e) {
         [P, M] = s.useState(v),
         [k, U] = s.useState(!1),
         [B, G] = s.useState(!1),
-        [Z, F] = s.useState(!1),
+        [F, Z] = s.useState(!1),
         [V, j] = s.useState(!1),
         [H, Y] = s.useState('none'),
         [W, K] = s.useState(() => ('function' == typeof i ? i() : i)),
@@ -89,8 +89,8 @@ n.Z = s.memo(function (e) {
                 }, 500);
         }, []),
         $ = s.useCallback(() => {
-            if (!Z) J();
-        }, [J, Z]),
+            if (!F) J();
+        }, [J, F]),
         ee = s.useCallback(() => {
             let e = L.current;
             if (null == e) return;
@@ -108,10 +108,10 @@ n.Z = s.memo(function (e) {
             U(!k), null == _ || _(!k);
         }, [k, _]),
         er = s.useCallback(() => {
-            F(!0);
+            Z(!0);
         }, []),
         ei = s.useCallback(() => {
-            F(!1), x === P && J();
+            Z(!1), x === P && J();
         }, [x, P, J]),
         ea = s.useCallback(
             (e) => {
@@ -161,7 +161,7 @@ n.Z = s.memo(function (e) {
                   className: T.audioElement,
                   src: r,
                   preload: H,
-                  playing: B && !Z,
+                  playing: B && !F,
                   onEnded: $,
                   onLoadedMetadata: X,
                   onError: ee,
@@ -179,7 +179,7 @@ n.Z = s.memo(function (e) {
               onError: ee,
               muted: k,
               volume: W,
-              playing: B && !Z,
+              playing: B && !F,
               children: (0, a.jsx)('source', { src: r })
           }));
     let ed = (0, u.e7)([d.Z], () => d.Z.useReducedMotion),

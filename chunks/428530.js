@@ -4,9 +4,9 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(200651);
+var a = n(200651);
 n(192379);
-var a = n(189223),
+var r = n(189223),
     l = n(692547),
     i = n(410030),
     o = n(95398),
@@ -23,25 +23,25 @@ let d = {
 };
 function u(e) {
     let t = {};
-    for (let [n, r] of Object.entries(e)) t[n] = r;
+    for (let [n, a] of Object.entries(e)) t[n] = a;
     return t;
 }
 let h = u(d),
     m = u(d);
 function x(e) {
     return s.Jn9.test(e)
-        ? (0, r.jsx)(o.Z, {
+        ? (0, a.jsx)(o.Z, {
               type: o.Z.Types.TEXT,
-              children: () => (0, r.jsx)(r.Fragment, { children: e })
+              children: () => (0, a.jsx)(a.Fragment, { children: e })
           })
         : e;
 }
 function f(e) {
     let { data: t } = e,
         n = (0, i.ZP)();
-    return (0, r.jsx)('div', {
+    return (0, a.jsx)('div', {
         className: c.inspectorWrapper,
-        children: (0, r.jsx)(a.L, {
+        children: (0, a.jsx)(r.L, {
             data: t,
             theme: 'light' === n ? m : h,
             invertTheme: !1,

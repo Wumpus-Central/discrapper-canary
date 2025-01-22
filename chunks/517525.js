@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(981631),
     C = n(474936),
     y = n(388032),
-    Z = n(891252);
-let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
+    b = n(891252);
+let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     T = {
         opacity: 0,
         transform: 'translate3d(100%, 0, 0)'
@@ -33,8 +33,8 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     },
     A = { opacity: 0 },
     j = { opacity: 1 },
-    w = { borderRadius: ''.concat(b, 'px ').concat(b, 'px ').concat(b, 'px ').concat(b, 'px') },
-    P = { borderRadius: '0px '.concat(b, 'px ').concat(b, 'px 0px') },
+    w = { borderRadius: ''.concat(Z, 'px ').concat(Z, 'px ').concat(Z, 'px ').concat(Z, 'px') },
+    P = { borderRadius: '0px '.concat(Z, 'px ').concat(Z, 'px 0px') },
     R = {
         mass: 1,
         tension: 500,
@@ -44,7 +44,7 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     M = (e) => {
         let t,
             a,
-            { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: b, setDidTrackUpsellViewed: T, className: N, premiumIndicator: A } = e,
+            { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: Z, setDidTrackUpsellViewed: T, className: N, premiumIndicator: A } = e,
             j = (0, _.Wc)(s),
             { analyticsLocations: w } = (0, p.ZP)(),
             P = null != (0, x.Z)(s);
@@ -76,7 +76,7 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             }, [L, R, M]);
         if (
             (l.useEffect(() => {
-                !b &&
+                !Z &&
                     R &&
                     (S.default.track(E.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: C.cd.STREAM_QUALITY_INDICATOR,
@@ -85,7 +85,7 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         location_stack: w
                     }),
                     T(!0));
-            }, [t, a, R, b, T, w]),
+            }, [t, a, R, Z, T, w]),
             null == j)
         )
             return null;
@@ -97,17 +97,17 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 (0, i.jsxs)(m.Clickable, {
                     ...e,
                     onClick: k,
-                    className: r()(Z.qualityIndicator, g, h.eE[d], P ? Z.qualityIndicatorLowQuality : Z.qualityIndicatorFullQuality, { [Z.clickable]: L && R }),
+                    className: r()(b.qualityIndicator, g, h.eE[d], P ? b.qualityIndicatorLowQuality : b.qualityIndicatorFullQuality, { [b.clickable]: L && R }),
                     children: [
                         R
                             ? (0, i.jsx)(m.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: Z.premiumStreamIcon
+                                  className: b.premiumStreamIcon
                               })
                             : null,
                         (0, i.jsx)('span', {
-                            className: Z.qualityResolution,
+                            className: b.qualityResolution,
                             children: (0, _.ml)(j.maxResolution)
                         }),
                         (0, i.jsx)('span', { children: (0, _.bp)(j.maxFrameRate) })
@@ -116,7 +116,7 @@ let b = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         });
         return (0, i.jsx)(m.TextBadge, {
             text: D,
-            className: r()(N, Z.qualityIndicatorBadge, { [Z.qualityIndicatorBadgePremium]: R && A }),
+            className: r()(N, b.qualityIndicatorBadge, { [b.qualityIndicatorBadgePremium]: R && A }),
             color: u.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d
         });
@@ -152,7 +152,7 @@ t.Z = (e) => {
     return ((e) => {
         let { className: n, popoutProps: l } = e;
         return (0, i.jsxs)('div', {
-            className: r()(Z.streamQualityIndicator, n),
+            className: r()(b.streamQualityIndicator, n),
             ...l,
             children: [
                 I((e, n) =>
@@ -160,7 +160,7 @@ t.Z = (e) => {
                         ? (0, i.jsx)(s.animated.div, {
                               style: e,
                               children: (0, i.jsx)(M, {
-                                  className: Z.liveQualityIndicator,
+                                  className: b.liveQualityIndicator,
                                   participant: t,
                                   size: o,
                                   shape: m.BadgeShapes.ROUND_LEFT,
@@ -174,7 +174,7 @@ t.Z = (e) => {
                 ),
                 (0, i.jsx)(s.animated.div, {
                     style: x,
-                    className: Z.liveIndicator,
+                    className: b.liveIndicator,
                     children: (0, i.jsx)(h.ZP, {
                         look: h.jZ.RED,
                         size: o,

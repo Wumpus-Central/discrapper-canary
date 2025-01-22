@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return F;
+        return Z;
     }
 });
 var i = r(536091);
@@ -166,7 +166,7 @@ function G(e) {
         })
     });
 }
-function Z(e) {
+function F(e) {
     let n,
         { onGetRolesClicked: r, onOpenProfile: i, eligibilityStates: a, userId: l, roleId: u, channelId: c, guildId: d } = e;
     o.useEffect(() => {
@@ -225,7 +225,7 @@ function Z(e) {
         })
     );
 }
-function F(e) {
+function Z(e) {
     let { userId: n, messageId: r, guild: i, channel: a } = e,
         { analyticsLocations: l } = (0, T.ZP)(),
         c = (0, O.Z)(i, n, a.id, !0),
@@ -241,7 +241,7 @@ function F(e) {
             return null == d
                 ? (0, s.jsx)(s.Fragment, {})
                 : (u()(null != c, 'visibleConnectionsRole is null'),
-                  (0, s.jsx)(Z, {
+                  (0, s.jsx)(F, {
                       eligibilityStates: d,
                       userId: n,
                       roleId: c.id,

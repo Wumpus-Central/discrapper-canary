@@ -97,8 +97,8 @@ class G {
         C(this, 'clickZones', []);
     }
 }
-let Z = new G(),
-    F = new Set();
+let F = new G(),
+    Z = new Set();
 function V(e) {
     var n;
     return null !== (n = x[e]) && void 0 !== n ? n : {};
@@ -286,7 +286,7 @@ function eh(e) {
 }
 function ep(e) {
     let { zones: n } = e;
-    Z.setClickZones(n);
+    F.setClickZones(n);
 }
 function em(e) {
     let { locked: n, pid: r } = e;
@@ -307,7 +307,7 @@ function eE() {
 }
 function ev(e) {
     let { enabled: n, mode: r } = e;
-    n ? F.add(r) : F.delete(r);
+    n ? Z.add(r) : Z.delete(r);
 }
 class eI extends (a = l.ZP.Store) {
     initialize() {
@@ -329,7 +329,7 @@ class eI extends (a = l.ZP.Store) {
         return M;
     }
     hasRenderDebugMode(e) {
-        return F.has(e);
+        return Z.has(e);
     }
     getFocusedPID() {
         return k;

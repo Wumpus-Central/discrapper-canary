@@ -4,8 +4,8 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(200651),
-    a = n(192379),
+var a = n(200651),
+    r = n(192379),
     l = n(848246),
     i = n(442837),
     o = n(481060),
@@ -46,17 +46,17 @@ let m = [
     ];
 function p() {
     let e = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
-        [t, n] = a.useState(!1),
-        [p, b] = a.useState(!1),
-        [g, v] = a.useState(1);
-    return (0, r.jsxs)('div', {
+        [t, n] = r.useState(!1),
+        [p, b] = r.useState(!1),
+        [g, v] = r.useState(1);
+    return (0, a.jsxs)('div', {
         className: h.container,
         children: [
-            (0, r.jsx)(o.FormSection, {
+            (0, a.jsx)(o.FormSection, {
                 title: 'Override HQ Streaming: Available',
                 className: h.formElement,
                 tag: o.FormTitleTags.H3,
-                children: (0, r.jsx)(o.SingleSelect, {
+                children: (0, a.jsx)(o.SingleSelect, {
                     options: m,
                     value: t,
                     onChange: (e) => {
@@ -65,11 +65,11 @@ function p() {
                     popoutLayerContext: u.O$
                 })
             }),
-            (0, r.jsx)(o.FormSection, {
+            (0, a.jsx)(o.FormSection, {
                 title: 'Override HQ Streaming: Activate',
                 className: h.formElement,
                 tag: o.FormTitleTags.H3,
-                children: (0, r.jsx)(o.SingleSelect, {
+                children: (0, a.jsx)(o.SingleSelect, {
                     options: x,
                     value: p,
                     onChange: (e) => {
@@ -78,11 +78,11 @@ function p() {
                     popoutLayerContext: u.O$
                 })
             }),
-            (0, r.jsx)(o.FormSection, {
+            (0, a.jsx)(o.FormSection, {
                 title: 'Override Demo Duration',
                 className: h.formElement,
                 tag: o.FormTitleTags.H3,
-                children: (0, r.jsx)(o.SingleSelect, {
+                children: (0, a.jsx)(o.SingleSelect, {
                     options: f,
                     value: g,
                     onChange: (e) => {
@@ -91,7 +91,7 @@ function p() {
                     popoutLayerContext: u.O$
                 })
             }),
-            (0, r.jsx)(o.Button, {
+            (0, a.jsx)(o.Button, {
                 onClick: () =>
                     void (s.Z.dispatch({
                         type: 'PREMIUM_PERKS_DEMO_OVERRIDE',

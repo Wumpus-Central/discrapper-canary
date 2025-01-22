@@ -30,7 +30,7 @@ r.d(n, {
         return L;
     },
     gU: function () {
-        return Z;
+        return F;
     },
     gl: function () {
         return R;
@@ -505,7 +505,7 @@ async function G(e) {
         });
     }
 }
-async function Z(e) {
+async function F(e) {
     let n = await s.tn.get({
         url: E.ANM.QUEST(e),
         rejectWithError: !1

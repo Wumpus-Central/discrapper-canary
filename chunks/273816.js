@@ -22,14 +22,14 @@ function p(e) {
     let [x, f] = (0, d.m8)(p),
         { currentFPS: v, averageFrameTime: g, timeSinceLastDrop: C, onResetFrameData: Z, droppedFramesRef: _, renderedFrameCount: b, bufferFramecountRef: j, frameCheckerEffect: I } = (0, d.d6)(!0, x, !0),
         [E, k, N] = (0, d.ZF)(p),
-        [w, T] = (0, d.Y5)(E, I),
-        y = performance.now() - f.current < d.MC,
+        [w, y] = (0, d.Y5)(E, I),
+        T = performance.now() - f.current < d.MC,
         S = k(g, j.current);
     (0, c.Z)(
         () => (
             w(),
             () => {
-                T();
+                y();
             }
         )
     );
@@ -37,9 +37,9 @@ function p(e) {
             Z(), N(), w();
         }, [Z, N, w]),
         [A, O] = r.useState(!0),
-        [P, M] = r.useState(!0),
-        [V, R] = r.useState(!0),
-        [W, D] = r.useState(!0),
+        [P, V] = r.useState(!0),
+        [M, R] = r.useState(!0),
+        [D, W] = r.useState(!0),
         [z, F] = r.useState(!0);
     return t && !n
         ? null
@@ -86,7 +86,7 @@ function p(e) {
                                       children: (0, i.jsx)(s.Checkbox, {
                                           size: 16,
                                           value: P,
-                                          onChange: (e, t) => M(t)
+                                          onChange: (e, t) => V(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
@@ -106,7 +106,7 @@ function p(e) {
                               })
                           ]
                       }),
-                  (V || !t) &&
+                  (M || !t) &&
                       (0, i.jsxs)('div', {
                           className: m.measurement,
                           children: [
@@ -115,7 +115,7 @@ function p(e) {
                                       className: m.measurementCheckbox,
                                       children: (0, i.jsx)(s.Checkbox, {
                                           size: 16,
-                                          value: V,
+                                          value: M,
                                           onChange: (e, t) => R(t)
                                       })
                                   }),
@@ -143,7 +143,7 @@ function p(e) {
                               })
                           ]
                       }),
-                  (W || !t) &&
+                  (D || !t) &&
                       (0, i.jsxs)('div', {
                           className: m.measurement,
                           children: [
@@ -152,8 +152,8 @@ function p(e) {
                                       className: m.measurementCheckbox,
                                       children: (0, i.jsx)(s.Checkbox, {
                                           size: 16,
-                                          value: W,
-                                          onChange: (e, t) => D(t)
+                                          value: D,
+                                          onChange: (e, t) => W(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
@@ -211,7 +211,7 @@ function p(e) {
                               })
                           ]
                       }),
-                  y &&
+                  T &&
                       (0, i.jsx)(s.Tooltip, {
                           position: 'left',
                           text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",

@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return F;
+        return Z;
     }
 });
 var i = r(47120);
@@ -318,7 +318,7 @@ function G(e) {
               ]
           });
 }
-function Z(e) {
+function F(e) {
     let { user: n, entry: r, header: i, className: s, onClose: l } = e,
         { profileType: u } = (0, L.z)(),
         c = { [k.fullSize]: u === P.y0.FULL_SIZE },
@@ -386,7 +386,7 @@ function Z(e) {
         ]
     });
 }
-function F(e) {
+function Z(e) {
     let { entry: n, ...r } = e;
     return (0, l.EQ)(n)
         .when(m.dX, (e) =>
@@ -408,7 +408,7 @@ function F(e) {
             })
         )
         .when(m.Mq, (e) =>
-            (0, a.jsx)(Z, {
+            (0, a.jsx)(F, {
                 entry: e,
                 ...r
             })

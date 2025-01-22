@@ -242,8 +242,8 @@ let A = _(
             negative: () => B(E(e, U()))
         }),
     G = B(I(b)),
-    Z = (e, n) => I((r) => S(r) && e <= r && n >= r),
-    F = (e) => I((n) => S(n) && n < e),
+    F = (e, n) => I((r) => S(r) && e <= r && n >= r),
+    Z = (e) => I((n) => S(n) && n < e),
     V = (e) => I((n) => S(n) && n > e),
     j = (e) => I((n) => S(n) && n <= e),
     H = (e) => I((n) => S(n) && n >= e),
@@ -251,8 +251,8 @@ let A = _(
     W = () => I((e) => S(e) && e < 0),
     K = (e) =>
         Object.assign(_(e), {
-            between: (n, r) => K(E(e, Z(n, r))),
-            lt: (n) => K(E(e, F(n))),
+            between: (n, r) => K(E(e, F(n, r))),
+            lt: (n) => K(E(e, Z(n))),
             gt: (n) => K(E(e, V(n))),
             lte: (n) => K(E(e, j(n))),
             gte: (n) => K(E(e, H(n))),
@@ -393,8 +393,8 @@ var J = {
     positive: k,
     negative: U,
     number: G,
-    betweenBigInt: Z,
-    ltBigInt: F,
+    betweenBigInt: F,
+    ltBigInt: Z,
     gtBigInt: V,
     lteBigInt: j,
     gteBigInt: H,

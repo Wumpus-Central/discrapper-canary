@@ -105,7 +105,7 @@ function G(e) {
               })
     });
 }
-function Z(e, n) {
+function F(e, n) {
     return s.useMemo(() => {
         if (null == n || e !== x)
             return {
@@ -120,7 +120,7 @@ function Z(e, n) {
     }, [n, e]);
 }
 n.ZP = s.forwardRef(function (e, n) {
-    var r, i, o, f, y, S, U, F, V, j;
+    var r, i, o, f, y, S, U, Z, V, j;
     let { sound: H, channel: Y, containerClassName: W, className: K, focused: z, forceSecondaryActions: q = !1, interactive: Q = !0, enableSecondaryActions: X = !1, suppressPlaySound: J, onMouseEnter: $, onSelectItem: ee, analyticsLocations: et, buttonOverlay: en = A.Pb.PLAY, showLockForDisabledSound: er = !0, inNitroLockedSection: ei = !1, refreshEnabled: ea = !1, isAnimated: es = !0, isPlayingSoundOverride: eo, isSoundmoji: el, soundmojiVisualEffectRef: eu, tooltipOverride: ec, tooltipClassName: ed, tooltipContentClassName: ef, ...e_ } = e,
         { name: eh, emojiId: ep, emojiName: em } = H,
         eg = (0, c.e7)([b.default], () => b.default.getCurrentUser()),
@@ -128,7 +128,7 @@ n.ZP = s.forwardRef(function (e, n) {
         { playSoundboardSound: ev, previewSound: eI, isPlayingSound: eT, isPreviewingSound: eb } = (0, C.Z)(H, null !== (y = null == Y ? void 0 : Y.id) && void 0 !== y ? y : null, null !== (S = el ? T.AY.getSetting() : null === (r = T.kU.getSetting()) || void 0 === r ? void 0 : r.volume) && void 0 !== S ? S : 100),
         { createMultipleConfettiAt: ey } = s.useContext(m.h),
         eS = s.useRef(null),
-        eA = Z(H.soundId, eS.current),
+        eA = F(H.soundId, eS.current),
         eN = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
         eC = s.useRef(w),
         eR = s.useRef(new d.Xp()),
@@ -139,12 +139,12 @@ n.ZP = s.forwardRef(function (e, n) {
         ew = !(0, N.Nq)(eg, H, Y) && !el,
         eP = q || (X && !ew),
         eM = s.useRef(null),
-        ek = (null !== (U = null === (i = eM.current) || void 0 === i ? void 0 : i.scrollHeight) && void 0 !== U ? U : 0) > (null !== (F = null === (o = eM.current) || void 0 === o ? void 0 : o.offsetHeight) && void 0 !== F ? F : 0),
+        ek = (null !== (U = null === (i = eM.current) || void 0 === i ? void 0 : i.scrollHeight) && void 0 !== U ? U : 0) > (null !== (Z = null === (o = eM.current) || void 0 === o ? void 0 : o.offsetHeight) && void 0 !== Z ? Z : 0),
         eU = null !== (V = g.Wq.useStore().bottomPosition) && void 0 !== V ? V : 0,
         eB = (null !== (j = null === (f = eS.current) || void 0 === f ? void 0 : f.getBoundingClientRect().bottom) && void 0 !== j ? j : 0) + 50 > eU ? 'top' : 'bottom',
-        [eG, eZ] = s.useState(!1),
-        eF = ew && er,
-        { enableInlineUpsell: eV } = I.Qs.useExperiment({ location: 'Soundboard Sound Button' }, { autoTrackExposure: eF });
+        [eG, eF] = s.useState(!1),
+        eZ = ew && er,
+        { enableInlineUpsell: eV } = I.Qs.useExperiment({ location: 'Soundboard Sound Button' }, { autoTrackExposure: eZ });
     function ej() {
         !J && ev(et);
     }
@@ -206,7 +206,7 @@ n.ZP = s.forwardRef(function (e, n) {
                                       ? (0, a.jsx)(E.ZP, {
                                             sound: H,
                                             channel: Y,
-                                            setTooltipShowing: eZ
+                                            setTooltipShowing: eF
                                         })
                                       : (0, a.jsxs)(a.Fragment, {
                                             children: [eP && eY, eW(), eP && eK]

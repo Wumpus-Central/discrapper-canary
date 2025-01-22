@@ -104,7 +104,7 @@ function k(e) {
             }
             let T = (0, N.WD)(n),
                 b = v.Z.getChannel(A.default.castMessageIdAsChannelId(r)),
-                y = await Z(n, () => {
+                y = await F(n, () => {
                     let e = null != r ? D.ANM.CHANNEL_MESSAGE_THREADS(n.id, r) : D.ANM.CHANNEL_THREADS(n.id);
                     return u.tn.post({
                         url: e,
@@ -123,7 +123,7 @@ function k(e) {
     );
 }
 function U(e, n, r, i, a) {
-    return Z(e, () =>
+    return F(e, () =>
         u.tn.post({
             url: D.ANM.CHANNEL_THREADS(e.id),
             body: {
@@ -155,7 +155,7 @@ function B(e) {
                         flags: 0 !== c ? c : void 0
                     }
                 },
-                T = await Z(n, () =>
+                T = await F(n, () =>
                     null != l && l.length > 0
                         ? s(g, v, l)
                         : u.tn.post({
@@ -185,7 +185,7 @@ function G(e, n, r, i, a) {
     else if (null != r && r.length > 0) return _.Z.sendStickers(e.id, r, n);
     else return _.Z.sendMessage(e.id, g.ZP.parse(e, n));
 }
-async function Z(e, n) {
+async function F(e, n) {
     let r;
     let i = e.isForumLikeChannel();
     try {

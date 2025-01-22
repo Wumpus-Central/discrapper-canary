@@ -39,12 +39,12 @@ var a = r(200651),
 let U = '4px',
     B = '11px',
     G = 222;
-function Z(e, n) {
+function F(e, n) {
     return null != e && null != n && (0, E.p9)(n, y.Z, T.Z, b.Z, g.Z)[0];
 }
-function F(e) {
+function Z(e) {
     var n, r, i, g, E;
-    let { quest: T, memberListItemRef: b, applicationStream: y, position: R, closePopout: F, updatePosition: V, impressionRef: j } = e,
+    let { quest: T, memberListItemRef: b, applicationStream: y, position: R, closePopout: Z, updatePosition: V, impressionRef: j } = e,
         H = (0, u.e7)([I.Z], () => {
             var e;
             return null !== (e = I.Z.getChannel(null == y ? void 0 : y.channelId)) && void 0 !== e ? e : null;
@@ -67,12 +67,12 @@ function F(e) {
     s.useEffect(() => {
         let e = ei.current;
         return (
-            null == e || e.addEventListener('scroll', F),
+            null == e || e.addEventListener('scroll', Z),
             () => {
-                null == e || e.removeEventListener('scroll', F);
+                null == e || e.removeEventListener('scroll', Z);
             }
         );
-    }, [F, ei]),
+    }, [Z, ei]),
         s.useEffect(() => {
             let e = ei.current,
                 n = b.current;
@@ -111,7 +111,7 @@ function F(e) {
             er.dispatch(w.CkL.POPOUT_CLOSE);
         },
         el = 'top' === R ? ''.concat(U, ' ').concat(U, ' 0 0') : '0 0 '.concat(U, ' ').concat(U);
-    if (null == T || W || (K && !Z(y, H))) return null;
+    if (null == T || W || (K && !F(y, H))) return null;
     let eu = () => {
             (0, S._3)({
                 questId: T.id,
@@ -137,7 +137,7 @@ function F(e) {
             e.stopPropagation(), eu();
         },
         ef = () => {
-            if (Z(y, H) && null != H)
+            if (F(y, H) && null != H)
                 return (
                     (0, S._3)({
                         questId: T.id,
@@ -165,7 +165,7 @@ function F(e) {
                         handleClickCta: ec,
                         tileAssetType: 'reward'
                     }
-                  : Z(y, H)
+                  : F(y, H)
                     ? {
                           headerText: M.intl.string(M.t.Bz6SkJ),
                           ctaText: M.intl.string(M.t.BXFP39),
@@ -286,7 +286,7 @@ function V(e) {
               questContent: N.jn.MEMBERS_LIST,
               trackGuildAndChannelMetadata: !0,
               children: (n) =>
-                  (0, a.jsx)(F, {
+                  (0, a.jsx)(Z, {
                       impressionRef: n,
                       ...e
                   })

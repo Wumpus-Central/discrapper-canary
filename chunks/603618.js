@@ -37,8 +37,8 @@ var n = i(200651),
     T = i(358085),
     R = i(998502),
     k = i(388627),
-    z = i(981631),
-    A = i(388032),
+    A = i(981631),
+    z = i(388032),
     M = i(13663);
 function L(e) {
     let { entry: t, currentUserActivity: i, idx: o } = e,
@@ -51,32 +51,32 @@ function L(e) {
             return () => clearTimeout(e);
         }
     }, [f]);
-    let S = null != i && (0, p.Z)(i, z.xjy.JOIN),
+    let S = null != i && (0, p.Z)(i, A.xjy.JOIN),
         C = async (e) => {
             if (null != d && 'unsent' === f) {
                 e.stopPropagation();
                 try {
                     if ((E('sending'), S))
                         await u.Z.sendActivityInviteUser({
-                            type: z.mFx.JOIN,
+                            type: A.mFx.JOIN,
                             userId: d.id,
                             activity: i,
-                            location: z.Sbl.UNLOCKED_OVERLAY
+                            location: A.Sbl.UNLOCKED_OVERLAY
                         });
                     else {
                         var n;
                         let e = await c.Z.getOrEnsurePrivateChannel(d.id),
                             i = null !== (n = O.Z.getChannel(e)) && void 0 !== n ? n : null;
                         s()(null != i, 'Send channel must be defined'),
-                            (0, _.uL)(z.Z5c.CHANNEL(i.guild_id, i.id)),
+                            (0, _.uL)(A.Z5c.CHANNEL(i.guild_id, i.id)),
                             await (0, g.p)({
                                 channel: i,
-                                content: A.intl.string(A.t.DwAcMz),
+                                content: z.intl.string(z.t.DwAcMz),
                                 entry: t,
                                 whenReady: !0
                             });
                     }
-                    h.Z.track(z.rMx.OVERLAY_GAME_INVITE_SENT, {
+                    h.Z.track(A.rMx.OVERLAY_GAME_INVITE_SENT, {
                         target_user_id: d.id,
                         target_content_entry_id: t.id,
                         target_index: o
@@ -92,9 +92,9 @@ function L(e) {
             if (null == d) return;
             let t = await c.Z.getOrEnsurePrivateChannel(d.id),
                 i = null !== (e = O.Z.getChannel(t)) && void 0 !== e ? e : null;
-            s()(null != i, 'Send channel must be defined'), (0, _.uL)(z.Z5c.CHANNEL(i.guild_id, i.id)), T.isPlatformEmbedded && R.ZP.focus();
+            s()(null != i, 'Send channel must be defined'), (0, _.uL)(A.Z5c.CHANNEL(i.guild_id, i.id)), T.isPlatformEmbedded && R.ZP.focus();
         },
-        I = S ? A.intl.string(A.t['3fRyS0']) : A.intl.string(A.t.y9eo7e),
+        I = S ? z.intl.string(z.t['3fRyS0']) : z.intl.string(z.t.y9eo7e),
         N = S
             ? (0, n.jsx)(a.GroupPlusIcon, {
                   color: 'currentColor',
@@ -141,17 +141,17 @@ function w(e) {
         d = null !== (t = null == o ? void 0 : o.application_id) && void 0 !== t ? t : i.extra.application_id,
         c = (0, r.e7)([N.Z], () => (null != s ? N.Z.getApplicationActivity(s.id, d) : null), [d, s]),
         [h, f] = l.useState('unsent');
-    if (!(null != c && (0, p.Z)(c, z.xjy.JOIN))) return null;
+    if (!(null != c && (0, p.Z)(c, A.xjy.JOIN))) return null;
     let E = async (e) => {
             if (null != s && 'unsent' === h) {
                 e.stopPropagation();
                 try {
                     f('sending'),
                         await u.Z.sendActivityInviteUser({
-                            type: z.mFx.JOIN_REQUEST,
+                            type: A.mFx.JOIN_REQUEST,
                             userId: s.id,
                             activity: c,
-                            location: z.Sbl.UNLOCKED_OVERLAY
+                            location: A.Sbl.UNLOCKED_OVERLAY
                         }),
                         f('sent');
                 } catch (e) {
@@ -159,7 +159,7 @@ function w(e) {
                 }
             }
         },
-        m = A.intl.string(A.t.OKsSCQ);
+        m = z.intl.string(z.t.OKsSCQ);
     return (0, n.jsx)(a.Tooltip, {
         text: m,
         'aria-label': m,
@@ -276,9 +276,9 @@ function P() {
         l = (0, S.Ns)(t),
         o = (0, r.e7)([y.default], () => y.default.getCurrentUser()),
         s = (0, r.e7)([I.Z], () => (null != i ? I.Z.getApplicationActivity(i) : null != t ? I.Z.getApplicationActivity(t) : null)),
-        u = null != s && (0, p.Z)(s, z.xjy.JOIN),
+        u = null != s && (0, p.Z)(s, A.xjy.JOIN),
         c = (0, E.q)(null == s ? void 0 : s.application_id),
-        h = null != c && (0, x.yE)(c.flags, z.udG.EMBEDDED);
+        h = null != c && (0, x.yE)(c.flags, A.udG.EMBEDDED);
     return 0 === l.length && null == s
         ? null
         : (0, n.jsxs)('div', {
@@ -295,10 +295,10 @@ function P() {
                   u && !h
                       ? (0, n.jsx)(a.Button, {
                             className: M.inviteFriendsButton,
-                            onClick: () => (0, d.h7)(s, !1, z.IlC.POPOUT),
+                            onClick: () => (0, d.h7)(s, !1, A.IlC.POPOUT),
                             size: a.ButtonSizes.SMALL,
                             color: a.ButtonColors.PRIMARY,
-                            children: A.intl.string(A.t['6Qgren'])
+                            children: z.intl.string(z.t['6Qgren'])
                         })
                       : null,
                   (0, n.jsx)(j, {

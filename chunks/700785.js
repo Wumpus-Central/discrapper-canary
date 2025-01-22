@@ -6,7 +6,7 @@ r.d(n, {
         return b;
     },
     Hu: function () {
-        return Z;
+        return F;
     },
     I0: function () {
         return w;
@@ -39,7 +39,7 @@ r.d(n, {
         return P;
     },
     we: function () {
-        return F;
+        return Z;
     },
     ym: function () {
         return O;
@@ -235,8 +235,8 @@ function k(e, n) {
     let i = { ...e.permissionOverwrites },
         a = { ...n.permissionOverwrites };
     return (
-        null == i[r] && (i[r] = F(r)),
-        null == a[r] && (a[r] = F(r)),
+        null == i[r] && (i[r] = Z(r)),
+        null == a[r] && (a[r] = Z(r)),
         Object.keys(i).length === Object.keys(a).length &&
             !Object.keys(i).some((e) => {
                 let n = i[e],
@@ -266,10 +266,10 @@ function G(e, n) {
             .sortBy((e) => -e.position)
             .first();
 }
-function Z(e, n) {
+function F(e, n) {
     return null == n.hoistRoleId ? null : E.Z.getRole(e.id, n.hoistRoleId);
 }
-function F(e) {
+function Z(e) {
     return {
         id: e,
         type: l.BN.ROLE,

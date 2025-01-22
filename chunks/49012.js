@@ -60,8 +60,8 @@ function D(e, n) {
     let U = null,
         B = !1,
         G = w,
-        Z = P,
-        F = null;
+        F = P,
+        Z = null;
     if (null != w && null != P) {
         var V, j, H;
         let e = y.Z.getMessage(P, w),
@@ -69,7 +69,7 @@ function D(e, n) {
         U = null !== (H = null == n ? void 0 : n.guild_id) && void 0 !== H ? H : null;
         let r = I.Z.getGuild(U),
             i = (null == e ? void 0 : null === (V = e.messageReference) || void 0 === V ? void 0 : V.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(C.iLy.IS_CROSSPOST)) && null != U;
-        i && (null == e ? void 0 : null === (j = e.messageReference) || void 0 === j ? void 0 : j.guild_id) != null ? ((G = e.messageReference.message_id), (Z = e.messageReference.channel_id), (F = e.messageReference.guild_id)) : (F = U);
+        i && (null == e ? void 0 : null === (j = e.messageReference) || void 0 === j ? void 0 : j.guild_id) != null ? ((G = e.messageReference.message_id), (F = e.messageReference.channel_id), (Z = e.messageReference.guild_id)) : (Z = U);
         let a = (null == n ? void 0 : n.type) === C.d4z.GUILD_ANNOUNCEMENT && (null == r ? void 0 : r.hasFeature(C.oNc.COMMUNITY)) === !0,
             s = (null == e ? void 0 : e.hasFlag(C.iLy.EPHEMERAL)) === !0;
         B = null != e && !s && (i || a);
@@ -108,8 +108,8 @@ function D(e, n) {
                         messageId: G,
                         channelId: P,
                         guildId: U,
-                        sourceChannelId: Z,
-                        sourceGuildId: F
+                        sourceChannelId: F,
+                        sourceGuildId: Z
                     }),
                 null != D)
             ) {
@@ -142,8 +142,8 @@ function D(e, n) {
                   messageId: G,
                   channelId: P,
                   guildId: U,
-                  sourceChannelId: Z,
-                  sourceGuildId: F
+                  sourceChannelId: F,
+                  sourceGuildId: Z
               });
         return;
     }

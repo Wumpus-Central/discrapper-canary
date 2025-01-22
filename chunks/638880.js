@@ -38,8 +38,8 @@ async function S(e) {
     if (!B && (null == P || (k && !P.isPrivate()) || null == c)) return Promise.resolve(!1);
     let G = _.ZP.getCurrentEmbeddedActivity();
     (null == G ? void 0 : G.applicationId) != null && (n = a.Z.getApplication(null == G ? void 0 : G.applicationId));
-    let Z = (null == G ? void 0 : G.location.kind) === i.X.CONTEXTLESS;
-    if ((Z || o.Z.getVoiceChannelId() === c) && null != G && G.applicationId === r && (Z || (0, m.p)(G.location) === o.Z.getVoiceChannelId())) return (0, T.Z)(M, G.location), Promise.resolve(!0);
+    let F = (null == G ? void 0 : G.location.kind) === i.X.CONTEXTLESS;
+    if ((F || o.Z.getVoiceChannelId() === c) && null != G && G.applicationId === r && (F || (0, m.p)(G.location) === o.Z.getVoiceChannelId())) return (0, T.Z)(M, G.location), Promise.resolve(!0);
     if (
         !(await (0, p.p)({
             applicationId: r,

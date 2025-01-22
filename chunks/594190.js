@@ -60,8 +60,8 @@ function B(e, n, r) {
     );
 }
 let G = new b.Z('RunningGameStore'),
-    Z = 'RunningGameStore',
-    F = !1,
+    F = 'RunningGameStore',
+    Z = !1,
     V = [
         {
             executables: [
@@ -273,7 +273,7 @@ function em(e) {
           }
         : {
               source: k.d.DEFAULT,
-              enabled: F || a,
+              enabled: Z || a,
               overlayMethod: E.gl.Hook
           };
 }
@@ -289,7 +289,7 @@ function ev(e) {
     return !e.hidden && eE(e);
 }
 function eI() {
-    m.K.set(Z, $);
+    m.K.set(F, $);
 }
 function eT(e) {
     let n = {
@@ -465,7 +465,7 @@ function eG(e) {
             interval_seconds: eu
         });
 }
-function eZ(e) {
+function eF(e) {
     if ((($.enableOverlay[ep(e.game)] = e.newEnabledValue), eI(), !__OVERLAY__)) {
         let n = null != e.game.id ? N.Z.getDetectableGame(e.game.id) : null;
         null != n &&
@@ -477,7 +477,7 @@ function eZ(e) {
             });
     }
 }
-function eF(e) {
+function eZ(e) {
     let { game: n } = e,
         r = eE(n);
     ($.enableDetection[ep(n)] = !r), eI(), O.default.track(U.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !r });
@@ -594,7 +594,7 @@ class eY extends (a = p.ZP.Store) {
     initialize() {
         var e, n, r, i;
         let a =
-            null !== (e = m.K.get(Z)) && void 0 !== e
+            null !== (e = m.K.get(F)) && void 0 !== e
                 ? e
                 : {
                       gamesSeen: [],
@@ -716,8 +716,8 @@ let eW = new eY(g.Z, {
     PERMISSION_CLEAR_ELEVATED_PROCESS: eP,
     PERMISSION_CONTINUE_NONELEVATED_PROCESS: ew,
     RUNNING_GAME_ADD_OVERRIDE: eM,
-    RUNNING_GAME_TOGGLE_OVERLAY: eZ,
-    RUNNING_GAME_TOGGLE_DETECTION: eF,
+    RUNNING_GAME_TOGGLE_OVERLAY: eF,
+    RUNNING_GAME_TOGGLE_DETECTION: eZ,
     RUNNING_GAME_EDIT_NAME: eV,
     RUNNING_GAME_DELETE_ENTRY: ej,
     GAMES_DATABASE_UPDATE: ee,

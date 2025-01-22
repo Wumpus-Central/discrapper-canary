@@ -3,10 +3,10 @@ n.d(t, {
         return m;
     }
 });
-var r = n(200651);
+var a = n(200651);
 n(192379);
-var a = n(120356),
-    l = n.n(a),
+var r = n(120356),
+    l = n.n(r),
     i = n(442837),
     o = n(481060),
     s = n(570140),
@@ -22,24 +22,24 @@ function m() {
                 total: e
             });
         };
-    return (0, r.jsx)(o.ScrollerThin, {
+    return (0, a.jsx)(o.ScrollerThin, {
         className: l()(h.panel),
-        children: (0, r.jsxs)('div', {
+        children: (0, a.jsxs)('div', {
             className: u.panelInner,
             children: [
-                (0, r.jsx)(o.Text, {
+                (0, a.jsx)(o.Text, {
                     className: u.panelHeader,
                     variant: 'text-lg/bold',
                     children: 'Friend Anniversary'
                 }),
-                (0, r.jsxs)('div', {
+                (0, a.jsxs)('div', {
                     className: u.panelRow,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, a.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             children: 'Reset gift message cooldown'
                         }),
-                        (0, r.jsx)(o.Button, {
+                        (0, a.jsx)(o.Button, {
                             size: o.Button.Sizes.SMALL,
                             onClick: () => {
                                 s.Z.dispatch({ type: 'DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET' });
@@ -48,14 +48,14 @@ function m() {
                         })
                     ]
                 }),
-                (0, r.jsxs)('div', {
+                (0, a.jsxs)('div', {
                     className: u.panelRow,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, a.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             children: 'Reset badge cooldown'
                         }),
-                        (0, r.jsx)(o.Button, {
+                        (0, a.jsx)(o.Button, {
                             size: o.Button.Sizes.SMALL,
                             onClick: () => {
                                 s.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET' });
@@ -64,14 +64,14 @@ function m() {
                         })
                     ]
                 }),
-                (0, r.jsxs)('div', {
+                (0, a.jsxs)('div', {
                     className: u.panelRow,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, a.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             children: 'Clear last seen friend anniversaries in All Friends'
                         }),
-                        (0, r.jsx)(o.Button, {
+                        (0, a.jsx)(o.Button, {
                             size: o.Button.Sizes.SMALL,
                             onClick: () => {
                                 s.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET' });
@@ -80,14 +80,14 @@ function m() {
                         })
                     ]
                 }),
-                (0, r.jsxs)('div', {
+                (0, a.jsxs)('div', {
                     className: u.panelRow,
                     children: [
-                        (0, r.jsx)(o.Text, {
+                        (0, a.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             children: 'Select number of friend anniversaries to generate'
                         }),
-                        (0, r.jsx)(o.SingleSelect, {
+                        (0, a.jsx)(o.SingleSelect, {
                             className: u.anniversaryCountSelect,
                             options: [
                                 {
@@ -129,7 +129,7 @@ function m() {
                             },
                             popoutLayerContext: d.O$
                         }),
-                        (0, r.jsx)(o.Button, {
+                        (0, a.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             className: u.anniversaryCountResetButton,
                             onClick: () => {

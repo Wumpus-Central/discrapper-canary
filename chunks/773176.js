@@ -396,7 +396,7 @@ function ed(e) {
                                     X.sF,
                                     {
                                         label: el.intl.string(el.t.icaJW1),
-                                        icon: u.PotionIcon,
+                                        icon: u.ExperimentalConfettiIcon,
                                         onClick: () => (0, N.openMessageConfettiModal)(t, n)
                                     },
                                     'add-confetti-potion'

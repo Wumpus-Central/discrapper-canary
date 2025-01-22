@@ -32,14 +32,14 @@ function S(e) {
                 }).length > 0
         })),
         C = (0, l.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
-        [y, Z] = (0, u.wq)(C),
-        b = (0, c.Aq)(),
+        [y, b] = (0, u.wq)(C),
+        Z = (0, c.Aq)(),
         T = null != x && null != I && x.state !== h.jm8.ENDED && x.ownerId === I.ownerId,
         N = (e) => {
-            if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !T && (0, o.iV)(I, { forceMultiple: e }), b.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll();
+            if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !T && (0, o.iV)(I, { forceMultiple: e }), Z.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll();
         };
     if (null == I) return null;
-    let A = (0, u.P9)(Z);
+    let A = (0, u.P9)(b);
     t ? (A = g.intl.string(g.t.XvBdeX)) : T && (A = g.intl.string(g.t.JH1SJy));
     let j = {
         color: n,

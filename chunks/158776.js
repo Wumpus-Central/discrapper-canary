@@ -140,7 +140,7 @@ function B(e) {
 function G() {
     return !0;
 }
-function Z(e) {
+function F(e) {
     let { guilds: n, presences: r } = e,
         i = m.default.getId();
     (T = {}), (A = {}), (b = { [i]: b[i] }), (y = { [i]: y[i] }), (S = { [i]: {} });
@@ -176,7 +176,7 @@ function Z(e) {
         a.delete(i),
         a.forEach(P);
 }
-function F(e) {
+function Z(e) {
     let { presences: n } = e;
     (T = n.presencesForGuilds), (b = n.statuses), (y = n.activities), (A = n.activityMetadata);
 }
@@ -342,8 +342,8 @@ class X extends (i = d.ZP.Store) {
 v(X, 'displayName', 'PresenceStore'),
     (n.Z = new X(f.Z, {
         CONNECTION_OPEN: G,
-        CONNECTION_OPEN_SUPPLEMENTAL: Z,
-        OVERLAY_INITIALIZE: F,
+        CONNECTION_OPEN_SUPPLEMENTAL: F,
+        OVERLAY_INITIALIZE: Z,
         GUILD_CREATE: j,
         GUILD_DELETE: H,
         GUILD_MEMBER_REMOVE: Y,

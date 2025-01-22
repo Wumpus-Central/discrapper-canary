@@ -2,7 +2,7 @@ var i = r(200651),
     a = r(192379),
     s = r(120356),
     o = r.n(s),
-    l = r(657707),
+    l = r(481060),
     u = r(540059),
     c = r(443603),
     d = r(957825),
@@ -22,7 +22,7 @@ function h(e, n) {
                   isActive: !1,
                   'aria-label': f.intl.string(f.t.yvN8bG),
                   'aria-haspopup': 'false',
-                  children: (0, i.jsx)(l.rIT, {
+                  children: (0, i.jsx)(l.ExperimentalConfettiIcon, {
                       size: a ? 'refresh_sm' : void 0,
                       color: 'currentColor'
                   })

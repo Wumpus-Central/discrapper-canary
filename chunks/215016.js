@@ -1,6 +1,6 @@
 r.d(n, {
     PY: function () {
-        return F;
+        return Z;
     },
     iR: function () {
         return G;
@@ -168,7 +168,7 @@ class G extends s.PureComponent {
             !k(n) && ((this._image = i.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src));
     }
 }
-class Z extends s.PureComponent {
+class F extends s.PureComponent {
     componentDidMount() {
         let { resultType: e, data: n } = this.props;
         e === S.wI2.FAVORITES && ((0, p.t1)(S.wI2.FAVORITES), (0, p.hM)(n, S.wI2.FAVORITES, { limit: null }));
@@ -411,7 +411,7 @@ class Z extends s.PureComponent {
             });
     }
 }
-function F() {
+function Z() {
     let { renderWindow: e } = s.useContext(E.ZP),
         n = e.document,
         [r] = s.useState(
@@ -443,8 +443,8 @@ function F() {
     };
 }
 let V = function (e) {
-    let n = F();
-    return (0, a.jsx)(Z, {
+    let n = Z();
+    return (0, a.jsx)(F, {
         ...e,
         ...n
     });

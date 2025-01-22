@@ -29,7 +29,7 @@ var s = r(200651),
     x = r(981631),
     w = r(506886);
 n.Z = o.forwardRef(function (e, n) {
-    let { value: r, type: i, channel: a, className: l, id: P, disabled: M, submitting: k, placeholder: U, required: B, textAreaPaddingClassName: G, onChange: Z, onPaste: F, onResize: V, onFocus: j, onBlur: H, onKeyDown: Y, onKeyUp: W, onTab: K, onEnter: z, onSubmit: q, maybeShowAutocomplete: Q, hideAutocomplete: X, moveSelection: J, spellcheckEnabled: $, canUseCommands: ee, canOnlyUseTextCommands: et, disableAutoFocus: en, disableEnterToSubmit: er, allowNewLines: ei, 'aria-owns': ea, 'aria-expanded': es, 'aria-haspopup': eo, 'aria-activedescendant': el, 'aria-controls': eu, 'aria-invalid': ec, 'aria-describedby': ed, 'aria-labelledby': ef, 'aria-autocomplete': e_ } = e,
+    let { value: r, type: i, channel: a, className: l, id: P, disabled: M, submitting: k, placeholder: U, required: B, textAreaPaddingClassName: G, onChange: F, onPaste: Z, onResize: V, onFocus: j, onBlur: H, onKeyDown: Y, onKeyUp: W, onTab: K, onEnter: z, onSubmit: q, maybeShowAutocomplete: Q, hideAutocomplete: X, moveSelection: J, spellcheckEnabled: $, canUseCommands: ee, canOnlyUseTextCommands: et, disableAutoFocus: en, disableEnterToSubmit: er, allowNewLines: ei, 'aria-owns': ea, 'aria-expanded': es, 'aria-haspopup': eo, 'aria-activedescendant': el, 'aria-controls': eu, 'aria-invalid': ec, 'aria-describedby': ed, 'aria-labelledby': ef, 'aria-autocomplete': e_ } = e,
         eh = o.useRef(null),
         ep = o.useRef(null),
         em = o.useRef(!0),
@@ -166,7 +166,7 @@ n.Z = o.forwardRef(function (e, n) {
             hideAutocomplete: X,
             moveSelection: J
         }),
-        { handlePaste: eC, handleGlobalPaste: eR } = (0, N.Z)(eb, eE, F),
+        { handlePaste: eC, handleGlobalPaste: eR } = (0, N.Z)(eb, eE, Z),
         eO = o.useCallback(
             (e) => {
                 null == Q || Q();
@@ -175,9 +175,9 @@ n.Z = o.forwardRef(function (e, n) {
         ),
         eD = o.useCallback(
             (e) => {
-                e !== ep.current ? eg.current && (null == Z || Z(null, (0, v.sk)(e, { mode: 'raw' }), e)) : eg.current && Q();
+                e !== ep.current ? eg.current && (null == F || F(null, (0, v.sk)(e, { mode: 'raw' }), e)) : eg.current && Q();
             },
-            [Q, Z]
+            [Q, F]
         );
     o.useLayoutEffect(() => {
         em.current && ((ep.current = r), ev(eb, 'parent', { value: r }));

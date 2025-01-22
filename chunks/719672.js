@@ -4,8 +4,8 @@ n.d(t, {
     }
 }),
     n(47120);
-var r,
-    a,
+var a,
+    r,
     l = n(200651);
 n(192379);
 var i = n(913527),
@@ -19,7 +19,7 @@ var i = n(913527),
     x = n(675478),
     f = n(681619),
     p = n(388958);
-((a = r || (r = {})).EVENT = 'events'), (a.CANDIDATES = 'candidates');
+((r = a || (a = {})).EVENT = 'events'), (r.CANDIDATES = 'candidates');
 let b = (e) => {
         switch (e) {
             case u.D.DC_DISMISSED:
@@ -54,8 +54,8 @@ function j() {
     let e = (0, s.e7)([u.Z], () => u.Z.getDCFEvents()),
         t = (0, m.ZP)((e) => e.candidates),
         n = (0, m.ZP)((e) => e.lastWinnerTime),
-        r = o()(n).fromNow(),
-        a = e.map((e) => {
+        a = o()(n).fromNow(),
+        r = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
             return {
                 key: b(t) + n.toString(),
@@ -93,7 +93,7 @@ function j() {
             (0, l.jsx)('br', {}),
             (0, l.jsxs)('div', {
                 className: p.info,
-                children: ['Last winner time: ', r]
+                children: ['Last winner time: ', a]
             }),
             (0, l.jsx)('br', {}),
             (0, l.jsx)('div', {
@@ -107,7 +107,7 @@ function j() {
             (0, l.jsx)('br', {}),
             (0, l.jsx)(f.Z, {
                 columns: g,
-                data: a
+                data: r
             })
         ]
     });

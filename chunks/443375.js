@@ -40,8 +40,8 @@ var a = r(120356),
     U = r(315324),
     B = r(262210),
     G = r(103479),
-    Z = r(386019),
-    F = r(553375),
+    F = r(386019),
+    Z = r(553375),
     V = r(228168),
     j = r(981631),
     H = r(701488),
@@ -62,7 +62,7 @@ function K(e) {
             location: 'UserProfileActivityCard',
             source: E.m1.UserProfile,
             trackEntryPointImpression: !0,
-            ...(0, F.nK)({
+            ...(0, Z.nK)({
                 user: r,
                 activity: K,
                 entry: ea
@@ -287,7 +287,7 @@ function K(e) {
                         sourceType: V.n_.ACTIVITY,
                         onAction: eo,
                         renderMoreButtonPopout: (e) =>
-                            (0, i.jsx)(Z.Z, {
+                            (0, i.jsx)(F.Z, {
                                 display: 'live',
                                 user: r,
                                 activity: K,

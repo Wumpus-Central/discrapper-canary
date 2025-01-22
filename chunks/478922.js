@@ -25,8 +25,8 @@ function _(e, n, r) {
     return (0, s.forwardRef)(function (r, h) {
         var p;
         let { onScroll: m, dir: g = 'ltr', sections: E, columns: v, getItemKey: I, getItemHeight: T, getSectionHeight: b, chunkSize: y, renderSection: S, renderItem: A, getSectionProps: N, itemGutter: C, removeEdgeItemGutters: R, sectionGutter: O, padding: D, paddingVertical: L, paddingHorizontal: x, fade: w = !1, className: P, style: M, maxContentWidth: k, renderAccessory: U, onItemVisibilityChange: B, ...G } = r,
-            Z = s.useRef(null),
             F = s.useRef(null),
+            Z = s.useRef(null),
             V = s.useRef({}),
             [j, H] = s.useState(!1),
             { scrollerRef: Y, scrollerState: W, getScrollerState: K } = (0, d.T4)();
@@ -97,9 +97,9 @@ function _(e, n, r) {
         let es = (0, s.useCallback)(
             (e) => {
                 et(1),
-                    null == Z.current ? H(!0) : clearTimeout(Z.current),
-                    (Z.current = setTimeout(() => {
-                        (Z.current = null), H(!1);
+                    null == F.current ? H(!0) : clearTimeout(F.current),
+                    (F.current = setTimeout(() => {
+                        (F.current = null), H(!1);
                     }, 200)),
                     null != m && m(e);
             },
@@ -124,11 +124,11 @@ function _(e, n, r) {
                     (0, s.useMemo)(
                         () =>
                             (0, a.jsx)(c.J, {
-                                containerRef: F,
+                                containerRef: Z,
                                 children: (0, a.jsx)('div', {
                                     style: { height: J },
                                     className: f.content,
-                                    ref: F,
+                                    ref: Z,
                                     children: Object.keys(X).map((e) => {
                                         var n;
                                         let r = (0, d.t$)(e),

@@ -9,7 +9,7 @@ r.d(n, {
         return N;
     },
     EQ: function () {
-        return Z;
+        return F;
     },
     Ej: function () {
         return S;
@@ -101,7 +101,7 @@ function f(e, n) {
     try {
         let r = d[n.premiumType];
         if (null == r) return c.warn("Cannot find the corresponding SKU to the user's premium type ".concat(n.premiumType)), !1;
-        let i = F[r];
+        let i = Z[r];
         if (null == i) return c.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(r, ' and premium type ').concat(n.premiumType)), !1;
         return i.skuFeatures.includes(e);
     } catch (e) {
@@ -142,11 +142,11 @@ new o.Z(i.q.INCREASED_FILE_UPLOAD_SIZE, s.h6);
 let U = new _(i.q.INCREASED_GUILD_LIMIT),
     B = new _(i.q.INCREASED_MESSAGE_LENGTH),
     G = new _('increasedVideoUploadQuality'),
-    Z = new _('uploadLargeFiles'),
-    F = Object.freeze({
-        [u.Si.TIER_0]: new l.Z(u.Si.TIER_0, [h, p, m, y, k, G, Z, N]),
-        [u.Si.TIER_1]: new l.Z(u.Si.TIER_1, [h, p, I, T, y, R, D, w, G, Z, N]),
-        [u.Si.TIER_2]: new l.Z(u.Si.TIER_2, [h, p, m, g, E, I, T, b, y, S, C, R, O, D, L, w, P, M, k, U, B, G, Z, N, A, x, v])
+    F = new _('uploadLargeFiles'),
+    Z = Object.freeze({
+        [u.Si.TIER_0]: new l.Z(u.Si.TIER_0, [h, p, m, y, k, G, F, N]),
+        [u.Si.TIER_1]: new l.Z(u.Si.TIER_1, [h, p, I, T, y, R, D, w, G, F, N]),
+        [u.Si.TIER_2]: new l.Z(u.Si.TIER_2, [h, p, m, g, E, I, T, b, y, S, C, R, O, D, L, w, P, M, k, U, B, G, F, N, A, x, v])
     });
 function V(e, n) {
     return e.getFeatureValue(n);

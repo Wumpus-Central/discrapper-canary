@@ -120,12 +120,12 @@ function B(e) {
 function G() {
     (v = {}), (b = {}), (S = {}), (y = {}), T.clear();
 }
-function Z(e) {
+function F(e) {
     let { voiceStates: n, user: r, sessionId: s } = e;
     for (let [e, r] of ((v = {}), (b = {}), (S = {}), (y = {}), Object.entries(n))) for (let [n, i] of Object.entries(r)) x(e, n, () => new _.Z(i));
     (i = r.id), (a = s);
 }
-function F(e) {
+function Z(e) {
     let { guild: n } = e;
     c().forEach(v[n.id], (e) => {
         x(n.id, e.userId, () => null);
@@ -216,11 +216,11 @@ m(H, 'displayName', 'VoiceStateStore'),
     (n.Z = new H(f.Z, {
         CONNECTION_OPEN: B,
         CONNECTION_OPEN_SUPPLEMENTAL: G,
-        OVERLAY_INITIALIZE: Z,
+        OVERLAY_INITIALIZE: F,
         VOICE_CHANNEL_SELECT: U,
         VOICE_STATE_UPDATES: w,
-        GUILD_DELETE: F,
-        GUILD_CREATE: F,
+        GUILD_DELETE: Z,
+        GUILD_CREATE: Z,
         CHANNEL_DELETE: V,
         CALL_DELETE: j,
         PASSIVE_UPDATE_V2: P,

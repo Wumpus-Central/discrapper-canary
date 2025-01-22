@@ -1,6 +1,6 @@
 n(653041), n(47120);
-var r,
-    a,
+var a,
+    r,
     l,
     i,
     o = n(772848),
@@ -14,7 +14,7 @@ let m = 0,
     f = 0,
     p = [],
     b = !1;
-class g extends (r = c.ZP.Store) {
+class g extends (a = c.ZP.Store) {
     initialize() {
         this.waitFor(h.Z);
     }
@@ -32,24 +32,24 @@ class g extends (r = c.ZP.Store) {
     }
 }
 (i = 'AnalyticsLogStore'),
-    (l = 'displayName') in (a = g)
-        ? Object.defineProperty(a, l, {
+    (l = 'displayName') in (r = g)
+        ? Object.defineProperty(r, l, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[l] = i),
+        : (r[l] = i),
     (t.Z = new g(d.Z, {
         TRACK: function (e) {
-            let { event: t, properties: n, fingerprint: r } = e;
+            let { event: t, properties: n, fingerprint: a } = e;
             if (h.Z.isDeveloper) {
-                var a;
+                var r;
                 x.push({
                     key: (m++).toString(),
                     event: t,
                     properties: n,
-                    fingerprint: null != (a = r) ? (0, s.s)(a) : u.default.getId(),
+                    fingerprint: null != (r = a) ? (0, s.s)(r) : u.default.getId(),
                     timestamp: new Date()
                 }),
                     f++,
@@ -57,7 +57,7 @@ class g extends (r = c.ZP.Store) {
             }
         },
         TRACK_TRIGGER: function (e) {
-            let { experimentId: t, descriptor: n, exposureType: r, excluded: a, location: l, previouslyTracked: i } = e;
+            let { experimentId: t, descriptor: n, exposureType: a, excluded: r, location: l, previouslyTracked: i } = e;
             if (!!h.Z.isDeveloper)
                 b &&
                     (p = [
@@ -66,8 +66,8 @@ class g extends (r = c.ZP.Store) {
                             key: (0, o.Z)(),
                             experimentId: t,
                             descriptor: n,
-                            exposureType: r,
-                            excluded: a,
+                            exposureType: a,
+                            excluded: r,
                             location: l,
                             previouslyTracked: i,
                             timestamp: new Date()

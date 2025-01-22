@@ -89,10 +89,10 @@ function B() {
 function G() {
     T = null;
 }
-function Z(e) {
+function F(e) {
     A = e.isGift;
 }
-function F(e) {
+function Z(e) {
     let { locked: n } = e;
     if (!n || null == N) return !1;
     (S = !1), (N = null), R();
@@ -151,7 +151,7 @@ d(V, 'displayName', 'SKUPaymentModalStore'),
         SKU_PURCHASE_FAIL: U,
         SKU_PURCHASE_SHOW_CONFIRMATION_STEP: B,
         SKU_PURCHASE_CLEAR_ERROR: G,
-        SKU_PURCHASE_UPDATE_IS_GIFT: Z,
-        OVERLAY_SET_INPUT_LOCKED: F,
+        SKU_PURCHASE_UPDATE_IS_GIFT: F,
+        OVERLAY_SET_INPUT_LOCKED: Z,
         GIFT_CODE_CREATE: k
     }));

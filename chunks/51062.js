@@ -56,8 +56,8 @@ function T(e, n, r) {
             state: O,
             onFocus: (e) => V.setSelectedIndex(e)
         }),
-        Z = null === (i = e.editorRef.current) || void 0 === i ? void 0 : i.getCurrentWord(),
-        F = {
+        F = null === (i = e.editorRef.current) || void 0 === i ? void 0 : i.getCurrentWord(),
+        Z = {
             ...e,
             navigator: G,
             activeCommand: U,
@@ -68,14 +68,14 @@ function T(e, n, r) {
             hidePersonalInformation: k,
             hideMentionDescription: R === c.Ie.RULES_INPUT,
             emojiIntention: R === c.Ie.RULES_INPUT ? I.Hz.COMMUNITY_CONTENT : I.Hz.CHAT,
-            currentWord: null !== (A = null == Z ? void 0 : Z.word) && void 0 !== A ? A : '',
-            currentWordIsAtStart: (null == Z ? void 0 : Z.isAtStart) === !0,
+            currentWord: null !== (A = null == F ? void 0 : F.word) && void 0 !== A ? A : '',
+            currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
             optionText: null != B ? (0, l.KF)({ [B.name]: null !== (N = null === (b = e.editorRef.current) || void 0 === b ? void 0 : b.getCurrentCommandOptionValue()) && void 0 !== N ? N : [] }, B.name) : ''
         },
-        [V] = a.useState(() => new m.Z(F));
+        [V] = a.useState(() => new m.Z(Z));
     return (
         a.useEffect(() => {
-            V.updateProps(F);
+            V.updateProps(Z);
         }),
         a.useImperativeHandle(n, () => V, [V]),
         a.useEffect(() => {

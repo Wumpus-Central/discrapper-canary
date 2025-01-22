@@ -49,10 +49,10 @@ let O = {},
     U = [],
     B = [],
     G = !1;
-function Z() {
+function F() {
     x = !1;
 }
-function F(e, n) {
+function Z(e, n) {
     return n.some((n) => n.platforms.includes(e));
 }
 function V(e) {
@@ -70,7 +70,7 @@ function V(e) {
                 let e = _.Z.fileManager.join(f, D),
                     n = (0, g.D)();
                 if (null != u && 0 !== u.length) {
-                    for (let r of (n === S.QR$.WIN64 && !F(n, u) && (n = S.QR$.WIN32), u))
+                    for (let r of (n === S.QR$.WIN64 && !Z(n, u) && (n = S.QR$.WIN32), u))
                         if (r.platforms.includes(n)) {
                             let n;
                             let { executable: i, name: a, working_dir: s } = r,
@@ -311,6 +311,6 @@ class ee extends (a = d.ZP.Store) {
 }
 A(ee, 'displayName', 'DispatchApplicationStore'),
     (n.Z = new ee(f.Z, {
-        CONNECTION_OPEN: Z,
+        CONNECTION_OPEN: F,
         DISPATCH_APPLICATION_STATE_UPDATE: $
     }));

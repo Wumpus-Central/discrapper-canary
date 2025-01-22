@@ -100,12 +100,12 @@ function B(e, n) {
     return U.set(r, i), i;
 }
 function G(e, n) {
-    return k ? (0, d.interpolate)(M(e), P(n), { maxSegmentLength: 1.5 }) : Z;
+    return k ? (0, d.interpolate)(M(e), P(n), { maxSegmentLength: 1.5 }) : F;
 }
-function Z(e) {
+function F(e) {
     return e.toString();
 }
-class F extends l.Component {
+class Z extends l.Component {
     componentDidMount() {
         this.forceUpdate();
     }
@@ -510,7 +510,7 @@ class H extends l.Component {
                         children: [
                             null != i
                                 ? (0, o.jsx)(
-                                      F,
+                                      Z,
                                       {
                                           className: T.lowerBadge,
                                           animatedStyle: this.getLowerBadgeStyles(),
@@ -521,7 +521,7 @@ class H extends l.Component {
                                 : null,
                             null != u
                                 ? (0, o.jsx)(
-                                      F,
+                                      Z,
                                       {
                                           className: T.upperBadge,
                                           animatedStyle: this.getUpperBadgeStyles(),

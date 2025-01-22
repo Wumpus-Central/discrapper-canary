@@ -6,7 +6,7 @@ r.d(n, {
         return M;
     },
     NK: function () {
-        return F;
+        return Z;
     },
     OP: function () {
         return b;
@@ -15,7 +15,7 @@ r.d(n, {
         return j;
     },
     ZP: function () {
-        return Z;
+        return F;
     },
     ge: function () {
         return V;
@@ -289,7 +289,7 @@ function G(e) {
         alertActionsExecution: null != i ? i : void 0
     };
 }
-function Z(e) {
+function F(e) {
     let n = a.useMemo(() => G(e), [e]),
         r = (0, h.e7)([p.Z], () => p.Z.getChannel(n.embedChannelId), [n.embedChannelId]);
     return {
@@ -297,7 +297,7 @@ function Z(e) {
         embedChannel: r
     };
 }
-function F(e) {
+function Z(e) {
     if (null == e) return null;
     let { alertActionsExecution: n } = G(e);
     return null != n ? n : null;

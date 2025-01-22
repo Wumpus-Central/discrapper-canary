@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return _;
     }
 }),
     n(47120);
-var r = n(200651),
-    a = n(192379),
+var a = n(200651),
+    r = n(192379),
     l = n(120356),
     i = n.n(l),
     o = n(442837),
@@ -22,9 +22,9 @@ function p(e, t) {
 }
 function b(e) {
     let { store: t, dataGetter: n } = e,
-        [l, i] = a.useState(n(t));
+        [l, i] = r.useState(n(t));
     return (
-        a.useEffect(() => {
+        r.useEffect(() => {
             let e = () => i(n(t));
             return (
                 e(),
@@ -34,9 +34,9 @@ function b(e) {
                 }
             );
         }, [t, n]),
-        (0, r.jsx)(s.ScrollerThin, {
+        (0, a.jsx)(s.ScrollerThin, {
             className: f.inspectorContainer,
-            children: (0, r.jsx)(d.Z, { data: l })
+            children: (0, a.jsx)(d.Z, { data: l })
         })
     );
 }
@@ -57,11 +57,11 @@ let g = [
             render(e) {
                 let { store: t } = e;
                 return null == t.__getLocalVars
-                    ? (0, r.jsxs)('div', {
+                    ? (0, a.jsxs)('div', {
                           className: f.inspectorContainer,
-                          children: ['Store is missing ', (0, r.jsx)('code', { children: '__getLocalVars' }), ' method.']
+                          children: ['Store is missing ', (0, a.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
-                    : (0, r.jsx)(b, {
+                    : (0, a.jsx)(b, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars()
                       });
@@ -72,7 +72,7 @@ let g = [
             name: 'Store Instance',
             render(e) {
                 let { store: t } = e;
-                return (0, r.jsx)(b, {
+                return (0, a.jsx)(b, {
                     store: t,
                     dataGetter: (e) => e
                 });
@@ -81,32 +81,32 @@ let g = [
     ];
 function j(e) {
     let { store: t, initialHeight: n } = e,
-        { TabBar: a, renderSelectedTab: l } = (0, m.Z)({ tabs: v }, []);
-    return (0, r.jsxs)(u.Z, {
+        { TabBar: r, renderSelectedTab: l } = (0, m.Z)({ tabs: v }, []);
+    return (0, a.jsxs)(u.Z, {
         className: f.subPanel,
         minHeight: 100,
         initialHeight: n,
         children: [
-            (0, r.jsx)(a, {}),
-            (0, r.jsxs)(c.ZP, {
+            (0, a.jsx)(r, {}),
+            (0, a.jsxs)(c.ZP, {
                 className: i()(x.headerBar, f.subPanelHeaderBar),
                 children: [
-                    (0, r.jsx)(c.ZP.Icon, {
+                    (0, a.jsx)(c.ZP.Icon, {
                         icon: s.TagIcon,
                         tooltip: t.getName()
                     }),
-                    (0, r.jsx)(c.ZP.Title, { children: t.getName() })
+                    (0, a.jsx)(c.ZP.Title, { children: t.getName() })
                 ]
             }),
             l({ store: t })
         ]
     });
 }
-function T() {
-    let e = a.useRef(null),
-        [t, n] = a.useState(''),
+function _() {
+    let e = r.useRef(null),
+        [t, n] = r.useState(''),
         l = o.yh.getAll(),
-        c = a
+        c = r
             .useMemo(
                 () =>
                     l
@@ -123,15 +123,15 @@ function T() {
                     return n.getName().toLowerCase().includes(t.toLowerCase());
                 })(e, t)
             ),
-        [d, u] = a.useState(),
+        [d, u] = r.useState(),
         m = l.find((e) => e._dispatchToken === d);
-    return (0, r.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         ref: e,
         className: i()(x.panel, f.panel),
         children: [
-            (0, r.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: f.toolbar,
-                children: (0, r.jsx)(s.SearchBar, {
+                children: (0, a.jsx)(s.SearchBar, {
                     className: f.searchBar,
                     size: s.SearchBar.Sizes.SMALL,
                     query: t,
@@ -141,14 +141,14 @@ function T() {
                     'aria-label': 'Search stores'
                 })
             }),
-            (0, r.jsx)(h.Z, {
+            (0, a.jsx)(h.Z, {
                 columns: g,
                 data: c,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)
             }),
             null != m &&
-                (0, r.jsx)(j, {
+                (0, a.jsx)(j, {
                     store: m,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })

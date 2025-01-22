@@ -163,19 +163,19 @@ class U extends o.Component {
     render() {
         var e, n, r, i, a, o;
         let { textValue: l, richValue: c, disabled: d, onChange: f, onKeyDown: _, onResize: h, onSubmit: m, channel: g, type: E, fontSize: v, useSlate: I, spellcheckEnabled: T, useNewSlashCommands: b, canOnlyUseTextCommands: S, className: C, id: D, required: x, maxCharacterCount: P, allowNewLines: M, 'aria-describedby': U, 'aria-labelledby': B, accessibilityLabel: G } = this.props,
-            { submitting: Z, popup: F } = this.state,
+            { submitting: F, popup: Z } = this.state,
             V = {
                 channel: g,
                 className: u()(C, w.textArea, {
                     [w.textAreaSlate]: I,
-                    [w.textAreaDisabled]: d || Z
+                    [w.textAreaDisabled]: d || F
                 }),
                 id: D,
                 placeholder: this.getPlaceholder(),
                 required: x,
                 accessibilityLabel: G,
                 disabled: d || !1,
-                submitting: Z,
+                submitting: F,
                 isEdit: E === A.Ie.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -201,10 +201,10 @@ class U extends o.Component {
                 useNewSlashCommands: b,
                 disableAutoFocus: p.tq || (null !== (r = E.disableAutoFocus) && void 0 !== r && r),
                 disableEnterToSubmit: null !== (i = null === (e = E.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
-                'aria-controls': null !== (a = F.id) && void 0 !== a ? a : void 0,
+                'aria-controls': null !== (a = Z.id) && void 0 !== a ? a : void 0,
                 'aria-haspopup': 'listbox',
-                'aria-expanded': null !== F.id || void 0,
-                'aria-activedescendant': null !== (o = F.activeDescendant) && void 0 !== o ? o : void 0,
+                'aria-expanded': null !== Z.id || void 0,
+                'aria-activedescendant': null !== (o = Z.activeDescendant) && void 0 !== o ? o : void 0,
                 'aria-invalid': l.length > P,
                 'aria-describedby': U,
                 'aria-labelledby': B,

@@ -142,12 +142,12 @@ n.ZP = {
         if (null == k || null == U || 0 === L(k).trim().length) return l();
         let B = f().pick(n.rules, w),
             G = g().parserFor(B)(c.whitespaceSanitized, S),
-            Z = d.whitespaceSanitized,
-            { target: F } = v;
+            F = d.whitespaceSanitized,
+            { target: Z } = v;
         return {
             content: G,
-            target: F,
-            title: Z
+            target: Z,
+            title: F
         };
     }
 };

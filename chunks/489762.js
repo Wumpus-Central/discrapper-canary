@@ -34,8 +34,8 @@ var a = r(200651),
     U = r(515005),
     B = r(652136),
     G = r(981631),
-    Z = r(957825),
-    F = r(388032),
+    F = r(957825),
+    Z = r(388032),
     V = r(458381),
     j = r(239840);
 let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
@@ -190,7 +190,7 @@ let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     a ? i.delete(e) : i.add(e),
                         A.default.track(G.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                             location: null == C ? void 0 : C.location,
-                            tab: Z.X1.STICKER,
+                            tab: F.X1.STICKER,
                             collapsed: !a,
                             sticker_pack_id: r ? e : null
                         }),
@@ -217,8 +217,8 @@ let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                     T.Z,
                                     {
                                         className: V.packHeader,
-                                        'aria-label': F.intl.string(F.t.wbfJFh),
-                                        children: F.intl.string(F.t['05Z/0t'])
+                                        'aria-label': Z.intl.string(Z.t.wbfJFh),
+                                        children: Z.intl.string(Z.t['05Z/0t'])
                                     },
                                     'stickers-you-might-like-header'
                                 )
@@ -231,7 +231,7 @@ let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 T.Z,
                                 {
                                     className: V.packHeader,
-                                    'aria-label': F.intl.formatToPlainString(F.t['7lLCjY'], { categoryName: r.name }),
+                                    'aria-label': Z.intl.formatToPlainString(Z.t['7lLCjY'], { categoryName: r.name }),
                                     icon: (0, a.jsx)(c.StarIcon, {
                                         size: 'xs',
                                         color: 'currentColor'
@@ -247,7 +247,7 @@ let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 T.Z,
                                 {
                                     className: V.packHeader,
-                                    'aria-label': F.intl.formatToPlainString(F.t['7lLCjY'], { categoryName: r.name }),
+                                    'aria-label': Z.intl.formatToPlainString(Z.t['7lLCjY'], { categoryName: r.name }),
                                     icon: (0, a.jsx)(c.ClockIcon, {
                                         size: 'xs',
                                         color: 'currentColor'
@@ -266,7 +266,7 @@ let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 T.Z,
                                 {
                                     className: V.packHeader,
-                                    'aria-label': F.intl.formatToPlainString(F.t['7lLCjY'], { categoryName: e.name }),
+                                    'aria-label': Z.intl.formatToPlainString(Z.t['7lLCjY'], { categoryName: e.name }),
                                     icon: (0, a.jsx)(m.Z, {
                                         guild: e,
                                         height: 16,
@@ -286,7 +286,7 @@ let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 T.Z,
                                 {
                                     className: V.packHeader,
-                                    'aria-label': F.intl.formatToPlainString(F.t['7lLCjY'], { categoryName: e.name }),
+                                    'aria-label': Z.intl.formatToPlainString(Z.t['7lLCjY'], { categoryName: e.name }),
                                     icon: (0, a.jsx)(P.ZP, {
                                         disableAnimation: !0,
                                         size: el,
@@ -362,7 +362,7 @@ let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 renderSection: U,
                 renderSectionFooter: B,
                 sectionFooterHeight: G,
-                renderSectionHeader: Z,
+                renderSectionHeader: F,
                 sectionHeaderHeight: Y
             } = e_({
                 collapsedStickersCategories: r,
@@ -444,7 +444,7 @@ let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     children: [
                         null != u && 0 === u.sendable.length && 0 === u.sendableWithPremium.length
                             ? (0, a.jsx)(d.Z, {
-                                  message: F.intl.string(F.t['zc+LQU']),
+                                  message: Z.intl.string(Z.t['zc+LQU']),
                                   className: V.__invalid_noSearchResultsContainer,
                                   noResultsImageURL: j,
                                   suggestions: (0, a.jsx)(ed, { onSuggestionClick: (e) => (0, E.ql)(e, !0) })
@@ -455,7 +455,7 @@ let H = (0, N.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   onScroll: W,
                                   renderRow: M,
                                   renderSection: null == u ? U : void 0,
-                                  renderSectionHeader: Z,
+                                  renderSectionHeader: F,
                                   renderSectionFooter: B,
                                   rowCount: b,
                                   rowCountBySection: y,

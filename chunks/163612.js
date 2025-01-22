@@ -1,6 +1,6 @@
 let i = (0, r(818083).B)({
     kind: 'guild',
-    id: '2024-01_guild_voice_ring_sender',
+    id: '2024-12_guild_voice_channel_ringing',
     label: 'Guild Voice Ringing',
     defaultConfig: { enabled: !1 },
     treatments: [

@@ -25,7 +25,7 @@ let u = (0, s.Un)({
         name: 'PopoutWindowRTCDebug'
     }),
     p = (0, s.Un)({
-        createPromise: () => Promise.all([n.e('93382'), n.e('19578'), n.e('72884'), n.e('14797')]).then(n.bind(n, 748623)),
+        createPromise: () => Promise.all([n.e('93382'), n.e('19578'), n.e('92922'), n.e('90296'), n.e('14797')]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: 'PopoutWindowActivity'
     });

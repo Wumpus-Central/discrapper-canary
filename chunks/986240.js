@@ -18,7 +18,7 @@ function u(e, n) {
         ? (0, i.jsx)(l.MenuItem, {
               id: 'add-confetti-potion',
               label: s.intl.string(s.t.icaJW1),
-              icon: l.PotionIcon,
+              icon: l.ExperimentalConfettiIcon,
               action: () => (0, r.openMessageConfettiModal)(n, e)
           })
         : null;

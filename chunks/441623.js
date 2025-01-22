@@ -96,10 +96,10 @@ function B() {
 function G() {
     B();
 }
-function Z() {
+function F() {
     (R = C()), B();
 }
-function F() {
+function Z() {
     R.lastShownFriendsListGiftIntents = Array.from(D);
 }
 function V(e) {
@@ -203,9 +203,9 @@ T(J, 'displayName', 'PremiumGiftingIntentStore'),
     ]),
     (n.Z = new J(f.Z, {
         CONNECTION_OPEN: G,
-        LOGOUT: Z,
+        LOGOUT: F,
         MESSAGE_GIFT_INTENT_SHOWN: V,
-        FRIENDS_LIST_GIFT_INTENTS_SHOWN: F,
+        FRIENDS_LIST_GIFT_INTENTS_SHOWN: Z,
         FRIENDS_TAB_BADGE_DISMISS: j,
         GIFT_INTENT_FLOW_PURCHASED_GIFT: H,
         DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: K,

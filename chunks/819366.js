@@ -85,7 +85,7 @@ function R(e) {
             className: n,
             children: R
         });
-    let Z = (e) =>
+    let F = (e) =>
         (0, i.jsx)(m.Z, {
             className: n,
             onContextMenu: M,
@@ -96,7 +96,7 @@ function R(e) {
     return O
         ? (0, i.jsx)(_.Gt, {
               value: L,
-              children: Z()
+              children: F()
           })
         : (0, i.jsx)(_.Gt, {
               value: L,
@@ -119,7 +119,7 @@ function R(e) {
                       })
                   ),
                   position: l.tq ? 'top' : 'right',
-                  children: (e) => Z(e)
+                  children: (e) => F(e)
               })
           });
 }

@@ -91,22 +91,22 @@ function v(e, t) {
                 E = Math.min((_ - o) / x - o, i),
                 C = Math.max(0, x - p.length),
                 y = p.slice(0, x),
-                Z = f.slice(0, C),
-                b = Array(C);
+                b = f.slice(0, C),
+                Z = Array(C);
             if (C > 0) {
                 let e = [];
-                for (let t of Z) {
+                for (let t of b) {
                     let n = I.current[t.id];
-                    null != n && n < C ? (b[n] = t) : e.push(t);
+                    null != n && n < C ? (Z[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < b.length; t++) {
-                    if (null != b[t]) continue;
+                for (let t = 0; t < Z.length; t++) {
+                    if (null != Z[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    b[t] = n;
+                    Z[t] = n;
                 }
             }
-            let T = b.filter(c.lm),
+            let T = Z.filter(c.lm),
                 N = (0, a.keyBy)((0, a.range)(T.length), (e) => T[e].id);
             I.current = N;
             let A = [...y, ...T];

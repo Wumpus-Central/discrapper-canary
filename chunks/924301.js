@@ -143,11 +143,11 @@ function B(e) {
 function G(e, n) {
     I.values(g.GUILD_EVENT(e)).forEach((e) => C(e.id, n));
 }
-function Z(e) {
+function F(e) {
     let { guildScheduledEvent: n } = e;
     return N(n), !0;
 }
-function F(e) {
+function Z(e) {
     let { guildScheduledEvent: n } = e;
     return C(n.id), !0;
 }
@@ -313,9 +313,9 @@ m(et, 'displayName', 'GuildScheduledEventStore'),
         GUILD_DELETE: B,
         FETCH_GUILD_EVENT: M,
         FETCH_GUILD_EVENTS_FOR_GUILD: k,
-        GUILD_SCHEDULED_EVENT_CREATE: Z,
-        GUILD_SCHEDULED_EVENT_UPDATE: Z,
-        GUILD_SCHEDULED_EVENT_DELETE: F,
+        GUILD_SCHEDULED_EVENT_CREATE: F,
+        GUILD_SCHEDULED_EVENT_UPDATE: F,
+        GUILD_SCHEDULED_EVENT_DELETE: Z,
         GUILD_SCHEDULED_EVENT_USER_ADD: K,
         GUILD_SCHEDULED_EVENT_USER_REMOVE: z,
         GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS: Y,

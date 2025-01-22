@@ -147,7 +147,7 @@ function k() {
                 channelId: r.id,
                 messageId: null == e ? void 0 : null === (n = e.params) || void 0 === n ? void 0 : n.message
             }),
-                Z(r.getGuildId(), r.id);
+                F(r.getGuildId(), r.id);
         }
     }
 }
@@ -166,7 +166,7 @@ function U() {
                         logFailures: r
                     })
                   : r && L.log('Skipping fetch because the selected channel is not a text channel'),
-              Z(a.getGuildId(), a.id))
+              F(a.getGuildId(), a.id))
             : r && L.log('Skipping fetch because channel is null');
     } else r && L.log('Skipping fetch because there is no selected channel');
 }
@@ -178,7 +178,7 @@ function B(e) {
         messageId: i,
         jumpType: a
     }),
-        Z(n, r);
+        F(n, r);
 }
 function G(e) {
     let { guildId: n, channelId: r } = e;
@@ -187,7 +187,7 @@ function G(e) {
         channelId: r
     });
 }
-function Z(e, n) {
+function F(e, n) {
     let r = v.ZP.getCurrentSidebarChannelId(n);
     if (null != r)
         x({
@@ -196,12 +196,12 @@ function Z(e, n) {
             messageId: v.ZP.getCurrentSidebarMessageId(n)
         });
 }
-function F() {
+function Z() {
     let e = y.Z.getChannelId(),
         n = S.Z.getGuildId();
     if (null == n || null == e) return;
     let r = v.ZP.getSidebarState(e);
-    if ((null == r ? void 0 : r.type) !== g.tI.VIEW_CHANNEL) Z(n, e);
+    if ((null == r ? void 0 : r.type) !== g.tI.VIEW_CHANNEL) F(n, e);
 }
 function V(e) {
     let { guildId: n, channelId: r, context: i } = e;
@@ -210,7 +210,7 @@ function V(e) {
             guildId: n,
             channelId: r
         }),
-        Z(n, r));
+        F(n, r));
 }
 function j(e) {
     let { channel: n, messageId: r } = e,
@@ -284,7 +284,7 @@ class q extends _.Z {
         super(...e),
             D(this, 'fetchMessages', x),
             D(this, 'loadSelectedChannelIfNecessary', U),
-            D(this, 'stores', new Map().set(v.ZP, F)),
+            D(this, 'stores', new Map().set(v.ZP, Z)),
             D(this, 'actions', {
                 APP_STATE_UPDATE: z,
                 OVERLAY_INITIALIZE: k,

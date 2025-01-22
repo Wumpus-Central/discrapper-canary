@@ -111,9 +111,9 @@ class C extends (a = c.PureComponent) {
         var e;
         let { value: n, active: r, focused: i, sortedMarkers: a, markerPositions: s, closestMarkerIndex: o, newClosestIndex: l, min: c, max: d } = this.state,
             { disabled: _, stickToMarkers: h, className: m, children: g, barStyles: T, fillStyles: y, mini: S, hideBubble: A, defaultValue: N, orientation: C, onValueRender: O, renderMarker: D, getAriaValueText: L, barClassName: x, grabberClassName: w, grabberStyles: P = {}, markerPosition: M = 0, 'aria-hidden': k, 'aria-label': U, 'aria-labelledby': B, 'aria-describedby': G } = this.props,
-            Z = 0;
-        h ? null != s && (null != l ? (Z = s[l]) : null != o && (Z = s[o])) : (Z = this.scaleValue(n));
-        let F = ''.concat(Z, '%'),
+            F = 0;
+        h ? null != s && (null != l ? (F = s[l]) : null != o && (F = s[o])) : (F = this.scaleValue(n));
+        let Z = ''.concat(F, '%'),
             V =
                 null != s && null != a
                     ? s.map((e, n) => {
@@ -146,7 +146,7 @@ class C extends (a = c.PureComponent) {
                           );
                       })
                     : null,
-            j = null != O ? O(n) : ''.concat(Z.toFixed(0), '%'),
+            j = null != O ? O(n) : ''.concat(F.toFixed(0), '%'),
             H = null !== (e = null == L ? void 0 : L(n)) && void 0 !== e ? e : void 0;
         return (0, u.jsx)(R, {
             active: r,
@@ -198,7 +198,7 @@ class C extends (a = c.PureComponent) {
                                     className: b.barFill,
                                     style: {
                                         ...y,
-                                        width: F
+                                        width: Z
                                     }
                                 })
                             }),
@@ -216,7 +216,7 @@ class C extends (a = c.PureComponent) {
                                             className: f()(b.grabber, w),
                                             style: {
                                                 ...P,
-                                                left: F
+                                                left: Z
                                             },
                                             onMouseDown: this.handleMouseDown,
                                             ref: this.grabberRef

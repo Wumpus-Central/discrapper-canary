@@ -1,9 +1,9 @@
 n.d(t, {
     GY: function () {
-        return f;
+        return m;
     },
     PI: function () {
-        return d;
+        return u;
     },
     RT: function () {
         return p;
@@ -14,17 +14,17 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var l = n(120356),
-    o = n.n(l),
-    r = n(692547),
+var r = n(120356),
+    o = n.n(r),
+    l = n(692547),
     a = n(481060),
     s = n(765250),
     c = n(388032),
-    u = n(122087);
-function d(e) {
+    d = n(122087);
+function u(e) {
     let { children: t } = e;
     return (0, i.jsx)('div', {
-        className: u.titleWrapper,
+        className: d.titleWrapper,
         children: (0, i.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'header-primary',
@@ -41,50 +41,50 @@ function h(e) {
         children: (e) =>
             (0, i.jsx)(a.Clickable, {
                 ...e,
-                className: u.button,
+                className: d.button,
                 onClick: t,
                 children: (0, i.jsx)(a.SettingsIcon, {
                     size: 'xxs',
-                    color: r.Z.colors.INTERACTIVE_ACTIVE
+                    color: l.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });
 }
-function f(e) {
+function m(e) {
     let { widgetId: t, showAllStreams: n } = e,
-        l = n ? c.intl.string(c.t.q2B3rq) : c.intl.string(c.t.JKGi6u),
-        d = () => {
+        r = n ? c.intl.string(c.t.q2B3rq) : c.intl.string(c.t.JKGi6u),
+        u = () => {
             (0, s.zG)(t, { showAllStreams: !n });
         };
     return (0, i.jsx)(a.Tooltip, {
-        text: l,
-        'aria-label': l,
+        text: r,
+        'aria-label': r,
         children: (e) =>
             (0, i.jsx)(a.Clickable, {
                 ...e,
-                className: o()(u.button, n && u.active),
-                onClick: d,
+                className: o()(d.button, n && d.active),
+                onClick: u,
                 children: (0, i.jsx)(a.ScreenIcon, {
                     size: 'xxs',
-                    color: n ? r.Z.colors.BG_BRAND : r.Z.colors.INTERACTIVE_ACTIVE
+                    color: n ? l.Z.colors.BG_BRAND : l.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });
 }
 function p(e) {
     let { id: t, pinned: n } = e,
-        l = n ? c.intl.string(c.t.cSu80t) : c.intl.string(c.t.cM8Vnp);
+        r = n ? c.intl.string(c.t.cSu80t) : c.intl.string(c.t.cM8Vnp);
     return (0, i.jsx)(a.Tooltip, {
-        text: l,
-        'aria-label': l,
+        text: r,
+        'aria-label': r,
         children: (e) =>
             (0, i.jsx)(a.Clickable, {
                 ...e,
-                className: o()(u.button, n && u.active),
+                className: o()(d.button, n && d.active),
                 onClick: () => (0, s.xh)(t),
                 children: (0, i.jsx)(a.PinUprightIcon, {
                     size: 'xxs',
-                    color: n ? r.Z.colors.BG_BRAND : r.Z.colors.INTERACTIVE_ACTIVE
+                    color: n ? l.Z.colors.BG_BRAND : l.Z.colors.INTERACTIVE_ACTIVE
                 })
             })
     });

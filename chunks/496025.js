@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return N;
     }
 }),
     n(47120);
-var r = n(200651),
-    a = n(192379),
+var a = n(200651),
+    r = n(192379),
     l = n(120356),
     i = n.n(l),
     o = n(602715),
@@ -22,12 +22,12 @@ var r = n(200651),
     g = n(98357),
     v = n(432877),
     j = n(246992),
-    T = n(821843),
+    _ = n(821843),
     C = n(941469);
-function _() {
+function T() {
     var e;
     let t = (0, s.Wu)([p.Z], () => p.Z.getSortedChannels()[1]),
-        [n, l] = a.useState(t.length > 0 ? t[0].channelId : void 0),
+        [n, l] = r.useState(t.length > 0 ? t[0].channelId : void 0),
         { selectedChannel: i, options: g } = (0, s.cj)([m.Z, f.default, x.Z], () => ({
             selectedChannel: m.Z.getChannel(n),
             options: t.map((e) => {
@@ -38,24 +38,24 @@ function _() {
                 };
             })
         })),
-        v = a.useCallback(() => {
+        v = r.useCallback(() => {
             var e;
             if (null == i || !i.isPrivate()) return;
             let t = (0, b.x9)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
             h.Z.updatePrivateChannelRecipientFlags(i.id, t);
         }, [i]),
         C = null != i && !!i.isPrivate() && (0, b.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, r.jsx)(c.Text, {
+            (0, a.jsx)(c.Text, {
                 variant: 'text-md/semibold',
                 children: 'In-Game NUX Message for DMs'
             }),
-            (0, r.jsxs)('div', {
-                className: T.inGameNuxContainer,
+            (0, a.jsxs)('div', {
+                className: _.inGameNuxContainer,
                 children: [
-                    (0, r.jsx)(c.SearchableSelect, {
-                        wrapperClassName: T.search,
+                    (0, a.jsx)(c.SearchableSelect, {
+                        wrapperClassName: _.search,
                         options: g,
                         placeholder: 'Select DM',
                         value: n,
@@ -65,7 +65,7 @@ function _() {
                             let t = m.Z.getChannel(e.value);
                             return null == t
                                 ? null
-                                : (0, r.jsx)(c.Avatar, {
+                                : (0, a.jsx)(c.Avatar, {
                                       src: (0, d.x)(t),
                                       'aria-hidden': !0,
                                       size: c.AvatarSizes.SIZE_16
@@ -73,7 +73,7 @@ function _() {
                         },
                         popoutLayerContext: j.O$
                     }),
-                    (0, r.jsx)(c.Button, {
+                    (0, a.jsx)(c.Button, {
                         size: c.Button.Sizes.SMALL,
                         onClick: v,
                         disabled: null == n,
@@ -84,23 +84,23 @@ function _() {
         ]
     });
 }
-function S() {
+function N() {
     let e = v.ZP.allByCategory(v.zU.MESSAGING).map((e) => {
-        let [t, n, { label: a }] = e;
-        return (0, r.jsx)(
+        let [t, n, { label: r }] = e;
+        return (0, a.jsx)(
             c.FormSwitch,
             {
                 value: n,
                 onChange: (e) => (0, g.Z)(t, e),
                 hideBorder: !0,
-                className: T.switch,
-                children: a
+                className: _.switch,
+                children: r
             },
             t
         );
     });
-    return (0, r.jsxs)('div', {
-        className: i()(C.panel, T.panel),
-        children: [e, (0, r.jsx)('div', { className: T.divider }), (0, r.jsx)(_, {})]
+    return (0, a.jsxs)('div', {
+        className: i()(C.panel, _.panel),
+        children: [e, (0, a.jsx)('div', { className: _.divider }), (0, a.jsx)(T, {})]
     });
 }

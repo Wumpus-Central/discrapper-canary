@@ -85,7 +85,7 @@ function G(e) {
     let { userId: n } = e;
     y.delete(n);
 }
-function Z(e) {
+function F(e) {
     return o()(e)
         .map((e) => ({
             key: e.id,
@@ -98,11 +98,11 @@ function Z(e) {
         })
         .value();
 }
-function F(e) {
-    y.delete(e.userId), L.set(e.userId, Z(e.mutualFriends)), x.set(e.userId, e.mutualFriends.length);
+function Z(e) {
+    y.delete(e.userId), L.set(e.userId, F(e.mutualFriends)), x.set(e.userId, e.mutualFriends.length);
 }
 function V(e) {
-    var n, r, i, a, s, o, c, d, f, h, p, E, I, y, N, P, U, B, G, F, V, j, H, Y, W, K, z;
+    var n, r, i, a, s, o, c, d, f, h, p, E, I, y, N, P, U, B, G, Z, V, j, H, Y, W, K, z;
     let q = null !== (N = null === (n = e.guild_member_profile) || void 0 === n ? void 0 : n.guild_id) && void 0 !== N ? N : T;
     if ((null === (r = b.get(e.user.id)) || void 0 === r || r.delete(q), null != e.mutual_guilds)) {
         let n = {};
@@ -129,7 +129,7 @@ function V(e) {
         let n = e.mutual_friends_count;
         x.set(e.user.id, n);
     }
-    null != e.mutual_friends && (L.set(e.user.id, Z(e.mutual_friends)), x.set(e.user.id, e.mutual_friends.length));
+    null != e.mutual_friends && (L.set(e.user.id, F(e.mutual_friends)), x.set(e.user.id, e.mutual_friends.length));
     let Q = null != e.premium_since ? new Date(e.premium_since) : null,
         X = null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
         J = e.application;
@@ -199,7 +199,7 @@ function V(e) {
                 guildId: e.guild_member_profile.guild_id,
                 banner: e.guild_member_profile.banner,
                 accentColor: e.guild_member_profile.accent_color,
-                themeColors: null === (F = e.guild_member_profile) || void 0 === F ? void 0 : F.theme_colors,
+                themeColors: null === (Z = e.guild_member_profile) || void 0 === Z ? void 0 : Z.theme_colors,
                 popoutAnimationParticleType: null === (V = e.guild_member_profile) || void 0 === V ? void 0 : V.popout_animation_particle_type,
                 profileEffectId: null === (H = e.guild_member_profile) || void 0 === H ? void 0 : null === (j = H.profile_effect) || void 0 === j ? void 0 : j.id,
                 profileEffectExpiresAt: null === (W = e.guild_member_profile) || void 0 === W ? void 0 : null === (Y = W.profile_effect) || void 0 === Y ? void 0 : Y.expires_at,
@@ -408,7 +408,7 @@ class en extends p.Z {
             USER_PROFILE_UPDATE_SUCCESS: z,
             USER_PROFILE_UPDATE_FAILURE: q,
             MUTUAL_FRIENDS_FETCH_START: B,
-            MUTUAL_FRIENDS_FETCH_SUCCESS: F,
+            MUTUAL_FRIENDS_FETCH_SUCCESS: Z,
             MUTUAL_FRIENDS_FETCH_FAILURE: G,
             USER_UPDATE: Q,
             GUILD_MEMBER_UPDATE: Q,

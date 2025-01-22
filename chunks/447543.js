@@ -39,8 +39,8 @@ var s = r(525654),
     U = r(314897),
     B = r(592125),
     G = r(984933),
-    Z = r(271383),
-    F = r(430824),
+    F = r(271383),
+    Z = r(430824),
     V = r(607744),
     j = r(341165),
     H = r(496675),
@@ -73,7 +73,7 @@ function eo(e) {
         case er.Iq.ROLE_SUBSCRIPTIONS_PURCHASE:
             l.targetType = e.target_type;
     }
-    return (!(null != F.Z.getGuild(null === (n = e.guild) || void 0 === n ? void 0 : n.id)) || e.new_member) && null != e.channel && (0, k.zi)(e.channel.type) && (l.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (l.guildScheduledEvent = e.guild_scheduled_event), (l.isGuestInvite = (0, q.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, u.$.IS_GUEST_INVITE)), (l.isApplicationBypassInvite = (0, q.yE)(null !== (o = e.flags) && void 0 !== o ? o : 0, u.$.IS_APPLICATION_BYPASS)), (l.inviterUserId = null === (r = e.inviter) || void 0 === r ? void 0 : r.id), l;
+    return (!(null != Z.Z.getGuild(null === (n = e.guild) || void 0 === n ? void 0 : n.id)) || e.new_member) && null != e.channel && (0, k.zi)(e.channel.type) && (l.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (l.guildScheduledEvent = e.guild_scheduled_event), (l.isGuestInvite = (0, q.yE)(null !== (s = e.flags) && void 0 !== s ? s : 0, u.$.IS_GUEST_INVITE)), (l.isApplicationBypassInvite = (0, q.yE)(null !== (o = e.flags) && void 0 !== o ? o : 0, u.$.IS_APPLICATION_BYPASS)), (l.inviterUserId = null === (r = e.inviter) || void 0 === r ? void 0 : r.id), l;
 }
 function el(e, n) {
     return {
@@ -100,7 +100,7 @@ function ec(e, n) {
 }
 function ed(e) {
     let { guildId: n, channel: i, options: a, analyticsLocations: s = [] } = e,
-        o = F.Z.getGuild(n),
+        o = Z.Z.getGuild(n),
         l = (0, y.K2)(n, 'invite') ? (null == o ? void 0 : o.hasFeature(ee.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) : (null == o ? void 0 : o.hasFeature(ee.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) && !(null == o ? void 0 : o.hasFeature(ee.oNc.PREVIEW_ENABLED)),
         { targetUserId: u, targetType: c, targetApplicationId: d, isGuestInvite: f, isApplicationBypassInvite: _ } = null != a ? a : {};
     if (!f && !_ && l && Y.Z.getGuildId() !== n) return;
@@ -141,7 +141,7 @@ function ed(e) {
                                           commandOrigin: v.bB.CHAT
                                       }));
                           };
-                      !f && (0, S.n)(n, [F.Z, V.Z, W.default, Z.ZP]) ? (0, b.hk)(n, o) : o();
+                      !f && (0, S.n)(n, [Z.Z, V.Z, W.default, F.ZP]) ? (0, b.hk)(n, o) : o();
                   });
           })
         : (0, g.l5)(p) &&

@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120),
     n(653041);
-var r = n(200651),
-    a = n(192379),
+var a = n(200651),
+    r = n(192379),
     l = n(120356),
     i = n.n(l),
     o = n(481060),
@@ -14,10 +14,10 @@ var r = n(200651),
     c = n(823379),
     d = n(246992),
     u = n(941469);
-let h = a.forwardRef(function (e, t) {
-    let { id: n, selected: a, onClick: l, children: s } = e;
-    return (0, r.jsx)(o.Clickable, {
-        className: i()(u.tabItem, { [u.selected]: a }),
+let h = r.forwardRef(function (e, t) {
+    let { id: n, selected: r, onClick: l, children: s } = e;
+    return (0, a.jsx)(o.Clickable, {
+        className: i()(u.tabItem, { [u.selected]: r }),
         'data-tab-id': n,
         innerRef: t,
         onClick: l,
@@ -26,24 +26,24 @@ let h = a.forwardRef(function (e, t) {
 });
 function m(e) {
     let { tabs: t, selectedTabId: n, onSelectTab: l } = e,
-        i = a.useRef(null),
-        m = a.useRef(0),
-        x = a.useRef(new Map()),
-        [f, p] = a.useState([]),
-        b = a.useCallback(() => {
-            var e, r, a, l;
+        i = r.useRef(null),
+        m = r.useRef(0),
+        x = r.useRef(new Map()),
+        [f, p] = r.useState([]),
+        b = r.useCallback(() => {
+            var e, a, r, l;
             if (null == i.current) return;
             let o = [],
                 s = i.current.getBoundingClientRect().width;
             if (s !== m.current) {
-                for (let i of ((m.current = s), (s -= null !== (r = null === (e = x.current.get(n)) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0), t)) {
-                    if (i.id !== n) (s -= null !== (l = null === (a = x.current.get(i.id)) || void 0 === a ? void 0 : a.width) && void 0 !== l ? l : 0) < 0 && o.push(i.id);
+                for (let i of ((m.current = s), (s -= null !== (a = null === (e = x.current.get(n)) || void 0 === e ? void 0 : e.width) && void 0 !== a ? a : 0), t)) {
+                    if (i.id !== n) (s -= null !== (l = null === (r = x.current.get(i.id)) || void 0 === r ? void 0 : r.width) && void 0 !== l ? l : 0) < 0 && o.push(i.id);
                 }
                 p(o);
             }
         }, [t, n]),
-        g = a.useRef(null);
-    a.useEffect(
+        g = r.useRef(null);
+    r.useEffect(
         () => (
             (g.current = new ResizeObserver(() => b())),
             null != i.current && g.current.observe(i.current),
@@ -54,24 +54,24 @@ function m(e) {
         ),
         [b]
     );
-    let v = a.useCallback(
+    let v = r.useCallback(
         (e) => {
-            let { closePopout: a } = e;
-            return (0, r.jsx)(o.Menu, {
+            let { closePopout: r } = e;
+            return (0, a.jsx)(o.Menu, {
                 navId: 'devtools-overflow',
                 variant: 'fixed',
-                onClose: a,
+                onClose: r,
                 'aria-label': 'Overflowed DevTools Tabs',
-                onSelect: a,
+                onSelect: r,
                 children: t
                     .map((e) => {
-                        let { id: t, name: a } = e;
+                        let { id: t, name: r } = e;
                         return f.includes(t) && n !== t
-                            ? (0, r.jsx)(
+                            ? (0, a.jsx)(
                                   o.MenuItem,
                                   {
                                       id: t,
-                                      label: a,
+                                      label: r,
                                       action: () => l(t)
                                   },
                                   t
@@ -83,49 +83,49 @@ function m(e) {
         },
         [t, f, l, n]
     );
-    return (0, r.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: u.tabBar,
         ref: i,
         children: [
             t
                 .map((e) => {
-                    let { id: t, name: a } = e;
+                    let { id: t, name: r } = e;
                     if (!f.includes(t))
-                        return (0, r.jsx)(
+                        return (0, a.jsx)(
                             h,
                             {
                                 id: t,
                                 selected: n === t,
                                 ref: (e) => {
-                                    var n, r, a;
-                                    let l = null !== (r = null === (n = x.current.get(t)) || void 0 === n ? void 0 : n.width) && void 0 !== r ? r : 0;
+                                    var n, a, r;
+                                    let l = null !== (a = null === (n = x.current.get(t)) || void 0 === n ? void 0 : n.width) && void 0 !== a ? a : 0;
                                     x.current.set(t, {
                                         node: e,
-                                        width: null !== (a = null == e ? void 0 : e.getBoundingClientRect().width) && void 0 !== a ? a : l
+                                        width: null !== (r = null == e ? void 0 : e.getBoundingClientRect().width) && void 0 !== r ? r : l
                                     });
                                 },
                                 onClick: n !== t ? () => l(t) : void 0,
-                                children: a
+                                children: r
                             },
                             t
                         );
                 })
                 .filter(c.lm),
             f.length > 0 &&
-                (0, r.jsx)(r.Fragment, {
-                    children: (0, r.jsx)(o.Popout, {
+                (0, a.jsx)(a.Fragment, {
+                    children: (0, a.jsx)(o.Popout, {
                         layerContext: d.O$,
                         renderPopout: v,
                         position: 'bottom',
                         align: 'right',
                         spacing: 0,
                         children: (e) =>
-                            (0, r.jsx)(o.Button, {
+                            (0, a.jsx)(o.Button, {
                                 ...e,
                                 className: u.overflowChevron,
                                 size: o.Button.Sizes.ICON,
                                 look: o.Button.Looks.BLANK,
-                                children: (0, r.jsx)(s.Z, {
+                                children: (0, a.jsx)(s.Z, {
                                     className: u.__invalid_overflowIcon,
                                     width: 16,
                                     height: 16
@@ -139,10 +139,10 @@ function m(e) {
 function x(e, t) {
     var n, l, i;
     let { tabs: o, initialSelectedTabId: s, onChangeTab: c } = e,
-        [d, u] = a.useState(null != s ? s : null === (n = o[0]) || void 0 === n ? void 0 : n.id),
-        h = a.useCallback(
+        [d, u] = r.useState(null != s ? s : null === (n = o[0]) || void 0 === n ? void 0 : n.id),
+        h = r.useCallback(
             () =>
-                (0, r.jsx)(m, {
+                (0, a.jsx)(m, {
                     tabs: o,
                     selectedTabId: d,
                     onSelectTab: (e) => {

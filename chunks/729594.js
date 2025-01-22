@@ -88,8 +88,8 @@ function b(e, n) {
                         if (!M.match(_)) {
                             var B = x.slice(0, O),
                                 G = x.slice(O + 1),
-                                Z = P.match(h);
-                            Z && (B.push(Z[1]), G.unshift(Z[2])), G.length && (T = '/' + G.join('.') + T), (this.hostname = B.join('.'));
+                                F = P.match(h);
+                            F && (B.push(F[1]), G.unshift(F[2])), G.length && (T = '/' + G.join('.') + T), (this.hostname = B.join('.'));
                             break;
                         }
                     }
@@ -97,9 +97,9 @@ function b(e, n) {
             }
         }
         this.hostname.length > f ? (this.hostname = '') : (this.hostname = this.hostname.toLowerCase()), !L && (this.hostname = i.toASCII(this.hostname));
-        var F = this.port ? ':' + this.port : '',
+        var Z = this.port ? ':' + this.port : '',
             V = this.hostname || '';
-        (this.host = V + F), (this.href += this.host), L && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), '/' !== T[0] && (T = '/' + T));
+        (this.host = V + Z), (this.href += this.host), L && ((this.hostname = this.hostname.substr(1, this.hostname.length - 2)), '/' !== T[0] && (T = '/' + T));
     }
     if (!p[S])
         for (var O = 0, w = u.length; O < w; O++) {
@@ -113,9 +113,9 @@ function b(e, n) {
     -1 !== Y && ((this.hash = T.substr(Y)), (T = T.slice(0, Y)));
     var W = T.indexOf('?');
     if ((-1 !== W ? ((this.search = T.substr(W)), (this.query = T.substr(W + 1)), n && (this.query = E.parse(this.query)), (T = T.slice(0, W))) : n && ((this.search = ''), (this.query = {})), T && (this.pathname = T), g[S] && this.hostname && !this.pathname && (this.pathname = '/'), this.pathname || this.search)) {
-        var F = this.pathname || '',
+        var Z = this.pathname || '',
             K = this.search || '';
-        this.path = F + K;
+        this.path = Z + K;
     }
     return (this.href = this.format()), this;
 }),

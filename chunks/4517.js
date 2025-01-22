@@ -1,6 +1,6 @@
 r.d(n, {
     Z: function () {
-        return F;
+        return Z;
     }
 });
 var i = r(47120);
@@ -98,17 +98,17 @@ function B(e) {
         U = s.useRef(null),
         B = s.useRef(null),
         G = s.useRef(A),
-        Z = s.useRef(N),
-        F = null != i && null == o,
+        F = s.useRef(N),
+        Z = null != i && null == o,
         [V, j] = s.useState(!1),
         [H, Y] = s.useState(!0),
-        [W, K] = s.useState(!F && T),
-        z = !F && T && V;
+        [W, K] = s.useState(!Z && T),
+        z = !Z && T && V;
     s.useLayoutEffect(() => {
         if ((j(!0), null == U.current || null == B.current || !z)) return;
         let e = U.current.getBoundingClientRect().height,
             n = B.current.getBoundingClientRect().height;
-        K(n > e), (G.current = e), (Z.current = n);
+        K(n > e), (G.current = e), (F.current = n);
     }, [z]);
     let q = (0, c.e7)([h.Z], () => h.Z.useReducedMotion),
         [Q] = s.useState(() => new d.V7());
@@ -124,7 +124,7 @@ function B(e) {
             if (!!W)
                 e
                     ? J({
-                          maxHeight: ''.concat(Math.min(Z.current, N), 'px'),
+                          maxHeight: ''.concat(Math.min(F.current, N), 'px'),
                           delay: q ? 0 : k,
                           config: {
                               clamp: !0,
@@ -258,7 +258,7 @@ function G(e) {
             })
     });
 }
-function Z(e) {
+function F(e) {
     let { emoji: n, text: r, user: i, guildId: o, channelId: l, profileType: u, ...c } = e,
         { trackUserProfileAction: d } = (0, I.KZ)(),
         { interactionType: f, interactionSource: _, resetInteraction: h } = (0, b.Xo)(),
@@ -314,7 +314,7 @@ function Z(e) {
             })
     });
 }
-function F(e) {
+function Z(e) {
     var n, r;
     let { location: i, user: s, onCloseProfile: o, ...l } = e,
         u = (0, c.e7)([v.default], () => v.default.getId() === s.id),
@@ -337,7 +337,7 @@ function F(e) {
             : h
               ? (0, a.jsx)(m.Gt, {
                     value: f,
-                    children: (0, a.jsx)(Z, {
+                    children: (0, a.jsx)(F, {
                         user: s,
                         emoji: E,
                         text: b,

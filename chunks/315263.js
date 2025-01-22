@@ -1,7 +1,7 @@
 r.r(n),
     r.d(n, {
         default: function () {
-            return F;
+            return Z;
         }
     });
 var i = r(47120);
@@ -62,13 +62,13 @@ async function G(e) {
         a = null == r ? void 0 : null === (n = r.guild) || void 0 === n ? void 0 : n.id;
     null != a && i.includes(a) ? f.Z.transitionToInviteSync(r) : await B(r, e.code);
 }
-let Z = {
+let F = {
     skipExtensionCheck: void 0,
     analyticsLocations: []
 };
-function F(e) {
+function Z(e) {
     var n;
-    let { skipExtensionCheck: i, analyticsLocations: a } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Z,
+    let { skipExtensionCheck: i, analyticsLocations: a } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F,
         s = (0, E.zO)(e);
     if (null != s && (s.type === g.g.INVITE || s.type === g.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), G(s), !0);
     if (null != s && (s.type === g.g.APP_DIRECTORY_PROFILE || s.type === g.g.APP_DIRECTORY_STOREFRONT || s.type === g.g.APP_DIRECTORY_STOREFRONT_SKU))

@@ -40,16 +40,16 @@ function D(e) {
         U = (0, E.Z)(s),
         { largeImage: B } = (0, f.FO)(s),
         { analyticsLocations: G } = (0, d.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        Z = (0, m.Z)({
+        F = (0, m.Z)({
             display: 'live',
             user: n,
             activity: s,
             entry: k,
             analyticsLocations: G
         }),
-        F = (0, g.Z)({
+        Z = (0, g.Z)({
             userId: n.id,
-            onAction: Z
+            onAction: F
         });
     if (!(0, u.Z)(s)) return null;
     let V = () => {
@@ -72,7 +72,7 @@ function D(e) {
                                         (0, i.jsx)(l.Clickable, {
                                             className: o()(O.clickableText, O.inline),
                                             onClick: (e) => {
-                                                e.stopPropagation(), Z({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(s, n.id, r);
+                                                e.stopPropagation(), F({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(s, n.id, r);
                                             },
                                             children: e
                                         }),
@@ -102,7 +102,7 @@ function D(e) {
                       user: n,
                       guild: D,
                       channel: L,
-                      onAction: Z,
+                      onAction: F,
                       onClose: w
                   }),
         Y = () =>
@@ -113,15 +113,15 @@ function D(e) {
                       children: (0, i.jsx)(N.Z, {
                           user: n,
                           activity: s,
-                          onAction: Z
+                          onAction: F
                       })
                   });
     return (0, i.jsx)(d.Gt, {
         value: G,
         children: (0, i.jsxs)(T.Z, {
-            ref: F,
+            ref: Z,
             className: o()(O.card, x),
-            onAction: Z,
+            onAction: F,
             onClose: w,
             children: [
                 (0, i.jsx)(b.Z, {
@@ -145,7 +145,7 @@ function D(e) {
                                     size: _.J.SIZE_60,
                                     className: O.clickableImage,
                                     onClick: (e) => {
-                                        e.stopPropagation(), Z({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(s, n.id);
+                                        e.stopPropagation(), F({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(s, n.id);
                                     }
                                 }),
                                 (0, i.jsxs)('div', {
@@ -157,7 +157,7 @@ function D(e) {
                                                     variant: 'heading-sm/semibold',
                                                     text: s.details,
                                                     onClick: () => {
-                                                        Z({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(s);
+                                                        F({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(s);
                                                     }
                                                 }),
                                                 V()

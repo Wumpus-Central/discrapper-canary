@@ -54,7 +54,7 @@ let y = 'scientist:triggered',
     U = {},
     B = 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL,
     G = {};
-function Z(e) {
+function F(e) {
     let n = G[e];
     if (void 0 !== n) return n;
     {
@@ -62,10 +62,10 @@ function Z(e) {
         return (G[e] = n), n;
     }
 }
-let F = I.qO.map((e) => Z(e)),
+let Z = I.qO.map((e) => F(e)),
     V = 604800000;
 function j(e, n) {
-    return e || F.includes(n);
+    return e || Z.includes(n);
 }
 function H(e) {
     var n;
@@ -79,8 +79,8 @@ function Y(e, n, r, i) {
     throw Error();
 }
 function W(e) {
-    if (e.type === I.xY.USER) return Z(''.concat(e.bucket, '|').concat(e.revision));
-    if (e.type === I.xY.GUILD) return Z(''.concat(e.bucket, '|').concat(e.revision, '|').concat(e.guildId));
+    if (e.type === I.xY.USER) return F(''.concat(e.bucket, '|').concat(e.revision));
+    if (e.type === I.xY.GUILD) return F(''.concat(e.bucket, '|').concat(e.revision, '|').concat(e.guildId));
     throw Error();
 }
 let K = Date.now(),
@@ -320,7 +320,7 @@ function en(e, n, r) {
 let er = 10000;
 function ei(e, n) {
     var r, i;
-    let a = Z(n),
+    let a = F(n),
         s = P[''.concat(a)];
     if (null == s) return null;
     let { revision: o, aaMode: l } = s,
@@ -338,7 +338,7 @@ function ei(e, n) {
                   hashResult: -1,
                   triggerDebuggingEnabled: c
               };
-    let d = Z(''.concat(null !== (r = s.hashKey) && void 0 !== r ? r : n, ':').concat(e)) % er,
+    let d = F(''.concat(null !== (r = s.hashKey) && void 0 !== r ? r : n, ':').concat(e)) % er,
         f = null;
     for (let n of null !== (i = s.overridesFormatted) && void 0 !== i ? i : [])
         if (null !== (f = en(e, n, d)))
@@ -576,7 +576,7 @@ class eg extends g.Z {
             let n = k[e];
             if (null != n) return n;
         }
-        let n = Z(e);
+        let n = F(e);
         return w[''.concat(n)];
     }
     getGuildExperimentDescriptor(e, n) {
@@ -603,10 +603,10 @@ class eg extends g.Z {
         return P;
     }
     getLoadedUserExperiment(e) {
-        return w[Z(e)];
+        return w[F(e)];
     }
     getLoadedGuildExperiment(e) {
-        return P[Z(e)];
+        return P[F(e)];
     }
     getRecentExposures(e, n) {
         let r = ''.concat(e, '|').concat(n, '|');
@@ -639,7 +639,7 @@ class eg extends g.Z {
         let e = {},
             n = {};
         for (let r in (Object.keys(L).forEach((e) => {
-            n[Z(''.concat(e))] = e;
+            n[F(''.concat(e))] = e;
         }),
         w)) {
             let i = n[r];

@@ -9,7 +9,7 @@ r.d(n, {
         return G;
     },
     PS: function () {
-        return F;
+        return Z;
     },
     T6: function () {
         return k;
@@ -18,7 +18,7 @@ r.d(n, {
         return K;
     },
     aj: function () {
-        return Z;
+        return F;
     },
     bE: function () {
         return q;
@@ -325,15 +325,15 @@ class U {
 }
 let B = new U(b.o8, D.yP.PRELOADED_USER_SETTINGS),
     G = new U(T.ji, D.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-    Z = {
+    F = {
         [D.yP.PRELOADED_USER_SETTINGS]: B,
         [D.yP.FRECENCY_AND_FAVORITES_SETTINGS]: G
     };
-function F(e, n, r) {
+function Z(e, n, r) {
     return B.updateAsync('guilds', (r) => (0, O.u0)(r, e, n), r);
 }
 function V(e, n, r, i) {
-    return F(e, (e) => (0, O.uL)(e, n, r), i);
+    return Z(e, (e) => (0, O.uL)(e, n, r), i);
 }
 function j(e) {
     return B.updateAsync(

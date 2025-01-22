@@ -4,8 +4,8 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(200651),
-    a = n(192379),
+var a = n(200651),
+    r = n(192379),
     l = n(120356),
     i = n.n(l),
     o = n(481060),
@@ -19,34 +19,34 @@ function x() {
     let e = {
             PremiumSubscriptionAprilMarketingDecoModal: async () => {
                 let { default: e } = await n.e('18327').then(n.bind(n, 731433));
-                return (t) => (0, r.jsx)(e, { ...t });
+                return (t) => (0, a.jsx)(e, { ...t });
             },
             CollectiblesExpiryModal: async () => {
                 let { default: e } = await n.e('77370').then(n.bind(n, 83950));
-                return (t) => (0, r.jsx)(e, { ...t });
+                return (t) => (0, a.jsx)(e, { ...t });
             }
         },
         t = Object.keys(e).map((e) => ({
             label: e,
             value: e
         })),
-        [l, x] = a.useState(t[0].value);
-    return (0, r.jsx)(o.ScrollerThin, {
+        [l, x] = r.useState(t[0].value);
+    return (0, a.jsx)(o.ScrollerThin, {
         className: i()(h.panel),
-        children: (0, r.jsxs)('div', {
+        children: (0, a.jsxs)('div', {
             className: m.panelInner,
             children: [
-                (0, r.jsxs)('section', {
+                (0, a.jsxs)('section', {
                     className: m.section,
                     children: [
-                        (0, r.jsx)(o.Heading, {
+                        (0, a.jsx)(o.Heading, {
                             variant: 'heading-md/semibold',
                             children: 'Open a Modal'
                         }),
-                        (0, r.jsxs)('div', {
+                        (0, a.jsxs)('div', {
                             className: m.inputRow,
                             children: [
-                                (0, r.jsx)(o.Select, {
+                                (0, a.jsx)(o.Select, {
                                     className: m.input,
                                     options: t,
                                     isSelected: (e) => l === e,
@@ -55,7 +55,7 @@ function x() {
                                     select: (e) => x(e),
                                     popoutLayerContext: d.O$
                                 }),
-                                (0, r.jsx)(o.Button, {
+                                (0, a.jsx)(o.Button, {
                                     onClick: () => {
                                         (0, o.openModalLazy)(e[l]);
                                     },
@@ -65,16 +65,16 @@ function x() {
                         })
                     ]
                 }),
-                (0, r.jsxs)('section', {
+                (0, a.jsxs)('section', {
                     className: m.section,
                     children: [
-                        (0, r.jsx)(o.Heading, {
+                        (0, a.jsx)(o.Heading, {
                             variant: 'heading-md/semibold',
                             children: 'Wow moment'
                         }),
-                        (0, r.jsx)('div', {
+                        (0, a.jsx)('div', {
                             className: m.inputRow,
-                            children: (0, r.jsx)(o.Button, {
+                            children: (0, a.jsx)(o.Button, {
                                 onClick: () => {
                                     (0, s.H)(!0), c.S.dispatch(u.CkL.PREMIUM_SUBSCRIPTION_CREATED);
                                 },

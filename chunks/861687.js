@@ -39,8 +39,8 @@ var u = r(654861),
     U = r(314897),
     B = r(592125),
     G = r(131951),
-    Z = r(19780),
-    F = r(226961),
+    F = r(19780),
+    Z = r(226961),
     V = r(936349),
     j = r(594174),
     H = r(626135),
@@ -334,7 +334,7 @@ class eI extends g.Z {
                     reason: i
                 }),
                 (this._encountered_socket_failure = !0)),
-            Z.Z.getRemoteDisconnectVoiceChannelId() === this.channelId && (null === (u = this._connection) || void 0 === u || u.wasRemoteDisconnected());
+            F.Z.getRemoteDisconnectVoiceChannelId() === this.channelId && (null === (u = this._connection) || void 0 === u || u.wasRemoteDisconnected());
         let d = 'Force Close' !== i;
         if (d) {
             let e = this._backoff.fail(this.reconnect);
@@ -1285,7 +1285,7 @@ class eI extends g.Z {
         (this._remoteVideoSinkWants = ee.Yy),
             es.w.on(es.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
             es.w.on(es.e.WindowVisibilityChanged, this.windowVisibilityChanged),
-            F.ZP.shouldRecordNextConnection() ? ((this._recordingEnabled = !0), y.TC(!1)) : (this._recordingEnabled = !1),
+            Z.ZP.shouldRecordNextConnection() ? ((this._recordingEnabled = !0), y.TC(!1)) : (this._recordingEnabled = !1),
             (this._soundshareStats = new et.Z()),
             W.Z.addOnlineCallback(this._handleNetworkOnline),
             W.Z.addOfflineCallback(this._handleNetworkOffline),

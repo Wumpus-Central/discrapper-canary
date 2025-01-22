@@ -3,12 +3,12 @@ n.d(t, {
         return i;
     }
 });
-var r = n(200651);
+var a = n(200651);
 n(192379);
-var a = n(702904),
+var r = n(702904),
     l = n(351930);
 function i() {
-    return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(a.Z, {}), (0, r.jsx)(l.Z, {})]
+    return (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)(r.Z, {}), (0, a.jsx)(l.Z, {})]
     });
 }

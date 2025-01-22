@@ -1,57 +1,57 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return x;
     }
 }),
     n(47120);
 var i = n(200651),
-    l = n(192379),
+    r = n(192379),
     o = n(120356),
-    r = n.n(o),
+    l = n.n(o),
     a = n(348327),
     s = n.n(a),
     c = n(642128),
-    u = n(481060),
-    d = n(667142),
+    d = n(481060),
+    u = n(667142),
     h = n(333031),
-    f = n(70491);
+    m = n(70491);
 let p = {
     mass: 1,
     tension: 600,
     friction: 60,
     clamp: !0
 };
-function m(e) {
+function x(e) {
     let { locked: t, pinned: n } = e,
-        [o, a] = l.useState(0),
-        [m, v] = l.useState(0),
-        [x, g] = l.useState(0),
-        C = l.useRef(0),
-        [Z, _] = l.useState(0),
-        { timeToLiveMs: I, reappearTimeMs: j } = d.ZP.useState(
+        [o, a] = r.useState(0),
+        [x, f] = r.useState(0),
+        [v, g] = r.useState(0),
+        C = r.useRef(0),
+        [Z, _] = r.useState(0),
+        { timeToLiveMs: b, reappearTimeMs: j } = u.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
                 reappearTimeMs: e.reappearTimeMs
             }),
             s()
         ),
-        E = {
-            timeToLiveMs: I,
+        I = {
+            timeToLiveMs: b,
             reappearTimeMs: j
         },
-        b = l.useRef(E);
-    l.useEffect(() => void (b.current = E)),
-        l.useEffect(
+        E = r.useRef(I);
+    r.useEffect(() => void (E.current = I)),
+        r.useEffect(
             () => (
                 (C.current = setInterval(() => {
                     let e = Date.now();
-                    v(e),
+                    f(e),
                         g((t) => {
                             if (0 === t) return e;
                             let n = e - t,
-                                i = b.current.timeToLiveMs,
-                                l = i + b.current.reappearTimeMs;
-                            return n > i ? t + l : t;
+                                i = E.current.timeToLiveMs,
+                                r = i + E.current.reappearTimeMs;
+                            return n > i ? t + r : t;
                         });
                 }, 100)),
                 () => {
@@ -60,11 +60,11 @@ function m(e) {
             ),
             []
         );
-    let w = () => {
+    let k = () => {
             a(Date.now()), _((e) => e + 1);
         },
-        N = o > 0 && m - o < 1000,
-        k = (0, u.useTransition)(x > 0 && x < m && m - x < I, {
+        N = o > 0 && x - o < 1000,
+        w = (0, d.useTransition)(v > 0 && v < x && x - v < b, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -73,18 +73,18 @@ function m(e) {
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: k(
+              children: w(
                   (e, t) =>
                       t &&
                       (0, i.jsx)(c.animated.div, {
                           style: e,
-                          className: f.clickZoneDebugContainer,
+                          className: m.clickZoneDebugContainer,
                           children: (0, i.jsx)(h.Z, {
-                              className: r()(f.clickZone, N && f.clickBackground),
-                              children: (0, i.jsx)(u.Clickable, {
-                                  onClick: w,
-                                  className: f.clickable,
-                                  children: (0, i.jsxs)(u.Text, {
+                              className: l()(m.clickZone, N && m.clickBackground),
+                              children: (0, i.jsx)(d.Clickable, {
+                                  onClick: k,
+                                  className: m.clickable,
+                                  children: (0, i.jsxs)(d.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'always-white',
                                       children: ['Click Me (', Z, ')']

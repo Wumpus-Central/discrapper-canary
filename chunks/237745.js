@@ -39,13 +39,13 @@ var i = r(995153),
     U = r(955307),
     B = r(661763),
     G = r(649859);
-function Z(e) {
+function F(e) {
     return e && e.__esModule ? e.default : e;
 }
-var F = {};
+var Z = {};
 function V(e) {
     let { 'aria-label': n, ...r } = e,
-        i = (0, G.qb)(Z(F), '@react-aria/breadcrumbs');
+        i = (0, G.qb)(F(Z), '@react-aria/breadcrumbs');
     return {
         navProps: {
             ...(0, B.zL)(r, { labelable: !0 }),
@@ -53,7 +53,7 @@ function V(e) {
         }
     };
 }
-F = {
+Z = {
     'ar-AE': i.Z,
     'bg-BG': a.Z,
     'cs-CZ': s.Z,

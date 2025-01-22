@@ -48,7 +48,7 @@ let m = (e) => {
                           className: p.potionBadge,
                           ...e,
                           children: [
-                              (0, i.jsx)(s.StarShootingIcon, {
+                              (0, i.jsx)(s.ExperimentalConfettiIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 12,

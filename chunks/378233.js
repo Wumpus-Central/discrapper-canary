@@ -175,11 +175,11 @@ let { API_ENDPOINT: m, MEDIA_PROXY_ENDPOINT: g, PROJECT_ENV: E, ASSET_ENDPOINT: 
         let n = e.guild_id;
         return void 0 !== l.Z.getGuild(n);
     },
-    Z = [];
-function F() {
+    F = [];
+function Z() {
     var e, n;
-    return null !== (n = null === (e = o.Z.frecencyWithoutFetchingLatest.favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== n ? n : Z;
+    return null !== (n = null === (e = o.Z.frecencyWithoutFetchingLatest.favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== n ? n : F;
 }
 function V(e) {
-    return F().includes(e);
+    return Z().includes(e);
 }

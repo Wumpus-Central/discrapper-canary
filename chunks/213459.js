@@ -3,7 +3,7 @@ r.d(n, {
         return er;
     },
     If: function () {
-        return eZ;
+        return eF;
     },
     JK: function () {
         return ey;
@@ -72,8 +72,8 @@ function B(e, n, r) {
     );
 }
 let G = new _.Yd('ApplicationCommandIndexStore'),
-    Z = Symbol('currentUser'),
-    F = Symbol('stale'),
+    F = Symbol('currentUser'),
+    Z = Symbol('stale'),
     V = Symbol('current'),
     j = Object.freeze({
         descriptors: [],
@@ -91,7 +91,7 @@ let G = new _.Yd('ApplicationCommandIndexStore'),
         }
     }),
     Y = Object.freeze({
-        serverVersion: F,
+        serverVersion: Z,
         fetchState: { fetching: !1 }
     }),
     W = 5000,
@@ -108,7 +108,7 @@ function Q(e) {
         case 'channel':
             return e.channelId;
         case 'user':
-            return Z;
+            return F;
         case 'application':
             return e.applicationId;
     }
@@ -127,7 +127,7 @@ function X(e, n) {
               }))
             : i &&
               (r = {
-                  serverVersion: F,
+                  serverVersion: Z,
                   fetchState: { fetching: !1 },
                   ...n
               }),
@@ -149,7 +149,7 @@ function ee() {
     q = [];
 }
 function et() {
-    for (let e of Object.values(em.indices)) e.serverVersion = F;
+    for (let e of Object.values(em.indices)) e.serverVersion = Z;
     ee(), (z = !0);
 }
 function en(e) {
@@ -242,7 +242,7 @@ function eo(e) {
                 type: 'guild',
                 guildId: r
             },
-            { serverVersion: null != i ? i : F }
+            { serverVersion: null != i ? i : Z }
         ),
         s = null == a ? void 0 : null === (n = a.result) || void 0 === n ? void 0 : n.sectionIdsByBotId;
     if (null != s)
@@ -254,7 +254,7 @@ function eo(e) {
                         type: 'channel',
                         channelId: n
                     },
-                    { serverVersion: F }
+                    { serverVersion: Z }
                 );
         }
 }
@@ -301,16 +301,16 @@ function eu(e) {
                       type: 'channel',
                       channelId: r
                   },
-            { serverVersion: F }
+            { serverVersion: Z }
         ),
-        em.hasUserStateApplication(n) && X({ type: 'user' }, { serverVersion: F }),
+        em.hasUserStateApplication(n) && X({ type: 'user' }, { serverVersion: Z }),
         em.hasApplicationState(n) &&
             X(
                 {
                     type: 'application',
                     applicationId: n
                 },
-                { serverVersion: F }
+                { serverVersion: Z }
             );
 }
 function ec(e) {
@@ -328,7 +328,7 @@ function ed(e) {
     });
 }
 function ef() {
-    X({ type: 'user' }, { serverVersion: F });
+    X({ type: 'user' }, { serverVersion: Z });
 }
 function e_(e) {
     let { chunks: n } = e,
@@ -372,11 +372,11 @@ class ep extends (i = h.ZP.Store) {
     }
     getUserState() {
         var e;
-        return null !== (e = this.indices[Z]) && void 0 !== e ? e : Y;
+        return null !== (e = this.indices[F]) && void 0 !== e ? e : Y;
     }
     hasUserStateApplication(e) {
         var n, r;
-        let i = this.indices[Z];
+        let i = this.indices[F];
         return e in (null !== (r = null == i ? void 0 : null === (n = i.result) || void 0 === n ? void 0 : n.sections) && void 0 !== r ? r : {});
     }
     getApplicationState(e) {
@@ -735,7 +735,7 @@ function eN(e) {
         let e = eC(C.Tm[k.bi.BUILT_IN], x, !0, !0, P);
         null != e && w.push(e);
     }
-    let Z = w.flatMap((e) =>
+    let F = w.flatMap((e) =>
         e.data.map((n) => ({
             ...n,
             section: e.section
@@ -752,7 +752,7 @@ function eN(e) {
                       guild: n
                   }
                 : void 0;
-        Z.sort((e, n) => {
+        F.sort((e, n) => {
             if (b.commands.useScore) {
                 var i, a;
                 let r = null !== (i = e.score) && void 0 !== i ? i : 0,
@@ -768,7 +768,7 @@ function eN(e) {
         });
     }
     return {
-        commands: Z,
+        commands: F,
         descriptors: w.map((e) => e.section),
         sectionedCommands: w,
         loading: (null == c ? void 0 : c.fetchState.fetching) === !0 || (null == d ? void 0 : d.fetchState.fetching) === !0 || (null != g && (null === (i = _.get(g)) || void 0 === i ? void 0 : i.fetchState.fetching) === !0)
@@ -925,7 +925,7 @@ function eB(e, n) {
 function eG(e, n) {
     return eB(e, n);
 }
-function eZ(e, n) {
+function eF(e, n) {
     var r, i, a, s, o, l;
     let u, c;
     if (n === k.bi.BUILT_IN)

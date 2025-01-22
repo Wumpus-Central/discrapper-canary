@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(199902),
     C = n(592125),
     y = n(430824),
-    Z = n(496675),
-    b = n(979651),
+    b = n(496675),
+    Z = n(979651),
     T = n(626135),
     N = n(153066),
     A = n(981631),
@@ -52,9 +52,9 @@ function P(e) {
 let R = d.Z.Types;
 t.Z = function (e) {
     let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: m = !1, analyticsParams: N, ...R } = e,
-        M = (0, s.e7)([b.Z, C.Z], () => {
+        M = (0, s.e7)([Z.Z, C.Z], () => {
             var e;
-            return C.Z.getChannel(null === (e = b.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
+            return C.Z.getChannel(null === (e = Z.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
         }),
         { enableHangStatus: O } = _.n.useExperiment(
             {
@@ -64,11 +64,11 @@ t.Z = function (e) {
             { autoTrackExposure: !1 }
         ),
         L = (0, s.e7)([E.Z], () => (a ? E.Z.getAnyStreamForUser(n.id) : null)),
-        k = O && Z.Z.can(A.Plq.CONNECT, M),
+        k = O && b.Z.can(A.Plq.CONNECT, M),
         D = (null == t ? void 0 : t.type) === A.IIU.HANG_STATUS && k ? M : null,
-        U = (0, s.e7)([y.Z, b.Z, C.Z], () => {
+        U = (0, s.e7)([y.Z, Z.Z, C.Z], () => {
             var e, i;
-            return (0, c.Z)(t, A.xjy.EMBEDDED) ? y.Z.getGuild(null === (e = C.Z.getChannel(null === (i = b.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? y.Z.getGuild(D.getGuildId()) : null;
+            return (0, c.Z)(t, A.xjy.EMBEDDED) ? y.Z.getGuild(null === (e = C.Z.getChannel(null === (i = Z.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? y.Z.getGuild(D.getGuildId()) : null;
         }),
         V = (0, s.e7)([y.Z], () => (null != L ? y.Z.getGuild(L.guildId) : null)),
         F = (0, s.e7)([f.Z], () => {

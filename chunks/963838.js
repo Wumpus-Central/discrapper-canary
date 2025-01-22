@@ -1,12 +1,12 @@
 r.d(n, {
     Iu: function () {
-        return Z;
+        return F;
     },
     Jw: function () {
         return B;
     },
     _r: function () {
-        return F;
+        return Z;
     },
     cX: function () {
         return j;
@@ -76,7 +76,7 @@ let M = {
                     });
             })
     ),
-    Z = (e, n) => {
+    F = (e, n) => {
         let r = B[e];
         if (null != n && e === w.q.PREMIUM) {
             let e = n.end + 1;
@@ -84,7 +84,7 @@ let M = {
         }
         return Math.floor(Math.random() * r.length);
     };
-function F(e) {
+function Z(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w.v;
     if (null != e.id) {
         var r;
