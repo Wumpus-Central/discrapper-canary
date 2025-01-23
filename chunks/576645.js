@@ -1,33 +1,39 @@
 r.d(n, {
     J: function () {
-        return P;
-    },
-    Ou: function () {
-        return B;
-    },
-    R2: function () {
-        return x;
-    },
-    T$: function () {
-        return D;
-    },
-    Uu: function () {
         return M;
     },
-    Zm: function () {
-        return L;
+    Ou: function () {
+        return G;
     },
-    bK: function () {
-        return k;
-    },
-    mx: function () {
-        return U;
-    },
-    t6: function () {
+    R2: function () {
         return w;
     },
+    T$: function () {
+        return L;
+    },
+    Uu: function () {
+        return k;
+    },
+    ZC: function () {
+        return V;
+    },
+    Zm: function () {
+        return x;
+    },
+    bK: function () {
+        return U;
+    },
+    mx: function () {
+        return B;
+    },
+    t6: function () {
+        return P;
+    },
     tv: function () {
-        return G;
+        return Z;
+    },
+    vY: function () {
+        return F;
     }
 });
 var i = r(47120);
@@ -51,12 +57,13 @@ var a = r(192379),
     I = r(980463),
     T = r(823961),
     S = r(896835),
-    A = r(981631),
-    C = r(37113);
-let N = 3500000,
-    R = 10000,
-    O = new l.Yd('HDStreamingConsumableModal'),
-    D = (e) => {
+    A = r(477931),
+    C = r(981631),
+    N = r(37113);
+let R = 3500000,
+    O = 10000,
+    D = new l.Yd('HDStreamingConsumableModal'),
+    L = (e) => {
         let n = (0, u.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
             r = (0, u.e7)([v.default], () => {
                 var e;
@@ -72,32 +79,32 @@ let N = 3500000,
         (0, u.e7)(
             [E.Z],
             () => {
-                if (null == s || Date.now() - s > R) {
+                if (null == s || Date.now() - s > O) {
                     let e = i.map((e) => {
                         var n;
                         let r = (0, p.V9)(e),
                             i = E.Z.getRTCConnection(r);
                         return null == i ? void 0 : null === (n = i.getVideoStats()) || void 0 === n ? void 0 : n.inbound_bitrate_estimate_percentile99;
                     });
-                    O.info('Setting bitrates', e), d(e), l(Date.now());
+                    D.info('Setting bitrates', e), d(e), l(Date.now());
                 }
             },
             [s, i]
         );
-        let f = (0, a.useMemo)(() => 0 === c.length || (!c.some((e) => null == e || e < N) && !0), [c]);
-        return ((null == n ? void 0 : n.premiumTier) === A.Eu4.NONE || (null == n ? void 0 : n.premiumTier) === A.Eu4.TIER_1) && f && !o;
+        let f = (0, a.useMemo)(() => 0 === c.length || (!c.some((e) => null == e || e < R) && !0), [c]);
+        return ((null == n ? void 0 : n.premiumTier) === C.Eu4.NONE || (null == n ? void 0 : n.premiumTier) === C.Eu4.TIER_1) && f && !o;
     },
-    L = (e, n) => {
+    x = (e, n) => {
         let r = (0, u.e7)([v.default], () => {
                 var e;
                 return null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
             i = (0, u.Wu)([h.Z], () => (null == e ? [] : h.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== r))),
             a = (0, S.j)(n),
-            o = D(e);
+            o = L(e);
         return a && o && i.length > 0;
     };
-function x(e) {
+function w(e) {
     let [n, r, i] = (0, u.Wu)([T.Z], () => [T.Z.isFetchingPrice(e), T.Z.getPrice(e), T.Z.getErrored(e)]);
     return (
         (0, a.useEffect)(() => {
@@ -110,7 +117,7 @@ function x(e) {
         }
     );
 }
-function w(e) {
+function P(e) {
     let [n, r, i, o, s] = (0, u.Wu)([T.Z], () => [T.Z.isEntitlementFetched(e), T.Z.fetchPotionCount(e), T.Z.isEntitlementFetching(e), T.Z.getEntitlement(e), T.Z.getErrored(e)]);
     return (
         (0, a.useEffect)(() => {
@@ -124,7 +131,7 @@ function w(e) {
         }
     );
 }
-function P(e, n) {
+function M(e, n) {
     let r = (0, a.useRef)(!0),
         i = null == e ? void 0 : e.hdStreamingUntil,
         o = (0, a.useRef)(n);
@@ -139,32 +146,49 @@ function P(e, n) {
             if (null != i && new Date(i) > new Date()) return o.current();
         }, [i]);
 }
-function M(e) {
-    P(e, () => {
+function k(e) {
+    M(e, () => {
         let n = h.Z.getCurrentUserActiveStream();
         if (null != n && n.channelId === e.id) {
             let e = m.Z.getState().goLiveSource;
             (0, I.x8)(null == e ? void 0 : e.quality);
-            let n = (0, f.s)(C.LY.RESOLUTION_1440, C.ws.FPS_60, e);
+            let n = (0, f.s)(N.LY.RESOLUTION_1440, N.ws.FPS_60, e);
             c.Z.setGoLiveSource(n);
         }
     });
 }
-function k() {
+function U() {
     var e;
     let n = (null !== (e = s().name) && void 0 !== e ? e : 'unknown').toLowerCase(),
         r = (0, u.e7)([y.Z], () => y.Z.isFocused()),
         i = (0, u.e7)([d.Z], () => d.Z.useReducedMotion);
     return 'safari' === n || !r || i;
 }
-function U(e) {
-    b.default.track(A.rMx.CONSUMABLE_HD_STREAMING_ENTRYPOINT, { location: e });
-}
 function B(e) {
+    b.default.track(C.rMx.CONSUMABLE_HD_STREAMING_ENTRYPOINT, { location: e });
+}
+function G(e) {
     let n = (0, u.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
         r = (0, S.j)('VoiceEffectsActionBar');
-    return ((null == n ? void 0 : n.premiumTier) === A.Eu4.NONE || (null == n ? void 0 : n.premiumTier) === A.Eu4.TIER_1) && (null == e ? void 0 : e.type) === A.d4z.GUILD_VOICE && !(null == e ? void 0 : e.isHDStreamSplashed) && r;
+    return ((null == n ? void 0 : n.premiumTier) === C.Eu4.NONE || (null == n ? void 0 : n.premiumTier) === C.Eu4.TIER_1) && (null == e ? void 0 : e.type) === C.d4z.GUILD_VOICE && !(null == e ? void 0 : e.isHDStreamSplashed) && r;
 }
-function G(e, n, r, i) {
-    return '' !== e && !n && null == r && (null == i || 0 === i.length);
+function Z(e, n, r, i) {
+    return !n && null == r && ('' !== e || (null != i && i.length > 0));
+}
+function F(e) {
+    if (null != e)
+        return {
+            message_emoji: {
+                id: e.emoji.id,
+                name: (0, I.zI)(e.emoji)
+            }
+        };
+}
+function V(e) {
+    if (null == e || null == e.potions || 0 === e.potions.length) return null;
+    for (let i of e.potions) {
+        var n, r;
+        if (i.type === A.B.CONFETTI && i.used_by === (null === (n = v.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && (null === (r = i.emoji) || void 0 === r ? void 0 : r.length) > 0) return i.emoji[0];
+    }
+    return null;
 }
