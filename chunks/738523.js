@@ -4,5 +4,6 @@ e.exports = {
     total: 'total_a5bc92',
     video: 'video_a5bc92',
     extraLong: 'extraLong_a5bc92',
-    videoIcon: 'videoIcon_a5bc92'
+    videoIcon: 'videoIcon_a5bc92',
+    popoutHeaderContainer: 'popoutHeaderContainer_a5bc92'
 };
