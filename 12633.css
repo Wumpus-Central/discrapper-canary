@@ -34840,7 +34840,8 @@ html:not(.visual-refresh) .root_b93e3f {
     border: 1px solid var(--border-faint);
     border-radius: var(--radius-sm);
     transition: border-color.2s ease;
-    box-shadow: var(--shadow-low)
+    box-shadow: var(--shadow-low);
+    background: var(--bg-overlay-floating, var(--chat-background-default))
 }
 
 :where(.visual-refresh-chat-input) .channelTextArea_bdf0de:focus-within {
