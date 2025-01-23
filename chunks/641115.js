@@ -114,15 +114,15 @@ function U(e) {
 }
 function w(e) {
     let { onClose: n, selectedPreset: t, selectedResolution: s, selectedFPS: r, onResolutionChange: a, onFPSChange: S, onPresetChange: D, targetGuildPremiumTier: w, captureDeviceSelected: B } = e,
-        G = (0, c.e7)([N.default], () => {
+        y = (0, c.e7)([N.default], () => {
             let e = N.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
-        y = (0, c.e7)([p.Z, j.Z], () => j.Z.getChannel(p.Z.getVoiceChannelId())),
-        F = I.ZP.canStreamQuality(I.U2.MID, G),
+        G = (0, c.e7)([p.Z, j.Z], () => j.Z.getChannel(p.Z.getVoiceChannelId())),
+        F = I.ZP.canStreamQuality(I.U2.MID, y),
         { location: O } = (0, g.O)(),
         z = (0, h.Zq)({ autoTrackExposure: !1 }),
-        V = (0, I.I5)(G, A.p9.TIER_1);
+        V = (0, I.I5)(y, A.p9.TIER_1);
     C.Z.useExperiment(
         { location: 'Go Live Modal' },
         {
@@ -131,8 +131,8 @@ function w(e) {
         }
     );
     let W = (0, Z.B4)({ location: 'StreamSettings' }),
-        H = N.default.getUser(null == y ? void 0 : y.hdStreamingBuyerId),
-        Y = null != y && null != y.hdStreamingUntil && new Date(y.hdStreamingUntil) > new Date() && null != H,
+        H = N.default.getUser(null == G ? void 0 : G.hdStreamingBuyerId),
+        Y = null != G && null != G.hdStreamingUntil && new Date(G.hdStreamingUntil) > new Date() && null != H,
         K = (0, v.So)(u.q.STREAM_HIGH_QUALITY),
         X = (!F && !z) || K,
         [J, q] = i.useState(!1),
@@ -146,7 +146,7 @@ function w(e) {
                 U({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, T.Z)(t, e.value, r, G, w, y),
+                    needsPremium: !(0, T.Z)(t, e.value, r, y, w, G),
                     needsDemo: (K || W) && e.value !== R.LY.RESOLUTION_720,
                     analyticsLocation: $,
                     onClick: () => a(e.value),
@@ -160,7 +160,7 @@ function w(e) {
                 U({
                     type: e,
                     selected: e.value === r,
-                    needsPremium: !(0, T.Z)(t, s, e.value, G, w, y),
+                    needsPremium: !(0, T.Z)(t, s, e.value, y, w, G),
                     needsDemo: (K || W) && e.value === R.ws.FPS_60,
                     analyticsLocation: $,
                     onClick: () => S(e.value),
@@ -211,11 +211,11 @@ function w(e) {
                               : null,
                           W && (0, l.jsx)(E.c, {}),
                           Y &&
-                              null != y.hdStreamingUntil &&
+                              null != G.hdStreamingUntil &&
                               (0, l.jsx)(f.Z, {
-                                  streamingUntil: y.hdStreamingUntil,
+                                  streamingUntil: G.hdStreamingUntil,
                                   user: H,
-                                  channel: y
+                                  channel: G
                               })
                       ]
                   })
@@ -246,11 +246,11 @@ function w(e) {
                               : null,
                           W && (0, l.jsx)(E.c, {}),
                           Y &&
-                              null != y.hdStreamingUntil &&
+                              null != G.hdStreamingUntil &&
                               (0, l.jsx)(f.Z, {
-                                  streamingUntil: null == y ? void 0 : y.hdStreamingUntil,
+                                  streamingUntil: null == G ? void 0 : G.hdStreamingUntil,
                                   user: H,
-                                  channel: y
+                                  channel: G
                               })
                       ]
                   });

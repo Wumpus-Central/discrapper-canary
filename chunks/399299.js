@@ -39,8 +39,8 @@ var l = t(200651),
     U = t(537135),
     w = t(641115),
     B = t(143135),
-    G = t(70722),
-    y = t(981631),
+    y = t(70722),
+    G = t(981631),
     F = t(526761),
     O = t(388032),
     z = t(949949),
@@ -151,9 +151,9 @@ function K(e) {
         }),
         s = v.eo.useSetting(),
         u = i.useCallback((e, n) => {
-            v.eo.updateSetting(n), E.default.track(y.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: n });
+            v.eo.updateSetting(n), E.default.track(G.rMx.NOTIFY_STREAM_SETTING_UPDATE, { value: n });
         }, []);
-    return t >= 2 && t <= G.tB
+    return t >= 2 && t <= y.tB
         ? (0, l.jsx)(o.FormItem, {
               className: r()(V.modalContent, z.checkboxRow),
               children: (0, l.jsx)(o.Checkbox, {
@@ -211,7 +211,7 @@ function J(e) {
     });
 }
 function q(e) {
-    let { selectedSource: n, selectedFPS: t, selectedChannelId: s, selectedPreset: r, selectedResolution: o, sourceChanged: c, selectedGuildId: m, targetGuildPremiumTier: g, selectSource: h, selectGuild: x, sound: v, previewDisabled: f, onClose: j, onChangeSelectedFPS: T, onChangeSelectedResolution: E, onChangeSelectedPreset: R, onChangeSelectedChannelId: A, onChangeSource: M, onChangeAudioDevice: U, onChangeGuild: B, onChangeSound: G, onChangePreviewDisabled: V } = e,
+    let { selectedSource: n, selectedFPS: t, selectedChannelId: s, selectedPreset: r, selectedResolution: o, sourceChanged: c, selectedGuildId: m, targetGuildPremiumTier: g, selectSource: h, selectGuild: x, sound: v, previewDisabled: f, onClose: j, onChangeSelectedFPS: T, onChangeSelectedResolution: E, onChangeSelectedPreset: R, onChangeSelectedChannelId: A, onChangeSource: M, onChangeAudioDevice: U, onChangeGuild: B, onChangeSound: y, onChangePreviewDisabled: V } = e,
         q = (0, a.e7)([N.Z, C.Z], () => C.Z.getChannel(N.Z.getVoiceChannelId())),
         Q = (0, a.e7)([b.Z], () => b.Z.GPUDriversOutdated),
         $ = (0, a.e7)([b.Z], () => b.Z.problematicGPUDriver),
@@ -243,7 +243,7 @@ function q(e) {
                           null != n && null == en
                               ? (0, l.jsx)(X, {
                                     enabled: v,
-                                    onChange: G,
+                                    onChange: y,
                                     screen: n.id.startsWith('screen')
                                 })
                               : null
@@ -264,14 +264,14 @@ function q(e) {
                   }),
             null != m && el && ei ? (0, l.jsx)(K, { guildId: m }) : null,
             Q ? (0, l.jsx)(Y, { text: O.intl.string(O.t.q65tS0) }) : null,
-            $ ? (0, l.jsx)(Y, { text: O.intl.format(O.t.RrLvub, { helpCenterLink: P.Z.getArticleURL(y.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            $ ? (0, l.jsx)(Y, { text: O.intl.format(O.t.RrLvub, { helpCenterLink: P.Z.getArticleURL(G.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             es &&
                 (0, l.jsx)(Z.Z, {
                     look: Z.z.WARNING,
                     className: z.hardwareWarning,
                     children: O.intl.format(O.t.zCLXws, {
                         onClick: () => {
-                            j(), u.Z.open(y.oAB.VOICE, null, { scrollPosition: F.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
+                            j(), u.Z.open(G.oAB.VOICE, null, { scrollPosition: F.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
                         }
                     })
                 }),

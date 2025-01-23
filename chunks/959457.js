@@ -85,26 +85,26 @@ function F() {
     (i = null), (a = null), B();
 }
 function V(e) {
-    let { streamType: n, guildId: r, channelId: i, appContext: a, pid: o, sourceId: s } = e,
-        l = (0, g.V9)({
+    let { streamType: n, guildId: r, channelId: i, appContext: a, pid: o, sourceId: s, nativePickerStyleUsed: l } = e,
+        u = (0, g.V9)({
             streamType: n,
             guildId: r,
             channelId: i,
             ownerId: I.default.getId()
         });
     if (
-        ((O[l] = a),
+        ((O[u] = a),
         d().forEach(P, (e) => {
             let { analyticsContext: n } = e;
-            n.setActionContext(a);
+            n.setActionContext(a), n.setNativePickerStyleUsed(l);
         }),
-        (x[l] = s),
-        (L[l] = o),
+        (x[u] = s),
+        (L[u] = o),
         null != o)
     ) {
         let e = _.ZP.getGameForPID(o);
         null != e &&
-            (D[l] = {
+            (D[u] = {
                 name: e.name,
                 id: e.id,
                 exe: e.exeName,
