@@ -57,8 +57,19 @@ class w {
     setNativePickerStyleUsed(e) {
         this.nativePickerStyleUsed = e;
     }
+    trackStart() {
+        this.startTime = new Date().getTime();
+    }
+    trackEnd() {
+        this.endTime = new Date().getTime();
+    }
+    getDuration() {
+        var e, n;
+        let r = new Date().getTime();
+        return (null !== (e = this.endTime) && void 0 !== e ? e : r) - (null !== (n = this.startTime) && void 0 !== n ? n : r);
+    }
     constructor({ streamRegion: e, streamApplication: n, streamSourceType: r, actionContext: i, numViewers: a }) {
-        O(this, 'streamRegion', void 0), O(this, 'streamApplication', void 0), O(this, 'streamSourceType', void 0), O(this, 'actionContext', void 0), O(this, 'maxViewers', void 0), O(this, 'nativePickerStyleUsed', void 0), (this.streamRegion = e), (this.streamApplication = n), (this.streamSourceType = r), (this.actionContext = i), (this.maxViewers = a);
+        O(this, 'streamRegion', void 0), O(this, 'streamApplication', void 0), O(this, 'streamSourceType', void 0), O(this, 'actionContext', void 0), O(this, 'maxViewers', void 0), O(this, 'nativePickerStyleUsed', void 0), O(this, 'startTime', void 0), O(this, 'endTime', void 0), (this.streamRegion = e), (this.streamApplication = n), (this.streamSourceType = r), (this.actionContext = i), (this.maxViewers = a);
     }
 }
 class P extends u.Z {
@@ -186,6 +197,7 @@ class P extends u.Z {
                                 share_game_exe: P,
                                 share_game_distributor: M,
                                 picker_type_used: null != this.analyticsContext.nativePickerStyleUsed ? 'native' : 'internal',
+                                duration: this.analyticsContext.getDuration(),
                                 ...O
                             });
                         });
