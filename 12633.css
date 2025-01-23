@@ -11990,12 +11990,16 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     align-items: center;
     text-align: center;
     padding: 0 var(--spacing-4);
-    margin: 2px var(--spacing-4);
+    margin: 2px 0;
     border-radius: var(--radius-sm);
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none
+}
+
+.inlineTextArea_f38a29 {
+    margin: 2px var(--spacing-4)
 }
 
 .soundmojiEmoji_f38a29 {
