@@ -61,74 +61,78 @@ function S(e) {
                 children: (0, i.jsx)(o.ScrollerAuto, {
                     className: E.settingsScroller,
                     orientation: 'auto',
-                    children: (0, i.jsxs)('main', {
-                        className: E.settingsContent,
-                        children: [
-                            (0, i.jsx)(
-                                o.FormSection,
-                                {
-                                    className: s()(E.header),
-                                    children: (0, i.jsx)(o.FormTitle, {
-                                        tag: o.FormTitleTags.H1,
-                                        children: b.intl.string(b.t['S40K6+'])
-                                    })
-                                },
-                                'header'
-                            ),
-                            (0, i.jsx)(
-                                o.FormSection,
-                                {
-                                    children: (0, i.jsxs)('div', {
-                                        className: s()(E.tableContainer),
-                                        children: [
-                                            (0, i.jsx)(f.Z, { guild: n }),
-                                            (0, i.jsx)(p.Z, { guild: n }),
-                                            S
-                                                ? (0, i.jsxs)('div', {
-                                                      className: s()(E.mainTableContainer),
-                                                      children: [
-                                                          (0, i.jsx)(_.Z, {
-                                                              guild: n,
-                                                              ref: A
-                                                          }),
-                                                          (0, i.jsx)(I.Z, {
-                                                              guild: n,
-                                                              searchState: L,
-                                                              compact: !0,
-                                                              onSelectRow: y,
-                                                              onResetForNewMembers: Z
-                                                          }),
-                                                          L !== v.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(N.Z, { guildId: n.id })
-                                                      ]
-                                                  })
-                                                : (0, i.jsx)('div', {
-                                                      className: s()(E.movedTable),
-                                                      children: (0, i.jsxs)('div', {
-                                                          className: s()(E.noResultsContainer),
+                    children: (0, i.jsx)(o.ScrollerAuto, {
+                        className: E.settingsHorizontalScroller,
+                        orientation: 'auto',
+                        children: (0, i.jsxs)('main', {
+                            className: E.settingsContent,
+                            children: [
+                                (0, i.jsx)(
+                                    o.FormSection,
+                                    {
+                                        className: s()(E.header),
+                                        children: (0, i.jsx)(o.FormTitle, {
+                                            tag: o.FormTitleTags.H1,
+                                            children: b.intl.string(b.t['S40K6+'])
+                                        })
+                                    },
+                                    'header'
+                                ),
+                                (0, i.jsx)(
+                                    o.FormSection,
+                                    {
+                                        children: (0, i.jsxs)('div', {
+                                            className: s()(E.tableContainer),
+                                            children: [
+                                                (0, i.jsx)(f.Z, { guild: n }),
+                                                (0, i.jsx)(p.Z, { guild: n }),
+                                                S
+                                                    ? (0, i.jsxs)('div', {
+                                                          className: s()(E.mainTableContainer),
                                                           children: [
-                                                              (0, i.jsx)('div', {
-                                                                  className: s()(E.__invalid_noResultsIconContainer),
-                                                                  children: (0, i.jsx)(T.Z, {})
+                                                              (0, i.jsx)(_.Z, {
+                                                                  guild: n,
+                                                                  ref: A
                                                               }),
-                                                              (0, i.jsx)(o.Text, {
-                                                                  variant: 'text-md/normal',
-                                                                  color: 'text-muted',
-                                                                  children: b.intl.format(b.t.Bf6yxM, {
-                                                                      onClick: (e) => {
-                                                                          if (null != n) e.preventDefault(), u.Z.close(), (0, x._X)(n.id);
-                                                                      }
-                                                                  })
-                                                              })
+                                                              (0, i.jsx)(I.Z, {
+                                                                  guild: n,
+                                                                  searchState: L,
+                                                                  compact: !0,
+                                                                  onSelectRow: y,
+                                                                  onResetForNewMembers: Z
+                                                              }),
+                                                              L !== v.po.SUCCESS_STILL_INDEXING && (0, i.jsx)(N.Z, { guildId: n.id })
                                                           ]
                                                       })
-                                                  })
-                                        ]
-                                    })
-                                },
-                                'body'
-                            ),
-                            (0, i.jsx)(C.Z, { guildId: n.id })
-                        ]
+                                                    : (0, i.jsx)('div', {
+                                                          className: s()(E.movedTable),
+                                                          children: (0, i.jsxs)('div', {
+                                                              className: s()(E.noResultsContainer),
+                                                              children: [
+                                                                  (0, i.jsx)('div', {
+                                                                      className: s()(E.__invalid_noResultsIconContainer),
+                                                                      children: (0, i.jsx)(T.Z, {})
+                                                                  }),
+                                                                  (0, i.jsx)(o.Text, {
+                                                                      variant: 'text-md/normal',
+                                                                      color: 'text-muted',
+                                                                      children: b.intl.format(b.t.Bf6yxM, {
+                                                                          onClick: (e) => {
+                                                                              if (null != n) e.preventDefault(), u.Z.close(), (0, x._X)(n.id);
+                                                                          }
+                                                                      })
+                                                                  })
+                                                              ]
+                                                          })
+                                                      })
+                                            ]
+                                        })
+                                    },
+                                    'body'
+                                ),
+                                (0, i.jsx)(C.Z, { guildId: n.id })
+                            ]
+                        })
                     })
                 })
             })
