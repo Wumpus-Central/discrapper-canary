@@ -43,6 +43,11 @@ let s = [
             type: 'image/webp'
         },
         {
+            reName: /\.avif$/i,
+            name: (e) => 'image'.concat(e, '.avif'),
+            type: 'image/avif'
+        },
+        {
             reName: /\.heic$/i,
             name: (e) => 'image'.concat(e, '.heic'),
             type: 'image/heic'
