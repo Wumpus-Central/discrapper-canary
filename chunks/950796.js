@@ -55,8 +55,10 @@ function y(e) {
 function b(e) {
     let { leading: n, title: r, trailing: o, windowKey: l, short: u } = e,
         c = (0, f.getPlatform)(),
-        d = a.useCallback(() => E(l), [l]);
+        d = a.useCallback(() => E(l), [l]),
+        p = c === f.PlatformTypes.WINDOWS;
     return (0, i.jsxs)('div', {
+        'data-windows': p,
         className: s()(_.bar, { [_.shortBar]: u }),
         onDoubleClick: d,
         children: [
@@ -87,17 +89,19 @@ function b(e) {
 function I(e) {
     let { fixed: n = !1, show: r, windowKey: o } = e,
         l = (0, f.getPlatform)(),
-        u = a.useCallback(() => E(o), [o]);
+        u = a.useCallback(() => E(o), [o]),
+        c = l === f.PlatformTypes.WINDOWS;
     return l === f.PlatformTypes.WEB
         ? null
         : (0, i.jsx)('div', {
+              'data-windows': c,
               className: s()(_.bar, _.systemBar, {
                   [_.fixed]: n,
                   [_.show]: r
               }),
               onDoubleClick: u,
               children:
-                  l === f.PlatformTypes.WINDOWS &&
+                  c &&
                   (0, i.jsx)('div', {
                       className: _.trailing,
                       onDoubleClick: v,

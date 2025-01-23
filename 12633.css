@@ -9015,6 +9015,16 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     border-radius: 3px
 }
 
+.visual-refresh .wrapperAudio_f72aac {
+    background-color: var(--background-mod-subtle);
+    border-color: var(--border-subtle)
+}
+
+.visual-refresh .audioControls_f72aac {
+    border-radius: var(--radius-sm);
+    background-color: var(--opacity-black-40)
+}
+
 .controlIcon_f72aac {
     display: block;
     width: 24px;
@@ -10073,6 +10083,12 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     color: var(--brand-500)
 }
 
+.visual-refresh .container_d6cb89 {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    transition: background-color.2s ease-in-out, border-color.2s ease-in-out
+}
+
 .playButtonContainer_d6cb89 {
     height: 32px;
     width: 32px;
@@ -10133,6 +10149,10 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 
 .theme-dark .container_d6cb89:not(.playing_d6cb89) .playButtonContainer_d6cb89:active {
     background: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(151.11deg, var(--brand-460)16.55%, var(--brand-560)104.36%)
+}
+
+.visual-refresh .playing_d6cb89 {
+    border-color: var(--opacity-blurple-60)
 }
 
 .oldPlayIconSpacing_d6cb89 {
@@ -35044,6 +35064,10 @@ html:not(.visual-refresh) .root_b93e3f {
     padding-left: 16px
 }
 
+.visual-refresh .textAreaWithoutAttachmentButton_bdf0de {
+    margin-left: 0
+}
+
 .textAreaForPostCreation_bdf0de {
     padding: 0 !important
 }
@@ -35117,6 +35141,10 @@ html:not(.visual-refresh) .root_b93e3f {
 :where(.visual-refresh) .channelTextArea_bdf0de {
     border: 1px solid var(--border-faint);
     border-radius: var(--radius-sm)
+}
+
+:where(.visual-refresh) .inner_bdf0de {
+    padding-left: calc(-1px + var(--space-16))
 }
 
 :where(.visual-refresh) .themedBackground_bdf0de {
@@ -37593,6 +37621,10 @@ div.popoutCloseButton_d523a2:hover {
     max-width: 100%;
     -o-object-fit: contain;
     object-fit: contain
+}
+
+.visual-refresh .media_f847a3 {
+    border-radius: var(--radius-md)
 }
 
 .media_f847a3.sizeClip_f847a3 {
@@ -43958,16 +43990,16 @@ img.thumbnail_c64476 {
 }
 
 .visual-refresh .icon_fc4f04 {
-    width: 20px;
-    height: 20px
+    width: var(--chat-input-icon-size);
+    height: var(--chat-input-icon-size)
 }
 
 .visual-refresh .iconWrapper_fc4f04 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 24px;
-    width: 24px;
+    height: var(--space-32);
+    width: var(--space-32);
     margin: 0
 }
 
@@ -44680,6 +44712,10 @@ img.thumbnail_c64476 {
 
 .childWrapperNoHoverBg_f90abb {
     background-color: var(--background-primary)
+}
+
+.visual-refresh .childWrapperNoHoverBg_f90abb {
+    background-color: var(--background-surface-higher)
 }
 
 .wrapper_f90abb:hover .childWrapperHoverScale_f90abb,
@@ -48759,6 +48795,10 @@ html.disable-forced-colors * {
     -webkit-app-region: drag
 }
 
+.bar_a5e357[data-windows=true] {
+    padding-right: 0
+}
+
 .shortBar_a5e357 {
     --custom-app-top-bar-height: 24px
 }
@@ -48823,8 +48863,7 @@ html.disable-forced-colors * {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: var(--space-4);
-    margin-right: calc(-1*var(--space-8))
+    gap: var(--space-4)
 }
 
 .winButtonsWithDivider_a5e357:before {
@@ -60565,7 +60604,7 @@ html.disable-forced-colors * {
     --background-message-highlight: hsl(var(--opacity-blurple-16-hsl) / 0.1607843137254902);
     --background-message-highlight-hover: hsl(var(--opacity-blurple-12-hsl) / 0.12156862745098039);
     --background-message-hover: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
-    --background-modifier-accent: hsl(var(--opacity-28-hsl) / 0.2784313725490196);
+    --background-modifier-accent: hsl(var(--opacity-24-hsl) / 0.23921568627450981);
     --background-modifier-active: hsl(var(--opacity-20-hsl) / 0.2);
     --background-modifier-hover: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
     --background-modifier-selected: hsl(var(--opacity-28-hsl) / 0.2784313725490196);
@@ -60578,9 +60617,9 @@ html.disable-forced-colors * {
     --bg-mod-faint: hsl(var(--opacity-12-hsl) / 0.12156862745098039);
     --bg-mod-strong: hsl(var(--opacity-28-hsl) / 0.2784313725490196);
     --bg-mod-subtle: hsl(var(--opacity-20-hsl) / 0.2);
-    --border-faint: hsl(var(--opacity-20-hsl) / 0.2);
-    --border-strong: hsl(var(--opacity-48-hsl) / 0.47843137254901963);
-    --border-subtle: hsl(var(--opacity-28-hsl) / 0.2784313725490196);
+    --border-faint: hsl(var(--opacity-16-hsl) / 0.1607843137254902);
+    --border-strong: hsl(var(--opacity-44-hsl) / 0.4392156862745098);
+    --border-subtle: hsl(var(--opacity-24-hsl) / 0.23921568627450981);
     --button-danger-background: var(--red-new-50);
     --button-danger-background-active: var(--red-new-61);
     --button-danger-background-disabled: var(--red-new-50);
@@ -60633,7 +60672,7 @@ html.disable-forced-colors * {
     --info-warning-background: hsl(var(--opacity-yellow-20-hsl) / 0.2);
     --info-warning-text: var(--yellow-new-43);
     --input-background: hsl(var(--opacity-black-8-hsl) / 0.0784313725490196);
-    --input-border: hsl(var(--opacity-36-hsl) / 0.3607843137254902);
+    --input-border: hsl(var(--opacity-32-hsl) / 0.3215686274509804);
     --interactive-active: var(--neutral-7);
     --interactive-hover: var(--neutral-27);
     --interactive-normal: var(--neutral-27);
@@ -60648,7 +60687,7 @@ html.disable-forced-colors * {
     --scrollbar-auto-thumb: var(--neutral-45);
     --scrollbar-auto-track: hsl(var(--transparent-hsl) / 0);
     --scrollbar-thin-thumb: var(--neutral-46);
-    --spine-default: hsl(var(--opacity-48-hsl) / 0.47843137254901963);
+    --spine-default: hsl(var(--opacity-44-hsl) / 0.4392156862745098);
     --text-brand: var(--blurple-41);
     --text-link: var(--blue-new-42);
     --text-muted: var(--neutral-33);
@@ -60657,7 +60696,7 @@ html.disable-forced-colors * {
     --text-primary: var(--neutral-7);
     --text-secondary: var(--neutral-27);
     --text-warning: var(--yellow-new-43);
-    --app-border-frame: hsl(var(--opacity-28-hsl) / 0.2784313725490196);
+    --app-border-frame: hsl(var(--opacity-24-hsl) / 0.23921568627450981);
     --background-base-low: var(--neutral-95);
     --background-base-lower: var(--neutral-97);
     --background-base-lowest: var(--neutral-100);
@@ -60675,7 +60714,7 @@ html.disable-forced-colors * {
     --background-surface-higher: var(--neutral-87);
     --background-surface-highest: var(--neutral-83);
     --border-feedback-critical: hsl(var(--opacity-red-24-hsl) / 0.23921568627450981);
-    --border-normal: hsl(var(--opacity-36-hsl) / 0.3607843137254902);
+    --border-normal: hsl(var(--opacity-32-hsl) / 0.3215686274509804);
     --chat-background-default: var(--neutral-92);
     --checkbox-background-checked: var(--brand-500);
     --checkbox-background-default: hsl(var(--opacity-4-hsl) / 0.0392156862745098);
@@ -60740,8 +60779,8 @@ html.disable-forced-colors * {
                 hsl(var(--opacity-12-hsl) / 0.12156862745098039) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.12156862745098039) var(--theme-base-color-amount, 0%));
         --background-modifier-accent: color-mix(in oklab,
-                hsl(var(--opacity-28-hsl) / 0.2784313725490196) 100%,
-                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.2784313725490196) var(--theme-base-color-amount, 0%));
+                hsl(var(--opacity-24-hsl) / 0.23921568627450981) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.23921568627450981) var(--theme-base-color-amount, 0%));
         --background-modifier-active: color-mix(in oklab,
                 hsl(var(--opacity-20-hsl) / 0.2) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.2) var(--theme-base-color-amount, 0%));
@@ -60779,14 +60818,14 @@ html.disable-forced-colors * {
                 hsl(var(--opacity-20-hsl) / 0.2) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.2) var(--theme-base-color-amount, 0%));
         --border-faint: color-mix(in oklab,
-                hsl(var(--opacity-20-hsl) / 0.2) 100%,
-                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.2) var(--theme-base-color-amount, 0%));
+                hsl(var(--opacity-16-hsl) / 0.1607843137254902) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.1607843137254902) var(--theme-base-color-amount, 0%));
         --border-strong: color-mix(in oklab,
-                hsl(var(--opacity-48-hsl) / 0.47843137254901963) 100%,
-                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.47843137254901963) var(--theme-base-color-amount, 0%));
+                hsl(var(--opacity-44-hsl) / 0.4392156862745098) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.4392156862745098) var(--theme-base-color-amount, 0%));
         --border-subtle: color-mix(in oklab,
-                hsl(var(--opacity-28-hsl) / 0.2784313725490196) 100%,
-                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.2784313725490196) var(--theme-base-color-amount, 0%));
+                hsl(var(--opacity-24-hsl) / 0.23921568627450981) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.23921568627450981) var(--theme-base-color-amount, 0%));
         --channel-icon: color-mix(in oklab,
                 var(--neutral-27) 100%,
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
@@ -60839,8 +60878,8 @@ html.disable-forced-colors * {
                 hsl(var(--opacity-black-8-hsl) / 0.0784313725490196) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.0784313725490196) var(--theme-base-color-amount, 0%));
         --input-border: color-mix(in oklab,
-                hsl(var(--opacity-36-hsl) / 0.3607843137254902) 100%,
-                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.3607843137254902) var(--theme-base-color-amount, 0%));
+                hsl(var(--opacity-32-hsl) / 0.3215686274509804) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.3215686274509804) var(--theme-base-color-amount, 0%));
         --interactive-active: color-mix(in oklab,
                 var(--neutral-7) 100%,
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
@@ -60884,8 +60923,8 @@ html.disable-forced-colors * {
                 var(--neutral-46) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
         --spine-default: color-mix(in oklab,
-                hsl(var(--opacity-48-hsl) / 0.47843137254901963) 100%,
-                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.47843137254901963) var(--theme-base-color-amount, 0%));
+                hsl(var(--opacity-44-hsl) / 0.4392156862745098) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.4392156862745098) var(--theme-base-color-amount, 0%));
         --text-brand: color-mix(in oklab,
                 var(--blurple-41) 100%,
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
@@ -60911,8 +60950,8 @@ html.disable-forced-colors * {
                 var(--yellow-new-43) 100%,
                 var(--theme-text-color, black) var(--theme-text-color-amount, 0%));
         --app-border-frame: color-mix(in oklab,
-                hsl(var(--opacity-28-hsl) / 0.2784313725490196) 100%,
-                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.2784313725490196) var(--theme-base-color-amount, 0%));
+                hsl(var(--opacity-24-hsl) / 0.23921568627450981) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.23921568627450981) var(--theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab,
                 var(--neutral-95) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
@@ -60965,8 +61004,8 @@ html.disable-forced-colors * {
                 hsl(var(--opacity-red-24-hsl) / 0.23921568627450981) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.23921568627450981) var(--theme-base-color-amount, 0%));
         --border-normal: color-mix(in oklab,
-                hsl(var(--opacity-36-hsl) / 0.3607843137254902) 100%,
-                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.3607843137254902) var(--theme-base-color-amount, 0%));
+                hsl(var(--opacity-32-hsl) / 0.3215686274509804) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.3215686274509804) var(--theme-base-color-amount, 0%));
         --chat-background-default: color-mix(in oklab,
                 var(--neutral-92) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
@@ -62188,20 +62227,20 @@ html.disable-forced-colors * {
 }
 
 :root {
+    --modal-horizontal-padding: 16px;
+    --modal-vertical-padding: 16px;
     --chat-resize-handle-width: 8px;
     --chat-input-icon-size: 24px;
     --chat-markup-line-height: 22px;
     --guildbar-avatar-size: 48px;
-    --guildbar-folder-size: 48px;
-    --modal-horizontal-padding: 12px;
-    --modal-vertical-padding: 16px
+    --guildbar-folder-size: 48px
 }
 
 .visual-refresh {
+    --modal-horizontal-padding: 24px;
     --chat-input-icon-size: 20px;
     --chat-markup-line-height: 24px;
-    --guildbar-avatar-size: 40px;
-    --modal-horizontal-padding: 24px
+    --guildbar-avatar-size: 40px
 }
 
 html,
@@ -63177,7 +63216,7 @@ img[alt] {
     --custom-guild-sidebar-width: 268px;
     --custom-app-sidebar-target-width: calc(var(--custom-guild-sidebar-width) + var(--custom-guild-list-width));
     --custom-rtc-account-height: 44px;
-    --custom-app-top-bar-height: 32px;
+    --custom-app-top-bar-height: 36px;
     --custom-channel-header-height: 56px;
     --custom-member-list-width: 265px;
     --custom-channel-textarea-text-area-height: 54px
