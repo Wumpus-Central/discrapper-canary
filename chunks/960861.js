@@ -108,7 +108,13 @@ function w(e) {
     let { existing: n } = e;
     if (((A = { lastPickerAction: 1 }), 0 === I && !n)) {
         let e = d.Z.getChannel(_.Z.getVoiceChannelId());
-        null != e && (0, g.Z)(p.Z) && (0, m.JL)(e, f.Z, h.Z, !1) && (0, u.WH)(e.getGuildId(), e.id, { sourceId: 'prepicked:0' });
+        null != e &&
+            (0, g.Z)(p.Z) &&
+            (0, m.JL)(e, f.Z, h.Z, !1) &&
+            (0, u.WH)(e.getGuildId(), e.id, {
+                sourceId: 'prepicked:0',
+                nativePickerStyleUsed: A.lastPresentedPickerStyle
+            });
     }
 }
 function P() {
@@ -121,8 +127,12 @@ function M(e) {
         lastPickerError: n
     };
 }
-function k() {
-    A = { lastPickerAction: 0 };
+function k(e) {
+    let { style: n } = e;
+    A = {
+        lastPickerAction: 0,
+        lastPresentedPickerStyle: n
+    };
 }
 function U() {
     A = {};

@@ -42,8 +42,8 @@ var l,
     U = t(944486),
     w = t(594174),
     B = t(449224),
-    G = t(626135),
-    y = t(63063),
+    y = t(626135),
+    G = t(63063),
     F = t(358085),
     O = t(998502),
     z = t(451467),
@@ -71,7 +71,7 @@ let es = (e) => {
               buttonCTA: el.intl.string(el.t['NX+WJC']),
               onClick: () => {},
               onSecondaryClick: () => {
-                  open(y.Z.getArticleURL(ee.BhN.SCREEN_SHARING_MACOS));
+                  open(G.Z.getArticleURL(ee.BhN.SCREEN_SHARING_MACOS));
               },
               secondaryButtonCTA: el.intl.string(el.t.hvVgAQ),
               caretPosition: b.DF.LEFT_CENTER,
@@ -80,7 +80,7 @@ let es = (e) => {
         : null;
 };
 function er(e) {
-    var n, l, i, a, c, b, y;
+    var n, l, i, a, c, b, G;
     let { selectGuild: er = !1, selectSource: ea = !0, guildId: eo, analyticsLocation: eu, onClose: ec, transitionState: ed } = e,
         { preset: em, resolution: eg, fps: eh, soundshareEnabled: ex } = (0, m.cj)([_.Z], () => _.Z.getState()),
         eS = (0, m.e7)([U.Z, k.Z], () => k.Z.getChannel(U.Z.getVoiceChannelId())),
@@ -114,10 +114,10 @@ function er(e) {
     let [eM, e_] = (0, E.US)(eb, void 0, !0);
     em !== $.tI.PRESET_CUSTOM && ((eg = eT), (eh = eE)), !(0, z.Z)(em, eg, eh, ep, eI) && ((eg = eT), (eh = eE));
     let ek = (0, T.Dt)();
-    let [eL, eD] = r.useState(((b = er), (y = ea && !eA), b ? 0 : y ? 2 : 3)),
+    let [eL, eD] = r.useState(((b = er), (G = ea && !eA), b ? 0 : G ? 2 : 3)),
         [eU, ew] = r.useState(eA),
-        [eB, eG] = r.useState(null),
-        [ey, eF] = r.useState(
+        [eB, ey] = r.useState(null),
+        [eG, eF] = r.useState(
             eA
                 ? {
                       id: 'prepicked:',
@@ -133,10 +133,11 @@ function er(e) {
         [eJ, eq] = r.useState(ex),
         [eQ, e$] = r.useState(null !== (i = M.I0.getSetting()) && void 0 !== i && i),
         [e0, e1] = r.useState(null != eo ? eo : null),
-        e3 = null !== (a = null == eS ? void 0 : eS.id) && void 0 !== a ? a : eB;
-    async function e4() {
+        e3 = null !== (a = null == eS ? void 0 : eS.id) && void 0 !== a ? a : eB,
+        [e4, e2] = r.useState(eA ? '' : void 0);
+    async function e7() {
         var e, n;
-        o()(null != ev || null != ey || (null != eZ && null != ef), 'got nothing to stream');
+        o()(null != ev || null != eG || (null != eZ && null != ef), 'got nothing to stream');
         let t = null !== (e = null == eS ? void 0 : eS.id) && void 0 !== e ? e : eB;
         o()(null != t, 'Received null target channel ID');
         let l = k.Z.getChannel(t),
@@ -152,18 +153,19 @@ function er(e) {
                 frameRate: a,
                 soundshareEnabled: eJ
             });
-        let u = (0, q.Z)(ev, ey, R.ZP.getRunningGames()),
-            c = !(0, F.isWindows)() || null == u || (null == ey ? void 0 : ey.id.startsWith('camera:')) || null == u ? null : u.pid,
+        let u = (0, q.Z)(ev, eG, R.ZP.getRunningGames()),
+            c = !(0, F.isWindows)() || null == u || (null == eG ? void 0 : eG.id.startsWith('camera:')) || null == u ? null : u.pid,
             d = null,
             m = null;
-        null == c && (null != ey ? ((d = ey.id), (m = ey.name)) : null != ef && ((d = ef), (m = null == eC ? void 0 : eC.name))),
+        null == c && (null != eG ? ((d = eG.id), (m = eG.name)) : null != ef && ((d = ef), (m = null == eC ? void 0 : eC.name))),
             (0, S.WH)(i, t, {
                 pid: c,
                 sourceId: d,
                 sourceName: m,
                 audioSourceId: eO,
                 sound: eJ,
-                previewDisabled: eQ
+                previewDisabled: eQ,
+                nativePickerStyleUsed: e4
             }),
             null != eM && e_(en.L.AUTO_DISMISS),
             !eP &&
@@ -175,13 +177,13 @@ function er(e) {
                         });
                 })();
     }
-    function e2() {
-        e4(), ec();
+    function e9() {
+        e7(), ec();
     }
     r.useEffect(() => {
         let e = (0, F.isWindows)() ? (0, Y.Z)(R.ZP, B.Z) : null,
             n = (null == e ? void 0 : e.id) != null ? p.Z.getApplication(e.id) : null;
-        G.default.track(ee.rMx.OPEN_MODAL, {
+        y.default.track(ee.rMx.OPEN_MODAL, {
             type: 'Go Live Modal',
             application_id: null == n ? void 0 : n.id,
             application_name: null == e ? void 0 : e.name,
@@ -190,7 +192,7 @@ function er(e) {
         }),
             P.Z.trackExposure({ location: 'GoLiveModal' });
     }, [eu]);
-    let e7 = r.useCallback(
+    let e6 = r.useCallback(
             (e, n, t) => {
                 var l;
                 let i = (0, V.Z)(e, ep, eI),
@@ -207,18 +209,17 @@ function er(e) {
             },
             [eS, eB, ep, eI, eK, eH, eV]
         ),
-        [e9, e6] = r.useState(eA ? '' : void 0),
         e5 = r.useCallback(
             (e) => {
-                (0, W.t)(), (0, W.T)(null != e ? e : e9);
+                (0, W.t)(), (0, W.T)(null != e ? e : e4);
             },
-            [e9]
+            [e4]
         );
     function e8(e) {
         if ((e.preventDefault(), 1 === eL)) return e5();
         if (2 === eL) return eD(3);
-        if (null != e9) return eD(1);
-        let n = (0, q.Z)(ev, ey, R.ZP.getRunningGames());
+        if (null != e4) return eD(1);
+        let n = (0, q.Z)(ev, eG, R.ZP.getRunningGames());
         O.ZP.supportsFeature(ee.eRX.ELEVATED_HOOK) && (null == n ? void 0 : n.elevated)
             ? !(function () {
                   var e;
@@ -228,16 +229,16 @@ function er(e) {
                       return (t) =>
                           (0, s.jsx)(e, {
                               ...t,
-                              handleStream: e2,
+                              handleStream: e9,
                               pid: n
                           });
                   });
               })()
-            : e2();
+            : e9();
     }
     let ne = r.useCallback(
             (e) => {
-                eF(e), null != e && (eP && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e6(e.id.split(':')[1]) : e6(void 0), eD(3), ew(!0));
+                eF(e), null != e && (eP && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0 ? e2(e.id.split(':')[1]) : e2(void 0), eD(3), ew(!0));
             },
             [eP]
         ),
@@ -304,7 +305,7 @@ function er(e) {
                     return null;
             }
         })(eL, er, ea, eU),
-        na = 1 !== eL && (3 !== eL || (null == ey && null == ev && null == ef) || null == e3),
+        na = 1 !== eL && (3 !== eL || (null == eG && null == ev && null == ef) || null == e3),
         no = r.useCallback(() => {
             null != nr && eD(nr);
         }, [nr]),
@@ -331,7 +332,7 @@ function er(e) {
                             children: eP
                                 ? (0, s.jsx)(J.se, { onSourceSelect: ne })
                                 : (0, s.jsx)(J.oA, {
-                                      selectedSource: ey,
+                                      selectedSource: eG,
                                       onChangeSelectedSource: ne
                                   })
                         })
@@ -344,16 +345,16 @@ function er(e) {
                                 selectedChannelId: null !== (c = null == eS ? void 0 : eS.id) && void 0 !== c ? c : eB,
                                 selectedPreset: eV,
                                 selectedResolution: eH,
-                                selectedSource: ey,
+                                selectedSource: eG,
                                 selectedFPS: eK,
                                 sound: eJ,
                                 previewDisabled: eQ,
                                 sourceChanged: eU,
                                 selectSource: ea,
-                                onChangeSelectedFPS: (e) => e7(eV, eH, e),
-                                onChangeSelectedResolution: (e) => e7(eV, e, eK),
-                                onChangeSelectedPreset: (e) => e7(e, eH, eK),
-                                onChangeSelectedChannelId: eG,
+                                onChangeSelectedFPS: (e) => e6(eV, eH, e),
+                                onChangeSelectedResolution: (e) => e6(eV, e, eK),
+                                onChangeSelectedPreset: (e) => e6(e, eH, eK),
+                                onChangeSelectedChannelId: ey,
                                 onChangeSelectedSource: ne,
                                 onChangeSource: () => ns(),
                                 onChangeAudioDevice: (e) => ez(e),
@@ -372,16 +373,16 @@ function er(e) {
                         children: (0, s.jsx)('div', {
                             className: ei.modalSize,
                             children: (0, s.jsx)(J.Hu, {
-                                onSourceSelect: e2,
+                                onSourceSelect: e9,
                                 onCancel: no,
-                                pickerType: e9
+                                pickerType: e4
                             })
                         })
                     })
                 ]
             })
         }),
-        nc = 1 === eL || (eA && 3 === eL) ? el.intl.string(el.t.FiBjwc) : eP && (3 !== eL || null != e9) ? el.intl.string(el.t.PDTjLC) : el.intl.string(el.t['UE/rPz']),
+        nc = 1 === eL || (eA && 3 === eL) ? el.intl.string(el.t.FiBjwc) : eP && (3 !== eL || null != e4) ? el.intl.string(el.t.PDTjLC) : el.intl.string(el.t['UE/rPz']),
         nd = (0, s.jsxs)(h.ModalFooter, {
             justify: null == nr ? I.Z.Justify.START : I.Z.Justify.BETWEEN,
             children: [

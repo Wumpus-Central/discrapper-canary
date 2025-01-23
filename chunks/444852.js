@@ -54,8 +54,11 @@ class w {
     trackViewerCount(e) {
         this.maxViewers = Math.max(e, this.maxViewers);
     }
+    setNativePickerStyleUsed(e) {
+        this.nativePickerStyleUsed = e;
+    }
     constructor({ streamRegion: e, streamApplication: n, streamSourceType: r, actionContext: i, numViewers: a }) {
-        O(this, 'streamRegion', void 0), O(this, 'streamApplication', void 0), O(this, 'streamSourceType', void 0), O(this, 'actionContext', void 0), O(this, 'maxViewers', void 0), (this.streamRegion = e), (this.streamApplication = n), (this.streamSourceType = r), (this.actionContext = i), (this.maxViewers = a);
+        O(this, 'streamRegion', void 0), O(this, 'streamApplication', void 0), O(this, 'streamSourceType', void 0), O(this, 'actionContext', void 0), O(this, 'maxViewers', void 0), O(this, 'nativePickerStyleUsed', void 0), (this.streamRegion = e), (this.streamApplication = n), (this.streamSourceType = r), (this.actionContext = i), (this.maxViewers = a);
     }
 }
 class P extends u.Z {
@@ -182,6 +185,7 @@ class P extends u.Z {
                                 share_game_id: w,
                                 share_game_exe: P,
                                 share_game_distributor: M,
+                                picker_type_used: null != this.analyticsContext.nativePickerStyleUsed ? 'native' : 'internal',
                                 ...O
                             });
                         });
