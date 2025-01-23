@@ -96,7 +96,7 @@ function V(e) {
         ((O[u] = a),
         d().forEach(P, (e) => {
             let { analyticsContext: n } = e;
-            n.setActionContext(a), n.setNativePickerStyleUsed(l);
+            n.setActionContext(a), n.setNativePickerStyleUsed(l), n.trackStart();
         }),
         (x[u] = s),
         (L[u] = o),
@@ -117,7 +117,7 @@ function j(e) {
     (O[r] = n),
         d().forEach(P, (e) => {
             let { analyticsContext: r } = e;
-            r.setActionContext(n);
+            r.setActionContext(n), r.trackEnd();
         }),
         (x[r] = null),
         (L[r] = null);

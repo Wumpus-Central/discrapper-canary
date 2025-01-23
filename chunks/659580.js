@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return S;
+            return I;
         }
     });
 var i = n(200651);
@@ -20,8 +20,8 @@ var l = n(990547),
     h = n(981631),
     g = n(388032),
     v = n(126741);
-function S(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: S = !1, renderInputModes: I = !1, renderInputVolume: _ = !1, renderOutputVolume: x = !1, onSelect: E } = e,
+function I(e) {
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: I = !1, renderInputModes: S = !1, renderInputVolume: _ = !1, renderOutputVolume: x = !1, onSelect: E } = e,
         { analyticsLocations: C } = (0, s.ZP)();
     (0, o.Z)({
         type: l.ImpressionTypes.MENU,
@@ -43,7 +43,7 @@ function S(e) {
             navId: 'audio-device-context',
             'aria-label': g.intl.string(g.t.ZR1Ss7),
             children: [
-                S
+                I
                     ? (0, i.jsx)(a.MenuGroup, {
                           label: g.intl.string(g.t.ElbIXF),
                           children: b
@@ -55,7 +55,7 @@ function S(e) {
                           children: Z
                       })
                     : null,
-                I
+                S
                     ? (0, i.jsx)(a.MenuGroup, {
                           label: g.intl.string(g.t['pS+K2N']),
                           children: T

@@ -16,8 +16,8 @@ function d(e) {
         h = i.useRef(!1),
         g = (0, l.e7)([a.Z], () => a.Z.getDrawMode()),
         v = (0, o.Z)((0, c.Z)(t.id, n, d), m),
-        S = (0, o.Z)((0, u.Z)(t.id, n, d), m),
-        I = i.useCallback(
+        I = (0, o.Z)((0, u.Z)(t.id, n, d), m),
+        S = i.useCallback(
             (e, t, n) => {
                 if (null == p) return;
                 let { x: i, y: l } = (0, s.hn)(p, n);
@@ -25,42 +25,42 @@ function d(e) {
                     case r.W.LINE:
                         return v[e](t, i, l);
                     case r.W.EMOJI_HOSE:
-                        return S[e](t, i, l);
+                        return I[e](t, i, l);
                 }
             },
-            [p, v, S]
+            [p, v, I]
         ),
         _ = i.useCallback(
             (e) => {
-                if (!!f && null != g) e.stopPropagation(), (h.current = !0), I('handleMouseDown', g, e);
+                if (!!f && null != g) e.stopPropagation(), (h.current = !0), S('handleMouseDown', g, e);
             },
-            [I, g, f]
+            [S, g, f]
         ),
         x = i.useCallback(
             (e) => {
-                if (!!f && null != g) e.stopPropagation(), h.current && I('handleMouseMove', g, e);
+                if (!!f && null != g) e.stopPropagation(), h.current && S('handleMouseMove', g, e);
             },
-            [I, g, f]
+            [S, g, f]
         ),
         E = i.useCallback(
             (e) => {
-                if (!!f && null != g) e.stopPropagation(), (h.current = !1), I('handleMouseUp', g, e);
+                if (!!f && null != g) e.stopPropagation(), (h.current = !1), S('handleMouseUp', g, e);
             },
-            [I, g, f]
+            [S, g, f]
         ),
         C = i.useCallback(
             (e) => {
-                if (!!h.current && null != g) I('handleMouseEnter', g, e);
+                if (!!h.current && null != g) S('handleMouseEnter', g, e);
             },
-            [I, g]
+            [S, g]
         );
     return (
         i.useEffect(() => {
             let e = (e) => {
-                if (null != g) (h.current = !1), I('handleMouseUp', g, e);
+                if (null != g) (h.current = !1), S('handleMouseUp', g, e);
             };
             return window.addEventListener('mouseup', e), () => window.removeEventListener('mouseup', e);
-        }, [I, g]),
+        }, [S, g]),
         {
             handleClick: i.useCallback(
                 (e) => {

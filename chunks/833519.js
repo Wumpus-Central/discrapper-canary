@@ -22,8 +22,8 @@ var i = n(200651),
     h = n(590293),
     g = n(863908),
     v = n(871118),
-    S = n(517525),
-    I = n(352978),
+    I = n(517525),
+    S = n(352978),
     _ = n(576645),
     x = n(590076),
     E = n(507675),
@@ -71,7 +71,7 @@ function z(e) {
                 n ? null : (0, i.jsx)(L.Z, { participant: t }),
                 a || null == u || u.state === D.jm8.ENDED || u.state === D.jm8.FAILED
                     ? null
-                    : (0, i.jsx)(S.Z, {
+                    : (0, i.jsx)(I.Z, {
                           size: f.ZP.Sizes.SMALL,
                           className: B.liveIndicator,
                           participant: t,
@@ -84,7 +84,7 @@ function z(e) {
     );
 }
 function G(e) {
-    let { participant: t, selected: n, onVideoResize: a, paused: f, fit: p, inPopout: S, inOverlayPopout: _ = !1, width: M, focused: L, wrapperClassName: k } = e,
+    let { participant: t, selected: n, onVideoResize: a, paused: f, fit: p, inPopout: I, inOverlayPopout: _ = !1, width: M, focused: L, wrapperClassName: k } = e,
         z = Z.Z.getVideoComponent(),
         G = (0, s.e7)([y.default], () => y.default.getId()),
         H = (0, h.Z)(),
@@ -94,7 +94,7 @@ function G(e) {
         Q = (0, s.e7)([C.Z], () => C.Z.getAllActiveStreams().length > 0),
         $ = (0, s.e7)([T.Z], () => T.Z.isFocused()),
         ee = (null == K ? void 0 : K.ownerId) === G,
-        et = ee && !$ && !S,
+        et = ee && !$ && !I,
         en = null != K ? (0, g.Z)(K, J, J.id === G, et) : null,
         ei = M < 195;
     (0, d.Z)(() => {
@@ -188,7 +188,7 @@ function G(e) {
                       })
                     : null,
                 (0, i.jsx)(
-                    I.Z,
+                    S.Z,
                     {
                         onResize: a,
                         wrapperClassName: r()(B.videoWrapper, k),
@@ -210,7 +210,7 @@ function G(e) {
                     : null,
                 (0, i.jsx)(j.Z, {
                     stream: Y,
-                    inPopout: S
+                    inPopout: I
                 })
             ]
         });

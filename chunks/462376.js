@@ -1,6 +1,6 @@
 n.d(t, {
     d: function () {
-        return f;
+        return E;
     },
     k: function () {
         return C;
@@ -20,8 +20,8 @@ var l = n(200651),
     g = n(699516),
     m = n(594174),
     v = n(768581),
-    x = n(624138),
-    I = n(51144),
+    I = n(624138),
+    x = n(51144),
     p = n(388032),
     S = n(755527);
 function N(e, t, n) {
@@ -38,14 +38,14 @@ function N(e, t, n) {
     );
 }
 let C = 44;
-class f extends i.Component {
+class E extends i.Component {
     shouldComponentUpdate(e, t) {
         return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel;
     }
     renderUserOrChannel() {
         let e, t, n;
         let { user: i, channel: s } = this.props;
-        if (null != i) (t = i.getAvatarURL(null == s ? void 0 : s.guild_id, 32)), (n = I.ZP.getName(i));
+        if (null != i) (t = i.getAvatarURL(null == s ? void 0 : s.guild_id, 32)), (n = x.ZP.getName(i));
         else if (null != s && ((t = (0, o.x)(s)), (n = (0, d.F6)(s, m.default, g.Z)), null == t && null != s.guild_id)) {
             let n = c.Z.getGuild(s.guild_id);
             null != n &&
@@ -55,7 +55,7 @@ class f extends i.Component {
                           icon: n.icon,
                           size: 32
                       }))
-                    : (e = (0, x.Zg)(n.name)));
+                    : (e = (0, I.Zg)(n.name)));
         }
         if (null == t || null == n)
             return null != e
@@ -106,7 +106,7 @@ class f extends i.Component {
                             this.renderUserOrChannel(),
                             (0, l.jsxs)('div', {
                                 className: S.inviteRowName,
-                                children: [I.ZP.getName(t), null != n ? (0, d.F6)(n, m.default, g.Z, !0) : null]
+                                children: [x.ZP.getName(t), null != n ? (0, d.F6)(n, m.default, g.Z, !0) : null]
                             })
                         ]
                     }),

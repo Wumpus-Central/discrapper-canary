@@ -3,10 +3,10 @@ t.d(n, {
         return d;
     },
     G0: function () {
-        return f;
+        return E;
     },
     QC: function () {
-        return E;
+        return f;
     },
     dd: function () {
         return I;
@@ -18,8 +18,8 @@ t(192379);
 var r = t(120356),
     l = t.n(r),
     u = t(481060),
-    o = t(454585),
-    a = t(489813),
+    a = t(454585),
+    o = t(489813),
     s = t(388032),
     c = t(119866);
 function d(e) {
@@ -40,7 +40,7 @@ function d(e) {
                         (0, i.jsx)(u.Text, {
                             variant: 'text-md/normal',
                             className: c.termsRowContent,
-                            children: o.Z.parseGuildVerificationFormRule(e, !0, { channelId: t })
+                            children: a.Z.parseGuildVerificationFormRule(e, !0, { channelId: t })
                         })
                     ]
                 },
@@ -49,7 +49,7 @@ function d(e) {
         )
     });
 }
-function f(e) {
+function E(e) {
     let { onChange: n, checked: t, disabled: r } = e;
     return (0, i.jsx)(u.Checkbox, {
         size: 20,
@@ -65,9 +65,9 @@ function f(e) {
         })
     });
 }
-function E(e) {
+function f(e) {
     let { formField: n } = e;
-    return (0, i.jsx)(a.Ih, {
+    return (0, i.jsx)(o.Ih, {
         icon: u.BookCheckIcon,
         text: s.intl.string(s.t['2xbmoK']),
         meetsRequirement: !!n.response
@@ -75,7 +75,7 @@ function E(e) {
 }
 let I = (e) => {
     let { channelId: n, formField: t, onChange: r } = e;
-    return (0, i.jsxs)(a.hK, {
+    return (0, i.jsxs)(o.hK, {
         title: s.intl.string(s.t.Q8OFNz),
         children: [
             (0, i.jsx)(d, {
@@ -83,7 +83,7 @@ let I = (e) => {
                 terms: t.values,
                 channelId: n
             }),
-            (0, i.jsx)(f, {
+            (0, i.jsx)(E, {
                 onChange: r,
                 checked: t.response
             })

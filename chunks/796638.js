@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     ZP: function () {
-        return S;
+        return I;
     },
     cF: function () {
         return f;
@@ -41,16 +41,16 @@ function v(e, t) {
                       cropSelfVideo: !1
                   },
         { tileWidth: i, tileMinWidth: s, tileMargin: o, limit: u, cropSelfVideo: m, version: f } = n,
-        [v, S] = l.useState(Date.now());
+        [v, I] = l.useState(Date.now());
     l.useEffect(() => {
         let e = setTimeout(() => {
-            S(Date.now());
+            I(Date.now());
         }, h);
         return () => {
             clearTimeout(e);
         };
     }, [t]);
-    let I = l.useRef({}),
+    let S = l.useRef({}),
         { visibleParticipants: _, participantTileWidth: x } = l.useMemo(() => {
             let n = Date.now(),
                 l = (0, a.sortBy)(t, (e) =>
@@ -84,9 +84,9 @@ function v(e, t) {
                 ),
                 [f, p] = (0, a.partition)(l, d.Io),
                 v = f.findIndex(g),
-                S = null;
-            -1 !== v && ((S = f[v]), f.splice(v, 1));
-            let _ = null == S || m ? e : e - i - o,
+                I = null;
+            -1 !== v && ((I = f[v]), f.splice(v, 1));
+            let _ = null == I || m ? e : e - i - o,
                 x = Math.max(0, Math.min(Math.floor((_ - o) / (s + o)), u, t.length)),
                 E = Math.min((_ - o) / x - o, i),
                 C = Math.max(0, x - p.length),
@@ -96,7 +96,7 @@ function v(e, t) {
             if (C > 0) {
                 let e = [];
                 for (let t of b) {
-                    let n = I.current[t.id];
+                    let n = S.current[t.id];
                     null != n && n < C ? (Z[n] = t) : e.push(t);
                 }
                 for (let t = 0; t < Z.length; t++) {
@@ -108,10 +108,10 @@ function v(e, t) {
             }
             let T = Z.filter(c.lm),
                 N = (0, a.keyBy)((0, a.range)(T.length), (e) => T[e].id);
-            I.current = N;
+            S.current = N;
             let A = [...y, ...T];
             return (
-                null != S && (m && A.length >= x ? (A[Math.max(0, A.length - 1)] = S) : A.push(S)),
+                null != I && (m && A.length >= x ? (A[Math.max(0, A.length - 1)] = I) : A.push(I)),
                 {
                     visibleParticipants: A,
                     participantTileWidth: E
@@ -123,7 +123,7 @@ function v(e, t) {
         participantTileWidth: x
     };
 }
-function S(e) {
+function I(e) {
     let { participants: t, participantTileWidth: n, selectedParticipantId: l, onDoubleClick: a, onContextMenu: r, onClick: s, channel: o, inCall: c, popoutWindow: d, paused: f = !1 } = e,
         h = null != d;
     return (0, i.jsx)('div', {

@@ -14,8 +14,8 @@ var l = n(120356),
     h = n(594174),
     g = n(979651),
     v = n(374129),
-    S = n(639351),
-    I = n(503438),
+    I = n(639351),
+    S = n(503438),
     _ = n(802856),
     x = n(387903),
     E = n(606925),
@@ -37,7 +37,7 @@ t.Z = (0, u.Z)((e) => {
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
         W = U === x.Y.STREAM_PREVIEW || null != r,
-        z = (0, I.Z)(t),
+        z = (0, S.Z)(t),
         G = z || W ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
         H = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
         Y = (0, o.e7)([g.Z, p.Z], () => {
@@ -60,7 +60,7 @@ t.Z = (0, u.Z)((e) => {
                         look: D,
                         color: k,
                         onAction: V,
-                        Icon: S.Z
+                        Icon: I.Z
                     },
                     'ConnectPlatformActivityButton'
                 );

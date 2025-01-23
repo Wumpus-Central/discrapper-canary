@@ -18,8 +18,8 @@ var i = n(200651),
     h = n(220779),
     g = n(142550),
     v = n(954017),
-    S = n(314091),
-    I = n(159244),
+    I = n(314091),
+    S = n(159244),
     _ = n(574176),
     x = n(952164),
     E = n(199902),
@@ -76,7 +76,7 @@ t.Z = function (e) {
             return null;
         }),
         B = (0, p.Z)(),
-        W = (0, I.Z)(n),
+        W = (0, S.Z)(n),
         z = B && null != t && W;
     return (l.useEffect(() => {
         (null == t ? void 0 : t.type) === A.IIU.HANG_STATUS &&
@@ -131,7 +131,7 @@ t.Z = function (e) {
                                                         user: n,
                                                         activity: t,
                                                         application: F,
-                                                        altText: (0, S.xC)(n, t),
+                                                        altText: (0, I.xC)(n, t),
                                                         stream: L
                                                     }),
                                                 i === g.L.ReplySubmit &&
@@ -141,7 +141,7 @@ t.Z = function (e) {
                                                         user: n,
                                                         activity: t,
                                                         application: F,
-                                                        altText: (0, S.xC)(n, t),
+                                                        altText: (0, I.xC)(n, t),
                                                         stream: L
                                                     });
                                         }

@@ -22,8 +22,8 @@ var i = n(512722),
     h = n(201133),
     g = n(55000),
     v = n(314091),
-    S = n(981631),
-    I = n(388032);
+    I = n(981631),
+    S = n(388032);
 let _ = async (e) => {
         let { reaction: t, altText: n, ...i } = e,
             l = await C(i);
@@ -56,9 +56,9 @@ let _ = async (e) => {
             { assets: c, application_id: u } = i,
             m = (0, f.getAssetImage)(u, null == c ? void 0 : c.large_image, 64),
             h = null == l ? void 0 : l.getIconURL(64),
-            g = null != o ? (s ? o.icon.darkPNG : o.icon.lightPNG) : i.type === S.IIU.PLAYING ? (s ? n(414575) : n(807612)) : null,
-            I =
-                i.type === S.IIU.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null
+            g = null != o ? (s ? o.icon.darkPNG : o.icon.lightPNG) : i.type === I.IIU.PLAYING ? (s ? n(414575) : n(807612)) : null,
+            S =
+                i.type === I.IIU.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null
                     ? (0, p.qc)({
                           id: i.emoji.id,
                           name: i.emoji.name,
@@ -69,7 +69,7 @@ let _ = async (e) => {
             ...(null != g && { Platform: g }),
             ...(null != m && { AssetImage: m.includes('http') ? m : n(869469)(m) }),
             ...(null != h && { ApplicationImage: h }),
-            ...(null != I && { HangStatus: I })
+            ...(null != S && { HangStatus: S })
         };
     },
     C = async (e) => {
@@ -85,7 +85,7 @@ let _ = async (e) => {
             drawImage: (e) => {
                 var i;
                 e.setFont({ truncate: c.GX.Truncate }),
-                    null != l ? A(e, n, t) : (0, o.Z)(n) ? Z(e, n, t) : (0, s.Z)(n) && n.name === r.Z.get(S.ABu.LEAGUE_OF_LEGENDS).name ? N(e, n, t) : n.type === S.IIU.HANG_STATUS ? T(e, n, t) : b(e, n, t),
+                    null != l ? A(e, n, t) : (0, o.Z)(n) ? Z(e, n, t) : (0, s.Z)(n) && n.name === r.Z.get(I.ABu.LEAGUE_OF_LEGENDS).name ? N(e, n, t) : n.type === I.IIU.HANG_STATUS ? T(e, n, t) : b(e, n, t),
                     (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has('Platform')) &&
                         e.drawImage(
                             'Platform',
@@ -328,7 +328,7 @@ let _ = async (e) => {
                 weight: 700
             }),
             e.drawText(
-                I.intl.string(I.t['74vS//']),
+                S.intl.string(S.t['74vS//']),
                 {
                     x: o,
                     y: g.SG + 1 * g.Nv,

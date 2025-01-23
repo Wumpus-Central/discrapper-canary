@@ -20,8 +20,8 @@ var i,
     h = n(410030),
     g = n(726542),
     v = n(600164),
-    S = n(686546),
-    I = n(111028),
+    I = n(686546),
+    S = n(111028),
     _ = n(925329),
     x = n(810568),
     E = n(168524),
@@ -144,7 +144,7 @@ class q extends (l = s.PureComponent) {
                     (0, r.jsx)(f.Heading, {
                         className: c()((0, P.l)(W, 'headerText', e ? 'EmptyBody' : 'Normal')),
                         variant: l ? 'text-xs/semibold' : 'eyebrow',
-                        children: (0, r.jsx)(I.Z, { children: t })
+                        children: (0, r.jsx)(S.Z, { children: t })
                     }),
                     null == a ? void 0 : a()
                 ]
@@ -196,8 +196,8 @@ class q extends (l = s.PureComponent) {
         else if ((0, A.dS)(e)) {
             let t = (0, A.rq)(e);
             if (null == t) return null;
-            p = (0, r.jsx)(S.ZP, {
-                mask: S.ZP.Masks.SQUIRCLE,
+            p = (0, r.jsx)(I.ZP, {
+                mask: I.ZP.Masks.SQUIRCLE,
                 width: V.Si.SMALL,
                 height: V.Si.SMALL,
                 children: (0, r.jsx)('img', {
@@ -513,12 +513,12 @@ class q extends (l = s.PureComponent) {
         (0, k.Z)(u) ? ((e = this.renderXboxImage()), (p = !0)) : null == (e = this.renderImage(u)) && (p = null != (e = this.renderGameImage(u)));
         let h = this.renderName(u),
             g = this.renderDetails(u),
-            S = this.renderState(u, l),
-            I = this.renderTimePlayed(u),
+            I = this.renderState(u, l),
+            S = this.renderTimePlayed(u),
             _ = this.renderChannelDetails(u),
             x = null != n ? n() : null,
             E = this.renderTimeBar(u),
-            C = ![e, h, g, S, I, E, x].some((e) => null != e);
+            C = ![e, h, g, I, S, E, x].some((e) => null != e);
         return (0, r.jsxs)('div', {
             className: c()(this.getTypeClass('activity'), i),
             children: [
@@ -542,7 +542,7 @@ class q extends (l = s.PureComponent) {
                                                             o(e), null == s || s();
                                                         }
                                                       : void 0,
-                                              children: [h, g, S, I]
+                                              children: [h, g, I, S]
                                           }),
                                           _,
                                           m ? null : E,

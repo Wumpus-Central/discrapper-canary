@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return S;
     }
 });
 var i = n(200651),
@@ -26,10 +26,10 @@ let h = { visibility: 'hidden' },
         precision: 0.0001,
         bounce: 0
     },
-    S = { duration: 1000 };
-function I(e) {
+    I = { duration: 1000 };
+function S(e) {
     let { stream: t, inPopout: n } = e,
-        { reducedMotion: I } = l.useContext(s.Sf),
+        { reducedMotion: S } = l.useContext(s.Sf),
         _ = (0, l.useRef)(null),
         x = d.n.getState().clipsButtonRef,
         E = (0, m.V9)(t),
@@ -87,7 +87,7 @@ function I(e) {
                     position: 'fixed',
                     visibility: 'hidden',
                     opacity: 1,
-                    ...(I.enabled ? T(e) : Z())
+                    ...(S.enabled ? T(e) : Z())
                 }),
                 enter: (e) => [
                     {
@@ -98,7 +98,7 @@ function I(e) {
                 ],
                 leave: {
                     opacity: 0,
-                    ...(!I.enabled && {
+                    ...(!S.enabled && {
                         height: 0,
                         width: 0,
                         ...(() => {
@@ -110,7 +110,7 @@ function I(e) {
                         })()
                     })
                 },
-                config: I.enabled ? S : v,
+                config: S.enabled ? I : v,
                 onRest: (e, t) => {
                     null != t.item && null != y.find((e) => e.timestamp === t.item.timestamp) && (0, u.Gh)(E, t.item.timestamp);
                 }

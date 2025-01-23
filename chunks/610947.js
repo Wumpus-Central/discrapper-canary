@@ -19,8 +19,8 @@ var i = n(192379),
     h = n(813900);
 let g = 1000 / 60;
 function v(e, t, n, v) {
-    let S = (0, r.useToken)(a.Z.unsafe_rawColors.BRAND_500).hex(),
-        I = (0, r.useToken)(a.Z.unsafe_rawColors.BLACK_500).hex(),
+    let I = (0, r.useToken)(a.Z.unsafe_rawColors.BRAND_500).hex(),
+        S = (0, r.useToken)(a.Z.unsafe_rawColors.BLACK_500).hex(),
         _ = (0, r.useToken)(a.Z.unsafe_rawColors.WHITE_500).hex(),
         x = i.useRef({}),
         E = i.useRef(new l.Xp()),
@@ -36,10 +36,10 @@ function v(e, t, n, v) {
                         let h = m.getContext('2d');
                         if (null == h) return;
                         let { width: g, height: v } = m.getBoundingClientRect(),
-                            S = [];
+                            I = [];
                         n.forEach((e) => {
                             if (!(null != o.Z.getVoiceStateForChannel(r, e.userId))) {
-                                S.push(e);
+                                I.push(e);
                                 return;
                             }
                             !(function (e) {
@@ -79,23 +79,23 @@ function v(e, t, n, v) {
                                 outlineColorDark: s,
                                 outlineColorLight: u,
                                 linesDrawnAt: l,
-                                deadDrawables: S,
+                                deadDrawables: I,
                                 streamerId: a
                             });
                         }),
-                            S.length > 0 && (0, c.fW)(S, a);
+                            I.length > 0 && (0, c.fW)(I, a);
                     })({
                         canvasRef: e,
                         drawables: n,
-                        fallbackColor: S,
+                        fallbackColor: I,
                         linesDrawnAt: x,
                         streamerId: t,
-                        outlineColorDark: I,
+                        outlineColorDark: S,
                         outlineColorLight: _,
                         channelId: v
                     });
             },
-            [e, v, S, I, _]
+            [e, v, I, S, _]
         );
     i.useEffect(() => {
         let t = new ResizeObserver(() => {

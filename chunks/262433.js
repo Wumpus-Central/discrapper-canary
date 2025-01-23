@@ -40,10 +40,10 @@ function g(e, t) {
 }
 function v(e) {
     var t, n, i, r;
-    let { emojiHose: v, context: S, canvasWidth: I, canvasHeight: _, fallbackColor: x, outlineColorDark: E, outlineColorLight: C, streamerId: y, deadDrawables: b } = e;
-    S.save();
+    let { emojiHose: v, context: I, canvasWidth: S, canvasHeight: _, fallbackColor: x, outlineColorDark: E, outlineColorLight: C, streamerId: y, deadDrawables: b } = e;
+    I.save();
     let Z = c.Z.getEmojiImage(null !== (n = null !== (t = v.emojiId) && void 0 !== t ? t : v.emojiName) && void 0 !== n ? n : ''),
-        T = (0, d.np)(v.x, I),
+        T = (0, d.np)(v.x, S),
         N = (0, d.np)(v.y, _),
         { outlineColor: A } = (0, d.bg)(v.userId, E, C, x);
     if (
@@ -91,8 +91,8 @@ function v(e) {
                     });
                 });
         })(v, T, N),
-        (0, m.I)(S, T, N, A, f.q2),
-        (0, m.T)(S, T, N, v.userId),
+        (0, m.I)(I, T, N, A, f.q2),
+        (0, m.T)(I, T, N, v.userId),
         g(v, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
@@ -100,11 +100,11 @@ function v(e) {
                     l = n.x - (i / 2) * window.devicePixelRatio,
                     a = n.y - 1.2 * i * window.devicePixelRatio;
                 (e.globalAlpha = n.opacity), e.drawImage(t, i / 2 + l, i / 2 + a, i, i);
-            })(S, Z, e)
+            })(I, Z, e)
         ),
         v.lastUpdatedAt + f.FO < Date.now() && (0, o.ZZ)(y, v),
         v.state === u.f.STOP && ((i = v), !(Object.keys(null !== (r = h.getState().particles[i.id]) && void 0 !== r ? r : {}).length > 0)))
     )
         b.push(v);
-    S.restore();
+    I.restore();
 }

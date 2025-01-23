@@ -96,7 +96,7 @@ function p(e) {
                         global_name_error_reason: t.getFirstFieldErrorMessage('global_name'),
                         date_of_birth_error_reason: t.getFirstFieldErrorMessage('date_of_birth')
                     }),
-                    e)
+                    t)
                 );
             }
         )

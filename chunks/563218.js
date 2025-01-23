@@ -25,9 +25,9 @@ function v(e) {
     let t,
         { embedId: n, className: r, style: s } = e,
         v = (0, a.e7)([o.Z], () => o.Z.getWindow(h.KJ3.CHANNEL_CALL_POPOUT)),
-        S = (0, f.Z)(),
-        I = (0, a.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
-    if (null != S && !(0, m.Z)((0, d.p)(S.location)) && I === p.Ez.PANEL) t = window;
+        I = (0, f.Z)(),
+        S = (0, a.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
+    if (null != I && !(0, m.Z)((0, d.p)(I.location)) && S === p.Ez.PANEL) t = window;
     else {
         var _;
         t = null !== (_ = null == v ? void 0 : v.window) && void 0 !== _ ? _ : window;

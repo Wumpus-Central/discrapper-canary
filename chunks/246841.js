@@ -11,9 +11,9 @@ var l = n(481060),
     s = n(629257);
 function o(e) {
     let { activity: t, user: n, source: o, className: c, size: u, look: d, color: m, fullWidth: f, onAction: p } = e,
-        { label: h, tooltip: g, loading: v, disabled: S, onClick: I } = (0, r.Ih)(t, n, o),
+        { label: h, tooltip: g, loading: v, disabled: I, onClick: S } = (0, r.Ih)(t, n, o),
         _ = () => {
-            null == p || p(), I();
+            null == p || p(), S();
         };
     return (0, i.jsx)(l.Tooltip, {
         text: g,
@@ -29,7 +29,7 @@ function o(e) {
                 onClick: _,
                 onMouseEnter: t,
                 onMouseLeave: n,
-                disabled: S,
+                disabled: I,
                 submitting: v,
                 children: [
                     (0, i.jsx)(a.Z, {

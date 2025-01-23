@@ -15,9 +15,9 @@ let u = a.ZP.getMaxAgeOptions,
     c = a.ZP.getMaxUsesOptions;
 function h(e) {
     var t;
-    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: x, onSelectMaxUses: I, isGuestInviteCreationToggleEnabled: p, inviteFlags: S, onSetInviteFlags: N } = e,
+    let { shouldHideTemporaryInviteToggle: n, maxAge: a, maxUses: h, temporary: g, onGenerateNewLink: m, onToggleTemporary: v, onSelectMaxAge: I, onSelectMaxUses: x, isGuestInviteCreationToggleEnabled: p, inviteFlags: S, onSetInviteFlags: N } = e,
         C = u.find((e) => e.value === a),
-        f = c.find((e) => e.value === h);
+        E = c.find((e) => e.value === h);
     return (0, l.jsx)('div', {
         className: d.settingsContent,
         children: (0, l.jsxs)('form', {
@@ -29,16 +29,16 @@ function h(e) {
                     children: (0, l.jsx)(s.SingleSelect, {
                         value: null !== (t = null == C ? void 0 : C.value) && void 0 !== t ? t : u[0].value,
                         options: u,
-                        onChange: x,
+                        onChange: I,
                         maxVisibleItems: 8
                     })
                 }),
                 (0, l.jsx)(s.FormItem, {
                     title: o.intl.string(o.t.jDqWHR),
                     children: (0, l.jsx)(s.SingleSelect, {
-                        value: null == f ? void 0 : f.value,
+                        value: null == E ? void 0 : E.value,
                         options: c,
-                        onChange: I
+                        onChange: x
                     })
                 }),
                 !n &&

@@ -14,8 +14,8 @@ var i,
     h = n(40851),
     g = n(607070),
     v = n(899663),
-    S = n(636449),
-    I = n(317381),
+    I = n(636449),
+    S = n(317381),
     _ = n(496616),
     x = n(100527),
     E = n(906732),
@@ -118,7 +118,7 @@ class q extends (i = a.Component) {
         n.document.documentElement.classList.toggle('disable-forced-colors', !e && 'active' === t);
     }
     render() {
-        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: a, windowKey: r, isRefreshEnabled: o, isRefreshChatInputEnabled: c, mouseModeEnabled: d, reducedMotionEnabled: m, fontScaleClass: g, withTitleBar: S, guestWindow: I, clientThemesClassName: _, contentClassName: x, appWrapperClassName: E } = this.props,
+        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: a, windowKey: r, isRefreshEnabled: o, isRefreshChatInputEnabled: c, mouseModeEnabled: d, reducedMotionEnabled: m, fontScaleClass: g, withTitleBar: I, guestWindow: S, clientThemesClassName: _, contentClassName: x, appWrapperClassName: E } = this.props,
             C = (0, V.getPlatform)(),
             A = s()(g, {
                 'mouse-mode': d,
@@ -148,7 +148,7 @@ class q extends (i = a.Component) {
                                                     (0, l.jsx)(T.Co, {}),
                                                     (0, l.jsx)(h.Wu, {
                                                         appContext: G.IlC.POPOUT,
-                                                        renderWindow: I,
+                                                        renderWindow: S,
                                                         children: (0, l.jsx)(y.m, {
                                                             children: (0, l.jsxs)(M.yP, {
                                                                 children: [
@@ -156,12 +156,12 @@ class q extends (i = a.Component) {
                                                                         className: Y.popout,
                                                                         children: [
                                                                             o &&
-                                                                                S &&
+                                                                                I &&
                                                                                 (0, l.jsx)(N.T, {
                                                                                     windowKey: r,
                                                                                     short: !0
                                                                                 }),
-                                                                            !o && S && null != C
+                                                                            !o && I && null != C
                                                                                 ? (0, l.jsx)(j.Z, {
                                                                                       focused: n,
                                                                                       type: C,
@@ -204,7 +204,7 @@ class q extends (i = a.Component) {
                 };
                 if (this.props.connectedToEmbeddedActivity && !D.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (!V.isPlatformEmbedded) return;
-                    (0, S.R)()
+                    (0, I.R)()
                         ? t()
                         : ((e.returnValue = H.intl.string(H.t['bST/Y2'])),
                           (0, _.Z)(() => {
@@ -234,9 +234,9 @@ let X = a.forwardRef(function (e, t) {
         })),
         d = (0, m.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
         { accessibilitySettings: p, appWrapperClassName: h } = (0, A.I)(),
-        v = (0, m.e7)([I.ZP], () => null != e.channelId && null !== I.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+        v = (0, m.e7)([S.ZP], () => null != e.channelId && null !== S.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, w.Z)(n, !1);
-    let S = (0, P.Z)(n, i),
+    let I = (0, P.Z)(n, i),
         { analyticsLocations: _ } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
         { clientThemesClassName: y, clientThemesCSS: b } = (0, C.ZP)();
     return null == n
@@ -257,7 +257,7 @@ let X = a.forwardRef(function (e, t) {
                       systemForcedColors: p.systemForcedColors,
                       fontScale: p.fontScale,
                       keyboardModeEnabled: p.keyboardModeEnabled,
-                      mouseModeEnabled: S,
+                      mouseModeEnabled: I,
                       reducedMotionEnabled: p.useReducedMotion,
                       connectedToEmbeddedActivity: v,
                       fontScaleClass: p.fontScaleClass,

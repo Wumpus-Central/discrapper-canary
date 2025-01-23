@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return I;
     }
 }),
     n(47120);
@@ -20,30 +20,30 @@ var l = n(442837),
     h = n(981631),
     g = n(388032),
     v = n(951908);
-function S(e) {
-    let { isCurrentUser: t, color: n, look: S, applicationStream: I, onAction: _ } = e,
+function I(e) {
+    let { isCurrentUser: t, color: n, look: I, applicationStream: S, onAction: _ } = e,
         { activeStream: x, watchingOtherStream: E } = (0, l.cj)([d.Z], () => ({
-            activeStream: d.Z.getActiveStreamForApplicationStream(I),
+            activeStream: d.Z.getActiveStreamForApplicationStream(S),
             watchingOtherStream:
-                null != I &&
-                d.Z.getAllActiveStreamsForChannel(I.channelId).filter((e) => {
+                null != S &&
+                d.Z.getAllActiveStreamsForChannel(S.channelId).filter((e) => {
                     let { ownerId: t } = e;
-                    return t !== I.ownerId;
+                    return t !== S.ownerId;
                 }).length > 0
         })),
-        C = (0, l.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
+        C = (0, l.e7)([m.Z], () => m.Z.getChannel(null == S ? void 0 : S.channelId)),
         [y, b] = (0, u.wq)(C),
         Z = (0, c.Aq)(),
-        T = null != x && null != I && x.state !== h.jm8.ENDED && x.ownerId === I.ownerId,
+        T = null != x && null != S && x.state !== h.jm8.ENDED && x.ownerId === S.ownerId,
         N = (e) => {
-            if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !T && (0, o.iV)(I, { forceMultiple: e }), Z.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll();
+            if (null != S) null == _ || _(), s.default.selectVoiceChannel(S.channelId), !T && (0, o.iV)(S, { forceMultiple: e }), Z.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll();
         };
-    if (null == I) return null;
+    if (null == S) return null;
     let A = (0, u.P9)(b);
     t ? (A = g.intl.string(g.t.XvBdeX)) : T && (A = g.intl.string(g.t.JH1SJy));
     let j = {
         color: n,
-        look: S
+        look: I
     };
     return (0, i.jsxs)(i.Fragment, {
         children: [

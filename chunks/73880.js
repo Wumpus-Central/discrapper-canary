@@ -6,7 +6,7 @@ t.d(n, {
         return d;
     },
     lX: function () {
-        return f;
+        return E;
     }
 });
 var i = t(200651);
@@ -14,26 +14,26 @@ t(192379);
 var r = t(120356),
     l = t.n(r),
     u = t(481060),
-    o = t(489813),
-    a = t(592286),
+    a = t(489813),
+    o = t(592286),
     s = t(119866);
 function c(e) {
-    let { value: n, placeholder: t, onChange: r, disabled: o, className: c, autofocus: d } = e;
+    let { value: n, placeholder: t, onChange: r, disabled: a, className: c, autofocus: d } = e;
     return (0, i.jsx)(u.TextArea, {
         className: l()(s.paragraphFieldBody, c),
-        maxLength: a.RS,
+        maxLength: o.RS,
         value: null != n ? n : '',
         placeholder: null != t ? t : '',
         onChange: r,
-        disabled: o,
+        disabled: a,
         autoFocus: d,
         autosize: !0,
-        showRemainingCharacterCount: !o
+        showRemainingCharacterCount: !a
     });
 }
 function d(e) {
     let { formField: n } = e;
-    return (0, i.jsx)(o.hK, {
+    return (0, i.jsx)(a.hK, {
         title: n.label,
         children: (0, i.jsx)(c, {
             className: s.fieldBackground,
@@ -42,9 +42,9 @@ function d(e) {
         })
     });
 }
-function f(e) {
+function E(e) {
     let { formField: n, autofocus: t, onChange: r } = e;
-    return (0, i.jsx)(o.hK, {
+    return (0, i.jsx)(a.hK, {
         title: n.label,
         children: (0, i.jsx)(c, {
             className: s.fieldBackground,

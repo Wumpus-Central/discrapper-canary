@@ -24,8 +24,8 @@ var i,
     h = n(833858),
     g = n(223135),
     v = n(374129),
-    S = n(639351),
-    I = n(630388),
+    I = n(639351),
+    S = n(630388),
     _ = n(51144),
     x = n(981631),
     E = n(354459),
@@ -160,7 +160,7 @@ function A(e) {
                       'div',
                       {
                           className: s()(b.iconSpacing),
-                          children: (0, l.jsx)(S.Z, { className: s()(b.icon, Z) })
+                          children: (0, l.jsx)(I.Z, { className: s()(b.icon, Z) })
                       },
                       'xbox'
                   )
@@ -203,7 +203,7 @@ function A(e) {
                       'watch'
                   )
               );
-    let G = null != L && !(0, I.yE)(L.flags, x.udG.EMBEDDED),
+    let G = null != L && !(0, S.yE)(L.flags, x.udG.EMBEDDED),
         H = null == R && G;
     return 0 !== W.length || null != z || M || H
         ? (0, l.jsxs)('div', {

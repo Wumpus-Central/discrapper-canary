@@ -21,7 +21,7 @@ t.Z = {
     handleRequiredAction(e) {
         let t = e.requiredAction;
         if (!h.s.isDisallowPopupsSet() && null != u.default.getCurrentUser())
-            t === p.c2C.REQUIRE_CAPTCHA || t === p.c2C.REQUIRE_VERIFIED_EMAIL || t === p.c2C.REQUIRE_VERIFIED_PHONE || t === p.c2C.REQUIRE_REVERIFIED_PHONE || t === p.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === p.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || o.Z.isEmailReverification(t)
+            t === p.c2C.REQUIRE_CAPTCHA || t === p.c2C.REQUIRE_VERIFIED_EMAIL || t === p.c2C.REQUIRE_VERIFIED_PHONE || t === p.c2C.REQUIRE_REVERIFIED_PHONE || t === p.c2C.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE || t === p.c2C.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === p.c2C.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || o.Z.isEmailReverification(t)
                 ? (0, a.q4)(() => (0, i.jsx)(c.Z, {}), {
                       layerKey: f.CV,
                       Layer: s.ZP

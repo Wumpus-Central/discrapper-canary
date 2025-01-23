@@ -19,7 +19,7 @@ t.Z = l.memo(function (e) {
                 g({ maskImage: 'none' });
                 return;
             }
-            let i = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
+            let i = null === (e = I.current) || void 0 === e ? void 0 : e.getBoundingClientRect(),
                 l = null === (t = p.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
             if (null == i || null == l) {
                 g({ maskImage: 'none' });
@@ -33,11 +33,11 @@ t.Z = l.memo(function (e) {
             }
             g({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(r, 'px)') });
         }),
-        S = (0, o.y)(v),
-        I = (0, u.p0)(f.userId, a),
+        I = (0, o.y)(v),
+        S = (0, u.p0)(f.userId, a),
         _ = {
             handleResize: v,
-            positionTrackerRef: S
+            positionTrackerRef: I
         },
         x = l.useRef(_);
     l.useEffect(() => {
@@ -46,11 +46,11 @@ t.Z = l.memo(function (e) {
         l.useEffect(() => {
             let { handleResize: e, positionTrackerRef: t } = x.current;
             if (null != t.current) e();
-        }, [I]);
+        }, [S]);
     let E = (0, s.O)(v);
     return (0, i.jsxs)('div', {
         className: r()(m.container, n && m.isOverlayContainer),
-        ref: S,
+        ref: I,
         children: [
             (0, i.jsx)('div', {
                 className: m.usernameContainer,
@@ -60,7 +60,7 @@ t.Z = l.memo(function (e) {
                 className: m.chipletParent,
                 ref: E,
                 children: (0, i.jsx)('span', {
-                    className: r()(m.chipletContainer, !I && n && m.noPadding),
+                    className: r()(m.chipletContainer, !S && n && m.noPadding),
                     ref: p,
                     style: h,
                     children: (0, i.jsx)(d.ZP, {
