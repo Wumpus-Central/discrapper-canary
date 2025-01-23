@@ -21,9 +21,10 @@ let v = (e) => {
         b = l.Z.getChannel(r.getChannelId()),
         I = null === (n = r.potions) || void 0 === n ? void 0 : n[0],
         T = a.useMemo(() => {
+            var e;
             if (null == I) return null;
-            let e = u.default.getUser(I.used_by);
-            return (0, d.y)(null == b ? void 0 : b.getGuildId(), null == b ? void 0 : b.id, e);
+            let n = u.default.getUser(I.used_by);
+            return null !== (e = (0, d.y)(null == b ? void 0 : b.getGuildId(), null == b ? void 0 : b.id, n)) && void 0 !== e ? e : null == n ? void 0 : n.globalName;
         }, [I, b]),
         S = a.useCallback(() => {
             if (null != v.current && (0, _.U)(r)) {
