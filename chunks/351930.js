@@ -65,43 +65,72 @@ let p = async () =>
 function g() {
     let [e, t] = r.useState('511651880837840896'),
         [n, l] = r.useState([]),
-        c = async () => {
-            l(await p());
+        [c, m] = r.useState(!1),
+        g = async () => {
+            try {
+                m(!0);
+                let e = await p();
+                l(e);
+            } finally {
+                m(!1);
+            }
         };
     r.useEffect(() => {
-        c();
+        g();
     }, []);
-    let m = r.useMemo(() => n.find((e) => e.status === h.O0b.ACTIVE), [n]),
-        g = r.useMemo(() => n.filter((e) => e.status !== h.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [n]),
-        v = async () => {
+    let v = r.useMemo(() => n.find((e) => e.status === h.O0b.ACTIVE), [n]),
+        j = r.useMemo(() => n.filter((e) => e.status !== h.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [n]),
+        C = async () => {
             await o.tn.post({
                 url: '/debug/subscription',
                 body: { plan_id: e },
                 rejectWithError: !1
             }),
-                await c();
+                await g();
         },
-        j = async () => {
+        _ = async () => {
             await o.tn.del({
                 url: '/debug/subscription',
                 rejectWithError: !1
             }),
-                await c();
+                await g();
         };
     return (0, a.jsx)(s.ScrollerThin, {
         className: i()(x.panel),
         children: (0, a.jsxs)('div', {
             className: f.panelInner,
             children: [
-                (0, a.jsx)(s.Text, {
-                    style: { marginBottom: '8px' },
-                    variant: 'text-lg/bold',
-                    children: 'Manage Subscription'
+                (0, a.jsxs)('div', {
+                    className: f.headerWrapper,
+                    children: [
+                        (0, a.jsx)('div', {
+                            children: (0, a.jsx)(s.Text, {
+                                style: { marginBottom: '8px' },
+                                variant: 'text-lg/bold',
+                                children: 'Manage Subscription'
+                            })
+                        }),
+                        (0, a.jsx)('div', {
+                            children: (0, a.jsx)(s.Button, {
+                                disabled: c,
+                                look: s.Button.Looks.BLANK,
+                                size: s.Button.Sizes.ICON,
+                                onClick: g,
+                                children: (0, a.jsx)('span', {
+                                    title: 'Refresh',
+                                    children: (0, a.jsx)(s.RefreshIcon, {
+                                        size: 'xs',
+                                        color: 'currentColor'
+                                    })
+                                })
+                            })
+                        })
+                    ]
                 }),
                 (0, a.jsx)('section', {
                     className: i()([f.section, f.buttons]),
                     children:
-                        null == m &&
+                        null == v &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(s.Text, {
@@ -117,7 +146,7 @@ function g() {
                                 }),
                                 (0, a.jsx)(s.Button, {
                                     size: s.Button.Sizes.SMALL,
-                                    onClick: v,
+                                    onClick: C,
                                     children: 'Create Subscription'
                                 })
                             ]
@@ -132,11 +161,11 @@ function g() {
                     className: i()([f.section, f.buttons]),
                     children: (0, a.jsx)(s.Button, {
                         size: s.Button.Sizes.SMALL,
-                        onClick: j,
+                        onClick: _,
                         children: 'End All Subscriptions'
                     })
                 }),
-                null != m &&
+                null != v &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(s.Text, {
@@ -145,12 +174,12 @@ function g() {
                                 children: 'Existing active subscription'
                             }),
                             (0, a.jsx)(u.Z, {
-                                subscription: m,
-                                onUpdated: c
+                                subscription: v,
+                                onUpdated: g
                             })
                         ]
                     }),
-                g.length > 0 &&
+                j.length > 0 &&
                     (0, a.jsxs)('div', {
                         style: { marginTop: '8px' },
                         children: [
@@ -159,12 +188,12 @@ function g() {
                                 variant: 'text-md/normal',
                                 children: 'Previous subscriptions'
                             }),
-                            g.map((e) =>
+                            j.map((e) =>
                                 (0, a.jsx)(
                                     u.Z,
                                     {
                                         subscription: e,
-                                        onUpdated: c
+                                        onUpdated: g
                                     },
                                     e.id
                                 )

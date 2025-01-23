@@ -1,5 +1,6 @@
 e.exports = {
     panelInner: 'panelInner_a12ab2',
+    headerWrapper: 'headerWrapper_a12ab2',
     section: 'section_a12ab2',
     buttons: 'buttons_a12ab2',
     inputRow: 'inputRow_a12ab2',
