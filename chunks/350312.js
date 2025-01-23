@@ -54,28 +54,22 @@ function E(e) {
     });
 }
 function C(e) {
-    let { title: t, subtitle: n } = e,
-        i = '' !== (null != t ? t : '').trim(),
-        l = '' !== (null != n ? n : '').trim();
-    return i || l
-        ? (0, r.jsxs)('div', {
-              className: d.endScreenCtaTitleContainer,
-              children: [
-                  i &&
-                      (0, r.jsx)(s.Heading, {
-                          variant: 'heading-md/semibold',
-                          className: d.endScreenCtaTitle,
-                          children: t
-                      }),
-                  l &&
-                      (0, r.jsx)(s.Heading, {
-                          variant: 'heading-sm/normal',
-                          className: d.endScreenCtaSubtitle,
-                          children: n
-                      })
-              ]
-          })
-        : null;
+    let { title: t, subtitle: n } = e;
+    return (0, r.jsxs)('div', {
+        className: d.endScreenCtaTitleContainer,
+        children: [
+            (0, r.jsx)(s.Heading, {
+                variant: 'heading-md/semibold',
+                className: d.endScreenCtaTitle,
+                children: t
+            }),
+            (0, r.jsx)(s.Heading, {
+                variant: 'heading-sm/normal',
+                className: d.endScreenCtaSubtitle,
+                children: n
+            })
+        ]
+    });
 }
 function p(e) {
     let { label: t, icon: n, onClick: l, className: a } = e,
