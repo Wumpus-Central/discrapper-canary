@@ -107,7 +107,6 @@ t.ZP = (e) => {
         W = (0, o.Z)(M, L.xjy.JOIN) || (0, s.Z)(M),
         q = W
             ? (0, l.jsx)(u.Z, {
-                  isEmbedded: (0, s.Z)(M),
                   embeddedActivity: k,
                   activity: M,
                   user: S,

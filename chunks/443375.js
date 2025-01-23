@@ -257,7 +257,6 @@ function K(e) {
                       children: (0, i.jsx)(x.Z, {
                           activity: K,
                           user: r,
-                          currentUser: a,
                           onAction: es,
                           onClose: J
                       })

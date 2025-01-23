@@ -20,50 +20,49 @@ var a = r(620662),
     g = r(715547),
     E = r(981631);
 function v(e) {
-    let { user: n, currentUser: r, activity: v, onAction: y, onClose: b } = e;
-    return (0, l.Z)(v)
+    let { user: n, activity: r, onAction: v, onClose: y } = e;
+    return (0, l.Z)(r)
         ? (0, i.jsx)(m.Z, {
               platformType: E.ABu.XBOX,
               icon: () => (0, i.jsx)(d.Z, {}),
-              onAction: y
+              onAction: v
           })
-        : (0, s.Z)(v)
+        : (0, s.Z)(r)
           ? (0, i.jsx)(m.Z, {
                 platformType: E.ABu.PLAYSTATION,
                 icon: () => (0, i.jsx)(c.Z, {}),
-                onAction: y
+                onAction: v
             })
-          : (0, u.Z)(v)
+          : (0, u.Z)(r)
             ? (0, i.jsx)(g.Z, {
-                  activity: v,
-                  onAction: y
+                  activity: r,
+                  onAction: v
               })
-            : (0, a.Z)(v, E.xjy.JOIN) || (0, o.Z)(v)
+            : (0, a.Z)(r, E.xjy.JOIN) || (0, o.Z)(r)
               ? (0, i.jsx)(h.Z, {
                     user: n,
-                    currentUser: r,
-                    activity: v,
-                    onAction: y,
-                    onClose: b
+                    activity: r,
+                    onAction: v,
+                    onClose: y
                 })
-              : (null == v ? void 0 : v.type) === E.IIU.HANG_STATUS
+              : (null == r ? void 0 : r.type) === E.IIU.HANG_STATUS
                 ? (0, i.jsx)(p.Z, {
                       user: n,
-                      activity: v,
-                      onAction: y,
-                      onClose: b
+                      activity: r,
+                      onAction: v,
+                      onClose: y
                   })
-                : (null == v ? void 0 : v.buttons) != null && (null == v ? void 0 : v.buttons.length) >= 1
+                : (null == r ? void 0 : r.buttons) != null && (null == r ? void 0 : r.buttons.length) >= 1
                   ? (0, i.jsx)(f.Z, {
                         user: n,
-                        activity: v,
-                        onAction: y
+                        activity: r,
+                        onAction: v
                     })
-                  : (0, a.Z)(v, E.xjy.INSTANCE)
+                  : (0, a.Z)(r, E.xjy.INSTANCE)
                     ? (0, i.jsx)(_.Z, {
                           user: n,
-                          activity: v,
-                          onAction: y
+                          activity: r,
+                          onAction: v
                       })
                     : null;
 }

@@ -105,8 +105,7 @@ t.Z = (e) => {
                                             guildId: t.guild_id,
                                             members: l
                                         })
-                                  : void 0,
-                          isEmbedded: h
+                                  : void 0
                       })
             }),
             (0, i.jsx)('div', {
@@ -119,8 +118,7 @@ t.Z = (e) => {
                     guildId: t.getGuildId(),
                     channelId: t.id,
                     color: x.button,
-                    onAction: o,
-                    isEmbedded: h
+                    onAction: o
                 })
             })
         ]

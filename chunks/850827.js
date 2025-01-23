@@ -21,8 +21,8 @@ var l = n(120356),
     E = n(606925),
     C = n(719216),
     y = n(429589),
-    b = n(276149),
-    Z = n(636245),
+    Z = n(276149),
+    b = n(636245),
     T = n(697761),
     N = n(611459),
     A = n(544671),
@@ -31,26 +31,26 @@ var l = n(120356),
     P = n(981631),
     R = n(522832);
 t.Z = (0, u.Z)((e) => {
-    let { activity: t, embeddedActivity: n, user: l, applicationStream: r, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V, isEmbedded: F = !1 } = e,
-        B = (0, o.e7)([h.default], () => {
+    let { activity: t, embeddedActivity: n, user: l, applicationStream: r, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V } = e,
+        F = (0, o.e7)([h.default], () => {
             let e = h.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
-        W = U === x.Y.STREAM_PREVIEW || null != r,
-        z = (0, S.Z)(t),
-        G = z || W ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
-        H = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
-        Y = (0, o.e7)([g.Z, p.Z], () => {
+        B = U === x.Y.STREAM_PREVIEW || null != r,
+        W = (0, S.Z)(t),
+        z = W || B ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
+        G = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
+        H = (0, o.e7)([g.Z, p.Z], () => {
             var e;
-            return H ? p.Z.getChannel(null === (e = g.Z.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return G ? p.Z.getChannel(null === (e = g.Z.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
-        J = G === m.Z.Direction.VERTICAL;
+        Y = z === m.Z.Direction.VERTICAL;
     return (0, i.jsx)(m.Z, {
         grow: 0,
         align: m.Z.Align.STRETCH,
-        direction: G,
-        wrap: J ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
-        className: a()(u, R.buttonsWrapper, J ? R.vertical : R.horizontal),
+        direction: z,
+        wrap: Y ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
+        className: a()(u, R.buttonsWrapper, Y ? R.vertical : R.horizontal),
         children: (() => {
             if ((0, _.Z)(t))
                 return (0, i.jsx)(
@@ -76,7 +76,7 @@ t.Z = (0, u.Z)((e) => {
                     },
                     'ConnectPlatformActivityButton'
                 );
-            if (z) {
+            if (W) {
                 let e = (0, i.jsx)(
                         A.Z,
                         {
@@ -112,7 +112,7 @@ t.Z = (0, u.Z)((e) => {
                 return null == e
                     ? null
                     : (0, i.jsx)(
-                          Z.Z,
+                          b.Z,
                           {
                               guildId: e.guildId,
                               channelId: e.channelId,
@@ -123,11 +123,11 @@ t.Z = (0, u.Z)((e) => {
                           e.channelId
                       );
             }
-            return W
+            return B
                 ? (0, i.jsx)(
                       w.Z,
                       {
-                          isCurrentUser: B.id === l.id,
+                          isCurrentUser: F.id === l.id,
                           color: k,
                           look: D,
                           applicationStream: r,
@@ -135,13 +135,13 @@ t.Z = (0, u.Z)((e) => {
                       },
                       'watch-button'
                   )
-                : H && null != Y
+                : G && null != H
                   ? (0, i.jsx)(
-                        b.Z,
+                        Z.Z,
                         {
                             color: k,
                             look: D,
-                            hangStatusChannel: Y,
+                            hangStatusChannel: H,
                             onAction: V
                         },
                         'hang-status-button'
@@ -166,7 +166,6 @@ t.Z = (0, u.Z)((e) => {
                                     user: l,
                                     color: k,
                                     look: D,
-                                    isEmbedded: F,
                                     onAction: V
                                 },
                                 'join-activity-button'

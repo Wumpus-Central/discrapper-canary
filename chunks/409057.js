@@ -257,7 +257,6 @@ function Y(e) {
                       children: (0, i.jsx)(D.Z, {
                           activity: a,
                           user: n,
-                          currentUser: r,
                           onAction: et,
                           onClose: q
                       })
