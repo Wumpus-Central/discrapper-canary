@@ -26,7 +26,8 @@ function C(e) {
         N = r.useRef(null),
         v = (0, l.e7)([m.ZP], () => (null == I ? void 0 : I.id) != null && m.ZP.getMentionCount(I.id, _.W.NOTIFICATION_CENTER) > 0),
         { enabled: T } = c.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        S = (0, l.e7)([s.Z], () => T && s.Z.getUnseenInviteCount() > 0);
+        S = (0, l.e7)([s.Z], () => T && s.Z.getUnseenInviteCount() > 0),
+        A = (0, a.useToken)(a.tokens.modules.chat.INPUT_ICON_SIZE);
     return (0, i.jsx)(f.k, {
         onOpen: t,
         onClose: n,
@@ -50,7 +51,7 @@ function C(e) {
                             className: C,
                             onClick: e,
                             icon: a.InboxIcon,
-                            iconSize: x ? 16 : void 0,
+                            iconSize: x ? A : void 0,
                             'aria-label': g.intl.string(g.t.GSmTKC),
                             tooltip: t ? null : g.intl.string(g.t.GSmTKC),
                             selected: t,

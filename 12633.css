@@ -44063,6 +44063,14 @@ img.thumbnail_c64476 {
     bottom: 2px
 }
 
+.visual-refresh .iconBadgeBottom_fc4f04 {
+    --custom-icon-offset: calc((var(--chat-input-icon-size) - 8px) / 2);
+    right: calc(.5*(-8px + var(--chat-input-icon-size)));
+    right: var(--custom-icon-offset);
+    bottom: calc(.5*(-8px + var(--chat-input-icon-size)));
+    bottom: var(--custom-icon-offset)
+}
+
 .divider_fc4f04 {
     width: 1px;
     height: 24px;
