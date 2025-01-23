@@ -227,6 +227,7 @@ t.Z = {
             case eN.pNK.ACCESS:
                 return {
                     section: eN.pNK.ACCESS,
+                    impressionName: r.ImpressionNames.GUILD_SETTINGS_ACCESS,
                     label: ej.intl.string(ej.t['+hFV+P']),
                     element: ex.O,
                     notice: {

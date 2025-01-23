@@ -90,6 +90,7 @@ r.d(n, {
             (e.GUILD_PRODUCT_LISTING_EMBED = 'impression_guild_product_listing_embed'),
             (e.GUILD_PRODUCT_LISTING_INFO_MODAL = 'impression_guild_product_listing_info_modal'),
             (e.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_GUILD_SETTINGS = 'impression_guild_role_subscription_store_page_guild_settings'),
+            (e.GUILD_SETTINGS_ACCESS = 'impression_guild_settings_access'),
             (e.GUILD_SETTINGS_ANALYTICS = 'impression_guild_settings_analytics'),
             (e.GUILD_SETTINGS_AUDIT_LOG = 'impression_guild_settings_audit_log'),
             (e.GUILD_SETTINGS_AUDIT_LOG_V2 = 'impression_guild_settings_audit_log_v2'),
