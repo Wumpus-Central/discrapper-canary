@@ -1,96 +1,91 @@
-var i,
-    r,
-    s,
-    l,
-    o = n(200651),
-    a = n(192379),
-    c = n(525654),
-    d = n.n(c),
-    u = n(442837),
-    h = n(893776),
-    g = n(129293),
-    f = n(388905),
-    m = n(108427),
-    p = n(314897),
-    x = n(981631),
-    _ = n(388032),
-    E = n(232186);
-u.ZP.initialize();
-class I extends (l = a.PureComponent) {
-    componentDidMount() {
-        let e = (0, g.Z)(this.props.location);
-        null != e && h.Z.authorizeIPAddress(e), (0, m.e)('authorize_ip');
+n.d(t, {
+    Z: function () {
+        return x;
     }
-    renderLoginButton() {
-        if ('Android' === d().os.family || 'iOS' === d().os.family) return null;
-        let { transitionTo: e } = this.props;
-        return (0, o.jsx)(f.zx, {
-            onClick: () => e(x.Z5c.LOGIN),
-            children: _.intl.string(_.t.dKhVQE)
-        });
-    }
-    renderFailed() {
-        return (0, o.jsxs)(f.ZP, {
-            children: [
-                (0, o.jsx)('img', {
-                    alt: '',
-                    src: n(262467),
-                    className: E.marginBottom20
-                }),
-                (0, o.jsx)(f.Dx, {
-                    className: E.marginBottom8,
-                    children: _.intl.string(_.t['f/54a2'])
-                }),
-                (0, o.jsx)(f.DK, {
-                    className: E.marginBottom40,
-                    children: _.intl.string(_.t.i3ehMj)
-                }),
-                this.renderLoginButton()
-            ]
-        });
-    }
-    renderSucceeded() {
-        return (0, o.jsxs)(f.ZP, {
-            children: [
-                (0, o.jsx)('img', {
-                    alt: '',
-                    src: n(640356),
-                    className: E.marginBottom20
-                }),
-                (0, o.jsx)(f.Dx, {
-                    className: E.marginBottom8,
-                    children: _.intl.string(_.t.iG0SlJ)
-                }),
-                (0, o.jsx)(f.DK, {
-                    className: E.marginBottom40,
-                    children: _.intl.string(_.t['Elv+qq'])
-                }),
-                this.renderLoginButton()
-            ]
-        });
-    }
-    renderDefault() {
-        return (0, o.jsxs)(f.ZP, {
-            children: [(0, o.jsx)(f.Hh, {}), (0, o.jsx)(f.Dx, { children: _.intl.string(_.t['9exy+f']) })]
-        });
-    }
-    render() {
-        let { verifyFailed: e, verifySucceeded: t } = this.props;
-        return e ? this.renderFailed() : t ? this.renderSucceeded() : this.renderDefault();
-    }
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    s = n(525654),
+    l = n.n(s),
+    o = n(442837),
+    a = n(893776),
+    c = n(493773),
+    d = n(129293),
+    u = n(388905),
+    h = n(108427),
+    g = n(981631),
+    f = n(388032),
+    m = n(232186);
+function p(e) {
+    return n.g.location.assign(e);
 }
-(i = I),
-    (r = 'defaultProps'),
-    (s = { transitionTo: (e) => n.g.location.assign(e) }),
-    r in i
-        ? Object.defineProperty(i, r, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
+function x(e) {
+    let { location: t, transitionTo: s = p } = e,
+        [o, x] = r.useState('submitting');
+    function _() {
+        return 'Android' === l().os.family || 'iOS' === l().os.family
+            ? null
+            : (0, i.jsx)(u.zx, {
+                  onClick: () => s(g.Z5c.LOGIN),
+                  children: f.intl.string(f.t.dKhVQE)
+              });
+    }
+    return ((0, c.Z)(() => {
+        (0, h.e)('authorize_ip');
+        let e = (0, d.Z)(t);
+        if (null == e) {
+            x('failed');
+            return;
+        }
+        (async () => {
+            try {
+                await a.Z.authorizeIPAddress(e), x('succeeded');
+            } catch (e) {
+                x('failed');
+            }
+        })();
+    }),
+    'failed' === o)
+        ? (0, i.jsxs)(u.ZP, {
+              children: [
+                  (0, i.jsx)('img', {
+                      alt: '',
+                      src: n(262467),
+                      className: m.marginBottom20
+                  }),
+                  (0, i.jsx)(u.Dx, {
+                      className: m.marginBottom8,
+                      children: f.intl.string(f.t['f/54a2'])
+                  }),
+                  (0, i.jsx)(u.DK, {
+                      className: m.marginBottom40,
+                      children: f.intl.string(f.t.i3ehMj)
+                  }),
+                  _()
+              ]
           })
-        : (i[r] = s),
-    (t.Z = u.ZP.connectStores([p.default], () => ({
-        verifyFailed: p.default.didVerifyFail(),
-        verifySucceeded: p.default.didVerifySucceed()
-    }))(I));
+        : 'succeeded' === o
+          ? (0, i.jsxs)(u.ZP, {
+                children: [
+                    (0, i.jsx)('img', {
+                        alt: '',
+                        src: n(640356),
+                        className: m.marginBottom20
+                    }),
+                    (0, i.jsx)(u.Dx, {
+                        className: m.marginBottom8,
+                        children: f.intl.string(f.t.iG0SlJ)
+                    }),
+                    (0, i.jsx)(u.DK, {
+                        className: m.marginBottom40,
+                        children: f.intl.string(f.t['Elv+qq'])
+                    }),
+                    _()
+                ]
+            })
+          : (0, i.jsxs)(u.ZP, {
+                children: [(0, i.jsx)(u.Hh, {}), (0, i.jsx)(u.Dx, { children: f.intl.string(f.t['9exy+f']) })]
+            });
+}
+o.ZP.initialize();

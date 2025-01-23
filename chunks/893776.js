@@ -364,30 +364,13 @@ function D() {
                 trackedActionData: { event: u.NetworkActionNames.AUTHORIZE_PAYMENT },
                 rejectWithError: !0
             }),
-        async authorizeIPAddress(e) {
-            if (null == e) {
-                p.Z.dispatch({
-                    type: 'VERIFY_FAILURE',
-                    errors: {}
-                });
-                return;
-            }
-            try {
-                await I.Z.post({
-                    url: S.ANM.AUTHORIZE_IP,
-                    body: { token: e },
-                    oldFormErrors: !0,
-                    trackedActionData: { event: u.NetworkActionNames.AUTHORIZE_IP },
-                    rejectWithError: !0
-                }),
-                    p.Z.dispatch({ type: 'VERIFY_SUCCESS' });
-            } catch (e) {
-                p.Z.dispatch({
-                    type: 'VERIFY_FAILURE',
-                    errors: {}
-                });
-            }
-        },
+        authorizeIPAddress: (e) =>
+            I.Z.post({
+                url: S.ANM.AUTHORIZE_IP,
+                body: { token: e },
+                trackedActionData: { event: u.NetworkActionNames.AUTHORIZE_IP },
+                rejectWithError: !0
+            }),
         verifyResend: () =>
             I.Z.post({
                 url: S.ANM.VERIFY_RESEND,
