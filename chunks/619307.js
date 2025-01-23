@@ -122,8 +122,11 @@ function O(e) {
 function D(e) {
     let { options: n, placeholder: r = y.intl.string(y.t.XqMe3N), className: i, isDisabled: s = !1, maxVisibleItems: u = 7, autoFocus: c = !1, popoutWidth: f, clearable: h = !1, look: E = v.q.FILLED, onClose: I, onOpen: T, renderOptionLabel: S = R, renderOptionValue: A = O, popoutClassName: C, popoutPosition: N = 'bottom', popoutLayerContext: D, optionClassName: x, closeOnSelect: w, select: P, isSelected: M, serialize: k, clear: U, hideIcon: B = !1, 'aria-label': G, 'aria-labelledby': Z } = e,
         [F, V] = o.useState(!1),
-        { ref: j, width: H, height: Y } = (0, m.Z)(),
-        W = o.useCallback(
+        { ref: j, width: H, height: Y } = (0, m.Z)();
+    o.useLayoutEffect(() => {
+        s && V(!1);
+    }, [s]);
+    let W = o.useCallback(
             (e) => {
                 F !== e && !s && (V(e), e ? null == T || T() : null == I || I());
             },
