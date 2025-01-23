@@ -4,6 +4,7 @@ e.exports = {
     inlineButton: 'inlineButton_f38a29',
     playing: 'playing_f38a29',
     inlineContainer: 'inlineContainer_f38a29',
+    inlineTextArea: 'inlineTextArea_f38a29',
     soundmojiEmoji: 'soundmojiEmoji_f38a29',
     unknownSound: 'unknownSound_f38a29',
     tooltip: 'tooltip_f38a29',

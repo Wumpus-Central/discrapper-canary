@@ -48,6 +48,7 @@ function S(e) {
         ? null == r
             ? (0, i.jsx)(T, {})
             : (0, i.jsx)(A, {
+                  className: I.inlineTextArea,
                   isPlaying: o,
                   playSound: s,
                   sound: r
@@ -55,26 +56,26 @@ function S(e) {
         : null;
 }
 function A(e) {
-    let { sound: n, playSound: r, isPlaying: a } = e,
-        o = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        l = b.intl.formatToPlainString(b.t.tuMUJy, {
-            emojiName: null == n ? void 0 : n.emojiName,
-            soundName: null == n ? void 0 : n.name
+    let { className: n, sound: r, playSound: a, isPlaying: o } = e,
+        l = (null == r ? void 0 : r.emojiId) != null || (null == r ? void 0 : r.emojiName) != null,
+        f = b.intl.formatToPlainString(b.t.tuMUJy, {
+            emojiName: null == r ? void 0 : r.emojiName,
+            soundName: null == r ? void 0 : r.name
         });
     return (0, d.X0)({ location: 'SoundboardMentionInline' })
         ? (0, i.jsxs)(u.Clickable, {
-              'aria-label': l,
+              'aria-label': f,
               tag: 'span',
-              onClick: r,
-              className: s()(I.inlineContainer, I.inlineButton, { [I.playing]: !0 === a }),
+              onClick: a,
+              className: s()(I.inlineContainer, I.inlineButton, { [I.playing]: !0 === o }, n),
               children: [
-                  o &&
+                  l &&
                       (0, i.jsx)(c.Z, {
-                          emojiId: null == n ? void 0 : n.emojiId,
-                          emojiName: null == n ? void 0 : n.emojiName,
+                          emojiId: null == r ? void 0 : r.emojiId,
+                          emojiName: null == r ? void 0 : r.emojiName,
                           className: I.soundmojiEmoji
                       }),
-                  (0, i.jsx)('span', { children: ' '.concat(null == n ? void 0 : n.name, ' ') })
+                  (0, i.jsx)('span', { children: ' '.concat(null == r ? void 0 : r.name, ' ') })
               ]
           })
         : null;
