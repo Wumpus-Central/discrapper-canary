@@ -1,60 +1,72 @@
+n.d(t, {
+    Z: function () {
+        return u;
+    }
+}),
+    n(47120);
 var i = n(200651),
     r = n(192379),
-    s = n(442837),
-    l = n(893776),
-    o = n(129293),
-    a = n(388905),
-    c = n(108427),
-    d = n(314897),
-    u = n(388032),
-    h = n(232186);
-t.Z = (e) => {
+    s = n(893776),
+    l = n(129293),
+    o = n(388905),
+    a = n(108427),
+    c = n(388032),
+    d = n(232186);
+function u(e) {
     let { location: t } = e,
-        { verifyFailed: g, verifySucceeded: f } = (0, s.cj)([d.default], () => ({
-            verifyFailed: d.default.didVerifyFail(),
-            verifySucceeded: d.default.didVerifySucceed()
-        }));
+        [u, h] = r.useState('submitting');
     return (r.useEffect(() => {
-        let e = (0, o.Z)(t);
-        null != e && l.Z.authorizePayment(e), (0, c.e)('authorize_payment');
+        (0, a.e)('authorize_payment');
+        let e = (0, l.Z)(t);
+        if (null == e) {
+            h('failed');
+            return;
+        }
+        (async () => {
+            try {
+                await s.Z.authorizePayment(e), h('succeeded');
+            } catch (e) {
+                h('failed');
+            }
+        })();
     }, [t]),
-    g)
-        ? (0, i.jsxs)(a.ZP, {
+    'failed' === u)
+        ? (0, i.jsxs)(o.ZP, {
               children: [
                   (0, i.jsx)('img', {
                       alt: '',
                       src: n(375673),
-                      className: h.marginBottom20
+                      className: d.marginBottom20
                   }),
-                  (0, i.jsx)(a.Dx, {
-                      className: h.marginBottom8,
-                      children: u.intl.string(u.t.GHRpub)
+                  (0, i.jsx)(o.Dx, {
+                      className: d.marginBottom8,
+                      children: c.intl.string(c.t.GHRpub)
                   }),
-                  (0, i.jsx)(a.DK, {
-                      className: h.marginBottom40,
-                      children: u.intl.string(u.t['1nO55u'])
+                  (0, i.jsx)(o.DK, {
+                      className: d.marginBottom40,
+                      children: c.intl.string(c.t['1nO55u'])
                   })
               ]
           })
-        : f
-          ? (0, i.jsxs)(a.ZP, {
+        : 'succeeded' === u
+          ? (0, i.jsxs)(o.ZP, {
                 children: [
                     (0, i.jsx)('img', {
                         alt: '',
                         src: n(73962),
-                        className: h.marginBottom20
+                        className: d.marginBottom20
                     }),
-                    (0, i.jsx)(a.Dx, {
-                        className: h.marginBottom8,
-                        children: u.intl.string(u.t['ihHX5+'])
+                    (0, i.jsx)(o.Dx, {
+                        className: d.marginBottom8,
+                        children: c.intl.string(c.t['ihHX5+'])
                     }),
-                    (0, i.jsx)(a.DK, {
-                        className: h.marginBottom40,
-                        children: u.intl.string(u.t.pGPCv7)
+                    (0, i.jsx)(o.DK, {
+                        className: d.marginBottom40,
+                        children: c.intl.string(c.t.pGPCv7)
                     })
                 ]
             })
-          : (0, i.jsxs)(a.ZP, {
-                children: [(0, i.jsx)(a.Hh, {}), (0, i.jsx)(a.Dx, { children: u.intl.string(u.t.T3vC7u) })]
+          : (0, i.jsxs)(o.ZP, {
+                children: [(0, i.jsx)(o.Hh, {}), (0, i.jsx)(o.Dx, { children: c.intl.string(c.t.T3vC7u) })]
             });
-};
+}

@@ -357,23 +357,13 @@ function D() {
                 n.body.user_id
             );
         },
-        async authorizePayment(e) {
-            try {
-                await I.Z.post({
-                    url: S.ANM.AUTHORIZE_PAYMENT,
-                    body: { token: e },
-                    oldFormErrors: !0,
-                    trackedActionData: { event: u.NetworkActionNames.AUTHORIZE_PAYMENT },
-                    rejectWithError: !0
-                }),
-                    p.Z.dispatch({ type: 'VERIFY_SUCCESS' });
-            } catch (e) {
-                p.Z.dispatch({
-                    type: 'VERIFY_FAILURE',
-                    errors: {}
-                });
-            }
-        },
+        authorizePayment: (e) =>
+            I.Z.post({
+                url: S.ANM.AUTHORIZE_PAYMENT,
+                body: { token: e },
+                trackedActionData: { event: u.NetworkActionNames.AUTHORIZE_PAYMENT },
+                rejectWithError: !0
+            }),
         async authorizeIPAddress(e) {
             if (null == e) {
                 p.Z.dispatch({
