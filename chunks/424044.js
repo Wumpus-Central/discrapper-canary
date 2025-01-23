@@ -24,7 +24,7 @@ t.Z = (e) => {
         [N, v] = r.useState(!1),
         [C, b] = r.useState(x.intl.string(x.t['9exy+f'])),
         [T, Z] = r.useState(!0),
-        S = (e) => {
+        A = (e) => {
             switch (e) {
                 case p.evJ.INVALID_FORM_BODY:
                 case p.evJ.DSA_RSL_REPORT_NOT_FOUND:
@@ -61,9 +61,9 @@ t.Z = (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, h.hs)(e) : void 0;
-                    null != n ? b(x.intl.string(x.t.e6mZMj)) : S(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                    null != n ? b(x.intl.string(x.t.e6mZMj)) : A(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
-                    S(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                    A(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
                     v(!1);
                 }

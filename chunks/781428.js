@@ -27,8 +27,8 @@ var i,
     b = n(86779),
     T = n(726745),
     Z = n(913583),
-    S = n(144114),
-    A = n(541692),
+    A = n(144114),
+    S = n(541692),
     j = n(952802),
     R = n(108427),
     P = n(365007),
@@ -627,7 +627,7 @@ class J extends (i = s.PureComponent) {
                 let { password: t, undelete: n } = this.state,
                     i = this.getFullLogin();
                 try {
-                    let { token: r } = await S.Z.verifyPhone(i, e, !1);
+                    let { token: r } = await A.Z.verifyPhone(i, e, !1);
                     await f.Z.authorizeIPAddress(r),
                         f.Z.login({
                             login: i,
@@ -645,7 +645,7 @@ class J extends (i = s.PureComponent) {
                 let { transitionTo: t } = this.props;
                 this.setState({ phoneVerifyError: null });
                 try {
-                    let { token: n } = await S.Z.verifyPhone(this.getFullLogin(), e, !1);
+                    let { token: n } = await A.Z.verifyPhone(this.getFullLogin(), e, !1);
                     t(U.Z5c.RESET, {
                         search: (0, c.stringify)({
                             token: n,
@@ -691,7 +691,7 @@ class J extends (i = s.PureComponent) {
                 } catch {}
             }),
             W(this, 'handleResendCode', () => {
-                S.Z.resendCode(this.getFullLogin());
+                A.Z.resendCode(this.getFullLogin());
             }),
             W(this, 'handleReset', (e) => {
                 null != e && e.preventDefault(),
@@ -735,7 +735,7 @@ class J extends (i = s.PureComponent) {
 }
 W(J, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
 t.Z = function (e) {
-    let t = (0, u.cj)([O.Z, y.Z, L.default, T.Z, A.Z], () => ({
+    let t = (0, u.cj)([O.Z, y.Z, L.default, T.Z, S.Z], () => ({
         authenticated: L.default.isAuthenticated(),
         handoffAvailable: O.Z.isHandoffAvailable(),
         user: O.Z.user,
@@ -745,7 +745,7 @@ t.Z = function (e) {
         maskedPhone: L.default.getMaskedPhone(),
         errors: L.default.getErrors(),
         defaultRoute: y.Z.defaultRoute,
-        country: A.Z.getCountryCode(),
+        country: S.Z.getCountryCode(),
         hasLoggedInAccounts: T.Z.getHasLoggedInAccounts()
     }));
     return (0, r.jsx)(J, {

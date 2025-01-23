@@ -24,7 +24,7 @@ let v = 'mweb_handoff_nonce',
 ((r = i || (i = {})).NONCE_MISSING = 'nonce_missing'), (r.NONCE_EXPIRED = 'nonce_expired'), (r.NULL_HANDOFF_TOKEN = 'deep_link_failed'), (r.HANDOFF_EXCHANGE = 'handoff_exchange');
 let T = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
     Z = new Set(['deep_link_failed']),
-    S = () => {
+    A = () => {
         u.K.remove(v), u.K.remove(C);
     };
 t.Z = () => {
@@ -40,10 +40,10 @@ t.Z = () => {
                 fingerprint: i
             });
     }, [i, e]);
-    let [x, A] = l.useState(null),
+    let [x, S] = l.useState(null),
         j = l.useCallback(
             (e) => {
-                A(e),
+                S(e),
                     p.default.track(
                         E.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                         {
@@ -53,7 +53,7 @@ t.Z = () => {
                         { fingerprint: r }
                     );
             },
-            [A, r]
+            [S, r]
         ),
         R = u.K.get(v);
     if (
@@ -62,7 +62,7 @@ t.Z = () => {
         l.useEffect(() => {
             if (null != R) {
                 let e = u.K.get(C);
-                (null == e || Date.now() >= e) && (j('nonce_expired'), S());
+                (null == e || Date.now() >= e) && (j('nonce_expired'), A());
             }
         }, [R, j]),
         l.useEffect(() => {
@@ -94,7 +94,7 @@ t.Z = () => {
                         j('handoff_exchange');
                     })
                     .finally(() => {
-                        S();
+                        A();
                     });
         }, [n, R, x, r, j]),
         null == r)

@@ -28,14 +28,14 @@ var i,
     b = n(981631),
     T = n(388032),
     Z = n(357070);
-function S() {
+function A() {
     return (0, s.jsx)('div', {
         className: Z.centerFlex,
         children: (0, s.jsx)(c.Spinner, {})
     });
 }
 ((r = i || (i = {}))[(r.LOADING = 0)] = 'LOADING'), (r[(r.DETAILS = 1)] = 'DETAILS'), (r[(r.ERROR = 2)] = 'ERROR');
-let A = (e) => {
+let S = (e) => {
     let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
@@ -74,7 +74,7 @@ function j(e) {
 function R(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: i, innerStyle: r, ...a } = e,
         { invite: d } = a,
-        [u, g] = l.useState(A(d)),
+        [u, g] = l.useState(S(d)),
         { ref: f, height: m } = (0, h.Z)(),
         p = (0, c.useSpring)({
             height: null != m && 0 !== m ? ''.concat(m, 'px') : ''.concat(i, 'px'),
@@ -82,7 +82,7 @@ function R(e) {
         });
     return (
         l.useEffect(() => {
-            let e = A(d);
+            let e = S(d);
             e !== u && g(e);
         }, [d, u]),
         (0, s.jsxs)(o.animated.div, {
@@ -121,7 +121,7 @@ function P(e) {
 function L(e) {
     let { invite: t } = e,
         n = (n) => {
-            if (null == t) return (0, s.jsx)(S, {});
+            if (null == t) return (0, s.jsx)(A, {});
             switch (n) {
                 case 1:
                     return (0, s.jsx)(v.Z, {
@@ -134,7 +134,7 @@ function L(e) {
                         invite: t
                     });
                 default:
-                    return (0, s.jsx)(S, {});
+                    return (0, s.jsx)(A, {});
             }
         },
         i = {

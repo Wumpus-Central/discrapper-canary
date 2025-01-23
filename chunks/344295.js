@@ -23,8 +23,8 @@ var i = n(200651),
     b = n(314897),
     T = n(896797),
     Z = n(701190),
-    S = n(626135),
-    A = n(630388),
+    A = n(626135),
+    S = n(630388),
     j = n(63063),
     R = n(782605),
     P = n(954824),
@@ -63,7 +63,7 @@ async function V(e) {
 class K extends r.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
-        if ((S.default.track(D.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, C.e)('invite'), !B.KO)) {
+        if ((A.default.track(D.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, C.e)('invite'), !B.KO)) {
             let e = this.getInviteKey();
             P.Z.launch('discord://' + D.Z5c.INVITE(e), () => void 0);
         }
@@ -117,7 +117,7 @@ class K extends r.PureComponent {
                       invite_code: s
                   }
                 : { invite_code: s };
-        S.default.track(e, {
+        A.default.track(e, {
             ...l,
             ...n
         });
@@ -239,7 +239,7 @@ class K extends r.PureComponent {
                 return this.renderSpinner(M.intl.string(M.t['Z+hCVV']));
             case D.r2o.RESOLVED:
                 var l;
-                if (n && (0, A.yE)(null !== (l = e.flags) && void 0 !== l ? l : 0, o.$.IS_GUEST_INVITE)) return u.Z.openApp(e.code), d.x.set(E.J, e.code), this.renderAppOpened(() => r(D.Z5c.APP));
+                if (n && (0, S.yE)(null !== (l = e.flags) && void 0 !== l ? l : 0, o.$.IS_GUEST_INVITE)) return u.Z.openApp(e.code), d.x.set(E.J, e.code), this.renderAppOpened(() => r(D.Z5c.APP));
                 if (n || !B.KO) return this.renderAuthenticatedOrDownload();
                 else if (this.getMode() === z.LOGIN)
                     return (0, i.jsx)(O.Z, {

@@ -6,6 +6,17 @@ r.d(n, {
 var i = r(47120);
 let a = {
     Modules: {
+        modal: {
+            HORIZONTAL_PADDING: {
+                resolve(e) {
+                    let { enabledExperiments: n } = e;
+                    if (0 === n.length) return 16;
+                    for (let e of n) if ('visual-refresh' === e) return 24;
+                    return 16;
+                }
+            },
+            VERTICAL_PADDING: { resolve: () => 16 }
+        },
         chat: {
             RESIZE_HANDLE_WIDTH: { resolve: () => 8 },
             INPUT_ICON_SIZE: {
@@ -35,17 +46,6 @@ let a = {
                 }
             },
             FOLDER_SIZE: { resolve: () => 48 }
-        },
-        modal: {
-            HORIZONTAL_PADDING: {
-                resolve(e) {
-                    let { enabledExperiments: n } = e;
-                    if (0 === n.length) return 12;
-                    for (let e of n) if ('visual-refresh' === e) return 24;
-                    return 12;
-                }
-            },
-            VERTICAL_PADDING: { resolve: () => 16 }
         }
     }
 };

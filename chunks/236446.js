@@ -28,8 +28,8 @@ var i = n(200651),
     b = n(163671),
     T = n(423527),
     Z = n(981631),
-    S = n(58346),
-    A = n(701476),
+    A = n(58346),
+    S = n(701476),
     j = n(630724),
     R = n(436620),
     P = n(388032),
@@ -87,7 +87,7 @@ class y extends r.PureComponent {
     }
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
-        return (a()(null != e, 'guild template must not be null'), e.state === S.Rj.RESOLVING)
+        return (a()(null != e, 'guild template must not be null'), e.state === A.Rj.RESOLVING)
             ? (0, i.jsx)(d.ZP, {
                   className: L.authBox,
                   children: (0, i.jsx)(p.Z, { guildTemplate: e })
@@ -105,9 +105,9 @@ class y extends r.PureComponent {
         if (t === Z.kEZ.OPEN) return this.renderAppOpened();
         if (t === Z.kEZ.OPENING) return this.renderSpinner(P.intl.string(P.t['Z+hCVV']));
         switch (e.state) {
-            case S.Rj.RESOLVING:
+            case A.Rj.RESOLVING:
                 return this.renderSpinner(P.intl.string(P.t['Z+hCVV']));
-            case S.Rj.RESOLVED:
+            case A.Rj.RESOLVED:
                 if (n || !R.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
                     return (0, i.jsx)(C.Z, {
@@ -121,10 +121,10 @@ class y extends r.PureComponent {
                         transitionTo: r,
                         location: s,
                         onRegister: () => {
-                            (0, x.c)(A.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), E.Z.flowStart(j.MK.ORGANIC_GUILD_TEMPLATES, j.EW.NUF_STARTED);
+                            (0, x.c)(S.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), E.Z.flowStart(j.MK.ORGANIC_GUILD_TEMPLATES, j.EW.NUF_STARTED);
                         }
                     });
-            case S.Rj.EXPIRED:
+            case A.Rj.EXPIRED:
                 return this.renderInvalidGuildTemplate();
             default:
                 return null;

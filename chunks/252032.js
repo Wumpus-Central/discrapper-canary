@@ -75,7 +75,7 @@ function b(e) {
                 }),
             [c]
         ),
-        M = (0, d.Q3)('EditorWrapper');
+        M = (0, d.R6)('EditorWrapper');
     return null != T && null != j
         ? (0, i.jsx)(v.Z, {
               ref: void 0,

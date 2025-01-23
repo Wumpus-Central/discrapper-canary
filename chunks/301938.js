@@ -26,13 +26,13 @@ function _(e) {
         [I, N] = r.useState(!1),
         [v, C] = r.useState(null),
         [b, T] = r.useState(null),
-        [Z, S] = r.useState(''),
-        A = r.useRef(null);
+        [Z, A] = r.useState(''),
+        S = r.useRef(null);
     return (
         r.useEffect(() => {
             if (_) {
                 var e;
-                null === (e = A.current) || void 0 === e || e.focus();
+                null === (e = S.current) || void 0 === e || e.focus();
             }
         }, [_]),
         (0, i.jsxs)('div', {
@@ -56,10 +56,10 @@ function _(e) {
                             name: 'password',
                             type: 'password',
                             label: m.intl.string(m.t['8dM4FB']),
-                            setRef: A,
+                            setRef: S,
                             className: x.marginBottom20,
                             value: Z,
-                            onChange: S,
+                            onChange: A,
                             error: v,
                             autoComplete: 'new-password',
                             maxLength: 72,
@@ -91,7 +91,7 @@ function _(e) {
                                                 let {
                                                     body: { email: n }
                                                 } = e;
-                                                S(''), t(n), s(g.n.SUCCESS);
+                                                A(''), t(n), s(g.n.SUCCESS);
                                             })
                                             .catch((e) => {
                                                 if (e instanceof Error) T(m.intl.formatToPlainString(m.t.aTVNen, { statusPageURL: f.yXt.STATUS }));
@@ -133,7 +133,7 @@ function _(e) {
                     children: (0, i.jsx)(d.zx, {
                         color: d.zx.Colors.PRIMARY,
                         onClick: () => {
-                            S(''), s(g.n.START);
+                            A(''), s(g.n.START);
                         },
                         children: m.intl.string(m.t.rzxnQ0)
                     })

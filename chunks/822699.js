@@ -23,8 +23,8 @@ var i = n(200651),
     b = n(677760),
     T = n(893607),
     Z = n(314897),
-    S = n(82142),
-    A = n(701190),
+    A = n(82142),
+    S = n(701190),
     j = n(626135),
     R = n(81063),
     P = n(449934),
@@ -355,7 +355,7 @@ class ev extends r.PureComponent {
                 : (t[n] = i);
     }
 }
-t.default = a.ZP.connectStores([Z.default, A.Z, S.Z, E.Z, I.Z], (e) => {
+t.default = a.ZP.connectStores([Z.default, S.Z, A.Z, E.Z, I.Z], (e) => {
     var t, n, i;
     let { match: r, location: s } = e,
         l = null == r ? void 0 : null === (t = r.params) || void 0 === t ? void 0 : t.inviteCode,
@@ -368,8 +368,8 @@ t.default = a.ZP.connectStores([Z.default, A.Z, S.Z, E.Z, I.Z], (e) => {
         isAuthenticated: Z.default.isAuthenticated(),
         giftCode: c,
         guildTemplateCode: d,
-        gift: null != c ? S.Z.get(c) : null,
-        invite: null != a ? A.Z.getInvite(a) : null,
+        gift: null != c ? A.Z.get(c) : null,
+        invite: null != a ? S.Z.getInvite(a) : null,
         guildTemplate: null != d ? I.Z.getGuildTemplate(d) : null,
         hasLoadedExperiments: E.Z.hasLoadedExperiments
     };

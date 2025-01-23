@@ -456,7 +456,7 @@ function eV(e) {
     let { port: n } = e;
     ec = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let r = new URLSearchParams();
-    r.append('build_id', 'fd77a75b1182bd8673663c9e915985f0a3128652'), r.append('rpc', String(n)), r.append('rpc_auth_token', ec), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
+    r.append('build_id', 'b278f09301442420c906ee4af530560a95b1764d'), r.append('rpc', String(n)), r.append('rpc_auth_token', ec), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
 }
 function ej(e) {
     let { channelId: n, ring: r } = e;

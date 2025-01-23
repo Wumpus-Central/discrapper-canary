@@ -21,8 +21,8 @@ t.Z = () => {
         [N, v] = r.useState(!1),
         [C, b] = r.useState(null),
         [T, Z] = r.useState(null),
-        S = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
-        A = S.code.split(' ')[0],
+        A = (0, o.e7)([u.Z], () => u.Z.getCountryCode()),
+        S = A.code.split(' ')[0],
         j = async () => {
             try {
                 await c.Z.resendCode(e);
@@ -33,7 +33,7 @@ t.Z = () => {
         R = async () => {
             I(!0);
             try {
-                let { token: t } = await c.Z.verifyPhone(A + e, s);
+                let { token: t } = await c.Z.verifyPhone(S + e, s);
                 b(null), Z(null), v(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
                 e.body.message ? (b(null), Z(e.body.message)) : (b(e.body.phone), Z(e.body.code));
@@ -71,8 +71,8 @@ t.Z = () => {
                       children: [
                           (0, i.jsx)(h.Z, {
                               label: m.intl.string(m.t.eJnn09),
-                              alpha2: S.alpha2,
-                              countryCode: A,
+                              alpha2: A.alpha2,
+                              countryCode: S,
                               value: e,
                               autoComplete: 'off',
                               spellCheck: 'false',
