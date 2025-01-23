@@ -54,7 +54,7 @@ function j() {
     let e = (0, s.e7)([u.Z], () => u.Z.getDCFEvents()),
         t = (0, m.ZP)((e) => e.candidates),
         n = (0, m.ZP)((e) => e.lastWinnerTime),
-        a = o()(n).fromNow(),
+        a = void 0 !== n ? o()(n).fromNow() : 'n/a',
         r = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
             return {

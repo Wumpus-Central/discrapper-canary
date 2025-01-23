@@ -1,6 +1,6 @@
 n.d(t, {
     FB: function () {
-        return T;
+        return L;
     },
     Pu: function () {
         return C;
@@ -12,7 +12,7 @@ n.d(t, {
         return S;
     },
     Zs: function () {
-        return L;
+        return T;
     },
     c7: function () {
         return l;
@@ -70,10 +70,10 @@ let A = (e) =>
             [I.bK.SOMETHING_ELSE]: a.intl.string(a.t.XU3s6u)
         })[e],
     l = (e) => (null == e || 0 === e.length ? '' : 1 === e.length ? e.toUpperCase() : ''.concat(e.charAt(0).toUpperCase()).concat(e.slice(1)));
-function T(e) {
+function L(e) {
     return null != e && null != e.guild_metadata;
 }
-let L = (e) => {
+let T = (e) => {
     if (e === o.evJ.DSA_APPEAL_REQUEST_DEFLECTION) return a.intl.string(a.t['0qyXXF']);
     return a.intl.string(a.t.aPmsx8);
 };

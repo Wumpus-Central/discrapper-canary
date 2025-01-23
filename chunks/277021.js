@@ -3,12 +3,12 @@ o.d(t, {
         return r;
     }
 });
-var n = o(544891),
-    a = o(981631);
+var a = o(544891),
+    n = o(981631);
 async function r() {
     return (
-        await n.tn.post({
-            url: a.ANM.AGE_ASSURANCE_TEST,
+        await a.tn.post({
+            url: n.ANM.AGE_ASSURANCE_TEST,
             body: {},
             rejectWithError: !1
         })

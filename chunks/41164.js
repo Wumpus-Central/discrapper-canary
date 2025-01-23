@@ -1,52 +1,52 @@
-i.r(t);
-var n = i(200651);
-i(192379);
-var a = i(481060),
-    l = i(230711),
-    s = i(181211),
-    o = i(188879),
-    r = i(981631),
-    c = i(726985),
-    d = i(388032),
-    u = i(280322),
-    m = i(170143);
-t.default = (e) => {
-    let { transitionState: t, onClose: i, classificationId: h, source: p } = e,
-        x = (0, s.Z)(),
+t.r(n);
+var i = t(200651);
+t(192379);
+var a = t(481060),
+    l = t(230711),
+    o = t(181211),
+    s = t(188879),
+    r = t(981631),
+    c = t(726985),
+    d = t(388032),
+    u = t(280322),
+    m = t(170143);
+n.default = (e) => {
+    let { transitionState: n, onClose: t, classificationId: h, source: p } = e,
+        x = (0, o.Z)(),
         f = () => {
-            i(), l.Z.open(r.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
+            t(), l.Z.open(r.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
         };
-    return (0, n.jsxs)(a.ModalRoot, {
+    return (0, i.jsxs)(a.ModalRoot, {
         className: u.modalRoot,
-        transitionState: t,
+        transitionState: n,
         children: [
-            (0, n.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: u.modalHeader,
                 children: [
-                    (0, n.jsx)('img', {
+                    (0, i.jsx)('img', {
                         className: u.image,
                         src: m,
                         alt: ''
                     }),
-                    (0, n.jsx)(a.ModalCloseButton, {
+                    (0, i.jsx)(a.ModalCloseButton, {
                         className: u.modalClose,
-                        onClick: i
+                        onClick: t
                     })
                 ]
             }),
-            (0, n.jsx)(a.ModalContent, {
+            (0, i.jsx)(a.ModalContent, {
                 className: u.modalContent,
                 children: x
-                    ? (0, n.jsx)(a.Spinner, {})
-                    : (0, n.jsx)(o.Z, {
+                    ? (0, i.jsx)(a.Spinner, {})
+                    : (0, i.jsx)(s.Z, {
                           classificationId: h,
                           source: p,
                           onError: f,
                           onClose: f
                       })
             }),
-            (0, n.jsx)(a.ModalFooter, {
-                children: (0, n.jsx)(a.Button, {
+            (0, i.jsx)(a.ModalFooter, {
+                children: (0, i.jsx)(a.Button, {
                     className: u.__invalid_button,
                     type: 'button',
                     color: a.Button.Colors.BRAND,

@@ -3,15 +3,15 @@ var i = n(200651),
     o = n(192379),
     s = n(442837),
     r = n(481060),
-    l = n(955522),
-    a = n(138201),
-    c = n(103879),
-    d = n(236289),
-    u = n(853178),
-    h = n(800530),
+    a = n(191237),
+    l = n(138201),
+    c = n(331692),
+    d = n(103879),
+    h = n(236289),
+    u = n(800530),
     m = n(388032),
-    x = n(177872);
-let g = [
+    g = n(177872);
+let x = [
     {
         title: m.intl.string(m.t['1+E7LC']),
         description: m.intl.string(m.t.BXiat7)
@@ -27,31 +27,31 @@ let g = [
 ];
 e.default = function (t) {
     let { onClose: e, transitionState: n } = t,
-        p = (0, s.e7)([d.Z], () => d.Z.getAgeVerificationWebviewUrl()),
-        b = (0, s.e7)([d.Z], () => d.Z.getIsLoadingAgeVerification()),
+        p = (0, s.e7)([h.Z], () => h.Z.getAgeVerificationWebviewUrl()),
+        b = (0, s.e7)([h.Z], () => h.Z.getIsLoadingAgeVerification()),
         N = o.useCallback(() => {
-            e(), u.Z.close();
+            e(), c.Z.close();
         }, [e]),
         _ = o.useCallback(() => {
-            u.Z.success(), N(), u.Z.start_verification_check();
+            c.Z.success(), N(), c.Z.start_verification_check();
         }, [N]);
     return (
         o.useEffect(() => {
             '' !== p &&
-                (0, l.F)({
+                a.Z.showAgeVerification({
                     webviewUrl: p,
                     onComplete: _
                 });
         }, [p, _]),
         (0, i.jsxs)(r.ModalRoot, {
             transitionState: n,
-            className: x.root,
+            className: g.root,
             children: [
                 (0, i.jsxs)(r.ModalContent, {
-                    className: x.content,
+                    className: g.content,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: x.header,
+                            className: g.header,
                             children: [
                                 (0, i.jsx)(r.Heading, {
                                     variant: 'heading-xl/bold',
@@ -65,13 +65,13 @@ e.default = function (t) {
                             ]
                         }),
                         (0, i.jsx)('div', {
-                            className: x.listContent,
+                            className: g.listContent,
                             children: (0, i.jsx)('div', {
-                                className: x.table,
-                                children: g.map((t, e) => {
+                                className: g.table,
+                                children: x.map((t, e) => {
                                     let { title: n, description: o } = t;
                                     return (0, i.jsx)(
-                                        a.ZP,
+                                        l.ZP,
                                         {
                                             title: n,
                                             description: o,
@@ -85,31 +85,31 @@ e.default = function (t) {
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: x.anotherOption,
+                            className: g.anotherOption,
                             children: [
                                 (0, i.jsx)(r.Text, {
                                     variant: 'text-sm/semibold',
-                                    className: x.optionEyebrow,
+                                    className: g.optionEyebrow,
                                     color: 'header-secondary',
                                     children: m.intl.string(m.t.WPwp1d)
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: x.table,
-                                    children: (0, i.jsx)(a.ZP, {
+                                    className: g.table,
+                                    children: (0, i.jsx)(l.ZP, {
                                         title: m.intl.string(m.t.N9WJMD),
                                         description: m.intl.string(m.t['NHq38/']),
                                         buttonText: m.intl.string(m.t['9iy4lJ']),
                                         buttonColor: r.Button.Colors.PRIMARY,
                                         titleVariant: 'text-md/medium',
-                                        onButtonPress: () => window.open(h.sQ.AGE_VERIFICATION_LINK, '_blank')
+                                        onButtonPress: () => window.open(u.sQ.AGE_VERIFICATION_LINK, '_blank')
                                     })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: x.learnMore,
+                                    className: g.learnMore,
                                     children: (0, i.jsx)(r.Heading, {
                                         variant: 'heading-sm/medium',
                                         color: 'text-secondary',
-                                        children: m.intl.format(m.t.ZbWsOD, { learnMoreLink: h.sQ.LEARN_MORE_UU_APPEAL_LINK })
+                                        children: m.intl.format(m.t.ZbWsOD, { learnMoreLink: u.sQ.LEARN_MORE_UU_APPEAL_LINK })
                                     })
                                 })
                             ]
@@ -117,10 +117,10 @@ e.default = function (t) {
                     ]
                 }),
                 (0, i.jsxs)(r.ModalFooter, {
-                    className: x.footer,
+                    className: g.footer,
                     children: [
                         (0, i.jsx)(r.Button, {
-                            onClick: c.FN,
+                            onClick: d.FN,
                             submitting: b,
                             children: m.intl.string(m.t['54b8V1'])
                         }),
@@ -128,7 +128,7 @@ e.default = function (t) {
                             color: r.Button.Colors.TRANSPARENT,
                             look: r.Button.Looks.BLANK,
                             onClick: N,
-                            className: x.cancelButton,
+                            className: g.cancelButton,
                             children: m.intl.string(m.t.dKacJy)
                         })
                     ]

@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return T;
+            return L;
         }
     });
 var i = n(200651);
@@ -69,7 +69,7 @@ function l() {
         children: [(0, i.jsx)(A, {}), (0, i.jsx)(s.Z, {})]
     });
 }
-function T() {
+function L() {
     return (
         null == (0, E.e7)([I.default], () => I.default.getSuspendedUserToken()) && (0, _.uL)(S.Z5c.LOGIN),
         (0, i.jsxs)('div', {
