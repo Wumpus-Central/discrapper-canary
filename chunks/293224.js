@@ -66,8 +66,8 @@ var i = n(200651),
     U = n(19780),
     Y = n(944486),
     H = n(594174),
-    X = n(979651),
-    K = n(388627),
+    K = n(979651),
+    X = n(388627),
     Q = n(810632),
     q = n(981631),
     J = n(388032),
@@ -266,7 +266,7 @@ function eo(e) {
         x = null != u;
     if (x) t = J.intl.string(J.t.S5anIS);
     else if (null != n) {
-        let e = (0, K.pL)();
+        let e = (0, X.pL)();
         t = s ? (null != e ? J.intl.format(J.t.AB5gT0, { game: e.name }) : J.intl.string(J.t.FeUKeH)) : J.intl.string(J.t.uQn9Bw);
     }
     let f = () => {
@@ -302,6 +302,7 @@ function eo(e) {
             return (0, i.jsx)(et, {
                 iconComponent: g,
                 tooltip: t,
+                'aria-label': J.intl.string(J.t.FeUKeH),
                 isToggled: x,
                 onClick: f,
                 popoutOpen: o,
@@ -498,7 +499,7 @@ function ed(e) {
             lastPing: U.Z.getLastPing()
         })),
         o = null != n,
-        a = (0, l.e7)([X.Z], () => null != n && X.Z.hasVideo(n), [n]);
+        a = (0, l.e7)([K.Z], () => null != n && K.Z.hasVideo(n), [n]);
     return (
         o &&
         null != t &&
