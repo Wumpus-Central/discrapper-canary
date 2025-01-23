@@ -315,6 +315,7 @@ function q(e) {
               }),
         'aria-label': i,
         tooltipClassName: Z.listItemTooltip,
+        tooltipContentClassName: Z.listItemTooltipContent,
         children: (e) => {
             let { onFocus: n, onBlur: r, ...i } = e;
             return (0, o.jsx)('div', {

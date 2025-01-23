@@ -22012,6 +22012,10 @@ h3.improved_f017d0:after {
     color: var(--text-normal)
 }
 
+.visual-refresh .listItemTooltipContent_bba834 {
+    padding: 8px
+}
+
 .guildIcon_bfabc4 {
     align-items: center;
     background-color: var(--background-primary);
