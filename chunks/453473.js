@@ -40,8 +40,8 @@ var i = n(200651),
     y = n(74551),
     O = n(981631),
     M = n(388032),
-    D = n(393873);
-let k = {
+    k = n(393873);
+let D = {
     offset: {
         left: 4,
         right: -12
@@ -52,7 +52,7 @@ function U(e) {
     return (0, i.jsx)(f.Dialog, {
         'aria-label': M.intl.string(M.t['2pAkDA']),
         children: (0, i.jsxs)('div', {
-            className: D.popoutContainer,
+            className: k.popoutContainer,
             children: [
                 (0, i.jsx)(_.h4, {
                     icon: f.BookmarkIcon,
@@ -135,7 +135,7 @@ function F(e) {
                             var t;
                             (l.current = e), (r.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
                         },
-                        className: D.messagesScroller,
+                        className: k.messagesScroller,
                         ...a,
                         children: t.map((e) =>
                             (0, i.jsx)(
@@ -175,10 +175,10 @@ function G(e) {
         c = (0, h.e7)([N.Z], () => !!((null == o ? void 0 : o.type) === O.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || N.Z.can(O.Plq.VIEW_CHANNEL, o));
     return null != o && null != t.message && c
         ? (0, i.jsxs)('div', {
-              className: D.messageContainer,
+              className: k.messageContainer,
               children: [
                   (0, i.jsx)(f.Clickable, {
-                      className: D.clickableMessageBackground,
+                      className: k.clickableMessageBackground,
                       onClick: s,
                       'aria-label': M.intl.string(M.t['+TSRGB'])
                   }),
@@ -194,16 +194,16 @@ function G(e) {
                       {
                           message: t.message,
                           channel: o,
-                          className: D.message,
+                          className: k.message,
                           compact: x.jU.getSetting(),
                           animateAvatar: !1,
-                          focusProps: k,
+                          focusProps: D,
                           trackAnnouncementViews: !0
                       },
                       t.message.id
                   ),
                   (0, i.jsx)(I.ZP, {
-                      className: D.hoverBar,
+                      className: k.hoverBar,
                       children: (0, i.jsx)(H, {
                           savedMessage: t,
                           jumpToMessage: s
@@ -212,10 +212,10 @@ function G(e) {
               ]
           })
         : (0, i.jsxs)('div', {
-              className: a()(D.messageContainer, D.deletedMessage),
+              className: a()(k.messageContainer, k.deletedMessage),
               children: [
                   (0, i.jsx)('div', {
-                      className: D.deleteIcon,
+                      className: k.deleteIcon,
                       children: (0, i.jsx)(f.CircleWarningIcon, {
                           size: 'xxs',
                           color: f.tokens.colors.INTERACTIVE_ACTIVE
@@ -227,7 +227,7 @@ function G(e) {
                       children: null != t.saveData.dueAt ? M.intl.string(M.t['wuQm+v']) : M.intl.string(M.t.o572FR)
                   }),
                   (0, i.jsx)(I.ZP, {
-                      className: D.hoverBar,
+                      className: k.hoverBar,
                       children: (0, i.jsx)(
                           I.sF,
                           {

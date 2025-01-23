@@ -131,7 +131,7 @@ class d {
                 height: this.options.videoCapture.height,
                 framerate: this.options.videoCapture.framerate
             },
-            bitrateMin: r,
+            bitrateMin: Math.max(r, this.options.videoBitrateFloor),
             bitrateMax: Math.max(i, this.options.videoBitrateFloor),
             localWant: e
         });

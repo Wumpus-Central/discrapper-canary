@@ -37,8 +37,8 @@ var i = n(200651),
     y = n(981631),
     O = n(388032),
     M = n(363637),
-    D = n(413097),
-    k = n(970952);
+    k = n(413097),
+    D = n(970952);
 function U(e) {
     let { applicationId: t, embedUrl: n } = e,
         [l, a, s] = (0, o.Wu)([Z.Z], () => [Z.Z.getApplication(t), Z.Z.isFetchingApplication(t), Z.Z.didFetchingApplicationFail(t)], [t]);
@@ -73,7 +73,7 @@ function B(e) {
         } = r.useMemo(
             () =>
                 (0, _.sl)(n, {
-                    fakeAppIconURL: D,
+                    fakeAppIconURL: k,
                     size: 56
                 }),
             [n]
@@ -126,7 +126,7 @@ function B(e) {
                   (0, i.jsx)('img', {
                       className: M.icon,
                       alt: n.name,
-                      src: null != R ? R : k,
+                      src: null != R ? R : D,
                       'aria-hidden': !0,
                       draggable: !1
                   }),

@@ -34,7 +34,7 @@ let _ = r.memo(function (e) {
                 l = null !== (M = (0, o.wK)(null != i ? i : '', r)) && void 0 !== M ? M : '';
             R && (O.borderColor = i), (O.background = l), (t = e), (n = e);
         }
-        let D = {
+        let k = {
             minWidth: y,
             color: t,
             borderColor: n
@@ -55,7 +55,7 @@ let _ = r.memo(function (e) {
                 }),
                 (0, i.jsx)('div', {
                     className: P.reactionCount,
-                    style: D,
+                    style: k,
                     children: L
                 })
             ]

@@ -51,8 +51,8 @@ var i,
     y = n(426275),
     O = n(947849),
     M = n(715903),
-    D = n(71619),
-    k = n(637618),
+    k = n(71619),
+    D = n(637618),
     U = n(225890),
     B = n(364097),
     w = n(495129),
@@ -105,8 +105,8 @@ var i,
     ey = n(782658),
     eO = n(219797),
     eM = n(453687),
-    eD = n(128854),
-    ek = n(101578),
+    ek = n(128854),
+    eD = n(101578),
     eU = n(524444),
     eB = n(319323),
     ew = n(884182),
@@ -278,7 +278,7 @@ class e3 extends (i = l.Component) {
                           },
                           i
                       );
-                  } else if (n === v.g.GUILD_PRODUCT) return (0, r.jsx)(k.Z, { code: i }, i);
+                  } else if (n === v.g.GUILD_PRODUCT) return (0, r.jsx)(D.Z, { code: i }, i);
                   else if (n === v.g.SERVER_SHOP) return (0, r.jsx)(T.Z, { guildId: i }, i);
                   else if (n === v.g.QUESTS_EMBED) return (0, r.jsx)(en.Z, { questId: i }, i);
                   else if (n === v.g.APP_DIRECTORY_STOREFRONT)
@@ -489,7 +489,7 @@ class e3 extends (i = l.Component) {
     renderComponentAccessories(e) {
         if (0 === e.components.length) return null;
         let { gifAutoPlay: t, shouldRedactExplicitContent: n, shouldHideMediaOptions: i, disableComponentInteractivity: l, onMediaItemContextMenu: a } = this.props;
-        return (0, r.jsx)(eD.F, {
+        return (0, r.jsx)(ek.F, {
             gifAutoPlay: t,
             getGifFavButton: e1,
             getOnMediaItemContextMenu:
@@ -509,7 +509,7 @@ class e3 extends (i = l.Component) {
     renderActivityInvite(e) {
         if (null == e.activity) return null;
         let { channel: t } = this.props;
-        return (0, r.jsx)(ek.Z, {
+        return (0, r.jsx)(eD.Z, {
             channel: t,
             message: e,
             hideParty: !1
@@ -836,7 +836,7 @@ function e2(e) {
             [f, n]
         ),
         I = (0, M.ux)(n.guild_id),
-        [, x] = (0, D.AB)(n.guild_id),
+        [, x] = (0, k.AB)(n.guild_id),
         N = (0, eo.$R)(n),
         v = (o === i.author.id || C) && i.author.id !== eH.LAt && !1 !== l && !(0, eC.yE)(i.flags, eH.iLy.EPHEMERAL) && N && 1 === (0, eA.Z)(i),
         T = o === i.author.id && N && !a,
@@ -856,7 +856,7 @@ function e2(e) {
         L = (0, z.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
         y = (0, X.Z)(null == n ? void 0 : n.id),
         O = (0, J.Z)(i),
-        k = (0, A.V)(n.id, i.author.id),
+        D = (0, A.V)(n.id, i.author.id),
         U = (0, b.r)(i.id),
         { hasInlineForwardButton: B } = (0, Z.yk)({ location: 'MessageAccessories' }),
         w = (0, P.a)(i) && B,
@@ -881,7 +881,7 @@ function e2(e) {
         showListsAndHeaders: L,
         showMaskedLinks: L,
         shouldHideMediaOptions: y,
-        shouldRedactExplicitContent: k,
+        shouldRedactExplicitContent: D,
         shouldRenderCtaButton: U,
         hasInlineForwardButton: w
     });

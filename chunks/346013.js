@@ -37,8 +37,8 @@ var i = n(200651),
     y = n(981631),
     O = n(959517),
     M = n(388032),
-    D = n(352447),
-    k = n(527455);
+    k = n(352447),
+    D = n(527455);
 function U(e) {
     var t, n, l;
     let { embedUrl: o, message: U, channel: B } = e,
@@ -117,19 +117,19 @@ function U(e) {
         em = w.coverImage,
         eh = null != em && (0, I.d$)(em);
     return (0, i.jsxs)('div', {
-        className: D.postPreviewContainer,
+        className: k.postPreviewContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: D.thumbnailContainer,
+                className: k.thumbnailContainer,
                 onMouseEnter: er,
                 onMouseLeave: el,
                 children: [
                     !K &&
                         (!0 === w.shouldShowBlurredThumbnailImage
                             ? (0, i.jsx)('img', {
-                                  src: k,
+                                  src: D,
                                   alt: M.intl.string(M.t.rIbh8P),
-                                  className: a()(D.thumbnail, { [D.spoiler]: w.shouldSpoiler }),
+                                  className: a()(k.thumbnail, { [k.spoiler]: w.shouldSpoiler }),
                                   onContextMenu: G,
                                   onError: () => Y(!0)
                               })
@@ -138,8 +138,8 @@ function U(e) {
                                   backgroundSrc: ''.concat(em, '?format=png'),
                                   alt: M.intl.string(M.t.rIbh8P),
                                   aspectRatio: 16 / 9,
-                                  className: a()(D.thumbnail, { [D.spoiler]: w.shouldSpoiler }),
-                                  imageChildClassName: D.thumbnailImage,
+                                  className: a()(k.thumbnail, { [k.spoiler]: w.shouldSpoiler }),
+                                  imageChildClassName: k.thumbnailImage,
                                   onContextMenu: G,
                                   onError: () => Y(!0)
                               })),
@@ -147,9 +147,9 @@ function U(e) {
                         (0, i.jsx)(m.Clickable, {
                             onClick: ea,
                             children: (0, i.jsx)('div', {
-                                className: D.thumbnailOverlay,
+                                className: k.thumbnailOverlay,
                                 children: (0, i.jsxs)('div', {
-                                    className: D.thumbnailOverlayCta,
+                                    className: k.thumbnailOverlayCta,
                                     children: [
                                         (0, i.jsx)(P.Z, { color: u.Z.WHITE }),
                                         (0, i.jsx)(m.Text, {
@@ -164,27 +164,27 @@ function U(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: D.descriptionContainer,
+                className: k.descriptionContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: D.descriptionHeader,
+                        className: k.descriptionHeader,
                         children: [
                             (0, i.jsx)(m.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'text-normal',
-                                className: D.descriptionHeaderText,
+                                className: k.descriptionHeaderText,
                                 children: w.title
                             }),
                             (0, i.jsx)(m.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
-                                className: a()(D.descriptionHeaderText, D.descriptionSubtitle),
+                                className: a()(k.descriptionHeaderText, k.descriptionSubtitle),
                                 children: w.subtitle
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: D.descriptionFooter,
+                        className: k.descriptionFooter,
                         children: [
                             null != eu &&
                                 (0, i.jsx)(m.Popout, {
@@ -206,20 +206,20 @@ function U(e) {
                                         })
                                 }),
                             (0, i.jsxs)('div', {
-                                className: D.descriptionFooterContainer,
+                                className: k.descriptionFooterContainer,
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: D.descriptionFooterChannelName,
+                                        className: k.descriptionFooterChannelName,
                                         children: [
                                             null != w.channelName &&
                                                 (0, i.jsx)(m.ImageSparkleIcon, {
                                                     size: 'md',
                                                     color: 'currentColor',
-                                                    className: D.mediaChannelIcon
+                                                    className: k.mediaChannelIcon
                                                 }),
                                             (0, i.jsx)(m.Clickable, {
                                                 onClick: ea,
-                                                className: D.channelName,
+                                                className: k.channelName,
                                                 children: (0, i.jsx)(m.Heading, {
                                                     variant: 'heading-md/semibold',
                                                     color: 'header-primary',
@@ -232,7 +232,7 @@ function U(e) {
                                         (0, i.jsx)(m.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-muted',
-                                            className: D.descriptionFooterAuthorContainer,
+                                            className: k.descriptionFooterAuthorContainer,
                                             children: M.intl.format(M.t.voIDKS, {
                                                 authorName: w.authorName,
                                                 authorNameHook: () =>
@@ -247,7 +247,7 @@ function U(e) {
                                                                     ...e,
                                                                     name: w.authorName,
                                                                     color: $,
-                                                                    className: D.authorName
+                                                                    className: k.authorName
                                                                 })
                                                         },
                                                         (0, c.Z)()
@@ -269,7 +269,7 @@ function U(e) {
                                 : (0, i.jsx)(m.ShinyButton, {
                                       pauseAnimation: X,
                                       onClick: ea,
-                                      className: a()(D.__invalid_ctaButtonContent, D.subscribeButton),
+                                      className: a()(k.__invalid_ctaButtonContent, k.subscribeButton),
                                       color: m.Button.Colors.CUSTOM,
                                       children: (0, i.jsx)(m.Text, {
                                           variant: 'text-sm/medium',

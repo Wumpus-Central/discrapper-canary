@@ -32,8 +32,8 @@ var i,
     y = n(768581),
     O = n(358085),
     M = n(804739),
-    D = n(410575),
-    k = n(981631),
+    k = n(410575),
+    D = n(981631),
     U = n(701488);
 function B(e, t, n) {
     return (
@@ -78,8 +78,8 @@ class F extends (i = l.PureComponent) {
         return null != t && null != t.primarySkuId && !e && O.isPlatformEmbedded;
     }
     render() {
-        return (0, r.jsx)(D.Z, {
-            section: D.Z.Sections.APPLICATION_EMBED,
+        return (0, r.jsx)(k.Z, {
+            section: k.Z.Sections.APPLICATION_EMBED,
             children: this.renderEmbed()
         });
     }
@@ -96,14 +96,14 @@ class F extends (i = l.PureComponent) {
                         applicationId: e.application_id,
                         channelId: l,
                         messageId: i.id,
-                        source: k.Sbl.MESSAGE_EMBED,
+                        source: D.Sbl.MESSAGE_EMBED,
                         analyticsLocations: t,
                         partyId: null === (a = e.party) || void 0 === a ? void 0 : a.id,
-                        embedded: (0, h.Z)(e, k.xjy.EMBEDDED)
+                        embedded: (0, h.Z)(e, D.xjy.EMBEDDED)
                     }),
                         (0, p.Z)({
-                            type: k.q5t.JOIN,
-                            source: k.Sbl.MESSAGE_EMBED,
+                            type: D.q5t.JOIN,
+                            source: D.Sbl.MESSAGE_EMBED,
                             userId: n,
                             guildId: r,
                             channelId: l,
@@ -120,10 +120,10 @@ class F extends (i = l.PureComponent) {
                     try {
                         this.setState({ sending: !0 }),
                             await s.Z.sendActivityInvite({
-                                type: k.mFx.JOIN,
+                                type: D.mFx.JOIN,
                                 channelId: t,
                                 activity: e,
-                                location: k.Sbl.MESSAGE_EMBED
+                                location: D.Sbl.MESSAGE_EMBED
                             });
                     } finally {
                         this.setState({ sending: !1 });
@@ -167,7 +167,7 @@ class F extends (i = l.PureComponent) {
                 let { application: t } = this.props;
                 return (0, r.jsx)(d.Z, {
                     ...e,
-                    source: k.Sbl.MESSAGE_EMBED,
+                    source: D.Sbl.MESSAGE_EMBED,
                     application: t
                 });
             }),
@@ -218,9 +218,9 @@ B(F, 'defaultProps', { isPreview: !1 }),
         let { activity: t, analyticsLocations: n, application: i, partyId: r, userId: l, guildId: a } = e,
             { id: o } = null != i ? i : {},
             s = null != t && null != t.party && t.party.id === r ? A.Z.getParty(t.party.id) : null,
-            c = null != o ? R.Z.getApplicationActivity(o) : R.Z.findActivity((e) => e.type === k.IIU.LISTENING),
+            c = null != o ? R.Z.getApplicationActivity(o) : R.Z.findActivity((e) => e.type === D.IIU.LISTENING),
             u = !1;
-        null != o && (u = P.Z.getState(o, k.mFx.JOIN) === k.OcF.LOADING);
+        null != o && (u = P.Z.getState(o, D.mFx.JOIN) === D.OcF.LOADING);
         let d = Array.from(null != s ? s : []).map((e) => {
                 let t = null != a ? b.ZP.getMember(a, e) : null,
                     n = null != t ? t.nick : null,

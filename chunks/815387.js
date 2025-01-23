@@ -32,8 +32,8 @@ var i = n(200651),
     y = n(314897),
     O = n(523746),
     M = n(592125),
-    D = n(430824),
-    k = n(496675),
+    k = n(430824),
+    D = n(496675),
     U = n(158776),
     B = n(944486),
     w = n(594174),
@@ -84,7 +84,7 @@ function eR(e) {
         { author: o } = t,
         { guild_id: s } = n,
         c = t.getChannelId(),
-        u = (0, l.e7)([D.Z], () => D.Z.getGuild(s), [s]),
+        u = (0, l.e7)([k.Z], () => k.Z.getGuild(s), [s]),
         d = r.useCallback(() => {
             if (null != u)
                 (0, g.f)({
@@ -444,9 +444,9 @@ let eP = Object.freeze({
     [eS.uaV.GUILD_INVITE_REMINDER]: function (e) {
         let { message: t, channel: n, compact: r } = e,
             a = (0, l.e7)([w.default], () => w.default.getCurrentUser()),
-            o = (0, l.e7)([D.Z], () => {
+            o = (0, l.e7)([k.Z], () => {
                 var e, t;
-                return null !== (t = null === (e = D.Z.getGuild(n.getGuildId())) || void 0 === e ? void 0 : e.isOwner(a)) && void 0 !== t && t;
+                return null !== (t = null === (e = k.Z.getGuild(n.getGuildId())) || void 0 === e ? void 0 : e.isOwner(a)) && void 0 !== t && t;
             });
         return (0, i.jsx)(ed.Z, {
             message: t,
@@ -567,7 +567,7 @@ let eP = Object.freeze({
                 guildId: o.guild_id,
                 messageId: r.id
             }),
-            d = (0, l.e7)([k.Z], () => k.Z.can(eS.Plq.MUTE_MEMBERS, o)),
+            d = (0, l.e7)([D.Z], () => D.Z.can(eS.Plq.MUTE_MEMBERS, o)),
             m = (0, l.e7)([j.Z], () => j.Z.getParticipant(o.id, r.author.id)),
             h = new Date(z.default.extractTimestamp(r.id)).toISOString() === new Date(null !== (n = null == m ? void 0 : null === (t = m.voiceState) || void 0 === t ? void 0 : t.requestToSpeakTimestamp) && void 0 !== n ? n : 0).toISOString(),
             f = d && (null == m ? void 0 : m.rtsState) === R.xO.REQUESTED_TO_SPEAK && h;

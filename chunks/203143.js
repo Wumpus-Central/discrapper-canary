@@ -96,14 +96,14 @@ function M(e) {
         };
     });
 }
-function D(e) {
+function k(e) {
     let { channelId: t, messageId: n } = e,
         i = v.Z.getMessage(t, n);
     return null == i ? [] : i.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
-async function k(e) {
+async function D(e) {
     let { channelId: t, messageId: n, answerIds: i } = e,
-        r = D({
+        r = k({
             channelId: t,
             messageId: n
         }),
@@ -160,7 +160,7 @@ async function U(e) {
     }
     let l = (0, j.fU)(t, n);
     r()(null != l, 'Must not be able to vote without existing state!');
-    let a = D({
+    let a = k({
         channelId: t,
         messageId: n
     });
@@ -178,7 +178,7 @@ async function U(e) {
                 }
             )
         ),
-            await k({
+            await D({
                 channelId: t,
                 messageId: n,
                 answerIds: e
@@ -195,7 +195,7 @@ async function U(e) {
             title: P.intl.string(P.t.iufib2),
             body: null !== (c = null !== (s = null === (o = e.getAnyErrorMessage) || void 0 === o ? void 0 : o.call(e)) && void 0 !== s ? s : e.message) && void 0 !== c ? c : P.intl.string(P.t.eAn6z8)
         }),
-            await k({
+            await D({
                 channelId: t,
                 messageId: n,
                 answerIds: a

@@ -32,8 +32,8 @@ var i = n(200651),
     y = n(981631),
     O = n(701488),
     M = n(388032),
-    D = n(273641);
-let k = r.memo((e) => {
+    k = n(273641);
+let D = r.memo((e) => {
     let { start: t } = e,
         [n, i] = r.useState(0),
         o = (0, P.n)(),
@@ -52,7 +52,7 @@ let k = r.memo((e) => {
         (0, N.m)(n)
     );
 });
-k.displayName = 'ActivityRuntimeCounter';
+D.displayName = 'ActivityRuntimeCounter';
 t.Z = r.memo(function (e) {
     var t, n, a, c;
     let { application: N, channelId: R, guildId: P } = e,
@@ -170,7 +170,7 @@ t.Z = r.memo(function (e) {
             iconSrc: t,
             embedUrl: (0, C.H)({ applicationId: N.id }),
             info: (0, i.jsxs)('div', {
-                className: D.infoWrapper,
+                className: k.infoWrapper,
                 children: [
                     null != X &&
                         (0, i.jsx)(o.Text, {
@@ -179,13 +179,13 @@ t.Z = r.memo(function (e) {
                             children:
                                 null != l &&
                                 (0, i.jsxs)('div', {
-                                    className: D.activityTimer,
+                                    className: k.activityTimer,
                                     children: [
                                         (0, i.jsx)(u.Icon, {
                                             size: 'xxs',
                                             color: 'currentColor'
                                         }),
-                                        (0, i.jsx)(k, { start: l })
+                                        (0, i.jsx)(D, { start: l })
                                     ]
                                 })
                         }),
@@ -199,7 +199,7 @@ t.Z = r.memo(function (e) {
                                 extraDetail: (0, i.jsxs)(o.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'always-white',
-                                    className: D.activePlayingText,
+                                    className: k.activePlayingText,
                                     children: [r, ' ', u.text]
                                 })
                             })
@@ -223,12 +223,12 @@ t.Z = r.memo(function (e) {
         });
     }
     return (0, i.jsx)('div', {
-        className: D.container,
+        className: k.container,
         children: (0, i.jsxs)('div', {
-            className: D.contentContainer,
+            className: k.contentContainer,
             children: [
                 (0, i.jsx)('div', {
-                    className: D.headerContainer,
+                    className: k.headerContainer,
                     children: J
                         ? (0, i.jsx)('div', {
                               children: (0, i.jsx)(o.Text, {
@@ -244,11 +244,11 @@ t.Z = r.memo(function (e) {
                           })
                 }),
                 (0, i.jsxs)('div', {
-                    className: D.footerContainer,
+                    className: k.footerContainer,
                     children: [
                         (0, i.jsx)(o.Tooltip, {
                             text: $.tooltip,
-                            tooltipContentClassName: D.tooltipContent,
+                            tooltipContentClassName: k.tooltipContent,
                             children: (e) => {
                                 let { onClick: t, ...n } = e;
                                 return (0, r.createElement)(

@@ -119,8 +119,8 @@ let R = ['TOP_LEFT', 'TOP_RIGHT'],
     y = 'falling-leaf',
     O = ['#61D5B2'],
     M = n(303893),
-    D = n(313226),
-    k = [M, D];
+    k = n(313226),
+    D = [M, k];
 function U() {
     return n
         .e('60005')
@@ -263,7 +263,7 @@ function B(e) {
                             }
                         }
                     },
-                    { sprite: 'TOP_LEFT' === f ? M : D }
+                    { sprite: 'TOP_LEFT' === f ? M : k }
                 );
             }
         }, [v, x, f, c]),
@@ -271,7 +271,7 @@ function B(e) {
             children: [
                 (0, o.jsx)(d.Ji, {
                     ref: I,
-                    sprites: k,
+                    sprites: D,
                     colors: O,
                     spriteWidth: 45,
                     spriteHeight: 45
@@ -359,16 +359,16 @@ function w(e) {
         M = s.useCallback(() => {
             f(!1);
         }, []),
-        D = s.useCallback(() => {
+        k = s.useCallback(() => {
             (0, C.AI)({ settingsVisible: !0 }), _.Z.open(S.oAB.POGGERMODE), f(!1);
         }, []),
-        k = s.useCallback(
+        D = s.useCallback(
             (e, t) => {
-                (null == t ? void 0 : t.id.startsWith(y)) && D();
+                (null == t ? void 0 : t.id.startsWith(y)) && k();
             },
-            [D]
+            [k]
         );
-    s.useEffect(() => m(k));
+    s.useEffect(() => m(D));
     let U = (0, o.jsx)(p.Clickable, {
         className: b.iconWrapper,
         innerRef: j,
@@ -394,7 +394,7 @@ function w(e) {
                           className: b.cannonWrapper,
                           children: (0, o.jsx)(B, {
                               onAnimationComplete: M,
-                              onClick: D
+                              onClick: k
                           })
                       })
                   })

@@ -53,14 +53,14 @@ function v(e) {
                     : v.rawValue,
         O = (0, a.e7)([_.Z], () => _.Z.getGuild(L)),
         M = (0, a.e7)([p.Z], () => p.Z.getChannel(y)),
-        D = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-        k = (0, a.e7)([], () => Z.author.id === (null == D ? void 0 : D.id)),
+        k = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
+        D = (0, a.e7)([], () => Z.author.id === (null == k ? void 0 : k.id)),
         U = null === (A = P.recipients) || void 0 === A ? void 0 : A.find((e) => e !== Z.author.id),
         B = (0, a.e7)([g.default], () => (null != U ? g.default.getUser(U) : null)),
         w = (0, d.ZP)(Z),
         F = (0, C._T)(P.getGuildId(), P.id, B),
         G = (0, a.Wu)([E.ZP], () => (null != M ? E.ZP.getVoiceStatesForChannel(M) : []), [M]),
-        V = G.some((e) => e.user.id === (null == D ? void 0 : D.id)),
+        V = G.some((e) => e.user.id === (null == k ? void 0 : k.id)),
         H =
             null === (R = Z.embeds[0]) || void 0 === R
                 ? void 0
@@ -75,11 +75,11 @@ function v(e) {
                     : b.rawValue,
         z = null != H ? H.split(',') : [],
         W = (0, a.Wu)([g.default], () => z.map((e) => g.default.getUser(e)).filter(Boolean)),
-        K = k && null != B ? x.intl.formatToPlainString(x.t['er/cHx'], { username: F }) : x.intl.formatToPlainString(x.t.noNjkZ, { username: w.nick }),
+        K = D && null != B ? x.intl.formatToPlainString(x.t['er/cHx'], { username: F }) : x.intl.formatToPlainString(x.t.noNjkZ, { username: w.nick }),
         Y = null != O && null != M,
         X = null;
-    (X = Y ? (k || V ? x.intl.format(x.t.CaLQqK, { channelHook: (e, t) => (0, i.jsx)(m.Z, { channel: null != M ? M : void 0 }, t) }) : x.intl.format(x.t.VugXpK, { channelHook: (e, t) => (0, i.jsx)(m.Z, { channel: null != M ? M : void 0 }, t) })) : x.intl.string(x.t['tHT/Vl'])), 0 === G.length && (X = k ? x.intl.string(x.t.IE2uZW) : x.intl.string(x.t.QVhmGx));
-    let Q = k ? x.intl.string(x.t['00XIbm']) : x.intl.string(x.t['7CrE9/']);
+    (X = Y ? (D || V ? x.intl.format(x.t.CaLQqK, { channelHook: (e, t) => (0, i.jsx)(m.Z, { channel: null != M ? M : void 0 }, t) }) : x.intl.format(x.t.VugXpK, { channelHook: (e, t) => (0, i.jsx)(m.Z, { channel: null != M ? M : void 0 }, t) })) : x.intl.string(x.t['tHT/Vl'])), 0 === G.length && (X = D ? x.intl.string(x.t.IE2uZW) : x.intl.string(x.t.QVhmGx));
+    let Q = D ? x.intl.string(x.t['00XIbm']) : x.intl.string(x.t['7CrE9/']);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {

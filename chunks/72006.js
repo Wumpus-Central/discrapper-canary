@@ -9,13 +9,13 @@ n.d(t, {
         return O;
     },
     R8: function () {
-        return D;
+        return k;
     },
     Sq: function () {
         return j;
     },
     Wg: function () {
-        return k;
+        return D;
     },
     Zn: function () {
         return b;
@@ -200,11 +200,11 @@ function O(e) {
 function M(e) {
     return y(0, e);
 }
-function D(e) {
+function k(e) {
     let t = e.getSelection();
     return (t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), i.EditorState.forceSelection(e, t);
 }
-function k(e) {
+function D(e) {
     let t = j(e),
         n = e.getSelection();
     return (n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), i.EditorState.forceSelection(e, n);

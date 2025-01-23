@@ -51,7 +51,7 @@ function b(e) {
                 }, [])
             ];
         })(),
-        { showTutorial: D, setSeenTutorial: k } = (function (e) {
+        { showTutorial: k, setSeenTutorial: D } = (function (e) {
             let t = (0, a.e7)([_.Z], () => {
                     var e, t;
                     return null !== (t = null === (e = _.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
@@ -148,8 +148,8 @@ function b(e) {
                                             children: (0, i.jsx)(v.Z, {
                                                 setTab: M,
                                                 onJump: z,
-                                                showTutorial: D,
-                                                setSeenTutorial: k,
+                                                showTutorial: k,
+                                                setSeenTutorial: D,
                                                 closePopout: U,
                                                 badgeState: j
                                             })

@@ -112,7 +112,7 @@ let R = L(function (e) {
     Z = L(function (e) {
         var t, o;
         let { appId: u, skuId: p, message: C } = e,
-            [N, R, Z, L, y, O, M, D] = (0, l.Wu)(
+            [N, R, Z, L, y, O, M, k] = (0, l.Wu)(
                 [_.Z, g.Z, f.Z, h.Z, c.Z],
                 () => {
                     var e, t, n, i;
@@ -127,7 +127,7 @@ let R = L(function (e) {
                 },
                 [u, C.channel_id, p]
             ),
-            k = (0, v.R)(null !== (o = null == R ? void 0 : R.id) && void 0 !== o ? o : '');
+            D = (0, v.R)(null !== (o = null == R ? void 0 : R.id) && void 0 !== o ? o : '');
         r.useEffect(() => {
             null == N && !L && !y && (0, s.km)(p);
         }, [y, L, N, p]),
@@ -139,7 +139,7 @@ let R = L(function (e) {
                 skuId: p,
                 initialSubscribeForGuild: M
             });
-        if (!k || null == R || null == N) return null;
+        if (!D || null == R || null == N) return null;
         let F = N.type === S.epS.SUBSCRIPTION,
             G = !!F && (0, d.KW)(N.flags),
             V = () => {
@@ -229,7 +229,7 @@ let R = L(function (e) {
             onLinkCopy: () => {
                 (0, x.X)(R.id, x.B.SKU_EMBED, p);
             },
-            iconSrc: D,
+            iconSrc: k,
             onIconClick: () => {
                 V(),
                     E.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {

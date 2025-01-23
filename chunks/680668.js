@@ -32,8 +32,8 @@ function g(e) {
         y = null != v,
         O = null != L,
         M = null != L && L.isGuildVocal(),
-        D = null != L && L.isGuildStageVoice(),
-        k = (0, c.yE)(null !== (t = T.flags) && void 0 !== t ? t : 0, r.$.IS_GUEST_INVITE),
+        k = null != L && L.isGuildStageVoice(),
+        D = (0, c.yE)(null !== (t = T.flags) && void 0 !== t ? t : 0, r.$.IS_GUEST_INVITE),
         U = null !== (g = null == v ? void 0 : v.hasFeature(f.oNc.HUB)) && void 0 !== g && g;
     if (null == v) {
         if (null == T.guild) return (0, i.jsx)(h.Z, {});
@@ -45,9 +45,9 @@ function g(e) {
         w = (0, m.e)({
             isVoiceChannel: M,
             isOwnInvite: b,
-            isGuest: k,
+            isGuest: D,
             isHubGuild: U,
-            isStage: D,
+            isStage: k,
             isStream: !1
         });
     return (
@@ -65,7 +65,7 @@ function g(e) {
                 })
             ]
         })),
-        k &&
+        D &&
             (I = (0, i.jsx)(l.TooltipContainer, {
                 className: _.tooltipContainer,
                 text: p.intl.string(p.t['/FeTKy']),
@@ -124,7 +124,7 @@ function g(e) {
                             onClick: B,
                             submitting: P,
                             color: o.Z.Button.Colors.GREEN,
-                            children: M ? (D ? p.intl.string(p.t['7vb2cX']) : p.intl.string(p.t.gpqgam)) : y ? p.intl.string(p.t.cEnaW1) : p.intl.string(p.t.XpeFYm)
+                            children: M ? (k ? p.intl.string(p.t['7vb2cX']) : p.intl.string(p.t.gpqgam)) : y ? p.intl.string(p.t.cEnaW1) : p.intl.string(p.t.XpeFYm)
                         })
                     ]
                 }),

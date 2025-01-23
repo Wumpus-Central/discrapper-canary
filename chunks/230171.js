@@ -39,8 +39,8 @@ function j(e) {
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
         }),
-        D = M && null != n.integrationTypesConfig && l.Y.GUILD_INSTALL in n.integrationTypesConfig,
-        k = M && null != n.integrationTypesConfig && l.Y.USER_INSTALL in n.integrationTypesConfig,
+        k = M && null != n.integrationTypesConfig && l.Y.GUILD_INSTALL in n.integrationTypesConfig,
+        D = M && null != n.integrationTypesConfig && l.Y.USER_INSTALL in n.integrationTypesConfig,
         U = (0, a.e7)([x.Z], () => {
             var e;
             return null !== (e = x.Z.getGuildId()) && void 0 !== e ? e : void 0;
@@ -63,8 +63,8 @@ function j(e) {
                     compactDisplay: 'short'
                 }),
                 r = null !== (t = null === (e = n.directoryEntry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== t ? t : 0;
-            return 0 !== r && D ? A.intl.format(A.t['6IW6Wl'], { guildCount: i.format(r) }) : null;
-        }, [null === (t = n.directoryEntry) || void 0 === t ? void 0 : t.guild_count, D, z]),
+            return 0 !== r && k ? A.intl.format(A.t['6IW6Wl'], { guildCount: i.format(r) }) : null;
+        }, [null === (t = n.directoryEntry) || void 0 === t ? void 0 : t.guild_count, k, z]),
         K =
             null != L
                 ? (0, N.aN)({
@@ -88,7 +88,7 @@ function j(e) {
             },
             []
         ),
-        q = (F || G || k) && Q,
+        q = (F || G || D) && Q,
         J = y || q,
         $ = r.useCallback(() => {
             if (q) {

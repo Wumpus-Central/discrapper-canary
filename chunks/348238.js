@@ -9,7 +9,7 @@ n.d(t, {
         return L;
     },
     NU: function () {
-        return D;
+        return k;
     },
     Nk: function () {
         return P;
@@ -33,7 +33,7 @@ n.d(t, {
         return V;
     },
     qo: function () {
-        return k;
+        return D;
     },
     rY: function () {
         return M;
@@ -129,10 +129,10 @@ function O(e, t) {
 function M(e, t) {
     return y(b('referencedAvatarProfile', e, t));
 }
-function D(e, t) {
+function k(e, t) {
     return y(b('interactionAvatarProfile', e, t));
 }
-function k(e, t, l, o) {
+function D(e, t, l, o) {
     let { id: s } = t,
         { id: u, flags: d } = e,
         m = (0, I.yE)(d, S.iLy.EPHEMERAL),

@@ -39,8 +39,8 @@ var i = n(200651),
     y = n(981631),
     O = n(245335),
     M = n(388032),
-    D = n(823578);
-let k = (0, P.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+    k = n(823578);
+let D = (0, P.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
     U = (0, P.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
     B = (0, P.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function w(e) {
@@ -53,12 +53,12 @@ function w(e) {
                 (0, i.jsxs)(
                     'div',
                     {
-                        className: D.statusWrapper,
+                        className: k.statusWrapper,
                         children: [
-                            (0, i.jsx)('i', { className: D.statusOnline }),
+                            (0, i.jsx)('i', { className: k.statusOnline }),
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-xs/normal',
-                                className: D.count,
+                                className: k.count,
                                 children: M.intl.format(M.t['LC+S+v'], { membersOnline: n })
                             })
                         ]
@@ -71,12 +71,12 @@ function w(e) {
                 (0, i.jsxs)(
                     'div',
                     {
-                        className: D.statusWrapper,
+                        className: k.statusWrapper,
                         children: [
-                            (0, i.jsx)('i', { className: D.statusOffline }),
+                            (0, i.jsx)('i', { className: k.statusOffline }),
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-xs/normal',
-                                className: D.count,
+                                className: k.count,
                                 children: M.intl.format(M.t.zRl6XV, { count: t })
                             })
                         ]
@@ -85,9 +85,9 @@ function w(e) {
                 )
             ),
         (0, i.jsx)('div', {
-            className: a()(D.statusCounts, {
-                [D.large]: r,
-                [D.stacked]: l
+            className: a()(k.statusCounts, {
+                [k.large]: r,
+                [k.stacked]: l
             }),
             children: o
         })
@@ -98,14 +98,14 @@ function F(e) {
     if (null != t && null != n) {
         let e = (0, x.KS)(t, n);
         return (0, i.jsxs)('div', {
-            className: a()(D.channel, {
-                [D.stacked]: r,
-                [D.ended]: l
+            className: a()(k.channel, {
+                [k.stacked]: r,
+                [k.ended]: l
             }),
             children: [
                 null != e
                     ? (0, i.jsx)(e, {
-                          className: D.channelIcon,
+                          className: k.channelIcon,
                           size: 'xs',
                           color: 'currentColor'
                       })
@@ -124,9 +124,9 @@ function F(e) {
     }
     return null != n
         ? (0, i.jsx)('div', {
-              className: a()(D.channel, {
-                  [D.stacked]: r,
-                  [D.ended]: l
+              className: a()(k.channel, {
+                  [k.stacked]: r,
+                  [k.ended]: l
               }),
               children: (0, i.jsx)(N.Z, {
                   children: (0, i.jsx)(d.Text, {
@@ -171,7 +171,7 @@ function G(e) {
                 (function () {
                     var e;
                     let t = null === (e = z.current) || void 0 === e ? void 0 : e.offsetWidth;
-                    null != t && (K(t < B + U), X(t <= 2 * k));
+                    null != t && (K(t < B + U), X(t <= 2 * D));
                 })()
             ),
             t = z.current;
@@ -200,7 +200,7 @@ function G(e) {
         { analyticsLocations: ea } = (0, C.ZP)(E.Z.INVITE_EMBED),
         eo = (0, p.Z)({
             applicationId: H.id,
-            size: k,
+            size: D,
             names: ['embedded_cover']
         }),
         es = (0, c.Wu)(
@@ -231,39 +231,39 @@ function G(e) {
     return (ed && en && (o = M.intl.string(M.t.wJNK8P)), !el && (o = M.intl.string(M.t.hHGrW1)), (u = en ? M.intl.string(M.t.KC26NT) : ei || !ed ? M.intl.string(M.t.VJlc0d) : M.intl.string(M.t.I0v0Qk)), null == x.code || '' === x.code)
         ? null
         : (0, i.jsxs)('div', {
-              className: D.container,
+              className: k.container,
               ref: $,
               children: [
                   (0, i.jsx)('div', {
-                      className: a()(D.imgContainer, {
-                          [D.large]: W,
-                          [D.stacked]: Y
+                      className: a()(k.imgContainer, {
+                          [k.large]: W,
+                          [k.stacked]: Y
                       }),
                       children: (0, i.jsx)(_.Z, {
                           imageBackground: eo,
                           applicationName: null !== (l = null == et ? void 0 : et.name) && void 0 !== l ? l : '',
-                          imageClassName: a()(D.img, {
-                              [D.large]: W,
-                              [D.stacked]: Y
+                          imageClassName: a()(k.img, {
+                              [k.large]: W,
+                              [k.stacked]: Y
                           }),
-                          imageNotFoundClassName: a()(D.brokenImg, {
-                              [D.large]: W,
-                              [D.stacked]: Y
+                          imageNotFoundClassName: a()(k.brokenImg, {
+                              [k.large]: W,
+                              [k.stacked]: Y
                           })
                       })
                   }),
                   (0, i.jsxs)(v.Z, {
-                      className: a()(D.content, {
-                          [D.large]: W,
-                          [D.stacked]: Y
+                      className: a()(k.content, {
+                          [k.large]: W,
+                          [k.stacked]: Y
                       }),
                       children: [
                           (0, i.jsxs)('div', {
-                              className: D.info,
+                              className: k.info,
                               children: [
                                   (0, i.jsx)(d.FormTitle, { children: ed ? M.intl.string(M.t['1ckx+P']) : M.intl.string(M.t.BoQUFR) }),
                                   (0, i.jsx)(d.Heading, {
-                                      className: D.heading,
+                                      className: k.heading,
                                       variant: 'heading-xl/semibold',
                                       children: null == et ? void 0 : et.name
                                   }),
@@ -276,14 +276,14 @@ function G(e) {
                               ]
                           }),
                           (0, i.jsxs)('div', {
-                              className: a()(D.currentState, {
-                                  [D.large]: W,
-                                  [D.split]: !ei && Y
+                              className: a()(k.currentState, {
+                                  [k.large]: W,
+                                  [k.split]: !ei && Y
                               }),
                               children: [
                                   !ei && ed
                                       ? (0, i.jsxs)('div', {
-                                            className: a()(D.endedNote, { [D.large]: W }),
+                                            className: a()(k.endedNote, { [k.large]: W }),
                                             children: [
                                                 (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/medium',
@@ -305,11 +305,11 @@ function G(e) {
                                             isStacked: Y
                                         }),
                                   (0, i.jsxs)('div', {
-                                      className: D.cta,
+                                      className: k.cta,
                                       children: [
                                           null != ee && ei
                                               ? (0, i.jsx)('div', {
-                                                    className: D.avatars,
+                                                    className: k.avatars,
                                                     children: (0, i.jsx)(g.Z, {
                                                         guildId: ee.id,
                                                         users: ec,
@@ -322,11 +322,11 @@ function G(e) {
                                               children: (e) => {
                                                   let { onClick: t, ...n } = e;
                                                   return (0, i.jsx)(d.Button, {
-                                                      className: D.actionButton,
+                                                      className: k.actionButton,
                                                       onClick: () => {
                                                           eh(), null == t || t();
                                                       },
-                                                      wrapperClassName: D.tooltipButtonWrapper,
+                                                      wrapperClassName: k.tooltipButtonWrapper,
                                                       ...n,
                                                       submitting: eu,
                                                       disabled: em,

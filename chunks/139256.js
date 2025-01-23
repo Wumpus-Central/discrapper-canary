@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     },
     $w: function () {
-        return k;
+        return D;
     },
     Og: function () {
         return B;
@@ -209,7 +209,7 @@ function M(e) {
         animated: n.animated
     });
 }
-function D(e, t) {
+function k(e, t) {
     return null != e
         ? (0, l.jsx)('div', {
               className: e,
@@ -217,7 +217,7 @@ function D(e, t) {
           })
         : (0, l.jsx)(l.Fragment, { children: t });
 }
-function k(e) {
+function D(e) {
     let { media: t, containerClassName: n, attachmentClassName: i, emojiClassName: r, fallback: a } = e,
         { message: o } = (0, N.GF)();
     if (null != t.attachmentIds && t.attachmentIds.length > 0) {
@@ -226,7 +226,7 @@ function k(e) {
             return e.id === (null === (n = t.attachmentIds) || void 0 === n ? void 0 : n[0]);
         });
         if (null != e)
-            return D(
+            return k(
                 n,
                 (0, l.jsx)(O, {
                     className: i,
@@ -235,7 +235,7 @@ function k(e) {
             );
     }
     return null != t.emoji
-        ? D(
+        ? k(
               n,
               (0, l.jsx)(M, {
                   className: r,

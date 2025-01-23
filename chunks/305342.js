@@ -222,8 +222,8 @@ t.Z = (e) => {
         C = (0, p.jO)(n),
         { openModal: I, canOpenModal: x, cannotOpenReason: v, isCheckingTrialEligibility: T } = (0, b.Z)(C, l, u, h),
         L = (0, o.e7)([m.Z], () => m.Z.isSyncing),
-        { activeSubscription: y, activeSubscriptionListing: D } = (0, g.Z)(u),
-        k = (null == D ? void 0 : D.id) === n,
+        { activeSubscription: y, activeSubscriptionListing: k } = (0, g.Z)(u),
+        D = (null == k ? void 0 : k.id) === n,
         U = (null == y ? void 0 : y.status) === R.O0b.CANCELED,
         [B, w] = r.useState(!1),
         [F, G] = r.useState(!1),
@@ -293,7 +293,7 @@ t.Z = (e) => {
                                       (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               Q && (0, i.jsx)('div', { className: P.divider }),
-                                              k
+                                              D
                                                   ? (0, i.jsx)(s.Button, {
                                                         fullWidth: !0,
                                                         look: s.Button.Looks.OUTLINED,
