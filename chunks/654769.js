@@ -149,22 +149,21 @@ async function W(e) {
     return (m.Z.disableNotifications && null == e.overrideStreamerMode) || !(await U()) || (T.isPlatformEmbedded && !w.ZP.shouldDisplayNotifications());
 }
 async function G(e, t, n, i, o) {
-    var a, l, c, d;
-    let u;
+    var a, r, l, c;
+    let d;
     if (await W(o)) {
         null != o.sound && !1 !== o.playSoundIfDisabled && D(o.sound, null !== (a = o.volume) && void 0 !== a ? a : 1, o.soundpack);
         return;
     }
-    let f = null !== (l = null == o ? void 0 : o.tag) && void 0 !== l ? l : null;
-    (0, T.isLinux)() && (n = r().escape(n));
-    let b = await Z(),
-        m = (null == b ? void 0 : b.authorizationStatus) === 'authorized',
-        v = m && (null == b ? void 0 : b.sound) === !0,
-        S = (e) => {
+    let u = null !== (r = null == o ? void 0 : o.tag) && void 0 !== r ? r : null,
+        f = await Z(),
+        b = (null == f ? void 0 : f.authorizationStatus) === 'authorized',
+        m = b && (null == f ? void 0 : f.sound) === !0,
+        v = (e) => {
             var t;
             null === (t = o.onShown) || void 0 === t || t.call(o), !o.omitViewTracking && C.default.track(k.rMx.NOTIFICATION_VIEWED, i), A && setTimeout(() => e.close(), 5000);
         };
-    if ((null != o.sound && !v && D(o.sound, null !== (c = o.volume) && void 0 !== c ? c : 1, o.soundpack), m)) {
+    if ((null != o.sound && !m && D(o.sound, null !== (l = o.volume) && void 0 !== l ? l : 1, o.soundpack), b)) {
         let a = {
             title: t,
             body: n
@@ -194,35 +193,34 @@ async function G(e, t, n, i, o) {
                     }
                 }
             };
-            return S(t), t;
+            return v(t), t;
         } catch (e) {
             O.warn('Native notification failed with error: ', e);
         }
     }
-    null != o.sound && m && D(o.sound, null !== (d = o.volume) && void 0 !== d ? d : 1, o.soundpack);
-    let B = {
-        icon: e,
-        body: n,
-        tag: f,
-        silent: !0
-    };
+    null != o.sound && b && D(o.sound, null !== (c = o.volume) && void 0 !== c ? c : 1, o.soundpack);
     N && g.Z.taskbarFlash && w.ZP.flashFrame(!0);
     try {
-        u = new L(t, B);
+        d = new L(t, {
+            icon: e,
+            body: n,
+            tag: u,
+            silent: !0
+        });
     } catch (e) {
         return null;
     }
-    return (S(u),
-    (u.onclick = () => {
+    return (v(d),
+    (d.onclick = () => {
         var e;
-        T.isPlatformEmbedded ? w.ZP.focus() : (window.focus(), u.close()), !o.omitClickTracking && C.default.track(k.rMx.NOTIFICATION_CLICKED, i), null === (e = o.onClick) || void 0 === e || e.call(o);
+        T.isPlatformEmbedded ? w.ZP.focus() : (window.focus(), d.close()), !o.omitClickTracking && C.default.track(k.rMx.NOTIFICATION_CLICKED, i), null === (e = o.onClick) || void 0 === e || e.call(o);
     }),
     R)
-        ? u
+        ? d
         : {
               close() {
                   var e;
-                  null == u || null === (e = u.onclose) || void 0 === e || e.call(u);
+                  null == d || null === (e = d.onclose) || void 0 === e || e.call(d);
               }
           };
 }
