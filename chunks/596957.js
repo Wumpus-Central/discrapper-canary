@@ -125,8 +125,9 @@ t.Z = function (e) {
         }, [F, c]),
         q = r.useMemo(() => c === P.pJs.PENDING && (l.filter(P.pJs.SPAM).length > 0 || l.filter(P.pJs.PENDING_IGNORED).length > 0), [l, c]),
         X = r.useMemo(() => l.filter(c, F[c]), [l, F, c]),
-        Q = r.useMemo(() => {
-            if (!B) return j;
+        Q = B && c === P.pJs.PENDING,
+        J = r.useMemo(() => {
+            if (!Q) return j;
             let e = [];
             return (
                 X.forEach((t) => {
@@ -135,9 +136,9 @@ t.Z = function (e) {
                 }),
                 e
             );
-        }, [X, B]);
-    (0, p.Z)(Q, B);
-    let J = r.useMemo(() => {
+        }, [Q, X]);
+    (0, p.Z)(J, Q);
+    let $ = r.useMemo(() => {
             if (c === P.pJs.PENDING) {
                 let e = [],
                     t = [];
@@ -150,15 +151,15 @@ t.Z = function (e) {
             }
             return [X];
         }, [X, c]),
-        $ = r.useMemo(() => X.filter((e) => e.type === P.OGo.PENDING_INCOMING).length, [X]),
-        ee = c === P.pJs.PENDING && $ > 0 && $ >= y.yf,
-        et = r.useCallback(
-            (e) => {
-                e.stopPropagation(), d.Z.confirmClearPendingRelationships($);
-            },
-            [$]
-        ),
+        ee = r.useMemo(() => X.filter((e) => e.type === P.OGo.PENDING_INCOMING).length, [X]),
+        et = c === P.pJs.PENDING && ee > 0 && ee >= y.yf,
         en = r.useCallback(
+            (e) => {
+                e.stopPropagation(), d.Z.confirmClearPendingRelationships(ee);
+            },
+            [ee]
+        ),
+        ei = r.useCallback(
             (e) => {
                 let n = (function (e, t, n) {
                     switch (e) {
@@ -175,7 +176,7 @@ t.Z = function (e) {
                         default:
                             return O.intl.formatToPlainString(O.t.rHRrhI, { count: t.toString() });
                     }
-                })(c, J[e].length, e);
+                })(c, $[e].length, e);
                 return c === P.pJs.PENDING && 0 === e
                     ? (0, i.jsxs)('div', {
                           className: R.sectionTitle,
@@ -184,13 +185,13 @@ t.Z = function (e) {
                                   id: t,
                                   title: n
                               }),
-                              ee &&
+                              et &&
                                   (0, i.jsx)(o.Button, {
                                       look: o.ButtonLooks.LINK,
                                       color: o.ButtonColors.LINK,
                                       className: R.clearButton,
                                       size: o.Button.Sizes.TINY,
-                                      onClick: et,
+                                      onClick: en,
                                       'aria-label': O.intl.string(O.t.O8k7Oz),
                                       children: O.intl.string(O.t.O8k7Oz)
                                   })
@@ -204,7 +205,7 @@ t.Z = function (e) {
                           })
                       });
             },
-            [J, c, t, ee, et]
+            [$, c, t, et, en]
         );
     if (
         (r.useEffect(() => {
@@ -216,8 +217,8 @@ t.Z = function (e) {
             section: c,
             showSpamCta: q
         });
-    let ei = '' !== F[c],
-        er = 0 === X.length && ei;
+    let er = '' !== F[c],
+        el = 0 === X.length && er;
     return (0, i.jsx)(m.Gt, {
         value: n,
         children: (0, i.jsxs)(u.Z, {
@@ -225,21 +226,21 @@ t.Z = function (e) {
             children: [
                 G && U && (0, i.jsx)(Z.R, {}),
                 (0, i.jsx)(o.SearchBar, {
-                    className: a()(R.searchBar, er ? R.searchEmptyState : null),
+                    className: a()(R.searchBar, el ? R.searchEmptyState : null),
                     query: F[c],
                     onChange: Y,
                     onClear: K,
                     size: o.SearchBar.Sizes.MEDIUM
                 }),
                 (0, i.jsx)(A.Z, {
-                    rows: J,
+                    rows: $,
                     renderRow: W,
-                    renderSection: en,
+                    renderSection: ei,
                     sectionFilter: c,
                     isVirtualizedList: k >= y.nG,
-                    hasSearchQuery: ei,
+                    hasSearchQuery: er,
                     footer:
-                        q && !er
+                        q && !el
                             ? (0, i.jsx)(o.Button, {
                                   look: o.Button.Looks.LINK,
                                   color: R.viewSpamButtonColor,
@@ -253,7 +254,7 @@ t.Z = function (e) {
                               })
                             : null
                 }),
-                er &&
+                el &&
                     (0, i.jsx)('div', {
                         className: R.emptyStateContainer,
                         children: (0, i.jsx)(T.Z, { type: T.j.SECTION_NO_RESULTS }, c)
