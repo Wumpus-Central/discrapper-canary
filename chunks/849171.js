@@ -40,8 +40,8 @@ var i,
     h = n(16609),
     g = n(527805),
     v = n(716600),
-    S = n(778569),
-    I = n(563218),
+    I = n(778569),
+    S = n(563218),
     _ = n(318891),
     x = n(884338),
     E = n(719296),
@@ -113,8 +113,8 @@ function B(e) {
     var t, n;
     let { participants: i, application: l, channel: s, width: h } = e,
         v = D(h),
-        [S] = U(h),
-        I = (0, c.Wu)([w.default, A.default], () =>
+        [I] = U(h),
+        S = (0, c.Wu)([w.default, A.default], () =>
             Array.from(i)
                 .map((e) => ((0, p.J)(e, A.default) ? null : w.default.getUser(e.userId)))
                 .filter(P.lm)
@@ -122,7 +122,7 @@ function B(e) {
         _ = (0, c.e7)([m.ZP], () => m.ZP.getEmbeddedActivitiesForChannel(s.id).find((e) => e.applicationId === l.id)),
         { analyticsLocations: x } = (0, b.ZP)(),
         E = (0, d.O)(),
-        C = R.ZP.getName(s.getGuildId(), s.id, null == I ? void 0 : I[0]),
+        C = R.ZP.getName(s.getGuildId(), s.id, null == S ? void 0 : S[0]),
         y =
             (0, g.s5)({
                 userId: null === (t = w.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -142,10 +142,10 @@ function B(e) {
         className: O.splash,
         children: [
             (0, a.jsx)(V, {
-                avatarSize: S,
+                avatarSize: I,
                 guildId: T,
                 channelId: s.id,
-                users: I
+                users: S
             }),
             (0, a.jsx)(u.Text, {
                 className: o()(O.subheader, {
@@ -154,10 +154,10 @@ function B(e) {
                 }),
                 variant: 'text-sm/normal',
                 children:
-                    I.length > 1
+                    S.length > 1
                         ? M.intl.formatToPlainString(M.t.cpe6CA, {
                               username: C,
-                              count: I.length - 1
+                              count: S.length - 1
                           })
                         : M.intl.formatToPlainString(M.t['7Uuia2'], { username: C })
             }),
@@ -186,7 +186,8 @@ function B(e) {
                           submitting: k,
                           size: F(v),
                           className: O.button,
-                          color: u.Button.Colors.PRIMARY,
+                          look: u.ButtonLooks.FILLED,
+                          color: u.Button.Colors.WHITE,
                           children: M.intl.string(M.t['4i2vj4'])
                       })
                     : null
@@ -201,7 +202,7 @@ function W(e) {
         d = (0, v.Z)(),
         m = null != d && (0, h.p)(d.location) === s.id && d.applicationId === u,
         [f] = (0, T.Z)([u]),
-        { url: p } = (0, S.Z)({
+        { url: p } = (0, I.Z)({
             applicationId: u,
             names: k,
             size: L
@@ -230,7 +231,7 @@ function W(e) {
                     children: [
                         g &&
                             null != d &&
-                            (0, a.jsx)(I.Z, {
+                            (0, a.jsx)(S.Z, {
                                 className: O.iframe,
                                 embedId: (0, E.Z)(d.location.id, u)
                             }),
