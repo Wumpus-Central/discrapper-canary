@@ -142,11 +142,16 @@ let F = o.memo(function (e) {
                       r > 0 &&
                           (0, l.jsx)(u.Clickable, {
                               className: a()(P.otherRoles),
-                              onMouseEnter: (e) => d(e),
-                              children: (0, l.jsxs)(u.Text, {
-                                  variant: 'text-xs/medium',
-                                  color: 'header-primary',
-                                  children: ['+', s]
+                              onClick: (e) => d(e),
+                              children: (0, l.jsx)(u.Tooltip, {
+                                  text: U.intl.string(U.t.DY6n4u),
+                                  children: (e) =>
+                                      (0, l.jsxs)(u.Text, {
+                                          variant: 'text-xs/medium',
+                                          color: 'header-primary',
+                                          ...e,
+                                          children: ['+', s]
+                                      })
                               })
                           }),
                       m &&
