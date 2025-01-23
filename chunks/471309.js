@@ -1,8 +1,16 @@
-let i = (0, r(818083).B)({
+r.d(n, {
+    E: function () {
+        return o;
+    }
+});
+var i = r(818083),
+    a = r(987338);
+let o = (0, i.B)({
         kind: 'user',
         id: '2024-08_tiered_tenure_badges',
         label: 'Tiered Tenure Badging',
         defaultConfig: { enabled: !1 },
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -22,8 +30,8 @@ let i = (0, r(818083).B)({
             }
         ]
     }),
-    a = function () {
+    s = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return i.useExperiment({ location: 'experiment_hook' }, { autoTrackExposure: e });
+        return o.useExperiment({ location: 'experiment_hook' }, { autoTrackExposure: e });
     };
-n.Z = a;
+n.Z = s;
