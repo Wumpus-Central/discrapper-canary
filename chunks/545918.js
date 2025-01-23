@@ -6,9 +6,9 @@ t.r(n),
     }),
     t(47120);
 var l = t(200651),
-    r = t(192379),
-    i = t(120356),
-    a = t.n(i),
+    i = t(192379),
+    r = t(120356),
+    a = t.n(r),
     s = t(442837),
     o = t(481060),
     c = t(100527),
@@ -23,8 +23,8 @@ var l = t(200651),
     f = t(246364),
     v = t(697379),
     g = t(98493),
-    N = t(412222),
-    I = t(223312),
+    I = t(412222),
+    N = t(223312),
     _ = t(571728),
     T = t(473403),
     E = t(984370),
@@ -52,7 +52,7 @@ var l = t(200651),
     Y = t(998810),
     Q = t(247627);
 function K(e) {
-    let { guild: n, previousChannel: t, currentTab: i, onTabSelect: a } = e,
+    let { guild: n, previousChannel: t, currentTab: r, onTabSelect: a } = e,
         s = (0, b.jS)(n.id, 'Member Safety Page'),
         c = (0, v.W)(n.id),
         d = H.intl.string(H.t.oclz3d),
@@ -87,7 +87,7 @@ function K(e) {
                                       null == t
                                           ? null
                                           : (0, l.jsxs)(
-                                                r.Fragment,
+                                                i.Fragment,
                                                 {
                                                     children: [
                                                         (0, l.jsx)(T._, {
@@ -120,7 +120,7 @@ function K(e) {
                     c &&
                     (0, l.jsx)(y.Z, {
                         guildId: n.id,
-                        currentTab: i,
+                        currentTab: r,
                         onTabSelect: a
                     })
             ]
@@ -130,13 +130,13 @@ function K(e) {
 function V(e) {
     var n;
     let { guildId: t } = e,
-        i = null !== (n = (0, _.A)({ guildId: t })) && void 0 !== n ? n : 0,
+        r = null !== (n = (0, _.A)({ guildId: t })) && void 0 !== n ? n : 0,
         u = (0, b.jS)(t, 'Member Safety Page'),
-        [m, v] = r.useState(u && i > 0 ? L.e.PENDING : L.e.ALL_MEMBERS),
+        [m, v] = i.useState(u && r > 0 ? L.e.PENDING : L.e.ALL_MEMBERS),
         T = (0, s.e7)([Z.Z], () => Z.Z.getGuild(t)),
         { analyticsLocations: E } = (0, d.ZP)(c.Z.MEMBER_SAFETY_PAGE),
-        y = (0, N.C)({ guildId: t }),
-        { guildJoinRequests: H } = (0, I.j)({
+        y = (0, I.C)({ guildId: t }),
+        { guildJoinRequests: H } = (0, N.j)({
             guildId: t,
             applicationStatus: 'ALL_MEMBERS' === m ? f.wB.SUBMITTED : m,
             sortOrder: y
@@ -145,19 +145,19 @@ function V(e) {
         W = (0, h.m)(t),
         X = (0, s.e7)([k.Z], () => k.Z.getLastSelectedChannelId(t)),
         $ = (0, s.e7)([R.Z], () => R.Z.getChannel(X)),
-        ee = r.useRef(null);
+        ee = i.useRef(null);
     (0, P.n)(t);
     let { fetchNextPage: en } = (0, g.m)({
             guildId: t,
             guildJoinRequests: H
         }),
-        et = r.useCallback(async () => {
+        et = i.useCallback(async () => {
             var e;
             if (m === L.e.ALL_MEMBERS) return;
             let n = null === (e = ee.current) || void 0 === e ? void 0 : e.getScrollerState();
             if (null != n) n.scrollHeight - n.scrollTop - n.offsetHeight < 200 && (await en(y, m));
         }, [m, m, y, en]),
-        el = r.useCallback(
+        el = i.useCallback(
             async (e) => {
                 if (m !== e) {
                     if (u) {
@@ -168,18 +168,18 @@ function V(e) {
             },
             [m, u, t, en, y]
         );
-    r.useEffect(() => {
+    i.useEffect(() => {
         if (!V && null != T) {
             var e;
             let n = null === (e = A.ZP.getDefaultChannel(T.id)) || void 0 === e ? void 0 : e.id;
             (0, S.XU)(T.id, n);
         }
     }, [T, V]),
-        r.useEffect(() => {
+        i.useEffect(() => {
             u && C.ZP.fetchVerificationForm(t);
         }, [t, u]);
-    let er = (0, s.e7)([M.ZP], () => null != M.ZP.getGuildSidebarState(t), [t]),
-        ei = r.useCallback(
+    let ei = (0, s.e7)([M.ZP], () => null != M.ZP.getGuildSidebarState(t), [t]),
+        er = i.useCallback(
             (e) => {
                 (0, h.Y)(e.guildId)
                     ? (0, x.r)(e.guildId, e.userId, q.oC.MEMBER_SAFETY, { modViewPanel: J.k.INFO })
@@ -200,7 +200,7 @@ function V(e) {
                           (0, l.jsx)(G.Z, { guild: T }),
                           (0, l.jsx)(z.Z, {
                               guild: T,
-                              onMemberSelect: ei
+                              onMemberSelect: er
                           })
                       ]
                   })
@@ -213,7 +213,7 @@ function V(e) {
         value: E,
         children: [
             (0, l.jsxs)('div', {
-                className: a()(Q.chat, Y.page, { [Q.threadSidebarOpen]: er }),
+                className: a()(Q.chat, Y.page, { [Q.threadSidebarOpen]: ei }),
                 children: [
                     (0, l.jsx)(K, {
                         guild: T,
@@ -223,7 +223,6 @@ function V(e) {
                     }),
                     (0, l.jsx)(o.AdvancedScroller, {
                         onScroll: et,
-                        className: a()(Y.scroller),
                         ref: ee,
                         orientation: 'vertical',
                         children: (0, l.jsx)('div', {
