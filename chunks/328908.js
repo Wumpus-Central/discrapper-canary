@@ -17,11 +17,11 @@ r.d(n, {
     Rg: function () {
         return d;
     },
+    b7: function () {
+        return b;
+    },
     q5: function () {
         return _;
-    },
-    rH: function () {
-        return m;
     },
     t0: function () {
         return v;
@@ -119,4 +119,10 @@ function y(e, n) {
         var i;
         return n ? r.messageReactionConfetti : null === (i = r.messageSendConfetti[e]) || void 0 === i ? void 0 : i.emoji;
     });
+}
+function b(e, n, r) {
+    if (n) return !1;
+    let i = m(e),
+        a = _(e);
+    return i && (0 === r || null == a);
 }

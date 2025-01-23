@@ -10,58 +10,65 @@ var o = r(200651),
     p = r(962293),
     h = r(63063),
     _ = r(328908),
-    m = r(883998),
-    g = r(981631),
-    E = r(388032),
-    v = r(648624);
-function y(e) {
+    m = r(317951),
+    g = r(883998),
+    E = r(576645),
+    v = r(981631),
+    y = r(388032),
+    b = r(648624);
+function I(e) {
     let { channel: n } = e,
         r = (0, _.z8)(n.id),
-        i = s.useCallback(
+        { entitlement: i, numPotions: a } = (0, E.t6)(m.D1),
+        l = s.useCallback(
             (e) => {
                 (0, _.Hi)(e, n.id);
             },
             [n.id]
         ),
-        a = s.useMemo(() => (null != r ? r.name.replace(/_/g, ' ') : ''), [r]),
-        l = s.useCallback(() => {
+        u = s.useMemo(() => (null != r ? r.name.replace(/_/g, ' ') : ''), [r]),
+        d = s.useCallback(() => {
             (0, _.Hb)(n.id);
-        }, [n.id]);
+        }, [n.id]),
+        f = s.useMemo(() => {
+            if (null != a && a > 0) return (null == i ? void 0 : i.type) === v.qc2.DEVELOPER_GIFT ? y.intl.format(y.t['b+P6ra'], { numPotions: a }) : y.intl.format(y.t.RiQ4cn, { numPotions: a });
+            return y.intl.format(y.t['jerM9/'], { helpCenterLink: h.Z.getArticleURL(v.BhN.CONFETTI_POTION) });
+        }, [a, i]);
     return (0, o.jsxs)('div', {
-        className: v.bar,
+        className: b.bar,
         children: [
             (0, o.jsxs)('div', {
-                className: v.beginning,
+                className: b.beginning,
                 children: [
                     (0, o.jsx)('div', {
-                        className: v.emojiButtonContainer,
-                        children: (0, o.jsx)(b, {
+                        className: b.emojiButtonContainer,
+                        children: (0, o.jsx)(T, {
                             channel: n,
-                            setEmojiConfetti: i,
+                            setEmojiConfetti: l,
                             emojiConfetti: null != r ? r : void 0
                         })
                     }),
                     (0, o.jsx)(c.xv, {
                         variant: 'text-sm/medium',
                         color: 'interactive-hover',
-                        children: null == r ? E.intl.string(E.t.mzfiGR) : E.intl.format(E.t.Hcd9OT, { emojiName: a })
+                        children: null == r ? y.intl.string(y.t.mzfiGR) : y.intl.format(y.t.Hcd9OT, { emojiName: u })
                     })
                 ]
             }),
             (0, o.jsxs)('div', {
-                className: v.end,
+                className: b.end,
                 children: [
                     (0, o.jsx)(c.xv, {
                         variant: 'text-sm/medium',
-                        children: E.intl.format(E.t['jerM9/'], { helpCenterLink: h.Z.getArticleURL(g.BhN.CONFETTI_POTION) })
+                        children: f
                     }),
-                    (0, o.jsx)(p.B, { onClick: l })
+                    (0, o.jsx)(p.B, { onClick: d })
                 ]
             })
         ]
     });
 }
-function b(e) {
+function T(e) {
     let { channel: n, setEmojiConfetti: r, emojiConfetti: i } = e,
         [a, l] = s.useState(!1),
         c = s.useCallback(() => {
@@ -74,7 +81,7 @@ function b(e) {
             [r]
         ),
         h = s.useMemo(() => (null == i ? null : null == i.id ? i.optionallyDiverseSequence : i.name), [i]);
-    return (0, o.jsx)(m.Z, {
+    return (0, o.jsx)(g.Z, {
         channel: n,
         shouldShow: a,
         onRequestClose: c,
@@ -86,8 +93,8 @@ function b(e) {
                 look: d.Button.Looks.BLANK,
                 size: d.Button.Sizes.NONE,
                 onClick: () => l(!a),
-                className: u()(v.emojiButton, { [v.selected]: a }),
-                innerClassName: v.emojiButtonInner,
+                className: u()(b.emojiButton, { [b.selected]: a }),
+                innerClassName: b.emojiButtonInner,
                 children:
                     null == i
                         ? (0, o.jsx)(d.ReactionIcon, {
@@ -102,4 +109,4 @@ function b(e) {
             })
     });
 }
-n.Z = y;
+n.Z = I;
