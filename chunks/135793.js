@@ -322,7 +322,10 @@ let Z = (e) => {
                 tooltipCopy: c
             } = (0, u.useMemo)(() => {
                 let e = {
-                        0: R.intl.formatToPlainString(R.t.Wh82U1, { price: (0, v.T4)(i.amount, i.currency) }),
+                        0: R.intl.formatToPlainString(R.t.POGRmp, {
+                            amount: I.pe,
+                            price: (0, v.T4)(i.amount, i.currency)
+                        }),
                         1: R.intl.string(R.t.RrKeDw),
                         2: R.intl.string(R.t.WOXaWF)
                     },
