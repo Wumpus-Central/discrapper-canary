@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     o = n(192379),
     a = n(119617),
-    s = n(642128),
-    l = n(748780),
+    l = n(642128),
+    s = n(748780),
     r = n(481060),
     c = n(596454),
     d = n(745510),
@@ -49,7 +49,7 @@ function b(e) {
             to: { y: y },
             config: {
                 duration: 450,
-                easing: l.Z.Easing.in(l.Z.Easing.exp)
+                easing: s.Z.Easing.in(s.Z.Easing.exp)
             },
             onChange: (e) => {
                 let { y: t } = e;
@@ -69,7 +69,7 @@ function b(e) {
             },
             config: {
                 duration: 450,
-                easing: l.Z.Easing.in(l.Z.Easing.ease)
+                easing: s.Z.Easing.in(s.Z.Easing.ease)
             },
             onRest: () => {
                 (0, h.G)(t, n.name, n.id);
@@ -104,10 +104,10 @@ function b(e) {
                     spriteHeight: f.Ko
                 }),
                 (0, i.jsx)(u.ZP, {
-                    children: (0, i.jsx)(s.animated.div, {
+                    children: (0, i.jsx)(l.animated.div, {
                         style: { ...A },
                         className: g.emojiContainer,
-                        children: (0, i.jsx)(s.animated.div, {
+                        children: (0, i.jsx)(l.animated.div, {
                             style: {
                                 ...O,
                                 opacity: O.opacity

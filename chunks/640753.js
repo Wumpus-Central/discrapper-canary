@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     o = n(192379),
     a = n(442837),
-    s = n(570140),
-    l = n(607070),
+    l = n(570140),
+    s = n(607070),
     r = n(222677),
     c = n(695346),
     d = n(960020),
@@ -25,10 +25,10 @@ t.Z = o.memo(function (e) {
             [b, _, g, t, n]
         ),
         [S, E] = o.useState(!1),
-        I = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        I = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
         R = c.Yk.useSetting(),
         N = o.useCallback(() => {
-            s.Z.dispatch({
+            l.Z.dispatch({
                 type: 'BURST_REACTION_EFFECT_CLEAR',
                 channelId: t,
                 messageId: n,

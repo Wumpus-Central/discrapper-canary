@@ -7,17 +7,17 @@ var n = r(192379),
     o = r(176354),
     s = r(823961);
 t.Z = (e) => {
-    let { update: t, draw: r, emit: c, tickRate: d, improvePerformance: f, shouldTick: h } = (0, u.Z)(e),
-        m = n.useMemo(() => new i.ZP(), []),
+    let { update: t, draw: r, emit: c, tickRate: d, improvePerformance: f, shouldTick: m } = (0, u.Z)(e),
+        h = n.useMemo(() => new i.ZP(), []),
         w = n.useCallback(
             (e) => {
-                (e.assetMap = m), r(e);
+                (e.assetMap = h), r(e);
             },
-            [m, r]
+            [h, r]
         ),
-        [p, y] = n.useState(!1),
-        v = n.useRef(),
-        x = n.useRef();
+        [y, p] = n.useState(!1),
+        x = n.useRef(),
+        v = n.useRef();
     return (
         n.useEffect(() => {
             async function e(e) {
@@ -33,11 +33,11 @@ t.Z = (e) => {
                                   size: 64,
                                   forcePNG: !0
                               });
-                await m.loadRemoteImage(i, u),
+                await h.loadRemoteImage(i, u),
                     c(i, n),
-                    y(!0),
-                    null != x.current && clearTimeout(x.current),
-                    (x.current = setTimeout(() => {
+                    p(!0),
+                    null != v.current && clearTimeout(v.current),
+                    (v.current = setTimeout(() => {
                         let e = s.Z.lastConfettiTrigger;
                         (null == e || Date.now() - e > 5000) &&
                             a.Z.dispatch({
@@ -47,30 +47,30 @@ t.Z = (e) => {
                     }, 5000));
             }
             return a.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => a.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
-        }, [m, c]),
+        }, [h, c]),
         n.useEffect(
             () => () => {
-                null != x.current && clearTimeout(x.current);
+                null != v.current && clearTimeout(v.current);
             },
             []
         ),
         n.useEffect(() => {
             let e = () => {
-                h.current ? (v.current = setTimeout(e, 1000)) : (y(!1), (v.current = null));
+                m.current ? (x.current = setTimeout(e, 1000)) : (p(!1), (x.current = null));
             };
             return (
-                (v.current = setTimeout(e, 1000)),
+                (x.current = setTimeout(e, 1000)),
                 () => {
-                    null != v.current && clearTimeout(v.current);
+                    null != x.current && clearTimeout(x.current);
                 }
             );
-        }, [p, h]),
+        }, [y, m]),
         {
             update: t,
             draw: w,
             tickRate: d,
             improvePerformance: f,
-            playing: p
+            playing: y
         }
     );
 };

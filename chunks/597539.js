@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     confirmModal: 'confirmModal_a9fa9a',
     discordTag: 'discordTag_a9fa9a',
     avatarIcon: 'avatarIcon_a9fa9a',

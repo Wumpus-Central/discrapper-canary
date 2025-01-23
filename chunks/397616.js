@@ -1,4 +1,4 @@
-t.d(e, {
+t.d(n, {
     Z: function () {
         return s;
     }
@@ -11,16 +11,16 @@ var r = t(442837),
     o = t(592125),
     d = t(594174),
     u = t(388032);
-function s(n, e) {
+function s(e, n) {
     var t;
     let s = (0, r.e7)([d.default], () => d.default.getCurrentUser(), []),
-        c = (0, r.e7)([o.Z], () => o.Z.getChannel(e), [e]);
-    return null == c || c.isOwner(n) || null == s || !c.isOwner(s.id) || !(null === (t = c.recipients) || void 0 === t ? void 0 : t.includes(n))
+        c = (0, r.e7)([o.Z], () => o.Z.getChannel(n), [n]);
+    return null == c || c.isOwner(e) || null == s || !c.isOwner(s.id) || !(null === (t = c.recipients) || void 0 === t ? void 0 : t.includes(e))
         ? null
         : (0, i.jsx)(l.MenuItem, {
               id: 'remove',
               label: u.intl.string(u.t.n5zMIy),
-              action: () => a.Z.removeRecipient(e, n),
+              action: () => a.Z.removeRecipient(n, e),
               color: 'danger'
           });
 }

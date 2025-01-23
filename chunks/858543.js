@@ -10,8 +10,8 @@ var i = n(200651);
 n(192379);
 var o = n(120356),
     a = n.n(o),
-    s = n(692547),
-    l = n(481060),
+    l = n(692547),
+    s = n(481060),
     r = n(109434),
     c = n(456269),
     d = n(479099),
@@ -24,14 +24,14 @@ function f(e) {
         i = (0, c.eV)(t),
         o = i.slice(void 0, 3),
         a = i.slice(3),
-        s = i.length > 3 ? i.length - 3 : 0,
-        l = t.hasFlag(u.zZ.PINNED),
-        r = o.length > 0 || l || n;
+        l = i.length > 3 ? i.length - 3 : 0,
+        s = t.hasFlag(u.zZ.PINNED),
+        r = o.length > 0 || s || n;
     return {
         shownTags: o,
         remainingTags: a,
-        moreTagsCount: s,
-        isPinned: l,
+        moreTagsCount: l,
+        isPinned: s,
         shouldRenderTagsRow: r,
         forumPostContainsTags: i.length > 0
     };
@@ -54,19 +54,19 @@ function g(e) {
               className: a()(p.tags, c),
               children: [
                   n
-                      ? (0, i.jsx)(l.TextBadge, {
+                      ? (0, i.jsx)(s.TextBadge, {
                             className: a()(m.newBadge, m.inTagsRow),
-                            color: s.Z.unsafe_rawColors.BRAND_260.css,
+                            color: l.Z.unsafe_rawColors.BRAND_260.css,
                             text: h.intl.string(h.t.y2b7CA)
                         })
                       : null,
                   b &&
                       (0, i.jsx)('div', {
                           className: p.pinIcon,
-                          children: (0, i.jsx)(l.Tooltip, {
+                          children: (0, i.jsx)(s.Tooltip, {
                               text: h.intl.string(h.t['1QLRYW']),
                               children: (e) =>
-                                  (0, i.jsx)(l.PinIcon, {
+                                  (0, i.jsx)(s.PinIcon, {
                                       size: 'custom',
                                       ...e,
                                       width: 16,

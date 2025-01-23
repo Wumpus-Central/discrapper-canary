@@ -9,8 +9,8 @@ n.d(t, {
 var i,
     o,
     a,
-    s = n(200651),
-    l = n(192379),
+    l = n(200651),
+    s = n(192379),
     r = n(392711),
     c = n.n(r),
     d = n(748780),
@@ -42,7 +42,7 @@ function p(e, t, n) {
     }
 }
 ((i = o || (o = {}))[(i.ABOVE = 0)] = 'ABOVE'), (i[(i.VISIBLE = 1)] = 'VISIBLE'), (i[(i.BELOW = 2)] = 'BELOW');
-class f extends (a = l.PureComponent) {
+class f extends (a = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { prevValue: n, currValue: i, nextValue: o } = t;
         return null == n && i !== e.value
@@ -95,7 +95,7 @@ class f extends (a = l.PureComponent) {
             { color: n, formatString: i } = this.props,
             o = c().omit(this.props, ['value', 'digitWidth', 'padStartLength', 'forcePosition']);
         if (null == e)
-            return (0, s.jsx)('div', {
+            return (0, l.jsx)('div', {
                 ...o,
                 style: {
                     color: n,
@@ -104,7 +104,7 @@ class f extends (a = l.PureComponent) {
                 children: null != i ? i(this.padValue(t)) : this.padValue(t)
             });
         let a = Math.max(e, t);
-        return (0, s.jsxs)('div', {
+        return (0, l.jsxs)('div', {
             ...o,
             style: {
                 color: n,
@@ -112,21 +112,21 @@ class f extends (a = l.PureComponent) {
                 overflow: 'hidden'
             },
             children: [
-                (0, s.jsx)('div', {
+                (0, l.jsx)('div', {
                     style: {
                         visibility: 'hidden',
                         minWidth: this.getMinWidth(a)
                     },
                     children: this.padValue(a)
                 }),
-                (0, s.jsx)(d.Z.div, {
+                (0, l.jsx)(d.Z.div, {
                     style: {
                         color: n,
                         ...this.getAnimatedStyle(this.prevAnimate)
                     },
                     children: null != i ? i(this.padValue(e)) : this.padValue(e)
                 }),
-                (0, s.jsx)(d.Z.div, {
+                (0, l.jsx)(d.Z.div, {
                     style: {
                         color: n,
                         ...this.getAnimatedStyle(this.currAnimate)

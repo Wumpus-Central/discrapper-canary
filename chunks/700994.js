@@ -1,38 +1,38 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return Z;
+        return f;
     }
 });
-var i = n(200651);
-n(192379);
-var l = n(442837),
-    r = n(481060),
-    o = n(846027),
-    a = n(131951),
-    u = n(594174),
-    d = n(36703),
-    s = n(358085),
-    c = n(65154),
-    f = n(388032);
-function Z(e) {
-    var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT,
-        Z = (0, l.e7)([a.Z], () => a.Z.getLocalVolume(e, n), [e, n]),
-        g = e === (null === (t = u.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
-        m = n === c.Yn.STREAM;
+var i = t(200651);
+t(192379);
+var l = t(442837),
+    r = t(481060),
+    o = t(846027),
+    d = t(131951),
+    u = t(594174),
+    a = t(36703),
+    s = t(358085),
+    c = t(65154),
+    Z = t(388032);
+function f(e) {
+    var n;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT,
+        f = (0, l.e7)([d.Z], () => d.Z.getLocalVolume(e, t), [e, t]),
+        g = e === (null === (n = u.default.getCurrentUser()) || void 0 === n ? void 0 : n.id),
+        m = t === c.Yn.STREAM;
     return g
         ? null
         : (0, i.jsx)(r.MenuControlItem, {
               id: 'user-volume',
-              label: m ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH),
-              control: (t, l) =>
+              label: m ? Z.intl.string(Z.t.t4JBnJ) : Z.intl.string(Z.t.m7TNdH),
+              control: (n, l) =>
                   (0, i.jsx)(r.MenuSliderControl, {
-                      ...t,
+                      ...n,
                       ref: l,
-                      value: (0, d.P)(Z),
+                      value: (0, a.P)(f),
                       maxValue: s.isPlatformEmbedded ? 200 : 100,
-                      onChange: (t) => o.Z.setLocalVolume(e, (0, d.A)(t), n),
-                      'aria-label': m ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH)
+                      onChange: (n) => o.Z.setLocalVolume(e, (0, a.A)(n), t),
+                      'aria-label': m ? Z.intl.string(Z.t.t4JBnJ) : Z.intl.string(Z.t.m7TNdH)
                   })
           });
 }

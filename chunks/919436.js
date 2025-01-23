@@ -188,7 +188,7 @@ class P extends (i = r.PureComponent) {
                     i = t.type === E.d4z.DM ? I.default.getUser(t.getRecipientId()) : null;
                 null != i
                     ? (0, u.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('5606')]).then(n.bind(n, 131404));
+                          let { default: e } = await Promise.all([n.e('79695'), n.e('31996'), n.e('56826'), n.e('5606')]).then(n.bind(n, 131404));
                           return (n) =>
                               (0, l.jsx)(e, {
                                   ...n,

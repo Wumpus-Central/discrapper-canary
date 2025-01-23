@@ -1,6 +1,6 @@
-t.d(e, {
+t.d(n, {
     Z: function () {
-        return m;
+        return p;
     }
 });
 var i = t(200651);
@@ -14,8 +14,8 @@ var r = t(442837),
     s = t(594174),
     c = t(388032),
     f = t(597539);
-function p(n) {
-    let { color: e, className: t } = n;
+function m(e) {
+    let { color: n, className: t } = e;
     return (0, i.jsx)('svg', {
         className: t,
         height: '16',
@@ -29,7 +29,7 @@ function p(n) {
             children: [
                 (0, i.jsx)('path', { d: 'm0 0h80v16h-80z' }),
                 (0, i.jsxs)('g', {
-                    stroke: e,
+                    stroke: n,
                     strokeLinecap: 'round',
                     strokeLinejoin: 'round',
                     strokeWidth: '2',
@@ -47,9 +47,9 @@ function p(n) {
         })
     });
 }
-function m(n, e) {
+function p(e, n) {
     let t = (0, r.e7)([s.default], () => s.default.getCurrentUser());
-    return null == t || e.ownerId !== t.id || n.id === t.id
+    return null == t || n.ownerId !== t.id || e.id === t.id
         ? null
         : (0, i.jsx)(a.MenuItem, {
               id: 'make-dm-owner',
@@ -65,10 +65,10 @@ function m(n, e) {
                               header: c.intl.string(c.t.WZoUsr),
                               confirmText: c.intl.string(c.t['cY+Ooa']),
                               cancelText: c.intl.string(c.t['ETE/oK']),
-                              onConfirm: () => o.Z.setDMOwner(e.id, n.id),
+                              onConfirm: () => o.Z.setDMOwner(n.id, e.id),
                               ...t,
                               children: [
-                                  (0, i.jsx)(p, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                  (0, i.jsx)(m, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
                                   (0, i.jsxs)('div', {
                                       className: f.fromToWrapper,
                                       children: [
@@ -82,7 +82,7 @@ function m(n, e) {
                                           (0, i.jsx)('div', {
                                               className: f.to,
                                               children: (0, i.jsx)(u.Z, {
-                                                  user: n,
+                                                  user: e,
                                                   size: a.AvatarSizes.SIZE_80
                                               })
                                           })
@@ -91,20 +91,20 @@ function m(n, e) {
                                   (0, i.jsx)(a.Text, {
                                       variant: 'text-md/normal',
                                       children: c.intl.format(c.t.gsBb3N, {
-                                          usernameHook: (e, t) =>
+                                          usernameHook: (n, t) =>
                                               (0, i.jsx)(
                                                   d.Z,
                                                   {
                                                       usernameIcon: (0, i.jsx)(a.Avatar, {
                                                           className: f.avatarIcon,
-                                                          src: n.getAvatarURL(void 0, 16),
+                                                          src: e.getAvatarURL(void 0, 16),
                                                           size: a.AvatarSizes.SIZE_16,
                                                           'aria-hidden': !0
                                                       }),
                                                       className: f.discordTag,
                                                       usernameClass: f.username,
                                                       discriminatorClass: f.discriminator,
-                                                      user: n
+                                                      user: e
                                                   },
                                                   t
                                               )

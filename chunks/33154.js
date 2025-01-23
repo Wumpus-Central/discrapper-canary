@@ -7,8 +7,8 @@ n.d(t, {
 var i,
     o,
     a = n(200651),
-    s = n(192379),
-    l = n(442837),
+    l = n(192379),
+    s = n(442837),
     r = n(481060),
     c = n(749210),
     d = n(313201),
@@ -21,9 +21,9 @@ var i,
 t.Z = (e) => {
     let { type: t, guild: i, closePopout: o, ctaRef: g } = e,
         v = (0, d.Dt)(),
-        [b, T] = s.useState(!1),
-        x = (0, l.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
-    s.useEffect(() => {
+        [b, T] = l.useState(!1),
+        x = (0, s.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
+    l.useEffect(() => {
         b && !x && o();
     }, [b, x, o]);
     let _ = null,

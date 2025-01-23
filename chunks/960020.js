@@ -7,8 +7,8 @@ n.d(t, {
 var i,
     o,
     a,
-    s,
     l,
+    s,
     r,
     c = n(442837),
     d = n(570140);
@@ -64,14 +64,14 @@ class g extends (o = c.ZP.Store) {
     }
 }
 (r = 'BurstReactionEffectsStore'),
-    (l = 'displayName') in (s = g)
-        ? Object.defineProperty(s, l, {
+    (s = 'displayName') in (l = g)
+        ? Object.defineProperty(l, s, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[l] = r),
+        : (l[s] = r),
     (t.Z = new g(d.Z, {
         BURST_REACTION_EFFECT_CLEAR: (e) => {
             var t;
@@ -81,15 +81,15 @@ class g extends (o = c.ZP.Store) {
         },
         BURST_REACTION_EFFECT_PLAY: (e) => {
             var t, n, i;
-            let { channelId: o, messageId: a, emoji: s, key: l } = e,
-                r = p(a, s);
-            if (f(l, o) >= 5) return;
+            let { channelId: o, messageId: a, emoji: l, key: s } = e,
+                r = p(a, l);
+            if (f(s, o) >= 5) return;
             let c = null !== (t = h[o]) && void 0 !== t ? t : {},
                 d = (null !== (n = m[o]) && void 0 !== n ? n : {})[r],
                 u = c[r];
-            if ('HOVER' !== l || null == u) {
-                'HOVER' === u && 'EXTERNAL' === l && null != d && ('function' == typeof d.destroy && d.destroy(), null === (i = m[o]) || void 0 === i || delete i[r], (u = void 0));
-                null == u && (null != h[o] ? (h[o][r] = l) : (h[o] = { [r]: l }));
+            if ('HOVER' !== s || null == u) {
+                'HOVER' === u && 'EXTERNAL' === s && null != d && ('function' == typeof d.destroy && d.destroy(), null === (i = m[o]) || void 0 === i || delete i[r], (u = void 0));
+                null == u && (null != h[o] ? (h[o][r] = s) : (h[o] = { [r]: s }));
             }
         },
         BURST_REACTION_ANIMATION_ADD: (e) => {

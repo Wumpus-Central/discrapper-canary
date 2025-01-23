@@ -9,39 +9,39 @@ var i,
     s = t(230711),
     c = t(981631),
     f = t(388032),
-    p = t(261121);
-function m(n, e, t) {
+    m = t(261121);
+function p(e, n, t) {
     return (
-        e in n
-            ? Object.defineProperty(n, e, {
+        n in e
+            ? Object.defineProperty(e, n, {
                   value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (n[e] = t),
-        n
+            : (e[n] = t),
+        e
     );
 }
 class h extends (i = l.Component) {
     render() {
         return (0, r.jsxs)('div', {
-            className: p.streamerModeEnabled,
+            className: m.streamerModeEnabled,
             children: [
-                (0, r.jsx)('div', { className: p.streamerModeEnabledImage }),
+                (0, r.jsx)('div', { className: m.streamerModeEnabledImage }),
                 (0, r.jsx)(d.Clickable, {
-                    className: o()(p.streamerModeEnabledBtn, { [p.disabled]: this.props.disableButton }),
+                    className: o()(m.streamerModeEnabledBtn, { [m.disabled]: this.props.disableButton }),
                     onClick: this.handleClick,
                     children: f.intl.string(f.t.Br1ls7)
                 })
             ]
         });
     }
-    constructor(...n) {
-        super(...n),
-            m(this, 'handleClick', () => {
+    constructor(...e) {
+        super(...e),
+            p(this, 'handleClick', () => {
                 !this.props.disableButton && ((0, u.jN)(c.S9g.USER_SETTINGS), s.Z.setSection(c.oAB.STREAMER_MODE));
             });
     }
 }
-m(h, 'defaultProps', { disableButton: !1 }), (e.Z = h);
+p(h, 'defaultProps', { disableButton: !1 }), (n.Z = h);

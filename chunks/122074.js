@@ -1,12 +1,12 @@
 t.d(e, {
     U: function () {
-        return N;
+        return Z;
     },
     Uf: function () {
-        return E;
+        return N;
     },
     ng: function () {
-        return T;
+        return E;
     }
 }),
     t(47120);
@@ -21,28 +21,28 @@ var i = t(200651),
     c = t(594174),
     f = t(74538),
     I = t(759198),
-    g = t(11352),
-    x = t(213931),
-    M = t(767157),
+    x = t(11352),
+    M = t(213931),
+    _ = t(767157),
     h = t(112440),
-    _ = t(671105),
-    m = t(552958),
+    m = t(671105),
+    g = t(552958),
     p = t(981631),
     v = t(921944),
-    j = t(871465),
-    C = t(388032),
-    Z = t(150626);
-function T(n, e) {
-    let t = g.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
+    C = t(871465),
+    j = t(388032),
+    T = t(150626);
+function E(n, e) {
+    let t = x.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
         r = S(n, void 0, u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, t.nestedEntry ? 'trailing' : 'top'),
         l = (t.nestedEntry && e) || (!t.nestedEntry && !e);
     return (0, i.jsx)(i.Fragment, { children: l && r });
 }
-function E(n, e, t) {
+function N(n, e, t) {
     return S(n, e, u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GDM_DM_BADGE, t);
 }
-function N() {
-    let n = g.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
+function Z() {
+    let n = x.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
         [e] = (0, d.cv)([u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE]);
     return (0, i.jsx)(i.Fragment, {
         children:
@@ -50,47 +50,47 @@ function N() {
             n.nestedEntry &&
             e === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE &&
             (0, i.jsx)(a.TextBadge, {
-                className: Z.newBadge,
-                text: C.intl.string(C.t.y2b7CA)
+                className: T.newBadge,
+                text: j.intl.string(j.t.y2b7CA)
             })
     });
 }
-function S(n, e, u, T) {
-    var E, N;
-    let S = (0, _.OR)(n),
-        A = (0, _._c)(n, e),
+function S(n, e, u, E) {
+    var N, Z;
+    let S = (0, m.OR)(n),
+        A = (0, m._c)(n, e),
         U = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         O = (0, l.e7)([s.ZP], () => s.ZP.isMuted(n), [n]),
-        y = f.ZP.canUseCustomNotificationSounds(U),
-        b = y ? (null != A ? A : S) : j.YC.CLASSIC,
-        G = g.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled,
-        [P, R] = r.useState(!1),
-        { playSound: D } = (0, m.Z)(),
-        [F, L] = (0, d.cv)([u]),
-        k = F === u;
+        G = f.ZP.canUseCustomNotificationSounds(U),
+        y = G ? (null != A ? A : S) : C.YC.CLASSIC,
+        P = x.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled,
+        [b, R] = r.useState(!1),
+        { playSound: D } = (0, g.Z)(),
+        [L, F] = (0, d.cv)([u]),
+        k = L === u;
     if (
         (r.useEffect(
             () => () => {
-                P && L(v.L.TAKE_ACTION);
+                b && F(v.L.TAKE_ACTION);
             },
-            [P, L]
+            [b, F]
         ),
-        !G)
+        !P)
     )
         return null;
     let w = (t) => {
-            if ((D(t), L(v.L.TAKE_ACTION), !y && t !== j.YC.CLASSIC)) {
-                (0, M.Z)(t, 'contextMenu'), (0, h.Z)();
+            if ((D(t), F(v.L.TAKE_ACTION), !G && t !== C.YC.CLASSIC)) {
+                (0, _.Z)(t, 'contextMenu'), (0, h.Z)();
                 return;
             }
-            null != e ? (0, x.M)(n, e, b, t, 'contextMenu') : (0, x.t)(n, b, t, 'contextMenu');
+            null != e ? (0, M.M)(n, e, y, t, 'contextMenu') : (0, M.t)(n, y, t, 'contextMenu');
         },
-        Y = y ? a.Text : I.Z,
-        z = (0, j.LB)(),
-        B = null !== (N = null === (E = z.find((n) => n.value === b)) || void 0 === E ? void 0 : E.label) && void 0 !== N ? N : C.intl.string(C.t.p3Hg5e),
+        Y = G ? a.Text : I.Z,
+        z = (0, C.LB)(),
+        B = null !== (Z = null === (N = z.find((n) => n.value === y)) || void 0 === N ? void 0 : N.label) && void 0 !== Z ? Z : j.intl.string(j.t.p3Hg5e),
         V = (0, i.jsx)(a.TextBadge, {
-            className: Z.newBadge,
-            text: C.intl.string(C.t.y2b7CA)
+            className: T.newBadge,
+            text: j.intl.string(j.t.y2b7CA)
         });
     return (0, i.jsx)(a.MenuItem, {
         id: 'notification-sounds',
@@ -99,37 +99,37 @@ function S(n, e, u, T) {
             return (
                 e && R(e),
                 (0, i.jsxs)('div', {
-                    className: Z.rootContainer,
+                    className: T.rootContainer,
                     children: [
                         (0, i.jsxs)('div', {
                             children: [
-                                k && 'top' === T && V,
+                                k && 'top' === E && V,
                                 (0, i.jsxs)('div', {
-                                    className: Z.headerContainer,
+                                    className: T.headerContainer,
                                     children: [
                                         (0, i.jsx)(Y, {
-                                            className: Z.text,
+                                            className: T.text,
                                             color: e ? 'always-white' : void 0,
                                             variant: 'text-sm/medium',
-                                            children: C.intl.string(C.t.mrqSOj)
+                                            children: j.intl.string(j.t.mrqSOj)
                                         }),
                                         (0, i.jsx)(a.NitroWheelIcon, {
                                             size: 'xs',
-                                            className: Z.nitroWheel,
-                                            color: e ? 'white' : y ? void 0 : o.JX.PREMIUM_TIER_2
+                                            className: T.nitroWheel,
+                                            color: e ? 'white' : G ? void 0 : o.JX.PREMIUM_TIER_2
                                         })
                                     ]
                                 }),
                                 null != B &&
                                     (0, i.jsx)(Y, {
-                                        className: Z.text,
+                                        className: T.text,
                                         color: e ? 'always-white' : void 0,
                                         variant: 'text-xs/normal',
                                         children: B
                                     })
                             ]
                         }),
-                        k && 'trailing' === T && V
+                        k && 'trailing' === E && V
                     ]
                 })
             );
@@ -154,11 +154,11 @@ function S(n, e, u, T) {
                         r.Fragment,
                         {
                             children: [
-                                y || n.value === j.YC.CLASSIC
+                                G || n.value === C.YC.CLASSIC
                                     ? (0, i.jsx)(a.MenuRadioItem, {
                                           id: n.label,
                                           group: 'notification-preset',
-                                          checked: (null != b ? b : j.YC.CLASSIC) === n.value,
+                                          checked: (null != y ? y : C.YC.CLASSIC) === n.value,
                                           label: n.label,
                                           action: () => w(n.value)
                                       })
@@ -167,7 +167,7 @@ function S(n, e, u, T) {
                                           label: (e) => {
                                               let { isFocused: t } = e;
                                               return (0, i.jsxs)('div', {
-                                                  className: Z.labelContainer,
+                                                  className: T.labelContainer,
                                                   children: [
                                                       (0, i.jsx)(I.Z, {
                                                           color: t ? 'always-white' : void 0,
@@ -175,7 +175,7 @@ function S(n, e, u, T) {
                                                           children: n.label
                                                       }),
                                                       (0, i.jsx)(a.CirclePlayIcon, {
-                                                          className: Z.playButton,
+                                                          className: T.playButton,
                                                           color: t ? a.tokens.colors.INTERACTIVE_ACTIVE : a.tokens.colors.INTERACTIVE_NORMAL
                                                       })
                                                   ]
@@ -183,7 +183,7 @@ function S(n, e, u, T) {
                                           },
                                           action: () => w(n.value)
                                       }),
-                                n.value === j.YC.CLASSIC ? (0, i.jsx)(a.MenuSeparator, {}) : null
+                                n.value === C.YC.CLASSIC ? (0, i.jsx)(a.MenuSeparator, {}) : null
                             ]
                         },
                         e
@@ -196,9 +196,9 @@ function S(n, e, u, T) {
                             (0, i.jsx)(a.MenuItem, {
                                 id: 'label',
                                 label: (0, i.jsx)(a.Text, {
-                                    className: Z.mutedLabel,
+                                    className: T.mutedLabel,
                                     variant: 'text-sm/medium',
-                                    children: C.intl.string(C.t['a9G/ER'])
+                                    children: j.intl.string(j.t['a9G/ER'])
                                 })
                             })
                         ]

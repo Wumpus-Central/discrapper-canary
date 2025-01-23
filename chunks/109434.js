@@ -10,8 +10,8 @@ n.d(t, {
 var i = n(512722),
     o = n.n(i),
     a = n(15729),
-    s = n(313361),
-    l = n(683860),
+    l = n(313361),
+    s = n(683860),
     r = n(731965),
     c = n(442837),
     d = n(592125),
@@ -31,8 +31,8 @@ function h(e, t, n) {
 }
 let m = new Set(),
     p = {
-        layoutType: s.X.LIST,
-        sortOrder: l.z.CREATION_DATE,
+        layoutType: l.X.LIST,
+        sortOrder: s.z.CREATION_DATE,
         tagFilter: m,
         scrollPosition: 0
     };

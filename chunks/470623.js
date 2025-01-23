@@ -13,8 +13,8 @@ n.d(t, {
 var i = n(200651),
     o = n(192379),
     a = n(512722),
-    s = n.n(a),
-    l = n(65400),
+    l = n.n(a),
+    s = n(65400),
     r = n(731965),
     c = n(430742),
     d = n(752305),
@@ -181,13 +181,13 @@ class g {
                     }),
                     m.Z.clearForumSearch(this.channelId);
             });
-        let s = u.Z.getChannel(e);
-        if (null == s) return;
-        let l = null !== (i = h.Z.getThreadSettings(s.id)) && void 0 !== i ? i : {},
-            g = null == s.template ? '' : s.template.trim(),
-            v = h.Z.getDraft(s.id, h.d.FirstThreadMessage),
+        let l = u.Z.getChannel(e);
+        if (null == l) return;
+        let s = null !== (i = h.Z.getThreadSettings(l.id)) && void 0 !== i ? i : {},
+            g = null == l.template ? '' : l.template.trim(),
+            v = h.Z.getDraft(l.id, h.d.FirstThreadMessage),
             b = (0, d.eK)(null != v && '' !== v.trim() ? v : g);
-        (this.name = null !== (o = l.name) && void 0 !== o ? o : ''), (a = new Set(l.appliedTags)), (this.appliedTags = void 0 !== a ? a : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = b);
+        (this.name = null !== (o = s.name) && void 0 !== o ? o : ''), (a = new Set(s.appliedTags)), (this.appliedTags = void 0 !== a ? a : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = b);
     }
 }
 let v = o.createContext(null);
@@ -195,7 +195,7 @@ function b(e) {
     let { children: t, channel: n } = e,
         a = o.useMemo(() => {
             var e;
-            return (e = n), (0, l.F)((t, n) => new g(e.id, t, n));
+            return (e = n), (0, s.F)((t, n) => new g(e.id, t, n));
         }, [n]);
     return (0, i.jsx)(v.Provider, {
         value: a,
@@ -204,9 +204,9 @@ function b(e) {
 }
 function T(e, t) {
     let n = o.useContext(v);
-    return s()(null != n, '[useForumPostComposerStore] Context should not be null'), n(e, t);
+    return l()(null != n, '[useForumPostComposerStore] Context should not be null'), n(e, t);
 }
 function x() {
     let e = o.useContext(v);
-    return s()(null != e, '[useForumPostComposerStore] Context should not be null'), e;
+    return l()(null != e, '[useForumPostComposerStore] Context should not be null'), e;
 }

@@ -11,8 +11,8 @@ var i = n(200651);
 n(192379);
 var o = n(481060),
     a = n(230711),
-    s = n(104494),
-    l = n(639119),
+    l = n(104494),
+    s = n(639119),
     r = n(790527),
     c = n(474936),
     d = n(981631),
@@ -27,8 +27,8 @@ function p(e) {
                 a.Z.open(d.oAB.PREMIUM), o();
             }
         }),
-        v = (0, l.N)(),
-        b = (0, s.Ng)(),
+        v = (0, s.N)(),
+        b = (0, l.Ng)(),
         T = null != v || null != b;
     return (0, i.jsx)(r.Z, {
         artURL: m,

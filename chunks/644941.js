@@ -16,8 +16,8 @@ var r = n(200651),
     x = n(561308),
     _ = n(669764),
     E = n(706454),
-    I = n(768581),
-    v = n(814225),
+    v = n(768581),
+    I = n(814225),
     C = n(709054),
     A = n(810568),
     S = n(998058),
@@ -51,7 +51,7 @@ let K = () =>
 function U(e) {
     var t;
     let { detectedGame: n, application: a, entries: o, viewId: d } = e,
-        m = i.useMemo(() => (null == n ? void 0 : n.genres.map(v.P3).join(', ')), [n]),
+        m = i.useMemo(() => (null == n ? void 0 : n.genres.map(I.P3).join(', ')), [n]),
         p = i.useMemo(() => {
             if (null == n) return '';
             let { artwork: e, screenshots: t } = n;
@@ -65,7 +65,7 @@ function U(e) {
             }
             return '';
         }, [n]),
-        g = null == a ? void 0 : a.getIconURL(160, I.$k ? 'webp' : 'png'),
+        g = null == a ? void 0 : a.getIconURL(160, v.$k ? 'webp' : 'png'),
         f = C.default.extractTimestamp(a.id),
         h = s()().diff(s()(f), 'days') <= D.G,
         _ = o.some((e) => (0, x.ig)(e) === c.o.GLOBAL),
@@ -209,8 +209,8 @@ let F = (e) => e.filter(T.z6).slice(0, 5);
 t.default = (e) => {
     var t;
     let { applicationId: n, source: a, sourceUserId: o, transitionState: s, onClose: c } = e,
-        { clientThemesClassName: I } = (0, f.ZP)(),
-        v = (0, d.e7)([E.default], () => E.default.locale),
+        { clientThemesClassName: v } = (0, f.ZP)(),
+        I = (0, d.e7)([E.default], () => E.default.locale),
         C = i.useMemo(() => (0, A.fP)(), []),
         T = (0, d.Wu)([b.Z], () => {
             var e;
@@ -245,8 +245,8 @@ t.default = (e) => {
     }),
     (0, g.Z)(T),
     i.useEffect(() => {
-        !v.startsWith('en') && (null == R ? void 0 : R.summaryLocalized) == null && m.Z.getDetectableGamesSupplemental([n], { forceFetch: !0 });
-    }, [n, null == R ? void 0 : R.summaryLocalized, v]),
+        !I.startsWith('en') && (null == R ? void 0 : R.summaryLocalized) == null && m.Z.getDetectableGamesSupplemental([n], { forceFetch: !0 });
+    }, [n, null == R ? void 0 : R.summaryLocalized, I]),
     i.useEffect(() => {
         (async () => {
             if (0 === T.length) {
@@ -263,7 +263,7 @@ t.default = (e) => {
         var e;
         let t = Date.now(),
             r = M.map((e) => {
-                let n = (0, x.kr)(e) ? (0, x.T_)(e, t) : (0, x.GL)(e, v);
+                let n = (0, x.kr)(e) ? (0, x.T_)(e, t) : (0, x.GL)(e, I);
                 return JSON.stringify({
                     item_id: e.id,
                     trait: e.traits,
@@ -285,7 +285,7 @@ t.default = (e) => {
         : (0, r.jsx)(u.ModalRoot, {
               transitionState: s,
               size: u.ModalSize.DYNAMIC,
-              className: l()(I, Z.gameProfileModal),
+              className: l()(v, Z.gameProfileModal),
               children: (0, r.jsxs)(u.Scroller, {
                   orientation: 'auto',
                   children: [

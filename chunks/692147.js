@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     o = n(192379),
     a = n(392711),
-    s = n(399606),
-    l = n(351780),
+    l = n(399606),
+    s = n(351780),
     r = n(576125),
     c = n(465858),
     d = n(112843),
@@ -15,7 +15,7 @@ var i = n(200651),
 function h(e) {
     let { reactionRef: t, count: n } = e,
         i = o.useRef(n),
-        r = (0, s.e7)([l.Z], () => l.Z.getState()),
+        r = (0, l.e7)([s.Z], () => s.Z.getState()),
         u = (0, d.Z)(),
         h = (0, c.Z)(t);
     return (

@@ -1,39 +1,39 @@
-n.d(t, {
+e.d(t, {
     B: function () {
-        return Z;
+        return g;
     }
 });
-var i = n(200651),
-    l = n(192379),
-    r = n(442837),
-    o = n(481060),
-    a = n(40851),
-    u = n(352954),
-    d = n(630759),
-    s = n(441894),
-    c = n(314897),
-    f = n(388032);
-function Z(e) {
-    let { userId: t, channelId: n, guildId: Z, location: g } = e,
+var i = e(200651),
+    l = e(192379),
+    r = e(442837),
+    o = e(481060),
+    u = e(40851),
+    a = e(352954),
+    d = e(630759),
+    s = e(441894),
+    c = e(314897),
+    f = e(388032);
+function g(n) {
+    let { userId: t, channelId: e, guildId: g, location: Z } = n,
         m = (0, s.J)({
-            channelId: n,
-            location: g
+            channelId: e,
+            location: Z
         }),
         v = (0, r.e7)([c.default], () => c.default.getId() === t),
-        b = (0, a.bp)(),
+        b = (0, u.bp)(),
         x = l.useCallback(() => {
-            u.Z.openSecureFramesUserVerificationModal(
+            a.Z.openSecureFramesUserVerificationModal(
                 t,
-                n,
+                e,
                 () =>
                     (0, d.fz)({
                         userId: t,
-                        channelId: n,
-                        guildId: Z
+                        channelId: e,
+                        guildId: g
                     }),
                 b
             );
-        }, [b, n, Z, t]);
+        }, [b, e, g, t]);
     return !m || v
         ? null
         : (0, i.jsx)(o.MenuItem, {

@@ -1,47 +1,47 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return m;
     }
 });
-var i = n(200651);
-n(192379);
-var l = n(442837),
-    r = n(481060),
-    o = n(493683),
-    a = n(40851),
-    u = n(740492),
-    d = n(314897),
-    s = n(592125),
-    c = n(699516),
-    f = n(944486),
-    Z = n(981631),
-    g = n(388032);
+var l = t(200651);
+t(192379);
+var i = t(442837),
+    r = t(481060),
+    a = t(493683),
+    u = t(40851),
+    o = t(740492),
+    d = t(314897),
+    s = t(592125),
+    c = t(699516),
+    Z = t(944486),
+    f = t(981631),
+    g = t(388032);
 function m(e) {
-    let { user: t, context: m, label: v, joinCallVideo: b, id: x, onCall: M } = e,
-        I = (0, a.Aq)(),
-        h = (0, l.e7)([d.default], () => d.default.getId() === t.id),
-        C = (0, l.e7)([c.Z], () => c.Z.isBlocked(t.id)),
-        L = (0, l.e7)([f.Z, s.Z], () => f.Z.getVoiceChannelId() === s.Z.getDMFromUserId(t.id));
-    if (h || m === Z.IlC.POPOUT || L || t.bot || t.isProvisional) return null;
-    let A = () => {
-            null == M || M(), o.Z.openPrivateChannel(t.id, !0, b), I.dispatch(Z.CkL.POPOUT_CLOSE), (0, r.closeAllModals)();
+    let { user: n, context: m, label: M, joinCallVideo: v, id: x, onCall: h } = e,
+        p = (0, u.Aq)(),
+        P = (0, i.e7)([d.default], () => d.default.getId() === n.id),
+        C = (0, i.e7)([c.Z], () => c.Z.isBlocked(n.id)),
+        I = (0, i.e7)([Z.Z, s.Z], () => Z.Z.getVoiceChannelId() === s.Z.getDMFromUserId(n.id));
+    if (P || m === f.IlC.POPOUT || I || n.bot || n.isProvisional) return null;
+    let b = () => {
+            null == h || h(), a.Z.openPrivateChannel(n.id, !0, v), p.dispatch(f.CkL.POPOUT_CLOSE), (0, r.closeAllModals)();
         },
-        U = !u.ZP.disableCallUserConfirmationPrompt;
-    return (0, i.jsx)(r.MenuItem, {
+        E = !o.ZP.disableCallUserConfirmationPrompt;
+    return (0, l.jsx)(r.MenuItem, {
         id: null != x ? x : 'call',
-        label: null != v ? v : g.intl.string(g.t.JJogjo),
-        action: U
+        label: null != M ? M : g.intl.string(g.t.JJogjo),
+        action: E
             ? () => {
                   (0, r.openModalLazy)(async () => {
-                      let { default: e } = await n.e('27157').then(n.bind(n, 736454));
-                      return (t) =>
-                          (0, i.jsx)(e, {
-                              onSubmit: A,
-                              ...t
+                      let { default: e } = await t.e('27157').then(t.bind(t, 736454));
+                      return (n) =>
+                          (0, l.jsx)(e, {
+                              onSubmit: b,
+                              ...n
                           });
                   });
               }
-            : A,
+            : b,
         disabled: C
     });
 }
