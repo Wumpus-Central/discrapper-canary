@@ -3,7 +3,7 @@ t.d(n, {
         return c;
     },
     v: function () {
-        return a;
+        return d;
     }
 });
 var i = t(200651);
@@ -12,10 +12,12 @@ var r = t(481060),
     l = t(144114),
     s = t(476770),
     o = t(815660),
-    u = t(388032);
+    u = t(388032),
+    a = t(484979);
 function c() {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
+            className: a.editableRequirementContainer,
             icon: r.MobilePhoneIcon,
             text: u.intl.string(u.t.woMjLS),
             footnote: u.intl.string(u.t['jMh+TU']),
@@ -33,11 +35,12 @@ function c() {
         })
     });
 }
-function a(e) {
+function d(e) {
     let { isUserVerified: n } = e,
         c = n ? u.intl.string(u.t.WWzQtb) : u.intl.string(u.t.woMjLS);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
+            className: a.editableRequirementContainer,
             icon: r.MobilePhoneIcon,
             text: c,
             footnote: u.intl.string(u.t['jMh+TU']),

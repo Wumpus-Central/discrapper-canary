@@ -13,11 +13,11 @@ var i = t(200651),
     s = t(893776),
     o = t(476770),
     u = t(388032),
-    c = t(484979);
-function a() {
+    a = t(484979);
+function c() {
     let [e, n] = r.useState(!1),
         [t, o] = r.useState(!1),
-        [a, d] = r.useState(!1);
+        [c, d] = r.useState(!1);
     r.useEffect(() => {
         let e;
         return (
@@ -43,7 +43,7 @@ function a() {
     };
     return t
         ? (0, i.jsx)(l.Text, {
-              className: c.verifyConfirmText,
+              className: a.verifyConfirmText,
               variant: 'text-sm/normal',
               color: 'text-positive',
               children: u.intl.string(u.t.H3Q7U1)
@@ -52,11 +52,12 @@ function a() {
               size: l.Button.Sizes.SMALL,
               submitting: e,
               onClick: f,
-              children: a ? u.intl.string(u.t.WnX4Jy) : u.intl.string(u.t['13ofGh'])
+              children: c ? u.intl.string(u.t.WnX4Jy) : u.intl.string(u.t['13ofGh'])
           });
 }
 function d() {
     return (0, i.jsx)(o.PU, {
+        className: a.editableRequirementContainer,
         icon: l.EnvelopeIcon,
         text: u.intl.string(u.t.c6EUJC),
         footnote: u.intl.string(u.t['jMh+TU']),
@@ -77,10 +78,11 @@ function f(e) {
     let { isUserVerified: n } = e,
         t = n ? u.intl.string(u.t.qY1jHB) : u.intl.string(u.t.c6EUJC);
     return (0, i.jsx)(o.PU, {
+        className: a.editableRequirementContainer,
         icon: l.EnvelopeIcon,
         text: t,
         footnote: u.intl.string(u.t['jMh+TU']),
         meetsRequirement: n,
-        children: (0, i.jsx)(a, {})
+        children: (0, i.jsx)(c, {})
     });
 }

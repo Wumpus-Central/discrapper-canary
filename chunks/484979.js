@@ -6,5 +6,6 @@ e.exports = {
     disabledFieldBackground: 'disabledFieldBackground_fb1388',
     termsFieldBody: 'termsFieldBody_fb1388',
     paragraphFieldBody: 'paragraphFieldBody_fb1388',
-    multipleChoiceIcon: 'multipleChoiceIcon_fb1388'
+    multipleChoiceIcon: 'multipleChoiceIcon_fb1388',
+    editableRequirementContainer: 'editableRequirementContainer_fb1388'
 };
