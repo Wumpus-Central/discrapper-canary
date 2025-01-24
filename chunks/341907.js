@@ -47,7 +47,7 @@ var a = r(772848),
     v = r(184299),
     y = r(862847),
     b = r(5881),
-    I = r(842942),
+    I = r(492112),
     T = r(61115),
     S = r(150560),
     A = r(46140),
@@ -125,15 +125,12 @@ function M(e) {
     let n = (0, b.T)({ quest: e }),
         r = { location: A.dr.QUESTS_BAR };
     if (!(0, y.j)(r)) return;
-    let i = (0, E.il)(e),
-        a = (0, I.Z)({ entityName: e.config.messages.gameTitle }),
-        o = () => a.experiment.getCurrentConfig(r).enabled;
-    if (a.taskType === i.taskType && !!o())
-        n.log('Showing survey '.concat(a.id)),
-            (0, T.openQuestSurveyModal)({
-                questId: e.id,
-                survey: a
-            });
+    let i = (0, I.Z)({ entityName: e.config.messages.gameTitle });
+    n.log('Showing survey '.concat(i.id)),
+        (0, T.openQuestSurveyModal)({
+            questId: e.id,
+            survey: i
+        });
 }
 function k(e, n) {
     return e <= 0 || n <= 0 ? 0 : e >= n ? 1 : Math.min(1, Math.round((e / n) * 100) / 100);

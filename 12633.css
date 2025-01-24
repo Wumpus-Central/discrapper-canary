@@ -13418,7 +13418,7 @@ div.modalHeader_c5e09c {
 .modalContent_c5e09c {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     padding: 0 16px 24px
 }
 
@@ -13437,6 +13437,8 @@ div.modalHeader_c5e09c {
     padding: 12px;
     background-color: var(--background-secondary);
     border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-faint);
     cursor: pointer
 }
 
