@@ -1,13 +1,13 @@
 t.d(n, {
     z: function () {
-        return u;
+        return a;
     }
 }),
     t(47120);
 var l = t(192379),
     i = t(442837),
     r = t(353926);
-function u(e) {
+function a(e) {
     let [n, t] = (0, i.Wu)([r.Z], () => [r.Z.getAllUserExperimentDescriptors(), r.Z.getGuildExperiments()]);
     l.useEffect(() => {
         e.trigger();

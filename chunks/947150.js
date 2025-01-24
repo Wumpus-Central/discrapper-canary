@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(481060),
-    r = n(846027),
+    r = n(481060),
+    a = n(846027),
     s = n(687058),
     o = n(131951);
 function c(e) {
@@ -16,14 +16,14 @@ function c(e) {
     return Object.values(t).map((t) => {
         let { id: l, disabled: s, name: o } = t;
         return (0, i.jsx)(
-            a.MenuRadioItem,
+            r.MenuRadioItem,
             {
                 id: 'input-'.concat(l),
                 group: 'input-devices',
                 disabled: s,
                 label: o,
                 checked: l === n,
-                action: () => r.Z.setInputDevice(l, { analyticsLocations: e })
+                action: () => a.Z.setInputDevice(l, { analyticsLocations: e })
             },
             'input-'.concat(l)
         );

@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return I;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(642128),
     o = n(442837),
     c = n(481060),
@@ -19,51 +19,51 @@ var i = n(200651),
 let h = 6 * m.Z.Millis.SECOND,
     g = 2 * m.Z.Millis.SECOND,
     v = 2 * m.Z.Millis.SECOND,
-    I = (e) => 'scale('.concat(1 - -(e / 120), ') rotate(').concat(e, 'deg)');
-function S(e) {
-    let { userId: t, voiceChannelEffect: n, onComplete: a } = e,
-        { emoji: m, sentAt: S } = n,
-        _ = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
-        [x, E] = l.useState(!0),
-        C = !_,
-        y = (0, c.useTransition)(x, {
+    S = (e) => 'scale('.concat(1 - -(e / 120), ') rotate(').concat(e, 'deg)');
+function I(e) {
+    let { userId: t, voiceChannelEffect: n, onComplete: r } = e,
+        { emoji: m, sentAt: I } = n,
+        x = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        [_, C] = l.useState(!0),
+        b = !x,
+        E = (0, c.useTransition)(_, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
             config: s.config.default,
             onRest: (e, t) => {
                 let { phase: n } = t;
-                'leave' === n && a();
+                'leave' === n && r();
             }
         });
     return (l.useEffect(() => {
         let e;
         return (
-            Date.now() - S >= v
+            Date.now() - I >= v
                 ? (0, f.H)(t)
                 : (e = setTimeout(
                       () => {
-                          E(!1), C && (0, f.H)(t);
+                          C(!1), b && (0, f.H)(t);
                       },
-                      C ? g : h
+                      b ? g : h
                   )),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [S, t, C]),
-    C)
+    }, [I, t, b]),
+    b)
         ? null
-        : y((e, t) => {
+        : E((e, t) => {
               var n;
               let { rotate: l } = e;
               return (
                   t &&
                   (0, i.jsx)(s.animated.div, {
                       className: p.voiceChannelEffectEmojiContainer,
-                      style: { transform: l.to(I) },
+                      style: { transform: l.to(S) },
                       children: (0, i.jsx)(u.Z, {
-                          className: r()(p.voiceChannelEffectEmoji),
+                          className: a()(p.voiceChannelEffectEmoji),
                           emojiId: m.id,
                           emojiName: m.name,
                           animated: null !== (n = m.animated) && void 0 !== n && n

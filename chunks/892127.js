@@ -1,44 +1,44 @@
 var n = i(200651),
     l = i(192379),
     o = i(120356),
-    s = i.n(o),
-    r = i(442837),
+    r = i.n(o),
+    s = i(442837),
     a = i(765250),
     u = i(13245),
     d = i(355863),
     c = i(237997),
     h = i(451478),
-    f = i(434529),
+    E = i(434529),
     p = i(145597),
-    E = i(830917),
-    m = i(353038),
-    v = i(306381),
+    f = i(830917),
+    S = i(353038),
+    _ = i(306381),
     g = i(610394),
-    S = i(561064),
-    _ = i(981631),
-    C = i(152397);
-t.Z = l.memo(function (e) {
-    let { widget: t, renderWidget: i, renderTitle: o, renderButtons: Z, resizeValidation: O, className: I, dragContainerClassName: N } = e,
-        y = d.Z.getWidgetConfig(t.type),
-        x = (0, r.e7)([c.Z], () => c.Z.isLocked((0, p.QF)())),
-        b = (0, S.Z)(),
-        T = (0, r.e7)([h.Z], () => h.Z.windowSize((0, E.ZY)(b))),
-        R = l.useCallback((e, t, i, n, l) => {
-            let o = h.Z.windowSize((0, E.ZY)((0, S.i)())),
-                s = (0, f.jL)(i, o),
-                r = (0, f.Ox)(n, o);
-            (0, a.Os)(t),
+    m = i(561064),
+    v = i(981631),
+    I = i(152397);
+e.Z = l.memo(function (t) {
+    let { widget: e, renderWidget: i, renderTitle: o, renderButtons: Z, resizeValidation: O, className: C, dragContainerClassName: N } = t,
+        y = d.Z.getWidgetConfig(e.type),
+        T = (0, s.e7)([c.Z], () => c.Z.isLocked((0, p.QF)())),
+        R = (0, m.Z)(),
+        x = (0, s.e7)([h.Z], () => h.Z.windowSize((0, f.ZY)(R))),
+        A = l.useCallback((t, e, i, n, l) => {
+            let o = h.Z.windowSize((0, f.ZY)((0, m.i)())),
+                r = (0, E.jL)(i, o),
+                s = (0, E.Ox)(n, o);
+            (0, a.Os)(e),
                 (0, a.nv)({
-                    widgetId: t,
-                    anchor: s,
-                    size: r
+                    widgetId: e,
+                    anchor: r,
+                    size: s
                 });
-            let c = e === m.B.MOVE,
-                p = (0, f.PY)(i, o.width, o.height, l.width, l.height);
-            u.Z.track(_.rMx.OVERLAY_LAYOUT_UPDATED, {
+            let c = t === S.B.MOVE,
+                p = (0, E.PY)(i, o.width, o.height, l.width, l.height);
+            u.Z.track(v.rMx.OVERLAY_LAYOUT_UPDATED, {
                 was_resized: !c,
                 was_dragged: c,
-                widget_type: d.Z.getWidgetType(t),
+                widget_type: d.Z.getWidgetType(e),
                 window_width: o.width,
                 window_height: o.height,
                 widget_width: l.width,
@@ -47,78 +47,78 @@ t.Z = l.memo(function (e) {
                 widget_top: p.top
             });
         }, []),
-        k = l.useCallback((e) => {
-            (0, a.Os)(e);
+        M = l.useCallback((t) => {
+            (0, a.Os)(t);
         }, []),
-        { id: A, pinned: z, zIndex: M, size: L, anchor: w } = t,
-        D = (0, f.w_)(L, T),
-        j = (0, f.KR)(w, T),
-        { minSize: P, resizeX: U, resizeY: H, dragAnywhere: V } = y,
-        W = z || !x,
+        { id: D, pinned: L, zIndex: w, size: z, anchor: k } = e,
+        b = (0, E.w_)(z, x),
+        P = (0, E.KR)(k, x),
+        { minSize: U, resizeX: j, resizeY: H, dragAnywhere: V } = y,
+        W = L || !T,
         F = l.useMemo(
             () => ({
                 minX: 0,
                 minY: 0,
-                maxX: T.width,
-                maxY: T.height
+                maxX: x.width,
+                maxY: x.height
             }),
-            [T]
+            [x]
         ),
         Y = l.useCallback(
-            (e) =>
+            (t) =>
                 i({
-                    ...e,
-                    widget: t,
-                    dragging: null != e.dragOperation,
-                    className: I
+                    ...t,
+                    widget: e,
+                    dragging: null != t.dragOperation,
+                    className: C
                 }),
-            [t, i, I]
+            [e, i, C]
         ),
-        B = l.useCallback(
-            (e) =>
+        G = l.useCallback(
+            (t) =>
                 null != o || null != Z
                     ? (0, n.jsxs)('div', {
-                          className: C.extrasContainer,
-                          children: [null == o ? void 0 : o(t), null == Z ? void 0 : Z(t, e)]
+                          className: I.extrasContainer,
+                          children: [null == o ? void 0 : o(e), null == Z ? void 0 : Z(e, t)]
                       })
                     : null,
-            [t, o, Z]
+            [e, o, Z]
         ),
-        G = (0, r.e7)([g.ZP], () => g.ZP.hasRenderDebugMode(v.G.WidgetAreas)),
-        K = l.useMemo(() => {
+        B = (0, s.e7)([g.ZP], () => g.ZP.hasRenderDebugMode(_.G.WidgetAreas)),
+        Q = l.useMemo(() => {
             if (null != O)
-                return (e) =>
+                return (t) =>
                     O({
-                        ...e,
-                        widget: t
+                        ...t,
+                        widget: e
                     });
-        }, [O, t]);
-    return (0, n.jsx)(m.Z, {
-        className: s()(
+        }, [O, e]);
+    return (0, n.jsx)(S.Z, {
+        className: r()(
             {
-                [C.debug]: G,
-                [C.debugUnpinned]: G && !z,
-                [C.debugPinned]: G && z
+                [I.debug]: B,
+                [I.debugUnpinned]: B && !L,
+                [I.debugPinned]: B && L
             },
             N
         ),
-        id: A,
-        size: D,
-        anchor: j,
+        id: D,
+        size: b,
+        anchor: P,
         container: F,
-        minSize: P,
+        minSize: U,
         hidden: !W,
-        locked: x,
-        resizeX: U,
+        locked: T,
+        resizeX: j,
         resizeY: H,
-        style: { zIndex: M },
+        style: { zIndex: w },
         dragAnywhere: V,
-        active: !x,
-        onUpdate: R,
-        onClick: k,
-        targetWindow: b,
-        renderExtras: B,
-        resizeValidation: K,
+        active: !T,
+        onUpdate: A,
+        onClick: M,
+        targetWindow: R,
+        renderExtras: G,
+        resizeValidation: Q,
         children: Y
     });
 });

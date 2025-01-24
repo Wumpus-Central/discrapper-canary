@@ -5,14 +5,14 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     a = n(481060),
     s = n(892196);
 let c = r.memo(function (e) {
     let { emptyText: t, icon: n, absolute: r = !1 } = e;
     return (0, i.jsx)('div', {
-        className: l()(s.emptyWidgetContainer, r && s.absolute),
+        className: o()(s.emptyWidgetContainer, r && s.absolute),
         children: (0, i.jsx)(a.Tooltip, {
             text: t,
             children: (e) =>

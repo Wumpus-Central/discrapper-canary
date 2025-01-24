@@ -1,8 +1,8 @@
 n(653041), n(47120);
 var i = n(200651),
     r = n(192379),
-    o = n(442837),
-    l = n(481060),
+    l = n(442837),
+    o = n(481060),
     a = n(237997),
     s = n(804570),
     c = n(388627),
@@ -12,18 +12,18 @@ var i = n(200651),
     m = n(371467),
     p = n(981631),
     x = n(388032),
-    f = n(109020);
+    g = n(109020);
 let v = [];
-function g(e) {
+function f(e) {
     return e.notification.id;
 }
 function C(e, t, n, r) {
-    let { index: o, notification: l, locked: a } = t;
+    let { index: l, notification: o, locked: a } = t;
     return (0, i.jsx)(
-        u.Z,
+        u.ZP,
         {
-            index: o,
-            notification: l,
+            index: l,
+            notification: o,
             locked: a,
             transitionState: n,
             cleanUp: r
@@ -33,14 +33,14 @@ function C(e, t, n, r) {
 }
 function Z(e) {
     return (0, i.jsx)('div', {
-        className: f.container,
+        className: g.container,
         children: e
     });
 }
 let b = (e) => r.useState(() => new h.AS(e))[0];
 t.Z = r.memo(function (e) {
     let { locked: t } = e,
-        n = (0, o.e7)(
+        n = (0, l.e7)(
             [a.Z, m.Z],
             () => {
                 if (a.Z.getNotificationPositionMode() === p._vf.DISABLED) return v;
@@ -65,10 +65,10 @@ t.Z = r.memo(function (e) {
     return (r.useLayoutEffect(() => u.updateState(n, t)), r.useLayoutEffect(() => (u.initialize((0, d.i)()), () => u.cleanUp()), [u]), 0 !== n.length || t)
         ? (0, i.jsx)(h.S4.Provider, {
               value: u,
-              children: (0, i.jsx)(l.TransitionGroup, {
+              children: (0, i.jsx)(o.TransitionGroup, {
                   items: n,
                   renderItem: C,
-                  getItemKey: g,
+                  getItemKey: f,
                   wrapChildren: Z
               })
           })
@@ -76,7 +76,7 @@ t.Z = r.memo(function (e) {
           ? null
           : (0, i.jsx)(s.E, {
                 emptyText: x.intl.string(x.t.O1Nbjo),
-                icon: l.BellIcon,
+                icon: o.BellIcon,
                 absolute: !0
             });
 });

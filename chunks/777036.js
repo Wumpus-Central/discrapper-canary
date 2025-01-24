@@ -1,54 +1,54 @@
-i.d(t, {
+i.d(e, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var n = i(26151),
     l = i(13245),
     o = i(43267),
-    s = i(933557),
-    r = i(699516),
+    r = i(933557),
+    s = i(699516),
     a = i(594174),
     u = i(620954),
     d = i(987650),
     c = i(981631),
     h = i(388032);
-function f(e) {
-    let t = (0, s.F6)(e, a.default, r.Z),
+function E(t) {
+    let e = (0, r.F6)(t, a.default, s.Z),
         i = h.intl.string(h.t.ssrVzM),
-        f = (0, o.x)(e),
-        { trackView: p, trackClick: E } = (0, u.R)(d.n0.IncomingCall, {
+        E = (0, o.x)(t),
+        { trackView: p, trackClick: f } = (0, u.R)(d.n0.IncomingCall, {
             notif_type: d.n0.IncomingCall,
-            notif_user_id: 1 === e.recipients.length ? e.recipients[0] : null,
-            guild_id: e.guild_id,
-            channel_id: e.id,
-            channel_type: e.type
+            notif_user_id: 1 === t.recipients.length ? t.recipients[0] : null,
+            guild_id: t.guild_id,
+            channel_id: t.id,
+            channel_type: t.type
         });
     return {
-        icon: f,
-        title: t,
+        icon: E,
+        title: e,
         body: i,
         confirmText: h.intl.string(h.t['0D/6R0']),
         cancelText: h.intl.string(h.t.BVN4pK),
         onNotificationShow: () => {
             p();
         },
-        onConfirmClick: (t, i) => {
-            E('join'),
-                n.Z.call(e.id, !1, !1),
+        onConfirmClick: (e, i) => {
+            f('join'),
+                n.Z.call(t.id, !1, !1),
                 l.Z.updateNotificationStatus(i),
                 l.Z.track(c.rMx.VOICE_CHANNEL_SELECTED, {
                     location: 'Overlay Notificaiton',
                     guild_id: null,
-                    channel_id: e.id,
+                    channel_id: t.id,
                     video_enabled: !1
                 });
         },
         onCancelClick: () => {
-            E('decline'), n.Z.stopRinging(e.id);
+            f('decline'), n.Z.stopRinging(t.id);
         },
         onDismissClick: () => {
-            E('dismiss');
+            f('dismiss');
         }
     };
 }

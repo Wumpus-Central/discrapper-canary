@@ -71,14 +71,14 @@ function x(e) {
             leave: { opacity: 0 },
             config: p
         }),
-        [T, y] = r.useState(!1);
+        [y, T] = r.useState(!1);
     if (
         (r.useEffect(() => {
-            Z > 0 && y(!0);
+            Z > 10 && T(!0);
         }, [Z]),
-        T)
+        y)
     )
-        throw Error('ClickZoneDebugWidget crashed');
+        throw Error('ClickZoneDebugWidget crashed, too many clicks');
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {

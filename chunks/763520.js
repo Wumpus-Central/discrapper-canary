@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i,
     l,
-    a = n(259443),
-    r = n(379649),
+    r = n(259443),
+    a = n(379649),
     s = n(314897),
     o = n(592125),
     c = n(866960),
@@ -35,7 +35,7 @@ function p(e, t, n) {
 let h = new Map();
 class g {
     onSpinnerStarted() {
-        null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, r.zO)());
+        null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, a.zO)());
     }
     trackSpinnerDuration(e, t, n) {
         if (null == this.spinnerVisibleStart) return;
@@ -44,14 +44,14 @@ class g {
                 let n = (null !== (t = h.get(e)) && void 0 !== t ? t : 0) + 1;
                 return h.set(e, n), n;
             })(n),
-            l = (0, r.zO)() - this.spinnerVisibleStart;
+            l = (0, a.zO)() - this.spinnerVisibleStart;
         if (((this.spinnerVisibleStart = null), l < 0)) {
             this.logger.warn('spinner duration is negative: '.concat(l, ' ms\n        [').concat(e, ', count for stream: ').concat(i, ']'));
             return;
         }
         this.logger.info('spinner visible for '.concat(l, ' ms\n      [').concat(e, ', count for stream: ').concat(i, ']'));
-        let a = u.Z.getGuildId(),
-            p = d.Z.getUserVoiceChannelId(a, s.default.getId()),
+        let r = u.Z.getGuildId(),
+            p = d.Z.getUserVoiceChannelId(r, s.default.getId()),
             g = (function (e) {
                 if (null != e) {
                     if (e.isGuildVoice()) return 'guild_voice';
@@ -67,7 +67,7 @@ class g {
             rtc_connection_id: u.Z.getRTCConnectionId(),
             media_session_id: u.Z.getMediaSessionId(),
             event_count_for_stream: i,
-            guild_id: a,
+            guild_id: r,
             channel_id: p,
             channel_type: g,
             spinning_user_id: t,
@@ -77,6 +77,6 @@ class g {
         });
     }
     constructor(e) {
-        p(this, 'logger', void 0), p(this, 'spinnerVisibleStart', null), (this.logger = new a.Yd(e));
+        p(this, 'logger', void 0), p(this, 'spinnerVisibleStart', null), (this.logger = new r.Yd(e));
     }
 }

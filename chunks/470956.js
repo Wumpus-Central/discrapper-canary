@@ -13,14 +13,14 @@ n.d(t, {
     n(653041);
 var i = n(192379),
     l = n(392711),
-    a = n(442837),
-    r = n(413523),
+    r = n(442837),
+    a = n(413523),
     s = n(314897),
     o = n(878884),
     c = n(19780),
     u = n(979651);
 function d(e, t) {
-    let n = (0, a.e7)([o.Z, c.Z], () => (e === c.Z.getChannelId() ? o.Z.getDesyncedVoiceStates() : null));
+    let n = (0, r.e7)([o.Z, c.Z], () => (e === c.Z.getChannelId() ? o.Z.getDesyncedVoiceStates() : null));
     return i.useMemo(
         () =>
             (function (e, t) {
@@ -47,7 +47,7 @@ function d(e, t) {
 }
 function m(e, t) {
     var n;
-    let s = ((n = e), (0, a.e7)([o.Z, c.Z], () => (n === c.Z.getChannelId() ? o.Z.getDesyncedParticipants() : null)));
+    let s = ((n = e), (0, r.e7)([o.Z, c.Z], () => (n === c.Z.getChannelId() ? o.Z.getDesyncedParticipants() : null)));
     return i.useMemo(
         () =>
             (function (e, t) {
@@ -56,7 +56,7 @@ function m(e, t) {
                 return (
                     e.forEach((e) => {
                         n.splice(
-                            (0, l.sortedIndexBy)(n, e, (e) => (0, r.Yr)(e)),
+                            (0, l.sortedIndexBy)(n, e, (e) => (0, a.Yr)(e)),
                             0,
                             e
                         );
@@ -68,13 +68,13 @@ function m(e, t) {
     );
 }
 function f(e, t) {
-    let n = (0, a.e7)([s.default], () => s.default.getId() === t),
-        l = (0, a.e7)([c.Z], () => c.Z.getChannelId()),
-        r = i.useRef(null),
+    let n = (0, r.e7)([s.default], () => s.default.getId() === t),
+        l = (0, r.e7)([c.Z], () => c.Z.getChannelId()),
+        a = i.useRef(null),
         [o, d] = i.useState(!1),
         [m, f] = i.useState(!1),
-        p = (0, a.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && c.Z.isUserConnected(t)),
-        h = (0, a.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
+        p = (0, r.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && c.Z.isUserConnected(t)),
+        h = (0, r.e7)([c.Z, u.Z], () => null != t && null != e && c.Z.getChannelId() === e && null != u.Z.isInChannel(e, t) && !c.Z.isUserConnected(t));
     return (
         i.useEffect(() => {
             p && f(!0);
@@ -84,13 +84,13 @@ function f(e, t) {
         }, [e, l]),
         i.useEffect(
             () => (
-                h && null == r.current
-                    ? (r.current = setTimeout(() => {
-                          (r.current = null), d(!0);
+                h && null == a.current
+                    ? (a.current = setTimeout(() => {
+                          (a.current = null), d(!0);
                       }, 250))
-                    : (clearTimeout(r.current), (r.current = null), d(!1)),
+                    : (clearTimeout(a.current), (a.current = null), d(!1)),
                 () => {
-                    clearTimeout(r.current), (r.current = null);
+                    clearTimeout(a.current), (a.current = null);
                 }
             ),
             [h]

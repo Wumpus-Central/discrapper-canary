@@ -2,22 +2,22 @@ t(653041), t(47120);
 var i = t(200651),
     r = t(192379),
     l = t(442837),
-    o = t(481060),
-    a = t(355863),
+    a = t(481060),
+    o = t(355863),
     c = t(237997),
     u = t(451478),
     d = t(145597),
     s = t(830917),
-    f = t(312178),
-    _ = t(388627),
+    _ = t(312178),
+    h = t(388627),
     p = t(892127),
-    h = t(561064),
+    f = t(561064),
     v = t(982572);
 function m(e) {
     return e.widget.id;
 }
 function b(e, n, t, r) {
-    return t === o.TransitionStates.YEETED
+    return t === a.TransitionStates.YEETED
         ? null
         : (0, i.jsx)(
               p.Z,
@@ -34,19 +34,19 @@ function b(e, n, t, r) {
 let g = [];
 n.Z = r.memo(function (e) {
     let { className: n } = e,
-        t = (0, h.Z)(),
+        t = (0, f.Z)(),
         p = (0, l.e7)([u.Z], () => u.Z.windowSize((0, s.ZY)(t))),
         v = (0, l.e7)([c.Z], () => c.Z.isPreviewingInGame()),
         I = (0, l.e7)(
-            [a.Z],
+            [o.Z],
             () => {
-                let e = a.Z.getLayout(d.qU);
+                let e = o.Z.getLayout(d.qU);
                 if (null == e) return g;
                 let n = [];
                 for (let t of e.widgets) {
-                    let e = a.Z.getWidget(t);
+                    let e = o.Z.getWidget(t);
                     if (null == e) continue;
-                    let i = f.p[e.type];
+                    let i = _.p[e.type];
                     null != i &&
                         n.push({
                             widget: e,
@@ -63,7 +63,7 @@ n.Z = r.memo(function (e) {
                 return n;
             },
             [v],
-            _.HP
+            h.HP
         ),
         Z = r.useCallback(
             (e) =>
@@ -74,7 +74,7 @@ n.Z = r.memo(function (e) {
                 }),
             [n, p]
         );
-    return (0, i.jsx)(o.TransitionGroup, {
+    return (0, i.jsx)(a.TransitionGroup, {
         items: I,
         renderItem: b,
         getItemKey: m,

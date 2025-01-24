@@ -1,8 +1,8 @@
 n(653041), n(47120);
 var i = n(200651),
     r = n(192379),
-    o = n(442837),
-    l = n(481060),
+    l = n(442837),
+    o = n(481060),
     a = n(355863),
     s = n(451478),
     c = n(830917),
@@ -14,8 +14,8 @@ var i = n(200651),
 function x(e) {
     return e.widget.id;
 }
-function f(e, t, n, r) {
-    return n === l.TransitionStates.YEETED
+function g(e, t, n, r) {
+    return n === o.TransitionStates.YEETED
         ? null
         : (0, i.jsx)(
               u.Z,
@@ -31,8 +31,8 @@ let v = [];
 t.Z = r.memo(function (e) {
     let { className: t } = e,
         n = (0, m.Z)(),
-        u = (0, o.e7)([s.Z], () => s.Z.windowSize((0, c.ZY)(n))),
-        g = (0, o.e7)(
+        u = (0, l.e7)([s.Z], () => s.Z.windowSize((0, c.ZY)(n))),
+        f = (0, l.e7)(
             [a.Z],
             () => {
                 let e = a.Z.getLayout(p.OVERLAY_V3_LAYOUT_ID);
@@ -62,9 +62,9 @@ t.Z = r.memo(function (e) {
                 }),
             [t, u]
         );
-    return (0, i.jsx)(l.TransitionGroup, {
-        items: g,
-        renderItem: f,
+    return (0, i.jsx)(o.TransitionGroup, {
+        items: f,
+        renderItem: g,
         getItemKey: x,
         wrapChildren: C
     });

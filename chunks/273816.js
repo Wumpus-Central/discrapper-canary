@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     a = n(442837),
     s = n(481060),
     c = n(493773),
@@ -16,15 +16,15 @@ var i = n(200651),
     h = n(333031),
     m = n(992813);
 function p(e) {
-    let { locked: t, pinned: n, anchorLeft: o } = e,
+    let { locked: t, pinned: n, anchorLeft: l } = e,
         p = (0, a.e7)([u.Z], () => u.Z.getSocket());
     (0, d.nU)();
-    let [x, f] = (0, d.m8)(p),
-        { currentFPS: v, averageFrameTime: g, timeSinceLastDrop: C, onResetFrameData: Z, droppedFramesRef: b, renderedFrameCount: _, bufferFramecountRef: j, frameCheckerEffect: I } = (0, d.d6)(!0, x, !0),
+    let [x, g] = (0, d.m8)(p),
+        { currentFPS: v, averageFrameTime: f, timeSinceLastDrop: C, onResetFrameData: Z, droppedFramesRef: b, renderedFrameCount: j, bufferFramecountRef: _, frameCheckerEffect: I } = (0, d.d6)(!0, x, !0),
         [E, k, N] = (0, d.ZF)(p),
         [w, y] = (0, d.Y5)(E, I),
-        T = performance.now() - f.current < d.MC,
-        S = k(g, j.current);
+        T = performance.now() - g.current < d.MC,
+        S = k(f, _.current);
     (0, c.Z)(
         () => (
             w(),
@@ -39,12 +39,12 @@ function p(e) {
         [A, O] = r.useState(!0),
         [P, V] = r.useState(!0),
         [M, R] = r.useState(!0),
-        [D, W] = r.useState(!0),
-        [z, F] = r.useState(!0);
+        [D, z] = r.useState(!0),
+        [W, F] = r.useState(!0);
     return t && !n
         ? null
         : (0, i.jsxs)('div', {
-              className: l()(m.panelGroup, !o && m.rightAligned),
+              className: o()(m.panelGroup, !l && m.rightAligned),
               children: [
                   (A || !t) &&
                       (0, i.jsxs)('div', {
@@ -99,8 +99,8 @@ function p(e) {
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: g > 1.1 * d.tO ? 'text-warning' : 'text-primary',
-                                          children: [g.toFixed(2), 'ms']
+                                          color: f > 1.1 * d.tO ? 'text-warning' : 'text-primary',
+                                          children: [f.toFixed(2), 'ms']
                                       })
                                   ]
                               })
@@ -137,7 +137,7 @@ function p(e) {
                                           variant: 'code',
                                           color: 'text-secondary',
                                           className: m.secondaryInfoText,
-                                          children: ['(', ((b.current / _.current) * 100).toFixed(3), '%)']
+                                          children: ['(', ((b.current / j.current) * 100).toFixed(3), '%)']
                                       })
                                   ]
                               })
@@ -153,7 +153,7 @@ function p(e) {
                                       children: (0, i.jsx)(s.Checkbox, {
                                           size: 16,
                                           value: D,
-                                          onChange: (e, t) => W(t)
+                                          onChange: (e, t) => z(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
@@ -167,13 +167,13 @@ function p(e) {
                                           tag: 'span',
                                           variant: 'code',
                                           color: 'text-primary',
-                                          children: _.current.toFixed(0)
+                                          children: j.current.toFixed(0)
                                       })
                                   ]
                               })
                           ]
                       }),
-                  (z || !t) &&
+                  (W || !t) &&
                       (0, i.jsxs)('div', {
                           className: m.measurement,
                           children: [
@@ -182,7 +182,7 @@ function p(e) {
                                       className: m.measurementCheckbox,
                                       children: (0, i.jsx)(s.Checkbox, {
                                           size: 16,
-                                          value: z,
+                                          value: W,
                                           onChange: (e, t) => F(t)
                                       })
                                   }),

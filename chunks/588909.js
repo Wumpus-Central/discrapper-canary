@@ -1,4 +1,4 @@
-i.d(t, {
+i.d(e, {
     Z: function () {
         return O;
     }
@@ -8,25 +8,25 @@ var n = i(200651);
 i(192379);
 var l = i(952265),
     o = i(24124),
-    s = i(13245),
-    r = i(620662),
+    r = i(13245),
+    s = i(620662),
     a = i(835473),
     u = i(442550),
     d = i(293273),
     c = i(145597),
     h = i(603618),
-    f = i(380736),
+    E = i(380736),
     p = i(620954),
-    E = i(987650),
-    m = i(981631),
-    v = i(602091),
+    f = i(987650),
+    S = i(981631),
+    _ = i(602091),
     g = i(701488),
-    S = i(388032),
-    _ = i(176463),
-    C = i(802334);
-function Z(e) {
-    let { game: t } = e,
-        i = (0, a.q)(t.id);
+    m = i(388032),
+    v = i(176463),
+    I = i(802334);
+function Z(t) {
+    let { game: e } = t,
+        i = (0, a.q)(e.id);
     return null == i
         ? null
         : (0, n.jsx)(u.f, {
@@ -34,75 +34,75 @@ function Z(e) {
               size: 40
           });
 }
-function O(e, t) {
-    let { trackView: a, trackClick: u } = (0, p.R)(E.n0.WelcomeNudge, { notif_type: E.n0.WelcomeNudge }),
+function O(t, e) {
+    let { trackView: a, trackClick: u } = (0, p.R)(f.n0.WelcomeNudge, { notif_type: f.n0.WelcomeNudge }),
         g = {};
-    for (let a of t)
+    for (let a of e)
         switch (a.type) {
-            case E.nc.WELCOME: {
-                let t = (null == e ? void 0 : e.altId) != null ? d.Z.getApplicationActivity(e.altId) : (null == e ? void 0 : e.id) != null ? d.Z.getApplicationActivity(e.id) : null;
-                null != t &&
-                    (0, r.Z)(t, m.xjy.JOIN) &&
-                    ((g.cancelText = S.intl.string(S.t['6F9ivr'])),
-                    (g.onCancelClick = (e, i) => {
-                        u('unlock'), s.Z.updateNotificationStatus(i), s.Z.setInputLocked(!1, (0, c.QF)()), (0, o.h7)(t, !1, m.IlC.POPOUT);
+            case f.nc.WELCOME: {
+                let e = (null == t ? void 0 : t.altId) != null ? d.Z.getApplicationActivity(t.altId) : (null == t ? void 0 : t.id) != null ? d.Z.getApplicationActivity(t.id) : null;
+                null != e &&
+                    (0, s.Z)(e, S.xjy.JOIN) &&
+                    ((g.cancelText = m.intl.string(m.t['6F9ivr'])),
+                    (g.onCancelClick = (t, i) => {
+                        u('unlock'), r.Z.updateNotificationStatus(i), r.Z.setInputLocked(!1, (0, c.QF)()), (0, o.h7)(e, !1, S.IlC.POPOUT);
                     }));
                 break;
             }
-            case E.nc.GO_LIVE_VOICE:
-            case E.nc.GO_LIVE_NON_VOICE:
-                (g.confirmText = S.intl.string(S.t.U76Ft7)),
-                    (g.onConfirmClick = (e, t) => {
+            case f.nc.GO_LIVE_VOICE:
+            case f.nc.GO_LIVE_NON_VOICE:
+                (g.confirmText = m.intl.string(m.t.U76Ft7)),
+                    (g.onConfirmClick = (t, e) => {
                         u('unlock'),
-                            s.Z.updateNotificationStatus(t),
-                            s.Z.setInputLocked(!1, (0, c.QF)()),
+                            r.Z.updateNotificationStatus(e),
+                            r.Z.setInputLocked(!1, (0, c.QF)()),
                             (0, l.ZD)(
                                 async () => {
-                                    let { default: e } = await Promise.all([i.e('93382'), i.e('79477'), i.e('90242')]).then(i.bind(i, 60594));
-                                    return (t) =>
-                                        (0, n.jsx)(e, {
-                                            ...t,
+                                    let { default: t } = await Promise.all([i.e('93382'), i.e('79477'), i.e('90242')]).then(i.bind(i, 60594));
+                                    return (e) =>
+                                        (0, n.jsx)(t, {
+                                            ...e,
                                             selectSource: !1,
-                                            guildId: a.type === E.nc.GO_LIVE_VOICE ? a.voiceGuild.id : void 0,
-                                            selectGuild: a.type === E.nc.GO_LIVE_NON_VOICE,
-                                            analyticsLocation: m.Sbl.OVERLAY_NUDGE
+                                            guildId: a.type === f.nc.GO_LIVE_VOICE ? a.voiceGuild.id : void 0,
+                                            selectGuild: a.type === f.nc.GO_LIVE_NON_VOICE,
+                                            analyticsLocation: S.Sbl.OVERLAY_NUDGE
                                         });
                                 },
-                                { contextKey: v.u1 }
+                                { contextKey: _.u1 }
                             );
                     });
                 break;
-            case E.nc.CONTENT_INVENTORY:
+            case f.nc.CONTENT_INVENTORY:
                 (g.renderFooter = () =>
                     (0, n.jsx)('div', {
-                        className: C.container,
+                        className: I.container,
                         children: (0, n.jsx)(h.i, { entries: a.entries })
                     })),
                     (g.onNotificationShow = () => {
-                        s.Z.track(m.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
-                            user_ids: a.entries.map((e) => e.author_id),
-                            entry_ids: a.entries.map((e) => e.id)
+                        r.Z.track(S.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                            user_ids: a.entries.map((t) => t.author_id),
+                            entry_ids: a.entries.map((t) => t.id)
                         });
                     });
         }
     return {
         icon:
-            null != e
-                ? (0, n.jsx)(Z, { game: e })
+            null != t
+                ? (0, n.jsx)(Z, { game: t })
                 : (0, n.jsx)('img', {
                       src: i(328756),
-                      className: _.icon,
+                      className: v.icon,
                       alt: ''
                   }),
-        title: null != e ? e.name : S.intl.string(S.t.pkXAeH),
+        title: null != t ? t.name : m.intl.string(m.t.pkXAeH),
         body: null,
-        hint: () => (0, f.Q)((0, p.P)(), S.t.e6giBQ, S.intl.string(S.t.jZkzVF)),
-        onNotificationShow: (e) => {
-            var t;
-            a(), null === (t = g.onNotificationShow) || void 0 === t || t.call(g, e);
+        hint: () => (0, E.QR)((0, p.P)(), m.t.e6giBQ, m.intl.string(m.t.jZkzVF)),
+        onNotificationShow: (t) => {
+            var e;
+            a(), null === (e = g.onNotificationShow) || void 0 === e || e.call(g, t);
         },
         onNotificationClick: () => {
-            u('unlock'), s.Z.setInputLocked(!1, (0, c.QF)());
+            u('unlock'), r.Z.setInputLocked(!1, (0, c.QF)());
         },
         onDismissClick: () => {
             u('dismiss');

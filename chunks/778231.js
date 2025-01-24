@@ -12,7 +12,7 @@ var i = r(200651),
     _ = r(388032),
     m = r(914301),
     g = r(970952);
-let E = 64,
+let E = 40,
     v = (e) => {
         var n, r;
         let { entry: v } = e,
@@ -57,7 +57,7 @@ let E = 64,
                                 children: [
                                     (0, i.jsx)(s.Text, {
                                         color: 'header-primary',
-                                        variant: 'text-sm/semibold',
+                                        variant: 'text-md/medium',
                                         children: y
                                     }),
                                     T.length > 0
@@ -65,7 +65,7 @@ let E = 64,
                                               children: [
                                                   (0, i.jsx)(s.Text, {
                                                       color: 'text-normal',
-                                                      variant: 'text-xs/normal',
+                                                      variant: 'text-md/normal',
                                                       children: (0, f.Z)(T.length)
                                                   }),
                                                   (0, i.jsx)(d.Z, {
@@ -79,13 +79,13 @@ let E = 64,
                                               children: [
                                                   (0, i.jsx)(s.Text, {
                                                       color: 'text-normal',
-                                                      variant: 'text-xs/normal',
+                                                      variant: 'text-md/normal',
                                                       children: null === (n = v.bot) || void 0 === n ? void 0 : n.tag
                                                   }),
                                                   null != A &&
                                                       (0, i.jsx)(s.Text, {
                                                           color: 'text-normal',
-                                                          variant: 'text-xs/normal',
+                                                          variant: 'text-md/normal',
                                                           children: _.intl.formatToPlainString(_.t.C9rUOz, { authorizedAt: A })
                                                       })
                                               ]

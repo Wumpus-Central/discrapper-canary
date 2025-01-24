@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return el;
+        return eo;
     }
 }),
     n(653041),
     n(47120);
 var i = n(200651),
     r = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     a = n(442837),
     s = n(952265),
     c = n(481060),
@@ -18,14 +18,14 @@ var i = n(200651),
     m = n(100527),
     p = n(906732),
     x = n(146282),
-    f = n(70097),
+    g = n(70097),
     v = n(567409),
-    g = n(74299),
+    f = n(74299),
     C = n(199902),
     Z = n(592125),
     b = n(430824),
-    _ = n(131951),
-    j = n(944486),
+    j = n(131951),
+    _ = n(944486),
     I = n(574254),
     E = n(556296),
     k = n(808506),
@@ -42,8 +42,8 @@ var i = n(200651),
     M = n(690336),
     R = n(333031),
     D = n(371651),
-    W = n(388627),
-    z = n(319414),
+    z = n(388627),
+    W = n(319414),
     F = n(561064),
     G = n(987650),
     B = n(501787),
@@ -53,7 +53,7 @@ var i = n(200651),
     K = n(167566);
 let X = !T.isPlatformEmbedded && !1,
     Q = X
-        ? (0, i.jsx)(f.Z, {
+        ? (0, i.jsx)(g.Z, {
               src: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdpcnRrYXdrNzVuNjZ3NXpmeTJvNGl4Z2N4OXBsamx5aXphdHhxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/OPg2B0FPBL94H12uM0/giphy480p.mp4',
               className: K.videoDev,
               autoPlay: !0,
@@ -79,7 +79,7 @@ function $(e) {
 let ee = r.memo(function (e) {
         let { keybind: t, onClick: n, locked: r } = e;
         return (0, i.jsx)(c.Clickable, {
-            className: l()(K.overlayBackground, {
+            className: o()(K.overlayBackground, {
                 [K.overlayActive]: !r,
                 [K.overlayLocked]: r
             }),
@@ -125,16 +125,16 @@ function ei() {
 function er() {
     u.Z.setFocusedPID(null);
 }
-function eo(e) {
+function el(e) {
     let t = N.Z.isLocked((0, L.QF)());
     'alt' === e.key.toLowerCase() && !t && ('keyup' === e.type.toLowerCase() ? y.S.dispatch(U.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }) : 'keydown' === e.type.toLowerCase() && y.S.dispatch(U.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }));
 }
-function el(e) {
+function eo(e) {
     var t, n;
-    let { isEmbeddedActivity: o } = e,
+    let { isEmbeddedActivity: l } = e,
         d = (0, F.Z)(),
         {
-            locked: f,
+            locked: g,
             focused: I,
             incompatibleApp: y,
             hasValidResolution: T,
@@ -177,22 +177,22 @@ function el(e) {
                 );
         })(
             () => {
-                u.Z.overlayReady((0, L.QF)()), d.addEventListener('keydown', eo), d.addEventListener('keyup', eo), X && (d.document.hasFocus() && u.Z.setFocusedPID(L.Js), d.addEventListener('focus', ei), d.addEventListener('blur', er));
+                u.Z.overlayReady((0, L.QF)()), d.addEventListener('keydown', el), d.addEventListener('keyup', el), X && (d.document.hasFocus() && u.Z.setFocusedPID(L.Js), d.addEventListener('focus', ei), d.addEventListener('blur', er));
             },
             () => {
-                d.removeEventListener('keydown', eo), d.removeEventListener('keyup', eo), X && (d.removeEventListener('focus', ei), d.removeEventListener('blur', er));
+                d.removeEventListener('keydown', el), d.removeEventListener('keyup', el), X && (d.removeEventListener('focus', ei), d.removeEventListener('blur', er));
             }
         ),
         !(function () {
             let e = r.useRef(!1),
-                t = (0, W.pL)(),
-                n = j.Z.getVoiceChannelId(),
+                t = (0, z.pL)(),
+                n = _.Z.getVoiceChannelId(),
                 i = Z.Z.getChannel(n),
-                o = null != i ? b.Z.getGuild(i.guild_id) : null,
-                l = null != C.Z.getCurrentUserActiveStream(),
+                l = null != i ? b.Z.getGuild(i.guild_id) : null,
+                o = null != C.Z.getCurrentUserActiveStream(),
                 s = null != n,
-                c = (0, g.Z)(_.Z) && !l && null != t,
-                d = s && null != o && null != n,
+                c = (0, f.Z)(j.Z) && !o && null != t,
+                d = s && null != l && null != n,
                 m = (0, v.Ns)(null == t ? void 0 : t.id),
                 p = (0, a.e7)([x.Z], () => null != x.Z.getLastFeedFetchDate(Y.YN.GAME_PROFILE_FEED));
             r.useEffect(() => {
@@ -206,17 +206,17 @@ function el(e) {
                     });
                 let r = null !== (i = k.Z.getFocusedPID()) && void 0 !== i ? i : (0, L.QF)();
                 if (D.Z.hasChangedRenderMode(r)) return;
-                let l = [{ type: G.nc.WELCOME }];
+                let o = [{ type: G.nc.WELCOME }];
                 if (
                     (c && d
-                        ? l.push({
+                        ? o.push({
                               type: G.nc.GO_LIVE_VOICE,
                               game: t,
                               voiceChannelId: n,
-                              voiceGuild: o
+                              voiceGuild: l
                           })
                         : c &&
-                          l.push({
+                          o.push({
                               type: G.nc.GO_LIVE_NON_VOICE,
                               game: t
                           }),
@@ -224,15 +224,15 @@ function el(e) {
                 ) {
                     let { enabled: e } = O.Z.getCurrentConfig({ location: 'Overlay' }, { autoTrackExposure: !0 });
                     e &&
-                        l.push({
+                        o.push({
                             type: G.nc.CONTENT_INVENTORY,
                             entries: m
                         });
                 }
-                u.Z.overlayMounted(...l);
-            }, [p, m, s, c, d, t, n, o]);
+                u.Z.overlayMounted(...o);
+            }, [p, m, s, c, d, t, n, l]);
         })(),
-        (t = f),
+        (t = g),
         (n = d),
         r.useEffect(() => {
             if (t) {
@@ -256,22 +256,22 @@ function el(e) {
                               theme: U.BRd.DARK,
                               children: (e) =>
                                   (0, i.jsxs)('div', {
-                                      className: l()(K.overlay, e),
+                                      className: o()(K.overlay, e),
                                       children: [
-                                          !o && Q,
+                                          !l && Q,
                                           (0, i.jsx)(ee, {
-                                              locked: f,
+                                              locked: g,
                                               keybind: R,
                                               onClick: en
                                           }),
                                           T
                                               ? (0, i.jsx)(M.Z, {
-                                                    className: l()({
-                                                        [K.layoutLocked]: f,
-                                                        [K.layoutUnlocked]: !f
+                                                    className: o()({
+                                                        [K.layoutLocked]: g,
+                                                        [K.layoutUnlocked]: !g
                                                     })
                                                 })
-                                              : f
+                                              : g
                                                 ? null
                                                 : (0, i.jsx)('div', {
                                                       className: K.invalidContainer,
@@ -280,11 +280,11 @@ function el(e) {
                                                           children: H.intl.format(H.t.ketnW1, L.FW)
                                                       })
                                                   }),
-                                          (0, i.jsx)(z.Z, {}),
-                                          !o &&
+                                          (0, i.jsx)(W.Z, {}),
+                                          !l &&
                                               X &&
                                               (0, i.jsx)(et, {
-                                                  locked: f,
+                                                  locked: g,
                                                   focused: I
                                               }),
                                           (0, i.jsx)(P.Z, {})

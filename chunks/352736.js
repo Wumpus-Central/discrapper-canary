@@ -25,8 +25,8 @@ let A = {
 let I = () => [v.t['0cuj7u'], v.t['MuW+CA'], v.t.osqpHR, v.t['5ToSh4'], v.t.JEB8pq, v.t.pkOV5e, v.t.kRb1Jy, v.t.EmKLY2, v.t.rPtBnZ, v.t['5B/ekZ'], v.t.ESNC3d, v.t['Iw6d8/'], v.t.WecSZ2],
     N = () => [v.t.Jm6e09, v.t.MGRnRU, v.t.EXOEGh, v.t['5uCTFB'], v.t.rl45Qk, v.t.Bh9zpa, v.t.RdEy1N, v.t.qcdp09, v.t.F7w2Rk, v.t.gSyOgI, v.t.uYgqv7, v.t['b/1SBQ'], v.t.LhebZG],
     T = () => [v.t['20E/ys'], v.t['oa8+kp'], v.t.zoKkXl, v.t.FP9aS0, v.t.E5Zj1d, v.t['6Anmws'], v.t.sR78HR, v.t.gA9qPz, v.t.Hkiyp6, v.t.w1HMho],
-    O = () => [v.t['8fy3DQ'], v.t.UproUV, v.t['7l3EyM'], v.t.GToyaG, v.t['DUs+Zm'], v.t.yLkbfn, v.t.oWdvws, v.t.tOoKTE, v.t['VM7+Oj'], v.t['hJx/u7']],
-    R = (e) => {
+    S = () => [v.t['8fy3DQ'], v.t.UproUV, v.t['7l3EyM'], v.t.GToyaG, v.t['DUs+Zm'], v.t.yLkbfn, v.t.oWdvws, v.t.tOoKTE, v.t['VM7+Oj'], v.t['hJx/u7']],
+    O = (e) => {
         switch (e) {
             case 'NORMAL':
             default:
@@ -35,17 +35,17 @@ let I = () => [v.t['0cuj7u'], v.t['MuW+CA'], v.t.osqpHR, v.t['5ToSh4'], v.t.JEB8
                 return T();
         }
     },
-    S = (e) => {
+    R = (e) => {
         switch (e) {
             case 'NORMAL':
             default:
                 return N();
             case 'CLAN':
-                return O();
+                return S();
         }
     };
 function P(e, t) {
-    let n = S(t),
+    let n = R(t),
         r = g.default.extractTimestamp(e) % n.length;
     return n[r];
 }
@@ -92,8 +92,8 @@ t.Z = {
                 );
             case C.uaV.RECIPIENT_REMOVE:
                 if (null == I) return;
-                let O = e.author;
-                if (null == O || O.id === I.id)
+                let S = e.author;
+                if (null == S || S.id === I.id)
                     return (0, l.Rp)(
                         v.intl.formatToParts(v.t['Qn5+LS'], {
                             username: T,
@@ -109,8 +109,8 @@ t.Z = {
                     })
                 );
             case C.uaV.CALL:
-                let { call: R } = e;
-                if (null != R && -1 === R.participants.indexOf(p.default.getId()))
+                let { call: O } = e;
+                if (null != O && -1 === O.participants.indexOf(p.default.getId()))
                     return (0, l.Rp)(
                         v.intl.formatToParts(v.t.DbgSAw, {
                             username: T,
@@ -141,9 +141,9 @@ t.Z = {
                     })
                 );
             case C.uaV.USER_JOIN:
-                let S = L(t.guild_id);
+                let R = L(t.guild_id);
                 return (0, l.Rp)(
-                    v.intl.formatToParts(P(e.id, S), {
+                    v.intl.formatToParts(P(e.id, R), {
                         username: T,
                         usernameOnClick: C.dG4
                     })
@@ -259,7 +259,7 @@ t.Z = {
         }
     },
     getSystemMessageUserJoin: function (e, t) {
-        let n = R(t),
+        let n = O(t),
             r = g.default.extractTimestamp(e) % n.length;
         return n[r];
     },

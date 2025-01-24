@@ -1,7 +1,7 @@
-var l, i, r, u;
+var l, i, r, a;
 t.d(n, {
     PU: function () {
-        return a;
+        return u;
     },
     _m: function () {
         return l;
@@ -15,7 +15,7 @@ t.d(n, {
     (r.CHANNEL_PROMPT = 'channel-prompt'),
     (r.JOIN_GUILD = 'join-guild'),
     (r.CREATION_INTENT = 'creation-intent'),
-    ((u = i || (i = {})).FRIENDS = 'FRIENDS'),
-    (u.COMMUNITY = 'COMMUNITY'),
-    (u.CLAN = 'CLAN');
-let a = 'create-guild';
+    ((a = i || (i = {})).FRIENDS = 'FRIENDS'),
+    (a.COMMUNITY = 'COMMUNITY'),
+    (a.CLAN = 'CLAN');
+let u = 'create-guild';

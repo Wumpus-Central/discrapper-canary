@@ -5,19 +5,19 @@ n.d(t, {
 });
 var i = n(726542),
     l = n(603113),
-    a = n(981631),
-    r = n(388032);
+    r = n(981631),
+    a = n(388032);
 function s(e) {
     var t;
     let n = null !== (t = (0, l.Z)(e)) && void 0 !== t ? t : '';
     switch (n) {
-        case a.M7m.PS4:
-        case a.M7m.PS5:
-            return r.intl.formatToPlainString(r.t.A17aMz, { platform: n.toUpperCase() });
-        case a.M7m.XBOX:
-        case a.M7m.SAMSUNG:
-            return r.intl.formatToPlainString(r.t.A17aMz, { platform: i.Z.get(n).name });
+        case r.M7m.PS4:
+        case r.M7m.PS5:
+            return a.intl.formatToPlainString(a.t.A17aMz, { platform: n.toUpperCase() });
+        case r.M7m.XBOX:
+        case r.M7m.SAMSUNG:
+            return a.intl.formatToPlainString(a.t.A17aMz, { platform: i.Z.get(n).name });
         default:
-            return r.intl.string(r.t['2TbM/P']);
+            return a.intl.string(a.t['2TbM/P']);
     }
 }

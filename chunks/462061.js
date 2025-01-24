@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(475179),
@@ -21,15 +21,15 @@ var i = n(200651),
     h = n(928518),
     g = n(518950),
     v = n(470956),
-    I = n(314897),
-    S = n(271383),
-    _ = n(131951),
-    x = n(451478),
-    E = n(5192),
-    C = n(44136),
-    y = n(351483),
-    Z = n(981631),
-    b = n(65154),
+    S = n(314897),
+    I = n(271383),
+    x = n(131951),
+    _ = n(451478),
+    C = n(5192),
+    b = n(44136),
+    E = n(351483),
+    y = n(981631),
+    Z = n(65154),
     T = n(388032),
     N = n(995544);
 let A = o.AvatarSizes.SIZE_80,
@@ -51,18 +51,18 @@ function w(e) {
         : null;
 }
 function P(e) {
-    let { participant: t, channel: n, inCall: a, width: o, paused: v, selected: y, fit: w, onVideoResize: P, blocked: R, ignored: M, noVideoRender: O = !1, pulseSpeakingIndicator: L = !1, inOverlayPopout: k = !1 } = e,
-        D = _.Z.getVideoComponent(),
-        U = (0, s.e7)([I.default], () => I.default.getId()),
-        { user: V, streamId: F, speaking: B } = t,
-        W = V.id === U,
-        z = (0, C.ZP)(t),
-        G = (0, s.e7)([x.Z], () => x.Z.isFocused()),
-        H = (0, s.e7)([h.Z], () => h.Z.getWindowFocused(Z.KJ3.CHANNEL_CALL_POPOUT)),
-        Y = (0, s.e7)([_.Z], () => null != V.id && _.Z.isLocalVideoDisabled(V.id, (0, m.Z)(t.type)), [V.id, t.type]),
-        J = (0, s.e7)([S.ZP], () => S.ZP.isGuestOrLurker(n.guild_id, V.id)),
-        q = E.ZP.getName(n.getGuildId(), n.id, V) + (J ? ' '.concat(T.intl.string(T.t['pFO/Pj'])) : ''),
-        X = B && (H || G),
+    let { participant: t, channel: n, inCall: r, width: o, paused: v, selected: E, fit: w, onVideoResize: P, blocked: R, ignored: O, noVideoRender: k = !1, pulseSpeakingIndicator: M = !1, inOverlayPopout: L = !1 } = e,
+        D = x.Z.getVideoComponent(),
+        U = (0, s.e7)([S.default], () => S.default.getId()),
+        { user: V, streamId: F, speaking: z } = t,
+        B = V.id === U,
+        W = (0, b.ZP)(t),
+        G = (0, s.e7)([_.Z], () => _.Z.isFocused()),
+        H = (0, s.e7)([h.Z], () => h.Z.getWindowFocused(y.KJ3.CHANNEL_CALL_POPOUT)),
+        Y = (0, s.e7)([x.Z], () => null != V.id && x.Z.isLocalVideoDisabled(V.id, (0, m.Z)(t.type)), [V.id, t.type]),
+        q = (0, s.e7)([I.ZP], () => I.ZP.isGuestOrLurker(n.guild_id, V.id)),
+        J = C.ZP.getName(n.getGuildId(), n.id, V) + (q ? ' '.concat(T.intl.string(T.t['pFO/Pj'])) : ''),
+        X = z && (H || G),
         K = o < 124 ? j : A,
         { avatarSrc: Q, avatarDecorationSrc: $ } = (0, g.Z)({
             user: V,
@@ -82,16 +82,16 @@ function P(e) {
     }),
     l.useEffect(() => {
         let { channel: e, selectedParticipant: t, user: n } = en.current;
-        e.isGuildStageVoice() && !z && (null == t ? void 0 : t.id) === n.id && c.Z.selectParticipant(e.id, null);
-    }, [z]),
-    a && !Y && !O && z && !y && null != D && _.Z.supports(b.AN.VIDEO))
+        e.isGuildStageVoice() && !W && (null == t ? void 0 : t.id) === n.id && c.Z.selectParticipant(e.id, null);
+    }, [W]),
+    r && !Y && !k && W && !E && null != D && x.Z.supports(Z.AN.VIDEO))
         ? (0, i.jsx)(
               p.Z,
               {
                   onResize: P,
                   wrapperClassName: N.videoWrapper,
                   className: N.content,
-                  mirror: W,
+                  mirror: B,
                   streamId: F,
                   videoComponent: D,
                   fit: w,
@@ -102,15 +102,15 @@ function P(e) {
               F
           )
         : (0, i.jsx)('div', {
-              className: r()(N.content, { [N.blockedAvatar]: R || M }),
+              className: a()(N.content, { [N.blockedAvatar]: R || O }),
               children: (0, i.jsx)(f.Z, {
-                  'aria-label': q,
+                  'aria-label': J,
                   src: Q,
                   avatarDecoration: $,
                   backgroundSrc: V.getAvatarURL(n.guild_id, 80),
                   size: K,
-                  pulseSpeakingIndicator: L,
-                  speaking: B,
+                  pulseSpeakingIndicator: M,
+                  speaking: z,
                   userId: V.id
               })
           });

@@ -1,16 +1,16 @@
 n.r(t),
     n.d(t, {
         sendReactionToActivity: function () {
-            return _;
+            return x;
         },
         sendReplyToActivity: function () {
-            return x;
+            return _;
         }
     });
 var i = n(512722),
     l = n.n(i),
-    a = n(493683),
-    r = n(726542),
+    r = n(493683),
+    a = n(726542),
     s = n(122810),
     o = n(503438),
     c = n(693824),
@@ -22,11 +22,11 @@ var i = n(512722),
     h = n(201133),
     g = n(55000),
     v = n(314091),
-    I = n(981631),
-    S = n(388032);
-let _ = async (e) => {
+    S = n(981631),
+    I = n(388032);
+let x = async (e) => {
         let { reaction: t, altText: n, ...i } = e,
-            l = await C(i);
+            l = await b(i);
         (0, h.a)({
             file: l,
             altText: n,
@@ -34,31 +34,31 @@ let _ = async (e) => {
             reaction: t
         });
     },
-    x = async (e) => {
+    _ = async (e) => {
         let { reply: t, altText: n, ...i } = e,
-            r = await C(i),
-            s = await a.Z.openPrivateChannel(i.user.id, !1, !1),
+            a = await b(i),
+            s = await r.Z.openPrivateChannel(i.user.id, !1, !1),
             o = m.Z.getChannel(s);
         l()(null != o, 'Channel cannot be null'),
             (0, h.B)({
-                file: r,
+                file: a,
                 altText: n,
                 channel: o,
                 reply: t
             });
     },
-    E = (e) => {
+    C = (e) => {
         var t;
-        let { activity: i, application: l, user: a } = e,
-            { theme: r } = (0, v.j3)(a, 'black'),
-            s = 'dark' === r,
+        let { activity: i, application: l, user: r } = e,
+            { theme: a } = (0, v.j3)(r, 'black'),
+            s = 'dark' === a,
             o = (0, d.Z)(i),
             { assets: c, application_id: u } = i,
             m = (0, f.getAssetImage)(u, null == c ? void 0 : c.large_image, 64),
             h = null == l ? void 0 : l.getIconURL(64),
-            g = null != o ? (s ? o.icon.darkPNG : o.icon.lightPNG) : i.type === I.IIU.PLAYING ? (s ? n(414575) : n(807612)) : null,
-            S =
-                i.type === I.IIU.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null
+            g = null != o ? (s ? o.icon.darkPNG : o.icon.lightPNG) : i.type === S.IIU.PLAYING ? (s ? n(414575) : n(807612)) : null,
+            I =
+                i.type === S.IIU.HANG_STATUS && (null === (t = i.emoji) || void 0 === t ? void 0 : t.id) != null
                     ? (0, p.qc)({
                           id: i.emoji.id,
                           name: i.emoji.name,
@@ -69,13 +69,13 @@ let _ = async (e) => {
             ...(null != g && { Platform: g }),
             ...(null != m && { AssetImage: m.includes('http') ? m : n(869469)(m) }),
             ...(null != h && { ApplicationImage: h }),
-            ...(null != S && { HangStatus: S })
+            ...(null != I && { HangStatus: I })
         };
     },
-    C = async (e) => {
+    b = async (e) => {
         let { user: t, activity: n, application: i, stream: l } = e,
-            d = await a.Z.openPrivateChannel(t.id, !1, !1),
-            m = E({
+            d = await r.Z.openPrivateChannel(t.id, !1, !1),
+            m = C({
                 activity: n,
                 application: i,
                 user: t
@@ -85,7 +85,7 @@ let _ = async (e) => {
             drawImage: (e) => {
                 var i;
                 e.setFont({ truncate: c.GX.Truncate }),
-                    null != l ? A(e, n, t) : (0, o.Z)(n) ? b(e, n, t) : (0, s.Z)(n) && n.name === r.Z.get(I.ABu.LEAGUE_OF_LEGENDS).name ? N(e, n, t) : n.type === I.IIU.HANG_STATUS ? T(e, n, t) : Z(e, n, t),
+                    null != l ? A(e, n, t) : (0, o.Z)(n) ? Z(e, n, t) : (0, s.Z)(n) && n.name === a.Z.get(S.ABu.LEAGUE_OF_LEGENDS).name ? N(e, n, t) : n.type === S.IIU.HANG_STATUS ? T(e, n, t) : y(e, n, t),
                     (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has('Platform')) &&
                         e.drawImage(
                             'Platform',
@@ -108,7 +108,7 @@ let _ = async (e) => {
             }
         });
     },
-    y = (e, t) => {
+    E = (e, t) => {
         e.setColor('dark' === t ? 'white' : 'black'),
             e.drawPath(
                 g.Cv,
@@ -120,14 +120,14 @@ let _ = async (e) => {
                 2 + 2 / 3
             );
     },
-    Z = (e, t, n) => {
-        var i, l, a;
+    y = (e, t, n) => {
+        var i, l, r;
         e.setSize({
             w: g.En,
             h: g.dI
         });
-        let { color: r, theme: s } = (0, v.j3)(n, 'black');
-        e.setColor(r),
+        let { color: a, theme: s } = (0, v.j3)(n, 'black');
+        e.setColor(a),
             e.drawRoundedRect(
                 {
                     x: 0,
@@ -175,7 +175,7 @@ let _ = async (e) => {
                         },
                         8
                     )
-                  : y(e, s);
+                  : E(e, s);
         let o = g.vS + g.o3 + g.sB;
         e.setColor('dark' === s ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -188,7 +188,7 @@ let _ = async (e) => {
                 {
                     x: o,
                     y: g.SG + 1 * g.Nv,
-                    w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(g.W3.Platform)) ? g.ee : g.sp
+                    w: (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has(g.W3.Platform)) ? g.ee : g.sp
                 },
                 !0
             ),
@@ -206,14 +206,14 @@ let _ = async (e) => {
                     !0
                 ));
     },
-    b = (e, t, n) => {
+    Z = (e, t, n) => {
         var i, l;
         e.setSize({
             w: g.En,
             h: g.dI
         });
-        let { color: a, theme: r } = (0, v.j3)(n, 'black');
-        e.setColor(a),
+        let { color: r, theme: a } = (0, v.j3)(n, 'black');
+        e.setColor(r),
             e.drawRoundedRect(
                 {
                     x: 0,
@@ -224,7 +224,7 @@ let _ = async (e) => {
                 8,
                 !0
             ),
-            e.setColor('dark' === r ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.7)'),
+            e.setColor('dark' === a ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.7)'),
             e.drawRoundedRect(
                 {
                     x: 0,
@@ -249,7 +249,7 @@ let _ = async (e) => {
                     8
                 );
         let s = g.vS + g.o3 + g.sB;
-        e.setColor('dark' === r ? 'white' : 'rgb(6, 6, 7)'),
+        e.setColor('dark' === a ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
                 size: 14,
                 family: ['gg sans', 'sans-serif'],
@@ -278,13 +278,13 @@ let _ = async (e) => {
             );
     },
     T = (e, t, i) => {
-        var l, a;
+        var l, r;
         e.setSize({
             w: g.En,
             h: g.dI
         });
-        let { color: r, theme: s } = (0, v.j3)(i, 'black');
-        e.setColor(r),
+        let { color: a, theme: s } = (0, v.j3)(i, 'black');
+        e.setColor(a),
             e.drawRoundedRect(
                 {
                     x: 0,
@@ -319,7 +319,7 @@ let _ = async (e) => {
                       },
                       8
                   )
-                : y(e, s);
+                : E(e, s);
         let o = g.vS + g.o3 + g.sB;
         e.setColor('dark' === s ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -328,11 +328,11 @@ let _ = async (e) => {
                 weight: 700
             }),
             e.drawText(
-                S.intl.string(S.t['74vS//']),
+                I.intl.string(I.t['74vS//']),
                 {
                     x: o,
                     y: g.SG + 1 * g.Nv,
-                    w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(g.W3.Platform)) ? g.ee : g.sp
+                    w: (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has(g.W3.Platform)) ? g.ee : g.sp
                 },
                 !0
             ),
@@ -357,7 +357,7 @@ let _ = async (e) => {
             w: g.En,
             h: g.dI
         });
-        let { color: l, theme: a } = (0, v.j3)(n, 'black');
+        let { color: l, theme: r } = (0, v.j3)(n, 'black');
         e.setColor(l),
             e.drawRoundedRect(
                 {
@@ -369,7 +369,7 @@ let _ = async (e) => {
                 8,
                 !0
             ),
-            e.setColor('dark' === a ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.7)'),
+            e.setColor('dark' === r ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.7)'),
             e.drawRoundedRect(
                 {
                     x: 0,
@@ -380,7 +380,7 @@ let _ = async (e) => {
                 8,
                 !0
             ),
-            e.setColor('dark' === a ? 'white' : 'black'),
+            e.setColor('dark' === r ? 'white' : 'black'),
             e.drawRoundedImage(
                 'AssetImage',
                 {
@@ -402,8 +402,8 @@ let _ = async (e) => {
                     !0,
                     2 + 2 / 3
                 );
-        let r = g.vS + g.o3 + g.sB;
-        e.setColor('dark' === a ? 'white' : 'rgb(6, 6, 7)'),
+        let a = g.vS + g.o3 + g.sB;
+        e.setColor('dark' === r ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
                 size: 14,
                 family: ['gg sans', 'sans-serif'],
@@ -412,7 +412,7 @@ let _ = async (e) => {
             e.drawText(
                 ''.concat(t.details),
                 {
-                    x: r,
+                    x: a,
                     y: g.SG + 1 * g.Nv,
                     w: (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has('Platform')) ? g.ee : g.sp
                 },
@@ -425,20 +425,20 @@ let _ = async (e) => {
             e.drawText(
                 ''.concat(t.state),
                 {
-                    x: r,
+                    x: a,
                     y: g.SG + 2 * g.Nv
                 },
                 !0
             );
     },
     A = (e, t, n) => {
-        var i, l, a;
+        var i, l, r;
         e.setSize({
             w: g.En,
             h: g.dI
         });
-        let { color: r, theme: s } = (0, v.j3)(n, 'black');
-        e.setColor(r),
+        let { color: a, theme: s } = (0, v.j3)(n, 'black');
+        e.setColor(a),
             e.drawRoundedRect(
                 {
                     x: 0,
@@ -486,7 +486,7 @@ let _ = async (e) => {
                         },
                         8
                     )
-                  : y(e, s);
+                  : E(e, s);
         let o = g.vS + g.o3 + g.sB;
         e.setColor('dark' === s ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -499,7 +499,7 @@ let _ = async (e) => {
                 {
                     x: o,
                     y: g.SG + g.Nv * (null != t.timestamps ? 1 : 1.5),
-                    w: (null === (a = e.assetMap) || void 0 === a ? void 0 : a.has(g.W3.Platform)) ? g.ee : g.sp
+                    w: (null === (r = e.assetMap) || void 0 === r ? void 0 : r.has(g.W3.Platform)) ? g.ee : g.sp
                 },
                 !0
             ),

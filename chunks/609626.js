@@ -1,4 +1,4 @@
-i.d(t, {
+i.d(e, {
     Z: function () {
         return a;
     }
@@ -6,18 +6,18 @@ i.d(t, {
 var n = i(768581),
     l = i(620954),
     o = i(987650),
-    s = i(981631),
-    r = i(388032);
-function a(e, t) {
-    let i = e.username,
-        a = r.intl.format(r.t['Yk+uYG'], { username: '' }),
-        u = (0, n.ov)(e),
-        d = r.intl.string(r.t.WRj1Wl),
+    r = i(981631),
+    s = i(388032);
+function a(t, e) {
+    let i = t.username,
+        a = s.intl.format(s.t['Yk+uYG'], { username: '' }),
+        u = (0, n.ov)(t),
+        d = s.intl.string(s.t.WRj1Wl),
         { trackView: c, trackClick: h } = (0, l.R)(o.n0.ActivityUserJoin, {
             notif_type: o.n0.ActivityUserJoin,
-            notif_user_id: e.id,
-            activity_type: s.mFx.JOIN,
-            activity_name: t.name
+            notif_user_id: t.id,
+            activity_type: r.mFx.JOIN,
+            activity_name: e.name
         });
     return {
         icon: u,

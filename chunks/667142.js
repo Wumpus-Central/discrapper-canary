@@ -9,7 +9,7 @@ n.d(t, {
         return a;
     },
     VX: function () {
-        return l;
+        return o;
     },
     ih: function () {
         return s;
@@ -23,15 +23,15 @@ let r = {
         timeToLiveMs: 5000,
         reappearTimeMs: 10000
     },
-    o = (0, i.H)(() => r),
-    l = 10000,
+    l = (0, i.H)(() => r),
+    o = 10000,
     a = 20000,
     s = 500,
     c = 1000;
 function d(e) {
-    o.setState({ timeToLiveMs: e });
+    l.setState({ timeToLiveMs: e });
 }
 function u(e) {
-    o.setState({ reappearTimeMs: e });
+    l.setState({ reappearTimeMs: e });
 }
-t.ZP = o;
+t.ZP = l;

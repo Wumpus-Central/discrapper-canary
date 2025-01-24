@@ -1,9 +1,9 @@
-var a, r;
+var i, l;
 n.d(t, {
     G: function () {
-        return a;
+        return i;
     }
 }),
-    ((r = a || (a = {})).ClickZones = 'click_zones'),
-    (r.WidgetAreas = 'widget_areas'),
-    (r.ExperimentalPerformance = 'experimental_performance');
+    ((l = i || (i = {})).ClickZones = 'click_zones'),
+    (l.WidgetAreas = 'widget_areas'),
+    (l.ExperimentalPerformance = 'experimental_performance');

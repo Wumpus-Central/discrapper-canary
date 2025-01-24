@@ -21,21 +21,21 @@ let A = [d.h8.TEXT_CHANNEL, d.h8.GROUP_DM, d.h8.USER],
     I = null,
     N = null,
     T = [],
-    O = [];
-function R(e) {
+    S = [];
+function O(e) {
     (T = [...T, e]),
-        (O = O.map((e) => ({
+        (S = S.map((e) => ({
             ...e,
             sent: T.includes(e.data.record.id)
         }))),
         y.emitChange();
 }
-function S() {
+function R() {
     (I = null), null != r && (r.destroy(), (r = null)), null != N && N();
 }
 function P() {
     let e = null != I && null != I.application_id ? _.Z.getApplicationActivity(I.application_id) : null;
-    if (null != I && (null == e || null == e.party || null == e.party.id)) return S();
+    if (null != I && (null == e || null == e.party || null == e.party.id)) return R();
 }
 class Z extends (i = o.ZP.Store) {
     initialize() {
@@ -49,7 +49,7 @@ class Z extends (i = o.ZP.Store) {
         return null !== (e = null == r ? void 0 : r.query) && void 0 !== e ? e : '';
     }
     getResults() {
-        return O;
+        return S;
     }
 }
 (u = 'ActivityInviteModalStore'),
@@ -72,7 +72,7 @@ let y = new Z(s.Z, {
                         var n;
                         return (
                             (n = e),
-                            void ((O = (
+                            void ((S = (
                                 '' === t.trim()
                                     ? (function () {
                                           let e = [];
@@ -158,19 +158,19 @@ let y = new Z(s.Z, {
                   type: v.mFx.JOIN,
                   activity: I,
                   location: 'Channel Text Area - Invite to Join Modal'
-              }).then(() => R(t))
+              }).then(() => O(t))
             : null != n &&
               c.Z.sendActivityInviteUser({
                   userId: n,
                   type: v.mFx.JOIN,
                   activity: I,
                   location: 'Channel Text Area - Invite to Join Modal'
-              }).then(() => R(n));
+              }).then(() => O(n));
     },
-    ACTIVITY_INVITE_MODAL_CLOSE: S,
+    ACTIVITY_INVITE_MODAL_CLOSE: R,
     OVERLAY_SET_INPUT_LOCKED: function (e) {
         let { locked: t } = e;
-        return !!t && null != I && (S(), !0);
+        return !!t && null != I && (R(), !0);
     },
     LOCAL_ACTIVITY_UPDATE: P,
     RPC_APP_DISCONNECTED: P

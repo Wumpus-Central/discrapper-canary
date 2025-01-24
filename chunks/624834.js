@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return C;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(2052),
@@ -19,20 +19,20 @@ var i = n(200651),
     h = n(835473),
     g = n(314897),
     v = n(592125),
-    I = n(594174),
-    S = n(849171),
-    _ = n(388032),
-    x = n(712434);
-function E(e) {
-    let { participant: t, width: n, channelId: a } = e,
-        { analyticsLocations: r } = (0, p.ZP)(f.Z.PRESENCE_ACTIVITY_TILE),
+    S = n(594174),
+    I = n(849171),
+    x = n(388032),
+    _ = n(712434);
+function C(e) {
+    let { participant: t, width: n, channelId: r } = e,
+        { analyticsLocations: a } = (0, p.ZP)(f.Z.PRESENCE_ACTIVITY_TILE),
         { activity: s } = t,
         o = s.application_id,
         [c] = (0, h.Z)([o]),
         { url: u } = (0, m.Z)({
             applicationId: o,
-            names: S.Ix,
-            size: S.bn
+            names: I.Ix,
+            size: I.bn
         }),
         d = l.useMemo(
             () => ({
@@ -42,22 +42,22 @@ function E(e) {
             [t]
         );
     return (0, i.jsx)(p.Gt, {
-        value: r,
+        value: a,
         children: (0, i.jsx)('div', {
-            className: x.container,
+            className: _.container,
             children: (0, i.jsxs)(i.Fragment, {
                 children: [
                     null != c && null != o && null != u && '' !== u
                         ? (0, i.jsx)('img', {
-                              className: x.splashImage,
+                              className: _.splashImage,
                               alt: c.name,
                               src: u
                           })
                         : null,
                     null != c && null != o
-                        ? (0, i.jsx)(C, {
+                        ? (0, i.jsx)(b, {
                               width: n,
-                              channelId: a,
+                              channelId: r,
                               participant: d,
                               applicationId: o
                           })
@@ -67,19 +67,19 @@ function E(e) {
         })
     });
 }
-function C(e) {
-    let { width: t, channelId: n, participant: a, applicationId: m } = e,
-        f = (0, S.V_)(t),
-        [E] = (0, S.Ym)(t),
-        C = (0, s.e7)([v.Z], () => v.Z.getChannel(n)),
-        y = (0, s.e7)([I.default, g.default], () => ((0, d.J)(a, g.default) ? null : I.default.getUser(a.userId))),
-        Z = l.useMemo(() => (null != y ? [y] : []), [y]),
-        b = (0, h.q)(m),
+function b(e) {
+    let { width: t, channelId: n, participant: r, applicationId: m } = e,
+        f = (0, I.V_)(t),
+        [C] = (0, I.Ym)(t),
+        b = (0, s.e7)([v.Z], () => v.Z.getChannel(n)),
+        E = (0, s.e7)([S.default, g.default], () => ((0, d.J)(r, g.default) ? null : S.default.getUser(r.userId))),
+        y = l.useMemo(() => (null != E ? [E] : []), [E]),
+        Z = (0, h.q)(m),
         { analyticsLocations: T } = (0, p.ZP)(),
         N = (0, c.O)(),
-        A = a.sessionId,
+        A = r.sessionId,
         [j, w] = l.useState(!1),
-        P = null == y ? void 0 : y.id,
+        P = null == E ? void 0 : E.id,
         R = l.useCallback(
             async (e) => {
                 if ((e.stopPropagation(), null != m && null != P))
@@ -96,42 +96,42 @@ function C(e) {
             },
             [m, P, N.location, T, A]
         );
-    return null == C || null == y || null == b
+    return null == b || null == E || null == Z
         ? null
         : (0, i.jsxs)('div', {
-              className: x.splash,
+              className: _.splash,
               children: [
-                  (0, i.jsx)(S.OV, {
-                      avatarSize: E,
-                      guildId: C.guild_id,
-                      channelId: C.id,
-                      users: Z
+                  (0, i.jsx)(I.OV, {
+                      avatarSize: C,
+                      guildId: b.guild_id,
+                      channelId: b.id,
+                      users: y
                   }),
                   (0, i.jsx)(o.Text, {
-                      className: r()(x.subheader, {
-                          [x.small]: f === S.nR.SMALL,
-                          [x.medium]: f === S.nR.MEDIUM
+                      className: a()(_.subheader, {
+                          [_.small]: f === I.nR.SMALL,
+                          [_.medium]: f === I.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: _.intl.formatToPlainString(_.t['7Uuia2'], { username: y.username })
+                      children: x.intl.formatToPlainString(x.t['7Uuia2'], { username: E.username })
                   }),
                   (0, i.jsx)(o.Text, {
-                      className: r()(x.header, {
-                          [x.small]: f === S.nR.SMALL,
-                          [x.medium]: f === S.nR.MEDIUM
+                      className: a()(_.header, {
+                          [_.small]: f === I.nR.SMALL,
+                          [_.medium]: f === I.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: b.name
+                      children: Z.name
                   }),
                   (0, i.jsx)('div', {
-                      className: x.buttons,
+                      className: _.buttons,
                       children: (0, i.jsx)(o.Button, {
                           onClick: R,
                           submitting: j,
-                          size: (0, S.ac)(f),
-                          className: x.button,
+                          size: (0, I.ac)(f),
+                          className: _.button,
                           color: o.Button.Colors.PRIMARY,
-                          children: _.intl.string(_.t['4i2vj4'])
+                          children: x.intl.string(x.t['4i2vj4'])
                       })
                   })
               ]

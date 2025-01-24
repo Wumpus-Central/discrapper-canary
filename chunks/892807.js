@@ -8,8 +8,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     a = n(442837),
     s = n(481060),
     c = n(410575),
@@ -19,20 +19,20 @@ var i = n(200651),
     m = n(46145),
     p = n(814443),
     x = n(592125),
-    f = n(430824),
+    g = n(430824),
     v = n(496675),
-    g = n(699516),
+    f = n(699516),
     C = n(594174),
     Z = n(979651),
     b = n(823379),
-    _ = n(981631),
-    j = n(388032),
+    j = n(981631),
+    _ = n(388032),
     I = n(693215);
 function E(e) {
     let { channel: t, currentVoiceChannel: n } = e,
         r = (0, u.KS)(t),
-        o = t.id === (null == n ? void 0 : n.id),
-        a = o ? s.tokens.colors.TEXT_POSITIVE : s.tokens.colors.INTERACTIVE_NORMAL;
+        l = t.id === (null == n ? void 0 : n.id),
+        a = l ? s.tokens.colors.TEXT_POSITIVE : s.tokens.colors.INTERACTIVE_NORMAL;
     return (0, i.jsxs)('div', {
         className: I.channelNameContainer,
         children: [
@@ -44,9 +44,9 @@ function E(e) {
                 : void 0,
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/semibold',
-                className: l()(I.label, I.channelName),
-                color: o ? 'text-positive' : 'text-normal',
-                children: (0, d.F6)(t, C.default, g.Z)
+                className: o()(I.label, I.channelName),
+                color: l ? 'text-positive' : 'text-normal',
+                children: (0, d.F6)(t, C.default, f.Z)
             })
         ]
     });
@@ -54,16 +54,16 @@ function E(e) {
 function k(e) {
     let { channel: t, currentVoiceChannel: n } = e,
         r = t.getGuildId(),
-        o = (0, a.e7)([f.Z], () => f.Z.getGuild(r), [r]),
-        l = t.id === (null == n ? void 0 : n.id);
-    return null == o
+        l = (0, a.e7)([g.Z], () => g.Z.getGuild(r), [r]),
+        o = t.id === (null == n ? void 0 : n.id);
+    return null == l
         ? null
         : (0, i.jsx)('div', {
               className: I.channelMenuSubContainer,
               children: (0, i.jsx)(s.Text, {
                   variant: 'text-xs/normal',
-                  color: l ? 'text-positive' : void 0,
-                  children: o.name
+                  color: o ? 'text-positive' : void 0,
+                  children: l.name
               })
           });
 }
@@ -76,8 +76,8 @@ function N(e) {
                     .map((e) => C.default.getUser(e.userId))
                     .filter(b.lm)
                     .sort((e, t) => {
-                        var n, i, r, o;
-                        return (null !== (r = null === (n = p.Z.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== r ? r : 0) - (null !== (o = null === (i = p.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== o ? o : 0);
+                        var n, i, r, l;
+                        return (null !== (r = null === (n = p.Z.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== r ? r : 0) - (null !== (l = null === (i = p.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== l ? l : 0);
                     }),
             [t.id]
         ),
@@ -95,21 +95,21 @@ function N(e) {
           });
 }
 function w(e) {
-    let { currentVoiceChannel: t, onClose: n, onSelect: o } = e,
-        l = (0, a.Wu)([g.Z, p.Z], () =>
-            g.Z.getFriendIDs().sort((e, t) => {
-                var n, i, r, o;
-                return null == e && null == t ? 0 : null == e ? 1 : null == t ? -1 : (null !== (r = null === (n = p.Z.getUserAffinity(t)) || void 0 === n ? void 0 : n.affinity) && void 0 !== r ? r : 0) - (null !== (o = null === (i = p.Z.getUserAffinity(e)) || void 0 === i ? void 0 : i.affinity) && void 0 !== o ? o : 0);
+    let { currentVoiceChannel: t, onClose: n, onSelect: l } = e,
+        o = (0, a.Wu)([f.Z, p.Z], () =>
+            f.Z.getFriendIDs().sort((e, t) => {
+                var n, i, r, l;
+                return null == e && null == t ? 0 : null == e ? 1 : null == t ? -1 : (null !== (r = null === (n = p.Z.getUserAffinity(t)) || void 0 === n ? void 0 : n.affinity) && void 0 !== r ? r : 0) - (null !== (l = null === (i = p.Z.getUserAffinity(e)) || void 0 === i ? void 0 : i.affinity) && void 0 !== l ? l : 0);
             })
         ),
         d = (0, a.Wu)(
             [C.default],
             () =>
-                l.reduce((e, t) => {
+                o.reduce((e, t) => {
                     let n = C.default.getUser(t);
                     return null != n && e.push(n), e;
                 }, []),
-            [l]
+            [o]
         ),
         u = (0, a.Wu)(
             [m.Z, Z.Z, x.Z, v.Z],
@@ -117,7 +117,7 @@ function w(e) {
                 let e = new Set(
                         m.Z.getChannelHistory().reduce((e, t) => {
                             let n = x.Z.getChannel(t);
-                            return null != n && v.Z.can(_.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
+                            return null != n && v.Z.can(j.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
                         }, [])
                     ),
                     t = d
@@ -126,7 +126,7 @@ function w(e) {
                             let i = null == n ? void 0 : n.channelId;
                             if (null == i) return t;
                             let r = x.Z.getChannel(i);
-                            return null != r && v.Z.can(_.Plq.CONNECT, r) && !e.has(i) && t.size < 3 && t.add(i), t;
+                            return null != r && v.Z.can(j.Plq.CONNECT, r) && !e.has(i) && t.size < 3 && t.add(i), t;
                         }, new Set());
                 return [...Array.from(e), ...t].map((e) => x.Z.getChannel(e)).filter(b.lm);
             },
@@ -134,17 +134,17 @@ function w(e) {
         ),
         h = r.useCallback(
             (e) => {
-                o(e), n();
+                l(e), n();
             },
-            [o, n]
+            [l, n]
         );
     return (0, i.jsx)(c.Z, {
-        section: _.jXE.CONTEXT_MENU,
+        section: j.jXE.CONTEXT_MENU,
         children: (0, i.jsx)(s.Menu, {
             onSelect: n,
             navId: 'manage-streams',
             onClose: n,
-            'aria-label': j.intl.string(j.t['+9QSnp']),
+            'aria-label': _.intl.string(_.t['+9QSnp']),
             children: (0, i.jsx)(s.MenuGroup, {
                 children: u.map((e) =>
                     (0, i.jsx)(
