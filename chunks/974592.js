@@ -59,5 +59,11 @@ let p = [
             getBackgroundImageUrl: () => c.Z,
             title: () => l.intl.string(l.t.hFzI4u),
             body: () => l.intl.string(l.t.rbWKaW)
+        },
+        giftPurchaseConfirmation: {
+            yearGiftText: l.t.p0pZXF,
+            monthGiftText: l.t['4ZJ+7e'],
+            collectRewardButtonText: () => l.intl.string(l.t.kMYVws),
+            rewardCollectedText: () => l.intl.string(l.t.eZrmtr)
         }
     };
