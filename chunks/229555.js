@@ -46,65 +46,67 @@ t.Z = () => {
         n = null !== (e = (0, o.GG)()) && void 0 !== e ? e : new Date();
     if (null == t) return null;
     let r = (0, c.J)(t.id),
-        { id: d, badgeVersion: h, nameUnformatted: p, earnedOnDate: x, tenureReqNumMonths: f } = t,
-        E = u.intl.string(p),
-        _ = (0, l.q)(d, f);
-    return 1 === h
-        ? (0, i.jsxs)('div', {
-              className: s()(m.container, g(d)),
-              children: [
-                  (0, i.jsx)('div', {}),
-                  ' ',
-                  (0, i.jsx)('img', {
-                      src: r,
-                      alt: E,
-                      className: m.badgeImage
-                  }),
-                  (0, i.jsxs)('div', {
-                      className: m.textColumn,
-                      children: [
-                          (0, i.jsx)(a.xv, {
-                              variant: 'text-lg/semibold',
-                              className: m.badgeText,
-                              children: E
-                          }),
-                          (0, i.jsx)(a.xv, {
-                              variant: 'text-xs/normal',
-                              children: u.intl.format(u.t.zl7yMD, { date: x })
-                          })
-                      ]
-                  })
-              ]
-          })
-        : (0, i.jsxs)('div', {
-              className: s()(m.container, g(d)),
-              children: [
-                  (0, i.jsx)('div', {}),
-                  ' ',
-                  (0, i.jsx)('img', {
-                      src: r,
-                      alt: E,
-                      className: s()(m.badgeImage, m.badgeImageV2)
-                  }),
-                  (0, i.jsxs)('div', {
-                      className: m.textColumn,
-                      children: [
-                          (0, i.jsx)(a.xv, {
-                              variant: 'text-lg/semibold',
-                              className: m.badgeText,
-                              children: E
-                          }),
-                          (0, i.jsx)(a.xv, {
-                              variant: 'text-md/normal',
-                              className: m.badgeText,
-                              children: _
-                          }),
-                          (0, i.jsx)(a.xv, {
-                              variant: 'text-xs/normal',
-                              children: u.intl.formatToPlainString(u.t['8zbGNT'], { date: n })
-                          })
-                      ]
-                  })
-              ]
-          });
+        { id: d, badgeVersion: h, nameUnformatted: p, tenureReqNumMonths: x } = t,
+        f = u.intl.string(p),
+        E = (0, l.q)(d, x);
+    if (1 === h) {
+        let e = t.status === o.Vq.EARNED ? t.earnedOnDate : null;
+        return (0, i.jsxs)('div', {
+            className: s()(m.container, g(d)),
+            children: [
+                (0, i.jsx)('div', {}),
+                ' ',
+                (0, i.jsx)('img', {
+                    src: r,
+                    alt: f,
+                    className: m.badgeImage
+                }),
+                (0, i.jsxs)('div', {
+                    className: m.textColumn,
+                    children: [
+                        (0, i.jsx)(a.xv, {
+                            variant: 'text-lg/semibold',
+                            className: m.badgeText,
+                            children: f
+                        }),
+                        (0, i.jsx)(a.xv, {
+                            variant: 'text-xs/normal',
+                            children: u.intl.format(u.t.zl7yMD, { date: e })
+                        })
+                    ]
+                })
+            ]
+        });
+    }
+    return (0, i.jsxs)('div', {
+        className: s()(m.container, g(d)),
+        children: [
+            (0, i.jsx)('div', {}),
+            ' ',
+            (0, i.jsx)('img', {
+                src: r,
+                alt: f,
+                className: s()(m.badgeImage, m.badgeImageV2)
+            }),
+            (0, i.jsxs)('div', {
+                className: m.textColumn,
+                children: [
+                    (0, i.jsx)(a.xv, {
+                        variant: 'text-lg/semibold',
+                        className: m.badgeText,
+                        children: f
+                    }),
+                    (0, i.jsx)(a.xv, {
+                        variant: 'text-md/normal',
+                        className: m.badgeText,
+                        children: E
+                    }),
+                    (0, i.jsx)(a.xv, {
+                        variant: 'text-xs/normal',
+                        children: u.intl.formatToPlainString(u.t['8zbGNT'], { date: n })
+                    })
+                ]
+            })
+        ]
+    });
 };
