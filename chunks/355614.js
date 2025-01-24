@@ -10,5 +10,10 @@ e.exports = {
     tooltipWrapper: 'tooltipWrapper_eb92a8',
     info: 'info_eb92a8',
     icon: 'icon_eb92a8',
-    radioIndicator: 'radioIndicator_eb92a8'
+    radioIndicator: 'radioIndicator_eb92a8',
+    refreshIcon: 'refreshIcon_eb92a8',
+    refreshIconStroke: 'refreshIconStroke_eb92a8',
+    refreshIconFill: 'refreshIconFill_eb92a8',
+    radioIndicatorChecked: 'radioIndicatorChecked_eb92a8',
+    radioIndicatorDisabled: 'radioIndicatorDisabled_eb92a8'
 };

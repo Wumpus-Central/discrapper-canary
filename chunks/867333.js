@@ -51,6 +51,7 @@ function g(e) {
                     children: T
                         ? (0, i.jsx)(d.RadioIndicator, {
                               checked: o,
+                              disabled: E,
                               radioItemIconClassName: m.radioIcon
                           })
                         : o
