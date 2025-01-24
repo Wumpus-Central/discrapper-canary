@@ -10,156 +10,160 @@ var r = t(481060),
     s = t(100527),
     c = t(441061),
     f = t(167675),
-    I = t(737013),
-    x = t(607783),
-    M = t(702321),
-    _ = t(461535),
-    h = t(776568),
-    m = t(299206),
-    g = t(895563),
+    m = t(737013),
+    I = t(607783),
+    x = t(702321),
+    h = t(461535),
+    g = t(776568),
+    M = t(299206),
+    _ = t(895563),
     p = t(212205),
     v = t(62420),
     C = t(122074),
     j = t(819403),
-    T = t(777658),
-    E = t(858488),
+    Z = t(777658),
+    T = t(858488),
+    E = t(44652),
     N = t(185457),
-    Z = t(570870),
-    S = t(389052),
-    A = t(24311),
-    U = t(794973),
-    O = t(165855),
+    S = t(570870),
+    A = t(389052),
+    U = t(24311),
+    O = t(794973),
+    b = t(165855),
     G = t(332576),
     y = t(158508),
     P = t(710631),
-    b = t(558924),
-    R = t(991307),
-    D = t(37258),
-    L = t(700994),
-    F = t(332031),
-    k = t(981631),
-    w = t(388032);
+    R = t(47091),
+    D = t(558924),
+    F = t(991307),
+    L = t(37258),
+    k = t(700994),
+    w = t(332031),
+    z = t(981631),
+    Y = t(388032);
 e.default = (0, a.Z)(
     (0, u.Z)(
         function (n) {
-            let { user: e, channel: t, channelSelected: u = !1, showMute: a = !0, showMediaItems: s = !1, showChannelCallItems: Y = !1, showModalItems: z = !0, targetIsUser: B = !1, context: V, onSelect: W, onHeightUpdate: K } = n,
-                X = (0, D.Z)({
+            let { user: e, channel: t, channelSelected: u = !1, showMute: a = !0, showMediaItems: s = !1, showChannelCallItems: B = !1, showModalItems: V = !0, targetIsUser: W = !1, context: K, onSelect: X, onHeightUpdate: q } = n,
+                J = (0, L.Z)({
                     userId: e.id,
                     guildId: null
                 }),
-                q = (0, A.Z)({
+                H = (0, U.Z)({
                     user: e,
-                    context: V
+                    context: K
                 }),
-                J = (0, N.Z)({
+                Q = (0, N.Z)({
                     user: e,
                     channelId: t.id,
-                    context: V
+                    context: K
                 }),
-                H = (0, E.Z)({ user: e }),
-                Q = (0, F.Z)(e.id),
-                $ = (0, U.Z)(t.id, u),
-                nn = (0, P.Z)({ user: e }),
-                ne = (0, d.Z)(null, e),
-                nt = (0, L.Z)(e.id),
-                ni = (0, b.Z)(e, t.id),
-                nr = (0, T.Z)(e),
-                nl = (0, R.Z)(e.id),
-                nu = (0, x.B)({
+                $ = (0, T.Z)({ user: e }),
+                nn = (0, w.Z)(e.id),
+                ne = (0, O.Z)(t.id, u),
+                nt = (0, P.Z)({ user: e }),
+                ni = (0, d.Z)(null, e),
+                nr = (0, k.Z)(e.id),
+                nl = (0, D.Z)(e, t.id),
+                nu = (0, Z.Z)(e),
+                na = (0, E.Z)({ user: e }),
+                no = (0, R.Z)({ user: e }),
+                nd = (0, F.Z)(e.id),
+                ns = (0, I.B)({
                     userId: e.id,
                     channelId: t.id,
                     guildId: t.getGuildId(),
                     location: 'DMUserContextMenu'
                 }),
-                na = (0, G.Z)(e.id, t.id),
-                no = (0, S.Z)({
+                nc = (0, G.Z)(e.id, t.id),
+                nf = (0, A.Z)({
                     user: e,
                     location: 'DMUserContextMenu'
                 }),
-                nd = (0, y.Z)({
+                nm = (0, y.Z)({
                     user: e,
                     location: 'DMUserContextMenu'
                 }),
-                ns = (0, h.ZP)(t),
-                nc = (0, C.Uf)(k.aIL, t.id, 'trailing'),
-                nf = (0, m.Z)({
+                nI = (0, g.ZP)(t),
+                nx = (0, C.Uf)(z.aIL, t.id, 'trailing'),
+                nh = (0, M.Z)({
                     id: e.id,
-                    label: w.intl.string(w.t['/AXYnJ'])
+                    label: Y.intl.string(Y.t['/AXYnJ'])
                 }),
-                nI = (0, m.Z)({
+                ng = (0, M.Z)({
                     id: t.id,
-                    label: w.intl.string(w.t.gFHI3t)
+                    label: Y.intl.string(Y.t.gFHI3t)
                 }),
-                nx = (0, _.Z)(t),
-                nM = (0, f.Z)(e.id),
-                n_ = (0, c.Z)(t.id),
-                nh = (0, j.Z)(e),
-                nm = (0, I.Z)(e.id),
-                ng = (0, Z.Z)({
+                nM = (0, h.Z)(t),
+                n_ = (0, f.Z)(e.id),
+                np = (0, c.Z)(t.id),
+                nv = (0, j.Z)(e),
+                nC = (0, m.Z)(e.id),
+                nj = (0, S.Z)({
                     commandType: o.yU.USER,
                     commandTargetId: e.id,
                     channel: t,
                     guildId: void 0,
-                    onHeightUpdate: K
+                    onHeightUpdate: q
                 }),
-                np = (0, g.l)(t),
-                nv = (0, g.P)(t),
-                nC = (0, p.Z)(t),
-                nj = (0, v.Z)(t),
-                nT = (0, O.Z)({ channel: t }),
-                nE = t.isManaged(),
-                nN = e.isNonUserBot();
+                nZ = (0, _.l)(t),
+                nT = (0, _.P)(t),
+                nE = (0, p.Z)(t),
+                nN = (0, v.Z)(t),
+                nS = (0, b.Z)({ channel: t }),
+                nA = t.isManaged(),
+                nU = e.isNonUserBot();
             return (0, i.jsxs)(r.Menu, {
                 navId: 'user-context',
                 onClose: l.Zy,
-                'aria-label': w.intl.string(w.t.liqwPD),
-                onSelect: W,
+                'aria-label': Y.intl.string(Y.t.liqwPD),
+                onSelect: X,
                 children: [
-                    (0, i.jsx)(r.MenuGroup, { children: !(nN && !(0, M.Z)(t.id)) && nx }),
+                    (0, i.jsx)(r.MenuGroup, { children: !(nU && !(0, x.Z)(t.id)) && nM }),
                     (0, i.jsxs)(r.MenuGroup, {
-                        children: [np, nC, nj]
+                        children: [nZ, nE, nN]
                     }),
-                    (0, i.jsx)(r.MenuGroup, { children: !nN && nh }),
+                    (0, i.jsx)(r.MenuGroup, { children: !nU && nv }),
                     (0, i.jsxs)(r.MenuGroup, {
                         children: [
-                            !nN &&
+                            !nU &&
                                 (0, i.jsxs)(i.Fragment, {
-                                    children: [z && X, q, !nE && ni, z && J, z && H, Q]
+                                    children: [V && J, H, !nA && nl, V && Q, V && $, nn]
                                 }),
-                            (0, M.Z)(t.id) && X,
-                            $
+                            (0, x.Z)(t.id) && J,
+                            ne
                         ]
                     }),
-                    !nN &&
+                    !nU &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(r.MenuGroup, { children: s && nt }),
-                                (0, i.jsx)(r.MenuGroup, { children: z && ne }),
+                                (0, i.jsx)(r.MenuGroup, { children: s && nr }),
+                                (0, i.jsx)(r.MenuGroup, { children: V && ni }),
                                 (0, i.jsxs)(r.MenuGroup, {
-                                    children: [s && nl, z && nu, s && na, ng, z && nn, nr, z && nd, z && no, s && nm]
+                                    children: [s && nd, V && ns, s && nc, nj, V && nt, nu, na, no, V && nm, V && nf, s && nC]
                                 }),
                                 (0, i.jsxs)(r.MenuGroup, {
-                                    children: [a && ns, nc]
+                                    children: [a && nI, nx]
                                 }),
-                                Y &&
+                                B &&
                                     (0, i.jsxs)(r.MenuGroup, {
-                                        children: [n_, nM]
+                                        children: [np, n_]
                                     })
                             ]
                         }),
-                    (0, M.Z)(t.id) &&
+                    (0, x.Z)(t.id) &&
                         (0, i.jsxs)(r.MenuGroup, {
-                            children: [a && ns, nc]
+                            children: [a && nI, nx]
                         }),
-                    (0, i.jsx)(r.MenuGroup, { children: nv }),
                     (0, i.jsx)(r.MenuGroup, { children: nT }),
+                    (0, i.jsx)(r.MenuGroup, { children: nS }),
                     (0, i.jsxs)(r.MenuGroup, {
-                        children: [nf, !B && nI]
+                        children: [nh, !W && ng]
                     })
                 ]
             });
         },
-        { object: k.qAy.CONTEXT_MENU }
+        { object: z.qAy.CONTEXT_MENU }
     ),
     [s.Z.CONTEXT_MENU, s.Z.DM_USER_MENU]
 );
