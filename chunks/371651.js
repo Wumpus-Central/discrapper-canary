@@ -122,7 +122,11 @@ function H(e, n) {
     if (!C) return u.gl.Disabled;
     if (N) return u.gl.Hook;
     let r = p.ZP.getGameForPID(e.pid);
-    if ((null != r && !(0, p.b6)(r).enabled) || !e.enabled) return u.gl.Disabled;
+    if (null != r) {
+        let n = (0, p.b6)(r);
+        if ((S.verbose('Overlay status for pid '.concat(e.pid, ': ').concat(n.enabled, ' from ').concat(n.source)), !n.enabled)) return u.gl.Disabled;
+    }
+    if (!e.enabled) return u.gl.Disabled;
     if (!(0, E.NW)('determineOverlayMethod', !1) || !(0, m.VS)()) return u.gl.Hook;
     switch (n) {
         case c.Jx.MINIMIZED:
@@ -301,9 +305,16 @@ function eo(e) {
     for (let n of e.removed) W(n.pid);
 }
 function es(e) {
-    if ((__OVERLAY__ && S.error('Running handleGameToggleOverlay While in Overlay Context!'), !C || !('pid' in e.game))) return;
+    if ((__OVERLAY__ && S.error('Running handleGameToggleOverlay While in Overlay Context!'), S.verbose('handleGameToggleOverlay', { action: e }), !C)) {
+        S.verbose('handleGameToggleOverlay: overlay not enabled');
+        return;
+    }
+    if (!('pid' in e.game)) {
+        S.verbose('handleGameToggleOverlay: game is not a PersistGame'), Q();
+        return;
+    }
     let n = e.game.pid;
-    e.newEnabledValue ? Y(n) : B(n);
+    return e.newEnabledValue ? (G(n) ? X(n) : Y(n)) : W(n), !0;
 }
 function el(e) {
     A = e.mode;
