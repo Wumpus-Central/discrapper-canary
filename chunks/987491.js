@@ -4,9 +4,9 @@ t.d(n, {
     }
 });
 var l = t(200651),
-    r = t(192379),
-    i = t(120356),
-    a = t.n(i),
+    i = t(192379),
+    r = t(120356),
+    a = t.n(r),
     s = t(913527),
     o = t.n(s),
     c = t(442837),
@@ -21,8 +21,8 @@ var l = t(200651),
     f = t(328977),
     v = t(412222),
     g = t(223312),
-    N = t(768762),
-    I = t(171368),
+    I = t(768762),
+    N = t(171368),
     _ = t(598077),
     T = t(430824),
     E = t(51144),
@@ -79,13 +79,13 @@ function k(e) {
                                 children: S.intl.string(S.t.EZ5QWF)
                             }),
                             n === C.Nw.TIMESTAMP_ASC
-                                ? (0, l.jsx)(N.Z, {
+                                ? (0, l.jsx)(I.Z, {
                                       className: p.sortIcon,
-                                      direction: N.Z.Directions.UP
+                                      direction: I.Z.Directions.UP
                                   })
-                                : (0, l.jsx)(N.Z, {
+                                : (0, l.jsx)(I.Z, {
                                       className: p.sortIcon,
-                                      direction: N.Z.Directions.DOWN
+                                      direction: I.Z.Directions.DOWN
                                   })
                         ]
                     })
@@ -102,19 +102,19 @@ function k(e) {
         })
     });
 }
-let L = r.memo(function (e) {
+let L = i.memo(function (e) {
         let { joinRequest: n, user: t } = e,
-            { joinRequestId: i, guildId: a } = n,
-            s = r.useCallback(
+            { joinRequestId: r, guildId: a } = n,
+            s = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
-                        (0, I.openUserProfileModal)({
+                        (0, N.openUserProfileModal)({
                             userId: t.id,
-                            joinRequestId: i
+                            joinRequestId: r
                         });
                 },
-                [t, i]
+                [t, r]
             );
         return (0, l.jsxs)('div', {
             className: A.memberNameContainer,
@@ -159,10 +159,10 @@ let L = r.memo(function (e) {
             ]
         });
     }),
-    w = r.memo(function (e) {
-        let { joinRequest: n, onSelect: i } = e,
+    w = i.memo(function (e) {
+        let { joinRequest: n, onSelect: r } = e,
             { guildId: s, createdAt: m, applicationStatus: x } = n,
-            h = r.useMemo(() => new _.Z(n.user), [n.user]),
+            h = i.useMemo(() => new _.Z(n.user), [n.user]),
             j = (0, f.L)({ guildId: s }),
             b = (0, c.e7)([T.Z], () => T.Z.getGuild(s)),
             v = x === C.wB.SUBMITTED,
@@ -187,7 +187,7 @@ let L = r.memo(function (e) {
         return null == h
             ? null
             : (0, l.jsxs)('tr', {
-                  onClick: i,
+                  onClick: r,
                   className: a()(A.roundedRow, A.memberRowContainer, { [A.selected]: (null == j ? void 0 : j.joinRequestId) === n.joinRequestId }),
                   children: [
                       (0, l.jsx)('td', {
@@ -272,7 +272,7 @@ let L = r.memo(function (e) {
     };
 function B(e) {
     let { guildId: n, currentTab: t } = e,
-        i = r.useRef(null),
+        r = i.useRef(null),
         s = (0, c.e7)([T.Z], () => T.Z.getGuild(n)),
         o = (0, v.C)({ guildId: n }),
         u = (0, c.e7)([j.Z], () => j.Z.isFetching()),
@@ -285,7 +285,7 @@ function B(e) {
             guildId: n,
             guildJoinRequests: m
         }),
-        f = r.useCallback(async () => {
+        f = i.useCallback(async () => {
             let e = o === C.Nw.TIMESTAMP_ASC ? C.Nw.TIMESTAMP_DESC : C.Nw.TIMESTAMP_ASC;
             h.Z.setSelectedSortOrder(n, e), await x(e, t);
         }, [o, n, x, t]);
@@ -295,7 +295,7 @@ function B(e) {
               className: M.mainTableContainer,
               children: (0, l.jsx)(d.AdvancedScroller, {
                   className: M.horizatonalScroller,
-                  ref: i,
+                  ref: r,
                   orientation: 'horizontal',
                   children: (0, l.jsxs)('table', {
                       className: a()(p.table),

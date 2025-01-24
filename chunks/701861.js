@@ -105,14 +105,14 @@ class x extends r.PureComponent {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillEnter(e);
     }
     render() {
-        let { user: e, isFocused: t, activities: n, applicationStream: r, status: l, isMobile: a, giftIntentType: s } = this.props,
-            { isActiveRow: c } = this.state;
+        let { user: e, isFocused: t, activities: n, applicationStream: r, status: l, isMobile: a, isGameRelationship: s, giftIntentType: c } = this.props,
+            { isActiveRow: h } = this.state;
         return (0, i.jsx)(I.Z, {
             ref: this.peopleListItemRef,
             isFocused: t,
-            isActive: c,
+            isActive: h,
             user: e,
-            onOtherHover: () => (c ? null : (0, d.Zy)()),
+            onOtherHover: () => (h ? null : (0, d.Zy)()),
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
                 (0, i.jsxs)('div', {
@@ -131,15 +131,15 @@ class x extends r.PureComponent {
                                 userIgnored: g.Z.isIgnored(e.id)
                             }),
                             hovered: t,
-                            showAccountIdentifier: !0
+                            showAccountIdentifier: !s
                         }),
                         (0, i.jsxs)('div', {
                             className: b.actions,
                             children: [
-                                null != s &&
+                                null != c &&
                                     (0, i.jsx)(u.Z, {
                                         recipientUser: e,
-                                        giftIntentType: s,
+                                        giftIntentType: c,
                                         analyticsPage: v.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t
                                     }),

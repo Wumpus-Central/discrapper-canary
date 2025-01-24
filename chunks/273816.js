@@ -20,7 +20,7 @@ function p(e) {
         p = (0, a.e7)([u.Z], () => u.Z.getSocket());
     (0, d.nU)();
     let [x, f] = (0, d.m8)(p),
-        { currentFPS: v, averageFrameTime: g, timeSinceLastDrop: C, onResetFrameData: Z, droppedFramesRef: _, renderedFrameCount: b, bufferFramecountRef: j, frameCheckerEffect: I } = (0, d.d6)(!0, x, !0),
+        { currentFPS: v, averageFrameTime: g, timeSinceLastDrop: C, onResetFrameData: Z, droppedFramesRef: b, renderedFrameCount: _, bufferFramecountRef: j, frameCheckerEffect: I } = (0, d.d6)(!0, x, !0),
         [E, k, N] = (0, d.ZF)(p),
         [w, y] = (0, d.Y5)(E, I),
         T = performance.now() - f.current < d.MC,
@@ -130,14 +130,14 @@ function p(e) {
                                           tag: 'span',
                                           variant: 'code',
                                           color: C < 2 ? 'text-danger' : C < 5 ? 'text-warning' : 'text-primary',
-                                          children: _.current
+                                          children: b.current
                                       }),
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
                                           color: 'text-secondary',
                                           className: m.secondaryInfoText,
-                                          children: ['(', ((_.current / b.current) * 100).toFixed(3), '%)']
+                                          children: ['(', ((b.current / _.current) * 100).toFixed(3), '%)']
                                       })
                                   ]
                               })
@@ -167,7 +167,7 @@ function p(e) {
                                           tag: 'span',
                                           variant: 'code',
                                           color: 'text-primary',
-                                          children: b.current.toFixed(0)
+                                          children: _.current.toFixed(0)
                                       })
                                   ]
                               })

@@ -23,8 +23,8 @@ var i = n(200651),
     g = n(74299),
     C = n(199902),
     Z = n(592125),
-    _ = n(430824),
-    b = n(131951),
+    b = n(430824),
+    _ = n(131951),
     j = n(944486),
     I = n(574254),
     E = n(556296),
@@ -50,12 +50,12 @@ var i = n(200651),
     U = n(981631),
     Y = n(206583),
     H = n(388032),
-    X = n(167566);
-let K = !T.isPlatformEmbedded && !1,
-    Q = K
+    K = n(167566);
+let X = !T.isPlatformEmbedded && !1,
+    Q = X
         ? (0, i.jsx)(f.Z, {
               src: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdpcnRrYXdrNzVuNjZ3NXpmeTJvNGl4Z2N4OXBsamx5aXphdHhxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/OPg2B0FPBL94H12uM0/giphy480p.mp4',
-              className: X.videoDev,
+              className: K.videoDev,
               autoPlay: !0,
               loop: !0,
               muted: !0
@@ -79,9 +79,9 @@ function $(e) {
 let ee = r.memo(function (e) {
         let { keybind: t, onClick: n, locked: r } = e;
         return (0, i.jsx)(c.Clickable, {
-            className: l()(X.overlayBackground, {
-                [X.overlayActive]: !r,
-                [X.overlayLocked]: r
+            className: l()(K.overlayBackground, {
+                [K.overlayActive]: !r,
+                [K.overlayLocked]: r
             }),
             onMouseDown: (e) => {
                 let { currentTarget: t, target: i, button: r } = e;
@@ -91,7 +91,7 @@ let ee = r.memo(function (e) {
             children: r
                 ? null
                 : (0, i.jsx)(R.Z, {
-                      className: X.closeContainer,
+                      className: K.closeContainer,
                       children: (0, i.jsx)(V.Z, {
                           keybind: t,
                           onClick: n,
@@ -104,7 +104,7 @@ let ee = r.memo(function (e) {
         let { locked: t, focused: n } = e;
         return t && n
             ? (0, i.jsx)(R.Z, {
-                  className: X.closeContainer,
+                  className: K.closeContainer,
                   children: (0, i.jsx)(V.Z, {
                       onClick: () => u.Z.setInputLocked(!1, (0, L.QF)()),
                       IconComponent: c.LockUnlockedIcon
@@ -177,10 +177,10 @@ function el(e) {
                 );
         })(
             () => {
-                u.Z.overlayReady((0, L.QF)()), d.addEventListener('keydown', eo), d.addEventListener('keyup', eo), K && (d.document.hasFocus() && u.Z.setFocusedPID(L.Js), d.addEventListener('focus', ei), d.addEventListener('blur', er));
+                u.Z.overlayReady((0, L.QF)()), d.addEventListener('keydown', eo), d.addEventListener('keyup', eo), X && (d.document.hasFocus() && u.Z.setFocusedPID(L.Js), d.addEventListener('focus', ei), d.addEventListener('blur', er));
             },
             () => {
-                d.removeEventListener('keydown', eo), d.removeEventListener('keyup', eo), K && (d.removeEventListener('focus', ei), d.removeEventListener('blur', er));
+                d.removeEventListener('keydown', eo), d.removeEventListener('keyup', eo), X && (d.removeEventListener('focus', ei), d.removeEventListener('blur', er));
             }
         ),
         !(function () {
@@ -188,10 +188,10 @@ function el(e) {
                 t = (0, W.pL)(),
                 n = j.Z.getVoiceChannelId(),
                 i = Z.Z.getChannel(n),
-                o = null != i ? _.Z.getGuild(i.guild_id) : null,
+                o = null != i ? b.Z.getGuild(i.guild_id) : null,
                 l = null != C.Z.getCurrentUserActiveStream(),
                 s = null != n,
-                c = (0, g.Z)(b.Z) && !l && null != t,
+                c = (0, g.Z)(_.Z) && !l && null != t,
                 d = s && null != o && null != n,
                 m = (0, v.Ns)(null == t ? void 0 : t.id),
                 p = (0, a.e7)([x.Z], () => null != x.Z.getLastFeedFetchDate(Y.YN.GAME_PROFILE_FEED));
@@ -256,7 +256,7 @@ function el(e) {
                               theme: U.BRd.DARK,
                               children: (e) =>
                                   (0, i.jsxs)('div', {
-                                      className: l()(X.overlay, e),
+                                      className: l()(K.overlay, e),
                                       children: [
                                           !o && Q,
                                           (0, i.jsx)(ee, {
@@ -267,22 +267,22 @@ function el(e) {
                                           T
                                               ? (0, i.jsx)(M.Z, {
                                                     className: l()({
-                                                        [X.layoutLocked]: f,
-                                                        [X.layoutUnlocked]: !f
+                                                        [K.layoutLocked]: f,
+                                                        [K.layoutUnlocked]: !f
                                                     })
                                                 })
                                               : f
                                                 ? null
                                                 : (0, i.jsx)('div', {
-                                                      className: X.invalidContainer,
+                                                      className: K.invalidContainer,
                                                       children: (0, i.jsx)('div', {
-                                                          className: X.inactiveContainer,
+                                                          className: K.inactiveContainer,
                                                           children: H.intl.format(H.t.ketnW1, L.FW)
                                                       })
                                                   }),
                                           (0, i.jsx)(z.Z, {}),
                                           !o &&
-                                              K &&
+                                              X &&
                                               (0, i.jsx)(et, {
                                                   locked: f,
                                                   focused: I

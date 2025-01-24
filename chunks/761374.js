@@ -22,13 +22,13 @@ var i = n(200651),
     g = n(804570),
     C = n(350663),
     Z = n(610394),
-    _ = n(340101),
-    b = n(388032),
+    b = n(340101),
+    _ = n(388032),
     j = n(666540);
 let I = [];
 function E(e, t, n, i) {
     let r = (i - 1) * C.z;
-    return e === _.C5.HORIZONTAL ? Math.min(Math.max((t - r) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - r) / i) * 16) / 9, 256));
+    return e === b.C5.HORIZONTAL ? Math.min(Math.max((t - r) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - r) / i) * 16) / 9, 256));
 }
 function k(e) {
     var t;
@@ -45,7 +45,7 @@ function k(e) {
             () => {
                 var e;
                 let t = f.Z.getWidget(n);
-                return !!(0, _.ZL)(t) && (null === (e = t.meta.showAllStreams) || void 0 === e || e);
+                return !!(0, b.ZL)(t) && (null === (e = t.meta.showAllStreams) || void 0 === e || e);
             },
             [n]
         ),
@@ -75,21 +75,21 @@ function k(e) {
         ),
         U = B.length,
         Y = null == z || 0 === U,
-        { tileWidth: H, layout: X } = (function (e, t, n, i, o) {
+        { tileWidth: H, layout: K } = (function (e, t, n, i, o) {
             let l = (function (e, t, n, i) {
-                    let r = E(_.C5.HORIZONTAL, e, t, n),
-                        o = E(_.C5.VERTICAL, e, t, n);
+                    let r = E(b.C5.HORIZONTAL, e, t, n),
+                        o = E(b.C5.VERTICAL, e, t, n);
                     switch (i) {
-                        case _.C5.VERTICAL:
+                        case b.C5.VERTICAL:
                             return o;
-                        case _.C5.HORIZONTAL:
+                        case b.C5.HORIZONTAL:
                             return r;
                     }
                     let l = ((9 * o) / 16 + C.z) * n - C.z;
                     return e > (16 * t) / 9 ? r : l <= t ? o : (9 * r) / 16 <= t ? r : o;
                 })(n, i, t, o),
-                a = E(_.C5.VERTICAL, n, i, t),
-                s = null != o ? o : l === a ? _.C5.VERTICAL : _.C5.HORIZONTAL,
+                a = E(b.C5.VERTICAL, n, i, t),
+                s = null != o ? o : l === a ? b.C5.VERTICAL : b.C5.HORIZONTAL,
                 [c, d] = r.useState(l);
             return (
                 r.useEffect(() => {
@@ -100,13 +100,13 @@ function k(e) {
                     tileWidth: c
                 }
             );
-        })(!1, U, null != M ? M : O - A, null != R ? R : P - A, S ? _.C5.HORIZONTAL : _.C5.VERTICAL),
-        K = {
+        })(!1, U, null != M ? M : O - A, null != R ? R : P - A, S ? b.C5.HORIZONTAL : b.C5.VERTICAL),
+        X = {
             id: n,
             width: O,
             height: P,
             sizeOffset: A,
-            layout: X,
+            layout: K,
             padding: w,
             participants: B.length
         };
@@ -128,7 +128,7 @@ function k(e) {
                         });
                     return;
                 }
-                if (o === _.C5.HORIZONTAL) {
+                if (o === b.C5.HORIZONTAL) {
                     let t = (16 / 9) * (i - r);
                     (0, a.nv)({
                         widgetId: e,
@@ -153,7 +153,7 @@ function k(e) {
             r.useEffect(() => {
                 if (l.current.participants <= 1) return;
                 let { id: e, width: t, height: n, sizeOffset: r, padding: o, participants: s } = l.current;
-                if (i === _.C5.HORIZONTAL) {
+                if (i === b.C5.HORIZONTAL) {
                     let n = t - r;
                     (0, a.nv)({
                         widgetId: e,
@@ -191,8 +191,8 @@ function k(e) {
     })({
         id: n,
         streamParticipants: B,
-        layout: X,
-        widgetLayoutSpecs: K
+        layout: K,
+        widgetLayoutSpecs: X
     }),
     r.useEffect(() => {
         s.Z.setGpuBoostRequested(Z.zS.OVERLAY_VIDEO_STREAM_RENDERING, !Y);
@@ -206,7 +206,7 @@ function k(e) {
           ? N
               ? null
               : (0, i.jsx)(g.E, {
-                    emptyText: b.intl.string(b.t['T6+rX1']),
+                    emptyText: _.intl.string(_.t['T6+rX1']),
                     icon: l.ScreenArrowIcon,
                     absolute: !0
                 })
@@ -218,7 +218,7 @@ function k(e) {
                     widgetId: n,
                     tileWidth: H,
                     locked: N,
-                    layout: X,
+                    layout: K,
                     streamParticipants: B,
                     participantsVersion: G,
                     pinned: L

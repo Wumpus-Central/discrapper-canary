@@ -37,7 +37,7 @@ function Z(e) {
         children: e
     });
 }
-let _ = (e) => r.useState(() => new h.AS(e))[0];
+let b = (e) => r.useState(() => new h.AS(e))[0];
 t.Z = r.memo(function (e) {
     let { locked: t } = e,
         n = (0, o.e7)(
@@ -61,7 +61,7 @@ t.Z = r.memo(function (e) {
             [t],
             c.E6
         ),
-        u = _(t);
+        u = b(t);
     return (r.useLayoutEffect(() => u.updateState(n, t)), r.useLayoutEffect(() => (u.initialize((0, d.i)()), () => u.cleanUp()), [u]), 0 !== n.length || t)
         ? (0, i.jsx)(h.S4.Provider, {
               value: u,

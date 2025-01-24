@@ -27,8 +27,8 @@ var i,
     E = n(168524),
     C = n(565138),
     y = n(833858),
-    b = n(223135),
-    Z = n(707409),
+    Z = n(223135),
+    b = n(707409),
     T = n(769654),
     N = n(424678),
     A = n(750154),
@@ -167,7 +167,7 @@ class q extends (l = s.PureComponent) {
         if (e.type === F.IIU.HANG_STATUS)
             return (0, r.jsx)('div', {
                 className: W.assets,
-                children: (0, r.jsx)(b.Z, {
+                children: (0, r.jsx)(Z.Z, {
                     hangStatusActivity: e,
                     className: c()(W.assetsHangStatus, this.getTypeClass('assetsSmallImage', 'WithoutLargeImage'))
                 })
@@ -422,9 +422,9 @@ class q extends (l = s.PureComponent) {
             ? null
             : (0, M.Z)(e)
               ? (0, r.jsx)(Y, { timestamps: n })
-              : (0, r.jsx)(Z.ZP, {
+              : (0, r.jsx)(b.ZP, {
                     start: n.start,
-                    location: Z.ZP.Locations.USER_ACTIVITY,
+                    location: b.ZP.Locations.USER_ACTIVITY,
                     className: W.playTime,
                     isApplicationStreaming: null != t
                 });

@@ -27,8 +27,8 @@ function x(e) {
         [x, f] = r.useState(0),
         [v, g] = r.useState(0),
         C = r.useRef(0),
-        [Z, _] = r.useState(0),
-        { timeToLiveMs: b, reappearTimeMs: j } = u.ZP.useState(
+        [Z, b] = r.useState(0),
+        { timeToLiveMs: _, reappearTimeMs: j } = u.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
                 reappearTimeMs: e.reappearTimeMs
@@ -36,7 +36,7 @@ function x(e) {
             s()
         ),
         I = {
-            timeToLiveMs: b,
+            timeToLiveMs: _,
             reappearTimeMs: j
         },
         E = r.useRef(I);
@@ -61,10 +61,10 @@ function x(e) {
             []
         );
     let k = () => {
-            a(Date.now()), _((e) => e + 1);
+            a(Date.now()), b((e) => e + 1);
         },
         N = o > 0 && x - o < 1000,
-        w = (0, d.useTransition)(v > 0 && v < x && x - v < b, {
+        w = (0, d.useTransition)(v > 0 && v < x && x - v < _, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },

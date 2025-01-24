@@ -165,7 +165,7 @@ function V(e) {
     if (null != r) (null === (n = p.Z.getAccount(r, b.ABu.SPOTIFY)) || void 0 === n ? void 0 : n.showActivity) && L(r, i);
 }
 function j() {
-    let { enabled: e } = d.Z.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !1 });
+    let { enabled: e } = d.Z.getCurrentConfig({ location: 'ContentInventoryManager' }, { autoTrackExposure: !0 });
     e &&
         k({
             feedId: y.YN.GAME_PROFILE_FEED,

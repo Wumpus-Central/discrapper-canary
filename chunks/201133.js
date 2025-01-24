@@ -1,66 +1,66 @@
-t.d(n, {
+n.d(t, {
     B: function () {
-        return h;
+        return v;
     },
     a: function () {
-        return m;
+        return h;
     }
 }),
-    t(411104);
-var i = t(570140),
-    l = t(493683),
-    r = t(957730),
-    o = t(222677),
-    a = t(995774),
-    u = t(314897),
-    s = t(592125),
-    d = t(703558),
-    c = t(62817),
-    p = t(960048);
-let f = (e) => {
-        let n = c.Z.getFiles(e)[0];
-        return null == c.Z.getMessageForFile(n.id)
-            ? (p.Z.addBreadcrumb({ message: 'No message found for upload' }), Promise.reject())
-            : new Promise((e, t) => {
-                  let l = (r) => {
-                      r.file.id === n.id && (i.Z.unsubscribe('UPLOAD_COMPLETE', l), i.Z.unsubscribe('UPLOAD_FAIL', l), 'UPLOAD_COMPLETE' === r.type ? e(r.messageRecord) : t(Error('Upload failed')));
+    n(411104);
+var r = n(570140),
+    i = n(493683),
+    l = n(957730),
+    o = n(222677),
+    a = n(995774),
+    u = n(314897),
+    s = n(592125),
+    c = n(703558),
+    d = n(62817),
+    f = n(960048);
+let p = (e) => {
+        let t = d.Z.getFiles(e)[0];
+        return null == d.Z.getMessageForFile(t.id)
+            ? (f.Z.addBreadcrumb({ message: 'No message found for upload' }), Promise.reject())
+            : new Promise((e, n) => {
+                  let i = (l) => {
+                      l.file.id === t.id && (r.Z.unsubscribe('UPLOAD_COMPLETE', i), r.Z.unsubscribe('UPLOAD_FAIL', i), 'UPLOAD_COMPLETE' === l.type ? e(l.messageRecord) : n(Error('Upload failed')));
                   };
-                  i.Z.subscribe('UPLOAD_COMPLETE', l), i.Z.subscribe('UPLOAD_FAIL', l);
+                  r.Z.subscribe('UPLOAD_COMPLETE', i), r.Z.subscribe('UPLOAD_FAIL', i);
               });
     },
-    v = async function (e, n) {
-        var i;
-        let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    m = async function (e, t) {
+        var r;
+        let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             o = arguments.length > 3 ? arguments[3] : void 0,
             a = arguments.length > 4 ? arguments[4] : void 0,
-            c = s.Z.getChannel(n);
-        if (((i = u.default.getToken()), r.ZP.parse(c, ''), l));
+            d = s.Z.getChannel(t);
+        if (((r = u.default.getToken()), l.ZP.parse(d, ''), i));
         else {
-            if (null == s.Z.getChannel(n)) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(n));
+            if (null == s.Z.getChannel(t)) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(t));
             {
-                let i = t(966390).Z;
+                let r = n(966390).Z;
                 (e.description = o),
-                    await i.uploadFiles({
-                        channelId: n,
+                    await r.uploadFiles({
+                        channelId: t,
                         uploads: [e],
-                        draftType: d.d.ChannelMessage,
+                        draftType: c.d.ChannelMessage,
                         parsedMessage: a
                     });
             }
         }
     },
-    m = async (e) => {
-        let { file: n, reaction: t, user: i, altText: r, requireConfirmation: u = !1 } = e,
-            s = await l.Z.openPrivateChannel(i.id, !1, !1);
-        v(n, s, u, r);
-        let d = await f(s);
-        if (null != d) {
-            let e = (0, a.g1)(t);
-            await (0, o.rU)(s, d.id, e);
+    h = async (e) => {
+        let { file: t, reaction: n, user: r, altText: l, requireConfirmation: u = !1 } = e,
+            s = await i.Z.openPrivateChannel(r.id, !1, !1);
+        m(t, s, u, l);
+        let c = await p(s);
+        if (null != c) {
+            let e = (0, a.g1)(n);
+            await (0, o.rU)(s, c.id, e);
         }
     },
-    h = (e) => {
-        let { file: n, reply: t, channel: i, altText: l, requireConfirmation: o = !1 } = e,
-            a = r.ZP.parse(i, t);
-        return v(n, i.id, o, l, a);
+    v = (e) => {
+        let { file: t, reply: n, channel: r, altText: i, requireConfirmation: o = !1 } = e,
+            a = l.ZP.parse(r, n);
+        return m(t, r.id, o, i, a);
     };

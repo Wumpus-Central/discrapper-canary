@@ -334,7 +334,7 @@ class W extends r.PureComponent {
                     { resultsState: o } = e;
                 if (l.type !== o.mode.type) this.setSelectedIndex(-1);
                 else if (t.selectedIndex >= 0 && (t.selectedIndex === n || o.autocompletes.length !== a.length)) {
-                    let e = L.zV(o.autocompletes, o.mode.type)[t.selectedIndex - 1],
+                    let e = L.zV(o.autocompletes, o.mode.type)[t.selectedIndex],
                         n = L.zV(a, l.type).indexOf(e);
                     -1 !== n ? this.setSelectedIndex(n) : t.selectedIndex >= r && this.setSelectedIndex(r - 1);
                 }

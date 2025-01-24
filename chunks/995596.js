@@ -5,9 +5,9 @@ t.d(n, {
 }),
     t(47120);
 var l = t(200651),
-    r = t(192379),
-    i = t(120356),
-    a = t.n(i),
+    i = t(192379),
+    r = t(120356),
+    a = t.n(r),
     s = t(442837),
     o = t(21260),
     c = t(780384),
@@ -35,26 +35,26 @@ let g = (e) => [
             label: f.intl.string(f.t.bSZklZ)
         }
     ],
-    N = (e) => {
-        let { tabs: n, selectedTab: t, onTabSelect: r, onClose: i } = e;
+    I = (e) => {
+        let { tabs: n, selectedTab: t, onTabSelect: i, onClose: r } = e;
         return (0, l.jsx)(d.Menu, {
             navId: 'members-tabs-overflow-menu',
             'aria-label': f.intl.string(f.t.riPnr6),
             hideScroller: !0,
-            onClose: i,
-            onSelect: i,
+            onClose: r,
+            onSelect: r,
             children: (0, l.jsx)(
                 d.MenuGroup,
                 {
                     children: n.map((e) => {
-                        let { id: n, label: i } = e;
+                        let { id: n, label: r } = e;
                         return (0, l.jsx)(
                             d.MenuItem,
                             {
                                 id: n,
-                                label: i,
+                                label: r,
                                 icon: n === t ? d.CircleCheckIcon : void 0,
-                                action: () => r(n)
+                                action: () => i(n)
                             },
                             n
                         );
@@ -64,27 +64,27 @@ let g = (e) => [
             )
         });
     };
-function I(e) {
-    let { onTabSelect: n, tabs: t, selectedTab: i } = e,
+function N(e) {
+    let { onTabSelect: n, tabs: t, selectedTab: r } = e,
         s = (0, u.ZP)(),
         o = (0, c.wj)(s),
-        m = r.useMemo(
+        m = i.useMemo(
             () =>
                 null !=
                 t.find((e) => {
                     let { id: n } = e;
-                    return n === i;
+                    return n === r;
                 }),
-            [i, t]
+            [r, t]
         ),
         x = m ? 'header-primary' : o ? 'text-muted' : 'header-primary',
         h = m ? d.tokens.colors.HEADER_PRIMARY : o ? d.tokens.colors.TEXT_MUTED : d.tokens.colors.HEADER_PRIMARY;
     return (0, l.jsx)(d.Popout, {
         renderPopout: (e) => {
-            let { closePopout: r } = e;
-            return (0, l.jsx)(N, {
-                selectedTab: i,
-                onClose: r,
+            let { closePopout: i } = e;
+            return (0, l.jsx)(I, {
+                selectedTab: r,
+                onClose: i,
                 tabs: t,
                 onTabSelect: n
             });
@@ -120,10 +120,10 @@ function I(e) {
     });
 }
 function _(e) {
-    let { guildId: n, currentTab: t, onTabSelect: i } = e,
-        [a, c] = r.useState(0),
-        u = r.useRef(null),
-        N = r.useRef(a),
+    let { guildId: n, currentTab: t, onTabSelect: r } = e,
+        [a, c] = i.useState(0),
+        u = i.useRef(null),
+        I = i.useRef(a),
         _ = (0, x.A)({ guildId: n }),
         T = g(null != _ ? _ : 0),
         {
@@ -138,20 +138,20 @@ function _(e) {
         }),
         M = (0, s.e7)([j.ZP], () => null != j.ZP.getGuildSidebarState(n), [n]),
         R = (0, m.L)({ guildId: n }),
-        A = r.useMemo(() => (t === b.e.ALL_MEMBERS ? M : null != R && null != R.user), [t, M, R]),
-        Z = r.useMemo(() => T.slice(0, E + 1), [E, T]),
-        k = r.useMemo(() => T.slice(E + 1), [E, T]),
-        L = r.useCallback(() => {
+        A = i.useMemo(() => (t === b.e.ALL_MEMBERS ? M : null != R && null != R.user), [t, M, R]),
+        Z = i.useMemo(() => T.slice(0, E + 1), [E, T]),
+        k = i.useMemo(() => T.slice(E + 1), [E, T]),
+        L = i.useCallback(() => {
             var e;
             let n = null === (e = u.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            null != n && N.current !== n.width && (c(n.width), (N.current = n.width));
+            null != n && I.current !== n.width && (c(n.width), (I.current = n.width));
         }, []);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             let e = (0, C.pP)(L);
             return (0, C.YP)(e, document.body), () => (0, C.UC)(e, document.body);
         }, [L]),
-        r.useEffect(() => {
+        i.useEffect(() => {
             L();
         }, [L, A]),
         (0, l.jsxs)(l.Fragment, {
@@ -181,9 +181,9 @@ function _(e) {
                                 ),
                                 (0, l.jsx)('div', {
                                     ref: p,
-                                    children: (0, l.jsx)(I, {
+                                    children: (0, l.jsx)(N, {
                                         tabs: k,
-                                        onTabSelect: i,
+                                        onTabSelect: r,
                                         selectedTab: t
                                     })
                                 })
@@ -193,7 +193,7 @@ function _(e) {
                             'aria-label': f.intl.string(f.t.tcvVXF),
                             selectedItem: t,
                             type: 'top-pill',
-                            onItemSelect: i,
+                            onItemSelect: r,
                             children: [
                                 Z.map((e) =>
                                     (0, l.jsx)(
@@ -207,9 +207,9 @@ function _(e) {
                                     )
                                 ),
                                 0 !== k.length
-                                    ? (0, l.jsx)(I, {
+                                    ? (0, l.jsx)(N, {
                                           tabs: k,
-                                          onTabSelect: i,
+                                          onTabSelect: r,
                                           selectedTab: t
                                       })
                                     : null

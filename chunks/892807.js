@@ -24,8 +24,8 @@ var i = n(200651),
     g = n(699516),
     C = n(594174),
     Z = n(979651),
-    _ = n(823379),
-    b = n(981631),
+    b = n(823379),
+    _ = n(981631),
     j = n(388032),
     I = n(693215);
 function E(e) {
@@ -74,7 +74,7 @@ function N(e) {
             () =>
                 Object.values(Z.Z.getVoiceStatesForChannel(t.id))
                     .map((e) => C.default.getUser(e.userId))
-                    .filter(_.lm)
+                    .filter(b.lm)
                     .sort((e, t) => {
                         var n, i, r, o;
                         return (null !== (r = null === (n = p.Z.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== r ? r : 0) - (null !== (o = null === (i = p.Z.getUserAffinity(e.id)) || void 0 === i ? void 0 : i.affinity) && void 0 !== o ? o : 0);
@@ -117,7 +117,7 @@ function w(e) {
                 let e = new Set(
                         m.Z.getChannelHistory().reduce((e, t) => {
                             let n = x.Z.getChannel(t);
-                            return null != n && v.Z.can(b.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
+                            return null != n && v.Z.can(_.Plq.CONNECT, n) && e.length < 5 && e.push(t), e;
                         }, [])
                     ),
                     t = d
@@ -126,9 +126,9 @@ function w(e) {
                             let i = null == n ? void 0 : n.channelId;
                             if (null == i) return t;
                             let r = x.Z.getChannel(i);
-                            return null != r && v.Z.can(b.Plq.CONNECT, r) && !e.has(i) && t.size < 3 && t.add(i), t;
+                            return null != r && v.Z.can(_.Plq.CONNECT, r) && !e.has(i) && t.size < 3 && t.add(i), t;
                         }, new Set());
-                return [...Array.from(e), ...t].map((e) => x.Z.getChannel(e)).filter(_.lm);
+                return [...Array.from(e), ...t].map((e) => x.Z.getChannel(e)).filter(b.lm);
             },
             [d]
         ),
@@ -139,7 +139,7 @@ function w(e) {
             [o, n]
         );
     return (0, i.jsx)(c.Z, {
-        section: b.jXE.CONTEXT_MENU,
+        section: _.jXE.CONTEXT_MENU,
         children: (0, i.jsx)(s.Menu, {
             onSelect: n,
             navId: 'manage-streams',

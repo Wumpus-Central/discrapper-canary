@@ -20,8 +20,8 @@ var r = n(200651),
     x = n(160404),
     g = n(703656),
     f = n(430824),
-    b = n(768581),
-    _ = n(302221),
+    _ = n(768581),
+    b = n(302221),
     v = n(956664),
     C = n(549817),
     N = n(45966),
@@ -29,8 +29,8 @@ var r = n(200651),
     I = n(548473),
     E = n(15320),
     B = n(973051),
-    Z = n(981631),
-    T = n(388032),
+    T = n(981631),
+    Z = n(388032),
     k = n(650413);
 async function D(e) {
     let t = await new Promise((t, n) => {
@@ -48,7 +48,7 @@ async function D(e) {
         ? void 0
         : t.map((e) => {
               let [t, n, r] = e;
-              return (0, _.vq)(t, n, r);
+              return (0, b.vq)(t, n, r);
           });
 }
 function P(e) {
@@ -71,7 +71,7 @@ function P(e) {
             () =>
                 null == S
                     ? null
-                    : b.ZP.getGuildSplashURL({
+                    : _.ZP.getGuildSplashURL({
                           id: S.id,
                           splash: S.splash
                       }),
@@ -90,12 +90,12 @@ function P(e) {
             },
             [t, F]
         ),
-        y = (0, a.e7)([x.Z], () => x.Z.isFullServerPreview(t)),
-        H = (0, a.e7)([j.ZP], () => j.ZP.getOnboardingStatus(t)),
+        H = (0, a.e7)([x.Z], () => x.Z.isFullServerPreview(t)),
+        y = (0, a.e7)([j.ZP], () => j.ZP.getOnboardingStatus(t)),
         G = null != w && w.length > 0,
         z = l.useCallback(() => {
-            (0, j.kp)(H) && R && G ? V(0) : M();
-        }, [H, R, G, V, M]);
+            (0, j.kp)(y) && R && G ? V(0) : M();
+        }, [y, R, G, V, M]);
     l.useEffect(() => {
         if (!j.ZP.shouldShowOnboarding(t)) return c.Z.escapeToDefaultChannel(t);
         (0, h.E)(t);
@@ -121,7 +121,7 @@ function P(e) {
         (l.useEffect(() => {
             if (!Y || X) {
                 let e = setTimeout(() => {
-                    (0, g.uL)(Z.Z5c.CHANNEL(t));
+                    (0, g.uL)(T.Z5c.CHANNEL(t));
                 }, 1000);
                 return () => clearTimeout(e);
             }
@@ -136,7 +136,7 @@ function P(e) {
                     guild: S,
                     onboardingStatus: j.uX.READY,
                     onStart: z,
-                    disableTracking: y
+                    disableTracking: H
                 });
             case 'rules':
                 return (0, r.jsx)(B.Z, {
@@ -145,7 +145,7 @@ function P(e) {
                     guild: S,
                     prompts: w,
                     completeOnboarding: M,
-                    disableTracking: y
+                    disableTracking: H
                 });
             case null:
                 return null;
@@ -157,7 +157,7 @@ function P(e) {
                     selectOption: L,
                     completeOnboarding: M,
                     setCurrentStep: V,
-                    disableTracking: y
+                    disableTracking: H
                 });
         }
     };
@@ -180,7 +180,7 @@ function P(e) {
             null != P &&
                 (0, r.jsx)('div', {
                     className: k.gradient,
-                    style: { background: 'linear-gradient(180deg, '.concat((0, _.aD)(P, 0.16), ' 0%, ').concat((0, _.aD)(P, 1), ' 100%)') }
+                    style: { background: 'linear-gradient(180deg, '.concat((0, b.aD)(P, 0.16), ' 0%, ').concat((0, b.aD)(P, 1), ' 100%)') }
                 }),
             (0, r.jsx)('div', { className: k.gradient }),
             W((e, t, n) => {
@@ -200,7 +200,7 @@ function P(e) {
                     children: (0, r.jsx)(d.Heading, {
                         variant: 'heading-sm/normal',
                         color: 'header-secondary',
-                        children: T.intl.format(T.t.kI6UoK, { privacyLink: Z.EYA.PRIVACY })
+                        children: Z.intl.format(Z.t.kI6UoK, { privacyLink: T.EYA.PRIVACY })
                     })
                 })
         ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return Z;
     }
 });
 var r = n(200651),
@@ -18,8 +18,8 @@ var r = n(200651),
     x = n(45966),
     g = n(637853),
     f = n(968644),
-    b = n(104265),
-    _ = n(588632),
+    _ = n(104265),
+    b = n(588632),
     v = n(290511),
     C = n(981631),
     N = n(388032),
@@ -38,18 +38,18 @@ function E(e) {
     return null != e && h.Z.getCurrentConfig({ location: 'ba216b_1' }, { autoTrackExposure: !0 }).includeRules;
 }
 function B(e) {
-    let { headerId: t, guild: n, step: l, lastPrompt: i, questionCount: a, currentPrompt: d, selectOption: m, gotoPrevPrompt: p, gotoNextPrompt: h, completeOnboarding: b } = e,
+    let { headerId: t, guild: n, step: l, lastPrompt: i, questionCount: a, currentPrompt: d, selectOption: m, gotoPrevPrompt: p, gotoNextPrompt: h, completeOnboarding: _ } = e,
         v = (0, o.Wu)([x.Z], () => x.Z.getOnboardingResponsesForPrompt(n.id, d.id)),
         C = 0 === v.length && (null == d ? void 0 : d.required),
         E = null == d ? void 0 : d.options.filter((e) => v.includes(e.id)),
         B = (0, g.L6)(E),
-        Z = (0, g.dX)(E),
-        T = 0 === v.length,
+        T = (0, g.dX)(E),
+        Z = 0 === v.length,
         { helpText: k, helpTextAdditional: D } = (0, f.Z)({
             guild: n,
             prompt: d,
             selectedRoleIds: B,
-            selectedChannelIds: Z,
+            selectedChannelIds: T,
             itemHook: I
         }),
         P = (0, c.Z)(n.id, 1000),
@@ -102,7 +102,7 @@ function B(e) {
                             id: t,
                             children: d.title
                         }),
-                        (0, r.jsx)(_.Z, {
+                        (0, r.jsx)(b.Z, {
                             options: O,
                             value: w,
                             onChange: (e) => {
@@ -164,12 +164,12 @@ function B(e) {
                                             innerClassName: j.buttonInner,
                                             onMouseEnter: t,
                                             onMouseLeave: n,
-                                            onClick: () => (i ? b() : h(v.length)),
+                                            onClick: () => (i ? _() : h(v.length)),
                                             disabled: C,
                                             size: s.Button.Sizes.MEDIUM,
                                             look: s.Button.Looks.FILLED,
                                             grow: !1,
-                                            color: T ? s.Button.Colors.PRIMARY : s.Button.Colors.BRAND,
+                                            color: Z ? s.Button.Colors.PRIMARY : s.Button.Colors.BRAND,
                                             children: i
                                                 ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
@@ -184,7 +184,7 @@ function B(e) {
                                                   })
                                                 : (0, r.jsxs)(r.Fragment, {
                                                       children: [
-                                                          T ? N.intl.string(N.t['5WxrcX']) : N.intl.string(N.t.PDTjLC),
+                                                          Z ? N.intl.string(N.t['5WxrcX']) : N.intl.string(N.t.PDTjLC),
                                                           (0, r.jsx)(u.Z, {
                                                               className: j.arrow,
                                                               direction: u.Z.Directions.RIGHT
@@ -202,15 +202,15 @@ function B(e) {
         })
     });
 }
-function Z(e) {
+function T(e) {
     let { headerId: t, guild: n, step: l, lastPrompt: i, questionCount: a, currentPrompt: d, selectOption: c, gotoPrevPrompt: m, gotoNextPrompt: p, completeOnboarding: h } = e,
-        _ = (0, o.Wu)([x.Z], () => x.Z.getOnboardingResponsesForPrompt(n.id, d.id)),
-        v = 0 === _.length && (null == d ? void 0 : d.required),
-        C = null == d ? void 0 : d.options.filter((e) => _.includes(e.id)),
+        b = (0, o.Wu)([x.Z], () => x.Z.getOnboardingResponsesForPrompt(n.id, d.id)),
+        v = 0 === b.length && (null == d ? void 0 : d.required),
+        C = null == d ? void 0 : d.options.filter((e) => b.includes(e.id)),
         E = (0, g.L6)(C),
         B = (0, g.dX)(C),
-        Z = 0 === _.length,
-        { helpText: T, helpTextAdditional: k } = (0, f.Z)({
+        T = 0 === b.length,
+        { helpText: Z, helpTextAdditional: k } = (0, f.Z)({
             guild: n,
             prompt: d,
             selectedRoleIds: E,
@@ -265,12 +265,12 @@ function Z(e) {
                             className: j.promptOptions,
                             children: d.options.map((e) =>
                                 (0, r.jsx)(
-                                    b.Z,
+                                    _.Z,
                                     {
                                         guildId: n.id,
                                         option: e,
                                         onSelect: (t) => c(d.id, e.id, null != t && t),
-                                        selected: _.includes(e.id)
+                                        selected: b.includes(e.id)
                                     },
                                     e.id
                                 )
@@ -288,7 +288,7 @@ function Z(e) {
                                 (0, r.jsxs)(s.Button, {
                                     className: j.button,
                                     innerClassName: j.buttonInner,
-                                    onClick: () => m(_.length),
+                                    onClick: () => m(b.length),
                                     size: s.Button.Sizes.MEDIUM,
                                     look: s.Button.Looks.OUTLINED,
                                     grow: !1,
@@ -309,7 +309,7 @@ function Z(e) {
                                     className: j.helpText,
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: [T, ' ', k]
+                                    children: [Z, ' ', k]
                                 }),
                                 (0, r.jsx)(s.Tooltip, {
                                     text: v ? N.intl.string(N.t.dA1dSU) : null,
@@ -320,12 +320,12 @@ function Z(e) {
                                             innerClassName: j.buttonInner,
                                             onMouseEnter: t,
                                             onMouseLeave: n,
-                                            onClick: () => (i ? h() : p(_.length)),
+                                            onClick: () => (i ? h() : p(b.length)),
                                             disabled: v,
                                             size: s.Button.Sizes.MEDIUM,
                                             look: s.Button.Looks.FILLED,
                                             grow: !1,
-                                            color: Z ? s.Button.Colors.PRIMARY : s.Button.Colors.BRAND,
+                                            color: T ? s.Button.Colors.PRIMARY : s.Button.Colors.BRAND,
                                             children: i
                                                 ? (0, r.jsxs)(r.Fragment, {
                                                       children: [
@@ -340,7 +340,7 @@ function Z(e) {
                                                   })
                                                 : (0, r.jsxs)(r.Fragment, {
                                                       children: [
-                                                          Z ? N.intl.string(N.t['5WxrcX']) : N.intl.string(N.t.PDTjLC),
+                                                          T ? N.intl.string(N.t['5WxrcX']) : N.intl.string(N.t.PDTjLC),
                                                           (0, r.jsx)(u.Z, {
                                                               className: j.arrow,
                                                               direction: u.Z.Directions.RIGHT
@@ -358,14 +358,14 @@ function Z(e) {
         })
     });
 }
-function T(e) {
+function Z(e) {
     let { guild: t, prompts: n, step: s, selectOption: c, completeOnboarding: u, setCurrentStep: h, headerId: x, disableTracking: g } = e,
         f = (0, o.e7)([d.Z], () => d.Z.getRulesPrompt(t.id));
     l.useEffect(() => {
         a.ZP.fetchVerificationForm(t.id);
     }, [t.id]);
-    let b = n[s],
-        _ = s + 1 >= n.length && !E(f),
+    let _ = n[s],
+        b = s + 1 >= n.length && !E(f),
         N = n[0].required;
     l.useEffect(() => {
         if (!g)
@@ -413,16 +413,16 @@ function T(e) {
                     })),
                 h(Math.max(0, s - 1));
         };
-    if (null == b) return null;
-    switch (b.type) {
+    if (null == _) return null;
+    switch (_.type) {
         case v.FN.MULTIPLE_CHOICE:
-            return (0, r.jsx)(Z, {
+            return (0, r.jsx)(T, {
                 guild: t,
                 headerId: x,
                 step: s,
                 questionCount: n.length,
-                currentPrompt: b,
-                lastPrompt: _,
+                currentPrompt: _,
+                lastPrompt: b,
                 selectOption: c,
                 gotoPrevPrompt: I,
                 gotoNextPrompt: j,
@@ -434,14 +434,14 @@ function T(e) {
                 headerId: x,
                 step: s,
                 questionCount: n.length,
-                currentPrompt: b,
-                lastPrompt: _,
+                currentPrompt: _,
+                lastPrompt: b,
                 selectOption: c,
                 gotoPrevPrompt: I,
                 gotoNextPrompt: j,
                 completeOnboarding: u
             });
         default:
-            (0, p.vE)(b.type);
+            (0, p.vE)(_.type);
     }
 }

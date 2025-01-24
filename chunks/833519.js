@@ -29,8 +29,8 @@ var i = n(200651),
     E = n(507675),
     C = n(199902),
     y = n(314897),
-    b = n(592125),
-    Z = n(131951),
+    Z = n(592125),
+    b = n(131951),
     T = n(451478),
     N = n(685203),
     A = n(112560),
@@ -53,7 +53,7 @@ function z(e) {
         u = (0, s.e7)([C.Z], () => C.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         d = (0, k.K)(o),
         [m, p] = l.useState(!1),
-        h = (0, s.e7)([b.Z], () => b.Z.getChannel(null == u ? void 0 : u.channelId));
+        h = (0, s.e7)([Z.Z], () => Z.Z.getChannel(null == u ? void 0 : u.channelId));
     return (
         (0, _.J)(h, () => {
             let e = setTimeout(() => {
@@ -85,11 +85,11 @@ function z(e) {
 }
 function G(e) {
     let { participant: t, selected: n, onVideoResize: a, paused: f, fit: p, inPopout: I, inOverlayPopout: _ = !1, width: M, focused: L, wrapperClassName: k } = e,
-        z = Z.Z.getVideoComponent(),
+        z = b.Z.getVideoComponent(),
         G = (0, s.e7)([y.default], () => y.default.getId()),
         H = (0, h.Z)(),
         { stream: Y, user: J, streamId: q } = t,
-        X = (0, s.e7)([b.Z], () => b.Z.getChannel(Y.channelId)),
+        X = (0, s.e7)([Z.Z], () => Z.Z.getChannel(Y.channelId)),
         K = (0, s.e7)([C.Z], () => C.Z.getActiveStreamForUser(J.id, Y.guildId), [J.id, Y.guildId]),
         Q = (0, s.e7)([C.Z], () => C.Z.getAllActiveStreams().length > 0),
         $ = (0, s.e7)([T.Z], () => T.Z.isFocused()),
@@ -106,7 +106,7 @@ function G(e) {
                     .concat(null != K, ' | selected: ')
                     .concat(n, ' | Video: ')
                     .concat(null != z, ' | MediaEngine: ')
-                    .concat(Z.Z.supports(V.AN.VIDEO))
+                    .concat(b.Z.supports(V.AN.VIDEO))
             );
         }, [z, K, n]);
     if (H)
@@ -134,7 +134,7 @@ function G(e) {
             participant: t,
             width: M
         });
-    else if (!(null != K && !n && null != z && Z.Z.supports(V.AN.VIDEO)))
+    else if (!(null != K && !n && null != z && b.Z.supports(V.AN.VIDEO)))
         return (0, i.jsxs)('div', {
             className: r()(B.content, B.streamPreview, { [B.small]: ei }),
             children: [

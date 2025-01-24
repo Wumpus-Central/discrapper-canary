@@ -91,14 +91,14 @@ class P extends u.Z {
         let { ownerId: e } = this._streamContext,
             n = this._videoQuality;
         if (null != n) {
-            var r;
-            let { duration: i, avg_bitrate: a, avg_fps: o, avg_resolution: s, inbound_bitrate_estimate_percentile99: l } = this.isOwner ? n.getOutboundStats()[0] : null !== (r = n.getInboundStats(e)) && void 0 !== r ? r : {};
+            var r, i;
+            let { duration: a, avg_bitrate: o, avg_fps: s, avg_resolution: l, inbound_bitrate_estimate_percentile99: u } = this.isOwner ? (null !== (r = n.getOutboundStats()[0]) && void 0 !== r ? r : {}) : null !== (i = n.getInboundStats(e)) && void 0 !== i ? i : {};
             return {
-                duration: i,
-                avg_bitrate: a,
-                avg_fps: o,
-                avg_resolution: s,
-                inbound_bitrate_estimate_percentile99: l
+                duration: a,
+                avg_bitrate: o,
+                avg_fps: s,
+                avg_resolution: l,
+                inbound_bitrate_estimate_percentile99: u
             };
         }
         return null;

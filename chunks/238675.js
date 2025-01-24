@@ -1,6 +1,6 @@
 n.d(t, {
     fw: function () {
-        return r;
+        return l;
     },
     qy: function () {
         return c;
@@ -10,14 +10,14 @@ n.d(t, {
     }
 });
 var a,
-    l,
     r,
+    l,
     o,
-    s = n(544891),
-    i = n(981631);
+    i = n(544891),
+    s = n(981631);
 async function c(e, t) {
-    await s.tn.post({
-        url: i.ANM.CAPTCHA_TEST,
+    await i.tn.post({
+        url: s.ANM.CAPTCHA_TEST,
         body: {
             decider: e,
             options: t
@@ -25,4 +25,4 @@ async function c(e, t) {
         rejectWithError: !1
     });
 }
-((a = r || (r = {})).HCAPTCHA_RQDATA = 'hCaptchaRqdata'), (a.SMITE_RQDATA = 'SmiteRqdata'), (a.RECAPTCHA = 'Recaptcha'), (a.RECAPTCHA_ENTERPRISE = 'RecaptchaEnterprise'), ((l = o || (o = {}))[(l.EASY = 1)] = 'EASY'), (l[(l.MODERATE = 2)] = 'MODERATE'), (l[(l.DIFFICULT = 3)] = 'DIFFICULT'), (l[(l.VERY_DIFFICULT = 4)] = 'VERY_DIFFICULT');
+((a = l || (l = {})).HCAPTCHA_RQDATA = 'hCaptchaRqdata'), (a.SMITE_RQDATA = 'SmiteRqdata'), (a.RECAPTCHA = 'Recaptcha'), (a.RECAPTCHA_ENTERPRISE = 'RecaptchaEnterprise'), ((r = o || (o = {}))[(r.EASY = 1)] = 'EASY'), (r[(r.MODERATE = 2)] = 'MODERATE'), (r[(r.DIFFICULT = 3)] = 'DIFFICULT'), (r[(r.VERY_DIFFICULT = 4)] = 'VERY_DIFFICULT');

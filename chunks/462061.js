@@ -28,8 +28,8 @@ var i = n(200651),
     E = n(5192),
     C = n(44136),
     y = n(351483),
-    b = n(981631),
-    Z = n(65154),
+    Z = n(981631),
+    b = n(65154),
     T = n(388032),
     N = n(995544);
 let A = o.AvatarSizes.SIZE_80,
@@ -58,7 +58,7 @@ function P(e) {
         W = V.id === U,
         z = (0, C.ZP)(t),
         G = (0, s.e7)([x.Z], () => x.Z.isFocused()),
-        H = (0, s.e7)([h.Z], () => h.Z.getWindowFocused(b.KJ3.CHANNEL_CALL_POPOUT)),
+        H = (0, s.e7)([h.Z], () => h.Z.getWindowFocused(Z.KJ3.CHANNEL_CALL_POPOUT)),
         Y = (0, s.e7)([_.Z], () => null != V.id && _.Z.isLocalVideoDisabled(V.id, (0, m.Z)(t.type)), [V.id, t.type]),
         J = (0, s.e7)([S.ZP], () => S.ZP.isGuestOrLurker(n.guild_id, V.id)),
         q = E.ZP.getName(n.getGuildId(), n.id, V) + (J ? ' '.concat(T.intl.string(T.t['pFO/Pj'])) : ''),
@@ -84,7 +84,7 @@ function P(e) {
         let { channel: e, selectedParticipant: t, user: n } = en.current;
         e.isGuildStageVoice() && !z && (null == t ? void 0 : t.id) === n.id && c.Z.selectParticipant(e.id, null);
     }, [z]),
-    a && !Y && !O && z && !y && null != D && _.Z.supports(Z.AN.VIDEO))
+    a && !Y && !O && z && !y && null != D && _.Z.supports(b.AN.VIDEO))
         ? (0, i.jsx)(
               p.Z,
               {

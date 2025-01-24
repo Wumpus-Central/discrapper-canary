@@ -48,7 +48,7 @@ function y(e) {
         i = E.delete(e);
     return t || n || i;
 }
-function b() {
+function Z() {
     var e;
     let t = p.Z.getChannelId();
     if (null == t) return !1;
@@ -66,12 +66,12 @@ function b() {
         i
     );
 }
-function Z() {
+function b() {
     _.clear(), x.clear(), E.clear();
 }
 class T extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, h.default, f.Z, p.Z), this.syncWith([h.default], b);
+        this.waitFor(g.Z, h.default, f.Z, p.Z), this.syncWith([h.default], Z);
     }
     get desyncedVoiceStatesCount() {
         return _.size();
@@ -97,13 +97,13 @@ class T extends (i = s.ZP.Store) {
         : (l[a] = r),
     (t.Z = new T(c.Z, {
         CONNECTION_OPEN: function () {
-            Z();
+            b();
         },
-        VOICE_CHANNEL_SELECT: Z,
+        VOICE_CHANNEL_SELECT: b,
         RTC_CONNECTION_STATE: function (e) {
             let { state: t, context: n } = e;
             if (n !== o.Yn.DEFAULT || t !== I.hes.DISCONNECTED) return !1;
-            Z();
+            b();
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e,

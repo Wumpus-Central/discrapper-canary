@@ -13,7 +13,7 @@ function u(e) {
         y = p.getChannel(c),
         b = (0, a.a)(y);
     if (null == n) return !1;
-    if (f)
+    if (f && null != c)
         return (
             (0, o.ZP)({
                 userId: n.id,
@@ -28,7 +28,7 @@ function u(e) {
                 GuildStore: h
             }) === o.Fw.CAN_JOIN
         );
-    if (!(0, i.isDesktop)()) return !1;
+    if (!(0, i.isDesktop)() && !f) return !1;
     if ((0, s.Z)(r, l.xjy.PARTY_PRIVACY_FRIENDS) && m.isFriend(n.id)) return !0;
     if ((0, s.Z)(r, l.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
         let e = p.getChannel(g.getVoiceChannelId());

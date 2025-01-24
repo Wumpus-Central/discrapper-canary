@@ -50,14 +50,14 @@ t.Z = r.memo(function (e) {
             pinned: v
         })),
         Z = (0, c.Z)(n),
-        _ = r === u.C5.VERTICAL,
-        b = 0,
+        b = r === u.C5.VERTICAL,
+        _ = 0,
         j = 0,
         I = (0, s.useTransition)(
-            _
+            b
                 ? C.map((e, t) => ({
                       ...e,
-                      y: (b += e.height + (t > 0 ? m : 0)) - e.height,
+                      y: (_ += e.height + (t > 0 ? m : 0)) - e.height,
                       x: 0
                   }))
                 : C.map((e, t) => ({
@@ -102,10 +102,10 @@ t.Z = r.memo(function (e) {
     return (0, i.jsx)('div', {
         className: l()({
             [h.gridContainer]: !0,
-            [h.vertical]: _,
-            [h.horizontal]: !_
+            [h.vertical]: b,
+            [h.horizontal]: !b
         }),
-        style: _ ? { height: b } : { width: j },
+        style: b ? { height: _ } : { width: j },
         children: I((e, t, r, o) =>
             (0, i.jsx)(a.animated.div, {
                 className: h.gridItem,

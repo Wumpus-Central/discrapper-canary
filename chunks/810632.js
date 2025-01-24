@@ -22,8 +22,8 @@ var i = n(200651),
     g = n(361291),
     C = n(592125),
     Z = n(430824),
-    _ = n(131951),
-    b = n(944486),
+    b = n(131951),
+    _ = n(944486),
     j = n(594174),
     I = n(449224),
     E = n(358085),
@@ -31,14 +31,14 @@ var i = n(200651),
     N = n(37113),
     w = n(761274);
 function y() {
-    let e = (0, a.e7)([b.Z], () => b.Z.getVoiceChannelId()),
+    let e = (0, a.e7)([_.Z], () => _.Z.getVoiceChannelId()),
         t = (0, a.e7)([C.Z], () => C.Z.getChannel(e), [e]),
         o = (0, a.e7)([j.default], () => {
             let e = j.default.getCurrentUser();
             return l()(null != e, 'useGoLiveImmidateAction: user cannot be undefined'), e;
         }),
         y = null == t ? void 0 : t.getGuildId(),
-        T = (0, a.e7)([_.Z], () => (0, u.Z)(_.Z));
+        T = (0, a.e7)([b.Z], () => (0, u.Z)(b.Z));
     async function S() {
         var e;
         return null !== (e = (await (0, x._Q)()).sort((e, t) => (0, x.ov)(t) - (0, x.ov)(e))[0]) && void 0 !== e ? e : null;
@@ -51,12 +51,12 @@ function y() {
         if (null == l && null == r) return !1;
         let a = null != y ? (null === (n = Z.Z.getGuild(y)) || void 0 === n ? void 0 : n.premiumTier) : null,
             { preset: s, resolution: u, fps: x, soundshareEnabled: C } = g.Z.getState(),
-            [b, j] = null !== (i = (0, m.Z)(s, o, a)) && void 0 !== i ? i : [N.LY.RESOLUTION_720, N.ws.FPS_30],
+            [_, j] = null !== (i = (0, m.Z)(s, o, a)) && void 0 !== i ? i : [N.LY.RESOLUTION_720, N.ws.FPS_30],
             k = s,
             T = u,
             L = x;
-        k !== N.tI.PRESET_CUSTOM && ((T = b), (L = j)),
-            !(0, h.Z)(k, T, L, o, a) && ((T = b), (L = j)),
+        k !== N.tI.PRESET_CUSTOM && ((T = _), (L = j)),
+            !(0, h.Z)(k, T, L, o, a) && ((T = _), (L = j)),
             !(0, h.Z)(k, T, L, o, a, t) && ((k = N.tI.PRESET_VIDEO), (T = N.LY.RESOLUTION_720), (L = N.ws.FPS_30)),
             (0, c.Rc)({
                 preset: k,
@@ -70,7 +70,7 @@ function y() {
             V = null;
         return (
             null == O && null != r && ((P = r.id), (V = r.name)),
-            !!(_.Z.getUseSystemScreensharePicker() || (await v.Z.hasPermission(w.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) &&
+            !!(b.Z.getUseSystemScreensharePicker() || (await v.Z.hasPermission(w.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) &&
                 ((0, c.WH)(y, e, {
                     pid: O,
                     sourceId: P,

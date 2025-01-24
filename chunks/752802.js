@@ -22,8 +22,8 @@ var i = n(200651),
     g = n(871118),
     C = n(352978),
     Z = n(833519),
-    _ = n(839662),
-    b = n(199902),
+    b = n(839662),
+    _ = n(199902),
     j = n(314897),
     I = n(131951),
     E = n(594174),
@@ -44,7 +44,7 @@ function S(e) {
             [t]
         ),
         l = (0, a.e7)([j.default], () => j.default.getId()),
-        { hasVideo: u } = (0, _.Z)(t, l),
+        { hasVideo: u } = (0, b.Z)(t, l),
         h = o && u,
         m = r.useCallback(() => {
             d.Z.toggleLocalMute(n, s.Yn.STREAM);
@@ -193,12 +193,12 @@ function A(e) {
 let O = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
     P = r.memo(function (e) {
         let { participant: t, width: n, locked: r, widgetId: o, pinned: s } = e,
-            d = (0, a.e7)([b.Z], () => b.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
+            d = (0, a.e7)([_.Z], () => _.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
             u = (0, p.bp)(),
             m = null != d && O.has(d.state),
             x = null != d,
             v = (0, N.yA)(t.stream),
-            _ = (0, N.xN)(t.stream);
+            b = (0, N.xN)(t.stream);
         return (!x && r) || m
             ? null
             : (0, i.jsxs)('div', {
@@ -222,7 +222,7 @@ let O = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
                                     children: (0, i.jsx)(Z.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != _ ? _ : C.L.CONTAIN,
+                                        fit: null != b ? b : C.L.CONTAIN,
                                         inPopout: !0,
                                         focused: !r,
                                         paused: !1,

@@ -56,10 +56,10 @@ function y(e) {
         l = C();
     return n || i || l;
 }
-function b() {
+function Z() {
     I.clear(), S.clear(), (_ = !1);
 }
-class Z extends (i = s.ZP.Store) {
+class b extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(h.Z, g.Z, m.Z, f.Z);
     }
@@ -74,7 +74,7 @@ class Z extends (i = s.ZP.Store) {
     }
 }
 (r = 'SecureFramesVerifiedStore'),
-    (a = 'displayName') in (l = Z)
+    (a = 'displayName') in (l = b)
         ? Object.defineProperty(l, a, {
               value: r,
               enumerable: !0,
@@ -82,12 +82,12 @@ class Z extends (i = s.ZP.Store) {
               writable: !0
           })
         : (l[a] = r),
-    (t.Z = new Z(c.Z, {
-        CONNECTION_OPEN: b,
+    (t.Z = new b(c.Z, {
+        CONNECTION_OPEN: Z,
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
             if (t === x) return !1;
-            (x = t), b();
+            (x = t), Z();
         },
         RTC_CONNECTION_STATE: function (e) {
             let { streamKey: t, state: n, context: i } = e;
@@ -97,7 +97,7 @@ class Z extends (i = s.ZP.Store) {
                     if (null == t) return !1;
                     return S.delete(t), C();
                 case o.Yn.DEFAULT:
-                    b();
+                    Z();
             }
         },
         RTC_CONNECTION_ROSTER_MAP_UPDATE: function (e) {

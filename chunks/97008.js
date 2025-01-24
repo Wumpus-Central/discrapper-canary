@@ -1,38 +1,38 @@
-t(411104);
-var i = t(141795),
-    l = t(476326),
-    r = t(956664),
-    o = t(693824);
-n.Z = class e {
+n(411104);
+var r = n(141795),
+    i = n(476326),
+    l = n(956664),
+    o = n(693824);
+t.Z = class e {
     toDataUrl(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'png',
-            t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-        return e.toDataURL(n, t);
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'png',
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+        return e.toDataURL(t, n);
     }
-    async exportCanvas(e, n) {
-        let { format: t, fileType: a = 'png', quality: u = 1, fileName: s } = n;
-        if (t === o.kH.Base64) return this.toDataUrl(e, a, u);
-        if (t === o.kH.Blob) {
-            let n = this.toDataUrl(e, a, u);
-            return (0, r.kD)(n);
+    async exportCanvas(e, t) {
+        let { format: n, fileType: a = 'png', quality: u = 1, fileName: s } = t;
+        if (n === o.kH.Base64) return this.toDataUrl(e, a, u);
+        if (n === o.kH.Blob) {
+            let t = this.toDataUrl(e, a, u);
+            return (0, l.kD)(t);
         }
-        if (t === o.kH.File) {
-            let n = this.toDataUrl(e, a, u);
-            return await (0, r.Bo)(n, s, 'image/png');
+        if (n === o.kH.File) {
+            let t = this.toDataUrl(e, a, u);
+            return await (0, l.Bo)(t, s, 'image/png');
         }
-        if (t === o.kH.CloudUpload) {
-            let { channelId: t } = n,
+        if (n === o.kH.CloudUpload) {
+            let { channelId: n } = t,
                 o = this.toDataUrl(e, a, u),
-                d = await (0, r.Bo)(o, s, 'image/png');
-            return new i.n(
+                c = await (0, l.Bo)(o, s, 'image/png');
+            return new r.n(
                 {
-                    file: d,
-                    platform: l.ow.WEB,
+                    file: c,
+                    platform: i.ow.WEB,
                     isThumbnail: !1
                 },
-                t
+                n
             );
         }
-        throw Error('DiscordCanvas: '.concat(t, ' is not a valid export format.'));
+        throw Error('DiscordCanvas: '.concat(n, ' is not a valid export format.'));
     }
 };

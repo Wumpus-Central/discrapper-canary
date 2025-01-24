@@ -29,8 +29,8 @@ function I(e) {
         properties: { location_stack: C }
     });
     let y = (0, p.Z)(),
-        b = (0, m.Z)(C),
-        Z = (0, f.Z)(C),
+        Z = (0, m.Z)(C),
+        b = (0, f.Z)(C),
         T = (0, c.Z)(C),
         N = (0, u.Z)(C),
         A = (0, d.Z)(C);
@@ -46,13 +46,13 @@ function I(e) {
                 I
                     ? (0, i.jsx)(a.MenuGroup, {
                           label: g.intl.string(g.t.ElbIXF),
-                          children: b
+                          children: Z
                       })
                     : null,
                 n
                     ? (0, i.jsx)(a.MenuGroup, {
                           label: g.intl.string(g.t['6Ww0iI']),
-                          children: Z
+                          children: b
                       })
                     : null,
                 S

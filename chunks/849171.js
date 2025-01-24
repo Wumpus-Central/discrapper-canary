@@ -47,8 +47,8 @@ var i,
     E = n(719296),
     C = n(958185),
     y = n(100527),
-    b = n(906732),
-    Z = n(890280),
+    Z = n(906732),
+    b = n(890280),
     T = n(835473),
     N = n(522474),
     A = n(314897),
@@ -120,7 +120,7 @@ function B(e) {
                 .filter(P.lm)
         ),
         _ = (0, c.e7)([m.ZP], () => m.ZP.getEmbeddedActivitiesForChannel(s.id).find((e) => e.applicationId === l.id)),
-        { analyticsLocations: x } = (0, b.ZP)(),
+        { analyticsLocations: x } = (0, Z.ZP)(),
         E = (0, d.O)(),
         C = R.ZP.getName(s.getGuildId(), s.id, null == S ? void 0 : S[0]),
         y =
@@ -133,7 +133,7 @@ function B(e) {
         N = r.useId(),
         j = s.id,
         L = l.id,
-        { submitting: k } = (0, Z.Z)({
+        { submitting: k } = (0, b.Z)({
             applicationId: L,
             channelId: j,
             launchingComponentId: N
@@ -197,7 +197,7 @@ function B(e) {
 }
 function W(e) {
     let { participant: t, width: n, selected: i, interactible: l, channel: s } = e,
-        { analyticsLocations: o } = (0, b.ZP)(y.Z.ACTIVITY_TILE),
+        { analyticsLocations: o } = (0, Z.ZP)(y.Z.ACTIVITY_TILE),
         { applicationId: u } = t,
         d = (0, v.Z)(),
         m = null != d && (0, h.p)(d.location) === s.id && d.applicationId === u,
@@ -209,7 +209,7 @@ function W(e) {
         }),
         g = !i && m,
         x = !m,
-        Z = !m && !i,
+        b = !m && !i,
         A = (0, c.e7)([j.Z, N.Z], () =>
             (0, C.Z)({
                 LayerStore: j.Z,
@@ -223,7 +223,7 @@ function W(e) {
                 (0, _.jy)(e);
             }
         }, [g, d, A]),
-        (0, a.jsx)(b.Gt, {
+        (0, a.jsx)(Z.Gt, {
             value: o,
             children: (0, a.jsx)('div', {
                 className: O.container,
@@ -242,7 +242,7 @@ function W(e) {
                                   src: p
                               })
                             : null,
-                        Z &&
+                        b &&
                             null != f &&
                             (0, a.jsx)(B, {
                                 width: n,

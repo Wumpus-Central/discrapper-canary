@@ -85,7 +85,7 @@ let _ = async (e) => {
             drawImage: (e) => {
                 var i;
                 e.setFont({ truncate: c.GX.Truncate }),
-                    null != l ? A(e, n, t) : (0, o.Z)(n) ? Z(e, n, t) : (0, s.Z)(n) && n.name === r.Z.get(I.ABu.LEAGUE_OF_LEGENDS).name ? N(e, n, t) : n.type === I.IIU.HANG_STATUS ? T(e, n, t) : b(e, n, t),
+                    null != l ? A(e, n, t) : (0, o.Z)(n) ? b(e, n, t) : (0, s.Z)(n) && n.name === r.Z.get(I.ABu.LEAGUE_OF_LEGENDS).name ? N(e, n, t) : n.type === I.IIU.HANG_STATUS ? T(e, n, t) : Z(e, n, t),
                     (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has('Platform')) &&
                         e.drawImage(
                             'Platform',
@@ -120,7 +120,7 @@ let _ = async (e) => {
                 2 + 2 / 3
             );
     },
-    b = (e, t, n) => {
+    Z = (e, t, n) => {
         var i, l, a;
         e.setSize({
             w: g.En,
@@ -206,7 +206,7 @@ let _ = async (e) => {
                     !0
                 ));
     },
-    Z = (e, t, n) => {
+    b = (e, t, n) => {
         var i, l;
         e.setSize({
             w: g.En,

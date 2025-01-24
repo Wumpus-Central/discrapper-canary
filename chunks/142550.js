@@ -1,11 +1,11 @@
-var i, l;
-t.d(n, {
+var r, i;
+n.d(t, {
     L: function () {
-        return i;
+        return r;
     },
     z: function () {
-        return r;
+        return l;
     }
 });
-let r = 200;
-((l = i || (i = {})).ReactBegin = 'React Begin'), (l.ReplyBegin = 'Reply Begin'), (l.ReactSubmit = 'React Submit'), (l.ReplySubmit = 'Reply Submit'), (l.ReactSend = 'React Send'), (l.ReplySend = 'Reply Send');
+let l = 200;
+((i = r || (r = {})).ReactBegin = 'React Begin'), (i.ReplyBegin = 'Reply Begin'), (i.ReactSubmit = 'React Submit'), (i.ReplySubmit = 'Reply Submit'), (i.ReactSend = 'React Send'), (i.ReplySend = 'Reply Send');

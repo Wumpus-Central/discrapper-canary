@@ -35,14 +35,14 @@ function S(e) {
         E = (0, m.V9)(t),
         C = (0, r.e7)([c.Z], () => c.Z.getActiveAnimation()),
         y = (0, r.Wu)([c.Z], () => c.Z.getStreamClipAnimations(E)),
-        b = (0, l.useRef)();
+        Z = (0, l.useRef)();
     l.useEffect(
         () => () => {
             (0, u.Gh)(E);
         },
         [E]
     );
-    let Z = () => {
+    let b = () => {
             var e;
             let t = null === (e = _.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             return null == t || n
@@ -56,7 +56,7 @@ function S(e) {
         },
         T = (e) => {
             let t = null == x ? void 0 : x.getBoundingClientRect();
-            if (((b.current = t), e.timestamp !== C || null == t || n)) return h;
+            if (((Z.current = t), e.timestamp !== C || null == t || n)) return h;
             let { top: i, left: l } = t;
             return {
                 top: i + 36,
@@ -87,7 +87,7 @@ function S(e) {
                     position: 'fixed',
                     visibility: 'hidden',
                     opacity: 1,
-                    ...(S.enabled ? T(e) : Z())
+                    ...(S.enabled ? T(e) : b())
                 }),
                 enter: (e) => [
                     {
@@ -102,10 +102,10 @@ function S(e) {
                         height: 0,
                         width: 0,
                         ...(() => {
-                            if (null != b.current)
+                            if (null != Z.current)
                                 return {
-                                    top: b.current.top + 12,
-                                    left: b.current.left + 12
+                                    top: Z.current.top + 12,
+                                    left: Z.current.left + 12
                                 };
                         })()
                     })

@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(131951),
     C = n(944486),
     Z = n(906037),
-    _ = n(804570),
-    b = n(501787),
+    b = n(804570),
+    _ = n(501787),
     j = n(65154),
     I = n(388032),
     E = n(827202);
@@ -98,7 +98,7 @@ function N(e) {
               })
         : a
           ? null
-          : (0, i.jsx)(_.E, {
+          : (0, i.jsx)(b.E, {
                 emptyText: I.intl.string(I.t['aTiM4+']),
                 icon: s.VideoIcon,
                 absolute: !0
@@ -112,22 +112,22 @@ function w(e) {
         s = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
         { width: c, height: p, ref: x } = (0, u.Z)(e.locked, e.widget.pinned),
         { participantTileWidth: g, visibleParticipants: Z } = (0, f.ZB)(s ? (null != c ? c : e.width) : null != p ? p : e.height, o, {
-            tileWidth: b.OVERLAY_TILE_WIDTH,
-            tileMinWidth: b.OVERLAY_TILE_MIN_WIDTH,
-            tileMargin: b.OVERLAY_TILE_MARGIN,
+            tileWidth: _.OVERLAY_TILE_WIDTH,
+            tileMinWidth: _.OVERLAY_TILE_MIN_WIDTH,
+            tileMargin: _.OVERLAY_TILE_MARGIN,
             limit: 8,
             cropSelfVideo: !0,
             version: l
         }),
-        _ = {
+        b = {
             id: e.widget.id,
             size: e.widget.size,
             containerWidth: e.width,
             containerHeight: e.height
         },
-        j = r.useRef(_);
+        j = r.useRef(b);
     return (
-        r.useLayoutEffect(() => void (j.current = _)),
+        r.useLayoutEffect(() => void (j.current = b)),
         r.useLayoutEffect(() => {
             let { size: e, id: t, containerWidth: n, containerHeight: i } = j.current;
             ((s && e.height > e.width) || (!s && e.width > e.height)) &&

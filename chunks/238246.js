@@ -21,8 +21,8 @@ var i,
     E = n(906732),
     C = n(168551),
     y = n(260035),
-    b = n(597952),
-    Z = n(628123),
+    Z = n(597952),
+    b = n(628123),
     T = n(686546),
     N = n(950796),
     A = n(80006),
@@ -139,11 +139,11 @@ class q extends (i = a.Component) {
                                 children: (0, l.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: s()(e, (0, b.Z)(), A, _, E),
+                                    className: s()(e, (0, Z.Z)(), A, _, E),
                                     children: (0, l.jsx)(f.FocusRingScope, {
                                         containerRef: this.rootRef,
                                         children: (0, l.jsx)(v.Z, {
-                                            children: (0, l.jsxs)(Z.Z, {
+                                            children: (0, l.jsxs)(b.Z, {
                                                 children: [
                                                     (0, l.jsx)(T.Co, {}),
                                                     (0, l.jsx)(h.Wu, {
@@ -238,7 +238,7 @@ let X = a.forwardRef(function (e, t) {
     (0, w.Z)(n, !1);
     let I = (0, P.Z)(n, i),
         { analyticsLocations: _ } = (0, E.ZP)(x.Z.POPOUT_WINDOW),
-        { clientThemesClassName: y, clientThemesCSS: b } = (0, C.ZP)();
+        { clientThemesClassName: y, clientThemesCSS: Z } = (0, C.ZP)();
     return null == n
         ? null
         : (0, l.jsx)(f.DnDProvider, {
@@ -264,7 +264,7 @@ let X = a.forwardRef(function (e, t) {
                       saturation: p.saturation,
                       alwaysShowLinkDecorations: p.alwaysShowLinkDecorations,
                       clientThemesClassName: y,
-                      clientThemesCSS: b,
+                      clientThemesCSS: Z,
                       appWrapperClassName: h,
                       isRefreshEnabled: a,
                       isRefreshChatInputEnabled: r

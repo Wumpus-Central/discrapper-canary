@@ -73,8 +73,8 @@ function C(e) {
         [E] = (0, S.Ym)(t),
         C = (0, s.e7)([v.Z], () => v.Z.getChannel(n)),
         y = (0, s.e7)([I.default, g.default], () => ((0, d.J)(a, g.default) ? null : I.default.getUser(a.userId))),
-        b = l.useMemo(() => (null != y ? [y] : []), [y]),
-        Z = (0, h.q)(m),
+        Z = l.useMemo(() => (null != y ? [y] : []), [y]),
+        b = (0, h.q)(m),
         { analyticsLocations: T } = (0, p.ZP)(),
         N = (0, c.O)(),
         A = a.sessionId,
@@ -96,7 +96,7 @@ function C(e) {
             },
             [m, P, N.location, T, A]
         );
-    return null == C || null == y || null == Z
+    return null == C || null == y || null == b
         ? null
         : (0, i.jsxs)('div', {
               className: x.splash,
@@ -105,7 +105,7 @@ function C(e) {
                       avatarSize: E,
                       guildId: C.guild_id,
                       channelId: C.id,
-                      users: b
+                      users: Z
                   }),
                   (0, i.jsx)(o.Text, {
                       className: r()(x.subheader, {
@@ -121,7 +121,7 @@ function C(e) {
                           [x.medium]: f === S.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: Z.name
+                      children: b.name
                   }),
                   (0, i.jsx)('div', {
                       className: x.buttons,

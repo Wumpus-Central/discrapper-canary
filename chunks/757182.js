@@ -1,23 +1,23 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return u;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(655922),
-    r = t(420660),
-    o = t(915863),
-    a = t(388032);
+var r = n(200651);
+n(192379);
+var i = n(655922),
+    l = n(420660),
+    o = n(915863),
+    a = n(388032);
 function u(e) {
-    let { activity: n, onAction: t, ButtonComponent: u = o.Z, ...s } = e;
-    return (0, r.Z)(n)
-        ? (0, i.jsx)(
+    let { activity: t, onAction: n, ButtonComponent: u = o.Z, ...s } = e;
+    return (0, l.Z)(t)
+        ? (0, r.jsx)(
               u,
               {
                   onClick: () => {
-                      null == t || t();
-                      let e = (0, l.Z)(n);
+                      null == n || n();
+                      let e = (0, i.Z)(t);
                       return window.open(null != e ? e : void 0);
                   },
                   fullWidth: !0,

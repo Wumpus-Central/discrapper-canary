@@ -108,7 +108,7 @@ function el(e) {
     if (!W.Z.showInviteNotification) return !1;
     let n = Y.Z.getGame();
     if (null == n || 0 === t.length) return;
-    let { affinityThreshold: i } = b.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !0 }),
+    let { affinityThreshold: i } = b.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }),
         s = t;
     if (null != i) {
         var r;
@@ -288,7 +288,7 @@ class ed extends (r = f.ZP.Store) {
             let { contentInventoryEntries: n } = e;
             if (0 === n.length) return;
             if (((en = n), O.Z.hasChangedRenderMode(null !== (t = V.Z.getFocusedPID()) && void 0 !== t ? t : (0, H.QF)()) || null == Y.Z.getGame())) return;
-            let { enabled: i, affinityThreshold: s } = b.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !1 });
+            let { enabled: i, affinityThreshold: s } = b.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' });
             if (!!i) (0 !== j.Z.getUserAffinities().length || null == s) && el({ contentInventoryEntries: n });
         },
         LOAD_USER_AFFINITIES_V2_SUCCESS: function (e) {

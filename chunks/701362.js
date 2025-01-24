@@ -26,13 +26,13 @@ var i = n(200651),
     E = n(687516),
     C = n(718805),
     y = n(871118),
-    b = n(981631),
-    Z = n(388032),
+    Z = n(981631),
+    b = n(388032),
     T = n(846450);
 class N extends l.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
-        _.default.track(b.rMx.OPEN_POPOUT, {
+        _.default.track(Z.rMx.OPEN_POPOUT, {
             type: 'Stream Preview',
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
@@ -88,8 +88,8 @@ class N extends l.PureComponent {
                                             channelId: n.channelId,
                                             analyticsParams: {
                                                 location: {
-                                                    page: b.ZY5.GO_LIVE_MODAL,
-                                                    section: b.jXE.STREAM_VIEWER_POPOUT
+                                                    page: Z.ZY5.GO_LIVE_MODAL,
+                                                    section: Z.jXE.STREAM_VIEWER_POPOUT
                                                 }
                                             },
                                             onAction: a
@@ -108,7 +108,7 @@ class N extends l.PureComponent {
                                       (0, i.jsx)(m.Z, {
                                           type: m.Z.Types.INLINE,
                                           className: T.protip,
-                                          children: __OVERLAY__ ? Z.intl.string(Z.t['YRdw7+']) : Z.intl.string(Z.t.CCTgbG)
+                                          children: __OVERLAY__ ? b.intl.string(b.t['YRdw7+']) : b.intl.string(b.t.CCTgbG)
                                       })
                               ]
                           })
