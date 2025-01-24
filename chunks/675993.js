@@ -40,6 +40,7 @@ function b(e) {
                 let n = v.Z.getDMFromUserId(null === (e = t.bot) || void 0 === e ? void 0 : e.id);
                 return null != n ? v.Z.getChannel(n) : void 0;
             }
+            return n.channel;
         }, [n, t]),
         { isSlideReady: A } = (0, _.hH)(),
         [g, b] = l.useState(!1);
