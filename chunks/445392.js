@@ -1,7 +1,7 @@
 var i,
     l = t(442837),
-    a = t(570140);
-function o(e, n, t) {
+    o = t(570140);
+function a(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -31,9 +31,9 @@ class c extends (i = l.ZP.PersistedStore) {
         return null == s.lastUsedTimeMs || null == s.lastUsedCommandId ? null : (e > s.lastUsedTimeMs + r && ((s.lastUsedCommandId = null), (s.lastUsedTimeMs = null)), s.lastUsedCommandId);
     }
 }
-o(c, 'displayName', 'AppLauncherLastUsedCommandStore'),
-    o(c, 'persistKey', 'AppLauncherLastUsedCommandStore'),
-    new c(a.Z, {
+a(c, 'displayName', 'AppLauncherLastUsedCommandStore'),
+    a(c, 'persistKey', 'AppLauncherLastUsedCommandStore'),
+    new c(o.Z, {
         APPLICATION_COMMAND_USED: function (e) {
             let { command: n } = e;
             (s.lastUsedCommandId = n.id), (s.lastUsedTimeMs = Date.now());

@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     l = t(192379),
-    a = t(120356),
-    o = t.n(a),
+    o = t(120356),
+    a = t.n(o),
     r = t(442837),
     s = t(481060),
     c = t(607070),
@@ -21,7 +21,7 @@ function u() {
             []
         );
     return (0, i.jsxs)('div', {
-        className: o()(d.container, { [d.noAnimation]: e }),
+        className: a()(d.container, { [d.noAnimation]: e }),
         children: [
             (0, i.jsx)('div', { className: d.iconPlaceholder }),
             (0, i.jsxs)('div', {

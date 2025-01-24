@@ -3,7 +3,7 @@ t.d(e, {
         return p;
     },
     aY: function () {
-        return l;
+        return r;
     },
     dW: function () {
         return g;
@@ -22,8 +22,8 @@ t.d(e, {
     }
 });
 var i,
-    r,
     l,
+    r,
     u,
     a = t(192379),
     o = t(100527),
@@ -33,11 +33,11 @@ var i,
     f = t(981631);
 function _(n, e, t) {
     var i;
-    let r = {
+    let l = {
         ...e,
         ...(0, d.hH)(null !== (i = e.guild_id) && void 0 !== i ? i : t)
     };
-    c.default.track(n, r);
+    c.default.track(n, l);
 }
 function E(n) {
     return a.useCallback(
@@ -68,7 +68,7 @@ function p(n) {
         [n]
     );
 }
-((i = l || (l = {})).UNUSUAL_DM_ACTIVITY = 'unusual_dm_activity'), (i.COMMUNICATION_DISABLED = 'communication_disabled'), (i.UNUSUAL_ACCOUNT_ACTIVITY = 'unusual_account_activity'), (i.USERNAME_QUARANTINED = 'username_quarantined');
+((i = r || (r = {})).UNUSUAL_DM_ACTIVITY = 'unusual_dm_activity'), (i.COMMUNICATION_DISABLED = 'communication_disabled'), (i.UNUSUAL_ACCOUNT_ACTIVITY = 'unusual_account_activity'), (i.USERNAME_QUARANTINED = 'username_quarantined');
 function g(n) {
     return a.useCallback(
         (e) => {
@@ -85,7 +85,7 @@ function g(n) {
     );
 }
 function h(n, e) {
-    let { location: t, targetUserId: i, targets: r, locations: l } = e;
+    let { location: t, targetUserId: i, targets: l, locations: r } = e;
     return a.useCallback(
         (e) => {
             let u = {
@@ -93,13 +93,13 @@ function h(n, e) {
                 mod_user_id: s.default.getId(),
                 guild_id: n,
                 location: t,
-                locations: l,
+                locations: r,
                 target_user_id: null != i ? i : void 0,
-                targets: null != r ? r : void 0
+                targets: null != l ? l : void 0
             };
             _(f.rMx.MODERATION_ACTION, u);
         },
-        [n, t, i, r, l]
+        [n, t, i, l, r]
     );
 }
 function A(n, e) {
@@ -108,4 +108,4 @@ function A(n, e) {
         location: e
     });
 }
-((r = u || (u = {})).BAN = 'ban'), (r.KICK = 'kick'), (r.MUTE = 'mute'), (r.TIMEOUT = 'timeout'), (r.ADD_ROLE = 'add_role'), (r.REMOVE_ROLE = 'remove_role'), (r.COPY_ID = 'copy_id'), (r.CHANGE_NICKNAME = 'change_nickname');
+((l = u || (u = {})).BAN = 'ban'), (l.KICK = 'kick'), (l.MUTE = 'mute'), (l.TIMEOUT = 'timeout'), (l.ADD_ROLE = 'add_role'), (l.REMOVE_ROLE = 'remove_role'), (l.COPY_ID = 'copy_id'), (l.CHANGE_NICKNAME = 'change_nickname');

@@ -14,17 +14,17 @@ var r = t(120356),
     s = t(481060),
     o = t(454585),
     u = t(476770),
-    c = t(388032),
-    a = t(484979);
+    a = t(388032),
+    c = t(484979);
 function d(e) {
     let { terms: n, channelId: t, className: r } = e;
     return (0, i.jsx)('div', {
-        className: l()(a.termsFieldBody, r),
+        className: l()(c.termsFieldBody, r),
         children: n.map((e, n) =>
             (0, i.jsxs)(
                 'div',
                 {
-                    className: a.termsRow,
+                    className: c.termsRow,
                     children: [
                         (0, i.jsx)(s.Text, {
                             variant: 'text-md/normal',
@@ -33,7 +33,7 @@ function d(e) {
                         }),
                         (0, i.jsx)(s.Text, {
                             variant: 'text-md/normal',
-                            className: a.termsRowContent,
+                            className: c.termsRowContent,
                             children: o.Z.parseGuildVerificationFormRule(e, !0, { channelId: t })
                         })
                     ]
@@ -52,10 +52,10 @@ function f(e) {
         onChange: n,
         disabled: r,
         style: { borderWidth: 2 },
-        className: a.checkbox,
+        className: c.checkbox,
         children: (0, i.jsx)(s.Text, {
             variant: 'text-sm/normal',
-            children: c.intl.string(c.t['2EXfGB'])
+            children: a.intl.string(a.t['2EXfGB'])
         })
     });
 }
@@ -63,17 +63,17 @@ function m(e) {
     let { formField: n } = e;
     return (0, i.jsx)(u.Ih, {
         icon: s.BookCheckIcon,
-        text: c.intl.string(c.t['2xbmoK']),
+        text: a.intl.string(a.t['2xbmoK']),
         meetsRequirement: !!n.response
     });
 }
 let h = (e) => {
     let { channelId: n, formField: t, onChange: r } = e;
     return (0, i.jsxs)(u.hK, {
-        title: c.intl.string(c.t.Q8OFNz),
+        title: a.intl.string(a.t.Q8OFNz),
         children: [
             (0, i.jsx)(d, {
-                className: a.disabledFieldBackground,
+                className: c.disabledFieldBackground,
                 terms: t.values,
                 channelId: n
             }),

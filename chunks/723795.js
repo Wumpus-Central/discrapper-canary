@@ -14,8 +14,8 @@ var o = n(200651),
     _ = n(200305),
     b = n(271383),
     h = n(594174),
-    x = n(970606),
-    C = n(900681),
+    C = n(970606),
+    x = n(900681),
     g = n(44272),
     y = n(308083),
     E = n(388032),
@@ -58,9 +58,9 @@ function T(e) {
 t.default = function (e) {
     var t, n, _;
     let { clan: R, prioritizedGameIds: j, position: B, transitionState: S, onClose: k } = e,
-        P = (0, l.Dt)(),
-        q = (0, c.e7)([u.Z], () => u.Z.get(R.id)),
-        [M, O] = i.useState(null !== (n = null == q ? void 0 : q.formFields) && void 0 !== n ? n : []),
+        q = (0, l.Dt)(),
+        P = (0, c.e7)([u.Z], () => u.Z.get(R.id)),
+        [M, O] = i.useState(null !== (n = null == P ? void 0 : P.formFields) && void 0 !== n ? n : []),
         [w, A] = i.useState(!1),
         [D, H] = i.useState(!1),
         [Z, Y] = i.useState(!1),
@@ -72,7 +72,7 @@ t.default = function (e) {
         }),
         [z, L] = i.useState(''),
         Q = i.useRef(() =>
-            (0, x._v)({
+            (0, C._v)({
                 guildId: R.id,
                 position: B
             })
@@ -87,14 +87,14 @@ t.default = function (e) {
         [R.id, Q]
     ),
         i.useEffect(() => {
-            null != q && O(q.formFields);
-        }, [q]);
+            null != P && O(P.formFields);
+        }, [P]);
     let X = i.useCallback(
             (e) => {
                 !w &&
                     (A(!0),
                     (Q.current = () => !1),
-                    (0, x.r)({
+                    (0, C.r)({
                         guildId: R.id,
                         position: B
                     })),
@@ -113,7 +113,7 @@ t.default = function (e) {
                 H(!0);
                 let e = Date.now();
                 await G({
-                    ...(null != q ? q : u.t),
+                    ...(null != P ? P : u.t),
                     formFields: M
                 });
                 let t = () => {
@@ -124,9 +124,9 @@ t.default = function (e) {
             } catch (e) {
                 L(null == e ? void 0 : e.message), H(!1);
             }
-        }, [G, k, q, M]),
+        }, [G, k, P, M]),
         J = M.some((e) => !(0, f.OA)(e)),
-        $ = (null !== (_ = null == q ? void 0 : null === (t = q.guild) || void 0 === t ? void 0 : t.approximate_member_count) && void 0 !== _ ? _ : 0) >= y.Du,
+        $ = (null !== (_ = null == P ? void 0 : null === (t = P.guild) || void 0 === t ? void 0 : t.approximate_member_count) && void 0 !== _ ? _ : 0) >= y.Du,
         ee = (0, c.e7)([s.Z], () => s.Z.useReducedMotion),
         et = (0, a.useSpring)(
             {
@@ -161,7 +161,7 @@ t.default = function (e) {
         eo = i.useRef(null);
     return (0, o.jsxs)(a.ModalRoot, {
         transitionState: S,
-        'aria-labelledby': P,
+        'aria-labelledby': q,
         size: a.ModalSize.DYNAMIC,
         className: N.container,
         hideShadow: !0,
@@ -189,7 +189,7 @@ t.default = function (e) {
                     (0, o.jsxs)('div', {
                         className: N.clanContainer,
                         children: [
-                            (0, o.jsx)(C.xV, {
+                            (0, o.jsx)(x.xV, {
                                 clan: R,
                                 className: N.profileCard,
                                 prioritizedGameIds: j,
@@ -206,7 +206,7 @@ t.default = function (e) {
                                         onClick: Z ? void 0 : K,
                                         submitting: D,
                                         fullWidth: !0,
-                                        disabled: J || null == q,
+                                        disabled: J || null == P,
                                         innerClassName: N.applyButtonInner,
                                         children: [
                                             $ &&

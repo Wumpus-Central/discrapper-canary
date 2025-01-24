@@ -125,8 +125,8 @@ function I(e) {
     return [null == n ? void 0 : n.result, null == r ? void 0 : r.result];
 }
 function T(e) {
-    let { channel: n, filters: r, options: i, allowFetch: a } = e,
-        o = null == n ? void 0 : n.guild_id,
+    let { context: n, filters: r, options: i, allowFetch: a } = e,
+        o = 'channel' === n.type ? n.channel.guild_id : null,
         c = (0, l.e7)([u.Z], () => u.Z.getGuild(o), [o]),
         {
             descriptors: p,

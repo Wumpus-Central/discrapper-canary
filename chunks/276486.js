@@ -1,9 +1,9 @@
 t.d(n, {
     l: function () {
-        return c;
+        return a;
     },
     v: function () {
-        return a;
+        return c;
     }
 });
 var i = t(200651);
@@ -13,7 +13,7 @@ var r = t(481060),
     s = t(489813),
     o = t(815660),
     u = t(388032);
-function c() {
+function a() {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
             icon: r.MobilePhoneIcon,
@@ -33,13 +33,13 @@ function c() {
         })
     });
 }
-function a(e) {
+function c(e) {
     let { isUserVerified: n } = e,
-        c = n ? u.intl.string(u.t.WWzQtb) : u.intl.string(u.t.woMjLS);
+        a = n ? u.intl.string(u.t.WWzQtb) : u.intl.string(u.t.woMjLS);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
             icon: r.MobilePhoneIcon,
-            text: c,
+            text: a,
             footnote: u.intl.string(u.t['jMh+TU']),
             meetsRequirement: n,
             children: (0, i.jsx)(r.Button, {

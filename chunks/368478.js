@@ -24,18 +24,18 @@ var i = n(192379),
     g = n(981631),
     C = n(388032);
 function x(e) {
-    let { channel: t, primaryEntryPointCommand: n, application: s, showAppLauncherPopup: c = !1 } = e,
+    let { context: t, primaryEntryPointCommand: n, application: s, showAppLauncherPopup: c = !1 } = e,
         [p, x] = i.useState(!1),
         v = (0, l.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
         _ = (0, r.GK)(),
         I = c ? C.t.cpT0Cg : C.t['0hKkS0'],
         E = i.useMemo(() => (null != n ? (0, h.XZ)(n.displayName) : C.intl.string(C.t['3xjX0d'])), [n]),
         b = void 0 !== s.flags && (0, f.yE)(s.flags, g.udG.EMBEDDED),
-        Z = null != v && v.applicationId === s.id && (_ || (0, o.p)(v.location) === t.id),
+        Z = null != v && v.applicationId === s.id && (_ || (0, o.p)(v.location) === t.channel.id),
         { analyticsLocations: N } = (0, u.ZP)(d.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
-        S = null != t.recipients ? t.recipients[0] : void 0,
+        S = null != t.channel.recipients ? t.channel.recipients[0] : void 0,
         T = (0, m.ms)({
-            channel: t,
+            context: t,
             applicationId: s.id,
             botUserId: S
         });
@@ -51,9 +51,9 @@ function x(e) {
     };
 }
 function v(e) {
-    let { channel: t, application: n, isEmbeddedApp: l, hasActiveMatchingEmbeddedActivity: r, currentEmbeddedActivity: a, onOpenButtonPress: o, channelRecipientUserId: d, setIsExecutingLaunchInteraction: u, analyticsLocations: h } = e,
+    let { context: t, application: n, isEmbeddedApp: l, hasActiveMatchingEmbeddedActivity: r, currentEmbeddedActivity: a, onOpenButtonPress: o, channelRecipientUserId: d, setIsExecutingLaunchInteraction: u, analyticsLocations: h } = e,
         f = (0, m.ms)({
-            channel: t,
+            context: t,
             applicationId: n.id,
             botUserId: d
         }),
@@ -66,13 +66,13 @@ function v(e) {
                 : (u(!0),
                   (0, s.Z)({
                       targetApplicationId: n.id,
-                      channelId: t.id,
+                      channelId: t.channel.id,
                       analyticsLocations: h,
                       onExecutedCallback: () => {
                           u(!1);
                       },
                       commandOrigin: p.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON
                   }));
-        }, [r, t.id, n.id, a, h, u]);
+        }, [r, t.channel.id, n.id, a, h, u]);
     return f && l ? g : o;
 }

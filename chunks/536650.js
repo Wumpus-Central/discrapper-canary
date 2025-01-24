@@ -1,13 +1,13 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return x;
     }
 }),
     t(47120);
 var i = t(200651),
     l = t(192379),
-    a = t(392711),
-    o = t(780384),
+    o = t(392711),
+    a = t(780384),
     r = t(481060),
     s = t(410030),
     c = t(220082),
@@ -29,18 +29,18 @@ function v(e) {
         n
     );
 }
-function _(e) {
-    let { application: n, channel: t, name: C, iconURL: _, scrollerRef: x, sectionName: N } = e,
-        I = (0, o.ap)((0, s.ZP)()),
-        A = l.useRef(null),
+function x(e) {
+    let { application: n, context: t, name: C, iconURL: x, scrollerRef: _, sectionName: N } = e,
+        A = (0, a.ap)((0, s.ZP)()),
+        I = l.useRef(null),
         E = l.useRef(null),
         g = l.useRef(null),
         b = l.useRef(null),
         P = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        S = (0, c.ZP)('number' == typeof _ ? '' : _, null != P ? P : ''),
-        j = l.useMemo(() => {
+        y = (0, c.ZP)('number' == typeof x ? '' : x, null != P ? P : ''),
+        S = l.useMemo(() => {
             var e, n;
-            let t = (0, a.compact)([d.Z.parseHexString(S), d.Z.parseHexString(I ? '#000000' : '#ffffff')]);
+            let t = (0, o.compact)([d.Z.parseHexString(y), d.Z.parseHexString(A ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -52,31 +52,31 @@ function _(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : S;
-        }, [S, I]),
-        y = v(A),
+                : y;
+        }, [y, A]),
+        j = v(I),
         T = v(E),
         L = l.useCallback(() => {
-            var e, n, t, i, l, o, r, s, c, d;
-            let u = x.current,
-                m = A.current,
+            var e, n, t, i, l, a, r, s, c, d;
+            let u = _.current,
+                m = I.current,
                 p = g.current,
                 h = null == b ? void 0 : b.current,
-                f = parseInt(null !== (e = null == y ? void 0 : y.height) && void 0 !== e ? e : ''),
+                f = parseInt(null !== (e = null == j ? void 0 : j.height) && void 0 !== e ? e : ''),
                 C = parseInt(null !== (n = null == T ? void 0 : T.height) && void 0 !== n ? n : '');
             if (null != u && null != m && null != p && !isNaN(f) && !isNaN(C)) {
                 let e = null !== (t = u.scrollTop) && void 0 !== t ? t : 0,
                     n = 0 !== u.scrollHeight ? u.scrollHeight : C + 20,
                     v = 0 !== u.clientHeight ? u.clientHeight : C + 20,
-                    _ = C - f,
-                    x = (0, a.clamp)(n - v, _ + 1, C + 20);
-                let N = ((i = e), (l = _) === (o = x) ? 1 : (0, a.clamp)((i - l) / (o - l), 0, 1));
+                    x = C - f,
+                    _ = (0, o.clamp)(n - v, x + 1, C + 20);
+                let N = ((i = e), (l = x) === (a = _) ? 1 : (0, o.clamp)((i - l) / (a - l), 0, 1));
                 if (
-                    ((m.style.filter = 'brightness('.concat(1 + ((I ? 1.4 : 0.6) - (r = 1)) * N, ')')),
+                    ((m.style.filter = 'brightness('.concat(1 + ((A ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(S, ' ')
+                        .concat(y, ' ')
                         .concat((1 - N) * 100, '%, ')
-                        .concat(j, ')')),
+                        .concat(S, ')')),
                     (p.style.opacity = ''.concat(0 + (1 - (s = 0)) * N)),
                     (p.style.transform = 'translateY('.concat((c = f / 4) + (0 - c) * N, 'px)')),
                     null != h)
@@ -84,13 +84,13 @@ function _(e) {
                     h.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [j, S, null == T ? void 0 : T.height, I, x, null == y ? void 0 : y.height]);
+        }, [S, y, null == T ? void 0 : T.height, A, _, null == j ? void 0 : j.height]);
     return (
         l.useEffect(() => {
             L();
-        }, [L, I]),
+        }, [L, A]),
         l.useEffect(() => {
-            let e = x.current,
+            let e = _.current,
                 n = () => {
                     L();
                 };
@@ -100,7 +100,7 @@ function _(e) {
                     null == e || e.removeEventListener('scroll', n);
                 }
             );
-        }, [x, L]),
+        }, [_, L]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -110,7 +110,7 @@ function _(e) {
                             className: f.stickyBannerContainer,
                             children: (0, i.jsx)('div', {
                                 className: f.stickyBanner,
-                                ref: A
+                                ref: I
                             })
                         }),
                         (0, i.jsx)('div', {
@@ -134,7 +134,7 @@ function _(e) {
                           className: f.moreMenuButtonContainer,
                           children: (0, i.jsx)(h.Z, {
                               application: n,
-                              channel: t,
+                              context: t,
                               className: f.headerButton,
                               sectionName: N
                           })
@@ -143,7 +143,7 @@ function _(e) {
                 (0, i.jsx)('div', {
                     ref: E,
                     className: f.bannerBackground,
-                    style: { backgroundColor: S }
+                    style: { backgroundColor: y }
                 })
             ]
         })

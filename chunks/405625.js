@@ -9,12 +9,12 @@ var i = n(192379),
     l = n(911969),
     r = n(822245),
     o = n(675478),
-    u = n(358085),
-    a = n(194188),
+    a = n(358085),
+    u = n(194188),
     c = n(761122);
 function d(e) {
     o.DZ.loadIfNecessary();
-    let { enabled: t } = a.x.getCurrentConfig({ location: 'useActivityShelfItemsSorting' }, { autoTrackExposure: !1 });
+    let { enabled: t } = u.x.getCurrentConfig({ location: 'useActivityShelfItemsSorting' }, { autoTrackExposure: !1 });
     return i.useMemo(() => {
         let n = [];
         e.forEach((e) => n.push(e.application.id));
@@ -48,7 +48,7 @@ let f = (e, t) => {
             .filter((e) => {
                 var t, n;
                 let [i] = e,
-                    r = null === (n = i.application.embeddedActivityConfig) || void 0 === n ? void 0 : null === (t = n.client_platform_config[(0, c.Z)((0, u.getOS)())]) || void 0 === t ? void 0 : t.label_type;
+                    r = null === (n = i.application.embeddedActivityConfig) || void 0 === n ? void 0 : null === (t = n.client_platform_config[(0, c.Z)((0, a.getOS)())]) || void 0 === t ? void 0 : t.label_type;
                 return !!r && (r === l.ww.NEW || r === l.ww.UPDATED);
             })
             .forEach((e) => {

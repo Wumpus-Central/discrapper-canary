@@ -9,8 +9,8 @@ t.d(n, {
     t(47120);
 var i = t(200651),
     l = t(481060),
-    a = t(239091),
-    o = t(299206),
+    o = t(239091),
+    a = t(299206),
     r = t(276022),
     s = t(695346),
     c = t(914010),
@@ -33,14 +33,14 @@ function h(e) {
 function f(e) {
     let { application: n, onSelect: t } = e,
         r = s.Sb.useSetting(),
-        c = (0, o.Z)({
+        c = (0, a.Z)({
             id: n.id,
             label: p.intl.string(p.t['+NP/b2'])
         }),
         d = h({ application: n });
     return (0, i.jsxs)(l.Menu, {
         navId: 'activity-shelf-item-context',
-        onClose: a.Zy,
+        onClose: o.Zy,
         'aria-label': p.intl.string(p.t.WkcHT0),
         onSelect: t,
         children: [null != d && (0, i.jsxs)(l.MenuGroup, { children: [...d] }, 'manage-app-actions'), r && (0, i.jsx)(l.MenuGroup, { children: c }, 'developer-actions')]

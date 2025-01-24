@@ -1,12 +1,12 @@
 t.d(n, {
     Q: function () {
-        return a;
+        return o;
     }
 }),
     t(47120);
 var i = t(192379),
     l = t(542094);
-function a(e) {
+function o(e) {
     let [n, t] = i.useState(e);
     return (
         i.useLayoutEffect(() => {

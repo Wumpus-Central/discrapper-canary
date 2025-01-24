@@ -6,11 +6,11 @@ t.d(n, {
     t(47120);
 var i = t(192379),
     l = t(674588),
-    a = t(70956),
-    o = t(314734);
+    o = t(70956),
+    a = t(314734);
 function r(e) {
     let { sectionId: n, commandsByActiveSection: t } = e,
-        [r, s] = i.useState(o.bS.ALPHABETICAL),
+        [r, s] = i.useState(a.bS.ALPHABETICAL),
         c = i.useMemo(() => {
             var e, i;
             return null !== (i = null === (e = t.find((e) => e.section.id === n)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : [];
@@ -57,17 +57,17 @@ function r(e) {
             }, [n]);
         })({ alphabeticalSortedCommands: c });
     i.useEffect(() => {
-        l.i6(n, { dontRefetchMs: a.Z.Millis.DAY });
+        l.i6(n, { dontRefetchMs: o.Z.Millis.DAY });
     }, [n]),
         i.useLayoutEffect(() => {
-            if (!!u) s(o.bS.POPULAR);
+            if (!!u) s(a.bS.POPULAR);
         }, [u]);
     let m = c;
     switch (r) {
-        case o.bS.POPULAR:
+        case a.bS.POPULAR:
             m = d;
             break;
-        case o.bS.ALPHABETICAL:
+        case a.bS.ALPHABETICAL:
             m = c;
     }
     return {

@@ -305,7 +305,7 @@ async function eC(e) {
     for (let n of e.removed) eg.verbose('updateIntendedOverlayPIDs: removedGame', n), await i(n), (a = !0);
     a && e2.emitChange();
 }
-let eN = ey('updateIntendedOverlayPIDs', (e) => eC(e));
+let eN = ey('updateIntendedOverlayPIDs', (e) => (eg.trace('updateIntendedOverlayPIDs', e), eC(e)));
 function eR() {
     return new Promise((e) => {
         e2.addConditionalChangeListener(() => {
@@ -456,7 +456,7 @@ function eV(e) {
     let { port: n } = e;
     ec = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let r = new URLSearchParams();
-    r.append('build_id', '469a0eb8b715ab68e4267dc85089aba62738c0fe'), r.append('rpc', String(n)), r.append('rpc_auth_token', ec), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
+    r.append('build_id', 'aa274f993854a93946fefe5fc26cf551690de064'), r.append('rpc', String(n)), r.append('rpc_auth_token', ec), (i = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(r.toString()));
 }
 function ej(e) {
     let { channelId: n, ring: r } = e;

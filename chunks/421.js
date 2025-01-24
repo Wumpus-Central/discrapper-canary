@@ -51,7 +51,7 @@ function S(e) {
                 children: [
                     (0, i.jsx)('div', {
                         className: Z.launcherOuterContainer,
-                        children: (0, i.jsx)(N, {
+                        children: (0, i.jsx)(y, {
                             activityItem: v,
                             onLaunch: u,
                             channelId: r
@@ -162,7 +162,7 @@ function S(e) {
         })
     });
 }
-function N(e) {
+function y(e) {
     var t, c;
     let { activityItem: d, onLaunch: p, channelId: m } = e,
         h = (0, x.Z)({
@@ -170,8 +170,8 @@ function N(e) {
             size: 2048
         }),
         { analyticsLocations: T } = (0, o.ZP)(),
-        [S, N] = a.useState(null !== (t = (0, g.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
-        [y, j] = a.useState(
+        [S, y] = a.useState(null !== (t = (0, g.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
+        [N, j] = a.useState(
             null !==
                 (c = (0, v.d)({
                     guildId: S,
@@ -180,19 +180,19 @@ function N(e) {
                 ? c
                 : void 0
         ),
-        E = (0, l.e7)([u.Z], () => u.Z.getChannel(y), [y]),
+        E = (0, l.e7)([u.Z], () => u.Z.getChannel(N), [N]),
         A = (0, g.W)(),
         M = (0, v.F)(S),
         O = a.useCallback(async () => {
             var e;
-            if (null != y)
+            if (null != N)
                 await (0, f.Z)({
                     targetApplicationId: null == d ? void 0 : null === (e = d.application) || void 0 === e ? void 0 : e.id,
-                    channelId: y,
+                    channelId: N,
                     analyticsLocations: T,
                     commandOrigin: r.bB.APPLICATION_LAUNCHER
                 }).then(p);
-        }, [d, T, p, y]),
+        }, [d, T, p, N]),
         L = a.useCallback(() => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e('60133').then(n.bind(n, 827940));
@@ -204,7 +204,7 @@ function N(e) {
                     });
             });
         }, [d, T]),
-        w = null == E || (null != E.guild_id && !(null != S && null != y && A.some((e) => e.value === S) && M.some((e) => e.value.channel.id === y)) && !0);
+        w = null == E || (null != E.guild_id && !(null != S && null != N && A.some((e) => e.value === S) && M.some((e) => e.value.channel.id === N)) && !0);
     return (0, i.jsxs)('div', {
         className: Z.launcherInnerContainer,
         children: [
@@ -236,7 +236,7 @@ function N(e) {
                               isSelected: (e) => e === S,
                               select: (e) => {
                                   var t;
-                                  N(e), j(null !== (t = (0, v.d)({ guildId: e })) && void 0 !== t ? t : void 0);
+                                  y(e), j(null !== (t = (0, v.d)({ guildId: e })) && void 0 !== t ? t : void 0);
                               },
                               serialize: (e) => e
                           }),
@@ -246,7 +246,7 @@ function N(e) {
                               options: M,
                               isSelected: (e) => {
                                   let { channel: t } = e;
-                                  return t.id === y;
+                                  return t.id === N;
                               },
                               select: (e) => {
                                   let { channel: t } = e;
@@ -257,7 +257,7 @@ function N(e) {
                                   return t.id;
                               },
                               renderOptionValue: () => {
-                                  let e = M.find((e) => e.value.channel.id === y);
+                                  let e = M.find((e) => e.value.channel.id === N);
                                   return null == e
                                       ? null
                                       : (0, i.jsx)(C.O, {

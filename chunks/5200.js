@@ -26,16 +26,16 @@ let x = ['embedded_cover'],
     };
 function _(e) {
     var t;
-    let { channel: n, activityItem: i, onClick: l, aspectRatio: s = 0, animatedDivClass: _, commandOrigin: I } = e,
+    let { context: n, activityItem: i, onClick: l, aspectRatio: s = 0, animatedDivClass: _, commandOrigin: I } = e,
         {
             onActivityItemSelected: E,
             imageBackground: b,
             activityAction: Z,
             labelType: N
         } = (0, u.ZP)({
-            channel: n,
+            context: n,
             activityItem: i,
-            guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
+            guildId: null !== (t = n.channel.getGuildId()) && void 0 !== t ? t : void 0,
             locationObject: {},
             onActivityItemSelected: l,
             embeddedActivitiesManager: m.Z,

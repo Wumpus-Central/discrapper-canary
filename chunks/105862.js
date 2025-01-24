@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     l = t(192379),
-    a = t(780384),
-    o = t(481060),
+    o = t(780384),
+    a = t(481060),
     r = t(410030),
     s = t(782568),
     c = t(63063),
@@ -20,8 +20,8 @@ var i = t(200651),
 function v(e) {
     let { showImage: n = !0, padding: t = !1 } = e,
         v = (0, r.ZP)(),
-        _ = (0, a.ap)(v) ? C : f,
-        x = l.useCallback(() => {
+        x = (0, o.ap)(v) ? C : f,
+        _ = l.useCallback(() => {
             (0, s.Z)(c.Z.getAppsSupportURL(m.BhN.APPS_LEARN_MORE));
         }, []),
         { trackSectionImpressionRef: N } = (0, u.Z)({
@@ -38,32 +38,32 @@ function v(e) {
                 n &&
                     (0, i.jsx)('img', {
                         className: h.image,
-                        src: _,
+                        src: x,
                         alt: '',
                         'aria-hidden': !0
                     }),
                 (0, i.jsxs)('div', {
                     className: h.body,
                     children: [
-                        (0, i.jsx)(o.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-lg/bold',
                             color: 'header-primary',
                             children: p.intl.string(p.t['kw8/ER'])
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-normal',
                             children: p.intl.string(p.t.GZoV1N)
                         })
                     ]
                 }),
-                (0, i.jsx)(o.Button, {
-                    size: o.Button.Sizes.MEDIUM,
+                (0, i.jsx)(a.Button, {
+                    size: a.Button.Sizes.MEDIUM,
                     'aria-label': p.intl.formatToPlainString(p.t.xx5Sur, {
                         sectionTitle: p.intl.string(p.t['kw8/ER']),
                         sectionBody: p.intl.string(p.t.GZoV1N)
                     }),
-                    onClick: x,
+                    onClick: _,
                     children: p.intl.string(p.t.Ye51oa)
                 })
             ]

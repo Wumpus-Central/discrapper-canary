@@ -114,7 +114,7 @@ function x(e) {
                     sectionName: s,
                     source: v.Z.entrypoint()
                 });
-                if (n.inputType === f.iw.BUILT_IN_TEXT && null != c) {
+                if (n.inputType === f.iw.BUILT_IN_TEXT && null != c && null != i.channel) {
                     var e;
                     let n = h.ZP.parse(u, c.content);
                     (n.tts = null !== (e = c.tts) && void 0 !== e && e), d.Z.sendMessage(i.channel.id, n);

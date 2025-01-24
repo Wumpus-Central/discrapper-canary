@@ -1,9 +1,9 @@
 t.d(n, {
     Gi: function () {
-        return c;
+        return a;
     },
     YJ: function () {
-        return a;
+        return c;
     },
     zY: function () {
         return d;
@@ -16,10 +16,10 @@ var r = t(481060),
     s = t(592286),
     o = t(388032),
     u = t(484979);
-function c(e) {
-    let { value: n, placeholder: t, onChange: l, disabled: o, autofocus: u, className: c } = e;
+function a(e) {
+    let { value: n, placeholder: t, onChange: l, disabled: o, autofocus: u, className: a } = e;
     return (0, i.jsx)(r.TextInput, {
-        inputClassName: c,
+        inputClassName: a,
         maxLength: s.tL,
         value: null != n ? n : '',
         placeholder: t,
@@ -28,7 +28,7 @@ function c(e) {
         autoFocus: u
     });
 }
-function a(e) {
+function c(e) {
     let { formField: n } = e;
     return (0, i.jsx)(l.CA, {
         title: n.label,
@@ -45,7 +45,7 @@ function d(e) {
     let { formField: n, autofocus: t, onChange: r } = e;
     return (0, i.jsx)(l.hK, {
         title: n.label,
-        children: (0, i.jsx)(c, {
+        children: (0, i.jsx)(a, {
             onChange: r,
             value: n.response,
             autofocus: t,

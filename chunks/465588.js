@@ -13,12 +13,12 @@ var r = t(120356),
     s = t(481060),
     o = t(476770),
     u = t(592286),
-    c = t(388032),
-    a = t(484979);
+    a = t(388032),
+    c = t(484979);
 function d(e) {
-    let { value: n, placeholder: t, onChange: r, disabled: o, className: c, autofocus: d } = e;
+    let { value: n, placeholder: t, onChange: r, disabled: o, className: a, autofocus: d } = e;
     return (0, i.jsx)(s.TextArea, {
-        className: l()(a.paragraphFieldBody, c),
+        className: l()(c.paragraphFieldBody, a),
         maxLength: u.RS,
         value: null != n ? n : '',
         placeholder: null != t ? t : '',
@@ -34,7 +34,7 @@ function f(e) {
     return (0, i.jsx)(o.CA, {
         title: n.label,
         children: (0, i.jsx)(d, {
-            className: a.disabledFieldBackground,
+            className: c.disabledFieldBackground,
             value: n.response,
             disabled: !0
         })
@@ -48,7 +48,7 @@ function m(e) {
             value: n.response,
             onChange: r,
             autofocus: t,
-            placeholder: c.intl.string(c.t['Sqn+Wl'])
+            placeholder: a.intl.string(a.t['Sqn+Wl'])
         })
     });
 }

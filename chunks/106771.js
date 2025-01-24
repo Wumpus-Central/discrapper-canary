@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     l = t(192379),
-    a = t(481060),
-    o = t(239091),
+    o = t(481060),
+    a = t(239091),
     r = t(973616),
     s = t(783097),
     c = t(176412),
@@ -17,12 +17,12 @@ var i = t(200651),
     h = t(413097);
 function f(e) {
     var n;
-    let { command: t, application: f, onClick: C, query: v, searchResultsPosition: _ } = e,
-        x = l.useCallback(
+    let { command: t, application: f, onClick: C, query: v, searchResultsPosition: x } = e,
+        _ = l.useCallback(
             (e) => {
                 if ((0, s.BQ)(f)) {
                     let n = f instanceof r.ZP ? f : r.ZP.createFromServer(f);
-                    (0, o.vq)(e, (e) =>
+                    (0, a.vq)(e, (e) =>
                         (0, i.jsx)(d.Z, {
                             application: n,
                             ...e
@@ -32,24 +32,24 @@ function f(e) {
             },
             [f]
         ),
-        { iconURL: N, name: I, description: A } = l.useMemo(() => (0, s.sl)(f, { fakeAppIconURL: h }), [f]),
+        { iconURL: N, name: A, description: I } = l.useMemo(() => (0, s.sl)(f, { fakeAppIconURL: h }), [f]),
         E = l.useMemo(() => {
             var e;
-            let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : A;
+            let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : I;
             return null == n ? null : (0, c.ae)(n, void 0);
-        }, [A, null == t ? void 0 : t.displayDescription]),
+        }, [I, null == t ? void 0 : t.displayDescription]),
         { trackSearchResultsItemImpressionRef: g } = (0, m.Z)({
             applicationId: f.id,
             commandId: null == t ? void 0 : t.id,
             query: v,
-            searchResultsPosition: _
+            searchResultsPosition: x
         });
-    return (0, i.jsx)(a.Clickable, {
+    return (0, i.jsx)(o.Clickable, {
         className: p.clickable,
         innerRef: (e) => (g.current = e),
         onClick: C,
-        onContextMenu: x,
-        children: (0, i.jsxs)(a.FocusBlock, {
+        onContextMenu: _,
+        children: (0, i.jsxs)(o.FocusBlock, {
             className: p.focusBlock,
             children: [
                 (0, i.jsx)(u.Z, {
@@ -61,13 +61,13 @@ function f(e) {
                 (0, i.jsxs)('div', {
                     className: p.cmdDetails,
                     children: [
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(o.Heading, {
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
-                            children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : I
+                            children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : A
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
@@ -76,11 +76,11 @@ function f(e) {
                     ]
                 }),
                 null != t
-                    ? (0, i.jsx)(a.Text, {
+                    ? (0, i.jsx)(o.Text, {
                           className: p.cmdAppName,
                           variant: 'text-sm/normal',
                           color: 'text-secondary',
-                          children: I
+                          children: A
                       })
                     : null,
                 (0, i.jsx)('div', { className: p.underline })

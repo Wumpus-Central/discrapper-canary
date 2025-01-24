@@ -29,8 +29,8 @@ var i = n(200651),
     _ = n(624138),
     Z = n(115130),
     S = n(566620),
-    N = n(421),
-    y = n(895395),
+    y = n(421),
+    N = n(895395),
     j = n(49978),
     E = n(427996),
     A = n(701488),
@@ -236,7 +236,7 @@ function R(e) {
                                 },
                                 children: (0, i.jsx)(F, {
                                     slide: V,
-                                    children: (0, i.jsx)(y.Z, {
+                                    children: (0, i.jsx)(N.Z, {
                                         scrollerRef: Q,
                                         channel: t,
                                         guildId: n,
@@ -274,7 +274,7 @@ function R(e) {
                                     children:
                                         null == z
                                             ? null
-                                            : (0, i.jsx)(N.Z, {
+                                            : (0, i.jsx)(y.Z, {
                                                   applicationId: z,
                                                   channelId: null == t ? void 0 : t.id,
                                                   guildId: n,
@@ -291,7 +291,7 @@ function R(e) {
                         children: (() => {
                             switch (V) {
                                 case A.ag.DIRECTORY:
-                                    return (0, i.jsx)(y.d, {});
+                                    return (0, i.jsx)(N.d, {});
                                 case A.ag.SELECT_CHANNEL:
                                     return (0, i.jsx)(j.q, {
                                         onBack: en,

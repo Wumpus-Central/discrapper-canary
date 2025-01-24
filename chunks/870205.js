@@ -5,24 +5,24 @@ t.d(n, {
 });
 var i = t(200651),
     l = t(481060),
-    a = t(984168),
-    o = t(314734),
+    o = t(984168),
+    a = t(314734),
     r = t(388032),
     s = t(853936);
 function c(e) {
     let n,
         { sortOrder: t, onSortOptionClick: c } = e;
     switch (t) {
-        case o.bS.POPULAR:
+        case a.bS.POPULAR:
             n = r.intl.string(r.t.SzxiqK);
             break;
-        case o.bS.ALPHABETICAL:
+        case a.bS.ALPHABETICAL:
             n = r.intl.string(r.t.m8xstr);
     }
     return (0, i.jsx)(l.Popout, {
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(a.Z, {
+            return (0, i.jsx)(o.Z, {
                 sortOrder: t,
                 onSortOptionClick: c,
                 closePopout: n
@@ -31,7 +31,7 @@ function c(e) {
         position: 'bottom',
         align: 'left',
         children: (e, t) => {
-            let { isShown: a } = t;
+            let { isShown: o } = t;
             return (0, i.jsxs)(l.Button, {
                 ...e,
                 size: l.Button.Sizes.MIN,
@@ -50,7 +50,7 @@ function c(e) {
                         color: 'text-normal',
                         children: n
                     }),
-                    a
+                    o
                         ? (0, i.jsx)(l.ChevronSmallUpIcon, {
                               size: 'custom',
                               color: 'currentColor',

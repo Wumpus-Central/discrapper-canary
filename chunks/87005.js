@@ -6,8 +6,8 @@ t.d(n, {
     t(47120);
 var i = t(192379),
     l = t(243814),
-    a = t(442837),
-    o = t(384275),
+    o = t(442837),
+    a = t(384275),
     r = t(911969),
     s = t(10718),
     c = t(812236),
@@ -25,22 +25,22 @@ let h = {
         includeFrecency: !0
     };
 function C(e) {
-    let { channel: n, onlyActivityApps: t, allowCommandFetch: r, includeAuthorizedAppsAndFetch: C } = e,
-        { sectionDescriptors: v, loading: _ } = s.wi({
-            channel: n,
+    let { context: n, onlyActivityApps: t, allowCommandFetch: r, includeAuthorizedAppsAndFetch: C } = e,
+        { sectionDescriptors: v, loading: x } = s.wi({
+            context: n,
             filters: h,
             options: f,
             allowFetch: r
         });
     return {
-        loading: _,
+        loading: x,
         frecentApps: (function (e) {
-            let { sectionDescriptors: n, channel: t, onlyActivityApps: r, includeAuthorizedAppsAndFetch: s } = e,
-                h = (0, a.e7)([u.Z], () => u.Z.getFetchState());
+            let { sectionDescriptors: n, context: t, onlyActivityApps: r, includeAuthorizedAppsAndFetch: s } = e,
+                h = (0, o.e7)([u.Z], () => u.Z.getFetchState());
             i.useEffect(() => {
-                s && h === u.M.NOT_FETCHED && o.Z.fetch();
+                s && h === u.M.NOT_FETCHED && a.Z.fetch();
             }, [s, h]);
-            let f = (0, a.Wu)([u.Z], () => {
+            let f = (0, o.Wu)([u.Z], () => {
                     var e, n;
                     return s && null !== (n = null === (e = u.Z.getApps()) || void 0 === e ? void 0 : e.filter((e) => e.scopes.includes(l.x.APPLICATIONS_COMMANDS))) && void 0 !== n ? n : [];
                 }),
@@ -49,7 +49,7 @@ function C(e) {
             return i.useMemo(() => (r ? v.filter((e) => null != e.application && (0, m.ye)(e.application) && null != (0, c.Xu)(t, e.id)) : v), [v, t, r]);
         })({
             sectionDescriptors: v,
-            channel: n,
+            context: n,
             onlyActivityApps: t,
             includeAuthorizedAppsAndFetch: C
         })

@@ -17,8 +17,8 @@ function o(e) {
                 i = null == t ? void 0 : t.guild,
                 o = r.Z.getGuild(n),
                 u = null == o ? void 0 : o.verificationLevel,
-                c = null == i ? void 0 : i.verification_level;
-            return null !== (e = null != u ? u : c) && void 0 !== e ? e : s.sFg.NONE;
+                a = null == i ? void 0 : i.verification_level;
+            return null !== (e = null != u ? u : a) && void 0 !== e ? e : s.sFg.NONE;
         },
         [n]
     );

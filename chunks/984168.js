@@ -6,8 +6,8 @@ t.d(n, {
 var i = t(200651);
 t(192379);
 var l = t(120356),
-    a = t.n(l),
-    o = t(481060),
+    o = t.n(l),
+    a = t(481060),
     r = t(314734),
     s = t(388032),
     c = t(283437);
@@ -17,24 +17,24 @@ function d(e) {
             t(e), l();
         };
     return (0, i.jsx)('div', {
-        className: a()(r.Jh, c.container),
-        children: (0, i.jsx)(o.Menu, {
+        className: o()(r.Jh, c.container),
+        children: (0, i.jsx)(a.Menu, {
             navId: 'command-list-sort',
             'aria-label': s.intl.string(s.t.Ugo9ub),
             hideScroller: !0,
             onClose: l,
             onSelect: l,
-            children: (0, i.jsxs)(o.MenuGroup, {
+            children: (0, i.jsxs)(a.MenuGroup, {
                 label: s.intl.string(s.t.yeYaHR),
                 children: [
-                    (0, i.jsx)(o.MenuRadioItem, {
+                    (0, i.jsx)(a.MenuRadioItem, {
                         id: 'sort-by-popular',
                         group: 'sort-by',
                         label: s.intl.string(s.t.SzxiqK),
                         action: () => d(r.bS.POPULAR),
                         checked: n === r.bS.POPULAR
                     }),
-                    (0, i.jsx)(o.MenuRadioItem, {
+                    (0, i.jsx)(a.MenuRadioItem, {
                         id: 'sort-by-alphabetical',
                         group: 'sort-by',
                         label: s.intl.string(s.t.m8xstr),

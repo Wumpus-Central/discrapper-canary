@@ -68,7 +68,7 @@ function E(e, n) {
 }
 let v = (e, n) => {
         if (0 === e.length) return null;
-        if (1 === e.length) return e[1];
+        if (1 === e.length) return e[0];
         if (2 === e.length)
             return p.intl.formatToPlainString(p.t['+v1gGx'], {
                 item1: e[0],

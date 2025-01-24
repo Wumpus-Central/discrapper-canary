@@ -22,8 +22,8 @@ var i,
     s = t(442837),
     o = t(658666),
     u = t(384632),
-    c = t(601964),
-    a = t(430824),
+    a = t(601964),
+    c = t(430824),
     d = t(863249),
     f = t(944163),
     m = t(63568),
@@ -34,17 +34,17 @@ var i,
 function v(e, n, t) {
     let i = (0, m.jS)(e, 'MemberVerificationScreens'),
         r = (0, s.e7)([f.Z], () => f.Z.get(e)),
-        c = (0, s.e7)([o.Z], () => o.Z.pendingState);
+        a = (0, s.e7)([o.Z], () => o.Z.pendingState);
     l.useEffect(() => {
         if (!t) d.ZP.fetchVerificationForm(e, n);
     }, [e, n, t]);
-    let a = l.useMemo(() => {
+    let c = l.useMemo(() => {
         var e, n;
         let l;
         if (!t || !i) return null;
-        if ((null == c ? void 0 : c.joinType) === u.A.APPLY && null != c.pendingVerificationFields) l = [...c.pendingVerificationFields];
-        else if ((null == c ? void 0 : c.joinType) === u.A.INVITE && null != c.termRules) {
-            let e = c.termRules.map((e) => e.value.trim()).filter((e) => '' !== e);
+        if ((null == a ? void 0 : a.joinType) === u.A.APPLY && null != a.pendingVerificationFields) l = [...a.pendingVerificationFields];
+        else if ((null == a ? void 0 : a.joinType) === u.A.INVITE && null != a.termRules) {
+            let e = a.termRules.map((e) => e.value.trim()).filter((e) => '' !== e);
             l = [
                 {
                     field_type: h.QJ.TERMS,
@@ -62,12 +62,12 @@ function v(e, n, t) {
                   formFields: l,
                   guild: null == r ? void 0 : r.guild
               };
-    }, [t, i, c, r]);
-    return null != a ? a : r;
+    }, [t, i, a, r]);
+    return null != c ? c : r;
 }
 function C(e, n) {
-    let t = (0, s.e7)([a.Z], () => a.Z.getGuild(e));
-    return l.useMemo(() => (null != t ? t : null != n ? new c.ZP(n) : null), [t, n]);
+    let t = (0, s.e7)([c.Z], () => c.Z.getGuild(e));
+    return l.useMemo(() => (null != t ? t : null != n ? new a.ZP(n) : null), [t, n]);
 }
 function p(e, n, t) {
     let i = !(null == n ? void 0 : n.isClaimed()),

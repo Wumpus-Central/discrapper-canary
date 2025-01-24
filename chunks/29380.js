@@ -1,13 +1,13 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return x;
     }
 }),
     t(47120);
 var i = t(200651),
     l = t(192379),
-    a = t(481060),
-    o = t(542094),
+    o = t(481060),
+    a = t(542094),
     r = t(895924),
     s = t(626135),
     c = t(499254),
@@ -19,50 +19,50 @@ var i = t(200651),
     f = t(981631),
     C = t(388032),
     v = t(129571);
-function _(e) {
-    let { channel: n, application: t, sectionName: _, primaryEntryPointCommand: x, buttonSize: N = a.ButtonSizes.MEDIUM } = e,
-        I = l.useId(),
-        A = l.useCallback(() => {
+function x(e) {
+    let { context: n, application: t, sectionName: x, primaryEntryPointCommand: _, buttonSize: N = o.ButtonSizes.MEDIUM } = e,
+        A = l.useId(),
+        I = l.useCallback(() => {
             c.yT(d.ti.ACTIVITY);
         }, []),
         { submitting: E, wasSubmitting: g } = (0, p.Z)({
             applicationId: t.id,
-            channelId: n.id,
-            launchingComponentId: I,
-            onSubmissionComplete: A
+            context: n,
+            launchingComponentId: A,
+            onSubmissionComplete: I
         }),
         [b, P] = l.useState(!1),
-        S = (0, o.Qv)({
+        y = (0, a.Qv)({
             applicationId: t.id,
-            channelId: n.id
+            context: n
         }),
-        j = l.useMemo(() => (0, m.XZ)(x.displayName), [x.displayName]),
+        S = l.useMemo(() => (0, m.XZ)(_.displayName), [_.displayName]),
         {
-            onActivityItemSelected: y,
+            onActivityItemSelected: j,
             buttonColor: T,
             buttonText: L
         } = (0, h.P7)({
-            channel: n,
+            context: n,
             application: t,
             location: r.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: _,
-            commandName: j,
-            autoDismissOnClick: S === o.JS.LEAVE,
-            launchingComponentId: I,
+            sectionName: x,
+            commandName: S,
+            autoDismissOnClick: y === a.JS.LEAVE,
+            launchingComponentId: A,
             submitting: null != g ? g : E
         }),
         { disabled: R, reason: M } = (0, u.Z)({
-            channelId: n.id,
+            context: n,
             application: t,
-            activityAction: S
+            activityAction: y
         });
-    return (0, i.jsx)(a.Tooltip, {
+    return (0, i.jsx)(o.Tooltip, {
         shouldShow: null != M,
         tooltipContentClassName: v.tooltipContent,
         text: M,
         children: (e) => {
             let { onClick: n, ...l } = e;
-            return (0, i.jsx)(a.Button, {
+            return (0, i.jsx)(o.Button, {
                 ...l,
                 type: 'submit',
                 size: N,
@@ -71,7 +71,7 @@ function _(e) {
                 submitting: b,
                 onClick: () => {
                     P(!0),
-                        y(),
+                        j(),
                         null == n || n(),
                         s.default.track(f.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                             application_id: t.id,

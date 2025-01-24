@@ -35,8 +35,8 @@ let Z = (0, s.U)(() => ({ visible: !1 })),
     },
     S = Z;
 function T(e) {
-    let { channel: t, entryPointCommandButtonRef: n, type: r } = e,
-        { isInitialLoading: a, application: s, primaryEntryPointCommand: o } = (0, p.Z)({ channel: t }),
+    let { context: t, entryPointCommandButtonRef: n, type: r } = e,
+        { isInitialLoading: a, application: s, primaryEntryPointCommand: o } = (0, p.Z)({ context: t }),
         c = null == s ? void 0 : s.id,
         m = (0, _.Z)({ type: r }),
         { sectionCommands: v } = (0, C.If)(t, null != c ? c : ''),
@@ -63,7 +63,7 @@ function T(e) {
     ),
     Z)
         ? (0, i.jsx)(j, {
-              channel: t,
+              context: t,
               application: s,
               primaryEntryPointCommand: o,
               onOpenButtonPress: E,
@@ -73,7 +73,7 @@ function T(e) {
         : null;
 }
 function j(e) {
-    let { channel: t, application: n, primaryEntryPointCommand: l, onOpenButtonPress: r, entryPointCommandButtonRef: s, type: o } = e,
+    let { context: t, application: n, primaryEntryPointCommand: l, onOpenButtonPress: r, entryPointCommandButtonRef: s, type: o } = e,
         d = (0, _.Z)({ type: o }),
         {
             isExecutingLaunchInteraction: u,
@@ -85,13 +85,13 @@ function j(e) {
             setIsExecutingLaunchInteraction: x,
             analyticsLocations: I
         } = (0, m.Z)({
-            channel: t,
+            context: t,
             primaryEntryPointCommand: l,
             application: n,
             showAppLauncherPopup: d
         }),
         Z = (0, m.J)({
-            channel: t,
+            context: t,
             application: n,
             isEmbeddedApp: f,
             hasActiveMatchingEmbeddedActivity: p,

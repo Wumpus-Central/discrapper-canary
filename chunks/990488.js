@@ -1,6 +1,6 @@
 t.d(n, {
     W: function () {
-        return b;
+        return F;
     },
     r: function () {
         return E;
@@ -13,8 +13,8 @@ var i = t(200651),
     s = t(430824),
     o = t(594174),
     u = t(63568),
-    c = t(246364),
-    a = t(990686),
+    a = t(246364),
+    c = t(990686),
     d = t(118346),
     f = t(186078),
     m = t(73880),
@@ -27,14 +27,14 @@ var i = t(200651),
     p = t(842310),
     T = t(644929),
     I = t(814960),
-    F = t(981631);
-function N(e) {
+    N = t(981631);
+function b(e) {
     let { guildId: n, formFields: t, updateFormFields: r, v2Enabled: o } = e,
         u = (0, l.e7)([s.Z], () => {
             var e;
             return null === (e = s.Z.getGuild(n)) || void 0 === e ? void 0 : e.rulesChannelId;
         }),
-        a = (e, n) => {
+        c = (e, n) => {
             let i = t[e];
             r([
                 ...t.slice(0, e),
@@ -70,17 +70,17 @@ function N(e) {
         },
         g = (e, n) => {
             switch (e.field_type) {
-                case c.QJ.TERMS:
+                case a.QJ.TERMS:
                     return (0, i.jsx)(
                         x.dd,
                         {
                             channelId: u,
                             formField: e,
-                            onChange: (e, t) => a(n, t)
+                            onChange: (e, t) => c(n, t)
                         },
                         n
                     );
-                case c.QJ.TEXT_INPUT:
+                case a.QJ.TEXT_INPUT:
                     return (0, i.jsx)(
                         j.zY,
                         {
@@ -90,7 +90,7 @@ function N(e) {
                         },
                         n
                     );
-                case c.QJ.PARAGRAPH:
+                case a.QJ.PARAGRAPH:
                     return (0, i.jsx)(
                         m.lX,
                         {
@@ -100,7 +100,7 @@ function N(e) {
                         },
                         n
                     );
-                case c.QJ.MULTIPLE_CHOICE:
+                case a.QJ.MULTIPLE_CHOICE:
                     return (0, i.jsx)(
                         f.sp,
                         {
@@ -113,17 +113,17 @@ function N(e) {
         },
         p = (e, n) => {
             switch (e.field_type) {
-                case c.QJ.TERMS:
+                case a.QJ.TERMS:
                     return (0, i.jsx)(
                         T.dd,
                         {
                             channelId: u,
                             formField: e,
-                            onChange: (e, t) => a(n, t)
+                            onChange: (e, t) => c(n, t)
                         },
                         n
                     );
-                case c.QJ.TEXT_INPUT:
+                case a.QJ.TEXT_INPUT:
                     return (0, i.jsx)(
                         I.zY,
                         {
@@ -133,7 +133,7 @@ function N(e) {
                         },
                         n
                     );
-                case c.QJ.PARAGRAPH:
+                case a.QJ.PARAGRAPH:
                     return (0, i.jsx)(
                         C.lX,
                         {
@@ -143,7 +143,7 @@ function N(e) {
                         },
                         n
                     );
-                case c.QJ.MULTIPLE_CHOICE:
+                case a.QJ.MULTIPLE_CHOICE:
                     return (0, i.jsx)(
                         v.sp,
                         {
@@ -156,18 +156,18 @@ function N(e) {
         };
     return (0, i.jsx)(i.Fragment, { children: t.map((e, n) => (o ? p(e, n) : g(e, n))) });
 }
-function b(e) {
+function F(e) {
     let n,
-        { guildId: t, formFields: r, updateFormFields: s, disableVerification: c } = e,
+        { guildId: t, formFields: r, updateFormFields: s, disableVerification: a } = e,
         f = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
-        m = (0, a.i)({ guildId: t }),
+        m = (0, c.i)({ guildId: t }),
         x = (0, u.jS)(t, 'PreviewFormRenderer');
-    return ((n = m === F.sFg.NONE ? null : m === F.sFg.VERY_HIGH ? (x ? p.l : h.l) : x ? g.b : d.b), null == f)
+    return ((n = m === N.sFg.NONE ? null : m === N.sFg.VERY_HIGH ? (x ? p.l : h.l) : x ? g.b : d.b), null == f)
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  !c && null != n && (0, i.jsx)(n, {}),
-                  (0, i.jsx)(N, {
+                  !a && null != n && (0, i.jsx)(n, {}),
+                  (0, i.jsx)(b, {
                       guildId: t,
                       formFields: r,
                       updateFormFields: s,
@@ -178,24 +178,24 @@ function b(e) {
 }
 function E(e) {
     let n,
-        { guildId: t, formFields: s, updateFormFields: c, disableVerification: f } = e,
+        { guildId: t, formFields: s, updateFormFields: a, disableVerification: f } = e,
         m = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
-        x = (0, a.i)({ guildId: t }),
+        x = (0, c.i)({ guildId: t }),
         j = (0, u.jS)(t, 'PreviewFormRenderer'),
         v = (null == m ? void 0 : m.isPhoneVerified()) || (null == m ? void 0 : m.isStaff()),
         C = (null == m ? void 0 : m.verified) || v,
         T = !1;
-    x === F.sFg.NONE ? ((T = !0), (n = null)) : x === F.sFg.VERY_HIGH ? ((T = null != v && v), (n = j ? p.v : h.v)) : ((T = null != C && C), (n = j ? g.B : d.B));
+    x === N.sFg.NONE ? ((T = !0), (n = null)) : x === N.sFg.VERY_HIGH ? ((T = null != v && v), (n = j ? p.v : h.v)) : ((T = null != C && C), (n = j ? g.B : d.B));
     let I = r.useRef(T);
     return null == m
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   !f && !I.current && null != n && (0, i.jsx)(n, { isUserVerified: T }),
-                  (0, i.jsx)(N, {
+                  (0, i.jsx)(b, {
                       guildId: t,
                       formFields: s,
-                      updateFormFields: c,
+                      updateFormFields: a,
                       v2Enabled: j
                   })
               ]

@@ -26,8 +26,8 @@ var i = n(701488),
     _ = n(641322),
     Z = n(829463),
     S = n(966310),
-    N = n(710227),
-    y = n(820836),
+    y = n(710227),
+    N = n(820836),
     j = n(179603),
     E = n(838116),
     A = n(697333),
@@ -108,13 +108,13 @@ let D = {
         playersSuggestionMin: 1,
         playersSuggestionMax: 7,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [y.Z, j.Z]
+        gameplayImageUrls: [N.Z, j.Z]
     },
     [i.Gv]: {
         playersSuggestionMin: 2,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 15,
-        gameplayImageUrls: [S.Z, N.Z]
+        gameplayImageUrls: [S.Z, y.Z]
     },
     [i.Cb]: {
         playersSuggestionMin: 2,
