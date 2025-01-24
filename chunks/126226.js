@@ -65,7 +65,10 @@ let R = {
         }
         let o = (0, m.hV)(e, r),
             { commands: l, sections: c } = d.JT(
-                e,
+                {
+                    channel: e,
+                    type: 'channel'
+                },
                 {
                     commandTypes: [s.yU.CHAT],
                     text: o.text

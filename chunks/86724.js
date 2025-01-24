@@ -40,7 +40,13 @@ function x(e, n, r, i) {
         if (null != n && A.bN.isEditorEmpty(e) && r.types.includes('application/x-discord-interaction-data')) {
             let e = JSON.parse(r.getData('application/x-discord-interaction-data')),
                 { commandKey: a, interactionOptions: s } = (0, _.XA)(e),
-                { application: l, command: u } = f.Xq(n, a);
+                { application: l, command: u } = f.Xq(
+                    {
+                        channel: n,
+                        type: 'channel'
+                    },
+                    a
+                );
             if (null != u) {
                 var i, o;
                 let e =
@@ -87,7 +93,10 @@ function x(e, n, r, i) {
         (e.onChange = () => {
             if (null != n) {
                 let a = p.Z.getState(n.id),
-                    o = f.Hf(n);
+                    o = f.Hf({
+                        channel: n,
+                        type: 'channel'
+                    });
                 if (A.bN.richValue(e) !== E || !A.Ew.equals(e.selection, v) || a.activeCommand !== y || null == T || o.some((e, n) => T[n] !== e)) {
                     let s = I.T.withMergedEntry(e, () => {
                         var o;
@@ -427,7 +436,14 @@ function F(e, n) {
     if (!e.startsWith('/')) return null;
     let r = (0, g.hV)(n, e.substring(1));
     if (!r.hasSpaceTerminator) return null;
-    let { commands: i, sections: a } = f.VB(n, u.yU.CHAT, r.text);
+    let { commands: i, sections: a } = f.VB(
+        {
+            channel: n,
+            type: 'channel'
+        },
+        u.yU.CHAT,
+        r.text
+    );
     if (0 === i.length) return null;
     let o = r.text.trim(),
         s = o + ' ',

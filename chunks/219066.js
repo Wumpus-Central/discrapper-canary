@@ -7,8 +7,8 @@ t.d(n, {
     t(47120);
 var i = t(192379),
     l = t(392711),
-    a = t.n(l),
-    o = t(911969),
+    o = t.n(l),
+    a = t(911969),
     r = t(254711),
     s = t(213459),
     c = t(10718),
@@ -16,12 +16,13 @@ var i = t(192379),
     u = t(689079);
 function m(e) {
     var n;
-    let { channel: t } = e,
-        l = (0, s.LD)(t.guild_id, !0),
-        { commandsByActiveSection: m, loading: p } = c.wi({
-            channel: t,
+    let { context: t } = e,
+        l = 'channel' === t.type ? t.channel : void 0,
+        m = (0, s.LD)(null == l ? void 0 : l.guild_id, !0),
+        { commandsByActiveSection: p, loading: h } = c.wi({
+            context: t,
             filters: {
-                commandTypes: [o.yU.CHAT, o.yU.PRIMARY_ENTRY_POINT]
+                commandTypes: [a.yU.CHAT, a.yU.PRIMARY_ENTRY_POINT]
             },
             options: {
                 placeholderCount: 0,
@@ -30,38 +31,38 @@ function m(e) {
             },
             allowFetch: !0
         }),
-        h = i.useMemo(
+        f = i.useMemo(
             () =>
-                m.reduce((e, n) => {
+                p.reduce((e, n) => {
                     let { section: t, data: i } = n;
                     return i.length > 0 && e.add(t.id), e;
                 }, new Set()),
-            [m]
+            [p]
         ),
-        f = i.useMemo(() => {
+        C = i.useMemo(() => {
             var e, n;
-            return Object.values(null !== (n = null === (e = l.result) || void 0 === e ? void 0 : e.sections) && void 0 !== n ? n : {})
+            return Object.values(null !== (n = null === (e = m.result) || void 0 === e ? void 0 : e.sections) && void 0 !== n ? n : {})
                 .map((e) => {
                     let { descriptor: n } = e;
                     return n;
                 })
-                .filter((e) => !(e.id in r.Tm) && h.has(e.id));
-        }, [null === (n = l.result) || void 0 === n ? void 0 : n.sections, h]),
-        C = (0, d.h)(f),
-        v = i.useMemo(
+                .filter((e) => !(e.id in r.Tm) && f.has(e.id));
+        }, [null === (n = m.result) || void 0 === n ? void 0 : n.sections, f]),
+        v = (0, d.h)(C),
+        x = i.useMemo(
             () =>
-                a()
+                o()
                     .compact(
-                        C.map((e) => {
+                        v.map((e) => {
                             let { application: n } = e;
                             return n;
                         })
                     )
                     .map((e) => ({ application: e })),
-            [C]
+            [v]
         );
     return {
-        appsInThisServer: v,
-        isLoading: l.fetchState.fetching || p.current
+        appsInThisServer: x,
+        isLoading: m.fetchState.fetching || h.current
     };
 }

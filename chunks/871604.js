@@ -31,31 +31,42 @@ function A(e) {
             return null === (e = y.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
         }),
         N = (0, o.e7)([_.Z], () => _.Z.getChannelId()),
-        R = (0, o.e7)([h.Z], () => {
+        R = (0, o.e7)([h.Z], () => h.Z.getChannel(N)),
+        O = (0, o.e7)([h.Z], () => {
             var e;
             return null === (e = h.Z.getChannel(N)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        O = (0, l.Z)({ channelId: null != N ? N : void 0 }),
-        D = n.id,
-        L = a.useCallback(() => {
+        D = a.useMemo(
+            () =>
+                null != R
+                    ? {
+                          channel: R,
+                          type: 'channel'
+                      }
+                    : { type: 'contextless' },
+            [R]
+        ),
+        L = (0, l.Z)({ context: D }),
+        x = n.id,
+        w = a.useCallback(() => {
             if (null != C) {
-                if (O) {
+                if (L) {
                     let e = _.Z.getCurrentlySelectedChannelId(),
                         n = h.Z.getChannel(e),
                         i = null != p.ZP.getSidebarState(e) || (null == n ? void 0 : n.isGuildVocal()) ? f.Ie.SIDEBAR : f.Ie.NORMAL;
-                    u.__(c._b.TEXT, i, { applicationId: C.id }), (0, s.closeModal)((0, b.z)(D, R)), null == r || r(), m.default.track(T.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: C.id });
+                    u.__(c._b.TEXT, i, { applicationId: C.id }), (0, s.closeModal)((0, b.z)(x, O)), null == r || r(), m.default.track(T.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: C.id });
                 } else
                     (0, v.LO)({
                         applicationId: C.id,
                         ...C
                     });
             }
-        }, [O, C, D, R, r]),
-        x = O ? S.intl.string(S.t['Cia+Aw']) : S.intl.string(S.t.NgXl3N);
+        }, [L, C, x, O, r]),
+        P = L ? S.intl.string(S.t['Cia+Aw']) : S.intl.string(S.t.NgXl3N);
     if (null == C || !(0, v.Eb)(C)) return null;
-    let { customInstallUrl: w } = C,
-        P = null == w || E.Z.isDiscordUrl(w) ? s.PlusSmallIcon : s.LinkExternalSmallIcon,
-        M = O ? void 0 : P;
+    let { customInstallUrl: M } = C,
+        k = null == M || E.Z.isDiscordUrl(M) ? s.PlusSmallIcon : s.LinkExternalSmallIcon,
+        U = L ? void 0 : k;
     return g.wS
         ? (0, i.jsx)(s.Popout, {
               renderPopout: (e) => {
@@ -78,10 +89,10 @@ function A(e) {
                   let { onClick: n, ...r } = e;
                   return (0, i.jsx)(I.tG, {
                       action: 'PRESS_ADD_APP',
-                      text: x,
-                      icon: M,
+                      text: P,
+                      icon: U,
                       onContextMenu: n,
-                      onClick: L,
+                      onClick: w,
                       ...r,
                       ...A
                   });
@@ -89,9 +100,9 @@ function A(e) {
           })
         : (0, i.jsx)(I.tG, {
               action: 'PRESS_ADD_APP',
-              text: x,
-              icon: M,
-              onClick: L,
+              text: P,
+              icon: U,
+              onClick: w,
               ...A
           });
 }

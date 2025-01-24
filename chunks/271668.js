@@ -64,7 +64,10 @@ n.Z = s.forwardRef(function (e, n) {
             scrollDown: et,
             filterSection: en
         } = T.wi({
-            channel: r,
+            context: {
+                channel: r,
+                type: 'channel'
+            },
             filters: {
                 commandTypes: [p.yU.CHAT],
                 builtIns: i ? S.D.ONLY_TEXT : S.D.ALLOW,

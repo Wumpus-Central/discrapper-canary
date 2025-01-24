@@ -200,41 +200,48 @@ function j(e) {
     });
 }
 function A(e) {
-    let { channel: t, guild: n, handleClose: l, width: r, userParticipantCount: o } = e;
+    let { channel: t, guild: n, handleClose: r, width: o, userParticipantCount: d } = e;
     (0, u.Z)(() => {
         _.default.track(E.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: 'activity suggestion',
-            n_participants: o
+            n_participants: d
         });
     });
-    let d = (0, h.Z)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: m } = (0, g.ZP)(f.Z.VC_TILE_ACTIVITY_SUGGESTION);
+    let m = (0, h.Z)({ guildId: n.id }).slice(0, 3),
+        { analyticsLocations: S } = (0, g.ZP)(f.Z.VC_TILE_ACTIVITY_SUGGESTION),
+        T = l.useMemo(
+            () => ({
+                channel: t,
+                type: 'channel'
+            }),
+            [t]
+        );
     return (0, i.jsx)(g.Gt, {
-        value: m,
+        value: S,
         children: (0, i.jsxs)(I.Z, {
             className: Z.root,
             children: [
-                r > 480
+                o > 480
                     ? (0, i.jsx)('img', {
                           className: Z.art,
                           src: N,
                           alt: b.intl.string(b.t['3Y9xdH'])
                       })
                     : null,
-                r > 300
+                o > 300
                     ? (0, i.jsx)(c.Text, {
                           className: Z.heading,
-                          variant: r > 550 ? 'text-md/semibold' : 'text-sm/semibold',
+                          variant: o > 550 ? 'text-md/semibold' : 'text-sm/semibold',
                           children: b.intl.string(b.t['7BKMcH'])
                       })
                     : null,
                 (0, i.jsx)('div', {
-                    className: a()(Z.activitiesContainer, { [Z.activitiesContainerSmol]: r <= 300 }),
-                    children: d.map((e) =>
+                    className: a()(Z.activitiesContainer, { [Z.activitiesContainerSmol]: o <= 300 }),
+                    children: m.map((e) =>
                         (0, i.jsx)(
                             p.Y,
                             {
-                                channel: t,
+                                context: T,
                                 activityItem: e,
                                 aspectRatio: p.Y.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: Z.activitySuggestion,
@@ -250,7 +257,7 @@ function A(e) {
                         _.default.track(E.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: 'activity suggestion',
                             close_type: 'permanent',
-                            n_participants: o
+                            n_participants: d
                         }),
                             (0, x.EW)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
@@ -268,9 +275,9 @@ function A(e) {
                         _.default.track(E.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: 'activity suggestion',
                             close_type: 'temporary',
-                            n_participants: o
+                            n_participants: d
                         }),
-                            l();
+                            r();
                     },
                     children: (0, i.jsx)(c.XSmallIcon, {
                         size: 'md',

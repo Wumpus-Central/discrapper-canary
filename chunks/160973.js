@@ -1,43 +1,42 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var i = t(442837),
     l = t(595519),
-    a = t(374065),
-    o = t(761122),
+    o = t(374065),
+    a = t(761122),
     r = t(542094),
     s = t(973616),
-    c = t(592125),
-    d = t(496675),
-    u = t(358085),
-    m = t(231338),
-    p = t(388032);
-function h(e) {
+    c = t(496675),
+    d = t(358085),
+    u = t(231338),
+    m = t(388032);
+function p(e) {
     let n,
-        { channelId: t, application: h, activityAction: f } = e,
-        C = (0, i.e7)([c.Z], () => c.Z.getChannel(t)),
-        v = (0, i.e7)([d.Z], () => d.Z.can(m.Pl.USE_EMBEDDED_ACTIVITIES, C)),
-        _ = (0, a.KF)(null == C ? void 0 : C.id),
+        { context: t, application: p, activityAction: h } = e,
+        f = 'channel' === t.type ? t.channel : void 0,
+        C = (0, i.e7)([c.Z], () => c.Z.can(u.Pl.USE_EMBEDDED_ACTIVITIES, f)),
+        v = (0, o.KF)(null == f ? void 0 : f.id),
         x = !1;
-    switch (f) {
+    switch (h) {
         case r.JS.LEAVE:
             x = !1;
             break;
         case r.JS.START:
-            (null == C ? void 0 : C.isGuildVoice()) ? _ !== a.jy.CAN_LAUNCH && (x = !0) : !(0, l.WS)(C) && (x = !0);
+            null == f ? (x = !1) : (null == f ? void 0 : f.isGuildVoice()) ? v !== o.jy.CAN_LAUNCH && (x = !0) : !(0, l.WS)(f) && (x = !0);
             break;
         case r.JS.JOIN:
-            (null == C ? void 0 : C.isGuildVoice()) ? (x = !v) : !(0, l.WS)(C) && (x = !0);
+            (null == f ? void 0 : f.isGuildVoice()) ? (x = !C) : !(0, l.WS)(f) && (x = !0);
     }
-    if (f !== r.JS.LEAVE) {
-        let e = h instanceof s.ZP ? h.embeddedActivityConfig : h.embedded_activity_config,
-            t = (0, o.Z)((0, u.getOS)());
-        null == e || e.supported_platforms.includes(t) ? (null == C ? void 0 : C.isThread()) && ((x = !0), (n = p.intl.string(p.t.ddSR3t))) : ((x = !1), (n = p.intl.string(p.t.z2YTgI)));
+    if (h !== r.JS.LEAVE) {
+        let e = p instanceof s.ZP ? p.embeddedActivityConfig : p.embedded_activity_config,
+            t = (0, a.Z)((0, d.getOS)());
+        null == e || e.supported_platforms.includes(t) ? (null == f ? void 0 : f.isThread()) && ((x = !0), (n = m.intl.string(m.t.ddSR3t))) : ((x = !1), (n = m.intl.string(m.t.z2YTgI)));
     }
     return (
-        x && null == n && (n = p.intl.string(p.t.f41E1t)),
+        x && null == n && (n = m.intl.string(m.t.f41E1t)),
         {
             disabled: x,
             reason: n

@@ -111,6 +111,7 @@ function j(e) {
             });
         }, [n.customInstallUrl, n.id, n.installParams, n.integrationTypesConfig, U]),
         et = (0, h.ms)({
+            context: { type: 'contextless' },
             applicationId: n.id,
             botUserId: null == L ? void 0 : L.id
         }),

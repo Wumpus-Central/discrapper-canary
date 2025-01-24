@@ -11,8 +11,9 @@ var i = t(544891),
     r = t(981631);
 let c = 10 * o.Z.Millis.MINUTE;
 async function u(e) {
-    let { channelId: n, location: t, withCommands: o } = e,
-        u = Date.now(),
+    let { channelId: n, location: t, withCommands: o } = e;
+    if (null == n) return;
+    let u = Date.now(),
         s = d.ZP.getFetchState({
             location: t,
             channelId: n,

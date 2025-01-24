@@ -31,7 +31,14 @@ function S(e, n, r, a, o) {
     let d = () => {
         let i = h.Z.getChannel(e);
         if (null == i) return;
-        let { command: s, application: d } = u.Xq(i, r, o);
+        let { command: s, application: d } = u.Xq(
+            {
+                channel: i,
+                type: 'channel'
+            },
+            r,
+            o
+        );
         if (null != s && s.untranslatedName === n) {
             var f, p;
             E.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
@@ -96,22 +103,29 @@ function A(e) {
                 hasUseAppCommandsPerm: m.Z.can(v.Plq.USE_APPLICATION_COMMANDS, E)
             };
         }),
-        { command: A } = u.YZ(E, null !== (n = r.commandKey) && void 0 !== n ? n : ''),
-        C = p.dN.useSetting(),
-        N = a.useMemo(() => {
-            if (null == A || null == E || A.untranslatedName !== r.commandName || C) return !1;
+        A =
+            void 0 !== E
+                ? {
+                      type: 'channel',
+                      channel: E
+                  }
+                : { type: 'contextless' },
+        { command: C } = u.YZ(A, null !== (n = r.commandKey) && void 0 !== n ? n : ''),
+        N = p.dN.useSetting(),
+        R = a.useMemo(() => {
+            if (null == C || null == E || C.untranslatedName !== r.commandName || N) return !1;
             let e = E.isPrivate();
             if ((0, f.xl)(E) || (!e && !I)) return !1;
-            let n = (null == A ? void 0 : A.applicationId) === y.bi.BUILT_IN;
+            let n = (null == C ? void 0 : C.applicationId) === y.bi.BUILT_IN;
             return !!e || !!n || !!T || !1;
-        }, [E, A, I, T, r.commandName, C]),
-        R = a.useCallback(
+        }, [E, C, I, T, r.commandName, N]),
+        O = a.useCallback(
             (e) => {
                 null == e || e.stopPropagation(), null != E && null != r.commandName && null != r.commandKey && S(E.id, r.commandName, r.commandKey, c.Vh.MENTION);
             },
             [E, r.commandKey, r.commandName]
         );
-    return N
+    return R
         ? (0, i.jsx)(
               s.Tooltip,
               {
@@ -123,7 +137,7 @@ function A(e) {
                           d.Z,
                           {
                               role: 'link',
-                              onClick: R,
+                              onClick: O,
                               onMouseEnter: n,
                               onMouseLeave: a,
                               children: [b.GI, l(r.content, _)]

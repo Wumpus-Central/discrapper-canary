@@ -131,11 +131,17 @@ function B(e) {
             }) === g.Fw.CAN_JOIN,
         T = null !== (n = s.getGuildId()) && void 0 !== n ? n : void 0,
         N = r.useId(),
-        j = s.id,
-        L = l.id,
+        j = l.id,
+        L = r.useMemo(
+            () => ({
+                channel: s,
+                type: 'channel'
+            }),
+            [s]
+        ),
         { submitting: k } = (0, b.Z)({
-            applicationId: L,
-            channelId: j,
+            applicationId: j,
+            context: L,
             launchingComponentId: N
         });
     return (0, a.jsxs)('div', {

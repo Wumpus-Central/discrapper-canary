@@ -8,8 +8,8 @@ t.d(n, {
     t(789020);
 var i = t(200651),
     l = t(192379),
-    a = t(392711),
-    o = t.n(a),
+    o = t(392711),
+    a = t.n(o),
     r = t(228458),
     s = t(535655),
     c = t(754738),
@@ -21,18 +21,18 @@ var i = t(200651),
     f = t(481060),
     C = t(911969),
     v = t(115130),
-    _ = t(566620),
-    x = t(127255),
+    x = t(566620),
+    _ = t(127255),
     N = t(880308),
-    I = t(427996),
-    A = t(367907),
+    A = t(427996),
+    I = t(367907),
     E = t(10718),
     g = t(895924),
     b = t(674588),
     P = t(368862),
-    S = t(34674),
-    j = t(835473),
-    y = t(857192),
+    y = t(34674),
+    S = t(835473),
+    j = t(857192),
     T = t(630388),
     L = t(823379),
     R = t(541099),
@@ -72,70 +72,73 @@ let Q = [],
     ],
     ee = u.Y.APP_LAUNCHER_IN_TEXT;
 function en(e) {
-    let { channel: n, entrypoint: t, searchQuery: a, setSearchQuery: o, setScroller: r, isScrollCloseToBottom: s } = e,
+    let { context: n, entrypoint: t, searchQuery: o, setSearchQuery: a, setScroller: r, isScrollCloseToBottom: s } = e,
         c = (0, h.e7)([v.Z], () => v.Z.getIsEnabled(), []),
-        d = t === M._b.TEXT && !n.isPrivate(),
+        d = t === M._b.TEXT && 'channel' === n.type && null != n.channel && !n.channel.isPrivate(),
         u = (0, U.Yn)(t),
         m = !(0, U.Yn)(t),
         p = t === M._b.TEXT,
-        [C, x] = ec(!0),
-        [N, I] = ec(d),
-        [A, E] = ec(u),
+        [C, _] = ec(!0),
+        [N, A] = ec(d),
+        [I, E] = ec(u),
         [g, b] = ec(m),
-        P = C && N && A && g,
-        S = (u || d) && !P,
-        j = m && c;
+        P = C && N && I && g,
+        y = (u || d) && !P,
+        S = m && c;
     l.useEffect(() => {
-        (0, _.w1)({
-            guildId: n.guild_id,
+        var e;
+        let t = 'channel' === n.type ? (null === (e = n.channel) || void 0 === e ? void 0 : e.guild_id) : void 0;
+        (0, x.w1)({
+            guildId: t,
             force: !0
         });
-    }, [n.guild_id]),
+    }, [n]),
         l.useEffect(() => {
-            t === M._b.VOICE && _.ux();
+            t === M._b.VOICE && x.ux();
         }, [t]);
-    let y = a.length > 0;
+    let j = o.length > 0;
     return (0, i.jsxs)('div', {
         className: J.container,
         children: [
-            j ? (0, i.jsx)(et, {}) : null,
+            S ? (0, i.jsx)(et, {}) : null,
             (0, i.jsx)(ei, {
-                searchQuery: a,
-                setSearchQuery: o,
+                searchQuery: o,
+                setSearchQuery: a,
                 placeholder: p ? q.intl.string(q.t.ziyFv7) : q.intl.string(q.t['pw+r5e'])
             }),
             (0, i.jsx)(f.Scroller, {
                 ref: r,
                 className: J.scrollableContent,
                 fade: !0,
-                children: y
+                children: j
                     ? (0, i.jsx)(G.Z, {
-                          channel: n,
-                          query: a,
+                          context: n,
+                          query: o,
                           entrypoint: t,
                           isScrollCloseToBottom: s
                       })
                     : (0, i.jsxs)('div', {
                           children: [
                               (0, i.jsx)(el, {
-                                  channel: n,
+                                  context: n,
                                   entrypoint: t,
-                                  onEmptyState: x
+                                  onEmptyState: _
                               }),
                               d &&
-                                  (0, i.jsx)(eo, {
-                                      channel: n,
-                                      onEmptyState: I
+                                  'channel' === n.type &&
+                                  (0, i.jsx)(ea, {
+                                      context: n,
+                                      onEmptyState: A
                                   }),
                               u &&
                                   (0, i.jsx)(er, {
-                                      channel: n,
+                                      context: n,
                                       entrypoint: t,
                                       onEmptyState: E
                                   }),
                               m &&
-                                  (0, i.jsx)(ea, {
-                                      channel: n,
+                                  (0, i.jsx)(eo, {
+                                      context: n,
                                       onEmptyState: b
                                   }),
                               P &&
@@ -143,7 +146,7 @@ function en(e) {
                                       type: M.LG.HOME_EMPTY,
                                       textContent: t === M._b.TEXT ? q.intl.string(q.t.iKZctb) : q.intl.string(q.t.RL7Ncn)
                                   }),
-                              S && (0, i.jsx)(F.Z, {})
+                              y && (0, i.jsx)(F.Z, {})
                           ]
                       })
             })
@@ -159,19 +162,19 @@ function et() {
                 variant: 'text-sm/normal',
                 children: q.intl.string(q.t.tZ3FNj)
             }),
-            (0, i.jsx)(I.W, { hideSearch: !0 })
+            (0, i.jsx)(A.W, { hideSearch: !0 })
         ]
     });
 }
 function ei(e) {
-    let { searchQuery: n, setSearchQuery: t, placeholder: a } = e,
+    let { searchQuery: n, setSearchQuery: t, placeholder: o } = e,
         r = l.useRef(null),
         [s, c] = l.useState(!1),
         d = l.useMemo(
             () =>
-                o().debounce(
+                a().debounce(
                     (e) => {
-                        (0, A.yw)(Y.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
+                        (0, I.yw)(Y.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
                             query: e,
                             source: R.Z.entrypoint(),
                             location: g.Vh.APP_LAUNCHER_HOME
@@ -188,7 +191,7 @@ function ei(e) {
         u = l.useCallback(() => t(''), [t]),
         m = l.useCallback(() => {
             c(!0),
-                (0, A.yw)(Y.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
+                (0, I.yw)(Y.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
                     source: R.Z.entrypoint(),
                     location: g.Vh.APP_LAUNCHER_HOME
                 });
@@ -223,7 +226,7 @@ function ei(e) {
                     var n;
                     r.current = null !== (n = null == e ? void 0 : e.containerRef.current) && void 0 !== n ? n : null;
                 },
-                placeholder: a,
+                placeholder: o,
                 query: n,
                 onChange: h,
                 onClear: u,
@@ -235,11 +238,11 @@ function ei(e) {
     );
 }
 function el(e) {
-    let { channel: n, entrypoint: t, onEmptyState: a } = e,
-        o = t === M._b.VOICE,
+    let { context: n, entrypoint: t, onEmptyState: o } = e,
+        a = t === M._b.VOICE,
         { frecentApps: r, loading: s } = (0, Z.f)({
-            channel: n,
-            onlyActivityApps: o,
+            context: n,
+            onlyActivityApps: a,
             allowCommandFetch: !0,
             includeAuthorizedAppsAndFetch: !0
         }),
@@ -250,7 +253,7 @@ function el(e) {
         }, [r]),
         d = q.intl.string(q.t['s+UQpa']),
         u = d;
-    o && (u = q.intl.string(q.t['2pFD8P']));
+    a && (u = q.intl.string(q.t['2pFD8P']));
     let { items: m, handleViewMore: p } = ed({
         title: u,
         look: t === M._b.VOICE ? D.U4.LARGE_BANNER : D.U4.ROW,
@@ -261,7 +264,7 @@ function el(e) {
     l.useEffect(() => {
         if (!0 !== s.current)
             0 !== m.length &&
-                (0, A.yw)(Y.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
+                (0, I.yw)(Y.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
                     num: m.length,
                     section_name: M.L3.RECENT_APPS,
                     location: M.G0.HOME,
@@ -271,8 +274,8 @@ function el(e) {
     let h = s.current,
         f = !h && 0 === m.length;
     return (l.useEffect(() => {
-        a(f);
-    }, [f, a]),
+        o(f);
+    }, [f, o]),
     !(function (e) {
         let { apps: n, onlyActivityApps: t } = e,
             i = l.useMemo(
@@ -285,10 +288,10 @@ function el(e) {
                         : [],
                 [n, t]
             );
-        (0, j.Z)(i);
+        (0, S.Z)(i);
     })({
         apps: m,
-        onlyActivityApps: o
+        onlyActivityApps: a
     }),
     h || f)
         ? null
@@ -305,11 +308,11 @@ function el(e) {
                           className: J.frecentList,
                           children: m.map((e, t) => {
                               let { application: l } = e;
-                              return o
+                              return a
                                   ? (0, i.jsx)(
                                         D.qR,
                                         {
-                                            channel: n,
+                                            context: n,
                                             application: l,
                                             look: D.U4.ICON,
                                             location: M.G0.HOME,
@@ -323,6 +326,7 @@ function el(e) {
                                   : (0, i.jsx)(
                                         D.kA,
                                         {
+                                            context: n,
                                             application: l,
                                             look: D.U4.ICON,
                                             location: M.G0.HOME,
@@ -337,44 +341,45 @@ function el(e) {
               ]
           });
 }
-function ea(e) {
-    let { channel: n, onEmptyState: t } = e;
+function eo(e) {
+    var n;
+    let { context: t, onEmptyState: o } = e;
     (0, N.g)();
-    let a = (0, x.Z)({ guildId: n.getGuildId() }),
-        o = D.U4.LARGE_BANNER,
-        { trackSectionImpressionRef: r } = (0, H.Z)({
+    let a = (0, _.Z)({ guildId: 'channel' === t.type ? (null === (n = t.channel) || void 0 === n ? void 0 : n.getGuildId()) : void 0 }),
+        r = D.U4.LARGE_BANNER,
+        { trackSectionImpressionRef: s } = (0, H.Z)({
             sectionName: M.L3.ACTIVITIES,
             numItems: a.length,
             numVisibleItems: a.length
         }),
-        s = (0, O.s)('ActivitiesShelfSection'),
-        c = 0 === a.length;
+        c = (0, O.s)('ActivitiesShelfSection'),
+        d = 0 === a.length;
     return (l.useEffect(() => {
-        t(c);
-    }, [t, c]),
-    c)
+        o(d);
+    }, [o, d]),
+    d)
         ? null
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)('div', {
-                      ref: (e) => (r.current = e),
+                      ref: (e) => (s.current = e),
                       children: (0, i.jsx)(W.Z, { title: q.intl.string(q.t.shUONj) })
                   }),
                   (0, i.jsx)('div', {
                       className: J.sectionTwoColumnContentContainer,
-                      children: a.map((e, t) => {
+                      children: a.map((e, n) => {
                           let { application: l } = e;
                           return (0, i.jsx)(
                               D.qR,
                               {
-                                  channel: n,
+                                  context: t,
                                   application: l,
-                                  look: o,
+                                  look: r,
                                   location: g.Vh.APP_LAUNCHER_HOME,
                                   sectionName: M.L3.ACTIVITIES,
-                                  resultsPosition: t,
+                                  resultsPosition: n,
                                   sectionOverallPosition: 0,
-                                  isOneClickCTA: !s,
+                                  isOneClickCTA: !c,
                                   fetchesApplication: !1
                               },
                               l.id
@@ -384,20 +389,20 @@ function ea(e) {
               ]
           });
 }
-function eo(e) {
-    let { channel: n, onEmptyState: t } = e,
-        a = M.L3.APPS_IN_THIS_SERVER,
-        { appsInThisServer: o, isLoading: r } = (0, k.Z)({ channel: n }),
+function ea(e) {
+    let { context: n, onEmptyState: t } = e,
+        o = M.L3.APPS_IN_THIS_SERVER,
+        { appsInThisServer: a, isLoading: r } = (0, k.Z)({ context: n }),
         { items: s, handleViewMore: c } = ed({
             title: q.intl.string(q.t.KfkuGR),
             look: D.U4.ROW,
-            items: o,
+            items: a,
             limit: 4,
-            sectionName: a
+            sectionName: o
         }),
         { trackSectionImpressionRef: d } = (0, H.Z)({
-            sectionName: a,
-            numItems: o.length,
+            sectionName: o,
+            numItems: a.length,
             numVisibleItems: s.length
         }),
         u = !r && 0 === s.length;
@@ -420,19 +425,20 @@ function eo(e) {
                       className: J.sectionRowsContentContainer,
                       children: r
                           ? K.map((e) => (0, i.jsx)(w.Z, { look: D.U4.ROW }, e))
-                          : s.map((e, n) => {
-                                let { application: t } = e;
-                                return null != t
+                          : s.map((e, t) => {
+                                let { application: l } = e;
+                                return null != l
                                     ? (0, i.jsx)(
                                           D.kA,
                                           {
-                                              application: t,
+                                              context: n,
+                                              application: l,
                                               look: D.U4.ROW,
-                                              sectionName: a,
-                                              resultsPosition: n,
+                                              sectionName: o,
+                                              resultsPosition: t,
                                               location: g.Vh.APP_LAUNCHER_HOME
                                           },
-                                          t.id
+                                          l.id
                                       )
                                     : null;
                             })
@@ -441,22 +447,22 @@ function eo(e) {
           });
 }
 function er(e) {
-    let { channel: n, entrypoint: t, onEmptyState: a } = e,
+    let { context: n, entrypoint: t, onEmptyState: o } = e,
         {
-            fetchState: o,
+            fetchState: a,
             recommendationsSections: d,
             isInstallOnDemand: u
         } = (function (e) {
-            let { channel: n, location: t } = e,
-                i = (0, h.e7)([y.default], () => y.default.onlyShowPreviewAppCollections) ? s.E.PREVIEW : s.E.ACTIVE;
+            let { context: n, location: t } = e,
+                i = (0, h.e7)([j.default], () => j.default.onlyShowPreviewAppCollections) ? s.E.PREVIEW : s.E.ACTIVE;
             l.useEffect(() => {
                 (0, b.XK)({
                     surface: ee,
                     activeState: i
                 });
             }, [i]);
-            let { sectionDescriptors: a } = E.wi({
-                    channel: n,
+            let { sectionDescriptors: o } = E.wi({
+                    context: n,
                     filters: { commandTypes: [C.yU.CHAT] },
                     options: {
                         placeholderCount: 0,
@@ -465,7 +471,7 @@ function er(e) {
                     },
                     allowFetch: !0
                 }),
-                o = l.useCallback((e) => !(null != a.find((n) => n.id === e.id)), [a]),
+                a = l.useCallback((e) => !(null != o.find((n) => n.id === e.id)), [o]),
                 c = (0, h.e7)([P.Z], () =>
                     P.Z.getFetchState({
                         surface: ee,
@@ -482,37 +488,38 @@ function er(e) {
             return {
                 fetchState: c,
                 recommendationsSections: l.useMemo(() => (u ? (0, U.pF)(d) : d), [d, u]),
-                isInstallOnDemand: o
+                isInstallOnDemand: a
             };
         })({
-            channel: n,
+            context: n,
             location: t === M._b.TEXT ? r.I.APP_LAUNCHER_TEXT : r.I.APP_LAUNCHER_VOICE
         }),
         p = (function (e) {
-            let { channel: n, recommendationsSections: t } = e;
+            var n;
+            let { context: t, recommendationsSections: i } = e;
             (0, N.g)();
-            let i = (0, x.Z)({ guildId: n.getGuildId() });
+            let o = (0, _.Z)({ guildId: 'channel' === t.type ? (null === (n = t.channel) || void 0 === n ? void 0 : n.getGuildId()) : void 0 });
             return l.useMemo(() => {
-                if (!t.some((e) => (0, T.yE)(e.flags, c.b.APPENDS_REMAINING_ACTIVITIES))) return Q;
+                if (!i.some((e) => (0, T.yE)(e.flags, c.b.APPENDS_REMAINING_ACTIVITIES))) return Q;
                 let e = new Set();
                 return (
-                    t.forEach((n) => {
+                    i.forEach((n) => {
                         n.application_directory_collection_items.forEach((n) => {
                             n.type === m.C.APPLICATION && e.add(n.application.id);
                         });
                     }),
-                    i.filter((n) => !e.has(n.application.id))
+                    o.filter((n) => !e.has(n.application.id))
                 );
-            }, [t, i]);
+            }, [i, o]);
         })({
-            channel: n,
+            context: n,
             recommendationsSections: d
         }),
-        f = o === P.M.FETCHING,
+        f = a === P.M.FETCHING,
         v = !f && 0 === d.length;
     return (l.useEffect(() => {
-        a(v);
-    }, [v, a]),
+        o(v);
+    }, [v, o]),
     v)
         ? null
         : (0, i.jsx)(i.Fragment, {
@@ -533,14 +540,15 @@ function er(e) {
                             n
                         );
                     })
-                  : d.map((e, n) =>
+                  : d.map((e, t) =>
                         (0, i.jsx)(
                             es,
                             {
                                 recommendationsSection: e,
                                 remainingActivities: p,
                                 isInstallOnDemand: u,
-                                position: n
+                                position: t,
+                                context: n
                             },
                             e.id
                         )
@@ -550,9 +558,9 @@ function er(e) {
 function es(e) {
     let n,
         t,
-        { recommendationsSection: a, remainingActivities: o, isInstallOnDemand: r, position: s } = e,
-        u = a.title;
-    switch (a.type) {
+        { recommendationsSection: o, remainingActivities: a, isInstallOnDemand: r, position: s, context: u } = e,
+        h = o.title;
+    switch (o.type) {
         case p.o.BANNER_CARDS:
             n = D.U4.LARGE_BANNER;
             break;
@@ -562,8 +570,8 @@ function es(e) {
         default:
             n = D.U4.ROW;
     }
-    let h = l.useMemo(() => {
-            let e = a.application_directory_collection_items
+    let f = l.useMemo(() => {
+            let e = o.application_directory_collection_items
                 .map((e) => {
                     if (e.type === m.C.APPLICATION)
                         return {
@@ -576,9 +584,9 @@ function es(e) {
                 })
                 .filter(L.lm);
             return (
-                (0, T.yE)(a.flags, c.b.APPENDS_REMAINING_ACTIVITIES) &&
+                (0, T.yE)(o.flags, c.b.APPENDS_REMAINING_ACTIVITIES) &&
                     e.push(
-                        ...o.map((e) => {
+                        ...a.map((e) => {
                             let { application: n } = e;
                             return {
                                 collectionItemId: void 0,
@@ -591,9 +599,9 @@ function es(e) {
                     ),
                 e
             );
-        }, [r, a.application_directory_collection_items, a.flags, o]),
-        f = a.id;
-    switch (a.type) {
+        }, [r, o.application_directory_collection_items, o.flags, a]),
+        C = o.id;
+    switch (o.type) {
         case p.o.BANNER_CARDS:
         case p.o.SMALL_BANNER_CARDS:
             t = 6;
@@ -602,53 +610,54 @@ function es(e) {
         default:
             t = 4;
     }
-    let { items: C, handleViewMore: v } = ed({
-            title: u,
+    let { items: v, handleViewMore: x } = ed({
+            title: h,
             look: n,
-            items: h,
+            items: f,
             limit: t,
-            sectionName: f,
+            sectionName: C,
             sectionOverallPosition: s
         }),
         { trackSectionImpressionRef: _ } = (0, H.Z)({
-            sectionName: f,
-            numItems: h.length,
-            numVisibleItems: C.length
+            sectionName: C,
+            numItems: f.length,
+            numVisibleItems: v.length
         }),
-        x = a.type !== p.o.SMALL_BANNER_CARDS;
+        N = o.type !== p.o.SMALL_BANNER_CARDS;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)('div', {
                 ref: (e) => (_.current = e),
                 children: (0, i.jsx)(W.Z, {
-                    title: a.title,
+                    title: o.title,
                     buttonType: W.Z.buttonTypes.VIEW_MORE,
-                    onClickViewButton: v
+                    onClickViewButton: x
                 })
             }),
             (0, i.jsx)('div', {
                 className: n === D.U4.ROW ? J.sectionRowsContentContainer : J.sectionTwoColumnContentContainer,
-                children: C.map((e, t) => {
+                children: v.map((e, t) => {
                     let l,
-                        { collectionItemId: a, collectionItemImageHash: o, application: r, installOnDemand: c, showsPromoted: d } = e;
+                        { collectionItemId: o, collectionItemImageHash: a, application: r, installOnDemand: c, showsPromoted: d } = e;
                     return (
-                        null != a &&
-                            null != o &&
-                            (l = (0, S.$_)({
-                                itemId: a,
-                                hash: o,
+                        null != o &&
+                            null != a &&
+                            (l = (0, y.$_)({
+                                itemId: o,
+                                hash: a,
                                 containerWidth: z.Gy
                             })),
                         (0, i.jsx)(
                             D.kA,
                             {
+                                context: u,
                                 application: r,
                                 look: n,
-                                sectionName: f,
+                                sectionName: C,
                                 resultsPosition: t,
                                 location: g.Vh.APP_LAUNCHER_HOME,
                                 installOnDemand: c,
-                                enableVideoBanner: x,
+                                enableVideoBanner: N,
                                 sectionOverallPosition: s,
                                 overrideImageUrl: l,
                                 showsPromoted: d
@@ -672,20 +681,20 @@ function ec(e) {
     ];
 }
 function ed(e) {
-    let { title: n, look: t, items: i, limit: a, sectionName: o, sectionOverallPosition: r } = e,
+    let { title: n, look: t, items: i, limit: o, sectionName: a, sectionOverallPosition: r } = e,
         { pushHistory: s } = (0, B.hH)();
     return l.useMemo(
         () =>
-            i.length <= a
+            i.length <= o
                 ? {
                       items: i,
                       handleViewMore: void 0
                   }
                 : {
-                      items: i.slice(0, a),
+                      items: i.slice(0, o),
                       handleViewMore: () => {
-                          (0, A.yw)(Y.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
-                              section_name: o,
+                          (0, I.yw)(Y.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+                              section_name: a,
                               source: R.Z.entrypoint(),
                               num: i.length
                           }),
@@ -694,11 +703,11 @@ function ed(e) {
                                   title: n,
                                   look: t,
                                   items: i,
-                                  sectionName: o,
+                                  sectionName: a,
                                   sectionOverallPosition: r
                               });
                       }
                   },
-        [i, a, o, s, n, t, r]
+        [i, o, a, s, n, t, r]
     );
 }

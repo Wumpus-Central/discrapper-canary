@@ -89,21 +89,23 @@ let y = [
         ],
         predicate: (e) => {
             let { channel: n } = e;
-            return n.isGroupDM();
+            return null != n && n.isGroupDM();
         },
         execute: (e, n) => {
             var r, i;
-            let { channel: o } = n,
-                s = (0, f.F6)(o, h.default, p.Z),
+            let { channel: o } = n;
+            if (null == o) return;
+            let s = (0, f.F6)(o, h.default, p.Z),
                 d = E.intl.formatToPlainString(E.t.hJ5Ap6, { name: s }),
                 _ = E.intl.format(E.t.SSIVOj, { name: s }),
                 m = null !== (i = null === (r = e.find((e) => 'silent' === e.name)) || void 0 === r ? void 0 : r.value) && void 0 !== i && i;
             async function g() {
-                try {
-                    await u.Z.closePrivateChannel(o.id, void 0, m);
-                } catch (e) {
-                    c.Z.sendBotMessage(o.id, E.intl.string(E.t.YOsuT0));
-                }
+                if (null != o)
+                    try {
+                        await u.Z.closePrivateChannel(o.id, void 0, m);
+                    } catch (e) {
+                        c.Z.sendBotMessage(o.id, E.intl.string(E.t.YOsuT0));
+                    }
             }
             o.isManaged() && ((d = E.intl.formatToPlainString(E.t.hVGjER, { name: s })), (_ = E.intl.format(E.t.IK1Qvr, { name: s }))),
                 (0, l.openModal)((e) =>

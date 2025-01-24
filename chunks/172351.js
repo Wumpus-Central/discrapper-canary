@@ -17,19 +17,26 @@ var i = r(200651),
 function _(e) {
     let { applicationId: n, commandIds: r, guildId: _, channel: m, onClick: g } = e,
         { trackUserProfileAction: E } = (0, c.KZ)(),
-        { commands: v } = s.Qm(m, n, r),
-        y = a.useMemo(
+        v = a.useMemo(
+            () => ({
+                channel: m,
+                type: 'channel'
+            }),
+            [m]
+        ),
+        { commands: y } = s.Qm(v, n, r),
+        b = a.useMemo(
             () =>
-                null == v
+                null == y
                     ? void 0
-                    : v.filter((e) => {
+                    : y.filter((e) => {
                           let { nsfw: n } = e;
                           return !0 !== n;
                       }),
-            [v]
+            [y]
         );
-    if (null == y || 0 === y.length) return null;
-    let b = (e) => {
+    if (null == b || 0 === b.length) return null;
+    let I = (e) => {
         null == g || g(),
             E({ action: 'PRESS_APP_COMMAND' }),
             u.default.track(f.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
@@ -43,7 +50,7 @@ function _(e) {
         heading: p.intl.string(p.t['0hKkS0']),
         children: (0, i.jsx)('ul', {
             className: h.list,
-            children: y.map((e) =>
+            children: b.map((e) =>
                 (0, i.jsx)(
                     'li',
                     {
@@ -51,7 +58,7 @@ function _(e) {
                             commandId: e.id,
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
-                            onClick: b,
+                            onClick: I,
                             guildId: _,
                             channelId: m.id,
                             applicationId: e.applicationId

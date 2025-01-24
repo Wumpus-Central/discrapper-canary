@@ -16,12 +16,17 @@ function u(e) {
         E = _.length > 0 ? _[_.length - 1] : 'open-activity-shelf',
         { enabled: C } = l.m1.getCurrentConfig({ location: E }, { autoTrackExposure: !1 });
     if (g && C) {
-        null != t &&
-            (0, a.Z)({
-                openInPopout: m,
-                channel: t,
-                analyticsLocation: E
-            });
+        (0, a.Z)({
+            openInPopout: m,
+            context:
+                null != t
+                    ? {
+                          type: 'channel',
+                          channel: t
+                      }
+                    : { type: 'contextless' },
+            analyticsLocation: E
+        });
         return;
     }
     m && (0, o.Z)(c.KJ3.CHANNEL_CALL_POPOUT);

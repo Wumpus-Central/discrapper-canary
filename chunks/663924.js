@@ -83,7 +83,10 @@ function S(e) {
         }, [T, j]);
     return (0, i.jsx)(v.Z, {
         ref: h,
-        channel: t,
+        context: {
+            channel: t,
+            type: 'channel'
+        },
         entrypoint: C._b.TEXT,
         initHistory: A
     });

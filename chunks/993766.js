@@ -23,7 +23,23 @@ function o(e) {
         h = (0, l.e7)([a.ZP, s.Z], () => {
             var e, t;
             let n = s.Z.getChannel(c);
-            return null !== (t = null === (e = a.ZP.getContextState(n)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
+            return (
+                null !==
+                    (t =
+                        null ===
+                            (e = a.ZP.getContextState(
+                                null != n
+                                    ? {
+                                          channel: n,
+                                          type: 'channel'
+                                      }
+                                    : { type: 'contextless' }
+                            )) || void 0 === e
+                            ? void 0
+                            : e.fetchState.fetching) &&
+                void 0 !== t &&
+                t
+            );
         }),
         p = i.useRef(!1),
         m = i.useRef(!1);

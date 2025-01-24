@@ -14,25 +14,24 @@ var r = n(481060),
     u = n(314734),
     d = n(981631);
 function m(e) {
-    let { channel: t, openInPopout: m, analyticsLocation: h } = e;
+    let { context: t, openInPopout: m, analyticsLocation: h } = e;
     m && (0, l.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
     let f = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
     (0, s.yT)(c.ti.DISMISSED), (0, s.__)(c._b.VOICE);
-    let p = t.id,
-        _ = a.ZP.hasUnread(p) || a.ZP.getMentionCount(p) > 0;
+    let p = 'contextless' !== t.type && (a.ZP.hasUnread(t.channel.id) || a.ZP.getMentionCount(t.channel.id) > 0);
     return (
         o.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {
             tab: 'activities',
             location: h,
             source: c._b.VOICE,
-            is_chat_badged: _
+            is_chat_badged: p
         }),
         (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('33862'), n.e('69057'), n.e('90225'), n.e('31740')]).then(n.bind(n, 743161));
                 return (n) =>
                     (0, i.jsx)(e, {
-                        channel: t,
+                        context: t,
                         ...n
                     });
             },

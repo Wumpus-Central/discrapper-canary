@@ -85,6 +85,7 @@ function y(e, n, r) {
     o()(null != n.autocomplete, 'Missing autocomplete context');
     let { query: a, name: p } = n.autocomplete,
         _ = d.default.fromTimestamp(Date.now());
+    if (null == n.channel) return;
     if (
         (l.Z.dispatch({
             type: 'APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST',

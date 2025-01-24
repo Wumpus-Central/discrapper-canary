@@ -25,33 +25,40 @@ t.Z = (n) => {
             guildId: null == v ? void 0 : v.id,
             context: I
         }),
+        P = i.useMemo(
+            () => ({
+                channel: T,
+                type: 'channel'
+            }),
+            [T]
+        ),
         {
-            commands: P,
-            sectionDescriptors: S,
-            loading: Z
+            commands: S,
+            sectionDescriptors: Z,
+            loading: b
         } = d.wi({
-            channel: T,
+            context: P,
             filters: { commandTypes: [e] },
             options: { limit: h.lr },
             allowFetch: !0
         }),
-        { sections: b } = i.useMemo(() => {
+        { sections: y } = i.useMemo(() => {
             let n = {};
             return (
-                S.forEach((t) => {
+                Z.forEach((t) => {
                     n[t.id] = t;
                 }),
                 { sections: n }
             );
-        }, [S]),
-        y = i.useRef(Z.current);
+        }, [Z]),
+        M = i.useRef(b.current);
     i.useEffect(() => {
-        Z.current !== y.current && ((y.current = Z.current), null == N || N());
-    }, [Z, N]);
-    let M = i.useCallback(
+        b.current !== M.current && ((M.current = b.current), null == N || N());
+    }, [b, N]);
+    let U = i.useCallback(
         (n) => {
             l()(null != T, 'menu item should not show if channel is null');
-            let t = b[n.applicationId],
+            let t = y[n.applicationId],
                 e = null != t ? (0, s.ky)(t) : void 0;
             return (0, r.jsx)(
                 o.MenuItem,
@@ -83,10 +90,10 @@ t.Z = (n) => {
                 n.id
             );
         },
-        [T, v, u, b]
+        [T, v, u, y]
     );
     if (
-        (Z.current
+        (b.current
             ? (t = (0, r.jsx)(
                   o.MenuItem,
                   {
@@ -97,7 +104,7 @@ t.Z = (n) => {
                   'menu-commands-placeholder'
               ))
             : ((t =
-                  0 === P.length
+                  0 === S.length
                       ? (0, r.jsx)(
                             o.MenuItem,
                             {
@@ -107,7 +114,7 @@ t.Z = (n) => {
                             },
                             'menu-commands-empty'
                         )
-                      : P.map(M)),
+                      : S.map(U)),
               null != O &&
                   O.length > 0 &&
                   (t = (0, r.jsxs)(r.Fragment, {

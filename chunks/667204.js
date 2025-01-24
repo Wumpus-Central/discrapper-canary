@@ -50,8 +50,9 @@ var c = r(512722),
     Y = r(388032);
 async function W(e) {
     var n, r, i, a, o, s, l, u, c, p, _, g, E, b, I, T, S;
-    let { command: A, optionValues: C, context: N, commandTargetId: D, maxSizeCallback: x, commandOrigin: w = F.bB.CHAT, sectionName: P, interactionLifecycleOptionsFactory: M = X, source: G, clientSupportsContextlessActivityLaunch: H } = e,
-        Y = null !== (i = Z.Z.getSource(N.channel.id)) && void 0 !== i ? i : G,
+    let { command: A, optionValues: C, context: N, commandTargetId: D, maxSizeCallback: x, commandOrigin: w = F.bB.CHAT, sectionName: P, interactionLifecycleOptionsFactory: M = X, source: G, clientSupportsContextlessActivityLaunch: H } = e;
+    if (null == N.channel) return;
+    let Y = null !== (i = Z.Z.getSource(N.channel.id)) && void 0 !== i ? i : G,
         W = null !== (a = Z.Z.getCommandOrigin(N.channel.id)) && void 0 !== a ? a : w;
     null == N.autocomplete &&
         f.Z.dispatch({
@@ -266,8 +267,9 @@ let K = (e) => {
     },
     q = (e) => {
         var n;
-        let { applicationId: r, data: i, context: a, attachments: o, maxSizeCallback: s, onMessageSuccess: l, analytics_location: u, sectionName: c, source: d, interactionLifecycleOptions: f } = e,
-            { channel: p, guild: h } = a,
+        let { applicationId: r, data: i, context: a, attachments: o, maxSizeCallback: s, onMessageSuccess: l, analytics_location: u, sectionName: c, source: d, interactionLifecycleOptions: f } = e;
+        if (null == a.channel) return;
+        let { channel: p, guild: h } = a,
             _ = p.id,
             g = null == h ? void 0 : h.id,
             E = {
@@ -312,7 +314,15 @@ function Q(e, n) {
 }
 async function X(e, n, r) {
     var i;
-    let a = G.Nk(n.channel, r.type, e.applicationId);
+    if (null == n.channel) return {};
+    let a = G.Nk(
+        {
+            channel: n.channel,
+            type: 'channel'
+        },
+        r.type,
+        e.applicationId
+    );
     if (null == a) return {};
     let o = null === (i = a.application) || void 0 === i ? void 0 : i.bot;
     if (null == o && null != a.botId)
@@ -362,6 +372,7 @@ async function X(e, n, r) {
             },
             onSuccess: () => {},
             onFailure: (r, i, a, o) => {
+                if (null == n.channel) return;
                 null == i && null != r && p.Z.sendClydeError(n.channel.id, r);
                 let l = i;
                 null == l && null != o && (l = (0, A.A0)(o, e.applicationId)),

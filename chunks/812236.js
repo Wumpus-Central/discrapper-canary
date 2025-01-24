@@ -30,12 +30,25 @@ async function h(e, n) {
         i = l.Z.getChannel(e);
     if (
         (null != i &&
-            null == (r = _(i, n)) &&
+            null ==
+                (r = _(
+                    {
+                        channel: i,
+                        type: 'channel'
+                    },
+                    n
+                )) &&
             (await (0, c.FN)({
                 type: 'application',
                 applicationId: n
             }),
-            (r = _(i, n))),
+            (r = _(
+                {
+                    channel: i,
+                    type: 'channel'
+                },
+                n
+            ))),
         null != r)
     )
         return r;
@@ -64,28 +77,28 @@ function m(e, n) {
                 !i &&
                 (0, u.j)({
                     type: 'application',
-                    applicationId: e
+                    applicationId: n
                 });
-        }, [e, s, i]),
+        }, [n, s, i]),
         o
     );
 }
 function g(e, n) {
     return (0, c.v1)(
-        n,
+        e,
         { commandTypes: p },
         {
             placeholderCount: 1,
             scoreMethod: d.p.COMMAND_ONLY,
-            applicationId: e,
+            applicationId: n,
             allowFetch: !1,
             allowApplicationState: !0
         }
     );
 }
 function E(e) {
-    let { channel: n, applicationId: r, botUserId: i } = e,
-        a = m(r, n);
+    let { context: n, applicationId: r, botUserId: i } = e,
+        a = m(n, r);
     if (null == a) return !1;
     let l = null != a.integration_types && a.integration_types.includes(o.Y.USER_INSTALL),
         u = null != a.contexts && a.contexts.includes(s.D.BOT_DM);

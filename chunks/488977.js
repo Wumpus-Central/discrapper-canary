@@ -1,13 +1,13 @@
 t.d(n, {
     Z: function () {
-        return S;
+        return y;
     }
 }),
     t(789020);
 var i = t(200651),
     l = t(120356),
-    a = t.n(l),
-    o = t(442837),
+    o = t.n(l),
+    a = t(442837),
     r = t(481060),
     s = t(367907),
     c = t(895924),
@@ -19,25 +19,25 @@ var i = t(200651),
     f = t(594174),
     C = t(626135),
     v = t(572004),
-    _ = t(630388),
-    x = t(135431),
+    x = t(630388),
+    _ = t(135431),
     N = t(541099),
-    I = t(783097),
-    A = t(570949),
+    A = t(783097),
+    I = t(570949),
     E = t(314734),
     g = t(981631),
     b = t(388032),
     P = t(472033);
-function S(e) {
+function y(e) {
     var n;
-    let { application: t, channel: l, className: S, sectionName: j } = e,
-        y = (0, o.e7)([N.Z], () => N.Z.entrypoint()),
-        T = (0, I.L1)(t),
-        L = (0, x.Eb)(T),
+    let { application: t, context: l, className: y, sectionName: S } = e,
+        j = (0, a.e7)([N.Z], () => N.Z.entrypoint()),
+        T = (0, A.L1)(t),
+        L = (0, _.Eb)(T),
         R = {
             location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: t.id,
-            section_name: j,
+            section_name: S,
             source: N.Z.lastShownEntrypoint()
         },
         M = f.default.getCurrentUser(),
@@ -46,8 +46,9 @@ function S(e) {
             id: t.id,
             label: b.intl.string(b.t['+NP/b2'])
         }),
-        O = (0, A.P)({ application: t }),
-        U = (0, _.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, g.udG.EMBEDDED);
+        O = (0, I.P)({ application: t }),
+        U = (0, x.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, g.udG.EMBEDDED),
+        B = 'channel' === l.type ? l.channel : void 0;
     return (0, i.jsxs)('div', {
         className: P.container,
         children: [
@@ -65,11 +66,11 @@ function S(e) {
                     (0, v.JG)(e),
                         C.default.track(g.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: t.id,
-                            source: y
+                            source: j
                         }),
                         (0, r.showToast)((0, r.createToast)(b.intl.string(b.t['L/PwZW']), r.ToastType.SUCCESS));
                 },
-                className: a()(P.clickable, S),
+                className: o()(P.clickable, y),
                 'aria-label': b.intl.string(b.t.WqhZsr),
                 children: (0, i.jsx)(r.LinkIcon, {
                     size: 'sm',
@@ -94,7 +95,7 @@ function S(e) {
                                               label: b.intl.string(b.t.NgXl3N),
                                               action: () => {
                                                   null == T.customInstallUrl && (0, s.yw)(g.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, R),
-                                                      (0, x.LO)({
+                                                      (0, _.LO)({
                                                           ...T,
                                                           oauth2Callback: (e) => {
                                                               let { location: n } = e;
@@ -115,8 +116,8 @@ function S(e) {
                                                   (0, p.uu)({
                                                       application: t,
                                                       entrypoint: 'app_launcher',
-                                                      contextualGuildId: null !== (e = l.getGuildId()) && void 0 !== e ? e : void 0,
-                                                      contextualChannelId: l.id
+                                                      contextualGuildId: null !== (e = null == B ? void 0 : B.getGuildId()) && void 0 !== e ? e : void 0,
+                                                      contextualChannelId: null == B ? void 0 : B.id
                                                   });
                                               }
                                           })
@@ -133,7 +134,7 @@ function S(e) {
                 children: (e) =>
                     (0, i.jsx)(r.Clickable, {
                         onClick: e.onClick,
-                        className: a()(P.clickable, S),
+                        className: o()(P.clickable, y),
                         'aria-label': b.intl.string(b.t.UKOtz8),
                         children: (0, i.jsx)(r.MoreHorizontalIcon, {
                             size: 'sm',

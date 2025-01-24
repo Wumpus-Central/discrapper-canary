@@ -359,7 +359,7 @@ class e_ extends (i = h.ZP.Store) {
     }
     getContextState(e) {
         var n, r;
-        return null != e && eR(e) ? (null !== (r = this.indices[null !== (n = e.guild_id) && void 0 !== n ? n : e.id]) && void 0 !== r ? r : Y) : H;
+        return 'contextless' !== e.type && eR(e.channel) ? (null !== (r = this.indices[null !== (n = e.channel.guild_id) && void 0 !== n ? n : e.channel.id]) && void 0 !== r ? r : Y) : H;
     }
     hasContextStateApplication(e, n, r) {
         var i, a;
@@ -391,64 +391,70 @@ class e_ extends (i = h.ZP.Store) {
     }
     query(e, n, r) {
         if (null == A.default.getCurrentUser()) return j;
-        let i = this.getContextState(e),
-            a = this.getUserState(),
-            o = this.getApplicationState(r.applicationId),
-            s = this.getApplicationStates(),
-            l = (0, P.k)(e, n.commandTypes),
-            u = null == e || (null == l ? void 0 : l.hasBaseAccessPermissions) === !0,
-            c = !1 !== n.applicationCommands,
-            d = !1;
+        let i = 'channel' === e.type ? e.channel : void 0,
+            a = this.getContextState(e),
+            o = this.getUserState(),
+            s = this.getApplicationState(r.applicationId),
+            l = this.getApplicationStates(),
+            u = (0, P.k)(i, n.commandTypes),
+            c = null == i || (null == u ? void 0 : u.hasBaseAccessPermissions) === !0,
+            d = !1 !== n.applicationCommands,
+            f = !1;
         r.allowFetch &&
-            (c &&
-                u &&
-                null != e &&
-                eR(e) &&
+            (d &&
+                c &&
+                null != i &&
+                eR(i) &&
                 (C.default.track(U.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
-                    miss: null == i.result,
+                    miss: null == a.result,
                     size: Object.keys(em.indices).length
                 }),
-                eO(i) &&
-                    null != e &&
-                    (null != e.guild_id
+                eO(a) &&
+                    null != i &&
+                    (null != i.guild_id
                         ? (0, D.j)({
                               type: 'guild',
-                              guildId: e.guild_id
+                              guildId: i.guild_id
                           })
                         : (0, D.j)({
                               type: 'channel',
-                              channelId: e.id
+                              channelId: i.id
                           }),
-                    (d = !0))),
-            eO(a) && ((0, D.j)({ type: 'user' }), (d = !0)),
-            eO(o) &&
+                    (f = !0))),
+            eO(o) && ((0, D.j)({ type: 'user' }), (f = !0)),
+            eO(s) &&
                 null != r.applicationId &&
                 ((0, D.j)({
                     type: 'application',
                     applicationId: r.applicationId
                 }),
-                (d = !0)));
-        let f = eC({
-            permissionContext: l,
+                (f = !0)));
+        let p = eC({
+            permissionContext: u,
             text: n.text,
-            allowApplicationCommands: c,
+            allowApplicationCommands: d,
             builtIns: n.builtIns,
             scoreMethod: r.scoreMethod,
             allowEmptySections: r.allowEmptySections,
-            contextState: i,
-            userState: a,
-            applicationStates: r.allowApplicationState ? s : new Map(),
+            contextState: a,
+            userState: o,
+            applicationStates: r.allowApplicationState ? l : new Map(),
             sortOptions: r.sortOptions,
             singleApplicationId: r.applicationId,
             installOnDemand: r.installOnDemand
         });
-        return (f.loading = f.loading || d), f;
+        return (p.loading = p.loading || f), p;
     }
     queryInstallOnDemandApp(e, n) {
         let r = T.Z.getChannel(n);
         null != r &&
             this.query(
-                r,
+                null != r
+                    ? {
+                          channel: r,
+                          type: 'channel'
+                      }
+                    : { type: 'contextless' },
                 { commandTypes: [g.yU.CHAT] },
                 {
                     placeholderCount: 5,
@@ -479,30 +485,30 @@ let em = new e_(_.Z, {
 });
 function eg(e, n, r) {
     let [i, a] = c.useState(!0),
-        o = (0, h.cj)([em], () => (null != e ? em.getContextState(e) : em.getUserState()));
+        o = (0, h.cj)([em], () => ('channel' === e.type ? em.getContextState(e) : em.getUserState()));
     return (
         c.useEffect(() => {
             if (i) {
-                if (null == e) {
+                if ('contextless' === e.type) {
                     r && eO(o) && (0, D.j)({ type: 'user' });
                     return;
                 }
                 r &&
                     n &&
-                    eR(e) &&
+                    eR(e.channel) &&
                     (C.default.track(U.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
                         miss: null == o.result,
                         size: Object.keys(em.indices).length
                     }),
                     eO(o) &&
-                        (null != e.guild_id
+                        (null != e.channel.guild_id
                             ? (0, D.j)({
                                   type: 'guild',
-                                  guildId: e.guild_id
+                                  guildId: e.channel.guild_id
                               })
                             : (0, D.j)({
                                   type: 'channel',
-                                  channelId: e.id
+                                  channelId: e.channel.id
                               }))),
                     a(!1);
             }
@@ -570,9 +576,9 @@ function eT(e, n, r, i) {
     let { descriptors: a, commands: o, sectionedCommands: s, loading: l } = eA(e, r, i),
         u = c.useMemo(
             () =>
-                null != e
+                'channel' === e.type
                     ? {
-                          channel: e,
+                          channel: e.channel,
                           guild: n
                       }
                     : void 0,
@@ -627,31 +633,32 @@ let eS = Object.freeze({
     }
 });
 function eA(e, n, r) {
-    let i = (0, P.Hs)(e, n.commandTypes),
-        a = !1 !== n.applicationCommands,
-        o = eg(e, a, r.allowFetch),
-        s = ev(a, r.allowFetch),
-        l = eb(),
-        u = eI();
+    let i = 'channel' === e.type ? e.channel : void 0,
+        a = (0, P.Hs)(i, n.commandTypes),
+        o = !1 !== n.applicationCommands,
+        s = eg(e, o, r.allowFetch),
+        l = ev(o, r.allowFetch),
+        u = eb(),
+        d = eI();
     return (
         ey(r.applicationId, r.allowFetch),
         c.useMemo(
             () =>
                 eC({
-                    permissionContext: i,
+                    permissionContext: a,
                     text: n.text,
-                    allowApplicationCommands: a,
+                    allowApplicationCommands: o,
                     builtIns: n.builtIns,
                     scoreMethod: r.scoreMethod,
                     allowEmptySections: r.allowEmptySections,
-                    contextState: o,
-                    userState: s,
-                    applicationStates: r.allowApplicationState ? l : new Map(),
+                    contextState: s,
+                    userState: l,
+                    applicationStates: r.allowApplicationState ? u : new Map(),
                     sortOptions: r.sortOptions,
                     singleApplicationId: r.applicationId,
                     installOnDemand: r.installOnDemand
                 }),
-            [i, n.text, n.builtIns, a, r.scoreMethod, r.allowEmptySections, r.sortOptions, r.allowApplicationState, r.applicationId, r.installOnDemand, o, s, l, u]
+            [a, n.text, n.builtIns, o, r.scoreMethod, r.allowEmptySections, r.sortOptions, r.allowApplicationState, r.applicationId, r.installOnDemand, s, l, u, d]
         )
     );
 }
@@ -925,6 +932,9 @@ function eB(e, n) {
 function eG(e, n) {
     return eB(e, n);
 }
+!(function (e) {
+    (e[(e.COMMAND_NAME_STARTS_WITH = 0)] = 'COMMAND_NAME_STARTS_WITH'), (e[(e.STARTS_WITH_COMMAND_NAME = 1)] = 'STARTS_WITH_COMMAND_NAME'), (e[(e.COMMAND_NAME_CONTAINS = 2)] = 'COMMAND_NAME_CONTAINS'), (e[(e.STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME = 3)] = 'STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME'), (e[(e.OPTION_NAME_CONTAINS = 4)] = 'OPTION_NAME_CONTAINS'), (e[(e.SECTION_NAME_STARTS_WITH = 5)] = 'SECTION_NAME_STARTS_WITH'), (e[(e.SECTION_NAME_CONTAINS = 6)] = 'SECTION_NAME_CONTAINS'), (e[(e.COMMAND_DESCRIPTION_CONTAINS = 7)] = 'COMMAND_DESCRIPTION_CONTAINS'), (e[(e.SECTION_DESCRIPTION_CONTAINS = 8)] = 'SECTION_DESCRIPTION_CONTAINS');
+})(a || (a = {}));
 function eZ(e, n) {
     var r, i, a, o, s, l;
     let u, c;
@@ -960,6 +970,3 @@ function eZ(e, n) {
         isUserInstalled: null != m
     };
 }
-!(function (e) {
-    (e[(e.COMMAND_NAME_STARTS_WITH = 0)] = 'COMMAND_NAME_STARTS_WITH'), (e[(e.STARTS_WITH_COMMAND_NAME = 1)] = 'STARTS_WITH_COMMAND_NAME'), (e[(e.COMMAND_NAME_CONTAINS = 2)] = 'COMMAND_NAME_CONTAINS'), (e[(e.STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME = 3)] = 'STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME'), (e[(e.OPTION_NAME_CONTAINS = 4)] = 'OPTION_NAME_CONTAINS'), (e[(e.SECTION_NAME_STARTS_WITH = 5)] = 'SECTION_NAME_STARTS_WITH'), (e[(e.SECTION_NAME_CONTAINS = 6)] = 'SECTION_NAME_CONTAINS'), (e[(e.COMMAND_DESCRIPTION_CONTAINS = 7)] = 'COMMAND_DESCRIPTION_CONTAINS'), (e[(e.SECTION_DESCRIPTION_CONTAINS = 8)] = 'SECTION_DESCRIPTION_CONTAINS');
-})(a || (a = {}));

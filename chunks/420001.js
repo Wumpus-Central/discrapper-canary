@@ -43,7 +43,10 @@ let y = {
         if (null == c) return g.K;
         let f = (0, u.hV)(e, c.cleanedQuery),
             { commands: p, sections: h } = o.JT(
-                e,
+                {
+                    channel: e,
+                    type: 'channel'
+                },
                 {
                     commandTypes: [a.yU.CHAT],
                     text: f.text

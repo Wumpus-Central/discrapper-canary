@@ -149,7 +149,13 @@ class eq extends l.PureComponent {
         if (null == e.interactionData) return;
         let { channel: t } = this.props,
             { commandKey: n, interactionOptions: i } = (0, O.XA)(e.interactionData),
-            { command: l, application: r } = R.Xq(t, n);
+            { command: l, application: r } = R.Xq(
+                {
+                    channel: t,
+                    type: 'channel'
+                },
+                n
+            );
         if (null != l) {
             var a, s;
             let e =
@@ -731,7 +737,10 @@ class eX extends l.PureComponent {
                     ? (0, i.jsx)('div', {
                           className: eF.entryPointButtonContainer,
                           children: (0, i.jsx)(eD.ZP, {
-                              channel: n,
+                              context: {
+                                  channel: n,
+                                  type: 'channel'
+                              },
                               entryPointCommandButtonRef: l,
                               type: r
                           })
@@ -760,7 +769,20 @@ t.Z = l.memo(function (e) {
             location: 'ChannelChatMemo'
         }),
         _ = (0, w.h9)(t.id),
-        { isInitialLoading: I, primaryEntryPointCommand: b, isProfileFetching: S, wasProfileFetching: j, applicationId: A, channelId: P, commands: M } = (0, Z.Z)({ channel: t });
+        {
+            isInitialLoading: I,
+            primaryEntryPointCommand: b,
+            isProfileFetching: S,
+            wasProfileFetching: j,
+            applicationId: A,
+            channelId: P,
+            commands: M
+        } = (0, Z.Z)({
+            context: {
+                channel: t,
+                type: 'channel'
+            }
+        });
     (0, N.Z)({
         isProfileFetching: S,
         wasProfileFetching: j,

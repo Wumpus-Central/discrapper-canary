@@ -27,8 +27,8 @@ var i = n(200651),
     _ = n(665811),
     Z = n(182906),
     S = n(556505),
-    N = n(513202),
-    y = n(884338),
+    y = n(513202),
+    N = n(884338),
     j = n(823531),
     E = n(388032),
     A = n(96339),
@@ -43,8 +43,9 @@ function O(e) {
     });
 }
 function L(e) {
-    let { activity: t, application: n, channel: a, guildId: l, large: s = !1 } = e,
-        r = (0, c.Wu)([m.default], () => {
+    let { activity: t, application: n, context: a, guildId: l, large: s = !1 } = e,
+        r = 'channel' === a.type ? a.channel : void 0,
+        d = (0, c.Wu)([m.default], () => {
             var e;
             return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : [])
                 .map((e) => {
@@ -53,12 +54,12 @@ function L(e) {
                 })
                 .filter(h.lm);
         }),
-        d = x.ZP.getName(l, null == a ? void 0 : a.id, null == r ? void 0 : r[0]);
-    if (((d = (0, b.aF)(d, 15)), null == t || 0 === r.length)) {
-        var u, p;
-        let e = ''.concat((0, I.ZP)(null !== (u = n.maxParticipants) && void 0 !== u ? u : 0));
+        u = x.ZP.getName(l, null == r ? void 0 : r.id, null == d ? void 0 : d[0]);
+    if (((u = (0, b.aF)(u, 15)), null == t || 0 === d.length)) {
+        var p, f;
+        let e = ''.concat((0, I.ZP)(null !== (p = n.maxParticipants) && void 0 !== p ? p : 0));
         return (
-            s && (e = null !== (p = n.description) && void 0 !== p ? p : ''),
+            s && (e = null !== (f = n.description) && void 0 !== f ? f : ''),
             (0, i.jsx)(o.Text, {
                 className: A.activitySubtitleText,
                 variant: 'text-xs/normal',
@@ -74,17 +75,17 @@ function L(e) {
                 className: A.usersArePlayingText,
                 variant: 'text-xs/normal',
                 children:
-                    r.length > 1
+                    d.length > 1
                         ? E.intl.formatToPlainString(E.t.cpe6CA, {
-                              username: d,
-                              count: r.length - 1
+                              username: u,
+                              count: d.length - 1
                           })
-                        : E.intl.formatToPlainString(E.t['7Uuia2'], { username: d })
+                        : E.intl.formatToPlainString(E.t['7Uuia2'], { username: u })
             }),
-            (0, i.jsx)(y.Z, {
-                size: s ? y.u.SIZE_24 : y.u.SIZE_16,
+            (0, i.jsx)(N.Z, {
+                size: s ? N.u.SIZE_24 : N.u.SIZE_16,
                 guildId: l,
-                users: r,
+                users: d,
                 max: 6
             })
         ]
@@ -92,7 +93,7 @@ function L(e) {
 }
 function w(e) {
     var t;
-    let { activityItem: n, channel: l, guildId: m, locationObject: h, onActivityItemVisible: x, onActivityItemSelected: b, large: y = !1 } = e,
+    let { activityItem: n, context: l, guildId: m, locationObject: h, onActivityItemVisible: x, onActivityItemSelected: b, large: N = !1 } = e,
         {
             imageBackground: w,
             videoUrl: k,
@@ -103,12 +104,12 @@ function w(e) {
             staffReleasePhase: F
         } = (0, T.ZP)({
             activityItem: n,
-            channel: l,
+            context: l,
             guildId: m,
             locationObject: h,
             onActivityItemVisible: x,
             onActivityItemSelected: b,
-            embeddedActivitiesManager: N.Z,
+            embeddedActivitiesManager: y.Z,
             commandOrigin: u.bB.APPLICATION_LAUNCHER
         }),
         H = (0, c.e7)([C.Z, g.Z], () => C.Z.inDevModeForApplication(n.application.id) || g.Z.inTestModeForApplication(n.application.id), [n.application.id]),
@@ -139,13 +140,13 @@ function w(e) {
               }
             : void 0,
         className: s()(A.activityItem, {
-            [A.large]: !0 === y,
+            [A.large]: !0 === N,
             [A.disabled]: B !== T.JS.START
         }),
         children: [
             (0, i.jsxs)('div', {
                 ref: Y,
-                className: s()(A.activityImageContainer, { [A.large]: !0 === y }),
+                className: s()(A.activityImageContainer, { [A.large]: !0 === N }),
                 onMouseEnter: J,
                 onFocus: J,
                 onMouseLeave: X,
@@ -154,7 +155,7 @@ function w(e) {
                     (0, i.jsx)(Z.Z, {
                         imageBackground: w,
                         applicationName: V.name,
-                        imageClassName: s()(A.activityImage, { [A.large]: !0 === y }),
+                        imageClassName: s()(A.activityImage, { [A.large]: !0 === N }),
                         imageNotFoundClassName: A.brokenImageIconWrapper
                     }),
                     null != k && z && B === T.JS.START
@@ -200,9 +201,9 @@ function w(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: s()(A.activityTextContainer, { [A.large]: y }),
+                className: s()(A.activityTextContainer, { [A.large]: N }),
                 children: [
-                    y
+                    N
                         ? (0, i.jsx)(o.Text, {
                               className: A.activityMaxParticipantsLarge,
                               variant: 'text-xs/normal',
@@ -236,9 +237,9 @@ function w(e) {
                     (0, i.jsx)(L, {
                         activity: null == D ? void 0 : D.embeddedActivity,
                         application: V,
-                        channel: l,
+                        context: l,
                         guildId: m,
-                        large: y
+                        large: N
                     }),
                     (0, i.jsx)('div', {
                         className: A.activityTagsContainer,

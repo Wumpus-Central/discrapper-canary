@@ -8,17 +8,18 @@ var i = n(192379),
     a = n(110924),
     r = n(317381);
 function s(e) {
-    let { applicationId: t, channelId: n, launchingComponentId: s, onSubmissionComplete: o } = e,
-        c = (0, l.e7)([r.ZP], () => r.ZP.getLaunchState(t, n)),
-        u = null != c && c.isLaunching && c.componentId === s,
-        d = (0, a.Z)(u);
+    let { applicationId: t, context: n, launchingComponentId: s, onSubmissionComplete: o } = e,
+        c = 'channel' === n.type ? n.channel.id : void 0,
+        u = (0, l.e7)([r.ZP], () => r.ZP.getLaunchState(t, c)),
+        d = null != u && u.isLaunching && u.componentId === s,
+        m = (0, a.Z)(d);
     return (
         i.useEffect(() => {
-            !u && d && (null == o || o());
-        }, [u, d, o]),
+            !d && m && (null == o || o());
+        }, [d, m, o]),
         {
-            submitting: u,
-            wasSubmitting: d
+            submitting: d,
+            wasSubmitting: m
         }
     );
 }

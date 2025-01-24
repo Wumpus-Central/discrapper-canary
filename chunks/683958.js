@@ -64,7 +64,13 @@ function _(e) {
     let { applicationId: t, channel: n, command: s, onClose: f, requireLaunchChannel: b, onShareResult: S, previewMessage: _, ...j } = e,
         E = r.useMemo(() => (0, o.dL)(n.id), [n]),
         [M, L] = r.useState(!1),
-        { commands: T, loading: P } = Z(n, t),
+        { commands: T, loading: P } = Z(
+            {
+                channel: n,
+                type: 'channel'
+            },
+            t
+        ),
         w = r.useRef(0),
         [A, R] = r.useState(b ? [E] : []),
         k = A.length,

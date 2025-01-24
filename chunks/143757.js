@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return B;
     },
     n: function () {
-        return w;
+        return G;
     }
 }),
     n(47120);
@@ -15,49 +15,51 @@ var i = n(200651),
     o = n(481060),
     c = n(493683),
     d = n(239091),
-    u = n(774226),
-    h = n(317381),
-    m = n(122613),
-    p = n(16609),
-    g = n(100527),
-    f = n(906732),
-    _ = n(87005),
-    E = n(753972),
-    I = n(895924),
-    C = n(812236),
-    v = n(82295),
-    N = n(740492),
-    S = n(973616),
-    T = n(592125),
-    b = n(626135),
-    A = n(823379),
-    Z = n(728345),
-    x = n(812206),
-    L = n(981631),
-    y = n(388032),
-    P = n(914333),
-    O = n(312565);
-async function R(e, t, n) {
+    u = n(2052),
+    h = n(774226),
+    m = n(317381),
+    p = n(122613),
+    g = n(16609),
+    f = n(403404),
+    _ = n(100527),
+    E = n(906732),
+    I = n(87005),
+    C = n(753972),
+    v = n(895924),
+    N = n(812236),
+    S = n(82295),
+    T = n(740492),
+    b = n(973616),
+    A = n(592125),
+    Z = n(626135),
+    x = n(823379),
+    L = n(728345),
+    y = n(812206),
+    P = n(981631),
+    O = n(388032),
+    R = n(914333),
+    j = n(312565);
+async function D(e, t, n) {
     t(e.id);
     let i = e.bot;
     if (null == i)
         try {
             var r, l, a;
-            i = null !== (a = null === (r = x.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = S.ZP.createFromServer(await (0, Z.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
+            i = null !== (a = null === (r = y.Z.getApplication(e.id)) || void 0 === r ? void 0 : r.bot) && void 0 !== a ? a : null === (l = b.ZP.createFromServer(await (0, L.UM)(e.id))) || void 0 === l ? void 0 : l.bot;
         } catch (e) {
             t(void 0);
             return;
         }
     if (null != i) {
         let r,
-            l = null == T.Z.getDMFromUserId(i.id);
+            l = null == A.Z.getDMFromUserId(i.id);
         try {
-            r = await c.Z.openPrivateChannel([i.id], !1, !1, g.Z.APP_DMS_QUICK_LAUNCHER);
+            r = await c.Z.openPrivateChannel([i.id], !1, !1, _.Z.APP_DMS_QUICK_LAUNCHER);
         } catch (e) {
             t(void 0);
         }
         if (
-            (b.default.track(L.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (Z.default.track(P.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: l,
                 channel_id: r
@@ -68,59 +70,90 @@ async function R(e, t, n) {
             return;
         }
         try {
-            await (0, C.ZP)(r, e.id);
+            await (0, N.ZP)(r, e.id);
         } catch (e) {
-            if (e.message === C.sV) {
+            if (e.message === N.sV) {
                 t(void 0);
                 return;
             }
         }
-        await (0, m.Z)({
+        await (0, p.Z)({
             targetApplicationId: e.id,
             channelId: r,
             analyticsLocations: n,
-            commandOrigin: I.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+            commandOrigin: v.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
                 t(void 0);
             }
         });
     } else t(void 0);
 }
-function j(e) {
-    let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: l, analyticsLocations: c } = e,
-        d = (0, s.e7)([T.Z], () => T.Z.getDMFromUserId(l)),
-        m = (0, s.e7)([h.ZP], () => h.ZP.getCurrentEmbeddedActivity()),
-        g = (0, u.GK)(),
-        f = null != m && m.applicationId === t.id && (g || (0, p.p)(m.location) === d),
-        _ = n === t.id,
-        I = null != n;
+function M(e) {
+    let { analyticsLocations: t, analyticsContext: n } = e;
     return (0, i.jsx)(o.Clickable, {
-        className: a()(P.clickable, { [P.disabledClickable]: I }),
-        onClick: () => (f || I ? null : R(t, r, c)),
-        'aria-label': y.intl.formatToPlainString(y.t['zLhr9/'], {
+        className: R.clickable,
+        onClick: () => {
+            (0, f.Z)({
+                locationObject: n.location,
+                openInPopout: !1,
+                analyticsLocations: t,
+                opensAppLauncherModal: !0
+            });
+        },
+        'aria-label': O.intl.string(O.t.qJvTKS),
+        children: (0, i.jsx)(o.Tooltip, {
+            tooltipContentClassName: R.tooltipContent,
+            text: O.intl.string(O.t.qJvTKS),
+            children: (e) => {
+                let { ...t } = e;
+                return (0, i.jsx)('div', {
+                    className: R.iconContainer,
+                    ...t,
+                    children: (0, i.jsx)(o.PlusSmallIcon, {
+                        className: R.plusIcon,
+                        size: 'sm',
+                        'aria-hidden': !0
+                    })
+                });
+            }
+        })
+    });
+}
+function w(e) {
+    let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: l, analyticsLocations: c } = e,
+        d = (0, s.e7)([A.Z], () => A.Z.getDMFromUserId(l)),
+        u = (0, s.e7)([m.ZP], () => m.ZP.getCurrentEmbeddedActivity()),
+        p = (0, h.GK)(),
+        f = null != u && u.applicationId === t.id && (p || (0, g.p)(u.location) === d),
+        _ = n === t.id,
+        E = null != n;
+    return (0, i.jsx)(o.Clickable, {
+        className: a()(R.clickable, { [R.disabledClickable]: E }),
+        onClick: () => (f || E ? null : D(t, r, c)),
+        'aria-label': O.intl.formatToPlainString(O.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
         children: (0, i.jsx)(o.Tooltip, {
-            tooltipContentClassName: P.tooltipContent,
+            tooltipContentClassName: R.tooltipContent,
             text: t.name,
             children: (e) => {
                 let { ...n } = e;
                 return (0, i.jsxs)('div', {
-                    className: P.iconContainer,
+                    className: R.iconContainer,
                     ...n,
                     children: [
-                        (0, i.jsx)(E.Z, {
+                        (0, i.jsx)(C.Z, {
                             application: t,
-                            className: P.iconCard,
+                            className: R.iconCard,
                             'aria-hidden': !0,
                             rendersPlaceholder: !0
                         }),
                         _ || f
                             ? (0, i.jsx)(o.Spinner, {
                                   type: o.Spinner.Type.PULSING_ELLIPSIS,
-                                  className: P.spinner,
-                                  itemClassName: f ? P.spinnerInnerRunning : void 0
+                                  className: R.spinner,
+                                  itemClassName: f ? R.spinnerInnerRunning : void 0
                               })
                             : null
                     ]
@@ -129,14 +162,14 @@ function j(e) {
         })
     });
 }
-function D(e) {
+function k(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: r, analyticsLocations: l } = e;
     return (0, i.jsx)('div', {
-        className: P.itemContainer,
+        className: R.itemContainer,
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
-                j,
+                w,
                 {
                     application: e,
                     loadingAppId: n,
@@ -149,64 +182,71 @@ function D(e) {
         })
     });
 }
-let M = (e) => {
+let U = (e) => {
     (0, d.jW)(e, async () => {
         let { default: e } = await n.e('40706').then(n.bind(n, 610909));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 };
-function w() {
-    let e = (0, s.e7)([N.ZP], () => N.ZP.showPlayAgain),
-        { frecentApps: t } = (0, _.f)({
-            channel: void 0,
+function G() {
+    let e = (0, s.e7)([T.ZP], () => T.ZP.showPlayAgain),
+        { frecentApps: t } = (0, I.f)({
+            context: { type: 'contextless' },
             onlyActivityApps: !0,
             allowCommandFetch: !0,
             includeAuthorizedAppsAndFetch: !1
         });
     return e && t.length > 0;
 }
-function k(e) {
+function B(e) {
     let { bottomDivider: t } = e,
-        { frecentApps: n } = (0, _.f)({
-            channel: void 0,
+        { frecentApps: n } = (0, I.f)({
+            context: { type: 'contextless' },
             onlyActivityApps: !0,
             allowCommandFetch: !0,
             includeAuthorizedAppsAndFetch: !1
         }),
         [l, s] = r.useState(void 0),
-        { analyticsLocations: o } = (0, f.ZP)(g.Z.APP_DMS_QUICK_LAUNCHER),
+        { analyticsLocations: o } = (0, E.ZP)(_.Z.APP_DMS_QUICK_LAUNCHER),
         c = r.useRef(!1),
-        d = r.useMemo(
+        d = (0, u.O)(),
+        h = r.useMemo(
             () =>
                 n
                     .map((e) => e.application)
-                    .filter(A.lm)
-                    .slice(0, 5),
+                    .filter(x.lm)
+                    .slice(0, 8),
             [n]
         );
     return (
         r.useLayoutEffect(() => {
             var e;
-            if (!c.current) (c.current = !0), b.default.track(L.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = d.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
-        }, [d]),
+            if (!c.current) (c.current = !0), Z.default.track(P.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = h.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        }, [h]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: P.container,
-                    onContextMenu: M,
+                    className: R.container,
+                    onContextMenu: U,
                     children: [
-                        (0, i.jsx)(v.Z, {
-                            className: a()(P.headerContainer, O.privateChannelsHeaderContainer),
-                            children: (0, i.jsx)('div', {
-                                className: P.textContainer,
-                                children: (0, i.jsx)('span', {
-                                    className: O.headerText,
-                                    children: y.intl.string(y.t.vayAzs)
-                                })
+                        (0, i.jsx)(S.Z, {
+                            className: a()(R.headerContainer, j.privateChannelsHeaderContainer),
+                            children: (0, i.jsxs)('div', {
+                                className: R.textContainer,
+                                children: [
+                                    (0, i.jsx)('span', {
+                                        className: j.headerText,
+                                        children: O.intl.string(O.t.vayAzs)
+                                    }),
+                                    (0, i.jsx)(M, {
+                                        analyticsLocations: o,
+                                        analyticsContext: d
+                                    })
+                                ]
                             })
                         }),
-                        (0, i.jsx)(D, {
-                            frecentApps: d,
+                        (0, i.jsx)(k, {
+                            frecentApps: h,
                             loadingAppId: l,
                             setLoadingAppId: s,
                             analyticsLocations: o

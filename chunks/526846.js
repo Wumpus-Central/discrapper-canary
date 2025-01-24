@@ -145,7 +145,10 @@ let S = 'vc-activities-'.concat((0, s.Z)()),
                                             (0, i.jsx)(
                                                 _.Y,
                                                 {
-                                                    channel: n,
+                                                    context: {
+                                                        channel: n,
+                                                        type: 'channel'
+                                                    },
                                                     activityItem: e,
                                                     onClick: () => {
                                                         s(), A();

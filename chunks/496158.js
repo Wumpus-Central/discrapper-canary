@@ -1,16 +1,21 @@
 t.d(n, {
     D: function () {
-        return a;
+        return o;
     }
 });
 var i = t(192379),
     l = t(430824);
-function a(e) {
+function o(e) {
     return i.useMemo(() => {
         var n;
-        return {
-            channel: (n = e),
-            guild: null != n.guild_id ? l.Z.getGuild(n.guild_id) : null
-        };
+        return 'contextless' === (n = e).type
+            ? {
+                  channel: void 0,
+                  guild: void 0
+              }
+            : {
+                  channel: n.channel,
+                  guild: l.Z.getGuild(n.channel.guild_id)
+              };
     }, [e]);
 }

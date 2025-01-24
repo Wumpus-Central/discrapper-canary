@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return y;
+        return N;
     },
     d: function () {
         return j;
@@ -30,10 +30,10 @@ var i = n(200651),
     _ = n(839895);
 let Z = (0, c.Mg)(r.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
     S = (0, c.Mg)(r.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-    N = (0, c.Mg)(r.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
-function y(e) {
+    y = (0, c.Mg)(r.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+function N(e) {
     let { channel: t, guildId: n, locationObject: l, onClose: c, onActivityItemVisible: r, scrollerRef: I } = e,
-        [y, j] = a.useState(0),
+        [N, j] = a.useState(0),
         E = (0, h.Z)({
             guildId: n,
             enableFilter: !0
@@ -81,13 +81,13 @@ function y(e) {
                 B
                     ? (0, i.jsx)('div', {
                           className: _.scrollBackgroundContainer,
-                          style: { top: -y },
+                          style: { top: -N },
                           children: (0, i.jsx)('div', {
                               className: s()(_.scrollTierBackground),
                               style: {
                                   height: ((e) => {
                                       let t = 1 === e.length;
-                                      return Z + Math.ceil(e.length / 2) * (t ? N : S);
+                                      return Z + Math.ceil(e.length / 2) * (t ? y : S);
                                   })(E)
                               }
                           })
@@ -98,7 +98,7 @@ function y(e) {
                     className: _.scroller,
                     children: [
                         null,
-                        B
+                        B && null != t
                             ? (0, i.jsx)('div', {
                                   className: _.scrollSection,
                                   children: (0, i.jsx)('div', {
@@ -109,7 +109,10 @@ function y(e) {
                                               {
                                                   large: 1 === E.length,
                                                   activityItem: e,
-                                                  channel: t,
+                                                  context: {
+                                                      channel: t,
+                                                      type: 'channel'
+                                                  },
                                                   guildId: n,
                                                   locationObject: l,
                                                   onActivityItemVisible: r,
