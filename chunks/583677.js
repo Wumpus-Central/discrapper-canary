@@ -1,5 +1,6 @@
 e.exports = {
-    inner: 'inner_b84fc9',
+    inputInner: 'inputInner_b84fc9',
+    input: 'input_b84fc9',
     editor: 'editor_b84fc9',
     container: 'container_b84fc9',
     fullSize: 'fullSize_b84fc9',

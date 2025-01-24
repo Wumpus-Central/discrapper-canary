@@ -116,7 +116,8 @@ function O(e) {
             children: (0, a.jsx)(p.Z, {
                 parentModalKey: y,
                 emojiPickerCloseOnModalOuterClick: !0,
-                innerClassName: A.inner,
+                className: A.input,
+                innerClassName: A.inputInner,
                 editorClassName: A.editor,
                 type: d.Ie.USER_PROFILE_REPLY,
                 placeholder: S.intl.formatToPlainString(R(u), { username: m.ZP.getName(r, i, n) }),

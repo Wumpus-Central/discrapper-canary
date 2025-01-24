@@ -66,10 +66,11 @@ function D() {
         },
         login(e) {
             let { login: n, password: r, undelete: i, source: a, giftCodeSKUId: o, invite: s, isMultiAccount: l } = e;
-            p.Z.dispatch({
-                type: 'LOGIN',
-                isPasswordAttempt: !0
-            }),
+            return (
+                p.Z.dispatch({
+                    type: 'LOGIN',
+                    isPasswordAttempt: !0
+                }),
                 I.Z.post({
                     url: S.ANM.LOGIN,
                     body: {
@@ -118,44 +119,50 @@ function D() {
                     },
                     (e) => {
                         var i, a, o;
-                        if (null != e.body && (null === (i = e.body) || void 0 === i ? void 0 : i.suspended_user_token) != null) {
-                            p.Z.dispatch({
-                                type: 'LOGIN_SUSPENDED_USER',
-                                suspendedUserToken: null === (o = e.body) || void 0 === o ? void 0 : o.suspended_user_token
-                            });
-                            return;
-                        }
-                        let s = null === (a = e.body) || void 0 === a ? void 0 : a.code;
-                        s === S.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != r && '' !== r
-                            ? p.Z.dispatch({
-                                  type: 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
-                                  credentials: {
-                                      login: n,
-                                      password: r
-                                  }
-                              })
-                            : s === S.evJ.ACCOUNT_DISABLED && null != r && '' !== r
-                              ? p.Z.dispatch({
-                                    type: 'LOGIN_ACCOUNT_DISABLED',
-                                    credentials: {
-                                        login: n,
-                                        password: r
-                                    }
-                                })
-                              : s === S.evJ.PHONE_VERIFICATION_REQUIRED
+                        let s = new h.yZ(e);
+                        if (null != e.body && (null === (i = e.body) || void 0 === i ? void 0 : i.suspended_user_token) != null)
+                            throw (
+                                (p.Z.dispatch({
+                                    type: 'LOGIN_SUSPENDED_USER',
+                                    suspendedUserToken: null === (o = e.body) || void 0 === o ? void 0 : o.suspended_user_token
+                                }),
+                                s)
+                            );
+                        let l = null === (a = e.body) || void 0 === a ? void 0 : a.code;
+                        throw (
+                            (l === S.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != r && '' !== r
                                 ? p.Z.dispatch({
-                                      type: 'LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED',
+                                      type: 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
                                       credentials: {
                                           login: n,
                                           password: r
                                       }
                                   })
-                                : p.Z.dispatch({
-                                      type: 'LOGIN_FAILURE',
-                                      error: new h.yZ(e)
-                                  });
+                                : l === S.evJ.ACCOUNT_DISABLED && null != r && '' !== r
+                                  ? p.Z.dispatch({
+                                        type: 'LOGIN_ACCOUNT_DISABLED',
+                                        credentials: {
+                                            login: n,
+                                            password: r
+                                        }
+                                    })
+                                  : l === S.evJ.PHONE_VERIFICATION_REQUIRED
+                                    ? p.Z.dispatch({
+                                          type: 'LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED',
+                                          credentials: {
+                                              login: n,
+                                              password: r
+                                          }
+                                      })
+                                    : p.Z.dispatch({
+                                          type: 'LOGIN_FAILURE',
+                                          error: s
+                                      }),
+                            s)
+                        );
                     }
-                );
+                )
+            );
         },
         loginMFAv2(e) {
             let { code: n, ticket: r, source: i, giftCodeSKUId: a, isMultiAccount: o, mfaType: s } = e;

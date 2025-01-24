@@ -38094,9 +38094,14 @@ div.popoutCloseButton_d523a2:hover {
     border-left: 1px solid var(--background-modifier-accent)
 }
 
-.inner_b84fc9 {
+html:not(.visual-refresh-chat-input) .inputInner_b84fc9 {
     background: var(--input-background);
     border-radius: 3px
+}
+
+.visual-refresh-chat-input .input_b84fc9,
+.visual-refresh.custom-theme-background .input_b84fc9 {
+    background: var(--input-background)
 }
 
 .editor_b84fc9 {
