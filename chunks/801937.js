@@ -149,16 +149,17 @@ class M extends l.PureComponent {
     render() {
         var e;
         let { showAllPaymentMethods: n } = this.state,
-            { onChooseType: r, className: i, onStripePaymentMethodReceived: a, ipCountryCode: o, ipCountryCodeHasError: l, isEligibleForTrial: u = !1 } = this.props,
-            d = null !== (e = this.props.paymentRequestWallets) && void 0 !== e ? e : [],
-            p = {
+            { onChooseType: r, className: i, onStripePaymentMethodReceived: a, ipCountryCode: o, ipCountryCodeHasError: l, paymentRequestPaymentContext: u, isEligibleForTrial: d = !1 } = this.props,
+            p = null !== (e = this.props.paymentRequestWallets) && void 0 !== e ? e : [],
+            _ = {
                 className: S.button,
                 iconClassName: S.buttonIcon,
                 paymentLabel: T.intl.string(T.t.ZURqX1),
                 onStripePaymentMethodReceived: a,
-                onChooseType: r
+                onChooseType: r,
+                paymentRequestPaymentContext: u
             },
-            _ = d.map((e, n) => {
+            g = p.map((e, n) => {
                 let r = () => this.setState({ [''.concat(e, 'Loaded')]: !0 }),
                     i = {
                         onValidPaymentRequest: r,
@@ -169,7 +170,7 @@ class M extends l.PureComponent {
                     ? (0, s.jsx)(
                           m.Ch,
                           {
-                              ...p,
+                              ..._,
                               ...i
                           },
                           a
@@ -177,28 +178,28 @@ class M extends l.PureComponent {
                     : (0, s.jsx)(
                           m.Tr,
                           {
-                              ...p,
+                              ..._,
                               ...i
                           },
                           a
                       );
             }),
-            g = [],
             E = [],
-            v = void 0 === o || this.arePaymentRequestWalletsLoading();
-        if (l) g.push(...this.createPaymentButtons(P('ALL').countryPaymentMethods));
+            v = [],
+            y = void 0 === o || this.arePaymentRequestWalletsLoading();
+        if (l) E.push(...this.createPaymentButtons(P('ALL').countryPaymentMethods));
         else {
             let { countryPaymentMethods: e, remainingPaymentMethods: n } = P(o);
-            g.push(...this.createPaymentButtons(e)), E.push(...this.createPaymentButtons(n));
+            E.push(...this.createPaymentButtons(e)), v.push(...this.createPaymentButtons(n));
         }
-        let y = (0, s.jsxs)('div', {
+        let b = (0, s.jsxs)('div', {
             children: [
                 (0, s.jsxs)('div', {
                     className: c()(A.wrap, A.horizontal),
-                    children: [g, _]
+                    children: [E, g]
                 }),
                 (0, s.jsx)('div', {
-                    className: E.length > 0 ? A.flex : S.hidden,
+                    className: v.length > 0 ? A.flex : S.hidden,
                     children: (0, s.jsxs)(f.Clickable, {
                         onClick: () => this.toggleAllPayments(),
                         className: c()(A.flex, S.allPaymentsToggleButton),
@@ -210,31 +211,31 @@ class M extends l.PureComponent {
                         [S.hidden]: !n,
                         [A.flex]: n
                     }),
-                    children: E
+                    children: v
                 })
             ]
         });
         return (
-            v &&
+            y &&
                 !l &&
-                (y = (0, s.jsxs)('div', {
+                (b = (0, s.jsxs)('div', {
                     children: [
                         (0, s.jsx)('div', {
                             className: S.hidden,
-                            children: _
+                            children: g
                         }),
                         (0, s.jsx)(f.Spinner, { type: f.Spinner.Type.SPINNING_CIRCLE })
                     ]
                 })),
             (0, s.jsxs)('div', {
                 children: [
-                    u && (0, s.jsx)('hr', { className: S.SeparatorUpper }),
+                    d && (0, s.jsx)('hr', { className: S.SeparatorUpper }),
                     (0, s.jsx)(f.FormSection, {
-                        title: u ? T.intl.string(T.t.tywMsb) : T.intl.string(T.t['8lqkf3']),
+                        title: d ? T.intl.string(T.t.tywMsb) : T.intl.string(T.t['8lqkf3']),
                         className: i,
-                        children: y
+                        children: b
                     }),
-                    u && (0, s.jsx)('hr', { className: S.SeparatorLower })
+                    d && (0, s.jsx)('hr', { className: S.SeparatorLower })
                 ]
             })
         );
