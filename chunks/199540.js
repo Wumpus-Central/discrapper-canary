@@ -98,10 +98,10 @@ function N(e) {
                     )
                 )
             }));
-    let A = { backgroundColor: u && g ? d.tokens.colors.BACKGROUND_PRIMARY.css : (0, s.br)(f, 0.4) };
+    let P = { backgroundColor: u && g ? d.tokens.colors.BACKGROUND_PRIMARY.css : (0, s.br)(f, 0.4) };
     return (0, i.jsxs)('div', {
         'aria-hidden': !0,
-        style: c ? void 0 : A,
+        style: c ? void 0 : P,
         className: I.folderIconWrapper,
         children: [t, n]
     });
@@ -126,10 +126,10 @@ function E(e) {
             treeItemProps: { onFocus: E, ...y }
         } = e,
         [j, T] = l.useState(!1),
-        A = l.useCallback(() => {
+        P = l.useCallback(() => {
             o || T(!0), null == b || b(!0);
         }, [o, b]),
-        P = l.useCallback(() => {
+        A = l.useCallback(() => {
             o || T(!1), null == b || b(!1);
         }, [o, b]),
         w = (0, p.Q3)('FolderHeader'),
@@ -152,8 +152,8 @@ function E(e) {
             className: a()(I.folder, { [I.hover]: j }),
             onClick: _,
             onContextMenu: Z,
-            onMouseEnter: A,
-            onMouseLeave: P,
+            onMouseEnter: P,
+            onMouseLeave: A,
             onKeyDown: S,
             onFocus: E,
             'aria-label': x.intl.formatToPlainString(x.t['90/DwM'], {

@@ -22,8 +22,8 @@ var i = n(200651),
     E = n(213609),
     I = n(143757),
     C = n(463119),
-    N = n(377171),
-    v = n(540059),
+    v = n(377171),
+    N = n(540059),
     S = n(243778),
     T = n(125465),
     b = n(922409),
@@ -43,8 +43,8 @@ var i = n(200651),
     U = n(695346),
     G = n(283595),
     B = n(699516),
-    H = n(923834),
-    V = n(55563),
+    V = n(923834),
+    H = n(55563),
     F = n(774343),
     z = n(626135),
     W = n(814225),
@@ -199,7 +199,7 @@ let et = (e) => {
                         return t === h.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(p.TextBadge, {
                                   text: $.intl.string($.t.y2b7CA),
-                                  color: N.Z.BG_BRAND
+                                  color: v.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -311,13 +311,13 @@ function ed() {
 function eu() {
     let e = (0, u.e7)([F.Z], () => F.Z.getHomeLink()),
         t = (0, u.e7)(
-            [V.Z],
+            [H.Z],
             () => {
                 if (e === X.Z5c.APPLICATION_STORE) return !0;
                 let t = (0, W.ZK)(e);
                 if (null != t) {
                     var n, i;
-                    return null !== (i = null === (n = V.Z.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== i && i;
+                    return null !== (i = null === (n = H.Z.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== i && i;
                 }
                 return !1;
             },
@@ -326,8 +326,8 @@ function eu() {
         n = !U.bm.useSetting(),
         { theme: r } = (0, u.cj)([k.Z], () => ({ theme: k.Z.theme })),
         l = (0, u.e7)([G.Z], () => G.Z.hasLibraryApplication()),
-        a = (0, u.e7)([H.Z], () => H.Z.getCurrentPath()),
-        o = (0, v.Q3)('PrivateChannels'),
+        a = (0, u.e7)([V.Z], () => V.Z.getCurrentPath()),
+        o = (0, N.Q3)('PrivateChannels'),
         [c, d] = (0, M.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];

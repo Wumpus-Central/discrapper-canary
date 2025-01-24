@@ -28,38 +28,38 @@ var i = n(200651),
     E = n(565216),
     I = n(981631),
     C = n(921944),
-    N = n(388032),
-    v = n(966156);
+    v = n(388032),
+    N = n(966156);
 let S = [],
     T = (e) => {
         let { tagText: t, className: n } = e;
         return (0, i.jsx)(o.TextBadge, {
-            className: a()(v.tag, n),
+            className: a()(N.tag, n),
             text: t
         });
     },
     b = (e) => {
         let { header: t, subHeader: n, imageSrc: r, tagText: l, wideStyle: s } = e;
         return (0, i.jsxs)('div', {
-            className: a()(v.featureCard, { [v.wideStyle]: s }),
+            className: a()(N.featureCard, { [N.wideStyle]: s }),
             children: [
                 null != l
                     ? (0, i.jsx)(T, {
                           tagText: l,
-                          className: v.featureCardTag
+                          className: N.featureCardTag
                       })
                     : null,
                 (0, i.jsx)('img', {
                     alt: '',
-                    className: a()(v.featureCardImg, { [v.wideStyle]: s }),
+                    className: a()(N.featureCardImg, { [N.wideStyle]: s }),
                     src: r
                 }),
                 (0, i.jsxs)('div', {
-                    className: v.featureCardTextGroup,
+                    className: N.featureCardTextGroup,
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-md/extrabold',
-                            className: v.featureCardTextHeader,
+                            className: N.featureCardTextHeader,
                             children: t
                         }),
                         (0, i.jsx)(o.Text, {
@@ -77,13 +77,13 @@ function A(e) {
         k = (0, h.Dt)(),
         U = O.length % 2 == 0,
         G = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        [B, H] = r.useState(Date.now()),
-        [V, F] = r.useState(0),
+        [B, V] = r.useState(Date.now()),
+        [H, F] = r.useState(0),
         [z, W] = r.useState(0),
         [Y, K] = r.useState(!1),
         [q, X] = r.useState(!0),
         Q = r.useRef(B),
-        J = r.useRef(V),
+        J = r.useRef(H),
         $ = r.useRef(z),
         ee = r.useRef(Y),
         et = r.useRef(q),
@@ -94,7 +94,7 @@ function A(e) {
             t = e - Q.current,
             n = J.current,
             i = $.current;
-        return ee.current && (F((n += t)), !et.current && W((i += t))), H(e), [n, i];
+        return ee.current && (F((n += t)), !et.current && W((i += t))), V(e), [n, i];
     }
     return (
         r.useEffect(() => {
@@ -133,8 +133,8 @@ function A(e) {
             [en]
         ),
         r.useEffect(() => {
-            (Q.current = B), (J.current = V), ($.current = z), (ee.current = Y), (et.current = q);
-        }, [B, V, z, Y, q]),
+            (Q.current = B), (J.current = H), ($.current = z), (ee.current = Y), (et.current = q);
+        }, [B, H, z, Y, q]),
         r.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
@@ -166,27 +166,27 @@ function A(e) {
             );
         }, [A, R]),
         (0, i.jsxs)(o.ModalRoot, {
-            className: a()(v.root, t),
+            className: a()(N.root, t),
             transitionState: w,
             'aria-labelledby': k,
             children: [
                 (0, i.jsx)(o.ModalCloseButton, {
-                    className: v.closeButton,
+                    className: N.closeButton,
                     onClick: M
                 }),
-                (0, i.jsx)(E.Z, { className: v.splash }),
+                (0, i.jsx)(E.Z, { className: N.splash }),
                 null == Z ? void 0 : Z(),
                 (0, i.jsxs)(o.ModalContent, {
-                    className: v.content,
+                    className: N.content,
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'display-md',
-                            className: a()(v.headerText, L),
+                            className: a()(N.headerText, L),
                             children: x
                         }),
                         'video' === l.type
                             ? (0, i.jsx)(m.Z, {
-                                  className: a()(v.video, T),
+                                  className: a()(N.video, T),
                                   autoPlay: !G,
                                   loop: !0,
                                   muted: !0,
@@ -195,7 +195,7 @@ function A(e) {
                                   src: l.src,
                                   poster: l.poster,
                                   onPlay: (e) => {
-                                      f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), H(Date.now()), K(!0), X(e.currentTarget.muted);
+                                      f.default.track(I.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), V(Date.now()), K(!0), X(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
                                       el(), X(e.currentTarget.muted), K(!1);
@@ -211,7 +211,7 @@ function A(e) {
                                       null == en
                                           ? void 0
                                           : en.map((e) => {
-                                                let t = (0, N.getLanguages)().find((t) => t.code === e.locale);
+                                                let t = (0, v.getLanguages)().find((t) => t.code === e.locale);
                                                 return null == t
                                                     ? null
                                                     : (0, i.jsx)(
@@ -229,7 +229,7 @@ function A(e) {
                               })
                             : 'embed' === l.type
                               ? (0, i.jsx)(d.BC, {
-                                    className: a()(v.video, T),
+                                    className: a()(N.video, T),
                                     allowFullScreen: !1,
                                     href: l.href,
                                     thumbnail: l.thumbnail,
@@ -247,24 +247,24 @@ function A(e) {
                               : 'image' === l.type
                                 ? (0, i.jsx)('img', {
                                       alt: '',
-                                      className: a()(v.video, T),
+                                      className: a()(N.video, T),
                                       src: l.src
                                   })
                                 : null,
                         (0, i.jsxs)(o.Heading, {
                             variant: 'heading-lg/semibold',
-                            className: v.subHeader,
+                            className: N.subHeader,
                             children: [y, null == P ? void 0 : P()]
                         }),
                         null != D &&
                             (0, i.jsx)(o.Heading, {
                                 variant: 'heading-md/medium',
-                                className: v.bodyText,
+                                className: N.bodyText,
                                 children: D
                             }),
                         O.length > 0 &&
                             (0, i.jsx)('div', {
-                                className: a()(v.featureCardGroup, { [v.wideStyle]: U }),
+                                className: a()(N.featureCardGroup, { [N.wideStyle]: U }),
                                 children: O.map((e, t) =>
                                     (0, i.jsx)(
                                         b,

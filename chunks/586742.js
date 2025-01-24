@@ -36,7 +36,7 @@ function N(e) {
     let { context: t = j.Yn.DEFAULT, participants: o, locked: a, widget: d, channel: u, width: h, height: m, containerRef: x } = e,
         f = (e, r) => {
             (0, c.jW)(r, async () => {
-                let { default: r } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
+                let { default: r } = await Promise.all([n.e('79695'), n.e('69220'), n.e('10125')]).then(n.bind(n, 881351));
                 return (n) =>
                     (0, i.jsx)(r, {
                         ...n,

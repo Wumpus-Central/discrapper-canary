@@ -33,8 +33,8 @@ var l = n(120356),
     y = n(335353),
     j = n(896835),
     T = n(359110),
-    A = n(155409),
-    P = n(695346),
+    P = n(155409),
+    A = n(695346),
     w = n(447564),
     M = n(592125),
     L = n(430824),
@@ -48,13 +48,13 @@ var l = n(120356),
     V = n(98597),
     H = n(648501),
     F = n(473403),
-    W = n(830993),
-    z = n(653577),
+    z = n(830993),
+    W = n(653577),
     q = n(207055),
     Y = n(981631),
     Q = n(647086),
-    J = n(388032),
-    K = n(831746);
+    K = n(388032),
+    J = n(831746);
 function X(e, t, n) {
     return (
         t in e
@@ -83,16 +83,16 @@ class $ extends V.ZP {
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
-        if (n) return K.containerUserOver;
-        if (null != t) return e > t ? K.containerDragAfter : K.containerDragBefore;
-        return K.containerDefault;
+        if (n) return J.containerUserOver;
+        if (null != t) return e > t ? J.containerDragAfter : J.containerDragBefore;
+        return J.containerDefault;
     }
     renderSubtitle() {
         var e;
         let { channel: t, connected: n, enableHangStatus: l, allowChannelTopic: r } = this.props,
             a = null === (e = (0, x.D)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle,
             { hovered: o } = this.state;
-        return (0, i.jsx)(z.Z, {
+        return (0, i.jsx)(W.Z, {
             onClick: this.handleVoiceStatusClick,
             channel: t,
             connected: n,
@@ -119,7 +119,7 @@ class $ extends V.ZP {
         return null == e
             ? null
             : (0, i.jsx)('div', {
-                  className: K.channelInfo,
+                  className: J.channelInfo,
                   children: e
               });
     }
@@ -128,15 +128,15 @@ class $ extends V.ZP {
         return t || !e.isHDStreamSplashed
             ? null
             : (0, i.jsx)(s.Tooltip, {
-                  text: J.intl.string(J.t.gpF6QU),
+                  text: K.intl.string(K.t.gpF6QU),
                   children: (t) => {
                       let { onMouseEnter: n, onMouseLeave: l, onFocus: a, onBlur: o } = t;
                       return (0, i.jsx)(s.Clickable, {
-                          className: r()(K.iconItem, K.alwaysShown),
+                          className: r()(J.iconItem, J.alwaysShown),
                           onClick: () => {
                               (0, j.X)('VoiceChannel') ? (0, w.openHDPotionModal)(e, 'VoiceChannel') : window.open(O.Z.getArticleURL(Y.BhN.HD_STREAMING_POTION), '_blank');
                           },
-                          'aria-label': J.intl.string(J.t.gpF6QU),
+                          'aria-label': K.intl.string(K.t.gpF6QU),
                           onMouseEnter: n,
                           onMouseLeave: l,
                           onFocus: a,
@@ -144,7 +144,7 @@ class $ extends V.ZP {
                           children: (0, i.jsx)(s.PotionIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: K.actionIcon
+                              className: J.actionIcon
                           })
                       });
                   }
@@ -154,8 +154,8 @@ class $ extends V.ZP {
         let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: v, canReorderChannel: C, canMoveMembers: x, showTutorial: I, hasActiveEvent: _, embeddedApps: Z, isSubscriptionGated: b, isFavoriteSuggestion: S, withGuildIcon: N } = this.props,
             { shouldShowActivities: E, shouldShowGuildVerificationPopout: j } = this.state,
             T = this.getVoiceStatesCount(),
-            P = (0, i.jsxs)('li', {
-                className: r()(this.getModeClass(), { [K.disabled]: this.isDisabled() }),
+            A = (0, i.jsxs)('li', {
+                className: r()(this.getModeClass(), { [J.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: [
                     (0, i.jsx)('div', {
@@ -175,8 +175,8 @@ class $ extends V.ZP {
                                         return (0, i.jsx)(y.Z, {
                                             channel: e,
                                             children: (0, i.jsxs)(F.Z, {
-                                                className: K.iconVisibility,
-                                                iconClassName: r()({ [K.iconLive]: _ }),
+                                                className: J.iconVisibility,
+                                                iconClassName: r()({ [J.iconLive]: _ }),
                                                 hasActiveEvent: _,
                                                 channel: e,
                                                 selected: !S && t,
@@ -219,16 +219,16 @@ class $ extends V.ZP {
                 ]
             });
         return (
-            x && (P = m(P)),
-            C && (P = h(p(P))),
+            x && (A = m(A)),
+            C && (A = h(p(A))),
             I &&
-                (P = (0, i.jsx)(A.Z, {
+                (A = (0, i.jsx)(P.Z, {
                     tutorialId: 'voice-conversations',
                     position: 'right',
                     offsetX: -20,
-                    children: P
+                    children: A
                 })),
-            P
+            A
         );
     }
     constructor(...e) {
@@ -257,7 +257,7 @@ class $ extends V.ZP {
                     l = L.Z.getGuild(t.getGuildId());
                 null != l &&
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('81070')]).then(n.bind(n, 213202));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('14280')]).then(n.bind(n, 213202));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -309,8 +309,8 @@ class $ extends V.ZP {
                 let { channel: e, voiceStates: t, sorting: n, isUserOver: l, selected: r, guild: a } = this.props,
                     { shouldShowActivities: o, shouldShowGuildVerificationPopout: s } = this.state;
                 if (o && !n && !l && !s) {
-                    let n = P.SE.getSetting().includes(a.id);
-                    return (0, i.jsx)(W.Z, {
+                    let n = A.SE.getSetting().includes(a.id);
+                    return (0, i.jsx)(z.Z, {
                         onAction: this.closePopout,
                         guild: a,
                         channel: e,
@@ -331,15 +331,15 @@ class $ extends V.ZP {
                 let { channel: e, locked: t, forceShowButtons: n } = this.props;
                 if (!t)
                     return (0, i.jsx)(s.Tooltip, {
-                        text: J.intl.string(J.t.ZXxLQk),
+                        text: K.intl.string(K.t.ZXxLQk),
                         children: (t) => {
                             let { onMouseEnter: l, onMouseLeave: a, onFocus: o, onBlur: u } = t;
                             return (0, i.jsx)(s.Clickable, {
-                                className: r()(K.iconItem, n ? K.alwaysShown : null),
+                                className: r()(J.iconItem, n ? J.alwaysShown : null),
                                 onClick: () => {
                                     c.Z.updateChatOpen(e.id, !0), (0, T.Kh)(e.id);
                                 },
-                                'aria-label': J.intl.string(J.t.ZXxLQk),
+                                'aria-label': K.intl.string(K.t.ZXxLQk),
                                 onMouseEnter: l,
                                 onMouseLeave: a,
                                 onFocus: o,
@@ -347,7 +347,7 @@ class $ extends V.ZP {
                                 children: (0, i.jsx)(s.ChatIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: K.actionIcon
+                                    className: J.actionIcon
                                 })
                             });
                         }
@@ -355,7 +355,7 @@ class $ extends V.ZP {
             }),
             X(this, 'getTooltipText', () => {
                 let { connected: e } = this.props;
-                return this.isFull() && !e ? J.intl.string(J.t.rZfiNj) : null;
+                return this.isFull() && !e ? K.intl.string(K.t.rZfiNj) : null;
             });
     }
 }
@@ -394,7 +394,7 @@ function et(e) {
             },
             { autoTrackExposure: !1 }
         ),
-        A = (0, H.Z)({
+        P = (0, H.Z)({
             channel: n,
             isChannelSelected: o,
             isChannelCollapsed: s,
@@ -404,7 +404,7 @@ function et(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        P = y && null == A;
+        A = y && null == P;
     return (0, i.jsx)(ee, {
         channelName: g,
         embeddedApps: f,
@@ -418,8 +418,8 @@ function et(e) {
         ...e,
         connected: y,
         isFavoriteSuggestion: r && !N,
-        forceShowButtons: P,
-        channelInfo: A,
+        forceShowButtons: A,
+        channelInfo: P,
         enableHangStatus: j,
         allowChannelTopic: T,
         resolvedUnreadSetting: d

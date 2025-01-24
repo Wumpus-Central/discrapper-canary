@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(590771),
     I = n(273596),
     C = n(128449),
-    N = n(49898),
-    v = n(388032),
+    v = n(49898),
+    N = n(388032),
     S = n(608576);
 function T() {
     let e = r.useRef((0, m.PM)()),
@@ -50,7 +50,7 @@ function T() {
             },
             [j, O, Z]
         ),
-        H = r.useMemo(
+        V = r.useMemo(
             () =>
                 j
                     ? b.filter((e) => {
@@ -60,14 +60,14 @@ function T() {
                     : b,
             [b, j]
         ),
-        V = r.useRef(new h.Z(x)),
+        H = r.useRef(new h.Z(x)),
         { onGuildCardSeen: F, onGuildCardClick: z } = (0, g.H)({
-            guildDiscoveryCardSeenManager: V.current,
+            guildDiscoveryCardSeenManager: H.current,
             loadId: e.current
         });
     return (
         r.useEffect(() => {
-            V.current.flushSeenGuilds(e.current);
+            H.current.flushSeenGuilds(e.current);
         }, [x]),
         r.useEffect(() => {
             T();
@@ -91,7 +91,7 @@ function T() {
                         !j &&
                             (0, i.jsx)(c.Z, {
                                 className: U,
-                                tabs: H,
+                                tabs: V,
                                 selectedTab: j ? null : A,
                                 onTabSelect: B,
                                 onAvailableWidthChange: M
@@ -101,17 +101,17 @@ function T() {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 className: S.searchResultsHeader,
-                                children: v.intl.format(v.t.zHdzqa, { query: G })
+                                children: N.intl.format(N.t.zHdzqa, { query: G })
                             }),
                         L &&
                             (0, i.jsx)(d.Z, {
                                 query: y,
-                                placeholder: v.intl.string(v.t['5h0QOD']),
+                                placeholder: N.intl.string(N.t['5h0QOD']),
                                 onTextChange: P,
                                 onClear: O,
                                 onSubmit: R,
                                 onCollapsedClick: w,
-                                state: j ? N.GlobalDiscoverySearchBarState.DEFAULT : D,
+                                state: j ? v.GlobalDiscoverySearchBarState.DEFAULT : D,
                                 onBlur: k
                             })
                     ]

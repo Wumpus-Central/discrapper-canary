@@ -15,21 +15,21 @@ var a,
     E = n(855674),
     I = n(981631);
 let C = [],
-    N = null,
-    v = !1,
+    v = null,
+    N = !1,
     S = I.QZA.CLOSED,
     T = {},
     b = !1,
     A = null;
 function Z() {
-    if (((i = null != (r = g.Z.getChannel()) ? f.Z.getGuild(r.guild_id) : null), (C = null != r && null != i && _.Z.can(I.Plq.MANAGE_WEBHOOKS, r) ? E.Z.getWebhooksForChannel(i.id, r.id) : []), null != N)) {
-        let e = L(N.id);
-        null != e && (N = e);
+    if (((i = null != (r = g.Z.getChannel()) ? f.Z.getGuild(r.guild_id) : null), (C = null != r && null != i && _.Z.can(I.Plq.MANAGE_WEBHOOKS, r) ? E.Z.getWebhooksForChannel(i.id, r.id) : []), null != v)) {
+        let e = L(v.id);
+        null != e && (v = e);
     }
     (S = I.QZA.OPEN), (T = {}), (b = !1);
 }
 let x = u().debounce(() => {
-    b && ((null == N || u().isEqual(N, L(N.id))) && (b = !1), !b && P.emitChange());
+    b && ((null == v || u().isEqual(v, L(v.id))) && (b = !1), !b && P.emitChange());
 }, 500);
 function L(e) {
     return C.find((t) => {
@@ -48,7 +48,7 @@ class y extends (a = h.ZP.Store) {
         return C;
     }
     get editedWebhook() {
-        return N;
+        return v;
     }
     get formState() {
         return S;
@@ -63,11 +63,11 @@ class y extends (a = h.ZP.Store) {
         return {
             submitting: S === I.QZA.SUBMITTING,
             webhooks: C,
-            editedWebhook: N,
+            editedWebhook: v,
             section: l,
             sectionId: A,
             hasChanges: this.hasChanges(),
-            isFetching: v,
+            isFetching: N,
             errors: T
         };
     }
@@ -94,7 +94,7 @@ let P = new y(
                   if (((l = I.b4C.OVERVIEW), null == i)) {
                       let e = g.Z.getChannel(),
                           t = null == e ? void 0 : e.getGuildId();
-                      null != e && null != t && (p.Z.fetchForChannel(t, e.id), (v = !0)), Z();
+                      null != e && null != t && (p.Z.fetchForChannel(t, e.id), (N = !0)), Z();
                   }
               },
               INTEGRATION_SETTINGS_SET_SECTION: function (e) {
@@ -105,22 +105,22 @@ let P = new y(
                   let { webhookId: t } = e,
                       n = L(t);
                   if (null == n) return !1;
-                  (N = n), (T = {}), (b = !1);
+                  (v = n), (T = {}), (b = !1);
               },
               INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                  (N = null), (T = {}), (b = !1);
+                  (v = null), (T = {}), (b = !1);
               },
               INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                   let { settings: t } = e;
-                  if (null == N) return !1;
-                  (N = { ...N }), null != t.name && N.name !== t.name && ((N.name = t.name), (b = !0)), void 0 !== t.avatar && N.avatar !== t.avatar && ((N.avatar = t.avatar), (b = !0)), null != t.channelId && N.channel_id !== t.channelId && ((N.channel_id = t.channelId), (b = !0)), b && x();
+                  if (null == v) return !1;
+                  (v = { ...v }), null != t.name && v.name !== t.name && ((v.name = t.name), (b = !0)), void 0 !== t.avatar && v.avatar !== t.avatar && ((v.avatar = t.avatar), (b = !0)), null != t.channelId && v.channel_id !== t.channelId && ((v.channel_id = t.channelId), (b = !0)), b && x();
               },
               CHANNEL_SETTINGS_CLOSE: function () {
-                  (r = null), (i = null), (C = []), (N = null), (S = I.QZA.CLOSED);
+                  (r = null), (i = null), (C = []), (v = null), (S = I.QZA.CLOSED);
               },
               WEBHOOKS_UPDATE: function (e) {
                   let { guildId: t, channelId: n, webhooks: l } = e;
-                  if (((v = !1), null != i && t === i.id && null != r && n === r.id && null != l && S !== I.QZA.SUBMITTING)) {
+                  if (((N = !1), null != i && t === i.id && null != r && n === r.id && null != l && S !== I.QZA.SUBMITTING)) {
                       for (let e = C.length - 1; e >= 0; e--) {
                           let t = C[e];
                           if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
@@ -133,8 +133,8 @@ let P = new y(
                                   ...t,
                                   ...i
                               };
-                              (C[e] = n), !b && (null == N ? void 0 : N.id) === n.id && (N = n);
-                          } else (null == N ? void 0 : N.id) === t.id && (N = null), C.splice(e, 1);
+                              (C[e] = n), !b && (null == v ? void 0 : v.id) === n.id && (v = n);
+                          } else (null == v ? void 0 : v.id) === t.id && (v = null), C.splice(e, 1);
                       }
                       for (let e of l)
                           null ==

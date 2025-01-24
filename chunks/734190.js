@@ -25,7 +25,7 @@ var i = n(200651),
     y = n(831746),
     j = n(193877),
     T = n(329986);
-function A(e) {
+function P(e) {
     let { style: t, withGuildIcon: n, inverted: l } = e,
         r = {
             className: a()(T.spine, { [T.spineWithGuildIcon]: n }, { [T.invertedSpine]: l }),
@@ -70,7 +70,7 @@ function A(e) {
               ]
           });
 }
-function P(e) {
+function A(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, i.jsx)('svg', {
         className: a()(T.spine, { [T.spineWithGuildIcon]: n }),
@@ -125,8 +125,8 @@ t.Z = l.memo(function (e) {
             [t.id]
         ),
         H = null == L ? 0 : L.length,
-        { role: F, ...W } = (0, o.JA)(t.id),
-        z = l.useRef(null),
+        { role: F, ...z } = (0, o.JA)(t.id),
+        W = l.useRef(null),
         q =
             G > 0
                 ? E.intl.formatToPlainString(E.t['ZL7+Iy'], {
@@ -136,7 +136,7 @@ t.Z = l.memo(function (e) {
                 : D
                   ? E.intl.formatToPlainString(E.t.YlVvmZ, { channelName: t.name })
                   : E.intl.formatToPlainString(E.t['0nZpiI'], { channelName: t.name }),
-        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? A : P;
+        Y = (0, p.Q3)('GuildSidebarThreadListEntry') ? P : A;
     return (0, i.jsxs)('li', {
         role: F,
         className: a()(y.containerDefault, { [y.selected]: r }),
@@ -150,8 +150,8 @@ t.Z = l.memo(function (e) {
                       style: { transform: 'rotateX(180deg) translateY(-9px)' }
                   }),
             (0, i.jsx)(c.FocusRing, {
-                focusTarget: z,
-                ringTarget: z,
+                focusTarget: W,
+                ringTarget: W,
                 offset: {
                     top: 2,
                     bottom: 2,
@@ -169,8 +169,8 @@ t.Z = l.memo(function (e) {
                     children: [
                         !D || B || r ? null : (0, i.jsx)('div', { className: a()(j.unread, j.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
-                            ...W,
-                            innerRef: z,
+                            ...z,
+                            innerRef: W,
                             className: j.link,
                             onClick: U,
                             'aria-label': q,

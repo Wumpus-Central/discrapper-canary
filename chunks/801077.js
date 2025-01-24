@@ -26,8 +26,8 @@ var i,
     y = n(630186),
     j = n(250889),
     T = n(199902),
-    A = n(592125),
-    P = n(480294),
+    P = n(592125),
+    A = n(480294),
     w = n(831506),
     M = n(731290),
     L = n(430824),
@@ -41,15 +41,15 @@ var i,
     V = n(981631);
 let H = !1,
     F = !1,
-    W = [],
     z = [],
+    W = [],
     q = {},
     Y = {},
     Q = new Set(),
-    J = new Set();
-function K() {
+    K = new Set();
+function J() {
     let e = G.Z.getFriendIDs();
-    return P.Z.hasConsented(V.pjP.PERSONALIZATION) ? new Set([...N.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e);
+    return A.Z.hasConsented(V.pjP.PERSONALIZATION) ? new Set([...N.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e);
 }
 function X(e) {
     return D.Z.findActivity(e, (e) => e.type !== V.IIU.CUSTOM_STATUS);
@@ -75,7 +75,7 @@ function ee(e) {
     );
 }
 function et(e) {
-    !J.has(e) && Q.add(e);
+    !K.has(e) && Q.add(e);
 }
 function en(e) {
     if ((0, f.Z)(e)) return E.r9;
@@ -100,15 +100,15 @@ function er(e, t, n) {
         I = [],
         Z = new Set(),
         N = !1,
-        P = [];
+        A = [];
     for (let e of t) {
         let n = T.Z.getAnyStreamForUser(e.id),
-            i = A.Z.getChannel(null == n ? void 0 : n.channelId);
+            i = P.Z.getChannel(null == n ? void 0 : n.channelId);
         if ((null == i ? void 0 : i.isNSFW()) && (!f || !M.Z.didAgree(null == i ? void 0 : i.getGuildId()))) continue;
         let o = X(e.id);
         if (
             (null != n &&
-                P.push({
+                A.push({
                     stream: n,
                     streamUser: e,
                     activity: o
@@ -134,7 +134,7 @@ function er(e, t, n) {
                     channelId: null === (r = B.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
                     currentUser: d,
                     isActivitiesEnabledForCurrentPlatform: t,
-                    ChannelStore: A.Z,
+                    ChannelStore: P.Z,
                     VoiceStateStore: B.Z,
                     PermissionStore: R.Z,
                     GuildStore: L.Z
@@ -173,7 +173,7 @@ function er(e, t, n) {
         H = new Set();
     for (let e of t) {
         let n = ei(e.id),
-            i = A.Z.getChannel(n),
+            i = P.Z.getChannel(n),
             l = null != i ? i.getGuildId() : null,
             r = L.Z.getGuild(l);
         if ((H.has(l) && V.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (G = !0));
@@ -216,7 +216,7 @@ function er(e, t, n) {
             return null !== (t = e.startedPlayingTime) && void 0 !== t ? t : 0;
         }),
         s()(o).orderBy([c, (e) => e.game.name], ['desc', 'asc'])).value(),
-        applicationStreams: P
+        applicationStreams: A
     };
 }
 function ea(e) {
@@ -251,11 +251,11 @@ let eu = s().throttle(() => {
         if (!ec()) return;
         Q.clear();
         let t = (function (e) {
-                let t = K(),
+                let t = J(),
                     n = er.bind(null, t);
                 return s()(e).mapValues(n);
             })(
-                ((e = Array.from(K()).reduce((e, t) => {
+                ((e = Array.from(J()).reduce((e, t) => {
                     let n = k.default.getUser(t);
                     return null != n && !n.bot && e.push(n), e;
                 }, [])),
@@ -315,7 +315,7 @@ let eu = s().throttle(() => {
                     });
                 });
             }),
-            (z = (W = t.filter((e) => {
+            (W = (z = t.filter((e) => {
                 let { blockeeExperimentEnabled: t, blockerExperimentEnabled: n } = (0, I.p7)('now-playing-view-store'),
                     i = n && es(e),
                     l = t && eo(e);
@@ -327,7 +327,7 @@ let eu = s().throttle(() => {
             !(function () {
                 if (Q.size > 0) {
                     let e = Array.from(Q);
-                    C.ZP.fetchApplications(e), e.forEach((e) => J.add(e)), Q.clear();
+                    C.ZP.fetchApplications(e), e.forEach((e) => K.add(e)), Q.clear();
                 }
             })(),
             (F = !0);
@@ -339,13 +339,13 @@ function ed() {
 }
 class eh extends (i = u.ZP.Store) {
     initialize() {
-        this.syncWith([k.default, x.Z, D.Z, w.Z, B.Z, T.Z, G.Z, P.Z, N.Z], ed), this.waitFor(Z.Z, L.Z, x.Z, k.default, N.Z);
+        this.syncWith([k.default, x.Z, D.Z, w.Z, B.Z, T.Z, G.Z, A.Z, N.Z], ed), this.waitFor(Z.Z, L.Z, x.Z, k.default, N.Z);
     }
     get currentActivityParties() {
-        return W;
+        return z;
     }
     get nowPlayingCards() {
-        return z;
+        return W;
     }
     get isMounted() {
         return H;
@@ -365,7 +365,7 @@ class eh extends (i = u.ZP.Store) {
         : (l[r] = a);
 let ep = new eh(d.Z, {
     LOGOUT: function () {
-        (H = !1), (W = []), (z = []), Q.clear();
+        (H = !1), (z = []), (W = []), Q.clear();
     },
     NOW_PLAYING_MOUNTED: function () {
         (H = !0), eu();

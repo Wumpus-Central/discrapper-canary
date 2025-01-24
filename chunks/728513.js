@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     authedApp: 'authedApp_f0135d',
     header: 'header_f0135d',
     headerText: 'headerText_f0135d',

@@ -295,7 +295,7 @@ class K extends r.PureComponent {
                             case M.d4z.GUILD_VOICE:
                             case M.d4z.GUILD_STAGE_VOICE:
                                 return (0, u.jW)(e, async () => {
-                                    let { default: e } = await Promise.all([s.e('79695'), s.e('18320'), s.e('83331'), s.e('81070')]).then(s.bind(s, 213202));
+                                    let { default: e } = await Promise.all([s.e('79695'), s.e('18320'), s.e('83331'), s.e('14280')]).then(s.bind(s, 213202));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             ...t,
@@ -351,7 +351,7 @@ class K extends r.PureComponent {
                         });
                     case p.h8.USER:
                         return (0, u.jW)(e, async () => {
-                            let { default: e } = await Promise.all([s.e('79695'), s.e('69220'), s.e('95052')]).then(s.bind(s, 881351));
+                            let { default: e } = await Promise.all([s.e('79695'), s.e('69220'), s.e('56842')]).then(s.bind(s, 881351));
                             return (s) =>
                                 (0, i.jsx)(e, {
                                     ...s,

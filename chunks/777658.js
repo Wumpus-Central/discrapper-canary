@@ -23,11 +23,11 @@ function c(e) {
             },
             [t]
         ),
-        [g, m] = (0, r.Wu)([o.Z], () => [o.Z.isFriend(t), o.Z.isBlocked(t)], [t]),
-        [M, v] = i.useState(!1);
+        [m, g] = (0, r.Wu)([o.Z], () => [o.Z.isFriend(t), o.Z.isBlocked(t)], [t]),
+        [M, x] = i.useState(!1);
     return Z || f
         ? null
-        : g
+        : m
           ? (0, l.jsx)(a.MenuItem, {
                 id: 'remove-friend',
                 label: s.intl.string(s.t.cvSt1N),
@@ -38,7 +38,7 @@ function c(e) {
                             confirmText: s.intl.string(s.t.cvSt1N),
                             cancelText: s.intl.string(s.t['ETE/oK']),
                             onConfirm: () => {
-                                u.Z.removeFriend(t, { location: n }), v(!1);
+                                u.Z.removeFriend(t, { location: n }), x(!1);
                             },
                             ...e,
                             children: (0, l.jsx)(a.Text, {
@@ -58,8 +58,8 @@ function c(e) {
                             userId: t,
                             context: { location: n }
                         }),
-                        v(!0));
+                        x(!0));
                 },
-                disabled: m || (M && !g)
+                disabled: g || (M && !m)
             });
 }

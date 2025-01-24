@@ -1,23 +1,23 @@
-n.d(t, {
+e.d(t, {
     P: function () {
-        return u;
+        return s;
     }
 });
-var i = n(442837),
-    l = n(385956),
-    r = n(15701),
-    a = n(594174),
-    s = n(359119),
-    o = n(897769),
-    c = n(981312),
-    d = n(403485);
-function u(e) {
-    let t = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        n = (0, r.G)(e),
-        u = (0, l.v)(e),
-        h = (0, o.S)(e, s.pj.STRANGER_DANGER),
-        p = (0, c.U)(),
-        m = (null == t ? void 0 : t.isStaff()) !== !0,
-        f = (0, d.h)(e).length > 0;
-    if ((!!p || !m) && !n && !u && !f) return h;
+var r = e(442837),
+    i = e(385956),
+    u = e(15701),
+    l = e(594174),
+    a = e(359119),
+    o = e(897769),
+    d = e(981312),
+    c = e(403485);
+function s(n) {
+    let t = (0, r.e7)([l.default], () => l.default.getCurrentUser()),
+        e = (0, u.G)(n),
+        s = (0, i.v)(n),
+        f = (0, o.S)(n, a.pj.STRANGER_DANGER),
+        E = (0, d.U)(),
+        _ = (null == t ? void 0 : t.isStaff()) !== !0,
+        p = (0, c.h)(n).length > 0;
+    if ((!!E || !_) && !e && !s && !p) return f;
 }

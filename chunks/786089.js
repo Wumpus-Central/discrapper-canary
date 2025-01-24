@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(617136),
     I = n(113434),
     C = n(497505),
-    N = n(475595),
-    v = n(352084),
+    v = n(475595),
+    N = n(352084),
     S = n(685613),
     T = n(981631),
     b = n(388032),
@@ -33,8 +33,8 @@ t.Z = (0, r.memo)(function (e) {
         k = (0, r.useRef)(null),
         U = (0, r.useRef)(null),
         G = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-        { ref: B, height: H = 0 } = (0, h.Z)(),
-        V = (0, m.ZP)(),
+        { ref: B, height: V = 0 } = (0, h.Z)(),
+        H = (0, m.ZP)(),
         F = (0, I.B6)(null === (t = y.userStatus) || void 0 === t ? void 0 : t.claimedAt, {
             month: 'numeric',
             day: 'numeric'
@@ -53,10 +53,10 @@ t.Z = (0, r.memo)(function (e) {
             r = U.current.getBoundingClientRect();
         j((i.top - n.top - r.height) / 2);
     });
-    let Q = (0, d.wj)(V),
+    let Q = (0, d.wj)(H),
         J = (0, r.useMemo)(() => null != y.config.cosponsorMetadata, [y]),
-        $ = (0, r.useMemo)(() => (0, N.fh)(y, N.eC.REWARD), [y]),
-        ee = P ? H + 8 : 0,
+        $ = (0, r.useMemo)(() => (0, v.fh)(y, v.eC.REWARD), [y]),
+        ee = P ? V + 8 : 0,
         et = () => {
             O(!0),
                 _.default.track(T.rMx.QUEST_HOVER, {
@@ -99,7 +99,7 @@ t.Z = (0, r.memo)(function (e) {
                               })
                           }),
                       Y
-                          ? (0, i.jsx)(v.Z, { className: A.image })
+                          ? (0, i.jsx)(N.Z, { className: A.image })
                           : $.isAnimated
                             ? (0, i.jsx)(i.Fragment, {
                                   children: (0, i.jsx)(g.Z, {

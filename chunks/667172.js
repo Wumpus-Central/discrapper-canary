@@ -1,9 +1,9 @@
-n.d(t, {
+e.d(t, {
     v4: function () {
-        return r;
+        return i;
     }
 });
-let i = (0, n(818083).B)({
+let r = (0, e(818083).B)({
     kind: 'user',
     id: '2025-01_inappropriate_conversations_new_defaults',
     label: 'Inappropriate Conversation Warning Default On',
@@ -16,8 +16,8 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
-    let { location: t } = e,
-        { enabled: n } = i.useExperiment({ location: t }, { autoTrackExposure: !1 });
-    return n;
+function i(n) {
+    let { location: t } = n,
+        { enabled: e } = r.useExperiment({ location: t }, { autoTrackExposure: !1 });
+    return e;
 }

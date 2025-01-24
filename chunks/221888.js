@@ -140,7 +140,7 @@ function L(e) {
                     (0, _.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([r.e('79695'), r.e('69220'), r.e('351')]).then(r.bind(r, 881351));
+                            let { default: e } = await Promise.all([r.e('79695'), r.e('69220'), r.e('10125')]).then(r.bind(r, 881351));
                             return (r) =>
                                 (0, o.jsx)(e, {
                                     ...r,

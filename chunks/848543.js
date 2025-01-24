@@ -22,8 +22,8 @@ var i = n(200651),
     E = n(459273),
     I = n(242291),
     C = n(792165),
-    N = n(603074),
-    v = n(981631),
+    v = n(603074),
+    N = n(981631),
     S = n(921944),
     T = n(388032),
     b = n(382290);
@@ -50,8 +50,8 @@ function A(e) {
             });
     }
     let {
-            Component: H,
-            play: V,
+            Component: V,
+            play: H,
             events: { onMouseEnter: F, onMouseLeave: z }
         } = (0, c.j)(),
         W = (e) =>
@@ -62,7 +62,7 @@ function A(e) {
                 onRequestClose: () => D(!1),
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
-                    return (0, i.jsx)(N.Z, {
+                    return (0, i.jsx)(v.Z, {
                         guildId: M,
                         channel: t,
                         onClose: n,
@@ -89,7 +89,7 @@ function A(e) {
                             disabled: R,
                             onClick: () => {
                                 var t, n;
-                                null != k && k !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(S.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!j), V();
+                                null != k && k !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(S.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!j), H();
                             },
                             onMouseEnter: (t) => {
                                 var n, i;
@@ -103,7 +103,7 @@ function A(e) {
                             fullWidth: !0,
                             size: L ? d.Button.Sizes.MEDIUM : d.Button.Sizes.SMALL,
                             ...x,
-                            children: (0, i.jsx)(H, {
+                            children: (0, i.jsx)(V, {
                                 className: l,
                                 size: 'sm',
                                 color: j ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE
@@ -116,7 +116,7 @@ function A(e) {
         }, [R, j]);
     return (
         (0, E.yp)({
-            event: v.CkL.TOGGLE_SOUNDBOARD,
+            event: N.CkL.TOGGLE_SOUNDBOARD,
             handler: Y
         }),
         (0, i.jsx)(m.Gt, {

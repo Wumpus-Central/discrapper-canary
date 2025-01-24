@@ -102,7 +102,7 @@ function _() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: Z, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: y, guildBanner: j, animationOverlayHeight: T, children: A, headerClassName: P, communityInfoVisible: w, hasSubheader: M } = e,
+    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: Z, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: y, guildBanner: j, animationOverlayHeight: T, children: P, headerClassName: A, communityInfoVisible: w, hasSubheader: M } = e,
         L = y.hasFeature(f.oNc.ANIMATED_BANNER),
         R = (0, d.Z)(y),
         D = !R && y.hasCommunityInfoSubheader(),
@@ -128,11 +128,11 @@ t.ZP = l.memo(function (e) {
         l.useEffect(() => {
             O.current = t;
         }, [t]);
-    let W = () => {
+    let z = () => {
             let { renderBanner: t, guildBanner: n } = e;
             return null != n && !t;
         },
-        z = (0, u.Q3)('GuildHeader');
+        W = (0, u.Q3)('GuildHeader');
     return (0, i.jsx)(c.ThemeProvider, {
         theme: t ? f.BRd.DARK : void 0,
         children: (e) => {
@@ -145,9 +145,9 @@ t.ZP = l.memo(function (e) {
                             [C.container]: !0,
                             [C.clickable]: null != o,
                             [C.selected]: null != o && N,
-                            [C.hasBanner]: W(),
+                            [C.hasBanner]: z(),
                             [C.bannerVisible]: t,
-                            [e]: !z && t,
+                            [e]: !W && t,
                             [C.communityInfoVisible]: G || (M && D)
                         }),
                         onMouseDown: b,
@@ -155,7 +155,7 @@ t.ZP = l.memo(function (e) {
                         onClick: o,
                         children: [
                             (0, i.jsxs)('header', {
-                                className: a()(C.header, P, { [C.themedHeaderMobile]: s.tq }),
+                                className: a()(C.header, A, { [C.themedHeaderMobile]: s.tq }),
                                 children: [
                                     (0, i.jsxs)('div', {
                                         className: a()(C.headerContent, C.primaryInfo),
@@ -186,7 +186,7 @@ t.ZP = l.memo(function (e) {
                                                 }),
                                             (0, i.jsx)('div', {
                                                 className: C.headerChildren,
-                                                children: A
+                                                children: P
                                             })
                                         ]
                                     }),
@@ -209,7 +209,7 @@ t.ZP = l.memo(function (e) {
                                 : null
                         ]
                     }),
-                    k && W()
+                    k && z()
                         ? (0, i.jsx)('div', {
                               className: C.animatedBannerHoverLayer,
                               onMouseEnter: () => {

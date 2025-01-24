@@ -1,26 +1,26 @@
 t.d(n, {
     Z: function () {
-        return s;
+        return u;
     }
 });
 var i = t(200651);
 t(192379);
 var r = t(442837),
     l = t(481060),
-    a = t(493683),
-    o = t(592125),
+    s = t(493683),
+    a = t(592125),
     d = t(594174),
-    u = t(388032);
-function s(e, n) {
+    o = t(388032);
+function u(e, n) {
     var t;
-    let s = (0, r.e7)([d.default], () => d.default.getCurrentUser(), []),
-        c = (0, r.e7)([o.Z], () => o.Z.getChannel(n), [n]);
-    return null == c || c.isOwner(e) || null == s || !c.isOwner(s.id) || !(null === (t = c.recipients) || void 0 === t ? void 0 : t.includes(e))
+    let u = (0, r.e7)([d.default], () => d.default.getCurrentUser(), []),
+        c = (0, r.e7)([a.Z], () => a.Z.getChannel(n), [n]);
+    return null == c || c.isOwner(e) || null == u || !c.isOwner(u.id) || !(null === (t = c.recipients) || void 0 === t ? void 0 : t.includes(e))
         ? null
         : (0, i.jsx)(l.MenuItem, {
               id: 'remove',
-              label: u.intl.string(u.t.n5zMIy),
-              action: () => a.Z.removeRecipient(n, e),
+              label: o.intl.string(o.t.n5zMIy),
+              action: () => s.Z.removeRecipient(n, e),
               color: 'danger'
           });
 }

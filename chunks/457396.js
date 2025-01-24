@@ -3,7 +3,7 @@ n.d(t, {
         return F;
     },
     i: function () {
-        return V;
+        return H;
     }
 }),
     n(47120);
@@ -26,8 +26,8 @@ var a = n(91192),
     E = n(78839),
     I = n(626135),
     C = n(74538),
-    N = n(502087),
-    v = n(650032),
+    v = n(502087),
+    N = n(650032),
     S = n(767870),
     T = n(104494),
     b = n(639119),
@@ -47,9 +47,9 @@ var a = n(91192),
     U = n(388032),
     G = n(398645);
 let B = 'NitroTabButton',
-    H = 1209600000;
+    V = 1209600000;
 ((r = i || (i = {}))[(r.BOGO_PROMOTION = 0)] = 'BOGO_PROMOTION'), (r[(r.TENURE_REWARD = 1)] = 'TENURE_REWARD'), (r[(r.NEW_PERKS_BADGE = 2)] = 'NEW_PERKS_BADGE'), (r[(r.DISCOUNT_OFFER = 3)] = 'DISCOUNT_OFFER'), (r[(r.TRIAL_OFFER = 4)] = 'TRIAL_OFFER'), (r[(r.LOCALIZED_PRICING = 5)] = 'LOCALIZED_PRICING'), (r[(r.REFERRAL_PROGRAM = 6)] = 'REFERRAL_PROGRAM'), (r[(r.REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY = 7)] = 'REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY'), (r[(r.REFERRAL_PROGRAM_INCENTIVE_AWARD = 8)] = 'REFERRAL_PROGRAM_INCENTIVE_AWARD'), (r[(r.FRACTIONAL_PREMIUM_COUNTDOWN_TIMER = 9)] = 'FRACTIONAL_PREMIUM_COUNTDOWN_TIMER');
-let V = (e) => {
+let H = (e) => {
         let { selected: t } = e,
             n = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
             i = (0, s.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
@@ -61,17 +61,17 @@ let V = (e) => {
             d = (0, Z.$_)(),
             u = (0, O.V)(),
             h = (0, C.Qo)(n, i),
-            m = (0, s.e7)([N.Z], () => N.Z.getCreatedAtOverride()),
+            m = (0, s.e7)([v.Z], () => v.Z.getCreatedAtOverride()),
             p = t || null != r || null != l || a || o || c || null != d || null != u || h,
             g = null != m ? m : null == n ? void 0 : n.createdAt;
-        return (p = p || (null != n && null != g && Date.now() - g.getTime() > H));
+        return (p = p || (null != n && null != g && Date.now() - g.getTime() > V));
     },
     F = (e) => {
         let t,
             n,
             i,
             r,
-            { selected: N, route: H, locationState: F, ...z } = e,
+            { selected: v, route: V, locationState: F, ...z } = e,
             W = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
             Y = (0, s.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
             K = (0, C.Qo)(W, Y),
@@ -92,10 +92,10 @@ let V = (e) => {
                 showAfterTimestamp: eo.valueOf(),
                 cooldownDurationMs: 0
             }),
-            { enabled: eh } = v._.useExperiment({ location: B }, { autoTrackExposure: !1 }),
+            { enabled: eh } = N._.useExperiment({ location: B }, { autoTrackExposure: !1 }),
             em = eh && (null == X ? void 0 : X.trial_id) === M.a7,
             [ep, eg] = (0, p.US)(J ? [o.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
-        if (!V({ selected: N })) return null;
+        if (!H({ selected: v })) return null;
         es !== M.a$.NONE &&
             ((r = 9),
             (i = (0, l.jsx)(S.Z, {
@@ -132,26 +132,26 @@ let V = (e) => {
                           : null != Q
                             ? ((i = (0, l.jsx)(y.GN, {
                                   userDiscount: Q,
-                                  isTabSelected: N,
+                                  isTabSelected: v,
                                   includesAmountOff: !1
                               })),
                               (r = 3))
                             : null == X || em
                               ? ei
                                   ? ((i = (0, l.jsx)(P.lH, {
-                                        isSelected: N,
+                                        isSelected: v,
                                         onSelect: () => (0, m.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: k.L.TAKE_ACTION })
                                     })),
                                     (r = 6))
-                                  : $ && ((i = (0, l.jsx)(x.k, { entryPoint: x.U.PrivateMessages })), !N && (t = G.localizeBadge), (r = 5))
+                                  : $ && ((i = (0, l.jsx)(x.k, { entryPoint: x.U.PrivateMessages })), !v && (t = G.localizeBadge), (r = 5))
                               : ((i = (0, l.jsx)(y.$H, {
                                     trialOffer: X,
-                                    isTabSelected: N
+                                    isTabSelected: v
                                 })),
                                 (r = 4));
         let ef = (0, l.jsx)(d.Qj, {
-            selected: N,
-            route: H,
+            selected: v,
+            route: V,
             icon: c.NitroWheelIcon,
             text: U.intl.string(U.t.Ipxkoq),
             locationState: F,

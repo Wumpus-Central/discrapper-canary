@@ -1,20 +1,20 @@
 t.d(n, {
     Z: function () {
-        return p;
+        return Z;
     }
 });
 var i = t(200651);
 t(192379);
 var r = t(442837),
     l = t(692547),
-    a = t(481060),
-    o = t(493683),
+    s = t(481060),
+    a = t(493683),
     d = t(129861),
-    u = t(700582),
-    s = t(594174),
+    o = t(700582),
+    u = t(594174),
     c = t(388032),
-    f = t(597539);
-function m(e) {
+    m = t(597539);
+function h(e) {
     let { color: n, className: t } = e;
     return (0, i.jsx)('svg', {
         className: t,
@@ -47,11 +47,11 @@ function m(e) {
         })
     });
 }
-function p(e, n) {
-    let t = (0, r.e7)([s.default], () => s.default.getCurrentUser());
+function Z(e, n) {
+    let t = (0, r.e7)([u.default], () => u.default.getCurrentUser());
     return null == t || n.ownerId !== t.id || e.id === t.id
         ? null
-        : (0, i.jsx)(a.MenuItem, {
+        : (0, i.jsx)(s.MenuItem, {
               id: 'make-dm-owner',
               color: 'danger',
               label: c.intl.string(c.t['6t3CyM']),
@@ -59,51 +59,51 @@ function p(e, n) {
                   var r;
                   return (
                       (r = t),
-                      void (0, a.openModal)((t) =>
-                          (0, i.jsxs)(a.ConfirmModal, {
-                              bodyClassName: f.confirmModal,
+                      void (0, s.openModal)((t) =>
+                          (0, i.jsxs)(s.ConfirmModal, {
+                              bodyClassName: m.confirmModal,
                               header: c.intl.string(c.t.WZoUsr),
                               confirmText: c.intl.string(c.t['cY+Ooa']),
                               cancelText: c.intl.string(c.t['ETE/oK']),
-                              onConfirm: () => o.Z.setDMOwner(n.id, e.id),
+                              onConfirm: () => a.Z.setDMOwner(n.id, e.id),
                               ...t,
                               children: [
-                                  (0, i.jsx)(m, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                  (0, i.jsx)(h, { color: l.Z.unsafe_rawColors.PRIMARY_300.css }),
                                   (0, i.jsxs)('div', {
-                                      className: f.fromToWrapper,
+                                      className: m.fromToWrapper,
                                       children: [
                                           (0, i.jsx)('div', {
-                                              className: f.from,
-                                              children: (0, i.jsx)(u.Z, {
+                                              className: m.from,
+                                              children: (0, i.jsx)(o.Z, {
                                                   user: r,
-                                                  size: a.AvatarSizes.SIZE_80
+                                                  size: s.AvatarSizes.SIZE_80
                                               })
                                           }),
                                           (0, i.jsx)('div', {
-                                              className: f.to,
-                                              children: (0, i.jsx)(u.Z, {
+                                              className: m.to,
+                                              children: (0, i.jsx)(o.Z, {
                                                   user: e,
-                                                  size: a.AvatarSizes.SIZE_80
+                                                  size: s.AvatarSizes.SIZE_80
                                               })
                                           })
                                       ]
                                   }),
-                                  (0, i.jsx)(a.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       variant: 'text-md/normal',
                                       children: c.intl.format(c.t.gsBb3N, {
                                           usernameHook: (n, t) =>
                                               (0, i.jsx)(
                                                   d.Z,
                                                   {
-                                                      usernameIcon: (0, i.jsx)(a.Avatar, {
-                                                          className: f.avatarIcon,
+                                                      usernameIcon: (0, i.jsx)(s.Avatar, {
+                                                          className: m.avatarIcon,
                                                           src: e.getAvatarURL(void 0, 16),
-                                                          size: a.AvatarSizes.SIZE_16,
+                                                          size: s.AvatarSizes.SIZE_16,
                                                           'aria-hidden': !0
                                                       }),
-                                                      className: f.discordTag,
-                                                      usernameClass: f.username,
-                                                      discriminatorClass: f.discriminator,
+                                                      className: m.discordTag,
+                                                      usernameClass: m.username,
+                                                      discriminatorClass: m.discriminator,
                                                       user: e
                                                   },
                                                   t

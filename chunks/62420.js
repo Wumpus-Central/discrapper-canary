@@ -24,7 +24,7 @@ function d(n) {
         for (let i of n) null == i.id ? (t = i) : e.push(i);
         return [t, e];
     })(d.filter((n) => n.id !== (null == t ? void 0 : t.parentId)));
-    function I(n) {
+    function m(n) {
         null != t && (0, l.uA)(t.id, n);
     }
     return null == c && 0 === f.length
@@ -38,7 +38,7 @@ function d(n) {
                           children: (0, i.jsx)(r.MenuItem, {
                               id: 'favorite-uncategorized',
                               label: c.name,
-                              action: () => I(c.id)
+                              action: () => m(c.id)
                           })
                       }),
                   f.length > 0 &&
@@ -50,7 +50,7 @@ function d(n) {
                                   {
                                       id: 'favorite-'.concat(e),
                                       label: t,
-                                      action: () => I(e)
+                                      action: () => m(e)
                                   },
                                   e
                               );

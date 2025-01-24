@@ -67,7 +67,7 @@ function S(e) {
                     cy: '12',
                     r: '12',
                     strokeWidth: 2,
-                    stroke: n ? 'rgba(255, 255, 255, 0.1)' : 'var(--input-border)',
+                    stroke: n ? 'var(--checkbox-border-checked)' : 'var(--checkbox-border-default)',
                     fill: 'none'
                 }),
                 n

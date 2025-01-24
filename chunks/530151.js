@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(112724),
     I = n(812206),
     C = n(44315),
-    N = n(600164),
-    v = n(167533),
+    v = n(600164),
+    N = n(167533),
     S = n(925329),
     T = n(707409),
     b = n(210887),
@@ -86,7 +86,7 @@ function B(e, t) {
             return (0, y.BU)(e, { useKibibytes: !0 });
     }
 }
-let H = {
+let V = {
     [j.vxO.INSTALLING]: {
         [T.J6.NONE]: (e, t, n, i) =>
             D.intl.formatToPlainString(D.t.JfJt9f, {
@@ -175,8 +175,8 @@ let H = {
             })
     }
 };
-function V(e, t, n, i, r) {
-    let l = H[t],
+function H(e, t, n, i, r) {
+    let l = V[t],
         a = null != l ? Object.keys(l) : [],
         { unit: s, time: o } = (0, T.CI)(null != e ? e / 60 : null, a);
     if (null != l && null != s) {
@@ -202,7 +202,7 @@ function F(e) {
         case j.f07.ALLOCATING_DISK:
             return D.intl.formatToPlainString(D.t.XigoJy, { percent: i });
         case j.f07.PATCHING:
-            return V(a, t, i, o, s);
+            return H(a, t, i, o, s);
         case j.f07.FINALIZING:
             return D.intl.formatToPlainString(D.t['6PHDUF'], { percent: i });
         case j.f07.PAUSING:
@@ -224,7 +224,7 @@ function F(e) {
                 total: s
             });
         case j.f07.REPAIRING:
-            if (t === j.vxO.REPAIRING) return V(a, t, i, o, s);
+            if (t === j.vxO.REPAIRING) return H(a, t, i, o, s);
             return D.intl.formatToPlainString(D.t.OCzETU, {
                 percent: i,
                 progress: o,
@@ -243,8 +243,8 @@ class K extends r.PureComponent {
     }
     renderBody(e) {
         let { percent: t, foregroundColor: n, foregroundGradientColor: r, message: l } = e;
-        return (0, i.jsxs)(N.Z, {
-            direction: N.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(v.Z, {
+            direction: v.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(h.Progress, {
                     percent: t,
@@ -262,8 +262,8 @@ class K extends r.PureComponent {
     }
     renderStackedProgress(e) {
         let { percents: t, message: n } = e;
-        return (0, i.jsxs)(N.Z, {
-            direction: N.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(v.Z, {
+            direction: v.Z.Direction.VERTICAL,
             children: [
                 (0, i.jsx)(h.StackedProgress, {
                     percents: t,
@@ -447,8 +447,8 @@ let q = () =>
             key: z,
             cellClassName: M.nameCell,
             render: (e) =>
-                (0, i.jsxs)(N.Z, {
-                    align: N.Z.Align.CENTER,
+                (0, i.jsxs)(v.Z, {
+                    align: v.Z.Align.CENTER,
                     children: [
                         (0, i.jsx)(S.Z, {
                             game: e.application,
@@ -492,8 +492,8 @@ let q = () =>
                         : null != e.state
                           ? e.state.type !== j.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, i.jsx)(Q, { item: e }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(X, { item: e })), (r = (0, i.jsx)(J, { item: e })))
                           : (r = (0, i.jsx)(J, { item: e })),
-                    (0, i.jsxs)(N.Z, {
-                        justify: N.Z.Justify.END,
+                    (0, i.jsxs)(v.Z, {
+                        justify: v.Z.Justify.END,
                         children: [n, r]
                     })
                 );
@@ -544,7 +544,7 @@ class ee extends r.PureComponent {
                               })
                           ]
                       }),
-                      (0, i.jsx)(v.Z, {
+                      (0, i.jsx)(N.Z, {
                           hasHeader: !1,
                           columns: $,
                           data: e,

@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(475595),
     I = n(566078),
     C = n(602667),
-    N = n(611855),
-    v = n(64141),
+    v = n(611855),
+    N = n(64141),
     S = n(667105),
     T = n(860151),
     b = n(341907),
@@ -101,8 +101,8 @@ function P(e) {
         U = (0, m.tP)(E),
         G = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         B = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        H = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
-        V = (null == E ? void 0 : E.userStatus) == null || (0, f.zE)(E.userStatus, g.jn.ACTIVITY_PANEL),
+        V = (null === (l = E.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null,
+        H = (null == E ? void 0 : E.userStatus) == null || (0, f.zE)(E.userStatus, g.jn.ACTIVITY_PANEL),
         F = (0, m.Rf)(E),
         z = (0, _.D)({
             quest: E,
@@ -110,7 +110,7 @@ function P(e) {
             location: A.dr.ACTIVITY_PANEL,
             questContent: g.jn.ACTIVITY_PANEL
         });
-    return V || U || H
+    return H || U || V
         ? null
         : (0, i.jsxs)('div', {
               ref: (e) => {
@@ -127,8 +127,8 @@ function P(e) {
                   (0, i.jsxs)('div', {
                       className: L.utils,
                       children: [
-                          G ? (0, i.jsx)(y, { quest: E }) : (0, i.jsx)(N.Z, { textOpacity: 0.5 }),
-                          (0, i.jsx)(v.r, {
+                          G ? (0, i.jsx)(y, { quest: E }) : (0, i.jsx)(v.Z, { textOpacity: 0.5 }),
+                          (0, i.jsx)(N.r, {
                               quest: E,
                               questContent: g.jn.ACTIVITY_PANEL,
                               shouldShowDisclosure: (null === (o = E.userStatus) || void 0 === o ? void 0 : o.enrolledAt) == null,

@@ -28,7 +28,7 @@ function c(e) {
                 (0, a.jW)(
                     e,
                     async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('95052')]).then(n.bind(n, 881351));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('56842')]).then(n.bind(n, 881351));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,

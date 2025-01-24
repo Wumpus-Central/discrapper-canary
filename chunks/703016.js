@@ -17,8 +17,8 @@ var i = n(913527),
     E = n(131951),
     I = n(292959),
     C = n(699516),
-    N = n(944486),
-    v = n(9156),
+    v = n(944486),
+    N = n(9156),
     S = n(594174),
     T = n(51144),
     b = n(196051),
@@ -104,13 +104,13 @@ function B(e) {
         u = null !== (i = f.ZP.getNick(c, r.author.id)) && void 0 !== i ? i : T.ZP.getName(r.author);
     return k(D(r.content, u, c, o), !0, l.id, r.id), !0;
 }
-function H(e) {
+function V(e) {
     var t, n, i, r, l, a;
     let { channelId: s, message: o, optimistic: c } = e;
     if (c || E.Z.isSelfDeaf()) return !1;
     let d = g.Z.getChannel(s);
     if (null == d) return !1;
-    let u = N.Z.getChannelId(),
+    let u = v.Z.getChannelId(),
         _ = p.ZP.getCurrentSidebarChannelId(u),
         S = s === u || s === _,
         b = h.OW.getSetting() && o.tts && S,
@@ -120,7 +120,7 @@ function H(e) {
         if (y.indexOf(o.id) >= 0) return !1;
         y.unshift(o.id) > 10 && y.pop();
         let e = d.getGuildId();
-        if (null != e && v.ZP.getMutedChannels(e).has(s)) return !1;
+        if (null != e && N.ZP.getMutedChannels(e).has(s)) return !1;
         let t = null !== (l = null !== (r = f.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : T.ZP.getName(o.author)) && void 0 !== l ? l : '',
             c = o.type === x.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
             u = null != c ? (null !== (a = f.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== a ? a : T.ZP.getName(c)) : null;
@@ -128,7 +128,7 @@ function H(e) {
     }
     return !1;
 }
-function V(e) {
+function H(e) {
     let { id: t, channelId: n } = e,
         i = A.Z.currentMessage;
     return null != i && t === i.messageId && n === i.channelId && ((0, b.NB)(), !0);
@@ -138,6 +138,6 @@ function F() {
 }
 t.Z = {
     init() {
-        l.Z.subscribe('SPEAK_TEXT', U), l.Z.subscribe('SPEAK_MESSAGE', B), l.Z.subscribe('STOP_SPEAKING', G), l.Z.subscribe('MESSAGE_CREATE', H), l.Z.subscribe('MESSAGE_DELETE', V), l.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', F), l.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', M), (0, a.Ql)(M);
+        l.Z.subscribe('SPEAK_TEXT', U), l.Z.subscribe('SPEAK_MESSAGE', B), l.Z.subscribe('STOP_SPEAKING', G), l.Z.subscribe('MESSAGE_CREATE', V), l.Z.subscribe('MESSAGE_DELETE', H), l.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', F), l.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', M), (0, a.Ql)(M);
     }
 };

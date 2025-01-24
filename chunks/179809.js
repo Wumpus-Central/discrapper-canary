@@ -30,16 +30,16 @@ var i = n(200651),
 let E = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     y = (0, s.animated)(d.Stack);
 function j(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: f = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: U } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: f = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: P, useCircleMask: A = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: U } = e,
         { id: O, name: V, children: H } = t,
         F = (0, p.Q3)('FolderItem'),
-        [W, z] = l.useState(!1),
+        [z, W] = l.useState(!1),
         [q, Y] = l.useState(!1),
-        Q = W || q;
+        Q = z || q;
     l.useEffect(() => {
-        M && z(!1);
+        M && W(!1);
     }, [M]);
-    let [{ dragging: J }, K] = (0, o.c)({
+    let [{ dragging: K }, J] = (0, o.c)({
             type: g.eD.FOLDER,
             item: () => (
                 null == L || L(),
@@ -62,7 +62,7 @@ function j(e) {
             },
             [D, s]
         ),
-        ee = null != V && '' !== V ? V : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
+        ee = null != V && '' !== V ? V : null != P && '' !== P ? P : b.intl.string(b.t.xV9hVl),
         et = (0, c.Ie)(''.concat(O)),
         en = 'folder-items-'.concat(O),
         ei = (function (e) {
@@ -73,7 +73,7 @@ function j(e) {
             let l = e * (t + ('cozy' === i ? 8 : 4));
             return 'cozy' === i ? l - 4 : l;
         })(H.length),
-        el = (0, d.useTransition)(!J && s, {
+        el = (0, d.useTransition)(!K && s, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
@@ -83,8 +83,8 @@ function j(e) {
         ea = (0, i.jsxs)(_.H, {
             children: [
                 (0, i.jsx)(v.Z, {
-                    disabled: J || s,
-                    hovered: W,
+                    disabled: K || s,
+                    hovered: z,
                     selected: r,
                     unread: T,
                     className: N.pill
@@ -95,15 +95,15 @@ function j(e) {
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
-                        ref: w ? K : void 0,
-                        className: a()(S.folderIcon, { [N.wobble]: !J && q && !s }),
+                        ref: w ? J : void 0,
+                        className: a()(S.folderIcon, { [N.wobble]: !K && q && !s }),
                         'data-dnd-name': ee,
-                        children: J
+                        children: K
                             ? (0, i.jsx)(I.Z, {})
                             : (0, i.jsx)(C.Z, {
                                   folderNode: t,
                                   expanded: s,
-                                  forceCircular: P,
+                                  forceCircular: A,
                                   sorting: M,
                                   mediaState: u,
                                   mentionCount: f,
@@ -112,7 +112,7 @@ function j(e) {
                                   folderGroupId: en,
                                   onClick: D,
                                   onContextMenu: G,
-                                  onHoverChange: z,
+                                  onHoverChange: W,
                                   onKeyDown: $,
                                   treeItemProps: et,
                                   folderIconContentClassName: U,
@@ -133,7 +133,7 @@ function j(e) {
         ref: er,
         className: a()(S.wrapper, s && S.isExpanded),
         children: [
-            !J &&
+            !K &&
                 s &&
                 (0, i.jsx)('span', {
                     className: a()(S.expandedFolderBackground, {

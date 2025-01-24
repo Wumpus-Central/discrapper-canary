@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
 var a = n(200651);
@@ -9,7 +9,7 @@ var o = n(120356),
     r = n.n(o),
     i = n(481060),
     u = n(457900);
-function l(e) {
+function s(e) {
     let { className: t, color: n, ...o } = e;
     return (0, a.jsx)(i.Text, {
         className: r()({ [u.text]: null == n }, t),

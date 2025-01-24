@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return g;
     }
 });
 var l = t(200651),
@@ -14,29 +14,29 @@ var l = t(200651),
     c = t(626135),
     Z = t(981631),
     f = t(228168),
-    g = t(388032);
-function m(e) {
-    let { user: n, guildId: t, channelId: m, context: M } = e,
-        { id: v } = n,
-        { loading: x, note: h } = (0, u.Z)(v),
-        p = !x && null != h && h.length > 0,
-        P = M === Z.IlC.POPOUT,
-        C = i.useContext(c.AnalyticsContext),
-        { analyticsLocations: I } = (0, a.ZP)();
-    return v === d.default.getId() || s.Z.hidePersonalInformation || P
+    m = t(388032);
+function g(e) {
+    let { user: n, guildId: t, channelId: g, context: M } = e,
+        { id: x } = n,
+        { loading: h, note: v } = (0, u.Z)(x),
+        p = !h && null != v && v.length > 0,
+        b = M === Z.IlC.POPOUT,
+        I = i.useContext(c.AnalyticsContext),
+        { analyticsLocations: C } = (0, a.ZP)();
+    return x === d.default.getId() || s.Z.hidePersonalInformation || b
         ? null
         : (0, l.jsx)(r.MenuItem, {
               id: 'note',
-              label: x ? g.intl.string(g.t['WLKx//']) : p ? g.intl.string(g.t.sHHsOD) : g.intl.string(g.t.Dglxra),
+              label: h ? m.intl.string(m.t['WLKx//']) : p ? m.intl.string(m.t.sHHsOD) : m.intl.string(m.t.Dglxra),
               action: () => {
                   (0, o.openUserProfileModal)({
                       userId: n.id,
                       section: f.oh.USER_INFO,
                       subsection: f.Tb.NOTE,
                       guildId: t,
-                      channelId: m,
-                      sourceAnalyticsLocations: I,
-                      analyticsLocation: C.location
+                      channelId: g,
+                      sourceAnalyticsLocations: C,
+                      analyticsLocation: I.location
                   });
               }
           });

@@ -22,8 +22,8 @@ var i,
     E = n(151864),
     I = n(725436),
     C = n(497656),
-    N = n(554747),
-    v = n(230900),
+    v = n(554747),
+    N = n(230900),
     S = n(854698),
     T = n(703656),
     b = n(922482),
@@ -44,7 +44,7 @@ var i,
 function U(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         i = (0, C.y)(t.id),
-        r = (0, N.k5)(t.id),
+        r = (0, v.k5)(t.id),
         s = (0, c.e7)([x.Z], () => x.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
         { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, c.cj)(
             [E.Z],
@@ -55,8 +55,8 @@ function U(e) {
             [s, r]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([A.Z], () => [...new Set(A.Z.getMutableParticipants(B, Z.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([A.Z], () => (null != B ? A.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
+        V = (0, c.Wu)([A.Z], () => [...new Set(A.Z.getMutableParticipants(B, Z.pV.SPEAKER).map((e) => e.user))], [B]),
+        H = (0, c.e7)([A.Z], () => (null != B ? A.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([O.Z], () => O.Z.can(D.Plq.CONNECT, i)),
         z = (0, L.Z)(null == i ? void 0 : i.id),
         W = null == r ? void 0 : r.creator_id,
@@ -189,7 +189,7 @@ function U(e) {
                         );
                     }
                     if (t.entity_type === M.WX.EXTERNAL) {
-                        let e = (0, v.cS)(t);
+                        let e = (0, N.cS)(t);
                         if (null == e) return { noticeType: null };
                         let n = f.ZP.getUserCount(t.id, E);
                         return {
@@ -280,13 +280,13 @@ function U(e) {
                 canConnect: F,
                 myRole: z,
                 eventCreator: Y,
-                speakers: H,
-                listenerCount: V,
+                speakers: V,
+                listenerCount: H,
                 isEventNoticeHidden: G,
                 isStageNoticeHidden: U,
                 isStudyRoomNotice: n
             }),
-        [r, s, i, F, z, Y, H, V, G, U, n]
+        [r, s, i, F, z, Y, V, H, G, U, n]
     );
     return null == K
         ? null

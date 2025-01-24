@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(209613),
     I = n(325708),
     C = n(320149),
-    N = n(82295),
-    v = n(252618),
+    v = n(82295),
+    N = n(252618),
     S = n(605236),
     T = n(243778),
     b = n(984370),
@@ -38,8 +38,8 @@ var i = n(200651),
     U = n(610697),
     G = n(26373),
     B = n(486622),
-    H = n(922409),
-    V = n(899740),
+    V = n(922409),
+    H = n(899740),
     F = n(177033),
     z = n(355350),
     W = n(307947),
@@ -54,7 +54,7 @@ var i = n(200651),
     et = n(247627);
 function en() {
     let e = r.useRef(null),
-        t = (0, V.q)(),
+        t = (0, H.q)(),
         n = (0, F.Z)(),
         l = (0, G.K)(),
         c = (0, g.N)(),
@@ -63,7 +63,7 @@ function en() {
         }, []),
         { rejectAll: h } = (0, B.m)({ onError: d }),
         m = (0, E.Z)('message-requests-list'),
-        { channelId: p } = (0, H._)(),
+        { channelId: p } = (0, V._)(),
         f = r.useCallback(() => {
             h(n.map((e) => e.channel.id));
         }, [n, h]),
@@ -94,7 +94,7 @@ function en() {
         I = r.useCallback(
             () =>
                 (0, i.jsxs)(
-                    N.Z,
+                    v.Z,
                     {
                         className: ee.sectionTitle,
                         children: [
@@ -238,7 +238,7 @@ function ea(e) {
 }
 let es = (0, p.Z)(function (e) {
     let { width: t } = e,
-        n = (0, V.q)();
+        n = (0, H.q)();
     (0, f.Z)(() => {
         h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), A.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     });
@@ -256,12 +256,12 @@ let es = (0, p.Z)(function (e) {
     r.useEffect(() => {
         null != g && !E && I && _ && ((0, Z.Kh)(g), x.Z.closeChannelSidebar(R.uZ));
     }, [g, I, _, E]);
-    let [C, N] = r.useState(q.pS.REQUESTS),
+    let [C, v] = r.useState(q.pS.REQUESTS),
         S = (e) => {
-            N(e);
+            v(e);
         };
     return (
-        (0, v.Tt)({ location: $.intl.string($.t.e7GWjY) }),
+        (0, N.Tt)({ location: $.intl.string($.t.e7GWjY) }),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {

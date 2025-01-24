@@ -10,7 +10,7 @@ var s = i(512722),
     a = i(129508),
     r = i(921608),
     o = i(693824);
-function l(t, e, i) {
+function h(t, e, i) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -23,8 +23,8 @@ function l(t, e, i) {
         t
     );
 }
-let h = 'undefined' != typeof OffscreenCanvas,
-    c = 660;
+let l = 'undefined' != typeof OffscreenCanvas,
+    c = 2112;
 class u {
     reset() {
         this.context.clearRect(0, 0, this.MAX_ROW_WIDTH, this.MAX_HEIGHT), this.imageMap.clear(), (this.nextX = 0), (this.nextY = 0), (this.tallestImageHeight = 0), (this.needsReset = !1);
@@ -59,7 +59,7 @@ class u {
         );
     }
     constructor() {
-        l(this, 'MAX_ROW_WIDTH', c), l(this, 'MAX_HEIGHT', c), l(this, 'nextX', 0), l(this, 'nextY', 0), l(this, 'tallestImageHeight', 0), l(this, 'needsReset', !1), l(this, 'canvas', void 0), l(this, 'context', void 0), l(this, 'imageMap', void 0), (this.imageMap = new Map()), h ? (this.canvas = new OffscreenCanvas(this.MAX_ROW_WIDTH, this.MAX_HEIGHT)) : ((this.canvas = document.createElement('canvas')), (this.canvas.width = this.MAX_ROW_WIDTH), (this.canvas.height = this.MAX_HEIGHT));
+        h(this, 'MAX_ROW_WIDTH', c), h(this, 'MAX_HEIGHT', c), h(this, 'nextX', 0), h(this, 'nextY', 0), h(this, 'tallestImageHeight', 0), h(this, 'needsReset', !1), h(this, 'canvas', void 0), h(this, 'context', void 0), h(this, 'imageMap', void 0), (this.imageMap = new Map()), l ? (this.canvas = new OffscreenCanvas(this.MAX_ROW_WIDTH, this.MAX_HEIGHT)) : ((this.canvas = document.createElement('canvas')), (this.canvas.width = this.MAX_ROW_WIDTH), (this.canvas.height = this.MAX_HEIGHT));
         let t = this.canvas.getContext('2d', {
             alpha: !0,
             willReadFrequently: !1
@@ -71,16 +71,16 @@ class u {
 class d extends a.Z {
     setupOffscreenCanvas() {
         try {
-            this.offscreenCanvas = new u();
+            this.offscreenCanvasCache = new u();
         } catch (t) {
-            this.offscreenCanvas = void 0;
+            this.offscreenCanvasCache = void 0;
         }
     }
     getCanvasForExport() {
         return this.canvas;
     }
     setFilter(t) {
-        !1 === this._warnedAboutFilters && this.offscreenCanvas, super.setFilter(t);
+        !1 === this._warnedAboutFilters && this.offscreenCanvasCache, super.setFilter(t);
     }
     setContextProperties() {
         null != this.context && ((this.context.fillStyle = this.color), (this.context.strokeStyle = this.color), (this.context.font = ''.concat(this.font.style, ' ').concat(this.font.weight, ' ').concat(this.font.size, 'px ').concat(this.font.family.join(', '))));
@@ -119,17 +119,17 @@ class d extends a.Z {
         var s, a;
         if (null == this.context) return;
         this.setContextProperties();
-        let l = null !== (s = e.w) && void 0 !== s ? s : this.canvas.width - e.x,
-            h = this.context.measureText(t),
+        let h = null !== (s = e.w) && void 0 !== s ? s : this.canvas.width - e.x,
+            l = this.context.measureText(t),
             c = !1,
             u = this.font.size,
             d = (t, e) => {
                 null != this.context && (i ? this.context.fillText(t, e.x, e.y) : this.context.strokeText(t, e.x, e.y));
             },
             f = (t) => {
-                if (null == this.context || h.width <= r.F) return '';
+                if (null == this.context || l.width <= r.F) return '';
                 let e = ''.concat(t);
-                for (; h.width + r.F > l; ) (e = e.slice(0, -4)), (h = this.context.measureText(e)), (c = !0);
+                for (; l.width + r.F > h; ) (e = e.slice(0, -4)), (l = this.context.measureText(e)), (c = !0);
                 return c && (e += '...'), e;
             };
         if ((this.font.truncate === o.GX.None && d(t, e), this.font.truncate === o.GX.Truncate && d((t = f(t)), e), this.font.truncate === o.GX.Wrap)) {
@@ -138,7 +138,7 @@ class d extends a.Z {
                 r = '',
                 o = 0;
             for (null != e.h && ((s = e.h / u), n()(s > 0, 'DiscordCavas: boundingBox.h of '.concat(e.h, ' results in 0 visible lines with font size of ').concat(u))); i.length > 0; )
-                if ((h = this.context.measureText(r + ' ' + i[0])).width > l) {
+                if ((l = this.context.measureText(r + ' ' + i[0])).width > h) {
                     let t = !1;
                     if (
                         (o + 1 >= s && i.length > 0 && (t = !0),
@@ -167,8 +167,8 @@ class d extends a.Z {
         return {
             x: e.x,
             y: e.y,
-            w: h.width,
-            h: h.actualBoundingBoxAscent + h.actualBoundingBoxDescent
+            w: l.width,
+            h: l.actualBoundingBoxAscent + l.actualBoundingBoxDescent
         };
     }
     drawFormattedMessage(t, e, i) {
@@ -183,15 +183,15 @@ class d extends a.Z {
                 let s = 0;
                 return (
                     t.forEach((t) => {
-                        let { x: a, y: r, w: o, h: l } = e,
-                            h = null != o ? o - s : void 0,
+                        let { x: a, y: r, w: o, h } = e,
+                            l = null != o ? o - s : void 0,
                             c = n(
                                 t,
                                 {
                                     x: a + s,
                                     y: r,
-                                    w: h,
-                                    h: l
+                                    w: l,
+                                    h
                                 },
                                 i
                             );
@@ -260,7 +260,7 @@ class d extends a.Z {
                 );
             }
             if (a === o.JU.Cover) {
-                var l, h, c, u;
+                var h, l, c, u;
                 let n;
                 let a = {
                         w: r.width,
@@ -272,7 +272,7 @@ class d extends a.Z {
                     let t = a.w / f;
                     n = {
                         x: 0,
-                        y: (a.h - t) * (null !== (h = null == s ? void 0 : null === (l = s.focus) || void 0 === l ? void 0 : l.y) && void 0 !== h ? h : 0.5),
+                        y: (a.h - t) * (null !== (l = null == s ? void 0 : null === (h = s.focus) || void 0 === h ? void 0 : h.y) && void 0 !== l ? l : 0.5),
                         w: r.width,
                         h: t
                     };
@@ -295,10 +295,10 @@ class d extends a.Z {
                     o.vP.Success
                 );
             }
-            if (null != this.offscreenCanvas) return this.drawCachedImage(t, e, i);
+            if (null != this.offscreenCanvasCache) return this.drawCachedImage(t, e, i);
             this.context.drawImage(r, e.x, e.y, i.w, i.h);
         } else {
-            if (null != this.offscreenCanvas) return this.drawCachedImage(t, e);
+            if (null != this.offscreenCanvasCache) return this.drawCachedImage(t, e);
             this.context.drawImage(r, e.x, e.y);
         }
         return o.vP.Success;
@@ -306,39 +306,39 @@ class d extends a.Z {
     drawRoundedImage(t, e, i, s, n) {
         if (null == this.context) return o.vP.Failure;
         let { x: a, y: r } = e,
-            { w: l, h } = i;
+            { w: h, h: l } = i;
         this.context.save();
         let c = new Path2D();
-        c.roundRect(a, r, l, h, s), this.context.clip(c);
+        c.roundRect(a, r, h, l, s), this.context.clip(c);
         let u = this.drawImage(t, e, i, n);
         return this.restoreContext(), u;
     }
     drawCroppedImage(t, e, i) {
         var s;
-        if ((null != this.offscreenCanvas && this.drawCroppedCachedImage(t, e, i), null == this.context)) return o.vP.Failure;
+        if ((null != this.offscreenCanvasCache && this.drawCroppedCachedImage(t, e, i), null == this.context)) return o.vP.Failure;
         let n = null === (s = this.assetMap) || void 0 === s ? void 0 : s.get(t);
         if (null == n) return o.vP.ImageNotLoaded;
-        let { x: a, y: r, w: l, h: h } = e,
+        let { x: a, y: r, w: h, h: l } = e,
             { x: c, y: u, w: d, h: f } = i;
-        return this.context.drawImage(n, a, r, l, h, c, u, d, f), o.vP.Success;
+        return this.context.drawImage(n, a, r, h, l, c, u, d, f), o.vP.Success;
     }
     drawCachedImage(t, e, i) {
         var s, a;
-        if ((n()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.'), n()(null != this.offscreenCanvas, 'DiscordCavas: `drawCachedImage` requires an offscreen canvas being initialized.'), null == this.context)) return o.vP.Failure;
+        if ((n()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.'), n()(null != this.offscreenCanvasCache, 'DiscordCavas: `drawCachedImage` requires an offscreen canvas being initialized.'), null == this.context)) return o.vP.Failure;
         let r = this.assetMap.get(t);
         if (null == r) return o.vP.ImageNotLoaded;
-        let l = this.offscreenCanvas.getImage(t.toString(), r, this.getFilterString());
-        return null == l ? o.vP.Failure : (this.context.drawImage(this.offscreenCanvas.canvas, l.x, l.y, l.w, l.h, e.x, e.y, null !== (s = null == i ? void 0 : i.w) && void 0 !== s ? s : l.w, null !== (a = null == i ? void 0 : i.h) && void 0 !== a ? a : l.h), o.vP.Success);
+        let h = this.offscreenCanvasCache.getImage(t.toString(), r, this.getFilterString());
+        return null == h ? o.vP.Failure : (this.context.drawImage(this.offscreenCanvasCache.canvas, h.x, h.y, h.w, h.h, e.x, e.y, null !== (s = null == i ? void 0 : i.w) && void 0 !== s ? s : h.w, null !== (a = null == i ? void 0 : i.h) && void 0 !== a ? a : h.h), o.vP.Success);
     }
     drawCroppedCachedImage(t, e, i) {
-        if ((n()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.'), n()(null != this.offscreenCanvas, 'DiscordCavas: `drawCachedImage` requires an offscreen canvas being initialized.'), null == this.context)) return o.vP.Failure;
+        if ((n()(null != this.assetMap, 'DiscordCavas: `drawImage` requires an AssetMap to be initialized.'), n()(null != this.offscreenCanvasCache, 'DiscordCavas: `drawCachedImage` requires an offscreen canvas being initialized.'), null == this.context)) return o.vP.Failure;
         let s = this.assetMap.get(t);
         if (null == s) return o.vP.ImageNotLoaded;
-        let a = this.offscreenCanvas.getImage(t.toString(), s, this.getFilterString());
+        let a = this.offscreenCanvasCache.getImage(t.toString(), s, this.getFilterString());
         if (null == a) return o.vP.Failure;
-        let { x: r, y: l, w: h, h: c } = e,
+        let { x: r, y: h, w: l, h: c } = e,
             { x: u, y: d, w: f, h: v } = i;
-        return this.context.drawImage(this.offscreenCanvas.canvas, a.x + r, a.y + l, h, c, u, d, f, v), o.vP.Success;
+        return this.context.drawImage(this.offscreenCanvasCache.canvas, a.x + r, a.y + h, l, c, u, d, f, v), o.vP.Success;
     }
     drawPath(t, e) {
         let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -394,6 +394,6 @@ class d extends a.Z {
         }
     }
     constructor(t, e) {
-        super(t, e), l(this, 'canvas', void 0), l(this, 'context', void 0), l(this, 'offscreenCanvas', void 0), l(this, '_warnedAboutFilters', !1), (this.canvas = t), (this.context = this.canvas.getContext('2d')), null != this.context && (this.context.imageSmoothingQuality = 'high');
+        super(t, e), h(this, 'canvas', void 0), h(this, 'context', void 0), h(this, 'offscreenCanvasCache', void 0), h(this, '_warnedAboutFilters', !1), (this.canvas = t), (this.context = this.canvas.getContext('2d')), null != this.context && (this.context.imageSmoothingQuality = 'high');
     }
 }

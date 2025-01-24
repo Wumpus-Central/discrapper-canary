@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return v;
     }
 });
 var l = t(200651);
@@ -15,44 +15,44 @@ var i = t(866442),
     c = t(271383),
     Z = t(430824),
     f = t(496675),
-    g = t(823379),
-    m = t(981631),
+    m = t(823379),
+    g = t(981631),
     M = t(388032),
-    v = t(849324);
-function x(e, n) {
+    x = t(849324);
+function h(e, n) {
     var t, r;
     return (0, l.jsxs)('div', {
-        className: v.roleRow,
+        className: x.roleRow,
         children: [
             'dot' === n
                 ? (0, l.jsx)(a.RoleDot, {
-                      className: v.roleDot,
-                      color: null !== (t = e.colorString) && void 0 !== t ? t : (0, i.Rf)(m.p6O),
+                      className: x.roleDot,
+                      color: null !== (t = e.colorString) && void 0 !== t ? t : (0, i.Rf)(g.p6O),
                       background: !1,
                       tooltip: !1
                   })
                 : (0, l.jsx)(a.RoleCircle, {
-                      className: v.roleDot,
-                      color: null !== (r = e.colorString) && void 0 !== r ? r : (0, i.Rf)(m.p6O)
+                      className: x.roleDot,
+                      color: null !== (r = e.colorString) && void 0 !== r ? r : (0, i.Rf)(g.p6O)
                   }),
             (0, l.jsx)('div', { children: e.name })
         ]
     });
 }
-function h(e, n) {
+function v(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-        v = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        h = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n)),
+        x = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        v = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n)),
         p = (0, r.e7)([Z.Z], () => Z.Z.getRoles(n)),
-        P = (0, r.e7)([u.Z], () => u.Z.roleStyle),
-        C = (0, d.sE)(n, {
+        b = (0, r.e7)([u.Z], () => u.Z.roleStyle),
+        I = (0, d.sE)(n, {
             location: i,
             targetUserId: e
         }),
         {
-            userRoles: I,
-            isGuildMember: b,
+            userRoles: C,
+            isGuildMember: P,
             canManageRoles: E
         } = (0, r.cj)(
             [c.ZP, f.Z],
@@ -61,41 +61,41 @@ function h(e, n) {
                 return {
                     userRoles: null != t ? t.roles : [],
                     isGuildMember: null != t,
-                    canManageRoles: null != h && f.Z.can(m.Plq.MANAGE_ROLES, h)
+                    canManageRoles: null != v && f.Z.can(g.Plq.MANAGE_ROLES, v)
                 };
             },
-            [e, n, h]
+            [e, n, v]
         );
-    if (__OVERLAY__ || null == I || null == h || !b) return null;
-    let j = f.Z.getHighestRole(h),
-        T = Object.values(p).filter((e) => !(0, o.pM)(h.id, e.id)),
-        O =
-            E && !v
+    if (__OVERLAY__ || null == C || null == v || !P) return null;
+    let j = f.Z.getHighestRole(v),
+        T = Object.values(p).filter((e) => !(0, o.pM)(v.id, e.id)),
+        N =
+            E && !x
                 ? T.map((t) => {
-                      let i = t.managed || !f.Z.isRoleHigher(h, j, t),
-                          r = -1 !== I.indexOf(t.id);
+                      let i = t.managed || !f.Z.isRoleHigher(v, j, t),
+                          r = -1 !== C.indexOf(t.id);
                       return i && !r
                           ? null
                           : (0, l.jsx)(
                                 a.MenuCheckboxItem,
                                 {
                                     id: t.id,
-                                    label: () => x(t, P),
+                                    label: () => h(t, b),
                                     disabled: i,
                                     action: () => {
                                         var l;
                                         return (
                                             (l = t),
-                                            void (I.includes(l.id)
+                                            void (C.includes(l.id)
                                                 ? (s.Z.updateMemberRoles(
                                                       n,
                                                       e,
-                                                      I.filter((e) => e !== l.id),
+                                                      C.filter((e) => e !== l.id),
                                                       [],
                                                       [l.id]
                                                   ),
-                                                  C(d.jQ.REMOVE_ROLE))
-                                                : (s.Z.updateMemberRoles(n, e, I.concat([l.id]), [l.id], []), C(d.jQ.ADD_ROLE)))
+                                                  I(d.jQ.REMOVE_ROLE))
+                                                : (s.Z.updateMemberRoles(n, e, C.concat([l.id]), [l.id], []), I(d.jQ.ADD_ROLE)))
                                         );
                                     },
                                     checked: r
@@ -103,25 +103,25 @@ function h(e, n) {
                                 t.id
                             );
                   })
-                : T.filter((e) => -1 !== I.indexOf(e.id)).map((e) =>
-                      (0, o.pM)(h.id, e.id)
+                : T.filter((e) => -1 !== C.indexOf(e.id)).map((e) =>
+                      (0, o.pM)(v.id, e.id)
                           ? null
                           : (0, l.jsx)(
                                 a.MenuItem,
                                 {
                                     id: e.id,
-                                    label: () => x(e, P)
+                                    label: () => h(e, b)
                                 },
                                 e.id
                             )
                   );
-    return 0 === O.filter(g.lm).length
+    return 0 === N.filter(m.lm).length
         ? null
         : t
-          ? O
+          ? N
           : (0, l.jsx)(a.MenuItem, {
                 id: 'roles',
-                label: M.intl.formatToPlainString(M.t.PCs0oq, { numRoles: O.length }),
-                children: O
+                label: M.intl.formatToPlainString(M.t.PCs0oq, { numRoles: N.length }),
+                children: N
             });
 }

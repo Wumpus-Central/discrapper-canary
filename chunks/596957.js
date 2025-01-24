@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(922611),
     I = n(699516),
     C = n(974042),
-    N = n(451478),
-    v = n(434184),
+    v = n(451478),
+    N = n(434184),
     S = n(701861),
     T = n(437314),
     b = n(696577),
@@ -59,15 +59,15 @@ t.Z = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, m.ZP)(h.Z.FRIENDS_LIST),
         { rows: l, section: c } = (0, s.cj)([C.ZP], () => C.ZP.getState()),
-        D = (0, s.e7)([N.Z], () => N.Z.isFocused()),
+        D = (0, s.e7)([v.Z], () => v.Z.isFocused()),
         { relationshipCount: k, hasBlockedOrIgnored: U } = (0, s.cj)([I.Z], () => ({
             relationshipCount: I.Z.getRelationshipCount(),
             hasBlockedOrIgnored: I.Z.getBlockedOrIgnoredIDs().length > 0
         })),
         G = (0, E.Do)({ location: 'PeopleList' }),
         B = (0, g.wn)({ location: 'PeopleList' }),
-        H = (0, s.e7)([f.Z], () => f.Z.getGameRelationshipCount() > 0),
-        V = B && H,
+        V = (0, s.e7)([f.Z], () => f.Z.getGameRelationshipCount() > 0),
+        H = B && V,
         [F, z] = r.useState(() => {
             let e = {};
             for (let t of Object.values(P.pJs)) e[t] = '';
@@ -77,7 +77,7 @@ t.Z = function (e) {
             (e) => {
                 switch (c) {
                     case P.pJs.BLOCKED:
-                        return (0, i.jsx)(v.Z, {
+                        return (0, i.jsx)(N.Z, {
                             ...e,
                             isFocused: D
                         });
@@ -85,7 +85,7 @@ t.Z = function (e) {
                         return (0, i.jsx)(b.Z, {
                             ...e,
                             isFocused: D,
-                            disambiguateGameFriends: V
+                            disambiguateGameFriends: H
                         });
                     case P.pJs.SUGGESTIONS:
                         return (0, i.jsx)(L.Z, {
@@ -106,7 +106,7 @@ t.Z = function (e) {
                         );
                 }
             },
-            [D, V, c]
+            [D, H, c]
         ),
         Y = r.useCallback(
             (e) => {

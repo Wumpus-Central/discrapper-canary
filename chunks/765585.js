@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(388032),
     p = n(410842);
 t.Z = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: m, headerClassName: f, contentClassName: g, tryItText: v, dismissText: C, onTryFeature: x, onClose: I, className: _, inlineArt: Z = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: y = 'top', align: j = 'center', art: T, isPremiumEarlyAccess: A = !1, maxWidth: P = 280, hideDismissButton: w = !1, pointerClassName: M, dismissIconClassName: L, dismissIcon: R, onDismissIconClick: D } = e,
+    let { body: n, header: r, artClassName: m, headerClassName: f, contentClassName: g, tryItText: v, dismissText: C, onTryFeature: x, onClose: I, className: _, inlineArt: Z = !1, isPremiumFeature: b = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: N = !1, dismissibleContent: E, position: y = 'top', align: j = 'center', art: T, isPremiumEarlyAccess: P = !1, maxWidth: A = 280, hideDismissButton: w = !1, pointerClassName: M, dismissIconClassName: L, dismissIcon: R, onDismissIconClick: D } = e,
         G = S ? o.Button.Sizes.LARGE : o.Button.Sizes.MAX,
         [k, B] = l.useState(!1),
         { ref: U, width: O } = (0, s.Z)();
@@ -22,8 +22,8 @@ t.Z = l.forwardRef(function (e, t) {
         l.useEffect(() => {
             var e, t;
             let n = (null !== (t = null === (e = U.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-            !k && n > P && B(!0);
-        }, [k, O, U, P]),
+            !k && n > A && B(!0);
+        }, [k, O, U, A]),
         l.useEffect(() => {
             (0, c.kk)(E);
         }, [E]),
@@ -33,7 +33,7 @@ t.Z = l.forwardRef(function (e, t) {
             children: (0, i.jsxs)('div', {
                 className: a()(p.content, g, {
                     [p.contentNoArt]: null == m || Z,
-                    [p.contentPremium]: b || A
+                    [p.contentPremium]: b || P
                 }),
                 children: [
                     null != R &&
@@ -54,14 +54,14 @@ t.Z = l.forwardRef(function (e, t) {
                                 variant: 'heading-md/bold',
                                 color: 'always-white',
                                 children: [
-                                    b && !A
+                                    b && !P
                                         ? (0, i.jsx)(o.NitroWheelIcon, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: p.premiumIcon
                                           })
                                         : null,
-                                    A
+                                    P
                                         ? (0, i.jsxs)(o.Text, {
                                               color: 'always-white',
                                               variant: 'eyebrow',
@@ -106,7 +106,7 @@ t.Z = l.forwardRef(function (e, t) {
                                               onClick: (e) => {
                                                   null == I || I(e), x(e), V(d.L.PRIMARY);
                                               },
-                                              color: b || A ? o.Button.Colors.BRAND_INVERTED : o.Button.Colors.WHITE,
+                                              color: b || P ? o.Button.Colors.BRAND_INVERTED : o.Button.Colors.WHITE,
                                               children: null != v ? v : h.intl.string(h.t.IHf1RE)
                                           }),
                                           !w &&
@@ -116,8 +116,8 @@ t.Z = l.forwardRef(function (e, t) {
                                                   onClick: (e) => {
                                                       null == I || I(e), V(d.L.DISMISS);
                                                   },
-                                                  color: b || A ? o.Button.Colors.WHITE : o.Button.Colors.BRAND,
-                                                  look: b || A ? o.Button.Looks.LINK : o.Button.Looks.FILLED,
+                                                  color: b || P ? o.Button.Colors.WHITE : o.Button.Colors.BRAND,
+                                                  look: b || P ? o.Button.Looks.LINK : o.Button.Looks.FILLED,
                                                   children: null != C ? C : h.intl.string(h.t.om7Ovr)
                                               })
                                       ]

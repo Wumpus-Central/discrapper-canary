@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(753972),
     I = n(895924),
     C = n(812236),
-    N = n(82295),
-    v = n(740492),
+    v = n(82295),
+    N = n(740492),
     S = n(973616),
     T = n(592125),
     b = n(626135),
@@ -156,7 +156,7 @@ let M = (e) => {
     });
 };
 function w() {
-    let e = (0, s.e7)([v.ZP], () => v.ZP.showPlayAgain),
+    let e = (0, s.e7)([N.ZP], () => N.ZP.showPlayAgain),
         { frecentApps: t } = (0, _.f)({
             channel: void 0,
             onlyActivityApps: !0,
@@ -195,7 +195,7 @@ function k(e) {
                     className: P.container,
                     onContextMenu: M,
                     children: [
-                        (0, i.jsx)(N.Z, {
+                        (0, i.jsx)(v.Z, {
                             className: a()(P.headerContainer, O.privateChannelsHeaderContainer),
                             children: (0, i.jsx)('div', {
                                 className: P.textContainer,

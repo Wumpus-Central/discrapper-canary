@@ -1,6 +1,6 @@
 n.d(t, {
     PD: function () {
-        return P;
+        return A;
     },
     aR: function () {
         return w;
@@ -34,7 +34,7 @@ var i = n(200651),
     y = n(388032),
     j = n(976019);
 let T = (0, _.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    A = (e) => {
+    P = (e) => {
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
             [o, s] = l.useState(!1),
@@ -56,7 +56,7 @@ let T = (0, _.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             })
         });
     },
-    P = 57,
+    A = 57,
     w = 57 + T,
     M = {
         tension: 180,
@@ -68,9 +68,9 @@ t.ZP = (e) => {
         { analyticsLocations: u } = (0, f.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
         { premiumSubscriberCount: v, id: _ } = t,
         T = (0, I.rF)(v, _),
-        P = (0, I.FZ)(T, t.id),
-        w = null == P,
-        L = null != P ? P : T,
+        A = (0, I.FZ)(T, t.id),
+        w = null == A,
+        L = null != A ? A : T,
         R = (0, c.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getCountForGuild(_)) && void 0 !== e ? e : 0;
@@ -111,7 +111,7 @@ t.ZP = (e) => {
             numTotal: (0, I.vn)(t.id)[L]
         });
     w && ((H = (0, I.e9)(L)), (F = y.intl.format(y.t.B2byER, { numBoosts: v }))), r && (H = H.toLocaleLowerCase());
-    let W = (0, s.JA)('boosts-'.concat(t.id));
+    let z = (0, s.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
         children: (0, i.jsx)(d.Tooltip, {
             text: w ? y.intl.string(y.t['Y+V9go']) : y.intl.formatToPlainString(y.t.UyDKl5, { levelName: (0, I.nW)(L) }),
@@ -121,7 +121,7 @@ t.ZP = (e) => {
             hideOnClick: !0,
             children: (e) =>
                 (0, i.jsxs)(d.Clickable, {
-                    ...W,
+                    ...z,
                     ...e,
                     'aria-label': void 0,
                     role: 'button',
@@ -140,7 +140,7 @@ t.ZP = (e) => {
                     onContextMenu: (e) => {
                         D &&
                             (0, h.vq)(e, (e) =>
-                                (0, i.jsx)(A, {
+                                (0, i.jsx)(P, {
                                     ...e,
                                     guild: t
                                 })

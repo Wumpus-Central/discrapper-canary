@@ -35,8 +35,8 @@ var i,
     y = n(31022),
     j = n(10401),
     T = n(131704),
-    A = n(592125),
-    P = n(796974),
+    P = n(592125),
+    A = n(796974),
     w = n(984933),
     M = n(914010),
     L = n(540126),
@@ -50,13 +50,13 @@ var i,
     V = n(995993),
     H = n(910595),
     F = n(466935),
-    W = n(120818),
-    z = n(61642),
+    z = n(120818),
+    W = n(61642),
     q = n(848442),
     Y = n(53425),
     Q = n(424785),
-    J = n(770202),
-    K = n(79556),
+    K = n(770202),
+    J = n(79556),
     X = n(428127),
     $ = n(950969),
     ee = n(233657),
@@ -96,7 +96,7 @@ class ed extends (i = r.PureComponent) {
     componentDidUpdate(e, t) {
         let { scrollToChannel: n, guildId: i, selectedChannelId: l } = this.props,
             { initialized: r } = this.state,
-            { scrollTop: a } = P.Z.getGuildDimensions(i);
+            { scrollTop: a } = A.Z.getGuildDimensions(i);
         null != n ? (this.scrollToChannel(n), h.Z.clearChannelListScrollTo(i)) : i !== e.guildId ? null != a && this.scrollTo(a) : l !== e.selectedChannelId ? this.scrollToChannel(l) : !t.initialized && r && (null == a && null != l ? this.scrollToChannel(l, !1, ei.yE, this.handleListScroll) : this.scrollTo(null != a ? a : 0, this.handleListScroll)), this.testShouldSkipTutorial();
     }
     getSectionRowsFromChannel(e) {
@@ -515,7 +515,7 @@ class ed extends (i = r.PureComponent) {
                             );
                         case en.z.GUILD_ROLE_SUBSCRIPTIONS:
                             return (0, l.jsx)(
-                                z.Z,
+                                W.Z,
                                 {
                                     guild: i,
                                     selected: o === er.oC.ROLE_SUBSCRIPTIONS
@@ -541,7 +541,7 @@ class ed extends (i = r.PureComponent) {
                                 en.z.GUILD_MEMBER_APPLICATIONS
                             );
                         case en.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR:
-                            return (0, l.jsx)(W.T, { guild: i });
+                            return (0, l.jsx)(z.T, { guild: i });
                         case en.z.CHANNELS_AND_ROLES:
                             return (0, l.jsx)(
                                 V.m,
@@ -592,7 +592,7 @@ class ed extends (i = r.PureComponent) {
                             r.Fragment,
                             {
                                 children: [
-                                    (0, l.jsx)(K.Z, {
+                                    (0, l.jsx)(J.Z, {
                                         channel: I,
                                         guild: i,
                                         position: C.position,
@@ -656,7 +656,7 @@ class ed extends (i = r.PureComponent) {
                         );
                     case el.d4z.GUILD_STORE:
                         return (0, l.jsx)(
-                            J.Z,
+                            K.Z,
                             {
                                 channel: I,
                                 guild: i,
@@ -671,7 +671,7 @@ class ed extends (i = r.PureComponent) {
                     case el.d4z.PUBLIC_THREAD:
                     case el.d4z.PRIVATE_THREAD:
                         return (0, l.jsx)(
-                            K.Z,
+                            J.Z,
                             {
                                 channel: I,
                                 guild: i,
@@ -734,8 +734,8 @@ let eh = (e) => {
     let { guildId: t, selectedChannelId: n, selectedVoiceChannelId: i } = e,
         a = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         { analyticsLocations: o } = (0, v.ZP)(g.Z.GUILD_CHANNEL_LIST),
-        d = (0, u.e7)([A.Z], () => A.Z.getChannel(n)),
-        h = (0, u.e7)([A.Z], () => A.Z.getChannel(i)),
+        d = (0, u.e7)([P.Z], () => P.Z.getChannel(n)),
+        h = (0, u.e7)([P.Z], () => P.Z.getChannel(i)),
         p = (0, u.e7)([M.Z], () => M.Z.getGuildId()),
         C = (0, N.DM)(t),
         I = r.useRef(null),

@@ -23,8 +23,8 @@ var i = n(200651),
     E = n(746728),
     I = n(140700),
     C = n(665807),
-    N = n(188493),
-    v = n(294330),
+    v = n(188493),
+    N = n(294330),
     S = n(981631),
     T = n(841787);
 let b = Object.freeze({
@@ -59,7 +59,7 @@ function L(e) {
         [k, U] = r.useState(3),
         G = r.useRef(k),
         B = r.useRef(null),
-        H = r.useCallback(
+        V = r.useCallback(
             (e) => {
                 if (null == e || P || m) return;
                 let t = o.length / k;
@@ -67,19 +67,19 @@ function L(e) {
             },
             [P, m, o.length, k, L]
         ),
-        V = (0, d.y)((e) => {
+        H = (0, d.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = t.width;
             n < 1024 && w.current ? ((w.current = !1), M(!1)) : n > 1024 && !w.current && ((w.current = !0), M(!0));
             let i = 1;
             for (n -= D ? 450 : 0, n -= 280; n > 0; ) (n -= 264), (i += 1);
-            i !== G.current && ((G.current = i), U(i)), H(t);
+            i !== G.current && ((G.current = i), U(i)), V(t);
         });
     r.useLayoutEffect(() => {
         var e;
-        H(null === (e = V.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
-    }, [V, H]),
+        V(null === (e = H.current) || void 0 === e ? void 0 : e.getBoundingClientRect());
+    }, [H, V]),
         r.useEffect(() => {
             j((0, f.PM)());
         }, [S]),
@@ -111,7 +111,7 @@ function L(e) {
                                     !D &&
                                         (0, i.jsxs)('div', {
                                             className: T.headingFilters,
-                                            children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(N.Z, { loadId: t })]
+                                            children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(v.Z, { loadId: t })]
                                         }),
                                     P && (0, i.jsx)(C.Z, { loadId: t })
                                 ]
@@ -178,7 +178,7 @@ function L(e) {
                         'div',
                         {
                             style: n,
-                            children: (0, i.jsx)(v.ZP, {
+                            children: (0, i.jsx)(N.ZP, {
                                 guildId: e,
                                 onClick: async (e) => await X(e, t, y, Z),
                                 onView: (e) => F(e)
@@ -233,7 +233,7 @@ function L(e) {
         $ = D ? b : A;
     return (0, i.jsx)('div', {
         className: T.container,
-        ref: V,
+        ref: H,
         children: (0, i.jsx)(c.MasonryList, {
             ref: B,
             className: T.masonryList,
@@ -258,7 +258,7 @@ function L(e) {
                               children: [
                                   (0, i.jsx)('div', {
                                       className: T.sidebarLanguageSelect,
-                                      children: (0, i.jsx)(N.Z, { loadId: t })
+                                      children: (0, i.jsx)(v.Z, { loadId: t })
                                   }),
                                   (0, i.jsx)(E.Z, { loadId: t })
                               ]

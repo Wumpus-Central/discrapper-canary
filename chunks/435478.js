@@ -31,7 +31,7 @@ function h(e) {
                 I(e === t);
             });
     }, [t, _, C]);
-    let N = (e) =>
+    let v = (e) =>
         (0, i.jsxs)(d.kF, {
             ...e,
             ...f,
@@ -68,9 +68,9 @@ function h(e) {
               renderPopout: m,
               shouldShow: E,
               onRequestClose: () => I(!1),
-              children: N
+              children: v
           })
-        : N();
+        : v();
 }
 function m(e) {
     let { id: t, children: n } = e,

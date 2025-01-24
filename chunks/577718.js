@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(626135),
     I = n(267642),
     C = n(337721),
-    N = n(981631),
-    v = n(921944),
+    v = n(981631),
+    N = n(921944),
     S = n(30513),
     T = n(474936),
     b = n(388032),
@@ -29,15 +29,15 @@ var i = n(200651),
     y = n(31932),
     P = n(642301);
 function O(e) {
-    if (null != e) m.Z.open(e.id, N.pNK.OVERVIEW, { section: N.jXE.PREMIUM_GUILD_PROGRESS_BAR }, N.KsC.DISPLAY);
+    if (null != e) m.Z.open(e.id, v.pNK.OVERVIEW, { section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR }, v.KsC.DISPLAY);
 }
 function R(e, t) {
     if (null != t)
-        (0, I.f2)(t, N.Eu4.TIER_1)
-            ? m.Z.open(t.id, N.pNK.OVERVIEW, { section: N.jXE.PREMIUM_GUILD_INVITE_SPLASH }, N.KsC.INVITE)
+        (0, I.f2)(t, v.Eu4.TIER_1)
+            ? m.Z.open(t.id, v.pNK.OVERVIEW, { section: v.jXE.PREMIUM_GUILD_INVITE_SPLASH }, v.KsC.INVITE)
             : (0, d.Z)({
                   analyticsLocations: e,
-                  analyticsSourceLocation: N.jXE.PREMIUM_GUILD_INVITE_SPLASH,
+                  analyticsSourceLocation: v.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
                   perks: (0, S.o9)()
               });
@@ -61,20 +61,20 @@ t.Z = r.memo(function (e) {
     let { contentTypes: t, theme: n, guild: r, renderGuildHeaderDropdownButton: s } = e,
         { analyticsLocations: d } = (0, o.ZP)(),
         S = () => {
-            E.default.track(N.rMx.TOOLTIP_VIEWED, {
+            E.default.track(v.rMx.TOOLTIP_VIEWED, {
                 type: T.cd.PREMIUM_PROGRESS_BAR,
-                location: { page: N.ZY5.GUILD_CHANNEL }
+                location: { page: v.ZY5.GUILD_CHANNEL }
             });
         },
         D = () => {
-            E.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+            E.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: T.cd.INVITE_SPLASH_UPSELL,
-                location: { page: N.ZY5.GUILD_CHANNEL },
+                location: { page: v.ZY5.GUILD_CHANNEL },
                 location_stack: d
             });
         },
         M = (0, a.wj)(n) ? L : y,
-        [w, k] = (0, c.US)(t, v.R.GUILD_HEADER_TOOLTIPS);
+        [w, k] = (0, c.US)(t, N.R.GUILD_HEADER_TOOLTIPS);
     return (0, i.jsx)(i.Fragment, {
         children: (() => {
             switch (w) {
@@ -141,8 +141,8 @@ t.Z = r.memo(function (e) {
                         renderGuildHeaderDropdownButton: s
                     });
                 case l.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, I.f2)(r, N.Eu4.TIER_1) ? b.intl.format(b.t.DDzEVl, {}) : b.intl.formatToPlainString(b.t.pMftkJ, { boostCount: (0, I.KK)(r, N.Eu4.TIER_1) }),
-                        t = (0, I.f2)(r, N.Eu4.TIER_1) ? b.intl.string(b.t.rOFcBg) : b.intl.string(b.t.hvVgAQ);
+                    let e = (0, I.f2)(r, v.Eu4.TIER_1) ? b.intl.format(b.t.DDzEVl, {}) : b.intl.formatToPlainString(b.t.pMftkJ, { boostCount: (0, I.KK)(r, v.Eu4.TIER_1) }),
+                        t = (0, I.f2)(r, v.Eu4.TIER_1) ? b.intl.string(b.t.rOFcBg) : b.intl.string(b.t.hvVgAQ);
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(_.ZP, {
                             onComponentMount: D,
@@ -173,7 +173,7 @@ t.Z = r.memo(function (e) {
                             header: b.intl.string(b.t.hLUL3t),
                             content: b.intl.string(b.t.ahWaPT),
                             buttonCTA: b.intl.string(b.t['NX+WJC']),
-                            onClick: () => k(v.L.UNKNOWN),
+                            onClick: () => k(N.L.UNKNOWN),
                             markAsDismissed: k
                         }),
                         renderGuildHeaderDropdownButton: s
@@ -191,7 +191,7 @@ t.Z = r.memo(function (e) {
                                 className: Z.fullWidthImage
                             }),
                             onClick: () => {
-                                m.Z.open(r.id, N.pNK.ROLES), m.Z.selectRole(r.getEveryoneRoleId(), b.intl.string(b.t.Bco7ND));
+                                m.Z.open(r.id, v.pNK.ROLES), m.Z.selectRole(r.getEveryoneRoleId(), b.intl.string(b.t.Bco7ND));
                             },
                             markAsDismissed: k
                         }),

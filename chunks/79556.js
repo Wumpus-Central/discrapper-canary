@@ -32,8 +32,8 @@ var l = n(120356),
     y = n(473403),
     j = n(304471),
     T = n(981631),
-    A = n(647086),
-    P = n(831746);
+    P = n(647086),
+    A = n(831746);
 function w(e, t, n) {
     return (
         t in e
@@ -59,7 +59,7 @@ class M extends N.ZP {
         return null == e
             ? null
             : (0, i.jsx)('div', {
-                  className: P.channelInfo,
+                  className: A.channelInfo,
                   children: e
               });
     }
@@ -69,8 +69,8 @@ class M extends N.ZP {
             E = (0, m.D)(x),
             j = (0, i.jsx)('li', {
                 className: r()(this.getClassName(), {
-                    [P.disabled]: this.isDisabled(),
-                    [P.selected]: n
+                    [A.disabled]: this.isDisabled(),
+                    [A.selected]: n
                 }),
                 'data-dnd-name': e.name,
                 onMouseEnter: c || N ? this.handleMouseEnter : void 0,
@@ -83,7 +83,7 @@ class M extends N.ZP {
                     shouldShow: (c && this.state.shouldShowThreadsPopout) || (N && this.state.shouldShowActivities),
                     children: () =>
                         (0, i.jsxs)(y.Z, {
-                            className: P.iconVisibility,
+                            className: A.iconVisibility,
                             channel: e,
                             guild: t,
                             selected: !C && n,
@@ -179,7 +179,7 @@ class M extends N.ZP {
                     let l = b.default.getUser(t.getRecipientId());
                     null != l &&
                         (0, c.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('31996'), n.e('56826'), n.e('5606')]).then(n.bind(n, 131404));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('31996'), n.e('56826'), n.e('55922')]).then(n.bind(n, 131404));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,
@@ -218,13 +218,13 @@ function R(e) {
             let e = C.Z.getChannel(t.parent_id);
             return {
                 canManageChannel: I.Z.can(T.Plq.MANAGE_CHANNELS, t),
-                canReorderChannel: !0 !== l && (n.id === A._ || (null != e ? I.Z.can(T.Plq.MANAGE_CHANNELS, e) : I.Z.can(T.Plq.MANAGE_CHANNELS, n)))
+                canReorderChannel: !0 !== l && (n.id === P._ || (null != e ? I.Z.can(T.Plq.MANAGE_CHANNELS, e) : I.Z.can(T.Plq.MANAGE_CHANNELS, n)))
             };
         }),
         S = (0, a.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: N, isSubscriptionGated: y } = (0, f.Z)(t.id),
         j = (0, a.e7)([Z.ZP], () => Z.ZP.isFavorite(n.id, t.id)),
-        P = (0, a.e7)(
+        A = (0, a.e7)(
             [b.default],
             () => {
                 let e = b.default.getCurrentUser();
@@ -255,7 +255,7 @@ function R(e) {
         needSubscriptionToAccess: N,
         isNewChannel: S && e.canBeNewChannel,
         isFavoriteSuggestion: r && !j,
-        canShowThreadPreviewForUser: P,
+        canShowThreadPreviewForUser: A,
         channelInfo: M,
         embeddedApps: R,
         resolvedUnreadSetting: m,

@@ -19,13 +19,13 @@ t.Z = function (e) {
             async scrollToEnd() {}
         }),
         C = g !== u.pJs.ONLINE && g !== u.pJs.ALL,
-        N = E || p || C,
-        v = r.useMemo(
+        v = E || p || C,
+        N = r.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
                         ? null
-                        : N
+                        : v
                           ? (0, i.jsxs)(
                                 'div',
                                 {
@@ -43,7 +43,7 @@ t.Z = function (e) {
                                 t
                             )
                 ),
-            [n, m, t, N]
+            [n, m, t, v]
         );
     return (0, i.jsx)(a.bG, {
         navigator: I,
@@ -54,7 +54,7 @@ t.Z = function (e) {
                     ref: t,
                     className: h.peopleList,
                     ...n,
-                    children: [v, f]
+                    children: [N, f]
                 });
             }
         })

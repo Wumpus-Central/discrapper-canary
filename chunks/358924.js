@@ -17,8 +17,8 @@ var i,
     E = n(122810),
     I = n(833664),
     C = n(503438),
-    N = n(420660),
-    v = n(74433),
+    v = n(420660),
+    N = n(74433),
     S = n(906732),
     T = n(812206),
     b = n(933557),
@@ -38,8 +38,8 @@ var i,
     U = n(395361),
     G = n(639351),
     B = n(81063),
-    H = n(823379),
-    V = n(51144),
+    V = n(823379),
+    H = n(51144),
     F = n(599706),
     z = n(981631),
     W = n(388032),
@@ -406,7 +406,7 @@ let ei = (e) => {
         let t,
             { activity: i, user: r, getAssetImage: a, guildId: s } = e,
             { name: c, details: d, assets: h, application_id: m } = i;
-        if (null != h && (0, N.Z)(i)) {
+        if (null != h && (0, v.Z)(i)) {
             var p;
             t = (0, l.jsx)(Z.Z, {
                 className: Y.twitchSectionPreviewWrapper,
@@ -481,7 +481,7 @@ let ei = (e) => {
                     })
                 ]
             }),
-            g = null !== (n = null === (t = (0, v.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : W.intl.string(W.t.eXan7O);
+            g = null !== (n = null === (t = (0, N.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : W.intl.string(W.t.eXan7O);
         return (0, l.jsxs)($, {
             children: [
                 (0, l.jsxs)('div', {
@@ -494,7 +494,7 @@ let ei = (e) => {
                             className: Y.applicationStreamingAvatar
                         }),
                         (0, l.jsxs)('div', {
-                            children: [X(V.ZP.getName(r)), Q(g)]
+                            children: [X(H.ZP.getName(r)), Q(g)]
                         }),
                         (0, l.jsx)(A.ZP, { size: A.ZP.Sizes.SMALL })
                     ]
@@ -517,7 +517,7 @@ let ei = (e) => {
         let h = (0, c.Wu)([k.default, M.default], () =>
                 Array.from(r)
                     .map((e) => (M.default.getId() === e ? null : k.default.getUser(e)))
-                    .filter(H.lm)
+                    .filter(V.lm)
             ),
             m = (0, p.O)(),
             { analyticsLocations: g } = (0, S.ZP)();

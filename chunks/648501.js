@@ -30,7 +30,7 @@ var l = n(442837),
     E = n(518360);
 function y(e) {
     var t;
-    let { channel: n, isChannelSelected: y, isChannelCollapsed: j, voiceStates: T, enableConnectedUserLimit: A, enableActivities: P, isSubscriptionGated: w, needSubscriptionToAccess: M, isNewChannel: L, muted: R, resolvedUnreadSetting: D } = e,
+    let { channel: n, isChannelSelected: y, isChannelCollapsed: j, voiceStates: T, enableConnectedUserLimit: P, enableActivities: A, isSubscriptionGated: w, needSubscriptionToAccess: M, isNewChannel: L, muted: R, resolvedUnreadSetting: D } = e,
         G = (0, l.e7)([m.ZP], () => m.ZP.getMentionCount(n.id)),
         k = (0, l.e7)([m.ZP], () => m.ZP.getIsMentionLowImportance(n.id)),
         B = (0, o.ZP)(n),
@@ -44,8 +44,8 @@ function y(e) {
             selected: y
         }),
         F = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
-        W = (0, s.n2)(n.guild_id, n.id),
-        z = (0, l.e7)([h.Z], () => {
+        z = (0, s.n2)(n.guild_id, n.id),
+        W = (0, l.e7)([h.Z], () => {
             var e, t;
             return null !== (t = null === (e = h.Z.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(b.oNc.COMMUNITY)) && void 0 !== t && t;
         });
@@ -67,25 +67,25 @@ function y(e) {
             color: 'text-brand',
             children: N.intl.format(N.t.GkAbqa, { count: (0, a.getBadgeCountString)(F) })
         });
-    if (!R && n.isForumLikeChannel() && null != W && W > 0)
+    if (!R && n.isForumLikeChannel() && null != z && z > 0)
         return (0, i.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'text-muted',
-            children: (0, a.getBadgeCountString)(W)
+            children: (0, a.getBadgeCountString)(z)
         });
     let q = null !== (t = null == T ? void 0 : T.length) && void 0 !== t ? t : 0;
-    return null != A && A && H
+    return null != P && P && H
         ? (0, i.jsx)(_.Z, {
               userCount: q,
               video: O || V,
               channel: n
           })
-        : j && (0, g.a)(T) && z
+        : j && (0, g.a)(T) && W
           ? (0, i.jsx)(a.TextBadge, {
                 text: N.intl.string(N.t.dI3q4u),
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
-          : null != P && P && (0, v.u)(B)
+          : null != A && A && (0, v.u)(B)
             ? (0, i.jsx)(I.Z, {
                   embeddedApps: B,
                   muted: R

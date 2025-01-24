@@ -408,7 +408,7 @@ class eG extends l.PureComponent {
                                     return (0, C.jW)(
                                         t,
                                         async () => {
-                                            let { default: e } = await Promise.all([n.e('79695'), n.e('70205'), n.e('31996'), n.e('56826'), n.e('95324')]).then(n.bind(n, 131404));
+                                            let { default: e } = await Promise.all([n.e('79695'), n.e('70205'), n.e('31996'), n.e('56826'), n.e('95603')]).then(n.bind(n, 131404));
                                             return (t) =>
                                                 (0, i.jsx)(e, {
                                                     ...t,
@@ -425,7 +425,7 @@ class eG extends l.PureComponent {
                                     return (0, C.jW)(
                                         t,
                                         async () => {
-                                            let { default: e } = await Promise.all([n.e('79695'), n.e('31996'), n.e('8634')]).then(n.bind(n, 354589));
+                                            let { default: e } = await Promise.all([n.e('79695'), n.e('31996'), n.e('60677'), n.e('86302')]).then(n.bind(n, 354589));
                                             return (t) =>
                                                 (0, i.jsx)(e, {
                                                     ...t,

@@ -26,8 +26,8 @@ var i = n(200651),
     y = n(905423),
     j = n(802718),
     T = n(796974),
-    A = n(271383),
-    P = n(430824),
+    P = n(271383),
+    A = n(430824),
     w = n(771845),
     M = n(358085),
     L = n(709054),
@@ -41,13 +41,13 @@ var i = n(200651),
     V = n(602147),
     H = n(416637),
     F = n(222059),
-    W = n(751277),
-    z = n(65721),
+    z = n(751277),
+    W = n(65721),
     q = n(843343),
     Y = n(654142),
     Q = n(695301),
-    J = n(836697),
-    K = n(921230),
+    K = n(836697),
+    J = n(921230),
     X = n(981631),
     $ = n(388032),
     ee = n(192069);
@@ -179,10 +179,10 @@ function el(e) {
         }),
         v = (0, h.e7)([E.Z], () => E.Z.lurkingGuildIds()),
         x = l.useMemo(() => (n ? [] : v), [v, n]),
-        et = (0, h.Wu)([P.Z, A.ZP], () => L.default.keys(P.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
+        et = (0, h.Wu)([A.Z, P.ZP], () => L.default.keys(A.Z.getGuilds()).filter((e) => P.ZP.isCurrentUserGuest(e))),
         el = x.concat(et),
         er = (0, h.e7)([Z.Z], () => Z.Z.isFullscreenInContext()),
-        ea = (0, h.e7)([P.Z], () => P.Z.getGeoRestrictedGuilds()),
+        ea = (0, h.e7)([A.Z], () => A.Z.getGeoRestrictedGuilds()),
         [eo, es] = l.useState(!1),
         ec = l.useCallback(() => es(!0), []),
         eu = l.useCallback(() => es(!1), []),
@@ -296,8 +296,8 @@ function el(e) {
         }
     }
     (0, D.Z)(eb.scrollToGuild);
-    let eA = p.getRoots(),
-        eP = (0, S.Z)(),
+    let eP = p.getRoots(),
+        eA = (0, S.Z)(),
         ew = (0, j.U)(),
         eM = ea.map((e) =>
             (0, i.jsx)(
@@ -346,29 +346,29 @@ function el(e) {
                                         onScroll: eb.handleScroll,
                                         children: [
                                             (0, i.jsx)(F.u, {}),
-                                            eP ? (0, i.jsx)(N.Z, {}) : null,
-                                            (0, i.jsx)(W.Z, { isOnHubVerificationRoute: ey }),
+                                            eA ? (0, i.jsx)(N.Z, {}) : null,
+                                            (0, i.jsx)(z.Z, { isOnHubVerificationRoute: ey }),
                                             (0, i.jsx)(k.Z, {}),
                                             ew,
-                                            el.map((e) => (0, i.jsx)(K.Z, { guildId: e }, e)),
-                                            (0, i.jsx)(J.Z, { onActivate: ej }),
-                                            (0, i.jsx)(z.Z, {}),
+                                            el.map((e) => (0, i.jsx)(J.Z, { guildId: e }, e)),
+                                            (0, i.jsx)(K.Z, { onActivate: ej }),
+                                            (0, i.jsx)(W.Z, {}),
                                             s
                                                 ? (0, i.jsx)(g.Stack, {
                                                       gap: 'xs',
                                                       'aria-label': $.intl.string($.t['7hB4kp']),
-                                                      children: eA.map(eT)
+                                                      children: eP.map(eT)
                                                   })
                                                 : (0, i.jsx)('div', {
                                                       'aria-label': $.intl.string($.t['7hB4kp']),
-                                                      children: eA.map(eT)
+                                                      children: eP.map(eT)
                                                   }),
                                             eM,
                                             n
                                                 ? null
                                                 : (0, i.jsx)(U.Z, {
                                                       disableTooltip: x.length > 0,
-                                                      lastTargetNode: eA[eA.length - 1]
+                                                      lastTargetNode: eP[eP.length - 1]
                                                   }),
                                             (0, i.jsx)(q.Z, {}),
                                             !n && s

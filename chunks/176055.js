@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(769654),
     I = n(601964),
     C = n(430824),
-    N = n(843445),
-    v = n(981631),
+    v = n(843445),
+    N = n(981631),
     S = n(388032),
     T = n(106269);
 function b(e, t, n) {
@@ -83,7 +83,7 @@ class A extends r.PureComponent {
                     : r && t && (u = S.intl.string(S.t.XpeFYm))
                 : ((u = S.intl.string(S.t.dKhVQE)), (h = this.handleLogin)),
             (0, i.jsxs)('div', {
-                className: a()(s, o === N.b.SMALL ? T.inviteSmall : T.inviteLarge),
+                className: a()(s, o === v.b.SMALL ? T.inviteSmall : T.inviteLarge),
                 children: [
                     (0, i.jsx)(m.Z, { children: S.intl.string(S.t.s1KcLi) }),
                     (0, i.jsxs)('div', {
@@ -136,14 +136,14 @@ class A extends r.PureComponent {
                     try {
                         await d.Z.joinGuild(e.id, {
                             lurker: !0,
-                            source: v.vtS.APPLICATION_STORE
+                            source: N.vtS.APPLICATION_STORE
                         }),
                             r();
                     } catch {}
             }),
             b(this, 'handleLogin', () => {
-                let e = { redirect_to: v.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
-                (0, _.uL)(v.Z5c.LOGIN, { search: (0, s.stringify)(e) });
+                let e = { redirect_to: N.Z5c.APPLICATION_STORE_LISTING_SKU(this.props.skuId) };
+                (0, _.uL)(N.Z5c.LOGIN, { search: (0, s.stringify)(e) });
             });
     }
 }

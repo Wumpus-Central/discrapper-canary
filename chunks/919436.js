@@ -41,7 +41,7 @@ let T = {
     friction: 28,
     tension: 600
 };
-function A(e) {
+function P(e) {
     switch (e) {
         case 'height':
         case 'opacity':
@@ -55,7 +55,7 @@ function A(e) {
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
 }
-class P extends (i = r.PureComponent) {
+class A extends (i = r.PureComponent) {
     componentWillEnter(e) {
         let { controller: t } = this.state;
         e(),
@@ -65,7 +65,7 @@ class P extends (i = r.PureComponent) {
                     height: 1,
                     opacity: 1,
                     scale: 1,
-                    config: A
+                    config: P
                 })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
@@ -77,7 +77,7 @@ class P extends (i = r.PureComponent) {
             scale: 1,
             opacity: 1,
             height: 1,
-            config: A
+            config: P
         })
             .start()
             .then(e);
@@ -91,7 +91,7 @@ class P extends (i = r.PureComponent) {
                     height: 0,
                     opacity: 0,
                     scale: 0,
-                    config: A
+                    config: P
                 })
                 .start()
                 .then(e)
@@ -180,7 +180,7 @@ class P extends (i = r.PureComponent) {
                     scale: 0,
                     height: 0,
                     opacity: 0,
-                    config: A
+                    config: P
                 })
             }),
             j(this, 'handleContextMenu', (e) => {
@@ -188,7 +188,7 @@ class P extends (i = r.PureComponent) {
                     i = t.type === E.d4z.DM ? I.default.getUser(t.getRecipientId()) : null;
                 null != i
                     ? (0, u.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('31996'), n.e('56826'), n.e('5606')]).then(n.bind(n, 131404));
+                          let { default: e } = await Promise.all([n.e('79695'), n.e('31996'), n.e('56826'), n.e('55922')]).then(n.bind(n, 131404));
                           return (n) =>
                               (0, l.jsx)(e, {
                                   ...n,
@@ -208,7 +208,7 @@ class P extends (i = r.PureComponent) {
             });
     }
 }
-j(P, 'defaultProps', {
+j(A, 'defaultProps', {
     badge: 0,
     audio: !1,
     video: !1,
@@ -228,7 +228,7 @@ j(P, 'defaultProps', {
             _ = !1;
         return (
             f && ((I = a === E.WtW.VOICE), (_ = a === E.WtW.VIDEO)),
-            (0, l.jsx)(P, {
+            (0, l.jsx)(A, {
                 ...e,
                 ref: t,
                 channelName: i,

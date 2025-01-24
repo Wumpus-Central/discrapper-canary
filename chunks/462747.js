@@ -195,7 +195,7 @@ function y(e) {
                       guildId: n.guild_id,
                       onContextMenu: function (e, n) {
                           (0, o.jW)(e, async () => {
-                              let { default: e } = await Promise.all([t.e('79695'), t.e('69220'), t.e('351')]).then(t.bind(t, 881351));
+                              let { default: e } = await Promise.all([t.e('79695'), t.e('69220'), t.e('10125')]).then(t.bind(t, 881351));
                               return (t) =>
                                   (0, i.jsx)(e, {
                                       ...t,
