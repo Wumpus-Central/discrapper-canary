@@ -23,8 +23,8 @@ var i = n(200651),
     E = n(941129),
     I = n(634894),
     C = n(586902),
-    N = n(570928),
-    v = n(100527),
+    v = n(570928),
+    N = n(100527),
     S = n(906732),
     T = n(676742),
     b = n(1585),
@@ -44,8 +44,8 @@ var i = n(200651),
     U = n(258609),
     G = n(427347),
     B = n(443669),
-    H = n(332473),
-    V = n(240504),
+    V = n(332473),
+    H = n(240504),
     F = n(637906),
     z = n(39370),
     W = n(19199),
@@ -77,8 +77,8 @@ var i = n(200651),
     eE = n(374023),
     eI = n(51144),
     eC = n(998502),
-    eN = n(870569),
-    ev = n(345243),
+    ev = n(870569),
+    eN = n(345243),
     eS = n(115530),
     eT = n(981631),
     eb = n(215023),
@@ -194,7 +194,7 @@ class eR extends r.PureComponent {
             c = null != n;
         return (
             (c || (o && l.isPomelo())) &&
-                (e = (0, i.jsx)(N.Z, {
+                (e = (0, i.jsx)(v.Z, {
                     hoverText: r,
                     forceHover: t,
                     children: c
@@ -213,7 +213,7 @@ class eR extends r.PureComponent {
                     }),
                     (0, i.jsx)('div', {
                         className: eZ.panelSubtextContainer,
-                        children: (0, i.jsx)(ev.Z, { children: null != e ? e : r })
+                        children: (0, i.jsx)(eN.Z, { children: null != e ? e : r })
                     })
                 ]
             })
@@ -508,7 +508,7 @@ function ej() {
             let e = eo.Z.getChannelId();
             return null != e ? el.Z.getChannel(e) : null;
         }),
-        { mute: f, selfMute: _, suppress: N } = (0, ei.Z)(g),
+        { mute: f, selfMute: _, suppress: v } = (0, ei.Z)(g),
         { selfDeaf: T, deaf: b } = (0, en.Z)(g),
         x = (0, s.e7)([A.C], () => {
             var e;
@@ -518,7 +518,7 @@ function ej() {
         y = (0, s.e7)([es.Z], () => es.Z.getSpeakingWhileMuted()),
         P = (0, s.e7)([ea.Z], () => ea.Z.hasLayers()),
         O = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || P || eE.s.isDisallowPopupsSet(),
-        R = (0, H.b)(),
+        R = (0, V.b)(),
         D = (0, s.e7)([U.Z], () => null != U.Z.getAwaitingRemoteSessionInfo()),
         M = (0, W.D)(),
         k = (0, E.u)(),
@@ -537,7 +537,7 @@ function ej() {
     let q = (0, s.e7)([Q.Z], () => Q.Z.hasHadOtherUserPlaySoundInSession()),
         X = (function () {
             let e = (0, w.wE)(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
-                [t, n] = (0, s.Wu)([V.Z], () => [V.Z.hasFetchedRelevance, V.Z.profileThemesRelevanceExceeded]),
+                [t, n] = (0, s.Wu)([H.Z], () => [H.Z.hasFetchedRelevance, H.Z.profileThemesRelevanceExceeded]),
                 [i, l] = (0, s.Wu)([eh.ZP], () => [eh.ZP.hasFetchedMostRecentPremiumTypeSubscription(), eh.ZP.getMostRecentPremiumTypeSubscription()]),
                 { enabled: a } = F.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = r.useMemo(() => {
@@ -558,7 +558,7 @@ function ej() {
                 !e && !!a && !c && null != n && n
             );
         })(),
-        { analyticsLocations: J } = (0, S.ZP)(v.Z.ACCOUNT),
+        { analyticsLocations: J } = (0, S.ZP)(N.Z.ACCOUNT),
         $ = {
             avatar: [],
             settings: []
@@ -583,7 +583,7 @@ function ej() {
                 speakingWhileMuted: y,
                 status: c,
                 streaming: a,
-                suppress: N,
+                suppress: v,
                 webBuildOverride: x,
                 awaitingRemote: D,
                 isEligibleForPomelo: R
@@ -597,15 +597,11 @@ function eD(e) {
         s = (0, h.i)();
     return (
         (a = null != t ? m.SettingsInfoIcon : n ? m.SettingsCircleIcon : s.Component),
-        (0, i.jsx)(eN.Z, {
+        (0, i.jsx)(ev.Z, {
             tooltipText: null != t ? eA.intl.formatToPlainString(eA.t.Gzh6ZG, { webBuildOverride: t.id }) : eA.intl.string(eA.t.cduTBA),
             onClick: r,
             onContextMenu: l,
-            innerClassName: null != t || n ? eZ.buildOverrideButton : null,
-            icon: (0, i.jsx)(a, {
-                size: 'refresh_sm',
-                color: m.tokens.colors.CHANNEL_ICON
-            }),
+            icon: (0, i.jsx)(a, { size: 'refresh_sm' }),
             ...s.events
         })
     );
@@ -615,9 +611,9 @@ function eM(e) {
         f = t || l || n,
         { Component: _, play: E, events: I } = (0, u.O)(f ? 'unmute' : 'mute'),
         C = n || l ? m.MicrophoneDenyIcon : _,
-        { mode: N } = (0, et.ZP)({ location: 'RTC Microphone Button' }),
-        T = null != s ? s : (0, L.Z)(t, n, l, a, N === et.BK.GroupedButtonsRedMic),
-        { analyticsLocations: b } = (0, S.ZP)(v.Z.AUDIO_INPUT_BUTTON);
+        { mode: v } = (0, et.ZP)({ location: 'RTC Microphone Button' }),
+        T = null != s ? s : (0, L.Z)(t, n, l, a, v === et.BK.GroupedButtonsRedMic),
+        { analyticsLocations: b } = (0, S.ZP)(N.Z.AUDIO_INPUT_BUTTON);
     r.useEffect(() => () => E(), [f, E]);
     let A = r.useCallback(
         (e) => {
@@ -627,7 +623,7 @@ function eM(e) {
     );
     return (0, i.jsx)(S.Gt, {
         value: b,
-        children: (0, i.jsx)(eN.Z, {
+        children: (0, i.jsx)(ev.Z, {
             tooltipText: T,
             tooltipColor: o,
             tooltipForceOpen: c,
@@ -641,9 +637,8 @@ function eM(e) {
                 size: 'custom',
                 width: 20,
                 height: 20,
-                color: f ? m.tokens.colors.STATUS_DANGER : m.tokens.colors.CHANNEL_ICON
+                color: f ? m.tokens.colors.STATUS_DANGER : 'currentColor'
             }),
-            iconForeground: f ? eZ.strikethrough : null,
             onClick: p,
             onContextMenu: A,
             role: 'switch',
@@ -662,7 +657,7 @@ function ew(e) {
             events: { onMouseEnter: p, onMouseLeave: g }
         } = (0, d.l)(c ? 'undeafen' : 'deafen'),
         f = n ? m.HeadphonesDenyIcon : u,
-        { analyticsLocations: _ } = (0, S.ZP)(v.Z.AUDIO_OUTPUT_BUTTON);
+        { analyticsLocations: _ } = (0, S.ZP)(N.Z.AUDIO_OUTPUT_BUTTON);
     r.useEffect(() => () => h(), [c, h]);
     let E = r.useCallback(
         (e) => {
@@ -672,7 +667,7 @@ function ew(e) {
     );
     return (0, i.jsx)(S.Gt, {
         value: _,
-        children: (0, i.jsx)(eN.Z, {
+        children: (0, i.jsx)(ev.Z, {
             tooltipText: (0, x.Z)(t, n, l),
             onMouseEnter: p,
             onMouseLeave: g,
@@ -680,7 +675,7 @@ function ew(e) {
                 size: 'custom',
                 width: 20,
                 height: 20,
-                color: c ? m.tokens.colors.STATUS_DANGER : m.tokens.colors.CHANNEL_ICON
+                color: c ? m.tokens.colors.STATUS_DANGER : 'currentColor'
             }),
             onClick: s,
             onContextMenu: E,

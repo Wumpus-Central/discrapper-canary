@@ -1,59 +1,55 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return g;
     }
 });
 var i = n(200651);
 n(192379);
 var r = n(685072),
-    l = n(481060),
-    a = n(287734),
-    s = n(15274),
-    o = n(389303),
-    c = n(881824),
-    d = n(719100),
-    u = n(870569),
-    h = n(388032);
-function m(e) {
+    l = n(287734),
+    a = n(15274),
+    s = n(389303),
+    o = n(881824),
+    c = n(719100),
+    d = n(870569),
+    u = n(388032);
+function h(e) {
     let { tooltipText: t, onClick: n } = e,
-        { events: a, Component: s } = (0, r.K)();
-    return (0, i.jsx)(u.Z, {
+        { events: l, Component: a } = (0, r.K)();
+    return (0, i.jsx)(d.Z, {
         tooltipText: t,
         onClick: n,
-        ...a,
-        icon: (0, i.jsx)(s, {
-            size: 'refresh_sm',
-            color: l.tokens.colors.CHANNEL_ICON
-        })
+        ...l,
+        icon: (0, i.jsx)(a, { size: 'refresh_sm' })
+    });
+}
+function m(e) {
+    let { channel: t } = e;
+    return (0, i.jsx)(h, {
+        tooltipText: u.intl.string(u.t.SMKyio),
+        onClick: () => {
+            if ((0, c.Z)(t)) {
+                (0, o.Us)(t);
+                return;
+            }
+            l.default.disconnect();
+        }
     });
 }
 function p(e) {
     let { channel: t } = e;
-    return (0, i.jsx)(m, {
-        tooltipText: h.intl.string(h.t.SMKyio),
+    return (0, i.jsx)(h, {
+        tooltipText: u.intl.string(u.t['6vrfgo']),
         onClick: () => {
-            if ((0, d.Z)(t)) {
-                (0, c.Us)(t);
+            if ((0, s.Z)(t)) {
+                (0, a.lC)(t);
                 return;
             }
-            a.default.disconnect();
+            l.default.disconnect();
         }
     });
 }
 function g(e) {
     let { channel: t } = e;
-    return (0, i.jsx)(m, {
-        tooltipText: h.intl.string(h.t['6vrfgo']),
-        onClick: () => {
-            if ((0, o.Z)(t)) {
-                (0, s.lC)(t);
-                return;
-            }
-            a.default.disconnect();
-        }
-    });
-}
-function f(e) {
-    let { channel: t } = e;
-    return t.isGuildStageVoice() ? (0, i.jsx)(p, { channel: t }) : (0, i.jsx)(g, { channel: t });
+    return t.isGuildStageVoice() ? (0, i.jsx)(m, { channel: t }) : (0, i.jsx)(p, { channel: t });
 }
