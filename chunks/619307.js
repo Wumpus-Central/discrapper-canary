@@ -225,8 +225,9 @@ function D(e) {
                 'aria-labelledby': Z,
                 children: [
                     X.length > 0
-                        ? (0, a.jsx)('span', {
+                        ? (0, a.jsx)(_.Text, {
                               className: b.value,
+                              variant: 'text-md/medium',
                               children: A(X)
                           })
                         : (0, a.jsx)('span', {
