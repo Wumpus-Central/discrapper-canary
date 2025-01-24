@@ -1,134 +1,137 @@
-i.d(t, {
-    Q: function () {
-        return g;
+n.d(t, {
+    QR: function () {
+        return S;
     },
-    Z: function () {
-        return O;
+    Yj: function () {
+        return _;
+    },
+    ZP: function () {
+        return b;
     }
 }),
-    i(47120);
-var n = i(200651),
-    l = i(192379),
-    o = i(120356),
-    s = i.n(o),
-    r = i(642128),
-    a = i(481060),
-    u = i(13245),
-    d = i(809357),
-    c = i(691891),
-    h = i(44359),
-    f = i(333031),
-    p = i(693091),
-    E = i(981631),
-    m = i(388032),
-    v = i(176463);
-function g(e, t, i) {
-    return (0, n.jsx)(S, {
+    n(47120);
+var i = n(200651),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    s = n(642128),
+    o = n(481060),
+    c = n(13245),
+    u = n(809357),
+    d = n(691891),
+    m = n(44359),
+    f = n(333031),
+    p = n(693091),
+    h = n(981631),
+    g = n(388032),
+    v = n(176463);
+function S(e, t, n) {
+    return (0, i.jsx)(I, {
         keybind: e,
         message: t,
-        messageWithoutKeybind: i
+        messageWithoutKeybind: n
     });
 }
-function S(e) {
-    let { keybind: t, message: i, messageWithoutKeybind: l } = e,
-        o = (0, d.o)();
-    return (0, n.jsx)(n.Fragment, {
-        children: o
-            ? m.intl.format(i, {
+function I(e) {
+    let { keybind: t, message: n, messageWithoutKeybind: l } = e,
+        r = (0, u.o)();
+    return (0, i.jsx)(i.Fragment, {
+        children: r
+            ? g.intl.format(n, {
                   keybind: t,
-                  keybindHook: (e) => (0, n.jsx)(h.Z, { keybind: t }, t.join('+'))
+                  keybindHook: (e) => (0, i.jsx)(m.Z, { keybind: t }, t.join('+'))
               })
             : l
     });
 }
-function _(e) {
+function x(e) {
     e.currentTarget.scrollTo(0, 0);
 }
-let C = l.memo(function (e) {
-    let { maxBodyLines: t, expand: i = !1, onNotificationShow: o, onDismissClick: u, onConfirmClick: d, onCancelClick: h, onNotificationClick: f, hint: p, cancelText: g, confirmText: S, icon: C, body: Z, title: O, renderFooter: I, contentOpacity: N, status: y, containerRef: x } = e,
-        [b, T] = l.useState(!1),
-        R = i || b || y === E._1z.FOCUSED;
+let _ = l.memo(function (e) {
+    let { maxBodyLines: t, expand: n = !1, onNotificationShow: r, onDismissClick: c, onConfirmClick: u, onCancelClick: m, onNotificationClick: f, hint: p, cancelText: S, confirmText: I, icon: _, body: C, title: b, renderFooter: E, contentOpacity: y, status: Z, containerRef: T, className: N, wrapperClassName: A } = e,
+        [j, w] = l.useState(!1),
+        P = n || j || Z === h._1z.FOCUSED;
     l.useEffect(() => {
-        null == o || o();
-    }, [o]);
-    let k = l.useCallback(
+        null == r || r();
+    }, [r]);
+    let R = l.useCallback(
+            (e) => {
+                e.stopPropagation(), null == c || c(e);
+            },
+            [c]
+        ),
+        O = l.useCallback(
             (e) => {
                 e.stopPropagation(), null == u || u(e);
             },
             [u]
         ),
-        A = l.useCallback(
+        k = l.useCallback(
             (e) => {
-                e.stopPropagation(), null == d || d(e);
+                e.stopPropagation(), null == m || m(e);
             },
-            [d]
-        ),
-        z = l.useCallback(
-            (e) => {
-                e.stopPropagation(), null == h || h(e);
-            },
-            [h]
+            [m]
         ),
         M = l.useCallback(() => {
-            T(!0);
+            w(!0);
         }, []),
         L = l.useCallback(() => {
-            T(!1);
+            w(!1);
         }, []);
-    return (0, n.jsxs)(n.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, n.jsx)('div', {
-                className: v.overflowWrapper,
-                onScroll: _,
-                children: (0, n.jsx)(a.Clickable, {
-                    innerRef: x,
+            (0, i.jsx)('div', {
+                className: a()(v.overflowWrapper, A),
+                onScroll: x,
+                children: (0, i.jsx)(o.Clickable, {
+                    innerRef: T,
                     ignoreKeyPress: !0,
                     onMouseOver: M,
                     onMouseLeave: L,
                     onClick: f,
-                    className: s()(v.container, { [v.clickable]: null != f }),
+                    className: a()(v.container, { [v.clickable]: null != f }, N),
                     children: (function () {
-                        let e = null == I ? void 0 : I(R);
-                        return (0, n.jsxs)(n.Fragment, {
+                        let e = null == E ? void 0 : E(P);
+                        return (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, n.jsxs)(r.animated.div, {
+                                (0, i.jsxs)(s.animated.div, {
                                     className: v.iconAndDetails,
-                                    style: { opacity: N },
+                                    style: { opacity: y },
                                     children: [
-                                        null == C
+                                        null == _
                                             ? null
-                                            : 'string' == typeof C
-                                              ? (0, n.jsx)(a.Avatar, {
-                                                    src: C,
-                                                    size: a.AvatarSizes.SIZE_40,
+                                            : 'string' == typeof _
+                                              ? (0, i.jsx)(o.Avatar, {
+                                                    src: _,
+                                                    size: o.AvatarSizes.SIZE_40,
                                                     className: v.avatar,
                                                     'aria-hidden': !0
                                                 })
-                                              : (0, n.jsx)('div', {
+                                              : (0, i.jsx)('div', {
                                                     className: v.avatar,
-                                                    children: C
+                                                    children: _
                                                 }),
-                                        (0, n.jsxs)('div', {
+                                        (0, i.jsxs)('div', {
                                             className: v.details,
                                             children: [
-                                                (0, n.jsx)(a.Text, {
+                                                (0, i.jsx)(o.Text, {
                                                     color: 'interactive-normal',
                                                     variant: 'text-sm/semibold',
                                                     lineClamp: 2,
-                                                    children: O
+                                                    children: b
                                                 }),
-                                                null != Z
-                                                    ? (0, n.jsx)(a.Text, {
+                                                null != C
+                                                    ? (0, i.jsx)(o.Text, {
                                                           color: 'interactive-normal',
                                                           variant: 'text-sm/normal',
-                                                          lineClamp: null != t ? t * (R ? 2 : 1) : void 0,
-                                                          children: Z
+                                                          lineClamp: null != t ? t * (P ? 2 : 1) : void 0,
+                                                          children: C
                                                       })
                                                     : null,
                                                 (function () {
-                                                    let e = 'function' == typeof p ? p(R) : p;
+                                                    let e = 'function' == typeof p ? p(P) : p;
                                                     return null != p
-                                                        ? (0, n.jsx)(a.Text, {
+                                                        ? (0, i.jsx)(o.Text, {
                                                               className: v.hint,
                                                               color: 'text-muted',
                                                               variant: 'text-xxs/medium',
@@ -136,28 +139,28 @@ let C = l.memo(function (e) {
                                                           })
                                                         : null;
                                                 })(),
-                                                null == d && null == h
+                                                null == u && null == m
                                                     ? null
-                                                    : (0, n.jsxs)('div', {
+                                                    : (0, i.jsxs)('div', {
                                                           className: v.buttonContainer,
                                                           children: [
-                                                              null != d
-                                                                  ? (0, n.jsx)(a.Button, {
+                                                              null != u
+                                                                  ? (0, i.jsx)(o.Button, {
                                                                         className: v.button,
-                                                                        size: a.Button.Sizes.SMALL,
-                                                                        color: a.Button.Colors.GREEN,
-                                                                        onClick: A,
-                                                                        children: null != S ? S : m.intl.string(m.t.BddRzc)
+                                                                        size: o.Button.Sizes.SMALL,
+                                                                        color: o.Button.Colors.GREEN,
+                                                                        onClick: O,
+                                                                        children: null != I ? I : g.intl.string(g.t.BddRzc)
                                                                     })
                                                                   : null,
-                                                              null != h
-                                                                  ? (0, n.jsx)(a.Button, {
+                                                              null != m
+                                                                  ? (0, i.jsx)(o.Button, {
                                                                         className: v.button,
-                                                                        size: a.Button.Sizes.SMALL,
-                                                                        look: a.Button.Looks.OUTLINED,
-                                                                        color: a.Button.Colors.PRIMARY,
-                                                                        onClick: z,
-                                                                        children: null != g ? g : m.intl.string(m.t['ETE/oK'])
+                                                                        size: o.Button.Sizes.SMALL,
+                                                                        look: o.Button.Looks.OUTLINED,
+                                                                        color: o.Button.Colors.PRIMARY,
+                                                                        onClick: k,
+                                                                        children: null != S ? S : g.intl.string(g.t['ETE/oK'])
                                                                     })
                                                                   : null
                                                           ]
@@ -167,7 +170,7 @@ let C = l.memo(function (e) {
                                     ]
                                 }),
                                 null != e &&
-                                    (0, n.jsx)(a.Clickable, {
+                                    (0, i.jsx)(o.Clickable, {
                                         className: v.footer,
                                         ignoreKeyPress: !0,
                                         onClick: (e) => e.stopPropagation(),
@@ -178,97 +181,97 @@ let C = l.memo(function (e) {
                     })()
                 })
             }),
-            (0, n.jsx)(c.Z, {
+            (0, i.jsx)(d.Z, {
                 className: v.dismissButton,
-                onDismiss: k,
-                'aria-label': m.intl.string(m.t.LnEgqa)
+                onDismiss: R,
+                'aria-label': g.intl.string(g.t.LnEgqa)
             })
         ]
     });
 });
-function Z(e) {
+function C(e) {
     let {
-        springs: { opacity: t, scale: i, transform: l, height: o },
-        index: s,
-        children: a,
-        locked: u
+        springs: { opacity: t, scale: n, transform: l, height: r },
+        index: a,
+        children: o,
+        locked: c
     } = e;
-    return (0, n.jsx)(r.animated.div, {
+    return (0, i.jsx)(s.animated.div, {
         className: v.animationWrapper,
         style: {
-            pointerEvents: u && 0 !== s ? 'none' : 'auto',
-            zIndex: Math.max(5 - s, 0),
+            pointerEvents: c && 0 !== a ? 'none' : 'auto',
+            zIndex: Math.max(5 - a, 0),
             opacity: t,
             transform: l.to((e) => 'translate3d(0, '.concat(e, 'px, 0)')),
-            scale: i.to([0, 1], [0.7, 1]),
-            height: o
+            scale: n.to([0, 1], [0.7, 1]),
+            height: r
         },
-        children: a
+        children: o
     });
 }
-function O(e) {
-    let { notification: t, index: i, locked: o, transitionState: s, cleanUp: r } = e,
+function b(e) {
+    let { notification: t, index: n, locked: r, transitionState: a, cleanUp: s } = e,
         {
-            id: a,
-            props: { onNotificationShow: d, onDismissClick: c, onNotificationClick: h, onConfirmClick: E, onCancelClick: m, renderFooter: g }
+            id: o,
+            props: { onNotificationShow: u, onDismissClick: d, onNotificationClick: m, onConfirmClick: h, onCancelClick: g, renderFooter: S }
         } = t,
-        S = l.useCallback(() => {
-            d(a);
-        }, [d, a]),
-        _ = l.useCallback(
+        I = l.useCallback(() => {
+            u(o);
+        }, [u, o]),
+        x = l.useCallback(
             (e) => {
-                u.Z.updateNotificationStatus(a), null == c || c(e, a);
+                c.Z.updateNotificationStatus(o), null == d || d(e, o);
             },
-            [a, c]
+            [o, d]
         ),
-        O = l.useCallback(
+        b = l.useCallback(
             (e) => {
-                null == h || h(e, a);
+                null == m || m(e, o);
             },
-            [h, a]
+            [m, o]
         ),
-        I = l.useCallback(
+        E = l.useCallback(
             (e) => {
-                null == E || E(e, a);
+                null == h || h(e, o);
             },
-            [E, a]
+            [h, o]
         ),
-        N = l.useCallback(
+        y = l.useCallback(
             (e) => {
-                null == m || m(e, a);
+                null == g || g(e, o);
             },
-            [m, a]
+            [g, o]
         ),
-        y = l.useCallback((e) => (null == g ? void 0 : g(e, a)), [g, a]),
+        Z = l.useCallback((e) => (null == S ? void 0 : S(e, o)), [S, o]),
         {
-            props: { onNotificationShow: x, onDismissClick: b, renderFooter: T, onNotificationClick: R, onConfirmClick: k, onCancelClick: A, ...z },
-            status: M
+            props: { onNotificationShow: T, onDismissClick: N, renderFooter: A, onNotificationClick: j, onConfirmClick: w, onCancelClick: P, ...R },
+            status: O
         } = t,
-        { ref: L, springs: w } = (0, p.X4)(t.id, s, r);
-    return (0, n.jsx)(Z, {
-        transitionState: s,
-        springs: w,
-        index: i,
-        locked: o,
-        children: (0, n.jsx)(f.Z, {
-            observe: 0 === i,
+        { ref: k, springs: M } = (0, p.X4)(t.id, a, s);
+    return (0, i.jsx)(C, {
+        transitionState: a,
+        springs: M,
+        index: n,
+        locked: r,
+        children: (0, i.jsx)(f.Z, {
+            observe: 0 === n,
             className: v.clickZone,
-            children: (0, n.jsx)(C, {
-                ...z,
-                title: 'function' == typeof z.title ? z.title(_) : z.title,
-                containerRef: L,
+            children: (0, i.jsx)(_, {
+                ...R,
+                title: 'function' == typeof R.title ? R.title(x) : R.title,
+                containerRef: k,
                 notificationId: t.id,
-                onNotificationShow: 0 === i ? S : void 0,
-                onDismissClick: _,
-                onNotificationClick: null != h ? O : void 0,
-                onConfirmClick: null != E ? I : void 0,
-                onCancelClick: null != m ? N : void 0,
-                renderFooter: y,
+                onNotificationShow: 0 === n ? I : void 0,
+                onDismissClick: x,
+                onNotificationClick: null != m ? b : void 0,
+                onConfirmClick: null != h ? E : void 0,
+                onCancelClick: null != g ? y : void 0,
+                renderFooter: Z,
                 expand: !1,
-                index: i,
-                locked: o,
-                status: M,
-                contentOpacity: w.contentOpacity
+                index: n,
+                locked: r,
+                status: O,
+                contentOpacity: M.contentOpacity
             })
         })
     });

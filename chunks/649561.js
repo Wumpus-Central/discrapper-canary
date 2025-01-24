@@ -4,16 +4,16 @@ var i = n(200651),
     r = n(120356),
     a = n.n(r),
     l = n(392711),
-    c = n.n(l),
-    s = n(818405),
-    d = n(587158),
+    s = n.n(l),
+    d = n(818405),
+    c = n(587158),
     u = n(286379),
     p = n(481060),
     h = n(13245),
     _ = n(490029),
     v = n(797614),
-    f = n(593481),
-    m = n(703656),
+    m = n(593481),
+    f = n(703656),
     y = n(254761),
     E = n(70956),
     b = n(960048),
@@ -22,8 +22,8 @@ var i = n(200651),
     k = n(518084),
     C = n(987650),
     x = n(981631),
-    w = n(388032),
-    I = n(974881);
+    I = n(388032),
+    w = n(974881);
 function L(e, t, n) {
     return (
         t in e
@@ -74,31 +74,31 @@ class P extends o.PureComponent {
                       theme: x.BRd.DARK,
                       children: (o) =>
                           (0, i.jsxs)(p.Clickable, {
-                              className: a()(o, I.container),
+                              className: a()(o, w.container),
                               onClick: (e) => e.stopPropagation(),
                               children: [
-                                  (0, i.jsx)(f.ZP, {
+                                  (0, i.jsx)(m.ZP, {
                                       expand: !0,
                                       icon: (0, i.jsx)(y.Z, {
                                           width: 40,
                                           height: 40,
-                                          className: I.notificationIcon
+                                          className: w.notificationIcon
                                       }),
-                                      title: w.intl.string(w.t.U38qZm),
-                                      confirmText: w.intl.string(w.t.TzAl1d),
+                                      title: I.intl.string(I.t.U38qZm),
+                                      confirmText: I.intl.string(I.t.TzAl1d),
                                       onNotificationClick: this.handleNotificationClick,
                                       onConfirmClick: this.handleReload,
                                       onDismissClick: this.hideNotification
                                   }),
                                   n && null != e
                                       ? (0, i.jsxs)(k.ZP, {
-                                            className: I.stackTrace,
+                                            className: w.stackTrace,
                                             children: [
                                                 (0, i.jsx)(k.ZP.Bar, { children: 'Error Details' }),
                                                 (0, i.jsx)(k.ZP.Content, {
-                                                    className: I.stackTraceCode,
+                                                    className: w.stackTraceCode,
                                                     children: (0, i.jsx)('code', {
-                                                        className: I.code,
+                                                        className: w.code,
                                                         children: (0, i.jsx)('pre', { children: t.stack })
                                                     })
                                                 })
@@ -143,12 +143,12 @@ class P extends o.PureComponent {
             });
     }
 }
-let O = c().throttle(
+let O = s().throttle(
     () => {
         v.Z.increment(
             {
                 name: u.V.APP_CRASHED,
-                tags: ['reason:'.concat(s.v.UNHANDLED_JS_ERROR), 'level:'.concat(d.c.FATAL)]
+                tags: ['reason:'.concat(d.v.UNHANDLED_JS_ERROR), 'level:'.concat(c.c.FATAL)]
             },
             !0
         );
@@ -158,7 +158,7 @@ let O = c().throttle(
 );
 class T extends o.PureComponent {
     componentDidCatch(e, t) {
-        let n = (0, m.s1)().location;
+        let n = (0, f.s1)().location;
         this.setState({
             error: e,
             info: t
@@ -172,6 +172,7 @@ class T extends o.PureComponent {
             payloads: [
                 {
                     type: 'OVERLAY_CRASHED',
+                    error: e.message,
                     pid: i
                 },
                 {

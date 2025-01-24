@@ -42,6 +42,19 @@ let m = {
             pid: n
         });
     },
+    setOverlayCrashed(e, n) {
+        s.Z.dispatch({
+            type: 'OVERLAY_CRASHED',
+            pid: e,
+            error: n
+        });
+    },
+    setReloadOverlay(e) {
+        s.Z.dispatch({
+            type: 'OVERLAY_RELOAD',
+            pid: e
+        });
+    },
     setRenderDebugMode(e, n) {
         s.Z.dispatch({
             type: 'OVERLAY_RENDER_DEBUG_MODE',

@@ -3,11 +3,12 @@ n.d(t, {
         return x;
     }
 }),
-    n(47120);
+    n(47120),
+    n(411104);
 var i = n(200651),
     r = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     a = n(348327),
     s = n.n(a),
     c = n(642128),
@@ -23,12 +24,12 @@ let p = {
 };
 function x(e) {
     let { locked: t, pinned: n } = e,
-        [o, a] = r.useState(0),
-        [x, f] = r.useState(0),
-        [v, g] = r.useState(0),
+        [l, a] = r.useState(0),
+        [x, g] = r.useState(0),
+        [v, f] = r.useState(0),
         C = r.useRef(0),
         [Z, b] = r.useState(0),
-        { timeToLiveMs: _, reappearTimeMs: j } = u.ZP.useState(
+        { timeToLiveMs: j, reappearTimeMs: _ } = u.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
                 reappearTimeMs: e.reappearTimeMs
@@ -36,8 +37,8 @@ function x(e) {
             s()
         ),
         I = {
-            timeToLiveMs: _,
-            reappearTimeMs: j
+            timeToLiveMs: j,
+            reappearTimeMs: _
         },
         E = r.useRef(I);
     r.useEffect(() => void (E.current = I)),
@@ -45,8 +46,8 @@ function x(e) {
             () => (
                 (C.current = setInterval(() => {
                     let e = Date.now();
-                    f(e),
-                        g((t) => {
+                    g(e),
+                        f((t) => {
                             if (0 === t) return e;
                             let n = e - t,
                                 i = E.current.timeToLiveMs,
@@ -63,13 +64,21 @@ function x(e) {
     let k = () => {
             a(Date.now()), b((e) => e + 1);
         },
-        N = o > 0 && x - o < 1000,
-        w = (0, d.useTransition)(v > 0 && v < x && x - v < _, {
+        N = l > 0 && x - l < 1000,
+        w = (0, d.useTransition)(v > 0 && v < x && x - v < j, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
             config: p
-        });
+        }),
+        [T, y] = r.useState(!1);
+    if (
+        (r.useEffect(() => {
+            Z > 0 && y(!0);
+        }, [Z]),
+        T)
+    )
+        throw Error('ClickZoneDebugWidget crashed');
     return t && !n
         ? null
         : (0, i.jsx)(i.Fragment, {
@@ -80,7 +89,7 @@ function x(e) {
                           style: e,
                           className: m.clickZoneDebugContainer,
                           children: (0, i.jsx)(h.Z, {
-                              className: l()(m.clickZone, N && m.clickBackground),
+                              className: o()(m.clickZone, N && m.clickBackground),
                               children: (0, i.jsx)(d.Clickable, {
                                   onClick: k,
                                   className: m.clickable,
