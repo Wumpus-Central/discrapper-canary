@@ -34010,16 +34010,22 @@ html:not(.visual-refresh) .root_b93e3f {
     border-radius: var(--radius-xs)
 }
 
-.inner_c59af2 {
+html:not(.visual-refresh-chat-input) .inner_c59af2 {
     background: var(--input-background);
     border-radius: 3px
 }
 
-.visual-refresh .inner_c59af2 {
-    border-radius: var(--radius-sm)
+.custom-profile-theme html:not(.visual-refresh-chat-input) .inner_c59af2 {
+    background: rgb(var(--bg-overlay-color-inverse)/.1)
 }
 
-.custom-profile-theme .inner_c59af2 {
+.visual-refresh-chat-input .container_c59af2,
+.visual-refresh.custom-theme-background .container_c59af2 {
+    background: var(--input-background)
+}
+
+.custom-profile-theme .visual-refresh-chat-input .container_c59af2,
+.custom-profile-theme .visual-refresh.custom-theme-background .container_c59af2 {
     background: rgb(var(--bg-overlay-color-inverse)/.1)
 }
 
@@ -34907,7 +34913,7 @@ html:not(.visual-refresh) .root_b93e3f {
     scrollbar-width: none
 }
 
-.visual-refresh.custom-theme-background .channelTextArea_bdf0de {
+:where(.visual-refresh.custom-theme-background) .channelTextArea_bdf0de {
     border-color: var(--app-border-frame);
     background: var(--bg-overlay-floating, var(--input-background))
 }

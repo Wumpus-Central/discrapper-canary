@@ -17,9 +17,6 @@ let l = { minInterval: 1000 / 60 },
             null != h.current && h.current.setSize(r);
         }, [r]),
             a.useEffect(() => {
-                null != h.current && h.current.setSize(r);
-            }, [r]),
-            a.useEffect(() => {
                 if (null != m.current) {
                     let e = new u.Z(m.current);
                     (h.current = e), s && e.setupOffscreenCanvas();
