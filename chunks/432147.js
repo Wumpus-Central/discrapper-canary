@@ -120,6 +120,7 @@ function x(e) {
                             'aria-hidden': !0,
                             lineClamp: 1,
                             color: 'header-secondary',
+                            className: C.bottomLine,
                             children: d
                         })
                     ]
