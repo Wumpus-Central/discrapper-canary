@@ -24,7 +24,7 @@ var a = r(913527),
     c = r(594174),
     d = r(78839),
     f = r(111361),
-    p = r(471309),
+    p = r(943180),
     h = r(494450),
     _ = r(474936);
 let m = () => {
@@ -32,7 +32,7 @@ let m = () => {
         return (0, h.l)(null == e ? void 0 : e.id);
     },
     g = () => {
-        let { version: e } = (0, p.Z)();
+        let { version: e } = (0, p.D)();
         return 2 === e ? Object.values(_.q4) : Object.values(_.Ph);
     },
     E = (e) =>

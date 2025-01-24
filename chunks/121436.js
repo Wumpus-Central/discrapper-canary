@@ -11,8 +11,8 @@ var n = t(120356),
     E = t(703656),
     N = t(594174),
     m = t(111361),
-    o = t(471309),
-    b = t(197115),
+    o = t(197115),
+    b = t(943180),
     M = t(553896),
     T = t(848572),
     u = t(787528),
@@ -28,7 +28,7 @@ a.default = (e) => {
         f = (0, T.Rw)(),
         v = N.default.getCurrentUser(),
         j = (0, m.yd)(null == v ? void 0 : v.premiumType, g.p9.TIER_2),
-        { version: O } = (0, o.Z)(),
+        { version: O } = (0, b.D)(),
         P = I.map((e) => {
             let { id: a, badgeVersion: t, nameUnformatted: n, tenureReqNumMonths: c } = e,
                 l = x.intl.string(n),
@@ -129,7 +129,7 @@ a.default = (e) => {
                           className: U.badgeList,
                           children: P
                       }),
-                      (0, s.jsx)(b.Z, {
+                      (0, s.jsx)(o.Z, {
                           className: U.subscribeButton,
                           premiumModalAnalyticsLocation: { page: R.ZY5.TIERED_TENURE_BADGES_MODAL },
                           buttonText: x.intl.string(x.t.JST6jo),
