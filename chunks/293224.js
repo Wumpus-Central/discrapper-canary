@@ -39,8 +39,8 @@ var i = n(200651),
     g = n(571250),
     C = n(628581),
     Z = n(659580),
-    _ = n(793865),
-    b = n(55311),
+    b = n(793865),
+    _ = n(55311),
     j = n(575175),
     I = n(933557),
     E = n(471445),
@@ -85,7 +85,7 @@ function ee(e) {
     );
 }
 function et(e) {
-    let { isToggled: t, disabled: n, iconComponent: r, iconColor: o, tooltip: l, defaultColor: a = 'primaryDark', highlightedColor: s = 'white', popoutOpen: c, onClick: d, popoutDisabled: u, onPopoutClick: h, onMouseEnter: m, onMouseLeave: p, onContextMenu: x, fullRegionButton: f } = e;
+    let { isToggled: t, disabled: n, iconComponent: r, iconColor: o, tooltip: l, defaultColor: a = 'primaryDark', highlightedColor: s = 'white', popoutOpen: c, onClick: d, popoutDisabled: u, onPopoutClick: h, onMouseEnter: m, onMouseLeave: p, onContextMenu: x, fullRegionButton: f, ...v } = e;
     return (0, i.jsx)(W.d, {
         onClick: null != d ? d : () => {},
         color: t ? s : a,
@@ -106,7 +106,8 @@ function et(e) {
         iconColor: o,
         isActive: t,
         onContextMenu: x,
-        onPopoutClick: h
+        onPopoutClick: h,
+        'aria-label': v['aria-label']
     });
 }
 function en(e) {
@@ -162,7 +163,7 @@ function ei(e) {
         p = l ? m.HeadphonesDenyIcon : c;
     r.useEffect(() => () => d(), [a, d]);
     let x = () => {
-            (0, b.Z)(l, q.jXE.OVERLAY);
+            (0, _.Z)(l, q.jXE.OVERLAY);
         },
         f = ee(n);
     return (0, i.jsx)(m.Popout, {
@@ -212,7 +213,7 @@ function er(e) {
         {
             Component: g,
             play: C,
-            events: { onMouseEnter: Z, onMouseLeave: b }
+            events: { onMouseEnter: Z, onMouseLeave: _ }
         } = (0, h.o)(a ? 'disable' : 'enable'),
         j =
             null != n
@@ -229,7 +230,7 @@ function er(e) {
     return (0, i.jsx)(m.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(_.Z, { onClose: I(t) });
+            return (0, i.jsx)(b.Z, { onClose: I(t) });
         },
         align: 'center',
         position: 'top',
@@ -248,7 +249,7 @@ function er(e) {
                 popoutOpen: r,
                 onContextMenu: n,
                 onMouseEnter: Z,
-                onMouseLeave: b,
+                onMouseLeave: _,
                 disabled: E
             });
         }
@@ -276,10 +277,10 @@ function eo(e) {
         {
             Component: g,
             events: { onMouseEnter: C, onMouseLeave: Z },
-            play: _
+            play: b
         } = (0, d.P)(x ? 'disable' : 'enable');
-    r.useEffect(() => () => _(), [x, _]);
-    let b = ee(o);
+    r.useEffect(() => () => b(), [x, b]);
+    let _ = ee(o);
     return (0, i.jsx)(m.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -288,7 +289,7 @@ function eo(e) {
                 currentUser: a,
                 activeStreams: x ? [u] : [],
                 handleGoLive: p,
-                onClose: b(t),
+                onClose: _(t),
                 appContext: h,
                 disableChangeWindows: !0
             });
@@ -341,7 +342,7 @@ function el(e) {
             events: { onClick: v, onMouseEnter: g, onMouseLeave: C }
         } = (0, u.j)(),
         Z = ee(o),
-        _ = (0, l.e7)([S.Z, F.default], () => S.Z.isUserPlayingSounds(F.default.getId()), []);
+        b = (0, l.e7)([S.Z, F.default], () => S.Z.isUserPlayingSounds(F.default.getId()), []);
     return (0, i.jsx)(m.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -370,8 +371,8 @@ function el(e) {
                 onClick: (e) => {
                     v(), n(e);
                 },
-                highlightedColor: _ ? 'green' : 'white',
-                defaultColor: _ ? 'green' : 'primaryDark',
+                highlightedColor: b ? 'green' : 'white',
+                defaultColor: b ? 'green' : 'primaryDark',
                 onContextMenu: p,
                 onMouseEnter: g,
                 onMouseLeave: C,
