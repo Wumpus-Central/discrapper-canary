@@ -115,9 +115,11 @@ function x(e) {
                                 })
                             ]
                         }),
-                        (0, i.jsx)('span', {
+                        (0, i.jsx)(o.Text, {
+                            variant: 'text-sm/normal',
                             'aria-hidden': !0,
-                            className: l()(C.bottomLine),
+                            lineClamp: 1,
+                            color: 'header-secondary',
                             children: d
                         })
                     ]

@@ -486,30 +486,32 @@ function eF(e, n) {
               })
             : null,
         na = tt
-            ? (0, o.jsxs)('div', {
-                  className: eI.accessoryBar,
-                  onClick: nn,
-                  ref: nt,
-                  children: [
-                      (0, o.jsxs)('div', {
-                          className: eI.accessoryBarLeft,
-                          children: [
-                              null == eA ? void 0 : eA(),
-                              t$,
-                              t8
-                                  ? (0, o.jsx)(v.Z, {
-                                        channel: et,
-                                        poggermodeEnabled: !1
-                                    })
-                                  : null
-                          ]
-                      }),
-                      (0, o.jsxs)('div', {
-                          className: eI.accessoryBarRight,
-                          children: [ni, nr]
-                      })
-                  ]
-              })
+            ? tJ
+                ? null
+                : (0, o.jsxs)('div', {
+                      className: eI.accessoryBar,
+                      onClick: nn,
+                      ref: nt,
+                      children: [
+                          (0, o.jsxs)('div', {
+                              className: eI.accessoryBarLeft,
+                              children: [
+                                  null == eA ? void 0 : eA(),
+                                  t$,
+                                  t8
+                                      ? (0, o.jsx)(v.Z, {
+                                            channel: et,
+                                            poggermodeEnabled: !1
+                                        })
+                                      : null
+                              ]
+                          }),
+                          (0, o.jsxs)('div', {
+                              className: eI.accessoryBarRight,
+                              children: [ni, nr]
+                          })
+                      ]
+                  })
             : null;
     return (0, o.jsx)(D.f6, {
         value: tO,

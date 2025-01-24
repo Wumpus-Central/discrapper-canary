@@ -1365,14 +1365,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     width: 10px
 }
 
-.custom-theme-background .tooltipPointer_b6c360 {
-    display: none
-}
-
-.custom-theme-background .tooltip_b6c360 {
-    border: 1px solid var(--border-strong)
-}
-
 .tooltip_b6c360 {
     box-shadow: var(--shadow-high);
     color: var(--text-normal)
@@ -1552,6 +1544,14 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     border-top: var(--border-width)solid var(--border-subtle);
     margin-top: -5px;
     z-index: 1
+}
+
+.custom-theme-background .tooltipPointer_b6c360 {
+    display: none
+}
+
+.custom-theme-background .tooltip_b6c360 {
+    border: 1px solid var(--border-strong)
 }
 
 .wrapper_c51b4e {
@@ -2682,6 +2682,21 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .cardBrand_a298b8 {
     --__card-accent-color: var(--brand-500)
+}
+
+.visual-refresh .cardWarning_a298b8 {
+    --__card-accent-color: var(--background-feedback-warning);
+    color: var(--text-feedback-warning)
+}
+
+.visual-refresh .cardDanger_a298b8 {
+    --__card-accent-color: var(--background-feedback-critical);
+    color: var(--text-feedback-critical)
+}
+
+.visual-refresh .cardSuccess_a298b8 {
+    --__card-accent-color: var(--background-feedback-positive);
+    color: var(--text-feedback-positive)
 }
 
 .card_a298b8 a {
@@ -4804,7 +4819,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     padding: 12px 10px;
     border-radius: 8px;
     border: 1px solid var(--input-border);
-    height: 40px
+    height: 44px
 }
 
 :where(.visual-refresh) .input_f8bc55:hover,
@@ -42543,6 +42558,10 @@ img.thumbnail_c64476 {
     border-radius: var(--radius-sm)
 }
 
+:where(.visual-refresh) .item_eb92a8 {
+    margin-bottom: var(--space-4)
+}
+
 :where(.visual-refresh) .radioIndicator_eb92a8 {
     box-sizing: border-box;
     width: 24px;
@@ -42552,27 +42571,29 @@ img.thumbnail_c64476 {
 }
 
 :where(.visual-refresh) .radioBar_eb92a8 {
-    padding: 16px !important
+    padding: var(--space-12)var(--space-16) !important
 }
 
-:where(.visual-refresh) .item_eb92a8[aria-checked=true] {
+:where(.visual-refresh) .item_eb92a8 {
     color: var(--text-primary)
 }
 
 :where(.visual-refresh) .itemFilled_eb92a8[aria-checked=true] {
-    background-color: var(--background-mod-strong)
-}
-
-:where(.visual-refresh) .itemFilled_eb92a8 {
     background-color: var(--background-mod-subtle)
 }
 
+:where(.visual-refresh) .itemFilled_eb92a8 {
+    background: none
+}
+
 :where(.visual-refresh) .itemFilled_eb92a8:hover:not([aria-checked=true]):not(.disabled_eb92a8) {
-    background-color: var(--background-mod-normal)
+    background-color: var(--background-mod-subtle);
+    color: var(--text-primary)
 }
 
 :where(.visual-refresh) .itemFilled_eb92a8:active:not([aria-checked=true]):not(.disabled_eb92a8) {
-    background-color: var(--background-mod-strong)
+    background-color: var(--background-mod-normal);
+    color: var(--text-primary)
 }
 
 .visual-refresh.full-motion .item_eb92a8 {
@@ -43092,7 +43113,7 @@ img.thumbnail_c64476 {
 
 :where(.visual-refresh) .select_f6639d,
 :where(.visual-refresh) .iconsContainer_f6639d {
-    height: 46px
+    min-height: 44px
 }
 
 :where(.visual-refresh) .wrapper_f6639d .select_f6639d.multi_f6639d {
@@ -43140,20 +43161,21 @@ img.thumbnail_c64476 {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: var(--text-normal)
+    color: var(--text-secondary)
 }
 
 :where(.visual-refresh) .option_f6639d[aria-selected=true] {
     font-weight: 500;
-    color: var(--text-normal)
+    color: var(--text-default)
 }
 
 :where(.visual-refresh) .option_f6639d[aria-selected=true]:hover {
-    background-color: var(--bg-mod-subtle)
+    background-color: var(--background-mod-subtle)
 }
 
 :where(.visual-refresh) .option_f6639d:hover {
-    background-color: var(--bg-mod-subtle)
+    background-color: var(--background-mod-subtle);
+    color: var(--text-default)
 }
 
 :where(.visual-refresh) .optionPillItem_f6639d {
@@ -43165,7 +43187,7 @@ img.thumbnail_c64476 {
 }
 
 :where(.visual-refresh) .optionPillItem_f6639d button .optionPill_f6639d {
-    border-radius: 4px;
+    border-radius: var(--radius-xs);
     border: 1px solid var(--border-faint)
 }
 
@@ -46151,6 +46173,19 @@ img.thumbnail_c64476 {
 
 .error_be45f6 .icon_be45f6 {
     color: var(--info-danger-foreground)
+}
+
+.visual-refresh .container_be45f6 {
+    border-radius: var(--radius-sm)
+}
+
+.visual-refresh .icon_be45f6 {
+    width: 20px;
+    height: 20px
+}
+
+.visual-refresh .text_be45f6 {
+    margin-left: var(--space-8)
 }
 
 .focusLock_f9a4c9 {

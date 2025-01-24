@@ -452,6 +452,7 @@ class eF extends r.PureComponent {
                                 ? (0, i.jsx)(f.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'text-secondary',
+                                      lineClamp: 1,
                                       children: o
                                   })
                                 : o

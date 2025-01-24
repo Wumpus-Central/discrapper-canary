@@ -6,5 +6,6 @@ e.exports = {
     isComboing: 'isComboing_d7ebeb',
     activityInviteEducation: 'activityInviteEducation_d7ebeb base_d7ebeb',
     activityInviteEducationFadeIn: 'activityInviteEducationFadeIn_d7ebeb',
-    activityInviteEducationArrow: 'activityInviteEducationArrow_d7ebeb'
+    activityInviteEducationArrow: 'activityInviteEducationArrow_d7ebeb',
+    activityInviteEducationLeftArrow: 'activityInviteEducationLeftArrow_d7ebeb'
 };

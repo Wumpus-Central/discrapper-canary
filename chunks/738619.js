@@ -73,11 +73,16 @@ class G extends s.PureComponent {
         null !== this.timeout && clearTimeout(this.timeout);
     }
     render() {
-        let { activity: e } = this.props;
+        let { activity: e, isRefreshChatInputEnabled: n } = this.props;
         return (0, o.jsxs)('div', {
             className: u()(k.activityInviteEducation, { [k.activityInviteEducationFadeIn]: this.state.fadeIn }),
             children: [
-                (0, o.jsx)('div', { className: k.activityInviteEducationArrow }),
+                n
+                    ? (0, o.jsx)(h.ArrowSmallLeftIcon, {
+                          size: 'sm',
+                          className: k.activityInviteEducationLeftArrow
+                      })
+                    : (0, o.jsx)('div', { className: k.activityInviteEducationArrow }),
                 (0, o.jsx)('span', {
                     children: M.intl.format(M.t['i/MoCg'], {
                         game: e.name,
@@ -129,7 +134,8 @@ function F(e) {
         return i && null != r
             ? (0, o.jsx)(G, {
                   activity: r,
-                  isFocused: a
+                  isFocused: a,
+                  isRefreshChatInputEnabled: N
               })
             : (0, o.jsx)(Z, {
                   channel: c,

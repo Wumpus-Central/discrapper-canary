@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return Z;
+            return y;
         },
         useAppSidebarState: function () {
-            return b;
+            return x;
         }
     });
 var i = n(200651),
@@ -20,30 +20,33 @@ var i = n(200651),
     m = n(300986),
     p = n(314451),
     g = n(35583),
-    f = n(141321),
-    _ = n(592125),
-    E = n(430824),
-    I = n(944486),
-    C = n(998502),
-    N = n(950796),
-    v = n(981631),
-    S = n(741764),
-    T = n(553512);
-let b = (0, l.U)(() => ({ isOpen: !0 }));
-function A() {
-    let e = (0, a.e7)([I.Z], () => I.Z.getChannelId()),
-        t = (0, a.e7)([_.Z], () => _.Z.getChannel(e), [e]),
-        n = E.Z.getGuild(null == t ? void 0 : t.guild_id);
+    f = n(522474),
+    _ = n(141321),
+    E = n(592125),
+    I = n(430824),
+    C = n(944486),
+    v = n(451478),
+    N = n(998502),
+    S = n(228488),
+    T = n(950796),
+    b = n(981631),
+    A = n(741764),
+    Z = n(553512);
+let x = (0, l.U)(() => ({ isOpen: !0 }));
+function L() {
+    let e = (0, a.e7)([C.Z], () => C.Z.getChannelId()),
+        t = (0, a.e7)([E.Z], () => E.Z.getChannel(e), [e]),
+        n = I.Z.getGuild(null == t ? void 0 : t.guild_id);
     return (
         null != n &&
         (0, i.jsxs)('div', {
-            className: T.guild,
+            className: Z.guild,
             children: [
                 (0, i.jsx)(h.Z, {
                     guild: n,
                     size: h.Z.Sizes.SMALLER,
                     active: !0,
-                    className: T.guildIcon
+                    className: Z.guildIcon
                 }),
                 (0, i.jsx)(s.Text, {
                     variant: 'text-sm/medium',
@@ -53,61 +56,61 @@ function A() {
         })
     );
 }
-function Z() {
+function y() {
     r.useLayoutEffect(() => {
-        C.ZP.setMinimumSize(S.J, S.N);
+        N.ZP.setMinimumSize(A.J, A.N);
     }, []);
     let e = (0, u.TH)('AppTitleBar'),
-        t = b((e) => e.isOpen),
+        t = x((e) => e.isOpen),
         { hasBugReporterAccess: n } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
-    return (
-        r.useLayoutEffect(() => {
-            C.ZP.setMinimumSize(S.J, S.N);
-        }, []),
-        (0, i.jsx)(N.T, {
-            leading:
-                !t &&
-                e &&
-                (0, i.jsxs)(i.Fragment, {
-                    children: [
-                        (0, i.jsx)(s.Clickable, {
-                            className: T.button,
-                            onClick: () => {
-                                b.setState({ isOpen: !b.getState().isOpen });
-                            },
-                            children: (0, i.jsx)(x, {})
-                        }),
-                        (0, i.jsx)(s.Clickable, {
-                            className: T.button,
-                            onClick: () => {
-                                o.Z.open(v.oAB.ACCOUNT);
-                            },
-                            children: (0, i.jsx)(s.SettingsIcon, {
-                                size: 'xs',
-                                color: 'currentColor'
-                            })
-                        })
-                    ]
-                }),
-            title: !1,
-            trailing: (0, i.jsxs)(i.Fragment, {
-                children: [
-                    (0, i.jsx)(d.Z, {
-                        canShowReminder: !0,
-                        className: T.button
-                    }),
-                    (0, i.jsx)(f.Z, { className: T.button }),
-                    n ? (0, i.jsx)(p.Z, { className: T.button }) : (0, i.jsx)(m.Z, { className: T.button }),
-                    (0, i.jsx)(g.Z, { className: T.button })
-                ]
-            })
-        })
-    );
+    return (r.useLayoutEffect(() => {
+        N.ZP.setMinimumSize(A.J, A.N);
+    }, []),
+    (0, a.e7)([v.Z, f.Z], () => (0, S.rB)()))
+        ? null
+        : (0, i.jsx)(T.T, {
+              leading:
+                  !t &&
+                  e &&
+                  (0, i.jsxs)(i.Fragment, {
+                      children: [
+                          (0, i.jsx)(s.Clickable, {
+                              className: Z.button,
+                              onClick: () => {
+                                  x.setState({ isOpen: !x.getState().isOpen });
+                              },
+                              children: (0, i.jsx)(P, {})
+                          }),
+                          (0, i.jsx)(s.Clickable, {
+                              className: Z.button,
+                              onClick: () => {
+                                  o.Z.open(b.oAB.ACCOUNT);
+                              },
+                              children: (0, i.jsx)(s.SettingsIcon, {
+                                  size: 'xs',
+                                  color: 'currentColor'
+                              })
+                          })
+                      ]
+                  }),
+              title: !1,
+              trailing: (0, i.jsxs)(i.Fragment, {
+                  children: [
+                      (0, i.jsx)(d.Z, {
+                          canShowReminder: !0,
+                          className: Z.button
+                      }),
+                      (0, i.jsx)(_.Z, { className: Z.button }),
+                      n ? (0, i.jsx)(p.Z, { className: Z.button }) : (0, i.jsx)(m.Z, { className: Z.button }),
+                      (0, i.jsx)(g.Z, { className: Z.button })
+                  ]
+              })
+          });
 }
-function x() {
+function P() {
     return (0, i.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: T.icon,
+        className: Z.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

@@ -22,8 +22,8 @@ var i = n(200651),
     E = n(289341),
     I = n(765717),
     C = n(358221),
-    N = n(823748),
-    v = n(626421),
+    v = n(823748),
+    N = n(626421),
     S = n(118379),
     T = n(267161),
     b = n(652515),
@@ -43,8 +43,8 @@ var i = n(200651),
     U = n(160404),
     G = n(225675),
     B = n(745052),
-    H = n(285865),
-    V = n(659971),
+    V = n(285865),
+    H = n(659971),
     F = n(179742),
     z = n(270759),
     W = n(918701),
@@ -98,13 +98,13 @@ let ef = (0, c.Un)({
         name: 'GuildHomePage',
         renderLoader: e_
     }),
-    eN = (0, c.Un)({
+    ev = (0, c.Un)({
         createPromise: () => Promise.all([n.e('60696'), n.e('12670')]).then(n.bind(n, 545918)),
         webpackId: 545918,
         name: 'MemberSafetyPage',
         renderLoader: e_
     }),
-    ev = (0, c.Un)({
+    eN = (0, c.Un)({
         createPromise: () => Promise.all([n.e('63288'), n.e('98479'), n.e('58227'), n.e('38359'), n.e('35566')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
@@ -160,19 +160,19 @@ let ef = (0, c.Un)({
                 case em.oC.GUILD_HOME:
                     return (0, i.jsx)(eC, { guildId: r });
                 case em.oC.CHANNEL_BROWSER:
-                    return (0, i.jsx)(ev, {
+                    return (0, i.jsx)(eN, {
                         guildId: r,
                         selectedSection: ep.l7.BROWSE
                     });
                 case em.oC.GUILD_ONBOARDING:
                     return (0, i.jsx)(eS, { guildId: r });
                 case em.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, i.jsx)(ev, {
+                    return (0, i.jsx)(eN, {
                         guildId: r,
                         selectedSection: ep.l7.CUSTOMIZE
                     });
                 case em.oC.MEMBER_SAFETY:
-                    return (0, i.jsx)(eN, { guildId: r });
+                    return (0, i.jsx)(ev, { guildId: r });
                 default:
                     (0, en.vE)(l);
             }
@@ -192,7 +192,7 @@ let ef = (0, c.Un)({
                 n.id
             );
         }
-        return (0, i.jsx)(N.Z, {});
+        return (0, i.jsx)(v.Z, {});
     },
     eb = r.memo(function () {
         let { guildId: e, channelId: t } = (0, Y.Z)(),
@@ -295,8 +295,8 @@ function eU(e) {
     p.R6.useExperiment({ location: _ }, { autoTrackExposure: !1 }), p.R6.trackExposure({ location: _ });
     let E = (0, u.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         I = (0, Z.TH)('ChannelSidebar'),
-        N = (0, Z.Q3)('ChannelSidebar'),
-        v = (0, T.useAppSidebarState)((e) => !e.isOpen) && I;
+        v = (0, Z.Q3)('ChannelSidebar'),
+        N = (0, T.useAppSidebarState)((e) => !e.isOpen) && I;
     r.useLayoutEffect(() => {
         if (I) {
             var e;
@@ -314,13 +314,13 @@ function eU(e) {
         }
     }, [I]),
         r.useLayoutEffect(() => {
-            if (v) ek(ec.p8);
+            if (N) ek(ec.p8);
             else {
                 var e;
                 let t = parseInt(null !== (e = h.K.get(ec.nT)) && void 0 !== e ? e : '');
                 Number.isNaN(t) && (t = ec.qO), ek(t);
             }
-        }, [v]);
+        }, [N]);
     let S = r.useRef(null),
         b = r.useCallback(
             (e, t) => {
@@ -355,19 +355,19 @@ function eU(e) {
         }, []);
     if (
         (r.useLayoutEffect(() => {
-            v && ek(ec.p8);
-        }, [v]),
-        l || (!N && s))
+            N && ek(ec.p8);
+        }, [N]),
+        l || (!v && s))
     )
         return null;
-    let P = N ? 'div' : r.Fragment,
-        O = N ? { className: a()(eg.sidebarList, { [eg.sidebarListRounded]: !t }) } : {};
+    let P = v ? 'div' : r.Fragment,
+        O = v ? { className: a()(eg.sidebarList, { [eg.sidebarListRounded]: !t }) } : {};
     return (0, i.jsx)(m.ThemeProvider, {
         theme: n,
         children: (e) =>
             (0, i.jsxs)('div', {
-                ref: N ? S : void 0,
-                'data-collapsed': v,
+                ref: v ? S : void 0,
+                'data-collapsed': N,
                 className: a()(eg.sidebar, e, {
                     [eg.hasNotice]: t,
                     [eg.fullWidth]: d.tq,
@@ -375,7 +375,7 @@ function eU(e) {
                     [eg.channelListHidden]: s
                 }),
                 children: [
-                    N &&
+                    v &&
                         o &&
                         !c &&
                         (0, i.jsx)(w.Z, {
@@ -389,7 +389,7 @@ function eU(e) {
                                     ...O,
                                     children: (0, i.jsx)(eb, {})
                                 }),
-                                N
+                                v
                                     ? (0, i.jsx)(m.Clickable, {
                                           onClick: y,
                                           'aria-label': 'Resize Sidebar',
@@ -400,7 +400,7 @@ function eU(e) {
                                 (0, i.jsx)(er.b, {})
                             ]
                         }),
-                    !N && (0, i.jsx)(ea.Z, {})
+                    !v && (0, i.jsx)(ea.Z, {})
                 ]
             })
     });
@@ -445,22 +445,23 @@ function eG() {
             let t = (0, s.TH)();
             return (null === (e = (0, s.LX)(t.pathname, eh.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e ? void 0 : e.isExact) === !0;
         })(),
-        m = (0, u.e7)([V.Z], () => V.Z.getIsOpen()),
+        m = (0, u.e7)([H.Z], () => H.Z.getIsOpen()),
         p = (0, s.$B)([eh.Z5c.CHANNEL(eh.ME, q.Hw.channelId()), eh.Z5c.CHANNEL(q.Hw.guildId(), q.Hw.channelId({ optional: !0 }), ':messageId?')]),
         g = (null == p ? void 0 : null === (e = p.params) || void 0 === e ? void 0 : e.channelId) === em.oC.GUILD_ONBOARDING,
         f = l || a || c || h || g,
-        E = r.useCallback(() => H.Z.openSidebar(), []),
-        C = (0, Z.Q3)('AppView'),
-        N = (0, Z.TH)('AppView'),
-        S = C ? 'div' : r.Fragment,
-        b = (0, T.useAppSidebarState)((e) => !e.isOpen);
+        E = r.useCallback(() => V.Z.openSidebar(), []),
+        v = (0, Z.Q3)('AppView'),
+        S = (0, Z.TH)('AppView'),
+        b = v ? 'div' : r.Fragment,
+        A = (0, T.useAppSidebarState)((e) => !e.isOpen),
+        x = (0, u.e7)([C.Z], () => C.Z.isFullscreenInContext());
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: eg.container,
             children: [
                 m &&
                     !h &&
-                    !C &&
+                    !v &&
                     (0, i.jsx)(w.Z, {
                         className: eg.guilds,
                         themeOverride: n
@@ -469,13 +470,14 @@ function eG() {
                     value: (null == p ? void 0 : p.params.guildId) === eh.ME ? void 0 : null == p ? void 0 : p.params.guildId,
                     children: (0, i.jsxs)('div', {
                         className: eg.base,
+                        'data-fullscreen': x,
                         children: [
-                            C && (0, i.jsx)(ef, {}),
+                            v && !x && (0, i.jsx)(ef, {}),
                             d.tq ? null : (0, i.jsx)(es.Z, {}),
                             (0, i.jsxs)('div', {
                                 className: eg.content,
                                 children: [
-                                    (0, i.jsx)(v.Z, {}),
+                                    (0, i.jsx)(N.Z, {}),
                                     (0, i.jsx)(eU, {
                                         isOnFullScreenCollectiblesShopRoute: h,
                                         isSidebarOpen: m,
@@ -484,9 +486,9 @@ function eG() {
                                         hideChannelList: f,
                                         hideSidebar: !m || h
                                     }),
-                                    (0, i.jsx)(S, {
+                                    (0, i.jsx)(b, {
                                         className: eg.page,
-                                        'data-collapsed': !!N && b,
+                                        'data-collapsed': !!S && A,
                                         children: (0, i.jsx)(_.Z.Provider, {
                                             value: E,
                                             children: (0, i.jsxs)(s.rs, {
