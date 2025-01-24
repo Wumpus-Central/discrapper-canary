@@ -2,7 +2,6 @@ e.exports = {
     premiumCards: 'premiumCards_c87d73',
     card: 'card_c87d73',
     withCardHover: 'withCardHover_c87d73',
-    cardPadding: 'cardPadding_c87d73',
     wumpusImageContainer: 'wumpusImageContainer_c87d73',
     wumpusImage: 'wumpusImage_c87d73',
     tier0: 'tier0_c87d73',
