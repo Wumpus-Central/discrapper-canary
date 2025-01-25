@@ -1186,6 +1186,26 @@ let { Themes: i } = r(15202).V,
                     }
                 }
             },
+            CARD_SECONDARY_BG: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
+                    },
+                    [i.LIGHT]: {
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'OPACITY_12',
+                        opacity: 0.12156862745098039
+                    },
+                    [i.DARKER]: {
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
+                    }
+                }
+            },
             CHANNEL_ICON: {
                 'visual-refresh': {
                     [i.DARK]: {
