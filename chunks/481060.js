@@ -18,6 +18,9 @@ r.r(n),
         ActivitiesIcon: function () {
             return tO.nG3;
         },
+        ActivitiesIllocon: function () {
+            return tL.vd;
+        },
         ActivitiesPlusIcon: function () {
             return tO.gQj;
         },
@@ -68,6 +71,9 @@ r.r(n),
         },
         AppleBrandLightIcon: function () {
             return tO.sjH;
+        },
+        AppleIllocon: function () {
+            return tL.Dw;
         },
         AppleNeutralIcon: function () {
             return tO.gLQ;
@@ -209,6 +215,9 @@ r.r(n),
         },
         BookCheckIcon: function () {
             return tO.snC;
+        },
+        BookIllocon: function () {
+            return tL.FG;
         },
         BookmarkIcon: function () {
             return tO.plf;
@@ -594,6 +603,9 @@ r.r(n),
         DoubleCheckmarkIcon: function () {
             return tO.W6s;
         },
+        DownloadArrowIllocon: function () {
+            return tL.yI;
+        },
         DownloadIcon: function () {
             return tO._8t;
         },
@@ -792,6 +804,9 @@ r.r(n),
         GameControllerIcon: function () {
             return tO.iWm;
         },
+        GamepadIllocon: function () {
+            return tL.Tg;
+        },
         GifIcon: function () {
             return tO.OUq;
         },
@@ -800,6 +815,9 @@ r.r(n),
         },
         GlobeEarthIcon: function () {
             return tO.enf;
+        },
+        GlobeIllocon: function () {
+            return tL.q3;
         },
         GridHorizontalIcon: function () {
             return tO.dRJ;
@@ -875,6 +893,9 @@ r.r(n),
         },
         HeartIcon: function () {
             return tO.h_8;
+        },
+        HeartIllocon: function () {
+            return tL.z9;
         },
         HeartOutlineIcon: function () {
             return tO.Pzh;
@@ -996,6 +1017,9 @@ r.r(n),
         LazyPopout: function () {
             return eS.K;
         },
+        LeafIllocon: function () {
+            return tL.Yd;
+        },
         LeagueOfLegendsBrandIcon: function () {
             return tO.EVB;
         },
@@ -1076,6 +1100,9 @@ r.r(n),
         },
         MagnifyingGlassPlusIcon: function () {
             return tO.OyE;
+        },
+        MailboxIllocon: function () {
+            return tL.Yv;
         },
         ManaIcon: function () {
             return tO.tUM;
@@ -1302,6 +1329,9 @@ r.r(n),
         PaintPaletteIcon: function () {
             return tO.V3v;
         },
+        PaintbrushIllocon: function () {
+            return tL.$_;
+        },
         PaintbrushThickIcon: function () {
             return tO.XKY;
         },
@@ -1326,6 +1356,12 @@ r.r(n),
         PaintbrushThinRetryIcon: function () {
             return tO.P19;
         },
+        PaletteIllocon: function () {
+            return tL.lo;
+        },
+        PaperAirplaneIllocon: function () {
+            return tL.qM;
+        },
         PaperClockIcon: function () {
             return tO.HAL;
         },
@@ -1340,6 +1376,9 @@ r.r(n),
         },
         PencilIcon: function () {
             return tO.vdY;
+        },
+        PencilIllocon: function () {
+            return tL.B0;
         },
         PencilSparkleIcon: function () {
             return tO.SxY;
@@ -1670,6 +1709,9 @@ r.r(n),
         },
         Slides: function () {
             return eY.H;
+        },
+        SofaIllocon: function () {
+            return tL.Ny;
         },
         SoundboardIcon: function () {
             return tO.KY1;
@@ -2464,4 +2506,5 @@ var i = r(680732),
     tN = r(359255),
     tR = r(525605),
     tO = r(657707),
-    tD = r(16030);
+    tD = r(16030),
+    tL = r(147432);

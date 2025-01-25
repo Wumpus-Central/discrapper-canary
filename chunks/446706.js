@@ -9,106 +9,108 @@ var i = e(200651),
     s = e.n(a),
     r = e(481060),
     d = e(600164),
-    o = e(539379),
-    c = e(109983),
-    u = e(834891),
-    C = e(388032),
-    m = e(627769);
-function p(t) {
+    o = e(540059),
+    c = e(539379),
+    u = e(109983),
+    C = e(834891),
+    m = e(388032),
+    p = e(627769);
+function L(t) {
     let { guildTemplate: n, onClick: e, autoFocus: a } = t,
-        s = l.useCallback(() => {
+        s = (0, o.Q3)('GuildTemplatesItem'),
+        r = l.useCallback(() => {
             e(n);
         }, [n, e]);
-    return (0, i.jsx)(c.Z, {
-        icon: o.M[n.id],
+    return (0, i.jsx)(u.Z, {
+        icon: s ? c.U[n.id] : c.M[n.id],
         message: n.label,
-        onClick: s,
+        onClick: r,
         autoFocus: a
     });
 }
 function g(t) {
     let { className: n, isNewUser: e, onClose: l, onChooseTemplate: a, onJoin: o } = t,
-        c = (0, u.E)();
+        c = (0, C.E)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(r.ModalHeader, {
                 direction: d.Z.Direction.VERTICAL,
-                className: m.header,
+                className: p.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)(r.Heading, {
-                        className: m.title,
+                        className: p.title,
                         variant: 'heading-xl/semibold',
-                        children: e ? C.intl.string(C.t['9U0b1t']) : C.intl.string(C.t['5HZu09'])
+                        children: e ? m.intl.string(m.t['9U0b1t']) : m.intl.string(m.t['5HZu09'])
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: m.subtitle,
+                        className: p.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: C.intl.string(C.t['wti/Hx'])
+                        children: m.intl.string(m.t['wti/Hx'])
                     }),
                     null != l &&
                         (0, i.jsx)(r.ModalCloseButton, {
-                            className: m.closeButton,
+                            className: p.closeButton,
                             onClick: l
                         })
                 ]
             }),
             (0, i.jsxs)(r.ModalContent, {
-                className: s()(m.templatesList, n),
+                className: s()(p.templatesList, n),
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(p, {
-                        guildTemplate: c[u.l.CREATE],
+                    (0, i.jsx)(L, {
+                        guildTemplate: c[C.l.CREATE],
                         onClick: a,
                         autoFocus: !0
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: m.optionHeader,
+                        className: p.optionHeader,
                         color: 'header-secondary',
                         variant: 'text-xs/bold',
-                        children: C.intl.string(C.t.JGDkfn)
+                        children: m.intl.string(m.t.JGDkfn)
                     }),
-                    (0, i.jsx)(p, {
-                        guildTemplate: c[u.l.GAMING],
+                    (0, i.jsx)(L, {
+                        guildTemplate: c[C.l.GAMING],
                         onClick: a
                     }),
-                    (0, i.jsx)(p, {
-                        guildTemplate: c[u.l.SCHOOL_CLUB],
+                    (0, i.jsx)(L, {
+                        guildTemplate: c[C.l.FRIENDS],
                         onClick: a
                     }),
-                    (0, i.jsx)(p, {
-                        guildTemplate: c[u.l.STUDY],
+                    (0, i.jsx)(L, {
+                        guildTemplate: c[C.l.STUDY],
                         onClick: a
                     }),
-                    (0, i.jsx)(p, {
-                        guildTemplate: c[u.l.FRIENDS],
+                    (0, i.jsx)(L, {
+                        guildTemplate: c[C.l.SCHOOL_CLUB],
                         onClick: a
                     }),
-                    (0, i.jsx)(p, {
-                        guildTemplate: c[u.l.CREATORS],
+                    (0, i.jsx)(L, {
+                        guildTemplate: c[C.l.LOCAL_COMMUNITY],
                         onClick: a
                     }),
-                    (0, i.jsx)(p, {
-                        guildTemplate: c[u.l.LOCAL_COMMUNITY],
+                    (0, i.jsx)(L, {
+                        guildTemplate: c[C.l.CREATORS],
                         onClick: a
                     })
                 ]
             }),
             null != o &&
                 (0, i.jsxs)(r.ModalFooter, {
-                    className: m.footer,
+                    className: p.footer,
                     children: [
                         (0, i.jsx)(r.Heading, {
                             variant: 'heading-lg/semibold',
-                            className: m.footerTitle,
-                            children: C.intl.string(C.t['N+Mi/f'])
+                            className: p.footerTitle,
+                            children: m.intl.string(m.t['N+Mi/f'])
                         }),
                         (0, i.jsx)(r.Button, {
-                            className: m.footerButton,
+                            className: p.footerButton,
                             color: r.Button.Colors.PRIMARY,
                             onClick: o,
-                            children: C.intl.string(C.t.riOUtL)
+                            children: m.intl.string(m.t.riOUtL)
                         })
                     ]
                 })
