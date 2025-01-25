@@ -109,21 +109,23 @@ function V(e) {
             return null != e && e.applicationId === (null == V ? void 0 : V.application_id) && e.location.kind === o.X.CONTEXTLESS;
         }),
         eu = (0, d.O)(),
-        ec = !U.isPlatformEmbedded;
-    if (!((0, v.Z)(V, G.xjy.JOIN) || X) || null == Q) return null;
-    let ed = !$ || (X && !el),
-        ef = ed && (ec || et) && !z && !en;
-    ed ? !ec && !et && null != V && (i = F.intl.formatToPlainString(F.t.SqJBnJ, { name: V.name })) : (i = F.intl.string(F.t['0OiwfH']));
-    let ep = null !== (r = null == j ? void 0 : j.launchId) && void 0 !== r ? r : null == V ? void 0 : V.session_id,
-        eh = async (e, n) => {
+        ec = !U.isPlatformEmbedded,
+        ed = (0, v.Z)(V, G.xjy.JOIN) || X,
+        ef = (0, v.Z)(V, G.xjy.CONTEXTLESS) && X;
+    if (!ed || null == Q) return null;
+    let ep = !$ || (X && !el),
+        eh = ep && (ec || et) && !z && !en;
+    ep ? !ec && !et && null != V && (i = F.intl.formatToPlainString(F.t.SqJBnJ, { name: V.name })) : (i = F.intl.string(F.t['0OiwfH']));
+    let e_ = null !== (r = null == j ? void 0 : j.launchId) && void 0 !== r ? r : null == V ? void 0 : V.session_id,
+        em = async (e, n) => {
             var r, i;
-            if (null == ep || null == Q) return;
+            if (null == e_ || null == Q) return;
             let a = (0, v.Z)(n, G.xjy.EMBEDDED),
                 o = x.Z.getVoiceChannelId(),
                 s = A.Z.getChannel(o);
             await u.Z.join({
                 userId: e.id,
-                sessionId: ep,
+                sessionId: e_,
                 applicationId: Q,
                 channelId: o,
                 messageId: null,
@@ -146,7 +148,7 @@ function V(e) {
                         analyticsLocations: K
                     });
         },
-        e_ = async () => {
+        eg = async () => {
             let e = !1;
             async function n() {
                 let e;
@@ -170,7 +172,8 @@ function V(e) {
                         locationObject: eu.location,
                         analyticsLocations: K,
                         joinUserId: H.id,
-                        joinSessionId: null == V ? void 0 : V.session_id
+                        joinSessionId: null == V ? void 0 : V.session_id,
+                        isContextlessActivity: ef
                     }))
                 ) {
                     null == W || W();
@@ -179,21 +182,21 @@ function V(e) {
             }
             if (!e) {
                 if (es) {
-                    null == Y || Y(), eh(H, V);
+                    null == Y || Y(), em(H, V);
                     return;
                 }
                 await n();
             }
         },
-        em = es ? F.intl.string(F.t.VJlc0d) : F.intl.string(F.t.OKsSCQ);
+        eE = es ? F.intl.string(F.t.VJlc0d) : F.intl.string(F.t.OKsSCQ);
     return (
-        X && !eo && (em = F.intl.string(F.t['4i2vj4'])),
-        el && (em = F.intl.string(F.t.DPfdsr)),
+        X && !eo && (eE = F.intl.string(F.t['4i2vj4'])),
+        el && (eE = F.intl.string(F.t.DPfdsr)),
         {
-            buttonCTA: em,
+            buttonCTA: eE,
             tooltip: i,
-            handleJoinRequest: e_,
-            isEnabled: ef,
+            handleJoinRequest: eg,
+            isEnabled: eh,
             isJoining: er,
             isEmbedded: X
         }
