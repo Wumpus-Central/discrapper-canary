@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(680295),
     I = n(785717),
     C = n(816988),
-    v = n(687158),
-    N = n(899007),
+    N = n(687158),
+    v = n(899007),
     S = n(648052),
     T = n(867176),
     b = n(537006),
@@ -161,7 +161,7 @@ function ee(e) {
     var t;
     let { currentUser: n, onClose: k, setPopoutRef: V } = e,
         ee = __OVERLAY__,
-        et = (0, v.ZP)(n.id),
+        et = (0, N.ZP)(n.id),
         { analyticsLocations: en } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
         ei = (0, I.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
@@ -322,7 +322,7 @@ function ee(e) {
                                     displayProfile: et,
                                     profileType: Y.y0.BITE_SIZE
                                 }),
-                                (0, i.jsx)(N.Z, {
+                                (0, i.jsx)(v.Z, {
                                     user: n,
                                     displayProfile: et,
                                     profileType: Y.y0.BITE_SIZE,

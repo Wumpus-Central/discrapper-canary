@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(617136),
     I = n(113434),
     C = n(497505),
-    v = n(475595),
-    N = n(352084),
+    N = n(475595),
+    v = n(352084),
     S = n(685613),
     T = n(981631),
     b = n(388032),
@@ -55,7 +55,7 @@ t.Z = (0, r.memo)(function (e) {
     });
     let Q = (0, d.wj)(H),
         J = (0, r.useMemo)(() => null != y.config.cosponsorMetadata, [y]),
-        $ = (0, r.useMemo)(() => (0, v.fh)(y, v.eC.REWARD), [y]),
+        $ = (0, r.useMemo)(() => (0, N.fh)(y, N.eC.REWARD), [y]),
         ee = P ? V + 8 : 0,
         et = () => {
             O(!0),
@@ -99,7 +99,7 @@ t.Z = (0, r.memo)(function (e) {
                               })
                           }),
                       Y
-                          ? (0, i.jsx)(N.Z, { className: A.image })
+                          ? (0, i.jsx)(v.Z, { className: A.image })
                           : $.isAnimated
                             ? (0, i.jsx)(i.Fragment, {
                                   children: (0, i.jsx)(g.Z, {

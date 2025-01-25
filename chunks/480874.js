@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(922409),
     I = n(727813),
     C = n(355350),
-    v = n(307947),
-    N = n(125855),
+    N = n(307947),
+    v = n(125855),
     S = n(687683),
     T = n(981631),
     b = n(388032),
@@ -53,7 +53,7 @@ function Z() {
                     c = null === (r = t[s + 1]) || void 0 === r ? void 0 : null === (n = r.channel) || void 0 === n ? void 0 : n.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    N.Z,
+                    v.Z,
                     {
                         index: s,
                         className: a()({
@@ -106,7 +106,7 @@ function Z() {
             [n, O, Z]
         );
     return 0 === t.length
-        ? (0, i.jsx)(v.Z, { section: S.pS.SPAM })
+        ? (0, i.jsx)(N.Z, { section: S.pS.SPAM })
         : (0, i.jsx)(s.bG, {
               navigator: x,
               children: (0, i.jsx)(s.SJ, {

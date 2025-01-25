@@ -23,8 +23,8 @@ var i = n(200651),
     E = n(746728),
     I = n(140700),
     C = n(665807),
-    v = n(188493),
-    N = n(294330),
+    N = n(188493),
+    v = n(294330),
     S = n(981631),
     T = n(841787);
 let b = Object.freeze({
@@ -111,7 +111,7 @@ function L(e) {
                                     !D &&
                                         (0, i.jsxs)('div', {
                                             className: T.headingFilters,
-                                            children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(v.Z, { loadId: t })]
+                                            children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(N.Z, { loadId: t })]
                                         }),
                                     P && (0, i.jsx)(C.Z, { loadId: t })
                                 ]
@@ -178,7 +178,7 @@ function L(e) {
                         'div',
                         {
                             style: n,
-                            children: (0, i.jsx)(N.ZP, {
+                            children: (0, i.jsx)(v.ZP, {
                                 guildId: e,
                                 onClick: async (e) => await X(e, t, y, Z),
                                 onView: (e) => F(e)
@@ -258,7 +258,7 @@ function L(e) {
                               children: [
                                   (0, i.jsx)('div', {
                                       className: T.sidebarLanguageSelect,
-                                      children: (0, i.jsx)(v.Z, { loadId: t })
+                                      children: (0, i.jsx)(N.Z, { loadId: t })
                                   }),
                                   (0, i.jsx)(E.Z, { loadId: t })
                               ]

@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(906732),
     I = n(87005),
     C = n(753972),
-    v = n(895924),
-    N = n(812236),
+    N = n(895924),
+    v = n(812236),
     S = n(82295),
     T = n(740492),
     b = n(973616),
@@ -70,9 +70,9 @@ async function D(e, t, n) {
             return;
         }
         try {
-            await (0, N.ZP)(r, e.id);
+            await (0, v.ZP)(r, e.id);
         } catch (e) {
-            if (e.message === N.sV) {
+            if (e.message === v.sV) {
                 t(void 0);
                 return;
             }
@@ -81,7 +81,7 @@ async function D(e, t, n) {
             targetApplicationId: e.id,
             channelId: r,
             analyticsLocations: n,
-            commandOrigin: v.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+            commandOrigin: N.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
             onExecutedCallback() {
                 t(void 0);
             }

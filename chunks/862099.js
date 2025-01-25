@@ -28,8 +28,8 @@ var i,
     E = n(565799),
     I = n(501655),
     C = n(192079),
-    v = n(427679),
-    N = n(448206),
+    N = n(427679),
+    v = n(448206),
     S = n(496675),
     T = n(938475),
     b = n(626135),
@@ -378,7 +378,7 @@ function Q(e) {
         r = t.getGuildId(),
         s = a.useMemo(() => n.slice(0, 3), [n]),
         h = (0, c.e7)([S.Z], () => S.Z.can(G.Plq.CONNECT, t)),
-        m = (0, N.Z)(t.id),
+        m = (0, v.Z)(t.id),
         p = B.intl.string(B.t.VJlc0d);
     switch (i) {
         case 1:
@@ -434,7 +434,7 @@ function Q(e) {
             i = (0, R.y)(t.id),
             r = (0, D.k5)(t.id),
             a = (0, D.Vm)(t.id),
-            s = (0, c.e7)([v.Z], () => v.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
+            s = (0, c.e7)([N.Z], () => N.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
             { isStageNoticeHidden: o, isEventNoticeHidden: d } = (0, c.cj)(
                 [y.Z],
                 () => ({

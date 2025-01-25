@@ -25,7 +25,7 @@ var r = n(287734),
 function I(e) {
     let { party: t, onChannelContextMenu: n, quest: I } = e,
         C = (0, f.L)(),
-        { voiceChannels: v, currentActivities: N, partiedMembers: S, applicationStreams: T, guildContext: b } = t,
+        { voiceChannels: N, currentActivities: v, partiedMembers: S, applicationStreams: T, guildContext: b } = t,
         A = [],
         Z = (e) => {
             var t, n;
@@ -39,8 +39,8 @@ function I(e) {
                 s = ''.concat(null !== (n = null == l ? void 0 : l.key) && void 0 !== n ? n : '').startsWith('game') && a.startsWith('rich-presence');
             A.push((0, i.jsx)(g.Z.Separator, { inset: s }, 'sep-'.concat(a))), A.push(e);
         };
-    for (let { activity: e } of (v.length > 0 &&
-        v.forEach((e) => {
+    for (let { activity: e } of (N.length > 0 &&
+        N.forEach((e) => {
             let { members: t, channel: r, guild: l } = e;
             Z(
                 (0, i.jsx)(
@@ -96,11 +96,11 @@ function I(e) {
                     )
                 );
             }),
-        N.forEach((e, t) => {
+        v.forEach((e, t) => {
             var n, r, l, p, f, C, T, A, x;
             let { activity: L, game: y, playingMembers: P, activityUser: O } = e;
             if (null == L || null == L.type) return null;
-            if (N.length > 1 && L.type === E.IIU.PLAYING && !(0, a.Z)(L) && null != y)
+            if (v.length > 1 && L.type === E.IIU.PLAYING && !(0, a.Z)(L) && null != y)
                 Z(
                     (0, i.jsx)(
                         g.Z.GameSection,
@@ -119,7 +119,7 @@ function I(e) {
                 );
             else if ((0, s.Z)(L)) {
                 let e = new Set(P.map((e) => e.id)),
-                    t = null === (l = v.find((e) => null != e)) || void 0 === l ? void 0 : l.channel;
+                    t = null === (l = N.find((e) => null != e)) || void 0 === l ? void 0 : l.channel;
                 null != t &&
                     Z(
                         (0, i.jsx)(
@@ -145,7 +145,7 @@ function I(e) {
                     )
                 );
             else if ((0, d.Z)(L)) {
-                let e = v.length > 0 && v[0].members.length > 1,
+                let e = N.length > 0 && N[0].members.length > 1,
                     n = P.length > 1;
                 Z(
                     (0, i.jsx)(

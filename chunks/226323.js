@@ -23,7 +23,7 @@ var i = n(200651),
     E = n(388032),
     I = n(525270);
 let C = { offset: 2 },
-    v = {
+    N = {
         serverDeaf: {
             icon: o.HeadphonesDenyIcon,
             colorize: !0,
@@ -50,9 +50,9 @@ let C = { offset: 2 },
             getStatus: () => E.intl.string(E.t['9F+xJS'])
         }
     };
-function N(e) {
+function v(e) {
     var t, r;
-    let { channel: l, user: p, nick: N, mute: S, deaf: T, serverMute: b, serverDeaf: A } = e,
+    let { channel: l, user: p, nick: v, mute: S, deaf: T, serverMute: b, serverDeaf: A } = e,
         Z = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         x = (0, d.Z)({
             userId: p.id,
@@ -60,7 +60,7 @@ function N(e) {
         }),
         L = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
         y = p.getAvatarURL(l.guild_id, 24),
-        P = null != N ? N : f.ZP.getName(p),
+        P = null != v ? v : f.ZP.getName(p),
         {
             icon: O,
             colorize: R,
@@ -68,11 +68,11 @@ function N(e) {
         } = null !==
             (r = (function (e) {
                 let { serverDeaf: t, deaf: n, serverMute: i, mute: r, localMute: l } = e;
-                if (t) return v.serverDeaf;
-                if (n) return v.deaf;
-                if (i) return v.serverMute;
-                else if (l) return v.localMute;
-                else if (r) return v.mute;
+                if (t) return N.serverDeaf;
+                if (n) return N.deaf;
+                if (i) return N.serverMute;
+                else if (l) return N.localMute;
+                else if (r) return N.mute;
             })({
                 serverDeaf: A,
                 deaf: T,
@@ -198,7 +198,7 @@ function S(e) {
                           let { user: t, nick: r, voiceState: l } = e;
                           return t.id !== m
                               ? (0, i.jsx)(
-                                    N,
+                                    v,
                                     {
                                         channel: n,
                                         user: t,

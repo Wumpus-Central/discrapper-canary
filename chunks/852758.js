@@ -22,8 +22,8 @@ var i = n(200651),
     E = n(23434),
     I = n(1964),
     C = n(762756),
-    v = n(308569),
-    N = n(981631),
+    N = n(308569),
+    v = n(981631),
     S = n(815660),
     T = n(388032);
 function b() {
@@ -54,7 +54,7 @@ function b() {
                         return (t) => (0, i.jsx)(e, { ...t });
                     },
                     {
-                        modalKey: v.F0,
+                        modalKey: N.F0,
                         Layer: g.ZP
                     }
                 );
@@ -86,8 +86,8 @@ function b() {
             []
         ),
         r.useEffect(() => {
-            (null == x ? void 0 : x[0]) === N.PUi.PHONE &&
-                (null == b ? void 0 : b[0]) === N.PUi.EMAIL &&
+            (null == x ? void 0 : x[0]) === v.PUi.PHONE &&
+                (null == b ? void 0 : b[0]) === v.PUi.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
@@ -100,7 +100,7 @@ function b() {
                             });
                     },
                     {
-                        modalKey: v.HR,
+                        modalKey: N.HR,
                         Layer: g.ZP,
                         onCloseCallback: L
                     }
@@ -112,7 +112,7 @@ function b() {
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
-                        url: N.ANM.CAPTCHA,
+                        url: v.ANM.CAPTCHA,
                         body: { captcha_key: e },
                         oldFormErrors: !0,
                         rejectWithError: !0
@@ -123,7 +123,7 @@ function b() {
             },
             theme: t,
             onClick: (e) => {
-                e === N.PUi.EMAIL_OR_PHONE || e === N.PUi.EMAIL || e === N.PUi.REVERIFY_EMAIL ? L() : y();
+                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? L() : y();
             },
             onLogout: () => {
                 (0, o.openModalLazy)(

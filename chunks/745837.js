@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return v;
     }
 });
 var i = n(200651);
@@ -38,7 +38,7 @@ function C() {
         })
     });
 }
-let v = {
+let N = {
     [p.D5.Error]: {
         textColor: 'text-primary',
         buttonLook: s.Button.Looks.FILLED,
@@ -79,14 +79,14 @@ let v = {
         containerClass: l()(E.container, E.containerEnabled)
     }
 };
-function N() {
+function v() {
     var e;
     let { decoupledClipsEnabled: t, clipsError: n } = (0, a.cj)([h.Z], () => ({
         decoupledClipsEnabled: h.Z.getSettings().decoupledClipsEnabled,
         clipsError: h.Z.getLastClipsError()
     }));
     let r = ((e = t), null != n ? p.D5.Error : e ? p.D5.Enabled : p.D5.Disabled),
-        { bodyCopy: l, buttonCopy: o, ctaOnClick: c, textColor: d, buttonColor: u, buttonLook: g, containerClass: f } = v[r];
+        { bodyCopy: l, buttonCopy: o, ctaOnClick: c, textColor: d, buttonColor: u, buttonLook: g, containerClass: f } = N[r];
     return (0, i.jsxs)('div', {
         className: f,
         children: [

@@ -27,8 +27,8 @@ let E = {
     },
     I = (0, u.hQ)(),
     C = ''.concat(I, '-decription'),
-    v = ''.concat(I, '-error');
-function N(e, t) {
+    N = ''.concat(I, '-error');
+function v(e, t) {
     switch (t.type) {
         case 'RESET':
             return E;
@@ -54,7 +54,7 @@ function N(e, t) {
 function S() {
     let e = r.createRef(),
         t = r.createRef(),
-        [n, l] = r.useReducer(N, E),
+        [n, l] = r.useReducer(v, E),
         { canSend: s, hint: u, success: S, error: T } = n;
     return (
         r.useEffect(() => {
@@ -150,7 +150,7 @@ function S() {
                                 placeholder: g.intl.string(g.t['Rn/sLi']),
                                 'aria-label': g.intl.string(g.t['Rn/sLi']),
                                 'aria-invalid': null != T || void 0,
-                                'aria-describedby': null != T ? v : C
+                                'aria-describedby': null != T ? N : C
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {
@@ -170,7 +170,7 @@ function S() {
                 null != T &&
                     (0, i.jsx)(c.FormText, {
                         role: 'alert',
-                        id: v,
+                        id: N,
                         type: c.FormText.Types.ERROR,
                         className: _.marginTop8,
                         children: T

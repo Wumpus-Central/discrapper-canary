@@ -23,8 +23,8 @@ var i,
     E = n(167533),
     I = n(925329),
     C = n(707409),
-    v = n(490983),
-    N = n(799777),
+    N = n(490983),
+    v = n(799777),
     S = n(626135),
     T = n(780570),
     b = n(624138),
@@ -412,21 +412,21 @@ function k(e) {
             applicationViewItems: i,
             filterQuery: a,
             fetched: s
-        } = (0, c.cj)([v.Z], () => ({
-            applicationViewItems: v.Z.sortedFilteredLibraryApplicationViewItems,
-            filterQuery: v.Z.applicationFilterQuery,
-            fetched: v.Z.hasFetchedApplications
+        } = (0, c.cj)([N.Z], () => ({
+            applicationViewItems: N.Z.sortedFilteredLibraryApplicationViewItems,
+            filterQuery: N.Z.applicationFilterQuery,
+            fetched: N.Z.hasFetchedApplications
         })),
         {
             sortKey: d,
             sortDirection: u,
             activeRowKey: h,
             isNavigatingByKeyboard: m
-        } = (0, c.cj)([N.Z], () => ({
-            sortKey: N.Z.sortKey,
-            sortDirection: N.Z.sortDirection,
-            activeRowKey: N.Z.activeRowKey,
-            isNavigatingByKeyboard: N.Z.isNavigatingByKeyboard
+        } = (0, c.cj)([v.Z], () => ({
+            sortKey: v.Z.sortKey,
+            sortDirection: v.Z.sortDirection,
+            activeRowKey: v.Z.activeRowKey,
+            isNavigatingByKeyboard: v.Z.isNavigatingByKeyboard
         }));
     return (0, r.jsx)(w, {
         ...e,

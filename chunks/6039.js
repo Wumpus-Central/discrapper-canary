@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(523924),
     I = n(390500),
     C = n(200305),
-    v = n(577809),
-    N = n(981631),
+    N = n(577809),
+    v = n(981631),
     S = n(898625),
     T = n(388032),
     b = n(301219);
@@ -36,7 +36,7 @@ t.Z = (e) => {
             guildPreviewDisabled: _.Z.getJoinRequestGuild(Z)
         }));
     r.useEffect(() => {
-        null != j && (0, o.uL)(N.Z5c.CHANNEL(Z));
+        null != j && (0, o.uL)(v.Z5c.CHANNEL(Z));
     }, [j, Z]),
         r.useEffect(() => {
             !D && h.Z.fetchRequestToJoinGuilds();
@@ -53,7 +53,7 @@ t.Z = (e) => {
     let G =
         ((n = T.intl.format(T.t['9ZezpK'], { name: null == M ? void 0 : M.toString() })),
         (A = () => {
-            P(Math.max(y, S.hO.FILLING)), h.Z.removeGuildJoinRequest(Z), (0, o.uL)(N.Z5c.ME);
+            P(Math.max(y, S.hO.FILLING)), h.Z.removeGuildJoinRequest(Z), (0, o.uL)(v.Z5c.ME);
         }),
         () => {
             (0, a.openModal)((e) =>
@@ -78,7 +78,7 @@ t.Z = (e) => {
                 (0, i.jsx)('div', { className: b.dragRegion }),
                 (0, i.jsx)('div', {
                     className: b.v2ContentWrapper,
-                    children: (0, i.jsx)(v.Z, {
+                    children: (0, i.jsx)(N.Z, {
                         guildId: Z,
                         inviteCode: x,
                         onComplete: k

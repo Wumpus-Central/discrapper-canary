@@ -1,9 +1,9 @@
 n.d(t, {
+    Cj: function () {
+        return p;
+    },
     M$: function () {
         return m;
-    },
-    RI: function () {
-        return p;
     },
     Zw: function () {
         return h;
@@ -44,4 +44,4 @@ async function h(e) {
     });
 }
 let m = [1, 100],
-    p = u.xjy.JOIN | u.xjy.PARTY_PRIVACY_FRIENDS | u.xjy.PARTY_PRIVACY_VOICE_CHANNEL | u.xjy.EMBEDDED;
+    p = u.xjy.JOIN | u.xjy.PARTY_PRIVACY_FRIENDS | u.xjy.PARTY_PRIVACY_VOICE_CHANNEL | u.xjy.EMBEDDED | u.xjy.CONTEXTLESS;

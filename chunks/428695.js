@@ -11,7 +11,7 @@ var i = n(200651),
     m = n(173549);
 let p = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: v, onClick: N, cta: S, ctaColor: T, centerText: b, className: A } = e;
+    let { guild: t, title: n, message: l, image: s, type: g, imageStyles: f, imageMarginX: _, imageMarginTop: E, trackingSource: I, undismissable: C, onDismissed: N, onClick: v, cta: S, ctaColor: T, centerText: b, className: A } = e;
     r.useEffect(() => {
         p(u.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: g,
@@ -32,7 +32,7 @@ t.Z = function (e) {
                           guild_id: t.id,
                           notice_type: g
                       }),
-                      null == N || N();
+                      null == v || v();
               },
               fullWidth: !0,
               color: T,
@@ -66,7 +66,7 @@ t.Z = function (e) {
                 ? null
                 : (0, i.jsx)(o.Clickable, {
                       onClick: () => {
-                          c.ZP.trackWithMetadata(u.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == v || v();
+                          c.ZP.trackWithMetadata(u.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: g }), null == N || N();
                       },
                       className: m.close,
                       'aria-label': h.intl.string(h.t.WAI6xs),

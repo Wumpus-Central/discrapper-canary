@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(666743),
     I = n(115130),
     C = n(812206),
-    v = n(770146),
-    N = n(600164),
+    N = n(770146),
+    v = n(600164),
     S = n(606081),
     T = n(252618),
     b = n(100159),
@@ -257,7 +257,7 @@ class ec extends r.PureComponent {
         if (null == l) throw Error('Rendering ApplicationStoreListing without description');
         return (0, i.jsxs)(r.Fragment, {
             children: [
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(N.Z, {
                     tag: 'h1',
                     children: ea.intl.format(ea.t.tluX4O, { name: n.name })
                 }),
@@ -344,9 +344,9 @@ class ec extends r.PureComponent {
             return (0, i.jsxs)(r.Fragment, {
                 children: [
                     this.renderHeader(e, t),
-                    (0, i.jsx)(N.Z, {
-                        align: N.Z.Align.CENTER,
-                        justify: N.Z.Justify.CENTER,
+                    (0, i.jsx)(v.Z, {
+                        align: v.Z.Align.CENTER,
+                        justify: v.Z.Justify.CENTER,
                         children: (0, i.jsx)(d.Spinner, { className: es.spinner })
                     })
                 ]
@@ -543,9 +543,9 @@ class ec extends r.PureComponent {
             eo(this, 'renderListing', () => {
                 let { application: e, storeListing: t, sku: n, pageSize: r } = this.props;
                 return null == e || null == n || null == t || t.isSlimDirectoryVersion()
-                    ? (0, i.jsx)(N.Z, {
-                          align: N.Z.Align.CENTER,
-                          justify: N.Z.Justify.CENTER,
+                    ? (0, i.jsx)(v.Z, {
+                          align: v.Z.Align.CENTER,
+                          justify: v.Z.Justify.CENTER,
                           children: (0, i.jsx)(d.Spinner, {})
                       })
                     : r === ei.b.SMALL

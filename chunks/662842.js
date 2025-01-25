@@ -22,8 +22,8 @@ var i,
     E = n(151864),
     I = n(725436),
     C = n(497656),
-    v = n(554747),
-    N = n(230900),
+    N = n(554747),
+    v = n(230900),
     S = n(854698),
     T = n(703656),
     b = n(922482),
@@ -44,7 +44,7 @@ var i,
 function U(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         i = (0, C.y)(t.id),
-        r = (0, v.k5)(t.id),
+        r = (0, N.k5)(t.id),
         s = (0, c.e7)([x.Z], () => x.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
         { isStageNoticeHidden: U, isEventNoticeHidden: G } = (0, c.cj)(
             [E.Z],
@@ -189,7 +189,7 @@ function U(e) {
                         );
                     }
                     if (t.entity_type === M.WX.EXTERNAL) {
-                        let e = (0, N.cS)(t);
+                        let e = (0, v.cS)(t);
                         if (null == e) return { noticeType: null };
                         let n = f.ZP.getUserCount(t.id, E);
                         return {

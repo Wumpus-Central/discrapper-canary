@@ -1,9 +1,9 @@
 e.d(n, {
     F: function () {
-        return _;
+        return g;
     },
     Z: function () {
-        return L;
+        return _;
     }
 }),
     e(47120);
@@ -19,48 +19,48 @@ var i = e(200651),
     C = e(984933),
     m = e(430824),
     p = e(388032),
-    g = e(217540);
-function _(t) {
-    let { createdGuildId: n, hasFooter: e = !0, onClose: _, onChannelPromptCompleted: L, isSlideReady: T } = t,
-        [x, E] = l.useState(''),
-        [I, h] = l.useState(null),
-        [G, D] = l.useState(!1),
-        f = (0, c.Dt)(),
-        y = (0, a.e7)([m.Z], () => m.Z.getGuild(n), [n]),
-        M = l.useRef(null);
+    L = e(217540);
+function g(t) {
+    let { createdGuildId: n, hasFooter: e = !0, onClose: g, onChannelPromptCompleted: _, isSlideReady: T } = t,
+        [E, I] = l.useState(''),
+        [x, h] = l.useState(null),
+        [G, f] = l.useState(!1),
+        D = (0, c.Dt)(),
+        M = (0, a.e7)([m.Z], () => m.Z.getGuild(n), [n]),
+        U = l.useRef(null);
     l.useEffect(() => {
         var t;
-        T && (null === (t = M.current) || void 0 === t || t.focus());
+        T && (null === (t = U.current) || void 0 === t || t.focus());
     }, [T]);
-    let U = l.useCallback(
+    let y = l.useCallback(
             async (t) => {
-                if ((t.preventDefault(), null == y)) return;
-                D(!0), h(null);
-                let n = C.ZP.getDefaultChannel(y.id);
+                if ((t.preventDefault(), null == M)) return;
+                f(!0), h(null);
+                let n = C.ZP.getDefaultChannel(M.id);
                 try {
-                    let t = p.intl.formatToPlainString(p.t.V4lepK, { topic: x });
-                    await r.Z.createTextChannel(y.id, x, null == n ? void 0 : n.parent_id, t), L();
+                    let t = p.intl.formatToPlainString(p.t.V4lepK, { topic: E });
+                    await r.Z.createTextChannel(M.id, E, null == n ? void 0 : n.parent_id, t), _();
                 } catch (t) {
                     h(new d.yZ(t));
                 }
-                D(!1);
+                f(!1);
             },
-            [y, x, L]
+            [M, E, _]
         ),
         N = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Button, {
                     color: s.Button.Colors.BRAND,
-                    onClick: U,
-                    disabled: 0 === x.length,
+                    onClick: y,
+                    disabled: 0 === E.length,
                     submitting: G,
                     children: p.intl.string(p.t.i4jeWV)
                 }),
                 (0, i.jsx)(s.Button, {
-                    className: g.skipButton,
+                    className: L.skipButton,
                     look: s.Button.Looks.BLANK,
                     size: s.Button.Sizes.MIN,
-                    onClick: L,
+                    onClick: _,
                     children: p.intl.string(p.t['5WxrcX'])
                 })
             ]
@@ -69,61 +69,61 @@ function _(t) {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(s.ModalHeader, {
-                    className: g.header,
+                    className: L.header,
                     direction: o.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != y && (0, i.jsx)(u.Z, { guild: y }),
+                        null != M && (0, i.jsx)(u.Z, { guild: M }),
                         (0, i.jsx)(s.Text, {
-                            className: g.guildName,
+                            className: L.guildName,
                             color: 'header-primary',
                             variant: 'text-sm/semibold',
-                            children: null == y ? void 0 : y.name
+                            children: null == M ? void 0 : M.name
                         }),
                         (0, i.jsx)(s.Heading, {
-                            className: g.title,
+                            className: L.title,
                             variant: 'heading-sm/semibold',
                             children: p.intl.string(p.t['8VRa7e'])
                         }),
                         (0, i.jsx)(s.Text, {
-                            className: g.subtitle,
+                            className: L.subtitle,
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             children: p.intl.string(p.t['+855Pj'])
                         }),
-                        null != _ &&
+                        null != g &&
                             (0, i.jsx)(s.ModalCloseButton, {
-                                className: g.closeButton,
-                                onClick: _
+                                className: L.closeButton,
+                                onClick: g
                             })
                     ]
                 }),
                 (0, i.jsxs)(s.ModalContent, {
-                    className: g.channelPrompt,
+                    className: L.channelPrompt,
                     children: [
                         (0, i.jsx)('form', {
-                            onSubmit: U,
+                            onSubmit: y,
                             children: (0, i.jsx)(s.FormItem, {
                                 title: p.intl.string(p.t.bY20tb),
                                 tag: 'label',
-                                htmlFor: f,
-                                error: null == I ? void 0 : I.getFieldMessage('name'),
+                                htmlFor: D,
+                                error: null == x ? void 0 : x.getFieldMessage('name'),
                                 children: (0, i.jsx)(s.TextInput, {
                                     type: 'text',
-                                    value: x,
-                                    id: f,
-                                    onChange: E,
+                                    value: E,
+                                    id: D,
+                                    onChange: I,
                                     placeholder: p.intl.string(p.t.xGOYAw),
-                                    inputRef: M
+                                    inputRef: U
                                 })
                             })
                         }),
-                        null != I &&
-                            0 === Object.keys(I.fields).length &&
+                        null != x &&
+                            0 === Object.keys(x.fields).length &&
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'text-danger',
-                                children: I.message
+                                children: x.message
                             })
                     ]
                 }),
@@ -133,7 +133,7 @@ function _(t) {
         footer: N
     };
 }
-function L(t) {
-    let { content: n } = _(t);
+function _(t) {
+    let { content: n } = g(t);
     return n;
 }

@@ -67,28 +67,28 @@ t.Z = {
                 }),
         handler(e) {
             var t, n, i, l, g, I, C;
-            let v,
+            let N,
                 {
-                    socket: N,
+                    socket: v,
                     args: { pid: S, activity: T },
                     isSocketConnected: b
                 } = e;
-            if (![f.He.IPC, f.He.WEBSOCKET, f.He.POST_MESSAGE].includes(N.transport)) throw new m.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'command not available from "'.concat(N.transport, '" transport'));
-            if (null == S && f.He.IPC === N.transport) throw new m.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'nonzero pid required');
+            if (![f.He.IPC, f.He.WEBSOCKET, f.He.POST_MESSAGE].includes(v.transport)) throw new m.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'command not available from "'.concat(v.transport, '" transport'));
+            if (null == S && f.He.IPC === v.transport) throw new m.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'nonzero pid required');
             if (null == T)
                 return (
                     a.Z.dispatch({
                         type: 'LOCAL_ACTIVITY_UPDATE',
-                        socketId: N.id,
+                        socketId: v.id,
                         pid: S,
                         activity: T
                     }),
                     Promise.resolve(T)
                 );
-            T.name = N.application.name;
-            let A = N.application.id;
+            T.name = v.application.name;
+            let A = v.application.id;
             T.application_id = A;
-            let Z = N.transport === f.He.POST_MESSAGE,
+            let Z = v.transport === f.He.POST_MESSAGE,
                 x = (0, p.S5)(T, Z);
             if ((x > 0 && (T.flags = x), null != A && (0, s.Kb)(A) && Z)) {
                 let e = o.ZP.getCurrentEmbeddedActivity();
@@ -103,7 +103,7 @@ t.Z = {
                             size: null !== (I = null === (n = T.party) || void 0 === n ? void 0 : n.size) && void 0 !== I ? I : c.M$,
                             ...(null !== (C = T.party) && void 0 !== C ? C : {})
                         }),
-                        (T.flags = T.flags | c.RI);
+                        (T.flags = T.flags | c.Cj);
                 }
             }
             delete T.instance, null === (t = T.party) || void 0 === t || delete t.privacy;
@@ -112,29 +112,29 @@ t.Z = {
                 let e = r()
                     .values(P)
                     .filter((e) => !!e);
-                if (null != y && r().intersection(e, [y.id]).length > 0 && !E.includes(N.application.id)) throw new m.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
+                if (null != y && r().intersection(e, [y.id]).length > 0 && !E.includes(v.application.id)) throw new m.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot match the party id');
                 if (r().uniq(e).length < e.length) throw new m.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, 'secrets must be unique');
                 if (null != R) throw new m.Z({ errorCode: _.lTL.INVALID_ACTIVITY_SECRET }, 'secrets cannot currently be sent with buttons');
             }
             if ((null != R && ((T.metadata = { button_urls: R.map((e) => e.url) }), (T.buttons = R.map((e) => e.label))), null != O)) for (let e of Object.keys(O)) Date.now().toString().length - O[e].toString().length > 2 && (O[e] = Math.floor(O[e] * h.Z.Millis.SECOND));
-            if (null == L) v = Promise.resolve([]);
+            if (null == L) N = Promise.resolve([]);
             else {
-                if (null == N.application || null == N.application.id) throw Error();
-                v = (0, u.fetchAssetIds)(N.application.id, [L.large_image, L.small_image]);
+                if (null == v.application || null == v.application.id) throw Error();
+                N = (0, u.fetchAssetIds)(v.application.id, [L.large_image, L.small_image]);
             }
-            return v.then((e) => {
+            return N.then((e) => {
                 var t, n;
                 let [i, r] = e;
                 if ((null != L && (null != i ? (L.large_image = i) : delete L.large_image, null != r ? (L.small_image = r) : delete L.small_image), !b())) return;
                 a.Z.dispatch({
                     type: 'LOCAL_ACTIVITY_UPDATE',
-                    socketId: N.id,
+                    socketId: v.id,
                     pid: S,
                     activity: T
                 });
                 let { secrets: l, party: s } = T,
                     o = {
-                        application_id: N.application.id,
+                        application_id: v.application.id,
                         type: T.type,
                         name: T.name,
                         details: null !== (t = T.details) && void 0 !== t ? t : '',

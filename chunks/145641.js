@@ -54,16 +54,16 @@ t.Z = function (e) {
                     callback: () => (null == t ? void 0 : t.focus())
                 });
         }, []),
-        v = (0, l.ZP)({
+        N = (0, l.ZP)({
             id: 'people-list',
             isEnabled: f,
             scrollToStart: E,
             scrollToEnd: I,
             setFocus: C
         }),
-        N = r.useMemo(() => t.map((e) => e.length), [t]);
+        v = r.useMemo(() => t.map((e) => e.length), [t]);
     return (0, i.jsx)(a.bG, {
-        navigator: v,
+        navigator: N,
         children: (0, i.jsx)(a.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
@@ -78,7 +78,7 @@ t.Z = function (e) {
                             rowHeight: d.NV,
                             renderSection: g,
                             sectionHeight: d.aS,
-                            sections: N,
+                            sections: v,
                             className: u.peopleList,
                             ...n
                         }),

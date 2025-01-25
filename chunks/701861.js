@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(321488),
     I = n(417183),
     C = n(825682),
-    v = n(170245),
-    N = n(981631),
+    N = n(170245),
+    v = n(981631),
     S = n(65154),
     T = n(388032),
     b = n(401207);
@@ -118,7 +118,7 @@ class x extends r.PureComponent {
                 (0, i.jsxs)('div', {
                     className: b.listItemContents,
                     children: [
-                        (0, i.jsx)(v.Z, {
+                        (0, i.jsx)(N.Z, {
                             user: e,
                             status: l,
                             isMobile: a,
@@ -140,7 +140,7 @@ class x extends r.PureComponent {
                                     (0, i.jsx)(u.Z, {
                                         recipientUser: e,
                                         giftIntentType: c,
-                                        analyticsPage: N.ZY5.FRIENDS_LIST,
+                                        analyticsPage: v.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t
                                     }),
                                 (0, i.jsx)(E.Z, {
@@ -168,8 +168,8 @@ class x extends r.PureComponent {
             A(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
-                let n = a().find(m.Z.getMutablePrivateChannels(), (e) => e.type === N.d4z.DM && e.getRecipientId() === t.id);
-                null != n ? (0, h.uL)(N.Z5c.CHANNEL(N.ME, n.id)) : c.Z.openPrivateChannel(t.id);
+                let n = a().find(m.Z.getMutablePrivateChannels(), (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id);
+                null != n ? (0, h.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
             A(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t, isGameRelationship: n, applicationId: r } = this.props;
