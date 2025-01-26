@@ -74,8 +74,8 @@ var i,
     E = n(430824),
     I = n(131951),
     C = n(375954),
-    N = n(158776),
-    v = n(594174),
+    v = n(158776),
+    N = n(594174),
     S = n(979651),
     T = n(70956),
     b = n(5192),
@@ -128,7 +128,7 @@ function G(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let r = (!e.isNSFW() || (null === (n = v.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
+            let r = (!e.isNSFW() || (null === (n = N.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
                 l = Object.values(S.Z.getVoiceStatesForChannel(e.id)).map((t) => V(i, e.id, t));
             return {
                 id: e.id,
@@ -173,7 +173,7 @@ function B(e) {
 }
 function V(e, t, n) {
     let { mute: i, deaf: r, selfMute: l, selfDeaf: a, suppress: s, userId: o } = n,
-        c = v.default.getUser(o);
+        c = N.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
         nick: b.ZP.getName(e, t, c),
@@ -192,13 +192,13 @@ function V(e, t, n) {
 }
 function H(e, t, n) {
     let { isSpamRequest: i, applicationId: r, userIgnored: l } = null != n ? n : {},
-        a = v.default.getUser(t);
+        a = N.default.getUser(t);
     return {
         type: e,
         user: null != a ? (0, L.Z)(a) : null,
         presence: {
-            status: N.Z.getStatus(t),
-            activity: null != r ? N.Z.getApplicationActivity(t, r) : N.Z.getPrimaryActivity(t)
+            status: v.Z.getStatus(t),
+            activity: null != r ? v.Z.getApplicationActivity(t, r) : v.Z.getPrimaryActivity(t)
         },
         isSpamRequest: i,
         userIgnored: l

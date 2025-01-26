@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(372769),
     I = n(134432),
     C = n(695346),
-    N = n(768581),
-    v = n(356164),
+    v = n(768581),
+    N = n(356164),
     S = n(890064),
     T = n(981631),
     b = n(388032),
@@ -37,7 +37,7 @@ var i = n(200651),
 function y(e) {
     let { guild: t, onClick: l, onView: s } = e,
         [f, _] = r.useState(!1),
-        [v, y] = r.useState(!1),
+        [N, y] = r.useState(!1),
         [P, O] = r.useState(!1),
         R = r.useCallback(async () => {
             y(!0);
@@ -76,7 +76,7 @@ function y(e) {
         M = (0, m.ZP)(),
         w = t.features.has(T.oNc.HUB),
         k = r.useMemo(() => {
-            let e = N.ZP.getGuildDiscoverySplashURL({
+            let e = v.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
                 size: 300 * (0, I.x_)()
@@ -92,7 +92,7 @@ function y(e) {
         }, [t.discoverySplash, t.id, w, M]),
         U = r.useMemo(
             () =>
-                N.ZP.getGuildIconURL({
+                v.ZP.getGuildIconURL({
                     id: t.id,
                     icon: t.icon,
                     size: 40
@@ -103,7 +103,7 @@ function y(e) {
     return (0, i.jsxs)('div', {
         className: A.container,
         children: [
-            v &&
+            N &&
                 (0, i.jsx)('div', {
                     className: A.spinnerContainer,
                     children: (0, i.jsx)(c.Spinner, {
@@ -118,7 +118,7 @@ function y(e) {
                 children: (0, i.jsxs)(g.Z, {
                     className: A.card,
                     onClick: R,
-                    disabled: v,
+                    disabled: N,
                     onContextMenu: D,
                     children: [
                         (0, i.jsxs)('div', {
@@ -226,7 +226,7 @@ function y(e) {
 }
 function P(e) {
     let { guildId: t, onClick: n, onView: r } = e,
-        l = (0, s.e7)([v.Z], () => v.Z.getGuild(t));
+        l = (0, s.e7)([N.Z], () => N.Z.getGuild(t));
     return null == l
         ? null
         : (0, i.jsx)(y, {

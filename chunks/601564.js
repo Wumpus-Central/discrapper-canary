@@ -23,8 +23,8 @@ var i = n(200651),
     E = n(703656),
     I = n(108427),
     C = n(911314),
-    N = n(429899),
-    v = n(843445),
+    v = n(429899),
+    N = n(843445),
     S = n(981631),
     T = n(388032),
     b = n(32304);
@@ -46,7 +46,7 @@ let Z = (0, f.Un)({
     webpackId: 496691
 });
 function x(e) {
-    return e < v.x ? v.b.SMALL : v.b.LARGE;
+    return e < N.x ? N.b.SMALL : N.b.LARGE;
 }
 s.ZP.initialize();
 class L extends r.PureComponent {
@@ -101,7 +101,7 @@ class L extends r.PureComponent {
                 return (0, i.jsx)(d.Z, {
                     page: S.ZY5.STORE_LISTING,
                     root: !0,
-                    children: (0, i.jsx)(N.Z, {
+                    children: (0, i.jsx)(v.Z, {
                         skuId: t,
                         applicationId: n,
                         slug: r,

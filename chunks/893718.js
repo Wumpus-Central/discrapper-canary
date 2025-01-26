@@ -458,8 +458,8 @@ function eF(e, n) {
         t5 = (0, eh.G)(et.id, en, t6),
         t7 = !0 === en.showSlowmodeIndicator,
         t8 = !0 === en.showTypingIndicator,
-        t9 = tt && en.layout === el.gy.INLINE,
-        ne = tt && en.layout === el.gy.FLUSH,
+        t9 = tn && en.layout === el.gy.INLINE,
+        ne = tn && en.layout === el.gy.FLUSH,
         nt = s.useRef(null),
         nn = s.useCallback((e) => {
             if (e.target === nt.current) {

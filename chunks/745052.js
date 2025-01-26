@@ -17,8 +17,8 @@ var i = n(200651),
     E = n(209613),
     I = n(325708),
     C = n(320149),
-    N = n(82295),
-    v = n(252618),
+    v = n(82295),
+    N = n(252618),
     S = n(605236),
     T = n(243778),
     b = n(984370),
@@ -94,7 +94,7 @@ function en() {
         I = r.useCallback(
             () =>
                 (0, i.jsxs)(
-                    N.Z,
+                    v.Z,
                     {
                         className: ee.sectionTitle,
                         children: [
@@ -256,12 +256,12 @@ let es = (0, p.Z)(function (e) {
     r.useEffect(() => {
         null != g && !E && I && _ && ((0, Z.Kh)(g), x.Z.closeChannelSidebar(R.uZ));
     }, [g, I, _, E]);
-    let [C, N] = r.useState(q.pS.REQUESTS),
+    let [C, v] = r.useState(q.pS.REQUESTS),
         S = (e) => {
-            N(e);
+            v(e);
         };
     return (
-        (0, v.Tt)({ location: $.intl.string($.t.e7GWjY) }),
+        (0, N.Tt)({ location: $.intl.string($.t.e7GWjY) }),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {

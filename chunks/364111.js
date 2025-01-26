@@ -31,14 +31,14 @@ function u(e) {
             }),
             [e, n, m, h]
         ),
-        N = (0, i.useMemo)(() => !(0, s.oc)(_, C), [_, C]),
-        v = (0, i.useMemo)(() => Date.now() - g < 600000, [g]);
+        v = (0, i.useMemo)(() => !(0, s.oc)(_, C), [_, C]),
+        N = (0, i.useMemo)(() => Date.now() - g < 600000, [g]);
     return (
         (0, i.useEffect)(() => {
             if (!t || !u || I) return;
             let e = Date.now() - f < 600000;
-            if (null == E || !e) (N || !v) && (0, s.Ov)(C);
-        }, [t, u, I, E, f, v, N, C]),
+            if (null == E || !e) (v || !N) && (0, s.Ov)(C);
+        }, [t, u, I, E, f, N, v, C]),
         {
             isFetchingShopHome: I,
             fetchShopHomeError: E,

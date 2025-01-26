@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(522558),
     I = n(441623),
     C = n(317271),
-    N = n(674701),
-    v = n(474936),
+    v = n(674701),
+    N = n(474936),
     S = n(981631),
     T = n(388032),
     b = n(378480),
@@ -76,11 +76,11 @@ function x(e) {
                 });
         },
         w = () => {
-            if (n === v.hX.FRIEND_ANNIVERSARY) return T.intl.formatToPlainString(T.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) });
+            if (n === N.hX.FRIEND_ANNIVERSARY) return T.intl.formatToPlainString(T.t['L2s/Nz'], { numberOfYears: I.Z.getFriendAnniversaryYears(t.id) });
             return (0, _.Ou)(n);
         },
         k = () => {
-            if (n === v.hX.FRIEND_ANNIVERSARY) return T.intl.string(T.t['4LohBA']);
+            if (n === N.hX.FRIEND_ANNIVERSARY) return T.intl.string(T.t['4LohBA']);
             return (0, _.Ou)(n);
         },
         U = () =>
@@ -133,16 +133,16 @@ function x(e) {
             P(!1);
         },
         renderPopout: (e) =>
-            (0, i.jsx)(N.Z, {
+            (0, i.jsx)(v.Z, {
                 giftIntentType: n,
-                premiumGiftIntentCardType: N.U.COACHMARK,
+                premiumGiftIntentCardType: v.U.COACHMARK,
                 recipientUser: t,
                 onMouseEnter: O,
                 onMouseLeave: R,
                 popoutPosition: e.position,
                 analyticsPage: l,
                 analyticsSection: S.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
-                giftIntentSecondaryAction: v.X2.SEND_MESSAGE,
+                giftIntentSecondaryAction: N.X2.SEND_MESSAGE,
                 glow: !0
             }),
         children: () => U()

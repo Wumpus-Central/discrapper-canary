@@ -6,6 +6,17 @@ r.d(n, {
 var i = r(47120);
 let a = {
     Modules: {
+        guildbar: {
+            AVATAR_SIZE: {
+                resolve(e) {
+                    let { enabledExperiments: n } = e;
+                    if (0 === n.length) return 48;
+                    for (let e of n) if ('visual-refresh' === e) return 40;
+                    return 48;
+                }
+            },
+            FOLDER_SIZE: { resolve: () => 48 }
+        },
         modal: {
             HORIZONTAL_PADDING: {
                 resolve(e) {
@@ -35,17 +46,6 @@ let a = {
                     return 22;
                 }
             }
-        },
-        guildbar: {
-            AVATAR_SIZE: {
-                resolve(e) {
-                    let { enabledExperiments: n } = e;
-                    if (0 === n.length) return 48;
-                    for (let e of n) if ('visual-refresh' === e) return 40;
-                    return 48;
-                }
-            },
-            FOLDER_SIZE: { resolve: () => 48 }
         }
     }
 };

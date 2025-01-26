@@ -101,7 +101,7 @@ function C(e) {
     }
     C(e);
 }
-class N extends d.Z {
+class v extends d.Z {
     send(e) {
         p.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(I(g.FRAME, e));
     }
@@ -130,7 +130,7 @@ class N extends d.Z {
             (this.socket = e);
     }
 }
-class v extends r.EventEmitter {
+class N extends r.EventEmitter {
     handleConnection(e) {
         f(e, !1),
             e.pause(),
@@ -152,7 +152,7 @@ class v extends r.EventEmitter {
                 let i = t.client_id,
                     r = +t.v;
                 try {
-                    n = new N(e, r, 'json');
+                    n = new v(e, r, 'json');
                 } catch (t) {
                     e.end(
                         I(g.CLOSE, {
@@ -192,4 +192,4 @@ class v extends r.EventEmitter {
             });
     }
 }
-t.Z = new v();
+t.Z = new N();

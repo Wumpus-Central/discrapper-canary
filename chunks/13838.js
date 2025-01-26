@@ -17,8 +17,8 @@ var i = n(392711),
     E = n(914946),
     I = n(238679),
     C = n(452426),
-    N = n(295424),
-    v = n(277272),
+    v = n(295424),
+    N = n(277272),
     S = n(863141),
     T = n(186901),
     b = n(981631);
@@ -293,7 +293,7 @@ let y = {
             return (e) => {
                 let { prevState: n, dispatch: i } = e,
                     r = { currentGuildMember: u.ZP.getSelfMember(t) };
-                return null != r.currentGuildMember && (null == n || !(0, a.Z)(r, n)) && i((0, v.Z)(r.currentGuildMember)), r;
+                return null != r.currentGuildMember && (null == n || !(0, a.Z)(r, n)) && i((0, N.Z)(r.currentGuildMember)), r;
             };
         }
     },
@@ -319,7 +319,7 @@ let y = {
                 a = c.Z.getStreamerActiveStreamMetadata(),
                 d = (null == a ? void 0 : a.pid) != null ? o.ZP.getGameForPID(a.pid) : null,
                 u = (null == d ? void 0 : d.id) != null ? s.Z.getApplication(d.id) : null,
-                h = null != u ? (0, N.Z)(u) : null,
+                h = null != u ? (0, v.Z)(u) : null,
                 m = null == a ? void 0 : a.sourceName,
                 p = {
                     active: null != a,

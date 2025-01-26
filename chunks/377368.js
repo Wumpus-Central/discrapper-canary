@@ -18,7 +18,7 @@ var r = n(481060),
     E = n(49230),
     I = n(981631),
     C = n(65154);
-function N(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function N(e, t, n) {
         e
     );
 }
-class v extends h.Z {
+class N extends h.Z {
     _initialize() {
         super._initialize(), !__OVERLAY__ && l.Z.subscribe('OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', this._handleOverlaySoundboardSoundsFetchRequest);
     }
@@ -42,8 +42,8 @@ class v extends h.Z {
         var t;
         super(...e),
             (t = this),
-            N(this, 'playingSoundsWeb', new Map()),
-            N(this, '_stopAndClearSounds', () => {
+            v(this, 'playingSoundsWeb', new Map()),
+            v(this, '_stopAndClearSounds', () => {
                 c.Z.supports(C.AN.SAMPLE_PLAYBACK) &&
                     c.Z.getMediaEngine().eachConnection((e) => {
                         e.stopAllSamplesLocalPlayback();
@@ -53,7 +53,7 @@ class v extends h.Z {
                     }),
                     (this.playingSoundsWeb = new Map());
             }),
-            N(this, '_playSound', async function (e) {
+            v(this, '_playSound', async function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     i = arguments.length > 2 ? arguments[2] : void 0,
                     r = arguments.length > 3 ? arguments[3] : void 0,
@@ -71,10 +71,10 @@ class v extends h.Z {
                         (0, m.R)(e, i);
                     }
             }),
-            N(this, '_handleOverlaySoundboardSoundsFetchRequest', () => {
+            v(this, '_handleOverlaySoundboardSoundsFetchRequest', () => {
                 (0, m.w)();
             }),
-            N(this, '_handleOpenEducationModal', (e, t) => {
+            v(this, '_handleOpenEducationModal', (e, t) => {
                 if (null == e) return;
                 let l = o.Z.getChannel(t),
                     c = u.Z.getKeybindForAction(I.kg4.SOUNDBOARD_HOLD);
@@ -95,4 +95,4 @@ class v extends h.Z {
             });
     }
 }
-t.Z = new v();
+t.Z = new N();

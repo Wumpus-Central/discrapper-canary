@@ -21,8 +21,8 @@ var i = n(200651),
     E = n(417183),
     I = n(170245),
     C = n(981631),
-    N = n(388032),
-    v = n(55945);
+    v = n(388032),
+    N = n(55945);
 function S(e) {
     var t;
     let { user: n, applicationId: l, isGameRelationship: o, active: c } = e,
@@ -49,23 +49,23 @@ function S(e) {
         children: [
             d &&
                 (0, i.jsx)('div', {
-                    className: v.staffIndicator,
+                    className: N.staffIndicator,
                     children: (0, i.jsx)(s.TextBadge, {
                         color: a.Z.unsafe_rawColors.BRAND_500.css,
-                        text: N.intl.string(N.t.oMx98P)
+                        text: v.intl.string(v.t.oMx98P)
                     })
                 }),
             (0, i.jsx)(_.Z, {
                 icon: s.CheckmarkLargeIcon,
                 actionType: _.Z.ActionTypes.ACCEPT,
-                tooltip: N.intl.string(N.t.ZcibdX),
+                tooltip: v.intl.string(v.t.ZcibdX),
                 onClick: p,
                 shouldHighlight: c
             }),
             (0, i.jsx)(_.Z, {
                 icon: s.XSmallIcon,
                 actionType: _.Z.ActionTypes.DENY,
-                tooltip: N.intl.string(N.t.xuio0N),
+                tooltip: v.intl.string(v.t.xuio0N),
                 onClick: g,
                 shouldHighlight: c
             })
@@ -89,17 +89,17 @@ function T(e) {
     return (0, i.jsx)(_.Z, {
         icon: s.XSmallIcon,
         actionType: _.Z.ActionTypes.DENY,
-        tooltip: N.intl.string(N.t.eaq81d),
+        tooltip: v.intl.string(v.t.eaq81d),
         onClick: c,
         shouldHighlight: a
     });
 }
 function b(e) {
     let { isGameRelationship: t, applicationId: n } = e,
-        r = t ? N.intl.string(N.t.ujfP6e) : N.intl.string(N.t.yltuhY),
+        r = t ? v.intl.string(v.t.ujfP6e) : v.intl.string(v.t.yltuhY),
         a = (0, l.e7)([c.Z], () => (null != n ? c.Z.getApplication(n) : null));
     return (0, i.jsxs)('div', {
-        className: v.applicationSublabel,
+        className: N.applicationSublabel,
         children: [
             (0, i.jsx)(s.Text, {
                 variant: 'text-xxs/medium',
@@ -169,7 +169,7 @@ function Z(e) {
         onClick: f,
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: v.listItemContents,
+                className: N.listItemContents,
                 children: [
                     (0, i.jsx)(A, {
                         user: t,
@@ -180,7 +180,7 @@ function Z(e) {
                         applicationId: s
                     }),
                     (0, i.jsx)('div', {
-                        className: v.actions,
+                        className: N.actions,
                         children:
                             n === C.OGo.PENDING_INCOMING
                                 ? (0, i.jsx)(S, {

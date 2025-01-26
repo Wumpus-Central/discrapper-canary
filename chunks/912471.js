@@ -31,21 +31,21 @@ async function C() {
     n > u.Z.Millis.HOUR && m.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }),
         e > t && (n = 0),
         m.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }),
-        N(),
+        v(),
         (E = setTimeout(
             () => {
-                v(),
+                N(),
                     (_ = setInterval(() => {
-                        v();
+                        N();
                     }, 15 * u.Z.Millis.MINUTE));
             },
             Math.max(n, 0)
         ));
 }
-function N() {
+function v() {
     null != E && (clearTimeout(E), (E = null)), null != _ && (clearInterval(_), (_ = null));
 }
-async function v() {
+async function N() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now(),
         n = await (0, p.Gg)(),
@@ -55,7 +55,7 @@ async function v() {
         return;
     }
     if (!I && !e) {
-        m.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), N();
+        m.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), v();
         return;
     }
     m.Z.addBreadcrumb({
@@ -87,14 +87,14 @@ function b() {
         }
     else
         !(function () {
-            if (!!I) (I = !1), m.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, p.fr)(!1), N(), (0, a.Z)();
+            if (!!I) (I = !1), m.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, p.fr)(!1), v(), (0, a.Z)();
         })();
 }
 function A() {
     m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(x), l.Z.subscribe('WINDOW_FOCUS', L), l.Z.subscribe('APP_STATE_UPDATE', y), l.Z.subscribe('LOGIN_SUCCESS', Z), b();
 }
 function Z() {
-    v(!0);
+    N(!0);
 }
 function x() {
     let e = c.Z.getState();

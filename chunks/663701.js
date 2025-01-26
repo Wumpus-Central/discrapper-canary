@@ -22,8 +22,8 @@ var i = n(200651),
     E = n(213609),
     I = n(143757),
     C = n(463119),
-    N = n(377171),
-    v = n(540059),
+    v = n(377171),
+    N = n(540059),
     S = n(243778),
     T = n(125465),
     b = n(922409),
@@ -199,7 +199,7 @@ let et = (e) => {
                         return t === h.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(p.TextBadge, {
                                   text: $.intl.string($.t.y2b7CA),
-                                  color: N.Z.BG_BRAND
+                                  color: v.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -327,7 +327,7 @@ function eu() {
         { theme: r } = (0, u.cj)([k.Z], () => ({ theme: k.Z.theme })),
         l = (0, u.e7)([G.Z], () => G.Z.hasLibraryApplication()),
         a = (0, u.e7)([V.Z], () => V.Z.getCurrentPath()),
-        o = (0, v.Q3)('PrivateChannels'),
+        o = (0, N.Q3)('PrivateChannels'),
         [c, d] = (0, M.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];

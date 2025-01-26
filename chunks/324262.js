@@ -12,7 +12,7 @@ var i = n(200651),
     p = n(3030);
 let g = a().debounce(o.ZP.trackWithMetadata, 500),
     f = (e) => {
-        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: N, ctaColor: v } = e;
+        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: N } = e;
         r.useEffect(() => {
             g(h.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: d,
@@ -20,9 +20,9 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
             });
         }, [t.id, d]);
         let S = null;
-        'function' == typeof N
-            ? (S = N())
-            : null != N &&
+        'function' == typeof v
+            ? (S = v())
+            : null != v &&
               (S = (0, i.jsx)(s.Button, {
                   className: p.btn,
                   size: s.Button.Sizes.SMALL,
@@ -36,8 +36,8 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                           null == C || C();
                   },
                   fullWidth: !0,
-                  color: v,
-                  children: N
+                  color: N,
+                  children: v
               }));
         let T = null != u ? ''.concat(u, 'px') : '16px';
         return (0, i.jsxs)('div', {

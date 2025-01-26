@@ -25,8 +25,8 @@ var i = n(200651),
     E = n(592125),
     I = n(430824),
     C = n(944486),
-    N = n(451478),
-    v = n(998502),
+    v = n(451478),
+    N = n(998502),
     S = n(228488),
     T = n(950796),
     b = n(981631),
@@ -58,15 +58,15 @@ function L() {
 }
 function y() {
     r.useLayoutEffect(() => {
-        v.ZP.setMinimumSize(A.J, A.N);
+        N.ZP.setMinimumSize(A.J, A.N);
     }, []);
     let e = (0, u.TH)('AppTitleBar'),
         t = x((e) => e.isOpen),
         { hasBugReporterAccess: n } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     return (r.useLayoutEffect(() => {
-        v.ZP.setMinimumSize(A.J, A.N);
+        N.ZP.setMinimumSize(A.J, A.N);
     }, []),
-    (0, a.e7)([N.Z, f.Z], () => (0, S.rB)()))
+    (0, a.e7)([v.Z, f.Z], () => (0, S.rB)()))
         ? null
         : (0, i.jsx)(T.T, {
               leading:

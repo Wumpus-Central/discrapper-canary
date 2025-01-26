@@ -25,13 +25,13 @@ t.Z = (e) => {
     });
     let { activeSubscription: I } = (0, s.Z)(null == E ? void 0 : E.id),
         C = (0, l.YB)(_.id),
-        N = null == C ? void 0 : C.description,
-        { editStateIds: v } = a.B7(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : null, _.id);
+        v = null == C ? void 0 : C.description,
+        { editStateIds: N } = a.B7(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : null, _.id);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(m.Z, {
                 title: g.intl.format(g.t['rm+ojI'], { serverName: _.toString() }),
-                description: null != N ? N : null,
+                description: null != v ? v : null,
                 coverImageAsset: null !== (n = null == C ? void 0 : C.cover_image_asset) && void 0 !== n ? n : null,
                 guild: _,
                 children: [
@@ -48,7 +48,7 @@ t.Z = (e) => {
             (0, i.jsx)(r.HeadingLevel, {
                 children: (0, i.jsx)(u.Z, {
                     guildId: _.id,
-                    children: v.map((e) => {
+                    children: N.map((e) => {
                         var t;
                         return (0, i.jsx)(
                             h.Z,
