@@ -18,36 +18,41 @@ let m = {
         END: u.alignRight
     },
     g = (e) => {
-        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, linkText: g, linkTo: h, cardAlignment: p = m.START } = e,
-            { balance: x } = (0, l.A)(),
-            [f, E] = r.useState(o.b.DEFAULT),
-            [_, C] = r.useState(!1);
+        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, className: g, linkText: h, linkTo: p, cardAlignment: x = m.START } = e,
+            { balance: f } = (0, l.A)(),
+            [E, _] = r.useState(o.b.DEFAULT),
+            [C, T] = r.useState(!1),
+            S = () => {
+                T(!C);
+            };
         return (
             r.useEffect(() => {
-                E(_ ? o.b.SELECTED : o.b.DEFAULT);
-            }, [_, E]),
+                _(C ? o.b.SELECTED : o.b.DEFAULT);
+            }, [C, _]),
             (0, i.jsxs)('div', {
-                className: u.container,
+                className: a()(u.container, g),
                 children: [
                     (0, i.jsx)(d.A, {
-                        balance: null != x ? x : 0,
-                        balanceWidgetMode: f,
-                        onClick: () => {
-                            C(!_);
-                        },
+                        balance: f,
+                        placeholderBalance: null != f ? f : 0,
+                        balanceWidgetMode: E,
+                        onClick: S,
                         showNotificationBadge: t
                     }),
-                    _ &&
+                    C &&
                         (0, i.jsx)('div', {
-                            className: a()(u.cardContainer, p),
+                            className: a()(u.cardContainer, x),
                             children: (0, i.jsx)(c.L, {
                                 ctaText: n,
-                                ctaOnClick: s,
-                                linkText: g,
-                                linkTo: h
+                                ctaOnClick: () => {
+                                    S(), s();
+                                },
+                                linkText: h,
+                                linkTo: p
                             })
                         })
                 ]
             })
         );
     };
+g.CardAlignment = m;

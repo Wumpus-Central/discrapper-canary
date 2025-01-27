@@ -25,8 +25,9 @@ let l = () => (0, i.jsx)('hr', { className: a.sectionDivider }),
             children: [
                 (0, i.jsx)(o, {}),
                 (0, i.jsx)(s.zx, {
+                    color: s.zx.Colors.BRAND,
+                    look: s.zx.Looks.FILLED,
                     onClick: n,
-                    color: a.buttonColor,
                     fullWidth: !0,
                     children: t
                 }),

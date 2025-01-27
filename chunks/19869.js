@@ -40,7 +40,8 @@ function g() {
                 label: 'Balance Widget Menu',
                 children: (0, i.jsx)(c.V9, {
                     ctaText: 'Earn More Orbs',
-                    linkText: 'Learn about Orbs'
+                    linkText: 'Learn about Orbs',
+                    ctaOnClick: () => {}
                 })
             }),
             (0, i.jsxs)(u.E_, {
