@@ -291,6 +291,7 @@ let K = (e) => {
             onFailure: f.onFailure,
             data: {
                 interactionType: m.B8.APPLICATION_COMMAND,
+                applicationId: r,
                 channelId: _
             }
         }),

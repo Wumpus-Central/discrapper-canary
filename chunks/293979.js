@@ -89,7 +89,12 @@ function Z(e, t) {
                                 i = f.Z.getChannel(l);
                             u()(null != i, 'expected channel');
                             let r = M(e.customId, e.components);
-                            (0, T.kz)(n, { data: { interactionType: d.B8.MODAL_SUBMIT } });
+                            (0, T.kz)(n, {
+                                data: {
+                                    interactionType: d.B8.MODAL_SUBMIT,
+                                    applicationId: e.application.id
+                                }
+                            });
                             let o = () => {
                                 (null == t || !t.aborted) &&
                                     a.tn

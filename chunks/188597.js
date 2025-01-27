@@ -53,6 +53,7 @@ let T = async (e) => {
             messageId: r,
             data: {
                 interactionType: u.B8.MESSAGE_COMPONENT,
+                applicationId: l,
                 customId: a,
                 componentId: s
             },
