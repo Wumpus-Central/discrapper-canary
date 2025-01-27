@@ -26,87 +26,80 @@ function I(e) {
             },
             [n.id]
         ),
-        u = s.useMemo(() => (null != r ? r.name.replace(/_/g, ' ') : ''), [r]),
-        d = s.useCallback(() => {
+        f = s.useMemo(() => (null != r ? r.name.replace(/_/g, ' ') : ''), [r]),
+        I = s.useCallback(() => {
             (0, _.Hb)(n.id);
         }, [n.id]),
-        f = s.useMemo(() => {
+        S = s.useMemo(() => {
             if (null != a && a > 0) return (null == i ? void 0 : i.type) === v.qc2.DEVELOPER_GIFT ? y.intl.format(y.t['b+P6ra'], { numPotions: a }) : y.intl.format(y.t.RiQ4cn, { numPotions: a });
             return y.intl.format(y.t['jerM9/'], { helpCenterLink: h.Z.getArticleURL(v.BhN.CONFETTI_POTION) });
-        }, [a, i]);
+        }, [a, i]),
+        [A, C] = s.useState(!1),
+        N = s.useCallback(() => {
+            C(!1);
+        }, []),
+        R = s.useCallback(
+            (e) => {
+                l(e), C(!1);
+            },
+            [l]
+        );
     return (0, o.jsxs)('div', {
         className: b.bar,
         children: [
-            (0, o.jsxs)('div', {
-                className: b.beginning,
-                children: [
-                    (0, o.jsx)('div', {
-                        className: b.emojiButtonContainer,
-                        children: (0, o.jsx)(T, {
-                            channel: n,
-                            setEmojiConfetti: l,
-                            emojiConfetti: null != r ? r : void 0
-                        })
-                    }),
-                    (0, o.jsx)(c.xv, {
-                        variant: 'text-sm/medium',
-                        color: 'interactive-hover',
-                        children: null == r ? y.intl.string(y.t.mzfiGR) : y.intl.format(y.t.Hcd9OT, { emojiName: u })
+            (0, o.jsx)(g.Z, {
+                channel: n,
+                shouldShow: A,
+                onRequestClose: N,
+                setEmojiConfetti: R,
+                position: 'top',
+                align: 'left',
+                children: () =>
+                    (0, o.jsxs)(d.Clickable, {
+                        onClick: () => C(!A),
+                        className: u()(b.beginning, { [b.selected]: A }),
+                        children: [
+                            (0, o.jsx)('div', {
+                                className: b.emojiButtonContainer,
+                                children: (0, o.jsx)(T, { emojiConfetti: null != r ? r : void 0 })
+                            }),
+                            (0, o.jsx)(c.xv, {
+                                variant: 'text-sm/medium',
+                                color: 'currentColor',
+                                children: null == r ? y.intl.string(y.t.mzfiGR) : y.intl.format(y.t.Hcd9OT, { emojiName: f })
+                            })
+                        ]
                     })
-                ]
             }),
             (0, o.jsxs)('div', {
                 className: b.end,
                 children: [
                     (0, o.jsx)(c.xv, {
                         variant: 'text-sm/medium',
-                        children: f
+                        children: S
                     }),
-                    (0, o.jsx)(p.B, { onClick: d })
+                    (0, o.jsx)(p.B, { onClick: I })
                 ]
             })
         ]
     });
 }
 function T(e) {
-    let { channel: n, setEmojiConfetti: r, emojiConfetti: i } = e,
-        [a, l] = s.useState(!1),
-        c = s.useCallback(() => {
-            l(!1);
-        }, []),
-        p = s.useCallback(
-            (e) => {
-                r(e), l(!1);
-            },
-            [r]
-        ),
-        h = s.useMemo(() => (null == i ? null : null == i.id ? i.optionallyDiverseSequence : i.name), [i]);
-    return (0, o.jsx)(g.Z, {
-        channel: n,
-        shouldShow: a,
-        onRequestClose: c,
-        setEmojiConfetti: p,
-        position: 'top',
-        align: 'left',
-        children: () =>
-            (0, o.jsx)(d.Button, {
-                look: d.Button.Looks.BLANK,
-                size: d.Button.Sizes.NONE,
-                onClick: () => l(!a),
-                className: u()(b.emojiButton, { [b.selected]: a }),
-                innerClassName: b.emojiButtonInner,
-                children:
-                    null == i
-                        ? (0, o.jsx)(d.ReactionIcon, {
-                              color: 'currentColor',
-                              size: 'sm'
-                          })
-                        : (0, o.jsx)(f.Z, {
-                              animated: !1,
-                              emojiId: i.id,
-                              emojiName: h
-                          })
-            })
+    let { emojiConfetti: n } = e,
+        r = s.useMemo(() => (null == n ? null : null == n.id ? n.optionallyDiverseSequence : n.name), [n]);
+    return (0, o.jsx)('div', {
+        className: b.emojiButton,
+        children:
+            null == n
+                ? (0, o.jsx)(d.ReactionIcon, {
+                      color: 'currentColor',
+                      size: 'sm'
+                  })
+                : (0, o.jsx)(f.Z, {
+                      animated: !1,
+                      emojiId: n.id,
+                      emojiName: r
+                  })
     });
 }
 n.Z = I;
