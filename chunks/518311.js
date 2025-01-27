@@ -373,7 +373,6 @@ class eo extends (i = r.PureComponent) {
                       (0, l.jsx)('div', { children: $.intl.string($.t['7orY6O']) }),
                       (0, l.jsx)(m.Button, {
                           autoFocus: !0,
-                          color: m.Button.Colors.GREEN,
                           fullWidth: !0,
                           size: m.Button.Sizes.SMALL,
                           onClick: this.handleAddFriendNavigation,
