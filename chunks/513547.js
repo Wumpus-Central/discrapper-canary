@@ -1,9 +1,9 @@
 r.d(t, {
     al: function () {
-        return D;
+        return F;
     },
     ck: function () {
-        return E;
+        return Z;
     }
 }),
     r(47120),
@@ -135,7 +135,8 @@ let d = {
     totalFreezesDuration: 'Freezes Duration (ms)',
     totalPausesDuration: 'Pauses Duration (ms)',
     videohookBackend: 'Videohook Backend',
-    videohookFrames: 'Videohook Frames'
+    videohookFrames: 'Videohook Frames',
+    videoEntropy: 'Video Entropy'
 };
 function u(e) {
     return ''.concat((e / 1000).toFixed(2), ' Kbps');
@@ -162,7 +163,10 @@ function v(e) {
     let { last: t } = e;
     return ''.concat(t, ' ms');
 }
-let D = {
+function D(e) {
+    return e.toFixed(2);
+}
+let F = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -191,7 +195,7 @@ let D = {
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0
     },
-    F = {
+    S = {
         accelerateRate: g,
         audioDetected: f,
         audioLevel: y,
@@ -214,7 +218,7 @@ let D = {
         delayEstimate: h,
         encoderImplementationName: p,
         encoderQualityPsnr: y,
-        encoderQualityVmaf: (e) => ''.concat(e.toFixed(2)),
+        encoderQualityVmaf: D,
         encodeUsage: g,
         expandRate: g,
         filter: p,
@@ -246,9 +250,10 @@ let D = {
         videohookBackend: function (e) {
             let t = ['N/A', 'Direct3D 9', 'Direct3D 10', 'Direct3D 11', 'Direct3D 12', 'OpenGL', 'Vulkan'];
             return e < t.length ? t[e] : 'Unknown';
-        }
+        },
+        videoEntropy: D
     },
-    S = (e) => e,
+    E = (e) => e,
     C = (e) => {
         let [t] = a.useState([]);
         return (
@@ -264,10 +269,10 @@ let D = {
             })
         );
     };
-function E(e) {
+function Z(e) {
     var t, r, a, i;
     let { label: l, value: u, section: m } = e,
-        p = null !== (r = F[l]) && void 0 !== r ? r : S;
+        p = null !== (r = S[l]) && void 0 !== r ? r : E;
     let h =
             s.Pz[l] &&
             (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value

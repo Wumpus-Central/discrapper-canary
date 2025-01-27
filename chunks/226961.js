@@ -58,7 +58,8 @@ let m = R(h.Yn.DEFAULT, p._s_.TRANSPORT, 0),
         packetsReceived: !0,
         packetsSent: !0,
         ping: !0,
-        qpSum: !0
+        qpSum: !0,
+        videoEntropy: !0
     },
     b = 600;
 function I(e, n, r) {
