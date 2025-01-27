@@ -6914,7 +6914,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
     width: 4px;
     height: 4px;
     margin: 0 2px;
-    background-color: var(--header-primary);
+    background-color: var(--channel-icon);
     opacity: .1;
     border-radius: 50%
 }
@@ -6922,6 +6922,10 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 .botTag_ac2a99 {
     margin-top: 4px !important;
     margin-left: 8px
+}
+
+.avatar_ac2a99 {
+    border: 1px solid var(--border-subtle)
 }
 
 .icon_a94328 {
