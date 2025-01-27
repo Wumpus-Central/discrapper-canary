@@ -35,14 +35,14 @@ let O = (e, t) => (t ? P.intl.format(P.t.auckX1, { stickerPackName: e.name }) : 
         let { sticker: t, stickerPack: n } = e;
         return r.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
     };
-function k(e) {
+function D(e) {
     N.default.track(R.rMx.PREMIUM_PROMOTION_OPENED, {
         location_page: null != e.guild_id ? R.ZY5.GUILD_CHANNEL : R.ZY5.DM_CHANNEL,
         location_section: R.jXE.STICKER_POPOUT
     }),
         (0, E.z)();
 }
-function D(e) {
+function k(e) {
     let { sticker: t, description: n } = e;
     return (0, i.jsxs)(m.Z, {
         children: [
@@ -200,7 +200,7 @@ let U = (e) => {
                 ? ((t = P.intl.string(P.t.IuXYcn)), (Q = !0), (q = 'Custom Sticker Popout (Upsell)'))
                 : ((t = P.intl.format(P.t.hGWuxc, {
                       openPremiumSettings: () => {
-                          k(l), h();
+                          D(l), h();
                       }
                   })),
                   (q = 'Custom Sticker Popout (Soft Upsell)'));
@@ -231,7 +231,7 @@ let U = (e) => {
                           return (0, i.jsxs)('div', {
                               className: y.emojiSection,
                               children: [
-                                  (0, i.jsx)(D, {
+                                  (0, i.jsx)(k, {
                                       description: t,
                                       sticker: n
                                   }),
@@ -357,11 +357,11 @@ function w(e) {
     let { channel: t, closePopout: n, sticker: r } = e;
     return (0, i.jsx)(g.W_, {
         className: L.popoutContent,
-        children: (0, i.jsx)(D, {
+        children: (0, i.jsx)(k, {
             sticker: r,
             description: P.intl.format(P.t.hGWuxc, {
                 openPremiumSettings: () => {
-                    n(), k(t);
+                    n(), D(t);
                 }
             })
         })

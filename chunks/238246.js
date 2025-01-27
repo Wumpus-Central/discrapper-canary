@@ -31,8 +31,8 @@ var i,
     P = n(392358),
     R = n(540059),
     O = n(314910),
-    k = n(22205),
-    M = n(892254),
+    M = n(22205),
+    k = n(892254),
     L = n(706454),
     D = n(210887),
     U = n(740492),
@@ -130,10 +130,10 @@ class K extends (i = r.Component) {
                 'visual-refresh': o,
                 'visual-refresh-chat-input': c
             }),
-            w = a === Y.OVERLAY_V3_KEY ? k.Z : Z.Z;
+            w = a === Y.OVERLAY_V3_KEY ? M.Z : Z.Z;
         return (0, l.jsx)(u.VK, {
             children: (0, l.jsx)(
-                M.Z,
+                k.Z,
                 {
                     children: (0, l.jsx)(f.ThemeProvider, {
                         theme: e,

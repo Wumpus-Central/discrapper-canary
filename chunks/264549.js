@@ -26,7 +26,7 @@ let p = {
         PRIMARY: () => !0,
         SECONDARY: () => !0
     },
-    m = () =>
+    _ = () =>
         (0, n.jsxs)(
             'div',
             {
@@ -41,7 +41,7 @@ let p = {
             },
             'symbol'
         );
-class _ extends i.PureComponent {
+class m extends i.PureComponent {
     componentDidMount() {
         this.setState({ animating: !0 }),
             (this._renderSecondaryTimeout = setTimeout(() => {
@@ -218,7 +218,7 @@ class C extends i.PureComponent {
             E(this, 'removeExplosion', (e) => {
                 let t = this.children,
                     s = t.findIndex((t) => {
-                        if (t.type !== _) return !1;
+                        if (t.type !== m) return !1;
                         let s = t.props;
                         return null != s.componentId && s.componentId === e;
                     });
@@ -232,7 +232,7 @@ class C extends i.PureComponent {
                     let i = 'expl-'.concat(this.state.explosions);
                     e.push(
                         (0, n.jsx)(
-                            _,
+                            m,
                             {
                                 componentId: i,
                                 top: a().random(s - 100, s + 100, !1),
@@ -247,7 +247,7 @@ class C extends i.PureComponent {
                 } else this.setTimeout(this.addSymbol, 750);
             }),
             E(this, 'addSymbol', () => {
-                (this.children = [(0, n.jsx)(m, {}, 'symbol')]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3000);
+                (this.children = [(0, n.jsx)(_, {}, 'symbol')]), this.forceUpdate(), this.setTimeout(this.delayedClose, 3000);
             }),
             E(this, 'delayedClose', () => {
                 this.props.handleDemonClose();

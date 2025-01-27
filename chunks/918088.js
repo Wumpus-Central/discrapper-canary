@@ -157,7 +157,7 @@ function Z(e, t) {
         P = g.layout_type,
         L = R(e, t, { formattedExpirationLabel: m });
     if (null == L) return;
-    let { canTapAnswers: y, canRemoveVote: O, canShowVoteCounts: M, canSubmitVote: k, expirationLabel: D = T.intl.string(T.t['e+J3JS']), hasSelectedAnswer: U, hasVoted: B, isEditingVote: w, isExpired: F, isInteractive: G, reactions: V, selectedAnswerIds: H, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = L,
+    let { canTapAnswers: y, canRemoveVote: O, canShowVoteCounts: M, canSubmitVote: D, expirationLabel: k = T.intl.string(T.t['e+J3JS']), hasSelectedAnswer: U, hasVoted: B, isEditingVote: w, isExpired: F, isInteractive: G, reactions: V, selectedAnswerIds: H, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = L,
         Y = (0, E.cZ)(V),
         X = T.intl.formatToPlainString(T.t.XRkuoa, { count: Y.toLocaleString() }),
         Q = Math.max(
@@ -228,7 +228,7 @@ function Z(e, t) {
         }),
         J = (0, i.EQ)({
             isExpired: F,
-            canSubmitVote: k,
+            canSubmitVote: D,
             hasVoted: B,
             isEditingVote: w,
             canRemoveVote: O,
@@ -264,7 +264,7 @@ function Z(e, t) {
             .otherwise(() => ({
                 label: T.intl.string(T.t.JwkNU1),
                 presentation: 'button',
-                enabled: k,
+                enabled: D,
                 type: 'submit'
             })),
         $ = (0, _.isIOS)() ? T.intl.string(T.t.PVATMz) : T.intl.string(T.t.cHfFqq),
@@ -292,7 +292,7 @@ function Z(e, t) {
             }))
             .otherwise(() => ({
                 label: X,
-                secondaryLabel: D,
+                secondaryLabel: k,
                 accessibilityHint: $,
                 presentation: 'text',
                 enabled: !0,

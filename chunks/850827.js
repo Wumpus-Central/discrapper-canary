@@ -31,7 +31,7 @@ var l = n(120356),
     P = n(981631),
     R = n(522832);
 t.Z = (0, u.Z)((e) => {
-    let { activity: t, embeddedActivity: n, user: l, applicationStream: a, className: u, guildId: O, channelId: k, source: M, color: L = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V } = e,
+    let { activity: t, embeddedActivity: n, user: l, applicationStream: a, className: u, guildId: O, channelId: M, source: k, color: L = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V } = e,
         F = (0, o.e7)([h.default], () => {
             let e = h.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
@@ -83,8 +83,8 @@ t.Z = (0, u.Z)((e) => {
                             activity: t,
                             user: l,
                             guildId: O,
-                            channelId: k,
-                            source: M,
+                            channelId: M,
+                            source: k,
                             look: D,
                             color: L,
                             onAction: V
@@ -96,7 +96,7 @@ t.Z = (0, u.Z)((e) => {
                         {
                             activity: t,
                             user: l,
-                            source: M,
+                            source: k,
                             look: D,
                             color: L,
                             onAction: V

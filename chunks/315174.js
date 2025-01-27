@@ -102,7 +102,7 @@ function _() {
     });
 }
 t.ZP = l.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: Z, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: y, guildBanner: j, animationOverlayHeight: T, children: P, headerClassName: A, communityInfoVisible: w, hasSubheader: M } = e,
+    let { bannerVisible: t, controller: n, className: r, onClick: o, onContextMenu: Z, onMouseDown: b, disableBannerAnimation: S, 'aria-expanded': N, 'aria-controls': E, guild: y, guildBanner: j, animationOverlayHeight: T, children: A, headerClassName: P, communityInfoVisible: w, hasSubheader: M } = e,
         L = y.hasFeature(f.oNc.ANIMATED_BANNER),
         R = (0, d.Z)(y),
         D = !R && y.hasCommunityInfoSubheader(),
@@ -155,7 +155,7 @@ t.ZP = l.memo(function (e) {
                         onClick: o,
                         children: [
                             (0, i.jsxs)('header', {
-                                className: a()(C.header, A, { [C.themedHeaderMobile]: s.tq }),
+                                className: a()(C.header, P, { [C.themedHeaderMobile]: s.tq }),
                                 children: [
                                     (0, i.jsxs)('div', {
                                         className: a()(C.headerContent, C.primaryInfo),
@@ -186,7 +186,7 @@ t.ZP = l.memo(function (e) {
                                                 }),
                                             (0, i.jsx)('div', {
                                                 className: C.headerChildren,
-                                                children: P
+                                                children: A
                                             })
                                         ]
                                     }),

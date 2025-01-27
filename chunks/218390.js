@@ -51,8 +51,8 @@ var i = n(200651),
     z = n(474936),
     K = n(981631),
     q = n(388032),
-    Q = n(328572),
-    X = n(881188),
+    X = n(328572),
+    Q = n(881188),
     J = n(434691);
 let $ = 'gifting_button',
     ee = 'payment modal';
@@ -70,14 +70,14 @@ function et(e) {
                   (l || !c) &&
                       (0, i.jsx)(V.Cy, {
                           text: l ? q.intl.string(q.t.qYKftb) : q.intl.string(q.t.EyjDRE),
-                          className: Q.topRimPillWithSparkles,
+                          className: X.topRimPillWithSparkles,
                           colorOptions: (0, u.wj)(a) ? V.VE.PREMIUM_TIER_2_WHITE_FILL : V.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                       }),
-                  (l || !c) && (0, i.jsx)('div', { className: Q.rimGlowTier2 }),
+                  (l || !c) && (0, i.jsx)('div', { className: X.rimGlowTier2 }),
                   (0, i.jsx)(m.Heading, {
                       variant: 'heading-md/normal',
                       color: 'always-white',
-                      className: Q.trialHeader,
+                      className: X.trialHeader,
                       children: (() => {
                           var e, n, i;
                           if (l) {
@@ -123,24 +123,24 @@ function en() {
         u = null !== s && null != s.trialId,
         g = e || u;
     return (0, i.jsxs)('div', {
-        className: a()(Q.tierCard, { [Q.withTier2Rim]: g }),
+        className: a()(X.tierCard, { [X.withTier2Rim]: g }),
         children: [
             (0, i.jsxs)('div', {
-                className: Q.tierInfo,
+                className: X.tierInfo,
                 children: [
-                    (0, i.jsx)(D.Z, { className: Q.tierTitle }),
+                    (0, i.jsx)(D.Z, { className: X.tierTitle }),
                     d
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(V.mn, {
                                       text: q.intl.string(q.t.uXF4c3),
-                                      className: Q.fractionalPremiumTopRimPill,
+                                      className: X.fractionalPremiumTopRimPill,
                                       colorOptions: V.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                   }),
                                   (0, i.jsx)(m.Heading, {
                                       variant: 'heading-md/normal',
                                       color: 'always-white',
-                                      className: Q.fractionalPremiumSubheader,
+                                      className: X.fractionalPremiumSubheader,
                                       children: q.intl.format(q.t.sK7fGh, { helpCenterLink: B.Z.getArticleURL(K.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                                   })
                               ]
@@ -156,7 +156,7 @@ function en() {
                           : null,
                     (0, i.jsx)(V.nT, { featureSet: d ? V.uZ.FRACTIONAL_PREMIUM : V.uZ.DEFAULT }),
                     (0, i.jsx)(m.Button, {
-                        className: Q.tierCardButton,
+                        className: X.tierCardButton,
                         color: m.Button.Colors.WHITE,
                         onClick: () => {
                             y.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
@@ -167,13 +167,13 @@ function en() {
                                 (0, O.uL)(K.Z5c.APPLICATION_STORE);
                         },
                         children: (0, i.jsx)(m.Text, {
-                            className: Q.tierCardButtonCTA,
+                            className: X.tierCardButtonCTA,
                             variant: 'text-sm/medium',
                             children: q.intl.string(q.t.VR2iVF)
                         })
                     }),
                     (0, i.jsx)(m.Button, {
-                        className: Q.managePlanButton,
+                        className: X.managePlanButton,
                         look: m.Button.Looks.OUTLINED,
                         color: m.Button.Colors.WHITE,
                         onClick: () => {
@@ -184,7 +184,7 @@ function en() {
                                 f.Z.open(K.oAB.SUBSCRIPTIONS);
                         },
                         children: (0, i.jsx)(m.Text, {
-                            className: Q.__invalid_managePlanButtonCTA,
+                            className: X.__invalid_managePlanButtonCTA,
                             variant: 'text-sm/medium',
                             color: 'always-white',
                             children: q.intl.string(q.t['9uDy6O'])
@@ -193,11 +193,11 @@ function en() {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: Q.tierImage,
+                className: X.tierImage,
                 children: (0, i.jsx)('img', {
-                    className: Q.tierImage,
+                    className: X.tierImage,
                     alt: '',
-                    src: X
+                    src: Q
                 })
             })
         ]
@@ -207,41 +207,41 @@ function ei(e) {
     let { className: t, config: n } = e,
         r = (0, c.e7)([T.Z], () => T.Z.useReducedMotion) ? n.getStaticImageUrl() : n.getAnimatedImageUrl();
     return (0, i.jsxs)('div', {
-        className: a()(Q.giftCardPromotion, t),
+        className: a()(X.giftCardPromotion, t),
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                className: Q.giftImagePromotion,
+                className: X.giftImagePromotion,
                 'aria-hidden': !0,
                 src: r
             }),
             (0, i.jsxs)('div', {
-                className: Q.giftInfoPromotion,
+                className: X.giftInfoPromotion,
                 children: [
                     (0, i.jsx)('img', {
                         alt: '',
                         'aria-hidden': !0,
-                        className: Q.giftCardPromotionBannerImage,
+                        className: X.giftCardPromotionBannerImage,
                         src: n.getBackgroundImageUrl()
                     }),
                     (0, i.jsx)(m.Heading, {
-                        className: Q.giftInfoTitlePromotion,
+                        className: X.giftInfoTitlePromotion,
                         color: 'always-white',
                         variant: 'heading-xl/extrabold',
                         children: n.title()
                     }),
                     (0, i.jsx)(m.Text, {
-                        className: Q.giftText,
+                        className: X.giftText,
                         color: 'always-white',
                         variant: 'text-sm/medium',
                         children: n.body()
                     }),
                     (0, i.jsx)(U.Z, {
                         isGift: !0,
-                        className: a()(Q.giftCardButton, Q.halloweenColor),
+                        className: a()(X.giftCardButton, X.halloweenColor),
                         look: m.Button.Looks.OUTLINED,
                         buttonText: q.intl.string(q.t.Ve9Ge3),
-                        buttonTextClassName: Q.giftButtonCTA,
+                        buttonTextClassName: X.giftButtonCTA,
                         color: m.Button.Colors.CUSTOM,
                         onClick: () => {
                             y.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
@@ -261,32 +261,32 @@ function er() {
     return null != t
         ? (0, i.jsx)(ei, { config: t })
         : (0, i.jsxs)('div', {
-              className: a()(Q.giftCard),
+              className: a()(X.giftCard),
               children: [
                   (0, i.jsx)('img', {
-                      className: Q.giftImage,
+                      className: X.giftImage,
                       alt: '',
                       src: J
                   }),
                   (0, i.jsxs)('div', {
-                      className: Q.giftInfo,
+                      className: X.giftInfo,
                       children: [
                           (0, i.jsx)(m.Heading, {
-                              className: Q.giftTitle,
+                              className: X.giftTitle,
                               variant: 'heading-xl/extrabold',
                               children: q.intl.string(q.t['3KomGR'])
                           }),
                           (0, i.jsx)(m.Text, {
-                              className: Q.giftText,
+                              className: X.giftText,
                               variant: 'text-sm/normal',
                               children: q.intl.string(q.t.yQ06u7)
                           }),
                           (0, i.jsx)(U.Z, {
                               isGift: !0,
-                              className: a()(Q.giftCardButton, Q.giftCardButtonColor),
+                              className: a()(X.giftCardButton, X.giftCardButtonColor),
                               look: m.Button.Looks.OUTLINED,
                               buttonText: q.intl.string(q.t.Ve9Ge3),
-                              buttonTextClassName: Q.giftButtonCTA,
+                              buttonTextClassName: X.giftButtonCTA,
                               color: m.Button.Colors.CUSTOM,
                               onClick: () => {
                                   y.default.track(K.rMx.PREMIUM_SETTINGS_INTERACTED, {
@@ -345,17 +345,17 @@ t.Z = function () {
         children: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: Q.__invalid_container,
+                    className: X.__invalid_container,
                     children: [
                         (0, i.jsx)(en, {}),
                         (O || D) && (0, i.jsx)(W.Z, { isInSettings: !0 }),
                         (0, i.jsx)(er, {}),
                         (0, i.jsx)(H.Z, {
-                            className: Q.__invalid_planComparisonTable,
+                            className: X.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: q.intl.string(q.t.dnVvQU),
                             hidePill: !U,
-                            selectedPlanColumnClassName: Q.tier2PlanComparisonTableBackground,
+                            selectedPlanColumnClassName: X.tier2PlanComparisonTableBackground,
                             selectedPlanTier: z.p9.TIER_2
                         })
                     ]
@@ -364,7 +364,7 @@ t.Z = function () {
                     onChange: (e) => {
                         e && !B && (y.default.track(K.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), Z(!0));
                     },
-                    children: (0, i.jsx)('div', { className: Q.bottomOfPageVisibilitySensor })
+                    children: (0, i.jsx)('div', { className: X.bottomOfPageVisibilitySensor })
                 })
             ]
         })

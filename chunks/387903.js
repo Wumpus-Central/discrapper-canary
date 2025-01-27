@@ -37,8 +37,8 @@ var i,
     P = n(153066),
     R = n(740265),
     O = n(122810),
-    k = n(833664),
-    M = n(503438),
+    M = n(833664),
+    k = n(503438),
     L = n(802856),
     D = n(420660),
     U = n(39628),
@@ -82,7 +82,7 @@ function q(e) {
         i = (function (e) {
             let { activity: t } = e,
                 n = null;
-            return (0, M.Z)(t) && (n = F.ABu.SPOTIFY), null != t.platform && [F.M7m.PS4, F.M7m.PS5].includes(t.platform) && (n = F.ABu.PLAYSTATION), n;
+            return (0, k.Z)(t) && (n = F.ABu.SPOTIFY), null != t.platform && [F.M7m.PS4, F.M7m.PS5].includes(t.platform) && (n = F.ABu.PLAYSTATION), n;
         })({ activity: t });
     if (null == i) return null;
     let l = g.Z.get(i);
@@ -176,7 +176,7 @@ class J extends (l = s.PureComponent) {
             { assets: u, application_id: d } = e;
         if (null == u || (null == u.large_image && null == u.small_image)) return null;
         (0, D.Z)(e) && (l = G[o]);
-        let m = (0, M.Z)(e),
+        let m = (0, k.Z)(e),
             p =
                 null != u.large_image
                     ? (0, a.jsx)('img', {
@@ -297,7 +297,7 @@ class J extends (l = s.PureComponent) {
         if (i) return null;
         let { details: l, type: r } = e;
         if (r === F.IIU.CUSTOM_STATUS) return null;
-        let s = (0, k.Z)(e),
+        let s = (0, M.Z)(e),
             o = e.name,
             u = o;
         return (r === F.IIU.HANG_STATUS
@@ -310,7 +310,7 @@ class J extends (l = s.PureComponent) {
               : !s &&
                 ((o = l),
                 (u = l),
-                (0, M.Z)(e) && null != e.sync_id && null != l
+                (0, k.Z)(e) && null != e.sync_id && null != l
                     ? (u = (0, a.jsx)(f.Anchor, {
                           className: B.bodyLink,
                           onClick: this.handleOpenSpotifyTrack,
@@ -341,8 +341,8 @@ class J extends (l = s.PureComponent) {
                               (0, T.X)(l.id);
                           }
                         : void 0);
-        else if (!(0, k.Z)(e)) {
-            if (((r = i), (s = i), (0, M.Z)(e) && null != i))
+        else if (!(0, M.Z)(e)) {
+            if (((r = i), (s = i), (0, k.Z)(e) && null != i))
                 r = z.intl.format(z.t.uU9le3, {
                     artists: s,
                     artistsHook: (t, n) =>
@@ -373,7 +373,7 @@ class J extends (l = s.PureComponent) {
                 })
               : (0, a.jsx)('div', {
                     title: null != s ? s : void 0,
-                    className: (0, D.Z)(e) || (0, M.Z)(e) ? B.detailsWrap : B.details,
+                    className: (0, D.Z)(e) || (0, k.Z)(e) ? B.detailsWrap : B.details,
                     children: r
                 });
     }
@@ -382,11 +382,11 @@ class J extends (l = s.PureComponent) {
         return n && null != t
             ? null == i
                 ? (0, a.jsx)('div', {
-                      className: (0, D.Z)(e) || (0, M.Z)(e) ? B.detailsWrap : B.details,
+                      className: (0, D.Z)(e) || (0, k.Z)(e) ? B.detailsWrap : B.details,
                       children: z.intl.format(z.t['hq/Qzc'], { guildName: t.name })
                   })
                 : (0, a.jsxs)('div', {
-                      className: c()((0, D.Z)(e) || (0, M.Z)(e) ? B.detailsWrap : B.details, B.guildDetails),
+                      className: c()((0, D.Z)(e) || (0, k.Z)(e) ? B.detailsWrap : B.details, B.guildDetails),
                       children: [
                           (0, a.jsx)(b.Z, {
                               guild: t,
@@ -416,7 +416,7 @@ class J extends (l = s.PureComponent) {
     }
     renderTimePlayed(e) {
         let { activityGuild: t } = this.props;
-        if (!(0, k.Z)(e) || (0, M.Z)(e)) return null;
+        if (!(0, M.Z)(e) || (0, k.Z)(e)) return null;
         let { timestamps: n } = e;
         return null == n
             ? null
@@ -430,7 +430,7 @@ class J extends (l = s.PureComponent) {
                 });
     }
     renderTimeBar(e) {
-        if (!(0, M.Z)(e)) return null;
+        if (!(0, k.Z)(e)) return null;
         let { timestamps: t } = e;
         if (null == t) return null;
         let { start: n, end: i } = t;
@@ -449,10 +449,10 @@ class J extends (l = s.PureComponent) {
         let { state: r, party: s, assets: o } = e,
             c = r,
             u = r;
-        return (!(0, k.Z)(e) &&
+        return (!(0, M.Z)(e) &&
             ((c = null == o ? void 0 : o.large_text),
             (u = null == o ? void 0 : o.large_text),
-            (0, M.Z)(e) &&
+            (0, k.Z)(e) &&
                 null != c &&
                 (c = z.intl.format(z.t.vOLBEx, {
                     album: u,

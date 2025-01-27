@@ -52,7 +52,7 @@ function M(e) {
     });
 }
 ((i = r || (r = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
-function k(e, t, n, i, r) {
+function D(e, t, n, i, r) {
     var a, o, c;
     let { message: u, compact: d, channel: m, isInteractionUserBlocked: f, isInteractionUserIgnored: p, showAvatarPopout: _, showTargetAvatarPopout: g, onClickAvatar: E, onUserContextMenu: C, onClickTargetAvatar: I, onTargetUserContextMenu: x, onPopoutRequestClose: N } = e;
     if (d && 1 === n) return null;
@@ -102,7 +102,7 @@ function k(e, t, n, i, r) {
           })
         : T();
 }
-function D(e, t, n, i, r) {
+function k(e, t, n, i, r) {
     let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: u, onUserContextMenu: d, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: f } = e;
     return (0, l.jsx)(R.Z, {
         className: 1 === n ? O.targetUsername : '',
@@ -165,8 +165,8 @@ function B(e) {
         V = i.interaction;
     if (null == V || null == B) return null;
     let H = () => {
-        let t = k(e, V.user, 0, B, (e) => c(e, V.user, [E.Z.AVATAR])),
-            n = D(e, V.user, 0, B, (e) => c(e, V.user));
+        let t = D(e, V.user, 0, B, (e) => c(e, V.user, [E.Z.AVATAR])),
+            n = k(e, V.user, 0, B, (e) => c(e, V.user));
         return (0, l.jsxs)(
             a.Fragment,
             {
@@ -256,8 +256,8 @@ function B(e) {
                           (0, l.jsx)(U, {}),
                           (0, l.jsx)(() => {
                               if (null == R) return null;
-                              let t = k(e, R, 1, w, (e) => c(e, R, [E.Z.AVATAR])),
-                                  n = D(e, R, 1, w, (e) => c(e, R));
+                              let t = D(e, R, 1, w, (e) => c(e, R, [E.Z.AVATAR])),
+                                  n = k(e, R, 1, w, (e) => c(e, R));
                               return (0, l.jsxs)(
                                   a.Fragment,
                                   {

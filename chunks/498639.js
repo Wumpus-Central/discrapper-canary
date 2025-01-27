@@ -71,8 +71,8 @@ t.Z = function () {
         { analyticsLocations: G } = (0, m.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
         [H, Y] = r.useState(''),
         [W, z] = r.useState(j.lds),
-        { balance: K, isFetching: q, error: Q } = (0, I.A)(),
-        { isSubmitting: X, responseMessage: J, redeemVirtualCurrency: $ } = (0, I.f)(),
+        { balance: K, isFetching: q, error: X } = (0, I.A)(),
+        { isSubmitting: Q, responseMessage: J, redeemVirtualCurrency: $ } = (0, I.f)(),
         [ee, et] = r.useState(j.lds),
         [en, ei] = r.useState(''),
         [er, es] = r.useState(j.lds),
@@ -291,10 +291,10 @@ t.Z = function () {
                                     : (0, i.jsxs)('div', {
                                           className: R.balanceWidgetPillContainer,
                                           children: [
-                                              null !== Q &&
+                                              null !== X &&
                                                   (0, i.jsxs)(l.Text, {
                                                       variant: 'text-sm/normal',
-                                                      children: ['Error fetching Virtual Currency Balance: ', Q.message]
+                                                      children: ['Error fetching Virtual Currency Balance: ', X.message]
                                                   }),
                                               (0, i.jsx)(N.A, {
                                                   balance: null != K ? K : 0,
@@ -315,7 +315,7 @@ t.Z = function () {
                         (0, i.jsx)(l.FormItem, {
                             className: R.formItem,
                             children: (0, i.jsx)(l.Button, {
-                                submitting: X,
+                                submitting: Q,
                                 onClick: () => $(ee),
                                 children: 'Redeem Virtual Currency for SKU'
                             })

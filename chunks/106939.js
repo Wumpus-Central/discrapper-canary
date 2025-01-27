@@ -272,8 +272,8 @@ function z() {
             z && (0, h.mN)(k.L0.FAMILY_CENTER);
         }, [z]);
     if (z) return null;
-    let Q = B !== L.dG.SETTINGS ? B : L.dG.ACTIVITY,
-        X = G[Q];
+    let X = B !== L.dG.SETTINGS ? B : L.dG.ACTIVITY,
+        Q = G[X];
     return (0, i.jsx)(x.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
@@ -283,19 +283,19 @@ function z() {
                 (0, i.jsx)(f.yY, { location: F.intl.string(F.t.RZqaJi) }),
                 (0, i.jsx)(Y, {
                     theme: y,
-                    section: Q,
+                    section: X,
                     handleItemSelect: (e) => {
                         Z(e);
                     }
                 }),
                 (0, i.jsx)(u.TabBar.Panel, {
-                    id: Q,
+                    id: X,
                     'aria-labelledby': V,
                     className: U.contentPanel,
                     children: (0, i.jsx)(u.Scroller, {
                         children: (0, i.jsx)('div', {
                             className: U.sideNavContent,
-                            children: X()
+                            children: Q()
                         })
                     })
                 })

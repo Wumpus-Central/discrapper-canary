@@ -26,8 +26,8 @@ var n = r(200651),
     D = r(51144),
     F = r(189648),
     S = r(775194),
-    C = r(499848),
-    E = r(724392),
+    E = r(499848),
+    C = r(724392),
     Z = r(442580),
     R = r(770800),
     b = r(981631),
@@ -96,7 +96,7 @@ function T(e, t, r, n, a) {
             i.push({
                 section: (0, y.J$)(e, b._s_.OUTBOUND, r),
                 label: P.intl.string(P.t['3u0gIC']),
-                element: E.Z,
+                element: C.Z,
                 elementProps: {
                     context: e,
                     index: r
@@ -129,7 +129,7 @@ function T(e, t, r, n, a) {
                     onClick: () => {
                         c.zc(d);
                     },
-                    element: C.Z,
+                    element: E.Z,
                     elementProps: {
                         context: e,
                         index: r,
@@ -163,8 +163,8 @@ function k() {
         v = (0, s.e7)([p.Z], () => p.Z.theme),
         D = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? b.BRd.DARK : void 0)),
         F = (0, s.e7)([y.ZP], () => y.ZP.getSection()),
-        C = (0, s.e7)([y.ZP], () => y.ZP.getVideoStreams()),
-        E = (function (e) {
+        E = (0, s.e7)([y.ZP], () => y.ZP.getVideoStreams()),
+        C = (function (e) {
             let { defaultStats: t, streamStats: r, videoStreams: a, screenshare: i, clips: l, channel: s, connectionState: c } = e,
                 d = t.flatMap((e, t) => T(x.Yn.DEFAULT, e, t, a, null == s ? void 0 : s.getGuildId())),
                 m = r.flatMap((e, t) => T(x.Yn.STREAM, e, t, a, null == s ? void 0 : s.getGuildId())),
@@ -223,7 +223,7 @@ function k() {
         })({
             defaultStats: r,
             streamStats: i,
-            videoStreams: C,
+            videoStreams: E,
             screenshare: m,
             clips: g,
             channel: l,
@@ -241,7 +241,7 @@ function k() {
             sidebarTheme: D,
             section: F,
             onSetSection: c.zc,
-            sections: E
+            sections: C
         })
     );
 }

@@ -36,7 +36,7 @@ function b(e) {
         Z = r.useRef(null),
         [P, L] = (0, v.ZP)(Z),
         { loadState: y, channels: O } = P,
-        { maybeLoadMore: M, markAllRead: k } = L;
+        { maybeLoadMore: M, markAllRead: D } = L;
     (function (e, t, n) {
         r.useLayoutEffect(() => {
             var i;
@@ -91,7 +91,7 @@ function b(e) {
             ),
             [b]
         );
-    let D = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing),
+    let k = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing),
         U = (0, p.Z)('unreads', Z);
     if (0 === O.length) {
         var B;
@@ -113,7 +113,7 @@ function b(e) {
         });
     }
     return (0, i.jsxs)('div', {
-        className: a()(A.container, 'group-spacing-'.concat(D)),
+        className: a()(A.container, 'group-spacing-'.concat(k)),
         'aria-label': S.intl.string(S.t.sRUdBw),
         children: [
             (0, i.jsx)(x.Z, {
@@ -123,7 +123,7 @@ function b(e) {
                 closePopout: b,
                 children: (0, i.jsx)(C.Z, {
                     type: 'top-header',
-                    onClick: k
+                    onClick: D
                 })
             }),
             (0, i.jsx)(c.bG, {

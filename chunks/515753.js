@@ -34,8 +34,8 @@ var i = n(200651),
     y = n(111028),
     j = n(540059),
     T = n(853856),
-    P = n(93687),
-    A = n(785232),
+    A = n(93687),
+    P = n(785232),
     w = n(878857),
     M = n(565640),
     L = n(518950),
@@ -139,7 +139,7 @@ function $(e) {
 }
 function ee(e) {
     var t;
-    let { channel: r, isGDMFacepileEnabled: o, selected: d = !1, user: j, activities: P, applicationStream: M, entry: R, isTyping: D, status: B, isMobile: O, 'aria-posinset': V, 'aria-setsize': H } = e,
+    let { channel: r, isGDMFacepileEnabled: o, selected: d = !1, user: j, activities: A, applicationStream: M, entry: R, isTyping: D, status: B, isMobile: O, 'aria-posinset': V, 'aria-setsize': H } = e,
         [$, ee] = l.useState(!1),
         et = l.useRef(null),
         en = l.useRef(null),
@@ -240,10 +240,10 @@ function ee(e) {
                         className: W.subtext,
                         children: z.intl.format(z.t.CxSA5O, { members: r.recipients.length + 1 })
                     })
-                  : B !== F.Skl.OFFLINE && B !== F.Skl.INVISIBLE && null != P && P.length > 0
+                  : B !== F.Skl.OFFLINE && B !== F.Skl.INVISIBLE && null != A && A.length > 0
                     ? (0, i.jsx)(v.Z, {
                           ...e,
-                          activities: P,
+                          activities: A,
                           applicationStream: M,
                           animate: $,
                           hideTooltip: !0,
@@ -260,7 +260,7 @@ function ee(e) {
             let e = p.AvatarSizes.SIZE_32;
             if (r.isMultiUserDM())
                 return r.recipients.length >= 2 && o && null == r.icon
-                    ? (0, i.jsx)(A.Z, {
+                    ? (0, i.jsx)(P.Z, {
                           'aria-hidden': !0,
                           recipients: r.recipients,
                           size: e,
@@ -278,7 +278,7 @@ function ee(e) {
             s()(null != j, 'PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel');
             let t = null;
             return (
-                !j.isSystemUser() && (t = (0, g.Z)(P) ? F.Skl.STREAMING : B),
+                !j.isSystemUser() && (t = (0, g.Z)(A) ? F.Skl.STREAMING : B),
                 (0, i.jsx)(q, {
                     ...er,
                     size: p.AvatarSizes.SIZE_32,
@@ -313,7 +313,7 @@ function ee(e) {
                   ]
               })
             : eu,
-        eP = null !== (t = ea || ey || ej) && void 0 !== t && t;
+        eA = null !== (t = ea || ey || ej) && void 0 !== t && t;
     return (0, i.jsx)(u.mh, {
         id: r.id,
         children: (e) => {
@@ -340,7 +340,7 @@ function ee(e) {
                     }),
                     as: 'div',
                     onClick: ev,
-                    muted: eP,
+                    muted: eA,
                     selected: d,
                     children: [
                         (0, i.jsx)(c.rU, {
@@ -356,7 +356,7 @@ function ee(e) {
                                 avatar: e_(),
                                 selected: d,
                                 highlighted: ec,
-                                muted: eP,
+                                muted: eA,
                                 subText: eI(),
                                 name: (0, i.jsx)(y.Z, {
                                     tooltipClassName: W.overflowTooltip,
@@ -388,7 +388,7 @@ function ee(e) {
 t.ZP = (e) => {
     let { channel: t, selected: n, ...l } = e,
         r = (0, h.e7)([O.default], () => O.default.getUser(t.getRecipientId())),
-        { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: o, isFacepileEnabled: s } = P.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
+        { isStatusIndicatorEnabled: a, isTypingIndicatorEnabled: o, isFacepileEnabled: s } = A.Z.useExperiment({ location: 'private_channel' }, { autoTrackExposure: !0 }),
         c = null == r ? void 0 : r.id,
         u = (0, h.cj)(
             [D.Z, R.Z],

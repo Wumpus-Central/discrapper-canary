@@ -345,7 +345,7 @@ function q(e) {
     }),
         !n && N.Z.loadLazyCache.recordEnd();
 }
-class Q extends (i = c.ZP.Store) {
+class X extends (i = c.ZP.Store) {
     initialize() {
         !Z && I.Z.getSocket().dispatcher.unpauseDispatchQueue();
     }
@@ -392,7 +392,7 @@ class Q extends (i = c.ZP.Store) {
     }
 }
 (a = 'CacheStore'),
-    (s = 'displayName') in (r = Q)
+    (s = 'displayName') in (r = X)
         ? Object.defineProperty(r, s, {
               value: a,
               enumerable: !0,
@@ -400,7 +400,7 @@ class Q extends (i = c.ZP.Store) {
               writable: !0
           })
         : (r[s] = a),
-    new Q(
+    new X(
         u.Z,
         Z
             ? {

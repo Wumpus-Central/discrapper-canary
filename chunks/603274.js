@@ -107,8 +107,8 @@ function y() {
             [l]
         ),
         T = (0, s.Wu)([v.default], () => j.map((e) => v.default.getUser(e)), [j]),
-        P = (0, s.Wu)([v.default], () => y.map((e) => v.default.getUser(e)), [y]),
-        A = E(
+        A = (0, s.Wu)([v.default], () => y.map((e) => v.default.getUser(e)), [y]),
+        P = E(
             c.VoiceNormalIcon,
             h.filter((e) => !y.includes(e.id) && !j.includes(e.id))
         );
@@ -149,11 +149,11 @@ function y() {
                   })),
         M = E(
             c.ScreenArrowIcon,
-            P.filter((e) => null != e && !j.includes(e.id))
+            A.filter((e) => null != e && !j.includes(e.id))
         ),
         L = E(c.ActivitiesIcon, T);
     return (0, i.jsxs)(i.Fragment, {
-        children: [w, A, M, L]
+        children: [w, P, M, L]
     });
 }
 function j() {

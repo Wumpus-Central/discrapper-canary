@@ -32,8 +32,8 @@ var i = n(200651),
     y = n(296848),
     O = n(51144),
     M = n(626799),
-    k = n(981631),
-    D = n(474936),
+    D = n(981631),
+    k = n(474936),
     U = n(388032),
     B = n(792857);
 function w(e, t, n) {
@@ -70,7 +70,7 @@ class G extends r.PureComponent {
         return e >= m.aL;
     }
     handleViewInventory() {
-        d.Z.open(k.oAB.INVENTORY);
+        d.Z.open(D.oAB.INVENTORY);
     }
     render() {
         return (0, i.jsx)(m.$G, {
@@ -108,7 +108,7 @@ class V extends r.Component {
         } = this.props;
         return {
             ...e,
-            section: k.jXE.GIFT_CODE_EMBED
+            section: D.jXE.GIFT_CODE_EMBED
         };
     }
     renderActions(e) {
@@ -163,7 +163,7 @@ class V extends r.Component {
     }
     isCustomGiftMessage() {
         let { type: e } = this.props;
-        return e === k.uaV.CUSTOM_GIFT;
+        return e === D.uaV.CUSTOM_GIFT;
     }
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: i } = this.props;
@@ -215,14 +215,14 @@ class V extends r.Component {
         if (e.isSubscription) {
             if (null == l) return U.intl.string(U.t.ZTNur6);
             if (null != r) {
-                let e = l.interval === D.rV.MONTH ? U.t['/RDIEB'] : U.t['3CX6Eh'];
+                let e = l.interval === k.rV.MONTH ? U.t['/RDIEB'] : U.t['3CX6Eh'];
                 return U.intl.format(e, {
                     username: O.ZP.getUserTag(r),
                     skuName: o,
                     intervalCount: l.intervalCount
                 });
             }
-            let e = l.interval === D.rV.MONTH ? U.t['2O4lo6'] : U.t['+Xjmsb'];
+            let e = l.interval === k.rV.MONTH ? U.t['2O4lo6'] : U.t['+Xjmsb'];
             return U.intl.format(e, {
                 skuName: o,
                 intervalCount: l.intervalCount
@@ -244,7 +244,7 @@ class V extends r.Component {
             : (0, i.jsx)(M.$, {
                   skuId: e.skuId,
                   onEmbedClick: this.handleEmbedClick,
-                  analyticsSection: k.jXE.GIFT_CODE_EMBED,
+                  analyticsSection: D.jXE.GIFT_CODE_EMBED,
                   renderCustomActions: () => this.renderActions(e),
                   renderCustomTitle: () => this.renderTitle(e),
                   renderCustomTagline: () => this.renderBody(e),
@@ -258,7 +258,7 @@ class V extends r.Component {
             return (0, i.jsx)(M.$, {
                 skuId: e.skuId,
                 onEmbedClick: this.handleClaimPromotion,
-                analyticsSection: k.jXE.GIFT_CODE_EMBED,
+                analyticsSection: D.jXE.GIFT_CODE_EMBED,
                 renderCustomActions: () => this.renderPromotionActions(),
                 renderCustomTitle: () => U.intl.string(U.t.X4p5uL),
                 renderCustomTagline: () => U.intl.string(U.t.VIuwDw),
@@ -282,23 +282,23 @@ class V extends r.Component {
         super(...e),
             w(this, 'handleViewLibrary', (e) => {
                 let { libraryApplication: t } = this.props;
-                e.preventDefault(), null != t && t.isHidden() ? (0, N.uL)(k.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, N.uL)(k.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
+                e.preventDefault(), null != t && t.isHidden() ? (0, N.uL)(D.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, N.uL)(D.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
             }),
             w(this, 'handleVerificationClick', (e) => {
-                e.stopPropagation(), e.preventDefault(), d.Z.open(k.oAB.ACCOUNT);
+                e.stopPropagation(), e.preventDefault(), d.Z.open(D.oAB.ACCOUNT);
             }),
             w(this, 'handleAccept', (e) => {
                 let { channelId: t, code: n, content: i, type: r, giftInfo: l } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
-                    Z.default.track(k.rMx.OPEN_MODAL, {
+                    Z.default.track(D.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
                         location: {
                             ...this.analyticsLocation,
-                            object: k.qAy.BUTTON_CTA
+                            object: D.qAy.BUTTON_CTA
                         }
                     });
-                let a = r !== k.uaV.CUSTOM_GIFT ? void 0 : i;
+                let a = r !== D.uaV.CUSTOM_GIFT ? void 0 : i;
                 (0, C.V)({
                     processedCode: n,
                     channelContext: t,
@@ -308,18 +308,18 @@ class V extends r.Component {
             }),
             w(this, 'handleEmbedClick', (e) => {
                 let { giftCode: t } = this.props;
-                null != t && t.isSubscription && (e.preventDefault(), d.Z.open(k.oAB.PREMIUM));
+                null != t && t.isSubscription && (e.preventDefault(), d.Z.open(D.oAB.PREMIUM));
             }),
             w(this, 'handleClaimPromotion', (e) => {
                 var t;
                 e.stopPropagation(), e.preventDefault();
                 let n = null === (t = this.props.giftCode) || void 0 === t ? void 0 : t.code;
-                if (null != n) window.open(k.Z5c.BILLING_PROMOTION_REDEMPTION(n));
+                if (null != n) window.open(D.Z5c.BILLING_PROMOTION_REDEMPTION(n));
             }),
             w(this, 'renderCustomGiftBox', (e) => {
                 let { useReducedMotion: t, width: n } = this.props;
                 if (null == e || null == e.giftStyle) return null;
-                let r = D.jy.includes(e.giftStyle),
+                let r = k.jy.includes(e.giftStyle),
                     l = a()(B.customGiftEmbedWrapper, {
                         [B.legacySeasonalGiftEmbedWrapper]: r,
                         [B.giftEmbedWrapperHorizontal]: n >= m.aL
@@ -334,7 +334,7 @@ class V extends r.Component {
                     className: l,
                     children: [
                         !t &&
-                            D.eZ.includes(e.giftStyle) &&
+                            k.eZ.includes(e.giftStyle) &&
                             (0, i.jsx)(x.Z, {
                                 className: B.snow,
                                 wind: 5

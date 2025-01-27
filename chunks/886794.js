@@ -15,13 +15,13 @@ var i = t(200651),
     u = t(785717),
     f = t(687158),
     m = t(899007),
-    I = t(648052),
-    x = t(867176),
-    p = t(280885),
+    p = t(648052),
+    I = t(867176),
+    x = t(280885),
     h = t(900927),
     v = t(678738),
-    Z = t(502762),
-    g = t(530),
+    g = t(502762),
+    Z = t(530),
     j = t(679332),
     _ = t(544989),
     b = t(228168),
@@ -34,8 +34,8 @@ function P(e) {
     let { user: n, guildId: t, channelId: P, messageId: C, roleId: A, sessionId: L, transitionState: M, onClose: R, sourceAnalyticsLocations: O = [] } = e,
         U = t === E.ME ? void 0 : t,
         B = (0, f.ZP)(n.id, U),
-        { analyticsLocations: D } = (0, c.ZP)([...O, s.Z.SIMPLIFIED_PROFILE_MODAL]),
-        F = (0, u.ZB)({
+        { analyticsLocations: F } = (0, c.ZP)([...O, s.Z.SIMPLIFIED_PROFILE_MODAL]),
+        D = (0, u.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
             sourceSessionId: L,
@@ -47,16 +47,16 @@ function P(e) {
         G = l.createRef(),
         w = (0, r.Z)(G);
     return (0, i.jsx)(c.Gt, {
-        value: D,
+        value: F,
         children: (0, i.jsx)(u.Mt, {
-            value: F,
+            value: D,
             children: (0, i.jsxs)(o.ModalRoot, {
                 transitionState: M,
                 className: y.root,
                 hideShadow: !0,
                 'aria-label': N.intl.string(N.t['3N/J2t']),
                 children: [
-                    (0, i.jsxs)(Z.Z, {
+                    (0, i.jsxs)(g.Z, {
                         user: n,
                         displayProfile: B,
                         profileType: b.y0.FULL_SIZE,
@@ -68,7 +68,7 @@ function P(e) {
                             }),
                             (0, i.jsxs)('header', {
                                 children: [
-                                    (0, i.jsx)(x.Z, {
+                                    (0, i.jsx)(I.Z, {
                                         user: n,
                                         displayProfile: B,
                                         profileType: b.y0.FULL_SIZE
@@ -88,19 +88,19 @@ function P(e) {
                             (0, i.jsxs)('div', {
                                 className: y.body,
                                 children: [
-                                    (0, i.jsx)(g.Z, {
+                                    (0, i.jsx)(Z.Z, {
                                         user: n,
                                         profileType: b.y0.FULL_SIZE,
                                         nickname: d.ZP.getName(U, P, n),
                                         pronouns: null == B ? void 0 : B.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
-                                        tags: (0, i.jsx)(I.Z, {
+                                        tags: (0, i.jsx)(p.Z, {
                                             displayProfile: B,
                                             profileType: b.y0.FULL_SIZE,
                                             onClose: R
                                         })
                                     }),
-                                    (0, i.jsx)(Z.Z.Overlay, {
+                                    (0, i.jsx)(g.Z.Overlay, {
                                         className: y.overlay,
                                         children: (0, i.jsxs)('div', {
                                             className: T.container,
@@ -128,7 +128,7 @@ function P(e) {
                                                     fade: !0,
                                                     className: S.scroller,
                                                     children: [
-                                                        (0, i.jsx)(p.Z, {
+                                                        (0, i.jsx)(x.Z, {
                                                             userId: n.id,
                                                             userBio: null == B ? void 0 : B.bio,
                                                             setLineClamp: !1

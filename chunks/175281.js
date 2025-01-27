@@ -17,19 +17,19 @@ var n,
     h = s.n(u),
     E = s(748780),
     p = s(442837),
-    m = s(215569),
-    _ = s(481060),
+    _ = s(215569),
+    m = s(481060),
     g = s(612226),
     C = s(951483),
     N = s(714338),
     f = s(607070),
     b = s(585483),
-    R = s(557177),
-    I = s(264549),
+    I = s(557177),
+    R = s(264549),
     S = s(981631),
     T = s(388032),
     x = s(521287);
-function O(e, t, s) {
+function M(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,10 +44,10 @@ function O(e, t, s) {
 }
 ((i = n || (n = {})).UP = 'UP'), (i.DOWN = 'DOWN'), (i.LEFT = 'LEFT'), (i.RIGHT = 'RIGHT');
 let y = {
-    UP: h().throttle(() => (0, R.GN)('ddr-up'), 100),
-    DOWN: h().throttle(() => (0, R.GN)('ddr-down'), 100),
-    LEFT: h().throttle(() => (0, R.GN)('ddr-left'), 100),
-    RIGHT: h().throttle(() => (0, R.GN)('ddr-right'), 100)
+    UP: h().throttle(() => (0, I.GN)('ddr-up'), 100),
+    DOWN: h().throttle(() => (0, I.GN)('ddr-down'), 100),
+    LEFT: h().throttle(() => (0, I.GN)('ddr-left'), 100),
+    RIGHT: h().throttle(() => (0, I.GN)('ddr-right'), 100)
 };
 function A(e) {
     switch (e.keyCode) {
@@ -63,12 +63,12 @@ function A(e) {
             return null;
     }
 }
-let M = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
-function L(e) {
+let O = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
+function P(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: a()(x.backdrop, { [x.show]: t }) });
 }
-function P() {
+function L() {
     let e = o.useMemo(
         () =>
             h()((0, g.Rv)())
@@ -78,7 +78,7 @@ function P() {
     );
     return (0, r.jsx)('div', {
         className: x.keyboardShortcutList,
-        children: M.map((t) => {
+        children: O.map((t) => {
             let s = e[t],
                 n = (0, g.UD)(t),
                 i = (0, g.U6)(t);
@@ -89,12 +89,12 @@ function P() {
                     children: [
                         (0, r.jsxs)('div', {
                             children: [
-                                (0, r.jsx)(_.Heading, {
+                                (0, r.jsx)(m.Heading, {
                                     variant: 'heading-lg/semibold',
                                     children: n
                                 }),
                                 null != i &&
-                                    (0, r.jsx)(_.Text, {
+                                    (0, r.jsx)(m.Text, {
                                         className: x.keybindGroupDescription,
                                         variant: 'text-sm/normal',
                                         children: i
@@ -114,7 +114,7 @@ function P() {
                                               {
                                                   className: a()(x.keybindGroup),
                                                   children: [
-                                                      (0, r.jsx)(_.Text, {
+                                                      (0, r.jsx)(m.Text, {
                                                           variant: 'text-sm/normal',
                                                           children: e.description
                                                       }),
@@ -122,7 +122,7 @@ function P() {
                                                           className: 'keybind-shortcuts',
                                                           children: e.binds.map((e) =>
                                                               (0, r.jsx)(
-                                                                  _.KeyCombo,
+                                                                  m.KeyCombo,
                                                                   {
                                                                       className: x.keybindKey,
                                                                       shortcut: e
@@ -159,14 +159,14 @@ class v extends o.PureComponent {
             className: x.keyboardShortcutsModal,
             style: this.getStyles(),
             children: [
-                (0, r.jsxs)(_.H, {
+                (0, r.jsxs)(m.H, {
                     className: x.modalTitle,
                     children: [
                         (0, r.jsx)('div', {
                             className: x.content,
                             children: T.intl.string(T.t['1BdUt7'])
                         }),
-                        (0, r.jsx)(_.KeyCombo, { shortcut: 'mod+/' })
+                        (0, r.jsx)(m.KeyCombo, { shortcut: 'mod+/' })
                     ]
                 }),
                 (0, r.jsx)('div', {
@@ -202,17 +202,17 @@ class v extends o.PureComponent {
                         })
                     ]
                 }),
-                (0, r.jsx)(_.AdvancedScrollerAuto, {
+                (0, r.jsx)(m.AdvancedScrollerAuto, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(_.HeadingLevel, { children: (0, r.jsx)(P, {}) })
+                    children: (0, r.jsx)(m.HeadingLevel, { children: (0, r.jsx)(L, {}) })
                 })
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            O(this, 'state', {
+            M(this, 'state', {
                 UP: !1,
                 DOWN: !1,
                 LEFT: !1,
@@ -222,25 +222,25 @@ class v extends o.PureComponent {
                 scaleY: new E.Z.Value(0),
                 animating: !1
             }),
-            O(this, 'scrollerRef', o.createRef()),
-            O(this, 'lastInputedKeys', []),
-            O(this, 'scrollPageUp', () => {
+            M(this, 'scrollerRef', o.createRef()),
+            M(this, 'lastInputedKeys', []),
+            M(this, 'scrollPageUp', () => {
                 let e = this.scrollerRef.current;
                 d()(null != e, 'Scroller is pagedUp when not mounted'), e.scrollPageUp({ animate: !0 });
             }),
-            O(this, 'scrollPageDown', () => {
+            M(this, 'scrollPageDown', () => {
                 let e = this.scrollerRef.current;
                 d()(null != e, 'Scroller is pagedDown when not mounted'), e.scrollPageDown({ animate: !0 });
             }),
-            O(this, 'arrowUp', (e) => {
+            M(this, 'arrowUp', (e) => {
                 let { direction: t } = e;
                 this.setState({ [t]: !1 });
             }),
-            O(this, 'arrowDown', (e) => {
+            M(this, 'arrowDown', (e) => {
                 let { direction: t } = e;
                 y[t](), this.setState({ [t]: !0 });
             }),
-            O(this, 'componentWillLeave', (e) => {
+            M(this, 'componentWillLeave', (e) => {
                 this.setState({ animating: !0 }),
                     this.state.opacity.setValue(1),
                     this.state.scaleX.setValue(0.5),
@@ -253,10 +253,10 @@ class v extends o.PureComponent {
                         })
                     ]).start(e);
             }),
-            O(this, 'toggleOpacity', () => {
+            M(this, 'toggleOpacity', () => {
                 1 === this.state.opacity._value ? this.state.opacity.setValue(0) : this.state.opacity.setValue(1);
             }),
-            O(this, 'getStyles', () => ({
+            M(this, 'getStyles', () => ({
                 opacity: this.state.opacity.interpolate({
                     inputRange: [0, 1],
                     outputRange: [0, 1]
@@ -276,17 +276,17 @@ class v extends o.PureComponent {
                     }
                 ]
             })),
-            O(this, 'handleKeyDown', (e) => {
+            M(this, 'handleKeyDown', (e) => {
                 if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === S.yXg.H && this.lastInputedKeys[1] === S.yXg.H && this.lastInputedKeys[2] === S.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === S.yXg.N && this.lastInputedKeys[4] === S.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
                 let t = A(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({ direction: t }));
             }),
-            O(this, 'handleKeyUp', (e) => {
+            M(this, 'handleKeyUp', (e) => {
                 if (this.props.keyboardModeEnabled) return;
                 let t = A(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({ direction: t }));
             }),
-            O(this, 'onArrowClick', (e) => {
+            M(this, 'onArrowClick', (e) => {
                 this.arrowDown({ direction: e });
             });
     }
@@ -304,7 +304,7 @@ function D(e) {
                 return () => clearTimeout(e);
             }
         }, [l]),
-        (0, r.jsx)(_.Clickable, {
+        (0, r.jsx)(m.Clickable, {
             onClick: d,
             className: a()(x.arrow, n, { [x.active]: t || l }),
             children: i
@@ -322,17 +322,17 @@ function U(e) {
         }));
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(L, { showBackdrop: l }),
-            (0, r.jsx)(_.ModalRoot, {
+            (0, r.jsx)(P, { showBackdrop: l }),
+            (0, r.jsx)(m.ModalRoot, {
                 className: a()(x.noBackground, { [x.noShadow]: n }),
-                size: _.ModalSize.DYNAMIC,
+                size: m.ModalSize.DYNAMIC,
                 'aria-label': T.intl.string(T.t.T9DA2N),
                 transitionState: t,
-                children: (0, r.jsx)(m.W, {
+                children: (0, r.jsx)(_.W, {
                     component: 'div',
                     children: n
                         ? (0, r.jsx)(
-                              I.Z,
+                              R.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(s, 500);

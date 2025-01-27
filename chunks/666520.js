@@ -14,28 +14,28 @@ var i = t(200651),
     u = t(388032),
     f = t(120238);
 function m(e) {
-    let { autoFocus: n = !1, className: t, userId: m, onUpdate: I } = e,
-        x = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
-        { loading: p, note: h } = (0, c.Z)(m),
+    let { autoFocus: n = !1, className: t, userId: m, onUpdate: p } = e,
+        I = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
+        { loading: x, note: h } = (0, c.Z)(m),
         v = l.useRef(null);
     return (l.useEffect(() => {
-        if (!n || x) return;
+        if (!n || I) return;
         let e = v.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [n, x]),
-    x)
+    }, [n, I]),
+    I)
         ? null
         : (0, i.jsx)('div', {
               className: t,
               children: (0, i.jsx)(r.TextAreaAutosize, {
                   ref: v,
                   className: f.textarea,
-                  disabled: p,
-                  placeholder: p ? u.intl.string(u.t['WLKx//']) : u.intl.string(u.t.VBhOe3),
+                  disabled: x,
+                  placeholder: x ? u.intl.string(u.t['WLKx//']) : u.intl.string(u.t.VBhOe3),
                   'aria-label': u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;
-                      if ((null != h ? h : '') !== n) null == I || I(), s.Z.updateNote(m, n);
+                      if ((null != h ? h : '') !== n) null == p || p(), s.Z.updateNote(m, n);
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which) {

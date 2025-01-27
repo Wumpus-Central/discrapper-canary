@@ -39,8 +39,8 @@ var i = n(200651),
     P = n(916771),
     R = n(792517),
     O = n(351483),
-    k = n(979425),
-    M = n(651183),
+    M = n(979425),
+    k = n(651183),
     L = n(623825),
     D = n(981631),
     U = n(354459),
@@ -68,7 +68,7 @@ function W(e) {
         }),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                n ? null : (0, i.jsx)(M.Z, { participant: t }),
+                n ? null : (0, i.jsx)(k.Z, { participant: t }),
                 r || null == u || u.state === D.jm8.ENDED || u.state === D.jm8.FAILED
                     ? null
                     : (0, i.jsx)(S.Z, {
@@ -84,7 +84,7 @@ function W(e) {
     );
 }
 function G(e) {
-    let { participant: t, selected: n, onVideoResize: r, paused: f, fit: p, inPopout: S, inOverlayPopout: x = !1, width: O, focused: M, wrapperClassName: L } = e,
+    let { participant: t, selected: n, onVideoResize: r, paused: f, fit: p, inPopout: S, inOverlayPopout: x = !1, width: O, focused: k, wrapperClassName: L } = e,
         W = Z.Z.getVideoComponent(),
         G = (0, s.e7)([E.default], () => E.default.getId()),
         H = (0, h.Z)(),
@@ -110,7 +110,7 @@ function G(e) {
             );
         }, [W, K, n]);
     if (H)
-        return (0, i.jsx)(k.Z, {
+        return (0, i.jsx)(M.Z, {
             stream: t.stream,
             isSmall: ei,
             selected: n,
@@ -179,7 +179,7 @@ function G(e) {
             children: [
                 null != X
                     ? (0, i.jsx)(_.Z, {
-                          focused: M,
+                          focused: k,
                           channelId: X.id,
                           guildId: X.guild_id,
                           streamerId: q.id,

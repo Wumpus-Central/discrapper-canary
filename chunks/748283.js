@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return x;
+        return I;
     }
 });
 var i = t(200651),
@@ -14,12 +14,12 @@ var i = t(200651),
     u = t(981631),
     f = t(474936),
     m = t(388032),
-    I = t(640984);
-function x(e) {
+    p = t(640984);
+function I(e) {
     let { currentUser: n, onClose: t } = e,
-        x = (0, s.I5)(n),
-        { trackUserProfileAction: p } = (0, c.KZ)();
-    return x
+        I = (0, s.I5)(n),
+        { trackUserProfileAction: x } = (0, c.KZ)();
+    return I
         ? (0, i.jsx)(a.oY, {
               action: d.yM.VIEW_PREMIUM_PERKS,
               icon: l.NitroWheelIcon,
@@ -30,14 +30,14 @@ function x(e) {
           })
         : (0, i.jsx)(o.Z, {
               onClick: () => {
-                  p({ action: d.yM.GET_PREMIUM });
+                  x({ action: d.yM.GET_PREMIUM });
               },
               buttonText: m.intl.string(m.t.x6rkDg),
               subscriptionTier: f.Si.TIER_2,
               premiumModalAnalyticsLocation: { section: u.jXE.USER_PROFILE },
-              shinyButtonClassName: I.getPremiumButton,
+              shinyButtonClassName: p.getPremiumButton,
               size: l.Button.Sizes.SMALL,
-              iconClassName: I.getPremiumButtonIcon,
+              iconClassName: p.getPremiumButtonIcon,
               look: l.Button.Looks.BLANK,
               onlyShineOnHover: !0
           });

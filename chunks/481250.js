@@ -64,8 +64,8 @@ let D = {
     codec: 2
 };
 function F(e, t, r, a, F) {
-    return e.map((S, C) => {
-        var E, Z;
+    return e.map((S, E) => {
+        var C, Z;
         let R = [];
         for (let e of Object.keys(S).sort((e, t) => {
             let r = D[e],
@@ -115,11 +115,11 @@ function F(e, t, r, a, F) {
                         })(S, r, a, F),
                     v(R),
                     'video' === S.type &&
-                        C === e.length - 1 &&
+                        E === e.length - 1 &&
                         null != r &&
                         null != a &&
                         null != F &&
-                        ((E = a),
+                        ((C = a),
                         (Z = t),
                         (0, n.jsx)(c.Z, {
                             className: f.marginBottom20,
@@ -132,9 +132,9 @@ function F(e, t, r, a, F) {
                                         children: 'Simulcast Override'
                                     }),
                                     (0, n.jsx)(l.SingleSelect, {
-                                        value: m.ZP.getSimulcastDebugOverride(E, Z),
+                                        value: m.ZP.getSimulcastDebugOverride(C, Z),
                                         onChange: (e) => {
-                                            s.MS(E, Z, e);
+                                            s.MS(C, Z, e);
                                         },
                                         options: Object.values(h.Z).map((e) => ({
                                             value: e,

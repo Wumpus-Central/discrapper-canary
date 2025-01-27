@@ -124,8 +124,8 @@ function H(e) {
         [H, Y] = r.useState(null),
         [W, z] = r.useState(!1),
         [K, q] = r.useState([]),
-        Q = (0, _.rR)(h.type),
-        X = E.Z.get(Q);
+        X = (0, _.rR)(h.type),
+        Q = E.Z.get(X);
     r.useEffect(() => {
         I(h.friendSync), A(h.visibility), O(h.metadataVisibility), D(h.showActivity);
     }, [h]);
@@ -210,7 +210,7 @@ function H(e) {
             (function (e) {
                 var t;
                 let n = E.Z.get(e.type),
-                    r = E.Z.get(Q),
+                    r = E.Z.get(X),
                     s = '1' === (null !== (t = e.metadata) && void 0 !== t ? t : {})[k.PC.TWITTER_VERIFIED],
                     a = null;
                 return (
@@ -394,7 +394,7 @@ function H(e) {
                     })
                 );
             })(h),
-            ((n = X),
+            ((n = Q),
             M.BFP.has(h.type) &&
                 (a = (0, i.jsx)(u.FormSwitch, {
                     className: U.connectionOptionSwitch,

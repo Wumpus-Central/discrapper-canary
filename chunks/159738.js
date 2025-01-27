@@ -45,7 +45,7 @@ function y(e, t, n) {
 n(978246);
 let O = (0, C.hQ)(),
     M = c()(m.yC, 500);
-class k extends r.PureComponent {
+class D extends r.PureComponent {
     componentDidMount() {
         var e, t;
         T.S.subscribe(Z.CkL.PERFORM_SEARCH, this.search), T.S.subscribe(Z.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), T.S.subscribe(Z.CkL.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute('aria-haspopup', 'listbox');
@@ -338,4 +338,4 @@ t.Z = u.ZP.connectStores([g.Z, N.Z], () => {
         hasResults: N.Z.hasResults(t),
         keyboardModeEnabled: l
     };
-})(k);
+})(D);

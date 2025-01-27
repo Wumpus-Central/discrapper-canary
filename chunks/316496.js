@@ -1,9 +1,9 @@
-n.d(t, {
+t.d(n, {
     S: function () {
-        return l;
+        return i;
     }
 });
-let i = (0, n(818083).B)({
+let l = (0, t(818083).B)({
     kind: 'user',
     id: '2025-01_updated_activity_privacy_controls',
     label: 'Enables the rtc popout and updated settings page',
@@ -38,6 +38,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function l(e) {
-    return i.useExperiment({ location: e }, { autoTrackExposure: !0 });
+function i(e) {
+    return l.useExperiment({ location: e }, { autoTrackExposure: !0 });
 }

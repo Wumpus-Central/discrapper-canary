@@ -26,8 +26,8 @@ var i = n(200651),
     y = n(905423),
     j = n(802718),
     T = n(796974),
-    P = n(271383),
-    A = n(430824),
+    A = n(271383),
+    P = n(430824),
     w = n(771845),
     M = n(358085),
     L = n(709054),
@@ -179,10 +179,10 @@ function el(e) {
         }),
         v = (0, h.e7)([E.Z], () => E.Z.lurkingGuildIds()),
         x = l.useMemo(() => (n ? [] : v), [v, n]),
-        et = (0, h.Wu)([A.Z, P.ZP], () => L.default.keys(A.Z.getGuilds()).filter((e) => P.ZP.isCurrentUserGuest(e))),
+        et = (0, h.Wu)([P.Z, A.ZP], () => L.default.keys(P.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
         el = x.concat(et),
         er = (0, h.e7)([Z.Z], () => Z.Z.isFullscreenInContext()),
-        ea = (0, h.e7)([A.Z], () => A.Z.getGeoRestrictedGuilds()),
+        ea = (0, h.e7)([P.Z], () => P.Z.getGeoRestrictedGuilds()),
         [eo, es] = l.useState(!1),
         ec = l.useCallback(() => es(!0), []),
         eu = l.useCallback(() => es(!1), []),
@@ -296,8 +296,8 @@ function el(e) {
         }
     }
     (0, D.Z)(eb.scrollToGuild);
-    let eP = p.getRoots(),
-        eA = (0, S.Z)(),
+    let eA = p.getRoots(),
+        eP = (0, S.Z)(),
         ew = (0, j.U)(),
         eM = ea.map((e) =>
             (0, i.jsx)(
@@ -346,7 +346,7 @@ function el(e) {
                                         onScroll: eb.handleScroll,
                                         children: [
                                             (0, i.jsx)(F.u, {}),
-                                            eA ? (0, i.jsx)(N.Z, {}) : null,
+                                            eP ? (0, i.jsx)(N.Z, {}) : null,
                                             (0, i.jsx)(z.Z, { isOnHubVerificationRoute: ey }),
                                             (0, i.jsx)(k.Z, {}),
                                             ew,
@@ -357,18 +357,18 @@ function el(e) {
                                                 ? (0, i.jsx)(g.Stack, {
                                                       gap: 'xs',
                                                       'aria-label': $.intl.string($.t['7hB4kp']),
-                                                      children: eP.map(eT)
+                                                      children: eA.map(eT)
                                                   })
                                                 : (0, i.jsx)('div', {
                                                       'aria-label': $.intl.string($.t['7hB4kp']),
-                                                      children: eP.map(eT)
+                                                      children: eA.map(eT)
                                                   }),
                                             eM,
                                             n
                                                 ? null
                                                 : (0, i.jsx)(U.Z, {
                                                       disableTooltip: x.length > 0,
-                                                      lastTargetNode: eP[eP.length - 1]
+                                                      lastTargetNode: eA[eA.length - 1]
                                                   }),
                                             (0, i.jsx)(q.Z, {}),
                                             !n && s

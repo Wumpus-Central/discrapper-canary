@@ -66,13 +66,13 @@ let _ = l.memo(function (e) {
             },
             [u]
         ),
-        k = l.useCallback(
+        M = l.useCallback(
             (e) => {
                 e.stopPropagation(), null == m || m(e);
             },
             [m]
         ),
-        M = l.useCallback(() => {
+        k = l.useCallback(() => {
             w(!0);
         }, []),
         L = l.useCallback(() => {
@@ -86,7 +86,7 @@ let _ = l.memo(function (e) {
                 children: (0, i.jsx)(o.Clickable, {
                     innerRef: T,
                     ignoreKeyPress: !0,
-                    onMouseOver: M,
+                    onMouseOver: k,
                     onMouseLeave: L,
                     onClick: f,
                     className: a()(v.container, { [v.clickable]: null != f }, N),
@@ -159,7 +159,7 @@ let _ = l.memo(function (e) {
                                                                         size: o.Button.Sizes.SMALL,
                                                                         look: o.Button.Looks.OUTLINED,
                                                                         color: o.Button.Colors.PRIMARY,
-                                                                        onClick: k,
+                                                                        onClick: M,
                                                                         children: null != S ? S : g.intl.string(g.t['ETE/oK'])
                                                                     })
                                                                   : null
@@ -247,10 +247,10 @@ function b(e) {
             props: { onNotificationShow: T, onDismissClick: N, renderFooter: A, onNotificationClick: j, onConfirmClick: w, onCancelClick: P, ...R },
             status: O
         } = t,
-        { ref: k, springs: M } = (0, p.X4)(t.id, a, s);
+        { ref: M, springs: k } = (0, p.X4)(t.id, a, s);
     return (0, i.jsx)(C, {
         transitionState: a,
-        springs: M,
+        springs: k,
         index: n,
         locked: r,
         children: (0, i.jsx)(f.Z, {
@@ -259,7 +259,7 @@ function b(e) {
             children: (0, i.jsx)(_, {
                 ...R,
                 title: 'function' == typeof R.title ? R.title(x) : R.title,
-                containerRef: k,
+                containerRef: M,
                 notificationId: t.id,
                 onNotificationShow: 0 === n ? I : void 0,
                 onDismissClick: x,
@@ -271,7 +271,7 @@ function b(e) {
                 index: n,
                 locked: r,
                 status: O,
-                contentOpacity: M.contentOpacity
+                contentOpacity: k.contentOpacity
             })
         })
     });

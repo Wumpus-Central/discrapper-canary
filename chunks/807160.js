@@ -53,8 +53,8 @@ var i,
     z = n(362786),
     K = n(981631),
     q = n(474936),
-    Q = n(231338),
-    X = n(388032),
+    X = n(231338),
+    Q = n(388032),
     J = n(943857);
 function $(e, t, n) {
     return (
@@ -73,7 +73,7 @@ let ee = (e) => 'https://'.concat(K.xr4, '/hc/').concat(e.toLowerCase(), '/reque
     et = [K.epS.DURABLE_PRIMARY, K.epS.DURABLE, K.epS.CONSUMABLE];
 ((s = i || (i = {})).PURCHASE_DATE = 'PURCHASE_DATE'), (s.SKU_TYPE = 'SKU_TYPE'), (s.ALREADY_REFUNDED = 'ALREADY_REFUNDED'), (s.PAYMENT_STATUS = 'PAYMENT_STATUS'), (s.PAYMENT_GATEWAY = 'PAYMENT_GATEWAY'), (s.SKU_STICKER_PACK = 'SKU_STICKER_PACK'), (s.SUBSCRIPTION_TYPE = 'SUBSCRIPTION_TYPE'), (s.GUILD_PRODUCT = 'GUILD_PRODUCT'), (s.COLLECTIBLE = 'COLLECTIBLE');
 let en = [K.PyE.FAILED, K.PyE.REVERSED, K.PyE.CANCELED],
-    ei = [Q.gg.APPLE],
+    ei = [X.gg.APPLE],
     er = (e) => {
         let { description: t, cost: n } = e;
         return (0, a.jsx)('li', {
@@ -128,7 +128,7 @@ function el(e) {
         i = (0, S.hO)(t, n, { requireCurrentGuild: !1 }),
         r = (0, I.C)(i),
         s = (0, h.e7)([Z.Z], () => Z.Z.getGuild(t)),
-        o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? X.intl.string(X.t.H11qcX) : r,
+        o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? Q.intl.string(Q.t.H11qcX) : r,
         c = l.useCallback(async () => {
             (null == s ? void 0 : s.hasFeature(K.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, j.Z)(K.Z5c.GUILD_PRODUCT(t, n)) : await (0, j.Z)(K.Z5c.CHANNEL(t)), (0, x.xf)();
         }, [s, t, n]);
@@ -136,12 +136,12 @@ function el(e) {
         children: [
             null != o &&
                 (0, a.jsx)(ea, {
-                    description: X.intl.string(X.t.lXPbJS),
+                    description: Q.intl.string(Q.t.lXPbJS),
                     detail: o
                 }),
             null != s &&
                 (0, a.jsx)(ea, {
-                    description: X.intl.string(X.t.Wpn8z8),
+                    description: Q.intl.string(Q.t.Wpn8z8),
                     detail: (0, a.jsx)(O.Z, {
                         onClick: c,
                         children: s.name
@@ -175,7 +175,7 @@ function eo(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'header-secondary',
                                     className: J.guildProductBenefitLabel,
-                                    children: X.intl.string(X.t.hxawo6)
+                                    children: Q.intl.string(Q.t.hxawo6)
                                 }),
                                 (0, a.jsx)(N.Z, {
                                     guildId: i,
@@ -191,7 +191,7 @@ function eo(e) {
                                     variant: 'text-xs/semibold',
                                     color: 'header-secondary',
                                     className: J.guildProductBenefitLabel,
-                                    children: X.intl.string(X.t.gWBNen)
+                                    children: Q.intl.string(Q.t.gWBNen)
                                 }),
                                 (0, a.jsx)(v.Z, { role: c })
                             ]
@@ -234,32 +234,32 @@ class ec extends (r = l.PureComponent) {
             case K.PyE.PENDING:
                 return (0, a.jsx)('span', {
                     className: J.statusTagGrey,
-                    children: X.intl.string(X.t.y7F0RU)
+                    children: Q.intl.string(Q.t.y7F0RU)
                 });
             case K.PyE.FAILED:
                 return (0, a.jsx)('span', {
                     className: J.statusTagRed,
-                    children: X.intl.string(X.t.Yo4ru7)
+                    children: Q.intl.string(Q.t.Yo4ru7)
                 });
             case K.PyE.REFUNDED:
                 if (e.amountRefunded !== e.amount)
                     return (0, a.jsx)('span', {
                         className: J.statusTagGreen,
-                        children: X.intl.string(X.t.lYbZz8)
+                        children: Q.intl.string(Q.t.lYbZz8)
                     });
                 return (0, a.jsx)('span', {
                     className: J.statusTagGreen,
-                    children: X.intl.string(X.t.ZBb6ND)
+                    children: Q.intl.string(Q.t.ZBb6ND)
                 });
             case K.PyE.REVERSED:
                 return (0, a.jsx)('span', {
                     className: J.statusTagRed,
-                    children: X.intl.string(X.t.YQv9Li)
+                    children: Q.intl.string(Q.t.YQv9Li)
                 });
             case K.PyE.CANCELED:
                 return (0, a.jsx)('span', {
                     className: J.statusTagRed,
-                    children: X.intl.string(X.t.ttkBh4)
+                    children: Q.intl.string(Q.t.ttkBh4)
                 });
             default:
                 return null;
@@ -280,11 +280,11 @@ class ec extends (r = l.PureComponent) {
             children: (0, a.jsxs)('div', {
                 className: J.paymentInfo,
                 children: [
-                    (0, a.jsx)('div', { children: X.intl.string(X.t['UQim+v']) }),
+                    (0, a.jsx)('div', { children: Q.intl.string(Q.t['UQim+v']) }),
                     (0, a.jsx)(es, {
                         value: e.id,
-                        copyText: X.intl.string(X.t['Mdk9+P']),
-                        copyFeedbackText: X.intl.string(X.t['7eIrAw'])
+                        copyText: Q.intl.string(Q.t['Mdk9+P']),
+                        copyFeedbackText: Q.intl.string(Q.t['7eIrAw'])
                     })
                 ]
             })
@@ -305,7 +305,7 @@ class ec extends (r = l.PureComponent) {
                           showLabels: !0,
                           showPaymentSourceIcon: !0
                       })
-                    : e.paymentGateway === Q.gg.APPLE_PARTNER
+                    : e.paymentGateway === X.gg.APPLE_PARTNER
                       ? (0, a.jsx)(Y.Z, {
                             paymentSource: new B.$z({}),
                             locale: t,
@@ -325,14 +325,14 @@ class ec extends (r = l.PureComponent) {
                                           cost: (0, H.T4)(s - r, d)
                                       }),
                                       (0, a.jsx)(er, {
-                                          description: X.intl.string(X.t.QgWXho),
+                                          description: Q.intl.string(Q.t.QgWXho),
                                           cost: (0, H.T4)(r, d)
                                       })
                                   ]
                               })
                             : null,
                         (0, a.jsx)(er, {
-                            description: X.intl.string(X.t.txajQE),
+                            description: Q.intl.string(Q.t.txajQE),
                             cost: (0, H.T4)(s, d)
                         }),
                         e.isGuildProductPurchase &&
@@ -346,11 +346,11 @@ class ec extends (r = l.PureComponent) {
                             (0, a.jsxs)(a.Fragment, {
                                 children: [
                                     (0, a.jsx)(er, {
-                                        description: X.intl.string(X.t['A+I0AA']),
+                                        description: Q.intl.string(Q.t['A+I0AA']),
                                         cost: (0, H.T4)(o, d)
                                     }),
                                     (0, a.jsx)(er, {
-                                        description: X.intl.string(X.t.xER6Wl),
+                                        description: Q.intl.string(Q.t.xER6Wl),
                                         cost: (0, H.T4)(s - o, d)
                                     })
                                 ]
@@ -374,30 +374,30 @@ class ec extends (r = l.PureComponent) {
             o = this.isPremium ? 5 : 14;
         return (
             (e = i.includes('SKU_TYPE')
-                ? X.intl.format(X.t['5lvoVV'], { supportURL: s })
+                ? Q.intl.format(Q.t['5lvoVV'], { supportURL: s })
                 : r
                   ? n.isPremiumSubscription || n.isPremiumGuildSubscription
-                      ? X.intl.format(X.t.EPYteX, {
+                      ? Q.intl.format(Q.t.EPYteX, {
                             dateLimit: o,
                             supportURL: s
                         })
                       : n.isGift
-                        ? X.intl.format(X.t['16eP/P'], {
+                        ? Q.intl.format(Q.t['16eP/P'], {
                               dateLimit: o,
                               supportURL: s
                           })
-                        : X.intl.format(X.t['1LDI4O'], {
+                        : Q.intl.format(Q.t['1LDI4O'], {
                               dateLimit: o,
                               playtimeLimit: 2,
                               supportURL: s
                           })
                   : n.isCollectible
-                    ? X.intl.string(X.t.s9TZMz)
+                    ? Q.intl.string(Q.t.s9TZMz)
                     : n.isGift
-                      ? X.intl.formatToPlainString(X.t.owlOWV, { dateLimit: o })
+                      ? Q.intl.formatToPlainString(Q.t.owlOWV, { dateLimit: o })
                       : n.isPremiumSubscription || n.isPremiumGuildSubscription
-                        ? X.intl.formatToPlainString(X.t.dk7vyM, { dateLimit: o })
-                        : X.intl.formatToPlainString(X.t.s4Kk0N, {
+                        ? Q.intl.formatToPlainString(Q.t.dk7vyM, { dateLimit: o })
+                        : Q.intl.formatToPlainString(Q.t.s4Kk0N, {
                               dateLimit: o,
                               playtimeLimit: 2
                           })),
@@ -406,7 +406,7 @@ class ec extends (r = l.PureComponent) {
                 children: [
                     (0, a.jsx)(p.H, {
                         className: J.paymentHeader,
-                        children: X.intl.string(X.t['n/27pq'])
+                        children: Q.intl.string(Q.t['n/27pq'])
                     }),
                     (0, a.jsxs)('div', {
                         className: J.paymentText,
@@ -452,11 +452,11 @@ class ec extends (r = l.PureComponent) {
                 children: [
                     (0, a.jsx)('div', {
                         className: J.refundRules,
-                        children: !r.isCollectible && this.renderRefundCriteria(X.intl.string(X.t.H0RNz8), s, X.intl.formatToPlainString(X.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
+                        children: !r.isCollectible && this.renderRefundCriteria(Q.intl.string(Q.t.H0RNz8), s, Q.intl.formatToPlainString(Q.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
                     }),
                     (0, a.jsx)(p.Anchor, {
                         href: ee(i),
-                        children: X.intl.string(X.t.re5nOD)
+                        children: Q.intl.string(Q.t.re5nOD)
                     })
                 ]
             });
@@ -470,13 +470,13 @@ class ec extends (r = l.PureComponent) {
                     text: (function (e) {
                         switch (e) {
                             case z.d$.ALREADY_REFUNDED_PREMIUM:
-                                return X.intl.string(X.t['GBu+VV']);
+                                return Q.intl.string(Q.t['GBu+VV']);
                             case z.d$.ALREADY_REFUNDED_PREMIUM_GUILD:
-                                return X.intl.string(X.t['7bNM5+']);
+                                return Q.intl.string(Q.t['7bNM5+']);
                             case z.d$.ENTITLEMENT_ALREADY_CONSUMED:
-                                return X.intl.string(X.t['2yOjur']);
+                                return Q.intl.string(Q.t['2yOjur']);
                             default:
-                                return X.intl.string(X.t.iFF3T0);
+                                return Q.intl.string(Q.t.iFF3T0);
                         }
                     })(l),
                     children: (e) =>
@@ -494,12 +494,12 @@ class ec extends (r = l.PureComponent) {
                                             ...t
                                         });
                                 }),
-                            children: X.intl.string(X.t.qC9V9P)
+                            children: Q.intl.string(Q.t.qC9V9P)
                         })
                 }),
                 (0, a.jsx)(p.Anchor, {
                     href: ee(i),
-                    children: X.intl.string(X.t.re5nOD)
+                    children: Q.intl.string(Q.t.re5nOD)
                 })
             ]
         });
@@ -521,10 +521,10 @@ class ec extends (r = l.PureComponent) {
                 });
             else if (g.type === K.NYc.GUILD) {
                 if (null != c) {
-                    let e = c.interval === q.rV.YEAR ? X.t.V6UFQE : X.t['6oq129'];
-                    n.push(X.intl.format(e, { planName: c.name })), (l = c.skuId);
+                    let e = c.interval === q.rV.YEAR ? Q.t.V6UFQE : Q.t['6oq129'];
+                    n.push(Q.intl.format(e, { planName: c.name })), (l = c.skuId);
                 }
-            } else g.type === K.NYc.APPLICATION && (null != c && (l = c.skuId), null != r ? n.push(X.intl.formatToPlainString(X.t['0wL/VF'], { tier: null == m ? void 0 : m.name })) : n.push(X.intl.string(X.t['9czSYm'])));
+            } else g.type === K.NYc.APPLICATION && (null != c && (l = c.skuId), null != r ? n.push(Q.intl.formatToPlainString(Q.t['0wL/VF'], { tier: null == m ? void 0 : m.name })) : n.push(Q.intl.string(Q.t['9czSYm'])));
             (t = 0 !== n.length ? n.join(', ') : i.description),
                 (e = (0, a.jsx)(T.Z, {
                     className: J.descriptionIcon,
@@ -536,7 +536,7 @@ class ec extends (r = l.PureComponent) {
                 }));
         } else if (null != m) {
             var x;
-            if (((t = i.isGuildProductPurchase && i.isSoftDeletedProduct ? X.intl.string(X.t.O7uLm5) : m.name), null != o)) {
+            if (((t = i.isGuildProductPurchase && i.isSoftDeletedProduct ? Q.intl.string(Q.t.O7uLm5) : m.name), null != o)) {
                 let t = (0, D.Zt)(o);
                 e = (0, a.jsx)(y.ZP, {
                     disableAnimation: !d,
@@ -576,7 +576,7 @@ class ec extends (r = l.PureComponent) {
             }),
             E = i.isGift
                 ? (0, a.jsx)(p.Tooltip, {
-                      text: X.intl.string(X.t.QddTpq),
+                      text: Q.intl.string(Q.t.QddTpq),
                       children: (e) =>
                           (0, a.jsx)(p.GiftIcon, {
                               size: 'md',
@@ -618,8 +618,8 @@ class ec extends (r = l.PureComponent) {
                           ? (0, a.jsx)(A.Z, {
                                 className: J.warningBlock,
                                 buttonPosition: A.E.RIGHT,
-                                notice: X.intl.string(X.t['3AvulJ']),
-                                ctaLabel: X.intl.string(X.t.zoztQE),
+                                notice: Q.intl.string(Q.t['3AvulJ']),
+                                ctaLabel: Q.intl.string(Q.t.zoztQE),
                                 onClick: () => (0, f.Z)(ee(n))
                             })
                           : null != i &&
@@ -640,7 +640,7 @@ class ec extends (r = l.PureComponent) {
                 children: [
                     (0, a.jsx)(p.H, {
                         className: J.paymentHeader,
-                        children: X.intl.string(X.t.nyzoFR)
+                        children: Q.intl.string(Q.t.nyzoFR)
                     }),
                     this.renderPaymentBreakdown(),
                     this.renderGuildProductBenefits(),

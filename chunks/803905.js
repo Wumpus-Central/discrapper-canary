@@ -138,7 +138,7 @@ let h = new p(i.q.ANIMATED_EMOJIS),
     P = new p('installPremiumApplications'),
     M = new p('redeemPremiumPerks'),
     k = new p(i.q.VIDEO_FILTER_ASSETS);
-new s.Z(i.q.INCREASED_FILE_UPLOAD_SIZE, o.h6);
+new s.Z(i.q.INCREASED_FILE_UPLOAD_SIZE, o.h);
 let U = new p(i.q.INCREASED_GUILD_LIMIT),
     B = new p(i.q.INCREASED_MESSAGE_LENGTH),
     G = new p('increasedVideoUploadQuality'),

@@ -6,7 +6,7 @@ n.d(t, {
         return j;
     },
     kw: function () {
-        return P;
+        return A;
     },
     rj: function () {
         return T;
@@ -40,8 +40,8 @@ function N(e) {
 let E = l.memo(function (e) {
     let t,
         { channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: _, position: E, sortingPosition: y, hideIcon: j, children: T } = e,
-        P = (0, f.Q3)('CategoryChannel'),
-        A = (0, s.e7)([x.ZP], () => x.ZP.isChannelMuted(r.getGuildId(), r.id)),
+        A = (0, f.Q3)('CategoryChannel'),
+        P = (0, s.e7)([x.ZP], () => x.ZP.isChannelMuted(r.getGuildId(), r.id)),
         w = (0, s.e7)([g.Z], () => g.Z.isCollapsed(r.id)),
         M = (0, s.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_CHANNELS, r));
     t = null != y ? (E > y ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
@@ -54,7 +54,7 @@ let E = l.memo(function (e) {
                     let t = v.Z.getGuild(r.getGuildId());
                     null != t &&
                         (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('8965'), n.e('81070')]).then(n.bind(n, 139035));
+                            let { default: e } = await Promise.all([n.e('8965'), n.e('14280')]).then(n.bind(n, 139035));
                             return (n) =>
                                 (0, i.jsx)(e, {
                                     ...n,
@@ -99,7 +99,7 @@ let E = l.memo(function (e) {
                         ref: O,
                         className: a()(S.iconVisibility, S.wrapper, {
                             [S.collapsed]: w,
-                            [S.muted]: A,
+                            [S.muted]: P,
                             [S.clickable]: !0
                         }),
                         onContextMenu: R,
@@ -114,7 +114,7 @@ let E = l.memo(function (e) {
                                 'aria-expanded': !w,
                                 focusProps: { enabled: !1 },
                                 children: [
-                                    P || j
+                                    A || j
                                         ? null
                                         : (0, i.jsx)(c.ChevronSmallDownIcon, {
                                               size: 'md',
@@ -125,7 +125,7 @@ let E = l.memo(function (e) {
                                         className: S.name,
                                         children: (0, i.jsx)(m.Z, { children: r.name })
                                     }),
-                                    P && !j
+                                    A && !j
                                         ? (0, i.jsx)(c.ChevronSmallDownIcon, {
                                               size: 'md',
                                               color: 'currentColor',
@@ -160,7 +160,7 @@ let E = l.memo(function (e) {
                                                               left: -4
                                                           }
                                                       },
-                                                      children: P
+                                                      children: A
                                                           ? (0, i.jsx)(c.PlusMediumIcon, {
                                                                 size: 'xs',
                                                                 color: 'currentColor',
@@ -278,7 +278,7 @@ let y = l.memo(function (e) {
                 : null
             : (0, i.jsx)('div', { style: { height: 16 } });
     }),
-    P = l.memo(function (e) {
+    A = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
             className: a()(S.containerDefault),

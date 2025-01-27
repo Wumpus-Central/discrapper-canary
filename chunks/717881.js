@@ -54,21 +54,21 @@ t.Z = function (e) {
             var e;
             return C.Z.getChannel(null === (e = y.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
         }),
-        { enableHangStatus: k } = I.n.useExperiment(
+        { enableHangStatus: M } = I.n.useExperiment(
             {
                 guildId: null == O ? void 0 : O.guild_id,
                 location: 'UserActivityContainer'
             },
             { autoTrackExposure: !1 }
         ),
-        M = (0, s.e7)([_.Z], () => (r ? _.Z.getAnyStreamForUser(n.id) : null)),
-        L = k && E.Z.can(N.Plq.CONNECT, O),
+        k = (0, s.e7)([_.Z], () => (r ? _.Z.getAnyStreamForUser(n.id) : null)),
+        L = M && E.Z.can(N.Plq.CONNECT, O),
         D = (null == t ? void 0 : t.type) === N.IIU.HANG_STATUS && L ? O : null,
         U = (0, s.e7)([b.Z, y.Z, C.Z], () => {
             var e, i;
             return (0, c.Z)(t, N.xjy.EMBEDDED) ? b.Z.getGuild(null === (e = C.Z.getChannel(null === (i = y.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? b.Z.getGuild(D.getGuildId()) : null;
         }),
-        V = (0, s.e7)([b.Z], () => (null != M ? b.Z.getGuild(M.guildId) : null)),
+        V = (0, s.e7)([b.Z], () => (null != k ? b.Z.getGuild(k.guildId) : null)),
         F = (0, s.e7)([m.Z], () => {
             if (null != t) return null != t.application_id ? m.Z.getApplication(t.application_id) : m.Z.getApplicationByName(t.name);
             return null;
@@ -103,7 +103,7 @@ t.Z = function (e) {
                             children: [
                                 (0, i.jsx)(w, {
                                     ...R,
-                                    applicationStream: M,
+                                    applicationStream: k,
                                     activity: t,
                                     user: n
                                 }),
@@ -130,7 +130,7 @@ t.Z = function (e) {
                                                         activity: t,
                                                         application: F,
                                                         altText: (0, v.xC)(n, t),
-                                                        stream: M
+                                                        stream: k
                                                     }),
                                                 i === h.L.ReplySubmit &&
                                                     null != r &&
@@ -140,7 +140,7 @@ t.Z = function (e) {
                                                         activity: t,
                                                         application: F,
                                                         altText: (0, v.xC)(n, t),
-                                                        stream: M
+                                                        stream: k
                                                     });
                                         }
                                     })

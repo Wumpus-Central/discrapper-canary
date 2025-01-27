@@ -4,8 +4,8 @@ var l,
     a,
     u,
     o,
-    E,
-    d = t(442837),
+    d,
+    E = t(442837),
     _ = t(570140),
     c = t(592125),
     s = t(896797),
@@ -19,7 +19,7 @@ function S(e) {
     if (A === n) return !1;
     A = n;
 }
-class L extends (E = d.ZP.Store) {
+class L extends (d = E.ZP.Store) {
     initialize() {
         this.waitFor(s.Z, I.Z, T.Z, C.Z, c.Z);
     }

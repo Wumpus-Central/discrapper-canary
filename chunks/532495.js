@@ -69,8 +69,8 @@ function P() {
             location: q + ' auto off',
             autoTrackExposure: !1
         });
-    let Q = (0, N.ZP)(Z.id),
-        X = null == Q ? void 0 : Q.getLegacyUsername(),
+    let X = (0, N.ZP)(Z.id),
+        Q = null == X ? void 0 : X.getLegacyUsername(),
         J = (null !== (n = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? H.global_name : null !== (r = null == Y ? void 0 : Y.nick) && void 0 !== r ? r : [],
         $ = (null !== (P = null === (t = H.bio) || void 0 === t ? void 0 : t.length) && void 0 !== P ? P : 0) > 0 ? H.bio : null !== (D = null == Y ? void 0 : Y.bio) && void 0 !== D ? D : [],
         ee = (0, c.V)();
@@ -166,7 +166,7 @@ function P() {
                 'bio'
             ),
             ee.length > 0 && (0, i.jsx)(d.Z, { availableClans: ee }),
-            null != X && (0, i.jsx)(f.Z, { legacyUsername: X }, 'legacy_username')
+            null != Q && (0, i.jsx)(f.Z, { legacyUsername: Q }, 'legacy_username')
         ]
     });
 }

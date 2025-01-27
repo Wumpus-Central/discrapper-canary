@@ -145,7 +145,7 @@ class q extends r.Component {
             });
     }
 }
-class Q extends r.Component {
+class X extends r.Component {
     async refreshBuildOverrides() {
         this.setState({ loading: !0 });
         let e = await (0, T.Ce)();
@@ -442,7 +442,7 @@ class Q extends r.Component {
             Y(this, 'handleLinkGeneration', () => {
                 let { buildOverrides: e } = this.state;
                 (0, m.openModal)((t) =>
-                    (0, i.jsx)(X, {
+                    (0, i.jsx)(Q, {
                         ...t,
                         buildOverrides: e
                     })
@@ -450,7 +450,7 @@ class Q extends r.Component {
             });
     }
 }
-class X extends r.Component {
+class Q extends r.Component {
     isMobile() {
         var e;
         return K(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
@@ -1221,7 +1221,7 @@ function ei() {
 class er extends r.PureComponent {
     render() {
         return (0, i.jsxs)(r.Fragment, {
-            children: [(0, i.jsx)(et, {}), (0, i.jsx)(ee, {}), (0, i.jsx)(en, {}), (0, i.jsx)(ei, {}), (0, i.jsx)(Q, {})]
+            children: [(0, i.jsx)(et, {}), (0, i.jsx)(ee, {}), (0, i.jsx)(en, {}), (0, i.jsx)(ei, {}), (0, i.jsx)(X, {})]
         });
     }
 }

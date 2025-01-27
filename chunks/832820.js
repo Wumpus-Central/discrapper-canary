@@ -34,7 +34,7 @@ function I(e) {
             if (null != a && a > 0) return (null == i ? void 0 : i.type) === v.qc2.DEVELOPER_GIFT ? y.intl.format(y.t['b+P6ra'], { numPotions: a }) : y.intl.format(y.t.RiQ4cn, { numPotions: a });
             return y.intl.format(y.t['jerM9/'], { helpCenterLink: h.Z.getArticleURL(v.BhN.CONFETTI_POTION) });
         }, [a, i]),
-        [A, C] = s.useState(!1),
+        [A, C] = s.useState(!0),
         N = s.useCallback(() => {
             C(!1);
         }, []),

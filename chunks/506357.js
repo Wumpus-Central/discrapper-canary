@@ -88,7 +88,7 @@ function x(e) {
             ]
         });
     let M = (0, _.CG)(j) ? C.intl.formatToPlainString(C.t.tZTx2N, { guildName: A.name }) : (0, _.kk)(j) ? C.intl.formatToPlainString(C.t['1bSmxs'], { guildName: A.name }) : C.intl.formatToPlainString(C.t.W87xDA, { guildName: A.name }),
-        k = Z && T === E.oC.MEMBER_SAFETY;
+        D = Z && T === E.oC.MEMBER_SAFETY;
     return (0, i.jsxs)(a.Notice, {
         className: I.notice,
         color: a.NoticeColors.WARNING,
@@ -99,7 +99,7 @@ function x(e) {
             }),
             y,
             M,
-            !k &&
+            !D &&
                 (0, i.jsx)(a.NoticeButton, {
                     className: I.actionButton,
                     onClick: () => L(!0),

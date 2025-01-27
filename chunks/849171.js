@@ -18,7 +18,7 @@ n.d(t, {
         return F;
     },
     bn: function () {
-        return M;
+        return k;
     },
     nR: function () {
         return i;
@@ -57,9 +57,9 @@ var i,
     P = n(823379),
     R = n(5192),
     O = n(388032),
-    k = n(262745);
+    M = n(262745);
 ((l = i || (i = {}))[(l.SMALL = 0)] = 'SMALL'), (l[(l.MEDIUM = 1)] = 'MEDIUM'), (l[(l.LARGE = 2)] = 'LARGE');
-let M = 1024,
+let k = 1024,
     L = ['embedded_background'];
 function D(e) {
     return e > 400 ? 2 : e > 300 ? 1 : 0;
@@ -89,7 +89,7 @@ function V(e) {
                         {
                             src: e.getAvatarURL(n, s),
                             alt: t,
-                            className: k.avatar
+                            className: M.avatar
                         },
                         e.id
                     )
@@ -132,7 +132,7 @@ function z(e) {
         T = null !== (n = s.getGuildId()) && void 0 !== n ? n : void 0,
         N = a.useId(),
         j = l.id,
-        M = a.useMemo(
+        k = a.useMemo(
             () => ({
                 channel: s,
                 type: 'channel'
@@ -141,11 +141,11 @@ function z(e) {
         ),
         { submitting: L } = (0, Z.Z)({
             applicationId: j,
-            context: M,
+            context: k,
             launchingComponentId: N
         });
     return (0, r.jsxs)('div', {
-        className: k.splash,
+        className: M.splash,
         children: [
             (0, r.jsx)(V, {
                 avatarSize: S,
@@ -154,9 +154,9 @@ function z(e) {
                 users: I
             }),
             (0, r.jsx)(u.Text, {
-                className: o()(k.subheader, {
-                    [k.small]: 0 === v,
-                    [k.medium]: 1 === v
+                className: o()(M.subheader, {
+                    [M.small]: 0 === v,
+                    [M.medium]: 1 === v
                 }),
                 variant: 'text-sm/normal',
                 children:
@@ -168,15 +168,15 @@ function z(e) {
                         : O.intl.formatToPlainString(O.t['7Uuia2'], { username: b })
             }),
             (0, r.jsx)(u.Text, {
-                className: o()(k.header, {
-                    [k.small]: 0 === v,
-                    [k.medium]: 1 === v
+                className: o()(M.header, {
+                    [M.small]: 0 === v,
+                    [M.medium]: 1 === v
                 }),
                 variant: 'text-sm/normal',
                 children: l.name
             }),
             (0, r.jsx)('div', {
-                className: k.buttons,
+                className: M.buttons,
                 children: E
                     ? (0, r.jsx)(u.Button, {
                           onClick: function (e) {
@@ -191,7 +191,7 @@ function z(e) {
                           },
                           submitting: L,
                           size: F(v),
-                          className: k.button,
+                          className: M.button,
                           look: u.ButtonLooks.FILLED,
                           color: u.Button.Colors.WHITE,
                           children: O.intl.string(O.t['4i2vj4'])
@@ -211,7 +211,7 @@ function B(e) {
         { url: p } = (0, S.Z)({
             applicationId: u,
             names: L,
-            size: M
+            size: k
         }),
         g = !i && m,
         _ = !m,
@@ -232,18 +232,18 @@ function B(e) {
         (0, r.jsx)(y.Gt, {
             value: o,
             children: (0, r.jsx)('div', {
-                className: k.container,
+                className: M.container,
                 children: (0, r.jsxs)(r.Fragment, {
                     children: [
                         g &&
                             null != d &&
                             (0, r.jsx)(I.Z, {
-                                className: k.iframe,
+                                className: M.iframe,
                                 embedId: (0, C.Z)(d.location.id, u)
                             }),
                         _ && null != f && null != p && '' !== p
                             ? (0, r.jsx)('img', {
-                                  className: k.splashImage,
+                                  className: M.splashImage,
                                   alt: f.name,
                                   src: p
                               })
@@ -256,7 +256,7 @@ function B(e) {
                                 participants: t.participants,
                                 application: f
                             }),
-                        l || _ ? null : (0, r.jsx)('div', { className: k.clickShield })
+                        l || _ ? null : (0, r.jsx)('div', { className: M.clickShield })
                     ]
                 })
             })

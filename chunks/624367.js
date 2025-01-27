@@ -40,14 +40,14 @@ function A(e) {
         y = null == P ? void 0 : null === (t = P.bot) || void 0 === t ? void 0 : t.id,
         O = null != P && (0, u.ye)(P),
         M = (0, x.ZP)(null !== (a = null == P ? void 0 : P.maxParticipants) && void 0 !== a ? a : 0),
-        k = (0, N.Z)({
+        D = (0, N.Z)({
             applicationId: A,
             size: S,
             names: ['embedded_cover']
         }),
-        D = null !== (C = null == P ? void 0 : P.id) && void 0 !== C ? C : '0',
-        U = (0, I.TK)(D, (0, m.PL)(!0, !1)),
-        B = (0, I.TK)(D, (0, m.LD)(L, !1)),
+        k = null !== (C = null == P ? void 0 : P.id) && void 0 !== C ? C : '0',
+        U = (0, I.TK)(k, (0, m.PL)(!0, !1)),
+        B = (0, I.TK)(k, (0, m.LD)(L, !1)),
         w = async () => {
             if (null != y && (null == P ? void 0 : P.id) != null)
                 try {
@@ -83,7 +83,7 @@ function A(e) {
                             children: (0, i.jsx)('img', {
                                 className: T.img,
                                 alt: P.name,
-                                src: k.url
+                                src: D.url
                             })
                         }),
                         (0, i.jsxs)('div', {

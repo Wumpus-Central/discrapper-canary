@@ -115,7 +115,7 @@ async function I(e, n, r, i) {
             skuId: n
         });
         let e = r instanceof l.HF ? r : new l.HF(r);
-        if (e.code === u.SM.BILLING_BUNDLE_ALREADY_PURCHASED || e.code === u.SM.BILLING_BUNDLE_PARTIALLY_OWNED) throw e;
+        if (e.code === u.SM.BILLING_BUNDLE_ALREADY_PURCHASED || e.code === u.SM.BILLING_BUNDLE_PARTIALLY_OWNED || e.code === u.SM.INVALID_BILLING_ADDRESS) throw e;
     }
     return a;
 }

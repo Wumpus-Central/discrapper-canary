@@ -209,18 +209,18 @@ class K extends n.Component {
                                 giftStyle: n.giftStyle,
                                 className: B.seasonalGiftIcon
                             }),
-                        (0, s.jsx)('div', { className: g ? void 0 : B.backSplash }),
+                        !g && (0, s.jsx)('div', { className: B.backSplash }),
+                        !Z &&
+                            (0, s.jsx)(u.ModalCloseButton, {
+                                onClick: i,
+                                className: B.closeButton
+                            }),
                         (0, s.jsxs)(u.ModalContent, {
                             className: a()({
                                 [B.content]: !g,
                                 [B.contentCustomGift]: g
                             }),
                             children: [
-                                !Z &&
-                                    (0, s.jsx)(u.ModalCloseButton, {
-                                        onClick: i,
-                                        className: B.closeButton
-                                    }),
                                 !Z &&
                                     (null == n.giftStyle || (g && S)) &&
                                     (0, s.jsx)(A.Z, {

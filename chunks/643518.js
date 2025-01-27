@@ -15,10 +15,10 @@ var i = t(697927),
     u = t(388032);
 function f(e) {
     var n, t;
-    let { user: f, currentUser: m, initialSubsection: I } = e,
-        { live: x, recent: p, stream: h, outbox: v } = (0, o.Z)(f.id),
-        Z = x.length > 0 || p.length > 0 || null != h,
-        g = null === (n = (0, i.Z)(f.id, f.id !== (null == m ? void 0 : m.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
+    let { user: f, currentUser: m, initialSubsection: p } = e,
+        { live: I, recent: x, stream: h, outbox: v } = (0, o.Z)(f.id),
+        g = I.length > 0 || x.length > 0 || null != h,
+        Z = null === (n = (0, i.Z)(f.id, f.id !== (null == m ? void 0 : m.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
         j = null === (t = (0, l.Z)(f.id, f.id !== (null == m ? void 0 : m.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
         _ = f.id === (null == m ? void 0 : m.id),
         b = (0, r.Z)({
@@ -33,7 +33,7 @@ function f(e) {
             }
         ];
     return (
-        (Z || (null == v && I === a.Tb.RECENT_ACTIVITY)) &&
+        (g || (null == v && p === a.Tb.RECENT_ACTIVITY)) &&
             E.push({
                 section: a.oh.ACTIVITY,
                 text: u.intl.string(u.t.chq59f)
@@ -42,7 +42,7 @@ function f(e) {
             b &&
             (E.push({
                 section: a.oh.MUTUAL_FRIENDS,
-                text: (0, s.Z)(g)
+                text: (0, s.Z)(Z)
             }),
             E.push({
                 section: a.oh.MUTUAL_GUILDS,

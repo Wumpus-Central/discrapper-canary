@@ -39,8 +39,8 @@ var i = n(200651),
     y = n(492435),
     O = n(353926),
     M = n(506357),
-    k = n(36459),
-    D = n(236069),
+    D = n(36459),
+    k = n(236069),
     U = n(305325),
     B = n(281956),
     w = n(574650),
@@ -382,13 +382,13 @@ let ev =
                       return (0, i.jsx)(eC, {});
                   case eh.kVF.HARDWARE_MUTE:
                       if (null == em.metadata) return null;
-                      let { vendor: eM, model: ek } = em.metadata;
+                      let { vendor: eM, model: eD } = em.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
                               eg.intl.format(eg.t.qoDex8, {
                                   vendorName: eM.name,
-                                  modelName: ek.name
+                                  modelName: eD.name
                               }),
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
@@ -396,7 +396,7 @@ let ev =
                                   }
                               }),
                               (0, i.jsx)(c.NoticeButtonAnchor, {
-                                  href: ek.url,
+                                  href: eD.url,
                                   target: '_blank',
                                   rel: 'noreferrer noopener',
                                   children: eg.intl.string(eg.t['Yl/Rio'])
@@ -439,8 +439,8 @@ let ev =
                       });
                   case eh.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
                       if (null == em.metadata) return null;
-                      let { skuId: eD, applicationId: eU } = em.metadata,
-                          eB = el.Z.get(eD),
+                      let { skuId: ek, applicationId: eU } = em.metadata,
+                          eB = el.Z.get(ek),
                           ew = b.Z.getApplication(eU);
                       if (null == eB || null == ew) return null;
                       let eF = { page: eh.ZY5.IN_APP };
@@ -838,7 +838,7 @@ let ev =
                       });
                   case eh.kVF.AUTOMOD_QUARANTINED_USER_PROFILE: {
                       let e = { page: eh.ZY5.IN_APP };
-                      return (0, i.jsx)(D.Z, {
+                      return (0, i.jsx)(k.Z, {
                           guildId: S,
                           analyticsLocations: eT,
                           analyticsLocation: e
@@ -886,15 +886,15 @@ let ev =
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: eh.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION,
                                   onClick: () => {
-                                      null != S && (0, k.T9)(S), eN(eY);
+                                      null != S && (0, D.T9)(S), eN(eY);
                                   }
                               }),
                               eg.intl.string(eg.t.B8ruyc),
                               (0, i.jsx)(c.NoticeButton, {
                                   onClick: () => {
                                       null != S &&
-                                          (0, k.UE)(S, eX, () => {
-                                              eN(eY), (0, k.T9)(S);
+                                          (0, D.UE)(S, eX, () => {
+                                              eN(eY), (0, D.T9)(S);
                                           });
                                   },
                                   children: eg.intl.string(eg.t.oX14Eh)

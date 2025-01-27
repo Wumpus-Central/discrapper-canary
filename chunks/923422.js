@@ -13,27 +13,27 @@ var r = n(200651),
     h = n(991346),
     m = n(606669),
     x = n(53432),
-    M = n(74869),
-    f = n(45570),
+    f = n(74869),
+    M = n(45570),
     b = n(308512),
     j = n(594791),
     Z = n(393431),
-    S = n(69021),
-    C = n(981631),
-    I = n(388032);
+    C = n(69021),
+    S = n(981631),
+    v = n(388032);
 t.default = (0, c.Z)(
     function (e) {
         let { webBuildOverride: t, onSelect: n } = e,
             [c, s] = i.useState(!1),
-            E = (0, f.Z)(),
-            v = (0, b.Z)(),
+            I = (0, M.Z)(),
+            E = (0, b.Z)(),
             y = (0, x.Z)(),
             k = (0, m.Z)(),
             R = (0, Z.Z)(),
-            P = (0, j.Z)(),
-            D = (0, M.Z)(),
-            O = (0, S.Z)(),
-            { analyticsLocations: T } = (0, d.ZP)(),
+            D = (0, j.Z)(),
+            O = (0, f.Z)(),
+            T = (0, C.Z)(),
+            { analyticsLocations: P } = (0, d.ZP)(),
             A = i.useMemo(() => (0, g.j)(), []);
         async function G() {
             try {
@@ -42,43 +42,43 @@ t.default = (0, c.Z)(
                 s(!1);
             }
         }
-        let N = (e) => {
+        let B = (e) => {
                 switch (e) {
-                    case C.oAB.GAMES:
+                    case S.oAB.GAMES:
+                        return I;
+                    case S.oAB.STREAMER_MODE:
                         return E;
-                    case C.oAB.STREAMER_MODE:
-                        return v;
-                    case C.oAB.APPEARANCE:
+                    case S.oAB.APPEARANCE:
                         return y;
-                    case C.oAB.ACCESSIBILITY:
+                    case S.oAB.ACCESSIBILITY:
                         return k;
-                    case C.oAB.VOICE:
+                    case S.oAB.VOICE:
                         return R;
-                    case C.oAB.TEXT:
-                        return P;
-                    case C.oAB.EXPERIMENTS:
+                    case S.oAB.TEXT:
                         return D;
-                    case C.oAB.DEVELOPER_OPTIONS:
+                    case S.oAB.EXPERIMENTS:
                         return O;
+                    case S.oAB.DEVELOPER_OPTIONS:
+                        return T;
                     default:
                         return null;
                 }
             },
-            B = (0, h.VO)()
+            N = (0, h.VO)()
                 .filter((e) => {
                     let { section: t } = e;
                     return t !== o.ID.HEADER && t !== o.ID.CUSTOM && t !== o.ID.DIVIDER && 'logout' !== t;
                 })
                 .filter((e) => null == e.predicate || e.predicate());
         return (0, r.jsx)(d.Gt, {
-            value: T,
+            value: P,
             children: (0, r.jsxs)(l.Menu, {
                 navId: 'user-settings-cog',
                 onClose: a.Zy,
-                'aria-label': I.intl.string(I.t.opYYHh),
+                'aria-label': v.intl.string(v.t.opYYHh),
                 onSelect: n,
                 children: [
-                    B.map((e) => {
+                    N.map((e) => {
                         let { section: t, label: n, onClick: i } = e,
                             a = t.replace(/\W/gi, '_');
                         return (0, r.jsx)(
@@ -90,10 +90,10 @@ t.default = (0, c.Z)(
                                     null != i
                                         ? i()
                                         : (function (e, t) {
-                                              let n = Object.values(C.oAB).filter((t) => t === e)[0];
+                                              let n = Object.values(S.oAB).filter((t) => t === e)[0];
                                               null != n && u.Z.open(n, void 0, { analyticsLocations: t });
-                                          })(t, T),
-                                children: N(t)
+                                          })(t, P),
+                                children: B(t)
                             },
                             a
                         );
@@ -126,7 +126,7 @@ t.default = (0, c.Z)(
                               children: (0, r.jsx)(l.MenuItem, {
                                   id: 'clear-build-override',
                                   disabled: c,
-                                  label: I.intl.string(I.t['/Nz9ra']),
+                                  label: v.intl.string(v.t['/Nz9ra']),
                                   action: G,
                                   color: 'danger'
                               })

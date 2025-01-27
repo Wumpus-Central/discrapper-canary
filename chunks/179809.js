@@ -30,7 +30,7 @@ var i = n(200651),
 let E = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     y = (0, s.animated)(d.Stack);
 function j(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: f = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: P, useCircleMask: A = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: U } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: f = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: U } = e,
         { id: O, name: V, children: H } = t,
         F = (0, p.Q3)('FolderItem'),
         [z, W] = l.useState(!1),
@@ -62,7 +62,7 @@ function j(e) {
             },
             [D, s]
         ),
-        ee = null != V && '' !== V ? V : null != P && '' !== P ? P : b.intl.string(b.t.xV9hVl),
+        ee = null != V && '' !== V ? V : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
         et = (0, c.Ie)(''.concat(O)),
         en = 'folder-items-'.concat(O),
         ei = (function (e) {
@@ -103,7 +103,7 @@ function j(e) {
                             : (0, i.jsx)(C.Z, {
                                   folderNode: t,
                                   expanded: s,
-                                  forceCircular: A,
+                                  forceCircular: P,
                                   sorting: M,
                                   mediaState: u,
                                   mentionCount: f,

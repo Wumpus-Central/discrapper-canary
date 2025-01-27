@@ -168,10 +168,10 @@ t.Z = function (e) {
         z = Math.max(0, W - U.length),
         K = G > W,
         q = W === s.length,
-        Q = q ? z : 1,
-        X = r.useMemo(() => {
+        X = q ? z : 1,
+        Q = r.useMemo(() => {
             let e = [];
-            for (let t = 0; t < Q; t++)
+            for (let t = 0; t < X; t++)
                 e.push(
                     (0, i.jsx)(
                         I.Z,
@@ -183,7 +183,7 @@ t.Z = function (e) {
                     )
                 );
             return e;
-        }, [Q, Z]),
+        }, [X, Z]),
         J = null != M,
         $ = r.useMemo(() => V.find((e) => e.isAvailable()), [V]);
     if (0 === V.length) return null;
@@ -264,7 +264,7 @@ t.Z = function (e) {
                                 children: [
                                     (0, i.jsx)('div', {
                                         className: P.headerBoostGems,
-                                        children: X
+                                        children: Q
                                     }),
                                     (0, i.jsxs)('div', {
                                         className: P.__invalid_headerCopy,

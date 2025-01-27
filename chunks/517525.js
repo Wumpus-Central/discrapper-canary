@@ -60,10 +60,10 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         }
         let R = t || r,
             { location: O } = (0, f.O)(),
-            k = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
-            M = o && !I.ZP.isPremium(k, b.p9.TIER_1) && !I.ZP.canStreamQuality(I.ZP.StreamQuality.MID, k),
+            M = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
+            k = o && !I.ZP.isPremium(M, b.p9.TIER_1) && !I.ZP.canStreamQuality(I.ZP.StreamQuality.MID, M),
             L = l.useCallback(() => {
-                M &&
+                k &&
                     R &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await n.e('28479').then(n.bind(n, 78865));
@@ -73,7 +73,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                                 analyticsSource: O
                             });
                     });
-            }, [M, R, O]);
+            }, [k, R, O]);
         if (
             (l.useEffect(() => {
                 !Z &&
@@ -97,7 +97,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 (0, i.jsxs)(m.Clickable, {
                     ...e,
                     onClick: L,
-                    className: a()(y.qualityIndicator, g, h.eE[d], P ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: M && R }),
+                    className: a()(y.qualityIndicator, g, h.eE[d], P ? y.qualityIndicatorLowQuality : y.qualityIndicatorFullQuality, { [y.clickable]: k && R }),
                     children: [
                         R
                             ? (0, i.jsx)(m.NitroWheelIcon, {

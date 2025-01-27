@@ -51,8 +51,8 @@ var r = n(990547),
     z = n(498639),
     K = n(748717),
     q = n(419636),
-    Q = n(799071),
-    X = n(601433),
+    X = n(799071),
+    Q = n(601433),
     J = n(154022),
     $ = n(393681),
     ee = n(309739),
@@ -97,7 +97,7 @@ var r = n(990547),
 let ew = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eF = eN.Z,
     eU = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eU, impressionSource: eV, numOfPendingFamilyRequests: eG, isOverlaySupported: eH, isClipsBetaTagShowing: eY = !1, shouldMergeGameSettings: eW, isUserSettingsSearchEnabled: ez, isKeywordFilteringEnabled: eK, isStaff: eq, isInappropriateConversationWarningEnabled: eQ, isInapproprateConversationsDefaultOn: eX, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e6, developerMode: e3, isAdultUser: e8, hasSecureFramesVerifiedUserIds: e4, hypeSquadRemoved: e7, stealthRemediationEnabled: e5, hasIgnoredUsers: e9, hasBlockedUsers: te, isAllowGameFriendDMsVisible: tt, useRefreshedVoiceAndVideo: tn } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: eU, impressionSource: eV, numOfPendingFamilyRequests: eG, isOverlaySupported: eH, isClipsBetaTagShowing: eY = !1, shouldMergeGameSettings: eW, isUserSettingsSearchEnabled: ez, isKeywordFilteringEnabled: eK, isStaff: eq, isInappropriateConversationWarningEnabled: eX, isInapproprateConversationsDefaultOn: eQ, paymentsBlocked: eJ, isEligibleForQuests: e$, showGiftNitro: e0, isStricterMessageRequestsEnabled: e1, hasLibraryApplication: e2, hasTOTPEnabled: e6, developerMode: e3, isAdultUser: e4, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e7, stealthRemediationEnabled: e5, hasIgnoredUsers: e9, hasBlockedUsers: te, isAllowGameFriendDMsVisible: tt, useRefreshedVoiceAndVideo: tn, hasRedesignedActivitySharing: ti } = e;
         return Object.freeze({
             [ey.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -411,13 +411,13 @@ let ew = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eB.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eM.intl.string(eM.t.qFsx5u)],
                 parent: ey.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => eQ && !e8 && !eX
+                predicate: () => eX && !e4 && !eQ
             },
             [ey.s6.PRIVACY_ENCRYPTION_VERIFIED_DEVICES_V2]: {
                 section: eB.oAB.DATA_AND_PRIVACY,
                 searchableTitles: [eM.intl.string(eM.t['5b3FND'])],
                 parent: ey.s6.PRIVACY_AND_SAFETY_VOICE_SECURITY,
-                predicate: () => e4
+                predicate: () => e8
             },
             [ey.s6.PRIVACY_FAMILY_CENTER]: {
                 section: eB.oAB.FAMILY_CENTER,
@@ -1390,8 +1390,8 @@ let ew = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [ey.s6.ACTIVITY_PRIVACY]: {
                 section: eB.oAB.ACTIVITY_PRIVACY,
-                searchableTitles: [eM.intl.string(eM.t.Cq98yM)],
-                label: eM.intl.string(eM.t.Cq98yM),
+                searchableTitles: ti ? [eM.intl.string(eM.t['6x5uWV'])] : [eM.intl.string(eM.t.Cq98yM)],
+                label: ti ? eM.intl.string(eM.t['6x5uWV']) : eM.intl.string(eM.t.Cq98yM),
                 ariaLabel: eM.intl.string(eM.t.Cq98yM),
                 element: ee.Z,
                 predicate: () => !eW
@@ -1687,7 +1687,7 @@ let ew = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: ['Text Playground'],
                 label: 'Text Playground',
                 element: eb.Z,
-                predicate: () => (0, X.D)() || Z.Z.isDeveloper
+                predicate: () => (0, Q.D)() || Z.Z.isDeveloper
             },
             [ey.s6.DESIGN_SYSTEMS]: {
                 section: eB.oAB.DESIGN_SYSTEMS,
@@ -1714,8 +1714,8 @@ let ew = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eB.oAB.TEXT_COMPONENT,
                 searchableTitles: ['Text Components'],
                 label: 'Text Components',
-                element: Q.Z,
-                predicate: () => (0, X.D)() || Z.Z.isDeveloper
+                element: X.Z,
+                predicate: () => (0, Q.D)() || Z.Z.isDeveloper
             },
             [ey.s6.INTL_TESTING]: {
                 section: eB.oAB.INTL_TESTING,

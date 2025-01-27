@@ -168,8 +168,8 @@ t.Z = function (e) {
         z = null == W ? void 0 : null === (t = W.discount) || void 0 === t ? void 0 : t.amount,
         K = (0, N.t7)(),
         q = (0, N.lr)(),
-        Q = (0, o.e7)([E.ZP], () => E.ZP.inReverseTrial()),
-        X = () => {
+        X = (0, o.e7)([E.ZP], () => E.ZP.inReverseTrial()),
+        Q = () => {
             if (r.status === D.O0b.ACTIVE || r.status === D.O0b.PAST_DUE || r.status === D.O0b.PAUSED) ee(O.Steps.PAUSE_SELECT);
         },
         J = () => {
@@ -285,7 +285,7 @@ t.Z = function (e) {
             let t = S.ZP.getReverseTrialWeeks(r.trialId);
             return (0, i.jsx)('div', {
                 className: B.planInfo,
-                children: Q
+                children: X
                     ? y.intl.format(y.t.jLglur, { weeks: t })
                     : (0, S.qV)({
                           planId: e,
@@ -327,7 +327,7 @@ t.Z = function (e) {
                                   look: c.ButtonLooks.LINK,
                                   color: c.ButtonColors.WHITE,
                                   submitting: R,
-                                  onClick: X,
+                                  onClick: Q,
                                   children: y.intl.string(y.t.eFlYVF)
                               })
                             : (0, i.jsx)(c.Button, {

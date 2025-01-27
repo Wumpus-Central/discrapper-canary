@@ -104,8 +104,8 @@ function O(e) {
             },
             [c, a]
         ),
-        k = (0, d.e7)([y.ZP], () => y.ZP.getFocusedRunningGame()),
-        M = v
+        M = (0, d.e7)([y.ZP], () => y.ZP.getFocusedRunningGame()),
+        k = v
             ? (0, i.jsxs)('div', {
                   children: [
                       (0, i.jsx)(m.Text, {
@@ -138,10 +138,10 @@ function O(e) {
         D = (null !== (t = null == b ? void 0 : b.isStaff()) && void 0 !== t && t) || (null !== (n = null == b ? void 0 : b.isStaffPersonal()) && void 0 !== n && n);
     return (0, i.jsx)(Z.Yj, {
         title: A.intl.string(A.t.U38qZm),
-        body: M,
+        body: k,
         hint: D ? L : void 0,
         confirmText: A.intl.string(A.t.a3HlgI),
-        cancelText: null != k ? A.intl.string(A.t.qIYnPj) : void 0,
+        cancelText: null != M ? A.intl.string(A.t.qIYnPj) : void 0,
         icon: (0, i.jsx)(x.Z, {
             width: 40,
             height: 40,
@@ -149,7 +149,7 @@ function O(e) {
         }),
         onNotificationClick: P,
         onConfirmClick: w,
-        onCancelClick: null != k ? O : void 0,
+        onCancelClick: null != M ? O : void 0,
         onDismissClick: a,
         expand: !0,
         locked: !0,
@@ -162,7 +162,7 @@ function O(e) {
         wrapperClassName: j.errorNotificationWrapper
     });
 }
-class k extends l.PureComponent {
+class M extends l.PureComponent {
     componentDidCatch(e, t) {
         let n = (0, S.s1)().location;
         this.setState({
@@ -227,4 +227,4 @@ class k extends l.PureComponent {
             w(this, 'pid', null);
     }
 }
-t.Z = k;
+t.Z = M;

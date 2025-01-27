@@ -70,7 +70,7 @@ function O(e) {
         z = (0, I.p)(M, null == G ? void 0 : G.themeColors),
         K = null !== (t = null == G ? void 0 : G.bio) && void 0 !== t ? t : '',
         q = null !== (n = null == G ? void 0 : G.pronouns) && void 0 !== n ? n : '',
-        Q = (e, t, n) => {
+        X = (e, t, n) => {
             n(null != e ? e : null != t ? null : void 0);
         };
     return (0, i.jsxs)('div', {
@@ -123,7 +123,7 @@ function O(e) {
                                 ]
                             }),
                             showRemoveAvatarButton: Y,
-                            onAvatarChange: (e) => Q(e, null == V ? void 0 : V.avatar, S.I5),
+                            onAvatarChange: (e) => X(e, null == V ? void 0 : V.avatar, S.I5),
                             errors: null == k ? void 0 : k.avatar,
                             guildId: F.id,
                             disabled: !H
@@ -181,7 +181,7 @@ function O(e) {
                         {
                             showRemoveBannerButton: W,
                             errors: null == k ? void 0 : k.banner,
-                            onBannerChange: (e) => Q(e, null == G ? void 0 : G.banner, S.g_),
+                            onBannerChange: (e) => X(e, null == G ? void 0 : G.banner, S.g_),
                             guildId: null == F ? void 0 : F.id,
                             disabled: !H
                         },

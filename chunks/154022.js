@@ -73,11 +73,11 @@ function Y(e) {
             }),
             (0, i.jsx)(b.F, {
                 setting: D.s6.ACCESSIBILITY_TAGS,
-                children: (0, i.jsx)(Q, {})
+                children: (0, i.jsx)(X, {})
             }),
             (0, i.jsx)(b.F, {
                 setting: D.s6.ACCESSIBILITY_PROFILE_COLORS,
-                children: (0, i.jsx)(X, {})
+                children: (0, i.jsx)(Q, {})
             }),
             (0, p.b)()
                 ? (0, i.jsxs)(b.F, {
@@ -272,7 +272,7 @@ function q() {
         ]
     });
 }
-function Q() {
+function X() {
     let e = (0, c.e7)([h.Z], () => h.Z.hideTags);
     return (0, i.jsx)(d.FormItem, {
         title: L.intl.string(L.t.UQt6dX),
@@ -287,7 +287,7 @@ function Q() {
         })
     });
 }
-function X() {
+function Q() {
     let e = (0, c.e7)([h.Z], () => h.Z.syncProfileThemeWithUserTheme),
         t = r.useRef(null);
     return (

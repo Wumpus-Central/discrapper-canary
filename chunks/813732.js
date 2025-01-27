@@ -112,8 +112,8 @@ t.Z = function () {
                 .filter((e) => e.status !== F.O0b.ENDED).length;
         }),
         q = (0, x.Z)({ forceFetch: !0 }),
-        Q = null !== n ? n.currentPeriodEnd : void 0,
-        X = q.fractionalState !== w.a$.NONE || q.unactivatedUnits.length > 0;
+        X = null !== n ? n.currentPeriodEnd : void 0,
+        Q = q.fractionalState !== w.a$.NONE || q.unactivatedUnits.length > 0;
     if (
         (r.useEffect(
             () => (
@@ -150,9 +150,9 @@ t.Z = function () {
                           subscriptions: s
                       })
                     : (0, i.jsx)(k.MM, {}),
-                X &&
+                Q &&
                     ((e = q),
-                    (t = Q),
+                    (t = X),
                     (0, i.jsxs)('section', {
                         children: [
                             (0, i.jsx)(o.Heading, {

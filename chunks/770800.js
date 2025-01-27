@@ -18,8 +18,8 @@ var n = r(200651),
     D = r(206314),
     F = r(513547),
     S = r(65154),
-    C = r(388032),
-    E = r(378481),
+    E = r(388032),
+    C = r(378481),
     Z = r(232186);
 class R extends a.PureComponent {
     render() {
@@ -90,8 +90,8 @@ class R extends a.PureComponent {
             );
         return (0, n.jsxs)(o.FormSection, {
             tag: o.FormTitleTags.H2,
-            title: C.intl.string(C.t.wU9INz) + (null != t ? ' - ' + t : ''),
-            className: E.allowSelection,
+            title: E.intl.string(E.t.wU9INz) + (null != t ? ' - ' + t : ''),
+            className: C.allowSelection,
             children: [(0, v.a)(s), 0 === p.length ? null : (0, n.jsx)(o.FormDivider, { className: Z.marginBottom20 }), (0, v.a)(p)]
         });
     }

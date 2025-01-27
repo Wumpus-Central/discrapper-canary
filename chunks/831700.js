@@ -33,8 +33,8 @@ var l = n(120356),
     y = n(335353),
     j = n(896835),
     T = n(359110),
-    P = n(155409),
-    A = n(695346),
+    A = n(155409),
+    P = n(695346),
     w = n(447564),
     M = n(592125),
     L = n(430824),
@@ -154,7 +154,7 @@ class $ extends V.ZP {
         let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: m, connectDragPreview: v, canReorderChannel: C, canMoveMembers: x, showTutorial: I, hasActiveEvent: _, embeddedApps: Z, isSubscriptionGated: b, isFavoriteSuggestion: S, withGuildIcon: N } = this.props,
             { shouldShowActivities: E, shouldShowGuildVerificationPopout: j } = this.state,
             T = this.getVoiceStatesCount(),
-            A = (0, i.jsxs)('li', {
+            P = (0, i.jsxs)('li', {
                 className: r()(this.getModeClass(), { [J.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: [
@@ -219,16 +219,16 @@ class $ extends V.ZP {
                 ]
             });
         return (
-            x && (A = m(A)),
-            C && (A = h(p(A))),
+            x && (P = m(P)),
+            C && (P = h(p(P))),
             I &&
-                (A = (0, i.jsx)(P.Z, {
+                (P = (0, i.jsx)(A.Z, {
                     tutorialId: 'voice-conversations',
                     position: 'right',
                     offsetX: -20,
-                    children: A
+                    children: P
                 })),
-            A
+            P
         );
     }
     constructor(...e) {
@@ -257,7 +257,7 @@ class $ extends V.ZP {
                     l = L.Z.getGuild(t.getGuildId());
                 null != l &&
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('14280')]).then(n.bind(n, 213202));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('83331'), n.e('81070')]).then(n.bind(n, 213202));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
@@ -309,7 +309,7 @@ class $ extends V.ZP {
                 let { channel: e, voiceStates: t, sorting: n, isUserOver: l, selected: r, guild: a } = this.props,
                     { shouldShowActivities: o, shouldShowGuildVerificationPopout: s } = this.state;
                 if (o && !n && !l && !s) {
-                    let n = A.SE.getSetting().includes(a.id);
+                    let n = P.SE.getSetting().includes(a.id);
                     return (0, i.jsx)(z.Z, {
                         onAction: this.closePopout,
                         guild: a,
@@ -394,7 +394,7 @@ function et(e) {
             },
             { autoTrackExposure: !1 }
         ),
-        P = (0, H.Z)({
+        A = (0, H.Z)({
             channel: n,
             isChannelSelected: o,
             isChannelCollapsed: s,
@@ -404,7 +404,7 @@ function et(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        A = y && null == P;
+        P = y && null == A;
     return (0, i.jsx)(ee, {
         channelName: g,
         embeddedApps: f,
@@ -418,8 +418,8 @@ function et(e) {
         ...e,
         connected: y,
         isFavoriteSuggestion: r && !N,
-        forceShowButtons: A,
-        channelInfo: P,
+        forceShowButtons: P,
+        channelInfo: A,
         enableHangStatus: j,
         allowChannelTopic: T,
         resolvedUnreadSetting: d

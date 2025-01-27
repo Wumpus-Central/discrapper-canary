@@ -48,7 +48,7 @@ function A(e) {
         y = I.y.GUILD_SHOP_FULL_PREVIEW;
     A || (R && Z) ? (L.push(P === x.a3.PRODUCTS_FIRST ? I.y.GUILD_PRODUCTS : I.y.GUILD_ROLE_SUBSCRIPTIONS), L.push(P === x.a3.PRODUCTS_FIRST ? I.y.GUILD_ROLE_SUBSCRIPTIONS : I.y.GUILD_PRODUCTS), (y = L[0])) : R && !Z ? (L.push(I.y.GUILD_PRODUCTS), (y = I.y.GUILD_PRODUCTS)) : !R && Z && (L.push(I.y.GUILD_ROLE_SUBSCRIPTIONS), (y = I.y.GUILD_ROLE_SUBSCRIPTIONS), b && L.push(I.y.GUILD_PRODUCTS_PREVIEW)), (l = null != l ? l : y);
     let [O, M] = r.useState(l),
-        k = (b && !(Z && j)) || O === I.y.GUILD_PRODUCTS_PREVIEW;
+        D = (b && !(Z && j)) || O === I.y.GUILD_PRODUCTS_PREVIEW;
     return (
         r.useEffect(() => {
             M(l);
@@ -58,7 +58,7 @@ function A(e) {
                 selectedTab: O,
                 setSelectedTab: M,
                 categoryTabs: L,
-                isPhantomPreview: k,
+                isPhantomPreview: D,
                 handlePreviewDismiss: (e) => {
                     (0, u.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW);
                     let t = { ...(0, c.hH)(a) };

@@ -39,7 +39,7 @@ var i,
     y = n(388032),
     O = n(981125);
 function M(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: o, popoutPosition: M, analyticsPage: k, analyticsSection: D, glow: U, giftIntentSecondaryAction: B } = e,
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: o, popoutPosition: M, analyticsPage: D, analyticsSection: k, glow: U, giftIntentSecondaryAction: B } = e,
         w = (0, u.e7)([N.default], () => N.default.getCurrentUser()),
         { analyticsLocations: F } = (0, _.ZP)(),
         G = (0, u.e7)([b.Z], () => b.Z.getFriendAnniversaryYears(i.id));
@@ -181,8 +181,8 @@ function M(e) {
                                     analyticsLocation: 'system_message' === n ? r.chat : r.actionButtonCoachmark,
                                     analyticsLocations: F,
                                     analyticsObject: {
-                                        page: k,
-                                        section: D,
+                                        page: D,
+                                        section: k,
                                         object: Z.qAy.BUTTON_CTA,
                                         objectType: Z.Qqv.GIFT
                                     },

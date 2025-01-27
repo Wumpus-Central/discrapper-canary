@@ -33,14 +33,14 @@ var i = n(200651),
     y = n(919755),
     j = n(110977),
     T = n(603274),
-    P = n(981631),
-    A = n(388032),
+    A = n(981631),
+    P = n(388032),
     w = n(120555);
 let M = {
     analyticsSource: {
-        page: P.ZY5.GUILD_CHANNEL,
-        section: P.jXE.CHANNEL_LIST,
-        object: P.qAy.CHANNEL
+        page: A.ZY5.GUILD_CHANNEL,
+        section: A.jXE.CHANNEL_LIST,
+        object: A.qAy.CHANNEL
     }
 };
 function L() {
@@ -51,9 +51,9 @@ function L() {
             favoriteChannels: N.Z.getFavoriteChannels(),
             favoriteServerMuted: N.Z.favoriteServerMuted
         })),
-        k = (0, s.e7)([Z.Z], () => Z.Z.getChannelId(P.I_8)),
+        k = (0, s.e7)([Z.Z], () => Z.Z.getChannelId(A.I_8)),
         B = (0, s.e7)([_.Z], () => _.Z.getChannel(k)),
-        U = (0, x.Z)((e) => e.guildId) === P.I_8,
+        U = (0, x.Z)((e) => e.guildId) === A.I_8,
         { badge: O, unread: V } = (0, y.Z)(G),
         H = (function (e) {
             let t = (0, s.e7)([Z.Z], () => Z.Z.getVoiceChannelId()),
@@ -112,12 +112,12 @@ function L() {
                         lowerBadge: F,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
-                            ariaLabel: A.intl.formatToPlainString(A.t['/uzRsr'], {
-                                guildName: A.intl.string(A.t.wMWycn),
+                            ariaLabel: P.intl.formatToPlainString(P.t['/uzRsr'], {
+                                guildName: P.intl.string(P.t.wMWycn),
                                 mentions: O
                             }),
                             to: {
-                                pathname: P.Z5c.CHANNEL(P.I_8, k),
+                                pathname: A.Z5c.CHANNEL(A.I_8, k),
                                 state: M
                             },
                             selected: U || L,

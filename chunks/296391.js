@@ -15,12 +15,12 @@ var l = t(442837),
     u = t(744802),
     f = t(493043),
     m = t(228168),
-    I = t(981631),
-    x = t(388032),
-    p = t(189144),
+    p = t(981631),
+    I = t(388032),
+    x = t(189144),
     h = t(731218);
 function v(e) {
-    let { user: n, currentUser: t, profileGuildId: v, subsection: Z, onClose: g } = e,
+    let { user: n, currentUser: t, profileGuildId: v, subsection: g, onClose: Z } = e,
         { live: j, recent: _, stream: b } = (0, c.Z)(n.id),
         E = j.length > 0 || _.length > 0 || null != b,
         N = (0, l.e7)([r.Z], () => r.Z.isFetchingUserOutbox(n.id));
@@ -30,7 +30,7 @@ function v(e) {
               children: (0, i.jsx)(o.Spinner, {})
           })
         : (0, i.jsxs)(o.ScrollerThin, {
-              className: p.scroller,
+              className: x.scroller,
               fade: !0,
               children: [
                   (0, i.jsxs)(a.Z, {
@@ -41,7 +41,7 @@ function v(e) {
                                   user: n,
                                   currentUser: t,
                                   stream: b,
-                                  onClose: g,
+                                  onClose: Z,
                                   profileGuildId: v
                               }),
                           j.map((e, l) =>
@@ -51,7 +51,7 @@ function v(e) {
                                       user: n,
                                       currentUser: t,
                                       activity: e,
-                                      onClose: g,
+                                      onClose: Z,
                                       profileGuildId: v
                                   },
                                   'live-'.concat(l)
@@ -61,22 +61,22 @@ function v(e) {
                   }),
                   _.length > 0 &&
                       (0, i.jsx)(a.Z, {
-                          heading: x.intl.string(x.t.M0zgnZ),
+                          heading: I.intl.string(I.t.M0zgnZ),
                           subheading:
                               n.id === t.id
-                                  ? x.intl.format(x.t['4bk9Ag'], {
+                                  ? I.intl.format(I.t['4bk9Ag'], {
                                         learnMoreHook: (e, n) =>
                                             (0, i.jsx)(
                                                 o.Anchor,
                                                 {
-                                                    href: s.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                    href: s.Z.getArticleURL(p.BhN.ACTIVITY_STATUS_SETTINGS),
                                                     children: e
                                                 },
                                                 n
                                             )
                                     })
                                   : void 0,
-                          scrollIntoView: Z === m.Tb.RECENT_ACTIVITY,
+                          scrollIntoView: g === m.Tb.RECENT_ACTIVITY,
                           children: _.map((e) =>
                               (0, i.jsx)(
                                   u.Z,
@@ -86,7 +86,7 @@ function v(e) {
                                       currentUser: t,
                                       entry: e,
                                       profileGuildId: v,
-                                      onClose: g
+                                      onClose: Z
                                   },
                                   e.id
                               )

@@ -14,8 +14,8 @@ var l = t(192379),
     a = t(524437),
     u = t(317381),
     o = t(853856),
-    E = t(846787),
-    d = t(924301),
+    d = t(846787),
+    E = t(924301),
     _ = t(601070),
     c = t(569471),
     s = t(131704),
@@ -26,12 +26,12 @@ var l = t(192379),
     A = t(496675),
     S = t(306680),
     L = t(944486),
-    f = t(9156),
-    N = t(823379),
-    g = t(540126),
+    g = t(9156),
+    f = t(823379),
+    N = t(540126),
     p = t(647086),
     P = t(231338);
-let R = [u.ZP, o.Z, d.ZP, _.Z, c.Z, C.Z, T.Z, h.Z, A.Z, S.ZP, L.Z, f.ZP];
+let R = [u.ZP, o.Z, E.ZP, _.Z, c.Z, C.Z, T.Z, h.Z, A.Z, S.ZP, L.Z, g.ZP];
 function D() {
     let [e, n] = l.useState(() => U());
     return (
@@ -44,36 +44,36 @@ function D() {
 }
 function U() {
     let e = o.Z.getFavoriteChannels(),
-        n = f.ZP.isGuildCollapsed(p._),
+        n = g.ZP.isGuildCollapsed(p._),
         t = L.Z.getChannelId(),
         l = T.Z.getChannel(t),
         i = L.Z.getVoiceChannelId(),
         u = [],
-        d = {};
+        E = {};
     for (let n in e) {
         let t = e[n],
             l = T.Z.getChannel(t.id);
         if (null == l || t.type === a.Dd.CATEGORY) continue;
-        let i = (0, E.r)(e, t, l);
+        let i = (0, d.r)(e, t, l);
         if (null == t.parentId || !(t.parentId in e)) {
             u.push(i);
             continue;
         }
-        !(t.parentId in d) && (d[t.parentId] = []), d[t.parentId].push(i);
+        !(t.parentId in E) && (E[t.parentId] = []), E[t.parentId].push(i);
     }
     function c(t, a) {
         let { isCollapsed: u, isMuted: o } = a;
         return r()(t)
             .map((t) => {
-                var E;
+                var d;
                 if (!t.isPrivate() && !A.Z.can(P.Pl.VIEW_CHANNEL, t)) return null;
-                let d = null != l && (l.id === t.id || i === t.id),
+                let E = null != l && (l.id === t.id || i === t.id),
                     c = null != l && l.isThread() && l.parent_id === t.id,
-                    C = null !== (E = d || c || !u ? _.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id) : _.Z.getActiveJoinedUnreadThreadsForParent(t.guild_id, t.id)) && void 0 !== E ? E : {},
-                    T = (0, g.zR)(t, C, l, i, n),
+                    C = null !== (d = E || c || !u ? _.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id) : _.Z.getActiveJoinedUnreadThreadsForParent(t.guild_id, t.id)) && void 0 !== d ? d : {},
+                    T = (0, N.zR)(t, C, l, i, n),
                     h = I.Z.isCollapsed(t.id),
-                    L = f.ZP.isChannelMuted(t.guild_id, t.id),
-                    N = {
+                    L = g.ZP.isChannelMuted(t.guild_id, t.id),
+                    f = {
                         id: t.id,
                         record: t,
                         category: a,
@@ -83,11 +83,11 @@ function U() {
                         isCollapsed: h,
                         isMuted: L,
                         isFirstVoiceChannel: !1,
-                        subtitle: (0, g.Bz)(t, h, !1)
+                        subtitle: (0, N.Bz)(t, h, !1)
                     };
-                return d || c || S.ZP.getMentionCount(t.id) > 0 ? N : (n && L) || (u && (L || o || (0, s.vd)(t.type) || ((0, s.vc)(t.type) && !1 === S.ZP.hasUnread(t.id)))) ? null : N;
+                return E || c || S.ZP.getMentionCount(t.id) > 0 ? f : (n && L) || (u && (L || o || (0, s.vd)(t.type) || ((0, s.vc)(t.type) && !1 === S.ZP.hasUnread(t.id)))) ? null : f;
             })
-            .filter(N.lm)
+            .filter(f.lm)
             .sortBy((e) => {
                 let { record: n } = e;
                 return n.isGuildVocal() ? n.position + 10000 : n.position;
@@ -115,10 +115,10 @@ function U() {
                 var n;
                 let { id: t, order: l } = e,
                     i = o.Z.getCategoryRecord(t),
-                    r = null !== (n = d[t]) && void 0 !== n ? n : [],
-                    a = f.ZP.isChannelMuted(p._, t),
+                    r = null !== (n = E[t]) && void 0 !== n ? n : [],
+                    a = g.ZP.isChannelMuted(p._, t),
                     u = C.Z.isCollapsed(t),
-                    E = null;
+                    d = null;
                 return {
                     isMuted: a,
                     isCollapsed: u,
@@ -130,7 +130,7 @@ function U() {
                     getShownChannelAndThreadIds: () => r.map((e) => e.id),
                     isEmpty: () => 0 === r.length,
                     get channelList() {
-                        return null == E && (E = c(r, this)), E;
+                        return null == d && (d = c(r, this)), d;
                     }
                 };
             })
@@ -153,13 +153,13 @@ function U() {
         voiceChannelsSectionNumber: -999,
         getSections() {
             let e = [];
-            (e[g.Fq] = 0), (e[g.wZ] = 0), (e[g.p2] = 0), (e[g.PB] = 0), (e[g.wd] = R.channelList.length);
-            for (let n = 0; n < D.length; n++) e[g.wF + n] = Math.max(1, D[n].channelList.length);
+            (e[N.Fq] = 0), (e[N.wZ] = 0), (e[N.p2] = 0), (e[N.PB] = 0), (e[N.wd] = R.channelList.length);
+            for (let n = 0; n < D.length; n++) e[N.wF + n] = Math.max(1, D[n].channelList.length);
             return e;
         },
-        isPlaceholderRow: (e, n) => !(e < g.wF) && 0 === n && 0 === D[e - g.wF].channelList.length,
-        getCategoryFromSection: (e) => (e === g.wd ? R : D[e - g.wF]),
-        getNamedCategoryFromSection: (e) => D[e - g.wF],
+        isPlaceholderRow: (e, n) => !(e < N.wF) && 0 === n && 0 === D[e - N.wF].channelList.length,
+        getCategoryFromSection: (e) => (e === N.wd ? R : D[e - N.wF]),
+        getNamedCategoryFromSection: (e) => D[e - N.wF],
         getChannelFromSectionRow(e, n) {
             let t = this.getCategoryFromSection(e);
             return null == t || null == t.channelList[n]
@@ -179,7 +179,7 @@ function U() {
                     if (n[t].channelList[l].id === e)
                         return [
                             {
-                                section: t + g.wd,
+                                section: t + N.wd,
                                 row: l
                             }
                         ];

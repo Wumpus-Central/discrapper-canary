@@ -383,7 +383,7 @@ class K extends r.PureComponent {
                         children: U.intl.string(U.t['/0WClp'])
                     })
                 }),
-                (0, i.jsx)(Q, {}),
+                (0, i.jsx)(X, {}),
                 (0, i.jsx)(j.F, {
                     setting: k.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, i.jsx)(u.FormSwitch, {
@@ -404,7 +404,7 @@ class K extends r.PureComponent {
                         children: U.intl.string(U.t.xSmFQE)
                     })
                 }),
-                (0, i.jsx)(X, {}),
+                (0, i.jsx)(Q, {}),
                 (0, i.jsx)(et, {}),
                 (0, i.jsx)(j.F, {
                     setting: k.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
@@ -499,7 +499,7 @@ let q = (0, x.B)({
         }
     ]
 });
-function Q() {
+function X() {
     let e = q.useExperiment({ location: 'settings' }, { autoTrackExposure: !1 }).enabled,
         t = (0, c.e7)([R.ZP], () => R.ZP.mentionOnAllMessages);
     return e
@@ -517,7 +517,7 @@ function Q() {
           })
         : null;
 }
-function X() {
+function Q() {
     let e = b.xT.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }).enabled,
         { manuallyOpen: t } = b.fs.useExperiment({ location: 'UserSettingsNotifications' }, { autoTrackExposure: !1 }),
         n = (0, c.e7)([R.ZP], () => R.ZP.useNewNotifications),

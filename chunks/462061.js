@@ -51,7 +51,7 @@ function w(e) {
         : null;
 }
 function P(e) {
-    let { participant: t, channel: n, inCall: r, width: o, paused: v, selected: E, fit: w, onVideoResize: P, blocked: R, ignored: O, noVideoRender: k = !1, pulseSpeakingIndicator: M = !1, inOverlayPopout: L = !1 } = e,
+    let { participant: t, channel: n, inCall: r, width: o, paused: v, selected: E, fit: w, onVideoResize: P, blocked: R, ignored: O, noVideoRender: M = !1, pulseSpeakingIndicator: k = !1, inOverlayPopout: L = !1 } = e,
         D = x.Z.getVideoComponent(),
         U = (0, s.e7)([S.default], () => S.default.getId()),
         { user: V, streamId: F, speaking: z } = t,
@@ -84,7 +84,7 @@ function P(e) {
         let { channel: e, selectedParticipant: t, user: n } = en.current;
         e.isGuildStageVoice() && !W && (null == t ? void 0 : t.id) === n.id && c.Z.selectParticipant(e.id, null);
     }, [W]),
-    r && !Y && !k && W && !E && null != D && x.Z.supports(Z.AN.VIDEO))
+    r && !Y && !M && W && !E && null != D && x.Z.supports(Z.AN.VIDEO))
         ? (0, i.jsx)(
               p.Z,
               {
@@ -109,7 +109,7 @@ function P(e) {
                   avatarDecoration: $,
                   backgroundSrc: V.getAvatarURL(n.guild_id, 80),
                   size: K,
-                  pulseSpeakingIndicator: M,
+                  pulseSpeakingIndicator: k,
                   speaking: z,
                   userId: V.id
               })

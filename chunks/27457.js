@@ -36,8 +36,8 @@ var i = n(200651),
     P = n(6242),
     R = n(757692),
     O = n(386542),
-    k = n(933843),
-    M = n(746599),
+    M = n(933843),
+    k = n(746599),
     L = n(231664),
     D = n(614011),
     U = n(210975),
@@ -74,7 +74,7 @@ var i = n(200651),
 let eg = [eu.fO.ACTIVITY, eu.fO.PRESENCE_EMBEDDED_ACTIVITY],
     ev = l.memo((e) => {
         var t, n, r, c, x;
-        let { participant: b, onDoubleClick: E, onContextMenu: K, onClick: Q, onMouseDown: es, onKeyDown: ev, className: eS, style: e_, containerStyle: eC, channel: eb, width: eE, inPopout: ey, onVideoResize: eZ, inCall: eT = !1, selected: eN = !1, noBorder: eA = !1, noVideoRender: ej = !1, focused: ew = !1, blocked: eP = !1, ignored: eR = !1, fit: eO = T.L.CONTAIN, paused: ek = !1, pulseSpeakingIndicator: eM = !1, forceIdle: eL = !1, inOverlayPopout: eD = !1 } = e,
+        let { participant: b, onDoubleClick: E, onContextMenu: K, onClick: Q, onMouseDown: es, onKeyDown: ev, className: eS, style: e_, containerStyle: eC, channel: eb, width: eE, inPopout: ey, onVideoResize: eZ, inCall: eT = !1, selected: eN = !1, noBorder: eA = !1, noVideoRender: ej = !1, focused: ew = !1, blocked: eP = !1, ignored: eR = !1, fit: eO = T.L.CONTAIN, paused: eM = !1, pulseSpeakingIndicator: ek = !1, forceIdle: eL = !1, inOverlayPopout: eD = !1 } = e,
             eU = l.useContext(F.h9) || eL,
             [eV, eF] = l.useState(!1),
             ez = V.Sb.useSetting(),
@@ -142,7 +142,7 @@ let eg = [eu.fO.ACTIVITY, eu.fO.PRESENCE_EMBEDDED_ACTIVITY],
                 return () => clearTimeout(e);
             }
         });
-        let e7 = (0, k.So)(s.q.STREAM_HIGH_QUALITY),
+        let e7 = (0, M.So)(s.q.STREAM_HIGH_QUALITY),
             { hqStreamingState: e9 } = (0, O.k)(s.q.STREAM_HIGH_QUALITY),
             e6 = (0, L.Z)(),
             e8 = e7 && e4 && null != e6,
@@ -190,7 +190,7 @@ let eg = [eu.fO.ACTIVITY, eu.fO.PRESENCE_EMBEDDED_ACTIVITY],
                 null != eq && d.Z.toggleLocalMute(eq, ef.Yn.STREAM);
             }, [eq]),
             tS = l.useCallback(() => {
-                (0, M.hP)();
+                (0, k.hP)();
             }, []),
             tI = l.useCallback(
                 (e) => {
@@ -223,7 +223,7 @@ let eg = [eu.fO.ACTIVITY, eu.fO.PRESENCE_EMBEDDED_ACTIVITY],
                     width: eE,
                     fit: eO,
                     onVideoResize: eZ,
-                    paused: ek,
+                    paused: eM,
                     inPopout: ey,
                     focused: ew,
                     inOverlayPopout: eD
@@ -245,13 +245,13 @@ let eg = [eu.fO.ACTIVITY, eu.fO.PRESENCE_EMBEDDED_ACTIVITY],
                     participant: b,
                     fit: eO,
                     onVideoResize: eZ,
-                    paused: ek,
+                    paused: eM,
                     selected: eN,
                     width: eE,
                     blocked: eP,
                     ignored: eR,
                     noVideoRender: ej || e$,
-                    pulseSpeakingIndicator: eM,
+                    pulseSpeakingIndicator: ek,
                     inOverlayPopout: eD
                 })),
                     (tE = (0, i.jsx)(ea.T, {
@@ -284,7 +284,7 @@ let eg = [eu.fO.ACTIVITY, eu.fO.PRESENCE_EMBEDDED_ACTIVITY],
                     width: eE,
                     fit: eO,
                     onVideoResize: eZ,
-                    paused: ek,
+                    paused: eM,
                     inPopout: ey,
                     focused: ew,
                     inOverlayPopout: eD
@@ -569,8 +569,8 @@ let eI = l.memo((e) => {
 eI.displayName = 'CallTileOverlayV2';
 let ex = l.memo((e) => {
     let { muted: t, deafened: n, localMuted: l, serverMuted: r, serverDeafened: s, idle: d, title: m, width: f, hasVideo: p, inCall: h, localVideoDisabled: g, videoToggleState: S, focused: I, blocked: _, ignored: C, hideAudioIcon: y, participantType: Z, participantUserId: T, onContextMenu: N, onToggleMute: A, platform: j, hangStatusActivity: w, application: P, speaking: R, secureFramesVerified: O } = e,
-        k = null,
         M = null,
+        k = null,
         L = null,
         D = null,
         U = (0, es.K)(f),
@@ -579,7 +579,7 @@ let ex = l.memo((e) => {
         z = (0, u.useRedesignIconContext)().enabled;
     if (!y) {
         if (l && Z === eu.fO.STREAM && p && !I)
-            k = (0, i.jsx)(u.Tooltip, {
+            M = (0, i.jsx)(u.Tooltip, {
                 text: ep.intl.string(ep.t.YqAjX1),
                 children: (e) => {
                     let { onClick: t, ...n } = e;
@@ -599,20 +599,20 @@ let ex = l.memo((e) => {
         else if (l || Z !== eu.fO.STREAM || !p || U || I) {
             if (z) {
                 let e;
-                s ? (e = u.HeadphonesDenyIcon) : r ? (e = u.MicrophoneDenyIcon) : n ? (e = u.HeadphonesSlashIcon) : l ? (e = u.MicrophoneDenyIcon) : t && (e = u.MicrophoneSlashIcon), (k = null != e ? (0, i.jsx)(e, { color: c.Z.colors.WHITE }) : null);
+                s ? (e = u.HeadphonesDenyIcon) : r ? (e = u.MicrophoneDenyIcon) : n ? (e = u.HeadphonesSlashIcon) : l ? (e = u.MicrophoneDenyIcon) : t && (e = u.MicrophoneSlashIcon), (M = null != e ? (0, i.jsx)(e, { color: c.Z.colors.WHITE }) : null);
             } else if (n || t || l) {
                 let e = n ? u.HeadphonesSlashIcon : u.MicrophoneSlashIcon;
-                k = (0, i.jsx)(e, { color: 'currentColor' });
+                M = (0, i.jsx)(e, { color: 'currentColor' });
             }
-            k =
-                null != k
+            M =
+                null != M
                     ? (0, i.jsx)('div', {
                           className: eh.status,
-                          children: k
+                          children: M
                       })
                     : null;
         } else
-            k = (0, i.jsx)(u.Tooltip, {
+            M = (0, i.jsx)(u.Tooltip, {
                 text: ep.intl.string(ep.t['w4m94+']),
                 children: (e) => {
                     let { onClick: t, ...n } = e;
@@ -636,12 +636,12 @@ let ex = l.memo((e) => {
               p &&
               g &&
               !F &&
-              (M = (0, i.jsx)(u.VideoSlashIcon, {
+              (k = (0, i.jsx)(u.VideoSlashIcon, {
                   size: 'md',
                   color: 'currentColor',
                   colorClass: eh.localMuteStrikethrough
               }))
-            : (M = (0, i.jsx)(u.VideoIcon, {
+            : (k = (0, i.jsx)(u.VideoIcon, {
                   size: 'md',
                   color: 'currentColor'
               })),
@@ -785,12 +785,12 @@ let ex = l.memo((e) => {
                         (0, i.jsxs)('div', {
                             className: eh.statusContainer,
                             children: [
-                                null != M &&
+                                null != k &&
                                     (0, i.jsx)('div', {
                                         className: eh.status,
-                                        children: M
+                                        children: k
                                     }),
-                                k,
+                                M,
                                 L,
                                 D
                             ]

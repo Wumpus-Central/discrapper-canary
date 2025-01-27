@@ -12,24 +12,24 @@ var i = s(392711),
     h = s(963249),
     E = s(93127),
     p = s(361291),
-    m = s(592125),
-    _ = s(430824),
+    _ = s(592125),
+    m = s(430824),
     g = s(594174),
     C = s(431),
     N = s(626135),
     f = s(74538),
     b = s(557457),
-    R = s(970645),
-    I = s(30684),
+    I = s(970645),
+    R = s(30684),
     S = s(514701),
     T = s(6242),
     x = s(467721),
-    O = s(757692),
+    M = s(757692),
     y = s(114064),
     A = s(933843),
-    M = s(281494),
-    L = s(276444),
-    P = s(937579),
+    O = s(281494),
+    P = s(276444),
+    L = s(937579),
     v = s(1163),
     D = s(841174),
     U = s(522558),
@@ -76,10 +76,10 @@ class F extends c.Z {
     }
     _getReferralIncentiveEligibility() {
         let e = g.default.getCurrentUser();
-        if (L.Z.getIsFetchingReferralIncentiveEligibility() || !(0, f.I5)(e)) return;
+        if (P.Z.getIsFetchingReferralIncentiveEligibility() || !(0, f.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             s = { autoTrackExposure: !1 };
-        if (!!k.g.getCurrentConfig(t, s).enabled && !Z.eP.getCurrentConfig(t, s).enabled) w.$.getCurrentConfig(t, s).enabled && (0, M.bq)();
+        if (!!k.g.getCurrentConfig(t, s).enabled && !Z.eP.getCurrentConfig(t, s).enabled) w.$.getCurrentConfig(t, s).enabled && (0, O.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
@@ -110,7 +110,7 @@ class F extends c.Z {
     maybeShowHDStreamingPerksDemoPostUpsellModal(e) {
         let { enabled: t } = v.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
         if (!t || e.state !== G.hes.DISCONNECTED || e.willReconnect) return;
-        let s = m.Z.getChannel(e.channelId);
+        let s = _.Z.getChannel(e.channelId);
         if (null == s) return;
         let n = y.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
         if (
@@ -133,13 +133,13 @@ class F extends c.Z {
                 let e = g.default.getCurrentUser();
                 if (null != e && e.verified) {
                     let t = !(0, f.I5)(e) && C.Z.shouldFetchOffer();
-                    await (0, P.T)('PremiumManager', void 0, t);
+                    await (0, L.T)('PremiumManager', void 0, t);
                 }
                 l.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
             Y(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = g.default.getCurrentUser();
-                null != e && e.verified && !(0, f.I5)(e) && I.Z.shouldFetchCheckoutRecovery() && (await (0, R.o)());
+                null != e && e.verified && !(0, f.I5)(e) && R.Z.shouldFetchCheckoutRecovery() && (await (0, I.o)());
             }),
             Y(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = U.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
@@ -174,9 +174,9 @@ class F extends c.Z {
                 (0, i.debounce)((e, t, s) => {
                     var n, i;
                     let r = u.Z.getSelectedParticipant(e),
-                        o = (0, O.o)(r, s),
+                        o = (0, M.o)(r, s),
                         { sendNitroMessage: l } = (0, T.TD)(o),
-                        c = null !== (i = null === (n = _.Z.getGuild(t)) || void 0 === n ? void 0 : n.premiumTier) && void 0 !== i ? i : G.Eu4.NONE;
+                        c = null !== (i = null === (n = m.Z.getGuild(t)) || void 0 === n ? void 0 : n.premiumTier) && void 0 !== i ? i : G.Eu4.NONE;
                     if (x.Z.cooldownIsActive() || !l || c >= G.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == s ? void 0 : s.id) || null == r.maxResolution || null == r.maxFrameRate) return;
                     S.I();
                     let d = W.intl.formatToPlainString(W.t.AbyeZG, {

@@ -51,8 +51,8 @@ var a = n(399606),
     z = n(609926),
     K = n(766491),
     q = n(193943),
-    Q = n(707046),
-    X = n(488459),
+    X = n(707046),
+    Q = n(488459),
     J = n(334347),
     $ = n(132015),
     ee = n(355653),
@@ -155,7 +155,7 @@ t.Z = () => {
                       title: k.intl.string(k.t.UkLVeH),
                       subtitle: k.intl.string(k.t.xf9ePj),
                       description: k.intl.string(k.t['+r4vdn']),
-                      perkImage: Q
+                      perkImage: X
                   }
                 : {
                       name: 'earlyAccess',
@@ -163,7 +163,7 @@ t.Z = () => {
                       subtitle: k.intl.string(k.t.xf9ePj),
                       description: k.intl.string(k.t['6+xTcn']),
                       isPremiumGetCta: !0,
-                      perkImage: Q
+                      perkImage: X
                   },
             earlyAccessSeeAllVariant: ef
                 ? {
@@ -171,7 +171,7 @@ t.Z = () => {
                       title: k.intl.string(k.t.UkLVeH),
                       subtitle: k.intl.string(k.t.xf9ePj),
                       description: k.intl.string(k.t['+r4vdn']),
-                      perkImage: X
+                      perkImage: Q
                   }
                 : {
                       name: 'earlyAccess',
@@ -179,7 +179,7 @@ t.Z = () => {
                       subtitle: k.intl.string(k.t.xf9ePj),
                       description: k.intl.string(k.t['6+xTcn']),
                       isPremiumGetCta: !0,
-                      perkImage: X
+                      perkImage: Q
                   },
             entranceSounds: ef
                 ? {

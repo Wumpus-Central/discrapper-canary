@@ -4,7 +4,7 @@ n.r(t),
             return i;
         },
         default: function () {
-            return X;
+            return Q;
         }
     }),
     n(47120),
@@ -288,7 +288,7 @@ function q(e) {
         subscription_status: e.status
     };
 }
-let Q = {
+let X = {
     1: "What You're Losing",
     2: 'Confirm Cancellation',
     3: 'Preview Updated Subscription',
@@ -297,7 +297,7 @@ let Q = {
     6: 'Select Pause Duration',
     7: 'Confirm Pause Duration'
 };
-function X(e) {
+function Q(e) {
     var t;
     let n,
         { premiumSubscription: i, transitionState: r, onClose: l, analyticsLocations: o, analyticsLocation: d, initialStep: m } = e,
@@ -316,15 +316,15 @@ function X(e) {
     let L = R === F.p9.TIER_0 || R === F.p9.TIER_1 || R === F.p9.TIER_2;
     null == m && (m = L ? 1 : 2);
     let { analyticsLocations: M } = (0, E.ZP)(o, f.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
-        [Y, z, X, J] = (function (e, t, n) {
+        [Y, z, Q, J] = (function (e, t, n) {
             let [i, r] = a.useState(e),
                 [s, l] = a.useState(Date.now()),
                 [o] = a.useState(Date.now()),
                 c = a.useCallback(
                     (e) => {
                         S.default.track(V.rMx.CANCELLATION_FLOW_STEP, {
-                            from_step: Q[i],
-                            to_step: Q[e],
+                            from_step: X[i],
+                            to_step: X[e],
                             step_duration_ms: Date.now() - s,
                             flow_duration_ms: Date.now() - o,
                             location_stack: n,
@@ -342,9 +342,9 @@ function X(e) {
     let et = (e) => {
             l(),
                 S.default.track(V.rMx.CANCELLATION_FLOW_STEP, {
-                    from_step: Q[e],
+                    from_step: X[e],
                     to_step: null,
-                    step_duration_ms: Date.now() - X,
+                    step_duration_ms: Date.now() - Q,
                     flow_duration_ms: Date.now() - J,
                     location_stack: o,
                     ...q(i)

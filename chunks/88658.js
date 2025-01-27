@@ -3,10 +3,10 @@ n.d(t, {
         return f;
     },
     YK: function () {
-        return d;
+        return s;
     },
     _o: function () {
-        return m;
+        return _;
     },
     bL: function () {
         return g;
@@ -15,7 +15,7 @@ n.d(t, {
         return u;
     },
     rr: function () {
-        return _;
+        return m;
     }
 }),
     n(47120);
@@ -27,8 +27,8 @@ var i,
 n(626135);
 var c = n(981631);
 n(388032);
-let s = 86400000 * c.eBq;
-function d() {
+let d = 86400000 * c.eBq;
+function s() {
     let e = l.h2.getSetting();
     return 0 === r.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
 }
@@ -36,11 +36,11 @@ function u() {
     let e = l.zA.getSetting();
     return 0 === r.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
 }
-function m() {
+function _() {
     let e = l.SE.getSetting();
     return 0 === r.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
 }
-function _() {
+function m() {
     let e = l.iH.getSetting();
     return 0 === r.Z.totalUnavailableGuilds && (e = e.filter((e) => null != o.Z.getGuild(e))), new Set(e);
 }
@@ -58,6 +58,6 @@ function g(e) {
           };
 }
 function f(e, t) {
-    return !!(!t.verified || t.isStaff()) || (null != e && s > Date.now() - new Date(e.created_at).getTime());
+    return !!(!t.verified || t.isStaff()) || (null != e && d > Date.now() - new Date(e.created_at).getTime());
 }
 ((a = i || (i = {}))[(a.UNDECIDED = 0)] = 'UNDECIDED'), (a[(a.OPTIN = 1)] = 'OPTIN'), (a[(a.OPTOUT = 2)] = 'OPTOUT');

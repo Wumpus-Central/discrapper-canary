@@ -40,7 +40,7 @@ async function P() {
     }
 }
 function L(e) {
-    let { children: t, className: n, channelId: r, channelType: l, guildId: c, innerClassname: u, transparent: N = !1, toolbar: v, mobileToolbar: L, 'aria-label': y, 'aria-labelledby': O, scrollable: M, role: k, hideSearch: D, showDivider: U } = e,
+    let { children: t, className: n, channelId: r, channelType: l, guildId: c, innerClassname: u, transparent: N = !1, toolbar: v, mobileToolbar: L, 'aria-label': y, 'aria-labelledby': O, scrollable: M, role: D, hideSearch: k, showDivider: U } = e,
         B = null == r || (0, R.AB)(r) ? null : r,
         w = (0, o.e7)([x.Z], () => x.Z.isInChannel(B) || !1),
         F = (0, o.e7)([m.Z], () => null != B && m.Z.getParticipantsListOpen(B)),
@@ -53,7 +53,7 @@ function L(e) {
         innerClassName: u,
         toolbar: (function () {
             if (null == v) return null;
-            let e = null != r && !D;
+            let e = null != r && !k;
             return a.tq
                 ? L
                 : (0, i.jsxs)(i.Fragment, {
@@ -82,7 +82,7 @@ function L(e) {
         onDoubleClick: P,
         'aria-label': y,
         'aria-labelledby': O,
-        role: k,
+        role: D,
         scrollable: M,
         children: t
     });

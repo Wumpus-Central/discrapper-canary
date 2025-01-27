@@ -49,8 +49,8 @@ t.Z = function (e) {
         [W, z] = r.useState(!0),
         K = r.useRef(0),
         q = (0, A.M5)(U, L.p9.TIER_2),
-        Q = (0, R.n)(),
-        X = null == Q ? void 0 : Q.countryCode,
+        X = (0, R.n)(),
+        Q = null == X ? void 0 : X.countryCode,
         { enabled: J } = (0, y.D)(),
         $ = (0, l.e7)([S.Z], () => (null != U ? S.Z.getUserProfile(U.id) : null)),
         ee = (0, l.e7)([j.Z], () => j.Z.hasFetched);
@@ -61,9 +61,9 @@ t.Z = function (e) {
         r.useEffect(() => {
             c.Z.wait(async () => {
                 let e = Date.now();
-                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(X, null, M.JjL.DISCOVERY), null != V && J && q && (0, g.In)(V)]), (K.current = Date.now() - e), z(!1);
+                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(Q, null, M.JjL.DISCOVERY), null != V && J && q && (0, g.In)(V)]), (K.current = Date.now() - e), z(!1);
             });
-        }, [X, V, J, q]),
+        }, [Q, V, J, q]),
         r.useEffect(() => {
             n && (null != G || null != H) && (0, O.a)(G, H);
         }, [n, G, H]),

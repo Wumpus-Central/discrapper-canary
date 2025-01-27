@@ -1503,7 +1503,7 @@ n.ZP = Object.freeze({
     isPremiumSku: ed,
     getClosestUpgrade: em,
     getIntervalMonths: ea,
-    getUserMaxFileSize: x.h6,
+    getUserMaxFileSize: x.h,
     getSkuIdForPlan: ep,
     getSkuIdForPremiumType: eh,
     getNumIncludedPremiumGuildSubscriptionSlots: eT,

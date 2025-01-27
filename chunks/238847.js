@@ -168,12 +168,12 @@ t.Z = (e) => {
                   : null,
         q = null;
     if (W) {
-        var Q;
+        var X;
         q = (0, i.jsxs)(u.Text, {
             variant: 'text-sm/normal',
             className: O.tierName,
             children: [
-                j.intl.format(j.t['5YBAcX'], { guildName: null !== (Q = null == d ? void 0 : d.name) && void 0 !== Q ? Q : j.intl.string(j.t.FsYvDw) }),
+                j.intl.format(j.t['5YBAcX'], { guildName: null !== (X = null == d ? void 0 : d.name) && void 0 !== X ? X : j.intl.string(j.t.FsYvDw) }),
                 null != d &&
                     (0, i.jsx)(f.Z, {
                         guild: d,

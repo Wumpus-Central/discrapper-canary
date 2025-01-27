@@ -145,11 +145,11 @@ t.Z = (e) => {
                 I(!1);
             }
         },
-        { isCancelled: Y, isPastDue: W, subscriptionPrice: z, memberSince: K, nextRenewalDate: q, nextRenewalLabel: Q, isTrial: X } = T,
+        { isCancelled: Y, isPastDue: W, subscriptionPrice: z, memberSince: K, nextRenewalDate: q, nextRenewalLabel: X, isTrial: Q } = T,
         J = n.soft_deleted || null == o || U,
         $ = () => {
             if (Y) return (0, i.jsx)(c.TextBadge, { text: y.intl.string(y.t['7uFZGh']) });
-            if (X)
+            if (Q)
                 return (0, i.jsx)(c.TextBadge, {
                     text: y.intl.string(y.t['6antoq']),
                     color: l.Z.BRAND_500
@@ -251,14 +251,14 @@ t.Z = (e) => {
                               className: B.subscriptionInfoCards,
                               children: [
                                   (0, i.jsx)(Z, {
-                                      label: Q,
+                                      label: X,
                                       value: q
                                   }),
                                   (0, i.jsx)(Z, {
                                       label: y.intl.string(y.t.dltUMD),
                                       value: z,
-                                      showInfoIcon: X,
-                                      infoIconTooltipText: X ? y.intl.string(y.t['/q6fpa']) : void 0
+                                      showInfoIcon: Q,
+                                      infoIconTooltipText: Q ? y.intl.string(y.t['/q6fpa']) : void 0
                                   }),
                                   (0, i.jsx)(Z, {
                                       label: y.intl.string(y.t.AOcwWF),
@@ -274,7 +274,7 @@ t.Z = (e) => {
                               }),
                           !J &&
                               (0, i.jsx)(M, {
-                                  isTrial: X,
+                                  isTrial: Q,
                                   isCancelled: Y,
                                   isResubscribing: S,
                                   shouldHideRoleSubscriptionEntryPoints: F,
