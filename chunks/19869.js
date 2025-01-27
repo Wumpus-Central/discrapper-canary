@@ -1,6 +1,6 @@
 n.d(t, {
     O: function () {
-        return m;
+        return g;
     }
 }),
     n(47120);
@@ -12,13 +12,15 @@ var i = n(200651),
     o = n(120786),
     c = n(775451),
     d = n(970815),
-    u = n(450272);
-function m() {
-    return (0, i.jsx)('div', { children: (0, i.jsx)(g, {}) });
-}
+    u = n(431286),
+    m = n(450272);
 function g() {
+    return (0, i.jsx)('div', { children: (0, i.jsx)(h, {}) });
+}
+function h() {
     let [e, t] = r.useState(l.b.DEFAULT),
-        m = () => {
+        g = (0, u.i)(),
+        h = () => {
             switch (e) {
                 case l.b.DEFAULT:
                     t(l.b.HIGHLIGHTED);
@@ -30,13 +32,13 @@ function g() {
                     t(l.b.DEFAULT);
             }
         };
-    return (0, i.jsxs)(u.$0, {
+    return (0, i.jsxs)(m.$0, {
         children: [
             (0, i.jsx)(a.Heading, {
                 variant: 'heading-xl/semibold',
                 children: 'Balance Widget Components'
             }),
-            (0, i.jsx)(u.E_, {
+            (0, i.jsx)(m.E_, {
                 label: 'Balance Widget Menu',
                 children: (0, i.jsx)(c.V9, {
                     ctaText: 'Earn More Orbs',
@@ -44,7 +46,7 @@ function g() {
                     ctaOnClick: () => {}
                 })
             }),
-            (0, i.jsxs)(u.E_, {
+            (0, i.jsxs)(m.E_, {
                 label: 'Balance Widget Pill',
                 children: [
                     (0, i.jsx)(d.A, {
@@ -66,22 +68,22 @@ function g() {
                     })
                 ]
             }),
-            (0, i.jsx)(u.E_, {
+            (0, i.jsx)(m.E_, {
                 label: 'Balance Widget Pill Interactive (click to change mode)',
                 children: (0, i.jsx)(d.A, {
                     balance: 150,
                     balanceWidgetMode: e,
-                    onClick: () => m()
+                    onClick: () => h()
                 })
             }),
-            (0, i.jsx)(u.E_, {
+            (0, i.jsx)(m.E_, {
                 label: 'Balance Widget Card',
                 children: (0, i.jsx)(o.L, {
                     ctaText: 'Earn More Orbs',
                     linkText: 'Learn about Orbs'
                 })
             }),
-            (0, i.jsx)(u.E_, {
+            (0, i.jsx)(m.E_, {
                 label: 'Announcement Modal',
                 children: (0, i.jsx)(s.zx, {
                     onClick: () => {
@@ -92,12 +94,19 @@ function g() {
                                 return (0, i.jsx)(e, {
                                     ...r,
                                     onClose: n,
-                                    onCTA: () => {}
+                                    onCTA: n
                                 });
                             };
                         });
                     },
                     children: 'Open Announcement Modal'
+                })
+            }),
+            (0, i.jsx)(m.E_, {
+                label: 'Announcement Modal [Dismissible Content]',
+                children: (0, i.jsx)(s.zx, {
+                    onClick: g,
+                    children: 'Open SINGLE Use Announcement Modal'
                 })
             })
         ]
