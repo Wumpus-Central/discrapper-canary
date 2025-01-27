@@ -164,11 +164,14 @@ class ea extends l.PureComponent {
         });
     }
     render() {
-        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: o, activity: s, className: c, isForceShowSharingPopout: u } = this.props;
+        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: l, streamMetadata: r, application: o, activity: s, className: c, isForceShowSharingPopout: u, setIsForceShowSharingPopout: d } = this.props;
         return l || (((0, ee.y)(o, s, t) || e) && (null != n || null != t))
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(_.j, { isForceShowSharingPopout: u }),
+                      (0, i.jsx)(_.j, {
+                          isForceShowSharingPopout: u,
+                          setIsForceShowSharingPopout: d
+                      }),
                       (0, i.jsx)('div', {
                           className: a()(el.panel, c),
                           children: (0, i.jsxs)('div', {
@@ -231,7 +234,7 @@ t.Z = (0, f.Z)(function (e) {
         R = null != p && p.ownerId === a && p.state !== en.jm8.ENDED,
         G = (0, c.e7)([Q.default, q.Z], () => (null != d ? (0, S.F6)(d, Q.default, q.Z) : void 0)),
         k = (0, D.Z)(),
-        [X] = l.useState(!1);
+        [X, $] = l.useState(!1);
     return (0, i.jsx)(ea, {
         ...r,
         guildId: n,
@@ -250,6 +253,7 @@ t.Z = (0, f.Z)(function (e) {
         channelName: G,
         guildForConnectedChannel: h,
         streamQualityIndicator: k,
-        isForceShowSharingPopout: X
+        isForceShowSharingPopout: X,
+        setIsForceShowSharingPopout: $
     });
 });
