@@ -1,48 +1,55 @@
 r.d(n, {
     Ng: function () {
-        return b;
+        return A;
     },
     OC: function () {
-        return C;
+        return D;
     },
     dg: function () {
-        return I;
+        return C;
     },
     dp: function () {
-        return g;
+        return b;
     },
     f3: function () {
-        return v;
-    },
-    nA: function () {
         return T;
     },
-    qF: function () {
-        return m;
+    iL: function () {
+        return L;
     },
-    uV: function () {
+    nA: function () {
+        return N;
+    },
+    qF: function () {
         return y;
     },
+    uV: function () {
+        return S;
+    },
     vY: function () {
-        return A;
+        return O;
     }
 });
 var i = r(47120);
-var a = r(112456),
-    o = r.n(a),
-    s = r(392711),
+var a = r(757143);
+var o = r(200651),
+    s = r(112456),
     l = r.n(s),
-    u = r(430824),
-    c = r(594174),
-    d = r(74538),
-    f = r(981631),
-    p = r(474936);
-let h = 524288000,
-    _ = 524288000;
-function m(e, n) {
-    return e instanceof File ? e : g(e.data, e.filename, n);
+    u = r(392711),
+    c = r.n(u),
+    d = r(430824),
+    f = r(594174),
+    p = r(424218),
+    h = r(74538),
+    _ = r(981631),
+    m = r(474936),
+    g = r(388032);
+let E = 524288000,
+    v = 524288000;
+function y(e, n) {
+    return e instanceof File ? e : b(e.data, e.filename, n);
 }
-function g(e, n, i) {
+function b(e, n, i) {
     let a = r(230318);
     if (null == n && ((n = 'unknown'), 'type' in e)) {
         let r = a.extension(e.type);
@@ -50,7 +57,7 @@ function g(e, n, i) {
     }
     return null == i && ('type' in e && (i = e.type), (i = null != i ? i : a.lookup(n))), new File([e], n, { type: i });
 }
-let E = [
+let I = [
     {
         reType: /^image\/vnd.adobe.photoshop/,
         klass: 'photoshop'
@@ -108,38 +115,49 @@ let E = [
         klass: 'audio'
     }
 ];
-function v(e) {
-    return y(e.name, e.type);
+function T(e) {
+    return S(e.name, e.type);
 }
-function y(e, n) {
+function S(e, n) {
     var r;
     e = null !== (r = null == e ? void 0 : e.toLowerCase()) && void 0 !== r ? r : '';
-    let i = l().find(E, (r) => (null != r.reType && null != n ? r.reType.test(n) : null != r.reName && '' !== e && r.reName.test(e)));
+    let i = c().find(I, (r) => (null != r.reType && null != n ? r.reType.test(n) : null != r.reName && '' !== e && r.reName.test(e)));
     return null != i ? i.klass : 'unknown';
 }
-function b(e) {
-    return o().filesize(e);
+function A(e) {
+    return l().filesize(e);
 }
-function I(e) {
-    let n = c.default.getCurrentUser(),
-        r = d.ZP.getUserMaxFileSize(n);
+function C(e) {
+    let n = f.default.getCurrentUser(),
+        r = h.ZP.getUserMaxFileSize(n);
     if (null == e) return r;
-    let i = u.Z.getGuild(e);
-    return Math.max(null != i ? p.HO[i.premiumTier].limits.fileSize : f.mBz, r);
+    let i = d.Z.getGuild(e);
+    return Math.max(null != i ? m.HO[i.premiumTier].limits.fileSize : _.mBz, r);
 }
-function T(e, n) {
-    let r = I(n);
+function N(e, n) {
+    let r = C(n);
     return Array.from(e).some((e) => e.size > r);
 }
-function S(e) {
+function R(e) {
     let n = 0;
     for (let r of e) n += r.size;
     return n;
 }
-function A(e) {
-    return S(e) > C();
+function O(e) {
+    return R(e) > D();
 }
-function C() {
-    let e = c.default.getCurrentUser();
-    return null != e && e.isStaff() ? _ : h;
+function D() {
+    let e = f.default.getCurrentUser();
+    return null != e && e.isStaff() ? v : E;
+}
+function L(e) {
+    let { guildId: n, onClick: r } = e,
+        i = (0, p.BU)(C(n) / 1024, { useKibibytes: !0 }),
+        a = (0, p.BU)(m.Uq / 1024, { useKibibytes: !0 }),
+        s = g.intl.formatToPlainString(g.t.q5fTZm, { maxSize: i }),
+        l = g.intl.formatToPlainString(g.t.htbuIS, { premiumMaxSize: a }),
+        u = g.intl.format(g.t.fjSvsL, { onClick: r });
+    return (0, o.jsxs)(o.Fragment, {
+        children: [s, ' ', l.replace('\n', ' '), '. ', u]
+    });
 }
