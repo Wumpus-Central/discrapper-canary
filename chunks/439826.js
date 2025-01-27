@@ -258,7 +258,10 @@ function O(e) {
                                                     className: I.utilButtonWrapper,
                                                     'aria-label': R.intl.string(R.t.RscU7O),
                                                     onClick: Y,
-                                                    children: (0, s.jsx)(p.PlayIcon, { className: I.utilButtonIcon })
+                                                    children: (0, s.jsx)(p.PlayIcon, {
+                                                        color: 'currentColor',
+                                                        className: I.utilButtonIcon
+                                                    })
                                                 })
                                         }),
                                     (0, s.jsx)(B.r, {
