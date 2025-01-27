@@ -31,6 +31,7 @@ function m(e) {
                 className: _.headerIcons,
                 children: [
                     (0, i.jsx)(a.qE, {
+                        className: _.avatar,
                         src: b,
                         size: p.EF.SIZE_56,
                         'aria-label': m.name
@@ -40,6 +41,7 @@ function m(e) {
                         children: [(0, i.jsx)('div', { className: _.ellipse }), (0, i.jsx)('div', { className: _.ellipse }), (0, i.jsx)('div', { className: _.ellipse })]
                     }),
                     (0, i.jsx)(a.qE, {
+                        className: _.avatar,
                         src: I,
                         size: p.EF.SIZE_56,
                         'aria-label': r.username

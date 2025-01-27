@@ -8,5 +8,6 @@ e.exports = {
     headerIcons: 'headerIcons_ac2a99',
     ellipseGroup: 'ellipseGroup_ac2a99',
     ellipse: 'ellipse_ac2a99',
-    botTag: 'botTag_ac2a99'
+    botTag: 'botTag_ac2a99',
+    avatar: 'avatar_ac2a99'
 };
