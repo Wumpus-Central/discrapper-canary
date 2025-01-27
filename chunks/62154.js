@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return b;
+        return E;
     }
 });
 var i = t(200651);
@@ -12,76 +12,85 @@ var l = t(442837),
     c = t(5192),
     a = t(111361),
     d = t(816988),
-    u = t(648052),
-    f = t(537006),
-    m = t(681837),
+    u = t(513236),
+    f = t(648052),
+    m = t(537006),
+    p = t(681837),
     I = t(91433),
     x = t(944043),
-    p = t(502762),
-    h = t(530),
-    v = t(740628),
+    h = t(502762),
+    v = t(530),
+    g = t(740628),
     Z = t(643518),
-    g = t(228168),
-    j = t(981631),
-    _ = t(171865);
-function b(e) {
+    j = t(228168),
+    _ = t(981631),
+    b = t(171865);
+function E(e) {
     var n;
-    let { user: t, currentUser: b, channelId: E, displayProfile: N, initialSection: y, initialSubsection: S, friendToken: T, onClose: P } = e,
-        { relationshipType: C, originApplicationId: A } = (0, l.cj)([s.Z], () => ({
+    let { user: t, currentUser: E, channelId: N, displayProfile: y, initialSection: S, initialSubsection: T, friendToken: P, onClose: C } = e,
+        { relationshipType: A, originApplicationId: L } = (0, l.cj)([s.Z], () => ({
             relationshipType: s.Z.getRelationshipType(t.id),
             originApplicationId: s.Z.getOriginApplicationId(t.id)
         })),
-        L = (0, l.Wu)([r.Z], () => r.Z.getGameRelationshipsForUser(t.id, j.OGo.PENDING_INCOMING)),
-        M = (0, o.wn)({ location: 'UserProfileModalBody' }),
-        R = (0, Z.Z)({
-            user: t,
-            currentUser: b,
-            initialSubsection: S
+        M = (0, l.Wu)([r.Z], () => r.Z.getGameRelationshipsForUser(t.id, _.OGo.PENDING_INCOMING)),
+        R = (0, l.Wu)([r.Z], () => r.Z.getGameFriendsForUser(t.id)),
+        O = (0, o.wn)({ location: 'UserProfileModalBody' }),
+        U = (0, u.P)({
+            userId: t.id,
+            relationshipType: A,
+            gameFriends: R,
+            pendingIncomingGameRelationships: M
         }),
-        O = c.ZP.useName(null == N ? void 0 : N.guildId, E, t),
-        U = t.id === b.id,
-        { dimissibleUpsellsEnabled: B } = (0, d.u)({ location: 'UserProfileModalBody' }),
-        D = (0, a.I5)(b);
+        B = (0, Z.Z)({
+            user: t,
+            currentUser: E,
+            initialSubsection: T
+        }),
+        F = c.ZP.useName(null == y ? void 0 : y.guildId, N, t),
+        D = t.id === E.id,
+        { dimissibleUpsellsEnabled: G } = (0, d.u)({ location: 'UserProfileModalBody' }),
+        w = (0, a.I5)(E);
     return (0, i.jsxs)('div', {
-        className: _.body,
+        className: b.body,
         children: [
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(v.Z, {
                 user: t,
-                profileType: g.y0.FULL_SIZE,
-                nickname: O,
-                pronouns: null == N ? void 0 : N.pronouns,
+                profileType: j.y0.FULL_SIZE,
+                nickname: F,
+                pronouns: null == y ? void 0 : y.pronouns,
                 nicknameVariant: 'heading-xl/bold',
-                nicknameIcons: (0, i.jsx)(m.Z, { userId: t.id }),
-                tags: (0, i.jsx)(u.Z, {
-                    displayProfile: N,
-                    profileType: g.y0.FULL_SIZE,
-                    onClose: P
-                })
+                nicknameIcons: (0, i.jsx)(p.Z, { userId: t.id }),
+                tags: (0, i.jsx)(f.Z, {
+                    displayProfile: y,
+                    profileType: j.y0.FULL_SIZE,
+                    onClose: C
+                }),
+                hideIdentityInfo: U
             }),
-            C === j.OGo.PENDING_INCOMING &&
-                (0, i.jsx)(p.Z.Overlay, {
-                    className: _.friendRequestBannerOverlay,
+            A === _.OGo.PENDING_INCOMING &&
+                (0, i.jsx)(h.Z.Overlay, {
+                    className: b.friendRequestBannerOverlay,
                     children: (0, i.jsx)(I.Z, {
                         user: t,
-                        applicationId: M ? A : void 0,
-                        guildId: null !== (n = null == N ? void 0 : N.guildId) && void 0 !== n ? n : void 0,
-                        channelId: E,
-                        friendToken: T,
-                        className: _.friendRequestBanner
+                        applicationId: O ? L : void 0,
+                        guildId: null !== (n = null == y ? void 0 : y.guildId) && void 0 !== n ? n : void 0,
+                        channelId: N,
+                        friendToken: P,
+                        className: b.friendRequestBanner
                     })
                 }),
-            M &&
-                L.map((e) =>
+            O &&
+                M.map((e) =>
                     (0, i.jsx)(
-                        p.Z.Overlay,
+                        h.Z.Overlay,
                         {
-                            className: _.friendRequestBannerOverlay,
+                            className: b.friendRequestBannerOverlay,
                             children: (0, i.jsx)(I.Z, {
                                 user: t,
-                                channelId: E,
+                                channelId: N,
                                 isGameRelationship: !0,
                                 applicationId: e.applicationId,
-                                className: _.friendRequestBanner
+                                className: b.friendRequestBanner
                             })
                         },
                         e.applicationId
@@ -91,22 +100,23 @@ function b(e) {
                 user: t,
                 source: x.t.MODAL
             }),
-            B &&
-                U &&
-                (0, i.jsx)(f.Z, {
-                    isPremiumUser: D,
-                    onInteraction: P
+            G &&
+                D &&
+                (0, i.jsx)(m.Z, {
+                    isPremiumUser: w,
+                    onInteraction: C
                 }),
-            (0, i.jsx)(p.Z.Overlay, {
-                className: _.overlay,
-                children: (0, i.jsx)(v.Z, {
+            (0, i.jsx)(h.Z.Overlay, {
+                className: b.overlay,
+                children: (0, i.jsx)(g.Z, {
                     user: t,
-                    currentUser: b,
-                    displayProfile: N,
-                    items: R,
-                    initialSection: y,
-                    initialSubsection: S,
-                    onClose: P
+                    currentUser: E,
+                    displayProfile: y,
+                    items: B,
+                    initialSection: S,
+                    initialSubsection: T,
+                    onClose: C,
+                    hideIdentityInfo: U
                 })
             })
         ]

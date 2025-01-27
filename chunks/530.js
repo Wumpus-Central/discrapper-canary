@@ -16,13 +16,13 @@ var a = r(120356),
     p = r(388032),
     h = r(961347);
 function _(e) {
-    let { user: n, profileType: r, usernameIcon: a, tags: _, nickname: m, nicknameIcons: g, pronouns: E, className: v, isTryItOut: y, onOpenProfile: b, nicknameVariant: I = 'heading-lg/bold', pronounsVariant: T = 'text-sm/medium' } = e,
-        S = {
+    let { user: n, profileType: r, usernameIcon: a, tags: _, nickname: m, nicknameIcons: g, pronouns: E, className: v, isTryItOut: y, onOpenProfile: b, nicknameVariant: I = 'heading-lg/bold', pronounsVariant: T = 'text-sm/medium', hideIdentityInfo: S = !1 } = e,
+        A = {
             [h.biteSize]: r === f.y0.BITE_SIZE,
             [h.fullSize]: r === f.y0.FULL_SIZE,
             [h.panel]: r === f.y0.PANEL
         },
-        A = (e) =>
+        C = (e) =>
             null == b
                 ? e
                 : (0, i.jsx)(s.Clickable, {
@@ -30,79 +30,80 @@ function _(e) {
                       className: h.clickableUsername,
                       children: e
                   }),
-        C = null != E && E.length > 0,
-        N = (0, u.D)(n);
+        N = null != E && E.length > 0,
+        R = (0, u.D)(n);
     return (0, i.jsxs)('div', {
-        className: o()(h.container, { [h.bot]: null != N }, v),
+        className: o()(h.container, { [h.bot]: null != R }, v),
         children: [
             (0, i.jsxs)('div', {
                 className: h.usernameRow,
                 children: [
-                    A(
+                    C(
                         (0, i.jsx)(s.Heading, {
-                            className: o()(h.nickname, S),
+                            className: o()(h.nickname, A),
                             variant: I,
                             children: m
                         })
                     ),
-                    null != N &&
+                    null != R &&
                         (0, i.jsx)(c.Z, {
-                            type: N,
+                            type: R,
                             verified: n.isVerifiedBot()
                         }),
                     null != g &&
                         (0, i.jsx)('div', {
-                            className: o()(h.nicknameIcons, S),
+                            className: o()(h.nicknameIcons, A),
                             children: g
                         })
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: o()(h.tags, S, {
-                    [h.pronouns]: C,
-                    [h.bot]: null != N
-                }),
-                children: [
-                    A(
-                        (0, i.jsx)(l.Z, {
-                            user: n,
-                            usernameIcon: a,
-                            forceUsername: !0,
-                            forcePomelo: y,
-                            className: h.userTag,
-                            usernameClass: h.userTagUsername,
-                            discriminatorClass: h.userTagDiscriminator,
-                            hideBotTag: !0
-                        })
-                    ),
-                    C &&
-                        (0, i.jsxs)(i.Fragment, {
-                            children: [
-                                (0, i.jsx)('div', {
-                                    'aria-hidden': 'true',
-                                    className: h.dotSpacer
-                                }),
-                                (0, i.jsx)(s.TooltipContainer, {
-                                    className: h.pronounsTooltip,
-                                    text: p.intl.string(p.t.GI2A8P),
-                                    delay: f.vB,
-                                    children: (0, i.jsx)(s.Text, {
-                                        variant: T,
-                                        className: h.pronounsText,
-                                        color: 'header-primary',
-                                        children: E
-                                    })
-                                })
-                            ]
-                        }),
-                    (0, i.jsx)(d.ZP, {
-                        userId: n.id,
-                        containerClassName: h.clanTagContainer,
-                        className: h.clanTag
+            !S &&
+                (0, i.jsxs)('div', {
+                    className: o()(h.tags, A, {
+                        [h.pronouns]: N,
+                        [h.bot]: null != R
                     }),
-                    _
-                ]
-            })
+                    children: [
+                        C(
+                            (0, i.jsx)(l.Z, {
+                                user: n,
+                                usernameIcon: a,
+                                forceUsername: !0,
+                                forcePomelo: y,
+                                className: h.userTag,
+                                usernameClass: h.userTagUsername,
+                                discriminatorClass: h.userTagDiscriminator,
+                                hideBotTag: !0
+                            })
+                        ),
+                        N &&
+                            (0, i.jsxs)(i.Fragment, {
+                                children: [
+                                    (0, i.jsx)('div', {
+                                        'aria-hidden': 'true',
+                                        className: h.dotSpacer
+                                    }),
+                                    (0, i.jsx)(s.TooltipContainer, {
+                                        className: h.pronounsTooltip,
+                                        text: p.intl.string(p.t.GI2A8P),
+                                        delay: f.vB,
+                                        children: (0, i.jsx)(s.Text, {
+                                            variant: T,
+                                            className: h.pronounsText,
+                                            color: 'header-primary',
+                                            children: E
+                                        })
+                                    })
+                                ]
+                            }),
+                        (0, i.jsx)(d.ZP, {
+                            userId: n.id,
+                            containerClassName: h.clanTagContainer,
+                            className: h.clanTag
+                        }),
+                        _
+                    ]
+                })
         ]
     });
 }
