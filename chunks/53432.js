@@ -19,8 +19,8 @@ var i = n(442837),
     h = n(740492),
     m = n(695346),
     x = n(874893),
-    M = n(981631),
-    f = n(388032);
+    f = n(981631),
+    M = n(388032);
 function b() {
     let e = m.jU.useSetting(),
         { analyticsLocations: t } = (0, s.ZP)(),
@@ -34,9 +34,9 @@ function b() {
             useForcedColors: c.Z.useForcedColors
         })),
         Z = m.YC.useSetting(),
-        S = (0, p.Q3)('appearance_settings'),
-        C = (0, p.o9)('appearance_settings'),
-        I = (e, i) =>
+        C = (0, p.Q3)('appearance_settings'),
+        S = (0, p.o9)('appearance_settings'),
+        v = (e, i) =>
             (0, r.jsx)(a.MenuRadioItem, {
                 id: e,
                 group: 'input-modes',
@@ -52,18 +52,18 @@ function b() {
                         (0, u.ZI)({ theme: e });
                 }
             }),
-        E = [
+        I = [
             (0, r.jsxs)(
                 a.MenuGroup,
                 {
                     children: [
-                        I(M.BRd.DARK, f.intl.string(f.t.b8Cei4)),
-                        I(M.BRd.LIGHT, f.intl.string(f.t.K2sFfn)),
-                        S &&
+                        v(f.BRd.DARK, M.intl.string(M.t.b8Cei4)),
+                        v(f.BRd.LIGHT, M.intl.string(M.t.K2sFfn)),
+                        C &&
                             (0, r.jsxs)(r.Fragment, {
-                                children: [I(M.BRd.DARKER, 'Darker'), I(M.BRd.MIDNIGHT, f.intl.string(f.t.pQwSpa))]
+                                children: [v(f.BRd.DARKER, 'Darker'), v(f.BRd.MIDNIGHT, M.intl.string(M.t.pQwSpa))]
                             }),
-                        I('system', f.intl.string(f.t['7rOU6u']))
+                        v('system', M.intl.string(M.t['7rOU6u']))
                     ]
                 },
                 'theme-items'
@@ -71,8 +71,8 @@ function b() {
             ,
         ];
     return (
-        C
-            ? (E.push(
+        S
+            ? (I.push(
                   (0, r.jsxs)(
                       a.MenuGroup,
                       {
@@ -95,22 +95,13 @@ function b() {
                                   action: () => {
                                       m.YC.updateSetting(l.Pi.COMPACT);
                                   }
-                              }),
-                              (0, r.jsx)(a.MenuRadioItem, {
-                                  id: 'auto-ui',
-                                  group: 'list-density',
-                                  label: 'Auto',
-                                  checked: Z === l.Pi.RESPONSIVE,
-                                  action: () => {
-                                      m.YC.updateSetting(l.Pi.RESPONSIVE);
-                                  }
                               })
                           ]
                       },
                       'list-density'
                   )
               ),
-              E.push(
+              I.push(
                   (0, r.jsxs)(
                       a.MenuGroup,
                       {
@@ -139,7 +130,7 @@ function b() {
                       'chat-density'
                   )
               ),
-              E.push(
+              I.push(
                   (0, r.jsx)(
                       a.MenuGroup,
                       {
@@ -147,21 +138,21 @@ function b() {
                               id: 'desktop-refresh-override',
                               label: 'Enable Desktop Refresh',
                               action: () => {
-                                  u.ZP.updatedUnsyncedSettings({ disableVisualRefresh: S });
+                                  u.ZP.updatedUnsyncedSettings({ disableVisualRefresh: C });
                               },
-                              checked: S
+                              checked: C
                           })
                       },
                       'refresh-experiment'
                   )
               ))
-            : E.push(
+            : I.push(
                   (0, r.jsx)(
                       a.MenuGroup,
                       {
                           children: (0, r.jsx)(a.MenuItem, {
                               id: 'compact-mode',
-                              label: e ? f.intl.string(f.t.CTpwDw) : f.intl.string(f.t['J/FISU']),
+                              label: e ? M.intl.string(M.t.CTpwDw) : M.intl.string(M.t['J/FISU']),
                               action: () => {
                                   m.jU.updateSetting(!e), (0, o.ZZ)();
                               }
@@ -170,6 +161,6 @@ function b() {
                       'compact-mode'
                   )
               ),
-        E
+        I
     );
 }

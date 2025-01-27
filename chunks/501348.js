@@ -66,7 +66,7 @@ let Y = {
     z = (0, T.hQ)(),
     K = (0, T.hQ)(),
     q = '1337',
-    Q = (e) => {
+    X = (e) => {
         let t = 0;
         return [
             (0, I.e5)({
@@ -111,7 +111,7 @@ let Y = {
             })
         ];
     },
-    X = () => {
+    Q = () => {
         let e = (0, l.e7)([_.Z], () => _.Z.isPreview),
             { enabled: t } = j.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
@@ -268,7 +268,7 @@ class J extends r.Component {
               })
             : (0, i.jsxs)(u.FormItem, {
                   className: G.marginTop8,
-                  title: (0, i.jsx)(X, {}),
+                  title: (0, i.jsx)(Q, {}),
                   children: [
                       (0, i.jsx)(Z.i, {}),
                       (0, i.jsx)(O.F, {
@@ -347,11 +347,6 @@ class J extends r.Component {
                                           name: U.intl.string(U.t['7iegX1']),
                                           value: c.Pi.COMPACT,
                                           desc: 'Tighter layout to fit more content'
-                                      },
-                                      {
-                                          name: 'Auto',
-                                          value: c.Pi.RESPONSIVE,
-                                          desc: 'Automatically adjusts for a responsive fit based on window size'
                                       }
                                   ],
                                   onChange: this.handleUIDensityChange,
@@ -478,8 +473,8 @@ class J extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            H(this, 'darkMessages', Q(k.BRd.DARK)),
-            H(this, 'lightMessages', Q(k.BRd.LIGHT)),
+            H(this, 'darkMessages', X(k.BRd.DARK)),
+            H(this, 'lightMessages', X(k.BRd.LIGHT)),
             H(this, 'handleDisplayCompactAvatarsChanged', (e) => {
                 m.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
