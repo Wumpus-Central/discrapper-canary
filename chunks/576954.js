@@ -1,6 +1,6 @@
 n.d(t, {
     M: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -11,188 +11,116 @@ var i = n(200651),
     s = n(481060),
     o = n(87051),
     c = n(194359),
-    d = n(661824),
-    u = n(797614),
-    h = n(922611),
-    p = n(681678),
-    m = n(699516),
-    f = n(9156),
-    g = n(621600),
-    C = n(378298),
-    x = n(359119),
-    v = n(473092),
-    _ = n(177342),
-    I = n(134612),
-    E = n(981631),
-    b = n(388032),
-    Z = n(771860);
+    d = n(797614),
+    u = n(922611),
+    h = n(681678),
+    p = n(819557),
+    m = n(138201),
+    f = n(699516),
+    g = n(9156),
+    C = n(621600),
+    x = n(378298),
+    v = n(359119),
+    _ = n(473092),
+    I = n(177342),
+    E = n(134612),
+    b = n(981631),
+    Z = n(388032);
 function N(e) {
     let { senderId: t, channelId: n, warningId: r } = e,
-        { isIgnored: d } = (0, a.cj)([m.Z], () => ({ isIgnored: m.Z.isIgnored(t) }), [t]),
-        u = (0, h.Do)({ location: 'web_stranger_danger_more' }),
-        C = (0, a.e7)([f.ZP], () => f.ZP.isChannelMuted(null, n)),
-        _ = l.useCallback(() => {
-            (0, v.qc)({
+        { isIgnored: s } = (0, a.cj)([f.Z], () => ({ isIgnored: f.Z.isIgnored(t) }), [t]),
+        d = (0, u.Do)({ location: 'web_stranger_danger_more' }),
+        p = (0, a.e7)([g.ZP], () => g.ZP.isChannelMuted(null, n)),
+        x = l.useCallback(() => {
+            (0, _.qc)({
                 channelId: n,
                 warningId: r,
                 senderId: t,
-                warningType: x.pj.STRANGER_DANGER,
-                cta: v.NM.USER_MODAL_IGNORE
+                warningType: v.pj.STRANGER_DANGER,
+                cta: _.NM.USER_MODAL_IGNORE
             }),
                 c.Z.ignoreUser(t, 'web_stranger_danger_more', n);
         }, [n, r, t]),
         I = l.useCallback(() => {
-            (0, v.qc)({
+            (0, _.qc)({
                 channelId: n,
                 warningId: r,
                 senderId: t,
-                warningType: x.pj.STRANGER_DANGER,
-                cta: v.NM.USER_MODAL_UNIGNORE
+                warningType: v.pj.STRANGER_DANGER,
+                cta: _.NM.USER_MODAL_UNIGNORE
             }),
                 c.Z.unignoreUser(t, 'web_stranger_danger_more', n);
         }, [n, r, t]);
-    return u
-        ? (0, i.jsxs)('div', {
-              className: Z.safetyAction,
-              children: [
-                  (0, i.jsxs)('div', {
-                      className: Z.safetyActionText,
-                      children: [
-                          (0, i.jsx)(s.Text, {
-                              variant: 'text-md/semibold',
-                              color: 'header-primary',
-                              children: b.intl.string(b.t.avyV7O)
-                          }),
-                          (0, i.jsx)(s.Text, {
-                              variant: 'text-xs/medium',
-                              color: 'header-secondary',
-                              children: b.intl.string(b.t.naWE6e)
-                          })
-                      ]
-                  }),
-                  (0, i.jsx)(s.Button, {
-                      size: s.Button.Sizes.SMALL,
-                      color: s.Button.Colors.PRIMARY,
-                      'aria-label': d ? b.intl.string(b.t['3SrzRU']) : b.intl.string(b.t.avyV7O),
-                      onClick: d ? I : _,
-                      children: d ? b.intl.string(b.t['3SrzRU']) : b.intl.string(b.t.avyV7O)
-                  })
-              ]
+    return d
+        ? (0, i.jsx)(m.ZP, {
+              title: Z.intl.string(Z.t.avyV7O),
+              description: Z.intl.string(Z.t.naWE6e),
+              buttonText: s ? Z.intl.string(Z.t['3SrzRU']) : Z.intl.string(Z.t.avyV7O),
+              onButtonPress: s ? I : x
           })
-        : (0, i.jsxs)('div', {
-              className: Z.safetyAction,
-              children: [
-                  (0, i.jsxs)('div', {
-                      className: Z.safetyActionText,
-                      children: [
-                          (0, i.jsx)(s.Text, {
-                              variant: 'text-md/semibold',
-                              color: 'header-primary',
-                              children: b.intl.string(b.t['UVp+4+'])
-                          }),
-                          (0, i.jsx)(s.Text, {
-                              variant: 'text-xs/medium',
-                              color: 'header-secondary',
-                              children: b.intl.string(b.t.VS47BA)
-                          })
-                      ]
-                  }),
-                  (0, i.jsx)(s.Button, {
-                      size: s.Button.Sizes.SMALL,
-                      color: s.Button.Colors.PRIMARY,
-                      'aria-label': C ? b.intl.string(b.t['6QK4Hx']) : b.intl.string(b.t['UVp+4+']),
-                      onClick: C
-                          ? () => {
-                                o.Z.updateChannelOverrideSettings(null, n, { muted: !1 }, g.ZB.Unmuted),
-                                    p.Z.showUnmuteSuccessToast(t, n),
-                                    (0, v.qc)({
-                                        channelId: n,
-                                        warningId: r,
-                                        senderId: t,
-                                        warningType: x.pj.STRANGER_DANGER,
-                                        cta: v.NM.USER_MODAL_UNMUTE
-                                    });
-                            }
-                          : () => {
-                                o.Z.updateChannelOverrideSettings(null, n, { muted: !0 }, g.ZB.Muted),
-                                    p.Z.showMuteSuccessToast(t, n),
-                                    (0, v.qc)({
-                                        channelId: n,
-                                        warningId: r,
-                                        senderId: t,
-                                        warningType: x.pj.STRANGER_DANGER,
-                                        cta: v.NM.USER_MODAL_MUTE
-                                    });
-                            },
-                      children: C ? b.intl.string(b.t['6QK4Hx']) : b.intl.string(b.t['UVp+4+'])
-                  })
-              ]
+        : (0, i.jsx)(m.ZP, {
+              title: Z.intl.string(Z.t['UVp+4+']),
+              description: Z.intl.string(Z.t.VS47BA),
+              buttonText: p ? Z.intl.string(Z.t['6QK4Hx']) : Z.intl.string(Z.t['UVp+4+']),
+              onButtonPress: p
+                  ? () => {
+                        o.Z.updateChannelOverrideSettings(null, n, { muted: !1 }, C.ZB.Unmuted),
+                            h.Z.showUnmuteSuccessToast(t, n),
+                            (0, _.qc)({
+                                channelId: n,
+                                warningId: r,
+                                senderId: t,
+                                warningType: v.pj.STRANGER_DANGER,
+                                cta: _.NM.USER_MODAL_UNMUTE
+                            });
+                    }
+                  : () => {
+                        o.Z.updateChannelOverrideSettings(null, n, { muted: !0 }, C.ZB.Muted),
+                            h.Z.showMuteSuccessToast(t, n),
+                            (0, _.qc)({
+                                channelId: n,
+                                warningId: r,
+                                senderId: t,
+                                warningType: v.pj.STRANGER_DANGER,
+                                cta: _.NM.USER_MODAL_MUTE
+                            });
+                    }
           });
 }
 function S(e) {
-    let { onClick: t } = e;
-    return (0, i.jsxs)('div', {
-        className: Z.safetyAction,
-        children: [
-            (0, i.jsxs)('div', {
-                className: Z.safetyActionText,
-                children: [
-                    (0, i.jsx)(s.Text, {
-                        variant: 'text-md/semibold',
-                        color: 'header-primary',
-                        children: b.intl.string(b.t['5QYPOz'])
-                    }),
-                    (0, i.jsx)(s.Text, {
-                        variant: 'text-xs/medium',
-                        color: 'header-secondary',
-                        children: b.intl.string(b.t.G08MKi)
-                    })
-                ]
-            }),
-            (0, i.jsx)(s.Button, {
-                size: s.Button.Sizes.SMALL,
-                color: s.Button.Colors.RED,
-                'aria-label': b.intl.string(b.t.ie0QdH),
-                onClick: t,
-                children: b.intl.string(b.t.ie0QdH)
-            })
-        ]
-    });
-}
-function T(e) {
-    let { channelId: t, warningId: o, senderId: h } = e,
-        { isBlocked: p } = (0, a.cj)([m.Z], () => ({ isBlocked: m.Z.isBlocked(h) }), [h]),
-        f = l.useCallback(() => {
-            (0, C.T)(t, [o]);
+    let { channelId: t, warningId: o, senderId: u } = e,
+        { isBlocked: h } = (0, a.cj)([f.Z], () => ({ isBlocked: f.Z.isBlocked(u) }), [u]),
+        g = l.useCallback(() => {
+            (0, x.T)(t, [o]);
         }, [t, o]),
-        g = (0, I.C2)(),
-        Z = l.useCallback(
+        C = (0, E.C2)(),
+        S = l.useCallback(
             (e) => () => {
                 c.Z.addRelationship({
-                    userId: h,
-                    context: { location: I.zr },
-                    type: E.OGo.BLOCKED
+                    userId: u,
+                    context: { location: E.zr },
+                    type: b.OGo.BLOCKED
                 }),
-                    f(),
-                    (0, v.qc)({
+                    g(),
+                    (0, _.qc)({
                         channelId: t,
                         warningId: o,
-                        senderId: h,
-                        warningType: x.pj.STRANGER_DANGER,
+                        senderId: u,
+                        warningType: v.pj.STRANGER_DANGER,
                         cta: e
                     });
             },
-            [f, t, o, h]
+            [g, t, o, u]
         );
     l.useEffect(() => {
-        (0, v.MC)(E.rMx.SAFETY_WARNING_VIEWED, {
+        (0, _.MC)(b.rMx.SAFETY_WARNING_VIEWED, {
             channelId: t,
             warningId: o,
-            senderId: h,
-            warningType: x.pj.STRANGER_DANGER
+            senderId: u,
+            warningType: v.pj.STRANGER_DANGER
         }),
-            u.Z.increment({ name: r.V.SAFETY_WARNING_VIEW });
-    }, [t, o, h]);
+            d.Z.increment({ name: r.V.SAFETY_WARNING_VIEW });
+    }, [t, o, u]);
     let T = () => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
@@ -203,32 +131,43 @@ function T(e) {
                         onClose: r,
                         channelId: t,
                         warningId: o,
-                        senderId: h,
-                        description: b.intl.string(b.t.DJMZX1),
-                        safetyTips: g.map((e, t) =>
+                        senderId: u,
+                        description: Z.intl.string(Z.t.DJMZX1),
+                        safetyTipRows: C.map((e, t) =>
                             (0, i.jsx)(
-                                s.Text,
+                                p.q,
                                 {
-                                    variant: 'text-sm/medium',
-                                    color: 'header-secondary',
-                                    children: e
+                                    index: t,
+                                    listType: 'numbered',
+                                    title: e
                                 },
                                 t
                             )
                         ),
-                        actions: (0, i.jsxs)(i.Fragment, {
+                        actionRows: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(N, {
-                                    senderId: h,
-                                    channelId: t,
-                                    warningId: o
-                                }),
-                                (0, i.jsx)(d.Z, {}),
-                                (0, i.jsx)(S, {
-                                    onClick: () => {
-                                        r(), j(v.NM.USER_MODAL_BLOCK_CONFIRM, v.NM.USER_MODAL_BLOCK_CANCEL, T);
-                                    }
-                                })
+                                (0, i.jsx)(
+                                    N,
+                                    {
+                                        senderId: u,
+                                        channelId: t,
+                                        warningId: o
+                                    },
+                                    'more-tips-button'
+                                ),
+                                (0, i.jsx)(
+                                    m.ZP,
+                                    {
+                                        title: Z.intl.string(Z.t['5QYPOz']),
+                                        description: Z.intl.string(Z.t.G08MKi),
+                                        buttonText: Z.intl.string(Z.t['5QYPOz']),
+                                        buttonColor: s.Button.Colors.RED,
+                                        onButtonPress: () => {
+                                            r(), j(_.NM.USER_MODAL_BLOCK_CONFIRM, _.NM.USER_MODAL_BLOCK_CANCEL, T);
+                                        }
+                                    },
+                                    'block-button'
+                                )
                             ]
                         })
                     });
@@ -241,51 +180,51 @@ function T(e) {
                 return (n) =>
                     (0, i.jsx)(a, {
                         ...n,
-                        userId: h,
-                        confirmBlock: Z(e),
+                        userId: u,
+                        confirmBlock: S(e),
                         onCancel: () => {
                             null == r || r(),
-                                (0, v.qc)({
+                                (0, _.qc)({
                                     channelId: t,
                                     warningId: o,
-                                    senderId: h,
-                                    warningType: x.pj.STRANGER_DANGER,
+                                    senderId: u,
+                                    warningType: v.pj.STRANGER_DANGER,
                                     cta: l
                                 });
                         }
                     });
             });
         };
-    return (0, i.jsx)(_.Q, {
+    return (0, i.jsx)(I.Q, {
         channelId: t,
         warningId: o,
-        senderId: h,
-        warningType: x.pj.STRANGER_DANGER,
-        header: b.intl.string(b.t.iOkDpK),
-        description: b.intl.string(b.t.ISUbcH),
-        onDismiss: f,
+        senderId: u,
+        warningType: v.pj.STRANGER_DANGER,
+        header: Z.intl.string(Z.t.iOkDpK),
+        description: Z.intl.string(Z.t.ISUbcH),
+        onDismiss: g,
         buttons: [
             {
-                text: b.intl.string(b.t['Qk/c4+']),
+                text: Z.intl.string(Z.t['Qk/c4+']),
                 color: s.Button.Colors.BRAND,
                 onclick: () => {
                     T(),
-                        (0, v.qc)({
+                        (0, _.qc)({
                             channelId: t,
                             warningId: o,
-                            senderId: h,
-                            warningType: x.pj.STRANGER_DANGER,
-                            cta: v.NM.OPEN_MORE_TIPS
+                            senderId: u,
+                            warningType: v.pj.STRANGER_DANGER,
+                            cta: _.NM.OPEN_MORE_TIPS
                         });
                 }
             },
-            ...(p
+            ...(h
                 ? []
                 : [
                       {
-                          text: b.intl.string(b.t.ie0QdH),
+                          text: Z.intl.string(Z.t.ie0QdH),
                           color: s.Button.Colors.RED,
-                          onclick: () => j(v.NM.USER_BANNER_BLOCK_CONFIRM, v.NM.USER_BANNER_BLOCK_CANCEL)
+                          onclick: () => j(_.NM.USER_BANNER_BLOCK_CONFIRM, _.NM.USER_BANNER_BLOCK_CANCEL)
                       }
                   ])
         ]
