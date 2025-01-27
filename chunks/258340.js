@@ -9,35 +9,36 @@ var n,
 ((a = n || (n = {}))[(a.FREE = 0)] = 'FREE'), (a[(a.ACTIVE = 1)] = 'ACTIVE');
 let o = (e) => Math.round(4 * e) / 4,
     d = (e) => {
-        let [t, r] = i.useState({
+        let t = 60,
+            [r, n] = i.useState({
                 y: 0.9 * e.h,
                 x: 0.3 * e.w
             }),
-            [n, a] = i.useState(1400),
-            [l, c] = i.useState(0.94),
-            [u, s] = i.useState(110),
-            [o, d] = i.useState(30),
-            [f, m] = i.useState(900),
-            [h, p] = i.useState(60);
+            [a, l] = i.useState(1400),
+            [c, u] = i.useState(0.94),
+            [s, o] = i.useState(110),
+            [d, f] = i.useState(t),
+            [m, h] = i.useState(900),
+            [p, y] = i.useState(60);
         i.useEffect(() => {
-            r({
+            n({
                 y: 0.9 * e.h,
                 x: 0.3 * e.w
             });
         }, [e.h, e.w]);
-        let y = i.useCallback(() => {
+        let w = i.useCallback(() => {
             let e;
-            return 60 === h ? (p(() => 45), !0) : (d((t) => (e = Math.max(3, Math.floor(0.75 * t)))), m((e) => Math.max(6, Math.floor(0.8 * e))), (null != e ? e : 30) < 16.875 && p(() => 28), !0);
-        }, [h, 30]);
+            return 60 === p ? (y(() => 45), !0) : (f((t) => (e = Math.max(3, Math.floor(0.75 * t)))), h((e) => Math.max(6, Math.floor(0.8 * e))), (null != e ? e : t) < 0.5625 * t && y(() => 28), !0);
+        }, [p, t]);
         return {
-            SPEED: t,
-            GRAVITY: n,
-            DRAG: l,
-            Y_POS: u,
-            PARTICLES_PER_EMISSION: o,
-            MAX_PARTICLES: f,
-            tickRate: 1000 / h,
-            improvePerformance: y
+            SPEED: r,
+            GRAVITY: a,
+            DRAG: c,
+            Y_POS: s,
+            PARTICLES_PER_EMISSION: d,
+            MAX_PARTICLES: m,
+            tickRate: 1000 / p,
+            improvePerformance: w
         };
     },
     f = (e) => {
