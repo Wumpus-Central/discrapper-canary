@@ -1,4 +1,7 @@
 r.d(n, {
+    DB: function () {
+        return l;
+    },
     TZ: function () {
         return s;
     },
@@ -39,4 +42,8 @@ let o = (0, i.B)({
 function s() {
     let { enableGiftingFlow: e, enableCoachmark: n } = o.useExperiment({ location: 'useIsValentinesGiftingActive' }, { autoTrackExposure: !1 });
     return e || n;
+}
+function l() {
+    let { enableCoachmark: e } = o.useExperiment({ location: 'useIsValentinesCoachmarkEnabled' }, { autoTrackExposure: !1 });
+    return e;
 }
