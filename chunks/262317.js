@@ -210,10 +210,10 @@ class B extends (i = r.PureComponent) {
                 });
             }),
             O(this, 'renderUser', (e) => {
-                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: r, mute: a, localMute: o, localVideoDisabled: c, speaking: u, disconnected: h, user: p, deaf: m, priority: f, collapsed: g, isStreaming: C, isGuest: v, nick: _, video: I, serverMute: E, serverDeaf: b, tabIndex: Z, embeddedApplication: N, channel: T, hangStatusActivity: j, showHangStatus: A, isSelf: y, application: P } = this.props,
-                    { userPopoutOpen: R, isHoveringHangStatus: O } = this.state,
-                    D = M.al.has(null != n ? n : ''),
-                    w = {
+                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: r, mute: a, localMute: o, localVideoDisabled: c, speaking: u, disconnected: h, user: p, deaf: m, priority: f, collapsed: g, isStreaming: C, isGuest: v, nick: _, video: I, serverMute: E, serverDeaf: b, tabIndex: Z, embeddedApplication: N, channel: T, ringing: j, hangStatusActivity: A, showHangStatus: y, isSelf: P, application: R } = this.props,
+                    { userPopoutOpen: O, isHoveringHangStatus: D } = this.state,
+                    w = M.al.has(null != n ? n : ''),
+                    B = {
                         user: p,
                         speaking: u,
                         disconnected: h,
@@ -224,6 +224,7 @@ class B extends (i = r.PureComponent) {
                         isGuest: v,
                         video: I,
                         priority: f,
+                        ringing: j,
                         deaf: m,
                         nick: _,
                         collapsed: g,
@@ -235,26 +236,26 @@ class B extends (i = r.PureComponent) {
                         voicePlatform: i,
                         embeddedApplication: N,
                         avatarContainerClass: s()({ [k.userAvatar]: !0 }),
-                        disabled: t && !D,
-                        selected: R,
-                        onClick: D ? void 0 : this.handleClickUser,
+                        disabled: t && !w,
+                        selected: O,
+                        onClick: w ? void 0 : this.handleClickUser,
                         onDoubleClick: this.handleWatchStream,
                         onContextMenu: this.handleUserContextMenu,
                         guildId: T.guild_id,
-                        hangStatusActivity: j,
-                        showHangStatus: A,
-                        isSelf: y,
-                        application: P,
+                        hangStatusActivity: A,
+                        showHangStatus: y,
+                        isSelf: P,
+                        application: R,
                         channelId: T.id
                     };
                 if (t) {
-                    var B;
+                    var U;
                     return (0, l.jsx)(d.Tooltip, {
-                        text: null !== (B = (0, x.Z)(n)) && void 0 !== B ? B : L.intl.string(L.t.IyYqqa),
+                        text: null !== (U = (0, x.Z)(n)) && void 0 !== U ? U : L.intl.string(L.t.IyYqqa),
                         children: (e) => {
                             let { onClick: t, onContextMenu: n, ...i } = e;
                             return (0, l.jsx)(S.ZP, {
-                                ...w,
+                                ...B,
                                 ...i
                             });
                         }
@@ -262,13 +263,13 @@ class B extends (i = r.PureComponent) {
                 }
                 return (0, l.jsx)(d.Popout, {
                     position: 'right',
-                    renderPopout: (A && O) || !C ? this.renderHangStatusPopout : this.renderStreamPopout,
-                    shouldShow: r && !R,
+                    renderPopout: (y && D) || !C ? this.renderHangStatusPopout : this.renderStreamPopout,
+                    shouldShow: r && !O,
                     onRequestClose: this.handleHidePreview,
                     spacing: 0,
                     children: () =>
                         (0, l.jsx)(S.ZP, {
-                            ...w,
+                            ...B,
                             onMouseDown: e.onMouseDown,
                             onKeyDown: e.onKeyDown,
                             handleHoverHangStatus: this.handleHoverHangStatus,

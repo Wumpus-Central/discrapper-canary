@@ -26,8 +26,8 @@ var i = n(200651),
     y = n(436774),
     j = n(594190),
     T = n(925329),
-    P = n(102172),
-    A = n(74299),
+    A = n(102172),
+    P = n(74299),
     w = n(914923),
     M = n(165393),
     L = n(989941),
@@ -79,11 +79,12 @@ class ea extends l.PureComponent {
         return (0, i.jsx)(ee.J, { ...this.props });
     }
     renderGame() {
-        let { isStreaming: e, application: t, runningGame: n } = this.props;
+        let { isStreaming: e, application: t, runningGame: n, setIsForceShowSharingPopout: l } = this.props;
         return (0, i.jsx)(et.k, {
             isStreaming: e,
             application: t,
-            game: n
+            game: n,
+            onClickNotSharing: () => l(!0)
         });
     }
     renderScreenshare() {
@@ -215,7 +216,7 @@ t.Z = (0, f.Z)(function (e) {
         [p, m] = (0, c.Wu)([B.Z], () => [B.Z.getCurrentUserActiveStream(), B.Z.getStreamerActiveStreamMetadata()]),
         f = (0, c.e7)([g.Z], () => g.Z.useReducedMotion),
         x = (0, c.e7)([I.ZP], () => (null != d ? I.ZP.getSelfEmbeddedActivityForChannel(d.id) : null)),
-        _ = (0, c.e7)([H.Z, z.Z, V.ZP], () => (null != s ? P.JL(s, H.Z, z.Z, !1) : null != n && P.h_(V.ZP.getChannels(n), H.Z, z.Z).length > 0)),
+        _ = (0, c.e7)([H.Z, z.Z, V.ZP], () => (null != s ? A.JL(s, H.Z, z.Z, !1) : null != n && A.h_(V.ZP.getChannels(n), H.Z, z.Z).length > 0)),
         [b] = (0, Z.Z)([
             null !==
                 (t = (function () {
@@ -229,7 +230,7 @@ t.Z = (0, f.Z)(function (e) {
         N = (0, c.e7)([E.Z], () => E.Z.getFakeGameData()),
         y = (0, c.e7)([I.ZP], () => I.ZP.getCurrentEmbeddedActivity()),
         T = (0, C.Z0)() && null != y && (0, v.R)(),
-        w = (0, c.e7)([F.Z], () => (0, A.Z)(F.Z) && (0, J.isWindows)()),
+        w = (0, c.e7)([F.Z], () => (0, P.Z)(F.Z) && (0, J.isWindows)()),
         M = (0, c.e7)([W.Z], () => (null != a ? W.Z.findActivity(a, (e) => e.type === en.IIU.PLAYING) : null)),
         R = null != p && p.ownerId === a && p.state !== en.jm8.ENDED,
         G = (0, c.e7)([Q.default, q.Z], () => (null != d ? (0, S.F6)(d, Q.default, q.Z) : void 0)),

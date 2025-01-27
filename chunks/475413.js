@@ -82,22 +82,24 @@ function h(e) {
     });
 }
 function _(e) {
-    let { icon: n, tooltipText: r, tooltipDelay: a, tooltipClassName: u, tooltipContainerClassName: d, className: p, innerClassName: h, shouldShowTooltip: _ = !0, ...m } = e;
+    let { icon: n, tooltipText: r, tooltipPosition: a, tooltipAlign: u, tooltipDelay: d, tooltipClassName: p, tooltipContainerClassName: h, ariaLabel: _, className: m, innerClassName: g, shouldShowTooltip: E = !0, ...v } = e;
     return (0, i.jsx)(l.TooltipContainer, {
         text: r,
+        position: a,
+        align: u,
         'aria-label': !1,
-        delay: a,
-        shouldShow: _,
-        className: d,
-        tooltipClassName: u,
+        delay: d,
+        shouldShow: E,
+        className: h,
+        tooltipClassName: p,
         children: (0, i.jsx)(f, {
-            className: o()(c.icon, p),
-            innerClassName: o()(c.icon, h),
+            className: o()(c.icon, m),
+            innerClassName: o()(c.icon, g),
             look: s.zx.Looks.FILLED,
             size: s.zx.Sizes.NONE,
             grow: !1,
-            'aria-label': r,
-            ...m,
+            'aria-label': 'string' == typeof r && null == _ ? r : _,
+            ...v,
             children: (0, i.jsx)(n, {
                 size: 'xs',
                 color: 'currentColor'

@@ -20,16 +20,17 @@ var i = n(200651),
     v = n(108427),
     N = n(210887),
     T = n(974042),
-    S = n(666286),
-    b = n(596957),
-    A = n(981631),
-    Z = n(723359),
-    x = n(388032),
-    L = n(224602);
-function y() {
+    S = n(849862),
+    b = n(666286),
+    A = n(596957),
+    Z = n(981631),
+    x = n(723359),
+    L = n(388032),
+    y = n(224602);
+function P() {
     return (0, i.jsx)('div', {
-        className: L.inviteToolbar,
-        children: (0, i.jsx)(E.Z, { tooltip: x.intl.string(x.t.HfOgAw) })
+        className: y.inviteToolbar,
+        children: (0, i.jsx)(E.Z, { tooltip: L.intl.string(L.t.HfOgAw) })
     });
 }
 t.Z = function (e) {
@@ -41,90 +42,91 @@ t.Z = function (e) {
         'true' === new URLSearchParams(l.search).get('confirm-age') &&
             u.Z.dispatch({
                 type: 'AGE_GATE_MODAL_OPEN',
-                source: Z.L0.DEEP_LINK_PROMPT
+                source: x.L0.DEEP_LINK_PROMPT
             }).then(() => {
-                E.replace(A.Z5c.ME);
+                E.replace(Z.Z5c.ME);
             });
     }, [E, l]),
         r.useEffect(() => {
-            h.Y(A.Z5c.FRIENDS), (0, v.e)('friends');
+            h.Y(Z.Z5c.FRIENDS), (0, v.e)('friends');
         }, []),
         r.useEffect(() => {
             null != t && m.Z.setInitialSection(t);
         }, [t]);
-    let P = (0, c.e7)([N.Z], () => N.Z.theme),
-        { section: O, pendingCount: R } = (0, c.cj)([T.ZP], () => T.ZP.getState()),
-        j = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
-        D = (e) => {
+    let O = (0, c.e7)([N.Z], () => N.Z.theme),
+        { section: R } = (0, c.cj)([T.ZP], () => T.ZP.getState()),
+        j = (0, S.If)(),
+        D = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
+        M = (e) => {
             m.Z.setSection(e);
         },
-        M = (0, g.Dt)(),
-        w = (0, g.Dt)();
+        w = (0, g.Dt)(),
+        k = (0, g.Dt)();
     return (0, i.jsxs)('main', {
-        className: L.container,
-        'aria-label': x.intl.string(x.t.TdEu5e),
+        className: y.container,
+        'aria-label': L.intl.string(L.t.TdEu5e),
         children: [
-            (0, i.jsx)(p.yY, { location: x.intl.string(x.t.TdEu5e) }),
+            (0, i.jsx)(p.yY, { location: L.intl.string(L.t.TdEu5e) }),
             (0, i.jsx)(d.ThemeProvider, {
-                theme: P,
+                theme: O,
                 children: (e) =>
                     (0, i.jsxs)(_.Z, {
                         className: e,
-                        toolbar: (0, i.jsx)(y, {}),
+                        toolbar: (0, i.jsx)(P, {}),
                         scrollable: o.tq,
                         role: 'navigation',
-                        'aria-labelledby': M,
+                        'aria-labelledby': w,
                         children: [
                             (0, i.jsx)(_.Z.Icon, {
                                 icon: d.FriendsIcon,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsx)(_.Z.Title, {
-                                id: M,
-                                children: x.intl.string(x.t.TdEu5e)
+                                id: w,
+                                children: L.intl.string(L.t.TdEu5e)
                             }),
                             (0, i.jsx)(_.Z.Divider, {}),
                             (0, i.jsxs)(d.TabBar, {
-                                'aria-label': x.intl.string(x.t.TdEu5e),
-                                selectedItem: O,
+                                'aria-label': L.intl.string(L.t.TdEu5e),
+                                selectedItem: R,
                                 type: 'top-pill',
-                                onItemSelect: D,
-                                className: L.tabBar,
+                                onItemSelect: M,
+                                className: y.tabBar,
                                 children: [
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        id: A.pJs.ONLINE,
-                                        className: L.item,
-                                        children: x.intl.string(x.t.b9w3bG)
+                                        id: Z.pJs.ONLINE,
+                                        className: y.item,
+                                        children: L.intl.string(L.t.b9w3bG)
                                     }),
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        id: A.pJs.ALL,
-                                        className: L.item,
-                                        children: x.intl.string(x.t.PfjFjY)
+                                        id: Z.pJs.ALL,
+                                        className: y.item,
+                                        children: L.intl.string(L.t.PfjFjY)
                                     }),
                                     (0, i.jsxs)(d.TabBar.Item, {
-                                        id: A.pJs.PENDING,
-                                        className: L.item,
-                                        'aria-label': x.intl.string(x.t.p6IHGB),
+                                        id: Z.pJs.PENDING,
+                                        className: y.item,
+                                        'aria-label': L.intl.string(L.t.p6IHGB),
                                         children: [
-                                            x.intl.string(x.t.p6IHGB),
-                                            R > 0
+                                            L.intl.string(L.t.p6IHGB),
+                                            j > 0
                                                 ? (0, i.jsx)(d.NumberBadge, {
-                                                      count: R,
-                                                      className: L.badge
+                                                      count: j,
+                                                      className: y.badge
                                                   })
                                                 : null
                                         ]
                                     }),
-                                    j > 0
+                                    D > 0
                                         ? (0, i.jsxs)(d.TabBar.Item, {
-                                              id: A.pJs.SUGGESTIONS,
-                                              className: L.item,
-                                              'aria-label': x.intl.string(x.t['8rSi19']),
+                                              id: Z.pJs.SUGGESTIONS,
+                                              className: y.item,
+                                              'aria-label': L.intl.string(L.t['8rSi19']),
                                               children: [
-                                                  x.intl.string(x.t['8rSi19']),
+                                                  L.intl.string(L.t['8rSi19']),
                                                   (0, i.jsx)(d.NumberBadge, {
-                                                      count: j,
-                                                      className: L.badge
+                                                      count: D,
+                                                      className: y.badge
                                                   })
                                               ]
                                           })
@@ -132,15 +134,15 @@ t.Z = function (e) {
                                     n
                                         ? null
                                         : (0, i.jsx)(d.TabBar.Item, {
-                                              id: A.pJs.BLOCKED,
-                                              className: L.item,
-                                              children: x.intl.string(x.t['4bDptL'])
+                                              id: Z.pJs.BLOCKED,
+                                              className: y.item,
+                                              children: L.intl.string(L.t['4bDptL'])
                                           }),
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        'aria-label': x.intl.string(x.t.j0wbEx),
-                                        className: a()(L.item, L.addFriend),
-                                        id: A.pJs.ADD_FRIEND,
-                                        children: (0, i.jsx)('span', { children: x.intl.string(x.t.j0wbEx) })
+                                        'aria-label': L.intl.string(L.t.j0wbEx),
+                                        className: a()(y.item, y.addFriend),
+                                        id: Z.pJs.ADD_FRIEND,
+                                        children: (0, i.jsx)('span', { children: L.intl.string(L.t.j0wbEx) })
                                     })
                                 ]
                             })
@@ -148,16 +150,16 @@ t.Z = function (e) {
                     })
             }),
             (0, i.jsxs)('div', {
-                className: L.tabBody,
+                className: y.tabBody,
                 children: [
                     (0, i.jsx)(d.TabBar.Panel, {
-                        id: O,
-                        className: L.peopleColumn,
-                        'aria-labelledby': w,
-                        children: O === A.pJs.ADD_FRIEND ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(b.Z, { titleId: w })
+                        id: R,
+                        className: y.peopleColumn,
+                        'aria-labelledby': k,
+                        children: R === Z.pJs.ADD_FRIEND ? (0, i.jsx)(b.Z, {}) : (0, i.jsx)(A.Z, { titleId: k })
                     }),
                     (0, i.jsx)('div', {
-                        className: L.nowPlayingColumn,
+                        className: y.nowPlayingColumn,
                         children: (0, i.jsx)(I.Z, {})
                     })
                 ]

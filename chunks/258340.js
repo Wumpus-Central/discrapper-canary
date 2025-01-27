@@ -5,10 +5,11 @@ var n,
     l = r(392711),
     c = r(633302),
     u = r(960048),
-    s = r(709054);
+    s = r(709054),
+    o = r(693824);
 ((a = n || (n = {}))[(a.FREE = 0)] = 'FREE'), (a[(a.ACTIVE = 1)] = 'ACTIVE');
-let o = (e) => Math.round(4 * e) / 4,
-    d = (e) => {
+let d = (e) => Math.round(4 * e) / 4,
+    f = (e) => {
         let [t, r] = i.useState({
                 y: 0.9 * e.h,
                 x: 0.3 * e.w
@@ -40,7 +41,7 @@ let o = (e) => Math.round(4 * e) / 4,
             improvePerformance: y
         };
     },
-    f = (e) => {
+    m = (e) => {
         let t = e.particles.current,
             r = e.particleStates.current;
         e.sortedParticles.current.sort((e, n) => {
@@ -50,26 +51,26 @@ let o = (e) => Math.round(4 * e) / 4,
         });
     };
 t.Z = (e) => {
-    let { SPEED: t, GRAVITY: r, DRAG: n, Y_POS: a, PARTICLES_PER_EMISSION: m, MAX_PARTICLES: h, tickRate: p, improvePerformance: y } = d(e),
-        w = {
-            particles: i.useRef(Array(h)),
-            particleStates: i.useRef(new Uint8Array(h)),
-            sortedParticles: i.useRef(new Uint16Array(Array.from({ length: h }, (e, t) => t))),
-            freeParticles: i.useRef(h),
+    let { SPEED: t, GRAVITY: r, DRAG: n, Y_POS: a, PARTICLES_PER_EMISSION: h, MAX_PARTICLES: p, tickRate: y, improvePerformance: w } = f(e),
+        v = {
+            particles: i.useRef(Array(p)),
+            particleStates: i.useRef(new Uint8Array(p)),
+            sortedParticles: i.useRef(new Uint16Array(Array.from({ length: p }, (e, t) => t))),
+            freeParticles: i.useRef(p),
             activeParticles: i.useRef(0)
         },
-        v = i.useRef(!1);
+        x = i.useRef(!1);
     return {
         update: (t) => {
-            if (0 === w.activeParticles.current) return;
-            let a = w.particleStates.current,
-                i = w.particles.current;
-            for (let l = 0; l < h; l++) {
+            if (0 === v.activeParticles.current) return;
+            let a = v.particleStates.current,
+                i = v.particles.current;
+            for (let l = 0; l < p; l++) {
                 if (0 === a[l]) continue;
                 let c = i[l];
-                (c.position.x -= c.velocity.x * t), (c.position.y -= c.velocity.y * t), (c.velocity.x *= n ** t), (c.velocity.y *= n ** t), (c.rotation += c.angularVelocity * t), (c.velocity.y -= r * t), c.position.y > e.h && ((w.particleStates.current[l] = 0), (w.activeParticles.current -= 1), (w.freeParticles.current += 1));
+                (c.position.x -= c.velocity.x * t), (c.position.y -= c.velocity.y * t), (c.velocity.x *= n ** t), (c.velocity.y *= n ** t), (c.rotation += c.angularVelocity * t), (c.velocity.y -= r * t), c.position.y > e.h && ((v.particleStates.current[l] = 0), (v.activeParticles.current -= 1), (v.freeParticles.current += 1));
             }
-            0 === w.activeParticles.current && (v.current = !1);
+            0 === v.activeParticles.current && (x.current = !1);
         },
         draw: (t) => {
             t.clearRect({
@@ -78,23 +79,23 @@ t.Z = (e) => {
                 w: e.w,
                 h: e.h
             });
-            let r = w.particleStates.current,
-                n = w.particles.current,
-                a = w.sortedParticles.current;
-            for (let e = 0; e < h; e++) {
+            let r = v.particleStates.current,
+                n = v.particles.current,
+                a = v.sortedParticles.current;
+            for (let e = 0; e < p; e++) {
                 var i;
                 let l = a[e];
                 if (0 === r[l]) continue;
                 let s = n[l],
-                    { x: d, y: f } = s.position;
-                if ((s.scale > 1 && t.setFilter({ blur: o((s.scale - 1) * 1.5) }), null === (i = t.assetMap) || void 0 === i ? void 0 : i.has(s.key))) {
+                    { x: f, y: m } = s.position;
+                if ((s.scale > 1 && t.setFilter({ blur: d((s.scale - 1) * 1.5) }), null === (i = t.assetMap) || void 0 === i ? void 0 : i.has(s.key))) {
                     let e = {
                             w: 32 * s.scale,
                             h: 32 * s.scale
                         },
                         r = {
-                            x: d + e.w / 2,
-                            y: f + e.h / 2
+                            x: f + e.w / 2,
+                            y: m + e.h / 2
                         };
                     t.rotateAroundOriginAndDraw(r, s.rotation, () =>
                         t.drawImage(
@@ -103,15 +104,16 @@ t.Z = (e) => {
                                 x: 0,
                                 y: 0
                             },
-                            e
+                            e,
+                            { fillMode: o.JU.Contain }
                         )
                     );
                 } else {
                     let e = c.ZP.contentHasUnicodeOrEmoji(s.key),
                         r = 24 * s.scale,
                         n = {
-                            x: d + r / 2,
-                            y: f + r / 2
+                            x: f + r / 2,
+                            y: m + r / 2
                         };
                     null != e
                         ? (t.setFont({ size: r }),
@@ -135,7 +137,7 @@ t.Z = (e) => {
         },
         emit: (r, n) => {
             s.default.isProbablyAValidSnowflake(r);
-            if (w.freeParticles.current < m / 2) return;
+            if (v.freeParticles.current < h / 2) return;
             let i = 0 === n.x && 0 === n.y && 0 === n.w && 0 === n.h,
                 c = {
                     min: e.h / 8,
@@ -143,7 +145,7 @@ t.Z = (e) => {
                 },
                 u = n.y < 0.66 * e.h ? Math.max(0.2, n.y / (0.66 * e.h)) : 1,
                 o = 1 + (1 - u);
-            for (let s = 0; s < m; s++) {
+            for (let s = 0; s < h; s++) {
                 let s, d;
                 s = i
                     ? {
@@ -154,8 +156,8 @@ t.Z = (e) => {
                           x: (0, l.random)(-t.x * o, t.x * o, !0),
                           y: t.y * u + (0, l.random)(-c.min, c.max, !0)
                       };
-                let m = (0, l.random)(0, 30),
-                    p = Math.atan2(-t.y - (0, l.random)(-c.min, c.max, !0), (0, l.random)(-t.x, t.x, !0)) * (0, l.random)(-50, 50);
+                let f = (0, l.random)(0, 30),
+                    h = Math.atan2(-t.y - (0, l.random)(-c.min, c.max, !0), (0, l.random)(-t.x, t.x, !0)) * (0, l.random)(-50, 50);
                 if (i)
                     d = {
                         x: e.w / 2 + (0, l.random)(-50, 50),
@@ -169,27 +171,27 @@ t.Z = (e) => {
                         y: n.y + n.h / 2 + (0, l.random)(-e, e)
                     };
                 }
-                for (let e = 0; e < h; e += 1)
-                    if (0 === w.particleStates.current[e]) {
-                        (w.particles.current[e] = {
+                for (let e = 0; e < p; e += 1)
+                    if (0 === v.particleStates.current[e]) {
+                        (v.particles.current[e] = {
                             key: r,
                             position: d,
                             velocity: s,
                             scale: (0, l.random)(0.8, 2),
-                            rotation: m,
-                            angularVelocity: p
+                            rotation: f,
+                            angularVelocity: h
                         }),
-                            (w.particleStates.current[e] = 1),
-                            (w.freeParticles.current -= 1),
-                            (w.activeParticles.current += 1);
+                            (v.particleStates.current[e] = 1),
+                            (v.freeParticles.current -= 1),
+                            (v.activeParticles.current += 1);
                         break;
                     }
-                f(w);
+                m(v);
             }
-            v.current = !0;
+            x.current = !0;
         },
-        tickRate: p,
-        improvePerformance: y,
-        shouldTick: v
+        tickRate: y,
+        improvePerformance: w,
+        shouldTick: x
     };
 };

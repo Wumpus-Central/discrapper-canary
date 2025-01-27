@@ -79,7 +79,7 @@ let T = (e) => {
               );
     };
 function A(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: r, serverMute: a, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: x, iconClassName: Z, embeddedApplication: T, otherClientSessionType: A, voicePlatform: j, hangStatusActivity: R, showHangStatus: O, isSelf: k, application: M, guildId: L, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: z } = e;
+    let { className: t, mute: n, localMute: i, localVideoDisabled: r, serverMute: a, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: x, iconClassName: Z, embeddedApplication: T, otherClientSessionType: A, voicePlatform: j, hangStatusActivity: R, showHangStatus: O, isSelf: M, application: k, guildId: L, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: z } = e;
     if (f || g) return null;
     let B = [],
         W = (0, l.jsx)(P, {
@@ -203,7 +203,7 @@ function A(e) {
                       'watch'
                   )
               );
-    let G = null != M && !(0, I.yE)(M.flags, _.udG.EMBEDDED),
+    let G = null != k && !(0, I.yE)(k.flags, _.udG.EMBEDDED),
         H = null == R && G;
     return 0 !== B.length || null != W || O || H
         ? (0, l.jsxs)('div', {
@@ -224,7 +224,7 @@ function A(e) {
                                 ? (0, l.jsx)(
                                       w,
                                       {
-                                          application: M,
+                                          application: k,
                                           iconClassName: Z,
                                           guildId: L,
                                           channelId: D,
@@ -235,7 +235,7 @@ function A(e) {
                                 : (0, l.jsx)(N, {
                                       hangStatusActivity: R,
                                       iconClassName: Z,
-                                      isSelf: k
+                                      isSelf: M
                                   })
                         })
                       : null
@@ -307,7 +307,7 @@ class j extends (i = r.Component) {
         return (0, l.jsx)(A, { ...this.props });
     }
     render() {
-        let { onClick: e, onKeyDown: t, flipped: n, size: i, className: r, selected: a, disabled: c, overlap: u, 'aria-label': d, tabIndex: m } = this.props;
+        let { onClick: e, onKeyDown: t, flipped: n, size: i, className: r, selected: a, disabled: c, overlap: u, 'aria-label': d, tabIndex: m, ringing: f } = this.props;
         return (0, l.jsx)(o.Clickable, {
             className: s()(r, {
                 [y.voiceUser]: !0,
@@ -316,7 +316,8 @@ class j extends (i = r.Component) {
                 [y.clickable]: null != e,
                 [y.userSmall]: i === _.ipw.SMALL,
                 [y.userLarge]: i === _.ipw.LARGE,
-                [y.disabled]: !a && c
+                [y.disabled]: !a && c,
+                [y.ringing]: f
             }),
             onClick: this.handleClick,
             onDoubleClick: this.handleDoubleClick,

@@ -171,10 +171,13 @@ function eu(e) {
         let { userId: i, channelId: a, guildId: o } = n;
         return (null != o &&
             null != a &&
-            E.Z.getCurrentConfig({
-                guildId: o,
-                location: 'voice_status_update'
-            }).enabled &&
+            E.Z.getCurrentConfig(
+                {
+                    guildId: o,
+                    location: 'voice_status_update'
+                },
+                { autoTrackExposure: !1 }
+            ).enabled &&
             K(a).updateGuildRingingUsers(i, !1),
         r && null != a && !M.includes(a))
             ? e
@@ -410,6 +413,9 @@ class eU extends (i = f.ZP.PersistedStore) {
                   view_mode_focus_duration_ms: Math.floor(n.focusDurationMs),
                   view_mode_toggle_count: n.toggleCount
               };
+    }
+    getGuildRingingUsers(e) {
+        return K(e).guildRingingUsers;
     }
     getMode(e) {
         var n;

@@ -60,13 +60,16 @@ class E {
         var t = this;
         m(this, 'updateAvailable', !1),
             m(this, 'hasNativeUpdate', !1),
+            m(this, 'nativeUpdatesDownloaded', 0),
             m(this, '_checkInterval', void 0),
             m(this, '_callbacks', []),
             m(this, '_bootstrapper', null),
             m(this, 'checkForUpdates', function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+                    n = 'win32' === (0, c.getPlatformName)(),
+                    i = n && t.nativeUpdatesDownloaded < 1;
                 return (
-                    (e || !t.hasNativeUpdate) && (c.isPlatformEmbedded ? ('win32' === (0, c.getPlatformName)() && d.ZP.canBootstrapNewUpdater ? t._requestNewUpdaterBootstrap() : d.ZP.send('CHECK_FOR_UPDATES')) : t._handleNativeUpdateNotAvailable()),
+                    (e || !t.hasNativeUpdate || i) && (c.isPlatformEmbedded ? (n && d.ZP.canBootstrapNewUpdater ? t._requestNewUpdaterBootstrap() : d.ZP.send('CHECK_FOR_UPDATES', { allowMultipleUpdates: !1 })) : t._handleNativeUpdateNotAvailable()),
                     new Promise((e) => {
                         t.updateAvailable ? e(!0) : t._callbacks.push(e);
                     })
@@ -86,7 +89,7 @@ class E {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || 'c9dd30fdcc5b39af1f9fe551702ffccfc14f177e' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || '260c55f5a2da152b747339cba9444293ff04ea74' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, a.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? f : p;
                                 if (Date.now() - _ > t) return r.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);
@@ -111,7 +114,8 @@ class E {
                     });
             }),
             m(this, '_handleUpdateDownloaded', (e, t, n, i, r) => {
-                this._handleUpdateAvailable(e),
+                e && (this.nativeUpdatesDownloaded += 1),
+                    this._handleUpdateAvailable(e),
                     l.Z.dispatch({
                         type: 'UPDATE_DOWNLOADED',
                         releaseNotes: t,

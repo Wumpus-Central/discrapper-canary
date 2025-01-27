@@ -225,7 +225,6 @@ class U extends (i = a.ZP.Store) {
         return {
             fetching: y,
             section: P,
-            pendingCount: I.Z.getPendingCount(),
             rows: O
         };
     }

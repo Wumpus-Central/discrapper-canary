@@ -1,88 +1,107 @@
 r.d(n, {
     Z: function () {
-        return g;
+        return T;
     }
 });
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(194359),
-    l = r(906732),
-    u = r(822972),
-    c = r(314897),
-    d = r(699516),
-    f = r(785717),
-    p = r(475413),
-    h = r(228168),
-    _ = r(981631),
-    m = r(388032);
-function g(e) {
-    let { user: n, friendToken: r, profileType: g, shouldShowTooltip: E } = e,
-        { newestAnalyticsLocation: v } = (0, l.ZP)(),
-        { trackUserProfileAction: y } = (0, f.KZ)(),
-        b = (0, a.e7)([c.default], () => c.default.getId() === (null == n ? void 0 : n.id)),
-        I = (0, a.e7)([d.Z], () => (null != n ? d.Z.getRelationshipType(n.id) : _.OGo.NONE)),
-        T = (0, u.Z)({
+var i = r(200651),
+    a = r(192379),
+    o = r(442837),
+    s = r(481060),
+    l = r(194359),
+    u = r(906732),
+    c = r(372460),
+    d = r(91896),
+    f = r(822972),
+    p = r(314897),
+    h = r(699516),
+    _ = r(785717),
+    m = r(475413),
+    g = r(930945),
+    E = r(228168),
+    v = r(981631),
+    y = r(388032);
+function b(e) {
+    let { user: n, analyticsLocation: r, shouldShowTooltip: a } = e,
+        { trackUserProfileAction: o } = (0, _.KZ)(),
+        l = (0, f.Z)({
             user: n,
             color: 'danger',
-            location: v,
-            onAction: () => y({ action: 'REMOVE_FRIEND' })
+            location: r,
+            onAction: () => o({ action: 'REMOVE_FRIEND' })
         });
-    if (null == n || n.bot || b || I === _.OGo.BLOCKED) return null;
-    let S = () =>
-            (0, i.jsx)(o.Popout, {
-                renderPopout: (e) => {
-                    let { closePopout: n } = e;
-                    return (0, i.jsx)(o.Menu, {
-                        navId: 'user-profile-friend-request-buttons',
-                        onSelect: void 0,
-                        onClose: n,
-                        'aria-label': m.intl.string(m.t.Jszi3N),
-                        children: T
-                    });
-                },
-                children: (e) =>
-                    (0, i.jsx)(p.oY, {
-                        shouldShowTooltip: E,
-                        icon: o.UserCheckIcon,
-                        tooltipText: m.intl.string(m.t.TdEu5e),
-                        ...e
-                    })
-            }),
-        A = () =>
-            g === h.y0.FULL_SIZE
-                ? null
-                : (0, i.jsx)(p.oY, {
-                      shouldShowTooltip: E,
-                      icon: o.UserClockIcon,
-                      tooltipText: m.intl.string(m.t.p6IHGB),
-                      disabled: !0
-                  }),
-        C = () =>
-            g === h.y0.FULL_SIZE
-                ? null
-                : (0, i.jsx)(p.oY, {
-                      shouldShowTooltip: E,
-                      icon: o.UserClockIcon,
-                      tooltipText: m.intl.string(m.t.p6IHGB),
-                      disabled: !0
-                  }),
-        N = () =>
-            g === h.y0.FULL_SIZE
-                ? null
-                : (0, i.jsx)(p.oY, {
-                      action: 'SEND_FRIEND_REQUEST',
-                      icon: o.UserPlusIcon,
-                      tooltipText: m.intl.string(m.t.w5uwoK),
-                      shouldShowTooltip: E,
-                      onClick: () => {
-                          s.Z.addRelationship({
-                              userId: n.id,
-                              friendToken: r,
-                              context: { location: v }
-                          });
-                      }
-                  });
-    return I === _.OGo.FRIEND ? S() : I === _.OGo.PENDING_INCOMING ? A() : I === _.OGo.PENDING_OUTGOING ? C() : N();
+    return (0, i.jsx)(s.Popout, {
+        renderPopout: (e) => {
+            let { closePopout: n } = e;
+            return (0, i.jsx)(s.Menu, {
+                navId: 'user-profile-friend-request-buttons',
+                onSelect: void 0,
+                onClose: n,
+                'aria-label': y.intl.string(y.t.Jszi3N),
+                children: l
+            });
+        },
+        children: (e) =>
+            (0, i.jsx)(m.oY, {
+                shouldShowTooltip: a,
+                icon: s.UserCheckIcon,
+                tooltipText: y.intl.string(y.t.TdEu5e),
+                ...e
+            })
+    });
+}
+function I(e) {
+    let { userId: n, friendToken: r, analyticsLocation: o, shouldShowTooltip: u } = e,
+        c = a.useCallback(() => {
+            l.Z.addRelationship({
+                userId: n,
+                friendToken: r,
+                context: { location: o }
+            });
+        }, [o, r, n]);
+    return (0, i.jsx)(m.oY, {
+        action: 'SEND_FRIEND_REQUEST',
+        icon: s.UserPlusIcon,
+        tooltipText: y.intl.string(y.t.w5uwoK),
+        shouldShowTooltip: u,
+        onClick: c
+    });
+}
+function T(e) {
+    let { user: n, friendToken: r, profileType: a, shouldShowTooltip: l = !1 } = e,
+        { newestAnalyticsLocation: f } = (0, u.ZP)(),
+        _ = (0, c.wn)({ location: 'useFriendRequestButtonTooltip' }),
+        T = (0, o.e7)([p.default], () => p.default.getId() === n.id),
+        S = (0, o.e7)([h.Z], () => h.Z.getRelationshipType(n.id)),
+        A = (0, o.Wu)([d.Z], () => d.Z.getGameFriendsForUser(n.id));
+    if (null == n || n.bot || T || S === v.OGo.BLOCKED) return null;
+    if (S === v.OGo.NONE && _ && 0 !== A.length)
+        return (0, i.jsx)(g.Z, {
+            userId: n.id,
+            shouldShowTooltip: l
+        });
+    switch (S) {
+        case v.OGo.FRIEND:
+            return (0, i.jsx)(b, {
+                user: n,
+                analyticsLocation: f,
+                shouldShowTooltip: l
+            });
+        case v.OGo.PENDING_INCOMING:
+        case v.OGo.PENDING_OUTGOING:
+            if (a === E.y0.FULL_SIZE) return null;
+            return (0, i.jsx)(m.oY, {
+                shouldShowTooltip: l,
+                icon: s.UserClockIcon,
+                tooltipText: y.intl.string(y.t.p6IHGB),
+                disabled: !0
+            });
+        default:
+            if (a === E.y0.FULL_SIZE) return null;
+            return (0, i.jsx)(I, {
+                userId: n.id,
+                shouldShowTooltip: l,
+                friendToken: r,
+                analyticsLocation: f
+            });
+    }
 }

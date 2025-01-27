@@ -103,7 +103,7 @@ function ed(e) {
         s = F.Z.getGuild(n),
         l = (0, T.K2)(n, 'invite') ? (null == s ? void 0 : s.hasFeature(ee.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) : (null == s ? void 0 : s.hasFeature(ee.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) && !(null == s ? void 0 : s.hasFeature(ee.oNc.PREVIEW_ENABLED)),
         { targetUserId: u, targetType: c, targetApplicationId: d, isGuestInvite: f, isApplicationBypassInvite: p } = null != a ? a : {};
-    if (!f && !p && l && Y.Z.getGuildId() !== n) return;
+    if (!f && !p && !(null == a ? void 0 : a.forceTransition) && l && Y.Z.getGuildId() !== n) return;
     let { type: h } = i,
         _ = B.Z.getChannel(i.id),
         m = eu(n, i, a),
@@ -447,11 +447,7 @@ n.Z = {
             return;
         }
         let s = (0, q.yE)(null !== (i = e.flags) && void 0 !== i ? i : 0, u.$.IS_APPLICATION_BYPASS);
-        if (null != o && !s && (0, R.u)(o)) {
-            (0, I.hk)(o.id);
-            return;
-        }
-        if (null == a) return;
+        if ((null != o && !s && (0, R.u)(o) && (0, R._)(o.id), null == a)) return;
         let l = es(e);
         null != n && (l.transitionTo = n),
             ed({
@@ -466,7 +462,8 @@ n.Z = {
             this.transitionToInviteChannelSync(e.channel.id, {
                 ...i,
                 intent: r,
-                transitionTo: n
+                transitionTo: n,
+                forceTransition: !0
             });
         }
     },

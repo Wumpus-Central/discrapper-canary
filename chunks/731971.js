@@ -1,44 +1,94 @@
 n.d(t, {
+    NQ: function () {
+        return g;
+    },
     U1: function () {
-        return o;
+        return s;
     },
     XW: function () {
-        return i;
+        return l;
+    },
+    _J: function () {
+        return m;
+    },
+    aP: function () {
+        return o;
     },
     c4: function () {
-        return c;
+        return u;
+    },
+    e7: function () {
+        return _;
     },
     h6: function () {
-        return r;
+        return d;
     },
     oE: function () {
-        return a;
+        return r;
     },
     y: function () {
-        return l;
+        return c;
     }
 });
-let i = (0, n(15729).U)((e) => ({
+var i = n(15729);
+let a = {
         nickname: void 0,
         dmsAllowed: !0,
         showActivity: !0,
         receiveNotifications: !0,
-        setNickname: (t) => e({ nickname: t }),
-        setDmsAllowed: (t) => e({ dmsAllowed: t }),
-        setShowActivity: (t) => e({ showActivity: t }),
-        setReceiveNotifications: (t) => e({ receiveNotifications: t }),
+        inviteCode: void 0,
+        guildId: void 0
+    },
+    l = (0, i.U)((e) => ({
+        ...a,
+        touched: !1,
+        setNickname: (t) =>
+            e((e) => ({
+                nickname: t,
+                touched: !0
+            })),
+        setDmsAllowed: (t) =>
+            e((e) => ({
+                dmsAllowed: t,
+                touched: !0
+            })),
+        setShowActivity: (t) =>
+            e((e) => ({
+                showActivity: t,
+                touched: !0
+            })),
+        setReceiveNotifications: (t) =>
+            e((e) => ({
+                receiveNotifications: t,
+                touched: !0
+            })),
+        setInviteCode: (t) =>
+            e((e) => ({
+                inviteCode: t,
+                touched: !0
+            })),
+        setGuildId: (t) =>
+            e((e) => ({
+                guildId: t,
+                touched: !0
+            })),
         reset: () =>
             e({
-                nickname: void 0,
-                dmsAllowed: !0,
-                showActivity: !0,
-                receiveNotifications: !0
+                ...a,
+                touched: !1
             })
     })),
-    a = () => {
-        i.getState().reset();
+    r = () => {
+        l.getState().reset();
     },
-    l = () => i.getState().nickname,
-    r = () => i.getState().dmsAllowed,
-    o = () => i.getState().showActivity,
-    c = () => i.getState().receiveNotifications;
+    o = () => {
+        let e = l.getState();
+        return e.nickname !== a.nickname || e.dmsAllowed !== a.dmsAllowed || e.showActivity !== a.showActivity || e.receiveNotifications !== a.receiveNotifications;
+    },
+    c = () => l.getState().nickname,
+    d = () => l.getState().dmsAllowed,
+    s = () => l.getState().showActivity,
+    u = () => l.getState().receiveNotifications,
+    _ = () => l.getState().inviteCode,
+    m = () => l.getState().guildId,
+    g = () => l.getState().touched;

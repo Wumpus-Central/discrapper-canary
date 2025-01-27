@@ -31,5 +31,6 @@ e.exports = {
     usernameSpeaking: 'usernameSpeaking_d80634',
     iconPriortySpeakerSpeaking: 'iconPriortySpeakerSpeaking_d80634',
     disabled: 'disabled_d80634',
+    ringing: 'ringing_d80634',
     guestSuffix: 'guestSuffix_d80634'
 };

@@ -106,34 +106,44 @@ function F(e) {
 }
 function V(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: r, onPaymentSourceChange: i, handlePaymentSourceAdd: s } = e,
-        { application: v, purchaseState: x, paymentSources: V, paymentSourceId: j, setHasAcceptedTerms: H, skusById: Y, skuPricePreviewsById: W, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: q, purchasePreviewError: Q, devShelfFetchState: X } = (0, P.usePaymentContext)(),
-        { isGift: J, giftRecipient: $ } = (0, w.wD)(),
-        ee = J && (0, L.pO)($),
-        { defaultPaymentSourceId: et, hasFetchedPaymentSources: en } = (0, c.cj)([C.Z], () => ({
+        { application: v, purchaseState: x, paymentSources: V, paymentSourceId: j, setHasAcceptedTerms: H, skusById: Y, skuPricePreviewsById: W, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: q, purchasePreviewError: Q, devShelfFetchState: X, setPurchasePreviewError: J } = (0, P.usePaymentContext)(),
+        { isGift: $, giftRecipient: ee } = (0, w.wD)(),
+        et = $ && (0, L.pO)(ee),
+        { defaultPaymentSourceId: en, hasFetchedPaymentSources: er } = (0, c.cj)([C.Z], () => ({
             defaultPaymentSourceId: C.Z.defaultPaymentSourceId,
             hasFetchedPaymentSources: C.Z.hasFetchedPaymentSources
         }));
     l()(null != K, 'Expected selectedSkuId');
-    let er = Y[K],
-        ei = W[K],
-        ea = null != j ? j : N.c,
-        eo = null != ei ? ei[ea] : null;
-    l()(null != er, 'SKU must exist and be fetched.'), l()(null != v, 'Application must exist.');
-    let es = (0, c.e7)([g.Z, R.Z], () => R.Z.inTestModeForApplication(v.id) || g.Z.inDevModeForApplication(v.id), [v.id]),
-        el = (0, c.e7)([S.Z], () => S.Z.enabled),
-        eu = u.M.EEA_COUNTRIES.has(A.Z.ipCountryCodeWithFallback),
-        ec = x === M.A.PURCHASING || x === M.A.COMPLETED,
-        ed = null != j ? V[j].type : null,
-        ef = (0, E.ed)('SKUInvoice'),
-        ep = er.productLine === U.POd.COLLECTIBLES && ef;
+    let ei = Y[K],
+        ea = W[K],
+        eo = null != j ? j : N.c,
+        es = null != ea ? ea[eo] : null;
+    l()(null != ei, 'SKU must exist and be fetched.'), l()(null != v, 'Application must exist.');
+    let el = (0, c.e7)([g.Z, R.Z], () => R.Z.inTestModeForApplication(v.id) || g.Z.inDevModeForApplication(v.id), [v.id]),
+        eu = (0, c.e7)([S.Z], () => S.Z.enabled),
+        ec = u.M.EEA_COUNTRIES.has(A.Z.ipCountryCodeWithFallback),
+        ed = x === M.A.PURCHASING || x === M.A.COMPLETED,
+        ef = null != j ? V[j].type : null,
+        ep = (0, E.ed)('SKUInvoice'),
+        eh = ei.productLine === U.POd.COLLECTIBLES && ep;
     return (
         o.useEffect(() => {
-            en && j === et && et !== N.c && null == eo && (0, f.x2)(er.applicationId, er.id, et, { isGift: J });
-        }, [et, en, j, er.applicationId, er.id, eo, J]),
+            er &&
+                j === en &&
+                en !== N.c &&
+                null == es &&
+                (0, f.x2)(ei.applicationId, ei.id, en, { isGift: $ })
+                    .then(() => {
+                        J(null);
+                    })
+                    .catch((e) => {
+                        J(e);
+                    });
+        }, [en, er, j, ei.applicationId, ei.id, es, J, $]),
         (0, a.jsxs)('div', {
             className: G.stepBody,
             children: [
-                es
+                el
                     ? (0, a.jsx)(
                           h.Z,
                           {
@@ -161,19 +171,19 @@ function V(e) {
                     : null,
                 (0, a.jsx)(F, {
                     application: v,
-                    sku: er,
+                    sku: ei,
                     isEmbeddedIAP: z
                 }),
-                ee && (0, a.jsx)(k.Z, { sku: er }),
-                null != $ ? (0, a.jsx)(T.s, { giftRecipient: $ }) : null,
+                et && (0, a.jsx)(k.Z, { sku: ei }),
+                null != ee ? (0, a.jsx)(T.s, { giftRecipient: ee }) : null,
                 (0, a.jsx)(d.FormTitle, {
                     tag: d.FormTitleTags.H5,
-                    children: J ? B.intl.string(B.t.PEjaCw) : B.intl.string(B.t.sail9P)
+                    children: $ ? B.intl.string(B.t.PEjaCw) : B.intl.string(B.t.sail9P)
                 }),
-                null != eo
+                null != es
                     ? (0, a.jsx)(Z, {
-                          sku: er,
-                          skuPricePreview: eo
+                          sku: ei,
+                          skuPricePreview: es
                       })
                     : null == Q
                       ? (0, a.jsx)(d.Spinner, {
@@ -182,14 +192,14 @@ function V(e) {
                         })
                       : (0, a.jsx)(b.PO, {
                             className: G.invoice,
-                            children: ep
+                            children: eh
                                 ? (0, a.jsx)(y.C, {
-                                      sku: er,
+                                      sku: ei,
                                       value: null,
                                       className: G.subscriptionCostRow
                                   })
                                 : (0, a.jsx)(b.R$, {
-                                      label: er.name,
+                                      label: ei.name,
                                       value: null,
                                       className: G.subscriptionCostRow
                                   })
@@ -206,7 +216,7 @@ function V(e) {
                             selectedPaymentSourceId: j,
                             onChange: i,
                             onPaymentSourceAdd: s,
-                            hidePersonalInformation: el
+                            hidePersonalInformation: eu
                         })
                     ]
                 }),
@@ -216,19 +226,19 @@ function V(e) {
                     children: (0, a.jsx)(m.Z, {
                         onChange: H,
                         forceShow: !0,
-                        showWithdrawalWaiver: eu,
-                        disabled: ec,
+                        showWithdrawalWaiver: ec,
+                        disabled: ed,
                         subscriptionPlan: null,
                         finePrintClassname: G.fineprint,
                         purchaseType: q,
-                        isGift: J,
-                        checkboxLabel: er.productLine === U.POd.COLLECTIBLES ? B.intl.format(B.t['1EdAlZ'], { paidURL: U.EYA.PAID_TERMS }) : void 0,
+                        isGift: $,
+                        checkboxLabel: ei.productLine === U.POd.COLLECTIBLES ? B.intl.format(B.t['1EdAlZ'], { paidURL: U.EYA.PAID_TERMS }) : void 0,
                         finePrint: (0, a.jsx)(p.Z, {
-                            paymentSourceType: ed,
+                            paymentSourceType: ef,
                             isEmbeddedIAP: z,
                             purchaseType: q,
-                            productLine: er.productLine,
-                            isGift: J
+                            productLine: ei.productLine,
+                            isGift: $
                         })
                     })
                 })

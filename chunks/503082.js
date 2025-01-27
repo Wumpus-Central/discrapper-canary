@@ -318,9 +318,13 @@ class d extends a.Z {
         if ((null != this.offscreenCanvasCache && this.drawCroppedCachedImage(t, e, i), null == this.context)) return o.vP.Failure;
         let n = null === (s = this.assetMap) || void 0 === s ? void 0 : s.get(t);
         if (null == n) return o.vP.ImageNotLoaded;
-        let { x: a, y: r, w: h, h: l } = e,
-            { x: c, y: u, w: d, h: f } = i;
-        return this.context.drawImage(n, a, r, h, l, c, u, d, f), o.vP.Success;
+        if (null != this.offscreenCanvasCache) return this.drawCroppedCachedImage(t, e, i);
+        {
+            let { x: t, y: s, w: a, h: r } = e,
+                { x: o, y: h, w: l, h: c } = i;
+            this.context.drawImage(n, t, s, a, r, o, h, l, c);
+        }
+        return o.vP.Success;
     }
     drawCachedImage(t, e, i) {
         var s, a;

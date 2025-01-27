@@ -130,29 +130,30 @@ function V(e) {
             isGift: j
         }),
         e4 = null != eC ? e3[eC] : null,
-        e6 = s.useMemo(() => {
+        [e6, e5] = s.useState(e4),
+        e7 = s.useMemo(() => {
             if (null == eC) return null;
             let e = e2[eC];
             return null == e ? null : e[null != et ? et : v.c];
         }, [eC, e2, et]),
-        { data: e5 } = (0, _.IX)(K),
-        e7 = g.Sb.useSetting(),
-        e8 = (0, c.e7)([f.Z], () => f.Z.getFetchState());
+        { data: e8 } = (0, _.IX)(K),
+        e9 = g.Sb.useSetting(),
+        te = (0, c.e7)([f.Z], () => f.Z.getFetchState());
     s.useEffect(() => {
-        null != e5 && (0, I.yE)(e5.flags, U.udG.EMBEDDED) && e7 && null == e8 && (0, p.$h)();
-    }, [e5, e7, e8]);
-    let e9 = (0, I.yE)(null !== (n = null == e5 ? void 0 : e5.flags) && void 0 !== n ? n : 0, U.udG.EMBEDDED) && (0, I.yE)(null !== (r = null == e5 ? void 0 : e5.flags) && void 0 !== r ? r : 0, U.udG.EMBEDDED_IAP),
-        te = (0, c.e7)([h.ZP], () =>
+        null != e8 && (0, I.yE)(e8.flags, U.udG.EMBEDDED) && e9 && null == te && (0, p.$h)();
+    }, [e8, e9, te]);
+    let tt = (0, I.yE)(null !== (n = null == e8 ? void 0 : e8.flags) && void 0 !== n ? n : 0, U.udG.EMBEDDED) && (0, I.yE)(null !== (r = null == e8 ? void 0 : e8.flags) && void 0 !== r ? r : 0, U.udG.EMBEDDED_IAP),
+        tn = (0, c.e7)([h.ZP], () =>
             Array.from(h.ZP.getSelfEmbeddedActivities().values()).find((e) => {
                 let { applicationId: n } = e;
                 return n === K;
             })
         ),
-        tt = null == te ? void 0 : te.compositeInstanceId,
-        tn = (0, c.e7)([y.Z], () => (null != eC ? y.Z.getForSKU(eC) : null), [eC]),
-        tr = e0[null != eC ? eC : ''],
-        [ti, ta] = s.useState(null),
-        to = null !== (i = null == b ? void 0 : b.inReverseTrial) && void 0 !== i && i && !j;
+        tr = null == tn ? void 0 : tn.compositeInstanceId,
+        ti = (0, c.e7)([y.Z], () => (null != eC ? y.Z.getForSKU(eC) : null), [eC]),
+        ta = e0[null != eC ? eC : ''],
+        [to, ts] = s.useState(null),
+        tl = null !== (i = null == b ? void 0 : b.inReverseTrial) && void 0 !== i && i && !j;
     return (0, o.jsx)(G.Provider, {
         value: {
             stripe: Q,
@@ -189,7 +190,8 @@ function V(e) {
             paymentError: ey,
             purchaseError: eI,
             setPurchaseError: eS,
-            purchasePreviewError: e4,
+            purchasePreviewError: e6,
+            setPurchasePreviewError: e5,
             purchaseErrorBlockRef: eT,
             purchaseTokenAuthState: ex,
             purchaseTokenHash: ew,
@@ -204,8 +206,8 @@ function V(e) {
             modalOverlayNode: eV,
             setModalOverlayNode: ej,
             selectedSkuId: eC,
-            selectedSku: tr,
-            selectedStoreListing: tn,
+            selectedSku: ta,
+            selectedStoreListing: ti,
             selectedPlan: eN,
             setSelectedSkuId: eO,
             setSelectedPlanId: eD,
@@ -220,19 +222,19 @@ function V(e) {
             hasFetchedSkus: e1,
             skusById: e0,
             skuPricePreviewsById: e2,
-            selectedSkuPricePreview: e6,
-            application: e5,
+            selectedSkuPricePreview: e7,
+            application: e8,
             purchaseType: W,
-            isEmbeddedIAP: e9,
-            activitySessionId: tt,
-            devShelfFetchState: e8,
+            isEmbeddedIAP: tt,
+            activitySessionId: tr,
+            devShelfFetchState: te,
             entitlementsGranted: eQ,
             setEntitlementsGranted: eX,
             referralCode: z,
-            invoicePreview: ti,
-            setInvoicePreview: ta,
+            invoicePreview: to,
+            setInvoicePreview: ts,
             repeatPurchase: q,
-            inReverseTrial: to
+            inReverseTrial: tl
         },
         children: (0, o.jsx)(l.Elements, {
             options: U.OBo,

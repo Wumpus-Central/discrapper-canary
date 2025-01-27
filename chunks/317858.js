@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return N;
     }
 }),
     n(47120);
@@ -10,41 +10,43 @@ var i = n(192379),
     a = n(525654),
     s = n.n(a),
     o = n(442837),
-    c = n(888369),
-    d = n(292959),
-    u = n(699516),
-    h = n(340895),
-    m = n(358085),
-    p = n(998502),
-    g = n(252618),
-    f = n(981631),
-    _ = n(388032);
-let E = new Set(['Blink', 'Gecko', 'WebKit']),
-    I = f.dG4;
-if (m.isPlatformEmbedded) I = (e) => p.ZP.setBadge(e);
-else if (E.has(s().layout)) {
+    c = n(91896),
+    d = n(849862),
+    u = n(888369),
+    h = n(292959),
+    m = n(699516),
+    p = n(340895),
+    g = n(358085),
+    f = n(998502),
+    _ = n(252618),
+    E = n(981631),
+    I = n(388032);
+let C = new Set(['Blink', 'Gecko', 'WebKit']),
+    v = E.dG4;
+if (g.isPlatformEmbedded) v = (e) => f.ZP.setBadge(e);
+else if (C.has(s().layout)) {
     let e = new (l())({ animation: 'none' });
-    I = (t) => {
+    v = (t) => {
         try {
-            (0, g.PR)(t), e.badge(-1 === t ? '\u2022' : t);
+            (0, _.PR)(t), e.badge(-1 === t ? '\u2022' : t);
         } catch (e) {}
     };
 }
-function C() {
-    let e = (0, o.e7)([h.Z], () => h.Z.hasIncomingCalls()),
-        t = (0, o.e7)([c.default, u.Z, d.Z], () => {
-            let e = c.default.getTotalMentionCount(),
-                t = u.Z.getPendingCount(),
-                n = c.default.hasAnyUnread(),
-                i = d.Z.getDisableUnreadBadge(),
+function N() {
+    let e = (0, o.e7)([p.Z], () => p.Z.hasIncomingCalls()),
+        t = (0, o.e7)([u.default, m.Z, h.Z, c.Z], () => {
+            let e = u.default.getTotalMentionCount(),
+                t = (0, d.m$)([m.Z, c.Z]),
+                n = u.default.hasAnyUnread(),
+                i = h.Z.getDisableUnreadBadge(),
                 r = e + t;
             return 0 === r && n && !i && (r = -1), r;
         });
     i.useEffect(() => {
         if (!e) return;
-        let t = p.ZP.bounceDock('critical'),
-            n = (0, g.EM)({
-                messages: [_.intl.string(_.t['fk1/bW'])],
+        let t = f.ZP.bounceDock('critical'),
+            n = (0, _.EM)({
+                messages: [I.intl.string(I.t['fk1/bW'])],
                 count: 50
             });
         return () => {
@@ -52,7 +54,7 @@ function C() {
         };
     }, [e]),
         i.useEffect(() => {
-            I(t);
+            v(t);
         }, [t]),
-        i.useEffect(() => () => I(0), []);
+        i.useEffect(() => () => v(0), []);
 }
