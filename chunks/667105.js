@@ -251,9 +251,10 @@ function w(e) {
         { premiumSubscription: s, hasFetchedSubscriptions: u } = (0, l.cj)([p.ZP], () => ({
             premiumSubscription: p.ZP.getPremiumSubscription(),
             hasFetchedSubscriptions: p.ZP.hasFetchedSubscriptions()
-        }));
+        })),
+        c = (0, l.e7)([E.Z], () => null != E.Z.questDeliveryOverride);
     if (null == i || ((0, y.Bg)(i.config) && (!u || (null == s ? void 0 : s.isPurchasedExternally)))) return !1;
-    let c = (null === (n = i.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-        d = null != i.userStatus && (0, y.zE)(i.userStatus, v.jn.QUEST_BAR);
-    return a && !d && !c && !o;
+    let d = (null === (n = i.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
+        f = !c && null != i.userStatus && (0, y.zE)(i.userStatus, v.jn.QUEST_BAR);
+    return a && !f && !d && !o;
 }

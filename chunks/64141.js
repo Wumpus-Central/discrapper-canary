@@ -49,7 +49,17 @@ function f(e) {
         }, [q, e.quest.id, e.questContent, e.questContentPosition]),
         Z = (e) => (0, r.showToast)((0, r.createToast)(new a.Z(e, e.status).message, r.ToastType.FAILURE)),
         y = () => (0, m.is)(e.quest.id).catch(Z),
-        P = s.useMemo(() => (f ? T.t.lwQdjI : T.t.hvVgAQ), [f]);
+        P = s.useMemo(() => (f ? T.t.lwQdjI : T.t.hvVgAQ), [f]),
+        B = s.useMemo(
+            () =>
+                (0, i.jsx)(r.MenuCheckboxItem, {
+                    id: 'delivery',
+                    label: 'Show in Quest Bar',
+                    checked: (null == n ? void 0 : n.id) === e.quest.id,
+                    action: I
+                }),
+            [I, e.quest.id, null == n ? void 0 : n.id]
+        );
     return (0, i.jsxs)(r.Menu, {
         variant: 'fixed',
         onSelect: () => {
@@ -75,7 +85,8 @@ function f(e) {
                                 label: T.intl.string(T.t.RDE0SU),
                                 action: L,
                                 icon: r.CopyIcon
-                            })
+                            }),
+                        !1
                     ]
                 },
                 'major-actions'
@@ -140,12 +151,7 @@ function f(e) {
                     {
                         label: 'Preview Controls',
                         children: [
-                            (0, i.jsx)(r.MenuCheckboxItem, {
-                                id: 'delivery',
-                                label: 'Show in Quest Bar',
-                                checked: (null == n ? void 0 : n.id) === e.quest.id,
-                                action: I
-                            }),
+                            B,
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'dismiss',
                                 label: 'Reset Dismissibility',
