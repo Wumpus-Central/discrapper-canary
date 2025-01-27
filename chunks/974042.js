@@ -19,7 +19,7 @@ var i,
     C = n(594174),
     v = n(981631),
     N = n(474936);
-function S(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function S(e, t, n) {
         e
     );
 }
-function T(e) {
+function S(e) {
     let t = C.default.getUser(e);
     return {
         user: t,
@@ -69,7 +69,7 @@ class Z extends c.Z {
     }
     constructor(e) {
         var t;
-        super(), S(this, 'key', void 0), S(this, 'userId', void 0), S(this, 'type', void 0), S(this, 'status', void 0), S(this, 'isMobile', void 0), S(this, 'activities', void 0), S(this, 'applicationStream', void 0), S(this, 'user', void 0), S(this, 'usernameLower', void 0), S(this, 'mutualGuildsLength', void 0), S(this, 'mutualGuilds', void 0), S(this, 'nickname', void 0), S(this, 'spam', void 0), S(this, 'giftIntentType', void 0), S(this, 'ignoredUser', void 0), S(this, 'applicationId', void 0), S(this, 'isGameRelationship', void 0), (this.key = e.key), (this.userId = e.userId), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType), (this.ignoredUser = e.ignoredUser), (this.applicationId = e.applicationId), (this.isGameRelationship = null !== (t = e.isGameRelationship) && void 0 !== t && t);
+        super(), T(this, 'key', void 0), T(this, 'userId', void 0), T(this, 'type', void 0), T(this, 'status', void 0), T(this, 'isMobile', void 0), T(this, 'activities', void 0), T(this, 'applicationStream', void 0), T(this, 'user', void 0), T(this, 'usernameLower', void 0), T(this, 'mutualGuildsLength', void 0), T(this, 'mutualGuilds', void 0), T(this, 'nickname', void 0), T(this, 'spam', void 0), T(this, 'giftIntentType', void 0), T(this, 'ignoredUser', void 0), T(this, 'applicationId', void 0), T(this, 'isGameRelationship', void 0), (this.key = e.key), (this.userId = e.userId), (this.type = e.type), (this.status = e.status), (this.activities = e.activities), (this.applicationStream = e.applicationStream), (this.user = e.user), (this.isMobile = e.isMobile), (this.usernameLower = e.usernameLower), (this.mutualGuildsLength = e.mutualGuildsLength), (this.mutualGuilds = e.mutualGuilds), (this.nickname = e.nickname), (this.spam = e.spam), (this.giftIntentType = e.giftIntentType), (this.ignoredUser = e.ignoredUser), (this.applicationId = e.applicationId), (this.isGameRelationship = null !== (t = e.isGameRelationship) && void 0 !== t && t);
     }
 }
 class x {
@@ -82,7 +82,7 @@ class x {
                         type: e,
                         userId: t,
                         nickname: I.Z.getNickname(t),
-                        ...T(t),
+                        ...S(t),
                         ...b(t),
                         ...A(t),
                         spam: I.Z.isSpam(t),
@@ -106,7 +106,7 @@ class x {
                             userId: i,
                             applicationId: r,
                             nickname: I.Z.getNickname(i),
-                            ...T(i),
+                            ...S(i),
                             ...b(i),
                             ...A(i),
                             spam: I.Z.isSpam(i),
@@ -124,7 +124,7 @@ class x {
                     userId: e.key,
                     type: 99,
                     nickname: e.name,
-                    ...T(e.key),
+                    ...S(e.key),
                     ...b(e.key),
                     ...A(e.key)
                 })
@@ -191,7 +191,7 @@ class x {
         );
     }
     constructor(e = []) {
-        S(this, '_rows', void 0), (this._rows = e);
+        T(this, '_rows', void 0), (this._rows = e);
     }
 }
 let L = !0,
@@ -219,7 +219,7 @@ function k(e) {
 }
 class U extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, E.Z, C.default, _.Z, f.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], w), this.syncWith([m.Z], w), this.syncWith([u.Z], w), this.syncWith([p.Z], w), this.syncWith([C.default], k(T)), this.syncWith([E.Z, g.Z], k(b)), M();
+        this.waitFor(I.Z, E.Z, C.default, _.Z, f.ZP, g.Z, u.Z, d.Z), this.syncWith([I.Z], w), this.syncWith([m.Z], w), this.syncWith([u.Z], w), this.syncWith([p.Z], w), this.syncWith([C.default], k(S)), this.syncWith([E.Z, g.Z], k(b)), M();
     }
     getState() {
         return {
@@ -230,7 +230,7 @@ class U extends (i = a.ZP.Store) {
         };
     }
 }
-S(U, 'displayName', 'FriendsStore'),
+T(U, 'displayName', 'FriendsStore'),
     (t.ZP = new U(s.Z, {
         CONNECTION_OPEN: function () {
             M();

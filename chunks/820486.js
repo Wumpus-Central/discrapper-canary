@@ -1,6 +1,6 @@
 n.d(t, {
     X: function () {
-        return T;
+        return S;
     }
 });
 var i,
@@ -41,10 +41,10 @@ let g = {},
         id: null,
         justChanged: !1
     },
-    S = /\(([^)]+)\)/;
-function T(e) {
+    T = /\(([^)]+)\)/;
+function S(e) {
     if ((0, d.getPlatform)() === d.PlatformTypes.WINDOWS) {
-        let t = e.name.match(S);
+        let t = e.name.match(T);
         if (null != t) return t[1];
     }
     return e.name;
@@ -96,7 +96,7 @@ p(A, 'displayName', 'ConnectedDeviceStore'),
                 i = {};
             (v.justChanged = !1),
                 t.forEach((e) => {
-                    if (((i[T(e)] = e.id), e.id === m.w5)) {
+                    if (((i[S(e)] = e.id), e.id === m.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
                         n !== v.id && (v.justChanged = !0), (v.id = n);
@@ -106,7 +106,7 @@ p(A, 'displayName', 'ConnectedDeviceStore'),
             if (
                 ((N.justChanged = !1),
                 n.forEach((e) => {
-                    if (((r[T(e)] = e.id), e.id === m.w5)) {
+                    if (((r[S(e)] = e.id), e.id === m.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
                         n !== N.id && (N.justChanged = !0), (N.id = n);

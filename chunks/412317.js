@@ -14,8 +14,8 @@ var l = t(481060),
     d = t(388032),
     u = t(997243);
 function f(e) {
-    let { isCurrentUser: n, user: t, relationshipType: f, friendToken: m, onClose: x } = e,
-        { newestAnalyticsLocation: I } = (0, r.ZP)();
+    let { isCurrentUser: n, user: t, relationshipType: f, friendToken: m, onClose: I } = e,
+        { newestAnalyticsLocation: x } = (0, r.ZP)();
     return n || f === a.OGo.BLOCKED
         ? null
         : f === a.OGo.FRIEND || t.bot
@@ -23,7 +23,7 @@ function f(e) {
                 className: u.multipleButtons,
                 children: (0, i.jsx)(c.c, {
                     userId: t.id,
-                    onClose: x
+                    onClose: I
                 })
             })
           : f === a.OGo.PENDING_OUTGOING || f === a.OGo.PENDING_INCOMING
@@ -37,7 +37,7 @@ function f(e) {
                       }),
                       (0, i.jsx)(c.c, {
                           userId: t.id,
-                          onClose: x
+                          onClose: I
                       })
                   ]
               })
@@ -46,7 +46,7 @@ function f(e) {
                   children: [
                       (0, i.jsx)(c.v, {
                           userId: t.id,
-                          onClose: x
+                          onClose: I
                       }),
                       (0, i.jsx)(s.tG, {
                           action: 'SEND_FRIEND_REQUEST',
@@ -56,7 +56,7 @@ function f(e) {
                           onClick: () => {
                               o.Z.addRelationship({
                                   userId: t.id,
-                                  context: { location: I },
+                                  context: { location: x },
                                   friendToken: m
                               });
                           }

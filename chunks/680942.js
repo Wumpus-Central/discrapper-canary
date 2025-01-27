@@ -1,8 +1,8 @@
 var r = n(200651),
     i = n(192379),
     l = n(481060),
-    s = n(727637),
-    a = n(906732),
+    a = n(727637),
+    s = n(906732),
     o = n(333867),
     c = n(677232),
     d = n(884697),
@@ -76,9 +76,9 @@ let g = {
 };
 t.Z = (e) => {
     let { product: t, selectedVariantIndex: n, returnRef: b, onSuccess: x, tooltipDelay: v, isGiftEasterEggEnabled: _, disableCustomColor: k = !1 } = e,
-        { analyticsLocations: j } = (0, a.ZP)(),
+        { analyticsLocations: j } = (0, s.ZP)(),
         E = i.useRef(null),
-        L = (0, s.Z)(E),
+        L = (0, a.Z)(E),
         I = k ? p.BR.DARK : p.BR.LIGHT,
         S = (0, u.hv)('CollectiblesShopGiftButton');
     return (0, d.x6)(t)

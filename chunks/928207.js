@@ -19,8 +19,8 @@ var r = n(120356),
     C = n(299657),
     v = n(594174),
     N = n(74538),
-    S = n(981631),
-    T = n(474936),
+    T = n(981631),
+    S = n(474936),
     b = n(388032),
     A = n(707858);
 let Z = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser() }))(
@@ -37,7 +37,7 @@ let Z = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser(
                       className: A.homeWrapperNormal,
                       children: [
                           (0, i.jsx)(u.Z, {
-                              section: S.jXE.NAVIGATION,
+                              section: T.jXE.NAVIGATION,
                               children: (0, i.jsx)(d.ThemeProvider, {
                                   theme: v,
                                   children: (e) =>
@@ -69,11 +69,11 @@ let Z = o.ZP.connectStores([v.default], () => ({ user: v.default.getCurrentUser(
                                             justify: _.Z.Justify.CENTER,
                                             children: (0, i.jsx)(d.Spinner, { className: A.spinner })
                                         })
-                                      : (0, i.jsx)(C.Z, { entrypoint: T.EZ.ApplicationStoreHome })
+                                      : (0, i.jsx)(C.Z, { entrypoint: S.EZ.ApplicationStoreHome })
                           })
                       ]
                   })
-                : (0, i.jsx)(a.l_, { to: S.Z5c.LOGIN });
+                : (0, i.jsx)(a.l_, { to: T.Z5c.LOGIN });
         })
     )
 );

@@ -25,7 +25,7 @@ function E(e) {
     let { party: E, onUserContextMenu: I } = e,
         { priorityMembers: C, guildContext: v } = E,
         N = C[0],
-        S = (function (e) {
+        T = (function (e) {
             let { priorityMembers: t, partiedMembers: n } = e,
                 i = new Set(
                     t.map((e) => {
@@ -52,7 +52,7 @@ function E(e) {
                     });
             }
         })(E),
-        { subtitle: T, icon: b } = (function (e) {
+        { subtitle: S, icon: b } = (function (e) {
             var t;
             let { priorityMembers: r, partiedMembers: c, voiceChannels: d, currentActivities: h } = e,
                 E = r.length,
@@ -60,13 +60,13 @@ function E(e) {
                 C = h[0],
                 v = null == C ? void 0 : C.activity,
                 N = null == C ? void 0 : C.startedPlayingTime,
-                S = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
+                T = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
             if ((0, a.Z)(v) && null != v)
                 return {
                     subtitle: (0, i.jsx)(u.ZP, {
                         start: N,
                         location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                        messageProps: S
+                        messageProps: T
                     }),
                     icon: null
                 };
@@ -90,7 +90,7 @@ function E(e) {
                             subtitle: (0, i.jsx)(u.ZP, {
                                 start: N,
                                 location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: S
+                                messageProps: T
                             }),
                             icon: null != e ? (0, i.jsx)(p.Z.Header.Icon, { src: null != e.getIconURL(g.Z) ? e.getIconURL(g.Z) : n(211827) }) : null
                         };
@@ -153,7 +153,7 @@ function E(e) {
                         subtitle: (0, i.jsx)(u.ZP, {
                             start: r,
                             location: u.ZP.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: S
+                            messageProps: T
                         }),
                         icon: null != n && null != n.getIconURL(g.Z) ? (0, i.jsx)(p.Z.Header.Icon, { src: n.getIconURL(g.Z) }) : null
                     }
@@ -172,8 +172,8 @@ function E(e) {
     return (0, i.jsx)(p.Z.Header, {
         priorityUser: N,
         guildId: null == v ? void 0 : v.id,
-        title: S,
-        subtitle: T,
+        title: T,
+        subtitle: S,
         icon: b,
         onSubtitleClick: A,
         onIconClick: A,

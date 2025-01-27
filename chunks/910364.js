@@ -15,8 +15,8 @@ var i = t(200651),
     u = t(906732),
     f = t(680295),
     m = t(699516),
-    x = t(5192),
-    I = t(785717),
+    I = t(5192),
+    x = t(785717),
     p = t(221292),
     h = t(816988),
     v = t(687158),
@@ -49,7 +49,7 @@ function G(e) {
             currentUser: t,
             location: B.Sbl.SIMPLIFIED_USER_PROFILE
         }),
-        ee = (0, I.ZB)({
+        ee = (0, x.ZB)({
             layout: $ ? 'SIMPLIFIED_MODAL' : 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE',
             userId: n.id,
             sourceSessionId: W,
@@ -80,7 +80,7 @@ function G(e) {
                   ? (0, i.jsx)(s.MenuItem, {
                         id: 'view-main-profile',
                         label: D.intl.string(D.t.GISTtb),
-                        subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: x.ZP.getName(void 0, void 0, n) }),
+                        subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: I.ZP.getName(void 0, void 0, n) }),
                         action: () => {
                             J(),
                                 (0, M.openUserProfileModal)({
@@ -99,7 +99,7 @@ function G(e) {
                   : (0, i.jsx)(s.MenuItem, {
                         id: 'view-server-profile',
                         label: D.intl.string(D.t.DisZzM),
-                        subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: x.ZP.getName(G, w, n) }),
+                        subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: I.ZP.getName(G, w, n) }),
                         action: () => {
                             J(),
                                 (0, M.openUserProfileModal)({
@@ -117,7 +117,7 @@ function G(e) {
                     });
     return (0, i.jsx)(u.Gt, {
         value: Q,
-        children: (0, i.jsx)(I.Mt, {
+        children: (0, i.jsx)(x.Mt, {
             value: ee,
             children: (0, i.jsx)(g.NJ, {
                 value: en,

@@ -15,8 +15,8 @@ var i = t(200651),
     u = t(785717),
     f = t(687158),
     m = t(899007),
-    x = t(648052),
-    I = t(867176),
+    I = t(648052),
+    x = t(867176),
     p = t(280885),
     h = t(900927),
     v = t(678738),
@@ -68,7 +68,7 @@ function P(e) {
                             }),
                             (0, i.jsxs)('header', {
                                 children: [
-                                    (0, i.jsx)(I.Z, {
+                                    (0, i.jsx)(x.Z, {
                                         user: n,
                                         displayProfile: B,
                                         profileType: b.y0.FULL_SIZE
@@ -94,7 +94,7 @@ function P(e) {
                                         nickname: d.ZP.getName(U, P, n),
                                         pronouns: null == B ? void 0 : B.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
-                                        tags: (0, i.jsx)(x.Z, {
+                                        tags: (0, i.jsx)(I.Z, {
                                             displayProfile: B,
                                             profileType: b.y0.FULL_SIZE,
                                             onClose: R

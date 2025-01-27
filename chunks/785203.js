@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     Z: function () {
-        return T;
+        return S;
     }
 });
 var i,
@@ -26,24 +26,24 @@ var i,
     C = n(255791),
     v = n(70956),
     N = n(267642),
-    S = n(981631);
-function T(e) {
+    T = n(981631);
+function S(e) {
     var t;
-    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : S.lds,
+    let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : T.lds,
         { lastFetchedAt: i } = (0, a.cj)([f.Z], () => ({
             appliedGuildBoosts: f.Z.getAppliedGuildBoostsForGuild(n),
             lastFetchedAt: f.Z.getLastFetchedAtForGuild(n)
         })),
-        { lastDismissedGracePeriod: r, isGracePeriodVisible: T } = (0, a.cj)([E.Z], () => ({
+        { lastDismissedGracePeriod: r, isGracePeriodVisible: S } = (0, a.cj)([E.Z], () => ({
             lastDismissedGracePeriod: E.Z.getLastDismissedGracePeriodForGuild(n),
             isGracePeriodVisible: E.Z.isVisible(n)
         })),
         b = (0, a.e7)([p.Z], () => p.Z.isVisible(e)),
         A = (0, a.e7)([C.Z], () => C.Z.isVisible(e)),
-        Z = (0, a.e7)([_.Z], () => _.Z.can(S.Plq.ADMINISTRATOR, e)),
-        x = null != r && Date.now() - r <= S.Dge,
+        Z = (0, a.e7)([_.Z], () => _.Z.can(T.Plq.ADMINISTRATOR, e)),
+        x = null != r && Date.now() - r <= T.Dge,
         L = null != e ? e.premiumSubscriberCount : 0,
-        y = (0, N.rF)(L, n) !== S.Eu4.NONE,
+        y = (0, N.rF)(L, n) !== T.Eu4.NONE,
         P = null != i && Date.now() - i <= 43200000,
         O = !P && !x && Z && y,
         R = (0, c.m)(n),
@@ -52,7 +52,7 @@ function T(e) {
         M = (0, m.h6)(e),
         { enableStudyGroup: w } = (0, u.s)(e),
         k = M.length > 0,
-        U = w && !(null == e ? void 0 : e.hasFeature(S.oNc.HUB)),
+        U = w && !(null == e ? void 0 : e.hasFeature(T.oNc.HUB)),
         G = (0, d.Vm)(n),
         B = (0, a.e7)([g.Z], () => null != g.Z.getActiveGuildSignUp(n));
     if (
@@ -77,7 +77,7 @@ function T(e) {
         b)
     )
         return 0;
-    if (T) return 1;
+    if (S) return 1;
     if (A) return 2;
     else if (R || null != G) return 3;
     else if (j) return 4;

@@ -6,6 +6,25 @@ r.d(n, {
 var i = r(47120);
 let a = {
     Modules: {
+        chat: {
+            RESIZE_HANDLE_WIDTH: { resolve: () => 8 },
+            INPUT_ICON_SIZE: {
+                resolve(e) {
+                    let { enabledExperiments: n } = e;
+                    if (0 === n.length) return 24;
+                    for (let e of n) if ('visual-refresh' === e) return 20;
+                    return 24;
+                }
+            },
+            MARKUP_LINE_HEIGHT: {
+                resolve(e) {
+                    let { enabledExperiments: n } = e;
+                    if (0 === n.length) return '1.375rem';
+                    for (let e of n) if ('visual-refresh' === e) return '1.5';
+                    return '1.375rem';
+                }
+            }
+        },
         guildbar: {
             AVATAR_SIZE: {
                 resolve(e) {
@@ -27,25 +46,6 @@ let a = {
                 }
             },
             VERTICAL_PADDING: { resolve: () => 16 }
-        },
-        chat: {
-            RESIZE_HANDLE_WIDTH: { resolve: () => 8 },
-            INPUT_ICON_SIZE: {
-                resolve(e) {
-                    let { enabledExperiments: n } = e;
-                    if (0 === n.length) return 24;
-                    for (let e of n) if ('visual-refresh' === e) return 20;
-                    return 24;
-                }
-            },
-            MARKUP_LINE_HEIGHT: {
-                resolve(e) {
-                    let { enabledExperiments: n } = e;
-                    if (0 === n.length) return 22;
-                    for (let e of n) if ('visual-refresh' === e) return 24;
-                    return 22;
-                }
-            }
         }
     }
 };

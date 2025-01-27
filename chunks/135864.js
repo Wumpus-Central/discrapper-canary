@@ -36,7 +36,7 @@ function N(e) {
         ),
         C = r.useMemo(() => (0, f.s)(t), [t]),
         N = n === t,
-        S = r.useCallback(() => {
+        T = r.useCallback(() => {
             switch (t) {
                 case E.GlobalDiscoveryTab.QUESTS:
                     return (
@@ -64,7 +64,7 @@ function N(e) {
             }
         }, [t, N]);
     return (0, i.jsxs)(o.Clickable, {
-        onClick: S,
+        onClick: T,
         className: a()(v.navItem, { [v.selected]: N }),
         children: [
             (0, i.jsx)('div', {

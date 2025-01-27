@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(318891),
     v = n(687751),
     N = n(912471),
-    S = n(100527),
-    T = n(838134),
+    T = n(100527),
+    S = n(838134),
     b = n(77987),
     A = n(679891),
     Z = n(491575),
@@ -73,8 +73,8 @@ var i = n(200651),
     eC = n(6025),
     ev = n(897473),
     eN = n(377368),
-    eS = n(262702),
-    eT = n(639033),
+    eT = n(262702),
+    eS = n(639033),
     eb = n(479313),
     eA = n(911560),
     eZ = n(703016),
@@ -161,7 +161,7 @@ let e2 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         }
     ),
     e3 = (0, b.e)(Z.Z, null, { passProps: !1 }),
-    e5 = (0, b.e)(T.default, null, { passProps: !1 }),
+    e5 = (0, b.e)(S.default, null, { passProps: !1 }),
     e7 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
 function e6(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: r = null } = e.params;
@@ -197,7 +197,7 @@ let e9 = [
                     (0, ex.openUserProfileModal)({
                         userId: s,
                         friendToken: r,
-                        sourceAnalyticsLocations: [S.Z.URI_SCHEME],
+                        sourceAnalyticsLocations: [T.Z.URI_SCHEME],
                         analyticsLocation: { section: eJ.jXE.DIRECT_ROUTE_ACCESS }
                     })
                 ),
@@ -410,8 +410,8 @@ class tt extends r.PureComponent {
             eZ.Z.init(),
             ez.Z.init(),
             ey.Z.init(),
-            eS.Z.initialize(),
             eT.Z.initialize(),
+            eS.Z.initialize(),
             eL.Z.initialize(),
             eP.Z.init(),
             w.Z.initialize(),

@@ -2,8 +2,8 @@ n.r(t), n(47120);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(979554),
+    a = n.n(l),
+    s = n(979554),
     o = n(399606),
     c = n(704215),
     d = n(952265),
@@ -32,15 +32,15 @@ var r = n(200651),
     F = n(298228),
     P = n(937510),
     w = n(309956),
-    O = n(853748),
-    A = n(426171),
+    A = n(853748),
+    O = n(426171),
     R = n(823941),
     H = n(752053),
     M = n(963102),
     D = n(508498),
     V = n(38900),
-    U = n(709999),
-    W = n(373113),
+    W = n(709999),
+    U = n(373113),
     G = n(141594),
     z = n(566564),
     $ = n(531864),
@@ -52,7 +52,7 @@ var r = n(200651),
     X = n(474936),
     ee = n(697526);
 function et(e) {
-    let { products: t, handleShopCardMount: n, header: i, category: l, isPremiumUser: s, isGiftEasterEggEnabled: a } = e,
+    let { products: t, handleShopCardMount: n, header: i, category: l, isPremiumUser: a, isGiftEasterEggEnabled: s } = e,
         c = (0, o.e7)([E.default], () => E.default.getCurrentUser());
     return null == c || 0 === t.length
         ? null
@@ -74,14 +74,14 @@ function et(e) {
                               {
                                   newValue: { tilePosition: t },
                                   children: (0, r.jsx)(
-                                      U.Z,
+                                      W.Z,
                                       {
                                           onMount: n(e),
-                                          isPremiumUser: s,
+                                          isPremiumUser: a,
                                           category: l,
                                           product: e,
                                           user: c,
-                                          isGiftEasterEggEnabled: a
+                                          isGiftEasterEggEnabled: s
                                       },
                                       e.skuId
                                   )
@@ -95,24 +95,24 @@ function et(e) {
 }
 function en(e) {
     let { category: t, initialItemCardRef: n, ...l } = e,
-        s = (0, P.l)(t.products),
-        a = (0, o.e7)([y.Z], () => y.Z.initialProductSkuId),
+        a = (0, P.l)(t.products),
+        s = (0, o.e7)([y.Z], () => y.Z.initialProductSkuId),
         c = i.useCallback(
             (e) => (t) => {
                 var r;
-                (e.skuId === a || (null === (r = e.variants) || void 0 === r ? void 0 : r.some((e) => e.skuId === a)) === !0) && (n.current = t.current);
+                (e.skuId === s || (null === (r = e.variants) || void 0 === r ? void 0 : r.some((e) => e.skuId === s)) === !0) && (n.current = t.current);
             },
-            [a, n]
+            [s, n]
         );
     return (0, r.jsx)(et, {
-        products: s,
+        products: a,
         handleShopCardMount: c,
         category: t,
         ...l
     });
 }
 function er(e) {
-    let { category: t, isPremiumUser: n, initialItemCardRef: l, isGiftEasterEggEnabled: a, setIsGiftEasterEggEnabled: o, showEasterEggToggle: c, isFullScreen: d } = e,
+    let { category: t, isPremiumUser: n, initialItemCardRef: l, isGiftEasterEggEnabled: s, setIsGiftEasterEggEnabled: o, showEasterEggToggle: c, isFullScreen: d } = e,
         C = i.useRef(10 + 70 * Math.random()),
         [p, f] = i.useState(!1),
         m = (0, K.M7)(t.skuId),
@@ -128,7 +128,7 @@ function er(e) {
         children: [
             c &&
                 (0, r.jsx)(u.Clickable, {
-                    className: s()(ee.hiddenWumpus, { [ee.hiddenWumpusEnabled]: a }),
+                    className: a()(ee.hiddenWumpus, { [ee.hiddenWumpusEnabled]: s }),
                     onClick: () => o(!0),
                     style: { left: ''.concat(C.current, '%') },
                     children: (0, r.jsx)(_.Z, {
@@ -144,11 +144,11 @@ function er(e) {
                 category: t,
                 initialItemCardRef: l,
                 isPremiumUser: n,
-                isGiftEasterEggEnabled: a
+                isGiftEasterEggEnabled: s
             }),
             null != m &&
                 null != t.unpublishedAt &&
-                (0, r.jsx)(O.$, {
+                (0, r.jsx)(A.$, {
                     unpublishedAt: t.unpublishedAt,
                     isVisible: p,
                     displayOptions: m,
@@ -164,10 +164,10 @@ t.default = function (e) {
     let l = (0, Z.u)('CollectiblesShop'),
         { analyticsSource: h, analyticsLocations: v } = (0, o.cj)([y.Z], () => y.Z.getAnalytics()),
         { analyticsLocations: _ } = (0, f.ZP)([...v, p.Z.COLLECTIBLES_SHOP]),
-        { sessionId: P, scrollerRef: O, scrollHandler: R } = (0, m._)(J.rMx.COLLECTIBLES_SHOP_SCROLLED, h),
-        { feedState: U, catalogState: K, transitionToCatalog: et, transitionToFeed: en } = (0, w.B)(l, O),
+        { sessionId: P, scrollerRef: A, scrollHandler: R } = (0, m._)(J.rMx.COLLECTIBLES_SHOP_SCROLLED, h),
+        { feedState: W, catalogState: K, transitionToCatalog: et, transitionToFeed: en } = (0, w.B)(l, A),
         [ei, el] = i.useState(!1),
-        [es, ea] = i.useState(q.IV),
+        [ea, es] = i.useState(q.IV),
         [eo, ec] = i.useState(),
         [ed, eu] = i.useState(),
         eC = (0, o.e7)([j.Z], () => j.Z.getLayers().includes(J.S9g.COLLECTIBLES_SHOP)),
@@ -181,13 +181,13 @@ t.default = function (e) {
     let eE = (0, F.O)(eg),
         eL = i.useRef(null),
         [eI, eS] = i.useState(!1);
-    (0, A.Kp)({
+    (0, O.Kp)({
         isFetchingCategories: eb,
         isLayer: eC,
         initialItemCardRef: eL
     }),
         i.useEffect(() => {
-            if (U === q.f7.VISIBLE || K === q.f7.VISIBLE) {
+            if (W === q.f7.VISIBLE || K === q.f7.VISIBLE) {
                 var e;
                 let t;
                 (t = l ? (K === q.f7.VISIBLE ? ed : h) : h),
@@ -195,8 +195,8 @@ t.default = function (e) {
                         location_stack: _,
                         source: t,
                         page_session_id: P,
-                        page_type: U === q.f7.VISIBLE ? 'home' : 'full',
-                        category: U === q.f7.VISIBLE ? void 0 : null === (e = T.Z.getCategory(eo)) || void 0 === e ? void 0 : e.name
+                        page_type: W === q.f7.VISIBLE ? 'home' : 'full',
+                        category: W === q.f7.VISIBLE ? void 0 : null === (e = T.Z.getCategory(eo)) || void 0 === e ? void 0 : e.name
                     });
             }
             !em &&
@@ -204,7 +204,7 @@ t.default = function (e) {
                     type: X.cd.COLLECTIBLES_SHOP,
                     location_stack: _
                 });
-        }, [l, em, _, h, P, U, K, eo, ec, ed]);
+        }, [l, em, _, h, P, W, K, eo, ec, ed]);
     let { dismissCollectiblesShopTabNewBadge: eB } = (0, G.Z)();
     i.useEffect(() => {
         if ((eB(), !(0, g.un)(c.z.COLLECTIBLES_GIFTING_COACHMARK)))
@@ -220,7 +220,7 @@ t.default = function (e) {
             () => () => {
                 (0, S.K$)({
                     categories: [...eg.values()],
-                    itemTypes: [a.Z.AVATAR_DECORATION, a.Z.PROFILE_EFFECT]
+                    itemTypes: [s.Z.AVATAR_DECORATION, s.Z.PROFILE_EFFECT]
                 });
             },
             [eg]
@@ -235,7 +235,7 @@ t.default = function (e) {
     let eT = i.useCallback(() => {
             ek();
         }, [ek]),
-        { setCategoryRef: ey, handleScrollToCategory: eZ } = (0, A.xV)(O.current),
+        { setCategoryRef: ey, handleScrollToCategory: eZ } = (0, O.xV)(A.current),
         { reducedMotion: eN } = i.useContext(u.AccessibilityPreferencesContext),
         eF = i.useRef(null),
         eP = i.useRef(null);
@@ -253,7 +253,7 @@ t.default = function (e) {
             },
             [et, eZ, n, eN]
         ),
-        eO = (0, o.e7)([T.Z], () => {
+        eA = (0, o.e7)([T.Z], () => {
             var e;
             return null === (e = T.Z.getCategory(eo)) || void 0 === e ? void 0 : e.name;
         });
@@ -262,7 +262,7 @@ t.default = function (e) {
         children: (0, r.jsxs)(B.k0, {
             newValue: {
                 sessionId: P,
-                pageCategory: eO
+                pageCategory: eA
             },
             children: [
                 (0, r.jsx)('div', {
@@ -271,20 +271,20 @@ t.default = function (e) {
                     tabIndex: -1,
                     children: (0, r.jsxs)(u.AdvancedScroller, {
                         className: ee.shopScroll,
-                        ref: O,
+                        ref: A,
                         onScroll: () => {
-                            if ((R(), null != O.current)) {
-                                let e = O.current.getDistanceFromBottom();
-                                es >= q.iA ? el(e < 20) : e <= 200 && ea(es + q.IV);
+                            if ((R(), null != A.current)) {
+                                let e = A.current.getDistanceFromBottom();
+                                ea >= q.iA ? el(e < 20) : e <= 200 && es(ea + q.IV);
                             }
                         },
                         children: [
-                            U !== q.f7.HIDDEN &&
+                            W !== q.f7.HIDDEN &&
                                 (0, r.jsxs)('div', {
-                                    className: s()(ee.shopViewWrapper, {
-                                        [ee.visible]: U === q.f7.VISIBLE,
-                                        [ee.in]: U === q.f7.IN,
-                                        [ee.out]: U === q.f7.OUT
+                                    className: a()(ee.shopViewWrapper, {
+                                        [ee.visible]: W === q.f7.VISIBLE,
+                                        [ee.in]: W === q.f7.IN,
+                                        [ee.out]: W === q.f7.OUT
                                     }),
                                     children: [
                                         (0, r.jsx)(M.I, {
@@ -297,13 +297,13 @@ t.default = function (e) {
                                         (0, r.jsx)(z.Z, {
                                             isFullScreen: n,
                                             handleTransition: ew,
-                                            numVisibleItems: es
+                                            numVisibleItems: ea
                                         })
                                     ]
                                 }),
                             K !== q.f7.HIDDEN &&
                                 (0, r.jsxs)('div', {
-                                    className: s()(ee.shopViewWrapper, {
+                                    className: a()(ee.shopViewWrapper, {
                                         [ee.visible]: K === q.f7.VISIBLE,
                                         [ee.in]: K === q.f7.IN,
                                         [ee.out]: K === q.f7.OUT
@@ -320,7 +320,7 @@ t.default = function (e) {
                                         (0, r.jsx)('div', {
                                             className: ee.pageWrapper,
                                             children: (0, r.jsx)('main', {
-                                                className: s()(ee.page, { [ee.pageFullscreen]: n }),
+                                                className: a()(ee.page, { [ee.pageFullscreen]: n }),
                                                 children: eb
                                                     ? (0, r.jsx)(V.Z, {})
                                                     : null != ej
@@ -364,19 +364,19 @@ t.default = function (e) {
                         ]
                     })
                 }),
-                eI && (0, r.jsx)(W.Z, {}),
+                eI && (0, r.jsx)(U.Z, {}),
                 !n &&
                     K !== q.f7.VISIBLE &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)($.Z, {
                                 peaking: ei,
-                                transitioning: U === q.f7.OUT
+                                transitioning: W === q.f7.OUT
                             }),
                             (0, r.jsx)($.Z, {
                                 style: { left: 1850 },
                                 peaking: ei,
-                                transitioning: U === q.f7.OUT
+                                transitioning: W === q.f7.OUT
                             })
                         ]
                     })

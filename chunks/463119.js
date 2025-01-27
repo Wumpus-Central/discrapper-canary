@@ -24,8 +24,8 @@ var i = n(200651),
     C = n(153066),
     v = n(335131),
     N = n(67696),
-    S = n(744112),
-    T = n(267097),
+    T = n(744112),
+    S = n(267097),
     b = n(364111),
     A = n(81136),
     Z = n(141594),
@@ -59,7 +59,7 @@ let O = (e) => {
             { analyticsLocations: _ } = (0, f.ZP)(p),
             E = (0, N.n)('ShopLinkButton'),
             [I, C] = r.useState(!1),
-            S = r.useCallback(() => {
+            T = r.useCallback(() => {
                 E && C(!0),
                     (0, v.Sm)({
                         analyticsSource: p,
@@ -79,7 +79,7 @@ let O = (e) => {
                     ...u,
                     onMouseEnter: a,
                     onMouseLeave: o,
-                    onClick: S,
+                    onClick: T,
                     children: c
                 })
             ]
@@ -133,15 +133,15 @@ let O = (e) => {
     }),
     w = (e) => {
         var t, n, l, s, u, h, g, f, _, E, I, v;
-        let N, S;
-        let { selected: T, locationState: b, displayOptions: A } = e,
+        let N, T;
+        let { selected: S, locationState: b, displayOptions: A } = e,
             Z = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
             [x, L] = r.useState(0),
             [R, D] = r.useState(!1),
             w = (0, m.ZP)(),
             k = A.entrypointDecorationAssets,
             U = (0, c.wj)(w);
-        R ? (U ? ((N = null === (t = A.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (S = null === (l = A.entrypointBackgroundStyle) || void 0 === l ? void 0 : null === (n = l.hovered) || void 0 === n ? void 0 : n.dark)) : ((N = null === (s = A.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (S = null === (h = A.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((N = null === (g = A.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (S = null === (_ = A.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (f = _.resting) || void 0 === f ? void 0 : f.dark)) : ((N = null === (E = A.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (S = null === (v = A.entrypointBackgroundStyle) || void 0 === v ? void 0 : null === (I = v.resting) || void 0 === I ? void 0 : I.light));
+        R ? (U ? ((N = null === (t = A.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (T = null === (l = A.entrypointBackgroundStyle) || void 0 === l ? void 0 : null === (n = l.hovered) || void 0 === n ? void 0 : n.dark)) : ((N = null === (s = A.entryPointBackgroundAssets) || void 0 === s ? void 0 : s.srcLightHovered), (T = null === (h = A.entrypointBackgroundStyle) || void 0 === h ? void 0 : null === (u = h.hovered) || void 0 === u ? void 0 : u.light))) : U ? ((N = null === (g = A.entryPointBackgroundAssets) || void 0 === g ? void 0 : g.srcDark), (T = null === (_ = A.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (f = _.resting) || void 0 === f ? void 0 : f.dark)) : ((N = null === (E = A.entryPointBackgroundAssets) || void 0 === E ? void 0 : E.srcLight), (T = null === (v = A.entrypointBackgroundStyle) || void 0 === v ? void 0 : null === (I = v.resting) || void 0 === I ? void 0 : I.light));
         let G = r.useCallback(
                 (e) => {
                     L((e) => (e + 1) % A.assetIds.length), D(!0), null == e || e();
@@ -167,7 +167,7 @@ let O = (e) => {
             children: (e) =>
                 (0, i.jsxs)(j, {
                     className: null != A.entryPointClassName ? (0, C.l)(P, A.entryPointClassName) : void 0,
-                    selected: T,
+                    selected: S,
                     locationState: b,
                     icon: A.entryPointIcon,
                     ...e,
@@ -176,7 +176,7 @@ let O = (e) => {
                     children: [
                         (0, i.jsx)('div', {
                             className: P.marketingButtonBackground,
-                            style: { background: S },
+                            style: { background: T },
                             children:
                                 null != N &&
                                 (0, i.jsx)('img', {
@@ -226,11 +226,11 @@ let O = (e) => {
                 })
         });
     },
-    U = () => ((0, T.Z)(), null),
+    U = () => ((0, S.Z)(), null),
     G = (e) => {
         let { selected: t, locationState: n } = e,
             { collectiblesShopTabNewBadgeDisplayOptions: r } = (0, Z.Z)(),
-            l = (0, S.b)('Collectibles Shop Button');
+            l = (0, T.b)('Collectibles Shop Button');
         if (null != r)
             switch (r.type) {
                 case x.k2.TOOLTIP:

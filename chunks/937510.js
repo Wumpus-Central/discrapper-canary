@@ -8,8 +8,8 @@ n.d(t, {
 var r,
     i,
     l = n(192379),
-    s = n(952639),
-    a = n.n(s),
+    a = n(952639),
+    s = n.n(a),
     o = n(399606),
     c = n(1870),
     d = n(724994);
@@ -22,6 +22,6 @@ let u = (e) => {
             let { isPurchased: e, isPartiallyOwnedBundle: r, isPartiallyOwnedVariantsGroup: i } = (0, d.U)(c.Z, n);
             t[r ? 2 : i ? 1 : e ? 3 : 0].push(n);
         }
-        return a()(t);
+        return s()(t);
     }, [t, e]);
 };

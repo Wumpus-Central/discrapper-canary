@@ -132,7 +132,7 @@ let j = {
                   children: _
               });
     },
-    T = () =>
+    L = () =>
         (0, a.jsx)('div', {
             className: b.paginationVideoOverlay,
             children: (0, a.jsx)(x.Z, {
@@ -141,7 +141,7 @@ let j = {
                 renderLinkComponent: v.iT
             })
         });
-class L extends (i = r.PureComponent) {
+class T extends (i = r.PureComponent) {
     componentDidMount() {
         _.S.subscribe(f.CkL.CAROUSEL_PREV, this.manualPrevious), _.S.subscribe(f.CkL.CAROUSEL_NEXT, this.manualNext);
     }
@@ -361,7 +361,7 @@ class L extends (i = r.PureComponent) {
                                 src: this.getPaginationSrc(e),
                                 draggable: !1
                             }),
-                            e.type === f.s9s.YOUTUBE_VIDEO || e.type === f.s9s.VIDEO ? (0, a.jsx)(T, {}) : null,
+                            e.type === f.s9s.YOUTUBE_VIDEO || e.type === f.s9s.VIDEO ? (0, a.jsx)(L, {}) : null,
                             i ? (0, a.jsx)('div', { className: b.overlappingBorder }) : null
                         ]
                     },
@@ -370,8 +370,8 @@ class L extends (i = r.PureComponent) {
             });
     }
 }
-I(L, 'defaultProps', {
+I(T, 'defaultProps', {
     autoplayInterval: 8000,
     paused: !1
 }),
-    (t.Z = (0, d.Z)(L));
+    (t.Z = (0, d.Z)(T));

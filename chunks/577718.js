@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(337721),
     v = n(981631),
     N = n(921944),
-    S = n(30513),
-    T = n(474936),
+    T = n(30513),
+    S = n(474936),
     b = n(388032),
     A = n(325382),
     Z = n(44669),
@@ -39,7 +39,7 @@ function R(e, t) {
                   analyticsLocations: e,
                   analyticsSourceLocation: v.jXE.PREMIUM_GUILD_INVITE_SPLASH,
                   guild: t,
-                  perks: (0, S.o9)()
+                  perks: (0, T.o9)()
               });
 }
 function j(e) {
@@ -60,15 +60,15 @@ function j(e) {
 t.Z = r.memo(function (e) {
     let { contentTypes: t, theme: n, guild: r, renderGuildHeaderDropdownButton: s } = e,
         { analyticsLocations: d } = (0, o.ZP)(),
-        S = () => {
+        T = () => {
             E.default.track(v.rMx.TOOLTIP_VIEWED, {
-                type: T.cd.PREMIUM_PROGRESS_BAR,
+                type: S.cd.PREMIUM_PROGRESS_BAR,
                 location: { page: v.ZY5.GUILD_CHANNEL }
             });
         },
         D = () => {
             E.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: T.cd.INVITE_SPLASH_UPSELL,
+                type: S.cd.INVITE_SPLASH_UPSELL,
                 location: { page: v.ZY5.GUILD_CHANNEL },
                 location_stack: d
             });
@@ -89,7 +89,7 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(_.ZP, {
-                            onComponentMount: S,
+                            onComponentMount: T,
                             header: b.intl.string(b.t.nxtaFx),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
@@ -108,7 +108,7 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
                     return (0, i.jsx)(j, {
                         renderPopout: (0, i.jsx)(_.ZP, {
-                            onComponentMount: S,
+                            onComponentMount: T,
                             header: b.intl.string(b.t.KAsfPT),
                             asset: (0, i.jsx)('img', {
                                 alt: '',

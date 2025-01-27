@@ -36,12 +36,12 @@ function N(e, t, n) {
         e
     );
 }
-let S = (0, g.Un)({
+let T = (0, g.Un)({
         createPromise: () => n.e('79618').then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
     }),
-    T = (0, g.Un)({
+    S = (0, g.Un)({
         createPromise: () => Promise.all([n.e('7654'), n.e('16806'), n.e('87768')]).then(n.bind(n, 869779)),
         webpackId: 869779,
         name: 'ChannelSettings'
@@ -57,8 +57,8 @@ let S = (0, g.Un)({
         name: 'GuildSettings'
     }),
     Z = {
-        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(S, {}),
-        [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(T, {}),
+        [C.S9g.USER_SETTINGS]: () => (0, r.jsx)(T, {}),
+        [C.S9g.CHANNEL_SETTINGS]: () => (0, r.jsx)(S, {}),
         [C.S9g.GUILD_SETTINGS]: () => (0, r.jsx)(A, {}),
         [C.S9g.COLLECTIBLES_SHOP]: () => (0, r.jsx)(b, {})
     },

@@ -6,9 +6,9 @@ n.d(t, {
 var r = n(200651),
     i = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(404759),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(404759),
+    o = n.n(s),
     c = n(91192),
     d = n(536895),
     u = n(866442),
@@ -27,7 +27,7 @@ let b = o()((e) => {
         return t ? C.tokens.unsafe_rawColors.PRIMARY_700.css : C.tokens.unsafe_rawColors.PRIMARY_200.css;
     }),
     x = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: l, totalVariants: a, selectedVariantIndex: o, onEnter: u, onLeave: h, minimal: x } = e,
+        let { variantGroupProduct: t, variant: n, variantIndex: l, totalVariants: s, selectedVariantIndex: o, onEnter: u, onLeave: h, minimal: x } = e,
             { isPurchased: v } = (0, f.L)(n),
             { onFocus: _, ...k } = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(l)),
             j = i.useCallback(
@@ -66,13 +66,13 @@ let b = o()((e) => {
                     },
                     className: g.colorVariant,
                     children: (0, r.jsx)('div', {
-                        className: s()(g.colorSwatch, {
+                        className: a()(g.colorSwatch, {
                             [g.open]: !x,
                             [g.selected]: l === o
                         }),
                         style: {
                             backgroundColor: n.variantValue,
-                            zIndex: a - l
+                            zIndex: s - l
                         },
                         children: v
                             ? (0, r.jsx)(C.CheckmarkSmallBoldIcon, {
@@ -86,9 +86,9 @@ let b = o()((e) => {
     },
     v = (e) => {
         var t, n;
-        let { variantGroupProduct: i, className: l, previewingVariantIndexProps: a, setIsHoveringOnSwitch: o, minimal: u, purchases: f, alternativeBackgroundColor: b } = e,
+        let { variantGroupProduct: i, className: l, previewingVariantIndexProps: s, setIsHoveringOnSwitch: o, minimal: u, purchases: f, alternativeBackgroundColor: b } = e,
             v = (0, p.o)(i, f),
-            _ = a.previewingVariantIndex,
+            _ = s.previewingVariantIndex,
             k = null === (t = i.variants) || void 0 === t ? void 0 : t[v],
             j = null !== _ ? (null === (n = i.variants) || void 0 === n ? void 0 : n[_]) : void 0,
             E = (0, h.Z)('shop-variants-group-'.concat(i.storeListingId), d.hy.HORIZONTAL);
@@ -103,7 +103,7 @@ let b = o()((e) => {
                     return (0, r.jsxs)('div', {
                         ref: n,
                         ...c,
-                        className: s()(g.variantsPanel, l, {
+                        className: a()(g.variantsPanel, l, {
                             [g.minimalState]: u,
                             [g.alternativeColor]: b
                         }),
@@ -125,8 +125,8 @@ let b = o()((e) => {
                                                       variantIndex: t,
                                                       selectedVariantIndex: v,
                                                       totalVariants: null !== (l = null === (n = i.variants) || void 0 === n ? void 0 : n.length) && void 0 !== l ? l : 0,
-                                                      onEnter: () => a.handleEntering(t),
-                                                      onLeave: a.handleLeaving,
+                                                      onEnter: () => s.handleEntering(t),
+                                                      onLeave: s.handleLeaving,
                                                       minimal: u
                                                   },
                                                   t

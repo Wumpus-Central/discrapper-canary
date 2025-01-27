@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(430824),
     v = n(843445),
     N = n(981631),
-    S = n(388032),
-    T = n(106269);
+    T = n(388032),
+    S = n(106269);
 function b(e, t, n) {
     return (
         t in e
@@ -40,18 +40,18 @@ class A extends r.PureComponent {
         return null == e || null == t
             ? null
             : (0, i.jsxs)(p.Z, {
-                  className: T.memberInfo,
+                  className: S.memberInfo,
                   align: p.Z.Align.CENTER,
                   children: [
-                      (0, i.jsx)('div', { className: T.dotOnline }),
+                      (0, i.jsx)('div', { className: S.dotOnline }),
                       (0, i.jsx)('span', {
-                          className: T.memberText,
-                          children: S.intl.format(S.t['LC+S+v'], { membersOnline: t })
+                          className: S.memberText,
+                          children: T.intl.format(T.t['LC+S+v'], { membersOnline: t })
                       }),
-                      (0, i.jsx)('div', { className: T.dotOffline }),
+                      (0, i.jsx)('div', { className: S.dotOffline }),
                       (0, i.jsx)('span', {
-                          className: T.memberText,
-                          children: S.intl.format(S.t.zRl6XV, { count: e })
+                          className: S.memberText,
+                          children: T.intl.format(T.t.zRl6XV, { count: e })
                       })
                   ]
               });
@@ -60,7 +60,7 @@ class A extends r.PureComponent {
         let { guild: e, inChannel: t, isInGuild: n, isLurking: r, isAuthenticated: l, className: s, pageSize: o } = this.props;
         if (t && n) return null;
         let d = new I.ZP(e),
-            u = S.intl.string(S.t.pxwdrK),
+            u = T.intl.string(T.t.pxwdrK),
             h = this.handleJoinOrView,
             f = c.Button.Looks.FILLED,
             _ = c.Button.Colors.PRIMARY;
@@ -68,41 +68,41 @@ class A extends r.PureComponent {
             l
                 ? n
                     ? ((f = c.Button.Looks.OUTLINED),
-                      (_ = T.buttonColorInGuild),
+                      (_ = S.buttonColorInGuild),
                       (u = (0, i.jsxs)(p.Z, {
                           align: p.Z.Align.CENTER,
                           children: [
-                              (0, i.jsx)('div', { children: S.intl.string(S.t.cEnaW1) }),
+                              (0, i.jsx)('div', { children: T.intl.string(T.t.cEnaW1) }),
                               (0, i.jsx)(c.CheckmarkLargeIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: T.joinedCheckmark
+                                  className: S.joinedCheckmark
                               })
                           ]
                       })))
-                    : r && t && (u = S.intl.string(S.t.XpeFYm))
-                : ((u = S.intl.string(S.t.dKhVQE)), (h = this.handleLogin)),
+                    : r && t && (u = T.intl.string(T.t.XpeFYm))
+                : ((u = T.intl.string(T.t.dKhVQE)), (h = this.handleLogin)),
             (0, i.jsxs)('div', {
-                className: a()(s, o === v.b.SMALL ? T.inviteSmall : T.inviteLarge),
+                className: a()(s, o === v.b.SMALL ? S.inviteSmall : S.inviteLarge),
                 children: [
-                    (0, i.jsx)(m.Z, { children: S.intl.string(S.t.s1KcLi) }),
+                    (0, i.jsx)(m.Z, { children: T.intl.string(T.t.s1KcLi) }),
                     (0, i.jsxs)('div', {
-                        className: T.content,
+                        className: S.content,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: T.info,
+                                className: S.info,
                                 children: [
                                     (0, i.jsx)(g.Z, {
                                         guild: d,
                                         active: !0,
                                         size: g.Z.Sizes.LARGE,
-                                        className: T.guildIcon
+                                        className: S.guildIcon
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: T.infoText,
+                                        className: S.infoText,
                                         children: [
                                             (0, i.jsx)('div', {
-                                                className: T.name,
+                                                className: S.name,
                                                 children: e.name
                                             }),
                                             this.renderMemberInfo()
@@ -112,7 +112,7 @@ class A extends r.PureComponent {
                             }),
                             (0, i.jsx)(c.Button, {
                                 size: c.Button.Sizes.SMALL,
-                                className: T.actionButton,
+                                className: S.actionButton,
                                 fullWidth: !0,
                                 color: _,
                                 look: f,

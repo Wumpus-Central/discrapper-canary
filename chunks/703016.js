@@ -19,8 +19,8 @@ var i = n(913527),
     C = n(699516),
     v = n(944486),
     N = n(9156),
-    S = n(594174),
-    T = n(51144),
+    T = n(594174),
+    S = n(51144),
     b = n(196051),
     A = n(441729),
     Z = n(653477),
@@ -37,9 +37,9 @@ function D(e, t, n, i) {
             .replace(j, L.intl.string(L.t['F+x38P']))
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var i;
-                let r = S.default.getUser(t);
+                let r = T.default.getUser(t);
                 if (null == r) return e;
-                return null !== (i = f.ZP.getNick(n, r.id)) && void 0 !== i ? i : T.ZP.getName(r);
+                return null !== (i = f.ZP.getNick(n, r.id)) && void 0 !== i ? i : S.ZP.getName(r);
             })
             .replace(/<@&?(\d+)>/g, (e, t) => {
                 let n = null != l ? _.Z.getRole(l.id, t) : null;
@@ -47,7 +47,7 @@ function D(e, t, n, i) {
             })
             .replace(/<#(\d+)>/g, (e, t) => {
                 let n = g.Z.getChannel(t);
-                return null == n ? e : (0, o.F6)(n, S.default, C.Z);
+                return null == n ? e : (0, o.F6)(n, T.default, C.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(L.intl.string(L.t.sMOuub), ' ').concat(t))
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => '/'.concat(t))
@@ -99,9 +99,9 @@ function B(e) {
     let { message: r, channel: l } = e,
         a = r.type === x.uaV.REPLY ? d.Z.getMessageByReference(r.messageReference) : null,
         s = (null == a ? void 0 : a.state) === d.Y.LOADED ? (null == a ? void 0 : null === (t = a.message) || void 0 === t ? void 0 : t.author) : null,
-        o = null != s ? (null !== (n = f.ZP.getNick(l.guild_id, null == s ? void 0 : s.id)) && void 0 !== n ? n : T.ZP.getName(s)) : null,
+        o = null != s ? (null !== (n = f.ZP.getNick(l.guild_id, null == s ? void 0 : s.id)) && void 0 !== n ? n : S.ZP.getName(s)) : null,
         c = l.getGuildId(),
-        u = null !== (i = f.ZP.getNick(c, r.author.id)) && void 0 !== i ? i : T.ZP.getName(r.author);
+        u = null !== (i = f.ZP.getNick(c, r.author.id)) && void 0 !== i ? i : S.ZP.getName(r.author);
     return k(D(r.content, u, c, o), !0, l.id, r.id), !0;
 }
 function V(e) {
@@ -112,18 +112,18 @@ function V(e) {
     if (null == d) return !1;
     let u = v.Z.getChannelId(),
         _ = p.ZP.getCurrentSidebarChannelId(u),
-        S = s === u || s === _,
-        b = h.OW.getSetting() && o.tts && S,
+        T = s === u || s === _,
+        b = h.OW.getSetting() && o.tts && T,
         A = I.Z.getTTSType(),
-        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (A === x.PrB.ALL_CHANNELS || (A === x.PrB.SELECTED_CHANNEL && S));
+        L = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (A === x.PrB.ALL_CHANNELS || (A === x.PrB.SELECTED_CHANNEL && T));
     if ((b || L) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
         if (y.indexOf(o.id) >= 0) return !1;
         y.unshift(o.id) > 10 && y.pop();
         let e = d.getGuildId();
         if (null != e && N.ZP.getMutedChannels(e).has(s)) return !1;
-        let t = null !== (l = null !== (r = f.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : T.ZP.getName(o.author)) && void 0 !== l ? l : '',
+        let t = null !== (l = null !== (r = f.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : S.ZP.getName(o.author)) && void 0 !== l ? l : '',
             c = o.type === x.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
-            u = null != c ? (null !== (a = f.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== a ? a : T.ZP.getName(c)) : null;
+            u = null != c ? (null !== (a = f.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== a ? a : S.ZP.getName(c)) : null;
         k(D(o.content, t, e, u), !1, d.id, o.id, Z.f);
     }
     return !1;

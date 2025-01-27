@@ -25,8 +25,8 @@ var i = n(200651),
     C = n(665807),
     v = n(188493),
     N = n(294330),
-    S = n(981631),
-    T = n(841787);
+    T = n(981631),
+    S = n(841787);
 let b = Object.freeze({
         top: 0,
         bottom: 0,
@@ -40,9 +40,9 @@ let b = Object.freeze({
         right: 32
     }),
     Z = {
-        page: S.ZY5.GUILD_DISCOVERY,
-        object: S.qAy.CARD,
-        section: S.jXE.DISCOVER_SEARCH
+        page: T.ZY5.GUILD_DISCOVERY,
+        object: T.qAy.CARD,
+        section: T.jXE.DISCOVER_SEARCH
     },
     x = o().throttle(m.c6, 1000, {
         leading: !1,
@@ -50,7 +50,7 @@ let b = Object.freeze({
     });
 function L(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        { guildIds: o, loading: m, searchResultsQuery: S, loadMore: L, searchCategoryId: y } = (0, _.f)({ loadId: t }),
+        { guildIds: o, loading: m, searchResultsQuery: T, loadMore: L, searchCategoryId: y } = (0, _.f)({ loadId: t }),
         P = 0 === o.length && !m,
         O = r.useContext(u.AnalyticsContext),
         [R, j] = r.useState((0, f.PM)()),
@@ -82,17 +82,17 @@ function L(e) {
     }, [H, V]),
         r.useEffect(() => {
             j((0, f.PM)());
-        }, [S]),
+        }, [T]),
         r.useEffect(() => {
             x({
                 loadId: t,
                 searchId: R,
-                query: S,
+                query: T,
                 guildResults: o.map(p.Z.getGuild).filter(h.lm),
                 analyticsContext: O,
                 categoryId: y
             });
-        }, [O, o, t, y, R, S]);
+        }, [O, o, t, y, R, T]);
     let F = r.useCallback((e) => n(e, y), [n, y]),
         z = r.useMemo(() => (m ? [o.length, 0] : [o.length]), [o.length, m]),
         W = r.useCallback(
@@ -106,11 +106,11 @@ function L(e) {
                                     paddingLeft: n.left,
                                     width: n.width - 16
                                 },
-                                className: a()(T.heading, { [T.headingTopbar]: !D }),
+                                className: a()(S.heading, { [S.headingTopbar]: !D }),
                                 children: [
                                     !D &&
                                         (0, i.jsxs)('div', {
-                                            className: T.headingFilters,
+                                            className: S.headingFilters,
                                             children: [(0, i.jsx)(I.Z, { loadId: t }), (0, i.jsx)(v.Z, { loadId: t })]
                                         }),
                                     P && (0, i.jsx)(C.Z, { loadId: t })
@@ -119,7 +119,7 @@ function L(e) {
                             r
                         );
                     case 1:
-                        return (0, i.jsx)(c.Spinner, { className: a()(T.spinner, { [T.spinnerWithSidebar]: D }) }, r);
+                        return (0, i.jsx)(c.Spinner, { className: a()(S.spinner, { [S.spinnerWithSidebar]: D }) }, r);
                 }
             },
             [P, D, t]
@@ -232,11 +232,11 @@ function L(e) {
         ),
         $ = D ? b : A;
     return (0, i.jsx)('div', {
-        className: T.container,
+        className: S.container,
         ref: H,
         children: (0, i.jsx)(c.MasonryList, {
             ref: B,
-            className: T.masonryList,
+            className: S.masonryList,
             sections: z,
             columns: k,
             itemGutter: 16,
@@ -251,13 +251,13 @@ function L(e) {
             renderAccessory: (e) =>
                 D
                     ? (0, i.jsx)('div', {
-                          className: T.sidebar,
+                          className: S.sidebar,
                           style: { height: e },
                           children: (0, i.jsxs)('div', {
-                              className: T.sidebarContent,
+                              className: S.sidebarContent,
                               children: [
                                   (0, i.jsx)('div', {
-                                      className: T.sidebarLanguageSelect,
+                                      className: S.sidebarLanguageSelect,
                                       children: (0, i.jsx)(v.Z, { loadId: t })
                                   }),
                                   (0, i.jsx)(E.Z, { loadId: t })

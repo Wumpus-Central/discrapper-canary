@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(974042),
     v = n(451478),
     N = n(434184),
-    S = n(701861),
-    T = n(437314),
+    T = n(701861),
+    S = n(437314),
     b = n(696577),
     A = n(163417),
     Z = n(830880),
@@ -46,7 +46,7 @@ function w(e) {
     return (0, i.jsx)('div', {
         className: R.emptyStateContainer,
         children: (0, i.jsx)(
-            T.Z,
+            S.Z,
             {
                 type: t,
                 onClick: l
@@ -97,7 +97,7 @@ t.Z = function (e) {
                     default:
                         let { key: t, ...n } = e;
                         return (0, i.jsx)(
-                            S.Z,
+                            T.Z,
                             {
                                 ...n,
                                 isFocused: D
@@ -257,7 +257,7 @@ t.Z = function (e) {
                 el &&
                     (0, i.jsx)('div', {
                         className: R.emptyStateContainer,
-                        children: (0, i.jsx)(T.Z, { type: T.j.SECTION_NO_RESULTS }, c)
+                        children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, c)
                     })
             ]
         })

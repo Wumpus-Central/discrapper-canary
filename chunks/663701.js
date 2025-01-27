@@ -24,8 +24,8 @@ var i = n(200651),
     C = n(463119),
     v = n(377171),
     N = n(540059),
-    S = n(243778),
-    T = n(125465),
+    T = n(243778),
+    S = n(125465),
     b = n(922409),
     A = n(899740),
     Z = n(28476),
@@ -192,7 +192,7 @@ let et = (e) => {
                     className: ee.familyCenterPendingBadge,
                     children: (0, i.jsx)(p.NumberBadge, { count: r })
                 })
-              : (0, i.jsx)(S.ZP, {
+              : (0, i.jsx)(T.ZP, {
                     contentTypes: [h.z.FAMILY_CENTER_NEW_BADGE],
                     children: (e) => {
                         let { visibleContent: t } = e;
@@ -340,7 +340,7 @@ function eu() {
             return !0 === e && !0 === t;
         })(),
         g = (0, I.n)(),
-        f = (0, T.G)({
+        f = (0, S.G)({
             location: 'private_channels',
             autoTrackExposure: m
         });

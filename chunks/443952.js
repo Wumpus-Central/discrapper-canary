@@ -20,8 +20,8 @@ var r = n(243814),
     C = n(592125),
     v = n(293273),
     N = n(885110),
-    S = n(451478),
-    T = n(630388),
+    T = n(451478),
+    S = n(630388),
     b = n(823379),
     A = n(709054),
     Z = n(591759),
@@ -185,7 +185,7 @@ t.Z = {
             return new Promise((e, t) => {
                 !(function (e, t) {
                     var n;
-                    let i = S.Z.getLastFocusedWindowId(),
+                    let i = T.Z.getLastFocusedWindowId(),
                         r = null == i ? null : null === (n = (0, h.g0)(i)) || void 0 === n ? void 0 : n.renderWindow;
                     if (null == r) throw new L.Z({ errorCode: M.lTL.UNKNOWN_ERROR }, 'No valid window found');
                     let l = r.document.createElement('input');
@@ -230,7 +230,7 @@ t.Z = {
             (0, y.bu)(n.transport);
             let r = n.application.id;
             if (null == r) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
-            if (!(0, T.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+            if (!(0, S.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
             let l = (0, O.Z)();
             if (null == l) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No channel found');
             if (!Z.Z.isDiscordCdnUrl(i)) throw new L.Z({ errorCode: M.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
@@ -254,7 +254,7 @@ t.Z = {
             let c = i.application.id;
             if (null == c) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No application.');
             if (!w.Cr.includes(c)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'Unsupported application.');
-            if (!(0, T.yE)(null !== (t = i.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+            if (!(0, S.yE)(null !== (t = i.application.flags) && void 0 !== t ? t : 0, M.udG.EMBEDDED)) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'This application cannot access this API');
             let d = (0, O.Z)();
             if (null == d) throw new L.Z({ errorCode: M.lTL.INVALID_COMMAND }, 'No channel found');
             if (null !== l || null !== a || null !== o) {

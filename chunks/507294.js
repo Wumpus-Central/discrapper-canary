@@ -26,8 +26,8 @@ var i = n(200651),
     C = n(430824),
     v = n(626135),
     N = n(63063),
-    S = n(134433),
-    T = n(225104),
+    T = n(134433),
+    S = n(225104),
     b = n(981631),
     A = n(388032),
     Z = n(698948),
@@ -80,7 +80,7 @@ t.default = function (e) {
             (0, i.jsxs)(c.ModalHeader, {
                 separator: !1,
                 children: [
-                    (0, i.jsx)(S.Z, {
+                    (0, i.jsx)(T.Z, {
                         className: Z.headerIcon,
                         size: 24
                     }),
@@ -173,7 +173,7 @@ t.default = function (e) {
                                                   })
                                               })
                                             : null,
-                                        (0, i.jsx)(T.Z, {
+                                        (0, i.jsx)(S.Z, {
                                             guildId: t,
                                             role: e,
                                             size: 24

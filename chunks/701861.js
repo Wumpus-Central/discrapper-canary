@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(825682),
     v = n(170245),
     N = n(981631),
-    S = n(65154),
-    T = n(388032),
+    T = n(65154),
+    S = n(388032),
     b = n(401207);
 function A(e, t, n) {
     return (
@@ -51,41 +51,41 @@ function Z(e) {
             });
         }, [n, l, t.id]),
         g = r.useCallback(() => {
-            let e = l ? T.intl.string(T.t['RLcE6+']) : T.intl.string(T.t.cvSt1N);
+            let e = l ? S.intl.string(S.t['RLcE6+']) : S.intl.string(S.t.cvSt1N);
             (0, o.openModal)((n) =>
                 (0, i.jsx)(o.ConfirmModal, {
-                    header: T.intl.formatToPlainString(T.t.fPLvZW, { name: f.ZP.getName(t) }),
+                    header: S.intl.formatToPlainString(S.t.fPLvZW, { name: f.ZP.getName(t) }),
                     confirmText: e,
-                    cancelText: T.intl.string(T.t['ETE/oK']),
+                    cancelText: S.intl.string(S.t['ETE/oK']),
                     onConfirm: m,
                     ...n,
                     children: (0, i.jsx)(o.Text, {
                         variant: 'text-md/normal',
-                        children: T.intl.format(T.t.l5FFq6, { name: f.ZP.getName(t) })
+                        children: S.intl.format(S.t.l5FFq6, { name: f.ZP.getName(t) })
                     })
                 })
             );
         }, [m, l, t]),
-        E = (0, s.e7)([p.Z], () => p.Z.supports(S.AN.VIDEO)),
+        E = (0, s.e7)([p.Z], () => p.Z.supports(T.AN.VIDEO)),
         I = t.isProvisional,
-        C = l ? T.intl.string(T.t['RLcE6+']) : T.intl.string(T.t.cvSt1N);
+        C = l ? S.intl.string(S.t['RLcE6+']) : S.intl.string(S.t.cvSt1N);
     return (0, i.jsxs)(o.Menu, {
         navId: 'friend-row',
-        'aria-label': T.intl.string(T.t.liqwPD),
+        'aria-label': S.intl.string(S.t.liqwPD),
         onClose: d.Zy,
         onSelect: a,
         children: [
             !I && E
                 ? (0, i.jsx)(o.MenuItem, {
                       id: 'start-video-call',
-                      label: T.intl.string(T.t.oCqlGB),
+                      label: S.intl.string(S.t.oCqlGB),
                       action: h
                   })
                 : null,
             !I &&
                 (0, i.jsx)(o.MenuItem, {
                     id: 'start-voice-call',
-                    label: T.intl.string(T.t.focH1t),
+                    label: S.intl.string(S.t.focH1t),
                     action: u
                 }),
             (0, i.jsx)(o.MenuItem, {
@@ -145,13 +145,13 @@ class x extends r.PureComponent {
                                     }),
                                 (0, i.jsx)(E.Z, {
                                     icon: o.ChatIcon,
-                                    tooltip: T.intl.string(T.t['g33r/P']),
+                                    tooltip: S.intl.string(S.t['g33r/P']),
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t
                                 }),
                                 (0, i.jsx)(E.Z, {
                                     icon: o.MoreVerticalIcon,
-                                    tooltip: T.intl.string(T.t.UKOtz8),
+                                    tooltip: S.intl.string(S.t.UKOtz8),
                                     onClick: this.handleOpenActionsMenu,
                                     shouldHighlight: t
                                 })

@@ -23,7 +23,7 @@ var i = n(200651),
     C = n(981631),
     v = n(388032),
     N = n(55945);
-function S(e) {
+function T(e) {
     var t;
     let { user: n, applicationId: l, isGameRelationship: o, active: c } = e,
         d = (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && (null == n ? void 0 : n.isStaff()),
@@ -72,7 +72,7 @@ function S(e) {
         ]
     });
 }
-function T(e) {
+function S(e) {
     let { userId: t, applicationId: n, isGameRelationship: l, active: a } = e,
         { cancelFriendRequest: o } = (0, f.u)({
             userId: t,
@@ -183,13 +183,13 @@ function Z(e) {
                         className: N.actions,
                         children:
                             n === C.OGo.PENDING_INCOMING
-                                ? (0, i.jsx)(S, {
+                                ? (0, i.jsx)(T, {
                                       user: t,
                                       applicationId: s,
                                       isGameRelationship: d,
                                       active: e
                                   })
-                                : (0, i.jsx)(T, {
+                                : (0, i.jsx)(S, {
                                       userId: t.id,
                                       applicationId: s,
                                       isGameRelationship: d,

@@ -24,8 +24,8 @@ var i,
     C = n(497656),
     v = n(554747),
     N = n(230900),
-    S = n(854698),
-    T = n(703656),
+    T = n(854698),
+    S = n(703656),
     b = n(922482),
     A = n(565799),
     Z = n(501655),
@@ -79,7 +79,7 @@ function U(e) {
             (function (e) {
                 let { guildEvent: t, stageInstance: n, activeChannel: i, canConnect: r, myRole: a, eventCreator: s, speakers: o, listenerCount: c, isEventNoticeHidden: d, isStageNoticeHidden: h, isStudyRoomNotice: m } = e,
                     g = null != n && null != i && !h,
-                    E = null != t ? (0, S.DK)(t) : null;
+                    E = null != t ? (0, T.DK)(t) : null;
                 if (m && null != i) {
                     let e = (0, p.KS)(i);
                     return {
@@ -375,7 +375,7 @@ function U(e) {
                             size: u.Button.Sizes.SMALL,
                             color: u.Button.Colors.GREEN,
                             onClick: () => {
-                                if (J) null != i && null != i.getGuildId() && ((0, b.Cq)(i), (0, T.XU)(i.getGuildId(), i.id));
+                                if (J) null != i && null != i.getGuildId() && ((0, b.Cq)(i), (0, S.XU)(i.getGuildId(), i.id));
                                 else {
                                     if (null == r) return;
                                     (0, g.bO)({ eventId: r.id });

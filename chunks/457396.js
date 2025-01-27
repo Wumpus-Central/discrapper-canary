@@ -28,8 +28,8 @@ var a = n(91192),
     C = n(74538),
     v = n(502087),
     N = n(650032),
-    S = n(767870),
-    T = n(104494),
+    T = n(767870),
+    S = n(104494),
     b = n(639119),
     A = n(655525),
     Z = n(314684),
@@ -54,7 +54,7 @@ let H = (e) => {
             n = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
             i = (0, s.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
             r = (0, b.N)(),
-            l = (0, T.Ng)(),
+            l = (0, S.Ng)(),
             a = (0, L.Vi)(),
             o = (0, j.vx)(B),
             c = (0, j.wG)(B),
@@ -77,7 +77,7 @@ let H = (e) => {
             K = (0, C.Qo)(W, Y),
             q = (0, a.JA)('nitro'),
             X = (0, b.N)(),
-            Q = (0, T.Ng)(),
+            Q = (0, S.Ng)(),
             J = (0, s.e7)([E.ZP], () => E.ZP.inReverseTrial()),
             $ = (0, s.e7)([_.Z], () => _.Z.isLocalizedPromoEnabled) && null == X,
             ee = (0, L.Vi)(),
@@ -98,7 +98,7 @@ let H = (e) => {
         if (!H({ selected: v })) return null;
         es !== M.a$.NONE &&
             ((r = 9),
-            (i = (0, l.jsx)(S.Z, {
+            (i = (0, l.jsx)(T.Z, {
                 className: '',
                 startsAt: eo,
                 endsAt: ec,

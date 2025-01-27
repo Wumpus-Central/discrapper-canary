@@ -1,26 +1,26 @@
 n.d(t, {
     k0: function () {
-        return a;
+        return s;
     },
     sp: function () {
-        return s;
+        return a;
     }
 });
 var r = n(200651),
     i = n(192379);
 let l = i.createContext(null);
-function s() {
+function a() {
     return i.useContext(l);
 }
-function a(e) {
+function s(e) {
     let { newValue: t, children: n } = e,
-        a = s(),
+        s = a(),
         o = i.useMemo(
             () => ({
-                ...a,
+                ...s,
                 ...t
             }),
-            [a, t]
+            [s, t]
         );
     return (0, r.jsx)(l.Provider, {
         value: o,

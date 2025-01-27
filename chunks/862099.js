@@ -30,8 +30,8 @@ var i,
     C = n(192079),
     v = n(427679),
     N = n(448206),
-    S = n(496675),
-    T = n(938475),
+    T = n(496675),
+    S = n(938475),
     b = n(626135),
     A = n(823379),
     Z = n(15274),
@@ -122,9 +122,9 @@ let H = a.memo(function (e) {
 function F(e) {
     let { guildEvent: t, channel: n } = e,
         i = (0, c.Wu)(
-            [T.ZP],
+            [S.ZP],
             () =>
-                T.ZP.getVoiceStatesForChannel(n).map((e) => {
+                S.ZP.getVoiceStatesForChannel(n).map((e) => {
                     let { user: t } = e;
                     return t;
                 }),
@@ -377,7 +377,7 @@ function Q(e) {
     let { channel: t, speakers: n, voiceType: i } = e,
         r = t.getGuildId(),
         s = a.useMemo(() => n.slice(0, 3), [n]),
-        h = (0, c.e7)([S.Z], () => S.Z.can(G.Plq.CONNECT, t)),
+        h = (0, c.e7)([T.Z], () => T.Z.can(G.Plq.CONNECT, t)),
         m = (0, N.Z)(t.id),
         p = B.intl.string(B.t.VJlc0d);
     switch (i) {

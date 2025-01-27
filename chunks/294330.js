@@ -27,8 +27,8 @@ var i = n(200651),
     C = n(695346),
     v = n(768581),
     N = n(356164),
-    S = n(890064),
-    T = n(981631),
+    T = n(890064),
+    S = n(981631),
     b = n(388032),
     A = n(125285),
     Z = n(129512),
@@ -74,7 +74,7 @@ function y(e) {
             [t]
         ),
         M = (0, m.ZP)(),
-        w = t.features.has(T.oNc.HUB),
+        w = t.features.has(S.oNc.HUB),
         k = r.useMemo(() => {
             let e = v.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
@@ -84,9 +84,9 @@ function y(e) {
             if (null != e) return e;
             if (w) return L;
             switch (M) {
-                case T.BRd.DARK:
+                case S.BRd.DARK:
                     return Z;
-                case T.BRd.LIGHT:
+                case S.BRd.LIGHT:
                     return x;
             }
         }, [t.discoverySplash, t.id, w, M]),
@@ -134,7 +134,7 @@ function y(e) {
                                     })
                                 }),
                                 G &&
-                                    (0, i.jsx)(S.Z, {
+                                    (0, i.jsx)(T.Z, {
                                         guild: t,
                                         className: A.contextMenu
                                     }),

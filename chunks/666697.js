@@ -25,34 +25,34 @@ var i = n(200651),
     E = n(890030);
 t.Z = function (e) {
     let { applicationId: t, onSelectApplication: n, onScroll: y, initialTab: P, onButtonsVisibilityChange: A } = e,
-        T = a.useRef(null),
-        L = (0, r.e7)([o.Z], () => o.Z.getApplication(t)),
+        L = a.useRef(null),
+        T = (0, r.e7)([o.Z], () => o.Z.getApplication(t)),
         R = (0, r.e7)([o.Z], () => o.Z.getApplicationFetchState(t));
     a.useEffect(() => {
-        if (null != t && null == L) {
+        if (null != t && null == T) {
             let e = 'true' === new URLSearchParams(location.search).get('preview') || void 0;
             l.i6(t, { noCache: e });
         }
-    }, [t, L]),
+    }, [t, T]),
         a.useEffect(() => {
             l.T4({ applicationId: t });
         }, [t]),
         a.useEffect(() => () => A(!0), [A]);
-    let Z = null == L ? void 0 : L.storefront_available,
+    let Z = null == T ? void 0 : T.storefront_available,
         [O, M] = a.useState(null != P ? P : S.GlobalDiscoveryAppsSections.ABOUT),
         k = a.useCallback(
             (e) => {
                 var t;
-                null === (t = T.current) || void 0 === t || t.scrollTo({ to: 0 }), M(S.GlobalDiscoveryAppsSections.ABOUT), n(e);
+                null === (t = L.current) || void 0 === t || t.scrollTo({ to: 0 }), M(S.GlobalDiscoveryAppsSections.ABOUT), n(e);
             },
             [n]
         );
     a.useEffect(() => {
-        (null == L ? void 0 : L.storefront_available) && null != t && (0, d.Z)(t);
-    }, [null == L ? void 0 : L.storefront_available, t]);
+        (null == T ? void 0 : T.storefront_available) && null != t && (0, d.Z)(t);
+    }, [null == T ? void 0 : T.storefront_available, t]);
     let D = (0, C.Uc)(),
-        w = (0, r.e7)([s.Z], () => s.Z.getFetchState({ applicationId: null == L ? void 0 : L.id })),
-        B = (0, r.e7)([s.Z], () => s.Z.getSimilarApplications({ applicationId: null == L ? void 0 : L.id })),
+        w = (0, r.e7)([s.Z], () => s.Z.getFetchState({ applicationId: null == T ? void 0 : T.id })),
+        B = (0, r.e7)([s.Z], () => s.Z.getSimilarApplications({ applicationId: null == T ? void 0 : T.id })),
         G = a.useMemo(() => (null == B ? void 0 : B.applications.slice(0, 3)), [B]),
         U = {
             displayedSimilarApplications: G,
@@ -64,16 +64,16 @@ t.Z = function (e) {
     }),
         a.useEffect(() => {
             let { displayedSimilarApplications: e, previousView: t } = H.current;
-            (null == L ? void 0 : L.id) != null &&
+            (null == T ? void 0 : T.id) != null &&
                 w !== s.M.FETCHING &&
                 (0, h.zZ)(j.rMx.APP_DIRECTORY_PAGE_VIEWED, {
                     current_page: C.m_.APPLICATION,
                     previous_page: null == t ? void 0 : t.type,
-                    application_id: L.id,
+                    application_id: T.id,
                     referrer: document.referrer,
                     suggested_application_ids: null == e ? void 0 : e.map((e) => e.id)
                 });
-        }, [null == L ? void 0 : L.id, w]);
+        }, [null == T ? void 0 : T.id, w]);
     let z = a.useMemo(
             () => [
                 {
@@ -88,14 +88,14 @@ t.Z = function (e) {
             []
         ),
         V = a.useMemo(() => {
-            if (null == L) return null;
+            if (null == T) return null;
             switch (O) {
                 case S.GlobalDiscoveryAppsSections.ABOUT:
-                    return (0, i.jsx)(v.Z, { application: L });
+                    return (0, i.jsx)(v.Z, { application: T });
                 case S.GlobalDiscoveryAppsSections.STORE:
-                    return (0, i.jsx)(I.Z, { application: L });
+                    return (0, i.jsx)(I.Z, { application: T });
             }
-        }, [O, L]),
+        }, [O, T]),
         F = a.useCallback(
             (e) => {
                 (0, h.zZ)(j.rMx.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
@@ -110,10 +110,10 @@ t.Z = function (e) {
         Y = O === S.GlobalDiscoveryAppsSections.ABOUT;
     return (0, i.jsx)(p.Z, {
         onScroll: y,
-        ref: T,
+        ref: L,
         children: (0, i.jsx)(u.Z, {
             children:
-                null == L
+                null == T
                     ? null == R || R === o.M.FETCHING
                         ? (0, i.jsx)('div', {
                               className: E.centerContainer,
@@ -127,7 +127,7 @@ t.Z = function (e) {
                           className: E.detailContainer,
                           children: [
                               (0, i.jsx)(_.Z, {
-                                  application: L,
+                                  application: T,
                                   onButtonsVisibilityChange: A
                               }),
                               (0, i.jsxs)('div', {
@@ -158,7 +158,7 @@ t.Z = function (e) {
                                       Y &&
                                           (0, i.jsx)(f.Z, {
                                               className: E.sidebar,
-                                              application: L,
+                                              application: T,
                                               view: 'side'
                                           })
                                   ]

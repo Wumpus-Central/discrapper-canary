@@ -39,7 +39,7 @@ function f(e) {
         y = null !== (n = null === (t = o.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
         P = null !== (a = null == d ? void 0 : d.length) && void 0 !== a ? a : 0,
         A = Math.max(0, y - P),
-        { shownMutualGuilds: T, hiddenMutualGuilds: L } = l.useMemo(() => {
+        { shownMutualGuilds: L, hiddenMutualGuilds: T } = l.useMemo(() => {
             let e = [],
                 t = [];
             return (
@@ -54,7 +54,7 @@ function f(e) {
                 }
             );
         }, [d, g]),
-        R = L.length,
+        R = T.length,
         Z = (function (e, t, n, i, a) {
             if (0 === t && 0 === e) return null;
             if (t > 0 && 0 === n) return C.intl.formatToPlainString(C.t.pnzE1t, { mutualGuildCount: t });
@@ -69,7 +69,7 @@ function f(e) {
                 nonMutualGuildCount: l.format(n)
             });
         })(y, P, A, N, I);
-    return 0 === T.length && null == Z
+    return 0 === L.length && null == Z
         ? null
         : (0, r.jsxs)('div', {
               className: s()(f, x.wrapper),
@@ -77,11 +77,11 @@ function f(e) {
                   (0, r.jsx)('div', {
                       className: s()(x.icons, j),
                       children:
-                          T.length > 0
+                          L.length > 0
                               ? (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        T.map((e, t) => {
-                                            let n = t === T.length - 1 && 0 === R,
+                                        L.map((e, t) => {
+                                            let n = t === L.length - 1 && 0 === R,
                                                 i = h.ZP.getGuildIconURL({
                                                     id: e.id,
                                                     icon: e.icon,
@@ -115,7 +115,7 @@ function f(e) {
                                         }),
                                         R > 0
                                             ? (0, r.jsx)(u.Tooltip, {
-                                                  text: C.intl.formatToPlainString(C.t.m6oRrK, { appNames: E.format(L.map((e) => e.name)) }),
+                                                  text: C.intl.formatToPlainString(C.t.m6oRrK, { appNames: E.format(T.map((e) => e.name)) }),
                                                   position: 'top',
                                                   children: (e) =>
                                                       (0, r.jsxs)('div', {

@@ -15,8 +15,8 @@ var i = t(200651),
     u = t(271383),
     f = t(430824),
     m = t(496675),
-    x = t(700785),
-    I = t(785717),
+    I = t(700785),
+    x = t(785717),
     p = t(256226),
     h = t(678738),
     v = t(314172),
@@ -24,7 +24,7 @@ var i = t(200651),
     g = t(388032),
     j = t(454302);
 function _(e) {
-    let { user: n, currentUser: t, guild: c, guildMember: a, roles: d, highestRole: u, canManageRoles: f, onAddRole: m, onRemoveRole: I } = e,
+    let { user: n, currentUser: t, guild: c, guildMember: a, roles: d, highestRole: u, canManageRoles: f, onAddRole: m, onRemoveRole: x } = e,
         h = f && null != a,
         _ = l.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
         b = (0, r.ZP)({
@@ -44,8 +44,8 @@ function _(e) {
                     role: e,
                     guildId: c.id,
                     disableBorderColor: !0,
-                    onRemove: () => I(e),
-                    canRemove: f ? x.r6(c, t.id, u, e) : (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null && n.id === t.id
+                    onRemove: () => x(e),
+                    canRemove: f ? I.r6(c, t.id, u, e) : (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null && n.id === t.id
                 },
                 e.id
             );
@@ -78,7 +78,7 @@ function _(e) {
 }
 function b(e) {
     let { user: n, currentUser: t, guild: o, scrollIntoView: r } = e,
-        { trackUserProfileAction: s } = (0, I.KZ)(),
+        { trackUserProfileAction: s } = (0, x.KZ)(),
         p = (0, c.e7)([u.ZP], () => u.ZP.getMember(o.id, n.id)),
         v = (0, c.e7)([f.Z], () => f.Z.getRoles(o.id)),
         j = null == p ? void 0 : p.roles,
@@ -96,7 +96,7 @@ function b(e) {
                           }),
             [v, j]
         ),
-        E = x.e9(o, t.id),
+        E = I.e9(o, t.id),
         [N] = (0, c.Wu)([m.Z], () => [m.Z.can(Z.Plq.MANAGE_ROLES, o), null != o ? m.Z.getGuildVersion(o.id) : null]),
         y = l.useCallback(
             (e) => {

@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(320149),
     v = n(82295),
     N = n(252618),
-    S = n(605236),
-    T = n(243778),
+    T = n(605236),
+    S = n(243778),
     b = n(984370),
     A = n(797614),
     Z = n(359110),
@@ -196,9 +196,9 @@ let er = function (e) {
             l = (0, c.e7)([_.Z], () => _.Z.useReducedMotion);
         return (
             r.useEffect(() => {
-                (0, S.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
+                (0, T.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
             }, []),
-            (0, i.jsx)(T.ZP, {
+            (0, i.jsx)(S.ZP, {
                 contentTypes: [d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
                 children: (r) => {
                     let { visibleContent: a, markAsDismissed: s } = r;
@@ -257,7 +257,7 @@ let es = (0, p.Z)(function (e) {
         null != g && !E && I && _ && ((0, Z.Kh)(g), x.Z.closeChannelSidebar(R.uZ));
     }, [g, I, _, E]);
     let [C, v] = r.useState(q.pS.REQUESTS),
-        S = (e) => {
+        T = (e) => {
             v(e);
         };
     return (
@@ -287,7 +287,7 @@ let es = (0, p.Z)(function (e) {
                                             'aria-label': $.intl.string($.t.e7GWjY),
                                             selectedItem: C,
                                             type: 'top-pill',
-                                            onItemSelect: S,
+                                            onItemSelect: T,
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {
                                                     id: q.pS.REQUESTS,

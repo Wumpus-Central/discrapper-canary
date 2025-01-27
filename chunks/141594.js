@@ -16,10 +16,10 @@ t.Z = () => {
         I = (0, a.e7)([u.Z], () => u.Z.getMarketingBySurface(r.K.DESKTOP_SHOP_BUTTON)),
         C = (null == I ? void 0 : I.dismissibleContent) === s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
         v = i.useMemo(() => ((0, d.Fc)(E) && null != I && !C ? [I.dismissibleContent] : []), [E, I, C]),
-        [N, S] = (0, o.US)(v, void 0, !0),
-        [T, b] = (0, o.XR)(C && (null == I ? void 0 : I.type) === l.Z.COACHTIP ? s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == I ? void 0 : I.version) && void 0 !== e ? e : 0, void 0, !0),
+        [N, T] = (0, o.US)(v, void 0, !0),
+        [S, b] = (0, o.XR)(C && (null == I ? void 0 : I.type) === l.Z.COACHTIP ? s.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == I ? void 0 : I.version) && void 0 !== e ? e : 0, void 0, !0),
         A = null;
-    if ((null != N || null != T) && null != I && I.type === l.Z.COACHTIP) {
+    if ((null != N || null != S) && null != I && I.type === l.Z.COACHTIP) {
         A = {
             type: h.k2.COACHTIP,
             title: () => I.title,
@@ -40,7 +40,7 @@ t.Z = () => {
     return {
         collectiblesShopTabNewBadgeDisplayOptions: A,
         dismissCollectiblesShopTabNewBadge: () => {
-            let e = C ? b : S;
+            let e = C ? b : T;
             null != A && e(m.L.AUTO);
         }
     };

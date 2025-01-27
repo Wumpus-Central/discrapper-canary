@@ -16,8 +16,8 @@ var i = t(200651),
     u = t(699516),
     f = t(594174),
     m = t(971393),
-    x = t(787018),
-    I = t(752342),
+    I = t(787018),
+    x = t(752342),
     p = t(886794),
     h = t(910364);
 let v = [c.Z.BITE_SIZE_PROFILE_POPOUT, c.Z.PROFILE_PANEL];
@@ -41,14 +41,14 @@ function Z(e) {
         }),
         N = d.Rt.useSetting();
     return j && b && E && !g
-        ? (0, i.jsx)(x.Z, {
+        ? (0, i.jsx)(I.Z, {
               user: n,
               currentUser: o,
               onViewBlockedProfileClick: () => _(!1),
               ...t
           })
         : j && E && g && !(Z && N)
-          ? (0, i.jsx)(x.W, {
+          ? (0, i.jsx)(I.W, {
                 user: n,
                 currentUser: o,
                 onViewBlockedProfileClick: () => _(!1),
@@ -61,7 +61,7 @@ function Z(e) {
                   currentUser: o
               })
             : n.bot
-              ? (0, i.jsx)(I.Z, {
+              ? (0, i.jsx)(x.Z, {
                     ...t,
                     user: n,
                     currentUser: o

@@ -12,8 +12,8 @@ var i = n(200651),
 t.Z = function (e) {
     let { index: t, children: l, user: m, channel: p, onClick: g, isFocused: f, isActive: _, onOtherHover: E, className: I } = e,
         [C, v] = r.useState(!1),
-        [N, S] = r.useState(!1),
-        T = () => {
+        [N, T] = r.useState(!1),
+        S = () => {
             v(!0), f && !_ && !N && (null == E || E());
         },
         b = () => {
@@ -21,7 +21,7 @@ t.Z = function (e) {
         },
         A = (e, t) => {
             if (null != t)
-                S(!0),
+                T(!0),
                     (0, d.jW)(
                         e,
                         async () => {
@@ -34,7 +34,7 @@ t.Z = function (e) {
                         },
                         {
                             onClose: () => {
-                                S(!1);
+                                T(!1);
                             }
                         }
                     );
@@ -53,7 +53,7 @@ t.Z = function (e) {
                         [h.firstItem]: 0 === t
                     }),
                     onContextMenu: (e) => A(e, m),
-                    onMouseEnter: T,
+                    onMouseEnter: S,
                     onMouseLeave: b,
                     onClick: null != g ? g : void 0,
                     style: {

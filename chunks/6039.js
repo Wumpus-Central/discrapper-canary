@@ -19,15 +19,15 @@ var i = n(200651),
     C = n(200305),
     v = n(577809),
     N = n(981631),
-    S = n(898625),
-    T = n(388032),
+    T = n(898625),
+    S = n(388032),
     b = n(301219);
 t.Z = (e) => {
     var t;
     let n, A;
     let { guildId: Z, inviteCode: x } = e,
         L = (0, g.jS)(Z, 'MemberVerificationPreviewDisabled'),
-        [y, P] = r.useState(S.hO.INITIAL),
+        [y, P] = r.useState(T.hO.INITIAL),
         O = (0, l.e7)([p.Z], () => p.Z.get(Z)),
         R = (0, l.e7)([_.Z], () => _.Z.getRequest(Z)),
         j = (0, l.e7)([c.Z], () => c.Z.getGuild(Z)),
@@ -51,17 +51,17 @@ t.Z = (e) => {
             h.Z.resetGuildJoinRequest(Z);
         };
     let G =
-        ((n = T.intl.format(T.t['9ZezpK'], { name: null == M ? void 0 : M.toString() })),
+        ((n = S.intl.format(S.t['9ZezpK'], { name: null == M ? void 0 : M.toString() })),
         (A = () => {
-            P(Math.max(y, S.hO.FILLING)), h.Z.removeGuildJoinRequest(Z), (0, o.uL)(N.Z5c.ME);
+            P(Math.max(y, T.hO.FILLING)), h.Z.removeGuildJoinRequest(Z), (0, o.uL)(N.Z5c.ME);
         }),
         () => {
             (0, a.openModal)((e) =>
                 (0, i.jsx)(a.ConfirmModal, {
-                    header: T.intl.string(T.t.y0CVen),
-                    cancelText: T.intl.string(T.t.oEAioK),
+                    header: S.intl.string(S.t.y0CVen),
+                    cancelText: S.intl.string(S.t.oEAioK),
                     onConfirm: A,
-                    confirmText: T.intl.string(T.t.p89ACg),
+                    confirmText: S.intl.string(S.t.p89ACg),
                     confirmButtonColor: a.Button.Colors.RED,
                     ...e,
                     children: (0, i.jsx)(a.Text, {
@@ -114,9 +114,9 @@ t.Z = (e) => {
                                 });
                             case f.wB.REJECTED:
                                 return (0, i.jsx)(E.Z, {
-                                    reapplyText: T.intl.string(T.t.I1LYVl),
+                                    reapplyText: S.intl.string(S.t.I1LYVl),
                                     onReapply: U,
-                                    confirmText: T.intl.string(T.t.mqtdmZ),
+                                    confirmText: S.intl.string(S.t.mqtdmZ),
                                     onWithdrawApplication: G,
                                     rejectionReason: null == R ? void 0 : R.rejectionReason,
                                     guild: M

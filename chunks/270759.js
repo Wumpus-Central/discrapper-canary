@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(922611),
     v = n(108427),
     N = n(210887),
-    S = n(974042),
-    T = n(666286),
+    T = n(974042),
+    S = n(666286),
     b = n(596957),
     A = n(981631),
     Z = n(723359),
@@ -53,7 +53,7 @@ t.Z = function (e) {
             null != t && m.Z.setInitialSection(t);
         }, [t]);
     let P = (0, c.e7)([N.Z], () => N.Z.theme),
-        { section: O, pendingCount: R } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
+        { section: O, pendingCount: R } = (0, c.cj)([T.ZP], () => T.ZP.getState()),
         j = (0, c.e7)([f.Z], () => f.Z.getSuggestionCount()),
         D = (e) => {
             m.Z.setSection(e);
@@ -154,7 +154,7 @@ t.Z = function (e) {
                         id: O,
                         className: L.peopleColumn,
                         'aria-labelledby': w,
-                        children: O === A.pJs.ADD_FRIEND ? (0, i.jsx)(T.Z, {}) : (0, i.jsx)(b.Z, { titleId: w })
+                        children: O === A.pJs.ADD_FRIEND ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(b.Z, { titleId: w })
                     }),
                     (0, i.jsx)('div', {
                         className: L.nowPlayingColumn,

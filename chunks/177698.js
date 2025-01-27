@@ -17,8 +17,8 @@ var r = n(481060),
 t.Z = (0, g.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: v, guildId: N, channelId: S, prompt: T, disableGuildSelect: b, disclosures: A, integrationType: Z, pid: x } = e,
-            L = 'OAuth2Authorize_'.concat(n, '_').concat(N, '_').concat(S),
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: g, redirectUri: E, codeChallenge: I, codeChallengeMethod: C, state: v, guildId: N, channelId: T, prompt: S, disableGuildSelect: b, disclosures: A, integrationType: Z, pid: x } = e,
+            L = 'OAuth2Authorize_'.concat(n, '_').concat(N, '_').concat(T),
             y = null != Z ? (null == d ? void 0 : d.get(Z)) : void 0,
             P = null !== (t = null == y ? void 0 : y.application) && void 0 !== t ? t : s.Z.getApplication(n);
         return new Promise((e, t) => {
@@ -45,8 +45,8 @@ t.Z = (0, g.Z)(
                             state: v,
                             permissions: h.toString(),
                             guildId: N,
-                            channelId: S,
-                            prompt: T,
+                            channelId: T,
+                            prompt: S,
                             disableGuildSelect: 'boolean' == typeof b ? b : 'true' === b,
                             integrationType: Z
                         }
@@ -58,7 +58,7 @@ t.Z = (0, g.Z)(
             null !=
                 (0, a.ZP)({
                     application: P,
-                    channelId: S
+                    channelId: T
                 })
                 ? (R = r.POPOUT_MODAL_CONTEXT)
                 : O && (R = r.POPOUT_MODAL_CONTEXT),
@@ -78,8 +78,8 @@ t.Z = (0, g.Z)(
                             state: v,
                             permissions: h,
                             guildId: N,
-                            channelId: S,
-                            prompt: T,
+                            channelId: T,
+                            prompt: S,
                             disableGuildSelect: 'boolean' == typeof b ? b : 'true' === b,
                             integrationType: Z
                         }),

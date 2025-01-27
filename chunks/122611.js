@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(374023),
     v = n(661599),
     N = n(617899),
-    S = n(8521),
-    T = n(760326),
+    T = n(8521),
+    S = n(760326),
     b = n(785203),
     A = n(652785),
     Z = n(921944);
@@ -66,7 +66,7 @@ function L(e) {
                                 markAsDismissed: l
                             });
                         case a.z.CHANNEL_NOTICE_QUICKSWITCHER:
-                            return (0, i.jsx)(T.Z, {
+                            return (0, i.jsx)(S.Z, {
                                 guild: n,
                                 markAsDismissed: l
                             });
@@ -101,7 +101,7 @@ t.Z = (e) => {
         case b.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
             return (0, i.jsx)(d.Z, { guild: t });
         case b.R.MAX_MEMBER_COUNT:
-            return (0, i.jsx)(S.Z, { guild: t });
+            return (0, i.jsx)(T.Z, { guild: t });
         case b.R.GUILD_LIVE_CHANNEL:
             return (0, i.jsx)(m.ZP, { guild: t });
         case b.R.GUILD_MFA_WARNING:

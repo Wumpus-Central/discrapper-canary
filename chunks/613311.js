@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(812206),
     v = n(770146),
     N = n(600164),
-    S = n(606081),
-    T = n(252618),
+    T = n(606081),
+    S = n(252618),
     b = n(100159),
     A = n(646288),
     Z = n(984370),
@@ -290,22 +290,22 @@ class ec extends r.PureComponent {
         let r = [],
             l = n.getSplashURL(1024);
         null != l && r.push(l), null != t.headerLogoLightTheme && r.unshift((0, H._W)(n.id, t.headerLogoLightTheme, 1024, 'jpg'));
-        let a = S.Z.Product({
+        let a = T.Z.Product({
                 name: e.name,
                 description: null != e.summary && '' !== e.summary ? e.summary : t.tagline,
-                image: S.Z.Product.Image(r),
+                image: T.Z.Product.Image(r),
                 sku: e.id
             }),
             s = e.getPrice();
         if (null != s) {
             let { amount: e, currency: t } = s;
-            a.offers = S.Z.Offer({
+            a.offers = T.Z.Offer({
                 priceCurrency: t.toUpperCase(),
                 price: (0, V.T4)(e, t, { style: 'decimal' })
             });
         }
-        let o = S.Z.ItemPage({ mainEntity: a });
-        return (0, i.jsx)(S.Z, { data: o });
+        let o = T.Z.ItemPage({ mainEntity: a });
+        return (0, i.jsx)(T.Z, { data: o });
     }
     renderSmall(e, t, n) {
         return (0, i.jsxs)('div', {
@@ -359,14 +359,14 @@ class ec extends r.PureComponent {
                       children: this.renderListing()
                   });
             return (0, i.jsxs)(r.Fragment, {
-                children: [(0, i.jsx)(T.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, i.jsx)(X.Z, { game: e }), n]
+                children: [(0, i.jsx)(S.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, i.jsx)(X.Z, { game: e }), n]
             });
         }
         return a
             ? (0, i.jsxs)('div', {
                   className: es.listingWrapper,
                   children: [
-                      (0, i.jsx)(T.yY, { location: e.name }),
+                      (0, i.jsx)(S.yY, { location: e.name }),
                       this.renderJsonLD(),
                       (0, i.jsx)(g.Z, {
                           section: er.jXE.NAVIGATION,
@@ -379,7 +379,7 @@ class ec extends r.PureComponent {
                   ]
               })
             : (0, i.jsxs)('div', {
-                  children: [(0, i.jsx)(T.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
+                  children: [(0, i.jsx)(S.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
               });
     }
     constructor(...e) {

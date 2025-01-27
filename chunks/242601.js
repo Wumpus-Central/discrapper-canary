@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return eS;
+        return eT;
     }
 }),
     n(47120),
@@ -25,8 +25,8 @@ var i = n(200651),
     C = n(211242),
     v = n(785203),
     N = n(745837),
-    S = n(13228),
-    T = n(540059),
+    T = n(13228),
+    S = n(540059),
     b = n(211644),
     A = n(605236),
     Z = n(243778),
@@ -404,7 +404,7 @@ class eN extends r.PureComponent {
             });
     }
 }
-function eS(e) {
+function eT(e) {
     var t;
     let { guildId: n, hideSelectedChannel: l, selectedChannelId: s } = e,
         u = (0, c.e7)([X.Z], () => X.Z.getGuild(n));
@@ -433,8 +433,8 @@ function eS(e) {
         eE = N && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
         eI = (0, c.e7)([q.Z], () => q.Z.getMemberCount(n)),
         ev = N && null != eI && eI >= 30 && (null == u ? void 0 : u.premiumProgressBarEnabled) === !1 && !ei.s.isDisallowPopupsSet(),
-        eS = Z && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != eI && eI > 50)),
-        eT = (0, O.Z)(n),
+        eT = Z && null != u && (u.hasFeature(ed.oNc.COMMUNITY) || (null != eI && eI > 50)),
+        eS = (0, O.Z)(n),
         eb = (null == u ? void 0 : u.hasFeature(ed.oNc.HUB)) === !0,
         eA = N && (null == u ? void 0 : u.hasFeature(ed.oNc.DISCOVERABLE)) === !0,
         eZ = (0, C.Q)(),
@@ -446,7 +446,7 @@ function eS(e) {
         eR = (0, c.e7)([G.Z], () => !a().isEmpty(G.Z.getThreadsForGuild(n))),
         ej = en.ZP.isNewUser(U),
         eD = er && !ej,
-        eM = (0, S.Z)(U);
+        eM = (0, T.Z)(U);
     (0, y.Z)(u);
     let ew = (0, A.wE)(d.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         ek = (0, w.Z)(n),
@@ -454,7 +454,7 @@ function eS(e) {
         eG = (0, c.e7)([ee.Z], () => ee.Z.getChannelId()),
         eB = (0, c.e7)([$.Z], () => $.Z.desyncedVoiceStatesCount),
         eV = k.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled,
-        eH = (0, T.Q3)('GuildSidebar');
+        eH = (0, S.Q3)('GuildSidebar');
     return (0, i.jsx)(eN, {
         guildId: n,
         hideSelectedChannel: l,
@@ -477,11 +477,11 @@ function eS(e) {
         showDiscoveryLandingPageSettingsUpsell: eA,
         showGuildHeaderTutorial: e_,
         showGuildTemplateDirtyTooltip: eL,
-        showRoleSubscriptionUpsell: eT,
+        showRoleSubscriptionUpsell: eS,
         showHubPrivacySettingsTooltip: eb,
         showNewUnreadsBar: eO,
         showActiveThreadsNotice: R && null != eI && eI >= 200 && eR,
-        showGuildSoundboardPermissionUpsell: eS,
+        showGuildSoundboardPermissionUpsell: eT,
         showMediaChannelUpsell: ek,
         showTierTemplatesUpsell: eU,
         isHeaderPopoutOpen: eP,

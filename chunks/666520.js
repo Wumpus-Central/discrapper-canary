@@ -14,16 +14,16 @@ var i = t(200651),
     u = t(388032),
     f = t(120238);
 function m(e) {
-    let { autoFocus: n = !1, className: t, userId: m, onUpdate: x } = e,
-        I = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
+    let { autoFocus: n = !1, className: t, userId: m, onUpdate: I } = e,
+        x = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
         { loading: p, note: h } = (0, c.Z)(m),
         v = l.useRef(null);
     return (l.useEffect(() => {
-        if (!n || I) return;
+        if (!n || x) return;
         let e = v.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [n, I]),
-    I)
+    }, [n, x]),
+    x)
         ? null
         : (0, i.jsx)('div', {
               className: t,
@@ -35,7 +35,7 @@ function m(e) {
                   'aria-label': u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;
-                      if ((null != h ? h : '') !== n) null == x || x(), s.Z.updateNote(m, n);
+                      if ((null != h ? h : '') !== n) null == I || I(), s.Z.updateNote(m, n);
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which) {

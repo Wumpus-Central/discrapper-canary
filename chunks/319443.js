@@ -26,8 +26,8 @@ var i = n(200651),
     y = n(975907),
     P = n(119014),
     A = n(258971),
-    T = n(133743),
-    L = n(726941),
+    L = n(133743),
+    T = n(726941),
     R = n(666697),
     Z = n(548514),
     O = n(370648),
@@ -179,10 +179,10 @@ t.default = function () {
             },
             [el, ec, $, u]
         ),
-        eC = a.useCallback((e) => (0, T.ph)({ applicationId: e }), []),
+        eC = a.useCallback((e) => (0, L.ph)({ applicationId: e }), []),
         ex = er || el,
         ev = a.useCallback(() => {
-            null != (0, A.Uc)() ? (0, b.op)() : (0, T.Yp)();
+            null != (0, A.Uc)() ? (0, b.op)() : (0, L.Yp)();
         }, []),
         e_ = (0, o.debounce)((e) => {
             let { scrollTop: t, offsetHeight: n, scrollHeight: i, location: a } = e;
@@ -274,7 +274,7 @@ t.default = function () {
                                   onScroll: (e) => ef(e, A.m_.HOME),
                                   onSelectApplication: eC
                               })
-                            : (0, i.jsx)(L.Z, {
+                            : (0, i.jsx)(T.Z, {
                                   tabId: Number(J),
                                   onScroll: (e) => ef(e, A.m_.CATEGORY),
                                   onSelectApplication: eC

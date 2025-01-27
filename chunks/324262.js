@@ -19,11 +19,11 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                 guild_id: t.id
             });
         }, [t.id, d]);
-        let S = null;
+        let T = null;
         'function' == typeof v
-            ? (S = v())
+            ? (T = v())
             : null != v &&
-              (S = (0, i.jsx)(s.Button, {
+              (T = (0, i.jsx)(s.Button, {
                   className: p.btn,
                   size: s.Button.Sizes.SMALL,
                   onClick: () => {
@@ -39,7 +39,7 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                   color: N,
                   children: v
               }));
-        let T = null != u ? ''.concat(u, 'px') : '16px';
+        let S = null != u ? ''.concat(u, 'px') : '16px';
         return (0, i.jsxs)('div', {
             className: p.channelNotice,
             children: [
@@ -61,8 +61,8 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                     className: p.imageContainer,
                     style: {
                         marginTop: ''.concat(f, 'px'),
-                        marginLeft: T,
-                        marginRight: T
+                        marginLeft: S,
+                        marginRight: S
                     },
                     children: (0, i.jsx)('img', {
                         className: p.image,
@@ -84,7 +84,7 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                             variant: 'text-sm/normal',
                             children: l
                         }),
-                        S
+                        T
                     ]
                 })
             ]

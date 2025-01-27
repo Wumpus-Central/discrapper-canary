@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return L;
     }
 }),
     n(610138),
@@ -35,10 +35,10 @@ var i = n(200651),
     y = n(979007),
     P = n(981631),
     A = n(378105);
-function T(e) {
+function L(e) {
     var t;
-    let { onSelectApplication: n, onScroll: T } = e,
-        L = (0, s.e7)([_.default], () => _.default.isAuthenticated()),
+    let { onSelectApplication: n, onScroll: L } = e,
+        T = (0, s.e7)([_.default], () => _.default.isAuthenticated()),
         R = a.useRef(null),
         Z = (0, r.TH)(),
         O = a.useRef(null),
@@ -165,11 +165,11 @@ function T(e) {
         children: [
             (0, i.jsx)(v.Z, {
                 ref: R,
-                onScroll: T,
+                onScroll: L,
                 children: (0, i.jsxs)('div', {
                     className: A.innerContainer,
                     children: [
-                        L ? null : (0, i.jsx)('div', { className: A.centeringBuffer }),
+                        T ? null : (0, i.jsx)('div', { className: A.centeringBuffer }),
                         (0, i.jsx)(x.Z, {
                             children: (0, i.jsxs)('div', {
                                 className: A.contentContainer,

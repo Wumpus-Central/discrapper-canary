@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     lH: function () {
-        return S;
+        return T;
     }
 });
 var i = n(200651),
@@ -125,7 +125,7 @@ let _ = 'url(#dark-purple-gradient)',
                 })
         });
     },
-    S = (e) => {
+    T = (e) => {
         let { isSelected: t, onSelect: n } = e;
         return (
             r.useEffect(() => {

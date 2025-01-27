@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 });
 var i = n(200651),
@@ -23,10 +23,10 @@ var i = n(200651),
     C = n(128449),
     v = n(49898),
     N = n(388032),
-    S = n(608576);
-function T() {
+    T = n(608576);
+function S() {
     let e = r.useRef((0, m.PM)()),
-        { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, a.M)(),
+        { onScroll: t, scrollPosition: n, resetScrollPosition: S } = (0, a.M)(),
         { tabs: b, selectedTab: A, setSelectedTab: Z } = (0, _.Y)(),
         x = (0, m.lg)(A),
         L = !C.MU.has(A),
@@ -70,13 +70,13 @@ function T() {
             H.current.flushSeenGuilds(e.current);
         }, [x]),
         r.useEffect(() => {
-            T();
-        }, [A, T]),
+            S();
+        }, [A, S]),
         r.useEffect(() => {
             !j && u.Z.setState({ scrollPosition: null });
         }, [j]),
         (0, i.jsxs)('div', {
-            className: S.container,
+            className: T.container,
             children: [
                 (0, i.jsxs)(o.ZP, {
                     variant: j ? o._6.RELATIVE : o._6.OVERLAY,
@@ -100,7 +100,7 @@ function T() {
                             (0, i.jsx)(l.Heading, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                className: S.searchResultsHeader,
+                                className: T.searchResultsHeader,
                                 children: N.intl.format(N.t.zHdzqa, { query: G })
                             }),
                         L &&

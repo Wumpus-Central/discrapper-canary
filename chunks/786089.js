@@ -19,8 +19,8 @@ var i = n(200651),
     C = n(497505),
     v = n(475595),
     N = n(352084),
-    S = n(685613),
-    T = n(981631),
+    T = n(685613),
+    S = n(981631),
     b = n(388032),
     A = n(625844);
 t.Z = (0, r.memo)(function (e) {
@@ -59,7 +59,7 @@ t.Z = (0, r.memo)(function (e) {
         ee = P ? V + 8 : 0,
         et = () => {
             O(!0),
-                _.default.track(T.rMx.QUEST_HOVER, {
+                _.default.track(S.rMx.QUEST_HOVER, {
                     quest_id: y.id,
                     ...(0, E.mH)(C.jn.TROPHY_CASE_CARD)
                 });
@@ -67,7 +67,7 @@ t.Z = (0, r.memo)(function (e) {
         en = () => O(!1),
         ei = (e) => {
             M(!0),
-                _.default.track(T.rMx.QUEST_ASSET_LOADING_FAILURE, {
+                _.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
                     source: e,
                     asset_id: e,
                     quest_id: y.id
@@ -128,7 +128,7 @@ t.Z = (0, r.memo)(function (e) {
                           ref: k,
                           className: A.logoContainer,
                           style: { transform: 'translateY(-'.concat(ee, 'px)') },
-                          children: (0, i.jsx)(S.ZP, {
+                          children: (0, i.jsx)(T.ZP, {
                               logotypeClassName: a()(A.logo, { [A.logoWithCosponsor]: J }),
                               quest: y,
                               withGameTile: !1

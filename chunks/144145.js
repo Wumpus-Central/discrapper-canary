@@ -25,15 +25,15 @@ var i = n(200651),
     C = n(626135),
     v = n(804739),
     N = n(346329),
-    S = n(981631),
-    T = n(388032);
-let b = d.Z.get(S.ABu.XBOX).name;
+    T = n(981631),
+    S = n(388032);
+let b = d.Z.get(T.ABu.XBOX).name;
 function A(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
         A = (function (e) {
             let { currentActivities: t } = e,
-                n = (0, l.e7)([f.Z], () => f.Z.getAccounts().some((e) => e.type === d.Z.get(S.ABu.XBOX).type)),
+                n = (0, l.e7)([f.Z], () => f.Z.getAccounts().some((e) => e.type === d.Z.get(T.ABu.XBOX).type)),
                 r = t.some((e) => {
                     let { activity: t } = e;
                     return (0, m.Z)(t);
@@ -42,8 +42,8 @@ function A(e) {
                 ? null
                 : (0, i.jsx)(a.MenuItem, {
                       id: 'xbox-connect',
-                      action: () => c.Z.open(S.oAB.CONNECTIONS),
-                      label: T.intl.formatToPlainString(T.t.XWSHTU, { platform: b })
+                      action: () => c.Z.open(T.oAB.CONNECTIONS),
+                      label: S.intl.formatToPlainString(S.t.XWSHTU, { platform: b })
                   });
         })(e),
         Z = (function (e) {
@@ -60,7 +60,7 @@ function A(e) {
                             return {
                                 ...e,
                                 libraryApplication: r,
-                                canJoin: null != t && (0, u.Z)(t, S.xjy.JOIN) && t.type === S.IIU.PLAYING,
+                                canJoin: null != t && (0, u.Z)(t, T.xjy.JOIN) && t.type === T.IIU.PLAYING,
                                 canPlay: (0, v.t)({
                                     LibraryApplicationStore: E.Z,
                                     LaunchableGameStore: g.Z,
@@ -89,23 +89,23 @@ function A(e) {
                     async function c() {
                         if (null == r) return;
                         let e = await s.Z.sendActivityInviteUser({
-                            type: S.mFx.JOIN_REQUEST,
+                            type: T.mFx.JOIN_REQUEST,
                             userId: l.id,
                             activity: r,
-                            location: S.Sbl.PROFILE_POPOUT
+                            location: T.Sbl.PROFILE_POPOUT
                         });
                         null != e && o.default.selectPrivateChannel(e.id);
                     }
                     return (0, i.jsx)(a.MenuItem, {
                         id: 'join-'.concat(r.session_id),
-                        label: t ? T.intl.formatToPlainString(T.t.wFAvxM, { name: l.toString() }) : T.intl.string(T.t.OKsSCQ),
+                        label: t ? S.intl.formatToPlainString(S.t.wFAvxM, { name: l.toString() }) : S.intl.string(S.t.OKsSCQ),
                         action: c
                     });
                 })(e, n),
                 (function (e, t) {
                     let { activity: n, game: r, libraryApplication: l, location: s, canPlay: o, isRunning: c, isLaunching: d } = e;
                     if (!o || null == n) return null;
-                    let u = c ? T.intl.formatToPlainString(T.t['gBme//'], { name: r.name }) : d ? T.intl.formatToPlainString(T.t.WtSQwM, { name: r.name }) : void 0;
+                    let u = c ? S.intl.formatToPlainString(S.t['gBme//'], { name: r.name }) : d ? S.intl.formatToPlainString(S.t.WtSQwM, { name: r.name }) : void 0;
                     return (0, i.jsx)(a.MenuItem, {
                         id: 'play-'.concat(n.session_id),
                         action: function () {
@@ -113,12 +113,12 @@ function A(e) {
                                 analyticsParams: {
                                     location: {
                                         ...s,
-                                        object: S.qAy.LIST_ITEM
+                                        object: T.qAy.LIST_ITEM
                                     }
                                 }
                             });
                         },
-                        label: t ? T.intl.formatToPlainString(T.t.ZDZEJC, { name: r.name }) : T.intl.string(T.t.XKUw8v),
+                        label: t ? S.intl.formatToPlainString(S.t.ZDZEJC, { name: r.name }) : S.intl.string(S.t.XKUw8v),
                         subtext: u
                     });
                 })(e, n)

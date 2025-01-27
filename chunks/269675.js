@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(396828),
     v = n(293423),
     N = n(20967),
-    S = n(504762),
-    T = n(807152),
+    T = n(504762),
+    S = n(807152),
     b = n(176505),
     A = n(388032),
     Z = n(807859);
@@ -70,7 +70,7 @@ function x(e) {
                     (0, i.jsx)(g.Z.Title, { children: A.intl.string(A.t['KzCF//']) })
                 ]
             }),
-            (0, i.jsx)('div', { id: T.v }),
+            (0, i.jsx)('div', { id: S.v }),
             (0, i.jsx)('div', {
                 className: Z.content,
                 children: L
@@ -81,7 +81,7 @@ function x(e) {
                               children: D ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsx)(v.Z, { guild: n })
                           })
                       })
-                    : (0, i.jsx)(S.Z, {})
+                    : (0, i.jsx)(T.Z, {})
             })
         ]
     });

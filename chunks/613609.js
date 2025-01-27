@@ -27,12 +27,12 @@ t.Z = (e) => {
     let N = r.useCallback((e) => {
             _((t) => Math.max(t, e));
         }, []),
-        S = (0, u.gK)();
+        T = (0, u.gK)();
     return (0, i.jsx)('div', {
         className: g.page,
         children: (0, i.jsxs)(s.Z, {
             embedded: !0,
-            splash: S,
+            splash: T,
             waveState: f,
             showLogo: !1,
             updateWaveState: N,

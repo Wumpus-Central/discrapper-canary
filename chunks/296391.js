@@ -15,8 +15,8 @@ var l = t(442837),
     u = t(744802),
     f = t(493043),
     m = t(228168),
-    x = t(981631),
-    I = t(388032),
+    I = t(981631),
+    x = t(388032),
     p = t(189144),
     h = t(731218);
 function v(e) {
@@ -61,15 +61,15 @@ function v(e) {
                   }),
                   _.length > 0 &&
                       (0, i.jsx)(a.Z, {
-                          heading: I.intl.string(I.t.M0zgnZ),
+                          heading: x.intl.string(x.t.M0zgnZ),
                           subheading:
                               n.id === t.id
-                                  ? I.intl.format(I.t['4bk9Ag'], {
+                                  ? x.intl.format(x.t['4bk9Ag'], {
                                         learnMoreHook: (e, n) =>
                                             (0, i.jsx)(
                                                 o.Anchor,
                                                 {
-                                                    href: s.Z.getArticleURL(x.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                    href: s.Z.getArticleURL(I.BhN.ACTIVITY_STATUS_SETTINGS),
                                                     children: e
                                                 },
                                                 n

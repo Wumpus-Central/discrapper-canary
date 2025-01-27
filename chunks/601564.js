@@ -25,8 +25,8 @@ var i = n(200651),
     C = n(911314),
     v = n(429899),
     N = n(843445),
-    S = n(981631),
-    T = n(388032),
+    T = n(981631),
+    S = n(388032),
     b = n(32304);
 function A(e, t, n) {
     return (
@@ -53,7 +53,7 @@ class L extends r.PureComponent {
     componentDidMount() {
         (0, o.Y)(this.props.location),
             (this.stopListeningToHistory = (0, E.s1)().listen((e) => {
-                e.pathname.startsWith(S.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
+                e.pathname.startsWith(T.Z5c.APPLICATION_STORE) && (0, o.Y)(e);
             })),
             this.props.isAuthenticated && (0, c.tZ)(),
             g.Z.disable(),
@@ -66,7 +66,7 @@ class L extends r.PureComponent {
     }
     renderCustomErrorMessage() {
         return (0, i.jsxs)('div', {
-            children: [(0, i.jsx)('p', { children: T.intl.string(T.t['1PZdFx']) }), (0, i.jsx)('p', { children: T.intl.string(T.t.CvQlAA) })]
+            children: [(0, i.jsx)('p', { children: S.intl.string(S.t['1PZdFx']) }), (0, i.jsx)('p', { children: S.intl.string(S.t.CvQlAA) })]
         });
     }
     render() {
@@ -99,7 +99,7 @@ class L extends r.PureComponent {
                     { width: s } = this.props,
                     o = (0, l.parse)(a.search);
                 return (0, i.jsx)(d.Z, {
-                    page: S.ZY5.STORE_LISTING,
+                    page: T.ZY5.STORE_LISTING,
                     root: !0,
                     children: (0, i.jsx)(v.Z, {
                         skuId: t,
@@ -115,32 +115,32 @@ class L extends r.PureComponent {
                 (0, i.jsxs)(a.rs, {
                     children: [
                         (0, i.jsx)(a.AW, {
-                            path: S.Z5c.APPLICATION_STORE,
+                            path: T.Z5c.APPLICATION_STORE,
                             exact: !0,
                             render: () =>
                                 (0, i.jsx)(d.Z, {
-                                    page: S.ZY5.STORE_DIRECTORY_HOME,
+                                    page: T.ZY5.STORE_DIRECTORY_HOME,
                                     root: !0,
                                     children: (0, i.jsx)(C.Z, {})
                                 })
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: S.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId', ':slug'),
+                            path: T.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId', ':slug'),
                             render: this.renderStoreListing
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: S.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId'),
+                            path: T.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId'),
                             render: this.renderStoreListing
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: S.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug'),
+                            path: T.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug'),
                             render: this.renderStoreListing
                         }),
                         (0, i.jsx)(a.AW, {
-                            path: S.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId'),
+                            path: T.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(a.l_, { to: S.Z5c.APP })
+                        (0, i.jsx)(a.l_, { to: T.Z5c.APP })
                     ]
                 })
             );

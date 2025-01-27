@@ -1,6 +1,6 @@
 n.d(t, {
     O: function () {
-        return s;
+        return a;
     }
 }),
     n(47120),
@@ -8,7 +8,7 @@ n.d(t, {
 var r = n(192379),
     i = n(399606),
     l = n(1870);
-let s = (e) => {
+let a = (e) => {
     let t = (0, i.e7)([l.Z], () => l.Z.purchases);
     return (0, r.useMemo)(() => {
         let n = [],

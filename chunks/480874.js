@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(355350),
     v = n(307947),
     N = n(125855),
-    S = n(687683),
-    T = n(981631),
+    T = n(687683),
+    S = n(981631),
     b = n(388032),
     A = n(300755);
 function Z() {
@@ -43,7 +43,7 @@ function Z() {
             P(t.map((e) => e.channel.id));
         }, [t, P]);
     (0, u.Z)(() => {
-        g.default.track(T.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), p.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
+        g.default.track(S.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), p.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let R = r.useCallback(
             (e) => {
@@ -106,7 +106,7 @@ function Z() {
             [n, O, Z]
         );
     return 0 === t.length
-        ? (0, i.jsx)(v.Z, { section: S.pS.SPAM })
+        ? (0, i.jsx)(v.Z, { section: T.pS.SPAM })
         : (0, i.jsx)(s.bG, {
               navigator: x,
               children: (0, i.jsx)(s.SJ, {
@@ -124,8 +124,8 @@ function Z() {
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
-                              sectionHeight: S.oi,
-                              rowHeight: S.WN,
+                              sectionHeight: T.oi,
+                              rowHeight: T.WN,
                               renderSection: j,
                               renderRow: R,
                               sections: [t.length],

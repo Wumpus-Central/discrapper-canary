@@ -24,8 +24,8 @@ var i = n(200651),
     C = n(762756),
     v = n(308569),
     N = n(981631),
-    S = n(815660),
-    T = n(388032);
+    T = n(815660),
+    S = n(388032);
 function b() {
     let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
             action: E.Z.getAction(),
@@ -70,7 +70,7 @@ function b() {
                         });
                 },
                 {
-                    modalKey: S.M,
+                    modalKey: T.M,
                     Layer: g.ZP
                 }
             );
@@ -94,9 +94,9 @@ function b() {
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                title: T.intl.string(T.t.KLnLIC),
-                                body: T.intl.string(T.t.XGbCq6),
-                                confirmText: T.intl.string(T.t['3oK4q6'])
+                                title: S.intl.string(S.t.KLnLIC),
+                                body: S.intl.string(S.t.XGbCq6),
+                                confirmText: S.intl.string(S.t['3oK4q6'])
                             });
                     },
                     {
@@ -131,14 +131,14 @@ function b() {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>
                             (0, i.jsx)(e, {
-                                header: T.intl.string(T.t['2jxGen']),
-                                confirmText: T.intl.string(T.t['2jxGen']),
-                                cancelText: T.intl.string(T.t['ETE/oK']),
+                                header: S.intl.string(S.t['2jxGen']),
+                                confirmText: S.intl.string(S.t['2jxGen']),
+                                cancelText: S.intl.string(S.t['ETE/oK']),
                                 onConfirm: () => c.Z.logout(),
                                 ...n,
                                 children: (0, i.jsx)(t, {
                                     variant: 'text-md/normal',
-                                    children: T.intl.string(T.t.SUnWBA)
+                                    children: S.intl.string(S.t.SUnWBA)
                                 })
                             });
                     },

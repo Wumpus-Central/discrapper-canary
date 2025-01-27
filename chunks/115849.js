@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return T;
     }
 }),
     n(47120);
@@ -51,15 +51,15 @@ function N(e, t) {
             };
     }
 }
-function S() {
+function T() {
     let e = r.createRef(),
         t = r.createRef(),
         [n, l] = r.useReducer(N, E),
-        { canSend: s, hint: u, success: S, error: T } = n;
+        { canSend: s, hint: u, success: T, error: S } = n;
     return (
         r.useEffect(() => {
-            null != S && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
-        }, [S, e]),
+            null != T && (o()(null != e.current, 'Input is submitting when not mounted'), (e.current.value = ''), e.current.focus());
+        }, [T, e]),
         (0, i.jsxs)('form', {
             onSubmit: (t) => {
                 t.preventDefault(), o()(null != e.current, 'Input is submitted when not mounted');
@@ -105,8 +105,8 @@ function S() {
                     children: (0, i.jsxs)('div', {
                         ref: t,
                         className: a()(f.addFriendInputWrapper, {
-                            [f.success]: S,
-                            [f.error]: T
+                            [f.success]: T,
+                            [f.error]: S
                         }),
                         children: [
                             (0, i.jsx)(c.TextInput, {
@@ -149,8 +149,8 @@ function S() {
                                 'data-1p-ignore': !0,
                                 placeholder: g.intl.string(g.t['Rn/sLi']),
                                 'aria-label': g.intl.string(g.t['Rn/sLi']),
-                                'aria-invalid': null != T || void 0,
-                                'aria-describedby': null != T ? v : C
+                                'aria-invalid': null != S || void 0,
+                                'aria-describedby': null != S ? v : C
                             }),
                             null != u &&
                                 (0, i.jsx)('div', {
@@ -167,20 +167,20 @@ function S() {
                         ]
                     })
                 }),
-                null != T &&
+                null != S &&
                     (0, i.jsx)(c.FormText, {
                         role: 'alert',
                         id: v,
                         type: c.FormText.Types.ERROR,
                         className: _.marginTop8,
-                        children: T
+                        children: S
                     }),
-                null != S &&
+                null != T &&
                     (0, i.jsx)(c.FormText, {
                         role: 'status',
                         type: c.FormText.Types.SUCCESS,
                         className: _.marginTop8,
-                        children: S
+                        children: T
                     })
             ]
         })

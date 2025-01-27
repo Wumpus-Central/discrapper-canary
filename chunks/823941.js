@@ -9,8 +9,8 @@ n.d(t, {
 var r = n(200651),
     i = n(192379),
     l = n(120356),
-    s = n.n(l),
-    a = n(180650),
+    a = n.n(l),
+    s = n(180650),
     o = n(399606),
     c = n(481060),
     d = n(607070),
@@ -36,8 +36,8 @@ let B = (0, b.IC)(96),
         let { category: t } = e,
             { analyticsLocations: n } = (0, u.ZP)(),
             l = i.useRef(null),
-            s = (0, o.e7)([p.default], () => p.default.getCurrentUser());
-        return g.ZP.canUseCollectibles(s)
+            a = (0, o.e7)([p.default], () => p.default.getCurrentUser());
+        return g.ZP.canUseCollectibles(a)
             ? (0, r.jsx)(r.Fragment, { children: t.summary })
             : (0, r.jsx)(r.Fragment, {
                   children: I.intl.format(I.t['9hafRk'], {
@@ -85,12 +85,12 @@ function Z(e) {
         Z = (0, E.ZS)(p.skuId),
         N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         F = (0, o.e7)([f.Z], () => f.Z.isFocused());
-    if (p.skuId === a.T.CHANCE) return (0, r.jsx)(k.O, { category: p });
+    if (p.skuId === s.T.CHANCE) return (0, r.jsx)(k.O, { category: p });
     let P = !!(null == Z ? void 0 : Z.showDarkBannerText),
         w = null !== (C = null == Z ? void 0 : Z.animatedBanner) && void 0 !== C ? C : null === (t = p.bannerAsset) || void 0 === t ? void 0 : t.animated;
     return (0, r.jsxs)(v.Z, {
         asset: null !== (h = null === (n = p.bannerAsset) || void 0 === n ? void 0 : n.static) && void 0 !== h ? h : p.banner,
-        className: s()(S.shopBanner, g),
+        className: a()(S.shopBanner, g),
         style:
             null != I
                 ? {
@@ -124,9 +124,9 @@ function Z(e) {
                   })
                 : (0, r.jsx)(c.Spacer, { size: 96 }),
             (0, r.jsx)(c.Text, {
-                className: s()(S.summary, { [S.blackSummary]: P }),
+                className: a()(S.summary, { [S.blackSummary]: P }),
                 variant: 'text-md/normal',
-                children: p.skuId === a.T.DISXCORE ? (0, r.jsx)(T, { category: p }) : p.summary
+                children: p.skuId === s.T.DISXCORE ? (0, r.jsx)(T, { category: p }) : p.summary
             }),
             !L &&
                 (0, r.jsx)(_.Z, {

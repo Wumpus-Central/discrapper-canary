@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return s;
+        return a;
     }
 });
 var r = n(818083),
@@ -19,4 +19,4 @@ let l = (0, r.B)({
         ],
         commonTriggerPoint: i.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    s = (e) => l.useExperiment({ location: e }).enabled;
+    a = (e) => l.useExperiment({ location: e }).enabled;

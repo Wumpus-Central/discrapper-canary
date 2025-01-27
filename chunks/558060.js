@@ -7,8 +7,8 @@ var r = n(200651);
 n(192379);
 var i = n(120356),
     l = n.n(i),
-    s = n(481060),
-    a = n(884697),
+    a = n(481060),
+    s = n(884697),
     o = n(409116),
     c = n(200615),
     d = n(981631),
@@ -16,17 +16,17 @@ var i = n(120356),
     C = n(487667);
 function h(e) {
     let { product: t, isPremiumUser: n, discount: i, className: h, nitroUpsell: p = !1 } = e,
-        f = (0, a.ql)(t, d.tuJ.DEFAULT);
+        f = (0, s.ql)(t, d.tuJ.DEFAULT);
     if (null == f) return null;
     if (f.amount <= 0)
         return (0, r.jsx)('div', {
             className: l()(C.priceTagsContainer, h),
             children: (0, r.jsx)(o.F, { price: f })
         });
-    let m = (0, a.ql)(t, d.tuJ.PREMIUM_TIER_2),
-        g = !n && !(0, a.x6)(t),
+    let m = (0, s.ql)(t, d.tuJ.PREMIUM_TIER_2),
+        g = !n && !(0, s.x6)(t),
         b =
-            (0, a.x6)(t) && n
+            (0, s.x6)(t) && n
                 ? {
                       ...f,
                       amount: i.original
@@ -37,7 +37,7 @@ function h(e) {
         children: [
             (0, r.jsx)(o.F, {
                 price: b,
-                discount: n ? a.f_ : i,
+                discount: n ? s.f_ : i,
                 className: l()(C.price, {
                     [C.striked]: n,
                     [C.dimmed]: n,
@@ -47,10 +47,10 @@ function h(e) {
             null != m &&
                 (0, r.jsx)(o.F, {
                     price: m,
-                    discount: n ? i : a.f_,
+                    discount: n ? i : s.f_,
                     renderPrice: p
                         ? (e) =>
-                              (0, r.jsx)(s.Text, {
+                              (0, r.jsx)(a.Text, {
                                   variant: 'text-xs/medium',
                                   children: u.intl.format(u.t.Sv8iiY, {
                                       price: e,
@@ -65,12 +65,12 @@ function h(e) {
                         [C.fullPrice]: g
                     }),
                     variant: n ? void 0 : 'text-xs/semibold',
-                    icon: (0, r.jsx)(s.Tooltip, {
+                    icon: (0, r.jsx)(a.Tooltip, {
                         text: u.intl.string(u.t.MPFyJy),
                         'aria-label': u.intl.string(u.t.X3Ekj4),
                         children: (e) => {
                             let { ...t } = e;
-                            return (0, r.jsx)(s.NitroWheelIcon, {
+                            return (0, r.jsx)(a.NitroWheelIcon, {
                                 size: 'md',
                                 color: 'currentColor',
                                 ...t,
