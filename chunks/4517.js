@@ -202,7 +202,14 @@ function B(e) {
                               emoji: null !== (n = null == i ? void 0 : i.name) && void 0 !== n ? n : '',
                               status: s
                           }),
-                          onMouseEnter: () => I({ action: 'HOVER_CUSTOM_STATUS' }),
+                          onMouseEnter: () => {
+                              I({ action: 'HOVER_CUSTOM_STATUS' }), $(!0);
+                          },
+                          onMouseLeave: () => {
+                              $(!1);
+                          },
+                          onFocus: () => $(!0),
+                          onBlur: () => $(!1),
                           children: [er, null == E ? void 0 : E(W)]
                       })
                   })
