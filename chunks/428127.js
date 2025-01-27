@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return I;
     }
 });
 var i = n(200651),
@@ -9,77 +9,76 @@ var i = n(200651),
     a = n.n(r),
     o = n(642128),
     s = n(442837),
-    c = n(692547),
-    u = n(481060),
-    d = n(540059),
-    h = n(492162),
-    p = n(237583),
-    m = n(451478),
-    f = n(934415),
-    g = n(968847),
-    v = n(388032),
-    C = n(706091);
-let x = {
+    c = n(481060),
+    u = n(540059),
+    d = n(492162),
+    h = n(237583),
+    p = n(451478),
+    m = n(934415),
+    f = n(968847),
+    g = n(388032),
+    v = n(706091);
+let C = {
     friction: 30,
     tension: 300
 };
-function I(e) {
+function x(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: r } = e,
         o = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
-        s = (0, h.Z)(n.id),
-        d = l.useCallback(
+        s = (0, d.Z)(n.id),
+        u = l.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), r();
             },
             [r]
         ),
-        m = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
-        g = (0, f.c4)({
-            channels: m,
+        p = null !== (t = null == o ? void 0 : o.getChannelRecords()) && void 0 !== t ? t : [],
+        f = (0, m.c4)({
+            channels: p,
             selectedChannelId: null,
             selectedVoiceChannelId: null,
             voiceStates: s
         });
-    return (0, i.jsxs)(u.Clickable, {
-        className: a()(C.bar),
-        onClick: d,
+    return (0, i.jsxs)(c.Clickable, {
+        className: a()(v.bar, v.voiceBar),
+        onClick: u,
         children: [
-            (0, i.jsx)(u.VoiceNormalIcon, {
+            (0, i.jsx)(c.VoiceNormalIcon, {
                 size: 'custom',
-                className: C.voiceChannelsIcon,
+                className: v.voiceChannelsIcon,
                 width: 14,
                 height: 14,
-                color: c.Z.unsafe_rawColors.GREEN_330.css
+                color: 'currentColor'
             }),
-            (0, i.jsx)(u.Text, {
+            (0, i.jsx)(c.Text, {
                 variant: 'text-xs/semibold',
                 color: 'text-positive',
-                className: C.barText,
-                children: v.intl.format(v.t['fDlr+P'], { count: g.length })
+                className: v.barText,
+                children: g.intl.format(g.t['fDlr+P'], { count: f.length })
             }),
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(h.Z, {
                 guildId: n.id,
-                className: C.voiceChannelsUsers,
-                users: g.slice(0, 4),
+                className: v.voiceChannelsUsers,
+                users: f.slice(0, 4),
                 renderMoreUsers: () => null,
                 max: 4,
-                size: u.AvatarSizes.SIZE_16
+                size: c.AvatarSizes.SIZE_16
             })
         ]
     });
 }
-function _(e) {
-    let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: c, jumpToChannel: h } = e,
-        p = (0, d.Q3)('UnreadBar'),
-        { bottomBar: f, topBar: _ } = (0, s.cj)([g.Z], () => g.Z.getUnreadStateForGuildId(n.id)),
-        Z = (0, s.e7)([m.Z], () => m.Z.isFocused()),
-        { mode: b, mentionCount: S, targetChannelId: N } = 'bottom' === t ? f : _,
-        E = b === g.x.HIDDEN,
-        y = (0, u.useSpring)(
+function I(e) {
+    let { position: t, guildChannels: n, guildChannelsVersion: r, jumpToVoiceChannels: d, jumpToChannel: h } = e,
+        m = (0, u.Q3)('UnreadBar'),
+        { bottomBar: I, topBar: _ } = (0, s.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
+        Z = (0, s.e7)([p.Z], () => p.Z.isFocused()),
+        { mode: b, mentionCount: S, targetChannelId: N } = 'bottom' === t ? I : _,
+        E = b === f.x.HIDDEN,
+        y = (0, c.useSpring)(
             {
                 to: { transform: E ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
-                config: x
+                config: C
             },
             Z ? 'respect-motion-settings' : 'animate-never'
         ),
@@ -90,59 +89,59 @@ function _(e) {
             [h, N]
         );
     return (0, i.jsx)('div', {
-        className: a()(C.container, {
-            [C.top]: 'top' === t,
-            [C.bottom]: 'bottom' === t
+        className: a()(v.container, {
+            [v.top]: 'top' === t,
+            [v.bottom]: 'bottom' === t
         }),
         children: (0, i.jsx)(o.animated.div, {
-            className: C.containerPadding,
+            className: v.containerPadding,
             style: y,
             'aria-hidden': E,
             children:
-                b === g.x.HIDDEN
-                    ? (0, i.jsx)('div', { className: a()(C.bar, C.emptyBar) })
-                    : b === g.x.UNREAD
-                      ? (0, i.jsxs)(u.Clickable, {
-                            className: C.bar,
+                b === f.x.HIDDEN
+                    ? (0, i.jsx)('div', { className: a()(v.bar, v.emptyBar) })
+                    : b === f.x.UNREAD
+                      ? (0, i.jsxs)(c.Clickable, {
+                            className: v.bar,
                             onClick: j,
                             children: [
                                 'bottom' === t
-                                    ? (0, i.jsx)(u.ChevronSmallDownIcon, {
+                                    ? (0, i.jsx)(c.ChevronSmallDownIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: C.unreadIcon,
+                                          className: v.unreadIcon,
                                           height: 14,
                                           width: 14
                                       })
-                                    : (0, i.jsx)(u.ChevronSmallUpIcon, {
+                                    : (0, i.jsx)(c.ChevronSmallUpIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
-                                          className: C.unreadIcon,
+                                          className: v.unreadIcon,
                                           height: 14,
                                           width: 14
                                       }),
-                                (0, i.jsx)(u.Text, {
+                                (0, i.jsx)(c.Text, {
                                     variant: 'text-xs/semibold',
                                     color: 'interactive-normal',
-                                    className: C.barText,
-                                    children: v.intl.string(v.t.FCRiT0)
+                                    className: v.barText,
+                                    children: g.intl.string(g.t.FCRiT0)
                                 })
                             ]
                         })
-                      : b === g.x.MENTIONS
-                        ? (0, i.jsx)(u.Clickable, {
-                              className: a()(C.bar, C.mentionsBar),
+                      : b === f.x.MENTIONS
+                        ? (0, i.jsx)(c.Clickable, {
+                              className: a()(v.bar, v.mentionsBar),
                               onClick: j,
-                              children: (0, i.jsx)(u.Text, {
+                              children: (0, i.jsx)(c.Text, {
                                   variant: 'text-xs/semibold',
-                                  color: p ? 'text-primary' : 'status-danger-text',
-                                  className: C.barText,
-                                  children: v.intl.format(v.t.EQcLys, { count: S })
+                                  color: m ? 'text-primary' : 'status-danger-text',
+                                  className: v.barText,
+                                  children: g.intl.format(g.t.EQcLys, { count: S })
                               })
                           })
-                        : b === g.x.VOICE_CHANNELS
-                          ? (0, i.jsx)(I, {
-                                jumpToVoiceChannels: c,
+                        : b === f.x.VOICE_CHANNELS
+                          ? (0, i.jsx)(x, {
+                                jumpToVoiceChannels: d,
                                 guildChannels: n,
                                 guildChannelsVersion: r
                             })

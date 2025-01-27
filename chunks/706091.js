@@ -9,5 +9,6 @@ e.exports = {
     unreadIcon: 'unreadIcon_eba0ba',
     voiceChannelsIcon: 'voiceChannelsIcon_eba0ba',
     barText: 'barText_eba0ba',
-    voiceChannelsUsers: 'voiceChannelsUsers_eba0ba'
+    voiceChannelsUsers: 'voiceChannelsUsers_eba0ba',
+    voiceBar: 'voiceBar_eba0ba'
 };
