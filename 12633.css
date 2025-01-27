@@ -26995,6 +26995,7 @@ body .headerAnimation_a27f2f {
 }
 
 .closeButton_fff54c {
+    margin: var(--modal-vertical-padding)var(--modal-horizontal-padding);
     margin-left: auto
 }
 
