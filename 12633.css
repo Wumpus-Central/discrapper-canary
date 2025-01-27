@@ -7199,7 +7199,7 @@ html:not(.visual-refresh).theme-dark.checked_f6cde8 {
 @use postcss-pxtorem;
 
 .density-compact.visual-refresh {
-    --chat-markup-line-height: 22px
+    --chat-markup-line-height: 1.375rem
 }
 
 .markup_f8f345 {
@@ -62446,20 +62446,20 @@ html.disable-forced-colors * {
 }
 
 :root {
+    --chat-resize-handle-width: 8px;
+    --chat-input-icon-size: 24px;
+    --chat-markup-line-height: 1.375rem;
     --guildbar-avatar-size: 48px;
     --guildbar-folder-size: 48px;
     --modal-horizontal-padding: 16px;
-    --modal-vertical-padding: 16px;
-    --chat-resize-handle-width: 8px;
-    --chat-input-icon-size: 24px;
-    --chat-markup-line-height: 22px
+    --modal-vertical-padding: 16px
 }
 
 .visual-refresh {
-    --guildbar-avatar-size: 40px;
-    --modal-horizontal-padding: 24px;
     --chat-input-icon-size: 20px;
-    --chat-markup-line-height: 24px
+    --chat-markup-line-height: 1.5;
+    --guildbar-avatar-size: 40px;
+    --modal-horizontal-padding: 24px
 }
 
 html,

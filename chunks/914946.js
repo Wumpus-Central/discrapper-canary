@@ -191,17 +191,18 @@ function V(e, t, n) {
     };
 }
 function H(e, t, n) {
-    let { isSpamRequest: i, applicationId: r, userIgnored: l } = null != n ? n : {},
-        a = N.default.getUser(t);
+    let { isSpamRequest: i, applicationId: r, userIgnored: l, originApplicationId: a } = null != n ? n : {},
+        s = N.default.getUser(t);
     return {
         type: e,
-        user: null != a ? (0, L.Z)(a) : null,
+        user: null != s ? (0, L.Z)(s) : null,
         presence: {
             status: v.Z.getStatus(t),
             activity: null != r ? v.Z.getApplicationActivity(t, r) : v.Z.getPrimaryActivity(t)
         },
         isSpamRequest: i,
-        userIgnored: l
+        userIgnored: l,
+        originApplicationId: a
     };
 }
 function F(e) {

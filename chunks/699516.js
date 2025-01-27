@@ -28,33 +28,35 @@ let m = {},
     v = new Set(),
     y = new Set(),
     b = new Set(),
-    I = 0,
+    I = {},
     T = 0,
     S = 0,
     A = 0,
     C = 0,
-    N = 0;
-function R() {
-    A = Object.values(m).length;
+    N = 0,
+    R = 0;
+function O() {
+    C = Object.values(m).length;
     let { [h.OGo.PENDING_INCOMING]: e = 0, [h.OGo.PENDING_OUTGOING]: n = 0, [h.OGo.FRIEND]: r = 0 } = s().countBy(Object.values(m), (e) => e);
-    (T = n), (S = r), (C = v.size), (N = b.size), (I = Math.max(e - C - N, 0));
+    (S = n), (A = r), (N = v.size), (R = b.size), (T = Math.max(e - N - R, 0));
 }
-function O(e) {
+function D(e) {
     (m = {}),
         (g = {}),
         (E = {}),
         (y = new Set()),
         (v = new Set()),
         (b = new Set()),
+        (I = {}),
         e.relationships.forEach((e) => {
-            (m[e.id] = e.type), null != e.nickname && (g[e.id] = e.nickname), null != e.since && (E[e.id] = e.since), e.is_spam_request && v.add(e.id), (0, c.JX)({ location: 'relationship_store' }) && e.user_ignored && (y.add(e.id), e.type === h.OGo.PENDING_INCOMING && b.add(e.id));
+            (m[e.id] = e.type), null != e.nickname && (g[e.id] = e.nickname), null != e.since && (E[e.id] = e.since), e.is_spam_request && v.add(e.id), null != e.origin_application_id && (I[e.id] = e.origin_application_id), (0, c.JX)({ location: 'relationship_store' }) && e.user_ignored && (y.add(e.id), e.type === h.OGo.PENDING_INCOMING && b.add(e.id));
         }),
-        R();
-}
-function D(e) {
-    (m = { ...e.relationships }), R();
+        O();
 }
 function L(e) {
+    (m = { ...e.relationships }), O();
+}
+function x(e) {
     let n = m[e.relationship.id];
     (m = {
         ...m,
@@ -70,9 +72,14 @@ function L(e) {
                 ...E,
                 [e.relationship.id]: e.relationship.since
             }),
+        null != e.relationship.originApplicationId &&
+            (I = {
+                ...I,
+                [e.relationship.id]: e.relationship.originApplicationId
+            }),
         e.relationship.isSpamRequest ? v.add(e.relationship.id) : v.delete(e.relationship.id),
         (0, c.JX)({ location: 'RelationshipStore::handleRelationshipAdd' }) && e.relationship.userIgnored ? (y.add(e.relationship.id), e.relationship.type === h.OGo.PENDING_INCOMING ? b.add(e.relationship.id) : e.relationship.type === h.OGo.FRIEND && b.delete(e.relationship.id)) : (y.delete(e.relationship.id), b.delete(e.relationship.id)),
-        R(),
+        O(),
         e.relationship.type === h.OGo.FRIEND &&
             n === h.OGo.PENDING_OUTGOING &&
             u.Z.dispatch({
@@ -80,10 +87,10 @@ function L(e) {
                 user: e.relationship.user
             });
 }
-function x(e) {
-    (m = { ...m }), delete m[e.relationship.id], null != g[e.relationship.id] && ((g = { ...g }), delete g[e.relationship.id]), null != E[e.relationship.id] && ((E = { ...E }), delete E[e.relationship.id]), !e.relationship.userIgnored && (y.delete(e.relationship.id), b.delete(e.relationship.id)), v.delete(e.relationship.id), R();
-}
 function w(e) {
+    (m = { ...m }), delete m[e.relationship.id], null != g[e.relationship.id] && ((g = { ...g }), delete g[e.relationship.id]), null != E[e.relationship.id] && ((E = { ...E }), delete E[e.relationship.id]), null != I[e.relationship.id] && ((I = { ...I }), delete I[e.relationship.id]), !e.relationship.userIgnored && (y.delete(e.relationship.id), b.delete(e.relationship.id)), v.delete(e.relationship.id), O();
+}
+function P(e) {
     let { relationship: n } = e;
     (m = {
         ...m,
@@ -92,17 +99,18 @@ function w(e) {
         null == n.since ? delete E[n.id] : (E[n.id] = n.since),
         null == n.nickname ? delete g[n.id] : (g[n.id] = n.nickname),
         n.isSpamRequest ? v.add(n.id) : v.delete(n.id),
+        null == n.originApplicationId ? delete I[n.id] : (I[n.id] = n.originApplicationId),
         (0, c.JX)({ location: 'RelationshipStore::handleRelationshipUpdate' }) && n.userIgnored ? (y.add(n.id), n.type === h.OGo.PENDING_INCOMING && b.add(n.id)) : (y.delete(n.id), b.delete(n.id)),
-        R();
+        O();
 }
-function P(e) {
+function M(e) {
     (m = { ...m }),
         f.default.keys(m).forEach((e) => {
             m[e] === h.OGo.PENDING_INCOMING && (delete m[e], v.delete(e), b.delete(e));
         }),
-        R();
+        O();
 }
-class M extends (i = l.ZP.Store) {
+class k extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(p.default);
     }
@@ -141,22 +149,22 @@ class M extends (i = l.ZP.Store) {
         return m[e] === h.OGo.PENDING_INCOMING && !this.isSpam(e) && !this.isIgnored(e);
     }
     getPendingCount() {
-        return I;
-    }
-    getSpamCount() {
-        return C;
-    }
-    getPendingIgnoredCount() {
-        return (0, c.JX)({ location: 'RelationshipStore::getPendingIgnoredCount' }) ? N : 0;
-    }
-    getOutgoingCount() {
         return T;
     }
-    getFriendCount() {
+    getSpamCount() {
+        return N;
+    }
+    getPendingIgnoredCount() {
+        return (0, c.JX)({ location: 'RelationshipStore::getPendingIgnoredCount' }) ? R : 0;
+    }
+    getOutgoingCount() {
         return S;
     }
-    getRelationshipCount() {
+    getFriendCount() {
         return A;
+    }
+    getRelationshipCount() {
+        return C;
     }
     getRelationships() {
         return m;
@@ -189,13 +197,16 @@ class M extends (i = l.ZP.Store) {
     getBlockedOrIgnoredIDs() {
         return f.default.keys(m).filter((e) => this.isBlockedOrIgnored(e));
     }
+    getOriginApplicationId(e) {
+        return I[e];
+    }
 }
-_(M, 'displayName', 'RelationshipStore'),
-    (n.Z = new M(u.Z, {
-        CONNECTION_OPEN: O,
-        OVERLAY_INITIALIZE: D,
-        RELATIONSHIP_ADD: L,
-        RELATIONSHIP_REMOVE: x,
-        RELATIONSHIP_UPDATE: w,
-        RELATIONSHIP_PENDING_INCOMING_REMOVED: P
+_(k, 'displayName', 'RelationshipStore'),
+    (n.Z = new k(u.Z, {
+        CONNECTION_OPEN: D,
+        OVERLAY_INITIALIZE: L,
+        RELATIONSHIP_ADD: x,
+        RELATIONSHIP_REMOVE: w,
+        RELATIONSHIP_UPDATE: P,
+        RELATIONSHIP_PENDING_INCOMING_REMOVED: M
     }));

@@ -33,13 +33,16 @@ var i = r(200651),
 function L(e) {
     let { user: n, currentUser: r, displayProfile: L, guild: x, isHovering: w, onOpenProfile: P, channelId: M, onClose: k } = e,
         U = f.ZP.useName(null == x ? void 0 : x.id, M, n),
-        B = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(n.id)),
-        G = (0, a.Wu)([l.Z], () => l.Z.getGameRelationshipsForUser(n.id, O.OGo.PENDING_INCOMING)),
-        Z = (0, s.wn)({ location: 'UserProfilePopoutBody' }),
-        F = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        V = n.id === r.id,
-        { dimissibleUpsellsEnabled: j } = (0, h.u)({ location: 'UserProfilePopoutBody' }),
-        H = (0, p.I5)(r);
+        { relationshipType: B, originApplicationId: G } = (0, a.cj)([c.Z], () => ({
+            relationshipType: c.Z.getRelationshipType(n.id),
+            originApplicationId: c.Z.getOriginApplicationId(n.id)
+        })),
+        Z = (0, a.Wu)([l.Z], () => l.Z.getGameRelationshipsForUser(n.id, O.OGo.PENDING_INCOMING)),
+        F = (0, s.wn)({ location: 'UserProfilePopoutBody' }),
+        V = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        j = n.id === r.id,
+        { dimissibleUpsellsEnabled: H } = (0, h.u)({ location: 'UserProfilePopoutBody' }),
+        Y = (0, p.I5)(r);
     return (0, i.jsxs)(o.Scroller, {
         fade: !0,
         className: D.body,
@@ -64,7 +67,7 @@ function L(e) {
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(E.Z, { userId: n.id }),
-                        !F &&
+                        !V &&
                             (0, i.jsx)(T.Z, {
                                 userId: n.id,
                                 isHovering: w,
@@ -78,11 +81,12 @@ function L(e) {
                     children: (0, i.jsx)(v.Z, {
                         user: n,
                         guildId: null == x ? void 0 : x.id,
-                        channelId: M
+                        channelId: M,
+                        applicationId: F ? G : void 0
                     })
                 }),
-            Z &&
-                G.map((e) =>
+            F &&
+                Z.map((e) =>
                     (0, i.jsx)(
                         b.Z.Overlay,
                         {
@@ -100,7 +104,7 @@ function L(e) {
                 user: n,
                 source: y.t.POPOUT
             }),
-            !V &&
+            !j &&
                 (0, i.jsx)(N.Z, {
                     user: n,
                     onOpenProfile: (e) => (null == P ? void 0 : P({ section: e }))
@@ -110,13 +114,13 @@ function L(e) {
                 : (0, i.jsx)(S.Z, {
                       user: n,
                       bio: null == L ? void 0 : L.bio,
-                      hidePersonalInformation: F,
+                      hidePersonalInformation: V,
                       onClose: k
                   }),
-            j &&
-                V &&
+            H &&
+                j &&
                 (0, i.jsx)(m.Z, {
-                    isPremiumUser: H,
+                    isPremiumUser: Y,
                     onInteraction: k,
                     className: D.upsell
                 }),

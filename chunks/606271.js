@@ -248,7 +248,7 @@ class y {
     }
     handleRelationshipAdd(e) {
         let {
-            relationship: { id: t, type: n, isSpamRequest: i, userIgnored: r }
+            relationship: { id: t, type: n, isSpamRequest: i, userIgnored: r, originApplicationId: l }
         } = e;
         if (0 !== this.rpcServer.subscriptions.length)
             this.rpcServer.dispatchToSubscriptions(
@@ -256,7 +256,8 @@ class y {
                 {},
                 (0, S.cD)(n, t, {
                     isSpamRequest: i,
-                    userIgnored: r
+                    userIgnored: r,
+                    originApplicationId: l
                 })
             );
     }

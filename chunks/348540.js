@@ -30,11 +30,14 @@ var i = n(200651),
     T = n(866669);
 function j(e) {
     let { user: t, currentUser: n, displayProfile: j, channel: A, isHovering: y, onOpenProfile: P } = e,
-        M = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
-        R = (0, l.Wu)([a.Z], () => a.Z.getGameRelationshipsForUser(t.id, N.OGo.PENDING_INCOMING)),
-        L = (0, r.wn)({ location: 'UserProfilePanelBody' }),
-        k = (0, l.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        O = (0, l.e7)([u.Z], () => {
+        { relationshipType: M, originApplicationId: R } = (0, l.cj)([o.Z], () => ({
+            relationshipType: o.Z.getRelationshipType(t.id),
+            originApplicationId: o.Z.getOriginApplicationId(t.id)
+        })),
+        L = (0, l.Wu)([a.Z], () => a.Z.getGameRelationshipsForUser(t.id, N.OGo.PENDING_INCOMING)),
+        k = (0, r.wn)({ location: 'UserProfilePanelBody' }),
+        O = (0, l.e7)([c.Z], () => c.Z.hidePersonalInformation),
+        D = (0, l.e7)([u.Z], () => {
             var e;
             return null === (e = u.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
         });
@@ -54,7 +57,7 @@ function j(e) {
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(g.Z, { userId: t.id }),
-                        !k &&
+                        !O &&
                             (0, i.jsx)(b.Z, {
                                 userId: t.id,
                                 isHovering: y,
@@ -67,11 +70,12 @@ function j(e) {
                 (0, i.jsx)(I.Z.Overlay, {
                     children: (0, i.jsx)(C.Z, {
                         user: t,
-                        channelId: A.id
+                        channelId: A.id,
+                        applicationId: k ? R : void 0
                     })
                 }),
-            L &&
-                R.map((e) =>
+            k &&
+                L.map((e) =>
                     (0, i.jsx)(
                         I.Z.Overlay,
                         {
@@ -98,7 +102,7 @@ function j(e) {
             (0, i.jsxs)(I.Z.Overlay, {
                 className: T.overlay,
                 children: [
-                    !k &&
+                    !O &&
                         (null == j ? void 0 : j.bio) != null &&
                         (null == j ? void 0 : j.bio) !== '' &&
                         (0, i.jsx)(_.Z, {
@@ -111,10 +115,10 @@ function j(e) {
                                 userId: t.id
                             })
                         }),
-                    (null == O ? void 0 : O.popularApplicationCommandIds) != null &&
+                    (null == D ? void 0 : D.popularApplicationCommandIds) != null &&
                         (0, i.jsx)(h.Z, {
-                            applicationId: O.id,
-                            commandIds: O.popularApplicationCommandIds,
+                            applicationId: D.id,
+                            commandIds: D.popularApplicationCommandIds,
                             channel: A
                         }),
                     (0, i.jsx)(_.Z, {

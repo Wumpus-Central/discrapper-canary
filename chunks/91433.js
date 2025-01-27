@@ -34,28 +34,29 @@ function g(e) {
         N = a.useCallback(() => {
             A(), I({ action: v ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
         }, [A, v, I]),
-        R = (0, c.q)(g);
-    return v && null == R
+        R = null != g,
+        O = (0, c.q)(g);
+    return R && null == O
         ? null
         : (0, i.jsxs)('div', {
               className: s()(m.container, y),
               children: [
-                  v
+                  R
                       ? (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: _.intl.format(_.t.syHjLC, {
+                            children: _.intl.format(v ? _.t.syHjLC : _.t.V15uUF, {
                                 username: b,
                                 applicationIcon: () =>
                                     (0, i.jsx)(
                                         d.Z,
                                         {
                                             className: m.gameIcon,
-                                            game: R,
+                                            game: O,
                                             size: d.Z.Sizes.XXSMALL
                                         },
-                                        null == R ? void 0 : R.id
+                                        null == O ? void 0 : O.id
                                     ),
-                                applicationName: null == R ? void 0 : R.name
+                                applicationName: null == O ? void 0 : O.name
                             })
                         })
                       : (0, i.jsx)(l.Text, {
