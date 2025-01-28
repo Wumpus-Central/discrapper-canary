@@ -56,7 +56,7 @@ t.Z = (e) => {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: a.tokens.colors.WHITE.css
+                    color: a.tokens.colors.TEXT_PRIMARY.css
                 }),
                 inModal: t
             }),
@@ -67,7 +67,7 @@ t.Z = (e) => {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: a.tokens.colors.WHITE.css
+                    color: a.tokens.colors.TEXT_PRIMARY.css
                 }),
                 inModal: t
             }),
@@ -77,7 +77,7 @@ t.Z = (e) => {
                 icon: (0, i.jsx)(o.Z, {
                     width: 20,
                     height: 20,
-                    color: a.tokens.colors.WHITE.css
+                    color: a.tokens.colors.TEXT_PRIMARY.css
                 }),
                 inModal: t
             }),
@@ -94,7 +94,7 @@ t.Z = (e) => {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: a.tokens.colors.WHITE.css
+                    color: a.tokens.colors.TEXT_PRIMARY.css
                 }),
                 inModal: t
             })

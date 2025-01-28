@@ -1,18 +1,18 @@
-n.d(t, {
+A.d(t, {
     Z: function () {
         return a;
     }
 });
-var A = n(200651);
-n(192379);
-var r = n(952265);
+var n = A(200651);
+A(192379);
+var r = A(952265);
 function a(e) {
     (0, r.ZD)(async () => {
-        let { default: t } = await Promise.resolve().then(n.bind(n, 776045));
-        return (n) =>
-            (0, A.jsx)(t, {
+        let { default: t } = await Promise.resolve().then(A.bind(A, 776045));
+        return (A) =>
+            (0, n.jsx)(t, {
                 ...e,
-                ...n
+                ...A
             });
     });
 }

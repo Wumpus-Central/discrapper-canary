@@ -21,7 +21,7 @@ let f = {
     BOTTOM: d.verticalStatusWarningBlock
 };
 function p(e) {
-    let { className: t, color: s = l.W.YELLOW, buttonPosition: i = f.BOTTOM, notice: p, ctaLabel: g, ctaLoading: x, ctaDisabled: b, ctaClassName: h, onClick: m } = e,
+    let { className: t, color: s = l.W.YELLOW, buttonPosition: i = f.BOTTOM, notice: p, ctaLabel: g, ctaLoading: b, ctaDisabled: x, ctaClassName: h, onClick: m } = e,
         v = (0, a.ZP)();
     return (0, n.jsx)(u.Z, {
         className: r()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != g }, t),
@@ -43,8 +43,8 @@ function p(e) {
                             color: (0, o.wj)(v) ? c.Button.Colors.WHITE : c.Button.Colors.CUSTOM,
                             size: c.ButtonSizes.MEDIUM,
                             onClick: m,
-                            disabled: b,
-                            submitting: x,
+                            disabled: x,
+                            submitting: b,
                             children: (0, n.jsx)(c.Text, {
                                 className: d.ctaButtonText,
                                 variant: 'text-sm/medium',

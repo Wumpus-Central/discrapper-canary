@@ -18,8 +18,8 @@ var n = s(200651),
     f = s(639119),
     p = s(474936),
     g = s(388032),
-    x = s(229830);
-function b(e) {
+    b = s(229830);
+function x(e) {
     let { isTabSelected: t, expiresAt: s, trialDuration: r, className: u } = e,
         d = i.useMemo(() => Date.parse(s), [s]),
         f = (0, a.Z)(d, 60000);
@@ -34,14 +34,14 @@ function b(e) {
               children: (e) =>
                   (0, n.jsxs)('div', {
                       ...e,
-                      className: o()(x.premiumTrialBadge, x.premiumTrialAcknowledgedBadge, u, { [x.premiumTrialBadgeSelected]: t }),
+                      className: o()(b.premiumTrialBadge, b.premiumTrialAcknowledgedBadge, u, { [b.premiumTrialBadgeSelected]: t }),
                       children: [
                           (0, n.jsx)(c.ClockIcon, {
                               size: 'custom',
                               width: 20,
                               height: 20,
                               color: 'currentColor',
-                              className: x.premiumTrialBadgeIcon
+                              className: b.premiumTrialBadgeIcon
                           }),
                           (0, n.jsxs)(c.Text, {
                               variant: 'eyebrow',
@@ -64,7 +64,7 @@ function h(e) {
         isTabSelected: r,
         badgeCopy: l,
         offerExpiresAt: o.expires_at,
-        className: ((s = a), (i = null == c ? void 0 : c.sku_id), s ? x.premiumTrialBadgeV2 : i === p.Si.TIER_2 ? x.premiumTrialTier2UnacknowledgedBadge : x.premiumTrialTier0UnacknowledgedBadge)
+        className: ((s = a), (i = null == c ? void 0 : c.sku_id), s ? b.premiumTrialBadgeV2 : i === p.Si.TIER_2 ? b.premiumTrialTier2UnacknowledgedBadge : b.premiumTrialTier0UnacknowledgedBadge)
     });
 }
 function m(e) {
@@ -75,23 +75,23 @@ function m(e) {
         isTabSelected: t,
         badgeCopy: i ? r : g.intl.string(g.t['/DTtr6']),
         offerExpiresAt: s.expires_at,
-        className: o ? x.premiumTrialBadgeV2 : x.premiumDiscountUnacknowledgedBadge
+        className: o ? b.premiumTrialBadgeV2 : b.premiumDiscountUnacknowledgedBadge
     });
 }
 function v(e) {
     let { isTabSelected: t, badgeCopy: s, offerExpiresAt: i, className: r, ackedClassName: a } = e;
     return null != i
-        ? (0, n.jsx)(b, {
+        ? (0, n.jsx)(x, {
               className: a,
               expiresAt: i,
               isTabSelected: t,
               trialDuration: s
           })
         : (0, n.jsx)('div', {
-              className: o()(x.premiumTrialBadge, r),
+              className: o()(b.premiumTrialBadge, r),
               children: (0, n.jsx)(c.Text, {
                   variant: 'eyebrow',
-                  className: x.premiumOfferBadgeCopy,
+                  className: b.premiumOfferBadgeCopy,
                   children: s
               })
           });

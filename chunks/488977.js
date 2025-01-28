@@ -6,8 +6,8 @@ t.d(n, {
     t(789020);
 var i = t(200651),
     l = t(120356),
-    o = t.n(l),
-    a = t(442837),
+    a = t.n(l),
+    o = t(442837),
     r = t(481060),
     s = t(367907),
     c = t(895924),
@@ -31,7 +31,7 @@ var i = t(200651),
 function y(e) {
     var n;
     let { application: t, context: l, className: y, sectionName: S } = e,
-        j = (0, a.e7)([N.Z], () => N.Z.entrypoint()),
+        j = (0, o.e7)([N.Z], () => N.Z.entrypoint()),
         T = (0, A.L1)(t),
         L = (0, _.Eb)(T),
         R = {
@@ -70,7 +70,7 @@ function y(e) {
                         }),
                         (0, r.showToast)((0, r.createToast)(b.intl.string(b.t['L/PwZW']), r.ToastType.SUCCESS));
                 },
-                className: o()(P.clickable, y),
+                className: a()(P.clickable, y),
                 'aria-label': b.intl.string(b.t.WqhZsr),
                 children: (0, i.jsx)(r.LinkIcon, {
                     size: 'sm',
@@ -134,7 +134,7 @@ function y(e) {
                 children: (e) =>
                     (0, i.jsx)(r.Clickable, {
                         onClick: e.onClick,
-                        className: o()(P.clickable, y),
+                        className: a()(P.clickable, y),
                         'aria-label': b.intl.string(b.t.UKOtz8),
                         children: (0, i.jsx)(r.MoreHorizontalIcon, {
                             size: 'sm',

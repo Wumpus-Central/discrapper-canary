@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     l = t(192379),
-    o = t(120356),
-    a = t.n(o),
+    a = t(120356),
+    o = t.n(a),
     r = t(481060),
     s = t(895924),
     c = t(827498),
@@ -16,12 +16,12 @@ var i = t(200651),
     p = t(388032),
     h = t(661630);
 function f(e) {
-    let { context: n, entrypoint: t, title: o, look: f, items: C, sectionName: v, sectionOverallPosition: x } = e,
+    let { context: n, entrypoint: t, title: a, look: f, items: C, sectionName: v, sectionOverallPosition: x } = e,
         _ = (0, d.s)('AppLauncherApplicationListViewScreen'),
         N = l.useMemo(() => (t === c._b.TEXT ? u.kA : u.qR), [t]);
     return (0, i.jsxs)('section', {
         className: h.container,
-        'aria-label': p.intl.formatToPlainString(p.t.iobNIC, { sectionTitle: o }),
+        'aria-label': p.intl.formatToPlainString(p.t.iobNIC, { sectionTitle: a }),
         children: [
             (0, i.jsxs)('div', {
                 className: h.header,
@@ -30,18 +30,18 @@ function f(e) {
                     (0, i.jsx)(r.Heading, {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
-                        children: o
+                        children: a
                     })
                 ]
             }),
             (0, i.jsx)(r.Scroller, {
                 children: (0, i.jsx)('div', {
-                    className: a()({
+                    className: o()({
                         [h.appGrid]: f !== u.U4.ROW,
                         [h.rows]: f === u.U4.ROW
                     }),
                     children: C.map((e, t) => {
-                        let { application: l, installOnDemand: o, showsPromoted: a } = e;
+                        let { application: l, installOnDemand: a, showsPromoted: o } = e;
                         return (0, i.jsx)(
                             N,
                             {
@@ -51,10 +51,10 @@ function f(e) {
                                 sectionName: v,
                                 resultsPosition: t,
                                 location: s.Vh.APP_LAUNCHER_LIST_VIEW_ALL,
-                                installOnDemand: o,
+                                installOnDemand: a,
                                 isOneClickCTA: _,
                                 sectionOverallPosition: x,
-                                showsPromoted: a
+                                showsPromoted: o
                             },
                             l.id
                         );

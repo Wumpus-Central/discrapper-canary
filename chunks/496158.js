@@ -1,11 +1,11 @@
 t.d(n, {
     D: function () {
-        return o;
+        return a;
     }
 });
 var i = t(192379),
     l = t(430824);
-function o(e) {
+function a(e) {
     return i.useMemo(() => {
         var n;
         return 'contextless' === (n = e).type

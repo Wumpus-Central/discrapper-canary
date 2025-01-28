@@ -6,8 +6,8 @@ t.d(n, {
     t(47120);
 var i = t(200651),
     l = t(192379),
-    o = t(392711),
-    a = t(780384),
+    a = t(392711),
+    o = t(780384),
     r = t(481060),
     s = t(410030),
     c = t(220082),
@@ -31,7 +31,7 @@ function v(e) {
 }
 function x(e) {
     let { application: n, context: t, name: C, iconURL: x, scrollerRef: _, sectionName: N } = e,
-        A = (0, a.ap)((0, s.ZP)()),
+        A = (0, o.ap)((0, s.ZP)()),
         I = l.useRef(null),
         E = l.useRef(null),
         g = l.useRef(null),
@@ -40,7 +40,7 @@ function x(e) {
         y = (0, c.ZP)('number' == typeof x ? '' : x, null != P ? P : ''),
         S = l.useMemo(() => {
             var e, n;
-            let t = (0, o.compact)([d.Z.parseHexString(y), d.Z.parseHexString(A ? '#000000' : '#ffffff')]);
+            let t = (0, a.compact)([d.Z.parseHexString(y), d.Z.parseHexString(A ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -57,7 +57,7 @@ function x(e) {
         j = v(I),
         T = v(E),
         L = l.useCallback(() => {
-            var e, n, t, i, l, a, r, s, c, d;
+            var e, n, t, i, l, o, r, s, c, d;
             let u = _.current,
                 m = I.current,
                 p = g.current,
@@ -69,8 +69,8 @@ function x(e) {
                     n = 0 !== u.scrollHeight ? u.scrollHeight : C + 20,
                     v = 0 !== u.clientHeight ? u.clientHeight : C + 20,
                     x = C - f,
-                    _ = (0, o.clamp)(n - v, x + 1, C + 20);
-                let N = ((i = e), (l = x) === (a = _) ? 1 : (0, o.clamp)((i - l) / (a - l), 0, 1));
+                    _ = (0, a.clamp)(n - v, x + 1, C + 20);
+                let N = ((i = e), (l = x) === (o = _) ? 1 : (0, a.clamp)((i - l) / (o - l), 0, 1));
                 if (
                     ((m.style.filter = 'brightness('.concat(1 + ((A ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'

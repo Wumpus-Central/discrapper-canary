@@ -1,46 +1,46 @@
-n.r(t),
-    n.d(t, {
+A.r(t),
+    A.d(t, {
         IconVariant: function () {
-            return A;
+            return n;
         },
         default: function () {
             return d;
         }
     }),
-    n(47120);
-var A,
+    A(47120);
+var n,
     r,
-    a = n(200651),
-    l = n(192379),
-    i = n(481060),
-    o = n(388032),
-    s = n(764162);
-((r = A || (A = {})).DANGER = 'danger'), (r.WARNING = 'warning');
+    a = A(200651),
+    i = A(192379),
+    l = A(481060),
+    o = A(388032),
+    s = A(764162);
+((r = n || (n = {})).DANGER = 'danger'), (r.WARNING = 'warning');
 function d(e) {
-    let { transitionState: t, onClose: n, title: A, body: r, cta: d, closeLabel: c, onConfirm: u, iconVariant: g = 'warning' } = e,
-        [h, p] = l.useState(!1),
+    let { transitionState: t, onClose: A, title: n, body: r, cta: d, closeLabel: c, onConfirm: u, iconVariant: g = 'warning' } = e,
+        [h, p] = i.useState(!1),
         m = async () => {
             p(!0);
             try {
-                await u(), n();
+                await u(), A();
             } finally {
                 p(!1);
             }
         },
-        f = null != A ? A : o.intl.string(o.t.D94rwc);
-    return (0, a.jsxs)(i.ModalRoot, {
+        f = null != n ? n : o.intl.string(o.t.D94rwc);
+    return (0, a.jsxs)(l.ModalRoot, {
         className: s.__invalid_container,
-        size: i.ModalSize.DYNAMIC,
+        size: l.ModalSize.DYNAMIC,
         transitionState: t,
         'aria-label': f,
         children: [
-            (0, a.jsxs)(i.ModalContent, {
+            (0, a.jsxs)(l.ModalContent, {
                 className: s.content,
                 children: [
                     (0, a.jsxs)('div', {
                         className: s.header,
                         children: [
-                            (0, a.jsx)(i.CircleWarningIcon, {
+                            (0, a.jsx)(l.CircleWarningIcon, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
@@ -54,19 +54,19 @@ function d(e) {
                                     }
                                 })(g)
                             }),
-                            (0, a.jsx)(i.Spacer, {
+                            (0, a.jsx)(l.Spacer, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, a.jsx)(i.Heading, {
+                            (0, a.jsx)(l.Heading, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
                                 children: f
                             })
                         ]
                     }),
-                    (0, a.jsx)(i.Spacer, { size: 12 }),
-                    (0, a.jsx)(i.Text, {
+                    (0, a.jsx)(l.Spacer, { size: 12 }),
+                    (0, a.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
                         className: s.__invalid_body,
@@ -74,23 +74,23 @@ function d(e) {
                     })
                 ]
             }),
-            (0, a.jsxs)(i.ModalFooter, {
+            (0, a.jsxs)(l.ModalFooter, {
                 children: [
-                    (0, a.jsx)(i.Button, {
-                        color: i.Button.Colors.BRAND,
+                    (0, a.jsx)(l.Button, {
+                        color: l.Button.Colors.BRAND,
                         onClick: m,
                         submitting: h,
                         children: d
                     }),
-                    (0, a.jsx)(i.Spacer, {
+                    (0, a.jsx)(l.Spacer, {
                         size: 12,
                         horizontal: !0
                     }),
                     null != c &&
-                        (0, a.jsx)(i.Button, {
-                            color: i.Button.Colors.PRIMARY,
-                            look: i.Button.Looks.OUTLINED,
-                            onClick: n,
+                        (0, a.jsx)(l.Button, {
+                            color: l.Button.Colors.PRIMARY,
+                            look: l.Button.Looks.OUTLINED,
+                            onClick: A,
                             children: c
                         })
                 ]

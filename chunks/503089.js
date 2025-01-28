@@ -24,8 +24,8 @@ var n = s(200651),
     f = s(207874),
     p = s(585483),
     g = s(960048),
-    x = s(410575),
-    b = s(493544),
+    b = s(410575),
+    x = s(493544),
     h = s(981631),
     m = s(388032),
     v = s(583535);
@@ -60,7 +60,7 @@ function T(e) {
     });
     let l = null !== (t = null == i ? void 0 : i.element) && void 0 !== t ? t : h.VqG,
         u = null !== (s = null == i ? void 0 : i.elementProps) && void 0 !== s ? s : {};
-    return (0, n.jsx)(x.Z, {
+    return (0, n.jsx)(b.Z, {
         section: i.section,
         children: (0, n.jsx)(l, {
             ...u,
@@ -69,7 +69,7 @@ function T(e) {
         })
     });
 }
-class _ extends i.PureComponent {
+class B extends i.PureComponent {
     componentDidMount() {
         this.getPredicateSections().forEach((e) => {
             let { notice: t } = e;
@@ -128,11 +128,11 @@ class _ extends i.PureComponent {
                         e.map((e, t) => {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {
-                                case b.ID.HEADER:
+                                case x.ID.HEADER:
                                     return (0, n.jsx)(c.TabBar.Header, { children: e.label }, t);
-                                case b.ID.DIVIDER:
+                                case x.ID.DIVIDER:
                                     return (0, n.jsx)(c.TabBar.Separator, {}, t);
-                                case b.ID.CUSTOM:
+                                case x.ID.CUSTOM:
                                     var s;
                                     let i = null !== (s = e.element) && void 0 !== s ? s : h.VqG;
                                     return (0, n.jsx)(i, {}, t);
@@ -164,7 +164,7 @@ class _ extends i.PureComponent {
                     location: i,
                     subsection: u
                 }),
-                (0, n.jsx)(b.ZP, {
+                (0, n.jsx)(x.ZP, {
                     sidebarTheme: t,
                     scrollerRef: this.scrollerRef,
                     section: s,
@@ -236,7 +236,7 @@ class _ extends i.PureComponent {
                 if (!this._unmounted) (this._intensity = E), this.forceUpdate();
             }),
             S(this, 'renderSettingsSectionTabBarItem', (e, t, s) => {
-                let { section: i, label: r = null, ariaLabel: a, onClick: l, color: u, icon: f, className: p, newIndicator: g, newIndicatorDismissibleContentTypes: x, badgeCount: b, searchFilterCount: S } = e,
+                let { section: i, label: r = null, ariaLabel: a, onClick: l, color: u, icon: f, className: p, newIndicator: g, newIndicatorDismissibleContentTypes: b, badgeCount: x, searchFilterCount: S } = e,
                     C = null;
                 null != S && S > 0
                     ? (C = (0, n.jsx)(c.NumberBadge, {
@@ -257,11 +257,11 @@ class _ extends i.PureComponent {
                               color: 'text-muted',
                               children: e.decoration
                           }))
-                        : null != s && (null == x ? void 0 : x.includes(s)) && !t
+                        : null != s && (null == b ? void 0 : b.includes(s)) && !t
                           ? (C = null != g ? g : (0, n.jsx)(c.TextBadge, { text: m.intl.string(m.t.y2b7CA) }))
                           : null != f
                             ? (C = f)
-                            : null != b && b > 0 && (C = (0, n.jsx)(c.NumberBadge, { count: b }));
+                            : null != x && x > 0 && (C = (0, n.jsx)(c.NumberBadge, { count: x }));
                 let E =
                     i === h.oAB.PREMIUM
                         ? (0, n.jsx)(d.Z, {
@@ -290,4 +290,4 @@ class _ extends i.PureComponent {
             });
     }
 }
-t.ZP = _;
+t.ZP = B;

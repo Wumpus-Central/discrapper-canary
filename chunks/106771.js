@@ -5,8 +5,8 @@ t.d(n, {
 });
 var i = t(200651),
     l = t(192379),
-    o = t(481060),
-    a = t(239091),
+    a = t(481060),
+    o = t(239091),
     r = t(973616),
     s = t(783097),
     c = t(176412),
@@ -22,7 +22,7 @@ function f(e) {
             (e) => {
                 if ((0, s.BQ)(f)) {
                     let n = f instanceof r.ZP ? f : r.ZP.createFromServer(f);
-                    (0, a.vq)(e, (e) =>
+                    (0, o.vq)(e, (e) =>
                         (0, i.jsx)(d.Z, {
                             application: n,
                             ...e
@@ -44,12 +44,12 @@ function f(e) {
             query: v,
             searchResultsPosition: x
         });
-    return (0, i.jsx)(o.Clickable, {
+    return (0, i.jsx)(a.Clickable, {
         className: p.clickable,
         innerRef: (e) => (g.current = e),
         onClick: C,
         onContextMenu: _,
-        children: (0, i.jsxs)(o.FocusBlock, {
+        children: (0, i.jsxs)(a.FocusBlock, {
             className: p.focusBlock,
             children: [
                 (0, i.jsx)(u.Z, {
@@ -61,13 +61,13 @@ function f(e) {
                 (0, i.jsxs)('div', {
                     className: p.cmdDetails,
                     children: [
-                        (0, i.jsx)(o.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
                             children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : A
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
@@ -76,7 +76,7 @@ function f(e) {
                     ]
                 }),
                 null != t
-                    ? (0, i.jsx)(o.Text, {
+                    ? (0, i.jsx)(a.Text, {
                           className: p.cmdAppName,
                           variant: 'text-sm/normal',
                           color: 'text-secondary',

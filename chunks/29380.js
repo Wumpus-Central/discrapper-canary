@@ -6,8 +6,8 @@ t.d(n, {
     t(47120);
 var i = t(200651),
     l = t(192379),
-    o = t(481060),
-    a = t(542094),
+    a = t(481060),
+    o = t(542094),
     r = t(895924),
     s = t(626135),
     c = t(499254),
@@ -20,7 +20,7 @@ var i = t(200651),
     C = t(388032),
     v = t(129571);
 function x(e) {
-    let { context: n, application: t, sectionName: x, primaryEntryPointCommand: _, buttonSize: N = o.ButtonSizes.MEDIUM } = e,
+    let { context: n, application: t, sectionName: x, primaryEntryPointCommand: _, buttonSize: N = a.ButtonSizes.MEDIUM } = e,
         A = l.useId(),
         I = l.useCallback(() => {
             c.yT(d.ti.ACTIVITY);
@@ -32,7 +32,7 @@ function x(e) {
             onSubmissionComplete: I
         }),
         [b, P] = l.useState(!1),
-        y = (0, a.Qv)({
+        y = (0, o.Qv)({
             applicationId: t.id,
             context: n
         }),
@@ -47,7 +47,7 @@ function x(e) {
             location: r.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: x,
             commandName: S,
-            autoDismissOnClick: y === a.JS.LEAVE,
+            autoDismissOnClick: y === o.JS.LEAVE,
             launchingComponentId: A,
             submitting: null != g ? g : E
         }),
@@ -56,13 +56,13 @@ function x(e) {
             application: t,
             activityAction: y
         });
-    return (0, i.jsx)(o.Tooltip, {
+    return (0, i.jsx)(a.Tooltip, {
         shouldShow: null != M,
         tooltipContentClassName: v.tooltipContent,
         text: M,
         children: (e) => {
             let { onClick: n, ...l } = e;
-            return (0, i.jsx)(o.Button, {
+            return (0, i.jsx)(a.Button, {
                 ...l,
                 type: 'submit',
                 size: N,

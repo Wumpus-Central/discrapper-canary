@@ -1,16 +1,16 @@
-n.d(t, {
+A.d(t, {
     v: function () {
-        return i;
+        return l;
     }
 });
-var A = n(200651);
-n(192379);
-var r = n(481060),
-    a = n(388032),
-    l = n(106468);
-let i = () =>
-    (0, A.jsx)(r.TextBadge, {
+var n = A(200651);
+A(192379);
+var r = A(481060),
+    a = A(388032),
+    i = A(106468);
+let l = () =>
+    (0, n.jsx)(r.TextBadge, {
         color: r.tokens.unsafe_rawColors.YELLOW_300.css,
         text: a.intl.string(a.t.vosPk5),
-        className: l.draftBadge
+        className: i.draftBadge
     });

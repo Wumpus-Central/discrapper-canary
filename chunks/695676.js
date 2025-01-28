@@ -6,14 +6,14 @@ t.d(n, {
         return r;
     },
     uX: function () {
-        return a;
+        return o;
     }
 });
 var i,
     l,
-    o = t(192379);
+    a = t(192379);
 ((i = l || (l = {})).HOME = 'home'), (i.LIST = 'list'), (i.APPLICATION = 'application');
-let a = o.createContext({
+let o = a.createContext({
     history: [],
     discard: {},
     currentView: void 0,
@@ -24,5 +24,5 @@ let a = o.createContext({
     setSlideReady: () => {}
 });
 function r() {
-    return o.useContext(a);
+    return a.useContext(o);
 }

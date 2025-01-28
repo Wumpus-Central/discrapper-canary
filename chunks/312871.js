@@ -1,13 +1,13 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return a;
     }
 });
 var i = t(192379),
     l = t(434650);
-function o(e) {
-    let { onVisible: n, threshold: t, minTimeVisibleMs: o } = e,
-        a = i.useRef(!1),
+function a(e) {
+    let { onVisible: n, threshold: t, minTimeVisibleMs: a } = e,
+        o = i.useRef(!1),
         r = i.useRef(null);
     return (
         i.useEffect(
@@ -17,11 +17,11 @@ function o(e) {
             []
         ),
         (0, l.O)((e) => {
-            if ((null != r.current && !e && !1 === a.current && (clearTimeout(r.current), (r.current = null)), !e || !0 === a.current)) return;
+            if ((null != r.current && !e && !1 === o.current && (clearTimeout(r.current), (r.current = null)), !e || !0 === o.current)) return;
             let t = () => {
-                n(), (a.current = !0), (r.current = null);
+                n(), (o.current = !0), (r.current = null);
             };
-            null != o ? (r.current = setTimeout(t, o)) : t();
+            null != a ? (r.current = setTimeout(t, a)) : t();
         }, t)
     );
 }

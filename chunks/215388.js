@@ -1,24 +1,24 @@
-n.d(t, {
+A.d(t, {
     Z: function () {
         return x;
     }
 }),
-    n(47120);
-var A = n(200651),
-    r = n(192379),
-    a = n(120356),
-    l = n.n(a),
-    i = n(772848),
-    o = n(481060),
-    s = n(752305),
-    d = n(893718),
-    c = n(131704),
-    u = n(703558),
-    g = n(981631),
-    h = n(388032),
-    p = n(555162),
-    m = n(394604);
-let f = (0, i.Z)(),
+    A(47120);
+var n = A(200651),
+    r = A(192379),
+    a = A(120356),
+    i = A.n(a),
+    l = A(772848),
+    o = A(481060),
+    s = A(752305),
+    d = A(893718),
+    c = A(131704),
+    u = A(703558),
+    g = A(981631),
+    h = A(388032),
+    p = A(555162),
+    m = A(394604);
+let f = (0, l.Z)(),
     v = (0, c.kt)({
         id: '1',
         type: g.d4z.DM
@@ -33,20 +33,20 @@ function C() {
 }
 function q(e) {
     var t;
-    let { hasError: n, maxLength: r, text: a } = e;
-    return (0, A.jsxs)('div', {
-        className: l()(m.maxLength, { [m.errorOverflow]: n }),
+    let { hasError: A, maxLength: r, text: a } = e;
+    return (0, n.jsxs)('div', {
+        className: i()(m.maxLength, { [m.errorOverflow]: A }),
         'aria-hidden': 'true',
         children: [null !== (t = null == a ? void 0 : a.length) && void 0 !== t ? t : 0, ' ', null != r && '/ '.concat(r)]
     });
 }
 function x(e) {
     var t;
-    let { 'aria-labelledby': n, className: a, id: i, autoFocus: c, maxLength: g, onChange: m, onSubmit: x, showCharacterCount: b = !1, placeholder: U, required: V, value: j, enableThemedBackground: I = !1, parentModalKey: N } = e,
+    let { 'aria-labelledby': A, className: a, id: l, autoFocus: c, maxLength: g, onChange: m, onSubmit: x, showCharacterCount: b = !1, placeholder: U, required: V, value: j, enableThemedBackground: I = !1, parentModalKey: N } = e,
         T = (0, o.useFormContext)(),
         [F, P] = r.useState(() => (0, s.JM)(j)),
         K = r.useRef(!0 === c),
-        Z = null != n ? n : null == T ? void 0 : T.titleId,
+        Z = null != A ? A : null == T ? void 0 : T.titleId,
         W = null !== (t = null == T ? void 0 : T.errorId) && void 0 !== t ? t : f,
         X = r.useMemo(
             () => ({
@@ -66,14 +66,14 @@ function x(e) {
             }),
             [c]
         );
-    return (0, A.jsxs)(d.Z, {
+    return (0, n.jsxs)(d.Z, {
         'aria-describedby': W,
         'aria-labelledby': Z,
-        innerClassName: l()(a, p.textArea),
-        id: i,
+        innerClassName: i()(a, p.textArea),
+        id: l,
         maxCharacterCount: g,
-        onChange: function (e, t, n) {
-            m(t), P(n);
+        onChange: function (e, t, A) {
+            m(t), P(A);
         },
         placeholder: U,
         required: V,
@@ -94,13 +94,13 @@ function x(e) {
         emojiPickerCloseOnModalOuterClick: !0,
         children: [
             !0 === b &&
-                (0, A.jsx)(q, {
+                (0, n.jsx)(q, {
                     hasError: null != T.error || (null != g && j.length > g),
                     text: j,
                     maxLength: g
                 }),
             null != g &&
-                (0, A.jsx)(o.HiddenVisually, {
+                (0, n.jsx)(o.HiddenVisually, {
                     id: f,
                     children: h.intl.format(h.t['+DFxLS'], { maxLength: g })
                 })

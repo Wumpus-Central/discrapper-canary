@@ -7,8 +7,8 @@ t.d(n, {
     t(47120);
 var i = t(192379),
     l = t(392711),
-    o = t.n(l),
-    a = t(911969),
+    a = t.n(l),
+    o = t(911969),
     r = t(254711),
     s = t(213459),
     c = t(10718),
@@ -22,7 +22,7 @@ function m(e) {
         { commandsByActiveSection: p, loading: h } = c.wi({
             context: t,
             filters: {
-                commandTypes: [a.yU.CHAT, a.yU.PRIMARY_ENTRY_POINT]
+                commandTypes: [o.yU.CHAT, o.yU.PRIMARY_ENTRY_POINT]
             },
             options: {
                 placeholderCount: 0,
@@ -51,7 +51,7 @@ function m(e) {
         v = (0, d.h)(C),
         x = i.useMemo(
             () =>
-                o()
+                a()
                     .compact(
                         v.map((e) => {
                             let { application: n } = e;

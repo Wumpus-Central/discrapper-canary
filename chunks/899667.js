@@ -11,8 +11,8 @@ let l = {},
     f = !1,
     p = !1,
     g = null,
-    x = null;
-function b() {
+    b = null;
+function x() {
     p = !0;
 }
 class h extends (n = c.ZP.Store) {
@@ -35,7 +35,7 @@ class h extends (n = c.ZP.Store) {
         return g;
     }
     get unapplyBoostError() {
-        return x;
+        return b;
     }
     get cooldownEndsAt() {
         return u;
@@ -69,8 +69,8 @@ class h extends (n = c.ZP.Store) {
             let { endsAt: t } = e;
             u = t;
         },
-        GUILD_UNAPPLY_BOOST_START: b,
-        GUILD_APPLY_BOOST_START: b,
+        GUILD_UNAPPLY_BOOST_START: x,
+        GUILD_APPLY_BOOST_START: x,
         GUILD_APPLY_BOOST_SUCCESS: function (e) {
             let { appliedGuildBoost: t } = e,
                 s = new Set(t.map((e) => e.id));
@@ -86,7 +86,7 @@ class h extends (n = c.ZP.Store) {
         },
         GUILD_UNAPPLY_BOOST_FAIL: function (e) {
             let { error: t } = e;
-            (p = !1), (x = t);
+            (p = !1), (b = t);
         },
         USER_APPLIED_BOOSTS_FETCH_START: function () {
             f = !0;

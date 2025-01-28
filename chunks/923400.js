@@ -1,15 +1,15 @@
-n.d(t, {
+A.d(t, {
     M: function () {
         return a;
     }
 });
-var A = n(83439),
-    r = n(100781);
+var n = A(83439),
+    r = A(100781);
 let a = [
     {
         name: 'cool-frog',
         alt: 'A cool frog',
-        data: A.Z
+        data: n.Z
     },
     {
         name: 'cute-bunny',

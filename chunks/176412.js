@@ -11,8 +11,8 @@ t.d(n, {
 });
 var i = t(192379),
     l = t(392711),
-    o = t.n(l),
-    a = t(442837),
+    a = t.n(l),
+    o = t(442837),
     r = t(25209),
     s = t(481060),
     c = t(2052),
@@ -34,7 +34,7 @@ let g = {
         ...C.Z.RULES.commandMention,
         parse: (e, n, t) => ({ content: C.Z.RULES.commandMention.parse(e, n, t).content })
     },
-    b = o().pick(
+    b = a().pick(
         (0, v.Z)([
             C.Z.RULES,
             { commandMention: g },
@@ -47,7 +47,7 @@ let g = {
     ),
     P = r.w4(b);
 function y(e) {
-    let { context: n, application: t, location: l, sectionName: o, commandName: r, autoDismissOnClick: f = !0, launchingComponentId: C, submitting: v = !1, fetchesApplication: g = !0 } = e,
+    let { context: n, application: t, location: l, sectionName: a, commandName: r, autoDismissOnClick: f = !0, launchingComponentId: C, submitting: v = !1, fetchesApplication: g = !0 } = e,
         b = (0, c.O)(),
         P = (0, d.Qv)({
             context: n,
@@ -55,7 +55,7 @@ function y(e) {
             fetchesApplication: g
         }),
         y = (0, A.Q)(P),
-        S = (0, a.e7)([_.Z], () => _.Z.entrypoint()),
+        S = (0, o.e7)([_.Z], () => _.Z.entrypoint()),
         j = i.useMemo(() => {
             var e, i, l;
             if ('channel' !== n.type) return null !== (l = null === (e = t.bot) || void 0 === e ? void 0 : e.id) && void 0 !== l ? l : null === (i = (0, p.If)(n, t.id).descriptor) || void 0 === i ? void 0 : i.botId;
@@ -72,14 +72,14 @@ function y(e) {
                     (0, m.yw)(I.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: l,
                         application_id: n,
-                        section_name: o,
+                        section_name: a,
                         action: y,
                         source: S
                     });
             },
             launchingComponentId: C,
             commandOrigin: h.bB.APPLICATION_LAUNCHER,
-            sectionName: o,
+            sectionName: a,
             source: S,
             fetchesApplication: g
         }),
@@ -97,7 +97,7 @@ function y(e) {
 }
 function S(e, n) {
     let t = _.Z.entrypoint(),
-        o = i.useMemo(
+        a = i.useMemo(
             () =>
                 (0, l.debounce)(
                     (e, n) => {
@@ -115,6 +115,6 @@ function S(e, n) {
             []
         );
     i.useEffect(() => {
-        null != e && o(e, t);
-    }, [e, n, t, o]);
+        null != e && a(e, t);
+    }, [e, n, t, a]);
 }

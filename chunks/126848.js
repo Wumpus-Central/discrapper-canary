@@ -16,8 +16,8 @@ var i = s(120356),
     f = s(346497),
     p = s(924540),
     g = s(351402),
-    x = s(170671),
-    b = s(474936),
+    b = s(170671),
+    x = s(474936),
     h = s(913074);
 function m(e) {
     let t,
@@ -27,7 +27,7 @@ function m(e) {
         C = (0, f.Vi)(),
         E = (0, o.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == v && null == s,
         { enabled: N } = c._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
-        j = N && (null == v ? void 0 : v.trial_id) === b.a7;
+        j = N && (null == v ? void 0 : v.trial_id) === x.a7;
     return (
         (t = C
             ? (0, n.jsx)(u.Z, {})
@@ -42,7 +42,7 @@ function m(e) {
                     ? s
                     : E
                       ? (0, n.jsx)(d.k, { entryPoint: d.U.SettingsMenu })
-                      : (0, n.jsx)(x.Z, { isSelected: m })
+                      : (0, n.jsx)(b.Z, { isSelected: m })
                 : (0, n.jsx)(p.$H, {
                       isTabSelected: m,
                       trialOffer: v

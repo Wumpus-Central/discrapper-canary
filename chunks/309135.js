@@ -1,6 +1,6 @@
 t.r(n);
-var o = t(200651),
-    r = t(192379),
+var r = t(200651),
+    o = t(192379),
     i = t(442837),
     a = t(215569),
     s = t(481060),
@@ -13,7 +13,7 @@ var o = t(200651),
     b = t(388032),
     h = t(145638);
 let p = () =>
-    (0, o.jsx)(l.Z, {
+    (0, r.jsx)(l.Z, {
         submitting: !1,
         message: b.intl.string(b.t['8g514e']),
         onReset: () => {
@@ -31,25 +31,25 @@ n.default = (e) => {
         f = (0, u.rb)((e) => e.shouldShowWarning),
         x = (0, i.e7)([c.Z], () => c.Z.get(t)),
         g = (0, d.Dt)();
-    return (r.useEffect(() => {
+    return (o.useEffect(() => {
         x === c.t && l();
     }, [l, x]),
     x === c.t)
         ? null
-        : (0, o.jsxs)(o.Fragment, {
+        : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, o.jsxs)(s.ModalRoot, {
+                  (0, r.jsxs)(s.ModalRoot, {
                       transitionState: n,
                       'aria-labelledby': g,
                       size: s.ModalSize.DYNAMIC,
                       className: h.container,
                       hideShadow: !0,
                       children: [
-                          (0, o.jsx)(s.ModalCloseButton, {
+                          (0, r.jsx)(s.ModalCloseButton, {
                               onClick: () => l(!1),
                               className: h.closeButton
                           }),
-                          (0, o.jsx)(m.Z, {
+                          (0, r.jsx)(m.Z, {
                               headerId: g,
                               guildId: t,
                               onClose: l,
@@ -58,12 +58,12 @@ n.default = (e) => {
                           })
                       ]
                   }),
-                  (0, o.jsx)(a.W, {
+                  (0, r.jsx)(a.W, {
                       children:
                           !0 === f &&
-                          (0, o.jsx)(s.SlideIn, {
+                          (0, r.jsx)(s.SlideIn, {
                               className: h.notice,
-                              children: (0, o.jsx)(p, {})
+                              children: (0, r.jsx)(p, {})
                           })
                   })
               ]

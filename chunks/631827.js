@@ -1,5 +1,5 @@
 function i(e, n) {
-    var t, i, l, o, a;
+    var t, i, l, a, o;
     let r;
     let s = null !== (t = n.limit) && void 0 !== t ? t : 1 / 0,
         c = (function (e, n) {
@@ -41,14 +41,14 @@ function i(e, n) {
                               l = e;
                           for (let e of n) {
                               let n = [],
-                                  o = [];
-                              for (let t of l) e(t) ? o.push(t) : n.push(t);
-                              if ((i.push(o), (l = n), i.reduce((e, n) => n.length + e, 0) >= t)) break;
+                                  a = [];
+                              for (let t of l) e(t) ? a.push(t) : n.push(t);
+                              if ((i.push(a), (l = n), i.reduce((e, n) => n.length + e, 0) >= t)) break;
                           }
                           return i;
-                      })(c, null !== (o = n.bucketPredicates) && void 0 !== o ? o : [], s)
+                      })(c, null !== (a = n.bucketPredicates) && void 0 !== a ? a : [], s)
                 : [c]),
-        null !== (a = n.sortComparers) && void 0 !== a ? a : [],
+        null !== (o = n.sortComparers) && void 0 !== o ? o : [],
         s
     ).slice(0, s);
 }

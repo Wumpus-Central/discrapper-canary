@@ -6,8 +6,8 @@ t.d(n, {
     t(47120);
 var i = t(200651),
     l = t(192379),
-    o = t(442837),
-    a = t(218061),
+    a = t(442837),
+    o = t(218061),
     r = t(481060),
     s = t(361213),
     c = t(778569),
@@ -28,7 +28,7 @@ function E(e) {
     var n;
     let { context: t, application: s, sectionName: c } = e,
         E = 'channel' === t.type ? t.channel : void 0,
-        b = (0, o.e7)([m.Z], () => m.Z.entrypoint()),
+        b = (0, a.e7)([m.Z], () => m.Z.entrypoint()),
         P = null !== (n = (0, u.q)(s.id === _.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
         y = (0, h.ye)(P) ? g : x.Z,
         S = l.useRef(null),
@@ -69,7 +69,7 @@ function E(e) {
                         src: L,
                         className: A.appIcon
                     }),
-                (0, i.jsx)(a.Z, { size: 54 }),
+                (0, i.jsx)(o.Z, { size: 54 }),
                 (0, i.jsx)(y, {
                     context: t,
                     application: P,
@@ -90,8 +90,8 @@ function E(e) {
     );
 }
 function g(e) {
-    let { context: n, application: t, sectionName: l, hasCommands: o } = e,
-        a = (0, c.Z)({
+    let { context: n, application: t, sectionName: l, hasCommands: a } = e,
+        o = (0, c.Z)({
             applicationId: t.id,
             size: 2048,
             names: ['embedded_cover']
@@ -101,9 +101,9 @@ function g(e) {
     return (0, i.jsx)(x.Z, {
         context: n,
         application: t,
-        imageCoverUrl: a.url,
+        imageCoverUrl: o.url,
         videoUrl: d,
         sectionName: l,
-        hasCommands: o
+        hasCommands: a
     });
 }

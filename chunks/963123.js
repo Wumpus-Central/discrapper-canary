@@ -9,7 +9,7 @@ var r = n(200651),
     i = n(192379),
     l = n(120356),
     o = n.n(l),
-    s = n(837604),
+    s = n(941208),
     a = n(642128),
     u = n(232713),
     c = n(442837),
@@ -173,8 +173,8 @@ function K(e) {
         e4 = (0, i.useRef)(null),
         e6 = i.useRef(!0),
         e9 = (null === (t = ei.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        e7 = (0, N.km)((e) => e.transcript),
-        [e8, e3] = i.useState(null),
+        e8 = (0, N.km)((e) => e.transcript),
+        [e7, e3] = i.useState(null),
         [e5, te] = i.useState(!1),
         [tt, tn] = i.useState(!1),
         [tr, ti] = i.useState(null),
@@ -219,7 +219,7 @@ function K(e) {
                                     event: w.rMx.QUEST_VIDEO_RESUMED,
                                     properties: {
                                         video_timestamp_seconds: e2.current.currentTime,
-                                        pause_reason: e8,
+                                        pause_reason: e7,
                                         video_session_id: el
                                     }
                                 }),
@@ -232,24 +232,24 @@ function K(e) {
                             ev(!1), tu();
                     }
             },
-            [ec, ei.id, e8, el, tu, ev]
+            [ec, ei.id, e7, el, tu, ev]
         );
     (0, v.N)(() => {
         e6.current && ((e6.current = !1), ew(f.Z.getEffectiveConnectionSpeed()), e9 && eX.timestampSec >= eX.duration && eJ(ei.id, 0, eX.duration));
     }),
         i.useEffect(() => {
             null != e2.current &&
-                null != e8 &&
+                null != e7 &&
                 ec({
                     questId: ei.id,
                     event: w.rMx.QUEST_VIDEO_PAUSED,
                     properties: {
                         video_timestamp_seconds: e2.current.currentTime,
-                        reason: e8,
+                        reason: e7,
                         video_session_id: el
                     }
                 });
-        }, [e8, ei.id, ec, el]),
+        }, [e7, ei.id, ec, el]),
         i.useEffect(() => {
             eg &&
                 null != e2.current &&
@@ -648,7 +648,7 @@ function K(e) {
                             type: m.Spinner.Type.WANDERING_CUBES,
                             className: F.loadingSpinner
                         }),
-                    eT === k.rq.PAUSED && e8 === k.yE.LOST_FOCUS && (0, r.jsx)(G, {}),
+                    eT === k.rq.PAUSED && e7 === k.yE.LOST_FOCUS && (0, r.jsx)(G, {}),
                     em &&
                         eT !== k.rq.ENDED &&
                         (0, r.jsxs)(r.Fragment, {
@@ -816,7 +816,7 @@ function K(e) {
                                     hideCaptionBtn: null == tO,
                                     handlePlaybackBtnClick: tg,
                                     handleTranscriptBtnClick: () => {
-                                        !em && (null == e7 || e7.questId !== ei.id || e7.fetchStatus === N.iF.NONE || e7.fetchStatus === N.iF.FAILURE) && (0, h.lL)(ei),
+                                        !em && (null == e8 || e8.questId !== ei.id || e8.fetchStatus === N.iF.NONE || e8.fetchStatus === N.iF.FAILURE) && (0, h.lL)(ei),
                                             ev(!em),
                                             ed({
                                                 questId: ei.id,

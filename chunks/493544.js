@@ -24,8 +24,8 @@ var n,
     f = s.n(d),
     p = s(642128),
     g = s(608863),
-    x = s(873546),
-    b = s(215569),
+    b = s(873546),
+    x = s(215569),
     h = s(481060),
     m = s(110924),
     v = s(358085),
@@ -85,13 +85,13 @@ function T(e) {
     (o.CUSTOM = 'custom'),
     (o.DEFAULT = 'default'),
     (o.WIDE = 'wide');
-let _ = Object.freeze({
+let B = Object.freeze({
     minimal: 'contentColumnMinimal',
     custom: 'contentColumnCustom',
     default: 'contentColumnDefault',
     wide: 'contentColumnWide'
 });
-function B(e) {
+function _(e) {
     let { isMobile: t, mobileSidebarOpen: s, closeAction: n } = e,
         i = u.useRef(null);
     return null == n
@@ -144,8 +144,8 @@ t.ZP = function (e) {
     u.useLayoutEffect(() => {
         null != E.current && T !== i && E.current.scrollTo({ to: 0 });
     }, [i, T, E]);
-    let O = (0, l.jsx)(B, {
-        isMobile: x.tq,
+    let O = (0, l.jsx)(_, {
+        isMobile: b.tq,
         mobileSidebarOpen: d,
         closeAction: r
     });
@@ -175,16 +175,16 @@ t.ZP = function (e) {
                                   children: (e) =>
                                       (0, l.jsx)('div', {
                                           className: f()(C.sidebarRegion, e, {
-                                              [C.flexFullWidth]: x.tq,
-                                              [C.hidden]: x.tq && !1 === d
+                                              [C.flexFullWidth]: b.tq,
+                                              [C.hidden]: b.tq && !1 === d
                                           }),
                                           children: (0, l.jsx)(h.AdvancedScrollerThin, {
                                               className: C.sidebarRegionScroller,
                                               fade: !0,
                                               children: (0, l.jsxs)('nav', {
-                                                  className: f()(C.sidebar, { [C.mobileSidebar]: x.tq }),
+                                                  className: f()(C.sidebar, { [C.mobileSidebar]: b.tq }),
                                                   children: [
-                                                      x.tq &&
+                                                      b.tq &&
                                                           (0, l.jsx)('div', {
                                                               className: C.mobileSidebarHeader,
                                                               children: O
@@ -198,21 +198,21 @@ t.ZP = function (e) {
                     (function () {
                         let e = null != v && null != r && d,
                             t =
-                                x.tq &&
+                                b.tq &&
                                 (0, l.jsxs)('div', {
                                     className: f()(C.mobileContentHeader, { [C.hideHamburger]: !e }),
                                     children: [e && (0, l.jsx)(g.r, { onClick: v }), O]
                                 });
                         if ('custom' === c)
-                            return (0, l.jsxs)(b.W, {
+                            return (0, l.jsxs)(x.W, {
                                 component: 'div',
                                 className: C.contentRegion,
-                                children: [t, s, !x.tq && O, R()]
+                                children: [t, s, !b.tq && O, R()]
                             });
-                        let n = _[null != c ? c : 'default'];
-                        return (0, l.jsxs)(b.W, {
+                        let n = B[null != c ? c : 'default'];
+                        return (0, l.jsxs)(x.W, {
                             component: 'div',
-                            className: f()(C.contentRegion, { [C.hidden]: x.tq && !0 === d }),
+                            className: f()(C.contentRegion, { [C.hidden]: b.tq && !0 === d }),
                             children: [
                                 (0, l.jsxs)('div', {
                                     className: C.contentTransitionWrap,
@@ -226,9 +226,9 @@ t.ZP = function (e) {
                                                     value: E.current,
                                                     children: (0, l.jsx)(h.TabBar.Panel, {
                                                         id: i,
-                                                        className: f()(C.contentColumn, C[n], { [C.mobileContent]: x.tq }),
+                                                        className: f()(C.contentColumn, C[n], { [C.mobileContent]: b.tq }),
                                                         ref: j,
-                                                        style: x.tq ? { maxWidth: window.innerWidth } : void 0,
+                                                        style: b.tq ? { maxWidth: window.innerWidth } : void 0,
                                                         children: S
                                                             ? s
                                                             : (0, l.jsx)(h.FocusRingScope, {
@@ -237,7 +237,7 @@ t.ZP = function (e) {
                                                               })
                                                     })
                                                 }),
-                                                !x.tq && O
+                                                !b.tq && O
                                             ]
                                         })
                                     ]

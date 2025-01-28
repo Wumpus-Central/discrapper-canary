@@ -5,12 +5,12 @@ t.d(n, {
 });
 var i = t(990547),
     l = t(213609),
-    o = t(541099),
-    a = t(312871);
+    a = t(541099),
+    o = t(312871);
 function r(e) {
     let { sectionName: n, numItems: t, numVisibleItems: r } = e;
     return {
-        trackSectionImpressionRef: (0, a.Z)({
+        trackSectionImpressionRef: (0, o.Z)({
             onVisible: () => {
                 (0, l.h)({
                     type: i.ImpressionTypes.VIEW,
@@ -19,7 +19,7 @@ function r(e) {
                         section_name: n,
                         num_items: t,
                         num_visible_items: r,
-                        source: o.Z.entrypoint()
+                        source: a.Z.entrypoint()
                     }
                 });
             },

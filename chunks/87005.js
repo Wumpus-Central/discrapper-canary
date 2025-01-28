@@ -6,8 +6,8 @@ t.d(n, {
     t(47120);
 var i = t(192379),
     l = t(243814),
-    o = t(442837),
-    a = t(384275),
+    a = t(442837),
+    o = t(384275),
     r = t(911969),
     s = t(10718),
     c = t(812236),
@@ -36,11 +36,11 @@ function C(e) {
         loading: x,
         frecentApps: (function (e) {
             let { sectionDescriptors: n, context: t, onlyActivityApps: r, includeAuthorizedAppsAndFetch: s } = e,
-                h = (0, o.e7)([u.Z], () => u.Z.getFetchState());
+                h = (0, a.e7)([u.Z], () => u.Z.getFetchState());
             i.useEffect(() => {
-                s && h === u.M.NOT_FETCHED && a.Z.fetch();
+                s && h === u.M.NOT_FETCHED && o.Z.fetch();
             }, [s, h]);
-            let f = (0, o.Wu)([u.Z], () => {
+            let f = (0, a.Wu)([u.Z], () => {
                     var e, n;
                     return s && null !== (n = null === (e = u.Z.getApps()) || void 0 === e ? void 0 : e.filter((e) => e.scopes.includes(l.x.APPLICATIONS_COMMANDS))) && void 0 !== n ? n : [];
                 }),

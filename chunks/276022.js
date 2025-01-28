@@ -6,8 +6,8 @@ t.d(n, {
     t(653041);
 var i = t(200651),
     l = t(192379),
-    o = t(442837),
-    a = t(481060),
+    a = t(442837),
+    o = t(481060),
     r = t(139387),
     s = t(230711),
     c = t(213459),
@@ -22,7 +22,7 @@ function C(e) {
     let { user: C, application: v, guildId: x, context: _, onItemClick: N } = e,
         A = null !== (n = null == v ? void 0 : v.id) && void 0 !== n ? n : null == C ? void 0 : C.id,
         I = m.Z.getGuild(x),
-        E = (0, o.e7)([p.Z], () => (null != I ? p.Z.can(h.Plq.MANAGE_GUILD, I) : null)),
+        E = (0, a.e7)([p.Z], () => (null != I ? p.Z.can(h.Plq.MANAGE_GUILD, I) : null)),
         g = (0, c.LD)(x, !0),
         b = (0, c.PL)(!0, !0),
         { isUserApp: P, isGuildApp: y } = l.useMemo(() => {
@@ -33,13 +33,13 @@ function C(e) {
                     isUserApp: !1
                 };
             let l = Object.values(null !== (t = null === (e = g.result) || void 0 === e ? void 0 : e.sections) && void 0 !== t ? t : {}),
-                o = Object.values(null !== (i = null === (n = b.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {});
+                a = Object.values(null !== (i = null === (n = b.result) || void 0 === n ? void 0 : n.sections) && void 0 !== i ? i : {});
             return {
                 isGuildApp: l.some((e) => {
                     var n;
                     return (null === (n = e.descriptor.application) || void 0 === n ? void 0 : n.id) === A;
                 }),
-                isUserApp: o.some((e) => {
+                isUserApp: a.some((e) => {
                     var n;
                     return (null === (n = e.descriptor.application) || void 0 === n ? void 0 : n.id) === A;
                 })
@@ -63,7 +63,7 @@ function C(e) {
             E &&
             T.push(
                 (0, i.jsx)(
-                    a.MenuItem,
+                    o.MenuItem,
                     {
                         id: 'manage-server-integration',
                         label: f.intl.string(f.t.IuSJT0),
@@ -75,7 +75,7 @@ function C(e) {
         P &&
             T.push(
                 (0, i.jsx)(
-                    a.MenuItem,
+                    o.MenuItem,
                     {
                         id: 'manage-authorized-app',
                         label: f.intl.string(f.t.V8ruv7),
