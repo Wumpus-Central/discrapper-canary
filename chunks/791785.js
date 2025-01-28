@@ -60,7 +60,7 @@ function J(e) {
         { activitySessionId: eh, purchaseState: e_, setPurchaseState: em, selectedSkuId: eg, setSelectedSkuId: eE, selectedPlan: ev, setSelectedPlanId: ey, setSelectedPlanNotification: eb, setStep: eI, setPurchaseError: eT, paymentAuthenticationState: eS, step: eA, contextMetadata: eC, purchaseTokenAuthState: eN, activeSubscription: eR, priceOptions: eO, hasPaymentSources: eD, paymentSourceId: eL, paymentSources: ex, purchaseType: ew, defaultPlanId: eP } = (0, U.usePaymentContext)(),
         eM = (0, Z.Z)(),
         ek = d.ModalSize.SMALL;
-    eu || (null == eM ? void 0 : eM.isLargeModal) ? (ek = d.ModalSize.LARGE) : (null == eM ? void 0 : eM.isDynamicModal) && (ek = d.ModalSize.DYNAMIC);
+    eu || (null == eM ? void 0 : eM.isLargeModal) ? (ek = d.ModalSize.LARGE) : (eA === B.h8.ADD_PAYMENT_STEPS || (null == eM ? void 0 : eM.isDynamicModal)) && (ek = d.ModalSize.DYNAMIC);
     let { isGift: eU, giftRecipient: eB, customGiftMessage: eG, emojiConfetti: eZ, soundEffect: eF } = (0, k.wD)(),
         eV = (0, C.Z)({ location: 'Payment Modal' }),
         ej = (0, N.Ng)(),

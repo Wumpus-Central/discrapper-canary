@@ -24,8 +24,8 @@ var i = s(392711),
     S = s(514701),
     T = s(6242),
     x = s(467721),
-    M = s(757692),
-    y = s(114064),
+    y = s(757692),
+    M = s(114064),
     A = s(933843),
     O = s(281494),
     P = s(276444),
@@ -112,7 +112,7 @@ class F extends c.Z {
         if (!t || e.state !== G.hes.DISCONNECTED || e.willReconnect) return;
         let s = _.Z.getChannel(e.channelId);
         if (null == s) return;
-        let n = y.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
+        let n = M.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
         if (
             (n &&
                 l.Z.dispatch({
@@ -174,7 +174,7 @@ class F extends c.Z {
                 (0, i.debounce)((e, t, s) => {
                     var n, i;
                     let r = u.Z.getSelectedParticipant(e),
-                        o = (0, M.o)(r, s),
+                        o = (0, y.o)(r, s),
                         { sendNitroMessage: l } = (0, T.TD)(o),
                         c = null !== (i = null === (n = m.Z.getGuild(t)) || void 0 === n ? void 0 : n.premiumTier) && void 0 !== i ? i : G.Eu4.NONE;
                     if (x.Z.cooldownIsActive() || !l || c >= G.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == s ? void 0 : s.id) || null == r.maxResolution || null == r.maxFrameRate) return;

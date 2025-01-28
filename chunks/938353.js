@@ -3,10 +3,10 @@ n.d(t, {
         return e6;
     },
     BB: function () {
-        return e2;
+        return e3;
     },
     ZP: function () {
-        return e3;
+        return e2;
     }
 }),
     n(47120),
@@ -177,7 +177,7 @@ let eJ = 15 * eg.Z.Millis.MINUTE,
               })
             : null;
     };
-class e2 extends (i = l.Component) {
+class e3 extends (i = l.Component) {
     shouldRenderInvite(e) {
         let { channel: t } = this.props;
         return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && e$.has(e));
@@ -810,7 +810,7 @@ class e2 extends (i = l.Component) {
             });
     }
 }
-function e3(e) {
+function e2(e) {
     var t;
     let { channel: n, message: i, renderSuppressEmbeds: l, isMessageSnapshot: a } = e,
         o = (0, c.e7)([eu.default], () => eu.default.getId()),
@@ -861,7 +861,7 @@ function e3(e) {
         { hasInlineForwardButton: B } = (0, Z.yk)({ location: 'MessageAccessories' }),
         w = (0, P.a)(i) && B,
         F = (0, eS._)(n);
-    return (0, r.jsx)(e2, {
+    return (0, r.jsx)(e3, {
         canSuppressEmbeds: v,
         canDeleteAttachments: T,
         ...R,
@@ -886,7 +886,7 @@ function e3(e) {
         hasInlineForwardButton: w
     });
 }
-eQ(e2, 'defaultProps', {
+eQ(e3, 'defaultProps', {
     renderEmbeds: !0,
     compact: !1
 });
@@ -902,7 +902,7 @@ let e6 = (e) => {
         E = (0, A.V)(i.id, n.author.id),
         C = (0, b.r)(n.id),
         I = (0, J.Z)(n);
-    return (0, r.jsx)(e2, {
+    return (0, r.jsx)(e3, {
         ...d,
         message: n,
         channel: i,

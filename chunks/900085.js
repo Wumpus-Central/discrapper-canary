@@ -29,8 +29,8 @@ var n,
     S = s(585483),
     T = s(63063),
     x = s(51596),
-    M = s(823385),
-    y = s(415795),
+    y = s(823385),
+    M = s(415795),
     A = s(670512),
     O = s(981631),
     P = s(388032),
@@ -69,7 +69,7 @@ let D = 10,
 class Z extends (n = r.Component) {
     render() {
         let e = f.Z.getGuild(this.props.channel.guild_id);
-        return (0, i.jsx)(y.$W, {
+        return (0, i.jsx)(M.$W, {
             ...this.props,
             children: (0, i.jsx)('div', {
                 className: L.miscContainer,
@@ -96,16 +96,16 @@ let w = c.ZP.connectStores([b.ZP, C.Z], (e) => {
     j = c.ZP.connectStores([N.default], (e) => {
         let { guild: t } = e;
         return { unread: N.default.hasUnread(t.id) };
-    })(y.ic),
+    })(M.ic),
     H = c.ZP.connectStores([b.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: b.ZP.getMentionCount(t.id) };
-    })(y.PZ),
+    })(M.PZ),
     G = c.ZP.connectStores([C.Z, b.ZP], (e) => {
         let { user: t } = e,
             s = C.Z.getDMFromUserId(t.id);
         return { mentions: null != s ? b.ZP.getMentionCount(s) : 0 };
-    })(y.n5);
+    })(M.n5);
 function V(e, t, s) {
     return (0, i.jsx)(
         d.Tooltip,
@@ -407,7 +407,7 @@ class K extends r.PureComponent {
                     { showScores: r } = _.Z.getCurrentConfig({ location: '62f4be_1' }, { autoTrackExposure: !1 });
                 switch (s.type) {
                     case p.h8.HEADER:
-                        return (0, i.jsx)(y.h4, { children: s.record.text }, ''.concat(s.type, '-').concat(s.record.id));
+                        return (0, i.jsx)(M.h4, { children: s.record.text }, ''.concat(s.type, '-').concat(s.record.id));
                     case p.h8.TEXT_CHANNEL:
                         return (0, i.jsx)(
                             w,
@@ -486,7 +486,7 @@ class K extends r.PureComponent {
                         );
                     case p.h8.APPLICATION:
                         return (0, i.jsx)(
-                            y.Mx,
+                            M.Mx,
                             {
                                 id: this.getRowId(t),
                                 focused: n >= 0 && t === n,
@@ -499,7 +499,7 @@ class K extends r.PureComponent {
                         );
                     case p.h8.LINK:
                         return (0, i.jsx)(
-                            y.rU,
+                            M.rU,
                             {
                                 focused: n >= 0 && t === n,
                                 onClick: () => this.selectResult(s),
@@ -514,7 +514,7 @@ class K extends r.PureComponent {
                         );
                     case p.h8.IN_APP_NAVIGATION:
                         return (0, i.jsx)(
-                            y.s8,
+                            M.s8,
                             {
                                 focused: n >= 0 && t === n,
                                 onClick: () => this.selectResult(s),
@@ -534,7 +534,7 @@ class K extends r.PureComponent {
     }
 }
 function W(e) {
-    let t = (0, c.cj)([M.Z], () => M.Z.getProps());
+    let t = (0, c.cj)([y.Z], () => y.Z.getProps());
     return (0, i.jsx)(K, {
         ...t,
         ...e

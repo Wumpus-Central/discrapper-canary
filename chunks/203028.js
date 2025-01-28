@@ -110,7 +110,7 @@ function E(e) {
                         );
                     case f.IIU.WATCHING:
                         return {
-                            subtitle: _.intl.string(_.t['0PyKSU']),
+                            subtitle: _.intl.formatToPlainString(_.t.pW3Ip6, { name: v.name }),
                             icon: null != e && null != e.getIconURL(g.Z) ? (0, i.jsx)(p.Z.Header.Icon, { src: e.getIconURL(g.Z) }) : null
                         };
                     default:

@@ -29,7 +29,7 @@ var n,
     S = s(981631),
     T = s(388032),
     x = s(521287);
-function M(e, t, s) {
+function y(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function M(e, t, s) {
     );
 }
 ((i = n || (n = {})).UP = 'UP'), (i.DOWN = 'DOWN'), (i.LEFT = 'LEFT'), (i.RIGHT = 'RIGHT');
-let y = {
+let M = {
     UP: h().throttle(() => (0, I.GN)('ddr-up'), 100),
     DOWN: h().throttle(() => (0, I.GN)('ddr-down'), 100),
     LEFT: h().throttle(() => (0, I.GN)('ddr-left'), 100),
@@ -212,7 +212,7 @@ class v extends o.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            M(this, 'state', {
+            y(this, 'state', {
                 UP: !1,
                 DOWN: !1,
                 LEFT: !1,
@@ -222,25 +222,25 @@ class v extends o.PureComponent {
                 scaleY: new E.Z.Value(0),
                 animating: !1
             }),
-            M(this, 'scrollerRef', o.createRef()),
-            M(this, 'lastInputedKeys', []),
-            M(this, 'scrollPageUp', () => {
+            y(this, 'scrollerRef', o.createRef()),
+            y(this, 'lastInputedKeys', []),
+            y(this, 'scrollPageUp', () => {
                 let e = this.scrollerRef.current;
                 d()(null != e, 'Scroller is pagedUp when not mounted'), e.scrollPageUp({ animate: !0 });
             }),
-            M(this, 'scrollPageDown', () => {
+            y(this, 'scrollPageDown', () => {
                 let e = this.scrollerRef.current;
                 d()(null != e, 'Scroller is pagedDown when not mounted'), e.scrollPageDown({ animate: !0 });
             }),
-            M(this, 'arrowUp', (e) => {
+            y(this, 'arrowUp', (e) => {
                 let { direction: t } = e;
                 this.setState({ [t]: !1 });
             }),
-            M(this, 'arrowDown', (e) => {
+            y(this, 'arrowDown', (e) => {
                 let { direction: t } = e;
-                y[t](), this.setState({ [t]: !0 });
+                M[t](), this.setState({ [t]: !0 });
             }),
-            M(this, 'componentWillLeave', (e) => {
+            y(this, 'componentWillLeave', (e) => {
                 this.setState({ animating: !0 }),
                     this.state.opacity.setValue(1),
                     this.state.scaleX.setValue(0.5),
@@ -253,10 +253,10 @@ class v extends o.PureComponent {
                         })
                     ]).start(e);
             }),
-            M(this, 'toggleOpacity', () => {
+            y(this, 'toggleOpacity', () => {
                 1 === this.state.opacity._value ? this.state.opacity.setValue(0) : this.state.opacity.setValue(1);
             }),
-            M(this, 'getStyles', () => ({
+            y(this, 'getStyles', () => ({
                 opacity: this.state.opacity.interpolate({
                     inputRange: [0, 1],
                     outputRange: [0, 1]
@@ -276,17 +276,17 @@ class v extends o.PureComponent {
                     }
                 ]
             })),
-            M(this, 'handleKeyDown', (e) => {
+            y(this, 'handleKeyDown', (e) => {
                 if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === S.yXg.H && this.lastInputedKeys[1] === S.yXg.H && this.lastInputedKeys[2] === S.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === S.yXg.N && this.lastInputedKeys[4] === S.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
                 let t = A(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({ direction: t }));
             }),
-            M(this, 'handleKeyUp', (e) => {
+            y(this, 'handleKeyUp', (e) => {
                 if (this.props.keyboardModeEnabled) return;
                 let t = A(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({ direction: t }));
             }),
-            M(this, 'onArrowClick', (e) => {
+            y(this, 'onArrowClick', (e) => {
                 this.arrowDown({ direction: e });
             });
     }
@@ -295,7 +295,7 @@ function D(e) {
     let { isActive: t, arrow: s, className: n, children: i } = e,
         [l, c] = o.useState(t),
         d = o.useCallback(() => {
-            y[s](), c(!0);
+            M[s](), c(!0);
         }, [s]);
     return (
         o.useEffect(() => {

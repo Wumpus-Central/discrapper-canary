@@ -3,22 +3,19 @@ n.d(t, {
         return g;
     },
     U1: function () {
-        return s;
+        return u;
     },
     XW: function () {
         return l;
     },
     _J: function () {
-        return m;
+        return _;
     },
     aP: function () {
         return o;
     },
-    c4: function () {
-        return u;
-    },
     e7: function () {
-        return _;
+        return m;
     },
     h6: function () {
         return d;
@@ -28,6 +25,9 @@ n.d(t, {
     },
     y: function () {
         return c;
+    },
+    yS: function () {
+        return s;
     }
 });
 var i = n(15729);
@@ -35,7 +35,7 @@ let a = {
         nickname: void 0,
         dmsAllowed: !0,
         showActivity: !0,
-        receiveNotifications: !0,
+        mutedServer: !1,
         inviteCode: void 0,
         guildId: void 0
     },
@@ -57,9 +57,9 @@ let a = {
                 showActivity: t,
                 touched: !0
             })),
-        setReceiveNotifications: (t) =>
+        setMutedServer: (t) =>
             e((e) => ({
-                receiveNotifications: t,
+                mutedServer: t,
                 touched: !0
             })),
         setInviteCode: (t) =>
@@ -83,12 +83,12 @@ let a = {
     },
     o = () => {
         let e = l.getState();
-        return e.nickname !== a.nickname || e.dmsAllowed !== a.dmsAllowed || e.showActivity !== a.showActivity || e.receiveNotifications !== a.receiveNotifications;
+        return e.nickname !== a.nickname || e.dmsAllowed !== a.dmsAllowed || e.showActivity !== a.showActivity || e.mutedServer !== a.mutedServer;
     },
     c = () => l.getState().nickname,
     d = () => l.getState().dmsAllowed,
-    s = () => l.getState().showActivity,
-    u = () => l.getState().receiveNotifications,
-    _ = () => l.getState().inviteCode,
-    m = () => l.getState().guildId,
+    u = () => l.getState().showActivity,
+    s = () => l.getState().mutedServer,
+    m = () => l.getState().inviteCode,
+    _ = () => l.getState().guildId,
     g = () => l.getState().touched;

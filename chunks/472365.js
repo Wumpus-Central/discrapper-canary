@@ -28,8 +28,8 @@ var n = s(200651),
     S = s(594174),
     T = s(855981),
     x = s(55543),
-    M = s(626135),
-    y = s(768581),
+    y = s(626135),
+    M = s(768581),
     A = s(358085),
     O = s(998502),
     P = s(379164),
@@ -43,7 +43,7 @@ function k() {
     let { analyticsLocations: e, sourceAnalyticsLocations: t } = (0, E.ZP)(h.Z.PREMIUM_UPSELL_TOOLTIP);
     return (
         i.useEffect(() => {
-            M.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
+            y.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: D.cd.GUILD_CAP_INLINE_INVITE_MODAL,
                 location: { page: v.ZY5.NATIVE_INVITE_MODAL },
                 location_stack: t
@@ -161,7 +161,7 @@ function G(e) {
     if (null != z) (t = null == W ? void 0 : W.name), (s = R.ZP.createFromServer(z).getCoverImageURL(1024));
     else if (null != W)
         (t = W.name),
-            (s = y.ZP.getGuildSplashURL({
+            (s = M.ZP.getGuildSplashURL({
                 id: W.id,
                 splash: W.splash
             }));
@@ -270,7 +270,7 @@ function G(e) {
                                                 className: Z.noThanksButton,
                                                 onClick: function () {
                                                     var e;
-                                                    M.default.track(v.rMx.INVITE_ACCEPT_DISMISSED, {
+                                                    y.default.track(v.rMx.INVITE_ACCEPT_DISMISSED, {
                                                         invite_code: null == T ? void 0 : T.code,
                                                         guild_id: null == T ? void 0 : null === (e = T.guild) || void 0 === e ? void 0 : e.id
                                                     }),

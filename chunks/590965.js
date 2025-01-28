@@ -6,43 +6,43 @@ var a,
     o,
     c = n(442837),
     d = n(570140),
-    s = n(413605),
-    u = n(703656),
-    _ = n(131704),
-    m = n(601964),
+    u = n(413605),
+    s = n(703656),
+    m = n(131704),
+    _ = n(601964),
     g = n(592125),
     f = n(430824),
     b = n(701190),
     p = n(496675),
-    h = n(594174),
-    S = n(998502),
+    S = n(594174),
+    h = n(998502),
     v = n(981631),
     I = n(176505);
 let C = v.IlC.APP,
-    N = !1,
     T = !1,
-    x = [];
+    x = !1,
+    N = [];
 function E() {
-    N = !0;
+    T = !0;
 }
-class R extends (a = c.ZP.Store) {
+class B extends (a = c.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, b.Z, h.default);
+        this.waitFor(f.Z, b.Z, S.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? v.IlC.OVERLAY : v.IlC.APP;
-        return !!(N && x.length > 0 && C === e);
+        return !!(T && N.length > 0 && C === e);
     }
     getProps() {
         return {
-            invite: x.length > 0 ? x[0][0] : null,
+            invite: N.length > 0 ? N[0][0] : null,
             error: null != i && '' !== i ? i : null,
-            submitting: T
+            submitting: x
         };
     }
 }
 (o = 'InviteModalStore'),
-    (r = 'displayName') in (l = R)
+    (r = 'displayName') in (l = B)
         ? Object.defineProperty(l, r, {
               value: o,
               enumerable: !0,
@@ -50,11 +50,11 @@ class R extends (a = c.ZP.Store) {
               writable: !0
           })
         : (l[r] = o),
-    (t.Z = new R(d.Z, {
+    (t.Z = new B(d.Z, {
         OVERLAY_INITIALIZE: E,
         CONNECTION_OPEN: E,
         CONNECTION_CLOSED: function () {
-            N = !1;
+            T = !1;
         },
         INVITE_MODAL_OPEN: function (e) {
             let t = e.invite;
@@ -62,13 +62,13 @@ class R extends (a = c.ZP.Store) {
             if (!(t.state === v.r2o.EXPIRED || t.state === v.r2o.BANNED || t.state === v.r2o.ERROR)) {
                 let { channel: e, guild: n } = t;
                 if (null == e) return !1;
-                if ((0, _.bc)(e.type)) {
-                    if (null != g.Z.getChannel(e.id)) return (0, u.XU)(v.ME, e.id), S.ZP.focus(), !1;
+                if ((0, m.bc)(e.type)) {
+                    if (null != g.Z.getChannel(e.id)) return (0, s.XU)(v.ME, e.id), h.ZP.focus(), !1;
                 } else {
                     if (null == n) return !1;
-                    if (null != f.Z.getGuild(n.id) && !(0, s.TY)(t)) {
+                    if (null != f.Z.getGuild(n.id) && !(0, u.TY)(t)) {
                         let e = (function (e) {
-                            if ((0, s.W6)(e)) return I.oC.ROLE_SUBSCRIPTIONS;
+                            if ((0, u.W6)(e)) return I.oC.ROLE_SUBSCRIPTIONS;
                             let { channel: t } = e;
                             if (null != t) {
                                 let e = g.Z.getChannel(t.id);
@@ -76,20 +76,20 @@ class R extends (a = c.ZP.Store) {
                             }
                             return null;
                         })(t);
-                        return (0, u.XU)(n.id, e), S.ZP.focus(), !1;
+                        return (0, s.XU)(n.id, e), h.ZP.focus(), !1;
                     }
                 }
             }
             if (
-                x.some((e) => {
+                N.some((e) => {
                     let [n] = e;
                     return n.code === t.code;
                 })
             )
                 return !1;
-            (C = e.context), (T = !1);
+            (C = e.context), (x = !1);
             let n = (function (e) {
-                let { approximate_member_count: t, approximate_presence_count: n, code: i, state: a, target_type: l, target_user: r, target_application: o, stage_instance: c, type: d, channel: s, guild: u, is_nickname_changeable: _ } = e,
+                let { approximate_member_count: t, approximate_presence_count: n, code: i, state: a, target_type: l, target_user: r, target_application: o, stage_instance: c, type: d, channel: u, guild: s, is_nickname_changeable: m } = e,
                     g = {
                         code: i,
                         state: a,
@@ -100,23 +100,23 @@ class R extends (a = c.ZP.Store) {
                         target_application: o,
                         stage_instance: c,
                         type: d,
-                        is_nickname_changeable: _
+                        is_nickname_changeable: m
                     };
-                return null != s && (g.channel = { ...s }), null != u && (g.guild = new m.ZP(u)), null != e.inviter && (g.inviter = { ...e.inviter }), g;
+                return null != u && (g.channel = { ...u }), null != s && (g.guild = new _.ZP(s)), null != e.inviter && (g.inviter = { ...e.inviter }), g;
             })(t);
-            x.push([n, e.resolve]);
+            N.push([n, e.resolve]);
         },
         INVITE_MODAL_CLOSE: function () {
-            if (((i = null), (T = !1), x.length > 0)) {
-                let [, e] = x.shift();
+            if (((i = null), (x = !1), N.length > 0)) {
+                let [, e] = N.shift();
                 null != e && e();
             }
         },
         INVITE_ACCEPT: function () {
-            T = !0;
+            x = !0;
         },
         INVITE_MODAL_ERROR: function (e) {
             let { message: t } = e;
-            (i = t), (T = !1);
+            (i = t), (x = !1);
         }
     }));

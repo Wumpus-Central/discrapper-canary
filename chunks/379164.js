@@ -17,7 +17,7 @@ t.Z = {
             s = (0, a.y)(),
             d = (0, a.h6)(),
             p = (0, a.U1)(),
-            _ = (0, a.c4)();
+            _ = (0, a.yS)();
         i.Z.acceptInvite({
             inviteKey: e.code,
             context: t,
@@ -36,7 +36,7 @@ t.Z = {
                         let t = new Set((0, E._o)());
                         t.add(e.guild.id), c.SE.updateSetting(Array.from(t));
                     }
-                    null != s && s.length > 0 && (0, o.iq)(e.guild.id, { nick: s }), r.Z.updateGuildNotificationSettings(e.guild.id, { muted: !_ }, h.ZB.Muted);
+                    null != s && s.length > 0 && (0, o.iq)(e.guild.id, { nick: s }), r.Z.updateGuildNotificationSettings(e.guild.id, { muted: _ }, h.ZB.Muted);
                 }
             },
             (e) => {
@@ -54,7 +54,7 @@ t.Z = {
             let s = (0, a.y)(),
                 n = (0, a.h6)(),
                 i = (0, a.U1)(),
-                r = (0, a.c4)(),
+                r = (0, a.yS)(),
                 o = (0, a.aP)();
             d.default.track(p.rMx.INVITE_ACCEPT_JOIN_SETTINGS_SET, {
                 invite_code: e,
@@ -62,7 +62,7 @@ t.Z = {
                 nickname_present: null != s && s.length > 0,
                 dms_allowed: n,
                 activity_status_shown: i,
-                receive_notifications: r,
+                muted_server: r,
                 changed_from_default: o
             });
         }

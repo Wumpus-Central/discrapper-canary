@@ -122,7 +122,7 @@ class A extends r.PureComponent {
             case I.mFx.WATCH:
                 return N.intl.formatToPlainString(N.t.BBJXVl, { name: t });
             case I.mFx.JOIN:
-                return N.intl.string(N.t.uWBvp6);
+                return N.intl.string(N.t['hC/Ze3']);
             case I.mFx.JOIN_REQUEST:
             default:
                 return N.intl.string(N.t.Ckxb6u);
@@ -140,7 +140,7 @@ class A extends r.PureComponent {
                 case I.mFx.JOIN:
                 case I.mFx.JOIN_REQUEST:
                 default:
-                    return N.intl.string(N.t.x1UXGR);
+                    return N.intl.string(N.t['2Gbof3']);
             }
         if (l && !r && !this.isEmbeddedActivityApplication() && e === I.mFx.JOIN) return N.intl.string(N.t.c3EWuL);
         if (this.isActionType(I.mFx.LISTEN) || this.isActionType(I.mFx.WATCH))
@@ -185,7 +185,7 @@ class A extends r.PureComponent {
                 : this.isActionType(I.mFx.LISTEN)
                   ? N.intl.string(N.t.gXYoq6)
                   : N.intl.string(N.t.eyKDl5);
-        return this.isActionType(I.mFx.JOIN_REQUEST) ? (this.isPartyFull() ? N.intl.string(N.t.VEtAtb) : N.intl.formatToPlainString(N.t.XWapnZ, { number: d - c })) : this.isInParty() ? N.intl.string(N.t.Y0TV5O) : t || n || r || this.isEmbeddedActivityApplication() ? (this.isPartyFull() ? N.intl.string(N.t.VEtAtb) : this.hasPartySize() ? N.intl.formatToPlainString(N.t.XWapnZ, { number: d - c }) : N.intl.string(N.t.VJlc0d)) : N.intl.formatToPlainString(N.t.SqJBnJ, { name: a });
+        return this.isActionType(I.mFx.JOIN_REQUEST) ? (this.isPartyFull() ? N.intl.string(N.t.jfrMtr) : N.intl.formatToPlainString(N.t.XWapnZ, { number: d - c })) : this.isInParty() ? N.intl.string(N.t.KC26NT) : t || n || r || this.isEmbeddedActivityApplication() ? (this.isPartyFull() ? N.intl.string(N.t.jfrMtr) : this.hasPartySize() ? N.intl.formatToPlainString(N.t.XWapnZ, { number: d - c }) : N.intl.string(N.t.VJlc0d)) : N.intl.formatToPlainString(N.t.SqJBnJ, { name: a });
     }
     renderActionButton() {
         let { isInBrowser: e, isPreview: t, isGameLaunchable: n, isSender: r, partyId: l, activity: a, message: o, renderSpotifyJoinButton: c, renderCustomButton: u } = this.props,
