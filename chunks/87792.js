@@ -25,8 +25,9 @@ var i = n(200651),
     v = n(292352),
     A = n(981631),
     j = n(388032),
-    O = n(95857);
-function R() {
+    O = n(95857),
+    R = n(441685);
+function P() {
     let e = r.useCallback(() => {
         (0, o.openModalLazy)(async () => {
             let { default: e } = await n.e('66462').then(n.bind(n, 756226));
@@ -45,7 +46,7 @@ function R() {
         })
     });
 }
-function P(e) {
+function D(e) {
     let { displayType: t } = e,
         n = r.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(j.intl.string(j.t.Wu8BKy), o.ToastType.FAILURE));
@@ -135,7 +136,7 @@ function P(e) {
         ]
     });
 }
-let D = () => {
+let y = () => {
         let e = (0, E.Z)(),
             t = (0, _.mq)(v.ne.ACTIVE),
             n = (0, h.o)(j.intl.formatToPlainString(j.t['7hqFl5'], { activeLinks: t.length }), j.intl.string(j.t['Q/D/0d'])),
@@ -162,7 +163,7 @@ let D = () => {
                   ]
               });
     },
-    y = (e) => {
+    B = (e) => {
         let { userId: t, subText: n, avatarSize: r = o.AvatarSizes.SIZE_40 } = e,
             s = (0, f.I)(t);
         return void 0 === s
@@ -190,7 +191,7 @@ let D = () => {
                   ]
               });
     },
-    B = () => {
+    Z = () => {
         let e = (0, _.mq)(v.ne.ACTIVE),
             t = (0, l.e7)([u.Z], () => u.Z.getSelectedTeenId()),
             { selectTeenUser: n } = (0, p.G)({}),
@@ -200,7 +201,7 @@ let D = () => {
             })),
             a = r.useCallback(
                 (e) =>
-                    (0, i.jsx)(y, {
+                    (0, i.jsx)(B, {
                         userId: e.value,
                         avatarSize: o.AvatarSizes.SIZE_24
                     }),
@@ -221,15 +222,15 @@ let D = () => {
             options: s
         });
     },
-    Z = (e) => {
+    L = (e) => {
         let { userId: t } = e,
             n = (0, E.Z)(),
             r = (0, _.mq)(v.ne.ACTIVE),
             s = (0, m.Qr)(!!n),
             a = (0, _.Rd)(s);
         return n && 1 !== r.length
-            ? (0, i.jsx)(B, {})
-            : (0, i.jsx)(y, {
+            ? (0, i.jsx)(Z, {})
+            : (0, i.jsx)(B, {
                   userId: t,
                   subText: a
               });
@@ -245,14 +246,14 @@ t.Z = (e) => {
         children: [
             (0, i.jsxs)('div', {
                 className: O.connectedCounter,
-                children: [(0, i.jsx)(D, {}), (0, i.jsx)(R, {})]
+                children: [(0, i.jsx)(y, {}), (0, i.jsx)(P, {})]
             }),
             (0, i.jsxs)('div', {
-                className: O.card,
+                className: R.box,
                 children: [
                     (0, i.jsx)('div', {
                         className: O.header,
-                        children: (0, i.jsx)(Z, { userId: t.id })
+                        children: (0, i.jsx)(L, { userId: t.id })
                     }),
                     (0, i.jsxs)('div', {
                         className: O.content,
@@ -276,7 +277,7 @@ t.Z = (e) => {
                                 children: r
                                     ? n.map((e) => {
                                           let [t] = e;
-                                          return (0, i.jsx)(P, { displayType: t }, ''.concat(t, '-list'));
+                                          return (0, i.jsx)(D, { displayType: t }, ''.concat(t, '-list'));
                                       })
                                     : (0, i.jsx)(N.Z, {
                                           className: O.emptyActivity,

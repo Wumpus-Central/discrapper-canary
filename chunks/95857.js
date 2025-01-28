@@ -1,6 +1,5 @@
 e.exports = {
     container: 'container_fd2eb1',
-    card: 'card_fd2eb1',
     connectedCounter: 'connectedCounter_fd2eb1',
     icon: 'icon_fd2eb1',
     tooltip: 'tooltip_fd2eb1',

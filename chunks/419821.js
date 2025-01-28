@@ -44,7 +44,6 @@ function p(e) {
                 className: h.actions,
                 children: (0, i.jsx)(d.Z, {
                     icon: o.XSmallIcon,
-                    className: h.__invalid_actionDeny,
                     tooltip: g.intl.string(g.t.l20ZZm),
                     onClick: p
                 })
