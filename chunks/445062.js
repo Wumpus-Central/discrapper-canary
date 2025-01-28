@@ -18,7 +18,6 @@ function u(e) {
     return (0, i.jsx)(d, {
         label: l(n),
         iconComponent: f,
-        isActive: !0,
         onMouseEnter: (e) => {
             null == s || s(e), p.onMouseEnter();
         },
