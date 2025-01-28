@@ -25,6 +25,7 @@ function c(e) {
                       s.Z,
                       {
                           badges: e,
+                          displayProfile: n,
                           onClose: l
                       },
                       e[0].id

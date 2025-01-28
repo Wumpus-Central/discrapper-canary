@@ -54,12 +54,12 @@ let L = (e) => {
         }
 };
 function x(e) {
-    let { badges: n, className: r, badgeClassName: i, onClose: s } = e,
-        { analyticsLocations: x } = (0, f.ZP)(d.Z.BADGE),
-        { context: w, trackUserProfileAction: P } = (0, I.KZ)(),
-        [M, k] = o.useState(!1),
-        U = E.default.getCurrentUser(),
-        B = (0, y.yd)(null == U ? void 0 : U.premiumType, R.p9.TIER_2);
+    let { badges: n, className: r, badgeClassName: i, displayProfile: s, onClose: x } = e,
+        { analyticsLocations: w } = (0, f.ZP)(d.Z.BADGE),
+        { context: P, trackUserProfileAction: M } = (0, I.KZ)(),
+        [k, U] = o.useState(!1),
+        B = E.default.getCurrentUser(),
+        G = (0, y.yd)(null == B ? void 0 : B.premiumType, R.p9.TIER_2);
     return (0, a.jsx)('div', {
         className: l()(D.container, r),
         'aria-label': O.intl.string(O.t.VWV0y8),
@@ -68,39 +68,47 @@ function x(e) {
             let n = (0, b.fv)(e.id),
                 r = (r) => {
                     if (
-                        (P({ action: 'PRESS_BADGE' }),
+                        (M({ action: 'PRESS_BADGE' }),
                         (0, T.NE)({
                             badge: e.id,
-                            analyticsLocations: x,
-                            ...w
+                            analyticsLocations: w,
+                            ...P
                         }),
                         (null == n ? void 0 : n.badgeVersion) === 2)
                     ) {
-                        if ((r.preventDefault(), !B)) {
-                            (0, h.k)(x), null == s || s();
+                        if (
+                            (r.preventDefault(),
+                            v.default.track(N.rMx.TIERED_TENURE_BADGE_CLICKED, {
+                                badge: e.id,
+                                premium_type: G,
+                                viewed_user_id: null == s ? void 0 : s.userId
+                            }),
+                            !G)
+                        ) {
+                            (0, h.k)(w), null == x || x();
                             return;
                         }
                         (0, g.uL)(N.Z5c.APPLICATION_STORE, {
                             source: d.Z.BADGE,
-                            sourceLocationStack: x
+                            sourceLocationStack: w
                         }),
-                            null == s || s();
+                            null == x || x();
                         return;
                     }
-                    let i = null != e.link ? (0, c.default)(e.link, { analyticsLocations: x }) : null;
-                    if (null != i) return null == s || s(), i(r);
+                    let i = null != e.link ? (0, c.default)(e.link, { analyticsLocations: w }) : null;
+                    if (null != i) return null == x || x(), i(r);
                 },
                 o = () => {
                     e.id === S.i && v.default.track(N.rMx.QUEST_CONTENT_VIEWED, { ...(0, _.mH)(m.jn.QUEST_BADGE) }),
-                        P({ action: 'HOVER_BADGE' }),
+                        M({ action: 'HOVER_BADGE' }),
                         (0, T.Qf)({
                             badge: e.id,
-                            analyticsLocations: x,
-                            ...w
+                            analyticsLocations: w,
+                            ...P
                         });
                 },
                 f = L(null == n ? void 0 : n.id),
-                E = null != n && M,
+                E = null != n && k,
                 y =
                     (null == n ? void 0 : n.badgeVersion) === 2
                         ? (0, a.jsx)(p.Z, {
@@ -115,8 +123,8 @@ function x(e) {
                     'aria-label': e.description,
                     delay: C.vB,
                     tooltipClassName: f,
-                    onTooltipShow: () => k(null != n && 1 === n.badgeVersion),
-                    onTooltipHide: () => k(!1),
+                    onTooltipShow: () => U(null != n && 1 === n.badgeVersion),
+                    onTooltipHide: () => U(!1),
                     children: (0, a.jsxs)(u.Anchor, {
                         onClick: r,
                         onMouseEnter: o,
