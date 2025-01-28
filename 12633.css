@@ -16756,8 +16756,7 @@ html:not(.visual-refresh) .container_b01a4f {
 }
 
 .visual-refresh .container_bf3873 {
-    margin-bottom: 16px;
-    margin-top: 8px
+    margin-bottom: 16px
 }
 
 .appContainer_bf3873 {
@@ -21133,6 +21132,10 @@ h3.improved_f017d0:after {
 
 .body_e89716 {
     padding: 8px 24px 16px
+}
+
+.visual-refresh .body_e89716 {
+    padding-top: 16px
 }
 
 .slideContainer_fc3a81 {
