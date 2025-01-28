@@ -65,7 +65,7 @@ let a = s(691041),
             })
         }),
     x = (t) => {
-        let { onClose: e, onCTA: a, transitionState: x } = t;
+        let { onClose: e, ctaOnClick: a, transitionState: x } = t;
         return (0, n.jsxs)(i.ModalRoot, {
             size: i.ModalSize.DYNAMIC,
             className: l.container,

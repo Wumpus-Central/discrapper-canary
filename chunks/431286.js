@@ -25,7 +25,7 @@ function c() {
                         (0, i.jsx)(e, {
                             transitionState: r,
                             onClose: n,
-                            onCTA: n
+                            ctaOnClick: n
                         })
                     );
                 };

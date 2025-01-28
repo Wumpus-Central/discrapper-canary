@@ -94,7 +94,7 @@ function h() {
                                 return (0, i.jsx)(e, {
                                     ...r,
                                     onClose: n,
-                                    onCTA: n
+                                    ctaOnClick: () => {}
                                 });
                             };
                         });
