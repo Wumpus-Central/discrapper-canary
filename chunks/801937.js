@@ -124,7 +124,6 @@ class M extends l.PureComponent {
                 f.Button,
                 {
                     onClick: () => this.props.onChooseType(e),
-                    className: S.button,
                     children: (0, s.jsxs)('div', {
                         className: c()(A.flex, A.alignCenter),
                         children: [
@@ -152,7 +151,6 @@ class M extends l.PureComponent {
             { onChooseType: r, className: i, onStripePaymentMethodReceived: a, ipCountryCode: o, ipCountryCodeHasError: l, paymentRequestPaymentContext: u, isEligibleForTrial: d = !1 } = this.props,
             p = null !== (e = this.props.paymentRequestWallets) && void 0 !== e ? e : [],
             _ = {
-                className: S.button,
                 iconClassName: S.buttonIcon,
                 paymentLabel: T.intl.string(T.t.ZURqX1),
                 onStripePaymentMethodReceived: a,
@@ -195,7 +193,7 @@ class M extends l.PureComponent {
         let b = (0, s.jsxs)('div', {
             children: [
                 (0, s.jsxs)('div', {
-                    className: c()(A.wrap, A.horizontal),
+                    className: c()(A.wrap, A.horizontal, S.container),
                     children: [E, g]
                 }),
                 (0, s.jsx)('div', {
@@ -207,7 +205,7 @@ class M extends l.PureComponent {
                     })
                 }),
                 (0, s.jsx)('div', {
-                    className: c()(A.wrap, A.horizontal, S.allPaymentsSection, {
+                    className: c()(A.wrap, A.horizontal, S.allPaymentsSection, S.container, {
                         [S.hidden]: !n,
                         [A.flex]: n
                     }),

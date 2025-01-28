@@ -52,10 +52,7 @@ function m(e) {
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(d.ModalContent, {
-                                  className: s()(O, h.body, {
-                                      [h.reviewStep]: b === p.h8.REVIEW,
-                                      [h.addPaymentSteps]: b === p.h8.ADD_PAYMENT_STEPS
-                                  }),
+                                  className: s()(O, h.body, { [h.reviewStep]: b === p.h8.REVIEW }),
                                   children: (0, i.jsx)(d.Slides, {
                                       activeSlide: b,
                                       centered: !1,
