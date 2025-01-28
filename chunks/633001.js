@@ -150,7 +150,9 @@ function w(e) {
         n = (0, s.cj)([j.Z], () => j.Z.getOverlayPIDStatuses()),
         r = (0, s.cj)([f.Z], () => f.Z.getTrackedGames()),
         l = (0, s.e7)([j.Z], () => j.Z.isInputLocked(t), [t]),
-        i = (0, s.e7)([j.Z], () => j.Z.isReady(t), [t]);
+        i = (0, s.e7)([j.Z], () => j.Z.DEV_isInputLockedV3(t), [t]),
+        o = (0, s.e7)([j.Z], () => j.Z.DEV_isInputLocked(t), [t]),
+        d = (0, s.e7)([j.Z], () => j.Z.isReady(t), [t]);
     return (0, a.jsxs)('div', {
         children: [
             (0, a.jsx)(c.Text, {
@@ -210,7 +212,17 @@ function w(e) {
             (0, a.jsx)(c.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-primary',
-                children: 'isReady: '.concat(i)
+                children: 'isInputLockedV3: '.concat(i)
+            }),
+            (0, a.jsx)(c.Text, {
+                variant: 'text-sm/normal',
+                color: 'text-primary',
+                children: 'isInputLockedV2: '.concat(o)
+            }),
+            (0, a.jsx)(c.Text, {
+                variant: 'text-sm/normal',
+                color: 'text-primary',
+                children: 'isReady: '.concat(d)
             })
         ]
     });

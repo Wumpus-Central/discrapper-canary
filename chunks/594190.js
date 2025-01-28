@@ -238,16 +238,17 @@ function e_(e) {
     return ''.concat(e.exePath, ':').concat(n);
 }
 function em(e) {
-    let [n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [C.Z, N.Z];
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        [r, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [C.Z, N.Z];
     if (e.isLauncher)
         return {
             source: k.d.LAUNCHER,
             enabled: !1,
             overlayMethod: E.gl.Disabled
         };
-    let i = n.getGameByName(e.name);
-    if (null != i) {
-        let e = r.getActiveLibraryApplication(i.id);
+    let a = r.getGameByName(e.name);
+    if (null != a) {
+        let e = i.getActiveLibraryApplication(a.id);
         if (null != e)
             return {
                 source: k.d.LIBRARY_APPLICATION,
@@ -255,26 +256,27 @@ function em(e) {
                 overlayMethod: E.gl.Disabled
             };
     }
-    let a = (0, A.NW)('getRawOverlayGameStatus') && (0, M.VS)() && !S.v.legacyEnabled,
-        o = a ? E.gl.OutOfProcess : E.gl.Hook,
-        s = $.enableOverlay[e_(e)];
-    if (null != s)
+    let o = n || S.v.legacyEnabled,
+        s = (0, A.NW)('getRawOverlayGameStatus') && (0, M.VS)() && !o,
+        l = s ? E.gl.OutOfProcess : E.gl.Hook,
+        u = $.enableOverlay[e_(e)];
+    if (null != u)
         return {
             source: k.d.USER_OVERRIDE,
-            enabled: s,
-            overlayMethod: o
+            enabled: u,
+            overlayMethod: l
         };
-    let l = null == e.id ? null : et[e.id];
-    return null != l
+    let c = null == e.id ? null : et[e.id];
+    return null != c
         ? {
               source: k.d.DATABASE,
-              enabled: l.enabled || a,
-              overlayMethod: o
+              enabled: c.enabled || s,
+              overlayMethod: l
           }
         : {
               source: k.d.DEFAULT,
-              enabled: F || a,
-              overlayMethod: E.gl.Hook
+              enabled: F || s,
+              overlayMethod: l
           };
 }
 function eg(e) {

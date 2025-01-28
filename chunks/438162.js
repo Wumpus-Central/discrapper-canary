@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return es;
+        return e_;
     }
 });
 var i = t(200651),
@@ -33,8 +33,8 @@ var i = t(200651),
     w = t(556296),
     T = t(237997),
     A = t(451478),
-    S = t(585483),
-    P = t(358085),
+    P = t(585483),
+    S = t(358085),
     D = t(13140),
     R = t(145597),
     U = t(830917),
@@ -46,29 +46,30 @@ var i = t(200651),
     F = t(915614),
     W = t(777382),
     Y = t(333031),
-    B = t(388627),
-    H = t(319414),
-    X = t(561064),
-    K = t(987650),
-    Q = t(981631),
-    J = t(206583),
-    q = t(388032),
-    $ = t(800004);
-let ee = !P.isPlatformEmbedded && !1,
-    en = ee
+    B = t(610394),
+    H = t(388627),
+    X = t(319414),
+    K = t(561064),
+    Q = t(987650),
+    J = t(981631),
+    q = t(206583),
+    $ = t(388032),
+    ee = t(800004);
+let en = !S.isPlatformEmbedded && !1,
+    et = en
         ? (0, i.jsx)(m.Z, {
               src: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdpcnRrYXdrNzVuNjZ3NXpmeTJvNGl4Z2N4OXBsamx5aXphdHhxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/OPg2B0FPBL94H12uM0/giphy480p.mp4',
-              className: $.videoDev,
+              className: ee.videoDev,
               autoPlay: !0,
               loop: !0,
               muted: !0
           })
         : null,
-    et = null;
-function ei(e) {
+    ei = null;
+function er(e) {
     e.preventDefault();
 }
-function er(e) {
+function el(e) {
     (0, d.jW)(e, async () => {
         let { default: e } = await t.e('17610').then(t.bind(t, 385620));
         return (n) =>
@@ -79,22 +80,22 @@ function er(e) {
             });
     });
 }
-let el = r.memo(function (e) {
+let ea = r.memo(function (e) {
         let { keybind: n, onClick: t, locked: r } = e;
         return (0, i.jsx)(u.Clickable, {
-            className: a()($.overlayBackground, {
-                [$.overlayActive]: !r,
-                [$.overlayLocked]: r
+            className: a()(ee.overlayBackground, {
+                [ee.overlayActive]: !r,
+                [ee.overlayLocked]: r
             }),
             onMouseDown: (e) => {
                 let { currentTarget: n, target: i, button: r } = e;
-                r === Q.AeJ.PRIMARY && n === i && t();
+                r === J.AeJ.PRIMARY && n === i && t();
             },
-            onContextMenu: er,
+            onContextMenu: el,
             children: r
                 ? null
                 : (0, i.jsx)(Y.Z, {
-                      className: $.closeContainer,
+                      className: ee.closeContainer,
                       children: (0, i.jsx)(F.Z, {
                           keybind: n,
                           onClick: t,
@@ -103,11 +104,11 @@ let el = r.memo(function (e) {
                   })
         });
     }),
-    ea = r.memo(function (e) {
+    eo = r.memo(function (e) {
         let { locked: n, focused: t } = e;
         return n && t
             ? (0, i.jsx)(Y.Z, {
-                  className: $.closeContainer,
+                  className: ee.closeContainer,
                   children: (0, i.jsx)(F.Z, {
                       onClick: () => s.Z.setInputLocked(!1, (0, R.QF)()),
                       IconComponent: u.LockUnlockedIcon
@@ -115,50 +116,54 @@ let el = r.memo(function (e) {
               })
             : null;
     });
-function eo() {
+function ec() {
     if (null != k.Z.getContextMenu()) {
         (0, d.Zy)();
         return;
     }
     s.Z.setInputLocked(!0, (0, R.QF)());
 }
-function ec() {
+function eu() {
     s.Z.setFocusedPID(R.Js);
 }
-function eu() {
+function ed() {
     s.Z.setFocusedPID(null);
 }
-function ed(e) {
-    let n = T.Z.isLocked((0, R.QF)());
-    'alt' === e.key.toLowerCase() && !n && ('keyup' === e.type.toLowerCase() ? S.S.dispatch(Q.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }) : 'keydown' === e.type.toLowerCase() && S.S.dispatch(Q.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }));
+function es(e) {
+    let n = B.ZP.isInputLocked((0, R.QF)());
+    'alt' === e.key.toLowerCase() && !n && ('keyup' === e.type.toLowerCase() ? P.S.dispatch(J.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }) : 'keydown' === e.type.toLowerCase() && P.S.dispatch(J.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }));
 }
-function es() {
+function e_() {
     var e, n;
-    let t = (0, X.Z)(),
+    let t = (0, K.Z)(),
         {
             locked: l,
             focused: d,
             incompatibleApp: m,
             hasValidResolution: k,
-            hasZeroSizeDimension: S,
-            keybind: P,
+            hasZeroSizeDimension: P,
+            keybind: S,
             isPreviewingInGame: F
-        } = (0, o.cj)([T.Z, A.Z, w.Z], () => {
-            let e = A.Z.windowSize((0, U.ZY)(t)),
-                n = w.Z.getOverlayKeybind();
-            return {
-                locked: T.Z.isLocked((0, R.QF)()),
-                focused: T.Z.isFocused((0, R.QF)()),
-                incompatibleApp: T.Z.incompatibleApp,
-                hasValidResolution: (0, R.Te)(e),
-                hasZeroSizeDimension: 0 === e.height || 0 === e.width,
-                keybind: null != n ? (0, D.BB)(n.shortcut, !0) : '???',
-                isPreviewingInGame: T.Z.isPreviewingInGame()
-            };
-        }),
+        } = (0, o.cj)(
+            [B.ZP, T.Z, A.Z, w.Z],
+            () => {
+                let e = A.Z.windowSize((0, U.ZY)(t)),
+                    n = w.Z.getOverlayKeybind();
+                return {
+                    locked: B.ZP.isInputLocked((0, R.QF)()),
+                    focused: B.ZP.isFocused((0, R.QF)()),
+                    incompatibleApp: T.Z.incompatibleApp,
+                    hasValidResolution: (0, R.Te)(e),
+                    isPreviewingInGame: T.Z.isPreviewingInGame(),
+                    hasZeroSizeDimension: 0 === e.height || 0 === e.width,
+                    keybind: null != n ? (0, D.BB)(n.shortcut, !0) : '???'
+                };
+            },
+            [t]
+        ),
         Y = (0, o.e7)([T.Z], () => T.Z.getActiveRegions()),
-        { analyticsLocations: er } = (0, f.ZP)(p.Z.OVERLAY),
-        es = l || F;
+        { analyticsLocations: el } = (0, f.ZP)(p.Z.OVERLAY),
+        e_ = l || F;
     !(function (e, n) {
         let t = r.useRef({
             mount: e,
@@ -182,15 +187,15 @@ function es() {
             );
     })(
         () => {
-            s.Z.overlayReady((0, R.QF)()), t.addEventListener('keydown', ed), t.addEventListener('keyup', ed), ee && (t.document.hasFocus() && s.Z.setFocusedPID(R.Js), t.addEventListener('focus', ec), t.addEventListener('blur', eu));
+            s.Z.overlayReady((0, R.QF)()), t.addEventListener('keydown', es), t.addEventListener('keyup', es), en && (t.document.hasFocus() && s.Z.setFocusedPID(R.Js), t.addEventListener('focus', eu), t.addEventListener('blur', ed));
         },
         () => {
-            t.removeEventListener('keydown', ed), t.removeEventListener('keyup', ed), ee && (t.removeEventListener('focus', ec), t.removeEventListener('blur', eu));
+            t.removeEventListener('keydown', es), t.removeEventListener('keyup', es), en && (t.removeEventListener('focus', eu), t.removeEventListener('blur', ed));
         }
     ),
         !(function () {
             let e = r.useRef(!1),
-                n = (0, B.pL)(),
+                n = (0, H.pL)(),
                 t = N.Z.getVoiceChannelId(),
                 i = y.Z.getChannel(t),
                 l = null != i ? x.Z.getGuild(i.guild_id) : null,
@@ -202,7 +207,7 @@ function es() {
             r.useEffect(() => {
                 if (e.current) return;
                 (e.current = !0),
-                    s.Z.track(Q.rMx.OVERLAY_INITIALIZED, {
+                    s.Z.track(J.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: o,
                         text_widget_connected: !1,
                         overlay_render_method: _.gl[_.gl.OutOfProcess]
@@ -210,20 +215,20 @@ function es() {
                 let i = null;
                 (i = d
                     ? {
-                          type: K.nc.KEYBIND_INDICATORS,
+                          type: Q.nc.KEYBIND_INDICATORS,
                           markAsDismissed: h
                       }
-                    : { type: K.nc.WELCOME }),
+                    : { type: Q.nc.WELCOME }),
                     c && u
                         ? (i = {
-                              type: K.nc.GO_LIVE_VOICE,
+                              type: Q.nc.GO_LIVE_VOICE,
                               game: n,
                               voiceChannelId: t,
                               voiceGuild: l
                           })
                         : c &&
                           (i = {
-                              type: K.nc.GO_LIVE_NON_VOICE,
+                              type: Q.nc.GO_LIVE_NON_VOICE,
                               game: n
                           }),
                     s.Z.overlayMounted(i);
@@ -233,80 +238,80 @@ function es() {
         (n = t),
         r.useEffect(() => {
             if (e) {
-                if (((0, c.Ay)(u.POPOUT_MODAL_CONTEXT), n.addEventListener('contextmenu', ei, !1), null != et)) {
-                    let e = Date.now() - et;
-                    s.Z.track(Q.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (et = null);
+                if (((0, c.Ay)(u.POPOUT_MODAL_CONTEXT), n.addEventListener('contextmenu', er, !1), null != ei)) {
+                    let e = Date.now() - ei;
+                    s.Z.track(J.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (ei = null);
                 }
                 return () => {
-                    n.removeEventListener('contextmenu', ei, !1);
+                    n.removeEventListener('contextmenu', er, !1);
                 };
             }
-            n.removeEventListener('contextmenu', ei, !1), null == et && ((et = Date.now()), s.Z.track(Q.rMx.OVERLAY_UNLOCKED));
+            n.removeEventListener('contextmenu', er, !1), null == ei && ((ei = Date.now()), s.Z.track(J.rMx.OVERLAY_UNLOCKED));
         }, [e, n]);
-    let e_ = (0, o.e7)([N.Z], () => N.Z.getVoiceChannelId()),
-        eh = (0, o.e7)([y.Z], () => y.Z.getChannel(e_)),
-        ep = (0, o.e7)([x.Z], () => (null != eh ? x.Z.getGuild(eh.guild_id) : null)),
-        ef = (0, o.e7)([E.default], () => E.default.getId()),
-        ev = (0, o.e7)([b.ZP, O.Z], () => (0, Z.Z)(b.ZP, O.Z)),
-        em = (0, g.Ns)(null == ev ? void 0 : ev.id),
-        eb = (0, o.e7)([v.Z], () => null != v.Z.getLastFeedFetchDate(J.YN.GAME_PROFILE_FEED)),
-        eg = (0, h.Z)(eb);
+    let eh = (0, o.e7)([N.Z], () => N.Z.getVoiceChannelId()),
+        ep = (0, o.e7)([y.Z], () => y.Z.getChannel(eh)),
+        ef = (0, o.e7)([x.Z], () => (null != ep ? x.Z.getGuild(ep.guild_id) : null)),
+        ev = (0, o.e7)([E.default], () => E.default.getId()),
+        em = (0, o.e7)([b.ZP, O.Z], () => (0, Z.Z)(b.ZP, O.Z)),
+        eb = (0, g.Ns)(null == em ? void 0 : em.id),
+        eg = (0, o.e7)([v.Z], () => null != v.Z.getLastFeedFetchDate(q.YN.GAME_PROFILE_FEED)),
+        eI = (0, h.Z)(eg);
     return (r.useEffect(() => {
-        !eg && eb && s.Z.notifyContentInventoryReady(em);
-    }, [em, eb, eg]),
-    S || m)
+        !eI && eg && s.Z.notifyContentInventoryReady(eb);
+    }, [eb, eg, eI]),
+    P || m)
         ? null
         : (0, i.jsx)(f.Gt, {
-              value: er,
+              value: el,
               children: (0, i.jsx)(u.RedesignIconContextProvider, {
                   children: (0, i.jsxs)('div', {
-                      className: $.overlay,
+                      className: ee.overlay,
                       children: [
                           (0, i.jsx)(z.Z, {}),
                           F &&
                               (0, i.jsx)('header', {
-                                  className: $.previewingInGameHeader,
-                                  children: q.intl.string(q.t.iOq96u)
+                                  className: ee.previewingInGameHeader,
+                                  children: $.intl.string($.t.iOq96u)
                               }),
-                          en,
-                          (!l || Y.has(Q.O0n.TEXT_WIDGET)) &&
-                              (0, i.jsx)(el, {
+                          et,
+                          (!l || Y.has(J.O0n.TEXT_WIDGET)) &&
+                              (0, i.jsx)(ea, {
                                   locked: l,
-                                  keybind: P,
-                                  onClick: eo
+                                  keybind: S,
+                                  onClick: ec
                               }),
                           k
                               ? (0, i.jsx)(W.Z, {
                                     className: a()({
-                                        [$.layoutLocked]: l,
-                                        [$.layoutUnlocked]: !l
+                                        [ee.layoutLocked]: l,
+                                        [ee.layoutUnlocked]: !l
                                     })
                                 })
                               : l
                                 ? null
                                 : (0, i.jsx)('div', {
-                                      className: $.invalidContainer,
+                                      className: ee.invalidContainer,
                                       children: (0, i.jsx)('div', {
-                                          className: $.inactiveContainer,
-                                          children: q.intl.format(q.t.ketnW1, R.FW)
+                                          className: ee.inactiveContainer,
+                                          children: $.intl.format($.t.ketnW1, R.FW)
                                       })
                                   }),
-                          (0, i.jsx)(H.Z, {}),
-                          ee &&
-                              (0, i.jsx)(ea, {
+                          (0, i.jsx)(X.Z, {}),
+                          en &&
+                              (0, i.jsx)(eo, {
                                   locked: l,
                                   focused: d
                               }),
-                          null != ep &&
-                              null != e_ &&
+                          null != ef &&
+                              null != eh &&
                               (0, i.jsx)(M.Z, {
-                                  streamerId: ef,
-                                  guildId: ep.id,
-                                  channelId: e_
+                                  streamerId: ev,
+                                  guildId: ef.id,
+                                  channelId: eh
                               }),
                           (0, i.jsx)(G.Z, {
-                              locked: es,
-                              keybind: P
+                              locked: e_,
+                              keybind: S
                           }),
                           (0, i.jsx)(V.Z, {})
                       ]
