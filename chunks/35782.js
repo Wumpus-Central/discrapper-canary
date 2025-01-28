@@ -149,20 +149,20 @@ let { Themes: i } = r(15202).V,
             BACKGROUND_MESSAGE_HOVER: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'OPACITY_BLACK_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_4',
+                        opacity: 0.0392156862745098
                     },
                     [i.LIGHT]: {
-                        raw: 'OPACITY_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_4',
+                        opacity: 0.0392156862745098
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'OPACITY_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_8',
+                        opacity: 0.0784313725490196
                     },
                     [i.DARKER]: {
-                        raw: 'OPACITY_BLACK_12',
-                        opacity: 0.12156862745098039
+                        raw: 'OPACITY_4',
+                        opacity: 0.0392156862745098
                     }
                 }
             },
@@ -362,6 +362,26 @@ let { Themes: i } = r(15202).V,
                     },
                     [i.DARKER]: {
                         raw: 'NEUTRAL_92',
+                        opacity: 1
+                    }
+                }
+            },
+            BG_BRAND: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'BLURPLE_50',
+                        opacity: 1
+                    },
+                    [i.LIGHT]: {
+                        raw: 'BLURPLE_50',
+                        opacity: 1
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'BLURPLE_50',
+                        opacity: 1
+                    },
+                    [i.DARKER]: {
+                        raw: 'BLURPLE_50',
                         opacity: 1
                     }
                 }
