@@ -41,7 +41,7 @@ function R(e, n, r) {
     );
 }
 !(function (e) {
-    (e.OVERLAY_UNLOCKED = 'OVERLAY_UNLOCKED'), (e.OVERLAY_VIDEO_STREAM_RENDERING = 'OVERLAY_VIDEO_STREAM_RENDERING');
+    (e.HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED = 'HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED'), (e.OVERLAY_UNLOCKED = 'OVERLAY_UNLOCKED'), (e.OVERLAY_VIDEO_STREAM_RENDERING = 'OVERLAY_VIDEO_STREAM_RENDERING');
 })(i || (i = {}));
 class O {
     constructor() {
@@ -232,6 +232,7 @@ async function en(e) {
             graphics_info_after: await (0, T.hj)(e, 0)
         }),
             f.Z.window.setBackgroundThrottling(!1),
+            v.ZP.IsHardwareAcceleratedGPUSchedulingEnabled() && P.toggleGPUBoost('HARDWARE_ACCELERATED_GPU_SCHEDULING_ENABLED', !0),
             et(e),
             (B = e),
             (0, y.tB)(e);

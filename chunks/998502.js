@@ -539,6 +539,10 @@ function M(e) {
             let { setGPUBoostEnabledByPid: r } = this.getDiscordUtils();
             return null !== r && r(e, n);
         },
+        IsHardwareAcceleratedGPUSchedulingEnabled() {
+            let { isHardwareAcceleratedGPUSchedulingEnabled: e } = this.getDiscordUtils();
+            return null !== e && e();
+        },
         isModuleVersionAtLeast(e, n) {
             var r, i, a;
             let o = [...(null != N ? N : [0, 0, 0])];
